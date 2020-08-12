@@ -1,5 +1,6 @@
 ---
 title: グラフの凡例アイテムを非表示にする (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、重要なデータを表示するため、凡例に表示するアイテムを選択する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92256240-0cd5-4be4-8904-d1e3b93cb6b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 784258433329832bbff3f8737086ef906eecfd64
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5f745b3eb2c862f4105bcdd872a8915845341942
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081331"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681421"
 ---
 # <a name="chart-legend---hide-items-report-builder"></a>グラフの凡例 - 項目の非表示 (レポート ビルダー)
 既定では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートで図形グラフ以外のグラフに追加した系列は、凡例の項目として使用されます。 円グラフ、ドーナツ グラフ、じょうごグラフ、およびピラミッド グラフでは、グラフに系列を追加すると、凡例に個々のデータ ポイントが追加されます。  

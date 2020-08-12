@@ -1,5 +1,6 @@
 ---
 title: レポート パラメーターの既定値の追加、変更、または削除 | Microsoft Docs
+description: 以下の手順でレポート パラメーターの既定値を追加、変更、削除し、レポートをカスタマイズします。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 902d28e7d37524ac0d1649642ca592b20ea5b3cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55e1d43bfdea2c01bf4e8f0516bf1554e1258d8d
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582041"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689275"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter"></a>レポート パラメーターの既定値の追加、変更、または削除
   レポート パラメーターを作成した後、既定値のリストを指定できます。 すべてのパラメーターに有効な既定値がある場合、レポートは、最初に表示またはプレビューしたときに自動的に実行します。  
@@ -63,7 +64,7 @@ ms.locfileid: "65582041"
 ## <a name="see-also"></a>参照  
  [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [チュートリアル:レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Parameters コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [レポート パラメーターの順序の変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   

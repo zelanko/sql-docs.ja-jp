@@ -1,5 +1,6 @@
 ---
 title: SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint サイトに展開する | Microsoft Docs
+description: SQL Server Reporting Services の場合、Report Viewer カスタム Web パーツを SharePoint 製品に手動で追加できます。
 ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,16 +8,16 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 232338818620069fc31bb57bc29cf07901d0f712
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49ac20b46c5453c431cb856ad060512b48315262
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256690"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767036"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint サイトに展開する
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]  [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 レポート ビューアー Web パーツは、SharePoint サイト内の SQL Server Reporting Services (ネイティブ モード) レポートを参照するために使用できるカスタム Web パーツです。 この Web パーツを使用すると、レポート サーバー上のレポートを表示、移動、印刷、およびエクスポートできます。 レポート ビューアー Web パーツは、SQL Server Reporting Services レポート サーバーまたは Power BI Report Server によって処理されるレポート定義 (.rdl) ファイルに関連付けられています。 このレポート ビューアー Web パーツは、Power BI Report Server にホストされている Power BI レポートでは使用できません。
 
@@ -148,7 +149,7 @@ Web パーツでサポートされている言語は以下のとおりです。
 * 簡体中国語 (zh-HANS および zh-CHS)
 * 繁体中国語 (zh-HANT および zh-CHT)
 
-## <a name="troubleshoot"></a>[トラブルシューティング]
+## <a name="troubleshoot"></a>トラブルシューティング
 
 * SharePoint 統合モードを構成している場合、SSRS をアンインストールすると、次のエラーが発生する。
 

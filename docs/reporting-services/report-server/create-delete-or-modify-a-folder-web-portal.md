@@ -1,5 +1,6 @@
 ---
 title: フォルダーの作成、削除、または変更 - Reporting Services | Microsoft Docs
+description: Reporting Services レポート サーバーにパブリッシュするアイテムを整理し、管理できるよう、フォルダーを作成、変更、削除する方法について説明します。
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 874fb7ba143c8f08a0f25501e1852b4d2b280cb2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ae3ae4b181ee6b3308bcbe5bcfc4af1ca370c974
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67492851"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548024"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>フォルダーの作成、削除、または変更 - Reporting Services
   フォルダーを作成すると、レポート サーバーにパブリッシュするアイテムを整理して管理できます。 フォルダーを作成することには、関心のあるレポートをユーザーが見つけやすくなるという利点があります。 コンテンツ マネージャーは、権限を適用するためのフレームワークとしてフォルダーを利用できます。 特定のフォルダーに対してロールの割り当てを作成することで、開発中のレポートや限定されたユーザーのみを対象としたレポートへのアクセスを制限できます。  
@@ -28,7 +29,7 @@ ms.locfileid: "67492851"
   
      **[新しいフォルダー]** ページが開きます。  
   
-3.  フォルダー名を入力します。 フォルダー名にはスペースを使用できますが、URL エンコードに使用される次の予約文字は使用できません。\; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|。 フォルダー名を続けて入力して、同時に複数のフォルダーを作成することはできません。  
+3.  フォルダー名を入力します。 フォルダー名にはスペースを使用できますが、URL エンコードに使用される次の予約文字は使用できません。\; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|. フォルダー名を続けて入力して、同時に複数のフォルダーを作成することはできません。  
   
 4.  必要に応じて、説明を入力します。  
   
@@ -78,7 +79,7 @@ ms.locfileid: "67492851"
   
 3. レポート サーバー ツールバーの右上の **[新規]** ボタンを選択し、ドロップダウン メニューから **[フォルダー]** を選択します。  
   
-4. **[(現在のフォルダー名) に新しいフォルダーを作成する]** ダイアログボックスに作成する新しいフォルダーの名前を入力します。 フォルダー名にはスペースを使用できますが、URL エンコードに使用される次の予約文字は使用できません。\; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|。 また、フォルダー名を続けて入力して、同時に複数のフォルダーを作成することはできません。  
+4. **[(現在のフォルダー名) に新しいフォルダーを作成する]** ダイアログボックスに作成する新しいフォルダーの名前を入力します。 フォルダー名にはスペースを使用できますが、URL エンコードに使用される次の予約文字は使用できません。\; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|. また、フォルダー名を続けて入力して、同時に複数のフォルダーを作成することはできません。  
   
 5. **[作成]** を選択して操作を完了します。  
   
@@ -96,7 +97,7 @@ ms.locfileid: "67492851"
   
 2. フォルダーを右クリックし、ドロップダウン メニューの **[削除]** を選択します。  
   
-3. **[プロパティ]** タブをクリックします。**プロパティ**ページが既定で表示されます。  
+3. **[プロパティ]** タブを選択します。既定では **[プロパティ]** ページが表示されています。  
   
 4. フォルダーの名前は、 *[名前]* * テキストボックスで変更できます。  
   
@@ -106,9 +107,9 @@ ms.locfileid: "67492851"
   
 7. **[適用]** を選択してプロパティの変更を保存します。  
   
-8. 必要に応じて、**[プロパティ]** ページの上部の **[移動]** または **[削除]** ボタンを選択して、フォルダーを移動したり削除したりすることができます。 詳細については、[アイテムの移動または削除 (Web ポータル)](../../reporting-services/report-server/move-or-delete-an-item-report-manager.md) に関する記事を参照してください。  
+8. 必要に応じて、 **[プロパティ]** ページの上部の **[移動]** または **[削除]** ボタンを選択して、フォルダーを移動したり削除したりすることができます。 詳細については、[アイテムの移動または削除 (Web ポータル)](../../reporting-services/report-server/move-or-delete-an-item-report-manager.md) に関する記事を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フォルダーの作成、削除、または変更 (Web ポータル)](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)   
  [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)    

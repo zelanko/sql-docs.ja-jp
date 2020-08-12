@@ -1,5 +1,6 @@
 ---
 title: グループ式の例 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、1 つのフィールドでデータをグループ化する方法と、グループ化の基準となるデータを識別する、より複雑な式を作成する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0e6378f523b74483ed6f1a459f63aafbfa1fc5ee
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ead7e4c893c667021770df4977244bb509c0d79c
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082100"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012420"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>グループ式の例 (レポート ビルダーおよび SSRS)
   データ領域では、1 つのフィールドでデータをグループ化することも、グループ化の基準となるデータを識別する、より複雑な式を作成することもできます。 複合式には、複数のフィールドやパラメーター、条件ステートメント、またはカスタム コードなどへの参照が含まれます。 データ領域に対してグループを定義する場合、これらの式を **[グループ]** プロパティに追加します。 詳細については、「 [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  

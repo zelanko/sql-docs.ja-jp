@@ -1,5 +1,6 @@
 ---
 title: レポート サーバーを構成および管理する (ネイティブ モード) | Microsoft Docs
+description: Reporting Services の構成に使用できる手法について説明し、コンポーネント、機能、サーバー機能を構成する方法に関する記事を紹介します。
 ms.date: 05/15/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2e38e508d2c6a7447781dd2918b980bcc1ff6003
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 68a37cc93271fc913cc89d2b0e522a81adec443f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082530"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547464"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>レポート サーバーを構成および管理する (SSRS ネイティブ モード)
   この記事では、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を構成するための方法について説明します。 また、特定のコンポーネント、機能、サーバー機能の構成方法について説明しているトピックへのリストも記載されています。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]は次の方法で構成できます。  
@@ -53,7 +54,7 @@ ms.locfileid: "77082530"
  [自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
  自動実行モードでレポートを処理するようにユーザー アカウントを構成する方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services のセキュリティと保護](../../reporting-services/security/reporting-services-security-and-protection.md)   

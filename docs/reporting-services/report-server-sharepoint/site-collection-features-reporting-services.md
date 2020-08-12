@@ -1,5 +1,6 @@
 ---
 title: Reporting Services サイト コレクション機能 | Microsoft Docs
+description: SQL Server Reporting Services SharePoint モードから与えられる SharePoint サイト コレクション機能について説明します。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e13654a38738c84095cc284a24fb723aa2b05327
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 052a6893f28d86a7f966edfe2a4b953ccc442e27
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580500"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764773"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services サイト コレクション機能
 

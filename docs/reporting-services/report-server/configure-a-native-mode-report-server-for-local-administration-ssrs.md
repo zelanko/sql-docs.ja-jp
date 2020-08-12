@@ -1,5 +1,6 @@
 ---
 title: ローカル管理用のネイティブ モードのレポート サーバーの構成 | Microsoft Docs
+description: Reporting Services レポート サーバーを特定の環境にインストールする場合、ローカル管理用にレポート サーバーを構成する方法について説明します。
 ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 535284c89f54fb39f448a71e5484e81c1a9d31af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 07a5040138bb19bd456a11ad9dcc15dc4cf06e4d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080886"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545614"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成
   レポート サーバー インスタンスをローカルに管理しようとする場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを次のオペレーティング システムのいずれかに配置するには、追加の構成手順が必要です。 このトピックでは、レポート サーバーをローカル管理用に構成する方法を説明します。 レポート サーバーのインストールまたは構成をまだ行っていない場合は、「[SQL Server をインストール ウィザードからインストールする &#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)」および「[Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)」を参照してください。  
@@ -113,7 +114,7 @@ ms.locfileid: "77080886"
   
 2.  ホーム ページの一番上の行にある歯車アイコンを選択した後、ドロップダウン メニューから **[サイト設定]** を選択します。 
   
-    ![歯車アイコン](../media/ssrsgearmenu.png)。
+    ![歯車アイコン](../media/ssrsgearmenu.png).
     >[!TIP]  
     >**注:** **[サイトの設定]** オプションが表示されない場合は、ブラウザーを閉じてから管理特権を使用してもう一度開き、Web ポータルを参照してください。  
   
@@ -174,7 +175,7 @@ ms.locfileid: "77080886"
 ##  <a name="additional-information"></a><a name="bkmk_addiitonal_informaiton"></a> 追加情報  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の管理に関連する追加の一般的な手順は、Windows ファイアウォールでポート 80 を開いてレポート サーバー コンピューターへのアクセスを許可することです。 手順については、「 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

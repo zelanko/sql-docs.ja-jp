@@ -1,5 +1,6 @@
 ---
 title: 数値と日付の書式設定 (レポート ビルダー) | Microsoft Docs
+description: データ領域の [プロパティ] ダイアログ ボックスの [数値] ページから書式を選択することで、レポート ビルダーのデータ領域の数値と日付を書式設定する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db780abef8f2d0078ce398e2ab0d30f29ac82a6b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 81a6c4e397ffba96af45a59a3ab26edaafeb05f4
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079820"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255490"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>数値と日付の書式設定 (レポート ビルダーおよび SSRS)
   データ領域の数値と日付の書式を設定するには、対応するデータ領域の **[プロパティ]** ダイアログ ボックスの **[数値]** ページを使用します。  
@@ -52,7 +53,7 @@ ms.locfileid: "77079820"
   
 -   同じテキスト ボックスで数字と文字が混在するテキストの書式を設定する場合、プレースホルダーを使用して、テキストの数値以外の部分とは別に数値の書式を設定します。 詳細については、「 [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)」を参照してください。 テキスト ボックスで Format プロパティについて指定された書式設定文字列が正しくない場合、書式設定文字列は無視されます。 グラフまたはゲージで Format プロパティについて指定された書式設定文字列が正しくない場合、指定した書式設定文字列は文字列として解釈され、書式設定は適用されません。  
   
--   **[カテゴリ]** の **[通貨]** をクリックして、 **[値の表示単位]** をオンにすると、 **[千]** 、 **[百万]** 、または **[十億]** を選択し、財務上の形式を使用して数値を表示できます。 たとえば、フィールド値が 1,789,905,394 の場合、 **[十億]** を選択して、小数点以下桁数を 2 桁に指定すると、レポートに表示される値は 1.78 です。  
+-   **[カテゴリ]** の **[通貨]** をクリックして、 **[値の表示単位]** をオンにすると、 **[千]**、 **[百万]**、または **[十億]** を選択し、財務上の形式を使用して数値を表示できます。 たとえば、フィールド値が 1,789,905,394 の場合、 **[十億]** を選択して、小数点以下桁数を 2 桁に指定すると、レポートに表示される値は 1.78 です。  
   
 ## <a name="see-also"></a>参照  
  [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   

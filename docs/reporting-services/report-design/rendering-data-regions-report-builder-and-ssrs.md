@@ -1,5 +1,6 @@
 ---
 title: データ領域のレンダリング (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーにおけるデータ領域のさまざまなパーツの改ページ動作とレンダリング動作について説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06eb5ee05e045a2cb6e902030714ebb2f824becc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9db14d568b96599a114616b011383b6aaf14ea7e
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77076998"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462296"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>データ領域の表示 (レポート ビルダーおよび SSRS)
   データ領域には、すべてのレポート アイテムに適用される一般的な表示動作に加えて、そのデータ領域が従う改ページ動作および表示動作があります。 データ領域固有の表示規則には、データ領域の拡張方法、特殊なセル (コーナーのセルやヘッダー セルなど) の表示方法、およびデータ領域を右から左に記述して表示する方法が含まれます。 ここでは、データ領域のさまざまな部分の表示方法について説明します。  

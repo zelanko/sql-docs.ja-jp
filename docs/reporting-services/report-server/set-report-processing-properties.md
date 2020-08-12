@@ -1,5 +1,6 @@
 ---
 title: レポート処理プロパティの設定 | Microsoft Docs
+description: レポートの処理方法を制御するレポート サーバーのレポート実行プロパティと、Web ポータルを使用してレポート別にそのプロパティを設定する方法について説明します。
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4a7729e8880e811494e6e1016b827831674cd812
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 62c38e222ede1678d7fd06089897b3a8435aa687
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140394"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547884"
 ---
 # <a name="set-report-processing-properties"></a>レポート処理プロパティの設定
   レポート実行プロパティでは、レポートの処理方法を制御します。 実行プロパティは、各レポートごとに設定する必要があります。  
@@ -53,7 +54,7 @@ ms.locfileid: "67140394"
   
  この条件が存在する場合、レポート サーバーは、次にスケジュールされているサブスクリプションの実行時に、サブスクリプションを無効にします。 サブスクリプションを再度アクティブ化するには、サブスクリプションを開いてから保存します。 サブスクリプションを開くと、レポート サーバーにより、スナップショットに指定されたサブスクリプションのパラメーター値が更新されます。 サブスクリプションの詳細については、「[サブスクリプションと配信 &#40;Reporting Services&#41](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [処理オプションの設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Reporting Services の概念 &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
  [レポート履歴のスナップショットの作成、変更および削除](create-modify-and-delete-snapshots-in-report-history.md)   

@@ -1,5 +1,6 @@
 ---
 title: ゲージ (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーに放射状ゲージまたは線形ゲージを使用することで主要業績評価指標を表示し、値を図示したり、データを比較したりします。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -156,12 +157,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6fb9864d97975b15711ec9cc1264251e8aac8c76
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 24fb81c9714e9008308721906505aab8cc4247fc
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082122"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84011860"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>ゲージ (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートのゲージ データ領域には、データセットの単一の値が表示されます。 各ゲージは常に、ゲージ パネル内に配置されます。ゲージ パネルでは、子ゲージまたは隣接ゲージを追加できます。 1 つのゲージ パネル内に、フィルター選択、グループ化、並べ替えなどの共通機能を使用する複数のゲージを作成できます。  
@@ -178,7 +179,7 @@ ms.locfileid: "77082122"
   
  ![ゲージ要素の図](../../reporting-services/report-design/media/gauge-elements-diagram.gif "ゲージ要素の図")  
   
- ゲージを KPI として使用する方法の詳細については、「[チュートリアル: レポートへの KPI の追加 (レポート ビルダー)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)」を参照してください。  
+ ゲージを KPI として使用する方法の詳細については、「[チュートリアル:レポートへの KPI の追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  ゲージは、レポート パーツとしてレポートとは別にパブリッシュできます。 [レポート パーツ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)の詳細を参照してください。  
@@ -204,7 +205,7 @@ ms.locfileid: "77082122"
   
  ![rs_LinearGauge](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_LinearGauge")  
   
- 線形ゲージのオプション : 横、縦、複数バー ポインター、2 つのスケール、3 色の範囲、対数、温度計、温度計 (華氏/摂氏)、ブレット グラフ  
+ 線形ゲージのオプション:横、縦、複数バー ポインター、2 つのスケール、3 色の範囲、対数、温度計、温度計 (華氏/摂氏)、ブレット グラフ。  
   
 ##  <a name="adding-data-to-a-gauge"></a><a name="AddingData"></a> ゲージへのデータの追加  
  ゲージをデザイン画面に追加したら、データセット フィールドをゲージ データ ペインにドラッグします。 既定では、ゲージはフィールド値を集計して単一の値として表示します。 この値は、Value プロパティを使用してポインターに関連付けられます。 フィールドのデータ型に応じて、ゲージは SUM または COUNT 集計を使用します。 追加する値が数値データの場合、ゲージでは SUM 関数が使用されます。 数値データ以外の場合は、COUNT 集計が使用されます。 ポインターの値には、別の集計を使用することも、集計を使用しないことも可能です。  

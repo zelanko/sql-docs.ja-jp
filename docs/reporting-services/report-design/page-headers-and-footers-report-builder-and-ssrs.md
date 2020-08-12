@@ -1,5 +1,6 @@
 ---
 title: ページ ヘッダーとページ フッター (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーのヘッダーとフッターに追加できる、テキスト、画像、四角形、罫線、背景色、式などの多数の項目について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +22,12 @@ f1_keywords:
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a94f7bf5e149431135972e4911463c5f86ffaa5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ca788f2b86e2e71465228a7e00cf55efb86c8914
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082460"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778374"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)
   レポートには、各ページの上部と下部にヘッダーとフッターを含めることができます。 ヘッダーとフッターには、静的テキスト、画像、線、四角形、罫線、背景色、背景画像、式などを含めることができます。 式には、データセットが 1 つしかないレポートでのデータセット フィールド参照と、スコープとしてデータセットを指定する集計関数呼び出しが含まれます。  

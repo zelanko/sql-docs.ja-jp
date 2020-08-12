@@ -1,5 +1,6 @@
 ---
 title: ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 | Microsoft Docs
+description: 概要と詳細の関係を表示し、サブレポートまたは個別のドリルスルー レポートにデータを表示する目的でデータを整理します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55dd847b01d6870712c226fa9aec0d49de2c4efb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578774"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689384"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域
   データをさまざまな方法で整理して、概要と詳細の関係を示すことができます。  たとえば、すべてのデータをレポートに含めておき、最初は詳細データは非表示で、ユーザーがクリックすると表示するようにできます。この動作を *ドリルダウン* アクションといいます。 テーブルやグラフなどのデータ領域をテーブルやマトリックスなどの別のデータ領域内に *入れ子* にして、その入れ子になったデータ領域にデータを表示できます。 メイン レポート内に完全に含まれている *サブレポート* にデータを表示できます。 また、ユーザーがリンクをクリックすると表示される個別のレポートである *詳細* レポートに詳細データを含めることもできます。  

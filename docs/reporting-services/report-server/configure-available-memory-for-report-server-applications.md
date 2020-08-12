@@ -1,5 +1,6 @@
 ---
 title: レポート サーバー アプリケーションで利用可能なメモリの構成 | Microsoft Docs
+description: Reporting Services におけるメモリ使用の構成設定と、要求の処理でメモリの負荷が要因になるときのサーバーの応答について説明します。
 ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 38278d3e33b7317ee3fdfc56d6ac60829743987e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67564024"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548074"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>レポート サーバー アプリケーションで利用可能なメモリの構成
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、利用可能なすべてのメモリを使用できますが、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー アプリケーションに割り当てることのできる合計メモリ リソース量に上限を設けることによって、既定の動作をオーバーライドすることができます。 また、しきい値を設定することにより、メモリの圧迫度 (低、中、高) に応じて、要求の優先度付けや処理の方法を変えることもできます。 メモリ圧迫の度合いが低い場合、レポート サーバーは、対話型のレポート処理またはオンデマンドのレポート処理に若干高い優先度を割り当てます。 メモリ圧迫の度合いが高い場合、レポート サーバーは、さまざまな手法を用いながら、利用できる限られたリソースで稼働状態を保ちます。  
@@ -88,7 +89,7 @@ ms.locfileid: "67564024"
 #### <a name="about-aspnet-memory-configuration-settings"></a>ASP.NET のメモリの構成設定について  
  2016 以降のレポート サーバー Web サービスと Web ポータルは HTML5 アプリケーションで、以前のアプリケーションは [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションですが、いずれのアプリケーションも、IIS 5.0 互換モードで実行される [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションの machine.config の **processModel** に指定するメモリ構成設定は参照しません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、メモリの構成設定を RSReportServer.config ファイルからのみ読み取ります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
  [レポート サーバー アプリケーションのアプリケーション ドメイン](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  

@@ -1,5 +1,6 @@
 ---
 title: レポート サーバー データベース (ネイティブ モード) | Microsoft Docs
+description: ネイティブ モードの Reporting Services インストールで永続データ ストレージと一時データ ストレージが 2 つのデータベースに分離されるしくみについて説明します。
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71207cc3476374c457ab72aa03e54215b38330ba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1a4bfe8c47361793dde026d61fb5fb7bdf0e709c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078007"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547284"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>レポート サーバー データベース (SSRS ネイティブ モード)
   レポート サーバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] を使用してメタデータやオブジェクトの定義を格納するステートレス サーバーです。 ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストールでは、一時データと永続データが 2 つのデータベースに別々に格納されます。 この 2 つのデータベースは同時に作成され、データベース名によってバインドされます。 既定では、データベース名はそれぞれ **ReportServer** と **ReportServerTempDB** になります。  
@@ -62,7 +63,7 @@ ms.locfileid: "77078007"
   
  一時データベースをバックアップし、続いてデータベースを復元する場合、コンテンツを削除する必要があります。 一般的に、一時データベースのコンテンツは、いつでも安全に削除できます。 ただし、コンテンツを削除した後、レポート サーバー Windows サービスを再起動する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server フェールオーバー クラスターでのレポート サーバー データベースのホスト](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
  [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   

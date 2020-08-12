@@ -1,5 +1,6 @@
 ---
 title: レポート履歴のスナップショットの作成、変更および削除 | Microsoft Docs
+description: スナップショットを追加したり、削除したりするか、レポート履歴の記憶域に影響するプロパティを変更することで、Reporting Services のレポート履歴を保守管理する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 72486193f4171be9fdce9400328bd1c2a199f2c5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4c686ff203b9a080424fb46e50c42a6edefd7655
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580477"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548034"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>レポート履歴のスナップショットの作成、変更および削除
   レポート履歴は、一連のレポート スナップショットです。 スナップショットの追加と削除、またはレポート履歴の記憶域に影響するプロパティの変更を行うことで、レポート履歴を管理できます。 レポート履歴は手動で、またはスケジュールに従って作成できます。  

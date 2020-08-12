@@ -1,5 +1,6 @@
 ---
 title: ゲージのスケールの書式設定 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーのページ分割されたレポートの、最小値と最大値の制約があるゲージのスケールについて説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 546af7322a8aeced15c0593fa2c1fdde5af632cc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 235406dc1a6ed138c5d40ef7364bb07b3e4e6ecf
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079632"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778894"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートでは、ゲージのスケールは、最小値と最大値で決められた範囲の数値であり、ゲージ上に表示されます。 通常、ゲージのスケールにはゲージ ラベルと目盛りがあり、ゲージ ポインターによって示された値を正確に読み取れるようになっています。 1 つのゲージ スケールに 1 つまたは複数のゲージ ポインターが関連付けられているのが普通です。 同じゲージに複数のスケールを指定できます。  

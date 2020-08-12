@@ -1,5 +1,6 @@
 ---
 title: レポート ビューアーでのローカル モードと接続モードのレポート | Microsoft Docs
+description: SQL Server Reporting Services レポートは、ローカル モードか接続モードで実行されるように構成できます。 さまざまなモードについて説明します。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: be9653d66ef541ebf27cb31c8092b79c2e1bf612
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d21d06182f259451f53fed45ba77a5cbacbb382d
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579875"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767003"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>レポート ビューアーでのローカル モードと接続モードのレポート
 
@@ -81,7 +82,7 @@ ms.locfileid: "65579875"
 
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 接続モードでの ADS 拡張機能の使用に関する最新情報については、「[Access Services Report in SharePoint Site shows error in data extension 'ADS'](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx)」 (SharePoint サイトの Access Services レポートでデータ拡張機能 'ADS' のエラーが表示される) を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [Reporting Services でサポートされるデータ ソース](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
 

@@ -1,5 +1,6 @@
 ---
 title: データ処理拡張機能の概要 | Microsoft Docs
+description: Reporting Services に付属するデータ処理拡張機能を紹介し、カスタムのデータ処理をレポート サーバーに追加する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67e20d8d0bdcfbb03d0188ac62b4d89bc12b704f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e9c3407060e22a2be8f74214cd1ba6a44c1487c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194206"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529676"
 ---
 # <a name="data-processing-extensions-overview"></a>データ処理拡張機能の概要
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータ処理拡張機能を使用することによって、データ ソースに接続し、データを取得できます。 データ処理拡張機能は、データ ソースとデータセット間のブリッジとしても機能します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータ処理拡張機能は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] データ プロバイダー インターフェイスのサブセットに倣っています。  
@@ -74,7 +75,7 @@ Reporting Services データ処理拡張機能のアーキテクチャ
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vstecado](../../../includes/vstecado-md.md)] アーキテクチャ、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] データ プロバイダー、ADO.NET DataSet オブジェクト、および共通する [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] インターフェイスについてよく理解していること。  
   
--   [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Visual C# や [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET など、[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 言語による開発経験があること。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# や [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET など、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 言語による開発経験があること。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services の拡張機能](../../../reporting-services/extensions/reporting-services-extensions.md)   

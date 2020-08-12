@@ -1,5 +1,6 @@
 ---
 title: 配信拡張機能の実装 | Microsoft Docs
+description: カスタムの配信拡張機能を実装することで、Reporting Services で配信機能を拡張する方法の概要をお読みください。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4c0004f844d6914cea330d3a0c7332de783116c7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0ac797a8dd02a9d854c8bb2783435a087326f48
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193758"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529567"
 ---
 # <a name="implementing-a-delivery-extension"></a>配信拡張機能の実装
   ユーザーは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] により、作成およびパブリッシュ後にさまざまな場所に配信できるレポートを作成およびパブリッシュできます。 さらに、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] には配信拡張機能と配信 API も用意されています。開発者は別の配信拡張機能を作成し、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の配信機能をさらに拡張することもできます。  

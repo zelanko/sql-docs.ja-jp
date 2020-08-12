@@ -1,5 +1,6 @@
 ---
 title: サイズの大きなレポートの処理 | Microsoft Docs
+description: 構成、表示、配置、配信の推奨事項に従うことで、レポート サーバーでサイズの大きなレポートを正しく実行する方法について説明します。
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 574fcc9c8e180b75d5d3def6d97798708c40996c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9b263aa61d02c20f55933744449151fa7676bad1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140260"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544514"
 ---
 # <a name="process-large-reports"></a>サイズの大きなレポートの処理
   サイズの大きなレポートは、処理が困難となる場合があり、正常に実行するには特定の構成が必要です。 サイズの大きなレポートは、ページ割り当てをサポートするように構成されている場合以外は、要求時に実行しないでください。  
@@ -66,7 +67,7 @@ ms.locfileid: "67140260"
   
  レポートを電子メールで配信する場合は、リンクを含むようにサブスクリプションを構成します。 レポートを添付ファイルとして送信することは避けてください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

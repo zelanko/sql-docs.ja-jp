@@ -1,5 +1,6 @@
 ---
 title: 再帰型階層グループの作成 (レポート ビルダー) | Microsoft Docs
+description: ページ分割されたレポートで、再帰型階層グループを使用して、階層レベルが複数ある 1 つのレポート データセットのデータを整理する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d1a73f72cc267b8a58c70dd4ea958be3560a4fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d72c85df464893a4f7e7d6ba1f183a3702aee87
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080550"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681531"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>再帰型階層グループの作成 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、再帰型階層グループは、組織階層内のマネージャーと従業員のリレーションシップを表す上司/部下構造など、複数の階層レベルから成る単一のレポート データセットのデータを編成します。  
@@ -48,7 +49,7 @@ ms.locfileid: "77080550"
     > [!NOTE]  
     >  プロパティ ペインが表示されない場合は、 **[表示]** タブの **[プロパティ]** をクリックします。  
   
-2.  プロパティ ペインで、 **[余白]** ノードを展開して **[左]** をクリックします。次に、ドロップダウン リストから **[\<式...>]** を選びます。  
+2.  プロパティ ウィンドウで、 **[余白]** ノードを展開して **[左]** をクリックします。次に、ドロップダウン リストから **[\<Expression...>]** を選びます。  
   
 3.  式ペインで次の式を入力します。  
   

@@ -1,5 +1,6 @@
 ---
 title: 式の例 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、組み込み関数、カスタム コード、カスタム レポート、カスタム グループ変数、ユーザー定義変数を利用し、コンテンツとレポートの外観を制御します。
 ms.date: 04/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 12933c259fa02e77a76b8c31edf61db916dcde49
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f37521692b7b30cc8db1e56b81222c3e8bad38de
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080340"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681341"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
@@ -66,7 +67,7 @@ ms.locfileid: "77080340"
 
   
 ## <a name="functions"></a>関数  
- レポート内の多くの式には、関数が含まれています。 これらの関数を使用して、データの書式を設定し、ロジックを適用し、レポートのメタデータにアクセスできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ランタイム ライブラリの関数や、<xref:System.Convert> 名前空間および <xref:System.Math> 名前空間の関数を使用する式を記述できます。 また、他のアセンブリまたはカスタム コードの関数への参照も追加できます。 また、[!INCLUDE[msCoName](../../includes/msconame-md.md)] などの [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> のクラスを使用することもできます。  
+ レポート内の多くの式には、関数が含まれています。 これらの関数を使用して、データの書式を設定し、ロジックを適用し、レポートのメタデータにアクセスできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ランタイム ライブラリの関数や、<xref:System.Convert> 名前空間および <xref:System.Math> 名前空間の関数を使用する式を記述できます。 また、他のアセンブリまたはカスタム コードの関数への参照も追加できます。 また、<xref:System.Text.RegularExpressions> などの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] のクラスを使用することもできます。  
   
 ##  <a name="visual-basic-functions"></a><a name="VisualBasicFunctions"></a> Visual Basic の関数  
  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の関数を使用して、テキスト ボックスに表示されるデータや、レポートのパラメーター、プロパティ、または他の領域に使用されるデータを操作できます。 ここでは、このような関数のうち、いくつかの例を紹介します。 各関数の詳細については、MSDN の「 [Visual Basic ランタイム ライブラリのメンバー](https://go.microsoft.com/fwlink/?LinkId=198941) 」を参照してください。  
@@ -214,7 +215,7 @@ ms.locfileid: "77080340"
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     次の式では、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の関数の代わりに <xref:System.String> の [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] クラスのメンバーを使用しています。返される値は、上の式と同じです。  
+     次の式では、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の関数の代わりに [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の <xref:System.String> クラスのメンバーを使用しています。返される値は、上の式と同じです。  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -233,7 +234,7 @@ ms.locfileid: "77080340"
   
     ```  
   
--   **の** に含まれる [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]Regex<xref:System.Text.RegularExpressions> 関数は、電話番号の書式を設定するなど、既存の文字列の書式を変更する場合に役立ちます。 次の式では、フィールドに含まれる、" **nnn** nnn*nnnn*- *" 形式の 10 桁の電話番号を、* -*Replace*関数を使用して "(*nnn*) *nnn*-*nnnn*" 形式に変更しています。  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の <xref:System.Text.RegularExpressions> に含まれる **Regex** 関数は、電話番号の書式を設定するなど、既存の文字列の書式を変更する場合に役立ちます。 次の式では、フィールドに含まれる、" **nnn** nnn*nnnn*- *" 形式の 10 桁の電話番号を、* -*Replace*関数を使用して "(*nnn*) *nnn*-*nnnn*" 形式に変更しています。  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  

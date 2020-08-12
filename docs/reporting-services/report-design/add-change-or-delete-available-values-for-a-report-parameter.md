@@ -1,5 +1,6 @@
 ---
 title: レポート パラメーターの値の追加、変更、または削除 | Microsoft Docs
+description: ユーザーに表示する利用可能値の一覧を指定することで、レポート ビルダーで、ユーザーがパラメーターに対して行える選択肢の一覧をカスタマイズします。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0d6f5a74365565e5da3be99408f53bc086b0b689
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b9d826682f2bcb742ab4ba7ae9e2b6fba33600c0
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582046"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681331"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>レポート パラメーターの値の追加、変更、または削除
   レポート パラメーターを作成した後、ユーザーに対して表示する使用可能な値の一覧を指定できます。 使用可能な値の一覧を使用すると、ユーザーがパラメーターに選択できる値が有効な値のみに制限されます。  
@@ -79,7 +80,7 @@ ms.locfileid: "65582046"
  [カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [レポート パラメーターの既定値の追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)   
  [Parameters コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
- [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [チュートリアル:レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

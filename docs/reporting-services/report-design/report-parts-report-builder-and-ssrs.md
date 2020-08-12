@@ -1,5 +1,6 @@
 ---
 title: レポート パーツ (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、他のページ分割されたレポートで再利用できるよう、個別のレポート パーツとしてパブリッシュするテーブル、マトリックス、グラフ、画像を作成します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0bd0dd7c77e7ebc2501b507324b02ba1bb364190
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6eaa6caa15f7cef82ca7d18caa8429b9df9978d8
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081110"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255261"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>レポート パーツ (レポート ビルダーおよび SSRS)
   テーブル、マトリックス、グラフ、画像などのレポート アイテムを、 *レポート パーツ*としてパブリッシュできます。 レポート パーツは、レポート サーバーに個別にパブリッシュされ、別のページ分割されたレポートで再利用できる、ページ分割されたレポート用のアイテムです。 レポート パーツのファイル拡張子は .rsc です。  

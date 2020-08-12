@@ -1,6 +1,6 @@
 ---
 title: 円グラフへのパーセンテージ値の表示 (レポート ビルダー) | Microsoft Docs
-description: Reporting Services のページ分割されたレポートでは、既定で凡例にカテゴリが表示されます。 凡例にパーセンテージまたはパイ スライス自体を表示することもできます。
+description: レポート ビルダーの凡例やパイ スライスで、円グラフにパーセンテージ値を表示する方法について説明します。
 ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b250f8bffdebeb0cb0f1e68a739bb808cb75abd
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: abacde42f813a00ecc2f48edd8fc71d2b3a83020
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487588"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681401"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>円グラフへのパーセンテージの表示 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、既定で凡例にカテゴリが表示されます。 凡例にパーセンテージまたはパイ スライス自体を表示することもできます。   
@@ -43,7 +43,7 @@ ms.locfileid: "81487588"
 2.  **[凡例]** の **[凡例のユーザー定義テキスト]** プロパティに **#PERCENT** と入力します。  
   
 ## <a name="see-also"></a>参照  
-* [チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
+* [チュートリアル:レポートへの円グラフの追加 (レポート ビルダー)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
 *  [円グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [グラフの凡例の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
 *  [円グラフの外側へのデータ ポイント ラベルの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   

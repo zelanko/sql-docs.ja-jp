@@ -1,5 +1,6 @@
 ---
 title: パフォーマンス カウンター - ReportServer サービス、パフォーマンス オブジェクト | Microsoft Docs
+description: SQL Server 2012 配置に含まれる、ReportServer:Service および ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f86af60001deb0991983fe17c3cf1cf9ba3f2552
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b7afe684cb88327fd7b8bb22ae2637ad4064cb25
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893438"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545524"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>パフォーマンス カウンター - ReportServer サービス、パフォーマンス オブジェクト
   このトピックでは、 **の配置に含まれる** ReportServer:Service **および** ReportServerSharePoint:Service [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。  
@@ -34,12 +35,12 @@ ms.locfileid: "68893438"
   
 -   [PowerShell コマンドレットを使用して一覧を取得する](#bkmk_powershell)  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+ [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ##  <a name="reportserverservice-performance-counters-native-mode-report-server"></a><a name="bkmk_ReportServer"></a> ReportServer:Service パフォーマンス カウンター (ネイティブ モードのレポート サーバー)  
- **ReportServer:Service** パフォーマンス オブジェクトには複数のカウンターが含まれおり、レポート サーバー インスタンスの HTTP 関連のイベントやメモリ関連のイベントの追跡に使用されます。 このパフォーマンス オブジェクトは、コンピューター上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスごとに 1 つ存在します。各インスタンスのパフォーマンス オブジェクトに対して、カウンターを追加したり削除したりできます。 既定のインスタンスのカウンターは、 **ReportServer:Service**という形式で表示されます。 名前付きインスタンスのカウンターは、**ReportServer$\<***インスタンス名***>:Service** という形式で表示されます。  
+ **ReportServer:Service** パフォーマンス オブジェクトには複数のカウンターが含まれおり、レポート サーバー インスタンスの HTTP 関連のイベントやメモリ関連のイベントの追跡に使用されます。 このパフォーマンス オブジェクトは、コンピューター上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスごとに 1 つ存在します。各インスタンスのパフォーマンス オブジェクトに対して、カウンターを追加したり削除したりできます。 既定のインスタンスのカウンターは、 **ReportServer:Service**という形式で表示されます。 名前付きインスタンスのカウンターは、**ReportServer$\<***instance_name***>:Service** という形式で表示されます。  
   
- **ReportServer:Service** パフォーマンス オブジェクトは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の新機能で、以前のバージョンの [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] でインターネット インフォメーション サービス (IIS) と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に含まれていたカウンターのサブセットを備えています。 これらは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に固有の新しいカウンターです。要求、接続、ログオン試行など、レポート サーバーにおける HTTP 関連のイベントが追跡されます。 さらに、このパフォーマンス オブジェクトには、メモリ管理イベントを追跡するカウンターも含まれています。  
+ **ReportServer:Service** パフォーマンス オブジェクトは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の新機能で、以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でインターネット インフォメーション サービス (IIS) と [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] に含まれていたカウンターのサブセットを備えています。 これらは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に固有の新しいカウンターです。要求、接続、ログオン試行など、レポート サーバーにおける HTTP 関連のイベントが追跡されます。 さらに、このパフォーマンス オブジェクトには、メモリ管理イベントを追跡するカウンターも含まれています。  
   
  次の表は、 **ReportServer:Service** パフォーマンス オブジェクトに含まれているカウンターの一覧です。  
   
@@ -62,7 +63,7 @@ ms.locfileid: "68893438"
 |**Logon Attempts/sec**|ログオン試行の割合。|  
 |**Logon Successes Total**|RSWindows 認証タイプのログオンに成功した回数。 RSWindows 認証タイプには、RSWindowsNegotiate、RSWindowsNTLM、RSWindowsKerberos、RSWindowsBasic などがあります。 ゼロ (0) はカスタム認証を表します。|  
 |**Logon Successes/sec**|成功したログオンの割合。|  
-|**Memory Pressure State**|サーバーの現在のメモリの状態を示す 1 ～ 5 の数値。<br /><br /> 1: 負荷なし<br /><br /> 2: 低負荷<br /><br /> 3: 中負荷<br /><br /> 4: 高負荷<br /><br /> 5: 負荷が限度を超えている|  
+|**Memory Pressure State**|サーバーの現在のメモリの状態を示す 1 ～ 5 の数値。<br /><br /> 1:負荷なし<br /><br /> 2:低負荷<br /><br /> 3:中負荷<br /><br /> 4:高負荷<br /><br /> 5:負荷が限度を超えている|  
 |**Memory Shrink Amount**|使用メモリ量を縮小するためにサーバーが要求したバイト数。|  
 |**Memory Shrink Notifications/sec**|使用メモリ量を縮小するために、サーバーが直前の 1 秒間に送信した通知の数。 この値は、サーバーでメモリ不足が何回発生しているかを示しています。|  
 |**Requests Disconnected**|通信エラーのために切断された要求の数。|  

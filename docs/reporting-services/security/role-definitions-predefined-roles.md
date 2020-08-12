@@ -1,6 +1,6 @@
 ---
 title: ロールの定義 - 定義済みロール | Microsoft Docs
-ms.date: 05/24/2019
+ms.date: 06/10/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c792804d9e7daae9209bcbafb8bae95fffb3492
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67500200"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716749"
 ---
 # <a name="role-definitions---predefined-roles"></a>ロールの定義 - 定義済みロール
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、定義済みのロールと共にインストールされます。このロールを使用すると、レポート サーバーの操作へのアクセスを許可することができます。 定義済みの各ロールは、関連するタスクのコレクションを示しています。 定義済みのロールにグループやユーザー アカウントを割り当てることで、レポート サーバーの操作にすぐにアクセスできます。  
@@ -59,11 +59,11 @@ ms.locfileid: "67500200"
 |----------|-----------------|  
 |レポートの使用|レポート定義を読み込みます。|  
 |リンク レポートの作成|リンク レポートではないレポートを基にしたリンク レポートを作成します。|  
-|すべてのサブスクリプションを管理|レポートおよびリンク レポートのサブスクリプションを、その所有者がだれであるかにかかわらず表示、変更、および削除します。 このタスクでは、データ ドリブン サブスクリプションも作成できます。|  
+|すべてのサブスクリプションを管理|レポートおよびリンク レポートのサブスクリプションを、その所有者がだれであるかにかかわらず表示、変更、および削除します。 このタスクでは、データ ドリブンのサブスクリプションの作成をサポートしています。 また、[Power BI Report Server の Power BI (.pbix) ファイルのスケジュールされている更新](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh)の編集と実行もサポートしています。|  
 |データ ソースを管理する|共有データ ソース アイテムの作成および削除と、データ ソースのプロパティとコンテンツの表示および変更を行います。|  
 |フォルダーの管理|フォルダーの作成、表示、削除、およびフォルダーのプロパティの表示と変更を行います。|  
 |モデルを管理する|モデルの作成、表示、削除、およびモデルのプロパティの表示と変更を行います。|  
-|個別のサブスクリプションを管理|レポートおよびリンク レポートに対してユーザーが所有するサブスクリプションを作成、表示、変更、および削除します。|  
+|個別のサブスクリプションを管理|レポートおよびリンク レポートに対してユーザーが所有するサブスクリプションを作成、表示、変更、および削除します。 このタスクでは、[Power BI Report Server の Power BI (.pbix) ファイルのスケジュールされている更新](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh)の編集と実行もサポートしています。|  
 |レポート履歴の管理|レポート履歴の作成、表示、削除、レポート履歴のプロパティの表示、およびスナップショット履歴の制限とキャッシュの動作を決定する設定の表示と変更を行います。|  
 |レポートの管理|レポートの追加と削除、レポート パラメーターの変更、レポートのプロパティの表示と変更、レポートにコンテンツを提供するデータ ソースの表示と変更、レポート定義の表示と変更、レポート レベルのセキュリティ ポリシーの設定を行います。|  
 |リソースの管理|リソースの作成、変更、削除、およびリソースのプロパティの表示および変更を行います。|  
@@ -209,7 +209,7 @@ ms.locfileid: "67500200"
   
  **システム ユーザー** ロールを使用して、既定のセキュリティを補完できます。 このロールは、レポート サーバーへのアクセスをレポート ユーザーに許可する新しいロールの割り当てに含めることができます。 詳細については、「 [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ロールを作成、削除、または変更する (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)  
 [レポート サーバーへのユーザー アクセスを許可する](../../reporting-services/security/grant-user-access-to-a-report-server.md)  
 [ロールの割り当てを変更または削除する &#40;SSRS Web ポータル&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  

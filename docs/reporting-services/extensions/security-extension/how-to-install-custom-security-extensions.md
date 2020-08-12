@@ -1,5 +1,6 @@
 ---
 title: カスタム セキュリティ拡張機能をインストールする方法 | Microsoft Docs
+description: Reporting Services 2016 で導入された新しい Web ポータルについて説明します。 結果的に行われた変更がカスタム セキュリティ拡張機能に与える影響について説明します。
 ms.date: 07/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fcef802f6c61b85b4905365bda075a9f11d9e10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4dfc638f65c66f6ecf5957b80b883ab89337b03e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68223231"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529068"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>カスタム セキュリティ拡張機能をインストールする方法
 
@@ -51,7 +52,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 ## <a name="deployment-and-configuration"></a>配置と構成
 
-カスタム セキュリティ拡張機能に必要な基本構成は、以前のリリースと同じです。 web.config および rsreportserver.config の変更が必要です。詳細については、「[レポート サーバーでカスタム認証またはフォーム認証を構成する](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)」を参照してください。
+カスタム セキュリティ拡張機能に必要な基本構成は、以前のリリースと同じです。 web.config と rsreportserver.config に変更が必要です。詳細については、「[レポート サーバーでカスタム認証またはフォーム認証を構成する](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)」を参照してください。
 
 レポート マネージャーの個別の web.config はなくなりましたが、ポータルでは reportserver エンドポイントと同じ設定が継承されます。
 

@@ -1,5 +1,6 @@
 ---
 title: インジケーター (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーのページ分割されたレポートの、1 つのデータ値の状態を示す小さなゲージであるインジケーターについて説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,15 +16,15 @@ f1_keywords:
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e62ec26c0019e82b3f0e37dbdd9c1539332212
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2b440f82dc7d758e7f6eb17bdf0f13e818348423
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082071"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779514"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>インジケーター (レポート ビルダーおよび SSRS)
-  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートのインジケーターは、1 つのデータ値の状態をひとめでわかるようにするための小さなゲージです。 インジケーターとその状態を表すアイコンは単純で、小さなサイズでもわかりやすくなっています。  
+  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]のページ分割されたレポートでのインジケーターとは、1 つのデータ値の状態をひとめでわかるようにした小さなゲージです。 インジケーターとその状態を表すアイコンは単純で、小さなサイズでもわかりやすくなっています。  
   
  レポートの状態インジケーターを使用して、次の内容を表示できます。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "77082071"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] そのまま使用できるインジケーター セットとインジケーター アイコンが組み込まれていますが、必要に応じて、個々のインジケーター アイコンとインジケーター セットをカスタマイズできます。  
   
- インジケーターを KPI として使用する方法の詳細については、「[チュートリアル: レポートへの KPI の追加 (レポート ビルダー)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)」を参照してください。  
+ インジケーターを KPI として使用する方法の詳細については、「[チュートリアル:レポートへの KPI の追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  インジケーターは、レポート パーツとしてレポートとは別にパブリッシュできます。 [レポート パーツ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)の詳細を参照してください。  

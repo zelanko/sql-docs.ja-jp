@@ -1,5 +1,6 @@
 ---
 title: グラフへのラベルの配置 (レポート ビルダー) | Microsoft Docs
+description: グラフの種類と形状におけるラベルの位置を変更する方法を見つけるために使用しているグラフの種類を判断します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 66083dc0ff720f5b836db0e6f0689c916d2b2fdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 23969f84491a66d7aedfdb887128fa85aea34742
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082380"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688660"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>グラフへのラベルの配置 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートのグラフはその種類によって形状が異なるので、グラフが見やすい位置にデータ ポイント ラベルを配置する必要があります。 ラベルの既定の位置は、グラフの種類によって異なります。  

@@ -1,5 +1,6 @@
 ---
 title: Web ポータルの構成 | Microsoft Docs
+description: レポートの表示、レポート サーバー コンテンツの管理、ネイティブ モードのレポート サーバーへのアクセス権の付与に使用される Web ポータル アプリケーションを構成する方法について説明します。
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 52a6055a3b3c79c08622d89b2931a48eedd14d76
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63308398"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548054"
 ---
 # <a name="configure-the-web-portal"></a>Web ポータルの構成
 
@@ -60,7 +61,7 @@ Web ポータルは、ユーザーが Web ブラウザーでアクセスする W
 
 #### <a name="to-configure-a-static-report-server-url"></a>レポート サーバーの静的 URL を構成するには
 
-1. テキスト エディターで **RSReportServer.config** ファイルを開きます。 既定では、\Program Files\Microsoft SQL Server\MSRS12.\<*instancename*>\Reporting Services\ReportServer にあります。  
+1. テキスト エディターで **RSReportServer.config** ファイルを開きます。 既定では、次の場所にあります。\Program Files\Microsoft SQL Server\MSRS12.\<*instancename*>\Reporting Services\ReportServer。  
 
 2. **ReportServerURL**を探します。
 
@@ -80,7 +81,7 @@ Web ポータルは、ユーザーが Web ブラウザーでアクセスする W
 
 2. Internet Explorer を開きます。
 
-3. Web ポータルの URLを入力します。 既定では、 https://\<**your-server-name**>/reports ですが、Reporting Services を名前付きインスタンスとしてインストールした場合、既定の URL は https://\<**your-server-name**>/reports\< **_instancename**> になります。
+3. Web ポータルの URLを入力します。 既定では、 https://\<**your-server-name**>/reports ですが、Reporting Services を名前付きインスタンスとしてインストールした場合、既定の URL は https://\<**your-server-name**>/reports\<**_instancename**> になります。
 
 4. **[サイトの設定]** を選択します。
 

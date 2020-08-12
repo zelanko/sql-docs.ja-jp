@@ -1,5 +1,6 @@
 ---
 title: Reporting Services SharePoint モード用の PowerShell コマンドレット | Microsoft Docs
+description: インストール、機能、アプリケーション管理など、SQL Server Reporting Services SharePoint モードをサポートする目的で PowerShell コマンドレットがインストールされます。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e415fee08a9723419c7d8a4258fc88670c5e262
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a92cb1a23c4c1d7062945bc24961a2c37d25950
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68892403"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83765003"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モード用の PowerShell コマンドレット
 
@@ -38,7 +39,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
   
  PowerShell の例を入力すると、次のようなエラー メッセージが表示されます。  
   
--   Install-SPRSService : 用語 'Install-SPRSService' は、  
+-   Install-SPRSService :用語 'Install-SPRSService' は、  
     コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として認識されません。 名前が正しく記述されていることを確認し、パスが含まれている場合はそのパスが正しいことを確認してから、再試行してください。  
   
  次のいずれかの問題が発生しています。  
@@ -290,7 +291,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 ## <a name="next-steps"></a>次のステップ
 
 [PowerShell を使用した Reporting Services サブスクリプション所有者の変更および一覧表示とサブスクリプションの実行](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[チェック リスト: PowerShell を使用して Power Pivot for SharePoint を確認する](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
+[チェックリスト:PowerShell を使用して Power Pivot for SharePoint を確認する](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
 [SQL Server PowerShell のヘルプの参照](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

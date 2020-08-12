@@ -1,5 +1,6 @@
 ---
 title: レポートへの罫線の追加 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーのヘッダー、フッター、およびレポート本文に罫線を追加して、ページ分割されたレポートの領域を定義します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7790d44cc4160d7f61562cf470da43bb49a82cf2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cfec5b85bce53a018bfab013494f2f0413a3803b
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080785"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681571"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>レポートへの罫線の追加 (レポート ビルダーおよび SSRS)
   線や四角形を追加せずに、ヘッダー、フッター、およびレポート本文自体に罫線を追加することで、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートに罫線を追加できます。    
     
- ページ ヘッダーとページ フッターに表示されるレポートの罫線を追加する場合は、レポートの最初と最後のページでヘッダーとフッターを非表示にしないでください。 非表示にした場合、レポートの最初と最後のページの上部または下部で罫線が一部しか表示されない可能性があります。 詳細については、「[ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)」を参照してください。    
+ ページ ヘッダーとページ フッターに表示されるレポートの罫線を追加する場合は、レポートの最初と最後のページでヘッダーとフッターを非表示にしないでください。 そうした場合、レポートの最初と最後のページの上部または下部で罫線が一部しか表示されない可能性があります。 詳細については、「[ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)」を参照してください。    
     
 ## <a name="to-add-a-border-to-a-report"></a>レポートに罫線を追加するには    
     

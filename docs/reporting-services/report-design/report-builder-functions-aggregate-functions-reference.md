@@ -1,5 +1,6 @@
 ---
 title: 集計関数リファレンス (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーの式で組み込みの集計関数を使用し、レポートに集計値を含めます。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c767c4e4feced7f5979cf6b22e90cceef311ca5
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081317"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255735"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>レポート ビルダー関数 - 集計関数リファレンス
   レポートに集計値を含めるには、式に組み込み集計関数を使用できます。 数値フィールドの既定の集計関数は SUM です。 式を編集して異なる組み込み集計関数を使用したり、異なるスコープを指定することもできます。 スコープにより、計算に使用するデータセットが識別されます。  
@@ -69,7 +70,7 @@ ms.locfileid: "77081317"
 ##  <a name="restrictions-on-built-in-fields-collections-and-aggregate-functions"></a><a name="Restrictions"></a> 組み込みフィールド、コレクション、および集計関数に関する制限  
  以下の表には、グローバル組み込みコレクションの参照を含む式を追加できるレポートの場所に関する制限をまとめています。  
   
-|レポート内の場所|フィールド|パラメーター|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|変数:|RenderFormat|  
+|レポート内の場所|フィールド|パラメーター|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|変数|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |ページ ヘッダー<br /><br /> ページ フッター|はい|はい|最大 1<br /><br /> 注 1|はい|はい|はい|はい|  
 |Body|はい<br /><br /> 注 2|はい|現在のスコープまたはコンテナー スコープのアイテムのみ<br /><br /> 注 3|いいえ|はい|はい|はい|  
@@ -78,10 +79,10 @@ ms.locfileid: "77081317"
 |クエリ パラメーター|いいえ|はい|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |グループ式|はい|はい|いいえ|いいえ|はい|いいえ|いいえ|  
 |並べ替え式|はい|はい|いいえ|いいえ|はい|はい<br /><br /> 注 5|いいえ|  
-|[フィルター式]|はい|はい|いいえ|いいえ|はい|はい<br /><br /> 注 6|いいえ|  
+|[フィルター式]|はい|はい|いいえ|×|はい|はい<br /><br /> 注 6|いいえ|  
 |コード|いいえ|はい<br /><br /> 注 7|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |レポートの言語|いいえ|はい|いいえ|いいえ|いいえ|いいえ|いいえ|  
-|変数:|はい|はい|いいえ|いいえ|はい|現在のスコープかコンテナー スコープ|いいえ|  
+|変数|はい|はい|いいえ|×|はい|現在のスコープかコンテナー スコープ|いいえ|  
 |集計|はい|はい|ページ ヘッダー/ページ フッター内のみ|レポート アイテムの集計内のみ|はい|いいえ|いいえ|  
 |参照関数|はい|はい|はい|いいえ|はい|いいえ|いいえ|  
   
@@ -108,10 +109,10 @@ ms.locfileid: "77081317"
   
 |Context|RunningValue|RowNumber|First (先頭へ)<br /><br /> Last (最後へ)|Previous|Sum およびその他の事前並べ替え関数|ReportItem の集計|参照関数|集計関数|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Running Value|いいえ|いいえ|いいえ|いいえ|はい|いいえ|はい|いいえ|  
-|First (先頭へ)<br /><br /> Last (最後へ)|いいえ|いいえ|いいえ|いいえ|はい|いいえ|いいえ|いいえ|  
+|Running Value|いいえ|いいえ|いいえ|×|はい|いいえ|はい|いいえ|  
+|First (先頭へ)<br /><br /> Last (最後へ)|いいえ|いいえ|いいえ|×|はい|いいえ|いいえ|いいえ|  
 |Previous|はい|はい|はい|いいえ|はい|いいえ|はい|いいえ|  
-|Sum およびその他の事前並べ替え関数|いいえ|いいえ|いいえ|いいえ|はい|いいえ|はい|いいえ|  
+|Sum およびその他の事前並べ替え関数|いいえ|いいえ|いいえ|×|はい|いいえ|はい|いいえ|  
 |ReportItem の集計|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |参照関数|はい|はい<br /><br /> 注 1|はい<br /><br /> 注 1|はい<br /><br /> 注 1|はい<br /><br /> 注 1|はい<br /><br /> 注 1|いいえ|いいえ|  
 |集計関数|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|  
@@ -173,7 +174,7 @@ ms.locfileid: "77081317"
 ##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> スコープのテスト  
  次の組み込み関数は、レポート アイテムの現在のコンテキストをテストし、それが特定のスコープのメンバーかどうかを確認します。  
   
-|Function|説明|  
+|機能|説明|  
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|アイテムの現在のインスタンスが、指定したスコープ内にあるかどうかを示します。|  
   
@@ -182,7 +183,7 @@ ms.locfileid: "77081317"
 ##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> 再帰レベルの取得  
  次の組み込み関数は、再帰型階層が処理されたときの現在のレベルを取得します。 テキスト ボックスの **Padding** プロパティに対してこの関数の結果を使用して、再帰グループの階層構造のインデント レベルを制御できます。 詳細については、「[複数の再帰型階層グループの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)」を参照してください。  
   
-|Function|説明|  
+|機能|説明|  
 |--------------|-----------------|  
 |[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|再帰型階層の現在の深さのレベルを返します。|  
   

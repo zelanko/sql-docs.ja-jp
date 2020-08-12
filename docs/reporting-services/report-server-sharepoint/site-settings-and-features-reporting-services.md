@@ -1,5 +1,6 @@
 ---
 title: Reporting Services のサイト設定とサイト機能 (SharePoint モード) | Microsoft Docs
+description: Reporting Services SharePoint モードの SharePoint Site Settings ページで管理できるサイト レベル カスタム機能とサイト機能があります。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73d357b6a601265df5e579f1b6acaff6ce8d648d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 558a741feb0e55646b4c45901965a0fb434f665f
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580455"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767373"
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Reporting Services のサイト設定とサイト機能 (SharePoint モード)
 
@@ -47,7 +48,7 @@ Reporting Services の SharePoint モードには、SharePoint の [サイトの
 |**レポートのアクセシビリティ メタデータを有効にします**|レポートの HTML 出力でアクセシビリティ メタデータを有効にします。|  
 |**データの視覚エフェクトをレポートのサイズに正確に合わせます**|Tablix 内でデータの視覚エフェクトが正確に調整されるように調整動作を構成します。 これには、グラフ、ゲージ、およびマップが含まれます。 この動作を無効にすると、データの視覚エフェクトをおおよそのサイズに合わせることになり、空白が残る場合があります。 この設定は、レポート ビューアー Web パーツの表示にのみ適用されます。 サーバー側の表示に対するこの動作を管理する場合は、**rsreportserver.config** ファイルを変更する必要があります。 詳細については、「<br /><br /> [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)<br /><br /> [RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)<br /><br /> [HTML デバイス情報設定](../../reporting-services/html-device-information-settings.md)<br /><br /> このオプションを有効にした場合は、正確なサイズを特定するために、おおよそのサイズに合わせる場合よりも処理に時間がかかることがあるため、パフォーマンスに影響する可能性があります。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [Reporting Services SharePoint サービス アプリケーションの管理](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   

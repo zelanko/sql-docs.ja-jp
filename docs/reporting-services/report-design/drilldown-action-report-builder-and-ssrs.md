@@ -1,5 +1,6 @@
 ---
 title: ドリルダウン アクション (レポート ビルダー) | Microsoft Docs
+description: テキスト ボックスに正符号と負符号のアイコンを付けることで、レポート ビルダーでユーザーがドリルダウン アクションを使用し、アイテムの表示と非表示を対話式で切り替えられるようにします。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -38,12 +39,12 @@ f1_keywords:
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a0c286663b339171a2536340ca19213879e22091
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c917e591bf7de47c7d6084d06cf2064904f8b4a
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080469"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462236"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>ドリルダウン アクション (レポート ビルダーおよび SSRS)
 テキスト ボックスに正符号と負符号のアイコンを組み込むことによって、アイテムの表示/非表示をユーザーが対話的に切り替えられるように設定できます。 これを *ドリルダウン* アクションと呼びます。 テーブルまたはマトリックスの場合、静的な行や列、またはグループに関連付けられている行や列の表示と非表示を切り替えることができます。  

@@ -1,5 +1,6 @@
 ---
 title: セル内のアイテムの変更 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、ページ分割されたレポートのテキスト ボックス、線、画像などの非コンテナー アイテムを新しいレポート アイテムに置換します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 91a54778-8929-41f9-bb4c-826cec636be4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e94201485577a2f70d8e459322a6d0475a65300d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c262d1c3b84f65c80897c28e6fa4de826aeb3a30
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081874"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255653"
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>セル内のアイテムの変更 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、新しいレポート アイテムで置き換えることができるのは、テキスト ボックスや線、画像などの非コンテナー アイテムに限られています。 たとえば、テーブルをテキスト ボックス内にドラッグすると、テキスト ボックスをテーブルで置き換えることができます。  

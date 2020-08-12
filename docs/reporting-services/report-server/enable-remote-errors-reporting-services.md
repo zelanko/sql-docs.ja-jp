@@ -1,5 +1,6 @@
 ---
 title: リモート エラーの有効化 (Reporting Services) | Microsoft Docs
+description: リモート サーバーで発生するエラー状態に関する追加情報を返すように、Reporting Services レポート サーバーのサーバー プロパティを設定する方法について説明します。
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 359d3705acbb3a7be762341008f32a6b473bdb55
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593872"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547974"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>リモート エラーの有効化 (Reporting Services)
   リモート サーバーで発生するエラー状態に関する追加情報が返されるように、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーのサーバー プロパティを設定できます。 エラー メッセージに "このエラーの詳細を表示するには、ローカルのサーバー コンピューターでレポート サーバーを開くか、リモート エラーを有効にしてください。" と表示されている場合は、 **EnableRemoteErrors** プロパティを設定すると、問題のトラブルシューティングに役立つ追加情報にアクセスできます。 詳細については、「[レポート サーバーのシステム プロパティ](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)」を参照してください。  

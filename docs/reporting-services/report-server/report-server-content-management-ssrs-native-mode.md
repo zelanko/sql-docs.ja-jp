@@ -1,5 +1,6 @@
 ---
 title: レポート サーバー コンテンツの管理 (ネイティブ モード) | Microsoft Docs
+description: Reporting Services コンテンツ管理のための Web ポータルと新しい Web ポータル エクスペリエンスについて説明します。 プロパティとセキュリティ設定を利用してアイテムを管理します。
 ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 78fb75acfefce3a1f0c8cb28ea286a028463a56b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 12832f724da36f6359f34fd2fd950ba804619c45
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286386"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547248"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、コンテンツ管理とはレポート サーバー アイテムの管理を指します。 すべてのアイテムは、プロパティおよびセキュリティの設定を通して、個別に管理できます。 アイテムは、レポート サーバー フォルダー名前空間内のさまざまな場所に移動できます。 アイテムを効率的に管理するには、コンテンツ マネージャーで実行されるタスクを理解しておく必要があります。 SQL Server Reporting Services (SSRS) 2016 以降の CTP 3.2 より、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルが利用できます。 この記事では、Web ポータルと、Web ポータルの新しいエクスペリエンスについて説明します。  
@@ -42,7 +43,7 @@ ms.locfileid: "79286386"
   
 -   レポート処理のスケジュールを設定し、要求時に実行できるレポート処理とキャッシュから読み込まれるレポート処理を指定することにより、サーバーに対するレポート処理の要求を分散させます。  
   
--   管理タスクを実行するための権限は、 **システム管理者** と **コンテンツ マネージャー**という、事前定義された 2 つのロールを通じて提供されます。 レポート サーバーのコンテンツを効率よく管理するためには、両方のロールに割り当てられている必要があります。  
+-   管理タスクを実行するための権限は、**システム管理者** と **コンテンツ マネージャー**という、事前定義された 2 つのロールを通じて提供されます。 レポート サーバーのコンテンツを効率よく管理するためには、両方のロールに割り当てられている必要があります。  
   
 レポート サーバーのコンテンツを管理するためのツールには、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] や Web ポータルなどがあります。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、既定値を設定したり、各機能を有効化することができます。 Web ポータルを使って、レポート サーバーのアイテムおよび操作へのユーザー アクセスを許可したり、レポートをはじめとする各種のコンテンツを表示および使用したり、すべての共有アイテムとレポート配信機能を表示および使用したりできます。 Web ポータルは、非推奨のレポート マネージャーの機能の大部分を実行できる、更新されたサイトです。 詳細については、「 [Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)」を参照してください。  
   
@@ -167,13 +168,13 @@ ms.locfileid: "79286386"
   
  個人用レポートの機能は任意で使用できます。 既定では、レポート サーバーのインストール時には、個人用レポートは無効になっています。 この機能を有効にする方法の詳細については、「 [個人用レポートの有効化と無効化](../../reporting-services/report-server/enable-and-disable-my-reports.md)」を参照してください。 詳細については、「 [個人用レポートをセキュリティで保護する](../../reporting-services/security/secure-my-reports.md)」を参照してください。  
   
-## <a name="tasks"></a>処理手順  
+## <a name="tasks"></a>タスク  
  [フォルダーへのファイルのアップロード](../../reporting-services/report-server/upload-files-to-a-folder.md)  
  [フォルダーの作成、削除、または変更 (Web ポータル)](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)  
  [リソースの更新 (Web ポータル)](../../reporting-services/report-server/update-a-resource-report-manager.md)  
  [フォルダーへのファイルのアップロード](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)   
  [ロールと権限 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
  [Reporting Services レポート &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  

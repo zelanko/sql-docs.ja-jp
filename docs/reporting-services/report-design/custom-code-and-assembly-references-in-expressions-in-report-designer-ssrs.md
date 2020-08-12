@@ -1,5 +1,6 @@
 ---
 title: レポート デザイナーでカスタム コードやアセンブリを式から参照する | Microsoft Docs
+description: レポートに埋め込まれたカスタム コードに参照を追加する方法について説明します。 レポート ビルダーでビルドして自分のコンピューターに保存し、レポート サーバーに展開します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab5e36ce6e76cf0017e7306802544f1b2764af73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 603207390785ff684167b3b553b31c3b956842c6
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080572"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880763"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)
   レポート内に埋め込まれたカスタム コードや、ビルドして自分のコンピューターに保存 (またはレポート サーバーに配置) したカスタム アセンブリは、レポート内から参照することができます。 カスタム定数、複雑な関数、または 1 レポート内で何度も使用される関数には、埋め込みコードを使用します。 コードを 1 か所で管理し、そのコードを複数のレポートで共有する場合は、カスタム コード アセンブリを使用します。 カスタム コードには、新しいカスタム定数、変数、関数、またはサブルーチンを含めることができます。 Parameters コレクションなど、組み込みコレクションへの読み取り専用の参照を含めることが可能です。 ただし、レポート データ値セットをカスタム関数に渡すことはできません。特に、カスタム集計はサポートされていません。  

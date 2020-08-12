@@ -1,5 +1,6 @@
 ---
 title: レポート変数コレクションとグループ変数コレクションの参照 (レポート ビルダー) | Microsoft Docs
+description: 複雑な計算をレポートで複数回使用するとき、一意の名前で変数を作成します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 77373c2a1a160c7621f54f3701564eebe1312618
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2ec35aa6399929f90f8e816b8c2d2de50e5cc155
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081453"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688850"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>組み込みコレクション - レポート変数とグループ変数の参照 (レポート ビルダー)
   レポート内の式で複数回使用される複雑な計算があれば、変数を作成した方がよい場合があります。 このような場合は、レポート変数またはグループ変数を作成できます。 変数名は、レポート内で一意である必要があります。  

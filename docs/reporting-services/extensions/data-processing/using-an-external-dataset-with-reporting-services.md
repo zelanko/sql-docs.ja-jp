@@ -1,5 +1,6 @@
 ---
 title: Reporting Services での外部データセットの使用 | Microsoft Docs
+description: 外部アプリケーションによって作成されるカスタム DataSet オブジェクトを統合できるよう、Reporting Services でカスタムのデータ処理拡張機能を作成します。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c3b4ad599864bc2ddb752982ed61bf73684c2f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 30bb74d7da5ef5e68c4e6229cfd307760d03711c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193867"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84530013"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Reporting Services での外部データセットの使用
   非接続の分散データ シナリオを [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] でサポートする場合、その中心となるのが **DataSet** オブジェクトです。 **DataSet** オブジェクトはメモリ上に保持されたデータを表し、データ ソースとは無関係に一貫したリレーショナル プログラミング モデルを提供します。 また、複数の異なるデータ ソースや XML データで使用でき、アプリケーションのデータをローカルに管理することも可能です。 **DataSet** オブジェクトは、関連テーブル、制約、およびテーブル間のリレーションシップを含む、完全なデータセットを表します。 **DataSet** オブジェクトには、データを格納し、表示するための柔軟な機能が備わっています。そのため、データに関するレポートを生成するときは、多くの場合、事前にそのデータが処理され、**DataSet** オブジェクトに変換されます。  

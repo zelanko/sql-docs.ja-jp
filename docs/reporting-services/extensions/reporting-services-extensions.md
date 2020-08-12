@@ -1,5 +1,6 @@
 ---
 title: Reporting Services の拡張機能 | Microsoft Docs
+description: レポート データ、通知メカニズム、セキュリティ システムをカスタマイズすることで、Reporting Services のデータ処理機能を拡張する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d0cf0ab94a17883f9721701b13725e34745a7875
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 957b494e9bb581a8d41e0951cec62724e46c7d0d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193815"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524573"
 ---
 # <a name="reporting-services-extensions"></a>Reporting Services の拡張機能
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のモジュール式アーキテクチャは、拡張性を考慮して設計されています。 マネージド コード API を使用して、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の多くのコンポーネントで使用される拡張機能を容易に開発、インストール、および管理できます。 プライベートまたは共有のアセンブリを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用して作成し、変化するご自分のビジネス要件に応じて新しい [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の機能を追加できます。  

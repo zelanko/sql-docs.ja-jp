@@ -1,5 +1,6 @@
 ---
 title: 複数の図形グラフでの色の統一 (レポート ビルダーおよび SSRS) | Microsoft Docs
+description: 図形グラフの色を選択すると、パレットの各色がデータセットのデータ ポイントにマッピングされるしくみについて説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d9e7b846d17fd6ad86edc45ff7dd4251c098ae1a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0c02b81c5ce7ea5363cf119c3a3618efd78f2aa
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578458"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688969"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>複数の図形グラフでの色の統一 (レポート ビルダーおよび SSRS)
   改ページ調整されたレポートの図形以外のグラフの場合、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] によって、グラフの系列のインデックスに基づいてパレットから新しい色が選択されます。 たとえば、グラフの最初の系列は、パレット内の最初の色にマップされます。 しかし、この動作は図形グラフでは異なります。 図形グラフの場合、パレットの各色は、データセット内のデータ ポイントにマップされます。 たとえば、データ ポイント 1 はパレットの最初の色にマップされ、データ ポイント 2 は 2 番目の色にマップされます。  

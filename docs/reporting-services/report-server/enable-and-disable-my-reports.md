@@ -1,5 +1,6 @@
 ---
 title: 個人用レポートの有効化と無効化 | Microsoft Docs
+description: Reporting Services で個人用レポートを有効または無効にする方法について説明します。 個人用レポートを使用すると、レポート サーバー データベースでユーザー用ストレージが与えられます。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6670d1da918ac1bdc6cb1947b265f9d543259814
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8ffc2b26db7e6211f16496b06f8bbaebf30b9ed7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65577779"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547984"
 ---
 # <a name="enable-and-disable-my-reports"></a>個人用レポートの有効化と無効化
   個人用レポート機能では、ユーザーが所有しているレポートを個人用のフォルダーに保存できるように、レポート サーバー データベースに個人の記憶域を割り当てます。 レポート サーバー管理者として、この機能を有効化または無効化したり、セキュリティ設定を変更してユーザーがこの作業領域で実行できる操作を制御することで機能の動作を変更することができます。  

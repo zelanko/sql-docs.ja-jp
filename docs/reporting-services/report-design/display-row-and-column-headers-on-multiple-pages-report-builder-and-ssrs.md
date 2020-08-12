@@ -1,6 +1,6 @@
 ---
 title: 複数のページへの行および列ヘッダーの表示 (レポート ビルダー) | Microsoft Docs
-description: Tablix データ領域 (テーブル、マトリックス、リスト) が複数のページにわたる場合、Reporting Services のページ分割されたレポートの各ページで行ヘッダーおよび列ヘッダーを繰り返すかどうかを制御できます。
+description: レポート ビルダーのページ分割されたレポートで、複数のページにわたる tablix データ領域の繰り返される行ヘッダーおよび列ヘッダーを、各ページで制御する方法について説明します。
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.date: 12/09/2019
-ms.openlocfilehash: ca1b00d98c71808cd42acb220e7fbf5d1c382555
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a0ece423e7396e2c3aab07cc1882cf1e7f5b09ad
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254591"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778644"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>複数のページへの行および列ヘッダーの表示 (レポート ビルダーおよび SSRS)
 

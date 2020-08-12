@@ -1,5 +1,6 @@
 ---
 title: 共有データセットのキャッシュ | Microsoft Docs
+description: レポート マネージャーでキャッシュされた共有データセットの有効期限をスケジュールする方法について説明します。 共有データセットをキャッシュすると、パフォーマンスが上がります。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7e98e5ffd8970806e2ed92e53c8e82da21387938
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 13b2f1d7af594346a6c9f0ce46a0c412541fcc65
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574765"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547914"
 ---
 # <a name="cache-a-shared-dataset"></a>共有データセットのキャッシュ
   パフォーマンスを向上させる方法の 1 つに、共有データセットのキャッシュ プロパティを構成するという方法があります。 共有データセットをキャッシュに格納した場合、クエリ結果のコピーが指定の時間、保存されます。 共有データセットを使用するレポートを要求した 1 人目のユーザーは、クエリ結果とすべての処理が完了しないとレポートを閲覧できません。 それ以降、同じレポートを要求したユーザーは、キャッシュの保持時間内であれば、クエリと処理が既に完了しているため、すぐにレポートを閲覧できます。 キャッシュ更新計画を指定してクエリを実行し、指定したキャッシュ有効期限まで結果をキャッシュしておくこともできます。  

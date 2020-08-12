@@ -1,5 +1,6 @@
 ---
 title: レポートでの式の使用 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、パラメーター、クエリ、フィルター、テキスト ボックスのプロパティに対して、式と共に値を指定し、計算します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e781df6f5ccbdbb427de7e8b68c9dbc06522be71
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b12b393e2b749c34abdd98c7f6363829800c5d06
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080269"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462216"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>レポートでの式の使用 (レポート ビルダーおよび SSRS)
-[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、パラメーター、クエリ、フィルター、レポート アイテムのプロパティ、グループ化と並べ替え定義、テキスト ボックスのプロパティ、ブックマーク、ドキュメント マップ、ページ ヘッダーとページ フッターの動的なコンテンツ、画像、および動的データ ソース定義の値を指定または計算するために、レポート定義を通して式が使用されています。 このトピックでは、レポートの内容と外観を変更するために式を使用できるさまざまな場所の例を示します。 この一覧がすべてではありません。 式 ( **[fx]** ) ボタンが表示されるダイアログ ボックスや、 **[\<式...>]** が表示されるドロップダウン リストで、あらゆるプロパティに式を設定できます。  
+[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、パラメーター、クエリ、フィルター、レポート アイテムのプロパティ、グループ化と並べ替え定義、テキスト ボックスのプロパティ、ブックマーク、ドキュメント マップ、ページ ヘッダーとページ フッターの動的なコンテンツ、画像、および動的データ ソース定義の値を指定または計算するために、レポート定義を通して式が使用されています。 このトピックでは、レポートの内容と外観を変更するために式を使用できるさまざまな場所の例を示します。 この一覧がすべてではありません。 式 (**fx**) ボタンが表示されるダイアログ ボックスや、 **\<Expression...>** が表示されるドロップダウン リストで、あらゆるプロパティに式を設定できます。  
   
  式には単純式と複合式があります。 *単純式* には、1 つのデータセット フィールド、パラメーター、または組み込みフィールドへの参照が含まれます。 複合式には、複数の組み込み参照、演算子、および関数呼び出しを含めることができます。 たとえば、複合式には売上フィールドに適用される Sum 関数が含まれる場合があります。  
   
@@ -57,7 +58,7 @@ ms.locfileid: "77080269"
 |値に応じてテキスト ボックス内のデータを書式設定します。|Tablix の詳細行のテキスト ボックス内のプレースホルダーの色。 [テキスト ボックスのプロパティ] ダイアログ ボックスの **[フォント]** を使用します。|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |レポート全体で参照される値を 1 回計算します。|レポート変数の値。 [レポートのプロパティ] ダイアログ ボックスの **[変数]** を使用します。|`=Variables!MyCalculation.Value`|  
 |データセットからの複数のフィールドの特定の値が含まれます。|Tablix のグループの式にフィルターを適用します。 [Tablix のプロパティ] ダイアログ ボックスの **[フィルター]** を使用します。|データ型には、 **[ブール]** を選択します。<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|デザイン画面のテキスト ボックスを非表示にします。これは *Show*というブール型パラメーターを使用して切り替えることができます。|テキスト ボックスの Hidden プロパティ。 [テキスト ボックスのプロパティ] ダイアログ ボックスの **[表示]** を使用します。|`=Not Parameters!` *Show\<ブール型パラメーター>* `.Value`|  
+|デザイン画面のテキスト ボックスを非表示にします。これは *Show*というブール型パラメーターを使用して切り替えることができます。|テキスト ボックスの Hidden プロパティ。 [テキスト ボックスのプロパティ] ダイアログ ボックスの **[表示]** を使用します。|`=Not Parameters!` *Show\<boolean parameter>* `.Value`|  
 |ページ ヘッダーまたはページ フッターの動的なコンテンツを指定します。|ページ ヘッダーまたはページ フッターに配置されるテキスト ボックス内のプレースホルダーの値。|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |パラメーターを使用してデータ ソースを動的に指定します。|データ ソースの接続文字列。 [データ ソースのプロパティ] ダイアログ ボックスの **[全般]** を使用します。|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |ユーザーが選択した複数値パラメーターのすべての値を識別します。|テキスト ボックス内のプレースホルダーの値。 [Tablix のプロパティ] ダイアログ ボックスの **[フィルター]** を使用します。|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  

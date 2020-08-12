@@ -1,5 +1,6 @@
 ---
 title: リモート管理用のレポート サーバーの構成 | Microsoft Docs
+description: 構成ツールを使用するか、カスタム コードを記述することで、ローカルまたはリモート構成の Reporting Services レポート サーバー インスタンスを構成する方法について説明します。
 ms.date: 09/14/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 48e8662f3547e9e483d67cc4af83e67d355ba664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4edd8925bffec751d00379c9a9e78cc6d06a62c8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580416"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545594"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>リモート管理用のレポート サーバーの構成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート サーバー インスタンスをローカルでもリモートでも構成できます。 リモートのレポート サーバー インスタンスを構成するには、Reporting Services 構成ツールを使用するか、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI (Windows Management Instrumentation) プロバイダーを利用するカスタム コードを作成します。 Reporting Services 構成ツールには WMI プロバイダーのグラフィカル インターフェイスが用意されているので、コードを記述しなくてもレポート サーバーの構成を行えます。 このツールを起動する際に、接続先のリモート サーバーを指定できます。  
@@ -41,7 +42,7 @@ ms.locfileid: "65580416"
   
  詳細については、MSDN のプラットフォーム SDK ドキュメントの「 [Windows ファイアウォールを使用した接続](https://go.microsoft.com/fwlink/?LinkId=63615) 」を参照してください。  
   
-## <a name="tasks"></a>処理手順  
+## <a name="tasks"></a>タスク  
  リモートのレポート サーバー構成を有効にするタスクは次のとおりです。  
   
 -   Windows ファイアウォールでポートを有効にし、レポート サーバーおよび SQL Server データベース エンジン インスタンスによって使用されるポートで要求が許可されるようにします。  「 [レポート サーバー アクセスに対するファイアウォールの構成](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 」および「 [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」を参照してください。  
@@ -108,7 +109,7 @@ ms.locfileid: "65580416"
   
 9. 自分のアカウントの名前を入力して、 **[OK]** をクリックします。  
   
-10. **[\<ユーザーまたはグループ のアクセス許可>]** で、 **[許可]** 列の **[リモートからの起動]** と **[リモートからのアクティブ化]** をオンにして、 **[OK]** をクリックします。  
+10. **[\<User or Group> のアクセス許可]** で、 **[許可]** 列の **[リモートからの起動]** と **[リモートからのアクティブ化]** をオンにして、 **[OK]** をクリックします。  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>管理者以外のユーザーにレポート サーバーの WMI 名前空間に対する権限を設定するには  
   

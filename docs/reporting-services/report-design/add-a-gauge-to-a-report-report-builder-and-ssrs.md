@@ -1,5 +1,6 @@
 ---
 title: レポートへのゲージの追加 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、ゲージ データ領域を作成し、そのゲージのウィンドウにレポート データセット フィールドをドラッグして、ビジュアル形式でデータを集計する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 45f01040e150a613cf49451371fd4e7b742042c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ebf3648c2292e5d3e83ff753f70b5f430f0ba3bc
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080730"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681551"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>レポートへのゲージの追加 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートの場合、データをビジュアル形式でまとめるにはゲージ データ領域を使用します。 ゲージ データ領域をデザイン画面に追加すると、ゲージのデータ ペインにレポート データセット フィールドをドラッグできるようになります。  

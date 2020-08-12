@@ -1,6 +1,7 @@
 ---
 title: 式で使用される組み込みコレクション (レポート ビルダー) | Microsoft Docs
-ms.date: 03/14/2017
+description: レポート ビルダーで自分のレポートのパラメーター、フィールド、データセットなどのコレクションを参照する、式で使用される組み込みコレクションについて説明します。
+ms.date: 3/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73fcabfe163fce811b208861adbde97e4411300b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5dbc7cf2683f78118087d18b2dd51865bf52f3d
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082200"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880263"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>式で使用される組み込みコレクション (レポート ビルダー)
   レポート内の式には、ReportItems、Parameters、Fields、DataSets、DataSources、Variables などの組み込みコレクションへの参照とレポート名などのグローバル情報の組み込みフィールドへの参照を含めることができます。 **[式]** ダイアログ ボックスにすべてのコレクションが表示されるとは限りません。 DataSets コレクションと DataSources コレクションを使用できるのは、レポート サーバー上でパブリッシュされたレポートの実行時のみです。 ReportItems コレクションは、ページまたはページ ヘッダーのテキスト ボックスなど、レポート領域内のテキスト ボックスのコレクションです。  

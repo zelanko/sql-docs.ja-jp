@@ -1,5 +1,6 @@
 ---
 title: データ処理拡張機能を実装する準備 | Microsoft Docs
+description: Reporting Services でデータ処理拡張機能を実装する方法について説明します。 利用できるインターフェイスと必須と任意の機能について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3ae11d41956f37f1a203235abad71639f942ae7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf7bbaddbe4379c7d56ce7209b6b93eb1b4f6254
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193895"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529165"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>データ処理拡張機能を実装する準備
   ご自分の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] データ処理拡張機能を実装する前に、実装するインターフェイスを定義しておく必要があります。 インターフェイスのセット全体にわたって拡張機能固有の実装を行うことができます。<xref:Microsoft.ReportingServices.DataProcessing.IDataReader> インターフェイスや <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> インターフェイスなど、サブセットだけを実装することもできます。このようなインターフェイスでは、クライアントが **DataReader** オブジェクトとして主に結果セットと対話し、[!INCLUDE[ssRS](../../../includes/ssrs.md)] データ処理拡張機能を結果セットとデータ ソース間のブリッジとして使用します。  

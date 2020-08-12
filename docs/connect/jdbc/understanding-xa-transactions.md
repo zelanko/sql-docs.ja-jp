@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9bcf55fd300c977105229473228955581da7cdd3
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: ff48d23727c8dd48048293dd34127b6acbb3f005
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528736"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294001"
 ---
 # <a name="understanding-xa-transactions"></a>XA トランザクションについて
 
@@ -60,7 +60,7 @@ ms.locfileid: "81528736"
 以下の手順は、分散トランザクションを処理するために XA データ ソースを Microsoft 分散トランザクション コーディネーター (MS DTC) と組み合わせて使用する場合に必要になります。  
 
 > [!NOTE]  
-> JDBC 分散トランザクション コンポーネントは、JDBC Driver のインストール先の xa ディレクトリに含まれます。 これらのコンポーネントには、xa_install.sql および sqljdbc_xa.dll のファイルが含まれます。  
+> JDBC 分散トランザクション コンポーネントは、JDBC Driver のインストール先の xa ディレクトリに含まれます。 これらのコンポーネントには、xa_install.sql および sqljdbc_xa.dll のファイルが含まれます。 さまざまなクライアントで JDBC ドライバーのさまざまなバージョンがある場合、サーバーで最新の sqljdbc_xa.dll を使用することをお勧めします。  
 
 > [!NOTE]  
 > SQL Server 2019 パブリック プレビュー CTP 2.0 以降では、JDBC XA 分散トランザクション コンポーネントが SQL Server エンジンに含まれており、システム ストアド プロシージャを使用して有効または無効にできます。

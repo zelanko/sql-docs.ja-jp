@@ -1,5 +1,6 @@
 ---
 title: データ領域内のデータの並べ替え (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーでレポートが最初に実行されるときの、データ領域のデータの並べ替え順序を変更する方法について説明します。
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17c93f66924d6b948264efd9747f72b47bf765a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fecda4c838a5317bf87b50834152a3bb65f1d41b
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080968"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462206"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>データ領域内のデータの並べ替え (レポート ビルダーおよび SSRS)
   レポートを初めて実行したときのデータ領域内のデータの並べ替え順序を変更するには、データ領域またはグループに対して並べ替え式を設定する必要があります。 既定で、グループの並べ替え式は、グループ式と同じ値に自動的に設定されます。  

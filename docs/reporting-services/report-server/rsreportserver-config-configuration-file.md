@@ -1,6 +1,7 @@
 ---
 title: RsReportServer.config 構成ファイル | Microsoft Docs
-ms.date: 06/12/2017
+description: レポート サーバー Web サービスとバックグラウンド処理で使用される設定を格納する構成ファイルについて説明します。
+ms.date: 05/01/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8aa3ac86bfd7754117af98ab1bc9d3b421ecca6f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: d8076a74005b52da656b1241d215a5aed7f43ac2
+ms.sourcegitcommit: 6eae1fda4962050e8abd7f105a614744009712d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487831"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84722984"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RSReportServer Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** ファイルには、レポート サーバー Web サービスおよびバックグラウンド処理で使用される設定が格納されます。 すべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションは、RSReportServer.config ファイルに格納された構成設定を読み取る単一のプロセス内で実行されます。 ネイティブ モードのレポート サーバーと SharePoint モードのレポート サーバーはどちらも RSReportServer.config を使用しますが、両方のモードで構成ファイル内のまったく同じ設定が使用されるわけではありません。 SharePoint モードの設定の多くは、ファイルではなく SharePoint 構成データベースに格納されるため、SharePoint モード バージョンのファイルは、より小さくなります。 このトピックでは、ネイティブ モードおよび SharePoint モード用にインストールされる既定の構成ファイル、いくつかの重要な設定、および構成ファイルによって制御される動作について説明します。  
@@ -38,16 +39,22 @@ RSReportServer.config は、レポート サーバーのモードに応じて、
 C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
 ```
 
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)]
+
+```  
+C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer
+```  
+
 **[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 ```  
-C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
+C:\Program Files\Microsoft Power BI Report Server\PBIRS\ReportServer
 ```  
   
 ### <a name="sharepoint-mode-report-server"></a>SharePoint モードのレポート サーバー 
 
 > [!NOTE]
-> SharePoint 統合モードは、SQL Server Reporting Services の Power BI レポートの 2017 年 1 月 Technical Preview バージョンでは使用できません。
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
   
 ```  
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
@@ -66,7 +73,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**Dsn**|レポート サーバー データベースをホストするデータベース サーバーへの接続文字列を指定します。 この値は、レポート サーバー データベースの作成時に、暗号化されて構成ファイルに追加されます。 SharePoint では、SharePoint 構成データベースからデータベース接続情報が取得されます。|N、S|  
 |**ConnectionType**|レポート サーバーがレポート サーバー データベースへの接続に使用する資格情報のタイプを指定します。 有効な値は、 **Default** および **Impersonate**です。 **Default** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインまたはサービス アカウントを使用してレポート サーバー データベースに接続するようにレポート サーバーを構成する場合に指定します。 **Impersonate** は、レポート サーバーが Windows アカウントを使用してレポート サーバー データベースに接続する場合に指定します。|N|  
 |**LogonUser、LogonDomain、LogonCred**|レポート サーバーがレポート サーバー データベースに接続するときに使用するドメイン アカウントのドメイン、ユーザー名、およびパスワードを格納します。 **LogonUser**、 **LogonDomain**、および **LogonCred** の値は、レポート サーバー接続がドメイン アカウントを使用するように構成されていると作成されます。 レポート サーバーのデータベース接続の詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。|N|  
-|**InstanceID**|レポート サーバーのインスタンス用の識別子です。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に基づいています。 この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名を指定します。 既定値は **MSRS12** _\<インスタンス名>_ です。 この設定は変更しないでください。 完全な値の例を次に示します: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> SharePoint モードの例を次に示します:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N、S|  
+|**InstanceID**|レポート サーバーのインスタンス用の識別子です。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に基づいています。 この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名を指定します。 既定では **MSRS12** _\<instancename>_ です。 この設定は変更しないでください。 完全な値の例を次に示します: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> SharePoint モードの例を次に示します:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N、S|  
 |**InstallationID**|セットアップによって作成されるレポート サーバーのインストール用の識別子です。 この値は GUID に設定されます。 この設定は変更しないでください。|N|  
 |**SecureConnectionLevel**|Web サービス呼び出しにおけるトランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) の使用レベルを指定します。 この設定は、レポート サーバー Web サービスと Web ポータルの両方で使用されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで、HTTP または HTTPS を使用するように URL を構成すると、この値が設定されます。 SQL Server 2008 R2 で、SecureConnectionLevel はオン/オフのスイッチとして使用されます。 SQL Server 2008 R2 より前のバージョンの場合、有効な値の範囲は 0 から 3 で、0 はセキュリティ レベルが最も低くなります。 詳細については、「[ConfigurationSetting メソッド - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md)」、「[セキュリティで保護された Web サービス メソッドの使用](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)」、および「[ネイティブ モードのレポート サーバーでの TLS 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。|N、S|
 |**DisableSecureFormsAuthenticationCookie**|既定値は False です。<br /><br /> フォーム認証とカスタム認証をセキュリティで保護されているものとしてマークするために使用するクッキーの強制を無効にするかどうかを指定します。 SQL Server 2012 以降、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によって、カスタム認証拡張機能と共に使用されるフォーム認証クッキーが、クライアントへの送信時にセキュリティで保護されたクッキーとして自動的にマークされます。 このプロパティを変更することで、レポート サーバー管理者およびカスタム セキュリティ拡張機能の作成者は、カスタム セキュリティ拡張機能の作成者がクッキーをセキュリティで保護されたクッキーとしてマークするかどうかを指定できた以前の動作に戻すことができます。 ネットワーク スニッフィングや再生攻撃を防止するため、フォーム認証にはセキュリティで保護されたクッキーを使用することをお勧めします。|N|  
@@ -84,6 +91,8 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**MaxScheduleWait**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次の実行時刻 **が要求されたときに、レポート サーバー Windows サービスが** エージェント サービスによるスケジュールの更新を待機する期間を秒単位で指定します。 有効な値の範囲は 1 ～ 60 です。<br /><br /> 既定の構成ファイルでは、MaxScheduleWait は **5**に設定されます。<br /><br /> レポート サーバーが構成ファイルを見つけられないか読み取れない場合、MaxScheduleWait は既定で 1 に設定されます。|N、S|  
 |**DisplayErrorLink**|エラーが発生した場合に [!INCLUDE[msCoName](../../includes/msconame-md.md)] ヘルプとサポート サイトへのリンクを表示するかどうかを示します。 このリンクはエラー メッセージに表示されます。 該当するリンクをクリックすることで、サイト上の最新のエラー メッセージの内容を表示できます。 有効な値は、 **True** (既定) および **False**です。|N、S|  
 |**WebServiceuseFileShareStorage**|キャッシュされたレポート、およびユーザー セッション中にレポート サーバー Web サービスにより作成された一時スナップショットをファイル システムに格納するかどうかを指定します。 有効な値は、 **True** および **False** (既定) です。 値を False に設定すると、一時データは reportservertempdb データベースに格納されます。|N、S|  
+|**ProcessTimeout**|レポート サーバー プロセス モニターで、サービスの停止前に、サービス アクティビティ操作の完了を待機する秒数を指定します。 有効な値は、0 から整数型の最大値までです。 既定値は 150 です。 この設定は既定では無効になっており、コメント構文 (```<!-- and -->```) を削除することで有効にすることができます。|N|  
+|**ProcessTimeoutGcExtension**|レポート サーバー プロセス モニターで、サービスの停止前に、サービス アクティビティ操作の完了を待機する秒数を指定します。 この設定は、.NET ガベージ コレクションが進行中で、ProcessTimeout 値に達した場合にのみ適用されます。 有効な値は、0 から整数型の最大値までです。 既定値は 30 です。 この設定は既定では無効になっており、コメント構文 (```<!-- and -->```) を削除することで有効にすることができます。|N|  
 |**WatsonFlags**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]にレポートするエラー状態をログに記録する際の情報量を指定します。<br /><br /> 0x0430 = 完全なダンプ<br /><br /> 0x0428 = ミニダンプ<br /><br /> 0x0002 = ダンプなし|N、S|  
 |**WatsonDumpOnExceptions**|エラー ログでレポートする例外のリストを指定します。 特定の問題が繰り返し発生するような場合は、この設定を使って分析に必要な情報のダンプを作成し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] に送信することができます。 ダンプを作成するとパフォーマンスに悪影響が生じるため、問題を診断するとき以外は、この設定を変更しないでください。|N、S|  
 |**WatsonDumpExcludeIfContainsExceptions**|エラー ログでレポートしない例外のリストを指定します。 問題を診断するときに、特定の例外についてはダンプが作成されないように設定できます。|N、S|  
@@ -147,28 +156,35 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ##  <a name="service-rsreportserverconfig-file"></a><a name="bkmk_service"></a> Service (RSReportServer.config ファイル)  
  **Service** は、サービス全体に適用されるアプリケーション設定を指定します。  
   
- 次の表の最後の列は、設定がネイティブ モードのレポート サーバーに適用されるか (N)、SharePoint モードのレポート サーバーに適用されるか (S)、両方に適用されるかを示しています。  
+ 次の表の最後の列は、設定がネイティブ モードのレポート サーバー (N)、SharePoint モードのレポート サーバー (S)、または Power BI Report Server (P) のいずれに適用されるかを示しています。  
+
   
 |設定|説明|モード|  
 |-------------|-----------------|----------|  
-|**IsSchedulingService**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーによって作成されたスケジュールおよびサブスクリプションに対応する一連の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] エージェント ジョブをレポート サーバーが維持するかどうかを指定します。 有効な値は、 **True** (既定) および **False**です。<br /><br /> ポリシー ベースの管理の [Reporting Services のセキュリティ構成] ファセットを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の機能を有効または無効にすると、この設定に影響します。 詳細については、「 [レポート サーバー サービスの開始と停止](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)」を参照してください。|N、S|  
-|**IsNotificationService**|レポート サーバーが通知および配信を処理するかどうかを指定します。 有効な値は、 **True** (既定) および **False**です。 この値が **False**の場合、サブスクリプションは配信されません。<br /><br /> ポリシー ベースの管理の [Reporting Services のセキュリティ構成] ファセットを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の機能を有効または無効にすると、この設定に影響します。 詳細については、「 [レポート サーバー サービスの開始と停止](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)」を参照してください。|N、S|  
-|**IsEventService**|サービスがイベント キュー内のイベントを処理するかどうかを指定します。 有効な値は、 **True** (既定) および **False**です。 この値が **False**の場合、レポート サーバーは、スケジュールまたはサブスクリプションの処理を実行しません。<br /><br /> ポリシー ベースの管理の [Reporting Services のセキュリティ構成] ファセットを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の機能を有効または無効にすると、この設定に影響します。 詳細については、「 [レポート サーバー サービスの開始と停止](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)」を参照してください。|N、S|  
+|**IsSchedulingService**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーによって作成されたスケジュールおよびサブスクリプションに対応する一連の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] エージェント ジョブをレポート サーバーが維持するかどうかを指定します。 有効な値は、 **True** (既定) および **False**です。<br /><br /> ポリシー ベースの管理の [Reporting Services のセキュリティ構成] ファセットを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の機能を有効または無効にすると、この設定に影響します。 詳細については、「 [レポート サーバー サービスの開始と停止](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)」を参照してください。|N、S、P|  
+|**IsNotificationService**|レポート サーバーが通知および配信を処理するかどうかを指定します。 有効な値は、 **True** (既定) および **False**です。 この値が **False**の場合、サブスクリプションは配信されません。<br /><br /> ポリシー ベースの管理の [Reporting Services のセキュリティ構成] ファセットを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の機能を有効または無効にすると、この設定に影響します。 詳細については、「 [レポート サーバー サービスの開始と停止](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)」を参照してください。|N、S、P|  
+|**IsEventService**|サービスがイベント キュー内のイベントを処理するかどうかを指定します。 有効な値は、 **True** (既定) および **False**です。 この値が **False**の場合、レポート サーバーは、スケジュールまたはサブスクリプションの処理を実行しません。<br /><br /> ポリシー ベースの管理の [Reporting Services のセキュリティ構成] ファセットを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の機能を有効または無効にすると、この設定に影響します。 詳細については、「 [レポート サーバー サービスの開始と停止](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)」を参照してください。|N、S、P|  
 |**IsAlertingService**|既定値は **True**です。|S|  
-|**PollingInterval**|レポート サーバーによるイベント テーブルへのポーリング間隔を、秒単位で指定します。 有効な値は、0 から整数型の最大値までです。 既定値は 10 です。|N、S|  
-|**WindowsServiceUseFileShareStorage**|キャッシュされたレポート、およびユーザー セッション中にレポート サーバー サービスにより作成された一時スナップショットをファイル システムに格納するかどうかを指定します。 有効な値は、 **True** および **False** (既定) です。|N、S|  
-|**MemorySafetyMargin**|**WorkingSetMaximum** を上限として、メモリ圧迫の度合いを中レベルと低レベルに分けたとき、その境界を定義するパーセンテージを指定します。 既定値は 80 です。 **WorkingSetMaximum** と利用可能なメモリの構成の詳細については、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。|N、S|  
-|**MemoryThreshold**|**WorkingSetMaximum** を上限として、メモリ圧迫の度合いを高レベルと中レベルに分けたとき、その境界を定義するパーセンテージを指定します。 既定値は **90**です。 この値は、 **MemorySafetyMargin**で設定する値より大きくする必要があります。 詳細については、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。|N、S|  
+|**PollingInterval**|レポート サーバーによるイベント テーブルへのポーリング間隔を、秒単位で指定します。 有効な値は、0 から整数型の最大値までです。 既定値は 10 です。|N、S、P|  
+|**IsDataModelRefreshService**|Power BI レポートのスケジュールされたデータ モデル更新イベントをサービスで処理するかどうかを指定します。 有効な値は、 **True** (既定) および **False**です。 この値が **False** の場合、レポート サーバーでは、スケジュールされたデータ モデルの更新の処理が実行されません。|N|  
+|**WindowsServiceUseFileShareStorage**|キャッシュされたレポート、およびユーザー セッション中にレポート サーバー サービスにより作成された一時スナップショットをファイル システムに格納するかどうかを指定します。 有効な値は、 **True** および **False** (既定) です。|N、S、P|  
+|**MemorySafetyMargin**|**WorkingSetMaximum** を上限として、メモリ圧迫の度合いを中レベルと低レベルに分けたとき、その境界を定義するパーセンテージを指定します。 既定値は 80 です。 **WorkingSetMaximum** と利用可能なメモリの構成の詳細については、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。|N、S、P|  
+|**MemoryThreshold**|**WorkingSetMaximum** を上限として、メモリ圧迫の度合いを高レベルと中レベルに分けたとき、その境界を定義するパーセンテージを指定します。 既定値は **90**です。 この値は、 **MemorySafetyMargin**で設定する値より大きくする必要があります。 詳細については、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。|N、S、P|  
+|**WorkingSetMaximum**|メモリのしきい値を指定します。この値を超えた場合、レポート サーバー アプリケーションに対する、新しいメモリ割り当て要求は許可されません。 既定では、コンピューターで使用可能なメモリ量が WorkingSetMaximum として設定されます。 この値は、サービスの開始時に検出されます。 この設定は、手動で追加しない限り、RSReportServer.config ファイルには存在しません。 有効な値は、0 から整数型の最大値までです。 この値はキロバイト単位で指定します。 詳細については、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。|N|  
+|**WorkingSetMinimum**|メモリ消費の下限を指定します。 全体的なメモリ使用量がこの制限を下回っている場合、レポート サーバーではメモリが解放されません。 既定では、値はサービスの起動時に計算され、最初のメモリ割り当て要求は **WorkingSetMaximum** の 60% に対して行われます。 この設定は、手動で追加しない限り、RSReportServer.config ファイルには存在しません。 この値をカスタマイズするには、RSReportServer.config ファイルに **WorkingSetMaximum** 要素を追加する必要があります。 有効な値は、0 から整数型の最大値までです。 この値はキロバイト単位で指定します。 詳細については、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。|N| 
 |**RecycleTime**|アプリケーション ドメインのリサイクル時間を分単位で指定します。 有効な値は、0 から整数型の最大値までです。 既定値は 720 です。|N、S|  
-|**MaxAppDomainUnloadTime**|リサイクル中に、アプリケーション ドメインがアンロードを許可される間隔を指定します。 この間にリサイクルが完了しない場合、アプリケーション ドメインのすべての処理が停止します。 詳細については、「 [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)」を参照してください。<br /><br /> この値は分単位で指定します。 有効な値は、0 から整数型の最大値までです。 既定値は **30**です。|N、S|  
-|**MaxQueueThreads**|レポート サーバー Windows サービスがサブスクリプションと通知を同時に処理するために使用するスレッド数を指定します。 有効な値は、0 から整数型の最大値までです。 既定値は 0 です。 0 を選択した場合は、レポート サーバーによってスレッドの最大数が決定されます。 整数を指定した場合は、指定した値が、一度に作成できるスレッド数の上限に設定されます。 レポート サーバー Windows サービスがプロセスを実行するためにメモリをどのように管理するかについては、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。|N、S|  
-|**UrlRoot**|電子メール サブスクリプションやファイル共有サブスクリプションで配信されたレポート用の URL を構築するために、レポート サーバーの配信拡張機能で使用されます。 パブリッシュされたレポートが置かれているレポート サーバーの有効な URL アドレスを指定する必要があります。 レポート サーバーは、この設定を使って、オフライン アクセスまたは自動アクセスに必要な URL を生成します。 これらの URL は、エクスポートされたレポートで使用されるほか、配信拡張機能が、リンクや電子メールなど、配信メッセージに追加される URL を構築する際に使用されます。 レポート サーバーは、次のようにして、レポート内の URL を決定します。<br /><br /> **[UrlRoot]** が空 (既定値) であり、URL 予約が存在する場合、レポート サーバーは、ListReportServerUrls メソッドによる URL 生成と同様の方法で、自動的に URL を決定します。 ListReportServerUrls メソッドで返される最初の URL が使用されます。 SecureConnectionLevel がゼロ (0) よりも大きい場合は、最初の TLS URL が使用されます。<br /><br /> **[UrlRoot]** が特定の値に設定された場合は、明示的な値が使用されます。<br /><br /> **[UrlRoot]** が空であり、URL 予約が構成されていない場合、レンダリングされたレポートや電子メール リンク内の URL に誤りが生じることになります。|N、S|  
-|**UnattendedExecutionAccount**|レポートを実行するために、レポート サーバーで使用されるユーザー名、パスワード、およびドメインを指定します。 これらの値は暗号化されます。 これらの値を設定するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールまたは **rsconfig** ユーティリティを使用します。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。<br /><br /> SharePoint モードでは、SharePoint サーバーの全体管理を使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの実行アカウントを設定します。 詳細については、「 [Reporting Services SharePoint サービス アプリケーションの管理](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)｣を参照してください|N|  
-|**PolicyLevel**|セキュリティ ポリシーの構成ファイルを指定します。 有効な値は Rssrvrpolicy.config です。詳細については、「 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)」を参照してください。|N、S|  
+|**MaxAppDomainUnloadTime**|リサイクル中に、アプリケーション ドメインがアンロードを許可される間隔を指定します。 この間にリサイクルが完了しない場合、アプリケーション ドメインのすべての処理が停止します。 詳細については、「 [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)」を参照してください。<br /><br /> この値は分単位で指定します。 有効な値は、0 から整数型の最大値までです。 既定値は **30**です。|N、S、P|  
+|**MaxQueueThreads**|レポート サーバー Windows サービスがサブスクリプションと通知を同時に処理するために使用するスレッド数を指定します。 有効な値は、0 から整数型の最大値までです。 既定値は 0 です。 0 を選択した場合は、レポート サーバーによってスレッドの最大数が決定されます。 整数を指定した場合は、指定した値が、一度に作成できるスレッド数の上限に設定されます。 レポート サーバー Windows サービスがプロセスを実行するためにメモリをどのように管理するかについては、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。|N、S、P|  
+|**UrlRoot**|レポート サーバー配信拡張機能によって使用され、メールおよびファイル共有サブスクリプションで配信されるレポートで使用される URL が作成されます。また、Globals!ReportServerUrl を使用して式を解決するときにレポート処理でも使用されます。 パブリッシュされたレポートが置かれているレポート サーバーの有効な URL アドレスを指定する必要があります。 レポート サーバーは、この設定を使って、オフライン アクセスまたは自動アクセスに必要な URL を生成します。 これらの URL は、エクスポートされたレポートで使用されるほか、配信拡張機能が、リンクや電子メールなど、配信メッセージに追加される URL を構築する際に使用されます。 レポート サーバーは、次のようにして、レポート内の URL を決定します。<br /><br /> **[UrlRoot]** が空 (既定値) であり、URL 予約が存在する場合、レポート サーバーは、ListReportServerUrls メソッドによる URL 生成と同様の方法で、自動的に URL を決定します。 ListReportServerUrls メソッドで返される最初の URL が使用されます。 SecureConnectionLevel がゼロ (0) よりも大きい場合は、最初の TLS URL が使用されます。<br /><br /> **[UrlRoot]** が特定の値に設定された場合は、明示的な値が使用されます。<br /><br /> **[UrlRoot]** が空であり、URL 予約が構成されていない場合、レンダリングされたレポートや電子メール リンク内の URL に誤りが生じることになります。|N、S、P|  
+|**UnattendedExecutionAccount**|レポートを実行するために、レポート サーバーで使用されるユーザー名、パスワード、およびドメインを指定します。 これらの値は暗号化されます。 これらの値を設定するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールまたは **rsconfig** ユーティリティを使用します。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。<br /><br /> SharePoint モードでは、SharePoint サーバーの全体管理を使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの実行アカウントを設定します。 詳細については、「 [Reporting Services SharePoint サービス アプリケーションの管理](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)｣を参照してください|N、P|  
+|**PolicyLevel**|セキュリティ ポリシーの構成ファイルを指定します。 有効な値は Rssrvrpolicy.config です。詳細については、「 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)」を参照してください。|N、S、P|  
 |**IsWebServiceEnabled**|レポート サーバー Web サービスが SOAP および URL アクセス要求に応答するかどうかを指定します。 ポリシー ベースの管理の [Reporting Services のセキュリティ構成] ファセットを使用してサービスを有効または無効にすると、この値が設定されます。|N、S|  
 |**IsReportManagerEnabled**|この設定は、SQL Server 2016 Reporting Services 累積更新プログラム 2 の時点で非推奨とされました。 Web ポータルは常に有効になります。|N|  
-|**FileShareStorageLocation**|一時スナップショットの格納先となるファイル システム上のフォルダーを 1 つ指定します。 UNC パスとしてフォルダー パスを指定することはできますが、これはお勧めできません。 既定値は空です。<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N、S|  
-|**IsRdceEnabled**|RDCE (Report Definition Customization Extension) が有効かどうかを指定します。 有効値は **True** および **False**です。|N、S|  
+|**FileShareStorageLocation**|一時スナップショットの格納先となるファイル システム上のフォルダーを 1 つ指定します。 UNC パスとしてフォルダー パスを指定することはできますが、これはお勧めできません。 既定値は空です。<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N、S、P|  
+|**IsRdceEnabled**|RDCE (Report Definition Customization Extension) が有効かどうかを指定します。 有効値は **True** および **False**です。|N、S、P|
+|**IsDataModelRefreshService**|サーバーで Power BI レポートの更新を処理するかどうかを指定します。 有効値は **True** および **False**です。|P|
+|**MaxCatalogConnectionPoolSizePerProcess**|サーバー カタログに接続するときの接続プールの最大サイズを指定します。 既定値は 0 です。 0 を選択すると、レポート サーバーでは、reportingservices.exe プロセスの最大接続数が決定されます。他のプロセスの場合は .[Sql クライアントの既定値](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.maxpoolsize)です。|P|  
+
   
 ##  <a name="ui-rsreportserverconfig-file"></a><a name="bkmk_UI"></a> UI (RSReportServer.config ファイル)  
  **UI** は、Web ポータル アプリケーションに適用される構成設定を指定します。  

@@ -1,5 +1,6 @@
 ---
 title: 背景画像の追加 (レポート ビルダー) | Microsoft Docs
+description: テキスト ボックス、リスト、ページ ヘッダーなど、さまざまなレポート項目に画像を追加するため、レポート定義に画像を埋め込む方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c8b53c0e259a9a0c99ae1bd06cc9cab9cc14355
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 719201b31c4bbfef138799f6712d33e24c50b725
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081341"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689361"
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>背景画像の追加 (レポート ビルダーおよび SSRS)
   四角形、テキスト ボックス、一覧、マトリックス、テーブル、グラフの一部などのレポート アイテム、またはページ ヘッダー、ページ フッター、レポート本文などのレポート セクションに背景画像を追加できます。 背景画像は、レポート デザイン画面で選択された任意のアイテムでプロパティ ペインに **[BackgroundImage]** が表示されるものに対して定義できます。 他の画像と同様に、背景画像は、レポート サーバー上の画像、データセット フィールドからの画像、またはレポート定義に埋め込まれた画像などへの URL である場合があります。 レポートに埋め込まれた画像を使用するには、その画像をデザイン画面に追加する前に、それをレポート定義に追加する必要があります。  

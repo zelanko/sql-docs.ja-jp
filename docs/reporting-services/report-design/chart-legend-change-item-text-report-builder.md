@@ -1,5 +1,6 @@
 ---
 title: 凡例アイテムのテキストの変更 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、凡例アイテムのテキストを変更して個々のデータ ポイントの詳細を表示する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f592abd3f634865a432b31d2aba4764187b0d86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7f13d4663cf0d4e27148e77eebc59068e8c36924
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078702"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681241"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>グラフの凡例 - 項目テキストの変更 (レポート ビルダー)
   グラフの [値] 領域にフィールドを配置すると、このフィールドの名前を含む凡例アイテムが自動的に生成されます。 すべての凡例アイテムは、グラフ上の個々の系列に接続されています。ただし、図形グラフの場合は例外で、凡例は個々の系列ではなく個々のデータ ポイントに接続されています。  
@@ -35,7 +36,7 @@ ms.locfileid: "77078702"
   
  次の表は、 **[凡例のユーザー定義テキスト]** プロパティに使用するグラフに固有のキーワードの例を示します。 キーワードの詳細については、「[グラフでのデータ ポイントの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  
   
-|Keyword|説明|凡例のテキストとして表示される内容の例|  
+|キーワード|説明|凡例のテキストとして表示される内容の例|  
 |-------------|-----------------|---------------------------------------------------|  
 |`#PERCENT{P1}`|合計値のパーセンテージを小数点以下 1 桁に表示します。|85.0%|  
 |`#VALY`|データ フィールドの実際の数値を表示します。|17000|  

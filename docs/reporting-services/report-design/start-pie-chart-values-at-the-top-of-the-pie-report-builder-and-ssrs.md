@@ -1,5 +1,6 @@
 ---
 title: 円グラフの値の開始位置を円の最上部にする (レポート ビルダー) | Microsoft Docs
+description: 最上部から既定の 90 度ではなく、グラフの最上部で円グラフ値を開始する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f23163da5fc4b23a364646be607167e663187fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dfdd7600a08a78baa0b70f2048423f1632ebe2db
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080902"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689438"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>円グラフの値の開始位置を円の最上部にする (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートの円グラフでは、既定でデータセットの最初の値が円の最上部から 90 度の位置から開始されます。 
@@ -22,7 +23,7 @@ ms.locfileid: "77080902"
 
 *円グラフの値は 90 度の位置から開始されます。*
 
-開始位置を円の最上部にすることもできます。 
+ただし、最初の値を最上部で始めることもあります。 
 
 ![report-builder-pie-chart-start-at-top](../../reporting-services/media/report-builder-pie-chart-start-at-top.png)
 

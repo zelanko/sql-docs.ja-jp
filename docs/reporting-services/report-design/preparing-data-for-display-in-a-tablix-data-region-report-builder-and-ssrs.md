@@ -1,5 +1,6 @@
 ---
 title: Tablix データ領域に表示するデータの準備 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーでデータの表示をカスタマイズし、取得されたすべてのデータかデータのサブセットを表示する方法について説明します。
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cf1e776b874a371dceeef8c10306a55efdd1a2ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2075475db3bc195517cd92c2771bd4988088b432
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082403"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681511"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>Tablix データ領域に表示するデータの準備 (レポート ビルダーおよび SSRS)
   Tablix データ領域には、データセットのデータが表示されます。 データセットに取得されたすべてのデータを表示することも、フィルターを作成してデータのサブセットのみを表示することもできます。 NULL 値に入力する条件式を追加したり、データセットのクエリを変更して既存の列の並べ替え順序を定義する列を含めることもできます。  

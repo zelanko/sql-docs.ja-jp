@@ -1,5 +1,6 @@
 ---
 title: 配信拡張機能での RenderedOutputFile クラスの使用 | Microsoft Docs
+description: レンダリングされたレポートまたはレポート リソースを格納する RenderedOutputFile クラスが配信拡張機能で使用されるしくみについて説明します。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b591801-42d5-49fa-b710-bf7e6917accf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 152a60911157b261ed95f7a68364e59470110637
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f743227a2927ad97c5a0bcc76c3634726969caef
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193668"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529108"
 ---
 # <a name="using-the-renderedoutputfile-class-for-a-delivery-extension"></a>配信拡張機能での RenderedOutputFile クラスの使用
   <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> クラスは、データ ストリームおよびデータ ストリームの関連付けられたプロパティに関する情報を表します。 <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> クラスの **Data** プロパティは、表示レポートまたはレポート リソースを **Stream** オブジェクトとして表すために使用します。  

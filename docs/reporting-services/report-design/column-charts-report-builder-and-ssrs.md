@@ -1,5 +1,6 @@
 ---
 title: 縦棒グラフ (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで縦棒グラフを使用し、一定期間の比較およびデータ変更を示す方法について説明します。 系列は、カテゴリ別にグループ化された一連の縦棒で表示されます。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 926c2613000423d4b0bb2acb16f81183ee470966
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8973b80e17b2c6bbedcdd7140fa87148c64d6538
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082319"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881949"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
   縦棒グラフでは、カテゴリ別にグループ化された縦棒のセットとして系列が表示されます。 縦棒グラフは、時間の経過に伴うデータの変化を示す場合やアイテム間の比較を示す場合に便利です。 一般的な縦棒グラフは、横棒グラフおよび範囲縦棒グラフと密接な関係にあります。横棒グラフでは、横棒のセットとして系列が表示され、範囲縦棒グラフでは、始点と終点が異なる縦棒のセットとして系列が表示されます。 詳細については、「 [横棒グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md) 」と「 [範囲グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)」を参照してください。  
@@ -52,7 +53,7 @@ ms.locfileid: "77082319"
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [横棒グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
  [範囲グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
- [チュートリアル: レポートへの横棒グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [チュートリアル:レポートへの横棒グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
  [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

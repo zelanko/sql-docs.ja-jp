@@ -1,5 +1,6 @@
 ---
 title: 配信拡張機能での Notification クラスの使用 | Microsoft Docs
+description: 配信拡張機能で Notification クラスが使用されるしくみについて説明します。 このクラスによって、レポートの配信時に使用されるサブスクリプション情報が格納されます。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad2792a390597223a98b8606af4cb361d17b9e8d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 20f65f0aeb5e7ab9a74da2b1f3baae574c45f3f2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193673"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529478"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>配信拡張機能での Notification クラスの使用
   <xref:Microsoft.ReportingServices.Interfaces.Notification> クラスは <xref:Microsoft.ReportingServices.Interfaces> 名前空間にあり、配信拡張機能がレポートの配信に使用するサブスクリプション情報を表します。 <xref:Microsoft.ReportingServices.Interfaces.Notification> クラスには、配信するレポートの表示、通知の状態の決定、およびユーザー データの設定に使用できる多数のプロパティが用意されています。  

@@ -1,5 +1,6 @@
 ---
 title: 円グラフの外側へのデータ ポイント ラベルの表示 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーでは、場合によっては、円グラフの外にラベルを表示すると、場所が増え、データ ラベルを長くすることができます。それについて説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 959b7574-cf43-470b-b592-4944d8a9948f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd5607aa5e3d6f93692e251da7c3490d8f62cb86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e09f4cd21015c0e1933154685e954fadd017943c
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080501"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462246"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>円グラフの外側へのデータ ポイント ラベルの表示 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、円グラフのラベル付けは、データのいくつかのスライスのみにラベルが表示されるように最適化されています。 円グラフに含まれるスライスが多すぎると、ラベルが重なる可能性があります。 1 つの解決策として、円グラフの外側にラベルを表示する方法があります。これにより、長いデータ ラベル用に領域を確保できます。 ラベルがまだ重なっていることが判明した場合は、3D を有効にすることでラベル用の領域をさらに確保することができます。 これにより、円グラフの直径が小さくなり、グラフの周囲でさらに領域が確保されます。  

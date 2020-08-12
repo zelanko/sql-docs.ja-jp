@@ -1,5 +1,6 @@
 ---
 title: グラフへのスケール区切りの追加 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーでスケール区切りを使用し、同じグラフ領域内で 2 つの異なる範囲を表示する方法について説明します。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 84d66436-ed62-4967-bbbd-b457593ee787
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 131381ac7e807dbb17493d56f5ee5bb1a70af8b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5bf77e72c4b8ac84d57668ebcf960ed8b926ba6e
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081550"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462336"
 ---
 # <a name="add-scale-breaks-to-a-chart-report-builder-and-ssrs"></a>グラフへのスケール区切りの追加 (レポート ビルダーおよび SSRS)
 

@@ -1,5 +1,6 @@
 ---
 title: Reporting Services セキュリティ ポリシー ファイルの使用 | Microsoft Docs
+description: コード アセンブリのセキュリティ ポリシー情報を格納する目的で Reporting Services で使用される構成ファイルについて説明します。 それらの変更方法について説明します。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae971989342ca6d3fda121b0559bebb681f07fb0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1390e53ddbc864f634b581bd2a1b42902c6b6bb9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193315"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529328"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Reporting Services セキュリティ ポリシー ファイルの使用
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、セットアップ時にファイル システムにコピーされる 3 つの構成ファイルにコンポーネントのセキュリティ ポリシーを格納します。 これらの構成ファイルには、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のコード アセンブリについて、内部用セキュリティ ポリシーとユーザー定義セキュリティ ポリシーの組み合わせを含めることができます。 3 つの構成ファイルは、セキュリティ保護可能な [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の 3 つのコンポーネント (レポート サーバーと Windows サービス、レポート マネージャー Web アプリケーション、レポート デザイナー プレビュー ウィンドウ) に対応しています。  

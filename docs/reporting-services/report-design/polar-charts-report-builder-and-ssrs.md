@@ -1,5 +1,6 @@
 ---
 title: 極座標グラフ (レポート ビルダー) | Microsoft Docs
+description: 円の中心からのポイントの長さで表される円や値でカテゴリ別にポイントをグループ化し、極座標グラフを使用することについて説明します。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e07905447f53e27272710594fd140076fb813665
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2f0ab5d9368f96cfd54a54a3859891dc4efbe821
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082389"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689456"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>極座標グラフ (レポート ビルダーおよび SSRS)
   極座標グラフでは、カテゴリ別にグループ化されたポイントのセットとして、360°の円上に系列が表示されます。 値は、円の中心からポイントまでの距離で表されます。 ポイントが中心から遠いほど、その値は大きくなります。 カテゴリのラベルは、グラフの周囲に表示されます。 極座標グラフにデータを追加する方法の詳細については、「 [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)」を参照してください。  
@@ -36,7 +37,7 @@ ms.locfileid: "77082389"
 ## <a name="example"></a>例  
  次の例では、レーダー チャートの使用方法を示します。 次の表は、チャートのサンプル データを示しています。  
   
-|Name|売上|  
+|名前|売上|  
 |----------|-----------|  
 |低木|61|  
 |種|78|  

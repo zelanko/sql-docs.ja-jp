@@ -1,5 +1,6 @@
 ---
 title: Reporting Services の構成ファイル (RSreportserver.config) の変更 | Microsoft Docs
+description: Reporting Services で構成ファイルを変更し、詳細設定を追加したり、構成したりする方法について説明します。 一部の設定は内部でのみ使用されます。 慎重に進めてください。
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 315f1129f6c83f36de02efebf4eb4ec58cb4c48f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581128"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547950"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、一連の構成ファイルにアプリケーション設定を格納します。 構成ファイルはセットアップ時に作成され、インストールしたレポート サーバー インスタンスごとに存在します。 各ファイル内の値は、インストール中に設定されるか、ツールやアプリケーションを使用してサーバーの動作を構成したときに設定されます。 場合によっては、高度な設定を追加したり構成したりするために、ファイルを直接変更する必要があります。 構成設定は、XML 要素または XML 属性のいずれかとして指定されます。 XML ファイルおよび構成ファイルを理解している場合は、テキスト エディターまたはコード エディターを使用して、ユーザーが定義可能な設定を変更できます。  

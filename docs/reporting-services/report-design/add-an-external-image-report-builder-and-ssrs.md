@@ -1,5 +1,6 @@
 ---
 title: 外部の画像の追加 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、適切な検証とアクセス許可を利用し、外部ソースからレポートに画像を追加する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 37c8cd4ae726484c36d1ec31b94312d9ff36dfa4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 707ce1a26dd2ec64f2f7335bd0a4528339d36e84
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080644"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681371"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>外部の画像の追加 (レポート ビルダーおよび SSRS)
   外部の画像は、ネイティブ モードまたは SharePoint 統合モードのレポート サーバー上にあるものも、他の Web サイトにあるものもあります。 外部の画像をレポートに含める場合、その画像が存在すること、およびその画像にアクセスする権限をレポートのリーダーが持っていることを確認する必要があります。 詳細については、「[画像 &#40;レポート ビルダーおよび SSRS& #41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)」を参照してください。  
@@ -35,7 +36,7 @@ ms.locfileid: "77080644"
   
      ネイティブ モードのレポート サーバーにある画像を指定する場合は、 **[次の画像を使用]** ボックスに画像の相対パスを入力します (例: ../images/image1.jpg)。  
   
-     SharePoint 統合モードのレポート サーバーまたはその他の Web サイトにある画像を指定する場合は、 **[次の画像を使用]** ボックスに画像への完全な URL を入力します (例: https://\<SharePoint サーバー名>/\<サイト>/Documents/images/image1.jpg)。  
+     SharePoint 統合モードのレポート サーバーまたはその他の Web サイトにある画像を指定する場合は、 **[次の画像を使用]** ボックスに画像への完全な URL を入力します (例: https://\<SharePointservername>/\<site>/Documents/images/image1.jpg)。  
   
      詳細については、「[外部アイテムへのパスの指定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。  
   

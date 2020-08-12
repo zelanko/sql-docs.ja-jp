@@ -1,5 +1,6 @@
 ---
 title: 表示拡張機能の実装 | Microsoft Docs
+description: レンダリング拡張機能を実装することで、Reporting Services のレポート データとレイアウト情報をデバイス固有の形式に変換する方法について説明します。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a72144df0f560feb6da0b954cbd7053832d46c87
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d61af9bd987256a2ad293f7f9566fd1a2bcd041e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193707"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529088"
 ---
 # <a name="implementing-a-rendering-extension"></a>表示拡張機能の実装
-  表示拡張機能は、レポート サーバーのコンポーネントまたはモジュールで、レポートのデータとレイアウト情報をデバイス固有の形式に変換します。 SQL Server Reporting Services には 6 種類の表示拡張機能 (HTML、Excel、Word、CSV (Text)、XML、Image、PDF) があります。 追加の表示拡張機能を作成して、他の形式でレポートを生成できます。  
+  表示拡張機能は、レポート サーバーのコンポーネントまたはモジュールで、レポートのデータとレイアウト情報をデバイス固有の形式に変換します。 SQL Server Reporting Services には次の 6 つの表示拡張機能があります。HTML、Excel、Word、CSV またはテキスト、XML、画像および PDF の 7 つの表示拡張機能があります。 追加の表示拡張機能を作成して、他の形式でレポートを生成できます。  
   
 > [!NOTE]  
 >  どの表示拡張機能を利用できるかは、RSReportServer.config ファイルのインストール済み拡張機能の一覧で確認できます。  

@@ -1,5 +1,6 @@
 ---
 title: レポート サーバー データベースを管理する (ネイティブ モード) | Microsoft Docs
+description: レポート サーバー データセットのバックアップと復元や暗号化キーの管理など、Reporting Services 配置の管理について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 63456df52690b25605bce4f279283f608644f553
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e288b9b92f4fed7f103b3e4f37ed696b76a1f32f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079115"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548094"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>レポート サーバー データベースを管理する (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の環境では、2 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベースが内部記憶域として使用されます。 既定では、データベース名がそれぞれ ReportServer と ReportServerTempdb になります。 ReportServerTempdb は、レポート サーバーのプライマリ データベースと共に作成され、一時データ、セッション情報、およびキャッシュされたレポートを格納する目的に使用されます。  

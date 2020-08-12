@@ -1,5 +1,6 @@
 ---
 title: マップまたはマップ レイヤーの追加、変更、または削除 (レポート ビルダー) | Microsoft Docs
+description: 手動か、レポート ビルダーでマップ レイヤー ウィザードを使用することで、マップ オプションを追加、削除、変更する方法について説明します。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +26,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e2330442d2e50b5f62328d831e582a03e1ac202
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 347a55c139a35c7edf0a5fc37e21a2de0736c401
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488249"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681461"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>マップまたはマップ レイヤーの追加、変更、または削除 (レポート ビルダーおよび SSRS)
   マップは、レイヤーのコレクションです。 マップを [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートに追加する場合は、先にレイヤーを定義します。 追加のレイヤーを作成するには、マップ レイヤー ウィザードを実行します。  

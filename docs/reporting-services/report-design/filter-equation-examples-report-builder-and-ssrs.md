@@ -1,5 +1,6 @@
 ---
 title: フィルター式の例 (レポート ビルダー) | Microsoft Docs
+description: レポート フィルターの作成方法について説明します。 以下の頻繁に使用されるフィルターの例を考察し、独自のフィルターを作成してください。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23a76863222fdd58d769031020ac888966596146
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 074a7d7b300d9ae55776199479b229407b2ba3a1
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080135"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689739"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>フィルター式の例 (レポート ビルダーおよび SSRS)
   フィルターを作成するには、1 つ以上のフィルター式を指定する必要があります。 フィルター式には、式、データ型、演算子、および値が含まれます。 ここでは、一般的に使用されるフィルターの例を示します。  

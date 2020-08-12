@@ -1,5 +1,6 @@
 ---
 title: レポート パラメーターの概念 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、関連するレポートをリンクさせたり、レポートの外観を制御したり、レポート データをフィルター処理したり、レポートの範囲を絞り込んだりするために、パラメーターを追加する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e5e7cafdce773969f9e6914a47534f88eb238a4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e6e6419e43991ff2dfe28ea0e3f6b2033693b9c3
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081070"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681601"
 ---
 # <a name="report-parameters-concepts-report-builder-and-ssrs"></a>レポート パラメーターの概念 (レポート ビルダーおよび SSRS)
   関連するレポートをリンクさせたり、レポートの外観を制御したり、レポート データをフィルター選択したり、レポートの範囲を特定のユーザーまたは場所に絞り込んだりする目的で、レポートにはパラメーターを追加することができます。  
@@ -43,6 +44,6 @@ ms.locfileid: "77081070"
   
 ## <a name="see-also"></a>参照  
  [Reporting Services の概念 (SSRS)](../reporting-services-concepts-ssrs.md) [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [チュートリアル:レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
   

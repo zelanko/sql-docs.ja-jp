@@ -1,5 +1,6 @@
 ---
 title: 空のポイントのグラフへの追加 (レポート ビルダー) | Microsoft Docs
+description: グラフ上で空のポイントを指定します。 レポート ビルダーで、これらのポイントは、値が含まれている前のデータ ポイントと次のデータ ポイントの平均値を求めることによって計算されます。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65b97d3f50eec05574a9f7463678ca7da09e2492
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: afdcb8a6d464484fb6f294cb4d7943659e32e7f1
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081649"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255665"
 ---
 # <a name="add-empty-points-to-a-chart-report-builder-and-ssrs"></a>空のポイントのグラフへの追加 (レポート ビルダーおよび SSRS)
 NULL 値は、系列内のデータ ポイント間の空白 (すきま) としてグラフに表示されます。 改ページ調整された [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートの空のポイントとは、NULL 値によって作成された空白に挿入できるデータ ポイントのことです。  

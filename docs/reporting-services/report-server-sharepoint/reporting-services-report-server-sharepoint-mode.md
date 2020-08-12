@@ -1,5 +1,6 @@
 ---
 title: Reporting Services レポート サーバー (SharePoint モード) | Microsoft Docs
+description: SharePoint モードの Reporting Services レポート サーバーは、Reporting Services コンテンツの種類のコラボレーションおよび管理機能を使用する目的で、SharePoint で実行できます。
 ms.date: 09/26/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: af25232f5a1603f25814309270813188c05a89fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 66cd108b1f96e003645510e3a17a3627a45495e4
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68262353"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83765009"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services レポート サーバー (SharePoint モード)
 
@@ -64,9 +65,9 @@ ms.locfileid: "68262353"
 
  SQL Server 2008 R2 リリースでは、SharePoint 2010 用 Microsoft SQL Server 2008 R2 以降の Reporting Services アドインがインストールされている SharePoint 2010 サーバーからレポートを表示するための新しい *ローカル モード* が導入されました。  
   
--   *ローカル モード*: ローカル モードでは、Reporting Services レポート サーバーと統合することなく、SharePoint ドキュメント ライブラリからレポートをローカルに表示できます。 SharePoint 製品では Reporting Services アドインは必須ですが、Reporting Services レポート サーバーは必須ではありません。 アドインは、いくつかの異なる方法でインストールできます (SharePoint 2010 製品準備ツールなど)。 ローカル モードの詳細については、「[レポート ビューアーでのローカル モードと接続モードのレポート](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)」および「[SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
+-   "*ローカル モード*":ローカル モードでは、Reporting Services レポート サーバーと統合することなく、SharePoint ドキュメント ライブラリからレポートをローカルに表示できます。 SharePoint 製品では Reporting Services アドインは必須ですが、Reporting Services レポート サーバーは必須ではありません。 アドインは、いくつかの異なる方法でインストールできます (SharePoint 2010 製品準備ツールなど)。 ローカル モードの詳細については、「[レポート ビューアーでのローカル モードと接続モードのレポート](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)」および「[SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
   
--   *接続モード*: 接続モードは、SharePoint サーバーの全体管理を使用して Reporting Services レポート サーバーを SharePoint ファームに統合することによってサポートされます。 レポート サーバーとの統合により、完全なエンド ツー エンドのレポート処理が実現され、SharePoint 2010 のコラボレーション機能やレポート サーバーのサーバー ベースの機能 (サブスクリプション、スナップショット、サーバー ベースの処理など) が提供されます。  
+-   "*接続モード*":接続モードは、SharePoint サーバーの全体管理を使用して Reporting Services レポート サーバーを SharePoint ファームに統合することによってサポートされます。 レポート サーバーとの統合により、完全なエンド ツー エンドのレポート処理が実現され、SharePoint 2010 のコラボレーション機能やレポート サーバーのサーバー ベースの機能 (サブスクリプション、スナップショット、サーバー ベースの処理など) が提供されます。  
   
 ## <a name="unsupported-sharepoint-features"></a>サポートされていない SharePoint 機能
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: arob98
 ms.author: angrobe
-ms.openlocfilehash: 971f89f9748ab8f31c234f872e817b0b474dcbe0
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 73a57d6ea391d0b1d98c2f86b4c983771d4e2208
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528476"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808117"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>手順 3:pyodbc を使用した SQL への接続を概念実証する
 
@@ -62,7 +62,7 @@ while row:
   
 ## <a name="insert-a-row"></a>行を挿入する  
   
-この例では、[INSERT](../../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行し、[SQL インジェクション](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)からアプリケーションを保護するパラメーターを渡す方法を示します。    
+この例からは、[INSERT](../../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行し、パラメーターを渡す方法がわかります。 パラメーターにより、アプリケーションは [SQL インジェクション](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)から保護されます。    
   
   
 ```python

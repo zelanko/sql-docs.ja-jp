@@ -1,5 +1,6 @@
 ---
 title: レポートのキャッシュ | Microsoft Docs
+description: キャッシュに残っていれば処理済みレポートの表示速度を上げる、レポート マネージャーのレポートのキャッシュについて説明します。
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3e94ed2c05d3c23585abde1f2452f491be089e84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 43a03b47b1d18569f56dae2652144af8c7e11adf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082560"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548064"
 ---
 # <a name="caching-reports-ssrs"></a>複数のレポートのキャッシュ (SSRS)
   レポート サーバーでは、処理済みレポートのコピーをキャッシュして、ユーザーがレポートを開いたときにそのコピーを返すことができます。 レポートがキャッシュされたコピーかどうかをユーザーが判断できる唯一の方法は、レポートが実行された日時を確認することです。 その日時が現在の日時ではなく、レポートがスナップショットでない場合、そのレポートはキャッシュから取得されたレポートです。  
@@ -67,7 +68,7 @@ ms.locfileid: "77082560"
   
  何らかの理由で、キャッシュされたインスタンスでレポートを実行できない場合 (たとえば、ユーザーが指定したパラメーター値が、キャッシュされたレポートの生成に使用するパラメーター値と異なる場合)、レポート サーバーでレポートが再実行されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [処理オプションの設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Reporting Services の概念 &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   

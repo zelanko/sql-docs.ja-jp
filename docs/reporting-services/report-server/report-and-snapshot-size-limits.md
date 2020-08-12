@@ -1,5 +1,6 @@
 ---
 title: レポートとスナップショットのサイズ制限 | Microsoft Docs
+description: レポートがレポート サーバーでパブリッシュされ、実行時に、レンダリングされ、ファイル システムに保存されるときのレポート サイズ制限について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 05ed8b22882264aa16efc8c5b7736bcc517e44f9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a4fa74909490cf7596faa1e38c83a83b6329bd28
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581449"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547994"
 ---
 # <a name="report-and-snapshot-size-limits"></a>レポートとスナップショットのサイズ制限
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配置を管理する管理者は、このトピックの情報を参照することにより、レポート サーバーへのパブリッシュ時、レンダリング時 (実行時)、ファイル システムへの保存時のレポート サイズ制限を理解できます。 このトピックでは、レポート サーバー データベースのサイズを測定する方法の具体的な指針とサーバーのパフォーマンスのスナップショット サイズの効果についても説明します。  

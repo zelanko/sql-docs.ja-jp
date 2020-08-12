@@ -1,5 +1,6 @@
 ---
 title: レポート デザイナーでのレポート パーツ | Microsoft Docs
+description: レポート ビルダーで、自分と他のユーザーが他のレポートで再利用できるよう、改ページされたレポートのアイテムを個別に、レポート サーバーまたは SharePoint サイトにパブリッシュします。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ec984cbb220bffecfae5a929ddad103780450285
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bba797577c2de63dc50e36e76f2c2b77aaedec66
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081062"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681351"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>レポート デザイナーでのレポート パーツ (SSRS)
 

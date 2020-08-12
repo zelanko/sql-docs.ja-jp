@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3e437e722665cb156fbd4c1bb474e1d9f095f95
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531983"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423161"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのオフライン展開を実行する
 
@@ -54,6 +54,10 @@ ms.locfileid: "73531983"
    ```PowerShell
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
+ 
+> [!WARNING]
+> プライベート リポジトリにプッシュ後、ビッグ データ クラスター イメージは変更しないでください。 イメージを変更して展開すると、サポートされていないビック データ クラスターがセットアップされます。
+
 
 ### <a name="big-data-cluster-container-images"></a><a id="images"></a> ビッグ データ クラスター コンテナー イメージ
 

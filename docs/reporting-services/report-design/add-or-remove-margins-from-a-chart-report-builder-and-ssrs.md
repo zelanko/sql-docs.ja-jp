@@ -1,5 +1,6 @@
 ---
 title: グラフの余白の追加または削除 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、列または散布図の余白を追加または削除します。 ページ分割されたレポートの読みやすさと外観を向上させます。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1a5b9d749cbeab7164bd1ca06d0fc8192561931c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 90b6b1e10ded769785b038b03d3f9d4886c4ba96
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081538"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882024"
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>グラフの余白の追加または削除 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート内の縦棒グラフおよび散布図では、横余白が X 軸の両端に自動的に追加されます。 横棒グラフでは、横余白が Y 軸の両端に自動的に追加されます。 その他すべての種類のグラフでは、横余白は追加されません。 余白のサイズは変更できません。  

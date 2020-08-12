@@ -1,5 +1,6 @@
 ---
 title: レポート履歴の作成 (Reporting Services の SharePoint 統合モード) | Microsoft Docs
+description: Reporting Services の SharePoint 統合モードで、時間の経過と共に作成されるレポート スナップショットの集まりであるレポート履歴を作成する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e57ec746-05ae-4ff6-8e39-6cde87310daa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4034d7a2892ede43f364d0ebdd105314b6107ff2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1f27689e6f1e573c85c869fda36881a53401084d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580356"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547444"
 ---
 # <a name="create-report-history-reporting-services-in-sharepoint-integrated-mode"></a>レポート履歴の作成 (Reporting Services の SharePoint 統合モード)
   レポート履歴とは、時間の経過と共に作成されるレポート スナップショットの集まりです。 各スナップショットは、レポート作成時の状態でのレポートのコピーであり、 スナップショット作成時点のレポートのレイアウトとデータが含まれています。 レンダリング情報はスナップショットに保存されません。 レポート履歴のスナップショットを開くと、スナップショットはレポート ビューアー Web パーツに HTML 形式で表示されます。 表示されたスナップショットは、別のアプリケーション形式にエクスポートできます。  

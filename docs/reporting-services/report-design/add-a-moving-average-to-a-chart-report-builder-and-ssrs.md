@@ -1,5 +1,6 @@
 ---
 title: グラフへの移動平均の追加 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、傾向を特定する目的で、移動平均式の価格インジケーターをグラフに表示する方法について説明します。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2cffa994cadf61b9d1d78c2cbe138c736e34b626
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: b2c72f3720b397e20df7daa794e08ef7ca241abf
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488324"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255701"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>グラフへの移動平均の追加 (レポート ビルダーおよび SSRS)
 移動平均は、定義された期間にわたって計算される、系列内のデータの平均です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 改ページされたレポートでは、移動平均をグラフに表示すると、重要な傾向を特定することができます。  
@@ -43,7 +44,7 @@ ms.locfileid: "81488324"
     >  期間は、移動平均の計算に使用する日数です。 x 軸で日付/時刻値が指定されていない場合、期間は、移動平均の計算に使用されるデータ ポイント数で表されます。 データ ポイントが 1 つしか存在しない場合は、移動平均式による計算は行われません。 移動平均の計算は、2 番目のポイントから開始されます。 **[最初のポイントから開始する]** チェック ボックスをオンにすると、移動平均の計算は最初のポイントから開始されます。 データ ポイントが 1 つしか存在しない場合、計算された移動平均のポイントは、元の系列の最初のポイントと同じになります。  
   
 ## <a name="see-also"></a>参照  
-* [チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー)](../tutorial-add-a-column-chart-to-your-report-report-builder.md)
+* [チュートリアル:レポートへの縦棒グラフの追加 (レポート ビルダー)](../tutorial-add-a-column-chart-to-your-report-report-builder.md)
 *  [グラフの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 *  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 *  [空のポイントのグラフへの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)  

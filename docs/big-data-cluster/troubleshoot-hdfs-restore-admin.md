@@ -1,5 +1,5 @@
 ---
-title: HDFS 管理者権限を復元する
+title: HDFS のアクセス許可の復元
 titleSuffix: SQL Server Big Data Cluster
 description: HDFS 管理者権限を復元します。
 author: MikeRayMSFT
@@ -9,14 +9,14 @@ ms.date: 04/21/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6fb8c7c53c6edf4a02649f256ac6aa6d7080fdf5
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: c6d09921074ca2f2e386535baff5060620a7a3c8
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82108696"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669383"
 ---
-# <a name="restore-hdfs-admin-rights"></a>HDFS 管理者権限を復元する
+# <a name="restore-hdfs-permissions"></a>HDFS のアクセス許可の復元
 
 HDFS のアクセス制御リスト (ACL) の変更が HDFS 内の `/system` および `/tmp` フォルダーに影響する可能性があります。 ACL の変更の原因として、ユーザーがフォルダーの ACL を手動で操作することが考えられます。 /system フォルダーと /tmp/logs フォルダー内のアクセス許可を直接変更することはサポートされていません。
 
@@ -71,7 +71,7 @@ org.apache.hadoop.security.AccessControlException: Permission denied: user=user1
 
 BDC ユーザーが HDFS ルート フォルダーに再帰的に追加されたことが原因である可能性があります。 これは既定のアクセス許可に影響を与えた可能性があります。
 
-## <a name="resolution"></a>解決方法
+## <a name="resolution"></a>解像度
 
 次のスクリプトを使用してアクセス許可を復元します。管理者権限で `kinit` を使用します。
 

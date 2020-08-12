@@ -1,5 +1,6 @@
 ---
 title: セキュリティ拡張機能の概要 | Microsoft Docs
+description: Reporting Services のセキュリティ拡張機能について説明します。 カスタムの認証と認可が適切となる状況について確認します。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5947d26c93dc9e79fc19c37e672f3342eb1d33d0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72eaf9b5c47d19da6b7f1893e473031cd6ebc615
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082270"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529198"
 ---
 # <a name="security-extensions-overview---reporting-services-ssrs"></a>セキュリティ拡張機能の概要 - Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] セキュリティ拡張機能を使用すると、ユーザーまたはグループの認証と承認を行えます。つまり、複数のユーザーがレポート サーバーにログオンし、それぞれ異なるタスクや操作を実行できます。 既定では、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は Windows ベースの認証拡張機能を使用します。この拡張機能は Windows アカウント プロトコルを使用して、システムのアカウントを持っていると主張するユーザーの ID を検証します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、ロールベースのセキュリティ システムを使用してユーザーを承認します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のロールベースのセキュリティ モデルは、他の技術に見られるロールベースのセキュリティ モデルと類似しています。  

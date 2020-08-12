@@ -1,5 +1,6 @@
 ---
 title: アイテムの移動または削除 (レポート マネージャー) | Microsoft Docs
+description: レポート マネージャーのレポート サーバーによって、フォルダーにレポートと関連アイテムが格納されます。 アイテムを移動したり、削除したりできます。 レポート サーバーでは、移動したアイテムへの参照が維持されます。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1be40ed580de1163c0e85e37e7b8ffc1bccc342
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b3b615a45df3d9e45338514423700a706980eee0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581089"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535500"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>アイテムの移動または削除 (レポート マネージャー)
   レポート サーバーにパブリッシュしたレポートやレポート関連アイテムは、フォルダーに格納されます。 アイテムは異なるフォルダーに移動でき、それらのアイテムへの参照はレポート サーバーによって自動的に保持されます。 アイテムを削除する前に、そのアイテムに依存しているアイテムが他に存在しないか確認してください。  

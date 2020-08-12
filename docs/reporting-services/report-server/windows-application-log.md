@@ -1,5 +1,6 @@
 ---
 title: Windows アプリケーション ログ | Microsoft Docs
+description: ローカル システムで実行されるレポート サーバー アプリケーションによって生成されるアプリケーション ログでイベント メッセージを表示する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f3d51afd8a27786be3c66bfdf935ad8b2e328d36
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5466c8a3e839a6db9438fde3ca7ce295405f3f23
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580930"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547834"
 ---
 # <a name="windows-application-log"></a>Windows アプリケーション ログ
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、イベント メッセージが Windows アプリケーション ログに書き込まれます。 アプリケーション ログに書き込まれたメッセージ情報を使用して、ローカル システムで実行されているレポート サーバー アプリケーションで生成されたイベントを確認できます。  

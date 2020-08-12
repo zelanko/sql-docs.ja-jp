@@ -1,5 +1,6 @@
 ---
 title: 面グラフ (レポート ビルダー) | Microsoft Docs
+description: 系列が線で結ばれた一連の点で表示され、線の下の領域はすべて塗りつぶされる、面グラフについて説明します。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 90bc9dd81ce2f005d771c57d5e3f5cdff2743f99
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ff8771593f293cf9195b26a792f1f0667e04f968
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081496"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778524"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>面グラフ (レポート ビルダーおよび SSRS)
   面グラフでは、線で結ばれた点のセットとして系列が表示され、線の下の領域はすべて塗りつぶされます。 面グラフにデータを追加する方法の詳細については、「 [グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)」を参照してください。  

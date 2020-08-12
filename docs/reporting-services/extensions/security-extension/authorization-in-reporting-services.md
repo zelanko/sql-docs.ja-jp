@@ -1,5 +1,6 @@
 ---
 title: Reporting Services での承認 | Microsoft Docs
+description: Reporting Services の認証プロセスについて説明します。 IAuthorizationExtension2 インターフェイスを使用することでセキュリティ拡張機能を開発する方法について説明します。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2210d5eb5997ec66e707a90cdc52dc24328e6f6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f5895064b0e6191c3ecbdcbd5405b1fd1bd50237
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193358"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529058"
 ---
 # <a name="authorization-in-reporting-services"></a>Reporting Services での承認
   承認は、レポート サーバー データベースの特定のリソースに対して要求された種類のアクセスに、ID を付与するかどうかを判断する処理です。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、ロールベースの承認アーキテクチャを使用します。つまり、そのアプリケーションでユーザーに割り当てられているロールに基づいて、各リソースにユーザー アクセス権を付与します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のセキュリティ拡張機能には、レポート サーバーでユーザーが認証された後、そのユーザーにアクセス権を付与するための承認コンポーネントが実装されています。 SOAP API および URL アクセスを使用して、ユーザーがシステムまたはレポート サーバー アイテムに対して操作を実行しようとすると、承認が呼び出されます。 これは、セキュリティ拡張機能インターフェイス **IAuthorizationExtension2** を使用して実現されます。 前に説明したように、すべての拡張機能は、配置した拡張機能の基本インターフェイスである **IExtension** から継承されます。 **IExtension** と **IAuthorizationExtension2** は、**Microsoft.ReportingServices.Interfaces** 名前空間のメンバーです。  

@@ -1,5 +1,6 @@
 ---
 title: 共有データセットのキャッシュ | Microsoft Docs
+description: データセットが使用されるレポートで応答時間を短縮し、データに一貫性を与える、SQL Server レポート マネージャーの共有データセットのキャッシュについて説明します。
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9436fd4963c5c9af86f3ea4ede200952fb6deb59
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0b256074f441dd2160298fe7840af4f6fca13eaf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082552"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545601"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>複数の共有データセットのキャッシュ (SSRS)
   共有データセットのクエリ結果をキャッシュにコピーしておくと、複数のレポートに一貫性のあるデータを提供し、データセット クエリの応答時間を短縮できます。 レポートと同様に、初回使用時または指定されたスケジュールによってキャッシュされるように共有データセットを構成できます。  
@@ -93,7 +94,7 @@ ms.locfileid: "77082552"
   
  共有データセットのキャッシュ更新計画を更新しても、既に処理中のレポートには影響がありません。 キャッシュ更新計画の更新は、共有データセットを参照する、これから起動されるレポートにのみ影響があります。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
   
  [共有データセットを管理する](../../reporting-services/report-data/manage-shared-datasets.md)  
   

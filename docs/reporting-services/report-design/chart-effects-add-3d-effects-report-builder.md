@@ -1,5 +1,6 @@
 ---
 title: グラフへの 3D 効果の追加 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、3 次元効果のある改ページされたレポートのグラフに奥行きを与え、視覚的効果を高めます。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d8bf9b9951ac461f6aaa3a33602ecb4e2aa4c30
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1dfc09cadd1b98116f2145e95fc6e96759d53013
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078787"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012673"
 ---
 # <a name="chart-effects---add-3d-effects-report-builder"></a>グラフの効果 - 3D 効果の追加 (レポート ビルダー)
   3 次元 (3D) 効果を使用すると、グラフに奥行を与え、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたグラフの視覚的な効果を高めることができます。 たとえば、分割円グラフの特定のスライスを強調する場合は、そのスライスが最初に目に留まるように、グラフのパースペクティブを回転および変更することができます。 グラフに 3D 効果を適用すると、グラデーションの色および陰影のスタイルはすべて無効になります。  

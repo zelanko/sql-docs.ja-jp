@@ -1,5 +1,6 @@
 ---
 title: Reporting Services での認証 | Microsoft Docs
+description: フォーム認証か IAuthenticationExtension2 インターフェイスを使用し、Reporting Services で認証スキームを拡張する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fdf93fe49275f0604606b65b7a8b5f60df0e887e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 64d22ded480b62a8d963127e32cf35b5e53df9ea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488588"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529078"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services での認証
   認証とは、ユーザーの本人性を立証するプロセスです。 ユーザー認証にはさまざまな方法がありますが、 最も一般的なのはユーザー パスワードを使用する方法です。 たとえば、フォーム認証を実装する場合は、ユーザーに対して資格情報の提示を要求し (通常は、ログイン名とパスワードを要求するインターフェイスを使用)、データベース テーブルや構成ファイルなどのデータ ストアと照合して、そのユーザーが本人かどうかを検証します。 資格情報の有効性を確認できない場合は、認証プロセスが失敗し、そのユーザーは匿名ユーザーであると見なされます。  

@@ -1,5 +1,6 @@
 ---
 title: SharePoint ライブラリへのドキュメントのアップロード (Reporting Services の SharePoint モード) | Microsoft Docs
+description: SharePoint モードの SQL Server Reporting Services で、レポート定義とレポート モデルを SharePoint ライブラリにアップロードできます。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2187cd5f69b49095b085ee6f49241227207842c2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a7a9e0aaf57d3084e6be239cb8fedcdd3d2e9066
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580471"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767359"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>SharePoint ライブラリへのドキュメントのアップロード (Reporting Services の SharePoint モード)
 
@@ -49,7 +50,7 @@ ms.locfileid: "65580471"
   
  レポートにパラメーターを含めると、ユーザーがデータをフィルター選択できるようになります。 パラメーターは、特定の値を使用するように構成したり、表示方法を変更したりすることができます。 詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 &#40;Reporting Services の SharePoint 統合モード&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [SharePoint ライブラリへのレポートのパブリッシュ](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [SharePoint ライブラリへの共有データ ソースのパブリッシュ](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   

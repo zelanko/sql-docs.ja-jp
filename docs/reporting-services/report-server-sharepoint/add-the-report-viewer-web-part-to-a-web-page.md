@@ -1,5 +1,6 @@
 ---
 title: レポート ビューアー Web パーツを Web ページに追加する | Microsoft Docs
+description: レポート ビューアー Web パーツを使用すると、SharePoint 統合モードの SQL Server Reporting Services で実行されるレポートを表示できます。
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 562c762871db5c29476d10a81ac52dad46f65ad5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf8f744078ccad4e755cc6d635ba999e0f077574
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579396"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767113"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>レポート ビューアー Web パーツを Web ページに追加する
 
@@ -52,7 +53,7 @@ Web パーツを Web ページに追加するには、サイト レベルでの 
   
 9. ツール ペインの下部で **[適用]** をクリックし、 **[OK]** をクリックしてペインを閉じます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [SharePoint サイトのレポート ビューアー Web パーツ](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [レポート ビューアー Web パーツのカスタマイズ](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)   

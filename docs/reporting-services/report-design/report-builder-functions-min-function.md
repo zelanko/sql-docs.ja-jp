@@ -1,5 +1,6 @@
 ---
 title: Min 関数 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、式によって指定された非 NULL 数値の最小値を返す、Min 関数について説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f1cff64290206526103c848de693c2a95735d72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ea5098d06e66813fb91d27ca9d56c31732080a2
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081205"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255575"
 ---
 # <a name="report-builder-functions---min-function"></a>レポート ビルダー関数 - Min 関数
   指定されたスコープのコンテキストで、式で指定された NULL 以外のすべての数値の中から最小値を返します。  

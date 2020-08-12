@@ -1,5 +1,6 @@
 ---
 title: グラフの凡例の書式設定 (レポート ビルダー) | Microsoft Docs
+description: '[凡例のプロパティ] ダイアログ ボックスまたは [プロパティ] ペインを利用し、レポート ビルダーで、グラフの汎用を書式設定する方法について説明します。'
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +26,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b2babeb60f6208761be04e85889206f9ba407e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc2f10905bdf80c1853aecefd6783bdc60819a82
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080561"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255325"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>グラフの凡例 - 書式設定 (レポート ビルダー)
   グラフの凡例には、グラフ内の各カテゴリの説明が含まれています。 凡例には常に 1 つ以上の凡例アイテムが含まれています。次の図に示すように、それぞれの凡例アイテムは、系列を表現する色つきのボックス、および系列を説明するテキスト文字列で構成されています。  

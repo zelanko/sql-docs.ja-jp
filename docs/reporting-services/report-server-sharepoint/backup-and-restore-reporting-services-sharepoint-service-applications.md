@@ -1,5 +1,6 @@
 ---
 title: Reporting Services SharePoint サービス アプリケーションのバックアップと復元 | Microsoft Docs
+description: SharePoint サーバーの全体管理または PowerShell を使用し、SQL Server Reporting Services サービス アプリケーションをバックアップし、復元する方法について説明します。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 93f3eb7db9c00f98d1d4270e9febc105eb6ef6b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9bf9391bfb9a705379caa6c9f34ae752d2dcc3c6
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574344"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767103"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint サービス アプリケーションのバックアップと復元
 
@@ -33,7 +34,7 @@ ms.locfileid: "65574344"
 > [!NOTE]
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションは、SharePoint のバックアップおよび復元機能を使用して、部分的にバックアップおよび復元できます。 これには**追加の手順が必要** であり、その手順はこのトピック内に記載されています。 現在、バックアップ プロセスでは、自動実行アカウント (UEA) または Windows 認証用の暗号化キーと資格情報は [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データベースにバックアップ**されません**。
 
-### <a name="recommendations"></a>Recommendations
+### <a name="recommendations"></a>推奨事項
   
 -   SharePoint のバックアップを開始する前に、暗号化キーをバックアップしてください。 暗号化キーをバックアップしなかった場合は、サービス アプリケーションの復元後に、暗号化されたデータへアクセスできなくなります。 その場合、暗号化されたデータを削除する必要が生じます。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "65574344"
 
 サービス アプリケーションをバックアップするには、次の手順を実行します。  
   
-1.  SharePoint サーバーの全体管理で、**[バックアップおよび復元]** グループの **[バックアップの実行]** を選択します。  
+1.  SharePoint サーバーの全体管理で、 **[バックアップおよび復元]** グループの **[バックアップの実行]** を選択します。  
   
 2.  **[共有サービス]** ノードで、 **[共有サービス アプリケーション]** を展開し、サービス アプリケーションを選択します。 種類は **[SQL Server Reporting Services サービス アプリケーション]** になります。  
   
@@ -77,9 +78,9 @@ ms.locfileid: "65574344"
   
 ### <a name="verify-execution-account-and-database-authentication"></a>実行アカウントとデータベース認証の確認
 
- **実行アカウント** : サービス アプリケーションが実行アカウントを使用しているかどうかを確認するには、次の手順を実行します。  
+ **実行アカウント:** サービス アプリケーションが実行アカウントを使用しているかどうかを確認するには、次の手順を行います。  
   
-1.  SharePoint サーバーの全体管理で、**[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
+1.  SharePoint サーバーの全体管理で、 **[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
   
 2.  サービス アプリケーションの名前を選択し、SharePoint リボンで **[管理]** を選択します。  
   
@@ -87,9 +88,9 @@ ms.locfileid: "65574344"
   
 4.  実行アカウントが構成されている場合は、サービス アプリケーションのバックアップを復元する際に資格情報が必要になります。 必ず、正しい資格情報を確認してからバックアップおよび復元の手順に進んでください。  
   
- **データベース認証** : サービス アプリケーションがデータベース認証用に Windows 認証を使用しているかどうかを確認するには、次の手順を実行します。  
+ **データベース認証:** サービス アプリケーションがデータベース認証用に Windows 認証を使用しているかどうかを確認するには、次の手順を行います。  
   
-1.  SharePoint サーバーの全体管理で、**[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
+1.  SharePoint サーバーの全体管理で、 **[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
   
 2.  サービス アプリケーションの名前を選択し、SharePoint リボンで **[プロパティ]** を選択します。  
   
@@ -109,7 +110,7 @@ ms.locfileid: "65574344"
   
 ### <a name="restore-the-service-application-using-sharepoint-central-administration"></a>SharePoint サーバーの全体管理を使用してサービス アプリケーションを復元する
   
-1.  SharePoint サーバーの全体管理で、**[バックアップおよび復元]** グループの **[バックアップからの復元を実行する]** を選択します。  
+1.  SharePoint サーバーの全体管理で、 **[バックアップおよび復元]** グループの **[バックアップからの復元を実行する]** を選択します。  
   
 2.  **[バックアップ ディレクトリの場所]** ボックスにバックアップ ファイルのパスを入力し、 **[更新]** を選択します。  
   
@@ -135,9 +136,9 @@ ms.locfileid: "65574344"
 
 ### <a name="configure-the-execution-account-and-database-authentication"></a>実行アカウントとデータベース認証の構成
 
- **実行アカウント** : サービス アプリケーションが実行アカウントを使用していた場合は、次の手順を実行して実行アカウントを構成します。  
+ **実行アカウント:** サービス アプリケーションが実行アカウントを使用していた場合は、次の手順を実行して実行アカウントを構成します。  
   
-1.  SharePoint サーバーの全体管理で、**[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
+1.  SharePoint サーバーの全体管理で、 **[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
   
 2.  サービス アプリケーションの名前を選択し、SharePoint リボンで **[管理]** を選択します。  
   
@@ -147,9 +148,9 @@ ms.locfileid: "65574344"
   
 5.  **[OK]** を選択します。  
   
- **データベース認証** : サービス アプリケーションがデータベース認証用に Windows 認証を使用していた場合は、次の手順を実行します。  
+ **データベース認証:** サービス アプリケーションがデータベース認証用に Windows 認証を使用していた場合は、次の手順を行います。  
   
-1.  SharePoint サーバーの全体管理で、**[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
+1.  SharePoint サーバーの全体管理で、 **[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
   
 2.  サービス アプリケーションの名前を選択し、SharePoint リボンで **[プロパティ]** を選択します。  
   

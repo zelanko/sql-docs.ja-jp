@@ -1,5 +1,6 @@
 ---
 title: 合計、集計、および組み込みコレクションの式のスコープ | Microsoft Docs
+description: レポート ビルダーで、合計、集計、組み込みコレクションの式のスコープにあるさまざまな意味について説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c822f0b6a3a17ccba2afbaf8bf0a9e4a4e2f7b12
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 453d5d9e960ead988e4c7f57adc48e2de69b25a1
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579820"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681311"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>合計、集計、および組み込みコレクションの式のスコープ
-  式の作成に関して、 *スコープ* という用語は、さまざまな文脈で用いられています。 スコープは、式を評価するのに使用するデータ、表示されたページのテキスト ボックスのセット、または表示と非表示を切り替えることのできるレポート アイテムのセットを示します。 *スコープ* という用語は、式の評価、集計関数の構文、条件付き表示に関連したトピックと、これらの領域に関連したエラー メッセージで使用されます。 次の説明を参考にして、どの意味で *スコープ* が適用されているかを区別してください。  
+  式の作成に関して、"*スコープ*" という用語は、さまざまな文脈で用いられています。 スコープは、式を評価するのに使用するデータ、表示されたページのテキスト ボックスのセット、または表示と非表示を切り替えることのできるレポート アイテムのセットを示します。 *スコープ* という用語は、式の評価、集計関数の構文、条件付き表示に関連したトピックと、これらの領域に関連したエラー メッセージで使用されます。 次の説明を参考にして、どの意味で *スコープ* が適用されているかを区別してください。  
   
 -   **データ スコープ** データ スコープは、レポート プロセッサがレポート データとレポート レイアウトを組み合わせ、テーブルやグラフなどのデータを表示するデータ領域を作成する場合に使用するスコープの階層です。 データ スコープを理解することで、次のような操作を行う場合に目的の結果を得ることができます。  
   

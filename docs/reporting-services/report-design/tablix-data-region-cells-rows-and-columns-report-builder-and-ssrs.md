@@ -1,6 +1,6 @@
 ---
 title: テーブルのセル、行、および列 | Microsoft Docs
-description: SQL Server Reporting Services のページ分割されたレポートの Tablix データ領域の行および列にデータを表示する方法を制御するには、詳細データ、グループ データ、ラベル、および合計に対して行と列を指定する方法を理解する必要があります。
+description: SQL Server レポートの表示を制御できるよう、データ、ラベル、合計に行と列を指定する方法について説明します。
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 26567c364e734824964e19ee6a639f2500ee2b4b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252396"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689449"
 ---
 # <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>Tablix データ領域 (レポート ビルダー) および SSRS のセル、行、および列
 

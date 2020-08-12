@@ -1,5 +1,6 @@
 ---
 title: Reporting Services SharePoint サービス アプリケーションの管理 | Microsoft Docs
+description: SharePoint サーバーの全体管理で SQL Server Reporting Services サービス アプリケーションを管理する方法について説明します。
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5de7b0a5b155c519a7a7d24331fb9ad2dc571e3e
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580086"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83765083"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint サービス アプリケーションの管理
 
@@ -73,7 +74,7 @@ ms.locfileid: "65580086"
   
 |設定|説明|  
 |-------------|--------------|  
-|実行のログ記録を有効にする|既定値は TRUE です。<br /><br /> レポート サーバーでトレース ログを生成するかどうかと、ログの保持日数を指定します。 。 ログは、レポート サーバー コンピューターの \Microsoft SQL Server\MSSQL.n\ReportServer\Log フォルダーに格納されます。 サービスを再起動するたび、新しいログ ファイルが生成されます。 ログ ファイルの詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。|  
+|実行のログ記録を有効にする|既定値は TRUE です。<br /><br /> レポート サーバーでトレース ログを生成するかどうかと、ログの保持日数を指定します。 . ログは、レポート サーバー コンピューターの \Microsoft SQL Server\MSSQL.n\ReportServer\Log フォルダーに格納されます。 サービスを再起動するたび、新しいログ ファイルが生成されます。 ログ ファイルの詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。|  
 |実行ログの保持日数|既定の日数は 60 日です。|  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はすべて、SharePoint ULS ログをサポートしています。  詳細については、「 [SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  

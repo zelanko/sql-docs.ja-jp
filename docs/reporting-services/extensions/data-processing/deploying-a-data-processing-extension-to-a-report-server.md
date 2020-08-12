@@ -1,5 +1,6 @@
 ---
 title: データ処理拡張機能をレポート サーバーに配置する方法 | Microsoft Docs
+description: どのエントリをどの構成ファイルに追加するか説明します。それにより、データ処理拡張機能をレポート サーバーに配置する方法がわかります。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3f0b775b53244cd0a428bb4ce4023906d2f5119
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a43b94a4ef45b210ea2f54b0401962e79ca9a489
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194124"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529584"
 ---
 # <a name="deploying-a-data-processing-extension-to-a-report-server"></a>データ処理拡張機能のレポート サーバーへの配置
   レポート サーバーは、表示レポートのデータを取得および処理するためにデータ処理拡張機能を使用します。 データ処理拡張機能のアセンブリは、プライベート アセンブリとしてレポート サーバーに配置してください。 また、レポート サーバーの構成ファイル RSReportServer.config にエントリを作成する必要もあります。  
@@ -25,7 +26,7 @@ ms.locfileid: "63194124"
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>データ処理拡張機能のアセンブリを配置するには  
   
-1.  ステージング場所から、データ処理拡張機能を使用するレポート サーバーの bin ディレクトリにアセンブリをコピーします。 レポート サーバーの bin ディレクトリの既定場所は、%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<*インスタンス名*>\Reporting Services\ReportServer\bin です。  
+1.  ステージング場所から、データ処理拡張機能を使用するレポート サーバーの bin ディレクトリにアセンブリをコピーします。 レポート サーバーの bin ディレクトリの既定の場所は %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer\bin です。  
   
     > [!NOTE]  
     >  この手順により、SQL Server の新しいインスタンスへのアップグレードが回避されます。 詳細については、「 [Upgrade and Migrate Reporting Services](../../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)」を参照してください。  
@@ -50,7 +51,7 @@ ms.locfileid: "63194124"
   
      **Name** の値は、データ処理拡張機能の一意の名前です。 **Type** の値は、<xref:Microsoft.ReportingServices.Interfaces.IExtension> インターフェイスおよび <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> インターフェイスを実装するクラスの完全修飾名前空間のエントリを含むコンマ区切りの一覧であり、その後にアセンブリの名前が続きます (.dll ファイル拡張子は含まない)。 既定では、データ処理拡張機能が表示されます。 レポート マネージャーなどのユーザー インターフェイスで拡張機能を非表示にするには、 **Extension** 要素に **Visible** 属性を追加して、 **false**に設定します。  
   
-5.  最後に、拡張機能の **FullTrust** アクセス許可を付与するカスタム アセンブリのコード グループを追加します。 これを行うには、コード グループを rssrvpolicy.config ファイルに追加します。既定では、このファイルは %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<*インスタンス名*>\Reporting Services\ReportServer にあります。 このコード グループは、次のようになります。  
+5.  最後に、拡張機能の **FullTrust** アクセス許可を付与するカスタム アセンブリのコード グループを追加します。 これを行うには、コード グループを rssrvpolicy.config ファイルに追加します。既定では、このファイルは %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer にあります。 このコード グループは、次のようになります。  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

@@ -1,5 +1,6 @@
 ---
 title: グラフの種類の変更 (レポート ビルダー) | Microsoft Docs
+description: レポート デザインの任意の時点でグラフの種類を変更する方法について説明します。 レポート ビルダーでデータに適した特徴で解釈を改善します。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de9785121ebd5703abda6c1a52dfb02e180a42cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 24c1c3d05650f3524697e6bfc7fca11afbe60c0b
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081877"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681261"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>グラフの種類の変更 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートにグラフを初めて挿入すると、 **[グラフの種類を選択]** ダイアログ ボックスが表示されます。 このダイアログ ボックスを取り消すと、縦棒グラフというグラフの種類が既定で追加されます。  

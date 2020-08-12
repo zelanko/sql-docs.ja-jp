@@ -1,5 +1,6 @@
 ---
 title: セキュリティ ポリシーの概要 | Microsoft Docs
+description: コード グループに基づき、アセンブリ、拡張機能、レポート式のアクセス許可を指定する、Reporting Services セキュリティ ポリシーについて説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6649017002fb3dd5df2dc3ee68a0d759ded24887
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a8fe596a34298d9864454a544bfb6d98a6601a46
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193391"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529346"
 ---
 # <a name="understanding-security-policies"></a>セキュリティ ポリシーの概要
   レポート サーバーが実行するすべてのコードは、特定のコード アクセス セキュリティ ポリシーの一部である必要があります。 これらのセキュリティ ポリシーは、証拠と名前付き権限セットとを対応付けるコード グループで構成されます。 多くの場合、コード グループは、そのグループ内のコードに対して与えることのできる権限が指定された名前付き権限セットに関連付けられます。 ランタイムは、信頼されるホストまたはローダーが提供した証拠を使用して、コードが属するコード グループ、およびコードに付与された権限を確認します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の共通言語ランタイム (CLR) に定義されている、このセキュリティ ポリシー アーキテクチャに準拠しています。 ここでは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の各種コードおよび関連付けられたポリシー ルールについて説明します。  

@@ -1,5 +1,6 @@
 ---
 title: レポート サーバー ExecutionLog と ExecutionLog3 ビュー | Microsoft Docs
+description: ネイティブ モードまたは SharePoint ファームのサーバーの関するレポートの詳細が含まれる、Reporting Services のレポート サーバー実行ログについて説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 15e8b648603952226af45d485d5678f5d0d3bbd6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65619692"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548014"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>レポート サーバー ExecutionLog と ExecutionLog3 ビュー
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート サーバー実行ログには、サーバー上で実行するレポート、またはネイティブ モードのスケールアウト配置や SharePoint ファーム内の複数のサーバー上で実行するレポートに関する情報が含まれます。 レポート実行ログを使用して、レポートを要求する頻度、最も多く使用される出力形式、および各処理フェーズでかかる処理時間 (単位はミリ秒) を調査できます。 このログには、レポートのデータセット クエリの実行にかかった時間とデータの処理にかかった時間に関する情報が記録されます。 レポート サーバー管理者は、ログの情報を確認して実行時間が長いタスクを特定し、レポート作成者に対して改善の余地があるレポートの領域 (データセットや処理) について提案することができます。  
@@ -121,7 +122,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|データの取得にかかった時間 (単位はミリ秒)。|  
 |TimeProcessing|レポートの処理にかかった時間 (単位はミリ秒)。|  
 |TimeRendering|レポートの表示にかかった時間 (単位はミリ秒)。|  
-|source|レポート実行のソース。 指定できる値<br /><br /> ライブ<br /><br /> Cache: キャッシュされた実行を示します。たとえば、データセット クエリは、ライブで実行されません。<br /><br /> スナップショット<br /><br /> 履歴<br /><br /> AdHoc: 詳細レポートに基づいて動的に生成されたレポート モデル、または処理および表示にレポート サーバーを使用するクライアントでプレビューされているレポート ビルダー レポートを示します。<br /><br /> Session: 既に確立されたセッション内のフォローアップ要求を示します。  たとえば、最初の要求がページ 1 の表示であり、フォローアップ要求は現在のセッション状態での Excel へのエクスポートである場合などが考えられます。<br /><br /> Rdce: レポート定義カスタマイズ拡張機能を示します。 RDCE カスタム拡張機能では、レポート実行時にレポート定義を処理エンジンに渡す前に動的にカスタマイズできます。|  
+|source|レポート実行のソース。 指定できる値<br /><br /> ライブ<br /><br /> Cache: キャッシュされた実行を示します。たとえば、データセット クエリは、ライブで実行されません。<br /><br /> スナップショット<br /><br /> 履歴<br /><br /> AdHoc: 詳細レポートに基づいて動的に生成されたレポート モデル、または処理および表示にレポート サーバーを使用するクライアントでプレビューされているレポート ビルダー レポートを示します。<br /><br /> Session:既に確立されたセッション内のフォローアップ要求を示します。  たとえば、最初の要求がページ 1 の表示であり、フォローアップ要求は現在のセッション状態での Excel へのエクスポートである場合などが考えられます。<br /><br /> Rdce:レポート定義カスタマイズ拡張機能を示します。 RDCE カスタム拡張機能では、レポート実行時にレポート定義を処理エンジンに渡す前に動的にカスタマイズできます。|  
 |Status|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
@@ -326,7 +327,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RequestType|要求の種類 (ユーザーまたはシステム)。|  
 |Format|表示形式。|  
 |パラメーター|レポート実行に使用するパラメーター値。|  
-|ReportAction|有効値: Render、Sort、BookMarkNavigation、DocumentNavigation、GetDocumentMap、Findstring。|  
+|ReportAction|指定できる値Render、Sort、BookMarkNavigation、DocumentNavigation、GetDocumentMap、Findstring|  
 |TimeStart|レポート処理の期間を示す開始時刻と終了時刻。|  
 |TimeEnd||  
 |TimeDataRetrieval|データの取得、レポートの処理、レポートの表示にかかった時間 (単位はミリ秒)。|  
@@ -362,7 +363,7 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|データの取得、レポートの処理、レポートの表示にかかった時間 (単位はミリ秒)。|  
 |TimeProcessing||  
 |TimeRendering||  
-|source|レポート実行のソース。 有効値: 1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴、5 = アドホック、6 = セッション、7 = RDCE。|  
+|source|レポート実行のソース。 指定できる値1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴、5 = アドホック、6 = セッション、7 = RDCE。|  
 |Status|有効値: rsSuccess、rsProcessingAborted、またはエラー コード。 複数のエラーが発生した場合は、最初のエラーだけが記録されます。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  

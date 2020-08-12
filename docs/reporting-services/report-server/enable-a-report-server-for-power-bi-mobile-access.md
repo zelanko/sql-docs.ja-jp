@@ -1,5 +1,6 @@
 ---
 title: Power BI モバイル アクセス用のレポート サーバーを有効にする | Microsoft Docs
+description: Power BI Mobile アプリを Reporting Services に接続し、モバイル レポートを使用する方法について説明します。 モバイル レポートは、ネイティブ モードの機能です。
 ms.date: 12/17/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4dfeb99dc01a0ed2aaade9c0c21e4ce3ddd5da49
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 69e6f1b03b7ef6b1fb68d6c08cd1f526a6b481fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486746"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545558"
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>Power BI モバイル アクセス用のレポート サーバーを有効にする
 Power BI モバイル アプリを使用して、モバイル レポートを使用することができます。 Power BI モバイル アプリで Reporting Services への接続を可能にするには、いくつかの構成が必要です。  

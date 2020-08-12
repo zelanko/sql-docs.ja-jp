@@ -1,5 +1,6 @@
 ---
 title: グラフへの傾斜、エンボス、テクスチャのスタイルの追加 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、グラフの視覚効果を上げるため、ベベル、エンボス、テクスチャなど、描画効果を指定する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9bbb097362d2569bcea8a16d451d33d931b82b35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc70f46d093336157fbc474abfa63460c42deb41
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078750"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462316"
 ---
 # <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>グラフの効果 - ベベル、エンボス、またはテクスチャの追加(レポート ビルダー)
   特定のグラフの種類を使用する場合、グラフの視覚的な効果を高めるために、描画効果を指定できます。 このような描画効果を適用できるのは、グラフの系列だけです。 その他のグラフ要素には影響しません。  

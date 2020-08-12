@@ -1,5 +1,6 @@
 ---
 title: 式 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーでデータを取得、表示、フィルター処理、書式設定することを可能にする式を利用し、データのコンテンツ、デザイン、対話性を制御します。
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99314c9108ef0af50a3c43d83a5fcb69b9ccf14f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: d092377531a2391917ccdaae046d456bd3b1f629
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487621"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012250"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>式 (レポート ビルダーおよび SSRS)
   式は [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート全体にわたって、データの取得、計算、表示、グループ化、並べ替え、フィルター処理、パラメーター化、書式設定などのために広く使用されます。 
@@ -60,7 +61,7 @@ ms.locfileid: "81487621"
 
 単純式では、記号を使用して、参照先 (フィールド、パラメーター、組み込みコレクション、または ReportItems コレクション) を示します。 表示テキストおよび式のテキストの例を次の表に示します。  
   
-|アイテム|表示テキストの例|式のテキストの例|  
+|Item|表示テキストの例|式のテキストの例|  
 |----------|--------------------------|-----------------------------|  
 |データセット フィールド|`[Sales]`<br /><br /> `[SUM(Sales)]`<br /><br /> `[FIRST(Store)]`|`=Fields!Sales.Value`<br /><br /> `=Sum(Fields!Sales.Value)`<br /><br /> `=First(Fields!Store.Value)`|  
 |レポート パラメーター|`[@Param]`<br /><br /> `[@Param.Label]`|`=Parameters!Param.Value`<br /><br /> `=Parameters!Param.Label`|  
@@ -110,6 +111,6 @@ ms.locfileid: "81487621"
 -   [式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 -   [フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
 -   [グループ式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
--   [チュートリアル: 式の概要](../tutorial-introducing-expressions.md)
+-   [チュートリアル:式の概要](../tutorial-introducing-expressions.md)
 -   [レポート サンプル (レポート ビルダーおよび SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

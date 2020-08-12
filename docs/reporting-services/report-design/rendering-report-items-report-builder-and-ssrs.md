@@ -1,5 +1,6 @@
 ---
 title: レポート アイテムのレンダリング (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、数字、サイズ、場所など、レポート アイテムがレンダリングの改ページに与える影響について説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 32bd51cd5dc4419465fac494559dc4d116f796c4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8256d74c8ed34bee0c94f4b68363c9b87a338a9
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077022"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462406"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>レポート アイテムのレンダリング (レポート ビルダーおよび SSRS)
   レポート アイテムの数、サイズ、および位置は、レポート本文の改ページに影響します。 以降、各種のレポート アイテムがどのようにレンダリングされるかについて説明します。  

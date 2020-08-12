@@ -1,5 +1,6 @@
 ---
 title: CountDistinct 関数 (レポート ビルダー) | Microsoft Docs
+description: 指定されたスコープのコンテキストで式によって指定されるすべての非 NULL 個別値を数えます。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ff5931ea437a2b91bf2232472fbf5780153f38cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f5689e3b1bf4330c8ac0e18d974a48672223fd2a
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081280"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689748"
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>レポート ビルダー関数 - CountDistinct 関数
   式で指定された NULL 以外の値が全部で何種類あるかを、指定されたスコープのコンテキストで評価して返します。  

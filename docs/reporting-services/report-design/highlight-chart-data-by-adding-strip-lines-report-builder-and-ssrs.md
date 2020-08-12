@@ -1,5 +1,6 @@
 ---
 title: ストリップ ラインの追加によるグラフのデータの強調表示 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、横方向または縦方向範囲でストリップ ラインを使用し、読みやすさを改善したり、日付を強調表示したり、特定のキー範囲を強調表示したりします。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fd7c4ee0998f7f0386272130e56bab47303b31c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b06345fef2d2bc813cfd146c8b31a53b54451859
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082088"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84011700"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>ストリップ ラインの追加によるグラフのデータの強調表示 (レポート ビルダーおよび SSRS)
   ストリップ ライン (ストリップ) は、一定の間隔またはカスタムの間隔でグラフの背景を網掛け表示にする、横方向または縦方向の帯です。 ストリップ ラインを使用すると、次のことが可能になります。  

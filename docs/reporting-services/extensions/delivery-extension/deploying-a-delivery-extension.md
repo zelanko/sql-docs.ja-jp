@@ -1,5 +1,6 @@
 ---
 title: 配信拡張機能の配置 | Microsoft Docs
+description: 配信拡張機能をレポート サーバーに配置する方法について説明します。 レポート サーバーで拡張機能の場所が見つかるよう、どのエントリをどの構成ファイルに追加するか確認してください。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06cffe614eaa55713fed862dc03f7c81da7bc287
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f358ebb3cc58a9f10c117d24bce8c04d849fd2f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193764"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529118"
 ---
 # <a name="deploying-a-delivery-extension"></a>配信拡張機能の配置
   配信拡張機能では、その構成情報を XML 構成ファイルの形式で指定します。 XML ファイルは、配信拡張機能に定義された XML スキーマに従います。 配信拡張機能により、構成ファイルを設定および変更するためのインフラストラクチャが提供されます。  
@@ -31,9 +32,9 @@ ms.locfileid: "63193764"
   
  次の表では、配信拡張機能の **Extension** 要素の属性について説明します。  
   
-|Attribute|説明|  
+|属性|説明|  
 |---------------|-----------------|  
-|**Name**|拡張機能の一意な名前 (たとえば、電子メール配信拡張機能の場合は "レポート サーバーの電子メール"、ファイル共有配信拡張機能の場合は "レポート サーバーのファイル共有")。 **Name** 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extension** 要素内にあるすべてのエントリの間で一意にする必要があります。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
+|**名前**|拡張機能の一意な名前 (たとえば、電子メール配信拡張機能の場合は "レポート サーバーの電子メール"、ファイル共有配信拡張機能の場合は "レポート サーバーのファイル共有")。 **Name** 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extension** 要素内にあるすべてのエントリの間で一意にする必要があります。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
 |**Type**|アセンブリの名前と共に完全修飾名前空間を含むコンマ区切りの一覧。|  
 |**[表示]**|**false** の値は、配信拡張機能がユーザー インターフェイスに表示されないことを示します。 この属性が指定されない場合、既定値は **true**になります。|  
   
@@ -44,7 +45,7 @@ ms.locfileid: "63193764"
   
 #### <a name="to-deploy-a-deliver-extension-assembly-to-a-report-server"></a>配信拡張機能アセンブリをレポート サーバーに配置するには  
   
-1.  ステージング場所から、配信拡張機能を使用するレポート サーバーの bin ディレクトリにアセンブリをコピーします。 レポート サーバーの Bin ディレクトリの既定の場所は、%ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer\bin です。  
+1.  ステージング場所から、配信拡張機能を使用するレポート サーバーの bin ディレクトリにアセンブリをコピーします。 レポート サーバーの bin ディレクトリの既定の場所は、%ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer\bin です。  
   
     > [!IMPORTANT]  
     >  既存の配信拡張機能アセンブリを上書きする場合、まず、レポート サーバー サービスを停止してから、更新済みのアセンブリをコピーする必要があります。 そのアセンブリをコピーした後で、サービスを再起動します。  

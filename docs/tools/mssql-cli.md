@@ -11,24 +11,53 @@ ms.reviewer: alayu, sstein, maghan
 ms.custom: tools|mssql-cli
 ms.date: 02/22/2018
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0363c91021baccb3ed8afd9d9dc41c23f807abac
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03bc52a6f8941bbc8d04f8f795876b0ca664f08c
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80216451"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462286"
 ---
 # <a name="mssql-cli-command-line-query-tool-for-sql-server-preview"></a>SQL Server 用 mssql-cli コマンドライン クエリ ツール (プレビュー)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-mssql-cli は、SQL Server のクエリを実行するための対話型コマンドライン ツールであり、Windows、macOS、または Linux 上にインストールします。
+mssql-cli は、SQL Server のクエリを実行するための対話型コマンドライン ツールであり、Windows、macOS、または Linux 上で実行されます。
 
 ## <a name="install-mssql-cli"></a>mssql-cli をインストールする
 
-インストール手順の詳細については、[インストール ガイド](https://github.com/dbcli/mssql-cli/tree/master/doc/installation)に関する記事を参照してください。または、pip がわかっている場合は、次のコマンドを実行してインストールします。
+インストール手順の詳細については、[インストール ガイド](https://github.com/dbcli/mssql-cli/tree/master/doc/installation)を参照してください。 最も一般的なインストール シナリオは以下のようにまとめられます。
+
+### <a name="windows-and-macos-installation"></a>Windows と macOS のインストール
+
+mssql-cli は `pip` を利用し、Windows と macOS にインストールされます。
 
 ```$ pip install mssql-cli```
+
+手順の詳細については、[インストール ガイド](https://github.com/dbcli/mssql-cli/tree/master/doc/installation)を参照してください。
+
+### <a name="linux-installation"></a>Linux インストール
+
+Microsoft リポジトリの登録後、mssql-cli は、複数の Linux ディストリビューションでパッケージマネージャーを使用してインストールしたり、アップグレードしたりできます。
+
+次の例は Ubuntu 18.04 (Bionic) に当てはまります。その他のディストリビューションの詳細や例は[インストール ガイド](https://github.com/dbcli/mssql-cli/tree/master/doc/installation)にあります。
+
+```
+# Import the public repository GPG keys
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+
+# Register the Microsoft Ubuntu repository
+sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
+
+# Update the list of products
+sudo apt-get update
+
+# Install mssql-cli
+sudo apt-get install mssql-cli
+
+# Install missing dependencies
+sudo apt-get install -f
+```
 
 ## <a name="mssql-cli-documentation"></a>mssql-cli ドキュメント
 

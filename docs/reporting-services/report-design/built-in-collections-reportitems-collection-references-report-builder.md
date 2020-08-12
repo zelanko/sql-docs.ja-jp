@@ -1,5 +1,6 @@
 ---
 title: ReportItems コレクションの参照 (レポート ビルダー) | Microsoft Docs
+description: ReportItems コレクションについて説明します。 レポート ビルダーのこれらのテキスト ボックスは、ページ ヘッダー、ページ フッター、またはレポート本文の現在のスコープに含まれています。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8819e97cbece0ab9682252c3afdedee7d671428
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbb13f8e3ce8b64b64a8f575dd087a715cd6e5da
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081892"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462326"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>組み込みコレクション - ReportItems コレクションの参照 (レポート ビルダー)
   組み込みコレクション **ReportItems** は、データ領域の行などのレポート アイテムのテキスト ボックスや、レポート デザイン画面上のテキスト ボックスのセットです。 **ReportItems** コレクションには、ページ ヘッダー、ページ フッター、またはレポート本文の現在のスコープにあるテキスト ボックスが含まれています。 このコレクションは、レポート プロセッサおよびレポート レンダラーによって実行時に決定されます。 ユーザーがレポートのページを表示する際には、レポート プロセッサによってレポート データとレポート アイテムのレイアウト要素が連続的に結合されますが、これに伴って現在のスコープが変化します。 組み込みコレクション **ReportItems** を使用すると、各ページの最初のアイテムと最後のアイテムを表示する辞書形式のページ ヘッダーを作成できます。  
@@ -22,7 +23,7 @@ ms.locfileid: "77081892"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>ReportItems の Value プロパティの使用  
- **ReportItems** コレクション内のアイテムに設定されるプロパティは、Value だけです。 **ReportItems** アイテムの値を使用すると、レポート内の別のフィールドのデータを表示または計算できます。 現在のテキスト ボックスの値にアクセスするには、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] に組み込まれたグローバルの Me.Value を使用するか、単なる Value を使用します。 First 関数や集計関数などのレポート関数では、完全修飾された構文を使用してください。  
+ **ReportItems** コレクション内のアイテムに設定されるプロパティは 1 つのみです:Value。 **ReportItems** アイテムの値を使用すると、レポート内の別のフィールドのデータを表示または計算できます。 現在のテキスト ボックスの値にアクセスするには、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] に組み込まれたグローバルの Me.Value を使用するか、単なる Value を使用します。 First 関数や集計関数などのレポート関数では、完全修飾された構文を使用してください。  
   
  次に例を示します。  
   

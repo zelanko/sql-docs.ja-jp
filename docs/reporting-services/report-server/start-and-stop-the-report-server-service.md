@@ -1,5 +1,6 @@
 ---
 title: レポート サーバー サービスの開始と停止 | Microsoft Docs
+description: レポート サーバー Web サービス、Web ポータル、バックグラウンド処理アプリケーションが含まれる Windows サービスを起動および停止する方法について説明します。
 ms.date: 05/21/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6463dc7e4b17992138a61e6a37277149fccfda68
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b10a0445ab89934be7da2b3da2af9b14cc7d20ee
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66270198"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547894"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>レポート サーバー サービスの開始と停止
 
@@ -44,7 +45,7 @@ ms.locfileid: "66270198"
   
 - 複数のインスタンスを実行しているか、レポート サーバーを名前付きインスタンスとして実行している場合は、かっこ内のインスタンス名が、停止または再起動するレポート サーバー インスタンスに対応していることを確認してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [SQL Server エージェント サービスの開始、停止、または一時停止](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   

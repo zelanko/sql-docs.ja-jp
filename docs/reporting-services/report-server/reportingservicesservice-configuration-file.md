@@ -1,5 +1,6 @@
 ---
 title: ReportingServicesService 構成ファイル | Microsoft Docs
+description: Reporting Services でトレースに使用される ReportingServicesService.exe.config のファイルの場所、編集ガイドライン、構成設定について説明します。
 ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bb3b4d6c7591385f332daab9102613f05f0e5dfc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66506631"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535354"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 構成ファイル
 
@@ -90,7 +91,7 @@ ReportingServicesService.exe.config ファイルには、トレースを構成�
 |**コンポーネント**|トレース ログを作成するコンポーネントを指定します。 既定値は **[すべて]** です。 この設定に対する他の有効な値には、内部コンポーネントの名前があります。 この値は変更しないでください。|  
 |**Runtime**|以前のバージョンとの下位互換性をサポートする構成設定を指定します。 Microsoft.ReportingServices.Interfaces の以前のバージョンを対象とする要求を新しいバージョンにリダイレクトするには、Runtime 設定を使用します。<br /><br /> このセクションの構成設定は、すべて [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の製品ドキュメントで説明されています。 詳細については、MSDN Web サイトまたは [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ドキュメントの「ランタイム設定スキーマ」を参照してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)  
 [レポート サーバー サービスのトレース ログ](../../reporting-services/report-server/report-server-service-trace-log.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: Turn on Reporting Services events for the SharePoint trace log (ULS) | Microsoft Docs
+description: SharePoint モードの Reporting Services サーバー用に SharePoint ULS トレース ログへの Reporting Services イベントの書き込みをオンにする方法について説明します。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef8729d35598b59c33a827d77e5e7c5473ead049
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893238"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547864"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
@@ -124,7 +125,7 @@ Get-SPDiagnosticConfig
 |レポート サーバー プロバイダー||  
 |レポート サーバー レンダリング||  
 |レポート サーバー レポート プレビュー||  
-|レポート サーバー リソース ユーティリティ|サンプルのエントリ:<br /><br /> MediumReporting Services starting SKU: Evaluation<br /><br /> MediumEvaluation コピー: 180 日間残っています|  
+|レポート サーバー リソース ユーティリティ|サンプルのエントリ:<br /><br /> MediumReporting Services starting SKU:評価<br /><br /> MediumEvaluation copy コピー:180 日間残っています|  
 |レポート サーバー実行中ジョブ||  
 |レポート サーバー実行中要求||  
 |レポート サーバー スケジュール||  

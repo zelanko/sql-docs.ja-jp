@@ -1,5 +1,6 @@
 ---
 title: 式で使用される定数 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで自分のレポートの式に含める、リテラル テキストまたは定義済みの定数のテキストについて説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0231c41e3104756232c55cb4c4707948605a35e6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8737057e0e4b291abf6530f5f6f74ce145dc84d7
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077073"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779110"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>式で使用される定数 (レポート ビルダーおよび SSRS)
   定数は、リテラル テキストまたは定義済みのテキストです。 レポート プロセッサは定義済みの定数にアクセスできるので、このような定数を式に含めると、式が評価される前に、このような定数が表す値が式に代入されます。  

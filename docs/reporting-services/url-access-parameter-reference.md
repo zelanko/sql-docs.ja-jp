@@ -1,7 +1,7 @@
 ---
 title: URL アクセス パラメーター リファレンス | Microsoft Docs
 description: この記事のパラメーターを URL の一部として使用すると、Reporting Services レポートのルック アンド フィールを構成できます。
-ms.date: 01/31/2020
+ms.date: 05/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ac67de4831d1785f17029bc6c68fa6f7d8aeb16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c975f457238912c16e33a13f1f2ba598c82cac3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77147385"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859034"
 ---
 # <a name="url-access-parameter-reference"></a>URL アクセス パラメーター リファレンス
 
@@ -79,18 +79,21 @@ ms.locfileid: "77147385"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
--   **FindString**:レポート内で特定のテキスト セットを検索します。
+-   **FindString**:レポートの中から特定のテキスト セットを検索し、そのテキストを強調表示します。
+    
+    > [!IMPORTANT]  
+    >  *rc:FindString* は、*rc:Toolbar*=**false** を URL アクセス文字列に含めない限り、機能しません。
   
      ネイティブ モードの例:
   
     ```  
-    https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
+    https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
      SharePoint モードの例:
   
     ```  
-    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
 -   **StartFind**: 検索する最後のセクションを指定します。 このパラメーターの既定値は、レポートの最終ページです。  
@@ -260,7 +263,7 @@ ms.locfileid: "77147385"
   
 -   **ClearSession**:値が **true** の場合は、レポート セッションからレポートを削除するようにレポート サーバーに指示します。 認証されているユーザーに関連付けられたすべてのレポート インスタンスがレポート セッションから削除されます (レポート インスタンスは、別のレポート パラメーターの値を指定して、レポートを複数回実行するように定義されます)。既定値は **false** です。
   
--   **ResetSession**:値が **true** の場合は、レポート セッションのすべてのレポート スナップショットとの関連付けを削除することによって、レポート セッションをリセットするようレポート サーバーに指示します。 既定値は **false** です。
+-   **true**: 値が **ResetSession** の場合は、レポート セッションのすべてのレポート スナップショットとの関連付けを削除することによって、レポート セッションをリセットするようレポート サーバーに指示します。 既定値は **false** です。
   
 -   **ShowHideToggle**:レポートのセクションの表示と非表示を切り替えます。 切り替えるセクションを表す正の整数を指定します。
   
@@ -273,7 +276,7 @@ ms.locfileid: "77147385"
   
     -   **ナビゲーション**: ツール バーに改ページのみを表示します。
   
-    -   **なし**: ツール バーを表示しません。
+    -   **None**:ツール バーを表示しません。
   
      SharePoint モードで、ツール バーに改ページのみを表示する例:
   
@@ -287,7 +290,7 @@ ms.locfileid: "77147385"
   
     -   **BreadCrumbsOnly**: ヘッダーに階層リンクのナビゲーションのみを表示して、アプリケーションでの現在位置をユーザーに示します。
   
-    -   **なし**: ヘッダーを表示しません。
+    -   **None**:ヘッダーを表示しません。
   
      SharePoint モードで、ヘッダーに階層リンクのナビゲーションのみを表示する例:
   

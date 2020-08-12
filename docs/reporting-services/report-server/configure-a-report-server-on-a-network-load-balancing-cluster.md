@@ -1,5 +1,6 @@
 ---
 title: ネットワーク負荷分散クラスターにおけるレポート サーバーの構成 | Microsoft Docs
+description: NLB で実行されるようにレポート サーバーのスケールアウトを構成する方法について説明します。 Reporting Services スケールアウト配置をサポートするために NLB クラスター ソリューションを実装します。
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
-ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8bd6d8e99549cb6228a46f04b1532bbf872a066
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244400"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545574"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>ネットワーク負荷分散クラスターにおけるレポート サーバーの構成
 
@@ -136,7 +137,7 @@ NLB クラスターでスケールアウト配置を運用するには、ユー�
   
 1. テキスト エディターで RSReportServer.config ファイルを開きます。  
   
-2. \<**Hostname**>、\<**ReportServerUrl**>、および \<**UrlRoot**> を探して、各設定のホスト名を確認します。 値が意図したホスト名でない場合は、正しいホスト名に置き換えます。  
+2. \<**Hostname**>、\<**ReportServerUrl**>、\<**UrlRoot**> を見つけ、設定ごとにホスト名を確認します。 値が意図したホスト名でない場合は、正しいホスト名に置き換えます。  
   
  これらの変更を加えてから Reporting Services 構成ツールを起動すると、\<**ReportServerUrl**> の設定が既定値に変更されることがあります。 使用する設定を含むバージョンに置き換える必要がある場合に備えて、常にバックアップ コピーを作成しておく必要があります。  
   

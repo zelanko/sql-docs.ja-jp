@@ -1,5 +1,6 @@
 ---
 title: データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 | Microsoft Docs
+description: レポート ビルダーで、フィルターを利用することで、レポートで表示し、処理するデータを制御する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e512a330ba8d16a0dbbce878f8bfb6c60176a098
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582054"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255703"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>データセット フィルター、データ領域フィルター、およびグループ フィルターの追加
   レポートのフィルターは、レポート内で使用されるデータを制限するために作成したデータセット、データ領域、またはデータ領域グループの一部です。 データセット クエリを変更できない場合 (共有データセットを使用している場合など)、レポート データを制御する方法としてフィルターを使用できます。  

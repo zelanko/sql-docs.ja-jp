@@ -1,5 +1,6 @@
 ---
 title: データ処理拡張機能の Connection クラスの実装 | Microsoft Docs
+description: Reporting Services でデータ処理拡張機能の Connection オブジェクトを実装します。 実装するインターフェイスとクライアントに求められる内容について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 32d38fd943628b25ab8fd9ce47b779b75c05e211
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 42f53d1b31f2e5b8805c5173bd45fcbd27f2d4a4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193936"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529574"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>データ処理拡張機能の Connection クラスの実装
   **Connection** オブジェクトはデータベース接続や類似するリソースを表す、ユーザーにとっての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] データ処理拡張機能の出発点です。 このオブジェクトはデータベース サーバーへの接続を表しますが、類似する動作を持つエンティティが **Connection** として表示される可能性があります。  

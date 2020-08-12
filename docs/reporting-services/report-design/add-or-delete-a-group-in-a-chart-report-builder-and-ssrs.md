@@ -1,5 +1,6 @@
 ---
 title: グラフでのグループの追加または削除 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーでグループを追加または削除する方法と、データセット フィールドをドラッグすることでグループまたは入れ子になったグループを作成する方法について説明します。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 635ffe754cc4634feff7632cbefc1dccb245039c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9742a5ac1207e5f6c879e0a84e3bb05f424be5ef
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081592"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681201"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>グラフでのグループの追加または削除 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 改ページ調整されたレポートで、グラフ データ領域をクリックすると、 **グラフ データ** ペインが表示されます。 データセット フィールドを **[カテゴリ グループ]** 領域と **[系列グループ]** 領域にドラッグすると、グループが作成されます。 入れ子になったグループを追加するには、複数のフィールドを領域に追加します。  

@@ -1,5 +1,6 @@
 ---
 title: レポート アイテムの書式設定 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで自分のレポートを書式設定して見やすくしたり、より魅力的にする方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d0433667ba85af242374933a028974d1960416c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 156745486165bd4348e70a81c910aa49fd55a0e1
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079640"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779434"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)
   レポート内のアイテムを書式設定すると、レポートの見栄えがよくなって読みやすくなります。 レポート デザイン モードでは、テキスト ボックスや、テキスト ボックスの個々のアイテム、画像、式、およびデータを書式設定できます。  
@@ -30,7 +31,7 @@ ms.locfileid: "77079640"
   
  書式設定するアイテムを選択し、そのアイテムの [プロパティ] ダイアログ ボックスを開くと、書式設定オプションを変更できます。 たとえば、テキスト ボックス全体のコンテンツやテキスト ボックスの選択した単語の書式を設定するには、アイテムを右クリックして、 **[テキスト ボックスのプロパティ]** を選択します。 次に、書式設定するスタイルを適用することができます。  
   
- すぐに使用するには、「[チュートリアル: テキストの書式設定 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-format-text-report-builder.md)」をご覧ください。  
+ すぐに使用するには、「[チュートリアル:テキストの書式設定 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-format-text-report-builder.md)」をご覧ください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

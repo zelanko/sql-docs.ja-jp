@@ -1,5 +1,6 @@
 ---
 title: レポート パーツのパブリッシュおよび再パブリッシュ (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、既定の場所、既定の設定、編集したメタデータでレポート パーツをパブリッシュする方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2ea76e42cb7230bc4195cc8c2dc1615308fa4058
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c8beab2bdd11e0b8f3b550d46601b5e00069525
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082351"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255225"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>レポート パーツのパブリッシュおよび再パブリッシュ (レポート ビルダーおよび SSRS)
   レポート パーツは、レポート サーバーに個別にパブリッシュされ、別のページ分割されたレポートで再利用できる、ページ分割されたレポート用のアイテムです。 レポート パーツを既定の設定を使用して既定の場所でパブリッシュすることも、名前や説明などのレポート パーツのメタデータを編集し、レポート サーバー上に保存することもできます。 適切な権限があれば、レポート サーバーと統合された SharePoint サイトに保存することもできます。  
@@ -32,7 +33,7 @@ ms.locfileid: "77082351"
   
      それ以外の場合は、 **[パブリッシュする前にレポート パーツを確認および変更する]** をクリックします。  
   
-3.  レポート パーツの名前と説明を編集します。名前をダブルクリックして編集し、 **[説明]** フィールドをクリックして説明を追加します。  
+3.  レポートの名前と説明を編集します。名前をダブルクリックして編集し、 **[説明]** フィールドをクリックして説明を追加します。  
   
     > [!NOTE]  
     >  検索時に識別しやすいように、レポート パーツの名前と説明を指定することをお勧めします。 レポート パーツの名前の最大文字数は、サーバー上のフォルダーの名前とその後に続くレポート パーツの実際の名前を含め、パス全体で 260 文字です。  

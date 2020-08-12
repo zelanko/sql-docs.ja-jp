@@ -1,5 +1,6 @@
 ---
 title: SQL Server Reporting Services のツリー マップとサンバースト グラフ | Microsoft Docs
+description: レポート ビルダーで、ツリーマップとサンバースト グラフを利用し、階層データを視覚的に表現する方法について説明します。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
-ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af294ac47e7523f0b0dba5a57bbf2318bbe8c149
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68259364"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255435"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services のツリー マップとサンバースト グラフ 
 
@@ -41,11 +42,11 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
   
 3. サンプル データから、次のフィールドを追加します。  
   
-    * **値:** LineTotal
+    * **値**:LineTotal
     * **カテゴリ グループ** (次の順序を使用):
         1. CategoryName
         2. SubcategoryName
-    * **系列グループ:** TerritoryName  
+    * **系列グループ**:TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -86,12 +87,12 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
   
 3. サンプル データから、次のフィールドを追加します。  
 
-    * **値:** LineTotal
+    * **値**:LineTotal
     * **カテゴリ グループ** (次の順序を使用):
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * **系列グループ:** TerritoryName  
+    * **系列グループ**:TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -115,7 +116,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
   
 1. **データを取得します**。  
   
-     このセクションのクエリは、「[Adventure Works 2016 Full Database Backup](https://github.com/Microsoft/sql-server-samples/releases)」 (Adventure Works 2016: データベースの完全なバックアップ) からダウンロードできる AdventureWorks データベースに基づいています。  
+     このセクションのクエリは、AdventureWorks データベースに基づいています。このデータベースは GitHub の「[AdventureWorks 2016 full database backup (AdventureWorks 2016 の完全なデータベース バックアップ)](https://github.com/Microsoft/sql-server-samples/releases)」からダウンロードできます。  
 
 2. **データ ソースを作成します**。  
   
@@ -172,12 +173,12 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
   
      データセットの作成の詳細については、「[共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 * [共有データセット デザイン ビュー &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)
 
 * [系列へのツールヒントの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 
-* [チュートリアル: Power BI でのツリー マップ](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
+* [チュートリアル:Power BI でのツリー マップ](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 
-* [ツリー マップ: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)
+* [ツリーマップ:Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)

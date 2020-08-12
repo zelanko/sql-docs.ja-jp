@@ -1,5 +1,6 @@
 ---
 title: 表示拡張機能の概要 | Microsoft Docs
+description: Reporting Services に付属する表示拡張機能について説明します。 他の形式でレポートを生成する目的で、カスタムの表示拡張機能を追加する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c411048c247224f0d1af95329480f24d9b6ccdad
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd3bca97b438d683e325194616af123ea9fb8290
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193885"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529428"
 ---
 # <a name="rendering-extensions-overview"></a>表示拡張機能の概要
   表示拡張機能は、レポート サーバーのコンポーネントまたはモジュールで、レポートのデータとレイアウト情報をデバイス固有の形式に変換します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] には、HTML、Excel、Word、CSV またはテキスト、XML、画像および PDF の 7 つの表示拡張機能があります。 追加の表示拡張機能を作成して、他の形式でレポートを生成できます。  

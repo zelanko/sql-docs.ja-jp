@@ -1,5 +1,6 @@
 ---
 title: 一般的に使用されるフィルター (レポート ビルダー) | Microsoft Docs
+description: 次のフィルター例も、レポート ビルダーでフィルターを作成するときに指定するフィルター式に加え、ご検討ください。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d0a096fd9dcb292f1a71b74aaf853abcbd7c02ae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d091d4b8d49bd1f7a6d0cac04a874bccfba6c2fc
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082308"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779124"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>一般的に使用されるフィルター (レポート ビルダーおよび SSRS)
   フィルターを作成するには、1 つ以上のフィルター式を指定する必要があります。 フィルター式には、式、データ型、演算子、および値が含まれます。 ここでは、一般的に使用されるフィルターの例を示します。  
@@ -46,8 +47,8 @@ ms.locfileid: "77082308"
   
 |パラメーターのタイプ|(フィルター) 式|演算子|値|データ型|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
-|単一値|`[EmployeeID]`|=|`[@EmployeeID]`|整数|  
-|MultiValue|`[EmployeeID]`|IN|`[@EmployeeID]`|整数|  
+|単一値|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
+|MultiValue|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  
   
 ## <a name="see-also"></a>参照  
  [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

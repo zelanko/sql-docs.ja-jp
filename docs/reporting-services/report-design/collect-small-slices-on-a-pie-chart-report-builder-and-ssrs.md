@@ -1,5 +1,6 @@
 ---
 title: 円グラフの小さいスライスをまとめる (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーのページ分割されたレポートで円グラフの多数の小さいスライスを 1 つのスライスにまとめる方法を説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5c318bebf807846aed85f49770498c57a27ef4d3
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5a4dc5671d5a23448f3549e383b26097026cc021
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487981"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462066"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>円グラフの小さいスライスをまとめる (レポート ビルダーおよび SSRS)
 スライスが多すぎる円グラフは、煩雑に見えることがあります。 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートで円グラフの多数の小さいスライスを 1 つのスライスにまとめる方法を説明します。
@@ -79,7 +80,7 @@ ms.locfileid: "81487981"
 >  2 つ目の円グラフの書式は設定できません。 このため、円スライスを収集する際は最初の方法を使用することを強くお勧めします。  
   
 ## <a name="see-also"></a>参照  
-* [チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
+* [チュートリアル:レポートへの円グラフの追加 (レポート ビルダー)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
 *  [円グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [グラフでのデータ ポイントの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
 *  [円グラフの外側へのデータ ポイント ラベルの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   

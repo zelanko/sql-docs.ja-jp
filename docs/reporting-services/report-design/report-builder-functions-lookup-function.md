@@ -1,5 +1,6 @@
 ---
 title: Lookup 関数 (レポート ビルダー) | Microsoft Docs
+description: Lookup 関数を使用し、名前または値のペアを含むデータセットから、指定された名前に最初に一致した値を返します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ca2ef5b2c605d2eb1ca73d05e897919869a435f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f2a3016bc45537aed393124b6d20f8d4a1656759
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081234"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255725"
 ---
 # <a name="report-builder-functions---lookup-function"></a>レポート ビルダー関数 - Lookup 関数
   名前と値のペアを含むデータセットから、指定された名前に最初に一致した値を返します。  

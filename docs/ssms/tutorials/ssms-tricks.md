@@ -1,6 +1,6 @@
 ---
 title: SSMS 使用のヒントとテクニック
-description: コードのコメントとコメント解除、テキストのインデント、オブジェクト エクスプローラーでのオブジェクトのフィルター処理、SQL Server エラー ログへのアクセス、SQL Server Management Studio を使用した SQL Server インスタンス名の検索を行う方法を学習します。
+description: SQL Server Management Studio でコードをコメント化する、コードのコメント化を解除する、テキストをインデントする、オブジェクトをフィルター処理する、エラー ログにアクセスする、SQL Server インスタンス名を見つける方法について説明します。
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245509"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462346"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) の使用に関するヒントとテクニック
 

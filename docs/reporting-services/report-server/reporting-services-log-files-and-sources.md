@@ -1,5 +1,6 @@
 ---
 title: Reporting Services のログ ファイルとソース | Microsoft Docs
+description: 実行とトレースの情報を記録する目的で Reporting Services でレポート サーバーとレポート サーバー環境によって使用されるログについて説明します。
 ms.date: 05/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a0f6270fc40d4a22db2d8b03deba8a53e57fbf6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1e9fad0dad3b5a5d90339403d2d596bb95bf0759
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65620319"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541444"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services のログ ファイルとソース
   レポート サーバーおよびレポート サーバー環境では、サーバーの操作および状態に関する情報を記録するために、さまざまなログの保存先が使用されます。 ログ記録には、実行のログ記録とトレースのログ記録という 2 つの基本的なカテゴリがあります。 実行のログ記録には、レポート実行統計、監査、パフォーマンスの診断、および最適化に関する情報が含まれます。 トレースのログ記録は、エラー メッセージおよび一般的な診断に関する情報です。  

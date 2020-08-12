@@ -1,5 +1,6 @@
 ---
 title: 表示拡張機能の配置 | Microsoft Docs
+description: レポート表示拡張機能を配置する方法について説明します。 レポート サーバーとレポート デザイナーで拡張機能の場所が見つかるよう、どの構成ファイル エントリを追加するか説明します。
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 10c822b8cd292c975309443f9196fb7ceb66cbc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a13d9eb18fae38ef85c182576fe50ed3be6f4d38
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193699"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529468"
 ---
 # <a name="deploying-a-rendering-extension"></a>表示拡張機能の配置
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のレポート表示拡張機能は、作成して [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ライブラリにコンパイルした後、レポート サーバーおよびレポート デザイナーで検出できるようにする必要があります。 それには、拡張機能を適切なディレクトリにコピーし、適切な [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成ファイルにエントリを追加します。  
   
 ## <a name="configuration-file-rendering-extension-element"></a>構成ファイルの表示拡張機能要素  
- 表示拡張機能を .DLL にコンパイルした後、rsreportserver.config ファイルにエントリを追加します。 既定では、%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer にあります。 親要素は \<Render> です。 Render 要素の下には、各表示拡張機能の Extension 要素があります。 **Extension** 要素には、Name と Type という 2 つの属性があります。  
+ 表示拡張機能を .DLL にコンパイルした後、rsreportserver.config ファイルにエントリを追加します。 既定では、次の場所にあります。%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer。 親要素は \<Render> です。 Render 要素の下には、各表示拡張機能の Extension 要素があります。 **Extension** 要素には、Name と Type という 2 つの属性があります。  
   
  次の表では、表示拡張機能の **Extension** 要素の属性について説明します。  
   
-|Attribute|説明|  
+|属性|説明|  
 |---------------|-----------------|  
-|**Name**|拡張機能の一意の名前。 **Name** 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extensions** 要素内のすべてのエントリの中で一意にする必要があります。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
+|**名前**|拡張機能の一意の名前。 **Name** 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extensions** 要素内のすべてのエントリの中で一意にする必要があります。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
 |**Type**|アセンブリの名前と共に完全修飾名前空間を含むコンマ区切りの一覧。|  
 |**[表示]**|値が **false** の場合、表示拡張機能がユーザー インターフェイスに表示されないことを示します。 この属性が指定されない場合、既定値は **true**になります。|  
 |**LogAllExecutionRequests**|値が **false** の場合、エントリがログに記録されるのは、セッションでレポートが最初に実行されるときのみであることを示します。 この属性が指定されない場合、既定値は **true**になります。<br /><br /> この設定によって、レポートに最初に表示されるページについてのみエントリをログに記録するか ( **false**の場合)、レポートに表示されるページごとにエントリをログに記録するか ( **true**の場合) が決まります。|  
@@ -40,7 +41,7 @@ ms.locfileid: "63193699"
   
 ### <a name="to-deploy-the-assembly"></a>アセンブリを配置するには  
   
-1.  ステージング場所から、表示拡張機能を使用するレポート サーバーの bin ディレクトリにアセンブリをコピーします。 レポート サーバーの Bin ディレクトリの既定の場所は、%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer\Bin です。  
+1.  ステージング場所から、表示拡張機能を使用するレポート サーバーの bin ディレクトリにアセンブリをコピーします。 レポート サーバーの bin ディレクトリの既定の場所は %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer\Bin です。  
   
 2.  アセンブリ ファイルをコピーした後、rsreportserver.config ファイルを開きます。 rsreportserver.config ファイルもレポート サーバーの bin ディレクトリにあります。 構成ファイルに拡張機能アセンブリ ファイルのエントリを作成する必要があります。 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] または簡単なテキスト エディターを使用して、ファイルを開くことができます。  
   

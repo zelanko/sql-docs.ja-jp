@@ -1,5 +1,6 @@
 ---
 title: 配信拡張機能ライブラリの作成 | Microsoft Docs
+description: Reporting Services で作成した配信拡張機能を一意の名前空間に割り当て、ライブラリまたはアセンブリ ファイルにする方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06b204e9cc3c13492b0ab6815c7d36abdc628d4b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 77bff5683f459317458f270eea663641ca5e2c33
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193876"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529138"
 ---
 # <a name="creating-a-delivery-extension-library"></a>配信拡張機能ライブラリの作成
   作成する [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配信拡張機能は、それぞれ一意の名前空間に割り当てられ、ライブラリまたはアセンブリ ファイルに組み込まれている必要があります。 名前空間の正確な名前はあまり重要ではありませんが、名前は他の拡張機能とは共有しない一意のものである必要があります。 会社の配信拡張機能には、独自に一意の名前空間を作成してください。  

@@ -1,5 +1,6 @@
 ---
 title: テーブル、マトリックス、または一覧の追加、移動、または削除 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで [新しいテーブル] または [マトリックスの新規作成] ウィザードを使用し、テーブルまたはマトリックスのデータ領域を配置します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 995bfa16d25392e35b9147c021b6bbcaff423a6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 698ee0d950b701ff864b31a6d786f72beed632f5
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081609"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84011747"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>テーブル、マトリックス、または一覧の追加、移動、または削除 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートのデータ領域には、レポート データセットのデータが表示されます。 またデータ領域には、テーブル、マトリックス、一覧、グラフ、およびゲージが含まれます。 1 つのデータ領域を別のデータ領域内に入れ子にするには、各データ領域を個別に追加し、子データ領域を親データ領域にドラッグします。  

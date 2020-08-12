@@ -1,5 +1,6 @@
 ---
 title: レポート実行の確認 | Microsoft Docs
+description: ログ ファイルを使用したり、レポートと共に表示されるステータス情報を参照したりし、レポート マネージャーでレポート実行を確認する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd48861b53b6b7f159d4421bd86bf024838fbaf7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6384697eea05d39431ecd7ec77796101747a59ee
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580074"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547824"
 ---
 # <a name="verifying-a-report-run"></a>レポート実行の確認
   レポート処理の状態に関する情報を表示するには、ログ ファイルを使用するか、またはレポート マネージャーでレポートと共に表示される状態の情報を参照します。  

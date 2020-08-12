@@ -1,5 +1,6 @@
 ---
 title: レポートへの画像の埋め込み (レポート ビルダー) | Microsoft Docs
+description: 画像をレポートで使用できるようにします。 レポートに埋め込まれ、レポート ビルダーの [レポート データ] ペインに一覧表示される画像を使用します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: acdbae6c6654494abe5cb498211cfb77cf0ad891
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a4fe4e15d2d35f55aa6af846492ac81b08394f7
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080444"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255631"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>レポートへの画像の埋め込み (レポート ビルダーおよび SSRS)
   レポートには、画像を埋め込むことができます。 画像の埋め込みには、レポートの画像を常に利用可能な状態にできるというメリットはありますが、レポート定義 (レポートを定義するファイル) のサイズは大きくなる可能性があります。 レポートに埋め込まれた画像は、レポート データ ペインに一覧表示されます。  

@@ -1,5 +1,6 @@
 ---
 title: データ バインド画像の追加 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーのご自分のレポートに表示する、データベースに格納されている画像を参照する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ab11e39d435a2a4f965c4a6cb5cf367ae2b4d84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f126fc98d517268f5513cc2cbaa8b439ae6623eb
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080761"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681561"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>データバインド画像の追加 (レポート ビルダーおよび SSRS)
   レポートには、データベースに保存されている画像への参照を含めることができます。 このような画像を *データバインド画像*と呼びます。 たとえば、製品一覧で製品名と合わせて表示される画像はデータバインド画像です。  

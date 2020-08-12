@@ -1,5 +1,6 @@
 ---
 title: レポート サーバーのパフォーマンスの監視 | Microsoft Docs
+description: レポート サーバーのパフォーマンスを監視してサーバー活動を評価し、傾向を観察し、ボトルネックを診断し、システム構成に関するデータを収集する方法について説明します。
 ms.date: 06/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 67d9f59f1561ce844c3e6a1b6f3e20770e12db6b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67412656"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547962"
 ---
 # <a name="monitoring-report-server-performance"></a>レポート サーバーのパフォーマンスの監視
   パフォーマンス監視ツールを使用してレポート サーバーのパフォーマンスを監視することにより、サーバーの利用状況の評価、傾向の監視、システムのボトルネックの診断、および現在のシステム構成で十分かどうかを判断するためのデータの収集を行うことができます。 サーバーのパフォーマンスを調整するには、レポート サーバー アプリケーション ドメインを再利用する頻度を指定します。 詳細については、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。  
@@ -70,10 +71,10 @@ SQL Server Reporting Services (SSRS) 2016 以降には、次のパフォーマ�
 ## <a name="other-performance-counters"></a>その他のパフォーマンス カウンター  
  **MSRS 2008 Web Service**、**MSRS 2008 Windows Service**、および **ReportServer サービス**専用に、カスタムの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] パフォーマンス カウンターが用意されています。 次のパフォーマンス オブジェクトにより、レポート サーバーに関する補足的なパフォーマンス監視データが提供されます。  
   
-|パフォーマンス オブジェクト|メモ|  
+|パフォーマンス オブジェクト|Notes|  
 |------------------------|-----------|  
 |**.NET CLR データ** および **.NET CLR メモリ**|Web ポータルでは、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] パフォーマンス カウンターが使用されます。 詳細については、MSDN の「Improving .NET Application Performance and Scalability」を参照してください。|  
-|**[処理]**|ReportingServicesService のインスタンスでプロセス ID ごとの稼働時間を追跡するための **Elapsed Time** および **ID Process** パフォーマンス カウンターを追加します。|  
+|**処理**|ReportingServicesService のインスタンスでプロセス ID ごとの稼働時間を追跡するための **Elapsed Time** および **ID Process** パフォーマンス カウンターを追加します。|  
   
 ## <a name="sharepoint-events"></a>SharePoint のイベント  
  レポート サーバーを SharePoint 統合モードで実行しており、SharePoint 製品を使用するようにレポート環境を構成している場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のパフォーマンス オブジェクトだけでなく、SharePoint のイベントを構成することもできます。 このセクションでは、「SharePoint 統合モードにおけるレポート サーバーのイベント」を基に、SharePoint と統合されたレポート環境で役立てることのできる診断イベントについて確認します。  
@@ -90,7 +91,7 @@ SQL Server Reporting Services (SSRS) 2016 以降には、次のパフォーマ�
 
 ::: moniker-end
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)  

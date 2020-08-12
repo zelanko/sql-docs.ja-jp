@@ -1,5 +1,6 @@
 ---
 title: セキュリティで保護された開発 (Reporting Services) | Microsoft Docs
+description: Reporting Services で使用され、厳しく制約され、管理者が定義したセキュリティ コンテキストでコードを実行するコード アクセス セキュリティ システムについて説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12161a6c-b93b-4312-9d27-0c922561eb9b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ead476f8aa6d2565c1865a24c2570a68c2b958d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 69d60e4a68deee28c639cc5e100456ef1c9c3552
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193805"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529410"
 ---
 # <a name="secure-development-reporting-services"></a>セキュリティで保護された開発 (Reporting Services)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、厳しく制約され、管理者が定義したセキュリティ コンテキストでコードを実行できる堅固なセキュリティ システムを備えています。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、コード アクセス セキュリティまたは証拠ベース セキュリティとも呼ばれる [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のセキュリティ システムを使用します。 コード アクセス セキュリティの管理下では、リソースにアクセスする場合にユーザーが信頼されます。ただし、ユーザーが実行するコードが信頼されていない場合は、リソースへのアクセスが拒否されます。  

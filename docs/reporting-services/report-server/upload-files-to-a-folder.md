@@ -1,5 +1,6 @@
 ---
 title: フォルダーへのファイルのアップロード | Microsoft Docs
+description: Reporting Services でファイル システムからさまざまなファイルの種類をアップロードし、レポート サーバー データベースに監視対象アイテムとして格納するしくみについて説明します。
 ms.date: 06/17/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d93840b2b1b7354238ccae12ba3a540889038fb2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 94de4754811e1cb35c819b9cf8f4398b9e8c8634
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67228681"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547854"
 ---
 # <a name="upload-files-to-a-folder"></a>フォルダーへのファイルのアップロード
   ファイル システムからファイルをアップロードし、それらを管理対象アイテムとしてレポート サーバー データベースに格納できます。 ファイルのアップロード時に行われる処理は、ファイルの種類によって異なります。  
@@ -49,7 +50,7 @@ ms.locfileid: "67228681"
 |任意のファイルをバイナリ オブジェクトとしてアップロード|リソースの管理|  
 |フォルダーのコンテンツの表示|リソースの表示、レポートの表示|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート サーバーの Web ポータル (SSRS ネイティブ モード)](../../reporting-services/web-portal-ssrs-native-mode.md)  
  [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [タスクと権限](../../reporting-services/security/tasks-and-permissions.md)   

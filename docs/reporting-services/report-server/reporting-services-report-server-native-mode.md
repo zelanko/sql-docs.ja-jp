@@ -1,5 +1,6 @@
 ---
 title: Reporting Services レポート サーバー (ネイティブ モード) | Microsoft Docs
+description: リソースを管理する、レポートから画像リソースを参照するなど、ネイティブ モード用に構成されたレポート サーバーについて説明します。
 ms.date: 04/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d4a78281f9e42921f31f8d02c5f167dd13d06d5
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 2ed406e7bb91f18149b0d42db90ed248de0d86c8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82086841"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535444"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   ネイティブ モード用に構成されたレポート サーバーは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]コンポーネントのみを通じてすべての処理機能と管理機能を提供するアプリケーション サーバーとして実行されます。  
@@ -79,7 +80,7 @@ ms.locfileid: "82086841"
   
 -   レポート処理のスケジュールを設定し、要求時に実行できるレポート処理とキャッシュから読み込まれるレポート処理を指定することにより、サーバーに対するレポート処理の要求を分散させます。  
   
- 管理タスクを実行するための権限は、 **システム管理者** と **コンテンツ マネージャー**という、事前定義された 2 つのロールを通じて提供されます。 レポート サーバーのコンテンツを効率よく管理するためには、両方のロールに割り当てられている必要があります。 詳細については、「[ロールとアクセス許可 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)」を参照してください。  
+ 管理タスクを実行するための権限は、**システム管理者** と **コンテンツ マネージャー**という、事前定義された 2 つのロールを通じて提供されます。 レポート サーバーのコンテンツを効率よく管理するためには、両方のロールに割り当てられている必要があります。 詳細については、「[ロールとアクセス許可 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)」を参照してください。  
   
  レポート サーバーのコンテンツを管理するためのツールには、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] や Web ポータルなどがあります。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、既定値を設定したり、各機能を有効化することができます。 Web ポータルを使って、レポート サーバーのアイテムおよび操作へのユーザー アクセスを許可したり、レポートをはじめとする各種のコンテンツを表示および使用したり、すべての共有アイテムとレポート配信機能を表示および使用したりできます。  
   
@@ -108,7 +109,7 @@ ms.locfileid: "82086841"
   
  レポートに画像リソースを使用するには、画像ファイルをプロジェクトに追加し、そのプロジェクトをレポートと一緒にパブリッシュします。 画像がパブリッシュされたら、レポート内の画像参照がレポート サーバー上のリソースを指定するように更新した後で、そのレポートのみを再パブリッシュして変更を保存します。 以後、リソースを再パブリッシュすることで、レポートと関係なく画像を更新できるようになります。 レポートでは、レポート サーバー上にある最新バージョンの画像が使用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート サーバーを構成および管理する &#40;SSRSネイティブ モード&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Reporting Services インストール時の問題解決](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   

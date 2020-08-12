@@ -1,5 +1,6 @@
 ---
 title: Avg 関数 (レポート ビルダー) | Microsoft Docs
+description: ページ分割されたレポートの Avg 関数について説明します。これは、レポート ビルダーで、式によって指定されたすべての非 NULL 数値の平均を返します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c29c03ea3942f9fd89fd7e148d65a3fe4c8b9f33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 983d0158582b7ead50ece81eb7f3d67bbe5777ad
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081310"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462396"
 ---
 # <a name="report-builder-functions---avg-function"></a>レポート ビルダー関数 - Avg 関数
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、式で指定された NULL 以外のすべての数値の平均を、指定されたスコープで評価して返します。  

@@ -1,5 +1,6 @@
 ---
 title: レポートの計画 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、売上データ、マーケティング傾向、経営報告、ダッシュボードを表示するリッチ テキストでレポートを計画し、作成します。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9c65d1db987f5d317b0719ff101012b4db0a5873
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 134f0578e66f39e38efe7cb550c687f75910ac5e
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67038024"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012242"
 ---
 # <a name="planning-a-report-report-builder"></a>レポートの計画 (レポート ビルダー)
   レポート ビルダーでは、さまざまな種類のページ分割されたレポートを作成できます。 たとえば、売上データの概要または詳細、マーケティングと売上の傾向、経営報告、またはダッシュボードを示すレポートを作成できます。 また、販売注文、製品カタログ、定型書簡などの高度な書式付きテキストを利用したレポートも作成できます。 これらのレポートはすべて、レポート ビルダーの同じ基本的な構成要素をさまざまに組み合わせて作成されます。 便利でわかりやすいレポートを作成するには、まず計画を立てることが役立ちます。 開始する前に検討すると役立ついくつかの事項を次に示します。  

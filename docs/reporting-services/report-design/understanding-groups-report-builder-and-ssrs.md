@@ -1,5 +1,6 @@
 ---
 title: グループについて (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーのページ分割されたレポートで、グループによってレポート データセットのビューがどのように整理されるかについて説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a24833de353f4a524dd12f3a37a343fdc1a9151
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 498604b377638981d767e353518b70fe3398c597
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080854"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880302"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>グループについて (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、グループは、データ領域にバインドされたレポート データセットの名前付きセットです。 グループは基本的に、レポート データセットのビューを整理します。 データ領域のグループはすべて、同じレポート データセットの異なるビューを指定します。  
@@ -61,7 +62,7 @@ ms.locfileid: "77080854"
 > [!NOTE]  
 >  グループにはさまざまなデータ領域があり、名前も異なりますが、グループの作成方法と使用方法の背景にある原則は同じです。 データ領域にグループを作成する際には、データ領域にリンクされているデータセットの詳細データを編成する方法を指定します。 各データ領域では、グループ化されたデータを表示するグループ構造がサポートされています。  
   
-### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Tablix データ領域のグループ: 詳細グループ、行グループ、列グループ  
+### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Tablix データ領域のグループ:詳細グループ、行グループ、列グループ  
  このトピックで前述したとおり、Tablix データ領域を使用すると、行または列ごとのグループにデータを編成できます。 ただし、Tablix データ領域には、行グループと列グループ以外にも使用可能なグループがあります。 このデータ領域で使用できるグループの種類は次のとおりです。  
   
 -   **詳細グループ** : 詳細グループは、レポート ビルダーまたはレポート デザイナーがデータセットとデータ領域フィルターを適用した後のレポート データセットの全データで構成されています。 そのため、詳細グループはグループ式がない唯一のグループです。  

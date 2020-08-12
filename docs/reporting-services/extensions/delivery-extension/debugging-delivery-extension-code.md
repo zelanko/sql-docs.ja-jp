@@ -1,5 +1,6 @@
 ---
 title: 配信拡張機能のコードのデバッグ | Microsoft Docs
+description: Microsoft .NET Framework デバッグ ツールを使用し、配信拡張機能コードを分析し、その中でエラーを見つける方法について説明します。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7d959da-5005-4a50-aca7-2cef36aa9947
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1abe30a462e8bf303b0171dbeeb82c407c80ca2a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2e28243c1cb41a8c7a85ddbe381302a18d161f2e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193742"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529128"
 ---
 # <a name="debugging-delivery-extension-code"></a>配信拡張機能のコードのデバッグ
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] には、ご自分の配信拡張機能コードを分析してエラーを探すのに役立ついくつかのデバッグ ツールが用意されています。 最適なデバッグ ツールは、使用する目的によって異なります。 この例では、[!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] を使用します。  

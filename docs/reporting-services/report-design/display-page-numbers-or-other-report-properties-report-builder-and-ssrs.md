@@ -1,5 +1,6 @@
 ---
 title: ページ番号またはその他のレポート プロパティの表示 (レポート ビルダー) | Microsoft Docs
+description: ページのヘッダーまたはフッターに表示するため、ページ番号、ファイル名、タイトルなど、レポートのプロパティを追加します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 14496cc4e46118b5421f4d061136f7b1c5b16850
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5bd98f079ed492a4959597068c1f49a048b74cd
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080493"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689536"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>ページ番号またはその他のレポート プロパティの表示 (レポート ビルダーおよび SSRS)
   レポートのページ ヘッダーまたはページ フッターにページ番号、レポート タイトル、ファイル名、およびその他のレポート プロパティを簡単に追加できます。 これらのプロパティは、レポート データ ペインの [組み込みフィールド] フォルダーのフィールドとして保存されます。  
@@ -32,7 +33,7 @@ ms.locfileid: "77080493"
   
 -   User ID  
   
--   言語  
+-   Language  
   
  ページ番号については、番号の前に "ページ" という語を追加したり、 総ページ数を表示したりすることもできます。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "77080493"
   
 1.  [&PageNumber] が含まれているテキスト ボックスを右クリックし、 **[式]** をクリックします。  
   
-     **[式の設定: 値]** テキスト ボックスに、=Globals!PageNumber という式が含まれています。  
+     **[式の設定:値]** テキスト ボックスに、=Globals!PageNumber という式が含まれています。  
   
 2.  = (等号) の後ろにカーソルを置き、「 **"ページ " &** 」と入力します。  
   

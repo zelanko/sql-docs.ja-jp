@@ -1,5 +1,6 @@
 ---
 title: テキスト ボックスの追加、移動、または削除 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、テキスト ボックスをレポート本文に追加し、タイトル、パラメーターの選択肢、組み込みフィールド、日付などの情報を表示します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9bf0a50378979312991cf7cd149d838f4cbe2a3b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2bb2436b448dc06fa68d4df98dfbc4e4ffd200
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081597"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462226"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>テキスト ボックスの追加、移動、または削除 (レポート ビルダーおよび SSRS)
   テキスト ボックスは [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート内で最も一般的に使用されるレポート アイテムです。 テキスト ボックスをレポート本文に追加して、タイトル、パラメーターの選択肢、組み込みフィールド、日付などの情報を表示できます。  

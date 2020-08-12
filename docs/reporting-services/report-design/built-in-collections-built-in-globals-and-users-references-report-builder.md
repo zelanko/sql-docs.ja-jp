@@ -1,5 +1,6 @@
 ---
 title: 組み込み Globals および Users 参照 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーのレポートで結果をフィルター処理するために使用できる値について説明します。
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8dfd41dfbcbd35712fb2e13925b047e4ed2db962
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 23c0167fddf6887d0ff4e25dcfcd9242434b4f66
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082208"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462196"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>組み込みコレクション - 組み込み Globals および Users 参照 (レポート ビルダー)
   組み込みフィールドのコレクションには、レポートの処理時に Reporting Services によって提供されるグローバルな値を表す **Globals** コレクションと **User** コレクションの両方が含まれています。 **Globals** コレクションでは、レポート名、レポート処理の開始時刻、レポート ヘッダーまたはレポート フッターの現在のページ番号などの値が提供されます。 **User** コレクションでは、ユーザー ID と言語設定が提供されます。 これらの値は、レポート内の結果をフィルター処理する際に式で使用できます。  
@@ -44,7 +45,7 @@ ms.locfileid: "77082208"
   
 |メンバー|種類|説明|  
 |------------|----------|-----------------|  
-|Name|**String**|RSReportServer 構成ファイルに登録されているレンダラーの名前です。<br /><br /> レポート処理または表示サイクルの特定の部分で使用できます。|  
+|名前|**String**|RSReportServer 構成ファイルに登録されているレンダラーの名前です。<br /><br /> レポート処理または表示サイクルの特定の部分で使用できます。|  
 |IsInteractive|**Boolean**|現在の表示要求で対話型の表示形式を使用するかどうかを示します。|  
 |DeviceInfo|読み取り専用の名前/値のコレクションです。|現在の表示要求の deviceinfo パラメーターのキーと値のペアです。<br /><br /> キーまたはインデックスを使用して、コレクションに文字列値を指定できます。|  
   

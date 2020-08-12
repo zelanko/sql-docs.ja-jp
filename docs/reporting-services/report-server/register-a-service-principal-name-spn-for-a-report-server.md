@@ -1,5 +1,6 @@
 ---
 title: レポート サーバーのサービス プリンシパル名 (SPN) の登録 | Microsoft Docs
+description: ネットワークで認証に Kerberos が使用されるとき、ドメイン ユーザーとして実行される場合に、レポート サーバー サービス用の SPN を作成する方法について説明します。
 ms.date: 02/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9bfe7a68dc64d2248b9ff9fc4c0696970f692b60
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d5f52195deab514d4f7bcc03c77d9cb9a5c69b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256425"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544504"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>レポート サーバーのサービス プリンシパル名 (SPN) の登録
   相互認証に Kerberos プロトコルを使用するネットワークに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を配置する場合に、レポート サーバー サービスをドメイン ユーザー アカウントとして実行するように構成するには、レポート サーバー サービスのサービス プリンシパル名 (SPN) を作成する必要があります。  
@@ -41,7 +42,7 @@ Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>
   
  **HTTP** はサービス クラスです。 レポート サーバー Web サービスは、HTTP.SYS で実行されます。 HTTP 用に SPN を作成すると、副次的に、HTTP.SYS で実行される同じコンピューター上のすべての Web アプリケーション (IIS でホストされるアプリケーションを含む) に対して、ドメイン ユーザー アカウントに基づいてチケットが付与されます。 これらのサービスを別のアカウントで実行すると、認証要求が失敗します。 この問題を回避するには、すべての HTTP アプリケーションが同じアカウントで実行されるように構成するか、またはアプリケーションごとにホスト ヘッダーを作成し、作成したホスト ヘッダーごとに個別の SPN を作成することを検討してください。 ホスト ヘッダーを構成する場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成にかかわらず DNS を変更する必要があります。  
   
- \<*computername*> と \<*domainname*> に指定した値で、レポート サーバーをホストするコンピューターのネットワーク アドレスが一意に識別されます。 これは、ローカル ホスト名にすることも、完全修飾ドメイン名 (FQDN) にすることもできます。 ドメインが 1 つしかない場合、コマンド ラインから \<*domainname*> を省略できます。 \<*domain-user-account*> は、レポート サーバー サービスが実行され、SPN を登録する必要があるユーザー アカウントです。  
+ \<*computername*> と \<*domainname*> に指定した値により、レポート サーバーをホストするコンピューターの一意のネットワーク アドレス識別されます。 これは、ローカル ホスト名にすることも、完全修飾ドメイン名 (FQDN) にすることもできます。 ドメインが 1 つしかない場合、コマンド ラインから \<*domainname*> を省略できます。 \<*domain-user-account*> は、レポート サーバー サービスが実行され、SPN を登録する必要があるユーザー アカウントです。  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>ドメイン ユーザー アカウントに対する SPN の登録  
   

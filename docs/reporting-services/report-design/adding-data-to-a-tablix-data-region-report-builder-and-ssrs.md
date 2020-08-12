@@ -1,5 +1,6 @@
 ---
 title: Tablix データ領域へのデータの追加 (レポート ビルダー) | Microsoft Docs
+description: テーブルまたはマトリックスのレポート データセットから Tablix データ領域に詳細データまたはグループ化されたデータを表示する方法について説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 316bb3980a52bef2c4c52b252b35a4641cede6ac
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 27e16e327855ccc2e7092787cefc95f275a1b2b4
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081513"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689701"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Tablix データ領域へのデータの追加 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートで、レポート データセットのデータをテーブルまたはマトリックス形式で表示するには、各データ セルで表示するデータセット フィールドの名前を指定します。 詳細データまたはグループ化されたデータを表示できます。 グループをテーブルまたはマトリックスに追加すると、グループの値およびデータの行と列が自動的に追加されます。 データの小計および合計を追加できます。  

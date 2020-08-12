@@ -1,5 +1,6 @@
 ---
 title: レポートまたはテキスト ボックスのロケールの設定 (Reporting Services) | Microsoft Docs
+description: テキスト ボックスで Language プロパティを使用すると、言語と地域によって表示が異なるデータに、レポート ビルダーでロケール設定を書式指定できます。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c5f31ffe9fc3158cf0c6b1c6ef8a9ba813417e76
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4105c10fba6774275471a1157677badf88c11f5f
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576770"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779095"
 ---
 # <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>レポートまたはテキスト ボックスのロケールの設定 (Reporting Services)
   レポートまたはテキスト ボックスの **Language** プロパティでは、ローカル設定を指定します。ローカル設定は、言語や地域ごとに異なるレポート データ (日付、通貨、数値など) を表示するための既定の形式を指定します。 テキスト ボックスの **Language** プロパティは、レポートの **Language** プロパティをオーバーライドします。 **Language**プロパティに値が指定されてない場合、Reporting Services は、パブリッシュされたレポートのレポート サーバーの OS のロケールか、またはレポート プレビューを行うレポート作成コンピューターのロケールを使用します。  

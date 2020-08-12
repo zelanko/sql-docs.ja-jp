@@ -1,5 +1,6 @@
 ---
 title: 罫線の追加および変更 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、個々のセクションにグラフィック要素を追加するか、罫線のプロパティを編集して色やスタイルを変更することでレポートの外観をカスタマイズします。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e188a075237c7cea2c05bb8bc0a5dd6f1496f39e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2f6260fc76e72d648f20806cf7286b2132efb6c9
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080626"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012680"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>罫線の追加および変更 (レポート ビルダーおよび SSRS)
   グラフィック要素を使用してレポートのセクションを区切る場合は、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートに罫線を追加できます。 色やスタイルなどの罫線のプロパティを編集して、罫線の外観をカスタマイズできます。 たとえば、企業の色をレポートに組み込むことができます。    

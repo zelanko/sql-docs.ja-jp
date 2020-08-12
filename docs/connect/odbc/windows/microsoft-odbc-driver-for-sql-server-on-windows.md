@@ -1,7 +1,7 @@
 ---
 title: Microsoft ODBC Driver for SQL Server on Windows | Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2018
+ms.date: 06/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f3aa47d41f347867a0db98b59e0cf5ab9b47c2da
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: bb53e8e44d0f6b9e9f293f6afa5a470e91103a0c
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886319"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681191"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用 Microsoft ODBC Driver は、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に標準の ODBC インターフェイスを実装するアプリケーション プログラミング インターフェイス (API) を提供するスタンドアロン ODBC ドライバーです。
 
-Microsoft ODBC Driver for SQL Server を使用して、新しいアプリケーションを作成できます。 現在古いバージョンの ODBC ドライバーを使用している古いバージョンのアプリケーションをアップグレードすることもできます。 ODBC Driver for SQL Server を使用すると、Azure SQL Database、Azure SQL Data Warehouse、SQL Server 2017、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008、SQL Server 2005 に接続できます。  
+Microsoft ODBC Driver for SQL Server を使用して、新しいアプリケーションを作成できます。 現在古いバージョンの ODBC ドライバーを使用している古いバージョンのアプリケーションをアップグレードすることもできます。 ODBC Driver for SQL Server を使用すると、Azure SQL Database、Azure SQL Data Warehouse、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続できます。  
 
 ## <a name="summary"></a>まとめ
 

@@ -1,5 +1,6 @@
 ---
 title: 円グラフ (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、円グラフを使用し、全体の一部としてデータを表示する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99988a882adff55308c9c7e3fe776cd49b7ce275
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 84f2bdbfd565809167be7c3ffe0169a5d4e3b79f
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082440"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255609"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>円グラフ (レポート ビルダーおよび SSRS)
   円グラフおよびドーナツ グラフは、データを全体に対する比率として表示します。 円グラフは、主に、グループ間の比較を示すために使用されます。 円グラフとドーナツ グラフは、ピラミッド グラフやじょうごグラフと同様、図形グラフの一種です。 図形グラフには軸がありません。 図形グラフに数値フィールドをドロップすると、それぞれの値の全体に占める比率が計算されます。 図形グラフの詳細については、「[図形グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)」を参照してください。  
@@ -87,7 +88,7 @@ ms.locfileid: "77082440"
  [円グラフの外側へのデータ ポイント ラベルの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [円グラフの小さいスライスをまとめる &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [円グラフへのパーセンテージの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
- [チュートリアル: レポートへの円グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [チュートリアル:レポートへの円グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [グラフの凡例の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  

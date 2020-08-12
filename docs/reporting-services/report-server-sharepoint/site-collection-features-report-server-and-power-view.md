@@ -1,5 +1,6 @@
 ---
 title: SharePoint でのレポート サーバーと Power View の統合機能のアクティブ化 | Microsoft Docs
+description: SQL Server Reporting Services Add-in for SharePoint 機能は通常、自動的にアクティブ化されます。 以下の手順は、手動でアクティブ化する必要がある場合にのみ使用します。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dce33b0f267dadd8454378fccb72112970553a96
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f96e73135889e94cda9e84a39c8f03b59c39973f
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580503"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764879"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>SharePoint でのレポート サーバーと Power View の統合機能のアクティブ化
 

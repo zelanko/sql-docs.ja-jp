@@ -1,5 +1,6 @@
 ---
 title: 改ページ、見出し、列、行の制御 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、ページの長さ、列、見出し、行を選択し、テーブル、リスト、画像の表示と印刷を最適化します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2199d84efbf16b2f9a21ca48b523215749ffc488
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d3bcce26870ffea199d83f542a5d31bed1452cd1
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082300"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012640"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>改ページ、見出し、列、および行の制御 (レポート ビルダーおよび SSRS)
   レポートは、改ページによって複数のページに分割され表示および印刷されます。 改ページを使用すると、レポートのプレビュー時または他のファイル形式へのエクスポート時に、表示が最適化されるようにコンテンツをレポート ページに収めることができます。  

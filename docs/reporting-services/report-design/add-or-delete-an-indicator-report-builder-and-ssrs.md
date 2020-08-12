@@ -1,5 +1,6 @@
 ---
 title: インジケーターの追加または削除 (レポート ビルダー) | Microsoft Docs
+description: 1 つのデータ値の状態を示すインジケーターを、レポート ビルダーの自分のページ分割されたレポートに追加または削除する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08dd396fc68bae04d973d6b96f67466006642120
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 154faecf24a142578fc236a2cae6330ea7d89a76
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081572"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881257"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>インジケーターの追加または削除 (レポート ビルダーおよび SSRS)
-  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 改ページ調整されたレポートのインジケーターは、1 つのデータ値の状態をひとめでわかるようにするための小さなゲージです。 詳細については、「 [インジケーター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)」を参照してください。  
+  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]のページ分割されたレポートでのインジケーターとは、1 つのデータ値の状態をひとめでわかるようにした小さなゲージです。 詳細については、「 [インジケーター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)」を参照してください。  
   
  通常、インジケーターはテーブルまたはマトリックス内のセルに置かれますが、単独で使用したり、ゲージと並べて使用したり、ゲージに埋め込むこともできます。  
   

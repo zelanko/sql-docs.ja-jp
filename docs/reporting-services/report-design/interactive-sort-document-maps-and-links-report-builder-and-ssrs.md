@@ -1,5 +1,6 @@
 ---
 title: 対話的な並べ替え、ドキュメント マップ、リンク (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、ユーザーがレポートの値の並べ替え順序を変更したり、項目の表示と非表示を切り替えたり、他のレポートまたは Web ページへのリンクを選択したりできるようにします。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 472f2d2962bab1f8a3fc576558012f08946a3755
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 712f572a9467eb2e3d1a4629bbf24026b9367c3f
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082001"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255465"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>対話的な並べ替え、ドキュメント マップ、およびリンク (レポート ビルダーおよび SSRS)
   Web ベースの環境では、ユーザーがレポートと対話できるようにするさまざまな機能を追加できます。 ユーザーは、レポート内の値の並べ替え順序を変更したり、レポート内のアイテムの表示と非表示を切り替えたり、リンクをクリックして他のレポートや Web ページを表示したりできます。 また、目次やドキュメント マップを追加することもできます。 レポート ユーザーは、目次またはドキュメント マップ内のアイテムをクリックして、レポート内の領域に直接移動できます。  

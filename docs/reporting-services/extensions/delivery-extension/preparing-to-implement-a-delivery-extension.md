@@ -1,5 +1,6 @@
 ---
 title: 配信拡張機能を実装する準備 | Microsoft Docs
+description: Reporting Services で配信拡張機能を実装する方法について説明します。 利用できるインターフェイス、利用できるクラス、必須の機能、任意の機能について説明します。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 949ab416b0d30f7bb20ec2b797a04121d49b9811
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fa186787f22c6ba3dbabe6f3e219165cbf96a9b7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193717"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529498"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>配信拡張機能を実装する準備
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配信拡張機能を実装する前に、実装するインターフェイスを定義しておく必要があります。 最初に配信拡張機能の使用方法、配信拡張機能に必要な設定、およびレポート通知を配信するために実装が必要な特定の機能を決定する必要があります。  

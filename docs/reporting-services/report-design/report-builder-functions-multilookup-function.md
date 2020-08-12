@@ -1,5 +1,6 @@
 ---
 title: Multilookup 関数 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーの Multilookup 関数からは、名前と値のペアを含むデータセットから、指定された名前のセットに最初に一致した値のセットが返されます。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94883e68a4543c7fe98794d8b89dc38f05d2b410
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fca4a966d661005f1c672011ac5712903644780b
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081189"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462386"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>レポート ビルダー関数 - Multilookup 関数
   名前と値のペアを含むデータセットから、指定された名前のセットに最初に一致した値のセットを返します。  
@@ -88,12 +89,12 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  CategoryNames データセットには、次の表に示すように、カテゴリ識別子とカテゴリ名が格納されています。  
   
-|id|Name|  
+|id|名前|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
-|4|Components|  
+|4|コンポーネント|  
   
  識別子のリストに対応する名前を参照するには、 **Multilookup**を使用します。 まず、リストを文字列の配列に分割する必要があります。次に、 **Multilookup** を呼び出してカテゴリ名を取得し、結果を連結して文字列にします。  
   

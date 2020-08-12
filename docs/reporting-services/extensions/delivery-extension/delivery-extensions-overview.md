@@ -1,5 +1,6 @@
 ---
 title: 配信拡張機能の概要 | Microsoft Docs
+description: 電子メールやファイル共有など、さまざまな方法で Reporting Services レポートを配信する目的で使用できる配信拡張機能の概要について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69dce8309f96988a9d339aefbb684116c0df2eb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1aca4a83bb117624fdfd5a090c9caab2ff4b7efd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193788"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529164"
 ---
 # <a name="delivery-extensions-overview"></a>配信拡張機能の概要
   ユーザーは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] により、作成およびパブリッシュ後にさまざまな場所に配信できるレポートを作成およびパブリッシュできます。 さらに、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] には配信拡張機能と配信 API も用意されています。開発者は別の配信拡張機能を作成し、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の配信機能をさらに拡張することもできます。  
@@ -51,7 +52,7 @@ Reporting Services の配信拡張機能アーキテクチャ
   
 -   レポート マネージャーに独自のサブスクリプション ユーザー インターフェイスを実装する場合は、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] および Web コントロールについてよく理解していること  
   
--   [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Visual C# や [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET など、[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 言語による開発経験があること。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# や [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET など、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 言語による開発経験があること。  
   
 ## <a name="see-also"></a>参照  
  [配信拡張機能の実装](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   

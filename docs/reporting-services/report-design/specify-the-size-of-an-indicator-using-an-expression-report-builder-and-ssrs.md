@@ -1,5 +1,6 @@
 ---
 title: 式を使用したインジケーターのサイズの指定 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、色、方向、形状に加えてサイズを使用して、インジケーターの視覚的効果を最大限にする方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ceaff572ac7641de9b7f184fa58baf8d74790677
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b699e22bfe392ae04cbfb504f09e3faba48b08b9
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080925"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681591"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>式を使用したインジケーターのサイズの指定 (レポート ビルダーおよび SSRS)
   インジケーターは、色、方向、形状のほか、サイズを変更して、視覚的効果を高めることができます。  

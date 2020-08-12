@@ -1,5 +1,6 @@
 ---
 title: レポート サーバー コンピューターの名前の変更 | Microsoft Docs
+description: コンピューター名の変更後、レポート サーバーを再構成する方法について説明します。 コンピューター名の変更後、SQL Server Reporting Services にアクセスできないことがあります。
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3fe381daf1b89d76d9282f2c1a54c3940a3ffbe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 83de666e0f6aa3dc54c3e9b864ebabf957f4ac25
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67314043"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544524"
 ---
 # <a name="rename-a-report-server-computer"></a>レポート サーバー コンピューターの名前の変更
   コンピューターの名前を変更すると、同じコンピューター上に存在する Web サーバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前が対応して変更されます。 場合によっては、コンピューター名を変更した後に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にアクセスできなくなることがあります。 コンピューター名を変更した後にレポート サーバーを再構成するには、この記事で説明する手順を使用します。  
@@ -43,7 +44,7 @@ ms.locfileid: "67314043"
     > [!NOTE]  
     >  企業ネットワークで Windows Internet Naming Service (WINS) を使用している場合は、レポート サーバーと Web ポータルを以前の名前でしばらく利用できることがあります。 WINS は、サービスを提供する各コンピューターに IP アドレスをマップします。 名前を変更したコンピューターの IP アドレスが WINS により更新された後は、古いコンピューター名を使用してレポート サーバーまたは Web ポータルにアクセスすることはできなくなります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   

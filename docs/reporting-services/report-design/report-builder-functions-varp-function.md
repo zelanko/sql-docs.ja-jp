@@ -1,5 +1,6 @@
 ---
 title: VarP 関数 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーの VarP 関数からは、式によって指定されるすべての非 NULL 数値の母集団分散が返されます。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e4f86ab3-bdb3-4e4a-9a9d-7ae7abdf4dc4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a4f054c2b267a0f3a4b6c83c25d990a9462216b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 15f9d359d16100849d4808359369c3937b7a49a7
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081083"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462366"
 ---
 # <a name="report-builder-functions---varp-function"></a>レポート ビルダー関数 - VarP 関数
   式で指定された NULL 以外のすべての数値の母集団に対する分散を、指定されたスコープのコンテキストで評価して返します。  

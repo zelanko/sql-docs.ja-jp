@@ -1,5 +1,6 @@
 ---
 title: Reporting Services レポート サーバーのネイティブ モードと SharePoint モードを比較する | Microsoft Docs
+description: 処理エンジンと機能を追加する拡張機能から構成される、SQL Server Reporting Services インストールの中心部分について説明します。
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b884782c7ae1ad7898a2d2ef04de7de18b7c73df
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67038015"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764837"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Reporting Services レポート サーバーのネイティブ モードと SharePoint モードを比較する
 
@@ -54,8 +55,8 @@ Reporting Services レポート サーバーは、ネイティブ モードと S
 |**構成マネージャー**|はい|**\*\* 重要 \*\*** 構成マネージャーは、SharePoint モードのレポート サーバーの管理には使用できません。 代わりに、SharePoint サーバーの全体管理を使用してください。|  
 |**Web ポータル**|はい|Web ポータルで SharePoint モードを管理することはできません。 SharePoint アプリケーション ページを使用してください。 詳細については、「 [Reporting Services の SharePoint サービスとサービス アプリケーション](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)｣を参照してください|  
 |**リンク レポート**|はい|いいえ。|  
-|**個人用レポート**|はい|いいえ|  
-|**個人用サブスクリプション** とバッチ処理方式|はい|いいえ|  
+|**個人用レポート**|○|いいえ|  
+|**個人用サブスクリプション** とバッチ処理方式|○|いいえ|  
 |**データ警告**|いいえ|はい|  
 |**Power View**|いいえ|はい<br /><br /> クライアント ブラウザーに Silverlight が必要です。 ブラウザーの要件の詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。|  
 |**.RDL レポート**|はい|はい<br /><br /> .RDL レポートは、ネイティブ モードまたは SharePoint モードの Reporting Services レポート サーバーで実行できます。|  
@@ -120,7 +121,7 @@ Reporting Services レポート サーバーは、ネイティブ モードと S
   
  Reporting Services が提供する既定の拡張機能を使用すると、カスタム コンポーネントを開発することなく、すべてのサーバー機能を使用できます。 次の表に示す既定の拡張機能は、完全なレポート サーバー インスタンスの一部であり、すぐに使用できる機能を提供します。  
   
-|種類|Default|  
+|Type|Default|  
 |----------|-------------|  
 |認証|既定のレポート サーバー インスタンスでは、Windows 認証がサポートされます。ドメインで有効になっていれば、権限の借用機能や委任機能もサポートされます。|  
 |データ処理|既定のレポート サーバー インスタンスには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、Oracle、Hyperion Essbase、SAPBW、OLE DB、並列データ ウェアハウス、ODBC の各データ ソース用のデータ処理拡張機能があります。|  

@@ -1,5 +1,6 @@
 ---
 title: インジケーター アイコンとインジケーター セットの変更 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーでより適切にデータを表現できるよう、別のインジケーター アイコンを含めたり、それらを増減させて、インジケーター アイコンとインジケーター セットを変更する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b93ba65ddda79ef44585c748ee2c465c1b9a25f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3c0df0ae9ee9e67697d4f3ec321ab323cfd188e
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081861"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881768"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、ページ分割されたレポート向けに、あらかじめ構成済みのインジケーター セットが用意されていますが、これらが常にデータを効果的に表したり、配信されたレポートで正しく機能するとは限りません。 このトピックでは、インジケーター アイコンの外観を変更する手順と、インジケーター セットを変更して別のインジケーター アイコンを含めたり、インジケーター アイコンの数を増減したりする手順について説明します。  
@@ -26,7 +27,7 @@ ms.locfileid: "77081861"
   
 2.  左ペインの **[値と状態]** をクリックします。  
   
-3.  変更するアイコンの横にある **[色]** 列の下矢印をクリックして、使用する色、 **[色なし]** 、または **[その他の色]** をクリックします。  
+3.  変更するアイコンの横にある **[色]** 列の下矢印をクリックして、使用する色、 **[色なし]**、または **[その他の色]** をクリックします。  
   
      必要に応じて、 **式** ( *[fx]* ) ボタンをクリックし、 **[色]** オプションの値を設定する式を編集します。  
   

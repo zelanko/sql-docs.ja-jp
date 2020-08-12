@@ -1,5 +1,6 @@
 ---
 title: IRenderingExtension インターフェイスの実装 | Microsoft Docs
+description: ビューアー、プリンター、その他のターゲットで使用される出力形式にレポート データを変換する IRenderingExtension インターフェイスを実装する方法について説明します。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e19691222fd55350bb3f0da7aaf94a983ec620cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8e53f229aff5a0093a38d4d785994514aeb1e971
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193589"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529448"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>IRenderingExtension インターフェイスの実装
   表示拡張機能では、実際のデータと組み合わされるレポート定義から出力結果を取得し、その結果データを使用可能な形式で表示します。 組み合わされたデータの変換と書式設定は、<xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> を実装する共通言語ランタイム (CLR) クラスを使用して実行されます。 これにより、オブジェクト モデルは、ビューアーやプリンターなどの出力先で使用できる出力形式に変換されます。  
@@ -70,7 +71,7 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
  <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.RenderStream%2A> メソッドは、レポート内の特定のストリームを表示します。 最初の <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> 呼び出しですべてのストリームが作成されますが、ストリームは最初はクライアントに返されません。 このメソッドは、HTML 表示における画像などのセカンダリ ストリームや、画像 (EMF) などの複数ページ表示拡張機能の追加ページに使用します。  
   
 ## <a name="getrenderingresource-method"></a>GetRenderingResource メソッド  
- <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドは、レポート全体を表示せずに情報を取得します。 レポートに情報は必要だが、レポート自体を表示する必要がない場合があります。 たとえば、表示拡張機能に関連付けられたアイコンが必要な場合、**\<Icon>** タグ 1 つを含む *deviceInfo* パラメーターを使用します。 このような場合に、<xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドを使用できます。  
+ <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドは、レポート全体を表示せずに情報を取得します。 レポートに情報は必要だが、レポート自体を表示する必要がない場合があります。 たとえば、表示拡張機能に関連付けられたアイコンが必要な場合、 **\<Icon>** タグ 1 つを含む *deviceInfo* パラメーターを使用します。 このような場合に、<xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドを使用できます。  
   
 ## <a name="see-also"></a>参照  
  [表示拡張機能の実装](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

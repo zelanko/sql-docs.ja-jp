@@ -1,5 +1,6 @@
 ---
 title: 一覧がある請求書とフォームを作成する (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、一覧を定義して使用し、自由形式レポートを作成する方法と、他のデータ領域との連動で一覧を使用する方法について説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce4867fdbaff2ff83f2c7e36d450e6c3b0f07471
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 351b24601c7e7cc101951547eb0a99ca0dcf59c8
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078593"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012690"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>一覧がある請求書とフォームを作成する (レポート ビルダーおよび SSRS)
   一覧データ領域は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート データセットのグループまたは行ごとに繰り返されます。 一覧は、他のデータ領域と関連付けて自由形式レポートや、請求書などのフォームを作成するために使用できます。 任意の数のレポート アイテムを含んでいる一覧を定義できます。 一覧は、入れ子にすることができます  
   
- 一覧の利用をすぐに開始するには、「[チュートリアル: 自由形式のレポートの作成 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)」を参照してください。  
+ 一覧をすぐに使用するには、「[チュートリアル:自由形式のレポートの作成 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  一覧は、レポート パーツとしてレポートとは別にパブリッシュできます。 詳細については、「 [レポート パーツ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)」を参照してください。  
@@ -38,7 +39,7 @@ ms.locfileid: "77078593"
 ##  <a name="displaying-data-in-a-free-form-layout"></a><a name="DisplayingLayout"></a> 自由形式のレイアウトでのデータの表示  
  グリッドではなく自由形式のレイアウトでレポート データを編成するには、一覧をデザイン画面に追加します。 レポート データ ペインからセルにフィールドをドラッグします。 既定では、セルにはコンテナーとして機能する四角形が含まれています。 コンテナーで各フィールドを移動させ、目的のデザインを取得します。 四角形のコンテナーにテキスト ボックスをドラッグする際に表示されるスナップラインを使用して、垂直および水平方向の端を合わせます。 セルのサイズを調整して、不要な空白を削除します。 詳細については、「[行の高さまたは列の幅の変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-row-height-or-column-width-report-builder-and-ssrs.md)」を参照してください。  
   
- 次の図には、注文情報を表示する一覧を示します。一覧には、Date、Order、Qty、Product、LineTotal のフィールドおよび画像が含まれます。  
+ 次の図に注文情報を表示する一覧を示します。一覧には、Date、Order、Qty、Product、LineTotal のフィールドおよび画像が含まれます。  
   
  ![デザイン ビューの一覧、4 つのフィールドと画像](../../reporting-services/report-design/media/rs-basiclistformdesign.gif "デザイン ビューの一覧、4 つのフィールドと画像")  
   

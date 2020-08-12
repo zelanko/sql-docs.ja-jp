@@ -1,5 +1,6 @@
 ---
 title: ページ レイアウトとレンダリング (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、ページ レイアウト、改ページ、用紙サイズのレンダリング拡張機能を使用し、ページ分割されたレポートをデザインしたり、改善したりします。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee04e2cef1f4f4681b42ff8ffb4ce549aeae624d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2d28282a1fd787585f401e3b532f104cba5e2c
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082447"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012700"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>ページ レイアウトとレンダリング (レポート ビルダーおよび SSRS)
 ページ レイアウト、改ページ、用紙サイズなど、意図したとおりのレポートを作成できるように、ページ分割されたレポートに関する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の表示拡張機能について説明します。 
 
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート ビルダーやレポート デザイナーのプレビュー ペインでレポートを表示すると、レポートは最初に HTML レンダラーによってレンダリングされます。 その後は、Excel ファイルや CSV (コンマ区切り) ファイルなどの別の形式にレポートをエクスポートできます。 エクスポートしたレポートは、Excel での詳細な分析や、CSV ファイルをインポートして使用できるアプリケーションのデータ ソースに使用できます。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートをさまざまな形式にエクスポートするための一連のレンダラーが含まれています。 各レンダラーには、レポートのレンダリング時の適用ルールがあります。 レポートを別のファイル形式にエクスポートする場合、Adobe Acrobat (PDF) レンダラーなど、特に物理的なページ サイズに基づくページ割り付けを使用するレンダラーの場合、レンダリング ルールの適用後、レポートのレイアウトを変更しないと、エクスポートしたレポートを正しい体裁で表示、印刷できない場合があります。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートをさまざまな形式にエクスポートするための一連のレンダラーが含まれています。 各レンダラーでは、レポートのレンダリング時にルールが適用されます。 レポートを別のファイル形式にエクスポートする場合、Adobe Acrobat (PDF) レンダラーなど、特に物理的なページ サイズに基づくページ割り付けを使用するレンダラーの場合、レンダリング ルールの適用後、レポートのレイアウトを変更しないと、エクスポートしたレポートを正しい体裁で表示、印刷できない場合があります。  
   
  エクスポートしたレポートが最適な外観になるまでには、反復的な作業が伴うことも少なくありません。つまり、レポート ビルダーやレポート デザイナーでレポートを作成、プレビューした後、必要な形式にエクスポートし、エクスポートしたレポートを見直してから、レポートに変更を加えるという作業です。  
     

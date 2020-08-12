@@ -1,5 +1,6 @@
 ---
 title: パブリッシュ済みレポートのパラメーターの設定 - SharePoint 統合モード | Microsoft Docs
+description: レポート ビルダーで、レポート定義の中で、あるいはレポート パブリッシュ後、パラメーターを設定し、パラメーター化されたレポートを実行する方法について説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51fcade75cff0f5cafa0e780a823ce505e43e297
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a04058cc679d7697f2526c85b8b6526e8ea4a8ce
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576669"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681221"
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>パブリッシュ済みレポートのパラメーターの設定 - SharePoint 統合モード
   パラメーター化されたレポートとは、レポートの実行時にデータのフィルター処理に使用する入力値を受け取るレポートです。 パラメーターは、レポートの作成時に定義します。 レポート定義でレポート パラメーターがどのように定義されているかによって、単一の値、複数の値、または動的な値を受け入れることができます。動的な値は、直前の選択に応じて変化します (たとえば、製品カテゴリを選択したとき、次の選択ではそのカテゴリの特定の製品を選択するなど)。 パラメーターには既定値を指定することもできます。フィルター選択したレポートを自動的に実行する場合に既定値を使用することも、既定値を別の値に置き換えることもできます。  

@@ -1,5 +1,6 @@
 ---
 title: レポート サーバー アクセスに対するファイアウォールの構成 | Microsoft Docs
+description: URL 経由でアクセスされるレポート サーバー アプリケーションとパブリッシュされたレポートへのアクセスを許可するよう、Windows ファイアウォールを構成する方法について説明します。
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbcd96e24d0819cc8403a669c7333bb92d396e05
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08a80c8307d551813a30becbed6d12507e6b2947
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593748"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545587"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>レポート サーバー アクセスに対するファイアウォールの構成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー アプリケーションとパブリッシュされたレポートには、IP アドレス、ポート、および仮想ディレクトリを指定した URL を通じてアクセスします。 Windows ファイアウォールが有効になっている場合、レポート サーバーで使用するように構成されているポートは閉じられる可能性が高くなります。 ポートが閉じていると、リモートのクライアント コンピューターから Web ポータルを開こうとしたときに空白のページが表示されたり、レポートの要求後に空白の Web ページが表示されたりします。  
@@ -73,7 +74,7 @@ ms.locfileid: "73593748"
   
  別のコンピューター上で Web ポータルを起動することによって、ポートが正しく開かれているかどうかを確認することもできます。 詳細については、[レポート サーバーの Web ポータル](../../reporting-services/web-portal-ssrs-native-mode.md)に関するページをご覧ください。
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   

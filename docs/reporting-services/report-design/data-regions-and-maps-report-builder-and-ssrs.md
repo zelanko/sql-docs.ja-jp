@@ -1,5 +1,6 @@
 ---
 title: データ領域とマップ (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、レポート データセットから表示をデザインするために、データ領域とマップの種類と特性をいろいろ試します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5cdc8e2cb16b4a73122ffbdc60a845a3b258a108
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ad7082d259b4e8da970083e880aa664fbbe71c21
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080540"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012630"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>データ領域とマップ (レポート ビルダーおよび SSRS)
   データ領域は、レポート データセットのデータを表示するレポート内のオブジェクトです。 レポート データは、数字やテキストとしてテーブル、マトリックス、または一覧に表示することも、グラフまたはゲージでグラフィカルに表示することも、マップの地理的背景上に表示することもできます。 テーブル、マトリックス、および一覧は、 *Tablix* データ領域に基づいており、データセットのデータをすべて表示するために必要に応じて拡張されます。 Tablix データ領域では、複数の行グループおよび列グループと、静的および動的な行と列がサポートされます。 グラフでは、複数の系列グループとカテゴリ グループをさまざまなグラフ形式で表示します。 ゲージでは、データセットの単一の値または集計値を表示します。 マップでは、データセットの集計データに基づいて表示を変更できるマップ要素として空間データを表示します。  

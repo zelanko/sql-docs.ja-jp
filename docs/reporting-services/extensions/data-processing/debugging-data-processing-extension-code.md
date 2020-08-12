@@ -1,5 +1,6 @@
 ---
 title: データ処理拡張機能コードのデバッグ | Microsoft Docs
+description: Microsoft .NET Framework デバッグ ツールを使用し、データ処理拡張機能コードを分析し、その中でエラーを見つける方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e963e205-9ae0-446d-97df-028a1d2727d9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 031dade1cb1f5535a1b0ccacc0efe4ca8b241ccb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4514d1b0fb84da6a44e5d51a60add48aff971021
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194050"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529646"
 ---
 # <a name="debugging-data-processing-extension-code"></a>データ処理拡張機能コードのデバッグ
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] には、ご自分のデータ処理拡張機能コードを分析してエラーを探すのに役立ついくつかのデバッグ ツールが用意されています。 最適なデバッグ ツールは、使用する目的によって異なります。 この例では、[!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] を使用します。  
@@ -26,7 +27,7 @@ ms.locfileid: "63194050"
   
 1.  [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] を起動し、データ処理拡張機能プロジェクトを開きます。  
   
-2.  プロジェクトを構築し、データ処理拡張機能アセンブリと付随する .pdb ファイルをレポート デザイナーに配置します。 配置の詳細については、「[データ処理拡張機能をレポート デザイナーに配置する方法](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)」を参照してください。  
+2.  プロジェクトを構築し、データ処理拡張機能アセンブリと付随する .pdb ファイルをレポート デザイナーに配置します。 配置方法の詳細については、[方法:データ処理拡張機能のレポート デザイナーへの配置](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)に関するページを参照してください。  
   
 3.  データ処理拡張機能コードを [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] で開いたまま、別の [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ウィンドウで新しいレポート プロジェクトを開きます。  
   

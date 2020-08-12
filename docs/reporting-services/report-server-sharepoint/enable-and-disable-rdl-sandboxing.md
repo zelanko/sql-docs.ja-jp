@@ -1,5 +1,6 @@
 ---
 title: SharePoint 統合モードで Reporting Services の RDL サンドボックスの有効化と無効化 | Microsoft Docs
+description: RDL サンドボックスを利用すれば、複数のテナントでレポート サーバーの Web ファームが 1 つ使用されるテナント別に、各種リソースの使用を検出し、制限できます。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d86cf9bbf284ad76c7423900c10a74f7ca26faa
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65577769"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767025"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 統合モードで Reporting Services の RDL サンドボックスの有効化と無効化
 
@@ -158,7 +159,7 @@ RDL (レポート定義言語) サンドボックス機能を使用すると、�
   
 ### <a name="working-with-operators-and-new"></a>演算子と New の操作
 
- 既定では、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework の言語演算子は、 **New**を除いて常に許可されます。 **New** 演算子は、**\<Allow>** 要素の **AllowNew** 属性によって制御されます。 既定のコレクション アクセサー演算子 **!** や [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework のキャスト マクロ ( **CInt**など) のような、他の言語演算子は常に許可されます。  
+ 既定では、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework の言語演算子は、 **New**を除いて常に許可されます。 **New** 演算子は、 **\<Allow>** 要素の **AllowNew** 属性によって制御されます。 既定のコレクション アクセサー演算子 **!** や [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework のキャスト マクロ ( **CInt**など) のような、他の言語演算子は常に許可されます。  
   
  カスタム演算子を含め、ブロック一覧への演算子の追加はサポートされていません。 特定の型に対して演算子を除外するには、次の手順を実行する必要があります。  
   

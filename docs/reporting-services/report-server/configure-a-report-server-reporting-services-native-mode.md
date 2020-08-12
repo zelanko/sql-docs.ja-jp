@@ -1,5 +1,6 @@
 ---
 title: レポート サーバーの構成 (Reporting Services ネイティブ モード) | Microsoft Docs
+description: インストール中に選択したオプションによって異なる、SQL Server Report Server の追加構成について説明します。
 ms.date: 06/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5723122c76b02900f6906c03efb807e58ebcc6d9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f3c23ea4581998fe462175cad1b0e12107d39b0e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67313974"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545563"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>レポート サーバーの構成 (Reporting Services ネイティブ モード)
   インストール中に選択したオプションによっては、レポート サーバーを使用する前に追加の構成が必要になる場合があります。 少なくともレポート サーバーの構成には以下が必要です。  
@@ -56,7 +57,7 @@ ms.locfileid: "67313974"
   
  フォルダーを作成し、アイテムをアップロードし、レポートを実行してインストール状況を確認します。 インストール状況を確認するには、「 [Reporting Services のインストール状態の検証](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) 」の手順に従います。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [レポート サーバー アクセスに対するファイアウォールの構成](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
  [ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)   

@@ -1,5 +1,6 @@
 ---
 title: 配信拡張機能での Report クラスの使用 | Microsoft Docs
+description: レポート サーバーのレポート URL、レポート名、その他のプロパティを格納する Report クラスが配信拡張機能で使用されるしくみについて説明します。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1145ac63-eafd-452a-82af-16f85b1676dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 05196a42af159e06a2b740c5671b2892d8362453
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 544a3c58f7a273a19a2df459e8d834d69afd2f8f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193611"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529458"
 ---
 # <a name="using-the-report-class-for-a-delivery-extension"></a>配信拡張機能での Report クラスの使用
   <xref:Microsoft.ReportingServices.Interfaces.Report> クラスは、レポート サーバー データベースのレポートを表します。 すべてのサブスクリプションは特定のレポートに関連付けられます。 レポートは通知に含まれます。 配信拡張機能では、通知の一部である <xref:Microsoft.ReportingServices.Interfaces.Report> オブジェクトを使用してレポートを生成できます。 <xref:Microsoft.ReportingServices.Interfaces.Report> オブジェクトには、レポート サーバーのレポートの URL やレポート名など、レポート固有のプロパティも含まれています。 これらのプロパティすべてを配信プロバイダーの一部として使用できます。  

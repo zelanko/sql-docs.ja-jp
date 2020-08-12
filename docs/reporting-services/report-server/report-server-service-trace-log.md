@@ -1,5 +1,6 @@
 ---
 title: Report Server Service Trace Log
+description: レポート サーバーのサービス操作に関する詳細情報が含まれる、Reporting Services のレポート サーバー トレース ログについて説明します。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
-ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 294639b3fed68acf0bb8b07ea0430a890e97910e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68254862"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541504"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
 
@@ -32,7 +33,7 @@ ms.locfileid: "68254862"
 
 トレース ログの動作は構成ファイル **ReportingServicesService.exe.config** で管理されています。構成ファイルは次のフォルダー パスにあります。  
   
- `\Program Files\Microsoft SQL Server\MSRS13.<instance name>\Reporting Services\ReportServer\bin`  
+ `\Program Files\Microsoft SQL Server\MSRS13.<instance name>\Reporting Services\ReportServer\bin`.  
   
  次の例では、 **RStrace** の設定の XML 構造を示しています。 **DefaultTraceSwitch** の値によって、ログに追加される情報の種類が決まります。 **Components** 属性を除き、 **RStrace** の値は構成ファイル間で同じになります。  
   

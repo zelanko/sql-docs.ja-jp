@@ -1,5 +1,6 @@
 ---
 title: 配信拡張機能の削除 | Microsoft Docs
+description: 配信拡張機能が利用可能としてレポート サーバーに一覧表示されず、配信拡張機能を使用するサブスクリプションが無効になるよう、Reporting Services から配信拡張機能を削除する方法について説明します。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dcb7caf2-d19a-4bc5-afb3-2b61ad11cac5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 49b36598d643bd88496117655f23f642e663d04c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f4f23d58836dbadb9393be49dd34425c89a15c3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193724"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529488"
 ---
 # <a name="removing-a-delivery-extension"></a>配信拡張機能の削除
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配信拡張機能を削除する場合は、配信拡張機能の **Extension** 要素を構成ファイルから削除するだけです。 構成情報を削除した後は、配信拡張機能をレポート サーバーに使用できません。  
