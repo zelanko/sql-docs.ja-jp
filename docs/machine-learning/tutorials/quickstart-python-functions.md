@@ -1,26 +1,25 @@
 ---
 title: クイック スタート:Python 関数
-description: このクイックスタートでは、SQL Server Machine Learning Services で Python の数学関数とユーティリティ関数を使用する方法について説明します。
+titleSuffix: SQL machine learning
+description: このクイックスタートでは、SQL 機械学習で Python の数学関数とユーティリティ関数を使用する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/28/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6afe1685956c43e30ace59f3e5cc794a2abbd88f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 5aef8010c48e08931998f1bd7e49c3797ef4e81a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784086"
 ---
-# <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>クイック スタート:SQL Server Machine Learning Services での Python 関数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-python-functions-with-sql-machine-learning"></a>クイック スタート:SQL 機械学習を使用した Python 関数
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 このクイックスタートでは、[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)上の [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) で Python の数学関数とユーティリティ関数を使用する方法について説明します。 多くの場合、統計関数は T-SQL での実装が複雑ですが、Python では、わずか数行のコードで行うことができます。
@@ -28,18 +27,29 @@ ms.locfileid: "83606707"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 このクイックスタートでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) で Python の数学関数とユーティリティ関数を使用する方法について説明します。 多くの場合、統計関数は T-SQL での実装が複雑ですが、Python では、わずか数行のコードで行うことができます。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+このクイックスタートでは、[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) で Python の数学関数とユーティリティ関数を使用する方法について説明します。 多くの場合、統計関数は T-SQL での実装が複雑ですが、Python では、わずか数行のコードで行うことができます。
+::: moniker-end
 
 ## <a name="prerequisites"></a>前提条件
 
-- このクイックスタートでは、Python 言語がインストールされた [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) を持つ SQL Server のインスタンスへのアクセスが必要となります。
+このクイック スタートを実行するには、次の前提条件を用意しておく必要があります。
 
-  あなたの SQL Server インスタンスは、Azure 仮想マシンまたはオンプレミスに配置できます。 外部スクリプト機能が既定で無効になっていることに注意してください。そのため、開始する前に、[外部スクリプトを有効にし](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)、**SQL Server Launchpad サービス**が実行されていることを確認する必要があります。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)に関するページを参照してください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)に関するページを参照してください。 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL Managed Instance の Machine Learning Services。 サインアップ方法については、[Azure SQL Managed Instance の Machine Learning Services の概要](/azure/azure-sql/managed-instance/machine-learning-services-overview)に関するページを参照してください。
+::: moniker-end
 
-- また、Python スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続し、T-SQL クエリまたはストアド プロシージャを実行できる限り、任意のデータベース管理ツールまたはクエリ ツールを使用して実行できます。 このクイックスタートでは [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) を使用します。
+- Python スクリプトを含む SQL クエリを実行するためのツールです。 このクイックスタートでは [Azure Data Studio](../../azure-data-studio/what-is.md) を使用します。
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>乱数を生成するストアド プロシージャを作成する
 
-わかりやすくするために、Python `numpy` パッケージを使用します。このパッケージは、Python がインストールされた SQL Server Machine Learning Services が既定でインストールおよびロードされていてます。 パッケージには、一般的な統計タスク用の数百の関数が含まれますが、その中の `random.normal` 関数は、指定された標準偏差と平均に対し、正規分布を使用して、指定された個数の乱数を生成します。
+わかりやすくするために、既定でインストールされて読み込まれる Python `numpy` パッケージを使用してみましょう。 パッケージには、一般的な統計タスク用の数百の関数が含まれますが、その中の `random.normal` 関数は、指定された標準偏差と平均に対し、正規分布を使用して、指定された個数の乱数を生成します。
 
 たとえば、次の Python コードは、指定された 3 の標準偏差で、平均値が 50 の 100 個の数値を返します。
 
@@ -60,9 +70,7 @@ OutputDataSet = pandas.DataFrame(numpy.random.normal(size=100, loc=50, scale=3))
 WITH RESULT SETS(([Density] FLOAT NOT NULL));
 ```
 
-さまざまな乱数のセットを簡単に生成するにはどうすればよいでしょうか。
-
-これは、SQL Server と組み合わせると簡単です。 ユーザーから引数を取得し、これらの引数を変数として Python スクリプトに渡すストアド プロシージャを定義します。
+さまざまな乱数のセットを簡単に生成するにはどうすればよいでしょうか。 ユーザーから引数を取得し、これらの引数を変数として Python スクリプトに渡すストアド プロシージャを定義します。
 
 ```sql
 CREATE PROCEDURE MyPyNorm (
@@ -119,11 +127,7 @@ elapsed_time = time.time() - start_time
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server で Python を使用して機械学習モデルを作成するには、次のクイック スタートに従ってください。
+SQL 機械学習で Python を使用して機械学習モデルを作成するには、次のクイック スタートに従ってください。
 
 > [!div class="nextstepaction"]
-> [クイック スタート: SQL Server Machine Learning Services を使用して Python で予測モデルを作成してスコア付けする](quickstart-python-train-score-model.md)
-
-SQL Server Machine Learning Services の詳細については、次を参照してください。
-
-- [SQL Server Machine Learning Services (Python と R) とは](../sql-server-machine-learning-services.md)
+> [クイック スタート: Python で予測モデルを作成してスコア付けする](quickstart-python-train-score-model.md)

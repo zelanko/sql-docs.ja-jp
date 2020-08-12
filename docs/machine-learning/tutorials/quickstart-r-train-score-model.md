@@ -10,16 +10,16 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 532a08f29b3b623d531d03ff7bc0ac56605faa17
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 21b3f8f93d3375789de9da92ab4bb2b1e136964c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606175"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772336"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-machine-learning"></a>クイック スタート:SQL 機械学習を使用して R で予測モデルを作成してスコア付けする
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 このクイックスタートでは、T を使用して予測モデルを作成してトレーニングします。そのモデルを SQL Server インスタンスのテーブルに保存してから、そのモデルを使用して、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) または[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)を使って新しいデータから値を予測します。
@@ -29,6 +29,9 @@ ms.locfileid: "83606175"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 このクイックスタートでは、T を使用して予測モデルを作成してトレーニングします。そのモデルを SQL Server インスタンスのテーブルに保存してから、そのモデルを使用して、[SQL Server R Services](../r/sql-server-r-services.md) を使って新しいデータから値を予測します。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+このクイックスタートでは、T を使用して予測モデルを作成してトレーニングし、SQL Server インスタンスのテーブルにモデルを保存します。次に、そのモデルを使用して、[Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) を使って新しいデータから値を予測します。
 ::: moniker-end
 
 SQL で実行されている 2 つのストアド プロシージャを作成して実行します。 最初のプロシージャでは、R に含まれる **mtcars** データセットを使用して、車両にマニュアル トランスミッションが搭載されている確率を予測する単純な汎用線形モデル (GLM) を生成します。 2 番目のプロシージャはスコアリング用で、最初のプロシージャで生成されたモデルを呼び出して、新しいデータに基づいて一連の予測を出力します。 SQL ストアド プロシージャに R コードを配置することで、操作は SQL に格納され、再利用可能になり、他のストアド プロシージャやクライアント アプリケーションから呼び出すことができます。
@@ -55,6 +58,9 @@ SQL で実行されている 2 つのストアド プロシージャを作成し
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services。 R Services をインストールする方法については、[Windows インストール ガイド](../install/sql-r-services-windows-install.md)に関するページを参照してください。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL Managed Instance の Machine Learning Services。 サインアップの方法については、[Azure SQL Managed Instance の Machine Learning Services の概要](/azure/azure-sql/managed-instance/machine-learning-services-overview)に関するページを参照してください。
 ::: moniker-end
 
 - R スクリプトを含む SQL クエリを実行するためのツール。 このクイックスタートでは [Azure Data Studio](../../azure-data-studio/what-is.md) を使用します。

@@ -1,5 +1,6 @@
 ---
 title: '[クライアント プロトコルのプロパティ] ダイアログ ボックス ([順序] タブ)'
+description: クライアント プロトコルを有効または無効にする方法を探索します。 クライアントが SQL Server への接続を試みるときに使用されるプロトコルの順序を変更する方法を確認します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 59ffc1332b52d95221541a45ba90fe3e22a89caa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 841c923899900ecac354356c9599d5aad61d8cfd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306528"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892064"
 ---
 # <a name="client-protocols-properties-order-tab"></a>[クライアント プロトコルのプロパティ] ダイアログ ボックス ([順序] タブ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   **[クライアント プロトコルのプロパティ]** ダイアログ ボックスの **[順序]** ページでは、クライアント プロトコルの表示や有効の設定を行います。  
   
  プロトコルをクリックして **[有効化]** または **[無効化]** をクリックすると、選択したプロトコルが **[無効なプロトコル]** 一覧または **[有効なプロトコル]** 一覧に移動します。  
@@ -31,7 +32,7 @@ ms.locfileid: "75306528"
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET SqlClient は、これらの設定を使用しません。 .NET SqlClient のプロトコルの順序は、最初に TCP、次に名前付きパイプであり、この順序は変更できません。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[無効なプロトコル]**  
  インストールされていても現在使用されていないプロトコルが一覧表示されます。  
   

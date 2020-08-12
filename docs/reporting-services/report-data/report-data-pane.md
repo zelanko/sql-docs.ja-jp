@@ -1,5 +1,6 @@
 ---
 title: '[レポート データ] ペイン'
+description: '[レポート データ] ペインを使用して、レポート内で現在定義されているパラメーター、データ ソース、データセット、フィールド コレクション、および画像を表示する方法について説明します。'
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -9,18 +10,18 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 24c11796a758d4cbf3b1da35af16565e0e607535
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c7afab0edc7afd86b16103e5364d17a93579d096
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190742"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812617"
 ---
 # <a name="report-data-pane-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) の [レポート データ] ペイン
 
   **[レポート データ]** ペインを使用すると、レポート内で現在定義されているパラメーター、データ ソース、データセット、フィールド コレクション、および画像が表示されます。 [レポート データ] ペインでは、レポート内のデータを表すアイテムの階層ビューが表示されます。 最上位のノードは、組み込みフィールド、パラメーター、画像、およびデータ ソース参照を表します。 データ アイテムを表示するには、各ノードを展開します。 たとえば、データ ソース ノードを展開すると、そのデータ ソース用に定義されたデータセットが表示されます。 データセットを展開すると、そのフィールド コレクションが表示されます。 データをレポート ページ上のレポート アイテムにリンクするには、アイテムをレポート デザイン画面にドラッグします。  
   
-## <a name="options"></a>オプション
+## <a name="options"></a>Options
 
  **組み込みフィールド**  
  レポート名やページ番号など、レポートでよく使用される、Reporting Services に用意されているフィールドを表します。 詳細については、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  

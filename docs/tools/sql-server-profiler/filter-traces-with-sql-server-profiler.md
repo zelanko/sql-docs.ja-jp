@@ -1,6 +1,7 @@
 ---
 title: トレースのフィルター処理
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler がトレース中に必要な情報を収集するようにフィルターを定義する方法について説明します。 トレース フィルターのその他の利点について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,15 +12,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: d80e5d8156c1322c22ea360dc003e71da3ab27ec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fdc3178888109ff5a40c66435a9c86f27b5b7b43
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307211"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789995"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>SQL Server Profiler でのトレースへのフィルターの適用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   関心のあるイベントの情報のみがキャプチャされるように、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のトレース イベントのデータ列にフィルターを定義できます。 トレース フィルターを使用すると、トレースでキャプチャするイベントが減るため、システム パフォーマンスに対するトレースの影響が小さくなります。 フィルターを適用すると、検索対象のイベント数が減るので、トレース結果を読み取りやすくなります。  
   
  **SQL Server Profiler でトレースにフィルターを適用するには**  

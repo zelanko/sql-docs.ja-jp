@@ -1,5 +1,6 @@
 ---
 title: マスター データ サービスのアンインストールと削除 | Microsoft Docs
+description: このアンインストール プロセスによって、マスター データ サービスのフォルダーおよびファイルが削除され、ローカル コンピューターからマスター データ サービス構成マネージャーがアンインストールされます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,23 +8,23 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a0ed3134e26bc2ed0f581a722de50526a49fb9e3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec6345d4470c95669b13a08bde103057409bde67
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68126037"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883720"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>マスター データ サービスのアンインストールと削除
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスから [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 機能をアンインストールするには、「[SQL Server の既存のインスタンスのアンインストール &#40;セットアップ&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)」の手順に従って [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] を **[機能の選択]** ページで削除する機能として指定します。 アンインストール プロセスによって [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] のフォルダーおよびファイルが削除され、ローカル コンピューターから [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] がアンインストールされます。  
   
  データの損失またはシステム内の他のコンピューターへの影響を回避するために、削除されない項目、またはアンインストール プロセスによって変更される項目もあります。 次の表を参考にして、項目を残すか削除するかを決定します。  
   
-|アイテム|説明|  
+|Item|説明|  
 |----------|-----------------|  
 |フォルダーとファイル|アンインストール プロセスによって、ほとんどのフォルダーとファイルがインストール パスから削除されます。<br /><br /> アンインストール プロセスでは、Master Data Services フォルダーおよび MDSTempDir フォルダーはインストール場所から削除されません。 これらのフォルダーのファイル システムからの削除は、アンインストール プロセスの完了後に手動で実行できます。 詳細については、「[フォルダーとファイルの権限 &#40;マスター データ サービス&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)」を参照してください。|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] アセンブリ|アンインストール プロセスによって、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] アセンブリがグローバル アセンブリ キャッシュ (GAC) から削除されます。|  

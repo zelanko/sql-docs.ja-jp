@@ -2,22 +2,22 @@
 title: R パッケージのリモート管理を有効または無効にする
 description: SQL Server 2016 R Services または SQL Server Machine Learning Services 上の R パッケージのリモート管理を有効にします (データベース内)
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1a18d56d1dcf0733f080da7cf8247421c669a4aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117985"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757141"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>SQL Server のパッケージのリモート管理を有効または無効にする
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この記事では、クライアント ワークステーションまたは別の Machine Learning Server から R パッケージのリモート管理を有効にする方法について説明します。 SQL Server でパッケージ管理機能が有効になったら、クライアントで RevoScaleR コマンドを使用して SQL Server にパッケージをインストールできます。
 
@@ -41,7 +41,7 @@ SQL Server でパッケージ管理を有効または無効にするには、コ
 
     このコマンドにより、パッケージ管理に必要なインスタンスレベルのオブジェクトが SQL Server コンピューターに作成されます。 また、インスタンスの Launchpad の再起動も行われます。
 
-    インスタンスを指定しない場合は、既定のインスタンスが使用されます。 ユーザーを指定しない場合は、現在のセキュリティ コンテキストが使用されます。 たとえば、次のコマンドにより、コマンド プロンプトを開いたユーザーの資格情報を使用して、RegisterRExt.exe のパスにあるインスタンスのパッケージ管理が有効になります。
+    インスタンスを指定しない場合は、既定のインスタンスが使用されます。 ユーザーを指定しない場合は、現在のセキュリティ コンテキストが使用されます。 たとえば、次のコマンドにより、コマンド プロンプトを開いたユーザーの資格情報を使用して、既定のインスタンスのパッケージ管理が有効になります。
 
     `REgisterRExt.exe /install pkgmgmt`
 
@@ -51,7 +51,7 @@ SQL Server でパッケージ管理を有効または無効にするには、コ
    
     このコマンドにより、ユーザーのアクセス許可を制御するために使用されるデータベース ロール (`rpkgs-users`、`rpkgs-private`、`rpkgs-shared` など) を含む、いくつかのデータベース成果物が作成されます。
 
-    たとえば、次のコマンドにより、RegisterRExt が実行されているインスタンスで、データベースのパッケージ管理が有効になります。 ユーザーを指定しない場合は、現在のセキュリティ コンテキストが使用されます。
+    たとえば、次のコマンドにより、既定のインスタンスで、データベースのパッケージ管理が有効になります。 ユーザーを指定しない場合は、現在のセキュリティ コンテキストが使用されます。
 
     `RegisterRExt.exe /install pkgmgmt /database:TestDB`
 

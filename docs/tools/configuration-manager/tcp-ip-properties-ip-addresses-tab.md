@@ -1,5 +1,6 @@
 ---
 title: '[TCP/IP のプロパティ]'
+description: '[TCP/IP のプロパティ] ダイアログ ボックスの [IP アドレス] タブを使用して、SQL Server で特定の IP アドレスの TCP/IP プロトコル オプションを構成する方法について説明します。'
 ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f1afdb9d25d599f32b2efb9d5339ef4afffd6f31
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c68b7a9f1da65862403750e32315ee7168ded6e6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307565"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880302"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>[TCP/IP のプロパティ]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   **[TCP/IP のプロパティ]** ダイアログ ボックス ([IP アドレス] タブ) では、TCP/IP プロトコルの特定の IP アドレスに関するオプションを構成します。 **[TCP 動的ポート]** と **[TCP ポート]** だけは、 **[IP All]** を選択することですべてのアドレスを一度に構成できます。  
   
  SQL Server を再起動すると変更が有効になります。 SQL Server Browser サービスの開始と停止の詳細については、「 [SQL Server Browser サービスの開始および停止](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」をご覧ください。  
@@ -32,7 +33,7 @@ ms.locfileid: "75307565"
 ## <a name="dynamic-ports"></a>動的ポート  
  SQL Server のインスタンスが動的ポートでリッスンするように構成されている場合、インスタンスは起動時にオペレーティング システムを調べて使用できるポートを検出し、そのポートに対するエンドポイントを開きます。 着信接続は、そのポート番号を指定して接続する必要があります。 SQL Server を起動するたびにポート番号が変わる可能性があるので、SQL Server には、ポートを監視して、着信接続をそのインスタンスの現在のポートにダイレクトする SQL Server Browser サービスが用意されています。 ファイアウォール経由で SQL Server に接続する場合に動的ポートを使用すると、SQL Server の再起動時にポート番号が変わる可能性があるので、そのたびにファイアウォールの設定を変更しなければなりません。 ファイアウォールによる接続の問題を回避するには、静的ポートを使用するように SQL Server を構成します。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **アクティブ**  
  コンピューターでその IP アドレスがアクティブかどうかを示します。 **[IPAll]** では指定できません。  
   

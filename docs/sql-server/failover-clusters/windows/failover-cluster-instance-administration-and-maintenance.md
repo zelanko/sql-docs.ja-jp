@@ -1,6 +1,6 @@
 ---
 title: フェールオーバー クラスター インスタンスの管理とメンテナンス
-description: SQL Server フェールオーバー クラスター インスタンスの管理とメンテナンスについて説明します。
+description: SQL Server セットアップ プログラムまたはフェールオーバー クラスター マネージャー スナップインを使用した SQL Server フェールオーバー クラスター インスタンスのメンテナンスと管理について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5788d52a119fe6bada56ac2def9d2fbfb2c09cb0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c5a6abf9599591bf1619b951926626fc337cf170
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230067"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887794"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>フェールオーバー クラスター インスタンスの管理とメンテナンス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   既存の AlwaysOn フェールオーバー クラスター インスタンス (FCI) に対するノードの追加または削除のようなメンテナンス タスクは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセットアップ プログラムを使用して行います。 IP アドレス リソースの変更や、特定の FCI シナリオからの復元が必要になった場合など、その他の管理タスクについては、Windows Server フェールオーバー クラスタリング (WSFC) サービスの管理スナップインであるフェールオーバー クラスター マネージャー スナップインを使用して行います。  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>フェールオーバー クラスター インスタンスの管理  

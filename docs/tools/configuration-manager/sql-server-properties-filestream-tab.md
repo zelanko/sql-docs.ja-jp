@@ -1,5 +1,6 @@
 ---
 title: '[SQL Server のプロパティ] ダイアログ ボックス ([FILESTREAM] タブ)'
+description: '[SQL Server のプロパティ] ダイアログ ボックスの [FILESTREAM] タブを使用して SQL Server 2019 のインストールに対して FILESTREAM を有効にする方法について説明します。'
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ ms.assetid: 07ca5ac6-a68a-4e85-bc6f-fa7ccf9f1c10
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b6606424a2e3f8e2d0191b012a81b7af430657a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f3af7955cb439a32789436faa8883425f7a17570
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306782"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893323"
 ---
 # <a name="sql-server-properties-filestream-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([FILESTREAM] タブ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   このページを使用すると、このインストールの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に対して FILESTREAM を有効にすることができます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[Transact-SQL アクセスに対して FILESTREAM を有効にする]**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスに対して FILESTREAM を有効にする場合にオンにします。 他のコントロール オプションを使用できるようにするには、先にこのコントロールをオンにする必要があります。  
   

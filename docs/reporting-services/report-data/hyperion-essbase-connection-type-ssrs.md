@@ -1,5 +1,6 @@
 ---
 title: Hyperion Essbase の接続の種類 | Microsoft Docs
+description: レポートに含める Hyperion Essbase 外部データ ソースから多次元データを取得する方法について説明します。
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e65c3ca2bd6866ede2eb9924f8465e5b66d37c0b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d6ee62393c6b9a74dee16acf532d474a7a344b54
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808434"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase の接続の種類 (SSRS)
   [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部データ ソースのデータをレポートに含めるには、種類が [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]のデータ拡張機能に基づいています。この拡張機能を使用すると、 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部データ ソースから多次元データを取得できます。  
@@ -79,7 +80,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  次の表に、 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] データ ソースで使用できる定義済みフィールド プロパティの一覧を示します。  
   
-|**プロパティ**|**Type**|**説明/有効値**|  
+|**Property**|**Type**|**説明/有効値**|  
 |------------------|--------------|---------------------------------------|  
 |**Value**|**Object**|フィールドのデータ値を指定します。<br /><br /> ディメンション プロパティの場合は、MEMBER_CAPTION にマッピングされます。 メジャーの場合は、データ値にマッピングされます。|  
 |**IsMissing**|**Boolean**|フィールドが結果データセットに存在するかどうかを示します。|  
@@ -100,7 +101,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  次の表に、 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] データ ソースで使用できるカスタム フィールド プロパティを示します。  
   
-|**プロパティ**|**Type**|**説明/有効値**|  
+|**Property**|**Type**|**説明/有効値**|  
 |------------------|--------------|---------------------------------------|  
 |**FORMAT_STRING**|**String**|メジャーで定義されます。String 型として使用できる **FormattedValue** です。|  
   
@@ -127,7 +128,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  レポートのデータへのアクセスの概要について説明します。  
   
- [データ接続文字列の作成 - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  データ接続とデータ ソースについて説明します。  
   
  [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

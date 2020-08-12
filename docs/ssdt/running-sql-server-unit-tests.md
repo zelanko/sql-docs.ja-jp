@@ -1,5 +1,6 @@
 ---
 title: SQL Server の単体テストの実行
+description: SQL Server の単体テストについて理解します。 テストの作成、カスタム テスト条件の作成、テストの実行、および結果の解釈に関するリソースを確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 93dfaf8cf202b0b9447574ecfc58cc13f151381b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d27d25d374d737cc51f7e0a5149556a4d5a92260
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256980"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883456"
 ---
 # <a name="running-sql-server-unit-tests"></a>SQL Server の単体テストの実行
 
@@ -26,31 +26,31 @@ ms.locfileid: "75256980"
 ## <a name="ways-to-run-sql-server-unit-tests"></a>SQL Server 単体テストを実行する方法  
 次に示すように、インストールされているソフトウェアに応じて異なる複数の方法で、SQL Server 単体テストを実行できます。  
   
--   Visual Studio 2010 の **[テスト ビュー]** ウィンドウを使ってテストを実行します。 詳しくは、「[SQL Server 単体テストを実行する方法](../ssdt/how-to-run-sql-server-unit-tests.md)」および「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)」をご覧ください。 Visual Studio 2012 の場合は、「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182470.aspx)」をご覧ください。  
+-   Visual Studio 2010 の **[テスト ビュー]** ウィンドウを使ってテストを実行します。 詳細については、「[SQL Server 単体テストを実行する方法](../ssdt/how-to-run-sql-server-unit-tests.md)」および「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)」を参照してください。 Visual Studio 2012 については、「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182470.aspx)」を参照してください。  
   
 -   コマンド プロンプトで MSTest.exe コマンドを使用してテストを実行します。 詳しくは、「[方法: MSTest を使用してコマンド ラインから自動テストを実行する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182487(VS.100).aspx)」または「[方法: MSTest を使用してコマンド ラインから自動テストを実行する (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182487.aspx)」をご覧ください。  
   
 -   **ソリューション エクスプローラー**からテスト プロジェクトを実行することで、テストを実行します。 詳しくは、「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)」または「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182470.aspx)」をご覧ください。  
   
--   **[テスト結果]** ウィンドウからテストを再実行します。 詳しくは、「[方法: テストを再実行する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx)」をご覧ください。  
+-   **[テスト結果]** ウィンドウからテストを再実行します。 詳細については、「[テストを再実行する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx)」を参照してください。  
   
 -   **[テスト リスト エディター]** ウィンドウから個々のテストまたはテスト リスト (Visual Studio 2010) を実行します。 詳しくは、「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)」または「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182470.aspx)」をご覧ください。  
   
 -   Team Foundation ビルドでプロジェクトをビルドするときにテストを実行します。 詳しくは、「[方法: アプリケーションのビルド後にスケジュールされているテストを構成および実行する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)」または「[方法: アプリケーションのビルド後にスケジュールされているテストを構成および実行する (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182465.aspx)」をご覧ください。  
   
-順序指定テストを使用して、特定の順序で SQL Server 単体テストを実行できます。 詳しくは、「[方法: 順序指定テストを作成する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182631(VS.100).aspx)」または「[方法: 順序指定テストを作成する (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182631.aspx)」をご覧ください。  
+順序指定テストを使用して、特定の順序で SQL Server 単体テストを実行できます。 詳細については、「[順序指定テストを作成する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182631(VS.100).aspx)」または「[方法: 順序指定テストを作成する (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182631.aspx)」を参照してください。  
   
 ## <a name="interpreting-tests-results"></a>テスト結果の解釈  
-テストを実行した後、 **[テスト結果]** ウィンドウにテストの合格または不合格が示されます。 詳しくは、「[SQL Server の単体テストの結果の解釈](../ssdt/interpreting-sql-server-unit-test-results.md)」をご覧ください。 予期しないエラーを診断する方法について詳しくは、「[データベース オブジェクトをデバッグする方法](../ssdt/how-to-debug-database-objects.md)」をご覧ください。  
+テストを実行した後、 **[テスト結果]** ウィンドウにテストの合格または不合格が示されます。 詳しくは、「[SQL Server の単体テストの結果の解釈](../ssdt/interpreting-sql-server-unit-test-results.md)」をご覧ください。 予期しないエラーを診断する方法の詳細については、「[データベース オブジェクトをデバッグする方法](../ssdt/how-to-debug-database-objects.md)」を参照してください。  
   
 ## <a name="topics-in-this-section"></a>このセクションのトピック  
 このセクションのトピックは次のとおりです。  
   
--   [データベース オブジェクトをデバッグする方法](../ssdt/how-to-debug-database-objects.md)  
+-   [方法: データベース オブジェクトをデバッグする](../ssdt/how-to-debug-database-objects.md)  
   
--   [Team Foundation ビルドから SQL Server の単体テストを実行する方法](../ssdt/how-to-run-sql-server-unit-tests-from-team-foundation-build.md)  
+-   [方法: Team Foundation ビルドから SQL Server の単体テストを実行する](../ssdt/how-to-run-sql-server-unit-tests-from-team-foundation-build.md)  
   
--   [SQL Server 単体テストを実行する方法](../ssdt/how-to-run-sql-server-unit-tests.md)  
+-   [方法:  SQL Server の単体テストを実行する](../ssdt/how-to-run-sql-server-unit-tests.md)  
   
 -   [SQL Server の単体テストの結果の解釈](../ssdt/interpreting-sql-server-unit-test-results.md)  
   

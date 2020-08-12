@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d168b32b85e4d0bbf42e166e175d9951de4dd31
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 2b57a54c66259fe16c3143e0328476279a1aea01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607005"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748499"
 ---
 # <a name="tutorial-create-a-predictive-model-in-r-with-sql-machine-learning"></a>チュートリアル:SQL 機械学習を使用して R で予測モデルを作成する
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズのパート 3 では、R で予測モデルをトレーニングします。このシリーズの次のパートでは、Machine Learning Services またはビッグ データ クラスターを使用して、このモデルを SQL Server データベースにデプロイします。
@@ -29,7 +28,10 @@ ms.locfileid: "83607005"
 この 4 部構成のチュートリアル シリーズのパート 3 では、R で予測モデルをトレーニングします。このシリーズの次のパートでは、Machine Learning Services を使用して、このモデルを SQL Server データベースにデプロイします。
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-この 4 部構成のチュートリアル シリーズのパート 3 では、R で予測モデルをトレーニングします。このシリーズの次のパートでは、SQL Server R Services を使用して、このモデルを SQL Server データベースにデプロイします。
+この 4 部構成のチュートリアル シリーズのパート 3 では、R で予測モデルをトレーニングします。このシリーズの次のパートでは、SQL Server R Services を使用して、このモデルをデータベースにデプロイします。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+この 4 部構成のチュートリアル シリーズのパート 3 では、R で予測モデルをトレーニングします。このシリーズの次のパートでは、Machine Learning Services を使用して、このモデルを Azure SQL Managed Instance データベースにデプロイします。
 ::: moniker-end
 
 この記事では、次の方法について学習します。
@@ -67,6 +69,7 @@ actual_counts <- test_data$RentalCount;
 model_lm <- lm(RentalCount ~  Month + Day + WeekDay + Snow + Holiday, data = train_data);
 
 #Model 2: Use rpart to create a decision tree model, trained with the training data set
+library(rpart);
 model_rpart  <- rpart(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = train_data);
 ```
 

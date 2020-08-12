@@ -1,6 +1,7 @@
 ---
 title: トレース中に値列またはデータ列を検索する
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler を使用してトレース実行中にトレース出力の特定の値列またはデータ列を検索する方法について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: e78150643556a418226cff36e9aaa2a3fa3f555c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 697674390fe11ff569451dcb0153482f7b8aefd8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307202"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789977"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>トレース中の値列またはデータ列の検索 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用してトレースを実行中に、トレース出力の特定の値列またはデータ列を検索する方法について説明します。  
   

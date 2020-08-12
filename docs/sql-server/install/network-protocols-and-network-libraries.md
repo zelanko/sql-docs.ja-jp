@@ -1,5 +1,6 @@
 ---
 title: ネットワーク プロトコルとネットワーク ライブラリ | Microsoft Docs
+description: サーバーは、複数のネットワーク プロトコルを監視するように構成することができます。 SQL Server 構成マネージャーを使用して、構成を変更できます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: abdd5e7af707bd566288bd1048eda4874d82311c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bc3f56fe60fdab32a41e61c878b1a3988e265a28
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68126072"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880446"
 ---
 # <a name="network-protocols-and-network-libraries"></a>ネットワーク プロトコルとネットワーク ライブラリ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   サーバーは、一度に複数のネットワーク プロトコルでリッスンまたは監視することができます。 ただし、これには各プロトコルを構成する必要があります。 特定のプロトコルが構成されていない場合、サーバーはそのプロトコルでリッスンできません。 インストール後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、プロトコルの構成を変更できます。  
   

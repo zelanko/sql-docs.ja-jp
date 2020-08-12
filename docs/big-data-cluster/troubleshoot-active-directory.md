@@ -5,20 +5,20 @@ description: Active Directory ドメインの SQL Server ビッグ データ ク
 author: rl-msft
 ms.author: rafidl
 ms.reviewer: mikeray
-ms.date: 03/12/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69762b5474f72256975af06e6c79d664de283809
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 302731f3f0c37f60c4944b7df44d02b2cfc64a8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153250"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772878"
 ---
 # <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>SQL Server ビッグ データ クラスターの Active Directory 統合のトラブルシューティング
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 この記事では、Active Directory モードでの SQL Server ビッグ データ クラスターの展開に関するトラブルシューティングについて説明します。
 
@@ -123,9 +123,9 @@ zookeeper-2       2/2     Running   0          32m
 
 ## <a name="cause"></a>原因
 
-上の例では、ドメイン グループのスコープがドメイン ローカルなので、ドメイン ユーザーのログインが作成されずに展開は失敗します。 ドメイン グローバルまたはドメイン ユニバーサルのスコープを持つグループを使用します。 「[Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する](deploy-active-directory.md)」では、AD グループのスコープ要件について説明されています。
+上の例では、ドメイン グループのスコープがドメイン ローカルなので、ドメイン ユーザーのログインが作成されずに展開は失敗します。 スコープがグローバルまたはユニバーサルのグループを使用します。 「[Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する](deploy-active-directory.md)」では、AD グループのスコープ要件について説明されています。
 
-## <a name="resolution"></a>解決方法
+## <a name="verify"></a>確認
 
 ドメイン グループのスコープ (<`domain-group`>) を確認します。 [get-adgroup](/powershell/module/addsadministration/get-adgroup/) を使用します。
 

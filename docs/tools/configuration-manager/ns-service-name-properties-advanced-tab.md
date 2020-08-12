@@ -1,5 +1,6 @@
 ---
 title: NS$&lt;サービス名&gt; プロパティ ([詳細設定] タブ)
+description: SQL Server の [Notification Services のプロパティ] ダイアログ ボックスの [詳細設定] タブを使用してカスタム プロパティの値を表示します。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: a605417c-4ba7-4f3f-baa9-14166f97c478
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e99c23d22ef5fb8abb67674c6f935283b8207d15
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 637a621b7bb9d4f3d01bbda0dceca11cd7918378
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306417"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893352"
 ---
 # <a name="nsltservice-namegt-properties-advanced-tab"></a>NS$&lt;サービス名&gt; プロパティ ([詳細設定] タブ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   [!INCLUDE[ssNS](../../includes/ssns-md.md)] は、**NS$** _<user_configured name>_ という形式の名前が付いたサービスとして実装されます。 カスタム プロパティが定義されていれば、そのプロパティと値がこのタブに表示されます。 このタブにプロパティが表示されない場合もあります。  
   
   

@@ -1,6 +1,7 @@
 ---
 title: SHOWPLAN 結果を使用したクエリの分析
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler にクエリ プラン情報が表示されるように、トレースから Showplan イベントを抽出する方法について説明します。 Showplan トレース イベントのテーブルを表示します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: e0936a3931b574c08e5a58f396d7917eae569078
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b833f87e092260d38649c464fd4b09c6e43899d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307386"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774954"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>SQL Server Profiler での Showplan 結果を使用したクエリの分析
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Showplan イベント クラスをトレース定義に追加することで、クエリ プランに関する情報を [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のトレースで収集して表示できます。 また、トレースで収集した他のイベントから Showplan イベントを抽出し、これらの Showplan イベントを個別の XML ファイルに保存することもできます。  
   
  トレースから Showplan イベントを抽出するために使用できる方法は、次のとおりです。  

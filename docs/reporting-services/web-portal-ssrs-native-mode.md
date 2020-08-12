@@ -4,17 +4,17 @@ ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
+description: Reporting Services レポート サーバーの Web ポータルは Web ベースの機能であり、レポート、モバイル レポート、KPI を表示したり、レポート サーバー インスタンスの要素をナビゲートしたりできます。
 ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24afa6ec8daa26730ad202d1aad612ba01213bb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 29181b0830ad767c71e73c709aa7f3eee5a49190
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082510"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759797"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>レポート サーバーの Web ポータル (SSRS ネイティブ モード)
 

@@ -1,6 +1,7 @@
 ---
 title: トレース テンプレートをエクスポートする
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler の別インスタンスでテンプレートを使用できるよう、SQL Server Profiler を使用し、テンプレート ファイルとしてトレース テンプレートをエクスポートする方法について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 82e3bab1f7042029462e3d50b3c7e550fe9eba86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8348b393da3dde8b8f941a882cf227b9bd99953b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307270"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774829"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>トレース テンプレートのエクスポート (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して既存のトレース テンプレートをエクスポートし、テンプレート ファイル (.tdf) として保存する方法について説明します。 トレース テンプレートをエクスポートして、ファイルとして保存すると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]の別のインスタンスでそのテンプレートを使用できるようになります。  
   

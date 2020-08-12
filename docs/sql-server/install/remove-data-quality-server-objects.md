@@ -1,5 +1,6 @@
 ---
 title: Data Quality Server オブジェクトの削除 | Microsoft Docs
+description: SQL Server のインスタンスから Data Quality Server をアンインストールする場合は、DQS データベースを含む一部の Data Quality Server オブジェクトを手動で削除する必要があります。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,17 +8,17 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 531e7f600c1523a565890d1ba1ab781d3b8a9deb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4f19dc1e34ea35509a8894400ca298909e3b1f96
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68019825"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883743"
 ---
 # <a name="remove-data-quality-server-objects"></a>Data Quality Server オブジェクトの削除
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] インスタンスから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアンインストールしても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を持つ [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] インスタンスを完全に削除しても、DQS データベースを含む一部の [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] オブジェクトは削除されません。 これは、SQL Server セットアップを使用して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] をアンインストールする場合、DQS データが失われないことを意味します。 このような [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] オブジェクトは、アンインストール プロセスの完了後に手動で削除する必要があります。  
   

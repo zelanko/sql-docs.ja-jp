@@ -1,21 +1,21 @@
 ---
 title: データベース単体テストを含む以前のテスト プロジェクトをアップグレードする
+description: データベース単体テストが含まれる Visual Studio 2010 テスト プロジェクトをアップグレードする方法について説明します。 これらのプロジェクトで SQL Server Data Tools を使用する方法を確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 146d52de5abbd868d80e848636213cf273c468ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 801844176680032b24e777a70acceea65f19f1f2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256302"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883392"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>データベース単体テストを含む以前のテスト プロジェクトをアップグレードする
 

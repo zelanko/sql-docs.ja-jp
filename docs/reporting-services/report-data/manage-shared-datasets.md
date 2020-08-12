@@ -1,5 +1,6 @@
 ---
 title: 共有データセットの管理 |Microsoft ドキュメント
+description: Reporting Services で共有データセットを管理する方法について説明します。これにより、クエリを共有して、複数のレポートに対して一貫したデータのセットを提供することができます。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 332103dd9f100a2477b9ae7392bd6d24088261f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df22dbab5cf450981f53976fb2a09e6ff08797c8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67220584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808442"
 ---
 # <a name="manage-shared-datasets"></a>共有データセットを管理する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、共有データセットによって、外部データ ソースに接続された共有データ ソースからデータを取得します。 共有データセットを使用するとクエリを共有できるので、複数のレポートに同じデータ セットを取り込むことができます。 データセット クエリにはデータセット パラメーターが含まれる場合があります。 初回使用時または指定したスケジュールに従い、特定のパラメーターの組み合わせによるクエリ結果をキャッシュするよう共有データセットを構成できます。 レポート キャッシュおよびレポート データ フィードと共に共有データセットのキャッシュを使用すると、データ ソースへのアクセスの管理に役立ちます。  
@@ -41,8 +42,8 @@ ms.locfileid: "67220584"
 ### <a name="manage-shared-dataset-item-properties"></a>共有データセット アイテムのプロパティの管理  
  次の表に、共有データセット アイテムの編集可能なプロパティを示します。  
   
-|||  
-|-|-|  
+|プロパティ|説明|  
+|--------|-----------|  
 |名前の編集|共有データセットの名前を変更できます。 依存アイテムからのすべての参照は引き続き動作します。|  
 |説明の編集|共有データセットの説明を変更できます。|  
 |クエリ実行タイムアウト|クエリ実行タイムアウトを秒単位で設定できます。 ゼロ (0) 秒は、タイムアウトが設定されていないことを意味します。設定した秒数が経過すると、データセット クエリがタイムアウトとなります。タイムアウト値を指定しない場合は、0 を使用します。 詳細については、「[レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)」を参照してください。|  

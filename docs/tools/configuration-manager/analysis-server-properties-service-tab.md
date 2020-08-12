@@ -1,5 +1,6 @@
 ---
 title: '[SQL Server Analysis Services のプロパティ] ダイアログ ボックス ([サービス] タブ)'
+description: バイナリ パス、ホスト名、開始モードなど、[分析サーバーのプロパティ] ダイアログ ボックスの [サービス] タブのオプションについて説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b5520bb39a8e8e856030781b7739a55fd88fccaf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 438f256154961a730d473096989fdc363af42b19
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306552"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895077"
 ---
 # <a name="analysis-server-properties-service-tab"></a>[SQL Server Analysis Services のプロパティ] ダイアログ ボックス ([サービス] タブ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   このサービスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] です。 [!INCLUDE[ssAS](../../includes/ssas-md.md)] を正しく機能させるには、このサービスを実行する必要があります。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[バイナリ パス]**  
  このサービスが使用するプログラム ファイルの場所が表示されます。  
   
@@ -35,7 +36,7 @@ ms.locfileid: "75306552"
  **Host Name**  
  [!INCLUDE[ssAS](../../includes/ssas-md.md)]を実行しているコンピューターまたはクラスターの名前が表示されます。  
   
- **Name**  
+ **名前**  
  サービスの表示名が表示されます。  
   
  **プロセス ID**  
@@ -47,11 +48,11 @@ ms.locfileid: "75306552"
  **[開始モード]**  
  このサービスを以下のいずれかのモードに設定します。  
   
--   手動: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
+-   手動: このサービスは、コンピューターの起動時に自動的に開始されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
   
--   \[自動]: このサービスは、コンピューターの起動時に開始を試みます。  
+-   自動:コンピューターの起動時に、このサービスの開始が試みられます。  
   
--   \[無効]: このサービスは開始できません。  
+-   無効:このサービスを開始できません。  
   
  **State**  
  このサービスが実行中か、停止しているか、無効になっているかが表示されます。  

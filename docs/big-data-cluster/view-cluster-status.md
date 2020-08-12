@@ -5,20 +5,20 @@ description: この記事では、Azure Data Studio、ノートブック、お�
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e3c7f2f34f949f16821ad7c1dd6a3c3b0d4681e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531588"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772825"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>ビッグ データ クラスターの状態を表示する方法 
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 この記事では、サービス エンドポイントにアクセスして SQL Server ビッグ データ クラスター コンポーネントの状態を表示する方法について説明します。 Azure Data Studio と **azdata** の両方を使用できます。この記事では、両方の手法について説明します。
 
@@ -53,7 +53,9 @@ ms.locfileid: "73531588"
 - Spark ジョブの監視
 - Spark リソースの管理
 
-これらのリンクを直接クリックできます。 これらのダッシュボードにアクセスするときは、認証が必要になります。 メトリックとログのダッシュボードの場合は、環境変数 **AZDATA_USERNAME** と **AZDATA_PASSWORD** を使用して、展開時に設定するコントローラー管理者の資格情報を指定します。 Spark ダッシュボードでは、AD に統合されたクラスターの AD ID、またはクラスター内で基本認証を使用している場合は、ユーザー **ルート**および **AZDATA_PASSWORD** というゲートウェイ (Knox) 資格情報が使用されます。 
+これらのリンクを直接クリックできます。 これらのダッシュボードにアクセスするときは、認証が必要になります。 メトリックとログのダッシュボードの場合は、環境変数 **AZDATA_USERNAME** と **AZDATA_PASSWORD** を使用して、展開時に設定するコントローラー管理者の資格情報を指定します。 Spark ダッシュボードでは、AD に統合されたクラスターの AD ID、またはクラスター内で基本認証を使用している場合は、**AZDATA_USERNAME** および **AZDATA_PASSWORD** というゲートウェイ (Knox) 資格情報が使用されます。
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ### <a name="cluster-status-notebook"></a><a id="notebook"></a> クラスターの状態ノートブック
 

@@ -1,29 +1,29 @@
 ---
 title: Team Foundation ビルドから SQL Server の単体テストを実行する
+description: Team Foundation ビルドから SQL Server の単体テストを実行する方法について説明します。 自動テストの実行時にビルド定義を作成して単体テストを実行する方法を確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f256431ad0b9df55d23672522db8533ebd26f311
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244291"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893921"
 ---
-# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Team Foundation ビルドから SQL Server の単体テストを実行する方法
+# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>方法:Team Foundation ビルドから SQL Server の単体テストを実行する
 
 Team Foundation ビルドを使用すると、SQL Server の単体テストをビルド確認テスト (BVT) の一環として実行できます。 データベースを配置し、テスト データを生成して、選択したテストを実行するように単体テストを構成できます。 Team Foundation ビルドを使い慣れていない場合は、このトピックの手順を実行する前に、次の情報を確認してください。  
   
 -   [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [方法: アプリケーションのビルド後にスケジュールされているテストを構成および実行する](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [方法: 方法: アプリケーションのビルド後にスケジュールされているテストを構成および実行する](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
 -   [基本的なビルド定義の作成](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
@@ -264,7 +264,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 10. **[基本]** グループの **[自動テスト]** で、実行するテストを指定します。 既定では、ソリューションの \*test\*.dll という名前のファイルに含まれているテストが実行されます。  
   
-11. **[ファイル]** メニューの **[** ProjectName*の保存]* をクリックします。  
+11. **[ファイル]** メニューの **[*ProjectName*の保存]** をクリックします。  
   
     ビルド定義が作成されました。 次に、テスト プロジェクトを変更します。  
   
@@ -278,7 +278,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 2.  必要に応じて、 **[ビルド定義]** で、新しいビルド定義をクリックします。  
   
-3.  **[ビルド定義]** 、 **[ビルド エージェント]** 、 **[このビルドの格納フォルダー]** の各フィールドの値がすべて適切であることを確認し、 **[キューに登録]** をクリックします。  
+3.  **[ビルド定義]**、**[ビルド エージェント]**、**[このビルドの格納フォルダー]** の各フィールドの値がすべて適切であることを確認し、**[キューに登録]** をクリックします。  
   
     **ビルド エクスプローラー**の **[キューに挿入済み]** タブが表示されます。 詳しくは、「[完了したビルドの管理と表示 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx)」または「[ビルド エクスプローラーでのビルドの管理 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx)」をご覧ください。  
   

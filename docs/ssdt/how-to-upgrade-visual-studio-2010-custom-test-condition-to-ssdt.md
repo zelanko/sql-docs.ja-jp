@@ -1,23 +1,23 @@
 ---
 title: Visual Studio 2010 のカスタム テスト条件を、以前のリリースからアップグレードする
+description: SQL Server Data Tools で使用するために Visual Studio 2010 のカスタム テスト条件をアップグレードする方法について説明します。 どのような変更が加えられたか、および条件をインストールする方法を確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 44c895a3-dee0-4032-a60f-812f5fe3c713
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 333ef282fe4e1f9d7af53cd3569371e88018a03f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b2b211250acb2e2594601236a379023a8479243c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251073"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893362"
 ---
-# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする方法
+# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>方法:Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする
 
 SQL Server Data Tools より前のバージョンで作成したテスト条件を使用するには、次のようにアップグレードする必要があります。  
   
@@ -50,7 +50,7 @@ SQL Server Data Tools より前のバージョンで作成したテスト条件�
   
 8.  **[プロジェクト]** メニューの **[プロジェクトのアンロード]** をクリックします。  
   
-9. **ソリューション エクスプローラー**で**プロジェクト**を右クリックして、**[**`project_name`**.csproj の編集]** をクリックします。  
+9. **ソリューション エクスプローラー**で**プロジェクト**を右クリックして、 **[** `project_name` **.csproj の編集]** をクリックします。  
   
 10. `Microsoft.CSharp.targets` をインポートした後、次の Import ステートメントを追加します。  
   
@@ -122,7 +122,7 @@ SQL Server Data Tools より前のバージョンで作成したテスト条件�
     ```  
   
 ### <a name="update-type-references"></a>型参照を更新する  
-SQL Server 単体テスト フレームワークでは、いくつかの型名が変更されました。 新しい型名を使用するようにコードを更新するには、**[編集]** メニューの **[検索と置換]** を使用します。 型名は、**Sql** で始まるようになりました。 クラス名は次のように更新されました。  
+SQL Server 単体テスト フレームワークでは、いくつかの型名が変更されました。 新しい型名を使用するようにコードを更新するには、 **[編集]** メニューの **[検索と置換]** を使用します。 型名は、**Sql** で始まるようになりました。 クラス名は次のように更新されました。  
   
 |以前の型名|新しい型名|  
 |-----------------|-----------------|  

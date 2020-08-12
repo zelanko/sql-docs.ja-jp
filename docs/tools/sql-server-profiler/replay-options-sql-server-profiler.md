@@ -1,6 +1,7 @@
 ---
 title: '[再生オプション]'
 titleSuffix: SQL Server Profiler
+description: キャプチャしたトレースを再生するときに SQL Server Profiler で使用される設定について説明します。 [構成の再生] ダイアログ ボックスを使用して設定を調整する方法について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 649bf543417c0772c23c6338862e33b6bac9bad1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbeda6af1316bacd6b0cca561a989f5e9bd966c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307494"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789915"
 ---
 # <a name="replay-options-sql-server-profiler"></a>再生オプション (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、キャプチャされたトレースを再生するには、 **[構成の再生]** ダイアログ ボックスで、以下の再生オプションを指定します。 このダイアログ ボックスを表示するには、再生するトレース ファイルまたはトレース テーブルを [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で開き、 **[再生]** メニューの **[開始]** をクリックします。 トレースの再生に必要な権限の詳細については、「 [SQL Server Profiler の実行に必要な権限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)」を参照してください。  
   
@@ -74,7 +75,7 @@ ms.locfileid: "75307494"
  ブロックされるプロセス モニターが、ブロックされているプロセスまたはブロックしているプロセスを検索する頻度を設定します。  
   
 ## <a name="about-the-health-monitor"></a>ヘルス モニターについて  
- ヘルス モニターは、トレースの再生に伴うシミュレートされたプロセスを監視するアプリケーション スレッドです。これらのプロセスのうち、再生内でブロックされているプロセスを終了します。 **[再生の構成]** ダイアログ ボックスの **[再生オプションの詳細設定]** タブで、ブロックされているプロセスを終了するまでにヘルス モニターが待機する時間を秒単位で指定できます ( **[ヘルス モニターの待機間隔]** )。 この間隔が 0 に設定されていると、ヘルス モニターは、再生されているトレース中のブロックしているシミュレートされたプロセスを終了しません。  
+ ヘルス モニターは、トレースの再生に伴うシミュレートされたプロセスを監視するアプリケーション スレッドです。これらのプロセスのうち、再生内でブロックされているプロセスを終了します。 **[再生の構成]** ダイアログ ボックスの **[再生オプションの詳細設定]** タブで、ブロックされているプロセスを終了するまでにヘルス モニターが待機する時間を秒単位で指定できます (**[ヘルス モニターの待機間隔]**)。 この間隔が 0 に設定されていると、ヘルス モニターは、再生されているトレース中のブロックしているシミュレートされたプロセスを終了しません。  
   
 ## <a name="see-also"></a>参照  
  [トレースの再生](../../tools/sql-server-profiler/replay-traces.md)   

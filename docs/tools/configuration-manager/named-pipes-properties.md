@@ -1,5 +1,6 @@
 ---
 title: '[名前付きパイプのプロパティ] ダイアログ ボックス'
+description: '[名前付きパイプのプロパティ] ダイアログ ボックスの [プロトコル] ページを使用して、名前付きパイプ プロトコルを使用しているときに SQL Server がリッスンする名前付きパイプの表示や変更を行います。'
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,20 +17,20 @@ ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 923f84ccc98837892d144a07ce71238c877ca5b6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c4fae15dcdd786b93caf189afb478e435d3fc986
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306439"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894849"
 ---
 # <a name="named-pipes-properties"></a>[名前付きパイプのプロパティ] ダイアログ ボックス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   **[名前付きパイプのプロパティ]** ダイアログ ボックスの **[プロトコル]** ページでは、名前付きパイプ プロトコルを使用している場合に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンする名前付きパイプの表示や変更を行います。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動する必要があるのは、プロトコルを有効または無効にする場合、または名前付きパイプを変更する場合です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **有効**  
  可能な値は、 **[はい]** と **[いいえ]** です。  
   

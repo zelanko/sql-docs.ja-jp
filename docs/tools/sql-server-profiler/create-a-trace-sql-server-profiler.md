@@ -1,6 +1,7 @@
 ---
 title: トレースを作成する
 titleSuffix: SQL Server Profiler
+description: トレースを作成することで SQL Server Profiler でイベント データをキャプチャする方法について説明します。 トレースに指定できるさまざまなオプションについて説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 08/01/2016
-ms.openlocfilehash: 5a5c004bbc7e93720f18df998b989c46ced0188e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c9c3fd13687004c1e632e81819ea25bfac7a3689
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307331"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774879"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>トレースの作成 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してトレースを作成する方法について説明します。  
   

@@ -1,5 +1,6 @@
 ---
 title: アクセス用のマルチホーム コンピューターの構成
+description: マルチホーム環境内の SQL Server のインスタンスへのネットワーク接続用に SQL Server と Windows ファイアウォールを構成する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: d8733c9a4624bcadb60eb5cfa70cf81f242f43a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 74f365ec21285609055d8ecc04690787f5870802
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244460"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894898"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>SQL Server アクセス用のマルチホーム コンピューターの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   サーバーが複数のネットワークまたはネットワーク サブネットへの接続を提供する必要がある場合、一般的なシナリオではマルチホーム コンピューターを使用します。 通常、このコンピューターは、境界ネットワーク (DMZ、非武装地帯、またはスクリーン サブネットとも呼ばれます) にあります。 この記事では、マルチホーム環境内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへのネットワーク接続用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とセキュリティが強化された Windows ファイアウォールを構成する方法について説明します。  
   
@@ -69,7 +70,7 @@ ms.locfileid: "75244460"
   
 1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー**をクリックします。  
   
-2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構成マネージャー**のコンソール ペインで、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][ネットワークの構成]** 、 **[\<instance name> のプロトコル]** を順に展開し、 **[TCP/IP]** をダブルクリックします。  
+2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー**のコンソール ペインで、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネットワーク構成]** 、 **[\<instance name> のプロトコル]** の順に展開して、 **[TCP/IP]** をダブルクリックします。  
   
 3.  **[TCP/IP のプロパティ]** ダイアログ ボックスの **[IP アドレス]** タブに、 **IP1**、 **IP2**という形式で **IPAll**まで IP アドレスが表示されます。 このうちいずれかが、ループバック アダプターの IP アドレス 127.0.0.1 です。 追加の IP アドレスがコンピューターで構成される各 IP アドレスとして表示されます。  
   

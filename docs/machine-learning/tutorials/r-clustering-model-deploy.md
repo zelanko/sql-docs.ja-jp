@@ -8,28 +8,30 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d9640ee6040e6906f888486f6b0a1f99bb1d071f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a949fc5f17d2e6875eeef7f62ecef065283e3a92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607115"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772317"
 ---
 # <a name="tutorial-deploy-a-clustering-model-in-r-with-sql-machine-learning"></a>チュートリアル:SQL 機械学習を使用して R でクラスタリング モデルをデプロイする
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-この 4 部構成のチュートリアル シリーズのパート 4 では、SQL Server Machine Learning Services またはビッグ データ クラスターを使用して、R で開発されたクラスタリング モデルを SQL データベースにデプロイします。
+この 4 部構成のチュートリアル シリーズのパート 4 では、SQL Server Machine Learning Services またはビッグ データ クラスターを使用して、R で開発されたクラスタリング モデルをデータベースにデプロイします。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-この 4 部構成のチュートリアル シリーズのパート 4 では、SQL Server Machine Learning Services を使用して、R で開発されたクラスタリング モデルを SQL データベースにデプロイします。
+この 4 部構成のチュートリアル シリーズのパート 4 では、SQL Server Machine Learning Services を使用して、R で開発されたクラスタリング モデルをデータベースにデプロイします。
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-この 4 部構成のチュートリアル シリーズのパート 4 では、SQL Server R Services を使用して、R で開発されたクラスタリング モデルを SQL データベースにデプロイします。
+この 4 部構成のチュートリアル シリーズのパート 4 では、SQL Server R Services を使用して、R で開発されたクラスタリング モデルをデータベースにデプロイします。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+この 4 部構成のチュートリアル シリーズのパート 4 では、Azure SQL Managed Instance Machine Learning Services を使用して、R で開発されたクラスタリング モデルをデータベースにデプロイします。
 ::: moniker-end
 
 新しい顧客が登録する際、クラスタリングを定期的に実行するには、どのアプリからでも R スクリプトを呼び出せる必要があります。 これを行うには、SQL ストアド プロシージャ内に R スクリプトを配置して、データベースに R スクリプトをデプロイします。 モデルはデータベースで実行されるため、データベースに格納されているデータに対して、容易にトレーニングできます。
@@ -38,7 +40,7 @@ ms.locfileid: "83607115"
 
 > [!div class="checklist"]
 > * モデルを生成するストアド プロシージャの作成
-> * SQL Database 上でのクラスタリング実行
+> * クラスタリングを実行する
 > * クラスタリング情報の使用
 
 [パート 1 ](r-clustering-model-introduction.md)では、前提条件をインストールしてサンプル データベースを復元しました。
@@ -139,10 +141,11 @@ EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
 # Define the connection string
+
 connStr <- paste("Driver=SQL Server; Server=", instance_name,
-               "; Database=", database_name,
-               "; Trusted_Connection=true; ",
-                  sep="" );
+                 "; Database=", database_name,
+                 "; uid=Username;pwd=Password; ",
+                 sep="" )
 
 # Input customer data that needs to be classified.
 # This is the result we get from the query.
@@ -178,7 +181,7 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>SQL データベース上でのクラスタリング実行
+## <a name="perform-clustering"></a>クラスタリングを実行する
 
 ストアド プロシージャを作成したところで、次のスクリプトを実行してクラスタリングを実行します。
 
@@ -237,7 +240,7 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 このチュートリアル シリーズのパート 4 で学習した内容は次のとおりです。
 
 * モデルを生成するストアド プロシージャの作成
-* SQL Server でのクラスタリング
+* SQL 機械学習でクラスタリングを実行する
 * クラスタリング情報の使用
 
 Machine Learning Services における R の使用について詳しくは、以下を参照してください。

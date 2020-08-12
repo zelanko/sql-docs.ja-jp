@@ -1,6 +1,7 @@
 ---
 title: フィルターを変更する
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler でトレース フィルターを変更して、必要な情報を収集できるようにする方法について説明します。 トレース フィルターがデータベースのパフォーマンスに与える影響について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4953da977f5172b8e861069616ff96e792dac8ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5231ec1526b1f019355f659ac58233c1f31005f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307187"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789957"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>フィルターの変更 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 トレース定義を保持するトレース テンプレートにフィルターを追加して、トレースで収集するイベントの数を制限します。 収集するイベントの数を制限すると、トレースによるパフォーマンスの影響を軽減できます。 トレース テンプレートにフィルターを設定していても、そのトレースで必要な種類の情報が収集されていないことが判明した場合は、そのフィルターを編集できます。  
   

@@ -1,5 +1,6 @@
 ---
 title: NS$&lt;サービス名&gt; プロパティ ([ログオン] タブ)
+description: SQL Server の [Notification Services のプロパティ] ダイアログ ボックスの [ログオン] タブについて説明します。 アカウントを指定して、サービスを開始または停止する方法を確認します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dfe2dcbb79a53b97c9dfc1a96a5bb7d1372804d9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7dbd0bca6e392b6a3037cef2ab05975829d5972b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306407"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883177"
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;サービス名&gt; プロパティ ([ログオン] タブ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   **[Notification Services のプロパティ]** ダイアログ ボックスの **[ログオン]** タブでは、 [!INCLUDE[ssNS](../../includes/ssns-md.md)] サービスが使用するアカウントの指定や、そのサービスの開始、停止を行います。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[ローカル システム アカウント]**  
  ローカル システム アカウントを指定します。このアカウントはパスワードを必要としません。 ただし、ローカル システム アカウントに与えられている特権によっては、そのサービスと他のサーバーとの対話が制限されることもあります。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "75306407"
  **[パスワードの確認入力]**  
  アカウントのパスワードを再度入力します。  
   
- **[開始]**  
+ **Start**  
  サービスを開始します。  
   
  **Stop**  

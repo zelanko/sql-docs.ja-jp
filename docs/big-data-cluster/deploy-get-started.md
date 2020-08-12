@@ -5,20 +5,20 @@ description: SQL Server ビッグ データ クラスターを展開するため
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0f6600b6578abe0a9b72dff8fee2d815b0771c0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4caaacd2d71d00d874a793129eef2f4144f03190
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82178133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784299"
 ---
 # <a name="get-started-with-big-data-clusters-2019-deployment"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]展開の概要
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法の概要を示します。 この記事では、概念を紹介し、展開シナリオを理解するためのフレームワークを提供します。 特定の展開手順は、クライアントとサーバーに対するプラットフォームの選択に応じて異なります。 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の概要については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)」を参照してください。
 
@@ -41,16 +41,7 @@ ms.locfileid: "82178133"
 
 ## <a name="client-tools"></a><a id="tools"></a> クライアント ツール
 
-ビッグ データ クラスターには、特定のクライアント ツール セットが必要です。 Kubernetes にビッグ データ クラスターを展開する前に、次のツールをインストールする必要があります。
-
-| ツール | 説明 |
-|---|---|
-| **azdata** | ビッグ データ クラスターを展開して管理します。 |
-| **kubectl** | 基になる Kubernetes クラスターを作成して管理します。 |
-| **Azure Data Studio** | ビッグ データ クラスターを使用するためのグラフィカル インターフェイス。 |
-| **SQL Server 2019 の拡張機能** | ビッグ データ クラスター機能を有効にする Azure Data Studio の拡張機能。 |
-
-別のシナリオでは、ほかのツールが必要になります。 各記事では、特定のタスクを実行するための前提条件が説明されています。 ツールとインストール リンクの完全な一覧については、「[SQL Server 2019 ビッグ データ ツールのインストール](deploy-big-data-tools.md)」を参照してください。
+ビッグ データ クラスターには、特定のクライアント ツール セットが必要です。 Kubernetes にビッグ データ クラスターを展開する前に、展開に必要なツールをインストールする必要があります。 別のシナリオでは、特定のツールが必要になります。 各記事では、特定のタスクを実行するための前提条件が説明されています。 ツールとインストール リンクの完全な一覧については、「[SQL Server 2019 ビッグ データ ツールのインストール](deploy-big-data-tools.md)」を参照してください。
 
 ## <a name="kubernetes"></a>Kubernetes
 
@@ -58,7 +49,11 @@ ms.locfileid: "82178133"
 
 - **Azure Kubernetes Service (AKS)** :AKS を使用すると、Azure 内にマネージド Kubernetes クラスターを展開できます。 ユーザーは、エージェント ノードの管理と保守のみを行います。 AKS では、クラスター用に独自のハードウェアをプロビジョニングする必要はありません。 [Python スクリプト](quickstart-big-data-cluster-deploy.md)や[展開ノートブック](notebooks-deploy.md)を使用すると、1 つの手順で AKS クラスターを作成してビッグ データ クラスターを展開することも簡単になります。 ビッグ データ クラスターの展開のために AKS を構成する方法の詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の展開のために Azure Kubernetes Service を構成する](deploy-on-aks.md)」を参照してください。
 
+- **Azure Red Hat OpenShift (ARO)** : ARO を使用すると、管理された Red Hat OpenShift クラスターを Azure に展開できます。 ユーザーは、エージェント ノードの管理と保守のみを行います。 ARO では、クラスター用に独自のハードウェアをプロビジョニングする必要はありません。 また、[Python スクリプト](quickstart-big-data-cluster-deploy-aro.md)を使用すると、ARO クラスターの作成とビッグ データ クラスターの展開が 1 つの手順で簡単に行うことができます。 この展開モデルは、SQL Server 2019 CU5 で導入されています。 
+
 - **複数のマシン**:Kubernetes を複数の Linux マシンに展開することもできます。物理サーバーまたは仮想マシンの可能性があります。 [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) ツールは、Kubernetes クラスターを作成するために使用できます。 この種類の展開を自動化するには、[bash スクリプト](deployment-script-single-node-kubeadm.md)を使用できます。 ビッグ データ クラスターに使用する既存のインフラストラクチャが既に存在する場合には、この方法が適しています。 ビッグ データ クラスターでの **kubeadm** 展開の利用に関する詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の展開のために複数のマシン上に Kubernetes を構成する](deploy-with-kubeadm.md)」を参照してください。
+
+- **Red Hat OpenShift**: 独自の Red Hat OpenShift クラスターに展開します。 詳細については、「[OpenShift (オンプレミス) と Azure Red Hat OpenShift で [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ビッグ データ クラスターを展開する](deploy-openshift.md)」を参照してください。 この展開モデルは、SQL Server 2019 CU5 で導入されています。
 
 ## <a name="deploy-a-big-data-cluster"></a>ビッグ データ クラスターをデプロイする
 

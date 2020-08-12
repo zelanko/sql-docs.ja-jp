@@ -4,22 +4,22 @@ titleSuffix: SQL machine learning
 description: SQL 機械学習を使用して、一連の単純な R スクリプトを実行します。 ストアド プロシージャ sp_execute_external_script を使用して、スクリプトを実行する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/23/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed4f4899869dbc9609f29d935c80a7df88fa3d4c
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 2327b6644725c77949b49c661bc7d02d13c4e47d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606754"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772354"
 ---
 # <a name="quickstart-run-simple-r-scripts-with-sql-machine-learning"></a>クイック スタート:SQL 機械学習を使用して単純な R スクリプトを実行する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 このクイックスタートでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) または[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)を使用して、一連の単純な R スクリプトを実行します。 ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して、SQL Server インスタンスでスクリプトを実行する方法について説明します。
@@ -29,6 +29,9 @@ ms.locfileid: "83606754"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 このクイックスタートでは、[SQL Server R Services](../r/sql-server-r-services.md) を使用して、一連の単純な R スクリプトを実行します。 ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して、SQL Server インスタンスでスクリプトを実行する方法について説明します。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+このクイックスタートでは、[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) を使用して、一連の単純な R スクリプトを実行します。 ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して、データベースでスクリプトを実行する方法について説明します。
 ::: moniker-end
 
 ## <a name="prerequisites"></a>前提条件
@@ -43,6 +46,9 @@ ms.locfileid: "83606754"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services。 R Services をインストールする方法については、[Windows インストール ガイド](../install/sql-r-services-windows-install.md)に関するページを参照してください。 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL Managed Instance の Machine Learning Services。 サインアップの方法については、[Azure SQL Managed Instance の Machine Learning Services の概要](/azure/azure-sql/managed-instance/machine-learning-services-overview)に関するページを参照してください。
 ::: moniker-end
 
 - R スクリプトを含む SQL クエリを実行するためのツール。 このクイックスタートでは [Azure Data Studio](../../azure-data-studio/what-is.md) を使用します。
@@ -108,7 +114,7 @@ GO
 | @language | 呼び出す言語拡張機能 (この例では R) を定義します |
 | @script | R ランタイムに渡されるコマンドを定義します この引数には R スクリプト全体を Unicode テキストとして含める必要があります。 **nvarchar** 型の変数にテキストを追加して、その変数を呼び出すこともできます |
 | @input_data_1 | クエリによって返されるデータ。R ランタイムに渡され、そこからデータがデータ フレームとして返されます |
-| WITH RESULT SETS | 句では、返されるデータ テーブルのスキーマを定義し、列名として "Hello World" を追加し、データ型に **int** を追加します |
+|結果セットを含む | 句では、返されるデータ テーブルのスキーマを定義し、列名として "Hello World" を追加し、データ型に **int** を追加します |
 
 このコマンドは、次のテキストを出力します。
 
@@ -198,12 +204,7 @@ GO
 
 ## <a name="check-r-version"></a>R バージョンの確認
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-SQL Server Machine Learning Services と共にインストールされている R のバージョンを確認するには、次のスクリプトを実行します。
-::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-SQL Server 2016 R Services と共にインストールされている R のバージョンを確認するには、次のスクリプトを実行します。
-::: moniker-end
+インストールされている R のバージョンを確認する場合は、次のスクリプトを実行します。
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'R'

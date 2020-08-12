@@ -1,6 +1,7 @@
 ---
 title: トレースを一時停止する
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler によるイベント データのキャプチャが停止するよう、トレースを一時停止する方法と、トレースの一時停止中に変更できるプロパティについて説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: ea1d02399ac99b1fe01ce1262bc3b933631801e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a30e6d06137eddf2f8a9796c69cfe20fb9ab976
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307542"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774777"
 ---
 # <a name="pause-a-trace-sql-server-profiler"></a>トレースの一時停止 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 トレースを一時停止すると、トレースを再開するまで、それ以上のイベント データはキャプチャされません。  
   
  トレースを一時停止すると、トレースを再開するまで、それ以上のイベント データはキャプチャされません。 トレースを再開すると、トレース操作が再開されます。 キャプチャを再開しても、それ以前にキャプチャしたデータが失われることはありません。 トレースを再開すると、その時点から、データのキャプチャが再開されます。 トレースを一時停止している間は、名前、イベント、列、およびフィルターを変更することができます。 ただし、トレース データの送信先またはサーバー接続は変更できません。  

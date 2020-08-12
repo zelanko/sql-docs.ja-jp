@@ -1,6 +1,7 @@
 ---
 title: テンプレート
 titleSuffix: SQl Server Profiler
+description: SQL Server Profiler の事前定義済みテンプレートとその使用方法について説明します。 ユーザー定義テンプレートを作成したり、既定のテンプレートを変更したりする方法について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 8b0d52f5405e3519b861b7642264460b316acd03
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d278cd7b25dd4a9879f2c3a498bf2288e582beb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307839"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748639"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler のテンプレート
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、トレースに含めるイベント クラスとデータ列を定義するテンプレートを作成できます。 テンプレートを定義して保存したら、選択したイベント クラスごとにデータを記録するトレースを実行できます。 テンプレートは多くのトレースで使用できますが、テンプレート自体は実行できません。  
 

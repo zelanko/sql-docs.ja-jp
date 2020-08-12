@@ -1,24 +1,25 @@
 ---
 title: クイック スタート:Python スクリプトを実行する
-description: SQL Server Machine Learning Services を使用して、一連の単純な Python スクリプトを実行します。 ストアド プロシージャ sp_execute_external_script を使用して、SQL Server インスタンスでスクリプトを実行する方法について説明します。
+titleSuffix: SQL machine learning
+description: SQL 機械学習を使用して、一連の単純な Python スクリプトを実行します。 ストアド プロシージャ sp_execute_external_script を使用して、スクリプトを実行する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/17/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6b15423d82a13485d343dc797bdf6e6efe25088f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 111230ebcd1108cc6fc99830d186294534f13a05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606454"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784118"
 ---
-# <a name="quickstart-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>クイック スタート:SQL Server Machine Learning Services を使用して単純な Python スクリプトを実行する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>クイック スタート:SQL 機械学習を使用して単純な Python スクリプトを実行する
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 このクイックスタートでは、[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)上の [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) を使用して、一連の単純な Python スクリプトを実行します。 ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して、SQL Server インスタンスでスクリプトを実行する方法について説明します。
@@ -26,26 +27,31 @@ ms.locfileid: "83606454"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 このクイックスタートでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) を使用して、一連の単純な Python スクリプトを実行します。 ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して、SQL Server インスタンスでスクリプトを実行する方法について説明します。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+このクイックスタートでは、[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) を使用して、一連の単純な Python スクリプトを実行します。 ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して、データベースでスクリプトを実行する方法について説明します。
+::: moniker-end
 
 ## <a name="prerequisites"></a>前提条件
 
+このクイック スタートを実行するには、次の前提条件を用意しておく必要があります。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 - SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)に関するページを参照してください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
 ::: moniker-end
-
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)に関するページを参照してください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)に関するページを参照してください。 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL Managed Instance の Machine Learning Services。 サインアップ方法については、[Azure SQL Managed Instance の Machine Learning Services の概要](/azure/azure-sql/managed-instance/machine-learning-services-overview)に関するページを参照してください。
 ::: moniker-end
 
-- また、Python スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続し、T-SQL クエリまたはストアド プロシージャを実行できる限り、任意のデータベース管理ツールまたはクエリ ツールを使用して実行できます。 このクイックスタートでは [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) を使用します。
+- Python スクリプトを含む SQL クエリを実行するためのツールです。 このクイックスタートでは [Azure Data Studio](../../azure-data-studio/what-is.md) を使用します。
 
 ## <a name="run-a-simple-script"></a>単純なスクリプトを実行する
 
-Python スクリプトを実行するには、これを引数としてシステム ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) に渡します。
-このシステム ストアド プロシージャを使用して、SQL Server のコンテキストで Python ランタイムを起動し、データを Python に渡し、Python ユーザー セッションを安全に管理し、何らかの結果をクライアントに返します。
+Python スクリプトを実行するには、これを引数としてシステム ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) に渡します。 このシステム ストアド プロシージャを使用して、SQL 機械学習のコンテキストで Python ランタイムを起動し、データを Python に渡し、Python ユーザー セッションを安全に管理し、何らかの結果をクライアントに返します。
 
-次の手順では、このサンプル Python スクリプトを SQL Server インスタンスで実行します。
+以降の手順では、次に例示する Python スクリプトをデータベースで実行します。
 
 ```python
 a = 1
@@ -55,7 +61,7 @@ d = a*b
 print(c, d)
 ```
 
-1. SQL Server インスタンスに接続された **Azure Data Studio** で新しいクエリ ウィンドウを開きます。
+1. SQL インスタンスに接続された **Azure Data Studio** で新しいクエリ ウィンドウを開きます。
 
 1. 完全な Python スクリプトを `sp_execute_external_script` ストアド プロシージャに渡します。
 
@@ -100,10 +106,9 @@ GO
 | | |
 |-|-|
 | @language | 呼び出す言語拡張機能 (この例では Python) を定義します |
-| @script | Python ランタイムに渡されるコマンドを定義します<br>Python 全体は、Unicode テキストとして、この引数で囲まれている必要があります。 **nvarchar** 型の変数にテキストを追加して、その変数を呼び出すこともできます |
+| @script | Python ランタイムに渡されるコマンドを定義します Python 全体は、Unicode テキストとして、この引数で囲まれている必要があります。 **nvarchar** 型の変数にテキストを追加して、その変数を呼び出すこともできます |
 | @input_data_1 | クエリによって返されるデータ。Python ランタイムに渡され、そこからデータがデータ フレームとして返されます |
-| WITH RESULT SETS | 句では、SQL Server に対して返されるデータ テーブルのスキーマを定義し、列名として "Hello World" を追加し、データ型に **int** を追加します |
-
+| 結果セットを含む | 句では、SQL 機械学習に対して返されるデータ テーブルのスキーマを定義し、列名として "Hello World" を追加し、データ型に **int** を追加します |
 
 このコマンドは、次のテキストを出力します。
 
@@ -170,45 +175,45 @@ GO
 
     Python では大文字と小文字が区別されることに注意してください。 Python スクリプトで使用される入力変数と出力変数は (**SQL_out**、**SQL_in**)、大文字と小文字を区別して、`@input_data_1_name` と `@output_data_1_name`で定義されている名前と一致する必要があります。
 
-   > [!TIP]
-   > パラメーターとして渡すことができる入力データセットは 1 つだけです。また、返すことのできるデータセットも 1 つだけです。 ただし、Python コード内から他のデータセットを呼び出し、データセットに加えて他の型の出力を返すことができます。 任意のパラメーターに OUTPUT キーワードを追加することもでき、その場合は、パラメーターに結果が返されます。
+    > [!TIP]
+    > パラメーターとして渡すことができる入力データセットは 1 つだけです。また、返すことのできるデータセットも 1 つだけです。 ただし、Python コード内から他のデータセットを呼び出し、データセットに加えて他の型の出力を返すことができます。 任意のパラメーターに OUTPUT キーワードを追加することもでき、その場合は、パラメーターに結果が返されます。
 
 1. 入力データを含まない Python スクリプトを使用して値を生成することもできます (`@input_data_1` は空白に設定されます)。
 
-   次のスクリプトは、 "hello" と "world" というテキストを出力します。
+    次のスクリプトは、 "hello" と "world" というテキストを出力します。
 
-   ```sql
-   EXECUTE sp_execute_external_script @language = N'Python'
-       , @script = N'
-   import pandas as pd
-   mytextvariable = pandas.Series(["hello", " ", "world"]);
-   OutputDataSet = pd.DataFrame(mytextvariable);
-   '
-       , @input_data_1 = N''
-   WITH RESULT SETS(([Col1] CHAR(20) NOT NULL));
-   ```
+    ```sql
+    EXECUTE sp_execute_external_script @language = N'Python'
+        , @script = N'
+    import pandas as pd
+    mytextvariable = pandas.Series(["hello", " ", "world"]);
+    OutputDataSet = pd.DataFrame(mytextvariable);
+    '
+        , @input_data_1 = N''
+    WITH RESULT SETS(([Col1] CHAR(20) NOT NULL));
+    ```
 
-   **結果**
+    **結果**
 
-   ![入力として @script を使用したクエリ結果](./media/python-data-generated-output.png)
+    ![入力として @script を使用したクエリ結果](./media/python-data-generated-output.png)
 
 > [!NOTE]
 > Python では、先頭のスペースを使用してステートメントをグループ化します。 そのため、前述のスクリプトのように、埋め込まれた Python スクリプトが複数の行にまたがる場合は、SQL コマンドに合わせるために Python コマンドにインデントを設定しようとしないでください。 たとえば、次のスクリプトでは次のエラーが生成されます。
-
-  ```text
-  EXECUTE sp_execute_external_script @language = N'Python'
-      , @script = N'
-      import pandas as pd
-      mytextvariable = pandas.Series(["hello", " ", "world"]);
-      OutputDataSet = pd.DataFrame(mytextvariable);
-      '
-      , @input_data_1 = N''
-  WITH RESULT SETS(([Col1] CHAR(20) NOT NULL));
-  ```
+>
+> ```sql
+> EXECUTE sp_execute_external_script @language = N'Python'
+>       , @script = N'
+>       import pandas as pd
+>       mytextvariable = pandas.Series(["hello", " ", "world"]);
+>       OutputDataSet = pd.DataFrame(mytextvariable);
+>       '
+>       , @input_data_1 = N''
+> WITH RESULT SETS(([Col1] CHAR(20) NOT NULL));
+> ```
 
 ## <a name="check-python-version"></a>Python バージョンの確認
 
-SQL Server インスタンスにインストールされている Python のバージョンを確認するには、次のスクリプトを実行します。
+サーバーにインストールされている Python のバージョンを確認するには、次のスクリプトを実行します。
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'Python'
@@ -224,13 +229,13 @@ Python `print` 関数は、**Messages** ウィンドウにバージョンを返�
 **結果**
 
 ```text
-STDOUT message(s) from external script: 
+STDOUT message(s) from external script:
 3.5.2 |Continuum Analytics, Inc.| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)]
 ```
 
 ## <a name="list-python-packages"></a>Python パッケージを一覧表示します
 
-Microsoft では、SQL Server インスタンスに SQL Server Machine Learning Services と共にプレインストールされた多数の Python パッケージを提供しています。
+Microsoft では、Machine Learning Services と共にプレインストールされる Python パッケージを多数提供しています。
 
 バージョンなど、インストールされている Python パッケージの一覧を表示するには、次のスクリプトを実行します。
 
@@ -257,5 +262,4 @@ GO
 SQL 機械学習で Python を使用する場合のデータ構造の使用方法については、次のクイックスタートを参照してください。
 
 > [!div class="nextstepaction"]
-> [クイック スタート: SQL Server Machine Learning Services で Python を使用するデータ構造とオブジェクト](quickstart-python-data-structures.md)
-
+> [クイック スタート: Python を使用したデータ構造とオブジェクト](quickstart-python-data-structures.md)

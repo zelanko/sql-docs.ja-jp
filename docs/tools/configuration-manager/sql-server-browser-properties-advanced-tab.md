@@ -1,5 +1,6 @@
 ---
 title: '[SQL Server Browser のプロパティ] ダイアログ ボックス ([詳細設定] タブ)'
+description: ダンプ ディレクトリやインスタンス ID など、[SQL Server Browser のプロパティ] ダイアログ ボックスの [詳細設定] タブのオプションについて説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ ms.assetid: ba79137a-cb72-4bf3-a650-e11d02cfce10
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e106fd50a6f643063f4b1216807d3a934b36e8c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fa4bcec5a702b604212a465d8f3b115348e8cc87
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307111"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880341"
 ---
 # <a name="sql-server-browser-properties-advanced-tab"></a>[SQL Server Browser のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser プログラムはサーバー上のサービスとして実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種リソースに関する着信要求を受信し、このコンピューター上にインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関する情報を提供します。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **クラスター化インデックス**  
  このサービスがクラスター サーバーのリソースとしてインストールされているかどうかが表示されます。  
   

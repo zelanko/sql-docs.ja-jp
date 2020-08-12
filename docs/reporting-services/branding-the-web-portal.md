@@ -1,19 +1,19 @@
 ---
 title: Web ポータルのブランド化 | Microsoft Docs
-ms.date: 04/10/2019
+ms.date: 07/01/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-description: この記事では、ブランド パッケージを利用してビジネスのブランドを設定することで Web ポータルの外観を変更する方法について説明します。 CSS (カスケーディング スタイル シート) に詳しくなくても作成できるようにブランド パッケージは設計されています。
+description: ブランド パッケージを使用した、ビジネスに対する Web ポータルの外観のブランド化について説明します。 ブランド パッケージは、CSS に詳しくなくても作成できるように設計されています。
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55b0557f6b6cf1a80219a492d4ce79a897be22ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72251914"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888127"
 ---
 # <a name="branding-the-web-portal"></a>Web ポータルのブランド化
 
@@ -38,50 +38,62 @@ Reporting Services のブランド パッケージは 3 つのアイテムから
 metadata.xml ファイルにより、ブランド パッケージの名前を設定できます。また、このファイルには、colors.json ファイルと logo.png ファイルの両方の参照エントリが含まれています。  
   
 ブランド パッケージの名前を変更するには、 **SystemResourcePackage** 要素の **name** 属性を変更します。  
-  
+
+```xml
     name="Multicolored example brand"  
+```
   
 任意で、ブランド パッケージにロゴ画像を含めることができます。 このアイテムは Contents 要素内にリストアップされます。  
   
 ロゴ ファイルなしの例。  
-  
-    <Contents>  
-      <Item key="colors" path="colors.json" />  
-    </Contents>  
-  
+
+```xml
+<Contents>  
+    <Item key="colors" path="colors.json" />  
+</Contents>  
+```
+
 ロゴ ファイルありの例。  
   
-    <Contents>  
-      <Item key="colors" path="colors.json" />  
-      <Item key="logo" path="logo.png" />  
-    </Contents>  
-  
+```xml
+<Contents>  
+    <Item key="colors" path="colors.json" />  
+    <Item key="logo" path="logo.png" />  
+</Contents>  
+```
+
 ### <a name="colorsjson"></a>Colors.json
   
 ブランド パッケージがアップロードされると、サーバーは colors.json ファイルから名前/値のペアを抽出し、それをマスター LESS スタイルシートである、brand.less と結合します。 この LESS ファイルが処理され、結果的に生成された CSS ファイルがクライアントに提供されます。 スタイルシートのすべての色を 6 文字の 16 進数で表現します。  
   
 次のように、LESS スタイルシートには、いくつかの事前定義済み LESS 変数を参照するブロックが含まれます。  
-  
-    /* primary buttons */   
-    .btn-primary {   
-        color:@primaryButtonColor;   
-        background-color:@primaryButtonBg;   
-    }  
+
+```css
+/* primary buttons */   
+.btn-primary {   
+    color:@primaryButtonColor;   
+    background-color:@primaryButtonBg;   
+}  
+```
   
 これは CSS 構文に似ていますが、@symbol が接頭辞として付く色値は LESS に固有のものです。 値が json ファイルにより設定される変数です。  
   
 たとえば、colors.json ファイルに次の値が含まれていたとします。  
-  
-    "primary":"#009900",   
-    "primaryContrast":"#ffffff"   
-  
+
+```json
+"primary":"#009900",   
+"primaryContrast":"#ffffff"   
+```
+
 処理された出力では、LESS 変数の **\@primaryButtonBg** が検索され、**primary** と呼ばれる json プロパティにマッピングされていることが確認されます (この例では、#009900)。 その後、適切な CSS が出力されます。  
-  
+
+```css
     .btn-primary {   
         color:#ffffff;   
         background-color:#009900;   
     }  
-  
+```
+
 プライマリ ボタンはすべて濃い緑でレンダリングされ、白いテキストが付きます。  
   
 Reporting Services の colors.json ファイルには 2 つのメイン カテゴリがあり、アイテムがグループ化されています。  
@@ -100,7 +112,8 @@ Reporting Services の colors.json ファイルには 2 つのメイン カテ�
 |ニュートラル ターシャリ|サイト設定の背景。|  
 |危険/警告/成功メッセージ|これらのメッセージの色。|  
 |KPI|色を good (1)、neutral (0)、neutral (-1)、none で調整します。|  
-  
+|||
+
 Mobile Report Publisher で初めてサーバーに接続するとき、それにブランド パッケージが配置されている場合、そのテーマが利用可能テーマに追加されます。アプリの右上のメニューから利用できます。  
   
 ![ssRSBrandingMobileReportPublisher](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
@@ -134,112 +147,116 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
 パッケージを **[ダウンロード]** したり、 **[削除]** したりすることもできます。 パッケージを削除すると、直後に Web ポータルが既定のブランドにリセットされます。  
   
 ## <a name="metadataxml-example"></a>metadata.xml 例
-  
-    <?xml version="1.0" encoding="utf-8"?>  
-    <SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
-        type="UniversalBrand"  
-        version="2.0.2"  
-        name="Multicolored example brand"  
-        >  
-        <Contents>  
-            <Item key="colors" path="colors.json" />  
-            <Item key="logo" path="logo.png" />  
-        </Contents>  
-    </SystemResourcePackage>  
-   
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>  
+<SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
+    type="UniversalBrand"  
+    version="2.0.2"  
+    name="Multicolored example brand"  
+    >  
+    <Contents>  
+        <Item key="colors" path="colors.json" />  
+        <Item key="logo" path="logo.png" />  
+    </Contents>  
+</SystemResourcePackage>  
+```
+
 ## <a name="colorsjson-example"></a>colors.json 例
-  
-    {  
-        "name":"Multicolored example brand",  
-        "version":"1.0",  
-        "interface":{  
-            "primary":"#b31e1e",  
-            "primaryAlt":"#ca0806",  
-            "primaryAlt2":"#621013",  
-            "primaryAlt3":"#e40000",  
-            "primaryAlt4":"#e14e50",  
-            "primaryContrast":"#fff",  
-  
-            "secondary":"#042200",  
-            "secondaryAlt":"#0f4400",  
-            "secondaryAlt2":"#155500",  
-            "secondaryAlt3":"#217700",  
-            "secondaryContrast":"#49e63c",  
-  
-            "neutralPrimary":"#d8edff",  
-            "neutralPrimaryAlt":"#c9e6ff",  
-            "neutralPrimaryAlt2":"#aedaff",  
-            "neutralPrimaryAlt3":"#88c8ff",  
-            "neutralPrimaryContrast":"#0a2b4c",  
-  
-            "neutralSecondary":"#e9d8eb",  
-            "neutralSecondaryAlt":"#d9badc",  
-            "neutralSecondaryAlt2":"#b06cb5",  
-            "neutralSecondaryAlt3":"#a75bac",  
-            "neutralSecondaryContrast":"#250a26",  
-  
-            "neutralTertiary":"#f79220",  
-            "neutralTertiaryAlt":"#f8a54b",  
-            "neutralTertiaryAlt2":"#facc9b",  
-            "neutralTertiaryAlt3":"#fce3c7",  
-            "neutralTertiaryContrast":"#391d00",  
-  
-            "danger":"#ff0000",  
-            "success":"#00ff00",  
-            "warning":"#ff8800",  
-            "info":"#00ff",  
-            "dangerContrast":"#fff",  
-            "successContrast":"#fff",  
-            "warningContrast":"#fff",  
-            "infoContrast":"#fff",  
-  
-            "kpiGood":"#4fb443",  
-            "kpiBad":"#de061a",  
-            "kpiNeutral":"#d9b42c",  
-            "kpiNone":"#333",  
-            "kpiGoodContrast":"#fff",  
-            "kpiBadContrast":"#fff",  
-            "kpiNeutralContrast":"#fff",  
-            "kpiNoneContrast":"#fff"  
-           },  
-           "theme":{  
-            "dataPoints":[  
-                "#0072c6",  
-                "#f68c1f",  
-                "#269657",  
-                "#dd5900",  
-                "#5b3573",  
-                "#22bdef",  
-                "#b4009e",  
-                "#008274",  
-                "#fdc336",  
-                "#ea3c00",  
-                "#00188f",  
-                "#9f9f9f"  
-            ],  
-  
-            "good":"#85ba00",  
-            "bad":"#e90000",  
-            "neutral":"#edb327",  
-            "none":"#333",  
-  
-            "background":"#fff",  
-            "foreground":"#222",  
-            "mapBase":"#00aeef",  
-            "panelBackground":"#f6f6f6",  
-            "panelForeground":"#222",  
-            "panelAccent":"#00aeef",  
-            "tableAccent":"#00aeef",  
-  
-            "altBackground":"#f6f6f6",  
-            "altForeground":"#000",  
-            "altMapBase":"#f68c1f",  
-            "altPanelBackground":"#235378",  
-            "altPanelForeground":"#fff",  
-            "altPanelAccent":"#fdc336",  
-            "altTableAccent":"#fdc336"  
-        }  
+
+```json
+{  
+    "name":"Multicolored example brand",  
+    "version":"1.0",  
+    "interface":{  
+        "primary":"#b31e1e",  
+        "primaryAlt":"#ca0806",  
+        "primaryAlt2":"#621013",  
+        "primaryAlt3":"#e40000",  
+        "primaryAlt4":"#e14e50",  
+        "primaryContrast":"#fff",  
+
+        "secondary":"#042200",  
+        "secondaryAlt":"#0f4400",  
+        "secondaryAlt2":"#155500",  
+        "secondaryAlt3":"#217700",  
+        "secondaryContrast":"#49e63c",  
+
+        "neutralPrimary":"#d8edff",  
+        "neutralPrimaryAlt":"#c9e6ff",  
+        "neutralPrimaryAlt2":"#aedaff",  
+        "neutralPrimaryAlt3":"#88c8ff",  
+        "neutralPrimaryContrast":"#0a2b4c",  
+
+        "neutralSecondary":"#e9d8eb",  
+        "neutralSecondaryAlt":"#d9badc",  
+        "neutralSecondaryAlt2":"#b06cb5",  
+        "neutralSecondaryAlt3":"#a75bac",  
+        "neutralSecondaryContrast":"#250a26",  
+
+        "neutralTertiary":"#f79220",  
+        "neutralTertiaryAlt":"#f8a54b",  
+        "neutralTertiaryAlt2":"#facc9b",  
+        "neutralTertiaryAlt3":"#fce3c7",  
+        "neutralTertiaryContrast":"#391d00",  
+
+        "danger":"#ff0000",  
+        "success":"#00ff00",  
+        "warning":"#ff8800",  
+        "info":"#00ff",  
+        "dangerContrast":"#fff",  
+        "successContrast":"#fff",  
+        "warningContrast":"#fff",  
+        "infoContrast":"#fff",  
+
+        "kpiGood":"#4fb443",  
+        "kpiBad":"#de061a",  
+        "kpiNeutral":"#d9b42c",  
+        "kpiNone":"#333",  
+        "kpiGoodContrast":"#fff",  
+        "kpiBadContrast":"#fff",  
+        "kpiNeutralContrast":"#fff",  
+        "kpiNoneContrast":"#fff"  
+        },  
+        "theme":{  
+        "dataPoints":[  
+            "#0072c6",  
+            "#f68c1f",  
+            "#269657",  
+            "#dd5900",  
+            "#5b3573",  
+            "#22bdef",  
+            "#b4009e",  
+            "#008274",  
+            "#fdc336",  
+            "#ea3c00",  
+            "#00188f",  
+            "#9f9f9f"  
+        ],  
+
+        "good":"#85ba00",  
+        "bad":"#e90000",  
+        "neutral":"#edb327",  
+        "none":"#333",  
+
+        "background":"#fff",  
+        "foreground":"#222",  
+        "mapBase":"#00aeef",  
+        "panelBackground":"#f6f6f6",  
+        "panelForeground":"#222",  
+        "panelAccent":"#00aeef",  
+        "tableAccent":"#00aeef",  
+
+        "altBackground":"#f6f6f6",  
+        "altForeground":"#000",  
+        "altMapBase":"#f68c1f",  
+        "altPanelBackground":"#235378",  
+        "altPanelForeground":"#fff",  
+        "altPanelAccent":"#fdc336",  
+        "altTableAccent":"#fdc336"  
     }  
+}  
+```
 
 ## <a name="next-steps"></a>次のステップ
 

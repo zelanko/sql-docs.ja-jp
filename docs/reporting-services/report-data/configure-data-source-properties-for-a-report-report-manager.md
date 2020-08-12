@@ -1,5 +1,6 @@
 ---
 title: ページ分割されたレポートのデータ ソースのプロパティを構成する - SSRS | Microsoft Docs
+description: ページ分割されたレポートに対する Reporting Services でのデータ ソースのプロパティの構成について説明します。 また、プロパティを設定して、データ ソースの接続情報を変更します。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5e134c81fd697d4aa6fc7e5b620c1a71ff462b73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2b4d8ce66078d49f7bf70e226de762a7c8a63325
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573194"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811371"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>ページ分割されたレポートのデータ ソースのプロパティを構成する
   ページ分割されたレポートを実行すると、レポート サーバーは、データ ソースへの接続方法を調べるためにプロパティ情報を取得します。 パブリッシュされたレポートの [データ ソース] プロパティ ページには、データ ソースの種類、接続文字列、および資格情報が指定されています。 これらのプロパティを設定することで、データ ソースの接続情報を、レポートの作成時に指定された元の値から変更することができます。  

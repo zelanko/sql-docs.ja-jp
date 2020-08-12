@@ -1,23 +1,23 @@
 ---
 title: モデルの統計を生成するためのデータベース プロジェクトのビルドを拡張する
+description: データベース プロジェクトのビルド時に SQL データベース モデルから統計を出力するビルド コントリビューターの作成、インストール、テストを行う方法について説明します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9365c90104fb7291a130f338e88907dce932dd7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242689"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894018"
 ---
-# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>チュートリアル :モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張
+# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>チュートリアル:モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張
 
 ビルド コントリビューターを作成して、データベース プロジェクトのビルド時にカスタム アクションを実行できます。 このチュートリアルでは、データベース プロジェクトのビルド時に SQL データベース モデルから統計を出力する ModelStatistics という名前のビルド コントリビューターを作成します。 このビルド コントリビューターはビルド時にパラメーターを受け取るため、追加のステップが必要となります。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "75242689"
   
 -   [ビルド コントリビューターをテストする](#TestBuildContributor)  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
 このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   C# または VB の開発をサポートする、SQL Server Data Tools (SSDT) を含む Visual Studio のバージョンがインストールされていること。  
@@ -525,7 +525,7 @@ ms.locfileid: "75242689"
   
 1.  Visual Studio で、プロジェクトを右クリックし、[リビルド] をクリックします。 これにより、プロジェクトがビルドし直されます。生成されたモデルの統計が表示されると共に、出力はビルド出力に含まれ、ModelStatistics.xml に保存されます。 xml ファイルを表示するには、ソリューション エクスプローラーで [すべてのファイルを表示] を選択する必要があることに注意してください。  
   
-2.  Visual Studio のコマンド プロンプトを開きます。これには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft Visual Studio <Visual Studio Version>]** 、 **[Visual Studio Tools]** の順にクリックして、 **[Visual Studio コマンド プロンプト (<Visual Studio Version>)]** をクリックします。  
+2.  Visual Studio のコマンド プロンプトを開きます。これには、**[スタート]** ボタンをクリックし、**[すべてのプログラム]**、**[Microsoft Visual Studio <Visual Studio Version>]**、**[Visual Studio Tools]** の順にクリックして、**[Visual Studio コマンド プロンプト (<Visual Studio Version>)]** をクリックします。  
   
 3.  コマンド プロンプトで、SQL プロジェクトが含まれているフォルダーに移動します。  
   
@@ -593,5 +593,5 @@ Relationships
   
 ## <a name="see-also"></a>参照  
 [ビルド コントリビューターと配置コントリビューターを使用してデータベースのビルドと配置をカスタマイズする](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[チュートリアル: 配置計画を分析するためのデータベース プロジェクトの配置の拡張](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[チュートリアル:配置計画を分析するためのデータベース プロジェクトの配置の拡張](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: XML レポート データの XML クエリ構文 | Microsoft Docs
+description: XML クエリまたは要素パスを含めることで Reporting Services でデータセット クエリを作成する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dd1bccb6bff8f19e9abb779310033f4685b31f67
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0ee76c36c70c201de03700b8838e5f21a8589448
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081351"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812194"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML レポート データの XML クエリ構文 (SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、XML データ ソースのデータセットを作成できます。 データセットを取得するためのクエリは、データ ソースを定義した後で作成します。 データセット クエリを作成する際は、データ ソースが参照する XML データの種類に応じて、XML **Query** または要素パスを指定する必要があります。 XML **クエリ** は、 **\<Query>** タグ内に、名前空間と XML 要素を指定したものです。指定する名前空間と XML 要素は、データ ソースによって異なります。 要素パスは、基になる XML データから取り出すノードおよびノード属性を XPath に似た構文で指定するもので、名前空間には依存しません。 要素パスの詳細については、「[Element Path Syntax for XML Report Data &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)」 (XML レポート データの要素パス構文 &#40;SSRS&#41;) を参照してください。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、XML データ ソースのデータセットを作成できます。 データセットを取得するためのクエリは、データ ソースを定義した後で作成します。 データセット クエリを作成する際は、データ ソースが参照する XML データの種類に応じて、XML **Query** または要素パスを指定する必要があります。 XML **クエリ**は、 **\<Query>** タグで始まり、データ ソースによって異なる名前空間と XML 要素が含まれます。 要素パスは、基になる XML データから取り出すノードおよびノード属性を XPath に似た構文で指定するもので、名前空間には依存しません。 要素パスの詳細については、「[Element Path Syntax for XML Report Data &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)」 (XML レポート データの要素パス構文 &#40;SSRS&#41;) を参照してください。  
   
  次のような種類の XML データについて、XML データ ソースを作成できます。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "77081351"
 |XML ドキュメント (既定)|*クエリなし*。<br /><br /> 要素パスは XML ドキュメントそのものから取得され、名前空間には依存しません。|  
   
 > [!NOTE]  
->  最初に挙げた Web サービスの例では、 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドから) このクエリを実行するには、新しいデータ ソースを作成し、接続文字列を `https://localhost/reportserver/reportservice2006.asmx` に設定する必要があります。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドは、**Item** と **Recursive** の 2 つのパラメーターを受け取ります。 **Item** の既定値は **/** に、 **Recursive** の既定値は **1**に設定されます。  
+>  最初に挙げた Web サービスの例では、 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドから) このクエリを実行するには、新しいデータ ソースを作成し、接続文字列を `https://localhost/reportserver/reportservice2006.asmx` に設定する必要があります。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドは 2 つのパラメーター**Item** と **Recursive** を受け取ります。 **Item** の既定値は **/** に、 **Recursive** の既定値は **1**に設定されます。  
   
 ## <a name="specifying-namespaces"></a>名前空間の指定  
  データ ソースから取得された XML データに使用する名前空間を指定するには、XML **Query** 要素を使用します。 次の XML クエリには、名前空間 **sales**が使用されています。 **および** の XML `sales:LineItems` ElementPath `sales:LineItem` ノードには、名前空間 **sales**が使用されています。  
@@ -78,7 +79,7 @@ ms.locfileid: "77081351"
 </Query>  
 ```  
   
- データ プロバイダーの名前空間を指定して、既定の名前空間を空のままにするには、 **xmldp**を使用します。 次の例を参照してください。  
+ データ プロバイダーの名前空間を指定して、既定の名前空間を空のままにするには、 **xmldp**を使用します。 これを次の例に示します。  
   
 ### <a name="example"></a>例  
  次の例では、DPNamespace.xml (後述) という XML ドキュメントが使用されています。 この表では、名前空間プレフィックスを使用した XML ElementPath 構文として、2 つの例を紹介します。  

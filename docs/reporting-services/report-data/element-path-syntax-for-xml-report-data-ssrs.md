@@ -1,5 +1,6 @@
 ---
 title: XML レポート データの要素パス構文 | Microsoft Docs
+description: レポート デザイナーで XML レポート データのパスを定義するために使用される要素パス構文と規則について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 967ffe24035094296d467e4a60225f31b1558cc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5a8404e6b993481202061644e68fa44a830fdca6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077661"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808462"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML レポート データの要素パス構文 (SSRS)
   レポート デザイナーでは、大文字と小文字が区別される要素パスを定義して、レポートに使用するデータを XML データ ソースから指定します。 要素パスとは、XML データ ソースにおける XML 階層のノードとその属性の走査方法を指定するものです。 データセット クエリを空にするか、XML **Query** の XML **ElementPath** を空にした場合、既定の要素パスが使用されます。 XML データ ソースからデータが取得されると、テキスト値を持つ要素ノードおよび要素ノードの属性が、結果セットにおける列になります。 クエリを実行すると、これらのノードと属性の値が、行データになります。 [レポート データ] ペインでは、列がデータセット フィールド コレクションとして表示されます。 このトピックでは、要素パス構文について説明します。  
@@ -73,12 +74,12 @@ XMLLocalName :: =
 |期間|定義|  
 |----------|----------------|  
 |Element path|XML ドキュメント内のノードのシーケンス、つまり、どのようにノードをたどっていけば、XML データ ソースからデータセットのフィールド データを取得できるかを定義します。|  
-|**ElementNode**|XML ドキュメント内の XML ノードです。 各ノードは他のノードと階層的な関係にあり、タグによって指定されます。 たとえば、\<Customers> は、ルート要素ノードです。 \<Customer> は、\<Customers> のサブ要素です。|  
+|**ElementNode**|XML ドキュメント内の XML ノードです。 各ノードは他のノードと階層的な関係にあり、タグによって指定されます。 たとえば、\<Customers> はルート要素ノードです。 \<Customer> は \<Customers> のサブ要素です。|  
 |**XMLName**|ノード名。 たとえば、Customers ノードの名前は Customers です。 すべてのノード名を一意に識別できるように、 **XMLName** の先頭には名前空間識別子を付けることができます。|  
 |**[エンコード]**|この要素の **Value** はエンコードされた XML であり、この要素のサブ要素としてデコードおよび追加する必要があることを示します。|  
 |**FieldList**|データの取得に使用する一連の要素と属性を定義します。<br /><br /> 指定しなかった場合は、すべての属性およびサブ要素がフィールドとして使用されます。 空のフィールド リストが指定されている場合 ( **{}** )、このノードのフィールドは使用されません。<br /><br /> **FieldList** には、 **Value** と **Element** または **ElementNode**の両方が含まれない場合があります。|  
 |**フィールド**|データセットのフィールドとして取得するデータを指定します。|  
-|**属性**|**ElementNode**内に指定される名前と値のペアです。 たとえば、要素ノード \<Customer ID="1"> において、**ID** は属性です。 **\@ID(Integer)** は、対応するデータ フィールド **ID** に整数型の "1" を返します。|  
+|**属性**|**ElementNode**内に指定される名前と値のペアです。 たとえば、要素ノードでは \<Customer ID="1">, **ID** は属性です。 **\@ID(Integer)** は、対応するデータ フィールド **ID** に整数型の "1" を返します。|  
 |**Value**|要素の値です。 **Value** は、要素パス内で最後の **ElementNode** でのみ使用できます。 たとえば、\<Return> はリーフ ノードであるため、これを要素パスの最後に追加した場合、**Return {@}** は **Chair** になります。|  
 |**Element**|指定されたサブ要素の値です。 たとえば、Customers {}/Customer {}/LastName とすると、LastName 要素についてのみ値が取得されます。|  
 |**Type**|この要素から作成されたフィールドに使用するデータ型 (省略可) です。|  
@@ -90,7 +91,7 @@ XMLLocalName :: =
 > [!NOTE]  
 >  要素パスが空の場合、クエリには、既定の要素パス (リーフ ノード コレクションの最初のパス) が使用されます。 1 つ目は要素パスを空にする例です。/Customers/Customer/Orders/Order という要素パスを指定した場合と同じ結果になります。 このパス上に存在するすべてのノードの値と属性が結果セットに返され、ノード名と属性名がデータセットのフィールドとして表示されます。  
   
- **例 1**: *空*  
+ **例 #1**:*空*  
   
 |Order|数量|id|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
@@ -133,7 +134,7 @@ XMLLocalName :: =
 |8|Crystal|Hu|20|  
 |15|Wyatt|Diaz|33|  
   
-#### <a name="xml-document-customersxml"></a>XML ドキュメント: Customers.xml  
+#### <a name="xml-document-customersxml"></a>XML ドキュメント:Customers.xml  
  前のセクションの要素パスの例を試すには、この XML をコピーして、レポート デザイナーからアクセス可能な URL に保存した後、この XML ドキュメントを XML データ ソースとして使用します (例: `https://localhost/Customers.xml`)。  
   
 ```  

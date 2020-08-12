@@ -1,21 +1,21 @@
 ---
 title: SQL Server の単体テストの作成と実行
+description: SQL Server の単体テストを作成する方法について説明します。 ストアド プロシージャでエラーを検出するテストを設定する手順について説明します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: cb284457b86d6dd1e2284d6815a1b175640fa0c2
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: edc5f591746673f55dfc7ea10c99822ee0c13098
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087509"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882923"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>チュートリアル:SQL Server の単体テストの作成と実行
 
@@ -181,7 +181,7 @@ ms.locfileid: "82087509"
     AS  
     BEGIN  
     INSERT INTO [Sales].[Customer] (CustomerName) VALUES (@CustomerName);  
-    SELECT SCOPE_IDENTITY()  
+    RETURN SCOPE_IDENTITY()  
     END  
     GO  
     PRINT N'Creating Sales.uspPlaceNewOrder...';  
@@ -274,7 +274,7 @@ ms.locfileid: "82087509"
   
 2.  ストアド プロシージャの 1 つを右クリックし、 **[単体テストの作成]** をクリックして **[単体テストの作成]** ダイアログ ボックスを表示します。  
   
-3.  ストアド プロシージャのチェック ボックスの 5 つすべてを選択します。**Sales.uspCancelOrder**、**Sales.uspFillOrder**、**Sales.uspNewCustomer**、**Sales.uspPlaceNewOrder**、**Sales.uspShowOrderDetails**。  
+3.  ストアド プロシージャのチェック ボックスの 5 つすべてを選択します。 **Sales.uspCancelOrder**、 **Sales.uspFillOrder**、 **Sales.uspNewCustomer**、 **Sales.uspPlaceNewOrder**、 **Sales.uspShowOrderDetails**。  
   
 4.  **[プロジェクト]** ボックスの一覧で、 **[新しい Visual C# テスト プロジェクトの作成]** を選択します。  
   
@@ -328,7 +328,7 @@ ms.locfileid: "82087509"
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspnewcustomer"></a>uspNewCustomer に対して SQL Server の単体テストを作成するには  
   
-1.  SQL Server 単体テスト デザイナーのナビゲーション バーで、 **[Sales_uspNewCustomerTest]** をクリックし、 **[テスト]** が隣接する一覧で強調表示されていることを確認します。  
+1.  SQL Server 単体テスト デザイナーのナビゲーション バーで、**[Sales_uspNewCustomerTest]** をクリックし、**[テスト]** が隣接する一覧で強調表示されていることを確認します。  
   
     前の手順を実行したら、単体テスト内のテスト アクション用のテスト スクリプトを作成できます。  
   
@@ -358,7 +358,7 @@ ms.locfileid: "82087509"
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspplaceneworder"></a>uspPlaceNewOrder に対して SQL Server の単体テストを作成するには  
   
-1.  SQL Server 単体テスト デザイナーのナビゲーション バーで、 **[Sales_uspPlaceNewOrderTest]** をクリックし、 **[テスト]** が隣接する一覧で強調表示されていることを確認します。  
+1.  SQL Server 単体テスト デザイナーのナビゲーション バーで、**[Sales_uspPlaceNewOrderTest]** をクリックし、**[テスト]** が隣接する一覧で強調表示されていることを確認します。  
   
     この手順を実行したら、単体テスト内のテスト アクション用のテスト スクリプトを作成できます。  
   
@@ -394,7 +394,7 @@ ms.locfileid: "82087509"
   
 5.  **[プロパティ]** ウィンドウで、 **[予期される値]** プロパティを 100 に設定します。  
   
-6.  SQL Server 単体テスト デザイナーのナビゲーション バーで、 **[Sales_uspPlaceNewOrderTest]** をクリックし、 **[事前テスト]** が隣接する一覧で強調表示されていることを確認します。  
+6.  SQL Server 単体テスト デザイナーのナビゲーション バーで、**[Sales_uspPlaceNewOrderTest]** をクリックし、**[事前テスト]** が隣接する一覧で強調表示されていることを確認します。  
   
     この手順の実行後に、テストの実行に必要な状態にデータを変更するステートメントを指定できます。 この例では、注文を行う前に Customer レコードを作成する必要があります。  
   
@@ -434,7 +434,7 @@ ms.locfileid: "82087509"
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspfillorder"></a>uspFillOrder に対して SQL Server の単体テストを作成するには  
   
-1.  SQL Server 単体テスト デザイナーのナビゲーション バーで、 **[Sales_uspFillOrderTest]** をクリックし、 **[テスト]** が隣接する一覧で強調表示されていることを確認します。  
+1.  SQL Server 単体テスト デザイナーのナビゲーション バーで、**[Sales_uspFillOrderTest]** をクリックし、**[テスト]** が隣接する一覧で強調表示されていることを確認します。  
   
     この手順を実行したら、単体テスト内のテスト アクション用のテスト スクリプトを作成できます。  
   
@@ -473,7 +473,7 @@ ms.locfileid: "82087509"
   
 5.  **[プロパティ]** ウィンドウで、 **[予期される値]** プロパティを 100 に設定します。  
   
-6.  SQL Server 単体テスト デザイナーのナビゲーション バーで、 **[Sales_uspFillOrderTest]** をクリックし、 **[事前テスト]** が隣接する一覧で強調表示されていることを確認します。 この手順の実行後に、テストの実行に必要な状態にデータを変更するステートメントを指定できます。 この例では、注文を行う前に Customer レコードを作成する必要があります。  
+6.  SQL Server 単体テスト デザイナーのナビゲーション バーで、**[Sales_uspFillOrderTest]** をクリックし、**[事前テスト]** が隣接する一覧で強調表示されていることを確認します。 この手順の実行後に、テストの実行に必要な状態にデータを変更するステートメントを指定できます。 この例では、注文を行う前に Customer レコードを作成する必要があります。  
   
 7.  **[作成するにはここをクリックしてください]** をクリックし、事前テスト スクリプトを作成します。  
   
@@ -524,7 +524,7 @@ ms.locfileid: "82087509"
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspshoworderdetails"></a>uspShowOrderDetails に対して SQL Server の単体テストを作成するには  
   
-1.  SQL Server 単体テスト デザイナーのナビゲーション バーで、 **[Sales_uspShowOrderDetailsTest]** をクリックし、 **[テスト]** が隣接する一覧で強調表示されていることを確認します。  
+1.  SQL Server 単体テスト デザイナーのナビゲーション バーで、**[Sales_uspShowOrderDetailsTest]** をクリックし、**[テスト]** が隣接する一覧で強調表示されていることを確認します。  
   
     この手順を実行したら、単体テスト内のテスト アクション用のテスト スクリプトを作成できます。  
   
@@ -568,7 +568,7 @@ ms.locfileid: "82087509"
   
     必要なスキーマがテスト条件と共に格納されます。  
   
-9. SQL Server 単体テスト デザイナーのナビゲーション バーで、 **[Sales_uspShowOrderDetailsTest]** をクリックし、 **[事前テスト]** が隣接する一覧で強調表示されていることを確認します。 この手順の実行後に、テストの実行に必要な状態にデータを変更するステートメントを指定できます。 この例では、注文を行う前に Customer レコードを作成する必要があります。  
+9. SQL Server 単体テスト デザイナーのナビゲーション バーで、**[Sales_uspShowOrderDetailsTest]** をクリックし、**[事前テスト]** が隣接する一覧で強調表示されていることを確認します。 この手順の実行後に、テストの実行に必要な状態にデータを変更するステートメントを指定できます。 この例では、注文を行う前に Customer レコードを作成する必要があります。  
   
 10. **[作成するにはここをクリックしてください]** をクリックし、事前テスト スクリプトを作成します。  
   
@@ -851,7 +851,7 @@ ms.locfileid: "82087509"
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspcancelorder"></a>uspCancelOrder に対して SQL Server の単体テストを作成するには  
   
-1.  SQL Server 単体テスト デザイナーのナビゲーション バーで、 **[Sales_uspCancelOrderTest]** をクリックし、 **[テスト]** が隣接する一覧で強調表示されていることを確認します。  
+1.  SQL Server 単体テスト デザイナーのナビゲーション バーで、**[Sales_uspCancelOrderTest]** をクリックし、**[テスト]** が隣接する一覧で強調表示されていることを確認します。  
   
     この手順を実行したら、単体テスト内のテスト アクション用のテスト スクリプトを作成できます。  
   
@@ -887,7 +887,7 @@ ms.locfileid: "82087509"
   
 5.  **[プロパティ]** ウィンドウで、 **[予期される値]** プロパティを 0 に設定します。  
   
-6.  SQL Server 単体テスト デザイナーのナビゲーション バーで、 **[Sales_uspCancelOrderTest]** をクリックし、 **[事前テスト]** が隣接する一覧で強調表示されていることを確認します。 この手順の実行後に、テストの実行に必要な状態にデータを変更するステートメントを指定できます。 この例では、注文を行う前に Customer レコードを作成する必要があります。  
+6.  SQL Server 単体テスト デザイナーのナビゲーション バーで、**[Sales_uspCancelOrderTest]** をクリックし、**[事前テスト]** が隣接する一覧で強調表示されていることを確認します。 この手順の実行後に、テストの実行に必要な状態にデータを変更するステートメントを指定できます。 この例では、注文を行う前に Customer レコードを作成する必要があります。  
   
 7.  **[作成するにはここをクリックしてください]** をクリックし、事前テスト スクリプトを作成します。  
   

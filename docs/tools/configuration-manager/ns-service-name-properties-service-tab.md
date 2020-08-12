@@ -1,5 +1,6 @@
 ---
 title: NS$&lt;サービス名&gt; プロパティ ([サービス] タブ)
+description: バイナリ パス、ホスト名、開始モードなど、[Notification Services のプロパティ] ダイアログ ボックスの [サービス] タブのオプションについて説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 80f6d926dbe1380bf0f44b8b841d79b2bd66afc7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00d3b6ffa3144384f04176af7ab4659649c7f338
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306392"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892493"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;サービス名&gt; プロパティ ([サービス] タブ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   このサービスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[バイナリ パス]**  
  このサービスが使用するプログラム ファイルの場所が表示されます。  
   
@@ -35,7 +36,7 @@ ms.locfileid: "75306392"
  **Host Name**  
  フルテキスト検索を実行しているコンピューターまたはクラスターの名前が表示されます。  
   
- **Name**  
+ **名前**  
  サービスの表示名が表示されます。  
   
  **プロセス ID**  
@@ -47,11 +48,11 @@ ms.locfileid: "75306392"
  **[開始モード]**  
  このサービスを以下のいずれかのモードに設定します。  
   
--   手動: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
+-   手動: このサービスは、コンピューターの起動時に自動的に開始されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
   
--   \[自動]: このサービスは、コンピューターの起動時に開始を試みます。  
+-   自動:コンピューターの起動時に、このサービスの開始が試みられます。  
   
--   \[無効]: このサービスは開始できません。  
+-   無効:このサービスを開始できません。  
   
  **State**  
  このサービスが実行中か、停止しているか、無効になっているかが表示されます。  

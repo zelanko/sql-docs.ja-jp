@@ -1,5 +1,6 @@
 ---
 title: SQL Native Client 11.0 の構成
+description: Microsoft SQL Server 構成マネージャーの [SQL Server Native Client の構成] ダイアログ ボックスで構成される設定について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e205d03c430670a9b51a0ed852629d608d8e78af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08b2107b77acecebeb990e6a071963af964f61ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306727"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885976"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 の構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   ここでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの **[SQL Server Native Client の構成]** ダイアログ ボックスの F1 ヘルプ トピックについて紹介します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client は、クライアント コンピューターが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するために使用するネットワーク ライブラリです。  
   
  [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の構成] ダイアログ ボックスの設定は、クライアント プログラムを実行するコンピューターで使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行するコンピューター上で構成された設定は、サーバー上で実行するクライアント プログラムだけに影響します。  

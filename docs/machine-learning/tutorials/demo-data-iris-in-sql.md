@@ -1,31 +1,32 @@
 ---
 title: チュートリアル用のアヤメのデモ データ セット
-Description: アヤメのデータセットと予測モデルを格納するためのデータベースを作成します。 このデータセットは、SQL Server Machine Learning Services 用の R および Python チュートリアルで使用されます。
+titleSuffix: SQL machine learning
+Description: アヤメのデータセットと予測モデルを格納するためのデータベースを作成します。 このデータセットは、SQL 機械学習が含まれる R および Python チュートリアルで使用されます。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 10/19/2018
+ms.technology: machine-learning-services
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b1d3aee4034124f61d88ccdf5e35f86b13b60158
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 9a5b7cc5c89874bddfda0ac978bce5899b1cd64b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116675"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737840"
 ---
-#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server での Python および R チュートリアル用のアヤメのデモ データ 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>SQL 機械学習が含まれる Python および R チュートリアル用のアヤメのデモ データ
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-この演習では、[アヤメの花のデータセット](https://en.wikipedia.org/wiki/Iris_flower_data_set)と同じデータに基づくモデルからのデータを格納する SQL Server データベースを作成します。 アヤメ データは、SQL Server によってインストールされた R と Python の両方のディストリビューションに含まれており、SQL Server の機械学習のチュートリアルで使用されます。 
+この演習では、[アヤメの花のデータセット](https://en.wikipedia.org/wiki/Iris_flower_data_set)と同じデータに基づくモデルからのデータを格納するデータベースを作成します。 アヤメ データは R と Python の両方のディストリビューションに含まれており、SQL 機械学習のチュートリアルで使用されます。
 
-この演習を完了するには、[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) または T-SQL クエリを実行できる別のツールが必要です。
+この演習を完了するには、[SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) または T-SQL クエリを実行できる別のツールが必要です。
 
 このデータセットを使用したチュートリアルとクイックスタートには、次のものがあります。
 
-+  [クイック スタート: SQL Server でのストアド プロシージャを使用した Python モデルの作成、トレーニング、および使用](quickstart-python-train-score-model.md)
++ [クイック スタート: Python での予測モデルの作成とスコア付け](quickstart-python-train-score-model.md)
 
 ## <a name="create-the-database"></a>データベースの作成
 
@@ -39,9 +40,6 @@ ms.locfileid: "81116675"
     USE irissql
     GO
     ```
-
-    > [!TIP] 
-    > SQL Server を始めて使用する場合、または所有しているサーバーで作業している場合は、**マスター** データベースにいることに気付かずにログインして作業を開始するのが、一般的な誤りです。 正しいデータベースを使用していることを確認するには、常に `USE <database name>` ステートメント (`use irissql` など) を使用してコンテキストを指定します。
 
 3. 空のテーブルを追加します。1 つはデータを格納するテーブル、もう 1 つはトレーニング済みのモデルを格納するテーブルです。 **iris_models** テーブルは、他の演習で生成されたシリアル化モデルを格納するために使用されます。
 
@@ -58,15 +56,12 @@ ms.locfileid: "81116675"
     );
     ```
 
-    > [!TIP] 
-    > T-SQL を初めて使用する場合は、`DROP...IF` ステートメントを覚えておくと良いでしょう。 テーブルを作成しようとしたときに、テーブルが既に存在している場合、SQL Server は次のエラーを返します。"データベースに 'iris_data' という名前のオブジェクトが既に存在します。" このようなエラーを回避する方法の 1 つは、既存のテーブルやその他のオブジェクトをコードの一部として削除することです。
-
-4. 次のコードを実行して、トレーニング済みのモデルを格納するために使用するテーブルを作成します。 SQL Server で Python (または R) モデルを保存するには、**varbinary(max)** 型の列にシリアル化して格納する必要があります。 
+4. 次のコードを実行して、トレーニング済みのモデルを格納するために使用するテーブルを作成します。 SQL Server で Python (または R) モデルを保存するには、**varbinary(max)** 型の列にシリアル化して格納する必要があります。
 
     ```sql
     DROP TABLE IF EXISTS iris_models;
     GO
-    
+
     CREATE TABLE iris_models (
       model_name VARCHAR(50) NOT NULL DEFAULT('default model') PRIMARY KEY,
       model VARBINARY(MAX) NOT NULL
@@ -78,7 +73,7 @@ ms.locfileid: "81116675"
 
 ## <a name="populate-the-table"></a>テーブルにデータを挿入する
 
-R または Python から組み込みのアヤメ データを取得できます。 Python または R を使用してデータをデータ フレームに読み込んでから、それをデータベース内のテーブルに挿入することができます。 外部セッションからトレーニング データを SQL Server テーブルに移動することは、複数の手順があるプロセスです。
+R または Python から組み込みのアヤメ データを取得できます。 Python または R を使用してデータをデータ フレームに読み込んでから、それをデータベース内のテーブルに挿入することができます。 外部セッションからトレーニング データをテーブルに移動することは、複数の手順があるプロセスです。
 
 + 必要なデータを取得するストアド プロシージャを設計します。
 + 実際にデータを取得するには、ストアド プロシージャを実行します。
@@ -136,10 +131,6 @@ R または Python から組み込みのアヤメ データを取得できます
 
     T-SQL を初めて使用する場合は、INSERT ステートメントで新しいデータのみが追加されることに注意してください。既存のデータをチェックしたり、テーブルを削除および再構築したりすることはありません。 テーブル内の同じデータの複数のコピーが取得されないようにするには、最初にこのステートメントを実行します: `TRUNCATE TABLE iris_data`。 T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) ステートメントでは、既存のデータが削除されますが、テーブルの構造はそのまま維持されます。
 
-    > [!TIP]
-    > 後でストアド プロシージャを変更するには、それを削除して再作成する必要はありません。 [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql) ステートメントを使用します。 
-
-
 ## <a name="query-the-data"></a>データにクエリを実行する
 
 検証手順として、クエリを実行してデータがアップロードされたことを確認します。
@@ -157,4 +148,4 @@ R または Python から組み込みのアヤメ データを取得できます
 
 次のクイックスタートでは、機械学習モデルを作成してテーブルに保存してから、モデルを使用して予測結果を生成します。
 
-+ [クイック スタート: SQL Server でのストアド プロシージャを使用した Python モデルの作成、トレーニング、および使用](quickstart-python-train-score-model.md)
++ [クイックスタート: Python での予測モデルの作成とスコア付け](quickstart-python-train-score-model.md)

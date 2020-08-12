@@ -4,22 +4,22 @@ titleSuffix: SQL machine learning
 description: このクイックスタートでは、SQL 機械学習で R を使用するときに、データ構造体、データ型、およびオブジェクトを使用する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/23/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e5b5f4e90b680f5ae06944eedc997a43b8a40024
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: b4e2fe7a7f8f5009f289a3db78b58f629e819ff2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606574"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772342"
 ---
 # <a name="quickstart-data-structures-data-types-and-objects-using-r-with-sql-machine-learning"></a>クイック スタート:SQL 機械学習での R を使用したデータ構造体、データ型、およびオブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 このクイックスタートでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) または[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)で R を使用するときに、データ構造体とデータ型を使用する方法について説明します。 R と SQL Server 間のデータの移動と、発生する可能性のある一般的な問題について説明します。
@@ -29,6 +29,9 @@ ms.locfileid: "83606574"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 このクイックスタートでは、[SQL Server R Services](../r/sql-server-r-services.md) で R を使用するときに、データ構造体とデータ型を使用する方法について説明します。 R と SQL Server 間のデータの移動と、発生する可能性のある一般的な問題について説明します。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+このクイックスタートでは、[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) で R を使用する場合に、データ構造体とデータ型を使用する方法について説明します。 R と SQL Managed Instance 間のデータの移動と、発生する可能性のある一般的な問題について説明します。
 ::: moniker-end
 
 前もって知っておくべき一般的な問題は、次のとおりです。
@@ -50,6 +53,9 @@ ms.locfileid: "83606574"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services。 R Services をインストールする方法については、[Windows インストール ガイド](../install/sql-r-services-windows-install.md)に関するページを参照してください。 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL Managed Instance の Machine Learning Services。 サインアップの方法については、[Azure SQL Managed Instance の Machine Learning Services の概要](/azure/azure-sql/managed-instance/machine-learning-services-overview)に関するページを参照してください。
 ::: moniker-end
 
 - R スクリプトを含む SQL クエリを実行するためのツール。 このクイックスタートでは [Azure Data Studio](../../azure-data-studio/what-is.md) を使用します。
@@ -205,7 +211,7 @@ execute sp_execute_external_script
 なぜですか? この場合、2 つの引数を同じ長さのベクターとして扱うことができるため、内積が 1 つの行列として R から返されます。  これは、線形代数のルールに従った想定どおりの動作です。ただし、ダウンストリーム アプリケーションで出力スキーマが変更されないと想定されている場合に問題が発生する可能性があります。
 
 > [!TIP]
-> 
+>
 > エラーが発生しましたか？ **master** や別のデータベースではなく、テーブルが格納されているデータベースのコンテキストで、ストアド プロシージャを実行していることを確認してください。
 >
 > また、これらの例では一時テーブルを使用しないことをお勧めします。 一部の R クライアントは、バッチ間の接続を終了するときに、一時テーブルを削除します。
@@ -292,7 +298,7 @@ WITH RESULT SETS undefined;
 
 **結果**
 
-```sql
+```text
 STDOUT message(s) from external script: 'data.frame':    37 obs. of  3 variables:
 STDOUT message(s) from external script: $ ReportingDate: POSIXct, format: "2010-12-24 23:00:00" "2010-12-24 23:00:00"
 STDOUT message(s) from external script: $ ProductSeries: Factor w/ 1 levels "M200 Europe",..: 1 1 1 1 1 1 1 1 1 1

@@ -1,5 +1,6 @@
 ---
 title: SQL Server の単体テストでのテスト条件の使用
+description: SQL Server の単体テストでのテスト条件について説明します。 定義済みの条件とネガティブ テストを使用する方法、およびカスタム条件に関する情報を確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc5e5817952ea19f12879079c572a3c79594e070
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243519"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895113"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>SQL Server の単体テストでのテスト条件の使用
 
@@ -42,7 +42,7 @@ SQL Server 単体テストでは、1 つ以上の Transact\-SQL テスト スク
 >   
 > 報告された継続時間には、テストの実行前に行われるデータの生成およびスキーマの配置に要する時間は含まれません。 テストの継続時間を表示するには、 **[テスト結果]** ウィンドウで実行されたテストを選択し、右クリックして **[テスト結果の詳細の表示]** をクリックします。  
   
-SQL Server 単体テストにテスト条件を追加するには、SQL Server 単体テスト デザイナーの [テスト条件] ウィンドウを使用します。 詳しくは、「[SQL Server の単体テストにテスト条件を追加する方法](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)」をご覧ください。  
+SQL Server 単体テストにテスト条件を追加するには、SQL Server 単体テスト デザイナーの [テスト条件] ウィンドウを使用します。 詳細については、「[SQL Server の単体テストにテスト条件を追加する方法](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)」を参照してください。  
   
 また、テスト メソッド コードを直接編集して機能を追加することもできます。 詳しくは、「[SQL Server の単体テストを開いて編集する方法](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)」および「[単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する方法](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)」をご覧ください。 たとえば、Assert ステートメントを追加することにより、テスト メソッドに機能を追加することができます。 詳しくは、「[SQL Server の単体テストでの Transact-SQL アサーションの使用](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md)」をご覧ください。  
   
@@ -92,7 +92,7 @@ SQL Server 単体テスト デザイナーを表示するには、**ソリュー
   
     **[TestConditionName の構成]** ダイアログ ボックスが表示されます。  
   
-5.  テストするデータベースへの接続を指定します。 詳しくは、「[方法:データベース接続の作成](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)」をご覧ください。  
+5.  テストするデータベースへの接続を指定します。 詳細については、「[データベース接続を作成する](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)」を参照してください。  
   
 6.  既定では、テストの Transact\-SQL 本体が編集ウィンドウに表示されます。 必要に応じて、予期する結果を生成するようにコードを変更できます。 たとえば、テストに事前テストのコードがある場合、そのコードを追加することができます。  
   
@@ -122,7 +122,7 @@ SQL Server 単体テストに予期されるスキーマ テスト条件を追�
   
     **[TestConditionName の構成]** ダイアログ ボックスが表示されます。  
   
-5.  テストするデータベースへの接続を指定します。 詳しくは、「[方法:データベース接続の作成](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)」をご覧ください。  
+5.  テストするデータベースへの接続を指定します。 詳細については、「[データベース接続を作成する](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)」を参照してください。  
   
 6.  既定では、テストの Transact\-SQL 本体が編集ウィンドウに表示されます。 必要に応じて、予期する結果を生成するようにコードを変更できます。 たとえば、テストに事前テストのコードがある場合、そのコードを追加することができます。  
   

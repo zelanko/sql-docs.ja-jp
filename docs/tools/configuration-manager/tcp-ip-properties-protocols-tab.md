@@ -1,5 +1,6 @@
 ---
 title: '[TCP/IP のプロパティ] ダイアログ ボックス ([プロトコル] タブ)'
+description: '[TCP/IP のプロパティ] ダイアログ ボックスの [プロトコル] タブにあるオプションを使用して、Keep Alive 間隔、有効なフラグ、およびその他のプロパティを構成します。'
 ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
@@ -12,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 32054dfc368a358370abe4b3a5213305fe815afb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2e9bf22b501a097e59af3bef953ffcbaa26780c1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307583"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880291"
 ---
 # <a name="tcpip-properties-protocols-tab"></a>[TCP/IP のプロパティ] ダイアログ ボックス ([プロトコル] タブ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   **[TCP/IP のプロパティ]** ダイアログ ボックスは、TCP/IP プロトコルのオプションを構成するために使用します。 左ペインで **[TCP/IP]** をクリックすると、詳細ペインに個々の IP アドレス構成が表示されます。  
   
  変更を有効にするには、Microsoft SQL Server を再起動する必要があります。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **有効**  
  可能な値は、 **[はい]** と **[いいえ]** です。  
   

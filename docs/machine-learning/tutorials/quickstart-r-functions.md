@@ -4,22 +4,22 @@ titleSuffix: SQL machine learning
 description: このクイックスタートでは、SQL 機械学習で R の数学関数とユーティリティ関数を使用する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/23/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c769862ab2ab1b06169ae5191217945cf8220c9b
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a056d73ae28d822c12752ac60f31df5022acf28b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606670"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772363"
 ---
 # <a name="quickstart-r-functions-with-sql-machine-learning"></a>クイック スタート:SQL 機械学習を使用した R 関数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 このクイックスタートでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) または[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)で R の数学関数とユーティリティ関数を使用する方法について説明します。 多くの場合、統計関数は T-SQL での実装が複雑ですが、R では、わずか数行のコードで行うことができます。
@@ -29,6 +29,9 @@ ms.locfileid: "83606670"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 このクイックスタートでは、[SQL Server R Services](../r/sql-server-r-services.md) で R の数学関数とユーティリティ関数を使用する方法について説明します。 多くの場合、統計関数は T-SQL での実装が複雑ですが、R では、わずか数行のコードで行うことができます。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+このクイックスタートでは、[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) で R を使用する場合に、データ構造体とデータ型を使用する方法について説明します。 R と SQL Managed Instance 間のデータの移動と、発生する可能性のある一般的な問題について説明します。
 ::: moniker-end
 
 ## <a name="prerequisites"></a>前提条件
@@ -43,6 +46,9 @@ ms.locfileid: "83606670"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services。 R Services をインストールする方法については、[Windows インストール ガイド](../install/sql-r-services-windows-install.md)に関するページを参照してください。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL Managed Instance の Machine Learning Services。 サインアップの方法については、[Azure SQL Managed Instance の Machine Learning Services の概要](/azure/azure-sql/managed-instance/machine-learning-services-overview)に関するページを参照してください。
 ::: moniker-end
 
 - R スクリプトを含む SQL クエリを実行するためのツール。 このクイックスタートでは [Azure Data Studio](../../azure-data-studio/what-is.md) を使用します。
@@ -106,21 +112,19 @@ EXECUTE MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 既定では、**utils** パッケージが含まれます。このパッケージは、現在の R 環境を調査するためのさまざまなユーティリティ関数を提供します。 これらの関数は、SQL Server と外部環境で R コードが実行する方法に不一致が見つかった場合に役立つ可能性があります。
 
-たとえば、R `memory.limit()` 関数を使用すると、現在の R 環境のメモリを取得できます。 `utils` パッケージはインストールされますが、既定では読み込まれないため、最初に `library()` 関数を使用して読み込む必要があります。
+たとえば、`system.time` や `proc.time` など、R のシステム タイミング関数を使用して、R プロセスによって使用される時間をキャプチャし、パフォーマンスの問題を分析することがあります。 例については、「[データ機能の作成](../tutorials/walkthrough-create-data-features.md)」チュートリアルを参照してください。R タイミング関数がソリューションに埋め込まれています。
 
 ```sql
 EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
         library(utils);
-        mymemory <- memory.limit();
-        OutputDataSet <- as.data.frame(mymemory);'
-    , @input_data_1 = N' ;'
-WITH RESULT SETS (([Col1] int not null));
+        start.time <- proc.time();
+        
+        # Run R processes
+        
+        elapsed_time <- proc.time() - start.time;'
 ```
-
-> [!TIP]
-> R プロセスによって使用される時間をキャプチャし、パフォーマンスの問題を分析するのに、多くのユーザーが `system.time` や `proc.time` など、R のシステム タイミング関数を使用しています。 例については、「[データの特徴量の作成](../tutorials/walkthrough-create-data-features.md)」チュートリアルを参照してください。R タイミング関数がソリューションに埋め込まれています。
 
 ## <a name="next-steps"></a>次のステップ
 

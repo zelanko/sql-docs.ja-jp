@@ -1,6 +1,6 @@
 ---
 title: 可用性グループの HealthCheckTimeout を構成する
-description: Always On 可用性グループの HealthCheckTimeout を構成します。これは、無応答を報告するまでに SQL Server リソース DLL が待機する時間を指定するために使用されます。
+description: Always On 可用性グループの HealthCheckTimeout を構成します。これにより、無応答が報告されるまでの SQL Server リソース DLL の待機時間を指定できます。
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e3baf48a747db8dfdc9fb18387ac92dd0c53b4c8
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 83c59052646a870b513ebe79835d4c5a9345a5d9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925122"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882954"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>HealthCheckTimeout プロパティ設定の構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   HealthCheckTimeout 設定を使用して、SQL Server リソース DLL が [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) ストアド プロシージャによって返される情報を待機する時間を、ミリ秒単位で指定できます。この待機時間を経過すると、AlwaysOn フェールオーバー クラスター インスタンス (FCI) は応答不能としてレポートされます。 タイムアウトの設定に加えられた変更は直ちに有効になり、SQL Server リソースを再起動する必要はありません。  
   
 -   **作業を開始する準備:** [制限事項と制約事項](#Limits)、[セキュリティ](#Security)  

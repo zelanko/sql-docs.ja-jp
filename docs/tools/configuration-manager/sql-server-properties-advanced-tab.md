@@ -1,5 +1,6 @@
 ---
 title: '[SQL Server のプロパティ] ダイアログ ボックス ([詳細設定] タブ)'
+description: データ パス、インスタンス ID、カスタム プロパティなど、[SQL Server のプロパティ] ダイアログ ボックスの [詳細設定] タブのオプションについて説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a21d6eb31b0edb5ab0cfa56f388b2cf3e3065627
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cabf817c5b2a1be512b93235e274d76abba7f69b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306833"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893340"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   **[詳細設定]** タブには、以下のプロパティが既定で表示されます。 カスタム プロパティが定義されていれば、そのプロパティと値もこのタブに表示されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **クラスター化インデックス**  
  このサービスがクラスター サーバーのリソースとしてインストールされているかどうかが表示されます。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "75306833"
  エラー発生時にメモリ ダンプが配置される場所が表示されます。  
   
  **[エラー報告]**  
- **[はい]** に設定した場合、重大な障害が発生したときに、ワトソン博士プログラムによって [!INCLUDE[msCoName](../../includes/msconame-md.md)] またはエラー サーバーに情報が転送されます。 エラー報告の詳細については、オンライン ブックの「エラー レポートと使用状況レポートの設定」を検索してください。 この値を変更するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーでサーバーを右クリックし、 **[プロパティ]** をクリックし、 **[その他のサーバーの設定]** ページをクリックします。 **[エラー報告]** 領域にオプションが表示されます。  
+ **[はい]** に設定した場合、重大な障害が発生したときに、ワトソン博士プログラムによって [!INCLUDE[msCoName](../../includes/msconame-md.md)] またはエラー サーバーに情報が転送されます。 エラー報告の詳細については、オンライン ブックの「エラー レポートと使用状況レポートの設定」を検索してください。 この値を変更するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーでサーバーを右クリックし、 **[プロパティ]** をクリックし、 **[その他のサーバーの設定]** ページをクリックします。 **[エラー報告]** 領域にオプションが表示されます。  
   
  **ファイル バージョン**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行可能ファイルのバージョンが表示されます。  
@@ -65,7 +66,7 @@ ms.locfileid: "75306833"
  **[SKU (Stock Keeping Unit)]**  
  製品の SKU (Stock Keeping Unit) 番号が表示されます。  
   
- **バージョン**  
+ **Version**  
  この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのバージョン番号が表示されます。  
   
  **[仮想サーバー名]**  

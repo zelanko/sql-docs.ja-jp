@@ -1,6 +1,7 @@
 ---
 title: 再生を実行するための必要条件
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler または分散再生ユーティリティを使用してトレース データを再生できるように、トレースでキャプチャするイベント クラスとデータ列について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 85f062ae15addae9908dca572c916e55a7ffde39
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5fa4964a2ffb0d62777c25aa0d0c6ef205ee94b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307483"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789927"
 ---
 # <a name="replay-requirements"></a>再生を実行するための必要条件
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] または Distributed Replay Utility を使用してトレース データを再生するには、特定のイベント クラスと列のセットがトレースにキャプチャされている必要があります。 **TSQL_Replay** トレース テンプレートを使用して、後で再生に使用するトレースを構成した場合、これらの設定は既定で有効になります。 このトピックでは、これらの設定と、再生を実行するためのその他の必要条件について説明します。  
   
@@ -75,7 +76,7 @@ ms.locfileid: "75307483"
   
 -   **DatabaseName**  
   
--   **[データベース ID]**  
+-   **データベース ID**  
   
 -   **ClientProcessID**  
   

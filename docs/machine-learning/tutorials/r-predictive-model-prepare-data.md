@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ae2931ca07cdcd6e3f1216ce7adb2551a6e23ae
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: e0c679ce4a146065223123e41cb2935e7d33ad71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607035"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784075"
 ---
 # <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>チュートリアル:SQL 機械学習を使用して R で予測モデルをトレーニングするためのデータを準備する
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズのパート 2 では、R を使用してデータベースからデータを準備します。このシリーズの後半では、このデータを利用し、SQL Server Machine Learning Services またはビッグ データ クラスターを使用して R で予測モデルをトレーニングしてデプロイします。
@@ -31,12 +30,15 @@ ms.locfileid: "83607035"
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズのパート 2 では、R を使用してデータベースからデータを準備します。このシリーズの後半では、このデータを利用して、SQL Server R Services を使用して R で予測モデルをトレーニングしてデプロイします。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+この 4 部構成のチュートリアル シリーズのパート 2 では、R を使用してデータベースからデータを準備します。このシリーズの後半では、このデータを利用して、Azure SQL Managed Instance の Machine Learning Services で R の予測モデルのトレーニングおよびデプロイを行います。
+::: moniker-end
 
 この記事では、次の方法について学習します。
 
 > [!div class="checklist"]
 > * サンプル データベースをデータベースに復元する
-> * SQL データベースから R データ フレームにデータを読み込む
+> * データベースから R データ フレームにデータを読み込む
 > * R でカテゴリとしていくつかの列を識別してデータを準備する
 
 [第 1 部](r-predictive-model-introduction.md)では、サンプル データベースを復元する方法を学習しました。
@@ -51,22 +53,19 @@ ms.locfileid: "83607035"
 
 ## <a name="load-the-data-into-a-data-frame"></a>データをデータ フレームに読み込む
 
-R でデータを使用するには、SQL データベースからデータ フレーム (`rentaldata`) にデータを読み込みます。
+R でデータを使用するには、データベースからデータ フレーム (`rentaldata`) にデータを読み込みます。
 
 RStudio で新しい RScript ファイルを作成し、以下のスクリプトを実行します。 **ServerName** を実際の接続情報に置き換えます。
 
 ```r
 #Define the connection string to connect to the TutorialDB database
-connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;uid=Username;pwd=Password"
+
 
 #Get the data from the table
 library(RODBC)
 
 ch <- odbcDriverConnect(connStr)
-
-#Take a look at the structure of the data and the top rows
-head(rentaldata)
-str(rentaldata)
 
 #Import the data from the table
 rentaldata <- sqlFetch(ch, "dbo.rental_data")
@@ -138,7 +137,7 @@ $ Snow       : Factor w/ 2 levels "0","1": 1 1 1 1 1 1 1 1 1 1 ...
 
 このチュートリアル シリーズのパート 2 で学習した内容は次のとおりです。
 
-* SQL Server から R データ フレームにサンプル データを読み込む
+* R データ フレームにサンプル データを読み込む
 * R でカテゴリとしていくつかの列を識別してデータを準備する
 
 TutorialDB データベースのデータを使用する機械学習モデルを作成するには、このチュートリアル シリーズのパート 3 に従ってください。

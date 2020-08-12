@@ -1,21 +1,21 @@
 ---
 title: SQL Server の単体テストのスクリプト
+description: SQL Server 単体テスト スクリプトについて理解します。 事前テスト スクリプト、テスト スクリプト、事後テスト スクリプト、および共通スクリプトである TestInitialize と TestCleanup について説明します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c5ff8457d5e2122f3e5bc455c204a5185cc30aec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1cc9bde70e716ba19f17f8d146719ccb191580b7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256969"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883447"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>SQL Server の単体テストのスクリプト
 
@@ -54,7 +54,7 @@ ms.locfileid: "75256969"
 ## <a name="initialization-and-cleanup-scripts"></a>初期化スクリプトとクリーンアップ スクリプト  
 SQL Server 単体テスト デザイナーでは、TestInitialize スクリプトと TestCleanup スクリプトが共通スクリプトと呼ばれます。 上記の例では、2 つの単体テストが同じテスト クラスに含まれていることを前提としています。 その結果、これらの単体テストでは、同一の TestInitialize スクリプトと TestCleanup スクリプトが共有されます。 すべての単体テストが 1 つのテスト クラス内にある場合は、常にこの例のようになります。 ただし、テスト実行に別のテスト クラスの単体テストが含まれる場合、単体テストの実行前と実行後に、関連するテスト クラスの共通スクリプトが実行されます。  
   
-SQL Server 単体テスト デザイナーのみを使用して単体テストを作成した場合は、テスト クラスの概念を理解していない可能性があります。 **[テスト]** メニューを開き、 **[新しいテスト]** をクリックして単体テストを作成するたびに、SQL Server Data Tools ではテスト クラスが生成されます。 テスト クラスは、指定したテスト名の後に .cs または .vb 拡張子が付いた状態で**ソリューション エクスプローラー**に表示されます。 各テスト クラス内では、個々の単体テストがテスト メソッドとして格納されます。 ただし、テスト メソッド (つまり、単体テスト) の数に関係なく、各テスト クラスには 0 または 1 つの TestInitialize スクリプトと TestCleanup スクリプトを含めることができます。  
+SQL Server 単体テスト デザイナーのみを使用して単体テストを作成した場合は、テスト クラスの概念を理解していない可能性があります。 **[テスト]** メニューを開き、**[新しいテスト]** をクリックして単体テストを作成するたびに、SQL Server Data Tools ではテスト クラスが生成されます。 テスト クラスは、指定したテスト名の後に .cs または .vb 拡張子が付いた状態で**ソリューション エクスプローラー**に表示されます。 各テスト クラス内では、個々の単体テストがテスト メソッドとして格納されます。 ただし、テスト メソッド (つまり、単体テスト) の数に関係なく、各テスト クラスには 0 または 1 つの TestInitialize スクリプトと TestCleanup スクリプトを含めることができます。  
   
 TestInitialize スクリプトを使用すると、テスト データベースを準備できます。また、TestCleanup スクリプトを使用すると、テスト データベースを既知の状態に戻すために使用できます。 たとえば、TestInitialize を使用して、後で実行するヘルパー ストアド プロシージャを作成し、テスト スクリプトで、別のストアド プロシージャをテストすることができます。  
   
