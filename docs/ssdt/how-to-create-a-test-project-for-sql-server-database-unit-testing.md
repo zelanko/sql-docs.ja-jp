@@ -1,31 +1,30 @@
 ---
 title: SQL Server の単体テストのテスト プロジェクトを作成する
+description: SQL Server データベース単体テストのテスト プロジェクトを作成する方法について説明します。 データベース プロジェクトを含むソリューションにテスト プロジェクトを追加するさまざまな方法を確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fe6b8e2e70a20041f394afa5cad1d800535559d1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ff3cb815dcd27f72ea96296935484ec0cc15ea0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241515"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243533"
 ---
-# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>SQL Server の単体テストのテスト プロジェクトを作成する方法
+# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>方法:SQL Server の単体テストのテスト プロジェクトを作成する
 
 データベース オブジェクトを評価する単体テストの作成を開始する前に、まずはテスト プロジェクトを作成する必要があります。 このプロジェクトには SQL Server の単体テストが含まれていますが、他の種類のテストが含まれることもあります。  
   
 特定のデータベース プロジェクトに対するすべての SQL Server の単体テストを 1 つのテスト プロジェクト内に配置することができます。 ただし、次の質問に対する回答に基づいて、追加のテスト プロジェクトの作成が必要になる場合もあります。  
   
-|||  
-|-|-|  
-|**質問**|**決定**|  
+|Question|決定|  
+|-|-|   
 |テストの実行やテストの検証のために、SQL Server の単体テストごとに異なるデータベース接続にアクセスする必要がありますか。|回答が "はい" の場合は、複数のテスト プロジェクトが必要です。 テストの実行には複数のデータベース接続を指定できません。 ただし、テストの検証には別のデータベース接続を指定できます。|  
 |単体テストごとに異なるデータベース プロジェクトを配置しますか。|回答が "はい" の場合は、複数のテスト プロジェクトが必要です。 テスト プロジェクトによって配置できるのは 1 つのデータベース プロジェクトのみです。|  
   

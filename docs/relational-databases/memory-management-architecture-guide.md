@@ -15,12 +15,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12dc8a03cbf65a0c07e9a5985f1ffade813a3e5f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012139"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243706"
 ---
 # <a name="memory-management-architecture-guide"></a>メモリ管理アーキテクチャ ガイド
 
@@ -55,7 +55,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 > [!NOTE]
 > 次の表には、現在利用できない 32 ビット バージョンの列が含まれています。
 
-| |32 ビット <sup>1</sup> |64 ビット|
+|メモリ ポリシー|32 ビット <sup>1</sup> |64 ビット|
 |-------|-------|-------| 
 |コンベンショナル メモリ |すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション。 プロセス仮想アドレス空間制限まで: <br>- 2 GB<br>- 3 GB (/3 gb のブート パラメーターを使用する場合) <sup>2</sup> <br>- 4 GB (WOW64 の場合) <sup>3</sup> |すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション。 プロセス仮想アドレス空間制限まで: <br>- 7 TB (IA64 アーキテクチャを使用する場合) (IA64 は [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降ではサポートされません)<br>- オペレーティング システムの最大容量 (x64 アーキテクチャを使用する場合) <sup>4</sup>
 |AWE メカニズム ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で 32 ビット プラットフォームのプロセス仮想アドレス空間制限を超えることを許可する) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard、Enterprise、および Developer エディション:バッファー プールは、最大 64 GB のメモリにアクセスできます。|該当なし <sup>5</sup> |
@@ -93,9 +93,9 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 |-------|-------|-------|
 |単一ページ割り当て|はい|はい。"あらゆるサイズの" ページ割り当てに統合。|
 |複数ページ割り当て|いいえ|はい。"あらゆるサイズの" ページ割り当てに統合。|
-|CLR 割り当て|いいえ|はい|
-|スレッド スタック メモリ|いいえ|いいえ|
-|Windows からの直接割り当て|いいえ|いいえ|
+|CLR 割り当て|×|はい|
+|スレッド スタック メモリ|いいえ|×|
+|Windows からの直接割り当て|いいえ|×|
 
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、max server memory 設定に指定されている値より多いメモリを割り当てる場合があります。 そのような動作は、**_Total Server Memory (KB)_** の値が (max server memory によって指定される) **_Target Server Memory (KB)_** の設定に既に到達しているときに発生することがあります。 メモリの断片化によって、複数ページ メモリ要求 (8 KB 超) を満たすだけの連続した空き容量がない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はメモリ要求を拒否せず、オーバーコミットを実行できます。 
 

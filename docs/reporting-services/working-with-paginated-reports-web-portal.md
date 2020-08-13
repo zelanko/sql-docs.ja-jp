@@ -1,5 +1,6 @@
 ---
 title: ページ分割されたレポートの使用 (Web ポータル) | Microsoft Docs
+description: Web ポータル内のページ分割されたレポートのプロパティを表示したり管理したりする方法について説明します。 また、レポート ビルダーを使用して、ページ分割されたレポートを作成または編集する方法について説明します。
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d5c5a6a7b1bd60f066c13a2b06e65dc6ef5f053
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68222642"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243578"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>ページ分割されたレポートの使用 (Web ポータル)
 
@@ -77,7 +78,7 @@ Web ポータル内のページ分割されたレポートのプロパティを�
   
 レポート サーバーがデータ ソースへの接続に使用する接続文字列を指定します。 接続の種類によって使用する構文が決まります。 たとえば、XML データ処理拡張機能の接続文字列は、XML ドキュメントの URL になります。 ほとんどの場合、データベース サーバーおよびデータ ファイルは一般的な接続文字列で指定されます。 次に、MyData という名前の SQL Server データベースへの接続に使用する接続文字列の例を示します。  
   
-    data source=(a SQL Server instance);initial catalog=MyData  
+`data source=(a SQL Server instance);initial catalog=MyData`
   
 接続文字列は式として構成できます。これにより、データ ソースを実行時に指定することができます。 データ ソースの式は、レポート デザイナーを使用してレポートで定義されます。 データ ソースの式は、Web ポータル上で定義、表示、変更できません。 ただし、 **[既定値よりオーバーライド]** をクリックして静的な接続文字列を入力することで、データ ソースの式をオーバーライドすることができます。 式に戻す場合は、 **[既定値に戻す]** をクリックします。 レポート サーバーは、復元する必要がある場合に備えて元の接続文字列を保存します。 データ ソースの式を使用するには、レポートに本来パブリッシュされていたデータ ソース接続情報を使用する必要があります。 共有データ ソースでは、接続文字列の式の使用はサポートされていません。  
   
@@ -179,7 +180,7 @@ Reporting Services サブスクリプションは、特定の時刻に、また�
   
 レポート ヒストリ スナップショットをクリックすると、そのスナップショットが表示されます。 レポート ヒストリに表示されるスナップショットは、作成日時だけで識別されます。 スナップショットがスケジュールの設定を受けて生成されたのか、手動で生成されたのかを識別する表示はありません。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
 [セキュリティのプロパティ] ページを使用すると、レポートへのアクセスを決定するセキュリティ設定の表示や変更を行えます。 このページは、セキュリティ保護の権限の対象となるアイテムに対して利用できます。  
   
 アイテムへのアクセスは、グループまたはユーザーが実行できるタスクを指定するロールの割り当てによって定義されます。 ロールの割り当ては、1 つのユーザー名またはグループ名、および一連のタスクを指定する 1 つ以上のロールの定義で構成されています。  

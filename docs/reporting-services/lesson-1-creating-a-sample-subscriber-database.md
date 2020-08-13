@@ -1,5 +1,6 @@
 ---
 title: 'レッスン 1: サンプル サブスクライバー データベースの作成 | Microsoft Docs'
+description: 小さな "サブスクライバー" データベースを作成して、データドリブン サブスクリプションに使用するサブスクリプション データを格納する方法について説明します。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a62e0e1c47cd6df4d2d5e4f28b35294af694a824
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62513164"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243273"
 ---
-# <a name="lesson-1-creating-a-sample-subscriber-database"></a>レッスン 1 : サンプル サブスクライバー データベースの作成
+# <a name="lesson-1-creating-a-sample-subscriber-database"></a>レッスン 1:サンプル サブスクライバー データベースの作成
 
 この [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のチュートリアル レッスンでは、小さな "サブスクライバー" データベースを作成して、データドリブン サブスクリプションに使用するサブスクリプション データを格納します。 サブスクリプションを処理するときに、レポート サーバーはこのデータを取得し、レポート出力のカスタマイズに使用します。 たとえば、データの行に特定の順序の数値を含めてフィルターに使用したり、レポートの生成時に、レポートのファイル形式を指定したりすることができます。  
   
@@ -55,14 +56,14 @@ ms.locfileid: "62513164"
     GO  
     ```  
   
-7.  ツールバーの **[実行]** をクリックします。  
+7.  ツール バーの **[実行]** をクリックします。  
   
 8.  SELECT ステートメントを使用して、3 行のデータがあることを確認します。 例: `select * from OrderInfo`  
   
 ## <a name="next-steps"></a>次の手順  
 + 以上の操作で、レポートを配信し、各サブスクライバーごとにレポート出力を変えるサブスクリプション データを作成できました。 
 + 次に、格納された資格情報を使用するレポートのデータ ソースのプロパティを変更します。 
-+ また、レポートのデザインを変更して、サブスクリプションがサブスクライバーのデータと共に使用するパラメーターを含めます。 [レッスン 2: レポート データ ソースのプロパティの変更](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
++ また、レポートのデザインを変更して、サブスクリプションがサブスクライバーのデータと共に使用するパラメーターを含めます。 [レッスン 2:レポート データ ソースのプロパティの変更](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
 
 ## <a name="next-steps"></a>次のステップ
 

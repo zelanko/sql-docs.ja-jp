@@ -1,5 +1,5 @@
 ---
-title: IRow による 1 行のフェッチ | Microsoft Docs
+title: IRow を使用した 1 行のフェッチ (OLE DB ドライバー) | Microsoft Docs
 description: OLE DB Driver for SQL Server の IRow インターフェイスを使用し、1 行をフェッチする
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, fetching
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 542875dc322cd94970c238747db0adb139b9a480
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fba517134c69914914da95daacafdf634de7b15c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994294"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244274"
 ---
-# <a name="fetching-a-single-row-with-irow"></a>IRow による 1 行のフェッチ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="fetching-a-single-row-with-irow-ole-db-driver"></a>IRow を使用した 1 行のフェッチ (OLE DB ドライバー)
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

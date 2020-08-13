@@ -1,5 +1,5 @@
 ---
-title: 行セットと SQL Server カーソル | Microsoft Docs
+title: 行セットと SQL Server カーソル (OLE DB ドライバー)
 description: 行セットと SQL Server カーソル
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4c87699f389d487354b562fafa8cfab378c2ff0d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994178"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244156"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>行セットと SQL Server カーソル
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -145,7 +145,7 @@ ms.locfileid: "67994178"
   
  行セット プロパティの特定のセットに対して選択されるカーソル モデルは、次のようにして決まります。  
   
- 行セット プロパティの指定されたコレクションから、上の表に示したプロパティのサブセットを取得します。 これらのプロパティを、各行セット プロパティのフラグ値 (必須 (T、F) または省略可能 (-)) に応じて、2 つのサブグループに分けます。 最初の表から始め、左から右に向かってカーソル モデルごとに、2 つのサブグループ内のプロパティの値を、その列の対応するプロパティの値と比較します。 必須プロパティに不一致がなく、かつオプション プロパティの不一致が最も少ないカーソル モデルが選択されます。 複数のカーソル モデルが該当する場合は、一番左側のモデルが選択されます。  
+ 行セット プロパティの指定されたコレクションから、上の表に示したプロパティのサブセットを取得します。 これらのプロパティを、各行セット プロパティのフラグ値 (必須 (T、F) または省略可能 (-)) に応じて、2 つのサブグループに分けます。 カーソル モデルごとに、最初のテーブルから開始し、左から右へ移動します。 2 つのサブグループ内のプロパティの値を、その列の対応するプロパティの値と比較します。 必須プロパティに不一致がなく、かつオプション プロパティの不一致が最も少ないカーソル モデルが選択されます。 複数のカーソル モデルが該当する場合は、一番左側のモデルが選択されます。  
   
 ## <a name="sql-server-cursor-block-size"></a>SQL Server カーソル ブロックのサイズ  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソルで OLE DB Driver for SQL Server 行セットがサポートされる場合、**IRowset::GetNextRows** メソッドまたは **IRowsetLocate::GetRowsAt** メソッドの行ハンドル配列パラメーター内の要素数によって、カーソル ブロックのサイズが決まります。 配列内のハンドルで指定される行が、カーソル ブロックのメンバーです。  

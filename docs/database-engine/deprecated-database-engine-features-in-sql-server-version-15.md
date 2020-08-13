@@ -1,5 +1,5 @@
 ---
-title: データベース エンジンの非推奨の機能 | Microsoft Docs
+title: SQL Server 2019 データベース エンジンの非推奨の機能 | Microsoft Docs
 titleSuffix: SQL Server 2019
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-ver15'
-ms.openlocfilehash: 552afb292f89eea602099fa095b86f587710229b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38597e5675bf285833cf8533690df83019224077
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920274"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244063"
 ---
 # <a name="deprecated-database-engine-features-in-sssqlv15-md"></a>[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] のデータベース エンジンの非推奨機能
 

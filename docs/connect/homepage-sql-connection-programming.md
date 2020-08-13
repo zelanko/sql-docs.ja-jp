@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: v-daenge
-ms.openlocfilehash: c3f2b6db58879a8d0fd3ce82a89511275fe9d3bb
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 19dafa831f6763c5c2da5b54f14326db38372be4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529046"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243414"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server に対するクライアント プログラミングのホーム ページ
 
@@ -51,13 +51,27 @@ Azure SQL Database に接続するための接続文字列の詳細について�
 
 次の表の各言語のイメージは、その言語と SQL Server の使用に関する詳細情報にリンクされています。 各リンクをクリックすると、この記事に示されているその言語のセクションに移動します。
 
-| &nbsp; | &nbsp; | &nbsp; |
-| :-- | :-- | :-- |
-| &nbsp; [![C# のロゴ][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![.NET Framework の ORM Entity Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java のロゴ][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Node.js のロゴ][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [ **`ODBC for C++`** ](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP のロゴ][image-ref-360-php]](#an-170-php-docu) |
-| &nbsp; [![Python のロゴ][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby のロゴ][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
-| &nbsp; | &nbsp; | <br />|
+:::row:::
+    :::column:::
+        [![C# のロゴ][image-ref-320-csharp]](#an-110-ado-net-docu)  
 
+        [![Node.js のロゴ][image-ref-340-node]](#an-140-node-js-docu)  
+
+        [![Python のロゴ][image-ref-370-python]](#an-180-python-docu)  
+    :::column-end:::
+    :::column:::
+        [![.NET Framework の ORM Entity Framework][image-ref-333-ef]](#an-116-csharp-ef-orm)  
+
+        [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu)  
+
+        [![Ruby のロゴ][image-ref-380-ruby]](#an-190-ruby-docu)  
+    :::column-end:::
+    :::column:::
+        [![Java のロゴ][image-ref-330-java]](#an-130-jdbc-docu)  
+
+        [![PHP のロゴ][image-ref-360-php]](#an-170-php-docu)  
+    :::column-end:::
+:::row-end:::
 
 #### <a name="downloads-and-installs"></a>ダウンロードとインストール
 
@@ -75,7 +89,7 @@ ADO.NET を最もよく使用するのが、C#、Visual Basic などの .NET マ
 
 #### <a name="code-examples"></a>コード例
 
-|||
+| 例 | 説明 |
 | :-- | :-- |
 | [ADO.NET を使用した SQL への接続を概念実証する](./ado-net/step-3-connect-sql-ado-net.md) | SQL Server の接続とクエリに重点を置いた小さなコード例。 |
 | [ADO.NET で SQL に弾性的に接続する](./ado-net/step-4-connect-resiliently-sql-ado-net.md) | コード例の再試行ロジック (接続が失われる可能性があるため)。<br /><br />再試行ロジックは、インターネットを介して維持される、任意のクラウド データベース (Azure SQL Database など) への接続に適切に適用されます。 |
@@ -85,7 +99,7 @@ ADO.NET を最もよく使用するのが、C#、Visual Basic などの .NET マ
 
 #### <a name="documentation"></a>ドキュメント
 
-|||
+| 領域 | 説明 |
 | :-- | :-- |
 | [ADO.NET が使用されている C#](./ado-net/index.md)| ドキュメントのルート。 |
 | [名前空間: System.Data](https://docs.microsoft.com/dotnet/api/system.data) | ADO.NET に使用されるクラスのセット。 |
@@ -116,7 +130,7 @@ EF には、次のテクノロジと直接的または間接的なリレーシ�
 
 *Entity Framework* は、2 つの異なるソース コード分岐によって共有される名前です。 一方の EF 分岐は古く、そのソース コードはパブリックで管理できるようになりました。 もう一方は新しい EF です。 この 2 つの EF について次に説明します。
 
-|     |     |
+| Version | Description |
 | :-- | :-- |
 | [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft が最初に EF をリリースしたのは 2008 年 8 月です。 そして 2015 年 3 月、Microsoft は、最後の Microsoft 開発バージョンとして EF 6.x を発表し、 ソース コードをパブリック ドメインに公開しました。<br /><br />当初、EF は .NET Framework に含まれていましたが、 EF 6 は .NET Framework から削除されました。<br /><br />[GitHub の *aspnet/EntityFramework6* リポジトリの EF 6.x ソース コード](https://github.com/aspnet/EntityFramework6) |
 | [EF Core](https://docs.microsoft.com/ef/core/) | 2016 年 6 月、Microsoft は新しく開発された EF Core をリリースしました。 EF Core は、柔軟性と移植性の向上を目指して設計されたもので、 Microsoft Windows 以外のオペレーティング システムで実行できます。 また、EF Core では、Microsoft SQL Server やその他のリレーショナル データベース以外のデータベースを操作することもできます。<br /><br />**C&#x23; のコード例:**<br />[Entity Framework Core の概要](https://docs.microsoft.com/ef/core/get-started/index)<br />[既存のデータベースを使用した .NET Framework 上の EF Core の概要](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
@@ -136,7 +150,7 @@ Microsoft からは、SQL Server (または Azure SQL Database) で使用する�
 
 #### <a name="code-examples"></a>コード例
 
-|||
+| 例 | 説明 |
 | :-- | :-- |
 | [コード例](./jdbc/code-samples/index.md) | データ型、結果セット、および大きなデータについて学習するためのコード例。 |
 | [接続 URL のサンプル](./jdbc/connection-url-sample.md) | 接続 URL を使用して SQL Server に接続する方法について説明します。 その後、これを使って SQL ステートメントを使用し、データを取得します。 |
@@ -149,7 +163,7 @@ Microsoft からは、SQL Server (または Azure SQL Database) で使用する�
 
 JDBC ドキュメントに含まれる主な区分を次に示します。
 
-|||
+| 領域 | 説明 |
 | :-- | :-- |
 | [Java Database Connectivity (JDBC)](./jdbc/index.md) | JDBC ドキュメントのルート。 |
 | [リファレンス](./jdbc/reference/index.md) | インターフェイス、クラス、およびメンバー。 |
@@ -168,7 +182,7 @@ SQL Server 用の Node.js 接続ドライバーは JavaScript で実装されま
 
 #### <a name="code-examples"></a>コード例
 
-|||
+| 例 | 説明 |
 | :-- | :-- |
 | [Node.js を使用した SQL への接続を概念実証する](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | SQL Server に接続してクエリを実行するための最小限のソース コード。 |
 | [Azure SQL データベース: Node.js を使用してクエリを実行する](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | クラウドの Azure SQL Database の例。 |
@@ -223,7 +237,7 @@ PHP を使用して SQL Server と対話できます。 PHP ドキュメント�
 
 #### <a name="code-examples"></a>コード例
 
-|||
+| 例 | 説明 |
 | :-- | :-- |
 | [PHP を使用した SQL への接続を概念実証する](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | SQL Server の接続とクエリに重点を置いた小さなコード例。 |
 | [PHP で SQL に弾性的に接続する](./php/step-4-connect-resiliently-to-sql-with-php.md) | コード例の再試行ロジック (インターネットおよびクラウドを介した接続が失われる可能性があるため)。 |
@@ -242,7 +256,7 @@ Python を使用して SQL Server と対話できます。
 
 #### <a name="code-examples"></a>コード例
 
-|||
+| 例 | 説明 |
 | :-- | :-- |
 | [pyodbc と Python を使用した SQL への接続の概念実証](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | SQL Server の接続とクエリに重点を置いた小さなコード例。 |
 | [Azure SQL データベース: Python を使用してクエリを実行する](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL Database の例。 |
@@ -267,7 +281,7 @@ Ruby を使用して SQL Server と対話できます。 Ruby ドキュメント
 
 #### <a name="code-examples"></a>コード例
 
-|||
+| 例 | 説明 |
 | :-- | :-- |
 | [Ruby を使用した SQL への接続を概念実証する](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | SQL Server の接続とクエリに重点を置いた小さなコード例。 |
 | [Azure SQL データベース: Ruby を使用してクエリを実行する](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database の例。 |

@@ -1,5 +1,6 @@
 ---
 title: 共有データセットの操作 (Web ポータル) | Microsoft Docs
+description: Web ポータル内の共有データセットのプロパティを表示および管理します。 Web ポータルを使用して、レポート ビルダーで共有データセットを作成または編集します。
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e034b911ec5817ac82214466fdc2bf7087e8865a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0d37e617ef7dcb4c63b7d2239881cc6cb96c7c2f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68222797"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243603"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>共有データセットの操作 - Web ポータル
 
@@ -37,7 +38,7 @@ Web ポータル内の共有データセットのプロパティを表示およ�
   
 4.  **[新しいレポートまたはデータセット]** ダイアログで、このデータセットに使用するデータ ソース接続を選択します。 共有データ ソースの場所を参照することが必要な場合があります。  
   
-5.  **作成** を選択します。  
+5.  **［作成］** を選択します  
   
 6.  データセットを作成し、画面左上の **[保存]** アイコンを選択してデータセットをレポート サーバーに保存します。  
   

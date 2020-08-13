@@ -1,5 +1,6 @@
 ---
 title: '[ローカル] ウィンドウ'
+description: Transact-SQL デバッガーの [ローカル] ウィンドウを使用して、現在の呼び出しスタック フレームの式を表示および変更する方法について説明します。
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,16 +14,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70ee1eee120c94e7f851bc37c3becf1983a57d09
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00c6704418210c0913470688ae4c8d7a55facaf4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253050"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243764"
 ---
 # <a name="transact-sql-debugger---locals-window"></a>Transact-SQL デバッガー - [ローカル] ウィンドウ
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 **[ローカル]** ウィンドウには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーの現在のスコープ内にあるローカル式についての情報が表示されます。 スコープは、 **[呼び出し履歴]** ウィンドウで選択された現在の呼び出し履歴フレームに設定されます。 ローカル式を表示するには、デバッグ モードである必要があります。  
 
@@ -39,7 +40,7 @@ ms.locfileid: "75253050"
 -   式を右クリックし、 **[値の編集]** を選択します。  
   
 ## <a name="columns"></a>[列]  
- **Name**  
+ **名前**  
  ローカル式の名前です。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーでは、変数、パラメーター、および名前が @@ で始まるシステム関数が一覧表示されます。  
   
  **Value**  

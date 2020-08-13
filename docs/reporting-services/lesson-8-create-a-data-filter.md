@@ -1,5 +1,6 @@
 ---
 title: 'レッスン 8: データ フィルターを作成する | Microsoft Docs'
+description: 子レポートに対して定義したデータ テーブルのデータ フィルターを作成する方法について説明します。 詳細レポートに対しては、テーブルベースのフィルターまたはクエリ フィルターを作成します。
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d64d2557945bc7fdd7b602652e23d52c0a052da7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62512394"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243243"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>レッスン 8: データ フィルターを作成する
 親レポートにドリルスルー アクションを追加した後は、子レポート用に定義したデータ テーブル用のデータ フィルターを作成します。  
@@ -41,7 +42,7 @@ ms.locfileid: "62512394"
   
 5.  **=** [演算子] **ドロップダウン リストで、等号演算子 (** ) を選択します。  
   
-6.  **[値]** フィールドの横の式ボタンを選択します。 **[カテゴリ]** 領域の **[パラメーター]** を選択し、 **[値]** 領域の **[productid]** をダブルクリックします。 **[式の設定: 値]** フィールドに、 **=Parameters!productid.Value**のような式が表示されます。  
+6.  **[値]** フィールドの横の式ボタンを選択します。 **[カテゴリ]** 領域の **[パラメーター]** を選択し、 **[値]** 領域の **[productid]** をダブルクリックします。 **[式の設定: 値]** フィールドに、 **=Parameters!productid.Value** のような式が表示されます。  
   
 7.  **[OK]** を選択します。 **[Tablix のプロパティ]** ダイアログ ボックスで再び **[OK]** をクリックします。  
   
@@ -165,7 +166,7 @@ ms.locfileid: "62512394"
   
     1.  **「レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する」** の手順 2 で作成したデータセット [DataSet2](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)のインスタンスを作成します。  
   
-    2.  SqlServer データベースへの接続を作成し、 **「レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する」** で定義したクエリを実行します。  
+    2.  SqlServer データベースへの接続を作成し、「**レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する**」で定義したクエリを実行します。  
   
     3.  このクエリには、返されるデータを親レポートで選択された **ProductID**に基づいてフィルター選択するための **productid** パラメーターが含まれます。  
   
@@ -287,7 +288,7 @@ ms.locfileid: "62512394"
 6.  ファイルを保存します。  
   
 ## <a name="next-task"></a>次の作業  
-これで、子レポートに対して定義したデータ テーブルのデータ フィルターを作成できました。 次は、Web サイト アプリケーションをビルドして実行します。 [「レッスン 9: アプリケーションをビルドして実行する」](../reporting-services/lesson-9-build-and-run-the-application.md)を参照してください。  
+これで、子レポートに対して定義したデータ テーブルのデータ フィルターを作成できました。 次は、Web サイト アプリケーションをビルドして実行します。 「[レッスン 9: アプリケーションをビルドして実行する](../reporting-services/lesson-9-build-and-run-the-application.md)」を参照してください。  
   
   
   

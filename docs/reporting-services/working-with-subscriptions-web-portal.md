@@ -1,5 +1,6 @@
 ---
 title: サブスクリプションの操作 (Web ポータル) | Microsoft Docs
+description: '[サブスクリプション] ページを使用して、Reporting Services の現在のレポートのサブスクリプションをすべて表示する方法について説明します。'
 ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 046faa5ff137f62ac2554192012ff0917bfb17e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5d936933b96c8d7f5c4c2830707b4a6bb4d9fe2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76971262"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243554"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>サブスクリプションの操作 (Web ポータル)
 
@@ -51,7 +52,7 @@ ms.locfileid: "76971262"
   
 このオプションを使用できるのは、高度な権限を持つユーザーのみです。 既定のセキュリティを設定している場合、[個人用レポート] フォルダーにあるレポートに対してデータ ドリブン サブスクリプションを使用することはできません。  
   
-## <a name="destination"></a>宛先  
+## <a name="destination"></a>到着地  
 レポートの配信に使用する配信拡張機能を選択します。   
   
 配信拡張機能を使用できるかどうかは、配信拡張機能がレポート サーバーにインストールおよび構成されているかどうかによって決まります。 レポート サーバーの電子メールは、既定の配信拡張機能ですが、使用する前に構成する必要があります。 ファイル共有配信は構成の必要はありませんが、共有フォルダーは使用前に定義が必要です。  

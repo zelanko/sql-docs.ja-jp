@@ -1,8 +1,8 @@
 ---
-title: IBCPSession::BCPColFmt (OLE DB) | Microsoft Docs
+title: IBCPSession::BCPColFmt (OLE DB ドライバー) | Microsoft Docs
 description: IBCPSession::BCPColFmt (OLE DB)
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - BCPColFmt method
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d4d55b6e950ccf7e1e9bfac54bf357d070ab09f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994581"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244667"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -60,10 +60,14 @@ HRESULT BCPColFmt(
   
 -   ユーザー ファイルの各フィールドにおけるデータの最大長  
   
--   各フィールドの省略可能なターミネータ バイト シーケンス  
+-   各フィールドの省略可能なターミネータ バイト シーケンス <a href="#terminator_note"><sup>**1**</sup></a>。  
   
--   省略可能なターミネータ バイト シーケンスの長さ  
+-   省略可能なターミネータ バイト シーケンスの長さ <a href="#terminator_note"><sup>**1**</sup></a>。  
   
+
+> [!IMPORTANT]
+> <b id="terminator_note">[1]:</b>データ ファイル コード ページが UTF-8 に設定されているシナリオでのターミネータ シーケンスの使用は、サポートされていません。 そのようなシナリオでは、**pbUserDataTerm** を `nullptr` に設定し、**cbUserDataTerm** を `0`に設定する必要があります。
+
  **BCPColFmt** を呼び出すたびに、ユーザー ファイルの 1 つのフィールドの形式が指定されます。 たとえば、5 つのフィールドから構成されるユーザー データ ファイルの 3 つのフィールドの既定の設定を変更するには、まず、`BCPColumns(5)` を呼び出し、**BCPColFmt** を 5 回呼び出します。この 5 回の呼び出しのうち 3 回は独自の形式を設定して呼び出します。 残りの 2 回の呼び出しでは、*eUserDataType* を BCP_TYPE_DEFAULT に設定し、*cbIndicator*、*cbUserData*、*cbUserDataTerm* をそれぞれ 0、BCP_VARIABLE_LENGTH、0 に設定します。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
   
 > [!NOTE]  
@@ -105,11 +109,11 @@ HRESULT BCPColFmt(
   
  複数の方法 (ターミネータと長さのインジケーター、ターミネータと列の最大長など) を使用してユーザー ファイルの列長を指定すると、一括コピーはコピーするデータの量が最も少なくなる方法を使用します。  
   
- 一括コピー API では、必要に応じて Unicode から MBCS への文字変換が実行されます。 このため、ターミネータのバイト文字列とそのバイト文字列の長さの両方を正しく設定するように注意する必要があります。  
-  
+ 一括コピー API では、必要に応じて Unicode から MBCS への文字変換が実行されます。 このため、ターミネータのバイト文字列とそのバイト文字列の長さの両方を正しく設定するように注意する必要があります。 UTF-8 エンコードの制限については、前述の「[解説](#remarks)」を参照してください。
+
  *cbUserDataTerm*[in]  
- 列に使用するターミネータ シーケンスの長さ (バイト単位)。 データ内にターミネータが存在しないか不要な場合は、この値を 0 に設定します。  
-  
+ 列に使用するターミネータ シーケンスの長さ (バイト単位)。 データ内にターミネータが存在しないか不要な場合は、この値を 0 に設定します。 UTF-8 エンコードの制限については、前述の「[解説](#remarks)」を参照してください。
+
  *idxServerCol*[in]  
  データベース テーブル内での列の序数位置。 最初の列の序数は 1 です。 列の序数位置は **IColumnsInfo::GetColumnInfo** などのメソッドから報告されます。 この値が 0 の場合、一括コピーではデータ ファイル内のこのフィールドは無視されます。  
   

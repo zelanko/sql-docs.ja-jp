@@ -1,5 +1,5 @@
 ---
-title: データベース エンジンの非推奨の機能 | Microsoft Docs
+title: SQL Server 2017 データベース エンジンの非推奨の機能 | Microsoft Docs
 titleSuffix: SQL Server 2019
 description: SQL Server 2017 (14.x) で引き続き使用できるデータベース エンジンの非推奨の機能について説明します。ただし、新しいアプリケーションではこれらを使用しないでください。
 ms.custom: seo-lt-2019
@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 33b12c2b68c067db1a47159c201f5cd04a9b1c45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ff7a91230daff2aab0e031fa2b87803e379921b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759136"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244081"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 データベース エンジンの非推奨の機能
 
@@ -127,7 +127,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | **timestamp** データ型の **rowversion** 構文 | **rowversion** データ型の構文 | timestamp |
 | **timestamp** 列に null 値を挿入する機能 | 代わりに DEFAULT を使用してください。 | TIMESTAMP 列への INSERT NULL |
 | 'text in row' テーブル オプション|**varchar(max)** 、**nvarchar(max)** 、および **varbinary(max)** データ型を使用してください。 詳細については、「[sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)」を参照してください。|Text in row テーブル オプション |
-| データ型:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|**varchar(max)** 、**nvarchar(max)** 、および **varbinary(max)** データ型を使用してください。|データ型: **text**、 **ntext** 、または **image** |
+| データ型:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|**varchar(max)** 、**nvarchar(max)** 、および **varbinary(max)** データ型を使用してください。|データ型 : **text**、**ntext**、または **image** |
 
 ### <a name="database-management"></a>データベースの管理
 

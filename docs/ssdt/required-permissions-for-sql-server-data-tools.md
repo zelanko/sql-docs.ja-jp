@@ -1,5 +1,6 @@
 ---
 title: 必要なアクセス許可
+description: データベースの作成、単体テストの実行、スキーマの比較など、SQL Server Data Tools のさまざまなタスクに必要なアクセス許可について説明します。
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.prod: sql
@@ -8,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
-ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5637af0406176ba8099038eaa8a2500d2f03629e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256992"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243723"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>SQL Server Data Tools に必要な権限
 
@@ -38,9 +38,8 @@ Visual Studio でデータベースに対してアクションを実行する前
 ## <a name="permissions-to-create-or-deploy-a-database"></a><a name="DatabaseCreationAndDeploymentPermissions"></a>データベースを作成または配置する権限  
 データベースを作成または配置するには、次の権限が必要です。  
   
-|||  
+|Actions|必要なアクセス許可|  
 |-|-|  
-|アクション|必要なアクセス許可|  
 |データベースのオブジェクトと設定をインポートする|ソース データベースに接続できる必要があります。<br /><br />ソース データベースが SQL Server 2005 に基づいている場合、各オブジェクトに対する **VIEW DEFINITION** 権限も必要です。<br /><br />ソース データベースが SQL Server 2008 以降に基づいている場合、各オブジェクトに対する **VIEW DEFINITION** 権限も必要です。 ログインには、(データベース暗号化キーに対する) **VIEW SERVER STATE** 権限が必要です。|  
 |サーバーのオブジェクトと設定をインポートする|指定されたサーバー上の master データベースに接続できる必要があります。<br /><br />サーバーで SQL Server 2005 が実行されている場合、サーバーに対する **VIEW ANY DEFINITION** 権限が必要です。<br /><br />ソース データベースが SQL Server 2008 以降に基づいている場合、サーバーに対する **VIEW ANY DEFINITION** 権限が必要です。 ログインには、(データベース暗号化キーに対する) **VIEW SERVER STATE** 権限が必要です。|  
 |データベース プロジェクトを作成または更新する|データベース プロジェクトを作成または変更するには、データベースの権限は不要です。|  
@@ -57,9 +56,8 @@ Visual Studio でデータベースに対してアクションを実行する前
 ## <a name="permissions-to-perform-unit-testing-on-a-sql-server-database"></a><a name="DatabaseUnitTestingPermissions"></a>SQL Server データベースで単体テストを実行する権限  
 データベースで単体テストを実行するには、次の権限が必要です。  
   
-|||  
-|-|-|  
-|アクション|必要なアクセス許可|  
+|Actions|必要なアクセス許可|  
+|-|-|   
 |テスト アクションを実行する|実行コンテキストのデータベース接続を使用する必要があります。 詳細については、「[接続文字列とアクセス許可の概要](../ssdt/overview-of-connection-strings-and-permissions.md)」を参照してください。|  
 |事前テスト アクションまたは事後テスト アクションを実行する|特権コンテキストのデータベース接続を使用する必要があります。 このデータベース接続では、実行コンテキスト接続よりも多くの権限が認められます。|  
 |TestInitialize スクリプトと TestCleanup スクリプトを実行する|特権コンテキストのデータベース接続を使用する必要があります。|  
@@ -72,9 +70,8 @@ Visual Studio でデータベースに対してアクションを実行する前
 ## <a name="permissions-to-compare-schemas-and-data"></a><a name="SchemaAndDataComparePermissions"></a>スキーマとデータを比較する権限  
 スキーマまたはデータを比較するには、次の権限が必要です。  
   
-|||  
-|-|-|  
-|アクション|必要なアクセス許可|  
+|Actions|必要なアクセス許可|  
+|-|-|   
 |2 つのデータベースのスキーマを比較する|データベースからオブジェクトと設定をインポートするための権限が必要です (「[データベースを作成または配置する権限](#DatabaseCreationAndDeploymentPermissions)」を参照してください)。|  
 |データベースとデータベース プロジェクトのスキーマを比較する|データベースからオブジェクトと設定をインポートするための権限が必要です (「[データベースを作成または配置する権限](#DatabaseCreationAndDeploymentPermissions)」を参照してください)。 また、Visual Studio でデータベース プロジェクトを開いておくことも必要です。|  
 |ターゲット データベースに更新を書き込む|ターゲット データベースに更新を配置するための権限が必要です (「[データベースを作成または配置する権限](#DatabaseCreationAndDeploymentPermissions)」を参照してください)。|  
@@ -88,7 +85,7 @@ Transact\-SQL エディター内で実行できる操作は、ターゲット �
 ## <a name="permissions-for-sql-server-common-language-run-time-projects"></a><a name="SQLCLRPermissions"></a>SQL Server 共通言語ランタイム (SQL CLR) プロジェクトに対する権限  
 CLR プロジェクトを配置またはデバッグするために必要な権限を次の表に示します。  
   
-|アクション|必要なアクセス許可|  
+|Actions|必要なアクセス許可|  
 |-----------|------------------------|  
 |SAFE 権限セットのアセンブリを配置する (初期または増分)|db_DDLAdmin - 配置するアセンブリとオブジェクトの種類に対する CREATE 権限と ALTER 権限が付与されます。<br /><br />データベース レベルの VIEW DEFINITION - 配置するために必要です。<br /><br />データベース レベルの CONNECT - データベースに接続する権限が付与されます。|  
 |external_access 権限セットのアセンブリを配置する|db_DDLAdmin - 配置するアセンブリとオブジェクトの種類に対する CREATE 権限と ALTER 権限が付与されます。<br /><br />データベース レベルの VIEW DEFINITION - 配置するために必要です。<br /><br />データベース レベルの CONNECT - データベースに接続する権限が付与されます。<br /><br />さらに、次のことも必要です。<br /><br />TRUSTWORTHY データベース オプションが ON に設定されている。<br /><br />配置に使用するログインが EXTERNAL ACCESS ASSEMBLY サーバー権限を持っている。|  

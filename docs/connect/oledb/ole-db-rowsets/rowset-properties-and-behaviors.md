@@ -1,5 +1,5 @@
 ---
-title: 行セットのプロパティと動作 | Microsoft Docs
+title: 行セットのプロパティと動作 (OLE DB ドライバー)
 description: OLE DB Driver for SQL Server の行セットのプロパティと動作
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 1e2fff64739942539fd4fc34c736e32578555f93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e541289c5ae71a7289cd005ba03ca2f886fc0bb7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015351"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244180"
 ---
 # <a name="rowset-properties-and-behaviors"></a>行セットのプロパティと動作
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

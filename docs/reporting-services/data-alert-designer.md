@@ -1,5 +1,6 @@
 ---
 title: データ警告デザイナー | Microsoft Docs
+description: データ警告定義と、データ警告デザイナーでデータ警告定義を作成および編集する方法について説明します。
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0d166462c2a542d834e92da03735e6e8294290d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571593"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243304"
 ---
 # <a name="data-alert-designer"></a>データ警告デザイナー
 
@@ -170,7 +171,7 @@ ms.locfileid: "65571593"
 ### <a name="email-settings"></a>電子メールの設定  
  電子メールでデータ警告メッセージを受信する受信者の電子メール アドレスは、 **[受信者]** オプションで指定します。 Microsoft Office Outlook の電子メール メッセージと同じように、複数の電子メール アドレスはセミコロンで区切ります。 配布グループを受信者として指定することもできます。これにより、受信者の一覧をより簡単かつ効率的に管理できます。 警告定義の作成時に、作成者の電子メール アドレスを SharePoint が取得できた場合は、そのアドレスが受信者リストに自動的に追加されますが、それ以外の場合は自分自身を受信者として明示的に追加する必要があります。  
   
- 電子メールの既定の件名は、" **\<警告名> に関するデータの警告**" です。 件名は必要に応じて変更できます。  
+ 電子メールの既定の件名は、「 **\<alert name> に関するデータの警告**」です。 件名は必要に応じて変更できます。  
   
  **[説明]** オプションで、データ警告メッセージに含める説明を入力することもできます。 説明は、似たようなデータ警告がある場合などに、警告メッセージをすばやく区別したり、内容をすばやく理解するのに役立ちます。 レポート データが指定のルールに合致した場合に送信される警告メッセージに加えて、エラーが発生した際には、すべての受信者に警告メッセージが送信されます。 詳細については、「 [Data Alert Messages](../reporting-services/data-alert-messages.md)」を参照してください。  
   
