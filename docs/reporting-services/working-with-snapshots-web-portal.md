@@ -1,5 +1,6 @@
 ---
 title: スナップショットの操作 (Web ポータル) | Microsoft Docs
+description: キャッシュ スナップショットを作成して、特定の実行プロパティの読み込み速度を高めます。 また、履歴スナップショットで特定の時点をキャプチャすることもできます。
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 698c78dced26e7981fb7a651c22530909427b796
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ad3a09d742e18a3f9ab7ed304433fc1b59ce1fc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68222566"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247421"
 ---
 # <a name="working-with-snapshots-web-portal"></a>スナップショットの操作 (Web ポータル)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-レポートに対するスナップショットの作成を制御するには、レポートの **参照ボタン ([...])** 、 **[管理]** と選択し、 **[キャッシュ]** または **[履歴スナップショット]** を選択します。  
+レポートに対するスナップショットの作成を制御するには、レポートの **参照ボタン ([...])**、**[管理]** と選択し、**[キャッシュ]** または **[履歴スナップショット]** を選択します。  
   
 > [!NOTE]
 > SQL Server エージェント サービスを開始する必要があります。  

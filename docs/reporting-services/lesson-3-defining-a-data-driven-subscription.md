@@ -1,5 +1,6 @@
 ---
 title: 'レッスン 3 : データ ドリブン サブスクリプションの定義 | Microsoft Docs'
+description: Reporting Services Web ポータルのデータ ドリブン サブスクリプション ページを使用して、サブスクリプション データ ソースに接続したり、サブスクリプション データを取得するクエリを作成したりします。
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 332a1cbcda7bee87c16167179ef488fe02334474
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66826857"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247181"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>レッスン 3: データ ドリブン サブスクリプションの定義
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>レッスン 3:データ ドリブン サブスクリプションの定義
 この [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] チュートリアル レッスンでは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web ポータルのデータ ドリブン サブスクリプション ページを使って、サブスクリプション データ ソースへの接続、サブスクリプション データを取得するクエリの作成、レポートと配信オプションへの結果セットのマッピングを行います。  
   
 > [!NOTE]  
 > 開始する前に、 **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント** サービスが実行されていることを確認します。 実行されていない場合は、サブスクリプションを保存できません。  検証する方法の 1 つは、[SQL Server 構成マネージャー](../relational-databases/sql-server-configuration-manager.md)を起動することです。
-このレッスンを行うには、レッスン 1 とレッスン 2 を完了していることと、レポート データ ソースに、保存された資格情報が使用されていることが必要です。  詳細については、「 [レッスン 2: レポート データ ソースのプロパティの変更](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)」を参照してください。  
+このレッスンを行うには、レッスン 1 とレッスン 2 を完了していることと、レポート データ ソースに、保存された資格情報が使用されていることが必要です。  詳細については、「[レッスン 2: レポート データ ソースのプロパティの変更](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)」を参照してください  
   
 ## <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>データ ドリブン サブスクリプション ウィザードの開始  
   
@@ -33,7 +34,7 @@ ms.locfileid: "66826857"
 ## <a name="define-a-description"></a>説明の定義  
 1.  説明に「 **Sales Order delivery** 」と入力します。
 
-## <a name="type"></a>種類
+## <a name="type"></a>Type
 1.  **[データ ドリブン サブスクリプション]** をクリックします。  
 
 ## <a name="schedule"></a>スケジュール
@@ -44,7 +45,7 @@ ms.locfileid: "66826857"
 5. **[開始日および終了日]** を指定します。
 6. **[適用]** を選択します。
 
-## <a name="destination"></a>宛先  
+## <a name="destination"></a>到着地  
 1.  [転送先] セクションで、配信方法に対して **[Windows ファイル共有]** を選択します。  
 
 ## <a name="dataset"></a>データセット
@@ -57,7 +58,7 @@ ms.locfileid: "66826857"
     data source=localhost; initial catalog=Subscribers
     ```
     
-## <a name="credentials"></a>[資格情報]
+## <a name="credentials"></a>資格情報
 1. **[次の資格情報を使用する]** を選択します。
 2. **[Windows ユーザー名とパスワード]** を選択します。
 3.  **[ユーザー名]** と **[パスワード]** に、ドメイン ユーザー名とパスワードを入力します。 **[ユーザー名]** には、ドメインとユーザー アカウントの両方を指定します。
@@ -82,11 +83,11 @@ ms.locfileid: "66826857"
 パラメーター  |値のソース  | 値/フィールド  
 ---------|---------|---------
 **[ファイル名]**     |データセットから値を取得 | Order     
-**[パス]**     | 値を入力  | [値] に、書き込み権限のあるパブリック ファイル共有の名前を入力します (例: `\\mycomputer\public\myreports`)。 
+**パス**     | 値を入力  | [値] に、書き込み権限のあるパブリック ファイル共有の名前を入力します (例: `\\mycomputer\public\myreports`)。 
 **レンダリング フォーマット** | データセットから値を取得 | Format
 **[書き込みモード]**| 値を入力| 自動増分    
 **ファイル拡張子** |値を入力 |True
-**ユーザー名** | 値を入力 | ドメイン ユーザー アカウントを入力します。 \<ドメイン>\\\<アカウント> の形式で入力します。 ユーザー アカウントには、構成したパスに対する権限が必要です。 
+**ユーザー名** | 値を入力 | ドメイン ユーザー アカウントを入力します。 \<domain>\\\<account> の形式で入力してください。 ユーザー アカウントには、構成したパスに対する権限が必要です。 
 **パスワード** | 値を入力 | パスワードを入力
 **ファイル共有アカウントを使用する** | 値を入力 | False
 

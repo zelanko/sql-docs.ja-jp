@@ -1,5 +1,6 @@
 ---
 title: チュートリアル:自由形式のレポートの作成 (レポート ビルダー) | Microsoft Docs
+description: ニュースレターとして機能し、各ページに静的テキスト、概要ビジュアル、詳細なサンプル売上データが表示される、ページ分割されたレポートを作成する方法について説明します。
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b189c494f887faca2b6d3d4bb00253992470132
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499565"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247461"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>チュートリアル:自由形式のレポートの作成 (レポート ビルダー)
 このチュートリアルでは、ニュースレターとして機能する、ページ分割されたレポートを作成します。 各ページには、固定テキスト、概要ビジュアル、詳細サンプル セールス データが表示されます。
@@ -215,7 +216,7 @@ ms.locfileid: "66499565"
     *  **20 pt**
     *  **トマト**  
   
-9. 手順 3 で入力したテキストの下にカーソルを置いて、次のように入力します。**Hello**。この単語の後にスペースを入れ、次の手順で追加するフィールドとテキストを分離します。  
+9. 手順 3 で入力したテキストの下にカーソルを置き、「 **Hello** 」と入力します。「Hello」の後にスペースを入力し、次の手順で追加するフィールドとテキストを分離します。  
  
 10. [レポート データ] ペインの ListDataSet からテキスト ボックスに `[FullName]` フィールドをドラッグし、"Hello " の後に置きます。それからコンマ (,) を入力します。  
    
@@ -244,7 +245,7 @@ ms.locfileid: "66499565"
       *  **10 pt**
       *  **黒**  
  
-20. テキスト ボックス内にカーソルを合わせ、意味のないテキストの下に「**Congratulations on your total sales of**」と入力します。この後にスペースを入れ、次の手順で追加するフィールドとテキストを分離します。 
+20. テキスト ボックスの中にカーソルを置き、意味のないテキストの下に「 **Congratulations on your total sales of**」と入力します。この文章の後にスペースを入力し、次の手順で追加するフィールドとテキストを分離します。 
   
 21. Sales フィールドをテキスト ボックスにドラッグし、前の手順で入力したテキストの後に配置し、感嘆符 (!) を入力します。  
 

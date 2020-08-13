@@ -2,7 +2,7 @@
 title: データベースのファイルの瞬時初期化
 description: ファイルの瞬時初期化と、それを SQL Server データベースで有効にする方法について説明します。
 ms.custom: contperfq4
-ms.date: 05/30/2020
+ms.date: 07/24/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a10e6f9cff886b18b8bc344270516aaf2b5577db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20b182186244221c0f8cea2dda86d8f6a269cd50
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756255"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246584"
 ---
 # <a name="database-instant-file-initialization"></a>データベースのファイルの瞬時初期化
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,6 +37,7 @@ ms.locfileid: "85756255"
 - データベースまたはファイル グループの復元。  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ファイルの瞬時初期化 (IFI) によって、前述のファイル操作を高速に実行できます。これは、使用されているディスク領域をゼロで埋めることなく再利用するためです。 代わりに、新しいデータがファイルに書き込まれるときに、ディスクの内容が上書きされます。 ログ ファイルを瞬時に初期化することはできません。
+
 
 ## <a name="enable-instant-file-initialization"></a>ファイルの瞬時初期化の有効化
 
@@ -99,5 +100,29 @@ ms.locfileid: "85756255"
     > [!NOTE]
     > 無効化により、データ ファイルの割り当て時間が増加します。これは、ユーザー権限が禁止された後で作成またはサイズ増加されたファイルのみに影響します。
   
+### <a name="se_manage_volume_name-user-right"></a>SE_MANAGE_VOLUME_NAME ユーザー権限
+
+*SE_MANAGE_VOLUME_NAME* ユーザー特権は、**Windows 管理ツール**、**ローカル セキュリティ ポリシー** アプレットで割り当てることができます。 **[ローカル ポリシー]** で **[User Right Assignment]** \(ユーザー権限の割り当て\) を選択し、 **[ボリュームの保守タスクを実行]** プロパティを変更します。
+
+## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項
+
+データベース ファイルの初期化プロセスでは、初期化中にファイルの新しい領域にゼロが書き込まれます。 このプロセスの実行時間は、初期化されるファイル部分のサイズと、ストレージ システムの応答時間と容量によって異なります。 初期化に時間がかかる場合は、SQL Server Errorlog とアプリケーション ログに次のメッセージが記録されている可能性があります。
+
+```
+Msg 5144
+Autogrow of file '%.*ls' in database '%.*ls' was cancelled by user or timed out after %d milliseconds.  Use ALTER DATABASE to set a smaller FILEGROWTH value for this file or to explicitly set a new file size.
+```
+
+```
+Msg 5145
+Autogrow of file '%.*ls' in database '%.*ls' took %d milliseconds.  Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file.
+```
+
+データベースやトランザクション ログ ファイルの長い自動拡張によって、クエリ パフォーマンスの問題が発生する可能性があります。 これは、ファイルの自動拡張を必要とする操作が、ファイルの拡張操作中にロックやラッチなどのリソースに対して保持されるためです。 割り当てページのラッチで長い待機が発生する場合があります。 長い自動拡張を必要とする操作では、PREEMPTIVE_OS_WRITEFILEGATHER の待機の種類が表示されます。
+
+
+
+
+
 ## <a name="see-also"></a>参照  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)

@@ -1,5 +1,6 @@
 ---
 title: HTML デバイス情報設定 | Microsoft Docs
+description: HTML 形式で表示できるさまざまなデバイス情報設定について説明します。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c0d477364c4920e8220aef96629b24e34650ebb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6d86394f22eabb73c055329b2ad583f589b45ea8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503101"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247191"
 ---
 # <a name="html-device-information-settings"></a>HTML デバイス情報設定
 次の表は、HTML 形式で表示するデバイス情報設定を示しています。  
@@ -44,7 +45,7 @@ ms.locfileid: "65503101"
 |**ReplacementRoot(\*)**|ReportViewer コントロールの外部に表示する場合、レポートのすべてのドリルスルー、トグル、およびブックマークのリンクの先頭に追加する文字列。 たとえば、ユーザーのクリックをカスタム ページにリダイレクトするために使用されます。|  
 |**ResourceStreamRoot(\*)**|切り替えや並べ替え用の画像など、すべての画像リソースの URL の先頭に追加する文字列。|  
 |**セクション**|表示するレポートのページ番号。 **0** の値は、レポートのすべてのセクションが表示されることを示します。 既定値は **1**です。|  
-|**StreamRoot (\*)**|レポート サーバーが返す HTML レポートで IMG 要素の **src** 属性の値の前に付けるパス。 既定では、レポート サーバーがパスを提供します。 この設定を使用して、レポートの画像のルート パスを指定できます (たとえば、**https://\<サーバー名>/resources/companyimages**)。|  
+|**StreamRoot (\*)**|レポート サーバーが返す HTML レポートで IMG 要素の **src** 属性の値の前に付けるパス。 既定では、レポート サーバーがパスを提供します。 この設定を使用して、レポートの画像のルート パスを指定できます (たとえば、**https://\<servername>/resources/companyimages**)。|  
 |**StyleStream**|スタイルとスクリプトがドキュメント内ではなく、異なるストリームとして作成されるかどうかを示します。 既定値は **false** です。|  
 |**ツール バー**|ツール バーを表示するか非表示にするかを示します。 このパラメーターの既定値は **true**です。 このパラメーターの値が **false**である場合は、残りのオプション (ドキュメント マップを除く) すべてが無視されます。 このパラメーターを省略すると、サポートされている表示形式でツール バーが自動的に表示されます。<br /><br /> URL アクセスを使用してレポートを表示すると、レポート ビューアー ツール バーが表示されます。 ツール バーは SOAP API によっては表示されません。 しかし、 **Toolbar** デバイス情報設定は、SOAP の **Render** メソッドを使用したときにレポートの表示に反映されます。 SOAP を使用して HTML を表示するときにこのパラメーターの値が **true** である場合、レポートの最初のセクションのみが表示されます。 値が **false**である場合、HTML レポート全体が単一の HTML ページとして表示されます。|  
 |**UserAgent**|要求元ブラウザーの **user-agent** 文字列。HTTP 要求に含まれています。|  

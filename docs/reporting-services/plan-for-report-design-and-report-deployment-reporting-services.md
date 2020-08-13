@@ -1,5 +1,6 @@
 ---
 title: レポート デザインとレポートの展開の計画 |Reporting Services | Microsoft Docs
+description: Reporting Services を使用して、レポートの作成とレポート サーバーを併用する環境を計画する方法について説明します。
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8921fa3e19ca9de4184af907ee1aac59bd82f824
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581244"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247541"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>レポート デザインとレポート配置の計画 | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、ページ分割されたレポートの作成と配置に関していくつかのアプローチが用意されています。 レポートの作成とレポート サーバーを併用する環境を計画する方法について説明します。
@@ -46,19 +47,19 @@ ms.locfileid: "65581244"
 ##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> レポート サーバーと RDL スキーマのサポート  
  レポート定義ファイルは、次の方法で [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] レポート サーバーに配置できます。  
   
--   **レポート デザイナー:** [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]のレポート デザイナーからレポートを配置する。  
+-   **レポート デザイナー:** [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] のレポート デザイナーからレポートを展開します。  
   
--   **レポート ビルダー:** レポート ビルダーからレポート サーバーにレポートを保存する。  
+-   **レポート ビルダー:** レポート ビルダーからレポート サーバーにレポートを保存します。  
   
--   **Web ポータル:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]からネイティブ モード レポート サーバーにレポートをアップロードします。  
+-   **Web ポータル:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] からネイティブ モード レポート サーバーにレポートをアップロードします。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
--   **SharePoint:** SharePoint モード レポート サーバーで構成された SharePoint サイトにレポートをアップロードする。  
+-   **SharePoint:** SharePoint モード レポート サーバーで構成された SharePoint サイトにレポートをアップロードします。  
 
 ::: moniker-end
   
--   **プログラムから:** プログラムから SOAP API インターフェイスを使用してレポート サーバーにレポートをパブリッシュする。 詳細については、「 [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)」を参照してください。  
+-   **プログラムを使用する:** プログラムから SOAP API インターフェイスを使用してレポート サーバーにレポートを発行します。 詳細については、「 [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)」を参照してください。  
   
  次の表は、サポートされる RDL スキーマのバージョンをレポート サーバーのバージョン別に示したものです。  
   

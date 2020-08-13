@@ -1,6 +1,6 @@
 ---
 title: レッスン 3:テーブル レポートのデータセットを定義する | Microsoft Docs
-description: ページ分割されたレポートのデータ ソースを定義したら、データセットを定義する必要があります。 SQL Server Reporting Services では、レポートで使用するデータはデータセットに格納されます。
+description: このレッスンでは、SQL Server Reporting Services (SSRS) でテーブル レポートのデータセットを定義する方法について説明します。
 ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25c62e0cd615748a764937d6dc2b8e4c952e59a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 272787e124616593c90483735afec702f5d4fb18
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244312"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247551"
 ---
 # <a name="lesson-3-define-a-dataset-for-the-table-report---sql-server-reporting-services"></a>レッスン 3:テーブル レポートのデータセットを定義する - SQL Server Reporting Services
 

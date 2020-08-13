@@ -1,5 +1,6 @@
 ---
 title: 基本的なテーブル レポートの作成 (SSRS チュートリアル) | Microsoft Docs
+description: Visual Studio/SQL Server Data Tools (SSDT) のレポート デザイナー ツールを使用して、SQL Server Reporting Services (SSRS) のページ分割されたレポートを作成します。
 ms.date: 04/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: af41da75d553794019f1d01c8b8f5bb6aba80622
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1549d3ba775d598902fd0fd4b5cc33bab2f54de
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65103312"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245141"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>基本的なテーブル レポートの作成 (SSRS チュートリアル)
 
@@ -49,18 +50,18 @@ AdventureWorks2016 データベースからデータを取得するには読み�
 
 ## <a name="next-steps"></a>次のステップ
 
-[レッスン 1: レポート サーバー プロジェクトの作成 (Reporting Services)](lesson-1-creating-a-report-server-project-reporting-services.md)
+[レッスン 1:レポート サーバー プロジェクトの作成 &#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)
 
-[レッスン 2: 接続情報の指定 (Reporting Services)](lesson-2-specifying-connection-information-reporting-services.md)
+[レッスン 2:接続情報の指定 &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)
 
-[レッスン 3: テーブル レポートのデータセットの定義 (Reporting Services)](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)
+[レッスン 3:テーブル レポートのデータセットの定義 &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)
 
-[レッスン 4: レポートへのテーブルの追加 (Reporting Services)](lesson-4-adding-a-table-to-the-report-reporting-services.md)
+[レッスン 4:レポートへのテーブルの追加 &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)
 
-[レッスン 5: レポートの書式設定 (Reporting Services)](lesson-5-formatting-a-report-reporting-services.md)
+[レッスン 5: レポートの書式設定 &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)
 
-[レッスン 6: グループと合計の追加 (Reporting Services)](lesson-6-adding-grouping-and-totals-reporting-services.md)
+[レッスン 6:グループと合計の追加 &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Reporting Services チュートリアル](reporting-services-tutorials-ssrs.md) その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,6 @@
 ---
 title: 画像デバイス情報設定 | Microsoft Docs
+description: Reporting Services において画像形式でレンダリングするために使用できるさまざまなデバイス情報設定について説明します。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 295784ba9f2c14ce0f73f9639ec6ed129e447e76
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 57126e2ab47493b2f320308344acf9d15b572318
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503080"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247171"
 ---
 # <a name="image-device-information-settings"></a>画像デバイス情報設定
   次の表は、IMAGE 形式で表示するためのデバイス情報設定を示しています。  
@@ -32,7 +33,7 @@ ms.locfileid: "65503080"
 |**MarginLeft**|レポートに設定する左余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、 **1in**)。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**MarginRight**|レポートに設定する右余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、 **1in**)。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**MarginTop**|レポートに設定する上余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、 **1in**)。 この値により、レポートの元の設定はオーバーライドされます。|  
-|**OutputFormat**|[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) でサポートされるいずれかの出力形式。 **BMP**、 **EMF**、 **GIF**、 **JPEG**、 **PNG**、または **TIFF**です。|  
+|**OutputFormat**|[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) でサポートされる次の出力形式のいずれか。**BMP**、**EMF**、**GIF**、**JPEG**、**PNG**、または **TIFF**。|  
 |**PageHeight**|レポートに設定するページの高さ (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、 **11in**)。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**PageWidth**|レポートに設定するページの幅 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、 **8.5in**)。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**PrintDpiX**|出力画像の水平方向の解像度。 既定値は、 **300**です。 拡張メタファイル (**EMF**) 出力形式に適用されます。|  

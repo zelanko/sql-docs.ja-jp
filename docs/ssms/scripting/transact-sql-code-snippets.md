@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL コード スニペット
+description: Transact-SQL コード スニペットを使用して、コードの記述を支援できます。 スニペット タスクについて説明する記事へのリンクを含むスニペット タスクの一覧については、こちらを参照してください。
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -10,16 +11,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aed4261773b7a7b6e539a60000d1b0748aca2602
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b2986e68cf58afaab0d0254f29ca6b0124af126
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243364"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246221"
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL コード スニペット
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)]コード スニペットは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のステートメントまたはブロックの基本構造を含んだテンプレートです。 スニペットは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでステートメントを追加する際のひな形として使用できます。 SQL Server に付属の定義済みのスニペットを挿入できるほか、独自のスニペットを作成することもできます。  
 

@@ -1,5 +1,6 @@
 ---
 title: チュートリアル:レポートへのパラメーターの追加 (レポート ビルダー) | Microsoft Docs
+description: Reporting Services のページ分割されたレポートにパラメーターを追加し、レポート閲覧者が 1 つまたは複数の値でレポート データをフィルター処理できるようにします。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd5fab649fc481bdb91b42c34be33f5976b5af93
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72252139"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245679"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>チュートリアル:レポートへのパラメーターの追加 (レポート ビルダー)
 このチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートにパラメーターを追加し、レポート閲覧者が 1 つまたは複数の値でレポート データをフィルター処理できるようにします。 
@@ -23,7 +24,7 @@ ms.locfileid: "72252139"
 レポート パラメーターは、データセット クエリに追加したクエリ パラメーターごとに自動で作成されます。 パラメーターのデータ型により、パラメーターがレポート ビューアー ツール バーに表示される方法が決まります。 
    
 > [!NOTE]  
-> このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、およびデータセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアルである「[チュートリアル:基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
+> このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
   
 このチュートリアルの推定所要時間:25 分。  
   
@@ -82,7 +83,7 @@ ms.locfileid: "72252139"
   
 11. クエリ デザイナーのツール バーで、 **[実行]** ( **!** ) をクリックしてデータを表示します。   
   
-    結果セットは、次の列で、4 店舗のサブカテゴリごとの販売済み商品数量を示す 11 行のデータで構成されます:StoreID、Subcategory、Quantity。店舗名は結果セットに含まれません。 このチュートリアルで後ほど、店舗 ID に対応する店舗の名前を別のデータセットから参照します。  
+    結果セットは StoreID 列、Subcategory 列、Quantity 列に、4 店舗のサブカテゴリごとの販売済み商品数量を示す 11 行のデータが表示されます。店舗名は結果セットには含まれません。 このチュートリアルで後ほど、店舗 ID に対応する店舗の名前を別のデータセットから参照します。  
   
     クエリ パラメーターは存在しません。 以降、このチュートリアルの中でクエリ パラメーターを追加していきます。   
   
@@ -179,7 +180,7 @@ ms.locfileid: "72252139"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  **[実行]** をクリックして、レポートをプレビューします。 レポート ビューアーには、*\@StoreID* の入力を求めるプロンプト **Store Identifier?** が表示されます。  
+6.  **[実行]** をクリックして、レポートをプレビューします。 レポート ビューアーには、 *\@StoreID* の入力を求めるプロンプト **Store Identifier?** が表示されます。  
   
 7.  レポート ビューアー ツール バーで、店舗 ID の横に「 **200**」と入力し、 **[レポートの表示]** をクリックします。  
   

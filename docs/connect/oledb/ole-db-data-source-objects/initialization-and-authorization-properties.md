@@ -1,8 +1,8 @@
 ---
-title: 初期化プロパティと承認プロパティ | Microsoft Docs
+title: 初期化プロパティと承認プロパティ (OLE DB ドライバー) | Microsoft Docs
 description: 初期化プロパティと承認プロパティ
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 01/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 28923ccb78e3edfa4de7b7e780195a643ec9914e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1a133b8b259b7746ff6f5e8750f31c5288c88aa9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72381874"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244959"
 ---
 # <a name="initialization-and-authorization-properties"></a>初期化プロパティと承認プロパティ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -69,10 +69,12 @@ ms.locfileid: "72381874"
 |SSPROP_INIT_FAILOVERPARTNER|型: VT_BSTR<br /><br /> R/W:読み取り/書き込み<br /><br /> 説明:データベース ミラーリングのフェールオーバー パートナーの名前を指定します。 これは、初期化プロパティで、初期化前にしか設定できません。 初期化後は、フェールオーバー パートナーが構成されている場合は、プライマリ サーバーから返されたフェールオーバー パートナー名を返します。<br /><br /> これにより、アプリケーションでは最後に判別したバックアップ サーバーをキャッシュできますが、この情報は最初に接続が確立されたとき (接続がプールされている場合はリセットされたとき) にのみ更新されることに注意する必要があります。接続が長期にわたると、この情報は古くなることがあります。<br /><br /> 接続後は、アプリケーションでこの属性をクエリすることにより、フェールオーバー パートナーの ID を判別できます。 プライマリ サーバーのフェールオーバー パートナーが存在しないと、この属性は空文字列を返します。 詳細については、「[データベース ミラーリングの使用](../../oledb/features/using-database-mirroring.md)」を参照してください。|  
 |SSPROP_INIT_FILENAME|型: VT_BSTR<br /><br /> R/W:読み取り/書き込み<br /><br /> 説明:アタッチできるデータベースのプライマリ ファイル名を指定します。 このデータベースがアタッチされ、接続の既定のデータベースとして使用されます。 SSPROP_INIT_FILENAME を使用するには、初期化プロパティ DBPROP_INIT_CATALOG の値にデータベース名を指定する必要があります。 指定したデータベース名が存在しない場合は、SSPROP_INIT_FILENAME に指定されているプライマリ ファイル名を確認し、そのデータベースと DBPROP_INIT_CATALOG に指定されている名前とをアタッチします。 データベースが以前にアタッチされていた場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はこれを再アタッチしません。|  
 |SSPROP_INIT_MARSCONNECTION|型: VT_BOOL<br /><br /> R/W:読み取り/書き込み<br /><br /> 既定値はVARIANT_FALSE<br /><br /> 説明:複数のアクティブな結果セット (MARS) が接続で有効かどうかを指定します。 このオプションは、データベースへの接続が確立される前に、TRUE に設定する必要があります。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../oledb/features/using-multiple-active-result-sets-mars.md)」を参照してください。|  
+|SSPROP_INIT_MULTISUBNETFAILOVER|型: VT_BOOL<br /><br /> R/W:読み取り/書き込み<br /><br/>既定値はVARIANT_FALSE<br /><br />説明:MultiSubnetFailover を使用することで、SQL Server のすべての Always On 可用性グループおよびフェールオーバー クラスター インスタンスに対して高速フェールオーバーが有効化され、単一サブネットおよびマルチサブネットの AlwaysOn トポロジにおけるフェールオーバー時間が大幅に短縮されます。 マルチサブネット フェールオーバーの際には、クライアントは複数の接続を並列で試行します。 詳細については、「[OLE DB Driver for SQL Server の高可用性、ディザスター リカバリーに関するサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)」を参照してください。|  
 |SSPROP_INIT_NETWORKADDRESS|型: VT_BSTR<br /><br /> R/W:読み取り/書き込み<br /><br /> 説明:DBPROP_INIT_DATASOURCE プロパティで指定されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを実行するサーバーのネットワーク アドレス。|  
 |SSPROP_INIT_NETWORKLIBRARY|型: VT_BSTR<br /><br /> R/W:読み取り/書き込み<br /><br /> 説明:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスとの通信に使われるネットワーク ライブラリ (DLL) の名前。 この名前には、パスやファイル拡張子 (.dll) は含めません。<br /><br /> 既定値は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クライアント構成ユーティリティを使用してカスタマイズできます。<br /><br /> 注:このプロパティでサポートされるのは、TCP および名前付きパイプのみです。 このプロパティにプレフィックスを使用した場合、プレフィックスが二重になりエラーが発生します。これは、内部でこのプロパティを使用してプレフィックスが生成されるためです。|  
-|SSPROP_INIT_PACKETSIZE|型: VT_I4<br /><br /> R/W:読み取り/書き込み<br /><br /> 説明:ネットワーク パケットのバイト単位のサイズ。 このパケット サイズ プロパティの値は 512 ～ 32,767 にする必要があります。 OLE DB Driver for SQL Server の既定のネットワーク パケット サイズは 4,096 です。|  
+|SSPROP_INIT_PACKETSIZE|型: VT_I4<br /><br /> R/W:読み取り/書き込み<br /><br /> 説明:バイト単位の表形式データ ストリーム (TDS) パケット サイズ。 このパケット サイズ プロパティの値は 0 または 512 から 32,767 の間にする必要があります。 既定値は 0 です。これは、実際のパケット サイズがサーバーによって決定されることを意味します。|  
 |SSPROP_INIT_TAGCOLUMNCOLLATION|型: BOOL<br /><br /> R/W:Write<br /><br /> 既定値はFALSE<br /><br /> 説明:サーバー側のカーソルが使用されているときに、データベースの更新中に使用されます。 このプロパティは、クライアントのコード ページではなく、サーバーから取得した照合順序情報を使用してデータにタグを付けます。 現在、このプロパティは、分散クエリ プロセスでしか使われていません。これは、分散クエリ プロセスでは変換先データの照合順序が認識されていて、データが適切に変換されるためです。|  
+|SSPROP_INIT_TNIR|型: VT_BOOL<br /><br /> R/W:読み取り/書き込み<br /><br/>既定値はVARIANT_TRUE<br /><br />説明:ホスト名に複数の IP が関連付けられている場合、ホスト名の最初に解決された IP が応答しないと、TNIR が接続シーケンスに影響を与えます。 TNIR では、MultiSubnetFailover と連動して、異なる接続シーケンスが提供されます。 詳しくは、「[透過的なネットワーク IP の解決の使用](../../oledb/features/using-transparent-network-ip-resolution.md)」をご覧ください。|  
 |SSPROP_INIT_TRUST_SERVER_CERTIFICATE<a href="#table1_1"><sup>**1**</sup></a>|型: VT_BOOL<br /><br /> R/W:読み取り/書き込み<br /><br /> 既定値はVARIANT_FALSE<br /><br /> 説明:サーバー証明書の検証の有効化または無効化に使用されます。 このプロパティは読み取り/書き込みですが、接続の確立後にこの値の設定が試みられると、エラーが発生します。<br /><br /> このプロパティは、クライアントが証明書の検証を要求するよう構成されている場合は、無視されます。 ただし、アプリケーションは、このプロパティを SSPROP_INIT_ENCRYPT と共に使用して、クライアントが暗号化を要求するよう構成されておらず、証明書がクライアント側に準備されていない場合でも、アプリケーションとサーバー間の接続が確実に暗号化されるようにすることができます。<br /><br /> クライアント アプリケーションでは、接続を開いた後にこの属性をクエリして、実際に使用されている暗号化と検証の設定を判断できます。<br /><br /> 注:証明書の検証なしで暗号化を使用する場合、パケット スニッフィングからは部分的に保護されますが、中間者攻撃からは保護されません。 この場合、サーバー証明書を検証せずに、サーバーに送られるログインとデータの暗号化が行われます。<br /><br /> 詳細については、「[検証を伴わない暗号化の使用](../../oledb/features/using-encryption-without-validation.md)」を参照してください。|  
 |SSPROP_INIT_USEPROCFORPREP|型: VT_I4<br /><br /> R/W:読み取り/書き込み<br /><br /> 既定値はSSPROPVAL_USEPROCFORPREP_ON<br /><br /> 説明:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ストアド プロシージャの使用。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の一時ストアド プロシージャを使用して **ICommandPrepare** インターフェイスをサポートすることを定義します。 このプロパティは SQL Server 6.5 に接続するときに限り意味がありました。 これ以降のバージョンでは、このプロパティは無視されます。<br /><br /> SSPROPVAL_USEPROCFORPREP_OFF:コマンドを準備するときに、一時ストアド プロシージャが作成されません。<br /><br /> SSPROPVAL_USEPROCFORPREP_ON:コマンドを準備するときに、一時ストアド プロシージャが作成されます。 セッションが解放されると、作成された一時ストアド プロシージャは削除されます。<br /><br /> SSPROPVAL_USEPROCFORPREP_ON_DROP:コマンドを準備するときに、一時ストアド プロシージャが作成されます。 コマンドが **ICommandPrepare::Unprepare** を使用して準備されていない場合、**ICommandText::SetCommandText** を使用してコマンド オブジェクトに新しいコマンドが指定されたとき、またはコマンドへのアプリケーション参照がすべて解放されたときに、プロシージャは削除されます。|  
 |SSPROP_INIT_WSID|型: VT_BSTR<br /><br /> R/W:読み取り/書き込み<br /><br /> 説明:ワークステーションを識別する文字列。|  

@@ -1,5 +1,6 @@
 ---
 title: ブレークポイントの切り替え
+description: ブレークポイントを切り替えて、関連付けられている Transact-SQL ステートメントを強調表示し、ステートメントに対してさまざまな操作 (編集など) を実行する方法について説明します。
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -11,16 +12,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 868e588d5ff2a60acbed41a729a8f1c3c1819b00
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 159834507edfc57466dc0872bf42e2976c4ca8cc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243417"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248071"
 ---
 # <a name="toggle-a-breakpoint"></a>ブレークポイントの切り替え
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント上でブレークポイントを設定することを、ブレークポイントの切り替えと呼びます。  
 

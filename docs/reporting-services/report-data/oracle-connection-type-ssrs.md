@@ -1,5 +1,6 @@
 ---
-title: Oracle の接続の種類 (レポート ビルダー、Power BI Report Server) | Microsoft Docs
+title: Oracle の接続の種類 (SSRS および Power BI Report Server)
+description: データ ソースを構築する方法については、この記事の Oracle の接続の種類に関する情報を参照してください。
 ms.date: 03/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 188e054487099e8db96ded6066b71ad09a49c762
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 32972e17c7dee83c1099cf8826eefe874db9d7dd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342732"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246481"
 ---
-# <a name="oracle-connection-type-report-builder--power-bi-report-server--microsoft-docs"></a>Oracle の接続の種類 (レポート ビルダー、Power BI Report Server) | Microsoft Docs
+# <a name="oracle-connection-type-ssrs--power-bi-report-server"></a>Oracle の接続の種類 (SSRS および Power BI Report Server)
 
 Oracle データベースのデータをレポート内で使用するには、種類が Oracle のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、Oracle Data Provider を直接使用し、Oracle クライアント ソフトウェア コンポーネントが必要です。 この記事では、Reporting Services、Power BI Report Server、レポート ビルダー、Power BI Desktop のドライバーをダウンロードしてインストールする方法について説明します。
 

@@ -1,20 +1,18 @@
 ---
 title: SQL ドキュメントのバージョン管理システム
-ms.date: 10/15/2019
+ms.date: 07/22/2020
 ms.prod: sql
-ms.technology: ''
-ms.custom: ''
+ms.technology: release-landing
 ms.topic: conceptual
-ms.reviewer: ''
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b343f34e0d7fdc30e2549095f5731d93e863414c
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 7ca82e29d32bfe2721baa619ec37d4c7576a0533
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150607"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247368"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL ドキュメントのバージョン管理システム
 
@@ -136,7 +134,7 @@ Web アドレスが `https://docs.microsoft.com/sql/` で始まっている記�
 
 記事の中には、SQL Server の複数のバージョンに関する情報が含まれるものがあります。 通常のすべてのモニカーでは、モニカーのバージョンについて正確でない、紛らわしい、または矛盾している情報が表示される可能性があるバージョン管理されたセクションは表示されません。 特別な **All SQL** モニカーでは、すべてのバージョンのセクションが表示され、不正確な情報が表示されていることが明らかでない場合があります。
 
-## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> メッセージ: リクエストされたページは \<モニカー\> で表示できません
+## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> メッセージ: 要求されたページは \<moniker\> で表示できません
 
 次のシナリオでは、:::no-loc text="Docs"::: Web ページの上部に情報メッセージが表示されます。
 
@@ -163,10 +161,11 @@ Web アドレスが `https://docs.microsoft.com/sql/` で始まっている記�
     - [SQL Server の以前のバージョン、2012 - 2005](../toc/previous-versions-sql-server.md)
 
 - _2014:_ &nbsp; バージョン管理システムは、SQL Server 2014 では半分実装されています。 バージョン管理コントロールで SQL Server 2014 を選択することができ、動作します。 ただし、内部的には、2008 のファイルが 2008 専用であるのと同じように、2014 のファイルは 2014 のみを対象としています。
-    - [SQL Server 2014 のドキュメント](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
+    - [SQL Server 2014 オフライン ドキュメント](/sql/sql-server/sql-server-offline-documentation)
 
 - _2016 以降:_ &nbsp; バージョン管理システムは、SQL Server バージョン 2016 以降のバージョンでは完全に実装されています。
     - [SQL Server 2016 以降のドキュメントへようこそ](/sql/sql-server/?view=sql-server-2016)
+    - [SQL Server 2016 オフライン ドキュメント](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>関連項目
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2964e02ad49ef21b61949da7eec2f48ede553b02
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b5f8da43f32319c45c94a8a6f82b012c4460e8e1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728442"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246387"
 ---
 # <a name="master-database"></a>master データベース
 
@@ -87,6 +87,7 @@ SQL Server と Azure SQL Database Managed Instance に向けた **master** デ�
 **master** データベースでは、次の操作は実行できません。  
   
 - ファイルまたはファイル グループの追加。  
+- バックアップ。master データベース上では、データベース全体のバックアップのみが可能です。
 - 照合順序の変更。 既定の照合順序はサーバーの照合順序です。  
 - データベース所有者の変更。 **master** は **sa**が所有します。  
 - フルテキスト カタログまたはフルテキスト インデックスの作成。  
@@ -100,7 +101,7 @@ SQL Server と Azure SQL Database Managed Instance に向けた **master** デ�
 - データベースの OFFLINE への設定。  
 - データベースまたはプライマリ ファイル グループの READ_ONLY への設定。  
   
-## <a name="recommendations"></a>Recommendations  
+## <a name="recommendations"></a>推奨事項  
 **master** データベースで作業を行っているときは、次の推奨設定を考慮してください。  
   
 - **master** データベースの現在のバックアップを、常に使用可能にする。  

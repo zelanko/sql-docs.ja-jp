@@ -1,5 +1,6 @@
 ---
 title: 'レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する | Microsoft Docs'
+description: Reporting Services を使用して、子レポートのデータ接続とデータ テーブルを作成する方法について説明します。
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d9be825b53cfab3601dc755b9122039669ce758
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80df8e86ed3d23c5ab097cdab3f26d83838c4544
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651362"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245121"
 ---
-# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する
+# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>レッスン 4:子レポートのデータ接続とデータ テーブルを定義する
 親レポートを設計した後は、子レポートのデータ接続とデータ テーブルを作成します。 このチュートリアルでは、データ接続先として AdventureWorks2014 データベースを使用します。  
   
 ### <a name="to-define-a-data-connection-and-datatable-by-adding-a-dataset-for-child-report"></a>DataSet を追加してデータ接続と DataTable を定義するには (子レポート用)  
@@ -42,7 +43,7 @@ ms.locfileid: "62651362"
   
     4.  **[OK]** を選択し、 **[次へ]** を選択します。  
   
-6.  手順 5. (b) で **[SQL Server 認証を使用する]** を選択した場合は、機密データを文字列に含めるか、またはその情報をアプリケーション コードで設定するかどうかを指定するオプションを選択します。  
+6.  手順 5. (b) で [ **SQL Server 認証を使用する** ] を選択した場合は、機密データを文字列に含めるか、またはその情報をアプリケーション コードで設定するかどうかを指定するオプションを選択します。  
   
 7.  **[接続文字列をアプリケーション構成ファイルに保存する]** ページで、接続文字列の名前を入力するか、既定値の **AdventureWorks2014ConnectionString**をそのまま使用します。 **[次へ]** を選択します。  
   
@@ -68,6 +69,6 @@ ms.locfileid: "62651362"
 12. データをプレビューするには、 **[データ]** メニューの **[データのプレビュー]** を選択し、 **[プレビュー]** を選択します。  
   
 ## <a name="next-task"></a>次の作業  
-これで、子レポートのデータ接続とデータ テーブルを作成できました。 次は、レポート ウィザードを使用して子レポートを設計します。 [「レッスン 5: レポート ウィザードを使用して子レポートを設計する」](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)を参照してください。  
+これで、子レポートのデータ接続とデータ テーブルを作成できました。 次は、レポート ウィザードを使用して子レポートを設計します。 「[レッスン 5:レポート ウィザードを使用して子レポートを設計する](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)」を参照してください。  
   
 

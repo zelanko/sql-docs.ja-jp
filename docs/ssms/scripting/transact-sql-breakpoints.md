@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL ブレークポイント
+description: デバッグ時に、必要に応じてブレークポイントを使用して実行を一時停止できます。 ブレークポイント タスクについて説明する記事へのリンクを含むブレークポイント タスクの一覧については、こちらを参照してください。
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,16 +14,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c31101eb201a55dffd100fb9365f7c29826fb5d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4013fea38f42ff997ebf07e74d3adee2c4896b45
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243403"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246184"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL ブレークポイント
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ブレークポイントは、特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーの実行の一時停止を指定し、その時点のコード要素の状態を確認できます。
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4ab8501b5b0753143ce5bfe2b289211729c35821
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28c1d78a4def2b3549957715c754e55b0d91e743
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765467"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246401"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable 内のディレクトリとパスの操作
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -93,12 +93,11 @@ GO
 ##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a> FileTable スキーマの is_directory 列  
  次の表に、 **is_directory** 列と、FileTable の FILESTREAM データを格納する **file_stream** 列との間のやり取りを示します。  
   
-||||  
-|-|-|-|  
-|*is_directory* **value**|*file_stream* **value**|**動作**|  
+|is_directory 値|file_stream 値|動作|  
+|-|-|-|    
 |FALSE|NULL|これは、システム定義の制約によってキャッチされる無効な組み合わせです。|  
 |FALSE|\<value>|アイテムはファイルを表します。|  
-|true|NULL|アイテムはディレクトリを表します。|  
+|TRUE|NULL|アイテムはディレクトリを表します。|  
 |TRUE|\<value>|これは、システム定義の制約によってキャッチされる無効な組み合わせです。|  
   
 ##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a> AlwaysOn 可用性グループでの仮想ネットワーク名 (VNN) の使用  

@@ -1,5 +1,6 @@
 ---
 title: URL アクセスを使用してレポートをエクスポートする | Microsoft Docs
+description: 'rs: Format URL パラメーターを使用してレポートを表示する形式を指定することによって、URL アクセスを使用してレポートをエクスポートする方法について説明します。'
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24cc4fbe1a1cadeeb9c2e94fe0da85fce24db8a6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c7a6907a20ecbfad89820c3afb792b50a7f2a6f8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571507"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247211"
 ---
 # <a name="export-a-report-using-url-access"></a>URL アクセスを使用してレポートをエクスポートする
   *rs:Format* URL パラメーターを使用すると、レポートを表示する形式を必要に応じて指定できます。  HTML4.0 および HTM5 (表示拡張機能) の場合は、ブラウザーにレンダリングされます。他の形式の場合は、レポート出力をローカル ファイルに保存するよう促すメッセージが表示されます。  

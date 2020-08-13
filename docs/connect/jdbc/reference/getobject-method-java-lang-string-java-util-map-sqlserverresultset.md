@@ -1,5 +1,5 @@
 ---
-title: getObject (java.lang.String, java.util.Map) メソッド | Microsoft Docs
+title: getObject (java.lang.String, java.util.Map) メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ apitype: Assembly
 ms.assetid: 8104406b-417d-4ff5-9aca-183ee0f76762
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 01998cb0542f63371d93cbb652c4b15bdf81d6b6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0a3c3b270e44c6b1ee6f703c3a3bd295d4601e66
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904922"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245063"
 ---
 # <a name="getobject-method-javalangstring-javautilmap-sqlserverresultset"></a>getObject (java.lang.String, java.util.Map) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

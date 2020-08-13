@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 9e50701d0486ee7bc00bf765d2a71cb4de0c0b25
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: cc030aa9036c67b1175a99ef01eab47099b8fc36
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196184"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247302"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos の接続性のトラブルシューティング
 
@@ -69,7 +69,7 @@ PolyBase には、Hadoop クラスターのプロパティを含む次の構成 
 
 これらのファイルは、次の場所にあります。
 
-`\[System Drive\]:{install path}\{instance}\{name}\MSSQL\Binn\PolyBase\Hadoop\conf`
+`\[System Drive\]:{install path}\{MSSQL##.INSTANCENAME}\MSSQL\Binn\PolyBase\Hadoop\conf`
 
 たとえば、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の既定値は `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf` です。
 
@@ -97,7 +97,7 @@ PolyBase には、Hadoop クラスターのプロパティを含む次の構成 
 ツールは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とは独立して実行されるため、構成 XML を更新する場合に、実行する必要はなく、再起動する必要もありません。 ツールを実行するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているホストで次のコマンドを実行します。
 
 ```cmd
-> cd C:\Program Files\Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
+> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
 > java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge {Name Node Address} {Name Node Port} {Service Principal} {Filepath containing Service Principal's Password} {Remote HDFS file path (optional)}
 ```
 
@@ -105,7 +105,7 @@ PolyBase には、Hadoop クラスターのプロパティを含む次の構成 
 
 | 引数 | 説明|
 | --- | --- |
-| *名前ノードのアドレス* | 名前ノードの IP または FQDN です。 CREATE EXTERNAL DATA SOURCE T-SQL の "LOCATION" 引数を参照します。|
+| *名前ノードのアドレス* | 名前ノードの IP または FQDN です。 CREATE EXTERNAL DATA SOURCE T-SQL の "LOCATION" 引数を参照します。 注:SQL Server 2019 バージョンのツールでは、IP または FQDN の前に *hdfs:\/\/* を指定する必要があります。|
 | *名前ノードのポート* | 名前ノードのポートです。 CREATE EXTERNAL DATA SOURCE T-SQL の "LOCATION" 引数を参照します。 例: 8020。 |
 | *サービス プリンシパル* | KDC に対する管理サービス プリンシパルです。 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL の "IDENTITY" 引数と一致します。|
 | *サービスのパスワード* | コンソールにパスワードを入力するのではなく、パスワードをファイルに保存し、そのファイルのパスをここに指定します。 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL で "SECRET" 引数として使用するプリンシパルと一致する必要があります。 |

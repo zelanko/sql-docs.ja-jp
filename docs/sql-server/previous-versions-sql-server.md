@@ -1,20 +1,20 @@
 ---
 title: 以前のバージョンの SQL Server ドキュメント
-description: オンラインおよびオフラインの SQL Server ドキュメントへのアクセス
+description: 2005、2008、2012、2014 など、以前のバージョンの SQL Server に関するオンラインおよびオフラインのドキュメントを取得する方法。
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.date: 05/08/2020
-monikerRange: =sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9b966a068e1ec95168754cf62d7610aee41b47bb
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.date: 07/24/2020
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9d2fd489c31ea140f747f90c50976b28f45f0045
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152104"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248089"
 ---
 # <a name="previous-versions-of-sql-server-documentation"></a>以前のバージョンの SQL Server ドキュメント
 
@@ -22,20 +22,18 @@ ms.locfileid: "83152104"
 
 ## <a name="online-documentation"></a>オンライン ドキュメント
 
-一部の以前のバージョンの Microsoft SQL Server には、オンライン ドキュメントがあります。
+SQL Server 2005 から 2014 のオンライン ドキュメントにアクセスするには、次のランディング ページを参照してください。
 
-- [2005 - 2012](https://docs.microsoft.com/previous-versions/sql/)
-- [2014](../2014/2014-toc/index.yml?view=sql-server-2014)
-- [2016 以降](../sql-server/index.yml?view=sql-server-2016)
+- [SQL Server の以前のバージョンに関するドキュメント](https://docs.microsoft.com/previous-versions/sql/)。
 
 ## <a name="offline-documentation"></a>オフライン ドキュメント
 
-一部の以前のバージョンの SQL Server には、オフライン ドキュメントがあります。
+SQL Server バージョン 2012 以降のオフライン コンテンツにアクセスするには、次の記事を参照してください。
 
-SQL Server バージョン 2012 以降のオフライン コンテンツにアクセスするには、[SSMS で SQL Server ドキュメントをインストールしてオフラインで表示する](sql-server-offline-documentation.md)方法に関するページを参照してください。
+- [SQL Server ドキュメントをインストールし、オフラインで SSMS に表示する](sql-server-offline-documentation.md)。
 
-> [!Tip]
-> SQL 2014 Transact-SQL コンテンツは、オフラインでのみ利用できます。
+> [!IMPORTANT]
+> SQL 2014 Transact-SQL コンテンツは、[オフライン](../sql-server/sql-server-offline-documentation.md#sql-server-2014-offline-content)でのみ利用できます。
 
 ## <a name="lifecycle-policy"></a>ライフサイクル ポリシー
 
@@ -43,9 +41,11 @@ SQL Server バージョン 2012 以降のオフライン コンテンツにア�
 
 - [Microsoft ライフサイクル ポリシー](https://support.microsoft.com/lifecycle/selectindex)
 
+SQL Server のサポート終了のオプションに関する具体的なガイダンスについては、次の記事を参照してください。
+
+- [SQL Server のサポート終了オプション](../sql-server/end-of-support/sql-server-end-of-life-overview.md)
+
 ## <a name="next-steps"></a>次のステップ
 
-- [SQL Server のドキュメント](../sql-server/index.yml?view=sql-server-2016)
-- [SQL Server 2014 のドキュメント](../2014/2014-toc/index.yml?view=sql-server-2014)。
-- [SQL Server の以前のバージョンに関するドキュメント](https://docs.microsoft.com/previous-versions/sql/)
-- [SQL ドキュメントのバージョン管理システム](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)
+- [SQL Server 2016 から 2019 のオンライン ドキュメント](../sql-server/index.yml)
+- [SQL Server ドキュメント ナビゲーション ガイド](../sql-server/sql-docs-navigation-guide.md)

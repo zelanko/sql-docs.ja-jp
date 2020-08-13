@@ -20,12 +20,12 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c421a03bfbafbe8d734ad6d3174e3ea20834606
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5aca8d2f5135400c80c5943455237c066a7ba424
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483153"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236829"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT (データベースの権限の許可) (Transact-SQL)
 
@@ -63,9 +63,9 @@ permission | ALL [ PRIVILEGES ]
 
 *permission*: データベースで許可できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。
 
-ALL: このオプションに設定しても、可能な権限がすべて許可されるわけではありません。 ALL を指定すると、次のアクセス許可が許可されます。BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE、CREATE VIEW。
+ALL: このオプションに設定しても、可能な権限がすべて許可されるわけではありません。 ALL を指定すると、次のアクセス許可が許可されます。BACKUP DATABASE、BACKUP LOG、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE、CREATE VIEW。
 
-PRIVILEGES: ISO 準拠のために用意されています。 ALL の動作は変更されません。
+PRIVILEGES: ANSI-92 準拠のために用意されています。 ALL の動作は変更されません。
 
 WITH GRANT OPTION: 権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。
 

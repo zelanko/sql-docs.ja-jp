@@ -1,5 +1,6 @@
 ---
 title: IntelliSense でサポートされている Transact-SQL 構文
+description: SQL Server 2019 (15. x) の SQL Server Management Studio IntelliSense でサポートされている Transact-SQL ステートメントと構文要素について説明します。
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -15,15 +16,15 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5acada236056a5691ceebe81d0372f1fa06543f1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 772574d5f50c9c3f9666c56abab80d3ce5181d82
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252979"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247363"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense でサポートされている Transact-SQL 構文
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の IntelliSense でサポートされる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ステートメントと構文要素について説明します。  
   
 ## <a name="statements-supported-by-intellisense"></a>IntelliSense でサポートされるステートメント  
@@ -35,14 +36,47 @@ ms.locfileid: "75252979"
 ### <a name="select-statement"></a>SELECT ステートメント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでは、IntelliSense によって、SELECT ステートメント内の次の構文要素がサポートされます。  
   
-|||  
-|-|-|  
-|SELECT|WHERE|  
-|FROM|ORDER BY|  
-|HAVING|UNION|  
-|FOR|GROUP BY|  
-|TOP|OPTION (hint)|  
-  
+:::row:::
+    :::column:::
+        SELECT
+    :::column-end:::
+    :::column:::
+        WHERE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        FROM
+    :::column-end:::
+    :::column:::
+        ORDER BY
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        HAVING
+    :::column-end:::
+    :::column:::
+        UNION
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        FOR
+    :::column-end:::
+    :::column:::
+        GROUP BY
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        TOP
+    :::column-end:::
+    :::column:::
+        OPTION (hint)
+    :::column-end:::
+:::row-end:::
+
 ### <a name="additional-transact-sql-statements-that-are-supported"></a>サポートされているその他の Transact-SQL ステートメント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでは、IntelliSense によって、次の表に示す [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントもサポートされています。  
   

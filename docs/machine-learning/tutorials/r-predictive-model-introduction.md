@@ -8,40 +8,40 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/26/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 237b8d5ac797b6e17a48bde2fff12de55844755e
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 6114ae9acf3ecdf8444dd6aec657d5c293fc4dae
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607145"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242313"
 ---
-# <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>チュートリアル:SQL 機械学習を使用して R で予測モデルをトレーニングするためのデータを準備する。
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="tutorial-develop-a-predictive-model-in-r-with-sql-machine-learning"></a>チュートリアル:SQL 機械学習を使用して R で予測モデルを開発する
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) または[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)で R と機械学習モデルを使用して、スキーのレンタル数を予測します。
 ::: moniker-end
-
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) で R と機械学習モデルを使用して、スキーのレンタル数を予測します。
 ::: moniker-end
-
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズでは、[SQL Server R Services](../r/sql-server-r-services.md) で R と機械学習モデルを使用して、スキーのレンタル数を予測します。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+この 4 部構成のチュートリアル シリーズでは、[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) で R と機械学習モデルを使用して、スキーのレンタル数を予測します。
 ::: moniker-end
 
 たとえば、スキー レンタル事業を所有していて、将来の日付に対するレンタル数を予測したい場合を考えてみましょう。 この情報は、在庫、スタッフおよび設備の準備に役立ちます。
 
-このシリーズのパート 1 では、前提条件を設定します。 パート 2 と 3 では、ノートブックでいくつかの R スクリプトを開発して、データを準備し、機械学習モデルをトレーニングします。 次にパート 3 では、T-SQL ストアド プロシージャを使用して、SQL Server 内でこれらの R スクリプトを実行します。
+このシリーズのパート 1 では、前提条件を設定します。 パート 2 と 3 では、ノートブックでいくつかの R スクリプトを開発して、データを準備し、機械学習モデルをトレーニングします。 その後、パート 3 では、T-SQL ストアド プロシージャを使用してデータベース内でそれらの R スクリプトを実行します。
 
 この記事では、次の方法について学習します。
 
 > [!div class="checklist"]
-> * サンプル データベースを SQL Server に復元する 
+> * サンプル データベースを復元する 
 
 [パート 2](r-predictive-model-prepare-data.md) では、データベースから Python データ フレームにデータを読み込み、R でデータを準備する方法を学習します。
 
@@ -54,9 +54,16 @@ ms.locfileid: "83607145"
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 * SQL Server Machine Learning Services - Machine Learning Services をインストールする方法については、「[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)」または「[Linux インストール ガイド](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)」に関するページを参照してください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
 ::: moniker-end
-
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * SQL Server Machine Learning Services - Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)に関するページを参照してください。 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+* SQL Server 2016 R Services。 R Services をインストールする方法については、[Windows インストール ガイド](../install/sql-r-services-windows-install.md)に関するページを参照してください。 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+* Azure SQL Managed Instance の Machine Learning Services。 サインアップ方法については、[Azure SQL Managed Instance の Machine Learning Services の概要](/azure/azure-sql/managed-instance/machine-learning-services-overview)に関するページを参照してください。
+
+* サンプル データベースを Azure SQL Managed Instance に復元するための [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 ::: moniker-end
 
 * R IDE - このチュートリアルでは [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) を使用します。
@@ -74,6 +81,7 @@ ms.locfileid: "83607145"
 > ビッグ データ クラスターで Machine Learning Services を使用している場合は、[SQL Server ビッグ データ クラスターのマスター インスタンスにデータベースを復元する](../../big-data-cluster/data-ingestion-restore-database.md)方法に関する記事を参照してください。
 ::: moniker-end
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 1. ファイル [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak) をダウンロードします。
 
 1. Azure Data Studio で、以下の詳細情報を使用して、「[バックアップ ファイルからデータベースを復元する](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file)」に記載されている手順に従います。
@@ -87,20 +95,32 @@ ms.locfileid: "83607145"
    USE TutorialDB;
    SELECT * FROM [dbo].[rental_data];
    ```
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+1. ファイル [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak) をダウンロードします。
 
-1. 次の SQL コマンドを実行して、外部スクリプトを有効にします。
+1. 次の詳細を使用して、SQL Server Management Studio で [Managed Instance へのデータベースの復元](/azure/sql-database/sql-database-managed-instance-get-started-restore)の指示に従います。
 
-    ```sql
-    sp_configure 'external scripts enabled', 1;
-    RECONFIGURE WITH override;
-    ```
+   * ダウンロードした **TutorialDB.bak** ファイルからインポートします
+   * ターゲット データベースに "TutorialDB" という名前を指定します
 
+1. **dbo.rental_data** テーブルに対してクエリを実行して、復元されたデータベースが存在することを確認できます。
+
+   ```sql
+   USE TutorialDB;
+   SELECT * FROM [dbo].[rental_data];
+   ```
+::: moniker-end
+
+## <a name="clean-up-resources"></a>リソースをクリーンアップする
+
+このチュートリアルを続行しない場合は、TutorialDB データベースを削除してください。
 ## <a name="next-steps"></a>次のステップ
 
 このチュートリアル シリーズの第 1 部では、これらの手順を完了しました。
 
 * 必須コンポーネントのインストール
-* サンプル データベースを SQL Server に復元する
+* サンプル データベースの復元
 
 機械学習モデル用にデータを準備するには、このチュートリアル シリーズの第 2 部の手順を実行します。
 

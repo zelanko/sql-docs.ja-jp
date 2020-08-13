@@ -1,5 +1,6 @@
 ---
 title: '[出力ウィンドウ]'
+description: '[出力] ウィンドウを使用して、SQL Server Management Studio デバッガーなどのツールからのステータス メッセージとその他の出力を表示する方法について説明します。'
 titleSuffix: T-SQL Debugger
 ms.prod: sql
 ms.technology: scripting
@@ -14,16 +15,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d446b3b7af6ce4606d656a6a1232016dbb90ea5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93cf1e703e7a8610ecf2bc8de841c00b7b2b3397
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253033"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247334"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Transact-SQL デバッガー - [出力] ウィンドウ
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 このウィンドウには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のさまざまな機能の状態メッセージが表示されます。 **デバッガー、外部ツール機能、またはデバッガーの** [コマンド] ウィンドウ [!INCLUDE[tsql](../../includes/tsql-md.md)] で実行されるコマンドから、 **[出力]** ウィンドウの特別のペインに出力が表示されます。 .bat ファイルや .com ファイルなど、通常は [コマンド プロンプト] ウィンドウに表示される外部ツールからの出力も参照できます。
 
@@ -33,7 +34,7 @@ ms.locfileid: "75253033"
   
 -   **[表示]** メニューの **[その他のウィンドウ]** をクリックし、 **[出力]** をクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **出力ペインの一覧**  
  出力ペインの一覧を表示します。 ユーザーに情報を配信するために **[出力]** ウィンドウで使用したツールに応じて、情報のペインの一部を使用できる場合があります。  
   

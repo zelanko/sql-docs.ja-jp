@@ -1,5 +1,6 @@
 ---
 title: HTML ビューアーとレポート ツール バー | Microsoft Docs
+description: HTML ビューアーとレポートツールバーについて、またレポート サーバーからの要求に応じてレポートを表示する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 825e169f3819cc19b042715662f4ec554f02d65b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503074"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247201"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML ビューアーとレポート ツール バー
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート サーバーからの要求に応じてレポートを表示するために使用できる HTML ビューアーがあります。 HTML ビューアーには、HTML でレポートを表示するためのフレームワークが提供されます。 これには、レポート ツール バー、パラメーター セクション、資格情報セクション、およびドキュメント マップが含まれます。 HTML ビューアーのレポート ツール バーには、HTML 以外の形式でレポートを表示できるエクスポート オプションなど、レポートに関する作業に使用できる機能が用意されています。 パラメーター セクションとドキュメント マップは、パラメーターまたはドキュメント マップ コントロールを使用するように構成されているレポートを開いた場合のみ表示されます。  
@@ -68,7 +69,7 @@ ms.locfileid: "65503074"
   
  レポート作成者は、各レポートに有効なパラメーター値を定義します。 レポート管理者も、パラメーター値を設定することができます。 レポートに有効なパラメーター値を調べるには、レポート設計者またはレポート管理者に問い合わせてください。  
   
-## <a name="credentials"></a>[資格情報]  
+## <a name="credentials"></a>資格情報  
  資格情報は、データ ソースにアクセスできるユーザー名とパスワードの値です。 資格情報を指定した後、 **[レポートの表示]** をクリックしてデータを取得します。 ユーザーのログオンが必要なレポートの場合、ユーザーが参照することを許可されたデータは、別のユーザーが参照するデータとは異なる場合があります。 つまり、2 人のユーザーが同じレポートを実行しても、異なる結果が得られる場合があります。 さらに、レポートによっては非表示の内容が含まれている場合があり、その内容はユーザーのログオン資格情報またはレポートで選択された内容に基づいて開示されます。 レポートで非表示になっている領域は検索操作の対象から除外されるため、すべての情報が表示された状態のレポートに検索を行った場合とは異なる検索結果が返されます。  
   
 ## <a name="see-also"></a>参照  

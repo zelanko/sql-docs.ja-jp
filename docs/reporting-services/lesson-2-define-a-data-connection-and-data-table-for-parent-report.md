@@ -1,5 +1,6 @@
 ---
 title: 'レッスン 2: 親レポートのデータ接続とデータ テーブルを定義する | Microsoft Docs'
+description: Visual C# 用の ASP.NET Web サイト テンプレートを使用して新しい Web サイト プロジェクトを作成した後に、親レポートのデータ接続とデータ テーブルを作成する方法について説明します。
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8bcfe976a8094c6faa22d8aab3db8a4a833d8cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 26599029af2b4fd6a52e85dc9b7567e9a7152038
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651600"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235658"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>レッスン 2: 親レポートのデータ接続とデータ テーブルを定義する
 Visual C# 用の ASP.NET Web サイト テンプレートを使用して新しい Web サイト プロジェクトを作成した後は、親レポートのデータ接続とデータ テーブルを作成します。 このチュートリアルでは、データ接続先として AdventureWorks2014 データベースを使用します。  
@@ -70,6 +71,6 @@ Visual C# 用の ASP.NET Web サイト テンプレートを使用して新し�
 13. データをプレビューするには、 **[データ]** メニューの **[データのプレビュー]** を選択し、 **[プレビュー]** を選択します。  
   
 ## <a name="next-task"></a>次の作業  
-これで、親レポートのデータ接続とデータ テーブルを作成できました。 次は、レポート ウィザードを使用して親レポートを設計します。 「 [レッスン 3: レポート ウィザードを使用して親レポートを設計する](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)」を参照してください。  
+これで、親レポートのデータ接続とデータ テーブルを作成できました。 次は、レポート ウィザードを使用して親レポートを設計します。 「[レッスン 3:レポート ウィザードを使用して親レポートを設計する](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)」を参照してください。  
   
 

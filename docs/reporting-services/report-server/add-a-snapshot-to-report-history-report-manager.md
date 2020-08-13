@@ -1,5 +1,6 @@
 ---
 title: レポート履歴へのスナップショットの追加 - Reporting Services | Microsoft Docs
+description: SQL Server Reporting Services (SSRS) でレポート履歴にスナップショットを手動で追加する方法について説明します。
 ms.prod: reporting-services
 ms.technology: reporting-services
 ms.topic: conceptual
@@ -8,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 2ada64f14c3564bd1e6c9846f890fdd8b287cb6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1effcdd44d04b3125cdeaf9983372cdcb00bd429
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68251936"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245735"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>レポート履歴にスナップショットを追加する
 
@@ -65,7 +66,7 @@ ms.locfileid: "68251936"
 
 5. **[Apply]** をクリックします。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [レポートの実行プロパティを構成する &#40;レポート マネージャー&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [レポート履歴を制限する &#40;レポート マネージャー&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)
@@ -110,7 +111,7 @@ ms.locfileid: "68251936"
 8.  **[適用]** を選択し、設定を保存します。  
 
     > [!NOTE]  
-    > スナップショット作成を有効にするには、管理者は**履歴の手動作成を許可する**ようにレポート履歴を構成する必要があります。 詳細については、「[レポート履歴を制限する (Web ポータル)](../../reporting-services/reports/limit-report-history-report-manager.md)」を参照してください。
+    > スナップショット作成を有効にするには、管理者は**履歴の手動作成を許可する**ようにレポート履歴を構成する必要があります。 詳細については、[レポート履歴の制限 (Web ポータル)](../../reporting-services/reports/limit-report-history-report-manager.md)に関するページを参照してください。
 
 9.  **[Apply]** をクリックします。
 
@@ -154,7 +155,7 @@ ms.locfileid: "68251936"
 
 5. **[Apply]** をクリックします。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [レポートの実行プロパティを構成する (Web ポータル)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [レポート履歴を制限する (Web ポータル)](../../reporting-services/reports/limit-report-history-report-manager.md)

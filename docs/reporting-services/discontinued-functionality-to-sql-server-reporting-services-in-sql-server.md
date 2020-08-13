@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2016 Reporting Services (SSRS) で廃止された機能
+description: SQL Server 2016 で使用できなくなった SQL Server Reporting Services の機能について説明します。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: seodec18
 ms.date: 04/26/2019
-ms.openlocfilehash: a34b37a2e970c0f7a1a873947d9f8432c0b9733c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0dec5b4ab6d942b448e051c4db54c2e180e4b0ad
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74317851"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246323"
 ---
 # <a name="discontinued-functionality-in-sql-server-2016-reporting-services-ssrs"></a>SQL Server 2016 Reporting Services (SSRS) で廃止された機能
 
@@ -26,7 +27,7 @@ ms.locfileid: "74317851"
 
 *提供が中止された機能* とは、今後サポートされない機能のことです。 製品から物理的に削除される場合もあります。 次の機能は提供が中止されました。
 
-|機能|置換または回避策|
+|特徴量|置換または回避策|
 |-|-|
 |HTML ビューアーおよびレポート マネージャーのスタイル シートのカスタマイズ|[Web ポータルをブランド化](branding-the-web-portal.md)することもできます。|
 

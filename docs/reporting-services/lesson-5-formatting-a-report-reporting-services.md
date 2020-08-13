@@ -1,5 +1,6 @@
 ---
 title: 'レッスン 5 : レポートの書式設定 (Reporting Services) | Microsoft Docs'
+description: Sales Orders レポートに 1 つのデータ領域といくつかのフィールドを追加した後、日付および通貨のフィールド、および列ヘッダーの書式を設定する方法について説明します。
 ms.date: 04/29/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2d3fd220aef7a593a2244cf2d7509c5264fcca
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65105927"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245111"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>レッスン 5 : レポートの書式設定 (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>レッスン 5: レポートの書式設定 (Reporting Services)
 
 Sales Orders レポートに 1 つのデータ領域といくつかのフィールドを追加した後、日付および通貨のフィールド、および列ヘッダーを書式設定できます。
 
@@ -37,7 +38,7 @@ Date フィールド式には、既定では日付と時刻の情報が表示さ
 1. `[LineTotal]` 式があるセルを右クリックし、 **[テキスト ボックスのプロパティ]** を選択します。
 2. 左端の列リスト ボックスから **[数値]** を選択し、 **[カテゴリ]** リストボックスから **[通貨]** を選択します。
 3. 地域設定が英語 (米国) の場合、 **[型]** リスト ボックスの既定値は次のようになります。
-    - **小数点以下の桁数 : 2**
+    - **小数点以下の桁数 :2**
     - **負の数値 : ($12345.00)**
     - **記号 : $ 英語 (米国)**
 4. [ **位取り区切り記号 (,) を使用する]** を選択します。 " **$12,345.00**" というサンプル テキストが表示されている場合、正しい設定が行われています。
@@ -65,9 +66,9 @@ Date フィールド式には、既定では日付と時刻の情報が表示さ
 
 ## <a name="next-steps"></a>次のステップ
 
-このレッスンでは、列ヘッダーとフィールド式の書式を正常に設定しました。 次に、レポートにグループおよび合計を追加します。 「[レッスン 6: グループと合計の追加 &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)」に進みます。
+このレッスンでは、列ヘッダーとフィールド式の書式を正常に設定しました。 次に、レポートにグループおよび合計を追加します。 「[レッスン 6:グループと合計の追加 &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)
 [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)

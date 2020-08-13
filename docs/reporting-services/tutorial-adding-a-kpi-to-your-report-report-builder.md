@@ -1,5 +1,6 @@
 ---
 title: 'チュートリアル: レポートへの KPI の追加 (レポート ビルダー) | Microsoft Docs'
+description: レポート ビルダーで、Reporting Services のページ分割されたレポートに主要業績評価指標 (KPI) を追加する方法について説明します。
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3446eb921f0a731a571f2ad5e7a6f275612f2776
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041890"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245649"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>チュートリアル: レポートへの KPI の追加 (レポート ビルダー)
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>チュートリアル:レポートへの KPI の追加 (レポート ビルダー)
 この [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] チュートリアルでは、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに主要業績評価指標 (KPI) を追加します。  
 
 KPI は、ビジネス上重要で、測定可能な値です。 このシナリオの KPI は、製品サブカテゴリ別の販売集計です。 この KPI の現在の状態を、色、ゲージ、およびインジケーターを使用して表示します。
@@ -27,7 +28,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
 > [!NOTE]  
 > このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成、およびウィザードの実行に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
   
-このチュートリアルの推定所要時間: 15 分  
+このチュートリアルの推定所要時間:15 分。  
   
 ## <a name="requirements"></a>必要条件  
 要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/prerequisites-for-tutorials-report-builder.md) を参照してください。  
@@ -51,7 +52,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
 5.  **[次へ]** をクリックします。  
   
-6.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 詳細については、「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
+6.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 詳細については、[基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
 7.  **[次へ]** をクリックします。  
   
@@ -136,7 +137,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
 11. **[完了]** をクリックします。  
   
-      テーブルがデザイン画面に追加されます。 テーブルには 5 列 5 行が含まれています。 行グループ ペインに、SalesDate、Subcategory、および Details の 3 つの行グループが表示されます。 詳細データは、データセット クエリによって取得されるすべてのデータです。 [列グループ] ペインが空です。  
+      テーブルがデザイン画面に追加されます。 テーブルには 5 列 5 行が含まれています。 [行グループ] ウィンドウには 3 つの行グループが表示されます。SalesDate、Subcategory、Details です。 詳細データは、データセット クエリによって取得されるすべてのデータです。 [列グループ] ペインが空です。  
       
       ![report-builder-kpi-row-groups](../reporting-services/media/report-builder-kpi-row-groups.png)
   
@@ -329,7 +330,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
 2.  **[デスクトップ]** 、 **[マイ ドキュメント]** 、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
   
 > [!NOTE]  
-> レポート サーバーにアクセスできない場合は、 **[デスクトップ]** 、 **[マイ ドキュメント]** 、または **[マイ コンピューター]** をクリックして、コンピューターにレポートを保存してください。  
+> レポート サーバーにアクセスできない場合は、 **[デスクトップ]**、 **[マイ ドキュメント]**、または **[マイ コンピューター]** をクリックして、コンピューターにレポートを保存してください。  
   
 1.  **[名前]** に入力されている既定の名前を「 **Product Sales KPI**」に置き換えます。  
   

@@ -1,5 +1,5 @@
 ---
-title: コマンドの実行 | Microsoft Docs
+title: コマンドの実行 (OLE DB ドライバー) | Microsoft Docs
 description: コマンドの実行
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, command execution
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: f13c9177a74212b849572881f114e503a9530286
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5077f621e8a3698e5aec09b79f28a2f5cf9257e7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994990"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244851"
 ---
 # <a name="executing-a-command"></a>コマンドの実行
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

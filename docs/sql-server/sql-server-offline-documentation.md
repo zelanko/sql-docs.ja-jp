@@ -8,17 +8,18 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
-ms.date: 05/08/2020
-ms.openlocfilehash: 5ca11e672e91b8d2b8801838c40057d6b2c8fbfd
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.date: 07/22/2020
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0d4145832aee94a1786308e21ac425081d4d2a88
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151544"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237947"
 ---
 # <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>SQL Server ドキュメントをインストールし、オフラインで SSMS に表示する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 この記事では、[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) で SQL Server のオフライン コンテンツをダウンロードして表示する方法について説明します。 オフライン コンテンツを使用すると、インターネットに接続しなくてもドキュメントにアクセスできます (ただし、ダウンロードするにはインターネット接続が必要です)。
 
@@ -34,7 +35,7 @@ ms.locfileid: "83151544"
 
 1. SSMS で、[ヘルプ] メニューの **[ヘルプ コンテンツの追加と削除]** を選択します。
 
-   ![ヘルプ ビューアーの [ヘルプ コンテンツの追加と削除]](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
+   ![ヘルプ コンテンツの追加と削除](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
 
    ヘルプ ビューアーが開き、[コンテンツの管理] タブが表示されます。
 
@@ -58,11 +59,14 @@ ms.locfileid: "83151544"
 
 ## <a name="sql-server-2014-offline-content"></a>SQL Server 2014 オフライン コンテンツ
 
+> [!IMPORTANT]
+> SQL 2014 Transact-SQL コンテンツは、オフラインでのみ利用できます。
+
 次の手順では、SQL Server 2014 のオフライン コンテンツを読み込む方法について説明しています。
 
 1. 「[ファイアウォールとプロキシで制限された環境向けの Microsoft SQL Server 2014 の製品ドキュメント](https://www.microsoft.com/download/details.aspx?id=42557)」をダウンロード センターからダウンロードし、フォルダーに保存します。
 
-2. ファイルを解凍して .msha ファイルを表示します。
+2. ファイルを解凍して *.msha* ファイルを表示します。
 
    ![SQL Server 2014 ヘルプ ドキュメントのセットアップ ファイル](../sql-server/media/sql-server-offline-documentation/sql-2014-help-content-setup-msha.png)
 
@@ -97,16 +101,13 @@ ms.locfileid: "83151544"
 
    ![自動的に更新された SQL Server 2014 ブック](../sql-server/media/sql-server-offline-documentation/sql-2014-content.png)
 
-> [!Tip]
-> SQL 2014 Transact-SQL コンテンツは、オフラインでのみ利用できます。
-
 ## <a name="sql-server-2012-offline-content"></a>SQL Server 2012 オフライン コンテンツ
 
 次の手順では、SQL Server 2012 のオフライン コンテンツを読み込む方法について説明しています。
 
 1. 「[ファイアウォールとプロキシで制限された環境向けの Microsoft SQL Server 2012 の製品ドキュメント](https://www.microsoft.com/download/details.aspx?id=35750)」をダウンロード センターからダウンロードし、フォルダーに保存します。
 
-2. ファイルを解凍して .msha ファイルを表示します。
+2. ファイルを解凍して *.msha* ファイルを表示します。
 
    ![SQL Server 2012 のヘルプ コンテンツ セットアップ ファイル](../sql-server/media/sql-server-offline-documentation/sql-2012-help-content-setup-msha.png)
 
@@ -153,7 +154,7 @@ SQL Server のヘルプ コンテンツは、最新バージョンの [SQL Serve
 
 ヘルプ ビューアーが開き、[コンテンツの管理] タブが表示されます。このタブの左側のペインにインストールされたヘルプの目次が表示されます。 目次内の記事を選択すると、右側のペインに該当するトピックが表示されます。
 
-> [!TIP]
+> [!Important]
 > コンテンツ ペインが表示されない場合は、左余白の [コンテンツ] を選択します。 プッシュピン アイコンを選択すると、コンテンツ ペインは開いたままになります。  
 
    ![コンテンツが表示されたヘルプ ビューアー](../sql-server/media/sql-server-offline-documentation/view-offline-all.png)
@@ -170,7 +171,7 @@ SQL Server のヘルプ コンテンツは、最新バージョンの [SQL Serve
 
 アーカイブされたコンテンツとヘルプ ビューアーの詳細については、以下のリンクを参照してください。
 
-- [SQL Server のドキュメント](../sql-server/index.yml?view=sql-server-2016)
-- [SQL Server 2014 のドキュメント](../2014/database-engine/install-windows/installation-for-sql-server.md)
-- [SQL Server の以前のバージョンに関するドキュメント](https://docs.microsoft.com/previous-versions/sql/)
+- [SQL Server オンライン ドキュメント](../sql-server/index.yml?view=sql-server-2016)
+- [SQL Server 2014 オンライン ドキュメント](/sql/2014-toc/)
+- [以前のバージョンの SQL Server オンライン ドキュメント](previous-versions-sql-server.md)
 - [SQL ドキュメントのバージョン管理システム](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

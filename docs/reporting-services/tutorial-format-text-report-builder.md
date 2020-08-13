@@ -1,5 +1,6 @@
 ---
 title: 'チュートリアル: 書式文字列 (レポート ビルダー) | Microsoft Docs'
+description: Reporting Services のページ分割されたレポートで、テキストの書式を設定するさまざまな方法について説明します。 たとえば、さまざまな書式を試すことができます。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f71447f2e0f83c87d9b48a464a99dbbb7a1d4c9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63043046"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248121"
 ---
-# <a name="tutorial-format-text-report-builder"></a>チュートリアル: テキストの書式設定 (レポート ビルダー)
+# <a name="tutorial-format-text-report-builder"></a>チュートリアル:テキストを書式設定する (レポート ビルダー)
 
 このチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートで、さまざまなテキストの書式設定方法を実習します。 さまざまな書式を実験できます。 
 
@@ -25,7 +26,7 @@ ms.locfileid: "63043046"
   
 途中の手順で一度わざと正しくない方法を試し、それがなぜ問題なのかを確認します。 その後、必要な効果が得られるように問題を修正します。  
     
-このチュートリアルの推定所要時間 : 20 分  
+このチュートリアルの推定所要時間:20 分  
   
 ## <a name="requirements"></a>必要条件  
 要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/prerequisites-for-tutorials-report-builder.md) を参照してください。  
@@ -50,7 +51,7 @@ ms.locfileid: "63043046"
 
     **[レポート データ]** ペインが表示されていない場合は、 **[表示]** タブの **[レポート データ]** をオンにします。
   
-2.  **[名前]** ボックスに「 **TextDataSource**」と入力します。  
+2.  **[名前]** ボックスに、「**TextDataSource**」と入力します。  
   
 3.  **[レポートに埋め込まれた接続を使用する]** をクリックします。  
   
@@ -67,7 +68,7 @@ ms.locfileid: "63043046"
   
 2.  データ ソースが **TextDataSource**であることを確認します。  
   
-3.  **[名前]** ボックスに「 **TextDataset**」と入力します。  
+3.  **[名前]** ボックスに、「**TextDataset**」と入力します。  
   
 4.  クエリの種類に **[テキスト]** が選択されていることを確認してから、 **[クエリ デザイナー]** をクリックします。  
   
@@ -179,7 +180,7 @@ ms.locfileid: "63043046"
   
 1.  **[挿入]** タブの **[テーブル]**  >  **[テーブル ウィザード]** をクリックします。  
   
-2.  新しいテーブル/マトリックス ウィザードの **[データセットの選択]** ページで、 **[このレポートの既存のデータセットまたは共有データセットを選択する]**  >  **[TextDataset (このレポートで)]**  >  **[次へ]** をクリックします。  
+2.  新しいテーブル/マトリックス ウィザードの **[データセットの選択]** ページで、 **[このレポートの既存のデータセットまたは共有データセットを選択する]** > **[TextDataset (このレポートで)]** > **[次へ]** をクリックします。  
   
 3.  **[フィールドの配置]** ページで、 **Territory**、 **LinkText**、および **Product** フィールドを **[行グループ]** にドラッグし、 **Sales** フィールドを **[値]** にドラッグしてから、 **[次へ]** をクリックします。  
 
@@ -355,7 +356,7 @@ ms.locfileid: "63043046"
 
 ## <a name="next-steps"></a>次の手順
 
-レポート ビルダーでは、さまざまな方法でテキストの書式を設定できます。 詳細な例については、「[チュートリアル: 自由形式のレポートの作成](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)」を参照してください。  
+レポート ビルダーでは、さまざまな方法でテキストの書式を設定できます。 [チュートリアル:自由形式のレポートの作成](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)」にはその他の例が紹介されています。  
 
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md) 
 [レポート アイテムの書式設定](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

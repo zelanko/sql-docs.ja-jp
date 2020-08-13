@@ -1,5 +1,6 @@
 ---
 title: Reporting Services の計画 | Microsoft Docs
+description: ニーズに最も合った SQL Server Reporting Services (SSRS) 環境をインストールおよび構成する方法について説明します。
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa89fdf4bce0f268d71ea8c93e60ec4fcee6237c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 569daf4b395e40d9bcaf444aace9565cd9fd3822
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68891770"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247521"
 ---
 # <a name="planning-for-reporting-services"></a>Reporting Services の計画
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] をより理解するには、次の各トピックをご覧ください。 ニーズに最も合った [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 環境をインストールおよび構成する方法について学習してください。  
@@ -28,7 +29,7 @@ ms.locfileid: "68891770"
  ![小さいファイル フォルダー アイコン](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **Reporting Services のセットアップ**  
  [Reporting Services Report Server](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
- [配置のチェック リスト: 既存の SharePoint ファームへの Reporting Services のインストール](https://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f)  
+ [デプロイ チェックリスト:既存の SharePoint ファームへの Reporting Services のインストール](https://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f)  
   
  [SharePoint の SQL Server BI 機能の配置トポロジ](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)  
   

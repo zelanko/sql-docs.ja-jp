@@ -1,5 +1,6 @@
 ---
 title: 'チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー) | Microsoft Docs'
+description: カテゴリでグループ化された一連の縦棒で数値を表現する棒グラフを含めた、Reporting Services のページ分割されたレポートを作成する方法を説明します。
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d650fd4b93df758ccaa39d716cf122c66adf7ab
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041185"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245699"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>チュートリアル:レポートへの横棒グラフの追加 (レポート ビルダー)
 このチュートリアルでは、ウィザードを使用して、[!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] で [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに横棒グラフを作成します。 次にフィルターを追加してグラフを強化します。 
 
 横棒グラフでは、カテゴリ データが水平方向に表示されます。 これは、次のようなことに役立ちます。  
@@ -32,7 +33,7 @@ ms.locfileid: "63041185"
 > [!NOTE]  
 > このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データセットの作成、データ ソースの選択に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
   
-このチュートリアルの推定所要時間: 15 分  
+このチュートリアルの推定所要時間:15 分。  
   
 ## <a name="requirements"></a>必要条件  
 要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
@@ -93,7 +94,7 @@ ms.locfileid: "63041185"
   
 2.  **[横棒]** をクリックし、 **[次へ]** をクリックします。  
   
-    **[グラフのフィールドの配置]** ページでは、 **使用できるフィールド** ペインに、FirstName、LastName、SalesYear2015、および SalesYear2014 の 4 つのフィールドがあります。  
+    **[グラフのフィールドの配置]** ページでは、 **[使用できるフィールド]** ペインに 4 つのフィールドFirstName、LastName、SalesYear2015、SalesYear2014 があります。  
   
 3.  LastName をカテゴリ ペインにドラッグします。  
   
@@ -199,7 +200,7 @@ ms.locfileid: "63041185"
   
 1.  レポート デザイン ビューに切り替えます。  
   
-2.  グラフ上部の **[グラフのタイトル]** というテキストを選択し、「 **Sales for 2014 and 2015**」と入力します。  
+2.  グラフ上部の **[グラフのタイトル]** というテキストを選択し、「**Sales for 2014 and 2015**」と入力します。  
   
 3.  [プロパティ] ペインで、タイトルを選択した状態で **[色]** を **[黒]** に、 **[フォント サイズ]** を **[12 ポイント]** に変更します。 
   

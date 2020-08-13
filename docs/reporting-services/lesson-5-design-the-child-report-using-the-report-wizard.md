@@ -1,5 +1,6 @@
 ---
 title: 'レッスン 5: レポート ウィザードを使用して子レポートを設計する | Microsoft Docs'
+description: 子レポートのデータ接続とデータ テーブルを作成した後に、レポート デザイナーのレポート ウィザードを使用して子レポートを設計する方法について説明します。
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da9f07cf60a2ec42e23416b52cbfebab78802247
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cb9555522638ab6c8132f3422c7f0ca30928f893
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62512646"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246257"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>レッスン 5: レポート ウィザードを使用して子レポートを設計する
 子レポートのデータ接続とデータ テーブルを作成した後は、レポート デザイナーのレポート ウィザードを使用して子レポートを設計します。 レポート デザイナーの詳細については、「[レポート デザイナーを使用してレポートをデザインする &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)」を参照してください。  
@@ -36,9 +37,9 @@ ms.locfileid: "62512646"
   
 6.  **[フィールドの配置]** ページで、次の操作を行います。  
   
-    1.  **[ProductID]** 、 **[PurchaseOrderID]** 、 **[PurchaseOrderDetailID]** 、 **[OrderQty]** 、 **[ReceivedQty]** 、 **[RejectedQty]** 、および **[StockedQty]** を、 **[使用できるフィールド]** から **[値]** ボックスにドラッグします。  
+    1.  **[ProductID]**、 **[PurchaseOrderID]**、 **[PurchaseOrderDetailID]**、 **[OrderQty]**、 **[ReceivedQty]**、 **[RejectedQty]**、および **[StockedQty]** を、 **[使用できるフィールド]** から **[値]** ボックスにドラッグします。  
   
-    2.  **[Sum(ProductID)]** 、 **[Sum(PurchaseOrderID)]** 、 **[Sum(PurchaseOrderDetailID)]** 、 **[Sum(OrderQty)]** 、 **[Sum(ReceivedQty)]** 、 **[Sum(RejectedQty)]** 、および **[Sum(StockedQty)]** の横の矢印を選択して、 **[Sum]** の選択を解除します。  
+    2.  **[Sum(ProductID)]**、 **[Sum(PurchaseOrderID)]**、 **[Sum(PurchaseOrderDetailID)]**、 **[Sum(OrderQty)]**、 **[Sum(ReceivedQty)]**、 **[Sum(RejectedQty)]**、および **[Sum(StockedQty)]** の横の矢印を選択して、 **[Sum]** の選択を解除します。  
   
 7.  **[次へ]** を 2 回選択し、 **[完了]** を選択して **レポート ウィザード**を閉じます。  
   
@@ -57,7 +58,7 @@ ms.locfileid: "62512646"
 9. .rdlc ファイルを保存します。  
   
 ## <a name="next-task"></a>次の作業  
-これで、レポート ウィザードを使用して子レポートを設計できました。 次は、Web サイト アプリケーションに ReportViewer コントロールを追加します。 [「レッスン 6: アプリケーションに ReportViewer コントロールを追加する」](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)を参照してください。  
+これで、レポート ウィザードを使用して子レポートを設計できました。 次は、Web サイト アプリケーションに ReportViewer コントロールを追加します。 「[レッスン 6:アプリケーションに ReportViewer コントロールを追加する](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)」を参照してください。  
   
   
   

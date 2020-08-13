@@ -1,7 +1,8 @@
 ---
 title: Windows ファイアウォールの構成
+description: ファイアウォールを経由して SQL Server のインスタンスへのアクセスを許可するように Windows ファイアウォールを構成する方法。
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -20,17 +21,17 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f2e73d6acd17e3a77802ecde712a2e18c7d66846
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dce5cf7e83be47bda2bcfef17b4602eb5f2fb49e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528876"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238482"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 ファイアウォール システムは、コンピューター リソースへの不正アクセスを防ぐのに役立ちます。 ファイアウォールがオンになっているが、正しく構成されていない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続の試行がブロックされる可能性があります。  
   
@@ -182,7 +183,7 @@ ms.locfileid: "81528876"
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] リモート プロシージャ呼び出し (MS RPC)<br /><br /> [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイムで使用されます。|TCP ポート 135<br /><br /> 「 [ポート 135 に関する注意事項](#BKMK_port_135)」を参照してください。|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスでは、ポート 135 で DCOM を使用します。 サービス コントロール マネージャーではポート 135 を使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの開始と停止、実行中のサービスに対する制御要求の転送などのタスクを実行します。 ポート番号を変更することはできません。<br /><br /> このポートは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] またはカスタム アプリケーションから [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] サービスのリモート インスタンスに接続する場合にのみ、開く必要があります。|  
   
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で Windows ファイアウォールを構成する詳細な手順については、[Integration Services サービス、SSIS サービス](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md?view=sql-server-2014)に関するページをご覧ください。  
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で Windows ファイアウォールを構成する詳細な手順については、[Integration Services サービス、SSIS サービス](/previous-versions/sql/sql-server-2012/ms137861(v=sql.110))に関するページをご覧ください。  
   
 ###  <a name="additional-ports-and-services"></a><a name="BKMK_additional_ports"></a> 追加のポートとサービス  
 次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が依存している可能性があるポートとサービスの一覧を示します。  

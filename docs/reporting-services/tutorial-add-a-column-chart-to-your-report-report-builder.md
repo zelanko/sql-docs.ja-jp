@@ -1,5 +1,6 @@
 ---
 title: 'チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー) | Microsoft Docs'
+description: カテゴリでグループ化された一連の縦棒で数値を表現する棒グラフを含めた、Reporting Services のページ分割されたレポートを作成する方法を説明します。
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 450e625fba58eaa6ff1d9e9fe13065bf934a633b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041400"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245689"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>チュートリアル:レポートへの縦棒グラフの追加 (レポート ビルダー)
 このチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートを作成します。レポートには、カテゴリでグループ化された一連の縦棒として連続を表示する棒グラフを含めます。 
 
 縦棒グラフは次に役立ちます。  
@@ -30,7 +31,7 @@ ms.locfileid: "63041400"
 > [!NOTE]  
 > このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
   
-このチュートリアルの推定所要時間: 15 分  
+このチュートリアルの推定所要時間:15 分。  
   
 ## <a name="requirements"></a>必要条件  
 要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/prerequisites-for-tutorials-report-builder.md) を参照してください。  
@@ -135,7 +136,7 @@ ms.locfileid: "63041400"
   
 ラベルを回転して間隔を指定することによってラベル表示をカスタマイズできます。  
   
-## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4.横軸の軸ラベルを回転させます。  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4.横軸の軸ラベルを回転させる  
   
 1.  レポート デザイン ビューに切り替えます。  
   

@@ -1,5 +1,6 @@
 ---
 title: sqlcmd ユーティリティの使用
+description: sqlcmd ユーティリティを使用して、Transact-SQL ステートメントおよびスクリプトを対話形式でアドホック実行したり、Transact-SQL スクリプト タスクを自動化したりする方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 06/06/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e41a75e543c325dce4353a512a8396887fe853c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0bd8f259e253083627a32f6f8a8b25b95c9159e5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79090595"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237946"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - ユーティリティの使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   **sqlcmd** ユーティリティは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよびスクリプトを対話形式でアドホック実行したり、 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト タスクを自動化したりするためのコマンドライン ユーティリティです。 **sqlcmd** を対話形式で使用したり、 **sqlcmd**を使用して実行できるスクリプト ファイルを作成したりするには、ユーザーが [!INCLUDE[tsql](../../includes/tsql-md.md)]を理解している必要があります。 **sqlcmd** ユーティリティは一般的に次のように使用されます。  
   
 -   コマンド プロンプトでの操作と同様、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを入力します。 結果はコマンド プロンプトに表示されます。 コマンド プロンプト ウィンドウを開くには、Windows の検索ボックスに「cmd」と入力し、 **[コマンド プロンプト]** をクリックして開きます。 コマンド プロンプトで「 **sqlcmd** 」と入力し、その後に必要なオプションのリストを入力します。 **sqlcmd**でサポートされるオプションの一覧については、「 [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)」を参照してください。  
@@ -410,28 +411,6 @@ ms.locfileid: "79090595"
   
     ```  
     :exit(select 100)  
-    @echo off  
-    C:\windowsscript.bat  
-    @echo off  
-  
-    echo Running badscript.sql  
-    sqlcmd -i badscript.sql -b -o out.log  
-    if not errorlevel 1 goto next1  
-    echo == An error occurred   
-  
-    :next1  
-  
-    echo Running goodscript.sql  
-    sqlcmd -i goodscript.sql -b -o out.log  
-    if not errorlevel 1 goto next2  
-    echo == An error occurred   
-  
-    :next2  
-    echo Running returnvalue.sql  
-    sqlcmd -i returnvalue.sql -o out.log  
-    echo SQLCMD returned %errorlevel% to the command shell  
-  
-    :exit  
     ```  
   
 -   C:\windowsscript.bat  

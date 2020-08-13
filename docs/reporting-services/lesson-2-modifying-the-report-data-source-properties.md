@@ -1,5 +1,6 @@
 ---
 title: 'レッスン 2: レポート データ ソースのプロパティの変更 | Microsoft Docs'
+description: Web ポータルを使用して、受信者に配信されるレポートを選択する方法と、レポート データ ソース プロパティを変更する方法について説明します。
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b45f2145efcca54d577db370b436e27c36ce987
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651727"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235668"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>レッスン 2: レポート データ ソースのプロパティの変更
 この [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] レッスンでは、受信者に配信されるレポートを、Web ポータルを使って選択します。 ここで定義するデータ ドリブン サブスクリプションによって、チュートリアル「 **基本的なテーブル レポートの作成 (SSRS チュートリアル)** 」で作成されたレポート [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)が配信されます。  この後の手順では、レポートがデータの取得に使用するデータ ソースの接続情報を変更します。 データ ドリブン サブスクリプションを介して配信できるのは、 **保存されている資格情報** を使用してレポート データ ソースにアクセスするレポートのみです。 保存されている資格情報は、レポートの自動処理に必要となります。  
@@ -25,9 +26,9 @@ ms.locfileid: "62651727"
 1.  管理者特権を使用して [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web ポータルを参照します。たとえば、Internet Explorer アイコンを右クリックして **[管理者として実行]** をクリックします。  
  
 2.    Web ポータルの URL を参照します。  次に例を示します。   
-    [https://login.microsoftonline.com/consumers/](`https://<server name>/reports`)  
+    `https://<server name>/reports`.  
     `https://localhost/reports`
- **注:** Web *ポータル* URL は "Reports" です。Report *Server* の URL "Reportserver" ではありません。  
+ **注: **Web *ポータル* URL は "Reports" です。Report *Server* の URL "Reportserver" ではありません。  
 3.  **Sales Orders** レポートを含むフォルダーを参照して、ショートカット メニューの **[管理]** をクリックします。  
  
  ![ssrs_tutorial_datadriven_manage_report](../reporting-services/media/ssrs-tutorial-datadriven-manage-report.png)
@@ -52,7 +53,7 @@ ms.locfileid: "62651727"
 10. **[保存]** をクリックします。
 11. **[キャンセル]** をクリックします。  
   
-11. レポートを表示し、指定した資格情報を使用してレポートが実行されていることを確認します。 。  
+11. レポートを表示し、指定した資格情報を使用してレポートが実行されていることを確認します。 .  
   
 ## <a name="to-modify-the-adventureworksdataset"></a><a name="bkmk_modify_dataset"></a>AdventureWorksDataset を変更するには  
  次の手順では、パラメーターを使用して注文番号でデータ セットをフィルター処理できるよう、データセットを変更します。
@@ -105,13 +106,13 @@ ms.locfileid: "62651727"
   
 ## <a name="re-deploy-the-report"></a><a name="bkmk_redeploy"></a>レポートを再配置する  
   
-1.  レポートを再配置して、このレッスンで適用した変更を、次のレッスンのサブスクリプション構成で利用できるようにします。 テーブルのチュートリアルで使用されるプロジェクト プロパティの詳細については、「[レッスン 6: グループと合計の追加 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)」の「レポートをレポート サーバーにパブリッシュするには (オプション)」セクションを参照してください。  
+1.  レポートを再配置して、このレッスンで適用した変更を、次のレッスンのサブスクリプション構成で利用できるようにします。 テーブルのチュートリアルで使用されるプロジェクト プロパティの詳細については、「レポートをレポート サーバーにパブリッシュするには (オプション)」セクションを参照してください。「[レッスン 6: グループと合計の追加 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)」を参照してください。  
   
 2.  ツール バーの **[ビルド]** をクリックし、 **[Tutorial の配置]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
 + 保存されている資格情報を使用してデータを取得するレポートを構成したので、パラメーターを使用してデータをフィルター処理できます。 
-+ 次のレッスンでは、Web ポータルのデータ ドリブン サブスクリプション ページを使用してサブスクリプションを構成します。 「 [レッスン 3: データ ドリブン サブスクリプションの定義](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)」を参照してください。  
++ 次のレッスンでは、Web ポータルのデータ ドリブン サブスクリプション ページを使用してサブスクリプションを構成します。 「[レッスン 3:データ ドリブン サブスクリプションの定義](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [レポート データ ソースを管理する](../reporting-services/report-data/manage-report-data-sources.md)  

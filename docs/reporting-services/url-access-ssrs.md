@@ -1,5 +1,6 @@
 ---
 title: URL アクセス | Microsoft Docs
+description: URL 要求でレポート サーバーにコマンドを送信できるようにするため、SQL Server Reporting Services (SSRS) レポート サーバーの URL アクセスを使用する方法について説明します。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59f183a3a5063b894bfa8a52a5334bb377119794
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2ea0b098296ef5e4617fffc1f172ecdb30a94d0e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078940"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248106"
 ---
 # <a name="url-access-ssrs"></a>URL アクセス (SSRS)
   SQL Server Reporting Services (SSRS) のレポート サーバーの URL アクセスにより、URL 要求を使用してレポート サーバーにコマンドを送信できます。 たとえば、ネイティブ モードのレポート サーバーや SharePoint ライブラリのレポートの表示をカスタマイズすることができます。 特定のレポート パラメーター値のセットを使用してレポートを表示したり、レポートの関心のある特定ページを表示することがあります。 この情報を、事前に定義された URL アクセス パラメーターを使用して URL にカプセル化することができます。 表示形式またはレポート ビューアーのルック アンド フィールのパラメーターを埋め込むことで、レポート サーバーによるレポートの処理方法をさらにカスタマイズできます。 その後、この URL を電子メールまたは Web ページに直接貼り付けて、他のユーザーがブラウザーから同じ方法でレポートにアクセスできるようにすることができます。  
@@ -102,7 +103,7 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  使用しているパラメーターの値に対応する URL テキスト。  
   
- **注:** 使用可能な URL アクセス パラメーターの一覧については、「 [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)」(URL アクセス パラメーター リファレンス) を参照してください。 URL でレポート パラメーターを渡す例については、「 [URL 内でレポート パラメーターを渡す](../reporting-services/pass-a-report-parameter-within-a-url.md)」を参照してください。  
+ **注:** 使用可能な URL アクセス パラメーターの一覧については、「[URL アクセス パラメーター リファレンス](../reporting-services/url-access-parameter-reference.md)」を参照してください。 URL でレポート パラメーターを渡す例については、「 [URL 内でレポート パラメーターを渡す](../reporting-services/pass-a-report-parameter-within-a-url.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

@@ -3,23 +3,23 @@ title: SQL Server Machine Learning Services の新機能
 titleSuffix: ''
 description: SQL Server Machine Learning Services および SQL Server 2016 R Services の各リリースの新機能に関するお知らせ。
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: overview
 author: dphansen
 ms.author: davidph
 ms.custom: sqlseattle
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdb358c2414d40aa39ead1323eff90aefbb3081e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7e4092bd98749006b6f68b8c55fee3baca678255
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487041"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245261"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の新機能
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 データ プラットフォーム、高度な分析、データ サイエンスの間の統合を継続的に拡大、拡張、強化するために、機械学習機能は、SQL Server の各リリースに追加されています。 
 
@@ -31,13 +31,15 @@ ms.locfileid: "81487041"
 > [!NOTE]
 > SQL Server 2019 の Java の新機能に関するドキュメントについては、「[SQL Server 言語拡張機能の新機能](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)」を参照してください。
 
-SQL Server Machine Learning Services の新機能を次に示します。
+**Windows** と **Linux** の両方で使用可能な SQL Server Machine Learning Services の新機能を次に示します。
 
-- [Python または R スクリプトから SQL Server へのループバック接続](connect/loopback-connection.md)が、Windows と Linux の両方でサポートされるようになりました。 
-- Windows および Linux で、R および Python 用の [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) がサポートされるようになりました。
-- Linux プラットフォームで R および Python の機械学習がサポートされるようになりました。 [Linux で SQL Server Machine Learning Services のインストール](../linux/sql-server-linux-setup-machine-learning.md)を開始します。
+- Linux プラットフォームのサポートが、Python と R の Machine Learning Services に追加されました。[Linux に SQL Server Machine Learning Services をインストールする](../linux/sql-server-linux-setup-machine-learning.md)ことから始めます。
+- [Python または R スクリプトからの SQL Server へのループバック接続](connect/loopback-connection.md)。 
+- Python と R の [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md)。
 - [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) によって、パーティション分割されたデータから複数のモデルを簡単に生成できる 2 つの新しいパラメーターが導入されています。 詳細については、[R でパーティションベースのモデルの作成](tutorials/r-tutorial-create-models-per-partition.md)のチュートリアルを参照してください。
-- すべてのノードで SQL Server Launchpad サービスが開始されていることを前提として、フェールオーバー クラスターが Windows および Linux でサポートされるようになりました。 詳細については、「[SQL Server フェールオーバー クラスターのインストール](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)」を参照してください。
+- すべてのノードで SQL Server Launchpad サービスが開始されていることを前提として、フェールオーバー クラスターが Launchpad サービスでサポートされるようになりました。 詳細については、「[SQL Server フェールオーバー クラスターのインストール](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)」を参照してください。
+- Machine Learning Services の分離メカニズムの変更。 詳細については、「[Windows 上の SQL Server 2019:Machine Learning Services」の「ファイルのアクセス許可」](install/sql-server-machine-learning-services-2019.md)セクションを参照してください。
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -71,7 +73,7 @@ Python はデータベース エンジンと統合されているため、デー
 
 T-SQL と Python の統合は、[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) システム ストアド プロシージャを通じてサポートされています。 このストアド プロシージャを使用して、任意の Python コードを呼び出すことができます。 コードは、セキュリティで保護されたデュアル アーキテクチャで実行されます。これにより、単純なストアド プロシージャを使用してアプリケーションから呼び出すことができる、Python モデルとスクリプトのエンタープライズレベルの展開が可能になります。 SQL から Python プロセスおよび MPI リング並列処理のデータをストリーミングすることで、パフォーマンスがさらに向上します。
 
-T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 関数を使用すると、以前に必要なバイナリ形式で保存した事前トレーニング済みのモデルに対して[ネイティブ スコアリング](sql-native-scoring.md)を実行できます。
+T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 関数を使用すると、以前に必要なバイナリ形式で保存した事前トレーニング済みのモデルに対して[ネイティブ スコアリング](predictions/native-scoring-predict-transact-sql.md)を実行できます。
 
 ### <a name="python-libraries"></a>Python ライブラリ
 
@@ -100,8 +102,8 @@ T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 関数を使用する�
 
 | Release |機能更新プログラム |
 |---------|----------------|
-| CU の追加 | [**リアルタイム スコアリング**](real-time-scoring.md) は、ネイティブ C++ ライブラリに依存して、最適化されたバイナリ形式で格納されたモデルを読み取り、R ランタイムを呼び出すことなく予測を生成します。 これにより、スコアリング操作が大幅に高速化します。 リアルタイム スコアリングを使用すると、R コードからストアド プロシージャを実行したり、リアルタイム スコアリングを実行したりすることができます。 インスタンスが [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)] の最新リリースにアップグレードされている場合、リアルタイム スコアリングは SQL Server 2016 でも利用できます。 |
-| 最初のリリース | [**データベース内分析のための R 統合**](r/sql-server-r-services.md)。 <br/><br/> T-SQL で R 関数を呼び出すための R パッケージ。その逆も同様です。 RevoScaleR 関数では、データをコンポーネント パーツにチャンク化し、分散処理を調整および管理し、結果を集計することによって、大規模な R 分析を提供します。 SQL Server 2016 R Services (データベース内) では、RevoScaleR エンジンがデータベース エンジンのインスタンスと統合され、データと分析が同じ処理コンテキストにまとめられます。 <br/><br/>[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) を使用した T-SQL と R の統合。 このストアド プロシージャを使用して、任意の R コードを呼び出すことができます。 このセキュリティで保護されたインフラストラクチャにより、単純なストアド プロシージャを使用してアプリケーションから呼び出すことができる、Rn モデルとスクリプトのエンタープライズレベルの展開が可能になります。 SQL から R プロセスおよび MPI リング並列処理のデータをストリーミングすることで、パフォーマンスがさらに向上します。 <br/><br/>T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 関数を使用すると、以前に必要なバイナリ形式で保存した事前トレーニング済みのモデルに対して[ネイティブ スコアリング](sql-native-scoring.md)を実行できます。|
+| CU の追加 | [**リアルタイム スコアリング**](predictions/real-time-scoring.md) は、ネイティブ C++ ライブラリに依存して、最適化されたバイナリ形式で格納されたモデルを読み取り、R ランタイムを呼び出すことなく予測を生成します。 これにより、スコアリング操作が大幅に高速化します。 リアルタイム スコアリングを使用すると、R コードからストアド プロシージャを実行したり、リアルタイム スコアリングを実行したりすることができます。 インスタンスが [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)] の最新リリースにアップグレードされている場合、リアルタイム スコアリングは SQL Server 2016 でも利用できます。 |
+| 最初のリリース | [**データベース内分析のための R 統合**](r/sql-server-r-services.md)。 <br/><br/> T-SQL で R 関数を呼び出すための R パッケージ。その逆も同様です。 RevoScaleR 関数では、データをコンポーネント パーツにチャンク化し、分散処理を調整および管理し、結果を集計することによって、大規模な R 分析を提供します。 SQL Server 2016 R Services (データベース内) では、RevoScaleR エンジンがデータベース エンジンのインスタンスと統合され、データと分析が同じ処理コンテキストにまとめられます。 <br/><br/>[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) を使用した T-SQL と R の統合。 このストアド プロシージャを使用して、任意の R コードを呼び出すことができます。 このセキュリティで保護されたインフラストラクチャにより、単純なストアド プロシージャを使用してアプリケーションから呼び出すことができる、Rn モデルとスクリプトのエンタープライズレベルの展開が可能になります。 SQL から R プロセスおよび MPI リング並列処理のデータをストリーミングすることで、パフォーマンスがさらに向上します。 <br/><br/>T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 関数を使用すると、以前に必要なバイナリ形式で保存した事前トレーニング済みのモデルに対して[ネイティブ スコアリング](predictions/native-scoring-predict-transact-sql.md)を実行できます。|
 
 ::: moniker-end
 
@@ -110,7 +112,7 @@ T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 関数を使用する�
 
 SQL Server 2019 では、データベース エンジンのインスタンスを使用して機械学習パッケージをインストールすると、R と Python に対する Linux Support が追加されます。 詳細については、[Linux に SQL Server Machine Learning Services をインストールする](../linux/sql-server-linux-setup-machine-learning.md)方法に関するページを参照してください。
 
-Linux では、SQL Server 2017 に R または Python の統合はありませんが、Linux で[ネイティブ スコアリング](sql-native-scoring.md)を使用することができます。これは、この機能が Linux で実行される T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) を通じて使用できるためです。 ネイティブ スコアリングにより、事前トレーニング済みモデルの高パフォーマンスなスコア付けが可能になりします。R ランタイムを呼び出すことも、必要になることもありません。
+Linux では、SQL Server 2017 に R または Python の統合はありませんが、Linux で[ネイティブ スコアリング](predictions/native-scoring-predict-transact-sql.md)を使用することができます。これは、この機能が Linux で実行される T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) を通じて使用できるためです。 ネイティブ スコアリングにより、事前トレーニング済みモデルの高パフォーマンスなスコア付けが可能になりします。R ランタイムを呼び出すことも、必要になることもありません。
 ::: moniker-end
 
 ## <a name="next-steps"></a>次のステップ

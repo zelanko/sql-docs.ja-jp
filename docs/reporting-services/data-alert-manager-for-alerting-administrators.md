@@ -1,5 +1,6 @@
 ---
 title: 警告管理者用のデータ警告マネージャー | Microsoft Docs
+description: SQL Server Reporting Services の SharePoint 用データ警告マネージャーを使用して警告を管理する方法について説明します。
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a80b90f30ce2b304bd7bbb0229f172407589d3c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5164302efa34bd74b76211c72617826478c4e515
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571551"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246344"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>警告管理者用のデータ警告マネージャー
 
@@ -54,7 +55,7 @@ SQL Server Reporting Services のデータ警告マネージャーを使用し�
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|前回の警告が成功し、警告が送信されました。|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|前回の警告は成功しましたが、データが変更されなかったため、警告は送信されませんでした。|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<エラー メッセージ> ログ ファイルにはエラーの詳細が含まれています。 識別子: \<GUID> のログ エントリを参照してください。|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<error message>ログ ファイルにはエラーの詳細情報が含まれています。 識別子: \<GUID> のログ エントリを参照してください。|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|警告が作成されました。|  
   
  詳細については、「 [データ警告マネージャーで SharePoint サイトのすべてのデータ警告を管理する](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)」を参照してください。  

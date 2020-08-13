@@ -5,21 +5,21 @@ ms.custom: ''
 ms.date: 11/01/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 43e6451f54e55af8e9c782dbab8a23bc753a03bc
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 33d6fd836bd4676e9f178fb5a3c59cc9fba67f80
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001129"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245606"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 リリース ノート
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 ここでは、SQL Server 2017 での制限事項と問題について説明します。 関連情報については、以下をご覧ください。
 - [SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Linux 上の SQL Server のリリース ノート](../linux/sql-server-linux-release-notes.md)
@@ -74,7 +74,7 @@ Windows 上の SQL Server については、このリリースに関するリリ
 - **問題およびユーザーへの影響:** ストアド プロシージャ **[catalog].[create_execution]** の *runincluster* パラメーターは、一貫性とわかりやすさを理由に、名前が *runinscaleout* に変更されました。
 - **回避策:** Scale Out でパッケージを実行する既存のスクリプトがある場合は、スクリプトが RC1 で動作するように、パラメーター名を *runincluster* から *runinscaleout* に変更します。
 
-- **問題およびユーザーへの影響:** SQL Server Management Studio (SSMS) 17.1 とそれより前のバージョンでは、RC1 の Scale Out でパッケージの実行をトリガーできません。 エラー メッセージ: " *@runincluster* はプロシージャ **create_execution** のパラメーターではありません。" この問題は、SSMS の次のリリースであるバージョン 17.2 で解決されています。 SSMS のバージョン 17.2 以降では、新しいパラメーター名と Scale Out でのパッケージ実行がサポートされています。 
+- **問題およびユーザーへの影響:** SQL Server Management Studio (SSMS) 17.1 とそれより前のバージョンでは、RC1 の Scale Out でパッケージの実行をトリガーできません。 エラー メッセージ: " *\@runincluster* はプロシージャ **create_execution** のパラメーターではありません。" この問題は、SSMS の次のリリースであるバージョン 17.2 で解決されています。 SSMS のバージョン 17.2 以降では、新しいパラメーター名と Scale Out でのパッケージ実行がサポートされています。 
 - **回避策:** SSMS バージョン 17.2 が利用可能になるまで、以下のようにします。
   1. 既存のバージョンの SSMS を使用して、パッケージ実行スクリプトを生成します。
   2. スクリプトの *runincluster* パラメーターの名前を *runinscaleout* に変更します。
@@ -150,7 +150,7 @@ Windows 上の SQL Server については、このリリースに関するリリ
 
 ## <a name="more-information"></a>詳細情報
 - [SQL Server Reporting Services リリース ノート](../reporting-services/release-notes-reporting-services.md)での制限事項と問題について説明します。
-- [Machine Learning サービスの既知の問題](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
+- [Machine Learning サービスの既知の問題](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md)
 - [SQL Server Update Center - サポート対象のすべてのバージョンのリンクと情報](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

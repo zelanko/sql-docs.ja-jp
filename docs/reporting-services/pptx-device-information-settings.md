@@ -1,5 +1,6 @@
 ---
 title: PPTX デバイス情報設定 | Microsoft Docs
+description: Reporting Services レポートを PPTX 形式で表示するためのデバイス情報の設定について説明します。
 ms.date: 09/11/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 53f5e080a4ce654eb133aed340034e547f247737
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a43b6ef919c75711af60a084e9019fa2d3b555b1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503331"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247502"
 ---
 # <a name="pptx-device-information-settings"></a>PPTX デバイス情報設定
   次の表は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートを PPTX 形式で表示するデバイス情報の設定を示しています。  

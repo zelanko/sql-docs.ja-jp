@@ -1,5 +1,6 @@
 ---
 title: 'レッスン 3: レポート ウィザードを使用して親レポートを設計する | Microsoft Docs'
+description: 親レポートのデータ接続とデータ テーブルを作成した後に、レポート デザイナーのレポート ウィザードを使用して親レポートを設計する方法。
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad06a5a76344348c71838873edcc490c75b7b2e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 74b71002f5f84f4d9b80966f6b44721b9942c8b4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651278"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247531"
 ---
-# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>レッスン 3: レポート ウィザードを使用して親レポートを設計する
+# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>レッスン 3:レポート ウィザードを使用して親レポートを設計する
 親レポートのデータ接続とデータ テーブルを作成した後は、レポート デザイナーのレポート ウィザードを使用して親レポートを設計します。 レポート デザイナーの詳細については、「[レポート デザイナーを使用してレポートをデザインする &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)」を参照してください。  
   
 ### <a name="to-design-the-parent-report-using-the-report-wizard"></a>レポート ウィザードを使用して親レポートを設計するには  
@@ -28,7 +29,7 @@ ms.locfileid: "62651278"
   
     これにより、レポート ウィザードが起動します。  
   
-4.  **[データセットのプロパティ]** ページの **[データ ソース]** ボックスで、「 **レッスン 2: 親レポートのデータ接続とデータ テーブルを定義する** 」で作成した [DataSet1](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)を選択します。  
+4.  [ **データセットのプロパティ** ] ページの [ **データ ソース** ] ボックスで、「 **レッスン 2: 親レポートのデータ接続とデータ テーブルを定義する** 」で作成した [DataSet1](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)を選択します。  
   
     上の手順で作成した **DataTable** で **[使用できるデータセット]** ボックスが自動的に更新されます。  
   
@@ -47,7 +48,7 @@ ms.locfileid: "62651278"
 8.  .rdlc ファイルを保存します。  
   
 ## <a name="next-task"></a>次の作業  
-これで、レポート ウィザードを使用して親レポートを設計できました。 次は、子レポートのデータ接続とデータ テーブルを作成します。 「 [レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)」を参照してください。  
+これで、レポート ウィザードを使用して親レポートを設計できました。 次は、子レポートのデータ接続とデータ テーブルを作成します。 「[レッスン 4:子レポートのデータ接続とデータ テーブルを定義する](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)」を参照してください。  
   
   
   

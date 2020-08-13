@@ -1,5 +1,6 @@
 ---
 title: データ ドリブン サブスクリプションの作成 (SSRS チュートリアル) | Microsoft Docs
+description: データ ドリブン サブスクリプションを作成し、フィルター処理されたレポート出力を生成する簡単な例で、データ ドリブン サブスクリプションについて説明します。
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: baff01bd8bc02af409a37c5cc1ce193e69663387
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2f4843c02d12c08cac8efa8b453999f4484ab084
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194837"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246334"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)
 この [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] チュートリアルでは、データ ドリブン サブスクリプションを作成し、フィルター処理されたレポート出力を生成してファイル共有に保存する簡単な例の手順を示すことで、データ ドリブン サブスクリプションの概念を説明します。 
@@ -33,9 +34,9 @@ ms.locfileid: "63194837"
 
 | レッスン | 説明 |
 | ------ | -------- |
-| [レッスン 1: サンプル サブスクライバー データベースを作成する](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | このレッスンでは、サブスクライバー情報を格納するテーブル ローカル [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースを作成します。 フィルター処理および出力ファイル形式に使用する情報の注文番号。 |
-| [レッスン 2: レポート データ ソースのプロパティを構成する](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) | このレッスンでは、指定したスケジュールでレポートを自動実行できるようにレポート データ ソースを構成します。 自動処理では保存された資格情報が必要です。 また、レポートのデータセットを変更して、サブスクライバーのデータが提供するパラメーターを含めます。 このパラメーターは、注文番号に基づくレポート データのフィルター処理に使用されます。 |
-| [レッスン 3: データ ドリブン サブスクリプションを定義する](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | このレッスンでは、データ ドリブン サブスクリプションを作成します。 ここでは、データ ドリブン サブスクリプション ウィザードを 1 ページずつ順に実行します。 |
+| [レッスン 1:サンプル サブスクライバー データベースを作成する](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | このレッスンでは、サブスクライバー情報を格納するテーブル ローカル [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースを作成します。 フィルター処理および出力ファイル形式に使用する情報の注文番号。 |
+| [レッスン 2:レポート データ ソースのプロパティを構成する](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) | このレッスンでは、指定したスケジュールでレポートを自動実行できるようにレポート データ ソースを構成します。 自動処理では保存された資格情報が必要です。 また、レポートのデータセットを変更して、サブスクライバーのデータが提供するパラメーターを含めます。 このパラメーターは、注文番号に基づくレポート データのフィルター処理に使用されます。 |
+| [レッスン 3:データ ドリブン サブスクリプションを定義する](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | このレッスンでは、データ ドリブン サブスクリプションを作成します。 ここでは、データ ドリブン サブスクリプション ウィザードを 1 ページずつ順に実行します。 |
 
 次の図は、チュートリアルの基本的なワークフローです。
 

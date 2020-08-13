@@ -1,11 +1,8 @@
 ---
 title: sqlcmd ユーティリティ
 description: sqlcmd ユーティリティを使用すると、Transact-SQL ステートメント、システム プロシージャ、およびスクリプト ファイルを異なるモードを使用して入力し、ODBC を使用して Transact-SQL バッチを実行できます。
-ms.custom: seo-lt-2019
-ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,20 +24,23 @@ helpviewer_keywords:
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 07/22/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0b4274b0c724ca86608bf35c9398b3edd199d55a
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 1898259aef928b749396d0560965aea1d2816624
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151613"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246641"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd ユーティリティ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-> SQL Server 2014 以前については、「[sqlcmd ユーティリティ](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
-> )」を参照してください。
-> 
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> SQL Server 2014 以前については、「[sqlcmd ユーティリティ](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014)」を参照してください。
+>
 > Linux 上で sqlcmd を使用する場合は、[Linux への sqlcmd と bcp のインストール](../linux/sql-server-linux-setup-tools.md)に関する記事を参照してください。
 
  **sqlcmd** ユーティリティを使用すると、Transact-SQL ステートメントやシステム プロシージャ、スクリプト ファイルを使用可能なさまざまなモードで入力できます。
@@ -68,7 +68,7 @@ ms.locfileid: "83151613"
 新しいバージョンの SQLCMD では、SQL Database、SQL Data Warehouse、Always Encrypted 機能の Multi-Factor Authentication (MFA) のサポートを含め、Azure AD 認証がサポートされています。
 新しい BCP では、SQL Database と SQL Data Warehouse の Multi-Factor Authentication (MFA) のサポートを含め、Azure AD 認証がサポートされています。
 
-**システム要件** Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2
+**システム要件** Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008-2019。
 
 このコンポーネントには、[Windows インストーラー 4.5](https://www.microsoft.com/download/details.aspx?id=8483) と [Microsoft ODBC Driver for SQL Server 17](https://www.microsoft.com/download/details.aspx?id=56567) の両方が必要です。
  
@@ -79,37 +79,38 @@ SQLCMD のバージョンを確認するには、`sqlcmd -?` コマンドを実�
 
 sqlcmd ユーティリティは既定でプレインストールされているため、Azure Cloud Shell から試してみることができます。[![Cloud Shell の起動](https://shell.azure.com/images/launchcloudshell.png "Cloud Shell の起動")](https://shell.azure.com)
 
-  SSMS で sqlcmd ステートメントを実行するには、上部のナビゲーションの [クエリ] メニューのドロップダウン リストから SQLCMD モードを選択します。  
-  
-> [!IMPORTANT] 
+SSMS で sqlcmd ステートメントを実行するには、上部のナビゲーションの [クエリ] メニューのドロップダウン リストから SQLCMD モードを選択します。  
+
+> [!IMPORTANT]
 > [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) では、**クエリ エディター**の標準モードと SQLCMD モードでの実行に Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient を使用します。 コマンド ラインから **sqlcmd** を実行する場合、**sqlcmd** では ODBC ドライバーが使用されます。 同じクエリでも、 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] の SQLCMD モードで実行する場合と **sqlcmd** ユーティリティで実行する場合とでは、適用される既定のオプションが異なるので、動作も異なる可能性があります。  
->   
-  
- 現在、**sqlcmd** ではコマンドライン オプションと値の間に空白を入れる必要はありません。 ただし、将来のリリースでは、コマンドライン オプションと値の間に空白が必要になる可能性があります。  
- 
- その他のトピック:
+>
+
+現在、**sqlcmd** ではコマンドライン オプションと値の間に空白を入れる必要はありません。 ただし、将来のリリースでは、コマンドライン オプションと値の間に空白が必要になる可能性があります。  
+
+ その他のトピック: 
+
 - [sqlcmd ユーティリティの起動](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
 - [sqlcmd ユーティリティの使用](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
   
-## <a name="syntax"></a>構文  
-  
-```  
-sqlcmd   
-   -a packet_size  
-   -A (dedicated administrator connection)  
-   -b (terminate batch job if there is an error)  
-   -c batch_terminator  
-   -C (trust the server certificate)  
-   -d db_name  
-   -e (echo input)  
-   -E (use trusted connection)  
-   -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] 
-   -g (enable column encryption) 
+## <a name="syntax"></a>構文
+
+```cmd
+sqlcmd
+   -a packet_size
+   -A (dedicated administrator connection)
+   -b (terminate batch job if there is an error)
+   -c batch_terminator
+   -C (trust the server certificate)
+   -d db_name
+   -e (echo input)
+   -E (use trusted connection)
+   -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage]
+   -g (enable column encryption)
    -G (use Azure Active Directory for authentication)
-   -h rows_per_header  
-   -H workstation_name  
-   -i input_file  
-   -I (enable quoted identifiers)  
+   -h rows_per_header
+   -H workstation_name
+   -i input_file
+   -I (enable quoted identifiers)
    -j (Print raw error messages)
    -k[1 | 2] (remove or replace control characters)  
    -K application_intent  
@@ -130,43 +131,45 @@ sqlcmd
    -t query_timeout  
    -u (unicode output file)  
    -U login_id  
-   -v var = "value"  
-   -V error_severity_level  
-   -w column_width  
-   -W (remove trailing spaces)  
-   -x (disable variable substitution)  
-   -X[1] (disable commands, startup script, environment variables, optional exit)  
-   -y variable_length_type_display_width  
-   -Y fixed_length_type_display_width  
-   -z new_password   
-   -Z new_password (and exit)  
-   -? (usage)  
-```  
+   -v var = "value"
+   -V error_severity_level
+   -w column_width
+   -W (remove trailing spaces)
+   -x (disable variable substitution)
+   -X[1] (disable commands, startup script, environment variables, optional exit)
+   -y variable_length_type_display_width
+   -Y fixed_length_type_display_width
+   -z new_password
+   -Z new_password (and exit)
+   -? (usage)
+```
   
-## <a name="command-line-options"></a>コマンド ライン オプション  
- **ログイン関連のオプション**  
-  **-A**  
- 専用管理者接続 (DAC) を使用して SQL Server にサインインします。 この種類の接続は、サーバーのトラブルシューティングで使用されます。 この接続は、DAC をサポートしているサーバー コンピューターでのみ機能します。 DAC を使用できない場合は、**sqlcmd** はエラー メッセージを生成して終了します。 DAC の詳細については、「 [データベース管理者用の診断接続](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」を参照してください。 -A オプションは -G オプションではサポートされていません。 -A を使用して SQL Database に接続する場合は、SQL Server 管理者である必要があります。 Azure Active Directory 管理者は DAC を使用できません。
-  
- **-C**  
- クライアントでこのスイッチを使用して、サーバーの証明書を検証せずに暗黙的に信頼するようにクライアントを構成できます。 このオプションは、ADO.NET オプションの `TRUSTSERVERCERTIFICATE = true`と同等です。  
-  
- **-d** _db_name_  
- **sqlcmd** の開始時に `USE` *db_name* ステートメントを実行します。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDDBNAME が設定されます。 このパラメーターにより初期データベースが指定されます。 既定値は、ログインの既定データベースのプロパティです。 データベースが存在しない場合は、エラー メッセージが生成され、 **sqlcmd** は終了します。  
-  
- **-l** _login_timeout_  
- サーバーに接続を試みたときに、 **sqlcmd** が ODBC ドライバーにログインするまでのタイムアウトを秒数で指定します。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDLOGINTIMEOUT が設定されます。 **sqlcmd** でのログインに関する既定のタイムアウトは 8 秒です。 **-G** オプションを使用して、SQL Database または SQL Data Warehouse に接続し、Azure Active Directory で認証する場合は、タイムアウト値を少なくとも 30 秒にすることをお勧めします。 ログイン タイムアウトは、0 ～ 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、 **sqlcmd** はエラー メッセージを生成します。 この値に 0 を指定すると、タイムアウトは無制限になります。
-  
- **-E**  
- ユーザー名とパスワードを使用せずにセキュリティ接続を使用して SQL Server にサインインします。 既定では、 **-E** を指定しないと、 **sqlcmd** ではセキュリティ接続オプションが使用されます。  
-  
- **-E** オプションを使用すると、SQLCMDPASSWORD などのユーザー名とパスワード用に使用できる環境変数の設定が無視されます。 **-E** オプションが **-U** オプションまたは **-P** オプションと共に使用されると、エラー メッセージが生成されます。  
+## <a name="command-line-options"></a>コマンド ライン オプション
+
+**ログイン関連のオプション**
+
+**-A**
+
+専用管理者接続 (DAC) を使用して SQL Server にサインインします。 この種類の接続は、サーバーのトラブルシューティングで使用されます。 この接続は、DAC をサポートしているサーバー コンピューターでのみ機能します。 DAC を使用できない場合は、**sqlcmd** はエラー メッセージを生成して終了します。 DAC の詳細については、「 [データベース管理者用の診断接続](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」を参照してください。 -A オプションは -G オプションではサポートされていません。 -A を使用して SQL Database に接続する場合は、SQL Server 管理者である必要があります。 Azure Active Directory 管理者は DAC を使用できません。
+
+**-C** クライアントでこのスイッチを使用して、サーバーの証明書を検証せずに暗黙的に信頼するようにクライアントを構成できます。 このオプションは、ADO.NET オプションの `TRUSTSERVERCERTIFICATE = true`と同等です。  
+
+**-d** _db_name_  
+**sqlcmd** の開始時に `USE` *db_name* ステートメントを実行します。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDDBNAME が設定されます。 このパラメーターにより初期データベースが指定されます。 既定値は、ログインの既定データベースのプロパティです。 データベースが存在しない場合は、エラー メッセージが生成され、 **sqlcmd** は終了します。  
+
+**-l** _login_timeout_  
+サーバーに接続を試みたときに、 **sqlcmd** が ODBC ドライバーにログインするまでのタイムアウトを秒数で指定します。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDLOGINTIMEOUT が設定されます。 **sqlcmd** でのログインに関する既定のタイムアウトは 8 秒です。 **-G** オプションを使用して、SQL Database または SQL Data Warehouse に接続し、Azure Active Directory で認証する場合は、タイムアウト値を少なくとも 30 秒にすることをお勧めします。 ログイン タイムアウトは、0 ～ 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、 **sqlcmd** はエラー メッセージを生成します。 この値に 0 を指定すると、タイムアウトは無制限になります。
+
+**-E**  
+ユーザー名とパスワードを使用せずにセキュリティ接続を使用して SQL Server にサインインします。 既定では、 **-E** を指定しないと、 **sqlcmd** ではセキュリティ接続オプションが使用されます。  
+
+**-E** オプションを使用すると、SQLCMDPASSWORD などのユーザー名とパスワード用に使用できる環境変数の設定が無視されます。 **-E** オプションが **-U** オプションまたは **-P** オプションと共に使用されると、エラー メッセージが生成されます。  
 
 **-g**  
 列の暗号化設定を `Enabled`に設定します。 詳細については、「 [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md)」を参照してください。 Windows 証明書ストアに格納されているマスター キーのみがサポートされます。 -g スイッチには、 **sqlcmd** バージョン [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)以上が必要です。 バージョンを判断するには、 `sqlcmd -?`を実行します。
 
- **-G**  
- このスイッチは、SQL Database または SQL Data Warehouse に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDUSEAAD = true が設定されます。 -G スイッチには、 **sqlcmd** バージョン [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)以上が必要です。 バージョンを判断するには、 `sqlcmd -?`を実行します。 詳細については、「 [Azure Active Directory 認証を使用して SQL Database または SQL Data Warehouse に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)」を参照してください。 -A オプションは -G オプションではサポートされていません。
+**-G**  
+このスイッチは、SQL Database または SQL Data Warehouse に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDUSEAAD = true が設定されます。 -G スイッチには、 **sqlcmd** バージョン [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)以上が必要です。 バージョンを判断するには、 `sqlcmd -?`を実行します。 詳細については、「 [Azure Active Directory 認証を使用して SQL Database または SQL Data Warehouse に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)」を参照してください。 -A オプションは -G オプションではサポートされていません。
 
 > [!IMPORTANT]
 > `-G` オプションは、Azure SQL Database と Azure Data Warehouse にのみ適用されます。
@@ -176,37 +179,37 @@ sqlcmd
 
     Azure Active Directory のユーザー名とパスワードを使用には、 **-G** オプションを指定します。ユーザー名とパスワードは、 **-U** オプションと **-P** オプションを指定する方法でも使用できます。
 
-    ``` 
-    Sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U bob@contoso.com -P MyAADPassword -G 
-    ``` 
+    ```cmd
+    Sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U bob@contoso.com -P MyAADPassword -G
+    ```
+
     -G パラメーターにより、バックエンドで次の接続文字列が生成されます。 
 
-    ```
+    ```cmd
      SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID= bob@contoso.com;PWD=MyAADPassword;AUTHENTICATION = ActiveDirectoryPassword 
     ```
 
-- **Azure Active Directory 統合** 
- 
+- **Azure Active Directory 統合**
+
    Azure Active Directory 統合認証の場合、ユーザー名とパスワードなしで **-G** オプションを指定します。
    "*現在、AAD 統合認証は、Linux または macOS 上でサポートされていません*"。
 
-    ```
+    ```cmd
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
-    ```  
+    ```
 
     これにより、バックエンドで次の接続文字列が生成されます。 
 
-    ```
+    ```cmd
     SERVER = Target_DB_or_DW.testsrv.database.windows.net Authentication = ActiveDirectoryIntegrated; Trusted_Connection=NO
-    ``` 
+    ```
 
-    > [!NOTE] 
+    > [!NOTE]
     > `-E` オプション (Trusted_Connection) と `-G` オプションを共に使用することはできません。
 
+- **Azure Active Directory 対話型**
 
-- **Azure Active Directory 対話型**  
- 
-   Azure SQL Database と SQL Data Warehouse の Azure AD 対話型認証では、多要素認証をサポートする対話的な方法を使用できます。 詳細については、「[Azure Active Directory 対話型認証](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)」を参照してください。 
+    Azure SQL Database と SQL Data Warehouse の Azure AD 対話型認証では、多要素認証をサポートする対話的な方法を使用できます。 詳細については、「[Azure Active Directory 対話型認証](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)」を参照してください。 
 
    Azure AD 対話型には、**sqlcmd** [バージョン 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) 以降と [ODBC バージョン 17.2 以降](https://www.microsoft.com/download/details.aspx?id=56567)が必要です。  
 
@@ -216,31 +219,31 @@ sqlcmd
 
    対話モードでは、パスワードを手動で入力する必要があります。また、多要素認証が有効なアカウントの場合は、構成された MFA 認証方法を完了します。
 
-   ``` 
+   ```cmd
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U alice@aadtest.onmicrosoft.com
    ```
 
    上記のコマンドにより、バックエンドで次の接続文字列が生成されます。  
 
-   ```
+   ```cmd
    SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID=alice@aadtest.onmicrosoft.com; AUTHENTICATION = ActiveDirectoryInteractive   
    ```
 
    Azure AD ユーザーが Windows アカウントを使用するドメイン フェデレーション ユーザーの場合、コマンド ラインで必要なユーザー名には (たとえば、以下の joe@contoso.com のように) そのドメイン アカウントが含まれます。
 
-   ```
+   ```cmd
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
- 
+
    ゲスト ユーザーが特定の Azure AD に存在し、SQL DB に存在するグループに属し、そのグループが sqlcmd コマンドを実行するデータベース アクセス許可を持つ場合、ゲスト ユーザーの別名が使用されます (たとえば、 *keith0@adventureworks.com* )。
 
   >[!IMPORTANT]
   >SQLCMD で `-G` および `-U` オプションを使用する場合、既知の問題として、`-G` オプションの前に `-U` オプションを指定すると、認証が失敗する可能性があります。 常に `-G` オプションから始め、`-U` オプションがその後になるようにします。
 
-    
- **-H** _workstation_name_  
- ワークステーション名です。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDWORKSTATION が設定されます。 ワークステーション名は **sys.sysprocesses** カタログ ビューの **hostname** 列に一覧表示され、ストアド プロシージャ **sp_who**を使用して取得できます。 このオプションが指定されていない場合の既定値は、現在のコンピューター名になります。 この名前は、異なる **sqlcmd** セッションを識別する場合に使用できます。  
+**-H** _workstation_name_  
+ ワークステーション名です。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDWORKSTATION が設定されます。 ワークステーション名は **sys.sysprocesses** カタログ ビューの **hostname** 列に一覧表示され、ストアド プロシージャ **sp_who**を使用して取得できます。 このオプションが指定されていない場合の既定値は、現在のコンピューター名になります。 この名前は、異なる 
 
+**sqlcmd** セッションを識別する場合に使用できます。  
 
 **-j** 画面に生のエラー メッセージを出力します。
   
@@ -248,7 +251,7 @@ sqlcmd
  アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、 **ReadOnly**だけです。 **-K** を指定しない場合、sqlcmd ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 **-M** _multisubnet_failover_  
- SQL Server 可用性グループまたは SQL Server フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 **-M** を指定しない場合、 **-M** は無効になります。 詳細については、「[リスナー、クライアント接続、アプリケーションのフェールオーバー](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」、「[可用性グループの作成と構成 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)」、「[フェールオーバー クラスタリングと Always On 可用性グループ (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)」、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](https://msdn.microsoft.com/library/ff878253.aspx)。 
+ SQL Server 可用性グループまたは SQL Server フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 **-M** を指定しない場合、 **-M** は無効になります。 詳細については、「[リスナー、クライアント接続、アプリケーションのフェールオーバー](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」、「[可用性グループの作成と構成 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)」、「[フェールオーバー クラスタリングと Always On 可用性グループ (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)」、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](https://msdn.microsoft.com/library/ff878253.aspx)。
   
  **-N**  
  クライアントでこのスイッチを使用して、暗号化された接続を要求できます。  
@@ -259,10 +262,9 @@ sqlcmd
 - **-P ""**
 
 強力なパスワードを使用することをお勧めします。
- 
+
 #### <a name="use-a-strong-password"></a>[**強力なパスワードを使用してください。** ](../relational-databases/security/strong-passwords.md)
-  
-  
+
  パスワード プロンプトは、次のようにパスワード プロンプトをコンソールに出力することによって表示されます。 `Password:`  
   
  ユーザーが行った入力は表示されません。 つまり、入力時には何も表示されず、カーソルが移動しません。  
@@ -322,13 +324,13 @@ sqlcmd
   
  コード ページには次の変換規則があります。  
   
--   コード ページを指定しないと、入力ファイルが変換不要の Unicode ファイルでない限り、 **sqlcmd** では、入力ファイルと出力ファイルの両方に現在のコード ページが使用されます。  
+- コード ページを指定しないと、入力ファイルが変換不要の Unicode ファイルでない限り、 **sqlcmd** では、入力ファイルと出力ファイルの両方に現在のコード ページが使用されます。  
   
--   **sqlcmd** では、ビッグ エンディアンとリトル エンディアンの両方の Unicode 入力ファイルが自動的に認識されます。 **-u** オプションを指定すると、出力は常にリトル エンディアン Unicode になります。  
+- **sqlcmd** では、ビッグ エンディアンとリトル エンディアンの両方の Unicode 入力ファイルが自動的に認識されます。 **-u** オプションを指定すると、出力は常にリトル エンディアン Unicode になります。  
   
--   出力ファイルを指定しないと、出力コード ページはコンソールのコード ページになります。 この方法では、コンソールに出力が正しく表示されます。  
+- 出力ファイルを指定しないと、出力コード ページはコンソールのコード ページになります。 この方法では、コンソールに出力が正しく表示されます。  
   
--   複数の入力ファイルの場合、同じコード ページが指定されているものと見なされます。 Unicode 入力ファイルと Unicode 以外の入力ファイルを混在させることができます。  
+- 複数の入力ファイルの場合、同じコード ページが指定されているものと見なされます。 Unicode 入力ファイルと Unicode 以外の入力ファイルを混在させることができます。  
   
  Cmd.exe のコード ページを確認するには、コマンド プロンプトに「 **chcp** 」と入力します。  
   
@@ -337,7 +339,7 @@ sqlcmd
   
  パスの例:  
 
-```  
+```cmd
 -i C:\<filename>  
 -i \\<Server>\<Share$>\<filename>  
 -i "C:\Some Folder\<file name>"  
@@ -354,11 +356,11 @@ sqlcmd
   
  パスの例:  
 
-```  
+```cmd
 -o C:< filename>  
 -o \\<Server>\<Share$>\<filename>  
 -o "C:\Some Folder\<file name>"  
- ``` 
+ ```
  空白を含むファイル パスは、引用符で囲む必要があります。  
   
  **-r**[**0** | **1**]  
@@ -442,21 +444,21 @@ sqlcmd
  **-y** _variable_length_type_display_width_  
  **sqlcmd** スクリプト変数 `SQLCMDMAXVARTYPEWIDTH`を設定します。 既定値は 256 です。 長い可変長のデータ型に返される文字数を制限します。  
   
--   **varchar(max)**  
+- **varchar(max)**  
   
--   **nvarchar(max)**  
+- **nvarchar(max)**  
   
--   **varbinary(max)**  
+- **varbinary(max)**  
   
--   **xml**  
+- **xml**  
   
--   **UDT (ユーザー定義のデータ型)**  
+- **UDT (ユーザー定義のデータ型)**  
   
--   **text**  
+- **text**  
   
--   **ntext**  
+- **ntext**  
   
--   **image**  
+- **image**  
   
 > [!NOTE]  
 >  UDT は実装によって固定長にもなります。 固定長の UDT の長さが *display_width*よりも短い場合は、返される UDT の値は影響を受けません。 ただし、 *display_width*よりも長い場合は、出力は切り捨てられます。  
@@ -468,17 +470,17 @@ sqlcmd
  **-Y** _fixed_length_type_display_width_  
  **sqlcmd** スクリプト変数 `SQLCMDMAXFIXEDTYPEWIDTH`を設定します。 既定値は 0 (無制限) です。 次のデータ型に返される文字数を制限します。  
   
--   **char(** _n_ **)** 、ただし 1<=n<=8000  
+- **char(** _n_ **)** 、ただし 1<=n<=8000  
   
--   **nchar(n** _n_ **)** 、ただし 1<=n<=4000  
+- **nchar(n** _n_ **)** 、ただし 1<=n<=4000  
   
--   **varchar(n** _n_ **)** 、ただし 1<=n<=8000  
+- **varchar(n** _n_ **)** 、ただし 1<=n<=8000  
   
--   **nvarchar(n** _n_ **)** 、ただし 1<=n<=4000  
+- **nvarchar(n** _n_ **)** 、ただし 1<=n<=4000  
   
--   **varbinary(n** _n_ **)** 、ただし 1<=n\<=4000  
+- **varbinary(n** _n_ **)** 、ただし 1<=n\<=4000  
   
--   **variant**  
+- **variant**  
   
  **エラー報告のオプション**  
   **-b**  
@@ -537,30 +539,31 @@ sqlcmd
  **-X** **[1]**  
  **sqlcmd** がバッチ ファイルから実行される場合に、システムのセキュリティを損なう可能性のあるコマンドを無効にします。 無効なコマンドも認識されます。 **sqlcmd** は警告メッセージを表示して継続します。 省略可能なパラメーターを **1** に指定すると、 **sqlcmd** はエラー メッセージを生成して終了します。 **-X** オプションを使用した場合に無効になるコマンドは次のとおりです。  
   
--   **ED**  
+- **ED**  
   
--   **!!** _command_  
+- **!!** _command_  
   
  **-X** オプションを指定すると、環境変数が **sqlcmd**に渡されなくなります。 また、SQLCMDINI スクリプト変数を使用して指定した、スタートアップ スクリプトも実行できなくなります。 **sqlcmd** スクリプト変数の詳細については、「 [sqlcmd でのスクリプト変数の使用](~/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)」を参照してください。  
   
  **-?**  
  **sqlcmd** のバージョンと **sqlcmd** オプションの構文の概要を表示します。  
   
-## <a name="remarks"></a>解説  
- オプションは、構文の例に示されている順序に従って使用する必要はありません。  
-  
- 複数の結果が返される場合は、 **sqlcmd** は同じバッチの各結果セットの間に空白行を 1 行ずつ出力します。 また、 `<x> rows affected` というメッセージは、そのメッセージが実行したステートメントに該当する場合にだけ表示されます。  
-  
- **sqlcmd** を対話的に使用するには、コマンド プロンプトで、**sqlcmd** を、この記事で前に説明した各オプションと共に入力します。 詳細については、「 [sqlcmd ユーティリティの使用](~/relational-databases/scripting/sqlcmd-use-the-utility.md)」を参照してください。  
-  
+## <a name="remarks"></a>解説
+
+オプションは、構文の例に示されている順序に従って使用する必要はありません。
+
+複数の結果が返される場合は、 **sqlcmd** は同じバッチの各結果セットの間に空白行を 1 行ずつ出力します。 また、 `<x> rows affected` というメッセージは、そのメッセージが実行したステートメントに該当する場合にだけ表示されます。
+
+**sqlcmd** を対話的に使用するには、コマンド プロンプトで、**sqlcmd** を、この記事で前に説明した各オプションと共に入力します。 詳細については、「 [sqlcmd ユーティリティの使用](~/relational-databases/scripting/sqlcmd-use-the-utility.md)」を参照してください。
+
 > [!NOTE]  
->  **-L**、 **-Q**、 **-Z** 、または **-i** のオプションを使用すると、 **sqlcmd** は実行後に終了します。  
+>  **-L**、 **-Q**、 **-Z** 、または **-i** のオプションを使用すると、 **sqlcmd** は実行後に終了します。
   
- コマンド環境 (Cmd.exe) での **sqlcmd** コマンドライン全体の長さは、すべての引数と拡張変数を含めて、オペレーティング システムが Cmd.exe のために決めます。  
+ コマンド環境 (Cmd.exe) での **sqlcmd** コマンドライン全体の長さは、すべての引数と拡張変数を含めて、オペレーティング システムが Cmd.exe のために決めます。
   
-## <a name="variable-precedence-low-to-high"></a>変数の優先順位 (低から高)  
+## <a name="variable-precedence-low-to-high"></a>変数の優先順位 (低から高)
   
-1.  システム レベル環境変数  
+1.  システム レベル環境変数
   
 2.  ユーザー レベル環境変数  
   
@@ -618,18 +621,18 @@ sqlcmd
   
  **sqlcmd** コマンドを使用するときは、次の点に注意してください。  
   
--   GO を除くすべての **sqlcmd** コマンドは、コロン (:) によってプレフィックス指定する必要があります。  
+- GO を除くすべての **sqlcmd** コマンドは、コロン (:) によってプレフィックス指定する必要があります。  
   
     > [!IMPORTANT]  
     >  既存の **osql** スクリプトとの互換性を保つために、一部のコマンドはコロンなしで認識され、 **[:]** によって示されます。
   
--   **sqlcmd** コマンドが認識されるのは、コマンドが行の先頭にある場合のみです。  
+- **sqlcmd** コマンドが認識されるのは、コマンドが行の先頭にある場合のみです。  
   
--   すべての **sqlcmd** コマンドには、大文字と小文字の区別はありません。  
+- すべての **sqlcmd** コマンドには、大文字と小文字の区別はありません。  
   
--   各コマンドは個別の行に指定する必要があります。 コマンドの後には、Transact-SQL ステートメントや別のコマンドを指定できません。  
+- 各コマンドは個別の行に指定する必要があります。 コマンドの後には、Transact-SQL ステートメントや別のコマンドを指定できません。  
   
--   コマンドは即座に実行されます。 Transact-SQL ステートメントのように、実行バッファーに配置されません。  
+- コマンドは即座に実行されます。 Transact-SQL ステートメントのように、実行バッファーに配置されません。  
   
  **編集コマンド**  
   **[:]** **ED**  
@@ -653,11 +656,11 @@ sqlcmd
   
  スクリプト変数は次の方法で指定できます。  
   
--   コマンド ラインのオプションを暗黙的に使用します。 たとえば、 **-l** オプションでは SQLCMDLOGINTIMEOUT という **sqlcmd** 変数が設定されます。  
+- コマンド ラインのオプションを暗黙的に使用します。 たとえば、 **-l** オプションでは SQLCMDLOGINTIMEOUT という **sqlcmd** 変数が設定されます。  
   
--   **:Setvar** コマンドを明示的に使用します。  
+- **:Setvar** コマンドを明示的に使用します。  
   
--   **sqlcmd**の実行前に環境変数を定義します。  
+- **sqlcmd**の実行前に環境変数を定義します。  
   
 > [!NOTE]  
 >  **-X** オプションを使用すると、環境変数が **sqlcmd**に渡されなくなります。  
@@ -708,7 +711,7 @@ sqlcmd
  **sqlcmd** が終了します。  
   
  **[:]** **EXIT**[ **(** _statement_ **)** ]  
- **sqlcmd**からの戻り値に、SELECT ステートメントの結果を使用できます。 数値の場合、結果行の最終行の第 1 列は、4 バイトの (長) 整数に変換されます。 MS-DOS は、下位バイトを親プロセスやオペレーティング システムのエラー レベルに渡します。 Windows 200x では、4 バイトの整数全体を渡します。 の構文は次のとおりです。  
+ **sqlcmd**からの戻り値に、SELECT ステートメントの結果を使用できます。 数値の場合、結果行の最終行の第 1 列は、4 バイトの (長) 整数に変換されます。 MS-DOS、Linux、および Mac は、下位バイトを親プロセスやオペレーティング システムのエラー レベルに渡します。 Windows 200x では、4 バイトの整数全体を渡します。 の構文は次のとおりです。  
   
  `:EXIT(query)`  
   
@@ -726,15 +729,15 @@ sqlcmd
   
  EXIT の形式を次に示します。  
   
--   :EXIT  
+- :EXIT  
   
  バッチを実行せずに直ちに終了し、値を返しません。  
   
--   :EXIT ( )  
+- :EXIT ( )  
   
  バッチを実行してから終了し、値を返しません。  
   
--   :EXIT (query)  
+- :EXIT (query)  
   
  クエリを含むバッチを実行し、クエリの結果を返して終了します。  
   
@@ -757,12 +760,12 @@ sqlcmd
   
  **その他のコマンド**  
   **:r \<** _filename_ **>**  
- **\<** _filename_ **>** によって指定されたファイルを基に、追加の Transact-SQL ステートメントと **sqlcmd** コマンドを解析し、ステートメント キャッシュ内に登録します。  
+ **\<**_filename_**>** によって指定されたファイルを基に、追加の Transact-SQL ステートメントと **sqlcmd** コマンドを解析し、ステートメント キャッシュ内に登録します。  
   
  **GO** が最後に記述されていない Transact-SQL ステートメントがファイルに含まれている場合は、その行の **:r** の後に **GO** を入力する必要があります。  
   
 > [!NOTE]  
->  **\<** _filename_ **>** は、**sqlcmd** が実行されたスタートアップ ディレクトリを基準にして読み取られます。  
+>  **\<** _filename_ **>** は、**sqlcmd** が実行されたスタートアップ ディレクトリと関連して読み取られます。  
   
  ファイルは、バッチ ターミネータが検出された後に読み取られ、実行されます。 **:r** コマンドは複数発行できます。 ファイルには、どのような **sqlcmd** コマンドでも含めることができます。 これには、バッチ ターミネータの **GO**も含まれます。  
   
@@ -777,7 +780,7 @@ sqlcmd
   
  タイムアウト オプション :  
   
-|||  
+|値|動作|  
 |-|-|  
 |0|待機状態を維持|  
 |n>0|n 秒間待機|  
@@ -815,13 +818,13 @@ sqlcmd
 ### <a name="sqlcmd-file-names"></a>sqlcmd のファイル名  
  **sqlcmd** の入力ファイルは **-i** オプションまたは **:r** コマンドで指定できます。 出力ファイルは **-o** オプションまたは **:Error**、 **:Out** 、および **:Perftrace** コマンドで指定できます。 指定するファイルについてのガイドラインを次に示します。  
   
--   **:Error**、 **:Out** 、および **:Perftrace** を指定するときは、個別に **\<** _filename_ **>** を指定します。 同じ **\<** _filename_ **>** を使用すると、各コマンドからの入力が混在する場合があります。  
+- **:Error**、 **:Out**、および **:Perftrace** を指定するときは、個別に **\<**_filename_**>** を指定します。 同じ **\<**_filename_**>** を使用すると、各コマンドからの入力が混在する場合があります。  
   
--   ローカル コンピューターの **sqlcmd** からリモート サーバー上の入力ファイルが呼び出され、ファイルに :Out c:\OutputFile.txt のようにドライブ パスが含まれていると、 出力ファイルはリモート サーバーではなく、ローカル コンピューター上に作成されます。  
+- ローカル コンピューターの **sqlcmd** からリモート サーバー上の入力ファイルが呼び出され、ファイルに :Out c:\OutputFile.txt のようにドライブ パスが含まれていると、 出力ファイルはリモート サーバーではなく、ローカル コンピューター上に作成されます。  
   
--   有効なファイル パスは、`C:\<filename>`、`\\<Server>\<Share$>\<filename>`、`"C:\Some Folder\<file name>"` などです。 パスに空白が含まれる場合は、引用符を使用します。  
+- 有効なファイル パスは、`C:\<filename>`、`\\<Server>\<Share$>\<filename>`、`"C:\Some Folder\<file name>"` などです。 パスに空白が含まれる場合は、引用符を使用します。  
   
--   各新規 **sqlcmd** セッションにより、同じ名前の既存のファイルが上書きされます。  
+- 各新規 **sqlcmd** セッションにより、同じ名前の既存のファイルが上書きされます。  
   
 ### <a name="informational-messages"></a>情報メッセージ
 
@@ -892,40 +895,42 @@ Enter キーを押すと、次の情報メッセージが出力されます。"�
   
  詳細については、この記事の「[XML 出力形式](#OutputXML)」を参照してください。  
 
-### <a name="using-azure-active-directory-authentication"></a>Azure Active Directory 認証の利用  
+### <a name="using-azure-active-directory-authentication"></a>Azure Active Directory 認証の利用
+
 Azure Active Directory 認証の利用例
-```
+
+```cmd
 sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G  -l 30
 sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P MyAADPassword -l 30
 ```
   
-## <a name="sqlcmd-best-practices"></a>sqlcmd のベスト プラクティス  
- 次の説明を参考にして、セキュリティと効率を最大にしてください。  
-  
--   統合セキュリティを使用します。  
-  
--   自動化された環境では **-X** を使用します。  
-  
--   適切な NTFS ファイル システム権限を使用して、入力ファイルと出力ファイルのセキュリティを保護します。  
-  
--   パフォーマンスを向上させるには、複数のセッションではなく、1 つの **sqlcmd** セッションの中で、できるだけ作業するようにします。  
-  
--   バッチまたはクエリ実行のタイムアウト値を、推定所要時間よりも長めに設定します。  
-  
-## <a name="see-also"></a>参照  
- [sqlcmd ユーティリティの起動](~/relational-databases/scripting/sqlcmd-start-the-utility.md)   
- [sqlcmd を使用した Transact-SQL スクリプト ファイルの実行](~/relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)   
- [sqlcmd ユーティリティの使用](~/relational-databases/scripting/sqlcmd-use-the-utility.md)   
- [sqlcmd でのスクリプト変数の使用](~/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
- [sqlcmd によるデータベース エンジンへの接続](~/relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)   
- [クエリ エディターによる SQLCMD スクリプトの編集](~/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
- [ジョブ ステップの管理](~/ssms/agent/manage-job-steps.md)   
- [CmdExec ジョブ ステップの作成](~/ssms/agent/create-a-cmdexec-job-step.md)  
-  
+## <a name="sqlcmd-best-practices"></a>sqlcmd のベスト プラクティス
+
+次の説明を参考にして、セキュリティと効率を最大にしてください。  
+
+- 統合セキュリティを使用します。  
+
+- 自動化された環境では **-X** を使用します。  
+
+- 適切な NTFS ファイル システム権限を使用して、入力ファイルと出力ファイルのセキュリティを保護します。
+
+- パフォーマンスを向上させるには、複数のセッションではなく、1 つの **sqlcmd** セッションの中で、できるだけ作業するようにします。
+
+- バッチまたはクエリ実行のタイムアウト値を、推定所要時間よりも長めに設定します。
+
+## <a name="next-steps"></a>次のステップ
+
+- [sqlcmd ユーティリティの起動](~/relational-databases/scripting/sqlcmd-start-the-utility.md)
+- [sqlcmd を使用した Transact-SQL スクリプト ファイルの実行](~/relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)
+- [sqlcmd ユーティリティの使用](~/relational-databases/scripting/sqlcmd-use-the-utility.md)
+- [sqlcmd でのスクリプト変数の使用](~/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)
+- [sqlcmd によるデータベース エンジンへの接続](~/relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)
+- [クエリ エディターによる SQLCMD スクリプトの編集](~/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)
+- [ジョブ ステップの管理](~/ssms/agent/manage-job-steps.md)   
+- [CmdExec ジョブ ステップの作成](~/ssms/agent/create-a-cmdexec-job-step.md)  
 
 ## <a name="feedback"></a>フィードバック
 
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL クライアント ツール フォーラム](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

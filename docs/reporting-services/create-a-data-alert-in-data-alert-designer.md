@@ -1,5 +1,6 @@
 ---
 title: データ警告デザイナーでのデータ警告の作成 | Microsoft Docs
+description: データ警告デザイナーでデータ警告の定義を作成する方法について説明します。 また、警告を編集し、完了時にその編集を保存する方法についても説明します。
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a7ef1c053dbf22bc1717a47d9a662d1d29fd55f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571575"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247566"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>警告デザイナーでのデータ警告の作成
 
@@ -69,7 +70,7 @@ ms.locfileid: "65571575"
   
      一覧表示される比較演算子は、選択した列のデータ型によって異なります。 日付データ型の列の場合、ルールのしきい値の横にカレンダーのアイコンが表示されます。 カレンダーの日付をクリックするか日付を入力してデータを入力できます。  
   
-     データ警告デザイナーでは、 **[値入力モード]** と **[フィールドの選択モード]** の 2 つの比較モードが提供されます。 既定のモードは **[値入力モード]** です。 OR 句は、 **[値入力モード]** で **is** 比較を使用している場合にのみ追加できます。  
+     データ警告デザイナーには 2 つの比較モードが用意されています。 **[値入力モード]** と **[フィールドの選択モード]** です。 既定のモードは **[値入力モード]** です。 OR 句は、 **[値入力モード]** で **is** 比較を使用している場合にのみ追加できます。  
   
 9. OR 句を追加するには、下矢印をクリックし、 **[値入力モード]** をクリックします。  
   
@@ -114,7 +115,7 @@ ms.locfileid: "65571575"
   
 20. 必要に応じて、 **[件名]** ボックスで、警告メッセージの件名行を更新します。  
   
-     既定の件名は、 **"\<データ警告名> に関するデータの警告"** です。  
+     既定の件名は、「 **\<data alert name> に関するデータの警告**」です。  
   
 21. 必要に応じて、 **[説明]** ボックスに警告メッセージの説明を入力します。  
   

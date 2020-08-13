@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6a13f70bfffbdbeba0ba08882c4dcc9b53aaa69
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0c62f1f2ef34bd5ba1a59a642ac8d07db2dbe259
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85668873"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247081"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>メモリ最適化テーブルのクエリ処理のガイド
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -195,7 +195,7 @@ END
   
  ネイティブ コンパイル ストアド プロシージャは作成時にコンパイルされ、解釈されたストアド プロシージャは最初の実行時にコンパイルされます (コンパイルの一部、特に解析と algebrizer の処理は作成時に実行されますが、 解釈されたストアド プロシージャの場合は、最初の実行時にクエリ プランの最適化が実行されます)。再コンパイルの論理と似ています。 サーバーを再起動した場合、ネイティブ コンパイル ストアド プロシージャは、プロシージャの最初の実行時に再コンパイルされます。 解釈されたストアド プロシージャは、そのプランがプラン キャッシュに存在しなくなった場合は再コンパイルされます。 次の表は、ネイティブ コンパイル ストアド プロシージャと解釈されたストアド プロシージャの両方について、コンパイルおよび再コンパイルのケースをまとめたものです。  
   
-||ネイティブ コンパイル ストアド プロシージャ|解釈された|  
+|コンパイルの種類|ネイティブ コンパイル ストアド プロシージャ|解釈された|  
 |-|-----------------------|-----------------|  
 |最初のコンパイル|作成時。|最初の実行時。|  
 |自動再コンパイル|データベースまたはサーバーの再起動後、プロシージャの最初の実行時。|サーバーの再起動時。 または、通常はスキーマや統計の変更またはメモリ不足に基づく、プラン キャッシュからの削除時。|  

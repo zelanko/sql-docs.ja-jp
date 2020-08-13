@@ -1,5 +1,6 @@
 ---
 title: ATOM デバイス情報設定 | Microsoft Docs
+description: ATOM フィードの名前の送信をサポートする ATOM 表示拡張機能のデバイス情報設定と、使用する文字エンコードについて説明します。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe4a56a4-5552-423c-85c1-895e2e212fee
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2d04fae8687e31df79d72aec2b41bfe67cc1cc3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 274815c98aa15aead103e33de761b8b496212242
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65504108"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242502"
 ---
 # <a name="atom-device-information-settings"></a>ATOM デバイス情報の設定
   ATOM 表示拡張機能のデバイス情報設定では、ATOM フィードの名前および使用する文字エンコードの送信がサポートされています。  

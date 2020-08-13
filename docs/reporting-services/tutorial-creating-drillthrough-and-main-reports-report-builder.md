@@ -1,5 +1,6 @@
 ---
 title: 'チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー) | Microsoft Docs'
+description: 詳細レポートとメイン レポートという、Reporting Services の 2 種類のページ分割されたレポートの作成方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,21 +9,21 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ce825906ef6282cd722f91b1c0dbf76463a7c821
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73637983"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238406"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル:詳細レポートとメイン レポートの作成 (レポート ビルダー)
 このチュートリアルでは、詳細レポートとメイン レポートという、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] の 2 種類のページ分割されたレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 
 
 次の図は、メイン レポートのフィールド値 "Games and Toys" を作成し、詳細レポートのタイトルに表示する方法を示します。 この詳細レポートには、Games and Toys 製品カテゴリに関連するデータが含まれています。  
   
 ![rs_DrillthroughCubeTutorial](../reporting-services/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
    
-このチュートリアルの推定所要時間: 30 分。  
+このチュートリアルの推定所要時間:30 分。  
   
 ## <a name="requirements"></a>必要条件  
 このチュートリアルでは、詳細レポートとメイン レポートの両方で Contoso Sales キューブにアクセスする必要があります。 このデータセットは、ContosoDW データ ウェアハウスと Contoso_Retail オンライン分析処理 (OLAP) データベースで構成されています。 このチュートリアルで作成するレポートは、Contoso Sales キューブからレポート データを取得します。 Contoso_Retail OLAP データベースは、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=18279)からダウンロードできます。 ダウンロードする必要があるファイルは、ContosoBIdemoABF.exe だけです。 このファイルに OLAP データベースが含まれています。  
@@ -120,7 +121,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 5.  フィルター式の一覧で、 **[All Channel]** を展開し、 **[Online]** と **[Reseller]** をクリックして、 **[OK]** をクリックします。  
   
-    Channel を Online と Reseller のみに制限するフィルターがクエリに追加されます。  
+    これで、次のチャネルのみを含めるフィルターがクエリに追加されます:Online および Reseller。  
   
 6.  Sales Territory ディメンションを展開し、Sales Territory Group を **[階層]** 列 ( **Channel Name**の下) にドラッグします。  
   
@@ -411,7 +412,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 5.  フィルター式の一覧で、 **[All Channel]** を展開し、 **[Online]** と **[Reseller]** をクリックして、 **[OK]** をクリックします。  
   
-    Channel を Online と Reseller のみに制限するフィルターがクエリに追加されます。  
+    これで、次のチャネルのみを含めるフィルターがクエリに追加されます:Online および Reseller。  
   
 6.  Sales Territory ディメンションを展開し、Sales Territory Group を **[階層]** 列 ( **Channel Name**の下) にドラッグします。  
   
@@ -627,7 +628,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 1.  デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
-2.  「 **2009 Product Category Sales: Online and Reseller Category:** 」と入力します。  
+2.  「**2009 Product Category Sales:Online and Reseller Category:** 」と入力します。  
   
 3.  入力したテキストを選択します。  
   

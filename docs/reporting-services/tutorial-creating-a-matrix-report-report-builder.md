@@ -1,5 +1,6 @@
 ---
 title: 'チュートリアル: マトリックス レポートの作成 (レポート ビルダー) | Microsoft Docs'
+description: 入れ子になった行および列グループ内のサンプル売上データのマトリックスを使用して、Reporting Services のページ分割されたレポートを作成する方法について説明します。
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,21 +9,21 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4891a25815d1efb14f230cbab9bcaaa75cad0a16
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63294670"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247451"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>チュートリアル: マトリックス レポートの作成 (レポート ビルダー)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>チュートリアル:マトリックス レポートの作成 (レポート ビルダー)
 このチュートリアルでは、入れ子になった行および列グループ内のサンプル売上データのマトリックスを使用して、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートを作成する方法について説明します。 
 
 また、隣接する列グループの作成、列の書式設定、およびテキストの回転も行います。 次の図に、ここで作成するレポートと同様のレポートを示します。  
   
 ![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
    
-このチュートリアルの推定所要時間 : 20 分  
+このチュートリアルの推定所要時間:20 分  
   
 ## <a name="requirements"></a>必要条件  
 要件については、「 [チュートリアルの前提条件](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。 
@@ -49,7 +50,7 @@ ms.locfileid: "63294670"
   
 5.  **[次へ]** をクリックします。  
   
-6.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 埋め込みデータ ソースの作成については、「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
+6.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 埋め込みデータ ソースの作成の詳細については、「[チュートリアル:基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
 7.  **[次へ]** をクリックします。  
   
@@ -133,7 +134,7 @@ ms.locfileid: "63294670"
   
 13. **[完了]** をクリックします。  
   
-    マトリックスがデザイン画面に追加されます。 行グループ ペインには、Territory と SalesDate の 2 つの行グループが表示されます。 列グループ ペインには、Subcategory と Product の 2 つの行グループが表示されます。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
+    マトリックスがデザイン画面に追加されます。 [行グループ] ペインには 2 つの行グループが表示されます。Territory と SalesDate です。 [列グループ] ペインには 2 つの列グループが表示されます。Subcategory と Product です。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
     
     ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
   
@@ -335,7 +336,7 @@ ms.locfileid: "63294670"
   
 2.  次が格納されたセルを選択します。 `[Territory].` 
 
-    >**注**: テキストではなくセルを選択します。 WritingMode プロパティは、セルにのみ使用できます。
+    >**注**:テキストではなくセルを選択します。 WritingMode プロパティは、セルにのみ使用できます。
     
      ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
   

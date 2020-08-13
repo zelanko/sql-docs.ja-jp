@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de9ceed1aa019b82bc943a1985f0f251ad82b1fa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b32c0b24aea8e1a55060b501fd001c1ad7f90b36
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917532"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248052"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) パッケージおよびプロジェクト パラメーター
 
@@ -76,10 +76,10 @@ ms.locfileid: "86917532"
  次の Transact-SQL ビューとストアド プロシージャを使用して、パラメーター値を表示および設定できます。  
   
  [catalog.execution_parameter_values &#40;SSISDB データベース&#41;](../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) (ビュー)  
- 特定の実行で使用される実際のパラメーター値を示します。  
+ 特定の実行における実際のパラメーター値を示します。
   
  [catalog.get_parameter_values &#40;SSISDB データベース&#41;](../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) (ストアド プロシージャ)  
- 指定されたパッケージと環境参照の実際の値を解決して示します。  
+ 指定されたパッケージと環境参照の実際の値を解決して示します。
   
  [catalog.object_parameters &#40;SSISDB データベース&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) (ビュー)  
  設計上の既定値とサーバーの既定値を含め、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログのすべてのパッケージおよびプロジェクトのパラメーターとプロパティを表示します。  

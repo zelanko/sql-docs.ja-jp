@@ -1,5 +1,6 @@
 ---
 title: Reporting Services Data Alerts | Microsoft Docs
+description: SQL Server Reporting Services のデータ警告を使用して、関心のある、または重要なレポート データについて通知する方法について説明します。
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b1cb553c263bc822d5139d50169241a0f19fdd79
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7a3d3d4cc792afdef44a6c5ff6684e1e6aa4ff14
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487799"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246681"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services のデータ警告
 
@@ -160,10 +161,10 @@ SQL Server Reporting Services の "データ警告" は、関心のある、ま�
 |エラー カテゴリ|<|\<|イベントの種類||>|>|>|  
 |--------------------|--------|--------|----------------|-|--------|--------|--------|  
 ||**FireAlert**|**FireSchedule**|**CreateSchedule**|**UpdateSchedule**|**DeleteSchedule**|**GenerateAlert**|**DeliverAlert**|  
-|メモリ不足|X|X|X|X|X|X|X|  
-|スレッドの中止|X|X|X|X|X|X|X|  
-|SQL エージェントが未実行|X||X|X|X|||  
-|一時的。 ほとんどの場合は接続の問題、タイムアウト、およびロックが原因。|X|X|X|X|X|X|X|  
+|メモリ不足|X|X|X|X|X|X|x|  
+|スレッドの中止|X|X|X|X|X|X|x|  
+|SQL エージェントが未実行|X||X|X|x|||  
+|一時的。 ほとんどの場合は接続の問題、タイムアウト、およびロックが原因。|X|X|X|X|X|X|x|  
 |IOException|||||||X|  
 |WebException|||||||X|  
 |SocketException|||||||X|  

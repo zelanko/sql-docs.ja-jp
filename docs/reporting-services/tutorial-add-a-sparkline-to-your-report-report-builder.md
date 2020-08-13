@@ -1,5 +1,6 @@
 ---
 title: 'チュートリアル: レポートへのスパークラインの追加 (レポート ビルダー) | Microsoft Docs'
+description: レポート ビルダーを使用して、Reporting Services のページ分割されたレポートにスパークライン グラフを含む基本的なテーブルを作成する方法について説明します。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fe0d52f55905721002a1590f54ada84d7732f2a0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63043182"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245659"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>チュートリアル: レポートへのスパークラインの追加 (レポート ビルダー)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>チュートリアル:レポートへのスパークラインの追加 (レポート ビルダー)
 
 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]のこのチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポート内にスパークライン グラフを含む基本的なテーブルを作成します。   
   
@@ -23,7 +24,7 @@ ms.locfileid: "63043182"
   
 ![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
      
-このチュートリアルの推定所要時間: 30 分。  
+このチュートリアルの推定所要時間:30 分。  
   
 ## <a name="requirements"></a>必要条件  
 要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
@@ -154,7 +155,7 @@ ms.locfileid: "63043182"
   
 14. テーブルがデザイン画面に追加されます。 テーブルには 3 列および 5 行が含まれています。  
   
-    グループ化ペインを確認します。 グループ化ペインが表示されない場合、 **[表示]** メニューの **[グループ化]** をクリックします。 行グループ ペインに行グループ **Product**が表示されます。 列グループ ペインに列グループ **SalesDate**が表示されます。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
+    グループ化ペインを確認します。 グループ化ペインが表示されない場合、 **[表示]** メニューの **[グループ化]** をクリックします。 行グループ ペインには 1 つの行グループ**Product** が表示されます。 列グループ ペインには 1 つ列グループ**SalesDate** が表示されます。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   

@@ -1,5 +1,6 @@
 ---
 title: プログラムによる WMI プロバイダーへのアクセス | Microsoft Docs
+description: WMI プロバイダーの概要、レポート サーバー インスタンスの検索方法、およびプログラムによって WMI プロバイダーにアクセスする方法について説明します。
 ms.date: 11/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8196e045704adedbf235fcba566ba22b009536f7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1886b2520c8b5a2228e67aa38e1dd6091a023b33
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62704577"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246366"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>プログラムによる WMI プロバイダーへのアクセス
 

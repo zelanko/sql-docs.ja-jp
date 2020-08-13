@@ -1,6 +1,6 @@
 ---
 title: さまざまなエディションでサポートされている機能 - SQL Server Reporting Services | Microsoft Docs
-description: このトピックでは、SQL Server のさまざまなエディションでサポートされる SQL Server Reporting Services (SSRS) 機能の詳細について説明します。 180 日の試用期間中、SQL Server Evaluation Edition をご利用いただけます。
+description: SQL Server のさまざまなエディションでサポートされる SQL Server Reporting Services (SSRS) 機能の詳細について説明します。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/16/2019
-ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbb3196349c648b955e5d27bf1d5fcfdadb9085f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76516603"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246661"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-editions"></a>SQL Server の各エディションでサポートされる SQL Server Reporting Services の機能
 
