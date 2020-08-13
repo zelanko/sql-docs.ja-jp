@@ -17,11 +17,12 @@ ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a89ba7886ecca244456b70e9b8dff78b0bea176e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d5e7f0d0d3495abcd716fb5763b29d7e26192f60
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999353"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173193"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85999353"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_pkeys [ @table_name = ] 'name'       
@@ -66,7 +67,7 @@ sp_pkeys [ @table_name = ] 'name'
 |KEY_SEQ|**smallint**|複数列の主キーの列のシーケンス番号。|  
 |PK_NAME|**sysname**|主キー識別子。 データソースに該当しない場合は NULL を返します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
  sp_pkeys では、PRIMARY KEY 制約で明示的に定義された列に関する情報が返されます。 すべてのシステムが明示的に名前が付けられた主キーをサポートしているわけではないため、ゲートウェイの実装者が主キーの構成を決定します。 "主キー" という用語は、テーブルの論理主キーを指していることに注意してください。 論理主キーとして示されているすべてのキーには、一意のインデックスが定義されている必要があります。 sp_statistics には、この一意なインデックスも返されます。  
   
  sp_pkeys ストアド プロシージャは、ODBC の SQLPrimaryKeys に相当します。 返される結果は、TABLE_QUALIFIER、TABLE_OWNER、TABLE_NAME、および KEY_SEQ の値で並べ替えられます。  
@@ -77,7 +78,7 @@ sp_pkeys [ @table_name = ] 'name'
 ## <a name="examples"></a>例  
  次の例では、`HumanResources.Department` データベースの `AdventureWorks2012` テーブルの主キーを取得します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_pkeys @table_name = N'Department'  
@@ -87,10 +88,10 @@ EXEC sp_pkeys @table_name = N'Department'
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、`DimAccount` データベースの `AdventureWorksPDW2012` テーブルの主キーを取得します。 このメソッドは、テーブルに主キーがないことを示すゼロ行を返します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-EXEC sp_pkeys @table_name = N'DimAccount;  
+EXEC sp_pkeys @table_name = N'DimAccount';  
 ```  
   
 ## <a name="see-also"></a>参照  

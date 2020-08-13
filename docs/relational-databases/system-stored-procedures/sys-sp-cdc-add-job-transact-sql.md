@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68737e96c3c2c90592b1cccf807675ae5518ee4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 53bc390e3e95ac49554826ad6ed96b8c4138ca10
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891189"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88172901"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
 `[ @pollinginterval ] = polling\_interval_`ログスキャンサイクルの間隔を秒数で指定します。 *polling_interval*は**bigint**で、既定値は5です。  
   
- *polling_interval*は、 *continuous*が1に設定されている場合にのみ、キャプチャジョブに対して有効です。 指定した場合、値を負の値にすることはできず、24時間を超えることはできません。 値 0 を指定した場合、ログ スキャンの間に待機時間はありません。  
+ *polling_interval*は、 *continuous*が1に設定されている場合にのみ、キャプチャジョブに対して有効です。 指定する場合、値は0以上で24時間未満 (最大: 86399 秒) にする必要があります。 値 0 を指定した場合、ログ スキャンの間に待機時間はありません。  
   
 `[ @retention ] = retention_`変更データ行が変更テーブルに保持される時間 (分単位)。 *リテンション期間*は**bigint**で、既定値は 4320 (72 時間) です。 最大値は 52494800 (100 年) です。 指定する場合、値は正の整数である必要があります。  
   
@@ -108,7 +108,7 @@ EXEC sys.sp_cdc_add_job @job_type = N'capture';
 GO  
 ```  
   
-### <a name="b-creating-a-cleanup-job"></a>B: クリーンアップジョブの作成  
+### <a name="b-creating-a-cleanup-job"></a>B. クリーンアップジョブの作成  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにクリーンアップ ジョブを作成します。 パラメーター `@start_job` は 0 に、`@retention` は 5760 分 (96 時間) に設定します。 明示的に削除された既存のクリーンアップ ジョブを改めて作成するという状況を想定しています。  
   
 ```  
@@ -120,7 +120,7 @@ EXEC sys.sp_cdc_add_job
     ,@retention = 5760;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [dbo. cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  

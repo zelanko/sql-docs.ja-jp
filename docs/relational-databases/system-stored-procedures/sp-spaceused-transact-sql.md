@@ -18,12 +18,12 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65b65c0ff721742c1bccbd6998d358797bd6d10b
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 91b38115cfcd9f688187fc7663e3da8c90d3d457
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393954"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173089"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "87393954"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 sp_spaceused [[ @objname = ] 'objname' ]   
 [, [ @updateusage = ] 'updateusage' ]  
 [, [ @mode = ] 'mode' ]  
@@ -60,7 +60,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *Mode*引数には、次の値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |ALL|ローカル部分とリモート部分の両方を含む、オブジェクトまたはデータベースのストレージの統計を返します。|  
 |LOCAL_ONLY|オブジェクトまたはデータベースのローカル部分のみのストレージ統計情報を返します。 オブジェクトまたはデータベースで Stretch が有効になっていない場合、は = ALL と同じ統計を返し @mode ます。|  
@@ -70,7 +70,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 `[ @oneresultset = ] oneresultset`1つの結果セットを返すかどうかを示します。 *Oneresultset*引数には、次の値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |0|* \@ Objname*が null またはが指定されていない場合、2つの結果セットが返されます。 2つの結果セットが既定の動作です。|  
 |1|* \@ Objname* = null またはが指定されていない場合、1つの結果セットが返されます。|  
@@ -164,7 +164,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**xtp_used**|**varchar (18)**|構築中、アクティブ、およびマージターゲットの状態を持つチェックポイントファイルの合計サイズ (KB 単位)。 これは、メモリ最適化テーブルのデータに対してアクティブに使用されるディスク領域です。 データベースに少なくとも1つのコンテナーを含む memory_optimized_data ファイルグループがない場合は、NULL を返します。 *この列は、 @include_total_xtp_storage = 1 の場合にのみ含ま*れます。| 
 |**xtp_pending_truncation**|**varchar (18)**|状態 WAITING_FOR_LOG_TRUNCATION のチェックポイントファイルの合計サイズ (KB 単位)。 これは、ログの切り捨てが行われると、クリーンアップを待機しているチェックポイントファイルに使用されるディスク領域です。 データベースに少なくとも1つのコンテナーを含む memory_optimized_data ファイルグループがない場合は、NULL を返します。 この列は、の場合にのみ含まれ `@include_total_xtp_storage=1` ます。|
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **database_size**は**reserved**  +  ログファイルのサイズが含まれていますが、**予約済み**で**unallocated_space**データページのみを考慮しているため、通常は予約済みの**未割り当て領域**の合計より大きくなります。 Azure Synapse Analytics では、このステートメントが true でない場合があります。 
   
  XML インデックスとフルテキストインデックスによって使用されるページは、両方の結果セットの**index_size**に含まれています。 *Objname*を指定すると、オブジェクトの XML インデックスとフルテキストインデックスのページも、**予約**された結果と**index_size**の結果の合計にカウントされます。  

@@ -1,5 +1,6 @@
 ---
 title: Reporting Services の新機能 | Microsoft Docs
+description: 主な機能領域の変更を含む、さまざまなバージョンの SQL Server Reporting Services の新機能について説明します。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: cb50ca237fb1b9fae87b73fd81a9e6f2426b4775
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 869c2be4422df2361a0522e5b2183e61e43ae797
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079610"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248553"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) の新機能
 
@@ -34,23 +35,23 @@ Power BI Report Server については、「[Power BI Report Server とは](http
 
 ### <a name="azure-sql-managed-instance-support"></a>Azure SQL Managed Instance のサポート
 
-VM またはデータ センターでホストされている Azure SQL Managed Instance (MI) で、SQL Server Reporting Services (SSRS) に使用されるデータベース カタログをホストできるようになりました。 サポートは、SQL MI への接続にデータベース資格情報を使用することに限定されています。
+VM またはデータ センターでホストされている Azure SQL Managed Instance (MI) で、SQL Server Reporting Services (SSRS) に使用されるデータベース カタログをホストできるようになりました。 サポートは、SQL MI への接続のためのデータベース資格情報の使用に制限されています。
 
 ### <a name="power-bi-premium-dataset-support"></a>Power BI Premium データセットのサポート
 
-Microsoft レポート ビルダーまたは SQL Server Data Tools (SSDT) を使用して Power BI データセットに接続できます。 次に、SQL Server Analysis Services 接続を使用してこれらのレポートを SSRS 2019 に発行できます。 このシナリオを実行するには、ユーザーが保存されている Windows ユーザー名とパスワードを使用する必要があります。
+Microsoft レポート ビルダーまたは SQL Server Data Tools (SSDT) を使用して、Power BI データセットに接続できます。 次に、SQL Server Analysis Services 接続を使用してこれらのレポートを SSRS 2019 に発行できます。 ユーザーは、保存されている Windows ユーザー名とパスワードを使用してこのシナリオに対応する必要があります。
 
-### <a name="alttext-alternative-text-support-for-report-elements"></a>AltText (代替テキスト) のレポート要素のサポート
+### <a name="alttext-alternative-text-support-for-report-elements"></a>レポート要素での AltText (代替テキスト) のサポート
 
-レポート作成時に、ツールヒントを使用してレポートの各要素のテキストを指定できます。 スクリーン リーダー テクノロジでは、これらのヒントが適切に識別されます。
+レポート作成時に、レポート上の各要素のテキストを指定するためにツールヒントを使用できます。 スクリーン リーダー テクノロジでは、これらのヒントが適切に識別されます。
 
 ### <a name="azure-active-directory-application-proxy-support"></a>Azure Active Directory アプリケーション プロキシのサポート
 
-Azure Active Directory アプリケーション プロキシを使用すると、Web アプリやモバイル アプリを介してセキュリティで保護されたアクセスを可能にするために、独自の Web アプリケーション プロキシを管理する必要がなくなります。
+Azure Active Directory アプリケーション プロキシによって、Web アプリまたはモバイル アプリを介してセキュリティで保護されたアクセスを実現するために、独自の Web アプリケーション プロキシを管理する必要がなくなりました。
 
 ### <a name="custom-headers"></a>カスタム ヘッダー
 
-指定された正規表現パターンに一致するすべての URL のヘッダー値を設定します。 ユーザーは、有効な XML を使用してカスタム ヘッダー値を更新し、選択した要求 URL のヘッダー値を設定できます。 管理者は、XML 内に任意の数のヘッダーを追加できます。 詳細については、「 **[サーバーのプロパティ] の [詳細設定] ページ**」の記事の[カスタム ヘッダー](tools/server-properties-advanced-page-reporting-services.md#customheaders)のセクションを参照してください。
+指定した正規表現パターンに一致するすべての URL のヘッダー値を設定します。 ユーザーは、有効な XML でカスタム ヘッダー値を更新し、選択された要求 URL のヘッダー値を設定できます。 管理者は、この XML に任意の数のヘッダーを追加できます。 詳細については、「 **[サーバーのプロパティ] の [詳細設定] ページ**」の記事の[カスタム ヘッダー](tools/server-properties-advanced-page-reporting-services.md#customheaders)のセクションを参照してください。
 
 ### <a name="transparent-database-encryption"></a>Transparent Database Encryption
 
@@ -58,7 +59,7 @@ SQL Server 2019 は、Enterprise および Standard エディションの SSRS �
 
 ### <a name="microsoft-report-builder-update"></a>Microsoft レポート ビルダーの更新プログラム
 
-レポート ビルダーの新しくリリースされたバージョンは、Reporting Services のバージョン 2016、2017、および 2019 と完全に互換性があります。 また、Power BI Report Server のすべてのリリースとサポートされているバージョンと互換性があります。
+新しくリリースされたバージョンのレポート ビルダーは、2016、2017、2019 バージョンの Reporting Services と完全に互換性があります。 また、これは、Power BI Report Server のリリースおよびサポートされているすべてのバージョンとも互換性があります。
 
 ::: moniker-end
 
@@ -137,7 +138,7 @@ SQL Server 2017 Reporting Services をダウンロードするには、「 **[Mi
 Reporting Services モバイル レポートは、多様なフォーム ファクター用に最適化された専用レポートであり、モバイル デバイスでレポートにアクセスするユーザーに最適なエクスペリエンスを提供します。 モバイル レポートでは、時間、カテゴリ、比較のグラフから、ツリーマップやカスタム マップまで、多種多様な視覚化を使用できます。 モバイル レポートは、オンプレミスの SQL Server Analysis Services 多次元およびテーブル データを含むさまざまなデータ ソースに接続できます。 グリッド行および列を調節したデザイン サーフェイス上に、モバイル レポート用のフィールドを配置できます。 柔軟なモバイル レポート要素は、任意の画面サイズに合わせて自動的に拡大縮小します。 Reporting Service サーバーに保存したモバイル レポートを、ブラウザーまたは Power BI モバイル アプリで表示および操作できます。 次のデバイスがサポートされています。
 
 - iPad
-- iPhones
+- iPhone
 - Android フォン
 - または Windows 10 デバイス
 
@@ -183,9 +184,9 @@ iPad および iPhone の iOS 用 Power BI モバイル アプリでは、ロー
 
 **ツリー マップとサンバースト グラフ:** ツリーマップ ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") とサンバースト グラフ ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") を使用してレポートを強化できます。これらは、階層データを表示する優れた方法です。 詳細については、「 [Reporting Services のツリー マップとサンバースト グラフ](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)」を参照してください。  
 
-**レポートの埋め込み:** モバイルおよびページ分割されたレポートを、URL パラメーターと共に、他の Web ページに (また、iframe を使ってアプリケーションに) 埋め込むことができるようになりました。  
+**レポートの埋め込み:** iframe を URL パラメーターと共に使用して、モバイル レポートやページ分割されたレポートを他の Web ページやアプリケーションに埋め込むことができるようになりました。  
 
-**レポートアイテムの Power BI ダッシュボードへのピン留め:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]でレポートを表示しているときに、レポート アイテムを選択し、 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードにピン留めできます。   ピン留めできるアイテムは、グラフ、ゲージ パネル、マップ、イメージです。 次のようにすることができます。
+**レポートアイテムの Power BI ダッシュボードへのピン留め:**[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]でレポートを表示しているときに、レポート アイテムを選択し、 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードにピン留めできます。   ピン留めできるアイテムは、グラフ、ゲージ パネル、マップ、イメージです。 次のようにすることができます。
 
 1. ピン留めするダッシュボードを含むグループを選択します。
 2. アイテムをピン留めするダッシュボードを選択します。
@@ -197,7 +198,7 @@ iPad および iPhone の iOS 用 Power BI モバイル アプリでは、ロー
 
 詳細については、「[Power BI Report Server の統合 &#40;構成マネージャー&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)」および「[Power BI ダッシュボードへの Reporting Services のアイテムのピン留め](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)」を参照してください。  
 
-**PowerPoint のレンダリングとエクスポート:** Microsoft PowerPoint (PPTX) 形式は、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] の新しい表示拡張機能です。 通常のアプリケーション (レポート ビルダー、レポート デザイナー (SSDT)、および [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]) から PPTX 形式のレポートをエクスポートできます。 たとえば、次の図は [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]のエクスポート メニューを示しています。 
+**PowerPoint のレンダリングとエクスポート:** Microsoft PowerPoint (PPTX) 形式は、[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] の新しい表示拡張機能です。 通常のアプリケーション (レポート ビルダー、レポート デザイナー (SSDT)、および [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]) から PPTX 形式のレポートをエクスポートできます。 たとえば、次の図は [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]のエクスポート メニューを示しています。 
 
 ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
 
@@ -209,7 +210,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 詳細については、「 [URL アクセスを使用してレポートをエクスポート](../reporting-services/export-a-report-using-url-access.md)」を参照してください。
 
-**リモート印刷での PDF による ActiveXの置き換え:** レポート ビューアー ツール バーでの印刷が、ActiveX コントロールではなく PDF を使うようになりました。 新しいレポート ビューアーは、Microsoft Edge を含む、ほとんどの最新ブラウザーでサポートされています。 ActiveX コントロールをダウンロードする必要はなくなります。 使用するブラウザーと、インストールされている PDF 表示アプリケーションおよびサービスに応じて、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ではレポートを印刷するための印刷ダイアログ ボックスが開かれるか、.PDF ファイルをダウンロードするプロンプトが表示されます。 管理者が [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] からクライアント側の印刷を無効にすることもできます。
+**リモート印刷での PDF による ActiveX の置き換え:** レポート ビューアーのツールバーは、ActiveX コントロールではなく PDF 経由で印刷されるようになりました。 新しいレポート ビューアーは、Microsoft Edge を含む、ほとんどの最新ブラウザーでサポートされています。 ActiveX コントロールをダウンロードする必要はなくなります。 使用するブラウザーと、インストールされている PDF 表示アプリケーションおよびサービスに応じて、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ではレポートを印刷するための印刷ダイアログ ボックスが開かれるか、.PDF ファイルをダウンロードするプロンプトが表示されます。 管理者が [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] からクライアント側の印刷を無効にすることもできます。
 
 詳細については、「 [Reporting Services のクライアント側印刷機能の有効化と無効化](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)」を参照してください。
 
@@ -217,7 +218,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 ### <a name="subscription-improvements"></a>サブスクリプションの機能強化  
 
-|機能|サポートされるサーバー モード|  
+|特徴量|サポートされるサーバー モード|  
 |-------------|---------------------------|  
 |**サブスクリプションを有効または無効にする**: サブスクリプションを簡単に無効または有効にできる新しいユーザー インターフェイス オプション。 サブスクリプションを無効にしても、スケジュールなどの他の構成プロパティは維持され、簡単に有効にすることができます。<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> 詳細については、「 [レポートとサブスクリプションの処理を無効化または一時停止する](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)」を参照してください。|ネイティブ モード|  
 |**サブスクリプションの説明**: 新しいサブスクリプションを作成するときに、サブスクリプションのプロパティの一部として、レポートの説明を含めることができるようになりました。 説明はサブスクリプションの概要ページに表示されます。|SharePoint モードとネイティブ モード|  
@@ -226,7 +227,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 
-新しいリリースの SSDT には、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]用のプロジェクト テンプレート (レポート サーバー プロジェクト ウィザードとレポート サーバー プロジェクト) が含まれています。 SSDT のダウンロードについては、 [SQL Server Data Tools for Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542)に関するページをご覧ください。  
+新しいリリースの SSDT には、[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 用のプロジェクト テンプレートが含まれています:レポート サーバー プロジェクト ウィザードとレポート サーバー プロジェクト。 SSDT のダウンロードについては、 [SQL Server Data Tools for Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542)に関するページをご覧ください。  
 
 ### <a name="report-builder-improvements"></a>レポート ビルダーの機能強化
 

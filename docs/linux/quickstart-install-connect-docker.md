@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 864abdb32dceaaa18e221295eebebc4f8382d4bb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: af1f6698cc08064d5ff9a8e8c6da32574b01d732
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901564"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248660"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>クイック スタート:Docker を使用して SQL Server コンテナー イメージを実行する
 
@@ -177,6 +177,8 @@ SELECT @@SERVERNAME,
 
 ターゲット コンテナーを特定しやすくするため、`-h` と `--name` を同じ値に設定することをお勧めします。
 
+5. 最後の手順として、`SA_PASSWORD` が `ps -eax` 出力に表示され、同じ名前の環境変数に格納されるため、SA パスワードを変更します。 以下の手順を参照してください。
+
 ::: moniker-end
 <!--End of 2017 "Pull and run" section-->
 
@@ -295,8 +297,14 @@ SELECT @@SERVERNAME,
 
 ターゲット コンテナーを特定しやすくするため、`-h` と `--name` を同じ値に設定することをお勧めします。
 
+
+5. 最後の手順として、`SA_PASSWORD` が `ps -eax` 出力に表示され、同じ名前の環境変数に格納されるため、SA パスワードを変更します。 以下の手順を参照してください。
+
+
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
+
+
 
 ## <a name="change-the-sa-password"></a><a id="sapassword"></a> SA パスワードの変更
 

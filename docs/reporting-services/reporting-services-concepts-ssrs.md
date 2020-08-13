@@ -1,5 +1,6 @@
 ---
 title: Reporting Services の概念 | Microsoft Docs
+description: レポートのスケジュール、ロールと権限、レポートのサブスクリプションと配信など、SQL Server Reporting Services (SSRS) の概念について説明します。
 ms.date: 10/25/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4679ed954ac7f422a0f3caa0c59c24e5012c927f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eb4d1592b2541c16a34c96820a27942ef8bc08e3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078184"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248588"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services の概念 (SSRS)
   このトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の概念を簡単に説明します。  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モード | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モード   
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モード | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モード   
   
 ##  <a name="report-server-concepts"></a><a name="bkmk_ReportServerConcepts"></a> レポート サーバーの概念  
  レポート サーバーは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインスタンスがインストールされているコンピューターです。 レポート サーバーには、改ページ調整されたレポートおよびモバイル レポート、レポート関連のアイテムやリソース、スケジュール、サブスクリプションなどのアイテムが内部的に保存されます。 レポート サーバーは、スタンドアロンの単一サーバーまたはスケールアウト ファームとして構成したり、SharePoint Server と統合したりすることができます。 レポート サーバーのアイテムは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web サービス、WMI プロバイダー、URL アクセス、またはプログラムからスクリプトを使用して操作します。 レポート サーバーを操作する方法は、配置トポロジと構成によって異なります。  

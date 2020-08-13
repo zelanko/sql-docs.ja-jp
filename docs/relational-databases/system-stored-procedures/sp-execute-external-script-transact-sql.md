@@ -20,16 +20,15 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a1ef1dc0f4b59b5eaf8f0ea4978a4eacde023e31
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 074836973123ae4f0f49acf72cf7bf6f56b17cf5
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87877965"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180259"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
-
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **Sp_execute_external_script**ストアドプロシージャは、プロシージャへの入力引数として指定されたスクリプトを実行し、 [Machine Learning Services](../../machine-learning/sql-server-machine-learning-services.md)および[言語拡張](../../language-extensions/language-extensions-overview.md)と共に使用されます。 
@@ -137,7 +136,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]`外部スクリプトによって使用される入力パラメーターの値の一覧です。  
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注釈
 
 > [!IMPORTANT]
 > クエリツリーは SQL machine learning によって制御され、ユーザーはクエリに対して任意の操作を実行できません。
@@ -191,7 +190,7 @@ sp_execute_external_script
   
 ## <a name="restrictions"></a>制限  
 
-### <a name="data-types"></a>データの種類
+### <a name="data-types"></a>データ型
 
 次のデータ型は、 **sp_execute_external_script**プロシージャの入力クエリまたはパラメーターで使用されている場合はサポートされません。また、サポートされていない型エラーを返します。  
 
@@ -322,9 +321,9 @@ Python を使って似たモデルを生成するには、言語識別子を `@l
 
 スコアリングには、ネイティブな [PREDICT](../../t-sql/queries/predict-transact-sql.md) 関数を使うこともできます。通常、これは Python や R のランタイムを呼び出さないので高速です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-+ [SQL machine learning](../../machine-learning/index.yml)
++ [SQL 機械学習](../../machine-learning/index.yml)
 + [SQL Server 言語拡張機能](../../language-extensions/language-extensions-overview.md)。 
 + [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
 + [Transact-sql&#41;&#40;の外部ライブラリの作成](../../t-sql/statements/create-external-library-transact-sql.md)  

@@ -19,15 +19,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a825843a69d9ba2f65f272adba86e6d8656aedde
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b6a24a142deef2283c58e21941293f31479f997b
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750705"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180086"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 では、R、Python、Java などの外部ランタイムに関連するパッケージライブラリの管理がサポートされています。
 
@@ -47,7 +47,7 @@ ms.locfileid: "85750705"
 |scope |INT |パブリックスコープの場合は0。プライベートスコープの場合は1 |  
 |scope_desc |varchar (7) |パッケージがパブリックであるかプライベートであるかを示します|
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>こちらもご覧ください  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [外部ライブラリの作成](../../t-sql/statements/create-external-library-transact-sql.md)  

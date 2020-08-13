@@ -1,5 +1,6 @@
 ---
 title: 'チュートリアル: 式の概要 | Microsoft Docs'
+description: 強力かつ柔軟性のある Reporting Services のページ分割されたレポートを作成するために、式と共に一般的な関数や演算子を使用する方法について説明します。
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7ebb428a12bc75f3c61793918dde0594da531ed2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63295623"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248541"
 ---
-# <a name="tutorial-introducing-expressions"></a>チュートリアル: 式の概要
+# <a name="tutorial-introducing-expressions"></a>チュートリアル:式の概要
 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] のこのチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 強力かつ柔軟性のあるページネーション付きのレポートを作成するために、式と共に一般的な関数や演算子を使用します。 
 
 名前値の連結、独立したデータセット内の値の参照、フィールド値に基づいた色の表示などを行うための式を作成します。  
@@ -26,7 +27,7 @@ ms.locfileid: "63295623"
   
 ![report-builder-expression-tutorial-in-browser](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
-このチュートリアルの推定所要時間: 30 分。  
+このチュートリアルの推定所要時間:30 分。  
   
 ## <a name="requirements"></a>必要条件  
 要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/prerequisites-for-tutorials-report-builder.md) を参照してください。  
@@ -89,7 +90,7 @@ ms.locfileid: "63295623"
     ```  
 
   
-10. クエリ デザイナーのツール バーで、 **[実行]** ( **!** ) をクリックします。 結果セットでは、FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase、LastPurchase の各列に 23 行のデータが表示されます。  
+10. クエリ デザイナーのツール バーで、 **[実行]** ( **!** ) をクリックします。 結果セットには、23 行のデータが表示されます。列はFirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase、LastPurchase です。  
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -147,7 +148,7 @@ ms.locfileid: "63295623"
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3.名のイニシャルと姓を表示する  
-このセクションでは、イニシャルと姓を含む名前に評価される式に、 **Left** 関数および **連結** ( **&** ) 演算子を使用します。 式を手順どおりに作成することも、手順をスキップして先に進み、チュートリアルから式をコピーして **[式]** ダイアログ ボックスに貼り付けることもできます。   
+このセクションでは、イニシャルと姓を含む名前に評価される式に、 **Left** 関数および **連結** (**&**) 演算子を使用します。 式を手順どおりに作成することも、手順をスキップして先に進み、チュートリアルから式をコピーして **[式]** ダイアログ ボックスに貼り付けることもできます。   
   
 1.  **[StateProvince]** 列を右クリックし、 **[列の挿入]** をポイントして、 **[左]** をクリックします。  
   
@@ -357,7 +358,7 @@ ms.locfileid: "63295623"
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>CountryRegion データセット内の値を参照するには  
   
-1.  **[Country Region ID]** 列ヘッダーをクリックし、テキストの **ID**という部分を削除し、「 **Country Region**」にします。  
+1.  **[Country Region ID]** 列ヘッダーをクリックし、テキストの**ID** を削除し、**Country Region** にします。  
   
 2.  **[Country Region]** 列のデータ セルを右クリックし、 **[式]** をクリックします。  
   

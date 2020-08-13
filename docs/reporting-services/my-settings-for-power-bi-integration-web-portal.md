@@ -1,5 +1,6 @@
 ---
 title: Power BI 統合の個人用設定 (Web ポータル) | Microsoft Docs
+description: Reporting Services Web ポータルの [個人用設定] ページと、個々のユーザーが Power BI でのサインインを管理するためそのページを使用する方法について説明します。
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 85c2fac7-80bf-45b7-8654-764b5f5231f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7535b16e731bc74df98f853156214abcfbe5961f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f25ab8f848c642de95f1ba62eaca15bbb8b7e7d9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503723"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248579"
 ---
 # <a name="my-settings-for-power-bi-integration-web-portal"></a>Power BI 統合の個人用設定 (Web ポータル)
 

@@ -18,11 +18,12 @@ ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c280be43be2ef4f14e57321cb96420e6cf51eb6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 18a4a5c25c791122191c07e5bb63a6fc6c32cba0
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012685"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180061"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "86012685"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 sp_fkeys [ @pktable_name = ] 'pktable_name'   
      [ , [ @pktable_owner = ] 'pktable_owner' ]   
      [ , [ @pktable_qualifier = ] 'pktable_qualifier' ]   
@@ -88,7 +89,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  返される結果は、FKTABLE_QUALIFIER、FKTABLE_OWNER、FKTABLE_NAME、KEY_SEQ の順序に従って並べ替えられます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
  無効な外部キーを含むテーブルを含むアプリケーションのコーディングは、次の方法で実装できます。  
   
 -   そのテーブルで作業している間は、一時的に制約チェックを無効にして (ALTER TABLE NOCHECK または CREATE TABLE NOT FOR REPLICATION)、その後再び有効にします。  

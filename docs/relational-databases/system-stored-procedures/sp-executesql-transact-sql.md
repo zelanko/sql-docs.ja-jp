@@ -19,11 +19,12 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdd669732bb26fcf14bde80efeb51673aeb3ce3e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 61a93d541e34c152d7c0ab5191ffe577c782c6e2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012697"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180239"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "86012697"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_executesql [ @stmt = ] statement  
@@ -74,7 +75,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>結果セット  
  SQL 文字列に組み込まれているすべての SQL ステートメントからの結果セットを返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
  sp_executesql パラメーターは、このトピックの「構文」セクションで説明されているように、特定の順序で入力する必要があります。 パラメーターが順序どおりに入力されていない場合は、エラーメッセージが表示されます。  
   
  sp_executesql は、バッチ、名前の有効範囲、およびデータベース コンテキストに関して、EXECUTE と同じように動作します。 [!INCLUDE[tsql](../../includes/tsql-md.md)]Sp_executesql stmt パラメーターのステートメントまたはバッチ \@ は、sp_executesql ステートメントが実行されるまでコンパイルされません。 次に、stmt の内容を \@ コンパイルして、sp_executesql を呼び出したバッチの実行プランとは別の実行プランとして実行します。 sp_executesql バッチから、sp_executesql を呼び出すバッチ内で宣言されている変数は参照できません。 sp_executesql バッチ内のローカル カーソルまたはローカル変数は、sp_executesql を呼び出すバッチでは認識されません。 データベース コンテキストの変更は、sp_executesql ステートメント終了時まで有効です。  
@@ -86,10 +87,10 @@ sp_executesql [ @stmt = ] statement
   
  sp_executesql では、次の例に示すように、[!INCLUDE[tsql](../../includes/tsql-md.md)] 文字列とは別にパラメーター値を設定できます。  
   
-```  
-DECLARE @IntVariable int;  
-DECLARE @SQLString nvarchar(500);  
-DECLARE @ParmDefinition nvarchar(500);  
+```sql  
+DECLARE @IntVariable INT;  
+DECLARE @SQLString NVARCHAR(500);  
+DECLARE @ParmDefinition NVARCHAR(500);  
   
 /* Build the SQL string one time.*/  
 SET @SQLString =  
@@ -109,17 +110,17 @@ EXECUTE sp_executesql @SQLString, @ParmDefinition,
   
  また、出力パラメーターを sp_executesql で使用することもできます。 次の例では、`AdventureWorks2012.HumanResources.Employee` テーブルから役職名を取得し、それを出力パラメーター `@max_title` に返します。  
   
-```  
-DECLARE @IntVariable int;  
-DECLARE @SQLString nvarchar(500);  
-DECLARE @ParmDefinition nvarchar(500);  
-DECLARE @max_title varchar(30);  
+```sql  
+DECLARE @IntVariable INT;  
+DECLARE @SQLString NVARCHAR(500);  
+DECLARE @ParmDefinition NVARCHAR(500);  
+DECLARE @max_title VARCHAR(30);  
   
 SET @IntVariable = 197;  
 SET @SQLString = N'SELECT @max_titleOUT = max(JobTitle)   
    FROM AdventureWorks2012.HumanResources.Employee  
    WHERE BusinessEntityID = @level';  
-SET @ParmDefinition = N'@level tinyint, @max_titleOUT varchar(30) OUTPUT';  
+SET @ParmDefinition = N'@level TINYINT, @max_titleOUT VARCHAR(30) OUTPUT';  
   
 EXECUTE sp_executesql @SQLString, @ParmDefinition, @level = @IntVariable, @max_titleOUT=@max_title OUTPUT;  
 SELECT @max_title;  
@@ -141,26 +142,26 @@ SELECT @max_title;
 ### <a name="a-executing-a-simple-select-statement"></a>A. 簡単な SELECT ステートメントを実行する  
  次の例では、 `SELECT` という名前の埋め込みパラメーターを含む単純なステートメントを作成して実行し `@level` ます。  
   
-```  
+```sql  
 EXECUTE sp_executesql   
           N'SELECT * FROM AdventureWorks2012.HumanResources.Employee   
           WHERE BusinessEntityID = @level',  
-          N'@level tinyint',  
+          N'@level TINYINT',  
           @level = 109;  
 ```  
   
 ### <a name="b-executing-a-dynamically-built-string"></a>B. 動的に作成された文字列の実行  
  次の例では、を使用して `sp_executesql` 、動的に作成された文字列を実行します。 この例で使用するストアド プロシージャでは、特定の年の販売データをパーティション分割するために使用されるテーブル セットにデータを追加します。 年の月ごとに、次の形式のテーブルが1つあります。  
   
-```  
+```sql  
 CREATE TABLE May1998Sales  
-    (OrderID int PRIMARY KEY,  
-    CustomerID int NOT NULL,  
-    OrderDate  datetime NULL  
+    (OrderID INT PRIMARY KEY,  
+    CustomerID INT NOT NULL,  
+    OrderDate  DATETIME NULL  
         CHECK (DATEPART(yy, OrderDate) = 1998),  
-    OrderMonth int  
+    OrderMonth INT  
         CHECK (OrderMonth = 5),  
-    DeliveryDate datetime  NULL,  
+    DeliveryDate DATETIME NULL,  
         CHECK (DATEPART(mm, OrderDate) = OrderMonth)  
     )  
 ```  
@@ -170,7 +171,7 @@ CREATE TABLE May1998Sales
 > [!NOTE]  
 >  これは sp_executesql の簡単な使用例です。 この例では、エラー チェックや、テーブル間における注文番号の重複の確認などのビジネス ルール チェックは行いません。  
   
-```  
+```sql  
 CREATE PROCEDURE InsertSales @PrmOrderID INT, @PrmCustomerID INT,  
                  @PrmOrderDate DATETIME, @PrmDeliveryDate DATETIME  
 AS  
@@ -206,18 +207,18 @@ GO
 ### <a name="c-using-the-output-parameter"></a>C. OUTPUT パラメーターを使用する  
  次の例では、パラメーターを使用し `OUTPUT` て、ステートメントによって生成された結果セットを `SELECT` パラメーターに格納し `@SQLString` ます。`SELECT`次に、パラメーターの値を使用する2つのステートメントが実行され `OUTPUT` ます。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SQLString nvarchar(500);  
-DECLARE @ParmDefinition nvarchar(500);  
-DECLARE @SalesOrderNumber nvarchar(25);  
-DECLARE @IntVariable int;  
+DECLARE @SQLString NVARCHAR(500);  
+DECLARE @ParmDefinition NVARCHAR(500);  
+DECLARE @SalesOrderNumber NVARCHAR(25);  
+DECLARE @IntVariable INT;  
 SET @SQLString = N'SELECT @SalesOrderOUT = MAX(SalesOrderNumber)  
     FROM Sales.SalesOrderHeader  
     WHERE CustomerID = @CustomerID';  
-SET @ParmDefinition = N'@CustomerID int,  
-    @SalesOrderOUT nvarchar(25) OUTPUT';  
+SET @ParmDefinition = N'@CustomerID INT,  
+    @SalesOrderOUT NVARCHAR(25) OUTPUT';  
 SET @IntVariable = 22276;  
 EXECUTE sp_executesql  
     @SQLString  
@@ -238,13 +239,13 @@ WHERE SalesOrderNumber = @SalesOrderNumber;
 ### <a name="d-executing-a-simple-select-statement"></a>D. 簡単な SELECT ステートメントを実行する  
  次の例では、 `SELECT` という名前の埋め込みパラメーターを含む単純なステートメントを作成して実行し `@level` ます。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXECUTE sp_executesql   
           N'SELECT * FROM AdventureWorksPDW2012.dbo.DimEmployee   
           WHERE EmployeeKey = @level',  
-          N'@level tinyint',  
+          N'@level TINYINT',  
           @level = 109;  
 ```  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - ghost clean up process
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 557f76e3f54811581e41ad15a5270a0c1e6e4057
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 16c9aa51475b00998b3c7aa9e71529bbbc292464
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859094"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248161"
 ---
 # <a name="ghost-cleanup-process-guide"></a>ゴースト クリーンアップ プロセスのガイド
 
@@ -46,7 +46,7 @@ ms.locfileid: "83859094"
 
 ## <a name="disable-the-ghost-cleanup"></a>ゴースト クリーンアップを無効にする
 
-削除が多く行われる負荷の高いシステムでは、ゴースト クリーンアップ プロセスにより、バッファー プールでページが保持され、IO が生成され、パフォーマンスの問題が発生する可能性があります。 そのため、トレース フラグ 661 を使用して、このプロセスを無効にすることができます。 この詳細については、「[高パフォーマンス ワークロードを実行する場合の SQL Server のチューニング オプション](https://support.microsoft.com/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa)」を参照してください。 ただし、プロセスを無効にするとパフォーマンスに影響します。
+削除が多く行われる負荷の高いシステムでは、ゴースト クリーンアップ プロセスにより、バッファー プールでページが保持され、IO が生成され、パフォーマンスの問題が発生する可能性があります。 そのため、[トレース フラグ 661](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用して、このプロセスを無効にすることができます。 ただし、プロセスを無効にするとパフォーマンスに影響します。
 
 ゴースト クリーンアップ プロセスを無効にすると、データベースのサイズが不必要に大きくなる可能性があり、パフォーマンスの問題につながる場合があります。 ゴースト クリーンアップ プロセスでは、ゴーストとしてマークされているレコードが削除されるため、プロセスを無効にすると、これらのレコードはページに残り、SQL Server でこのスペースを再利用できなくなります。 これにより、SQL Server では代わりに新しいページにデータが強制的に追加され、データベース ファイルの肥大化につながり、また、[ページ分割](indexes/specify-fill-factor-for-an-index.md)の原因ともなります。 ページ分割は、実行プランの作成時と、スキャン操作の実行時にパフォーマンスの問題につながります。 
 

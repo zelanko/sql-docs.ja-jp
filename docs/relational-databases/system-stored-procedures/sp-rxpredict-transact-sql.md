@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 13d5355bd1798af1514d16965059916e42e1ade0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: dd1359fa3430e45ae54cadacd75f9ee261021b8d
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243760"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173055"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 SQL Server データベースにバイナリ形式で格納されている機械学習モデルで構成される、指定された入力の予測値を生成します。
 
@@ -53,7 +53,7 @@ sp_rxPredict  ( @model, @input )
 スコア列、および入力データソースのすべてのパススルー列が返されます。
 アルゴリズムがそのような値の生成をサポートしている場合は、信頼区間などの追加のスコア列を返すことができます。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 ストアドプロシージャを使用できるようにするには、インスタンスで SQLCLR が有効になっている必要があります。
 
