@@ -27,12 +27,12 @@ ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c57c5a76818eabcc956a197b52b275a289576173
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006507"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823519"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -43,7 +43,7 @@ ms.locfileid: "68006507"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 CREATE ROUTE route_name  
 [ AUTHORIZATION owner_name ]  
@@ -61,7 +61,7 @@ WITH
  作成するルートの名前です。 新しいルートが現在のデータベースで作成され、AUTHORIZATION 句で指定されるプリンシパルによって所有されます。 サーバー名、データベース名、スキーマ名は指定できません。 *route_name* は有効な **sysname** とする必要があります。  
   
  AUTHORIZATION *owner_name*  
- ルートの所有者を、指定したデータベース ユーザーまたはロールに設定します。 現在のユーザーが **db_owner** 固定データベース ロールまたは **sysadmin** 固定サーバー ロールのメンバーである場合、*owner_name* には、任意の有効なユーザー名またはロール名を指定できます。 それ以外の場合、*owner_name* には、現在のユーザーの名前、現在のユーザーが IMPERSONATE 権限を持つユーザーの名前、または現在のユーザーが属するロールの名前を指定する必要があります。 この句を省略すると、ルートは現在のユーザーに属します。  
+ ルートの所有者を、指定したデータベース ユーザーまたはロールに設定します。 現在のユーザーが *db_owner* 固定データベース ロールまたは **sysadmin** 固定サーバー ロールのメンバーである場合、**owner_name** には、任意の有効なユーザー名またはロール名を指定できます。 それ以外の場合、*owner_name* には、現在のユーザーの名前、現在のユーザーが IMPERSONATE 権限を持つユーザーの名前、または現在のユーザーが属するロールの名前を指定する必要があります。 この句を省略すると、ルートは現在のユーザーに属します。  
   
  WITH  
  作成されるルートを定義するための句を、WITH の後に指定します。  
@@ -84,13 +84,13 @@ WHERE database_id = DB_ID()
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がルーティング テーブルにルートを保持する時間を秒単位で指定します。 有効期間が終了するとルートは期限切れとなり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、新しいメッセージ交換用のルートを選択するときに、そのルートは考慮されなくなります。 この句を省略した場合、*route_lifetime* は NULL になり、ルートの有効期限が切れることはありません。  
   
  ADDRESS **='** _next\_hop\_address_ **'**  
-SQL Database マネージド インスタンスの場合、`ADDRESS` はローカルである必要があります。 
+SQL Managed Instance の場合、`ADDRESS` はローカルである必要があります。 
 
 このルート用のネットワーク アドレスを指定します。 *next_hop_address* の次の形式で TCP/IP アドレスを指定します。  
   
  **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** _port\_number_  
   
- 指定した *port_number* は、指定したコンピューターにおける [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの [!INCLUDE[ssSB](../../includes/sssb-md.md)] エンドポイント用のポート番号と一致する必要があります。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
+ 指定した *port_number* は、指定したコンピューターにおける [!INCLUDE[ssSB](../../includes/sssb-md.md)] インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンドポイント用のポート番号と一致する必要があります。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
   
 ```  
 SELECT tcpe.port  
@@ -102,16 +102,16 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  ミラー化されたデータベースでサービスがホストされる場合、ミラー化されたデータベースをホストする別のインスタンスに対して、MIRROR_ADDRESS を指定する必要もあります。 それ以外の場合は、このルートはミラーに対してフェールオーバーされません。  
   
- ルートの *next_hop_address* が **'LOCAL'** になっている場合、メッセージは現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のサービスに配信されます。  
+ ルートの **next_hop_address** が *'LOCAL'* になっている場合、メッセージは現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のサービスに配信されます。  
   
- ルートの *next_hop_address* が **'TRANSPORT'** になっている場合、ネットワーク アドレスは、サービス名の中にあるネットワーク アドレスに基づいて決まります。 **'TRANSPORT'** を指定するルートは、サービス名やブローカー インスタンスを指定できない場合があります。  
+ ルートの **next_hop_address** が *'TRANSPORT'* になっている場合、ネットワーク アドレスは、サービス名の中にあるネットワーク アドレスに基づいて決まります。 **'TRANSPORT'** を指定するルートは、サービス名やブローカー インスタンスを指定できない場合があります。  
   
  MIRROR_ADDRESS **='** _next\_hop\_mirror\_address_ **'**  
  *next_hop_address* でホストされているミラー化されたデータベースを 1 つ含んでいる、ミラー化されたデータベースのネットワーク アドレスを指定します。 *next_hop_mirror_address* は、次の形式で TCP/IP アドレスを指定します。  
   
  **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- 指定した *port_number* は、指定したコンピューターにおける [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの [!INCLUDE[ssSB](../../includes/sssb-md.md)] エンドポイント用のポート番号と一致する必要があります。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
+ 指定した *port_number* は、指定したコンピューターにおける [!INCLUDE[ssSB](../../includes/sssb-md.md)] インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンドポイント用のポート番号と一致する必要があります。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
   
 ```  
 SELECT tcpe.port  
@@ -121,14 +121,14 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- MIRROR_ADDRESS が指定されている場合、ルートには SERVICE_NAME 句と BROKER_INSTANCE 句を指定する必要があります。 *next_hop_address* に **'LOCAL'** または **'TRANSPORT'** を指定するルートでは、ミラー アドレスが指定されない場合があります。  
+ MIRROR_ADDRESS が指定されている場合、ルートには SERVICE_NAME 句と BROKER_INSTANCE 句を指定する必要があります。 **next_hop_address** に **'LOCAL'** または *'TRANSPORT'* を指定するルートでは、ミラー アドレスが指定されない場合があります。  
   
 ## <a name="remarks"></a>解説  
  ルートを格納するルーティング テーブルは、**sys.routes** カタログ ビューを介して読み取ることができるメタデータ テーブルです。 このカタログ ビューを更新できるのは、CREATE ROUTE、ALTER ROUTE、および DROP ROUTE ステートメントだけです。  
   
- 既定では、各ユーザー データベースにあるルーティング テーブルには 1 つのルートが含まれています。 このルートには **AutoCreatedLocal** という名前が付いています。 ルートは *next_hop_address* に **'LOCAL'** を指定し、任意のサービス名およびブローカー インスタンス識別子と一致します。  
+ 既定では、各ユーザー データベースにあるルーティング テーブルには 1 つのルートが含まれています。 このルートには **AutoCreatedLocal** という名前が付いています。 ルートは **next_hop_address** に *'LOCAL'* を指定し、任意のサービス名およびブローカー インスタンス識別子と一致します。  
   
- ルートが *next_hop_address* に **'TRANSPORT'** を指定した場合、ネットワーク アドレスはサービスの名前に基づいて決定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*next_hop_address* のネットワーク アドレスが有効な形式であれば、このネットワーク アドレスで始まるサービス名が適切に処理されます。  
+ ルートが **next_hop_address** に *'TRANSPORT'* を指定した場合、ネットワーク アドレスはサービスの名前に基づいて決定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*next_hop_address* のネットワーク アドレスが有効な形式であれば、このネットワーク アドレスで始まるサービス名が適切に処理されます。  
   
  ルーティング テーブルには、同じサービス、ネットワーク アドレス、ブローカー インスタンス識別子を指定する、ルートをいくつでも含めることができます。 このような場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)] でルートを選択するときには、メッセージ交換で指定された情報とルーティング テーブル内の情報を照合して、最も正確に一致する情報を取得するためのプロシージャが使用されます。  
   

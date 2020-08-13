@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 11994d1dc3ec931f729c2739a107848464ed7f8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e93398b38e2fff73e63013fd0bfc1c4bedc31a43
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781695"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988767"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC を使用したデータベースの配置
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  **のインスタンスと** サーバー間、または 2 つの [!INCLUDE[ssDE](../../includes/ssde-md.md)] サーバー間でデータベースを配置するには、 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] SQL Azure へのデータベースの配置ウィザード [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]を使用します。  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスと [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] サーバー間、または 2 つの [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] サーバー間でデータベースを配置するには、 **[データベースを Microsoft Azure SQL Database に配置]** ウィザードを使用します。  
   
 ##  <a name="before-you-begin"></a><a name="BeforeBegin"></a> はじめに  
  このウィザードでは、データ層アプリケーション (DAC) の BACPAC アーカイブ ファイルを使用して、データおよびデータベース オブジェクトの定義を配置します。 ウィザードでは、ソース データベースからの DAC エクスポート操作と、配置先への DAC インポート操作を実行します。  
@@ -68,7 +68,7 @@ ms.locfileid: "85781695"
   
 3.  **[データベース]** ノードを展開します。  
   
-4.  配置するデータベースを右クリックして **[タスク]** を選択し、 **[SQL Azure へのデータベースの配置...]** をクリックします。  
+4.  配置するデータベースを右クリックして **[タスク]** を選択し、 **[データベースを Microsoft Azure SQL Database に配置]** をクリックします。  
   
 5.  ウィザードの各ダイアログを完了します。  
   

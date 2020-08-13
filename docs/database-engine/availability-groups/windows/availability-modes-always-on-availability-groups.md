@@ -1,6 +1,6 @@
 ---
 title: 可用性グループの可用性モード
-description: Always On 可用性グループの各種可用性モードの説明。
+description: Always On 可用性グループの 3 つの異なる可用性モード (非同期コミットモード、同期コミットモード、構成のみモード) について学習します。
 ms.custom: seo-lt-2019
 ms.date: 10/16/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08d214086ad32891c44bf5e6344a88196e705df2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a1d7664c3605228bac7746fe3cba9e48e2918ac8
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883590"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565340"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Always On 可用性グループの可用性モードの違い
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

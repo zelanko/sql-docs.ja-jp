@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4660b5f0bd16d4373498e472452b61aa4be3f24
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 29c625eb5b169e1811f880416a027eb3ac32c027
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111178"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864383"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -899,7 +899,7 @@ PolyBase では、クエリのパフォーマンスを向上させるために�
 
 クエリの制限事項:
 
-PolyBase では、32 個の同時 PolyBase クエリを実行しているときに、フォルダーあたり最大 33,000 ファイルを使用できます。 この最大数には、各 HDFS フォルダー内のファイルとサブフォルダーの両方が含まれます。 コンカレンシーの度合いが 32 未満である場合、ユーザーは 33,000 より多いファイルが含まれている HDFS のフォルダーに対して PolyBase クエリを実行できます。 外部ファイルのパスを短く維持し、使用するファイルの数を HDFS フォルダーあたり 30,000 以下にすることをお勧めします。 参照しているファイルの数が多すぎる場合は、Java 仮想マシン (JVM) のメモリ不足例外が発生する可能性があります。
+フォルダーあたりのファイルは 30,000 個を超えないようにすることをお勧めします。 参照しているファイルの数が多すぎる場合は、Java 仮想マシン (JVM) のメモリ不足の例外が発生したり、パフォーマンスが低下したりする可能性があります。
 
 テーブルの幅の制限:
 

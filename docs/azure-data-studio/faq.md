@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 123618a84b07aa2215a2666f9d427f669247c5d7
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: f7da670d93de95d06fb7a602332011f9218cdc2b
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411098"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87861973"
 ---
 # <a name="azure-data-studio-faq"></a>Azure Data Studio に関する FAQ
 
@@ -80,14 +80,14 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 
 |特徴量|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Azure サインイン|○|○|
+|Azure サインイン|はい|はい|
 |ダッシュボード|はい| |
 |拡張機能|はい| |
 |統合ターミナル|はい||
-|オブジェクト エクスプローラー|○|○|
-|オブジェクト スクリプト作成|○|○|
+|オブジェクト エクスプローラー|はい|はい|
+|オブジェクト スクリプト作成|はい|はい|
 |プロジェクト システム|はい||
-|テーブルからの選択|○|○|
+|テーブルからの選択|はい|はい|
 |ソース コード管理|はい||
 |タスク ウィンドウ|はい||
 |テーマ|はい||
@@ -104,8 +104,8 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 |:---|:---|:---|
 |グラフ ビューアー|はい||
 |結果を CSV、JSON、XLSX にエクスポート|はい||
-|IntelliSense|○|○|
-|スニペット|○|○|
+|IntelliSense|はい|はい|
+|スニペット|はい|はい|
 |プラン表示|プレビュー|はい|
 |クライアント統計||はい|
 |ライブ クエリ統計||はい|
@@ -120,7 +120,7 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 
 |特徴量|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Windows|○|○|
+|Windows|はい|はい|
 |macOS|はい||
 |Linux|はい||
 
@@ -136,7 +136,7 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 
 |特徴量|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|バックアップ/復元|○|○|
+|バックアップ/復元|はい|はい|
 |フラット ファイルのインポート|プレビュー|はい|
 |SQL エージェント|プレビュー|はい|
 |SQL Profiler|プレビュー|はい|
@@ -183,7 +183,7 @@ SQL PowerShell は、現在 PowerShell ギャラリーで入手できます。�
 
 ## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Azure Data Studio は Azure SQL Data Warehouse に統合されていますか?
 
-はい。 Azure SQL Data Warehouse に対する Azure Data Studio のサポートは、Azure SQL Database Managed Instance および SQL Server 2019 Big Data と共に現在プレビュー段階にあります。
+はい。 Azure SQL Data Warehouse に対する Azure Data Studio のサポートは、Azure SQL Managed Instance および SQL Server 2019 ビッグ データと共に現在プレビュー段階にあります。
 
 ## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>新しいバージョンの SQL Server にとって Azure Data Studio が重要である理由は何ですか?
 

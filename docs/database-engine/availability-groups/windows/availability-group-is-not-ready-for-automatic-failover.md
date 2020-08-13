@@ -1,6 +1,6 @@
 ---
 title: 可用性グループの自動フェールオーバーの準備ができていない
-description: Always On 可用性グループでフェールオーバーの準備ができていない原因の可能性を特定します。
+description: Always On 可用性グループでフェールオーバーの準備ができていないことに対して考えられる理由を特定する方法を学習します。
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d23e33effa5913689e4886c7a8fac6bf42cd9b7b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 79992ce77b803858c86d4bace6b9f6b128688447
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900883"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565598"
 ---
 # <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Always On 可用性グループで自動フェールオーバーの準備ができていない
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

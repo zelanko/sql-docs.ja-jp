@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e0dc290a3e514d8de7a63a6afb4a0ed6453b6107
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 568a3824405798cf7fc23f9dc0b28f6b43d0fff9
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332511"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864413"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +70,7 @@ SQL Database をバックアップします。
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -914,7 +914,7 @@ FROM sys.dm_exec_requests r
 WHERE r.command LIKE 'BACKUP%'
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [バックアップ デバイス](../../relational-databases/backup-restore/backup-devices-sql-server.md)
 - [メディア セット、メディア ファミリ、およびバックアップ セット](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
@@ -941,7 +941,7 @@ WHERE r.command LIKE 'BACKUP%'
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />マネージド インスタンス \*_** &nbsp;
+        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -950,9 +950,9 @@ WHERE r.command LIKE 'BACKUP%'
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database マネージド インスタンス
+## <a name="azure-sql-managed-instance"></a>Azure SQL Managed Instance
 
-Azure SQL Database Managed Instance に配置/ホストされている SQL Database をバックアップします。 SQL Database [マネージド インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)には自動バックアップがあり、ユーザーは完全なデータベース `COPY_ONLY` バックアップを作成できます。 差分、ログ、およびファイル スナップショットのバックアップはサポートされていません。
+Azure SQL Managed Instance に配置またはホストされている SQL データベースをバックアップします。 SQL [Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) には自動バックアップがあり、ユーザーは完全なデータベースの `COPY_ONLY` バックアップを作成できます。 差分、ログ、およびファイル スナップショットのバックアップはサポートされていません。
 
 ## <a name="syntax"></a>構文
 
@@ -990,12 +990,12 @@ BACKUP DATABASE { database_name | @database_name_var }
 
 ## <a name="arguments"></a>引数
 
-DATABASE: データベース全体のバックアップを指定します。 データベースのバックアップ時、Managed Instance では、バックアップが復元された場合に一貫性のあるデータベースを生成するのに十分なトランザクション ログをバックアップします。
+DATABASE: データベース全体のバックアップを指定します。 データベースのバックアップ時、Azure SQL Managed Instance では、バックアップが復元された場合に一貫性のあるデータベースを生成するのに十分なトランザクション ログをバックアップします。
 
 > [!IMPORTANT]
-> マネージド インスタンスで作成されたデータベース バックアップは、別の マネージド インスタンス上にのみ復元できます。 (SQL Server 2016 データベースのバックアップを SQL Server 2012 インスタンスに復元できないことと同様に) SQL Server のオンプレミス インスタンスに復元することはできません。
+> マネージド インスタンスで作成されたデータベース バックアップは、別の Azure SQL Managed Instance 上にのみ復元できます。 (SQL Server 2016 データベースのバックアップを SQL Server 2012 インスタンスに復元できないことと同様に) SQL Server のオンプレミス インスタンスに復元することはできません。
 
-BACKUP DATABASE (*データ バックアップ*) で作成されたバックアップを復元すると、バックアップ全体が復元されます。 Azure SQL Database マネージド インスタンスの自動バックアップから復元する方法については、「[データベースをマネージド インスタンスに復元する](/azure/sql-database/sql-database-managed-instance-get-started-restore)」を参照してください。
+BACKUP DATABASE (*データ バックアップ*) で作成されたバックアップを復元すると、バックアップ全体が復元されます。 SQL Managed Instance の自動バックアップから復元するには、[Managed Instance へのデータベースの復元](/azure/sql-database/sql-database-managed-instance-get-started-restore)に関するページを参照してください。
 
 { *database_name* |  **@** _database\_name\_var_ }: データベース全体のバックアップ元となるデータベースです。 変数 ( **@** _database\_name\_var_) として指定する場合、この名前は、文字列定数 ( **@** _database\_name\_var_ **=** _database name_) として指定するか、**ntext** または**text** データ型以外の文字列データ型の変数として指定します。
 
@@ -1097,7 +1097,7 @@ STATS [ **=** _percentage_ ]: 各 *percentage* の完了ごとにメッセージ
 
 STATS オプションでは、次のパーセンテージ間隔を報告するしきい値に達した時点までに、完了したパーセンテージを報告します。 これは、ほぼ指定したパーセンテージになります。たとえば、STATS=10 とすると、40% が完了した場合に、オプションでは 43% と表示されることがあります。 大規模なバックアップ セットの場合は、完了した I/O 呼び出し間での完了パーセンテージの変化が非常に遅くなるため、これは重要な問題にはなりません。
 
-## <a name="limitations-for-sql-database-managed-instance"></a>SQL Database マネージド インスタンスの制限事項
+## <a name="limitations-for-sql-managed-instance"></a>SQL Managed Instance の制限事項
 
 バックアップの最大ストライプ サイズは 195 GB (最大 BLOB サイズ) です。 バックアップ コマンドでストライプ サイズを増やして、個々のストライプ サイズを減らし、この制限内に収まるようにします。
 
@@ -1119,7 +1119,7 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5, COPY_ONLY;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [データベースの復元](restore-statements-transact-sql.md)
 
@@ -1131,7 +1131,7 @@ WITH STATS = 5, COPY_ONLY;
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        [SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
@@ -1208,7 +1208,7 @@ DIFFERENTIAL: ユーザー データベースの差分バックアップを実�
 
 **BACKUP DATABASE** 許可または **db_backupoperator** 固定データベース ロールのメンバーシップが必要です。 master データベースは、**db_backupoperator** 固定データベース ロールに追加された標準ユーザーではバックアップできません。 master データベースをバックアップできるのは、**sa**、ファブリック管理者、または **sysadmin** 固定サーバー ロールのメンバーに限られます。
 
-バックアップ ディレクトリにアクセスし、作成や書き込みを行うことが許可された Windows アカウントが必要です。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に Windows アカウント名とパスワードを保存する必要もあります。 これらのネットワーク資格情報を [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に追加するには、[sp_pdw_add_network_credentials - SQL Data Warehous](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) ストアド プロシージャを使用します。
+バックアップ ディレクトリにアクセスし、作成や書き込みを行うことが許可された Windows アカウントが必要です。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に Windows アカウント名とパスワードを保存する必要もあります。 これらのネットワーク資格情報を [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に追加するには、[sp_pdw_add_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) ストアド プロシージャを使用します。
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の資格情報を管理する方法については、「[セキュリティ](#Security)」セクションをご覧ください。
 
@@ -1357,8 +1357,8 @@ WITH (
 ;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[RESTORE DATABASE - Parallel Data Warehous](../../t-sql/statements/restore-statements-transact-sql.md)
+[RESTORE DATABASE - Parallel Data Warehouse](../../t-sql/statements/restore-statements-transact-sql.md)
 
 ::: moniker-end

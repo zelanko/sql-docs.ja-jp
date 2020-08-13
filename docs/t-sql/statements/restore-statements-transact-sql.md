@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ba782e0a2eee78e6f308ffee0d493fbac2032ce
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 089265151307a72e2f029d016df216e077c2dd88
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113225"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864335"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE ステートメント (Transact-SQL)
 
@@ -64,7 +64,7 @@ BACKUP コマンドで作成した SQL Database のバックアップを復元�
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />マネージド インスタンス](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
@@ -739,7 +739,7 @@ RESTORE DATABASE Sales
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />マネージド インスタンス \*_**
+        **_\* SQL Database<br />Managed Instance \*_**
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
@@ -748,7 +748,7 @@ RESTORE DATABASE Sales
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database マネージド インスタンス
+## <a name="azure-sql-managed-instance"></a>Azure SQL Managed Instance
 
 このコマンドを使用すると、Azure Blob Storage アカウントの完全データベース バックアップからデータベース全体を復元できます (完全復元)。
 
@@ -760,7 +760,7 @@ RESTORE DATABASE Sales
 - [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
 
 > [!IMPORTANT]
-> Azure SQL Database マネージド インスタンスの自動バックアップから復元する方法については、「[SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups)」(SQL Database の復元) を参照してください。
+> SQL Managed Instance の自動バックアップから復元するには、[SQL Database の復元](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups)に関するページを参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -802,17 +802,17 @@ FROM URL
 - メモリ最適化ファイルグループがソース .bak ファイルにない場合は、追加され、XTP と呼ばれます。 既存のメモリ最適化ファイルグループはすべて XTP に名前変更されます
 - SINGLE_USER および RESTRICTED_USER オプションは、MULTI_USER に変換されます
 
-## <a name="limitations---sql-database-managed-instance"></a>制限事項 - SQL Database マネージド インスタンス
+## <a name="limitations---sql-managed-instance"></a>制限事項 - SQL Managed Instance
 
 これらの制限が適用されます。
 
 - 複数のバックアップ セットを含む .BAK ファイルは復元できません。
 - 複数のログ ファイルを含む .BAK ファイルは復元できません。
 - .bak に FILESTREAM データが含まれている場合、復元は失敗します。
-- アクティブなメモリ内オブジェクトがあるデータベースを含むバックアップは、General Purpose マネージド インスタンスに復元することはできません。
+- アクティブなメモリ内オブジェクトがあるデータベースを含むバックアップは、General Purpose パフォーマンス レベルに復元することはできません。
 - 読み取り専用モードのデータベースが含まれているバックアップは、現在復元することができません。 この制限は間もなく解除される予定です。
 
-詳細については、[マネージド インスタンス](/azure/sql-database/sql-database-managed-instance)に関するトピックを参照してください
+詳細については、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) に関するページを参照してください。
 
 ## <a name="restoring-an-encrypted-database"></a>暗号化されたデータベースの復元
 暗号化されたデータベースを復元するには、データベースの暗号化に使用された証明書または非対称キーにアクセスできることが必要です。 証明書または非対称キーがないと、データベースは復元できません。 このため、バックアップが必要である間は、データベース暗号化キーの暗号化に使用する証明書を保持しておく必要があります。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。
@@ -886,7 +886,7 @@ WHERE r.command = 'RESTORE DATABASE'
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />マネージド インスタンス](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_**

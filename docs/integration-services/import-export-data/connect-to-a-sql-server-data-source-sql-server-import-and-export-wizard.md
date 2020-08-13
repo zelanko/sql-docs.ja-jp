@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 31a3cba341ee6d7ec8aada3bf620ab23ab55bf9f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f50c53d596c73565b3b5e56c27fa59fca0afe708
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920978"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790355"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>SQL Server データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -67,7 +67,7 @@ ms.locfileid: "86920978"
 ODBC ドライバーは、データ ソースのドロップダウン リストに記載されていません。 ODBC ドライバーを使用して接続するには、最初に **[.NET Framework Data Provider for ODBC]** をデータ ソースとして選択します。 このプロバイダーは、ODBC ドライバーのラッパーとして機能します。
 
 > [!TIP]
-> **最新のドライバーを入手します**。 [Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339) をダウンロードします。
+> **最新のドライバーを入手します**。 [Microsoft ODBC Driver for SQL Server](https://aka.ms/downloadmsodbcsql) をダウンロードします。
 
 下の図は、.NET Framework Data Provider for ODBC を選んだ直後に表示される一般的な画面です。
 

@@ -21,12 +21,12 @@ ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00132b65b2dc5e21fbc57c376ac005d968871f62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7f5c8f910d4fd9d5af81789a62eea86d609ec7a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85743327"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864503"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>非クラスター化インデックスのサイズの算出
 
@@ -176,13 +176,13 @@ ms.locfileid: "85743327"
   
 4.  可変長データ サイズを計算します。  
   
-     上記の手順 2.2. で説明した必要なクラスター化キー列を含め、インデックス キーに可変長列が存在する場合は、インデックス行内の可変長列を格納するのに使用する領域を次の式で計算します。  
+     上記の手順 2.2. で説明した必要なクラスター化キー列を含め、可変長列 (キー列または付加) が存在する場合は、インデックス行内の列を格納するために使用する領域を決定します。  
   
      ***Variable_Leaf_Size***  = 2 + (***Num_Variable_Leaf_Cols*** x 2) + ***Max_Var_Leaf_Size***  
   
      ***Max_Var_Key_Size*** に追加されたバイトは、それぞれの可変長列を追跡するためのものです。この式は、すべての可変長列がいっぱいになることを前提としています。 可変長列の格納領域の使用率が少ないことが予想される場合、その使用率に基づいて ***Max_Var_Leaf_Size*** の値を調整し、テーブルの全体サイズをより正確に見積もることができます。  
   
-     可変長列が存在しない場合は、 ***Variable_Leaf_Size*** に 0 を設定します。  
+     可変長列 (キー列または付加) が存在しない場合は、***Variable_Leaf_Size*** に 0 を設定します。  
   
 5.  次の式でインデックス行のサイズを計算します。  
   

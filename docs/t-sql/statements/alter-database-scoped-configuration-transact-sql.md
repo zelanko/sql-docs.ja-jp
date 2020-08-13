@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 3812f2f7e2f41259416147e969ceb90e395b5bbb
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 698048be11f3514762f27c23ec16bf4ef18041a5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279498"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864483"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -350,7 +350,7 @@ GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 [グローバル一時テーブル](../../t-sql/statements/create-table-transact-sql.md#temporary-tables)の自動削除機能を設定できます。 既定値は ON で、グローバル一時テーブルはどのセッションでも使用中でないときに自動的に削除されることを意味します。 OFF に設定すると、グローバル一時テーブルは、DROP TABLE ステートメントを使用して明示的に削除する必要があります。または、サーバーの再起動時に自動的に削除されます。
 
 - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 単一データベースおよびエラスティック プールでは、このオプションを SQL Database サーバーの個々のユーザー データベース内で設定できます。
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] マネージド インスタンス上では、このオプションは `TempDB` 内で設定され、個々のユーザー データベースの設定に影響を与えません。
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Azure SQL Managed Instance では、このオプションは `TempDB` 内で設定され、個々のユーザー データベースの設定に影響を与えません。
 
 <a name="lqp"></a>
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: afe2679e29f92d4b222067b6ab3b5220078744e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dbd46a6a2de2e46841eb8cc7b40542d8073e82c6
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763960"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988642"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server データベース エンジンへの接続のトラブルシューティング
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85763960"
 
 - このトピックには、SSPI エラーに関する情報が含まれていません。 SSPI エラーについては、「 ["SSPI コンテキストを生成できません" エラー メッセージのトラブルシューティング方法](https://support.microsoft.com/kb/811889)」を参照してください。
 - このトピックには、Kerberos エラーに関する情報が含まれていません。 ヘルプが必要な場合、「 [Microsoft® Kerberos Configuration Manager for SQL Server®](https://www.microsoft.com/download/details.aspx?id=39046)」をご覧ください。
-- このトピックには、SQL Azure 接続に関する情報が含まれていません。 ヘルプについては、「[Troubleshooting connectivity issues with Microsoft Azure SQL Database](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database)」 (Microsoft Azure SQL Database の接続に関する問題のトラブルシューティング) を参照してください。
+- このトピックには、Azure SQL Database 接続に関する情報が含まれていません。 ヘルプについては、「[Troubleshooting connectivity issues with Microsoft Azure SQL Database](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database)」 (Microsoft Azure SQL Database の接続に関する問題のトラブルシューティング) を参照してください。
 
 ## <a name="get-instance-name-from-configuration-manger"></a>構成マネージャーからインスタンス名を取得する
 

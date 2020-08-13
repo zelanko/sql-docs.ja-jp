@@ -1,6 +1,6 @@
 ---
 title: SQL Server Service Broker | Microsoft Docs
-description: Service Broker について説明します。 これにより、どのように SQL Server データベース エンジンおよび Azure SQL Database Managed Instance でのメッセージングがネイティブにサポートされるかを説明します。
+description: Service Broker について説明します。 これにより、どのように SQL Server データベース エンジンおよび Azure SQL Managed Instance でのメッセージングがネイティブにサポートされるかを確認します。
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -24,12 +24,12 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3e915b46eb89c29d260dc66ad7b73bc0cbc73ebc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2841f36d3f9e4498763f6b0862e2fa0cfaa2e4a9
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764044"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863406"
 ---
 # <a name="service-broker"></a>Service Broker
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -103,7 +103,7 @@ FROM ExpenseQueue;
 ## <a name="whats-new-in-service-broker"></a>Service Broker の新機能  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で導入された大きな変更はありません。  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]では、以下の変更が導入されました。  
 
-### <a name="service-broker-and-azure-sql-database-managed-instance"></a>Service Broker と Azure SQL Database Managed Instance
+### <a name="service-broker-and-azure-sql-managed-instance"></a>Service Broker と Azure SQL Managed Instance
 
 - インスタンス間の Service Broker はサポートされていません 
  - `sys.routes` - 前提条件: sys.routes からアドレスを選択してください。 すべてのルートでアドレスをローカルにする必要があります。 [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md) をご覧ください。

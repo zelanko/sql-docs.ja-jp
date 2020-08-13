@@ -2,7 +2,7 @@
 title: Microsoft SQL Server でのスカラー UDF のインライン化 | Microsoft Docs
 description: SQL Server (SQL Server 2019 以降) 内でスカラー UDF を呼び出すスカラー UDF インライン化機能を使用すると、クエリのパフォーマンスが向上します。
 ms.custom: ''
-ms.date: 06/23/2020
+ms.date: 08/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: b1a8d91cc9da7cb0707211464e53b2cccaf0a111
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 0d9a618e8170d08250c15c75e83d5d2dbc627447
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435588"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790305"
 ---
 # <a name="scalar-udf-inlining"></a>スカラー UDF のインライン化
 
@@ -164,6 +164,9 @@ UDF 内のロジックの複雑さによっては、結果として得られる�
 - UDF に、複数の RETURN ステートメントが含まれていない <sup>6</sup>。
 - UDF が、RETURN ステートメントから呼び出されていない <sup>6</sup>。
 - UDF で、`STRING_AGG` 関数が参照されていない <sup>6</sup>。 
+- UDF で、リモート テーブルが参照されていない <sup>7</sup>。
+- UDF 呼び出しクエリで、`GROUPING SETS`、`CUBE`、または `ROLLUP` が使用されない <sup>7</sup>。
+- UDF 呼び出しクエリで、割り当て用の UDF パラメーターとして使用される変数が含まれない (たとえば、`SELECT @y = 2`、`@x = UDF(@y)`) <sup>7</sup>。
 
 <sup>1</sup> 変数の累積/集計を含む `SELECT` (`SELECT @val += col1 FROM table1` など) は、インライン化ではサポートされていません。
 
@@ -176,6 +179,8 @@ UDF 内のロジックの複雑さによっては、結果として得られる�
 <sup>5</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4 に制限を追加
 
 <sup>6</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 に制限を追加
+
+<sup>7</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 に制限を追加
 
 > [!NOTE]
 > 最新の T-SQL スカラー UDF のインライン化の修正とインライン化の資格シナリオの変更については、サポート技術情報の記事を参照してください。[修正: SQL Server 2019 のスカラー UDF のインライン化の問題](https://support.microsoft.com/help/4538581)。

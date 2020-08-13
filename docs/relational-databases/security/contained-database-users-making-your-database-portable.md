@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e297be837d954217aa9197494d6734f53d5a6aa0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a76bc720df1808290a09e2cec5fad1c0667ae389
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005603"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988793"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>包含データベース ユーザー - データベースの可搬性を確保する
 
@@ -77,7 +77,7 @@ ms.locfileid: "86005603"
 
 ### <a name="managed-instance"></a>マネージド インスタンス
 
-Azure SQL Database マネージド インスタンスは、包含データベースのコンテキストでオンプレミス SQL Server のように動作します。 自分の包含ユーザーを作成するときは、ご利用のデータベースのコンテキストを master データベースからユーザーデータベースに変更してください。 また、containment オプションを設定するときは、ユーザー データベースへのアクティブな接続が存在しないようにする必要があります。 
+Azure SQL Managed Instance は、包含データベースのコンテキストでオンプレミス SQL Server のように動作します。 自分の包含ユーザーを作成するときは、ご利用のデータベースのコンテキストを master データベースからユーザーデータベースに変更してください。 また、containment オプションを設定するときは、ユーザー データベースへのアクティブな接続が存在しないようにする必要があります。 
 
 次に例を示します。 
 

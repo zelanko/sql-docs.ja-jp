@@ -41,7 +41,7 @@ IMPORTANCE は、リソース プールに対してローカルです。同じ�
 REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
 1 つの要求にプールから割り当てられる最大メモリ量を指定します。 *value* は、MAX_MEMORY_PERCENT で指定したリソース プールのサイズが基準になります。
 
-*value* は、[!INCLUDE[ssSQL17](sssql17-md.md)] までは整数であり、[!INCLUDE[sql-server-2019](sssqlv15-md.md)] 以降と [!INCLUDE[ssSDSfull](sssdsfull-md.md)] マネージド インスタンスでは float です。 既定値は 25 です。 *value* の許容範囲は 1 ～ 100 です。
+*value* は、[!INCLUDE[ssSQL17](sssql17-md.md)] までは整数であり、[!INCLUDE[sql-server-2019](sssqlv15-md.md)] 以降と Azure SQL Managed Instance では float です。 既定値は 25 です。 *value* の許容範囲は 1 ～ 100 です。
 
 > [!IMPORTANT]  
 > 指定した量のみがクエリの実行時に許可されるメモリとして割り当てられます。

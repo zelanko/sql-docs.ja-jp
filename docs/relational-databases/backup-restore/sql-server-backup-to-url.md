@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1409125ca324117a3b7bba1792ff0a3f3361fe05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6835fbc893b45214cf8ea6f7b6a02d8f1e1df773
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768077"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988742"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server Backup to URL
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85768077"
 - プロキシ サーバー経由でページ BLOB にバックアップする必要がある場合は、backuptourl.exe を使用する必要があります。 
 
 
-Blob Storage に大規模なデータベースをバックアップするとき、「[マネージド インスタンスの T-SQL の相違点、制限、既知の問題](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup)」に記載されている制限事項が当てはまります。
+Blob Storage に大規模なデータベースをバックアップするとき、[Managed Instance の T-SQL の相違点、制限、既知の問題](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup)に関する記事に記載されている制限事項が当てはまります。
 
  データベースが大きすぎる場合、次のいずれかの方法を実行します。
 - バックアップの圧縮の使用または

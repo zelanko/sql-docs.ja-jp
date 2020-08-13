@@ -1,6 +1,6 @@
 ---
-title: Azure SQL Database Managed Instance 拡張機能
-description: Azure SQL Managed Instance で Azure Data Studio を使用します
+title: Azure SQL Managed Instance 拡張機能
+description: Azure SQL Managed Instance で Azure Data Studio を使用する
 ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alanyu, maghan, sstein
@@ -10,18 +10,18 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 6a406efdd7c07d2740ebf33b6e84cd7d7175fde2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774703"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988598"
 ---
-# <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Azure Data Studio 用の Azure SQL Database Managed Instance ダッシュボード (プレビュー)
+# <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Azure Data Studio 用の Azure SQL Managed Instance ダッシュボード (プレビュー)
 
-Azure SQL Database Managed Instance 拡張機能により、[Azure Data Studio](https://github.com/Microsoft/azuredatastudio) で [Azure SQL Database マネージド インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)を操作するためのダッシュボードが提供されます。 この拡張機能には次の機能があります。
+Azure SQL Managed Instance 拡張機能により、[Azure Data Studio](https://github.com/Microsoft/azuredatastudio) で [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) を操作するためのダッシュボードが提供されます。 この拡張機能には次の機能があります。
 
-- 仮想コアや使用済みストレージなど、マネージド インスタンスのプロパティを表示する
+- 仮想コアや使用済みストレージなど、SQL Managed Instance のプロパティを表示する
 - 過去 2 時間の CPU とストレージの利用状況を監視する
 - 構成に関する警告およびチューニングの推奨事項を表示する
 - データベース レプリカの状態を表示する
@@ -30,7 +30,7 @@ Azure SQL Database Managed Instance 拡張機能により、[Azure Data Studio](
 ## <a name="install"></a>インストール
 
 この拡張機能の正式なリリースをインストールすることができます。 [Azure Data Studio のドキュメント](https://docs.microsoft.com/sql/azure-data-studio/extensions)の手順に従ってください。
-**[機能拡張]** ウィンドウで「Managed Instance」を検索し、そこでインストールします。 インストールされた後は、拡張機能の更新があれば、自動的に通知されます。
+**[拡張機能]** ウィンドウで「Managed Instance」を検索し、そこでインストールします。 インストールされた後は、拡張機能の更新があれば、自動的に通知されます。
 
 拡張機能をインストールすると、Azure Data Studio に **[Managed Instance]\(マネージド インスタンス\)** タブが表示されます。 ここでは、お使いのマネージド インスタンスに固有の情報を確認できます。
 
@@ -38,7 +38,7 @@ Azure SQL Database Managed Instance 拡張機能により、[Azure Data Studio](
 
 拡張機能により、お使いのマネージド インスタンスの技術的特性といくつかのリソース使用量が表示されます。
 
-[ ![マネージド インスタンスのプロパティ](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
+[ ![Managed Instance のプロパティ](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
 
 上部のウィンドウには、次の詳細が表示されます。
 
@@ -51,7 +51,7 @@ Azure SQL Database Managed Instance 拡張機能により、[Azure Data Studio](
 
 **[Managed Instance]\(マネージド インスタンス\)** タブで 2 番目のウィンドウを選択すると、マネージド インスタンスの最適化に役立つ推奨事項とアラートが表示されます。
 
-[ ![マネージド インスタンスの推奨事項](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
+[ ![Managed Instance の推奨事項](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
 
 次の推奨事項のいくつかが表示される場合があります。
 
@@ -62,13 +62,13 @@ Azure SQL Database Managed Instance 拡張機能により、[Azure Data Studio](
 - **データ ファイルの制限**。 データ ファイルが [General Purpose サービス レベルのファイル IO 制限](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)に近づいている場合、パフォーマンスを向上させるにはファイル サイズを増やすことが必要な場合があります。 この問題によって、メモリ不足が発生し、バックアップの速度が低下している可能性があります。
 - **可用性の問題**。 仮想ログ ファイルの数が多いと、パフォーマンスに影響することがあります。 ロセスで障害が発生した場合、そのような問題のため、General Purpose サービス レベルでのデータベース復旧に時間がかかる可能性があります。
 
-これらの推奨事項を定期的に確認し、根本原因を調査して、問題を修正するアクションを講じます。 Azure SQL Database Managed Instance 拡張機能を使うと、報告された問題の一部を軽減するために実行できるスクリプトが提供されます。
+これらの推奨事項を定期的に確認し、根本原因を調査して、問題を修正するアクションを講じます。 SQL Managed Instance 拡張機能を使うと、報告された問題の一部を軽減するために実行できるスクリプトが提供されます。
 
 ## <a name="replicas"></a>レプリカ
 
 **[Managed Instance]\(マネージド インスタンス\)** タブの 3 番目のウィンドウには、お使いのマネージド インスタンス内のデータベース レプリカの状態が表示されます。
 
-[ ![マネージド インスタンスのレプリカ](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
+[ ![Managed Instance のレプリカ](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
 
 General Purpose サービス レベルでは、すべてのデータベースに 1 つの (プライマリ) レプリカがあります。 Business Critical レベルのインスタンスでは、すべてのデータベースに 1 つのプライマリ レプリカと 3 つのセカンダリ レプリカがあり、そのうち 1 つは読み取り専用ワークロードに使用されます。 **[Replicas]\(レプリカ\)** ウィンドウでは、同期プロセスを監視し、すべてのセカンダリ レプリカがプライマリ レプリカと同期されていることを確認できます。
 
@@ -76,15 +76,15 @@ General Purpose サービス レベルでは、すべてのデータベースに
 
 **[Managed Instance]\(マネージド インスタンス\)** の 4 番目のウィンドウには、最新の関連する SQL エラー ログ エントリが表示されます。
 
-[ ![マネージド インスタンスのログ エントリ](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
+[ ![Managed Instance のログ エントリ](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
 
 マネージド インスタンスでによって大量のログ エントリが生成されますが、そのほとんどは内部/システムの情報です。 また、一部のログ エントリでは、実際の論理データベース名ではなく、物理データベース名 (`GUID` の値) が示されます。
 
-Azure SQL Database Managed Instance 拡張機能を使うと、[Dimitri Furman 法](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506)に基づいて不要なログ エントリを除外できます。 また、物理名ではなく実際の論理ファイル名が表示されます。
+SQL Managed Instance 拡張機能を使うと、[Dimitri Furman 法](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506)に基づいて不要なログ エントリを除外できます。 また、物理名ではなく実際の論理ファイル名が表示されます。
 
 ## <a name="reporting-problems"></a>問題の報告
 
-Azure SQL Database Managed Instance 拡張機能に関して問題が発生した場合は、[Extension GitHub プロジェクト](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues)にアクセスし、問題を報告してください。
+SQL Managed Instance 拡張機能に関して問題が発生した場合は、[Extension GitHub プロジェクト](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues)にアクセスし、問題を報告してください。
 
 ## <a name="code-of-conduct"></a>倫理規定
 

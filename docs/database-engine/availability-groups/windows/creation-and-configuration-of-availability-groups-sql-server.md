@@ -1,6 +1,6 @@
 ---
 title: 可用性グループの作成と構成 (コンテンツ インデックス)
-description: SQL Server の Always On 可用性グループの作成と構成に役立つリンクのインデックスです。
+description: SQL Server の Always On 可用性グループの作成と構成に役立つ参照について学習します。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e11ba9aff326c6656a2c719ff00ef736022fc64
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a20f798a107c6afb1d26a9f0707c35913a44d7b
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899880"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565115"
 ---
 # <a name="reference-for-the-creation-and-configuration-of-always-on-availability-groups"></a>Always On 可用性グループの作成と構成の参照
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

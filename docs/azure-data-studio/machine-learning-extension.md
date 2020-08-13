@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: e6b38724e2cb8fde7fe38a544c3f87fba3cebd45
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 8a415678b777ba6142bab01bced7d7da908b2204
+ms.sourcegitcommit: 68c1dbc465898e20ec95f98cc2f14a8c9cd166a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85352419"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051111"
 ---
 # <a name="machine-learning-extension-preview-for-azure-data-studio"></a>Azure Data Studio の Machine Learning 拡張機能 (プレビュー)
 
@@ -30,6 +30,23 @@ Azure Data Studio を実行するコンピューターには、次の前提条�
 - Windows、macOS、または Linux 用の [Microsoft ODBC driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md)。
 
 - [R 3.5](https://www.r-project.org/) (省略可能)。 3\.5 以外のバージョンは現在サポートされていません。 R 3.5 をインストールしたら、R を有効にし、[[拡張機能の設定]](#settings) で、R インストールへのローカル パスを指定する必要があります。 これは、データベースで R パッケージを管理する場合にのみ必要です。
+
+### <a name="trouble-installing-python-3-from-within-ads"></a>ADS 内からの Python 3 のインストールで問題が発生した場合
+Python 3 をインストールしようとしたときに、TLS/SSL に関するエラーが表示された場合は、次の 2 つのオプションのコンポーネントを追加します。
+
+_エラーのサンプル_
+```
+$: ~/0.0.1/bin/python3 -m pip install --user "jupyter>=1.0.0" --extra-index-url https://prose-python-packages.azurewebsites.net
+WARNING: pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.
+Looking in indexes: https://pypi.org/simple, https://prose-python-packages.azurewebsites.net
+Requirement already satisfied: jupyter
+```
+
+_次をインストールします_
+
+- [Homebrew](https://brew.sh) (オプション)。 Homebrew をインストールし、その後コマンド ラインから `brew update` を実行します。
+
+- *openssl* (オプション)。 次に、`brew install openssl` を実行します。
 
 ## <a name="install-the-extension"></a>拡張機能をインストールする
 

@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11f67835fe3cd74b63a9f2921850376ff4805881
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 0ff1117c601cc42d8fa14147df18b90a10fc97bd
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411044"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87987958"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -51,7 +51,7 @@ CREATE LOGIN はトランザクションに参加します。 CREATE LOGIN が�
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Azure SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -284,7 +284,7 @@ CHECK_EXPIRATION = OFF ;
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Azure SQL Database<br />単一データベース/エラスティック プール \*_**
+        **_\* Azure SQL Database \*_**
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -299,7 +299,7 @@ CHECK_EXPIRATION = OFF ;
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 単一データベース/エラスティック プール
+## <a name="sql-database"></a>SQL Database
 
 ## <a name="syntax"></a>構文
 
@@ -402,7 +402,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* Azure SQL<br />Managed Instance \*_**
@@ -417,12 +417,12 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database マネージド インスタンス
+## <a name="azure-sql-managed-instance"></a>Azure SQL Managed Instance
 
 ## <a name="syntax"></a>構文
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for Azure SQL Managed Instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 
 <option_list> ::=
@@ -451,7 +451,7 @@ SID **=** *sid*: ログインの再作成に使用されます。 SQL Server 認
 - Azure AD アカウントにマップされたサーバーレベルのプリンシパルを作成するための新しい構文が導入されました (**FROM EXTERNAL PROVIDER**)
 - **FROM EXTERNAL PROVIDER** を指定した場合:
 
-  - login_name は、現在の Azure SQL マネージド インスタンスによって Azure AD 内でアクセスできる既存の Azure AD アカウント (ユーザー、グループ、またはアプリケーション) を表す必要があります。 Azure AD プリンシパルに対して、CREATE LOGIN 構文では次が要求されます。
+  - login_name は、現在の Azure SQL Managed Instance によって Azure AD 内でアクセスできる既存の Azure AD アカウント (ユーザー、グループ、またはアプリケーション) を表す必要があります。 Azure AD プリンシパルに対して、CREATE LOGIN 構文では次が要求されます。
     - Azure AD ユーザー用の Azure AD オブジェクトの UserPrincipalName。
     - Azure AD のグループと Azure AD アプリケーション用の Azure AD オブジェクトの DisplayName。
   - **PASSWORD** オプションは使用できません。
@@ -469,18 +469,18 @@ SID **=** *sid*: ログインの再作成に使用されます。 SQL Server 認
 
 既定で、マスターに新しく作成された Azure AD ログインに付与される標準のアクセス許可は**CONNECT SQL** と **VIEW ANY DATABASE** です。
 
-### <a name="sql-database-managed-instance-logins"></a>SQL Database マネージド インスタンスのログイン
+### <a name="sql-managed-instance-logins"></a>SQL Managed Instance ログイン
 
 - サーバーに対する **ALTER ANY LOGIN** アクセス許可、または固定サーバー ロール `securityadmin` または `sysadmin` のいずれかのメンバーシップが必要です。 create コマンドを実行できるのは、サーバーに対する **ALTER ANY LOGIN** アクセス許可またはそのようなロールのいずれかのメンバーシップを持つ Azure Active Directory (Azure AD) アカウントのみです。
 - ログインが SQL プリンシパルの場合、作成コマンドを使用して Azure AD アカウントのログインを作成できるのは、`sysadmin` ロールに属しているログインのみです。
-- Azure SQL マネージド インスタンスで使用されるのと同じディレクトリ内の Azure AD のメンバーである必要があります。
+- Azure SQL Managed Instance で使用されるのと同じディレクトリ内の Azure AD のメンバーである必要があります。
 
 ## <a name="after-creating-a-login"></a>ログインを作成した後
 
 > [!NOTE]
-> 作成後にマネージド インスタンス機能の Azure AD 管理者が変更されました。 詳しくは、「[マネージド インスタンス用の新しい Azure AD 管理機能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)」をご覧ください。
+> 作成後の Azure SQL Managed Instance 機能の Azure AD 管理者が変更されました。 詳しくは、「[マネージド インスタンス用の新しい Azure AD 管理機能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)」をご覧ください。
 
-ログインが作成されたら、ログインは SQL Database マネージド インスタンスに接続できますが、**public** ロールに与えられた権限しか持ちません。 次の操作のいくつかを実行することを検討してください。
+ログインが作成されたら、ログインはマネージド インスタンスに接続できますが、**public** ロールに与えられた権限しか持ちません。 次の操作のいくつかを実行することを検討してください。
 
 - Azure AD ログインから Azure AD ユーザーを作成するには、「[CREATE USER](../../t-sql/statements/create-user-transact-sql.md)」を参照してください。
 - データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して組み込みデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT](../../t-sql/statements/grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[追加のサーバー レベルの管理者ロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
@@ -601,7 +601,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -729,7 +729,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)

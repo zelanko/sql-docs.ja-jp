@@ -15,12 +15,12 @@ ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 718c095fb544c2c0b9436a3cfa70040fcf31d71c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7b1338f4e935a2c7e8662a09aacff1cc4b7df9d3
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111735"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988810"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>SQL Server レプリケーションの [サブスクリプションのプロパティ] ダイアログ ボックス 
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "87111735"
   
 > [!NOTE]  
 >  - ディストリビューション エージェントまたはマージ エージェントのジョブがサブスクリプションに対してまだ作成されていない場合、ほとんどのサブスクリプション プロパティは表示されません。 プル サブスクリプションのエージェント ジョブを作成するには、[sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (スナップショットまたはトランザクション パブリケーションへのサブスクリプションの場合) または [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (マージ パブリケーションへのサブスクリプションの場合) を実行します。  
-> - Azure SQL Database マネージド インスタンスは、スナップショットおよびトランザクション レプリケーションのパブリッシャー、ディストリビューター、およびサブスクライバーの可能性があります。 Azure SQL Database のシングル データベースとプール データベースは、スナップショットとトランザクション レプリケーションのプッシュ サブスクライバーの可能性しかありません。 詳細については、[Azure SQL Database を使用したトランザクションのレプリケーション](/azure/sql-database/sql-database-managed-instance-transactional-replication)に関する記事を参照してください。 
+> - Azure SQL Managed Instance データベースは、スナップショットおよびトランザクション レプリケーションのパブリッシャー、ディストリビューター、およびサブスクライバーの可能性があります。 Azure SQL Database のデータベースは、スナップショットとトランザクション レプリケーションのプッシュ サブスクライバーの可能性しかありません。 詳細については、[Azure SQL Database を使用したトランザクションのレプリケーション](/azure/sql-database/sql-database-managed-instance-transactional-replication)に関する記事を参照してください。 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>すべてのサブスクリプションに対するパブリッシャーのオプション  
  **セキュリティ**  

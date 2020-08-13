@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9068f7e2807c4883dc94094cd67d23ec04cf6a0a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7936a8f83bf110592e142f0ff7d033233592c64
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915088"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863391"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 接続マネージャー
 
@@ -87,10 +87,10 @@ OLE DB 接続マネージャーは、次のようにして構成します。
  データ接続を選択し、 **[削除]** を選択して削除します。  
   
 #### <a name="managed-identities-for-azure-resources-authentication"></a>Azure リソース認証用のマネージド ID
-[Azure Data Factory 内の Azure-SSIS 統合ランタイム](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)上で SSIS パッケージを実行しているときは、お使いのデータ ファクトリに関連付けられている[マネージド ID](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) を Azure SQL Database (またはマネージド インスタンス) 認証に使用します。 この ID を使用して指定したファクトリからデータベースにアクセスし、データベースに、またはデータベースからデータをコピーできます。
+[Azure Data Factory 内の Azure-SSIS 統合ランタイム](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)上で SSIS パッケージを実行しているときは、お使いのデータ ファクトリに関連付けられている[マネージド ID](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) を Azure SQL Database または Managed Instance 認証に使用します。 この ID を使用して指定したファクトリからデータベースにアクセスし、データベースに、またはデータベースからデータをコピーできます。
 
 > [!NOTE]
->  Azure Active Directory (Azure AD) 認証 (マネージド ID 認証を含む) を使用して Azure SQL Database (またはマネージド インスタンス) に接続するときに、パッケージの実行エラーや予期しない動作の変更に関連する問題が発生することがあります。 詳しくは、「[Azure AD の機能と制限事項](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations)」をご覧ください。
+>  Azure Active Directory (Azure AD) 認証 (マネージド ID 認証を含む) を使用して Azure SQL Database または Managed Instance に接続するときに、パッケージの実行エラーや予期しない動作の変更に関連する問題が発生することがあります。 詳しくは、「[Azure AD の機能と制限事項](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations)」をご覧ください。
 
 Azure SQL Database にマネージド ID 認証を使用するには、以下の手順でデータベースを構成します。
 
@@ -108,7 +108,7 @@ Azure SQL Database にマネージド ID 認証を使用するには、以下の
     EXEC sp_addrolemember [role name], [your data factory name];
     ```
 
-Azure SQL Database マネージド インスタンスにマネージド ID 認証を使用するには、以下の手順でデータベースを構成します。
+Azure SQL Managed Instance にマネージド ID 認証を使用するには、以下の手順に従ってデータベースを構成します。
     
 1. まだ行っていない場合は、Azure portal でお使いのマネージド インスタンスの [Azure Active Directory 管理者をプロビジョニング](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)します。 Azure AD 管理者は、Azure AD ユーザーでも Azure AD グループでもかまいません。 マネージド ID を持つグループに管理者ロールを付与する場合は、ステップ 2 から 4 をスキップします。 管理者は、データベースへのフル アクセスを持ちます。
 

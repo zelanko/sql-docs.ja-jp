@@ -24,12 +24,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4690f82c1ae731a25edce6dbe0b36d7b31d448f2
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 0f87466ebfccaaf69b970386865af68275e83e10
+ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392830"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88046643"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -89,7 +89,7 @@ IDENTITY が Windows ユーザーの場合、このシークレットはパス�
 
 ## <a name="examples"></a>例
 
-### <a name="a-basic-example"></a>A. 基本的な例
+### <a name="a-creating-a-credential-for-windows-identity"></a>A. Windows ID の資格情報の作成
 
 次の例では、資格情報 `AlterEgo` を作成します。 この資格情報には Windows ユーザー `Mary5` とパスワードが含まれます。
 
@@ -145,7 +145,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. SAS トークンを使用する資格情報の作成
 
-**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)、および Azure SQL Database のマネージド インスタンス。
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658) および Azure SQL Managed Instance。
 
 次の例では、SAS トークンを使用して共有アクセス署名資格情報を作成します。 Azure コンテナーで格納済みアクセス ポリシーと Shared Access Signature を作成してから、Shared Access Signature を使って資格情報を作成するチュートリアルについては、「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。
 
@@ -159,6 +159,15 @@ USE master
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a trailing forward slash.
     WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.
     , SECRET = 'sharedaccesssignature' -- this is the shared access signature token
+GO
+```
+
+### <a name="e-creating-a-credential-for-managed-identity"></a>E. マネージド ID の資格情報の作成
+
+次の例では、Azure SQL または Azure Synapse サービスのマネージド ID を表す資格情報を作成します。 このケースでは、パスワードとシークレットは適用されません。
+
+```sql
+CREATE CREDENTIAL ServiceIdentity WITH IDENTITY = 'Managed Identity';
 GO
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: Azure Key Vault のカスタマー マネージド キーでよく発生するエラー
-description: Transparent Data Encryption (TDE) と Azure Key Vault (AKV) のカスタマー マネージド キーでよく発生するエラーを解決します。
+description: Transparent Data Encryption (TDE) と Azure Key Vault のカスタマー マネージド キーに関するアクセスの問題と一般的なエラーを特定し、解決する方法について説明します。
 ms.custom: seo-lt-2019
 helpviewer_keywords:
 - troublshooting, tde akv
@@ -14,16 +14,17 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 8ec410ba98be0c1893f376daf596a0746983b87d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 16368fe948d2cefeb052d503385c99cedfb097ff
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76909902"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899005"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Azure Key Vault のカスタマー マネージド キーを使った透過的なデータ暗号化に関する一般的なエラー
 
-[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[asdb-asdbmi-asa](../../../includes/applies-to-version/asdb-asdbmi-asa.md)]
+
 この記事では、[Azure Key Vault のカスタマー マネージド キーで Transparent Data Encryption (TDE)](/azure/sql-database/transparent-data-encryption-byok-azure-sql) を使用するように構成されたデータベースがアクセスできなくなる原因となった、Azure Key Vault キーのアクセスに関する問題を特定して解決する方法について説明します。
 
 ## <a name="introduction"></a>はじめに

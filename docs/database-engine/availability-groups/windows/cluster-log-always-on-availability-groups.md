@@ -1,6 +1,6 @@
 ---
 title: 可用性グループ用の CLUSTER.LOG を生成および分析する
-description: 'Always On 可用性グループ用にクラスター ログを生成および分析する方法について説明します。 '
+description: Always On 可用性グループ用にクラスター ログを生成および分析する方法の詳細について学習します。
 ms.custom: seo-lt-2019
 ms.date: 06/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b0cd86318c4ff884ba31fed56e31202c70990ff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: baf2149ebca76caf83ac1453eef742a5aeb88936
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896121"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565320"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Always On 可用性グループ用の CLUSTER.LOG を生成および分析する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

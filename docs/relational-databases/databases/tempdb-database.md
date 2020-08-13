@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf911fae5cc8df106cc2a4be9556cf873dd49eaa
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: d4b7c4f52c5d0e70ac6c7f59eebf5fd8a5e47e29
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332481"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864879"
 ---
 # <a name="tempdb-database"></a>tempdb データベース
 
@@ -39,8 +39,8 @@ ms.locfileid: "87332481"
   > [!NOTE]
   > 各内部オブジェクトでは、少なくとも 9 つのページが使用されます (IAM ページと 8 ページ分のエクステント)。 ページとエクステントの詳細については、「[ページとエクステント](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents)」を参照してください。
   > [!IMPORTANT]
-  > `tempdb` に保存され、データベース レベルまで調べられるグローバル一時テーブルとグローバル一時ストアド プロシージャは、Azure SQL Database 単一データベースおよびエラスティック プールによってサポートされています。 グローバル一時テーブルとグローバル一時ストアド プロシージャは、同じ Azure SQL データベース内ですべてのユーザーのセッションで共有されます。 他の Azure SQL データベースからのユーザー セッションは、グローバル一時テーブルにアクセスできません。 詳細については、「[Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)」(データベース スコープ グローバル一時テーブル (Azure SQL Database)) を参照してください。 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)) では、SQL Server と同じ一時オブジェクトがサポートされます。
-  > Azure SQL Database 単一データベースおよびエラスティック プールでは、master データベースと `tempdb` データベースのみが適用されます。 詳しくは、「[Azure SQL Database サーバーとは](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server)」をご覧ください。 Azure SQL Database 単一データベースおよびエラスティック プールのコンテキストでの `tempdb` の説明については、[Azure SQL Database 単一データベースおよびエラスティック プール内の tempdb データベース](#tempdb-database-in-sql-database)に関するページを参照してください。 Azure SQL Database Managed Instance の場合、すべてのシステム データベースが適用されます。
+  > `tempdb` に保存され、データベース レベルまで調べられるグローバル一時テーブルとグローバル一時ストアド プロシージャは、Azure SQL Database 単一データベースおよびエラスティック プールによってサポートされています。 グローバル一時テーブルとグローバル一時ストアド プロシージャは、同じ Azure SQL データベース内ですべてのユーザーのセッションで共有されます。 他の Azure SQL データベースからのユーザー セッションは、グローバル一時テーブルにアクセスできません。 詳細については、「[Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)」(データベース スコープ グローバル一時テーブル (Azure SQL Database)) を参照してください。 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)) では、SQL Server と同じ一時オブジェクトがサポートされます。
+  > Azure SQL Database 単一データベースおよびエラスティック プールでは、master データベースと `tempdb` データベースのみが適用されます。 詳しくは、「[Azure SQL Database サーバーとは](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server)」をご覧ください。 Azure SQL Database 単一データベースおよびエラスティック プールのコンテキストでの `tempdb` の説明については、[Azure SQL Database 単一データベースおよびエラスティック プール内の tempdb データベース](#tempdb-database-in-sql-database)に関するページを参照してください。 Azure SQL Managed Instance の場合、すべてのシステム データベースが適用されます。
 
 - **バージョン ストア**。これは行のバージョン管理を使用する機能のサポートに必要なデータ行を保持するデータ ページのコレクションです。 共通バージョン ストアとオンライン インデックス構築用のバージョン ストアの 2 つのバージョン ストアがあります。 バージョン ストアに保持される内容:
   - 行のバージョン管理を伴う READ COMMITTED 分離トランザクションまたはスナップショット分離トランザクションを使用するデータベースで、データ変更トランザクションによって生成される行バージョン。  

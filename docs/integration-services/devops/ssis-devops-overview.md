@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c89ff705077782d0cf8287f0d1bc010ce609cc72
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 29cef6bf700c6d837c77f02e16debe50e1f1a267
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472478"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823484"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps ツール
 
@@ -95,7 +95,7 @@ cat log.txt
 
 #### <a name="destination-server"></a>[転送先サーバー]
 
-宛先となる SQL サーバーの名前。 これには SQL Server、Azure SQL Database、Azure SQL Database マネージド インスタンスの名前が想定されます。 このプロパティは、宛先の種類が SSISDB の場合にのみ表示されます。
+宛先となる SQL サーバーの名前。 これは、オンプレミスの SQL Server、Azure SQL Database、または Azure SQL Managed Instance の名前にすることができます。 このプロパティは、宛先の種類が SSISDB の場合にのみ表示されます。
 
 #### <a name="destination-path"></a>宛先のパス
 
@@ -184,7 +184,7 @@ SSIS カタログ構成のインライン JSON。 このプロパティは、構
 
 #### <a name="target-server"></a>ターゲット サーバー
 
-ターゲット SQL Server の名前。 これには SQL Server、Azure SQL Database、Azure SQL Database マネージド インスタンスの名前が想定されます。
+ターゲット SQL Server の名前。 これは、オンプレミスの SQL Server、Azure SQL Database、または Azure SQL Managed Instance の名前にすることができます。
 
 #### <a name="authentication-type"></a>認証の種類
 

@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ad86aa823fc10827e8f0d11aaf36ae10fc0622bf
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: aee1c65fb03dcbf192c3f33fc4750bf496b05c77
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112552"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988207"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,10 +61,10 @@ ms.locfileid: "87112552"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />単一データベース/エラスティック プール](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />マネージド インスタンス](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -867,10 +867,10 @@ GO
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />単一データベース/エラスティック プール \*_**
+        **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
-        [SQL Database<br />マネージド インスタンス](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -882,11 +882,11 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 単一データベース/エラスティック プール
+## <a name="sql-database"></a>SQL Database
 
 ## <a name="overview"></a>概要
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 単一データベース/エラスティック プールでは、Azure SQL サーバーでこのステートメントを使って、単一のデータベースまたはエラスティック プール内のデータベースを作成できます。 このステートメントで、データベース名、照合順序、最大サイズ、エディション、サービス目標、および該当する場合は新しいデータベースのエラスティック プールを指定します。 また、エラスティック プールにデータベースを作成することにも使用できます。 さらに、別の SQL Database サーバー上にデータベースのコピーを作成することもできます。
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、Azure SQL サーバーでこのステートメントを使って、単一のデータベースまたはエラスティック プール内のデータベースを作成できます。 このステートメントで、データベース名、照合順序、最大サイズ、エディション、サービス目標、および該当する場合は新しいデータベースのエラスティック プールを指定します。 また、エラスティック プールにデータベースを作成することにも使用できます。 さらに、別の SQL Database サーバー上にデータベースのコピーを作成することもできます。
 
 ## <a name="syntax"></a>構文
 
@@ -973,7 +973,7 @@ CATALOG_COLLATION: メタデータ カタログの既定の照合順序を指定
 
 EDITION: データベースのサービス層を指定します。
 
-単一データベース/エラスティック プール上の単一のデータベースおよびプールされたデータベース。 使用できる値は次のとおりです。'Basic'、'Standard'、'Premium'、'GeneralPurpose'、'BusinessCritical'、'Hyperscale'。
+単一およびプールされたデータベース。 使用できる値は次のとおりです。'Basic'、'Standard'、'Premium'、'GeneralPurpose'、'BusinessCritical'、'Hyperscale'。
 
 MAXSIZE: データベースの最大サイズを指定します。 MAXSIZE は、指定されている EDITION (サービス層) に対して有効である必要があります。各サービス層でサポートされる MAXSIZE 値と既定値 (D) は次のとおりです。
 
@@ -1273,10 +1273,10 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />単一データベース/エラスティック プール](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />マネージド インスタンス \*_**
+        **_\* SQL Database<br />Managed Instance \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1288,11 +1288,11 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database マネージド インスタンス
+## <a name="azure-sql-managed-instance"></a>Azure SQL Managed Instance
 
 ## <a name="overview"></a>概要
 
-Azure SQL Database Managed Instance では、データベースを作成するためにこのステートメントを使用します。 マネージド インスタンス上にデータベースを作成するときは、データベース名と照合順序を指定します。
+Azure SQL Managed Instance では、データベースを作成するためにこのステートメントを使用します。 マネージド インスタンス上にデータベースを作成するときは、データベース名と照合順序を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -1357,10 +1357,10 @@ CREATE DATABASE TestDB1;
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />単一データベース/エラスティック プール](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />マネージド インスタンス](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -1482,10 +1482,10 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />単一データベース/エラスティック プール](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />マネージド インスタンス](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)

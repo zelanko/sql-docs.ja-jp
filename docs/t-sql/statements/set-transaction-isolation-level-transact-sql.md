@@ -27,12 +27,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23d39a7b7149f6ac75873389c1ac90c6daca8a90
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 73b805149ca1061c73572d742875fa11d9d81b23
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483928"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931961"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   READ_COMMITTED_SNAPSHOT が OFF (SQL Server での既定値) に設定されている場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では共有ロックが使用され、現在のトランザクションでの読み取り操作中に他のトランザクションによって行が変更されるのを防ぐことができます。 また、ステートメントが他のトランザクションで変更された行を読み取ろうとしても、そのトランザクションが完了するまでステートメントはブロックされます。 いつ解放されるかは、共有ロックの種類によって決まります。 行ロックは、次の行が処理される前に解放されます。 ページ ロックは次のページの読み取り時に解放され、テーブル ロックはステートメントの終了時に解放されます。  
   
--   READ_COMMITTED_SNAPSHOT が ON (SQL Azure データベースでの既定値) に設定されている場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では行のバージョン管理が使用され、各ステートメントでは、トランザクション全体で一貫性のあるデータのスナップショットが使用されます。このスナップショットは、ステートメント開始時点に存在したデータのスナップショットです。 ただし、ロックは、他のトランザクションがデータを更新するのを防ぐために使用されることはありません。
+-   READ_COMMITTED_SNAPSHOT が ON (Azure SQL Database での既定値) に設定されている場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では行のバージョン管理が使用され、各ステートメントでは、トランザクション全体で一貫性のあるデータのスナップショットが使用されます。このスナップショットは、ステートメント開始時点に存在したデータのスナップショットです。 ただし、ロックは、他のトランザクションがデータを更新するのを防ぐために使用されることはありません。
 
 > [!IMPORTANT]  
 > トランザクション分離レベルを選択しても、データ変更を保護するために獲得したロックは影響を受けません。 トランザクションでは、設定されたトランザクション分離レベルに関係なく、常に、そのトランザクションで変更するデータについて排他ロックを獲得し、トランザクションが完了するまでそのロックを保持します。 さらに、READ_COMMITTED 分離レベルで作成された更新では、選択されたデータ行に更新ロックを使用するのに対して、SNAPSHOT 分離レベルで作成された更新では行のバージョンを使用して更新する行を選択します。 トランザクション分離レベルでは主に、読み取り操作に対して、他のトランザクションによって行われる変更の影響からの保護レベルを定義します。 詳細については、「[トランザクションのロックおよび行のバージョン管理ガイド](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)」を参照してください。

@@ -22,12 +22,12 @@ ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f7e5bfe755ab485b1470f2dfe066165c577de2d1
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 67428f9b61dbca0798ee868b9e89a4bf8fe25332
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381126"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823707"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -86,7 +86,7 @@ WHERE database_id = DB_ID();
   
  ADDRESS **='** _next\_hop\_address_'  
 
- Azure SQL Database マネージド インスタンスの場合、`ADDRESS` はローカルである必要があります。
+ Azure SQL Managed Instance の場合、`ADDRESS` はローカルである必要があります。
 
  このルート用のネットワーク アドレスを指定します。 *next_hop_address* の次の形式で TCP/IP アドレスを指定します。  
   

@@ -16,12 +16,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0e39946071c85dff0c1e29f6f36e6bafe910f77d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0fba95ecd1553bcd090cbf7ef987728bd17b712d
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774002"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863359"
 ---
 # <a name="configure-publishing-and-distribution"></a>パブリッシングおよびディストリビューションの構成
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "85774002"
 
 2. ディストリビューター (兼パブリッシャー) で、[sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) を実行します。このとき `@working_directory` には、既定のスナップショット フォルダーとして使用する UNC 共有を指定します。
 
-   SQL Database Managed Instance 上のディストリビューターの場合は、`@working_directory` に Azure ストレージ アカウントを、`@storage_connection_string` にストレージ アクセス キーを使用します。 
+   SQL Managed Instance 上のディストリビューターの場合は、`@working_directory` に Azure ストレージ アカウントを、`@storage_connection_string` にストレージ アクセス キーを使用します。 
 
 3. パブリッシャーで、[sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) を実行します。 `@dbname` にはパブリッシュするデータベースを、`@optname` にはレプリケーションの種類を、`@value` には `true` を指定します。
 
@@ -80,7 +80,7 @@ ms.locfileid: "85774002"
 
 2. ディストリビューターで、[sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) を実行します。このとき、`@working_directory` には、既定のスナップショット フォルダーとして使用する UNC 共有を指定します。 ディストリビューターがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、さらに、`@security_mode` には `0` の値を、`@login` と `@password` には [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン情報を指定する必要があります。
 
-   SQL Database Managed Instance 上のディストリビューターの場合は、`@working_directory` に Azure ストレージ アカウントを、`@storage_connection_string` にストレージ アクセス キーを使用します。 
+   SQL Managed Instance 上のディストリビューターの場合は、`@working_directory` に Azure ストレージ アカウントを、`@storage_connection_string` にストレージ アクセス キーを使用します。 
 
 3. パブリッシャーの master データベースで [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) を実行します。 `@password` には、手順 1. で使用した強力なパスワードを指定してください。 このパスワードは、パブリッシャーがディストリビューターに接続する際に使用されます。
 

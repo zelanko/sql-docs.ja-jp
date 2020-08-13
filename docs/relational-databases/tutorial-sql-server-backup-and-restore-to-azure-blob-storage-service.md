@@ -11,24 +11,24 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59968cad65f3a80c2d511dad3dc804d151d33095
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 332fde643d285b20c0bd772918f8c9cf1bf578f2
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458044"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864959"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>クイック スタート:Azure Blob Storage サービスへの SQL のバックアップと復元
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 このクイックスタートでは、Azure Blob Storage サービスへのバックアップの書き込みと、Azure Blob Storage サービスからの復元を実行する方法について学習できます。  この記事では、Azure BLOB コンテナーを作成し、Blob service にバックアップを書き込んだ後、復元を実行する方法について説明します。
   
 ## <a name="prerequisites"></a>前提条件  
-このクイックスタートを完了するには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップと復元の概念および T-SQL 構文についての知識が必要です。  Azure ストレージ アカウント、SQL Server Management Studio (SSMS)、および SQL Server または Azure SQL Database マネージド インスタンスが実行されているサーバーへのアクセスが必要です。 また、BACKUP コマンドと RESTORE コマンドの実行に使用するアカウントは、**alter any credential** 権限を持つ **db_backup operator** データベース ロールに属している必要があります。 
+このクイックスタートを完了するには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップと復元の概念および T-SQL 構文についての知識が必要です。  Azure ストレージ アカウント、SQL Server Management Studio (SSMS)、および SQL Server または Azure SQL Managed Instance が実行されているサーバーへのアクセスが必要です。 また、BACKUP コマンドと RESTORE コマンドの実行に使用するアカウントは、**alter any credential** 権限を持つ **db_backup operator** データベース ロールに属している必要があります。 
 
 - 無料の [Azure アカウント](https://azure.microsoft.com/offers/ms-azr-0044p/)を取得する。
 - [Azure ストレージ アカウント](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)を作成します。
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
-- [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールするか、[Azure SQL 仮想マシン](/azure/sql-database/sql-database-managed-instance-configure-vm)または[ポイント対サイト](/azure/sql-database/sql-database-managed-instance-configure-p2s)[によって確立された接続を使用して](/azure/sql-database/sql-database-managed-instance-get-started)マネージド インスタンスをデプロイします。
+- [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールするか、[Azure SQL 仮想マシン](/azure/sql-database/sql-database-managed-instance-configure-vm)または[ポイント対サイト](/azure/sql-database/sql-database-managed-instance-configure-p2s)によって確立された接続を使用して [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started) をデプロイします。
 - ユーザー アカウントを [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) のロールに割り当て、[alter any credential](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 権限を付与する。 
 
 ## <a name="create-azure-blob-container"></a>Azure BLOB コンテナーを作成する
@@ -53,7 +53,7 @@ ms.locfileid: "86458044"
 
 1. [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) を起動し、SQL Server インスタンスに接続します。
 1. **[新しいクエリ]** ウィンドウを開きます。 
-1. 次の Transact-SQL (T-SQL) コードを実行して、テスト データベースを作成します。 新しいデータベースを表示するには、**オブジェクト エクスプローラー**の **[データベース]** ノードを最新の情報に更新します。 Azure SQL Database マネージド インスタンス上に新しく作成されたデータベースでは自動的に TDE が有効になっているので、続行するにはそれを無効にする必要があります。 
+1. 次の Transact-SQL (T-SQL) コードを実行して、テスト データベースを作成します。 新しいデータベースを表示するには、**オブジェクト エクスプローラー**の **[データベース]** ノードを最新の情報に更新します。 SQL Managed Instance 上に新しく作成されたデータベースでは自動的に TDE が有効になっているので、続行するにはそれを無効にする必要があります。 
 
 ```sql
 USE [master]
@@ -87,7 +87,7 @@ GO
 SELECT * FROM SQLTest
 GO
 
--- Disable TDE for newly-created databases on a managed instance 
+-- Disable TDE for newly-created databases on SQL Managed Instance 
 USE [SQLTestDB];
 GO
 ALTER DATABASE [SQLTestDB] SET ENCRYPTION OFF;

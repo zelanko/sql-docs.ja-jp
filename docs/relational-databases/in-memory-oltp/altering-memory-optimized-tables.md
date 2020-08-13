@@ -12,12 +12,12 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db339d9063378b29f6902f7e52e3006ac57295b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 60acfdfb738542c39c5974691811c482e36b9f9e
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776072"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863347"
 ---
 # <a name="altering-memory-optimized-tables"></a>メモリ最適化テーブルの変更
 
@@ -26,7 +26,7 @@ ms.locfileid: "85776072"
 メモリ最適化テーブルのスキーマとインデックスの変更は、ALTER TABLE ステートメントを使用して実行できます。 SQL Server 2016 と Azure SQL Database では、メモリ最適化テーブルに対する ALTER TABLE 操作は OFFLINE です。つまり、操作が行われている間、テーブルのクエリを行うことはできません。 データベース アプリケーションは実行を継続できます。また、テーブルにアクセスする操作は、変更プロセスが完了するまでブロックされます。 1 つの ALTER TABLE ステートメントに、複数の ADD、DROP、または ALTER 操作を組み合わせることができます。
 
 > [!IMPORTANT]
-> Azure SQL Database Managed Instance では、General Purpose サービス層でのメモリ最適化テーブルはサポートされません。
+> Azure SQL Managed Instance では、General Purpose サービス レベルでのメモリ最適化テーブルはサポートされません。
   
 ## <a name="alter-table"></a>ALTER TABLE  
 

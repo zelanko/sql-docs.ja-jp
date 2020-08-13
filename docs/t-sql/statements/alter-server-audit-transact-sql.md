@@ -20,12 +20,12 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8f61833c4c532056d7af9980360e04e9d124854d
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 34a467f81612e88e15b45c055650c961493357dd
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381296"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823508"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,7 +81,7 @@ ALTER SERVER AUDIT audit_name
  監査ターゲットの場所を指定します。 オプションは、バイナリ ファイル、Windows アプリケーション ログ、または Windows セキュリティ ログです。  
 
 > [!IMPORTANT]
-> Azure SQL Database マネージド インスタンスでは SQL 監査はサーバー レベルで動作し、Azure Blob Storage に `.xel` ファイルを格納します。
+> Azure SQL Managed Instance では、SQL 監査はサーバー レベルで動作し、Azure Blob Storage に `.xel` ファイルを格納します。
   
  FILEPATH **= '** _os\_file\_path_ **'**  
  監査記録のパス。 ファイル名は、監査名と監査 GUID に基づいて生成されます。  

@@ -18,12 +18,12 @@ ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28e5524c0d2359f3edcbe003be366618df00217b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7b952b51c6171bf22590403452e7b17899459de0
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112079"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87564934"
 ---
 # <a name="concat_ws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
@@ -38,11 +38,9 @@ CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
-separator  
-任意の文字型の式です (`char`、`nchar`、`nvarchar`、または `varchar`)。
+*separator* 任意の文字型の式です (`char`、`nchar`、`nvarchar`、または `varchar`)。
 
-argument1, argument2, argument*N*  
-任意のデータ型の式。
+*argument1, argument2, argumentN* 任意の型の式です。 `CONCAT_WS` 関数では、2 個以上、254 個未満の引数が必要です。
 
 ## <a name="return-types"></a>戻り値の型
 長さと型を入力に依存する文字列値。
@@ -125,7 +123,7 @@ STRING_AGG(CONCAT_WS( ',', database_id, ISNULL(recovery_model_desc,''), ISNULL(c
 FROM sys.databases;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  

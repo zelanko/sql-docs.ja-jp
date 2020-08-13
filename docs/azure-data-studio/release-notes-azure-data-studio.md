@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 07/17/2020
-ms.openlocfilehash: b064c24ff7717fc5a03ee1413b1e85fbb71530dc
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 4a8f50b7a6558974c79f01f3d157715890beeb82
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411263"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988560"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
@@ -47,7 +47,7 @@ ms.locfileid: "87411263"
 | 新しい機能ツアーの追加 | Connections Viewlet、Notebook viewlet、Extensions Marketplace などのよく利用される機能のチュートリアルを、ホーム ページとコマンド パレットから機能ツアーを起動して、ユーザーが開始できるようになりました |
 | ノートブックの新機能 | &bull; &nbsp; Markdown ツールバーでのヘッダーのサポート<br/> &bull; &nbsp; テキスト セルでの Markdown の横に並べてのプレビュー
 | クエリ エディターでの列とテーブルのドラッグ アンド ドロップ | ユーザーは、Connections Viewlet からクエリ エディターに、列とテーブルを直接ドラッグ アンド ドロップできるようになりました |
-| アクティビティ バーへの Azure アカウント アイコンの追加 | Azure へのサインインにおける検出の向上 |
+| アクティビティ バーへの Azure アカウント アイコンの追加 | Azure にサインインする場所をユーザーが簡単に確認できるようになりました |
 | バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed)を参照してください。 |
 | &nbsp; | &nbsp; |
 
@@ -60,7 +60,7 @@ ms.locfileid: "87411263"
 
 | Change | 詳細 |
 | :----- | :------ |
-| Azure portal 統合に Azure Data Studio が追加されました | ユーザーは Azure SQL DB 接続、Azure Postgres などから、Azure portal を直接起動できるようになりました。 |
+| Azure portal 統合に Azure Data Studio が追加されました | ユーザーは Azure SQL Database 接続、Azure Postgres などから、Azure portal を直接起動できるようになりました。 |
 | ノートブックの新機能 | &bull; &nbsp; 新しいノートブック ツール バー <br/> &bull; &nbsp; 新しい [セルの編集] ツールバー <br/> &bull; &nbsp; Python 依存関係ウィザード UX の更新 <br/> &bull; &nbsp; ノートブック間のスペースの向上 |
 | SQL Assessment API 拡張機能の発表 | この拡張機能は、ADS における SQL Server ベスト プラクティス評価を追加します。 以前は PowerShell SqlServer モジュールおよび SMO でしか使用できなかった SQL Assessment API が公開されています。これにより SQL Server インスタンスを評価したり、SQL Server チームによるそれらの推奨事項を受け取ったりすることができるようになります。 [こちらの記事](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15)で、SQL Assessment API の詳細と、この拡張機能でできることについて説明します。 |
 | [Machine Learning 拡張機能の改善点](https://go.microsoft.com/fwlink/?linkid=2129918) | Azure SQL Managed Instance がサポートされるようになりました。 |
@@ -489,7 +489,7 @@ ms.locfileid: "87411263"
 
 ### <a name="bug-fixes-november-2018"></a>バグの修正、2018 年 11 月
 
-- 修正: [問題 #2933](https://github.com/Microsoft/azuredatastudio/issues/2933):Azure SQL DB への接続が失われた
+- 修正: [問題 #2933](https://github.com/Microsoft/azuredatastudio/issues/2933):Azure SQL Database への接続が失われた
 - 修正: [問題 #2914](https://github.com/Microsoft/azuredatastudio/issues/2914):OE データベース ノードを展開する際の "無効な引数" 例外
 - 修正: [問題 #2935](https://github.com/Microsoft/azuredatastudio/pull/2935):クエリ結果で複数行のメッセージを正しく表示する
 - 修正: [問題 #2906](https://github.com/Microsoft/azuredatastudio/pull/2906):テーブル名に特殊文字が含まれている場合に、データの編集ドキュメント名を修正する
@@ -506,7 +506,7 @@ ms.locfileid: "87411263"
 
 | Change | 詳細 |
 | :----- | :------ |
-| Azure SQL データベースを参照するための Azure Resource Explorer の導入。 | &nbsp; |
+| Azure SQL Database を参照するための Azure Resource Explorer の導入。 | &nbsp; |
 | オブジェクト エクスプローラーとクエリ エディターの接続性の堅牢性が向上しました。 | &nbsp; |
 | SQL エージェント拡張機能の強化。 | &nbsp; |
 | SQL Server 2019 Preview 拡張機能への更新。 | 「[データ仮想化の拡張機能](data-virtualization-extension.md?view=sql-server-ver15)」を参照してください。 |
@@ -546,7 +546,7 @@ Azure Data Studio (旧称 SQL Operations Studio) の一般提供リリース。
 | :----- | :------ |
 | [ビッグ データ クラスター](../big-data-cluster/big-data-cluster-overview.md)のサポートを含む、SQL Server 2019 プレビュー機能のサポート。 | SQL Server 2019 preview に付属している HDFS/Spark ゲートウェイに接続できます。<br/><br/>HDFS の参照、ファイルのアップロード、ファイルの保存、便利な操作の起動 (ノートブックでの CSV ファイルの分析など) が行なえます。<br/><br/>ダッシュボードから Spark ジョブを送信したり、オブジェクト エクスプローラーで HDFS/Spark 接続を右クリックすることができます。 |
 | Azure Data Studio ノートブック。 | 統合されたノートブック ビューアーを使用して、ノートブックを作成したり、開いたりできます。 このリリースのノートブック ビューアーでは、ローカル カーネルと SQL Server 2019 ビッグ データ クラスターへの接続のみがサポートされています。<br/><br/>ノートブックで PROSE コード アクセラレータ ライブラリを使用して、ファイル形式とデータ型について学習し、データ準備を迅速化することができます。 |
-| Azure Resource Explorer。 | Azure Resource Explorer ビューを使用すると、Azure アカウントのデータ関連のエンドポイントを参照し、オブジェクト エクスプローラーでそれらへの接続を作成できます。 このリリースでは、Azure SQL のデータベースとサーバーがサポートされています。 |
+| Azure Resource Explorer。 | Azure Resource Explorer ビューを使用すると、Azure アカウントのデータ関連のエンドポイントを参照し、オブジェクト エクスプローラーでそれらへの接続を作成できます。 このリリースでは、Azure SQL Database がサポートされています。 |
 | SQL Server PolyBase の外部テーブル作成ウィザード。 | 使いやすいウィザードを使用して、外部テーブルとそれに関連するメタデータ構造を作成できます。 このリリースでは、リモート SQL Server と Oracle サーバーがサポートされています。 |
 | &nbsp; | &nbsp; |
 

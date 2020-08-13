@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 81fb9b9cb792cf350137a375e7a2e25643656b6e
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: 7bf5aa9ee503dff3a00053365485c3ef70cc9247
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002853"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823266"
 ---
 # <a name="migrate-on-premises-ssis-workloads-to-ssis-in-adf"></a>ADF でオンプレミスの SSIS ワークロードを SSIS に移行する
 
@@ -36,5 +36,5 @@ Data Migration Assistant (DMA) は、この目的のために自由にダウン�
 
 ## <a name="next-steps"></a>次のステップ
 
-- 「[SSIS パッケージを Azure SQL Database マネージド インスタンスに移行する](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)」。
+- [SSIS パッケージを Azure SQL Managed Instance に移行する](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
 - [SQL Server Management Studio (SSMS) を使用して SSIS ジョブを Azure Data Factory (ADF) に移行する](https://docs.microsoft.com/azure/data-factory/how-to-migrate-ssis-job-ssms)。

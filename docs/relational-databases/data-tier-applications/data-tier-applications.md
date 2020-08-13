@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f8d91ef65f8beb5194bbb8cbe3b1618d7666e106
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e7f5fb29c15fbd8532a6852477ed9376df92f72
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781739"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988773"
 ---
 # <a name="data-tier-applications"></a>データ層アプリケーション
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85781739"
   
     -   SQL Server Management Studio を使用して、既存のデータベースから DACPAC を抽出でき、その他の DAC 操作を実行することもできます。  
   
-    -   また、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の DBA は、DAC 操作に Management Portal for SQL Azure を使用できます。  
+    -   また、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] の DBA の場合、DAC 操作に Azure portal を使用できます。  
   
 -   独立系ソフトウェア ベンダー:  
   
@@ -87,7 +87,7 @@ ms.locfileid: "85781739"
   
 -   **EXTRACT**: ユーザーはデータベースを DACPAC に抽出できます。  
   
--   **DEPLOY**: ユーザーは DACPAC をホスト サーバーに配置できます。 配置が SQL Server Management Studio や Management Portal for SQL Azure などの管理ツールから行われる場合、ホスト サーバーに生成されるデータベースがデータ層アプリケーションとして暗黙的に登録されます。  
+-   **DEPLOY**: ユーザーは DACPAC をホスト サーバーに配置できます。 配置が SQL Server Management Studio や Azure portal などの管理ツールから行われる場合、ホスト サーバーに生成されるデータベースがデータ層アプリケーションとして暗黙的に登録されます。  
   
 -   **REGISTER**: ユーザーはデータベースをデータ層アプリケーションとして登録できます。  
   
