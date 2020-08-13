@@ -1,5 +1,6 @@
 ---
 title: Reporting Services ツール | Microsoft Docs
+description: SQL Server Reporting Services に含まれている開発、構成、管理、およびレポート表示のためのツールについて説明します。
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e5a060e58019d79b44d42feeb396854807c19f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8adb6775be47b2d064e97c74e6888c64af75fe2e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66826919"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915016"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services ツール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、管理環境での機能豊富なレポートの開発と使用をサポートするグラフィカル ツールとスクリプト ツールのセットが用意されています。 このツール セットには、開発ツール、構成と管理ツール、およびレポート表示ツールが含まれています。 この記事では、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の各ツールと、それらにアクセスする方法について、簡単に説明します。  
   
- ツールを簡単に見つける方法については、「[チュートリアル : Reporting Services ツールを検索および開始する方法 (SSRS)](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)」を参照してください。  
+ ツールをすぐに見つけるには、「[チュートリアル:Reporting Services ツールを検索および開始する方法 &#40;SSRS&#41;](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)」を参照してください。  
   
 ## <a name="tools-for-report-authoring"></a>レポートの作成ツール  
  次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でのレポートの作成に使用できるツールの一覧を示します。  
@@ -49,7 +50,7 @@ ms.locfileid: "66826919"
   
 |ツール|説明|アクセス方法|  
 |----------|-----------------|-------------------|  
-|Reporting Services 構成マネージャー|Reporting Services のインストールを構成するには、このツールを使用します。 実行できるタスクは次のとおりです。<br /><br />  レポート サーバー サービス アカウントの構成<br /><br /> 1 つ以上の Web サービス URL の作成および構成<br /><br /> Web ポータルの URL を構成する<br /><br /> レポート サーバー データベースの作成および構成<br /><br /> スケールアウト配置の構成<br /><br /> 保存されている接続文字列や資格情報を暗号化する対称キーのバックアップ、復元、または置き換え<br /><br /> 自動実行アカウントの構成<br /><br /> サブスクリプション設定の構成<br /><br /> 電子メール配信用の SMTP サーバーの構成<br /><br /> Power BI サービス (クラウド) の構成<br /><br /> 注: Reporting Services 構成マネージャーには、レポート サーバー コンテンツの管理、拡張機能の有効化、サーバーに対するアクセス権の付与を支援する機能はありません。<br /><br /> 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。|[スタート] メニュー|  
+|Reporting Services 構成マネージャー|Reporting Services のインストールを構成するには、このツールを使用します。 実行できるタスクは次のとおりです。<br /><br />  レポート サーバー サービス アカウントの構成<br /><br /> 1 つ以上の Web サービス URL の作成および構成<br /><br /> Web ポータルの URL を構成する<br /><br /> レポート サーバー データベースの作成および構成<br /><br /> スケールアウト配置の構成<br /><br /> 保存されている接続文字列や資格情報を暗号化する対称キーのバックアップ、復元、または置き換え<br /><br /> 自動実行アカウントの構成<br /><br /> サブスクリプション設定の構成<br /><br /> 電子メール配信用の SMTP サーバーの構成<br /><br /> Power BI サービス (クラウド) の構成<br /><br /> 注:Reporting Services 構成マネージャーには、レポート サーバー コンテンツの管理、拡張機能の有効化、サーバーに対するアクセス権の付与を支援する機能はありません。<br /><br /> 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。|[スタート] メニュー|  
 |SQL Server Management Studio|次のように、単一の環境で 1 つ以上のレポート サーバー インスタンスを管理するには、このツールを使用します。<br /><br /> ローカルとリモートの両方のレポート サーバー インスタンスの管理<br /><br /> レポート サーバーのプロパティの設定<br /><br /> ロールの定義の変更<br /><br /> 使用していないレポート サーバー機能の無効化<br /><br /> ジョブの管理<br /><br /> 共有スケジュールの管理|[スタート] メニュー|   
 |Rsconfig ユーティリティ|レポート サーバー データベースへのレポート サーバー接続を構成および管理するには、このツールを使用します。 これを使用して、自動レポート処理に使用するユーザー アカウントを指定することもできます。<br /><br /> 詳細については、「[レポート サーバーのコマンド プロンプト ユーティリティ (SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)」を参照してください。|コマンド プロンプト|  
 |Rskeymgmt ユーティリティ|このツールは次の場合に使用します。<br /><br /> レポート サーバー データの暗号化に使用する対称キーの抽出、復元、作成、および削除<br /><br /> スケールアウト配置へのレポート サーバー インスタンスの追加<br /><br /> <br /><br /> 詳細については、「[レポート サーバーのコマンド プロンプト ユーティリティ (SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)」を参照してください。|コマンド プロンプト|  
@@ -72,7 +73,7 @@ ms.locfileid: "66826919"
 |Web ポータル|**(ネイティブ モードのみ)** HTTP 接続を経由してリモートの場所から 1 つのレポート サーバー インスタンスを管理するには、このツールを使用します。 次の操作を実行できます。<br /><br /> レポートの表示、検索、印刷、およびサブスクライブ。<br /><br /> サーバー上のアイテムを整理するフォルダー階層の作成、セキュリティ保護、および保守。<br /><br /> アイテムおよび操作に対するアクセスを決定するロールベースのセキュリティの構成。<br /><br /> レポート実行プロパティ、レポート履歴、およびレポート パラメーターの構成。<br /><br /> Microsoft SQL Server Analysis Services データ ソースまたは SQL Server リレーショナル データ ソースに接続してデータを取得するレポート モデルの作成。<br /><br /> モデル内の特定のエンティティへのアクセスを許可するモデル アイテム セキュリティの設定、または事前に作成した定義済みのクリックスルー レポートへのエンティティのマップ。<br /><br /> スケジュールおよびデータ ソース接続をさらに管理しやすくする共有スケジュールおよび共有データ ソースの作成。<br /><br /> 大きい受信者一覧にレポートをロール アウトするデータ ドリブン サブスクリプションの作成。<br /><br /> 既存レポートの再利用や目的変更を行うための、リンク レポートの作成。<br /><br /> レポートを作成するレポート ビルダーの起動。作成したレポートは、レポート サーバーで保存および実行できます。 詳細については、「[レポート サーバーの Web ポータル (SSRS ネイティブ モード)](../../reporting-services/web-portal-ssrs-native-mode.md)」をご覧ください。| Browser  
 |RS ユーティリティ|このツールは、スクリプト操作の実行に使用できるスクリプト ホストです。 このツールを使用して、レポート サーバー データベース間でのデータのコピー、レポートのパブリッシュ、レポート サーバー データベースでのアイテムの作成などを行う [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] スクリプトを実行します。 詳細については、「[レポート サーバーのコマンド プロンプト ユーティリティ (SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)」を参照してください。|コマンド プロンプト|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [Reporting Services の概念 &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
  [SQL Server Reporting Services (SSRS) とは](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  

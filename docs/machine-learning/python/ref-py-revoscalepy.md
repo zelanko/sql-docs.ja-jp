@@ -1,24 +1,26 @@
 ---
 title: revoscalepy Python パッケージ
-description: SQL Server Machine Learning Services における Python モジュール revoscalepy の概要
+description: revoscalepy は Microsoft が提供する Python パッケージであり、分散コンピューティング、リモート計算コンテキスト、ハイパフォーマンス データ サイエンス アルゴリズムをサポートしています。 このパッケージは、SQL Server Machine Learning Services に含まれています。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 145c1f571cc76bd8c26fc781ee7f4edcbfd3cb3a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ae5d05658d94f6967049d9b6857d407286661f3f
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117925"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406185"
 ---
-# <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (SQL Server の Python モジュール)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="revoscalepy-python-package-in-sql-server-machine-learning-services"></a>revoscalepy (SQL Server Machine Learning Services の Python パッケージ)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**revoscalepy** は Microsoft が提供する Python35 対応モジュールであり、分散コンピューティング、リモート計算コンテキスト、ハイパフォーマンス データ サイエンス アルゴリズムをサポートしています。 これは (Microsoft R Server と SQL Server R Services で配布される) R 向けの **RevoScaleR** パッケージを基礎としており、同様の機能性を提供します。
+**revoscalepy** は Microsoft が提供する Python パッケージであり、分散コンピューティング、リモート計算コンテキスト、ハイパフォーマンス データ サイエンス アルゴリズムをサポートしています。 このパッケージは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) に含まれています。
+
+このパッケージには、次の機能が含まれます。
 
 + 同じバージョンの **revoscalepy** が与えられたシステムでのローカルとリモートの計算コンテキスト
 + データ変換と視覚化の機能
@@ -29,7 +31,7 @@ ms.locfileid: "81117925"
 
 ## <a name="full-reference-documentation"></a>完全なリファレンス ドキュメント
 
-**revoscalepy** ライブラリは複数の Microsoft 製品で配布されていますが、SQL Server または別の製品のどちらでライブラリを取得した場合でも、使用方法は同じです。 これらの関数は同じであるため、[個々の revoscalepy 関数のドキュメント](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)は Microsoft Machine Learning Server の [Python リファレンス](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)の下でのみ公開されています。 製品固有の動作が存在する場合、関数のヘルプ ページにその相違点が示されます。
+**revoscalepy** パッケージは、複数の Microsoft 製品で配布されていますが、このパッケージを SQL Server または別の製品のどちらで取得しても、使用方法は同じです。 これらの関数は同じであるため、[個々の revoscalepy 関数のドキュメント](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)は Microsoft Machine Learning Server の [Python リファレンス](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)の下でのみ公開されています。 製品固有の動作が存在する場合、関数のヘルプ ページにその相違点が示されます。
 
 ## <a name="versions-and-platforms"></a>バージョンとプラットフォーム
 
@@ -40,7 +42,7 @@ ms.locfileid: "81117925"
 + [データ サイエンス クライアント用の Python クライアント ライブラリ](setup-python-client-tools-sql.md)
 
 > [!NOTE]
-> 完全な製品リリース バージョンは、SQL Server 2017 では Windows のみです。 [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md) の **revoscalepy** では、Windows と Linux の両方がサポートされています。
+> 完全な製品リリース バージョンは、SQL Server 2017 では Windows のみです。 [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md) 以降の **revoscalepy** では、Windows と Linux の両方がサポートされています。
 
 ## <a name="functions-by-category"></a>カテゴリ別の関数
 
@@ -107,7 +109,7 @@ Python スクリプトをストアド プロシージャ [sp_execute_external_sc
 
 ### <a name="using-revoscalepy-with-microsoftml"></a>microsoftml で revoscalepy を使用する
 
-[microsoftml](ref-py-microsoftml.md) の Python 関数は、revoscalepy で与えられる計算コンテキストとデータ ソースと統合されます。 モデルを定義してトレーニングするときなど、microsoftml から関数を呼び出すとき、revoscalepy 関数を使用し、ローカルか SQl Server リモート計算コンテキストで Python コードを実行します。
+[microsoftml](ref-py-microsoftml.md) の Python 関数は、revoscalepy で与えられる計算コンテキストとデータ ソースと統合されます。 モデルを定義してトレーニングするときなど、microsoftml から関数を呼び出す場合は、revoscalepy 関数を使用して、ローカルか SQL Server リモート計算コンテキストで Python コードを実行します。
 
 次の例では、Python コードでモジュールをインポートするための構文を示しています。 その後、必要な個々の関数を参照できます。
 

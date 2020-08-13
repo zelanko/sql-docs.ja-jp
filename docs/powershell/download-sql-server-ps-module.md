@@ -1,23 +1,24 @@
 ---
 title: SQL Server PowerShell モジュールのダウンロード
+description: SqlServer PowerShell モジュールをインストールする方法について説明します。これには、最新の SQL 機能をサポートするコマンドレットが用意されており、SQLPS モジュールのコマンドレットの更新済みバージョンも含まれています。
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: carlrab
+ms.reviewer: matteot, aanelson
 ms.custom: ''
-ms.date: 01/23/2020
-ms.openlocfilehash: 99976a12ae76254da5b50c5467df9d9e42fdbbce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 06/11/2020
+ms.openlocfilehash: 63b91463a265585036416721d1794920e02b9d13
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76920357"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123003"
 ---
 # <a name="install-the-sql-server-powershell-module"></a>SQL Server PowerShell モジュールをインストールする
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この記事は、**SqlServer** PowerShell モジュールをインストールする手順を説明しています。
 
@@ -26,7 +27,8 @@ ms.locfileid: "76920357"
 2 つの SQL Server PowerShell モジュールがあります。
 
 - **SqlServer**: SqlServer モジュールには、最新の SQL 機能をサポートする新しいコマンドレットが含まれています。 モジュールには、**SQLPS** 内のコマンドレットの更新バージョンも含まれています。 SqlServer モジュールをダウンロードするには、[PowerShell ギャラリーの SqlServer モジュール](https://www.powershellgallery.com/packages/Sqlserver)にアクセスします。
-- **SQLPS**: SQLPS モジュールは (後方互換性のため) SQL Server のインストールに含まれていますが、今後更新されることはありません。 最新の PowerShell モジュールは **SqlServer** モジュールです。
+
+- **SQLPS**: SQLPS は、[SQL Agent](sql-server-powershell.md#sql-server-agent) によって、PowerShell サブシステムを使用してエージェント ジョブ ステップでエージェント ジョブを実行するために使用されるモジュールです。
 
 > [!NOTE]
 > PowerShell ギャラリーの **SqlServer** モジュールのバージョンは、バージョン管理をサポートし、PowerShell バージョン 5.0 以降が必要です。
@@ -38,20 +40,22 @@ ms.locfileid: "76920357"
 
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
-バージョン17.0 以降の SQL Server Management Studio (SSMS) では、どちらの PowerShell モジュールもインストールされません。 PowerShell を SSMS で使用するには、**SqlServer** モジュールを [PowerShell ギャラリー](https://www.powershellgallery.com/packages/Sqlserver)からインストールします。
+[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) では、どちらの PowerShell モジュールもインストールされません。 PowerShell を SSMS で使用するには、**SqlServer** モジュールを [PowerShell ギャラリー](https://www.powershellgallery.com/packages/Sqlserver)からインストールします。
 
 > [!NOTE]
-> バージョン 16. x の SSMS では、前のバージョンの **SqlServer** モジュールが SQL Server Management Studio (SSMS) に含まれています。
+> SSMS 16.x では、前のバージョンの **SqlServer** モジュールが SQL Server Management Studio (SSMS) に含まれています
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 
-Azure Data Studio では、どちらの PowerShell モジュールもインストールされません。 PowerShell を Azure Data Studio で使用するには、**SqlServer** モジュールを [PowerShell ギャラリー](https://www.powershellgallery.com/packages/Sqlserver)からインストールします。
+[Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) では、どちらの PowerShell モジュールもインストールされません。 PowerShell を Azure Data Studio で使用するには、**SqlServer** モジュールを [PowerShell ギャラリー](https://www.powershellgallery.com/packages/Sqlserver)からインストールします。
 
 [PowerShell 拡張機能](../azure-data-studio/powershell-extension.md)を使用できます。これにより、Azure Data Studio に高機能な PowerShell エディターのサポートが提供されます。
 
 ## <a name="installing-or-updating-the-sqlserver-module"></a>SqlServer モジュールのインストールまたは更新
 
-PowerShell ギャラリーから **SqlServer** モジュールをインストールするには、[PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) セッションを管理者として開始します。 管理者として Azure Data Studio を開始し、統合ターミナルの PowerShell セッションでこれらのコマンドを実行することもできます。
+PowerShell ギャラリーから **SqlServer** モジュールをインストールするには、[PowerShell](/powershell/scripting/overview) セッションを管理者として開始します。 管理者として Azure Data Studio を開始し、統合ターミナルの PowerShell セッションでこれらのコマンドを実行することもできます。
+
+さらに、*Install-Module SQLServer -Scope CurrentUser* を使用して、管理者特権のアクセス許可を実行することもできます。 このコマンドレットは、環境の管理者ではないユーザーに役立ちます。 ただし、スコープは現在のユーザーに制限されるため、同じコンピューター上の他のユーザーはモジュールを使用できません。
 
 ### <a name="install-the-sqlserver-module"></a>SqlServer モジュールをインストールする
 
@@ -152,3 +156,13 @@ Install-Module SqlServer -RequiredVersion 21.1.18040-preview -AllowPrerelease
 ## <a name="sql-server-powershell-on-linux"></a>SQL Server PowerShell on Linux
 
 SQL Server PowerShell on Linux をインストールする方法については、「[PowerShell Core で SQL Server on Linux を管理する](../linux/sql-server-linux-manage-powershell-core.md)」を参照してください。
+
+## <a name="other-modules"></a>その他のモジュール
+
+- [Az.Sql](https://www.powershellgallery.com/packages/Az.Sql/) - Windows PowerShell と PowerShell Core の Azure Resource Manager 用 SQL サービス コマンドレット。
+
+- [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc/) - Microsoft SQL Server のデプロイと構成用の DSC リソースを含むモジュール。
+
+## <a name="next-steps"></a>次のステップ
+
+[SQL Server PowerShell](sql-server-powershell.md)

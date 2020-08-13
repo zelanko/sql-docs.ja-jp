@@ -1,5 +1,6 @@
 ---
 title: SAP NetWeaver BI の接続の種類 | Microsoft Docs
+description: データ ソースを構築する方法については、この記事の SAP NetWeaver BI の接続の種類に関する情報を参照してください。
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c9edca5b50403f47b82cd2e69d51eb568c66f8a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 028ee19646716666314b0242e0ebe0e3c6551e95
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081779"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457752"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI の接続の種類 (SSRS)
   SAP NetWeaver® Business Intelligence の外部データ ソースのデータをレポートに含めるには、種類が [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 for [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]のデータ拡張機能に基づいています。  
@@ -29,7 +30,7 @@ ms.locfileid: "77081779"
 DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla  
 ```  
   
- 接続文字列の例の詳細については、「[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
+ 接続文字列の例について詳しくは、「[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
   
   
 ##  <a name="credentials"></a><a name="Credentials"></a> [資格情報]  
@@ -79,14 +80,14 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ### <a name="predefined-field-properties"></a>定義済みフィールド プロパティ  
  次の表に、 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] データ ソースで使用できる定義済みフィールド プロパティの一覧を示します。  
   
-|**プロパティ**|**Type**|**説明/有効値**|  
+|**Property**|**Type**|**説明/有効値**|  
 |------------------|--------------|---------------------------------------|  
 |**Value**|**Object**|フィールドのデータ値を指定します。|  
 |**IsMissing**|**Boolean**|フィールドが結果データセットに存在するかどうかを示します。|  
 |**FormattedValue**|**String**|主要データの書式設定した値を返します。|  
 |**BackgroundColor**|**String**|データベースで定義されたフィールドの背景色を返します。|  
 |**Color**|**String**|データベースで定義されたアイテムの前景色を返します。|  
-|**[キー]**|**Object**|レベルのキーを返します。|  
+|**キー**|**Object**|レベルのキーを返します。|  
 |**LevelNumber**|**整数**|親子階層の場合は、レベル番号またはディメンション番号を返します。|  
 |**ParentUniqueName**|**String**|親子階層の場合は、親レベルの完全修飾名を返します。|  
 |**UniqueName**|**String**|レベルの完全修飾名を返します。 たとえば、従業員の **UniqueName** の値は *[0D_Company].[10D_Department].[11]* のようになります。|  
@@ -116,7 +117,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  レポートのデータへのアクセスの概要について説明します。  
   
- [データ接続文字列の作成 - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  データ接続とデータ ソースについて説明します。  
   
  [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

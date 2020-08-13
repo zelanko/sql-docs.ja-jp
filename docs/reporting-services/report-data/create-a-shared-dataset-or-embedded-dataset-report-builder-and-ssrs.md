@@ -1,5 +1,6 @@
 ---
 title: 共有データセットまたは埋め込みデータセットの作成 (レポート ビルダー) | Microsoft Docs
+description: さまざまなレポートで使用する埋め込みデータセットと共有データセットを作成する方法について説明します。 データセットを作成するには、埋め込みデータ ソースまたは共有データ ソースが必要です。
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b19b5442731bf52e299450a32cb8536c0f95467f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 76e1482bf441401b02de984529d7fd178d88975c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081413"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457804"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)
 埋め込みデータセットは、単一の [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] レポートで使用されます。 レポート サーバーの共有データセットはモバイルとページ分割があるタイプの、複数のレポートで使用できます。 データセットを作成するには、埋め込みデータ ソースまたは共有データ ソースが必要です。  

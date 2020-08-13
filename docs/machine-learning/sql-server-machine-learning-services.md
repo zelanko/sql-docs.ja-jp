@@ -3,21 +3,21 @@ title: SQL Server Machine Learning Services とは (Python と R)
 titleSuffix: ''
 description: Machine Learning Services は、リレーショナル データを使用して Python および R スクリプトを実行できるようになる SQL Server の機能です。 オープンソースのパッケージとフレームワーク、および予測分析と機械学習用の Microsoft Python および R パッケージを使用できます。 スクリプトは、SQL Server の外部またはネットワーク経由でデータを移動することなく、データベース内で実行されます。 この記事では、SQL Server Machine Learning Services の基本と開始方法について説明します。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 04/16/2020
+ms.technology: machine-learning-services
+ms.date: 06/19/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a3ce585c69cd0ee026d81c4bd1f75c235af4752
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: da72781fa2a2076d1cd2ff0bd9bb8b84635d4b68
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606584"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913678"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>SQL Server Machine Learning Services とは (Python と R)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 Machine Learning Services は、リレーショナル データを使用して Python および R スクリプトを実行できるようになる SQL Server の機能です。 オープンソースのパッケージとフレームワーク、および予測分析と機械学習用の [Microsoft Python および R パッケージ](#packages)を使用できます。 スクリプトは、SQL Server の外部またはネットワーク経由でデータを移動することなく、データベース内で実行されます。 この記事では、SQL Server Machine Learning Services の基本と開始方法について説明します。
 
@@ -111,6 +111,6 @@ Machine Learning Services と共にインストールされるパッケージと
 
 ## <a name="next-steps"></a>次のステップ
 
-+ [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json) に [SQL Server Machine Learning Services をインストールする](install/sql-machine-learning-services-windows-install.md)
++ [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json)または [Windows に SQL Server Machine Learning Services をインストールする](install/sql-machine-learning-services-windows-install.md)。
 + [SQL 機械学習用の Python チュートリアル](tutorials/python-tutorials.md)
 + [SQL 機械学習用の R チュートリアル](tutorials/r-tutorials.md)

@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 keywords:
 - 新しい sql server
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0289967cfb3585f6fa7914262e8e280089d4b478
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: e7fa3484063a5d57de1540e54454b674d8d687c9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886240"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967553"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 の新機能
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]    
  SQL Server 2016 では、メモリ内パフォーマンスや高度なセキュリティからデータベース内分析まで、すべてが組み込まれたスケーラブルなハイブリッド データベース プラットフォームを使って、インテリジェントでミッションクリティカルなアプリケーションをビルドできます。 SQL Server 2016 のリリースでは、さまざまな改善機能や拡張機能と共に、新しいセキュリティ機能、クエリ機能、Hadoop とクラウド統合、R 分析などが追加されています。 
 
 このページでは、概要情報と、SQL Server 2016 の各 SQL Server コンポーネントの新機能に関する詳細情報へのリンクを提供します。 
@@ -33,7 +33,7 @@ ms.locfileid: "82886240"
 ![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **SQL Server 2016 をお試しください。** 
-- **無料**の [**SQL Server 2016 Developer エディション**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers)をダウンロードしてください。
+- **無料**の [**SQL Server 最新版**](https://www.microsoft.com/sql-server/sql-server-downloads)をダウンロードしてください。
 - 最新バージョンの [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) をダウンロードします。 
 - Azure アカウントをすでにお持ちですか? [SQL Server 2016 がインストール済みの仮想マシン](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)をすぐにご利用いただけます。
 

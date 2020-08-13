@@ -1,5 +1,6 @@
 ---
 title: データ警告マネージャーで SharePoint サイトのすべてのデータ警告を管理する | Microsoft Docs
+description: サイト ユーザーによって作成されたデータ警告と、警告に関する情報を表示する方法について説明します。 警告を削除する方法についても説明します。
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9702ca84fab0da2024db6f6f5e0f510822dcd29e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a6435b5e113d7ac79546e415479acb47e1c90b89
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579806"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235698"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>データ警告マネージャーで SharePoint サイトのすべてのデータ警告を管理する
 

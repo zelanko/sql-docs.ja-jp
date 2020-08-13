@@ -1,5 +1,6 @@
 ---
 title: タブ補完の管理 (SQL Server PowerShell) | Microsoft Docs
+description: SQL Server PowerShell モジュールで 3 つの変数を適切に使用することで、Windows PowerShell のタブ補完を制御する方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: db8338f832d27fb5362cb44d3b4cf82212472957
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 96e6bf9e0f564e68449a8dfaf99d921c69aadd47
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67912238"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919108"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>タブ補完の管理 (SQL Server PowerShell)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell スナップインには、Windows PowerShell のタブ補完を制御するための 3 つの変数 ( **$SqlServerMaximumTabCompletion**、 **$SqlServerMaximumChildItems**、 **$SqlServerIncludeSystemObjects**) が追加されました。 入力された文字列で名前が始まるアイテムの一覧を返すタブ補完によって、入力の手間を削減することができます。  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell スナップインには、Windows PowerShell のタブ補完を制御するための 3 つの変数 (**$SqlServerMaximumTabCompletion**、 **$SqlServerMaximumChildItems**、 **$SqlServerIncludeSystemObjects**) が追加されました。 入力された文字列で名前が始まるアイテムの一覧を返すタブ補完によって、入力の手間を削減することができます。  
 
 > [!NOTE]
 > SQL Server PowerShell モジュールには **SqlServer** と **SQLPS** の 2 つがあります。 **SQLPS** モジュールは (後方互換性のため) SQL Server のインストールに含まれていますが、今後更新されることはありません。 最新の PowerShell モジュールは **SqlServer** モジュールです。 **SqlServer** モジュールには **SQLPS** のコマンドレットの更新バージョンだけでなく、最新の SQL 機能をサポートする新しいコマンドレットも含まれています。  

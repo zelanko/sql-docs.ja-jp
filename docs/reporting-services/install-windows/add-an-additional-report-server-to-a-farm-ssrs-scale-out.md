@@ -8,12 +8,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f7997b4e7bf9ccf51198e317c2e175f115fa6973
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63225698"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942984"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>ファームへのレポート サーバーの追加 (SSRS スケールアウト)
 
@@ -66,13 +66,15 @@ ms.locfileid: "63225698"
 ##  <a name="additional-configuration"></a><a name="bkmk_additional"></a> その他の構成  
  スケールアウト配置では、個々の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバーを最適化して、バックグラウンド処理のみを実行できます。そのため、リソースの確保を求めて対話型のレポート実行との競合が発生することはありません。 バックグラウンド処理には、スケジュール、サブスクリプション、およびデータ警告が含まれます。  
   
- 個々のレポート サーバーの動作を変更するには、**RSreportServer.config** 構成ファイルで **\<IsWebServiceEnable>** を false に設定します。  
+ 個々のレポート サーバーの動作を変更するには、**RSreportServer.config** 構成ファイルの **\<IsWebServiceEnable>** を false に設定します。  
   
- 既定では、\<IsWebServiceEnable> を TRUE に設定してレポート サーバーが構成されます。 TRUE の設定を使用してすべてのサーバーが構成されている場合は、対話型処理とバックグラウンド処理がファーム内のすべてのノード間で負荷分散されます。  
+ レポート サーバーの既定では、\<IsWebServiceEnable> は TRUE に設定して構成されています。 TRUE の設定を使用してすべてのサーバーが構成されている場合は、対話型処理とバックグラウンド処理がファーム内のすべてのノード間で負荷分散されます。  
   
  \<IsWebServiceEnable> を False に設定してすべてのレポート サーバーを構成した場合は、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の機能を使用しようとすると、次のようなエラー メッセージが表示されます。  
   
-      The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true. 
+```output
+The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true.
+```
  
  詳細については、「[Reporting Services の構成ファイルの変更 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
 

@@ -1,5 +1,6 @@
 ---
 title: ターゲット プラットフォームを変更し、データベース プロジェクトを公開する
+description: SQL Server Data Tools データベース プロジェクトのプラットフォームを、サポートされている SQL Server のインスタンスに変更する方法について説明します。 データベース プロジェクトを公開する方法について説明します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,16 +10,15 @@ f1_keywords:
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: a2af594db8c4f92028a9a36b8cc54f5f3712c9b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d69b0f2a11afb46e46ff88a49dff12c2037ecca
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241598"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942468"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>方法:ターゲット プラットフォームを変更し、データベース プロジェクトを公開する
 
@@ -41,7 +41,7 @@ SSDT では、ターゲット プラットフォームを認識し、コード�
   
 2.  `ON [PRIMARY]` ステートメントの末尾に、 `CREATE TABLE` を追加します。  
   
-3.  **[エラー一覧]** ウィンドウに次のエラーが表示されることに注意してください。SQL70015:'ファイル グループ参照とパーティション構成' は、SQL Azure ではサポートされていません。  
+3.  **エラー一覧**ペインに、"SQL70015: 'ファイル グループ参照とパーティション構成' は SQL Azure ではサポートされていません。" というエラーが表示されます。  
   
     ターゲット プラットフォームに基づいて、スクリプトが自動的に検証されます。 ここでは、ファイル グループが SQL Azure でサポートされていないため、SSDT からエラーが返されます。 SQL Azure でサポートされていない Transact\-SQL ステートメントの一覧については、「[部分的にサポートされる Transact-SQL ステートメント (Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx)」をご覧ください。  
   
@@ -57,7 +57,7 @@ SSDT では、ターゲット プラットフォームを認識し、コード�
   
 4.  **[接続のプロパティ]** ダイアログ ボックスで、SQL Server インスタンス名を指定し、認証に使用する資格情報を入力します。 **[データベースへの接続]** に、「 **NewTrade**」と入力します。 これにより、データベース プロジェクトを新しいデータベースに公開するように試行されます。 公開先の既存データベースを選択することもできます。 たとえば、既存の **TradeDev** データベースを選択すると、オフラインの **TradeDev** プロジェクトに含まれるオブジェクト (スクリプト) に対して加えた変更がすべて、ライブの **TradeDev** データベースに反映されます。  
   
-    公開先のデータベースに変更を加えるアクセス許可を持っている場合は、 **[公開]** をクリックします。 運用データベースに対する書き込みアクセス許可を持っていない場合は、 **[スクリプトの生成]** をクリックし、Transact\-SQL 公開スクリプトを作成できます。これは DBA に渡すことができます。 DBA はスクリプトを実行し、スキーマがデータベース プロジェクトと同期するように、運用サーバーを更新します。  
+    公開先のデータベースに変更を加えるアクセス許可を持っている場合は、 **[公開]** をクリックします。 運用データベースに対する書き込みアクセス許可を持っていない場合は、**[スクリプトの生成]** をクリックし、Transact\-SQL 公開スクリプトを作成できます。これは DBA に渡すことができます。 DBA はスクリプトを実行し、スキーマがデータベース プロジェクトと同期するように、運用サーバーを更新します。  
   
 5.  **[データ ツール操作]**  ウィンドウには、公開操作の進捗状況が表示され、エラーがあれば通知されます。 この新しいウィンドウでは、配置プレビュー、生成されたスクリプト、または必要に応じて公開のすべての結果も表示できます。  
   
@@ -67,5 +67,5 @@ SSDT では、ターゲット プラットフォームを認識し、コード�
   
 **A project which specifies Microsoft SQL Server 2012 as the target platform may experience compatibility issues with SQL Server 2008**    このようなプロジェクトに Microsoft SQL Server 2012 で導入されたエンティティ (たとえば、シーケンス オブジェクト) が含まれている場合、発行操作は失敗します。  
   
-    The deployment will fail if object predicates use **CONTAINS** or **FREETEXT** over a newly created full-text index and transactional scripts are used. If the option to include transactional scripts is enabled during deployment, then procedures and views are defined inside a transaction while a full-text index is defined outside of a transaction at the end of the deploy script. Because of this ordering in the script, procedures or views using CONTAINS or FREETEXT will not be resolved against the full-text index, resulting in a deployment error.  
+オブジェクトの述語で、新しく作成したフルテキスト インデックスに対して **CONTAINS** または **FREETEXT** を使用し、トランザクション スクリプトが使用されると、配置は失敗します。 トランザクション スクリプトを含むオプションを配置中に有効にすると、プロシージャやビューがトランザクション内で定義されるのに対し、フルテキスト インデックスは配置スクリプトの末尾のトランザクションの外部で定義されます。 スクリプト内のこの順序により、CONTAINS または FREETEXT を使用したプロシージャまたはビューは、フルテキスト インデックスに対して解決されず、配置エラーが発生します。  
   

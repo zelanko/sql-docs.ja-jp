@@ -1,5 +1,6 @@
 ---
 title: SQL Server データ ツールの Reporting Services (SSDT) | Microsoft Docs
+description: Microsoft Visual Studio で SQL Server Data Tools のレポート デザイナー作成環境を使用して、Reporting Services のソリューションを作成する方法について学習します。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 30e7824d1519fb09a7947dde1cfdc2b818ebc144
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68889839"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916588"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
 
@@ -43,7 +44,7 @@ ms.locfileid: "68889839"
   
   
 ##  <a name="report-designer-windows-and-panes"></a><a name="bkmk_ReportDesignerWindowsandPanes"></a> レポート デザイナーのウィンドウとペイン  
- レポート デザイナーは 2 つのビューをサポートしています。レポート データとレポート レイアウトを定義するための **[デザイン]** ビューと、描画されたレポートのビューを表示するための **[プレビュー]** ビューです。 それぞれのビューでは、表示レポートをデザインまたは表示できるように複数のウィンドウを表示できます。  
+ レポート デザイナーでは、レポート データとレポート レイアウトを定義するための **[デザイン]** ビューと、描画されたレポートのビューを表示するための **[プレビュー]** ビューがサポートされています。 それぞれのビューでは、表示レポートをデザインまたは表示できるように複数のウィンドウを表示できます。  
   
 ###  <a name="report-data-pane"></a><a name="bkmk_ReportDataPane"></a> レポート データ ペイン  
  [レポート データ] ペインには、組み込みフィールド、データ ソース、データセット、フィールド コレクション、レポート パラメーター、および画像が表示されます。  
@@ -93,7 +94,7 @@ ms.locfileid: "68889839"
   
  次の場合、[プロパティ] ペインを使用します。  
   
--   デザイン画面で現在選択されている項目のプロパティを設定します。 プロパティによっては、値のドロップダウン リストが表示されます。 セルに値を直接入力することもできます。 一部のプロパティには値のコレクションが含まれており、 **[(コレクション)]** という値で示されます。 ほとんどのプロパティでは式を使用できます。複雑な式は **\<式>** という値で示されます。 **[式]** ダイアログ ボックスを開くには、 **\<式>** をクリックします。 詳細については、「 [[式] ダイアログ ボックス](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)」を参照してください。  
+-   デザイン画面で現在選択されている項目のプロパティを設定します。 プロパティによっては、値のドロップダウン リストが表示されます。 セルに値を直接入力することもできます。 一部のプロパティには値のコレクションが含まれており、 **[(コレクション)]** という値で示されます。 ほとんどのプロパティで式を受け入れることができます。複雑な式は **\<Expression>** という値で示されます。 **[式]** ダイアログ ボックスを開くには、 **\<Expression>** をクリックします。 詳細については、「 [[式] ダイアログ ボックス](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)」を参照してください。  
   
 -   グリッドをカテゴリ別の表示からアルファベット順の表示に変更するには、[プロパティ] ペインのツール バー ボタンを使用します。 カテゴリ別の表示では、カテゴリのすべてのプロパティを表示するには、そのカテゴリを展開する必要があります。 アイテムの [プロパティ] ダイアログ ボックスを開くには、ツール バーの **[プロパティ ページ]** ボタンをクリックするか、アイテムを右クリックして **[プロパティ]** をクリックします。  
   

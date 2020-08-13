@@ -1,5 +1,6 @@
 ---
 title: 配置タスクおよび管理タスクのスクリプト作成 | Microsoft Docs
+description: レポート サーバーの日常的なインストール、配置、管理タスクを自動化するためのツール、テクノロジ、戦略について学習します。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 694a2c4c14564a1d3d57322e1300beddd8bfab98
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1716581451737a20951cf941bb57b81c8d14e5e4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66500568"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918428"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>配置タスクおよび管理タスクのスクリプト作成
 
@@ -42,7 +43,7 @@ ms.locfileid: "66500568"
 ## <a name="deployment-tasks-and-how-to-automate-them"></a>配置タスクと自動化の方法  
  次の表は、レポート サーバーを配置するために必要なインストール タスクおよび構成タスクをまとめたものです。 特定のタスクと、それを自動化するためのアプローチがひとめでわかるように記載されています。  
   
-|タスク|アプローチ|  
+|タスク|方法|  
 |----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]をインストールする。|コマンド ラインからセットアップを実行することによって自動インストールが可能です。<br /><br /> セットアップ プログラムを使用すると、レポート サーバーのインストールと構成の両方を行うことができます。ただし、この場合は、既定の構成オプションを指定すること、システムが自動インストール要件をすべて満たしていることが条件となります。 既定の構成でインストールすることができない場合は、ファイルのみのインストールを実行する必要があります。|  
 |サービス アカウントを構成する。|サービス アカウントは、最初にセットアップを使用して構成されます。 サービス アカウントに対する変更をセットアップ後のタスクとして自動化するには、レポート サーバー WMI プロバイダーを呼び出すカスタム コードを作成する必要があります。 サービス アカウントをプログラムによって構成するためのコマンド プロンプト ユーティリティやスクリプト テンプレートはありません。<br /><br /> コードを作成するのが困難であるなど、なんらかの理由でこの手順を自動化できない場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを実行することにより、アカウントを手動で簡単に構成できます。 詳細については、「[サービス アカウントの構成 (SSRS 構成マネージャー)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。|  

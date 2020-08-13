@@ -1,5 +1,6 @@
 ---
 title: ブレークポイントの有効化、無効化、および削除
+description: '[ブレークポイント] ウィンドウを使用して、ブレークポイントの表示、削除、無効化、および有効化を行う方法について説明します。'
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,16 +13,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72acf04118e0b3b7f3f205a06d6e93e96bf13ecb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7ce9b445b5340680f53279a3c061f05c8999a5dd
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253925"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122927"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>ブレークポイントの有効化、無効化、および削除
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 開かれているすべてのブレークポイントを表示および管理するには、 **[ブレークポイント]** ウィンドウを使用します。 ブレークポイントの情報を表示し、各種の操作 (ブレークポイントの削除、無効化、有効化など) を実行するには、このウィンドウを使用します。
 

@@ -1,5 +1,6 @@
 ---
 title: レポート データセット | Microsoft Docs
+description: レポート データセットについて説明します。たとえば、データセットには、データ ソースから特定のデータを取得するために必要な情報が含まれています。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73de47423caed308e1a9ae433bdcc7b24b3e69d0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0677b5c5cdf5ff01009a81da01668ff977d2fcff
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081941"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458347"
 ---
 # <a name="report-datasets-ssrs"></a>レポート データセット (SSRS)
   データをレポートに追加するには、データセットを作成します。 各データセットは、データ ソースに対するクエリ コマンドの実行によって取得された結果セットを表します。 結果セットの列はフィールド コレクションです。 結果セット内の行がデータです。 データセットに実際のデータは格納されていません。 データセットには、データ ソースから特定のデータを取得するために必要な情報が含まれています。  
@@ -36,7 +37,7 @@ ms.locfileid: "77081941"
   
  また、レポート パーツ (レポート パーツが依存するデータセットが含まれています) を追加することによって、データセットをレポートに追加することもできます。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを表示するレポートの作成方法については、「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。 独自のデータが含まれたレポートの作成方法については、「[チュートリアル: オフラインでのクイック グラフ レポートの作成 &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを表示するレポートの作成方法については、「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。 独自のデータが含まれたレポートの作成方法については、「[チュートリアル:オフラインでのクイック グラフ レポートの作成 &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -120,7 +121,7 @@ ms.locfileid: "77081941"
 ##  <a name="in-this-section"></a><a name="Section"></a> トピックの内容  
  [レポート ビルダーのレポート パーツおよびデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
- [データ接続文字列の作成 - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
  [レポート データ ソースに関する資格情報と接続情報を指定する](specify-credential-and-connection-information-for-report-data-sources.md)  
   

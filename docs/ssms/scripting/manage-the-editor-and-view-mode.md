@@ -1,5 +1,6 @@
 ---
 title: エディターと表示モードの管理
+description: SQL Server Management Studio の 2 つの表示モードのいずれかを選択する方法について説明します。タブ付きドキュメント モードと複数のドキュメント インターフェイス モード。 分割ビュー、右端での折り返し、仮想空間モード、行番号の表示、全画面表示モード、および [すべて自動的に隠す] についても説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bc702e9ada88099e0d13cd3fc9e3a955134532f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9b3017d75cd7222948c63b4883b7935c551f3144
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253798"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122589"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>エディターと表示モードの管理
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   エディターには、コードの表示を制御するさまざまな方法が用意されています。  
   
 ## <a name="changing-the-view-mode"></a>表示モードの変更  

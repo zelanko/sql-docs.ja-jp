@@ -2,21 +2,21 @@
 title: SQL Server 2014 リリース ノート | Microsoft Docs
 description: このリリース ノートでは、Microsoft SQL Server 2014 (12.x) リリースのインストールやトラブルシューティングを行う前に知っておく必要がある、既知の問題について説明しています。
 ms.custom: ''
-ms.date: 03/15/2018
+ms.date: 07/22/2020
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 6346b8e611fc70f07211abe3060781d548a6a929
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: aeeaf52d389da8bb58d4b76bfbe85957cbd832dd
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001142"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111125"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ SQL Server 2014 SP1 には、SQL Server 2014 CU 1 から CU 5 までで提供さ
 **対処法:** ダウングレードを実行するための回避策はありません。 SQL Server 2014 RTM にアップグレードする前に、データベースをバックアップすることをお勧めします。  
   
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>SQL Server 2014 メディア/ISO/CAB 上の不正なバージョンの StreamInsight クライアント  
-SQL Server メディア/ISO/CAB 上に間違ったバージョンの StreamInsight.msi および StreamInsightClient.msi があります (パスは StreamInsight\\\<Architecture\>\\\<Language ID\>)。  
+SQL Server の media/ISO/CAB (StreamInsight\\\<Architecture\>\\\<Language ID\>) 上に間違ったバージョンの StreamInsight.msi および StreamInsightClient.msi があります。  
   
 **対処法:** [SQL Server 2014 Feature Pack のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=306709)から正しいバージョンをダウンロードしてインストールします。  
   
@@ -287,7 +287,7 @@ instance_id の値の不一致という問題が既に発生している場合�
 5.  修正するインスタンスに対応する行を特定します。 
 6.  (sysdac_instances_internal テーブルで) sysdac_history_internal.instance_id の値を、手順 3 で書き留めた値に更新します。  
   
-    `update` sysdac_history_internal `set` instance_id = '\<手順 3 で書き留めた値\>' `where` \<更新しようとする行に一致する式\>  
+    `update` sysdac_history_internal `set` instance_id = '\<value from step 3\>' `where` \<expression that matches the rows you want to update\>  
   
 ### <a name="reporting-services-rtm"></a><a name="SSRS"></a>Reporting Services (RTM)
   

@@ -1,5 +1,6 @@
 ---
 title: rsconfig ユーティリティ | Microsoft Docs
+description: レポート サーバー データベースの接続およびアカウント値を RSReportServer.config ファイルへ暗号化して格納する rsconfig.exe ユーティリティについて説明します。
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ad41870ac9bcb162e792dc6abd8ca21ceeeb3f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8397412801d38107c3532bea377d7bd150561f17
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082180"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913643"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig ユーティリティ (SSRS)
   **rsconfig.exe** ユーティリティは、接続値とアカウント値を RSReportServer.config ファイルへ暗号化して格納します。 暗号化される値は、自動レポート処理に使用される、レポート サーバー データベースの接続情報とアカウント値です。  

@@ -5,43 +5,47 @@ description: azdata コマンドのリファレンス記事です。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94adabb2ace2f5619abd700b2652aa7d88f3e1aa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7a3862dca974efc0ef035a0b52edfff39d2f5bcf
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822346"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942974"
 ---
 # <a name="azdata"></a>azdata
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-このリファレンス記事では、`azdata` コマンドについて説明します。
+以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。
 
 ## <a name="commands"></a>コマンド
-|     |     |
+| command | 説明 |
 | --- | --- |
-|[azdata bdc](reference-azdata-bdc.md) | SQL Server ビッグ データ クラスターを選択、管理、および操作します。 |
 |[azdata app](reference-azdata-app.md) | アプリケーションを作成、削除、実行、および管理します。 |
+|[azdata bdc](reference-azdata-bdc.md) | SQL Server ビッグ データ クラスターを選択、管理、および操作します。 |
+|[azdata sql](reference-azdata-sql.md) | SQL DB CLI により、ユーザーは T-SQL を使用して SQL Server を操作できます。 |
 [azdata login](#azdata-login) | クラスターのコントローラー エンドポイントにログインし、その名前空間をアクティブなコンテキストとして設定します。 ログイン時にパスワードを使用するには、AZDATA_PASSWORD 環境変数を設定する必要があります。
 [azdata logout](#azdata-logout) | クラスターからログアウトします。
 |[azdata context](reference-azdata-context.md) | コンテキスト管理コマンド。 |
-|[azdata control](reference-azdata-control.md) | コントロール プレーンを作成、削除、管理します。 |
-|[azdata sql](reference-azdata-sql.md) | SQL DB CLI により、ユーザーは T-SQL を使用して SQL Server を操作できます。 |
+|[azdata extension](reference-azdata-extension.md) | CLI 拡張機能を管理および更新します。 |
 |[azdata notebook](reference-azdata-notebook.md) | ターミナルからノートブックを表示、実行、管理するコマンドです。 |
 ## <a name="azdata-login"></a>azdata login
 クラスターが展開されると、展開中にコントローラー エンドポイントが一覧表示されます。これをログインに使用する必要があります。  コントローラー エンドポイントがわからない場合は、システム上の <user home>/.kube/config の既定の場所にクラスターの kube 構成を配置してログインするか、KUBECONFIG 環境変数を使用する (つまり KUBECONFIG=path/to/.kube/config をエクスポートする) ことをお勧めします。ログインすると、このクラスターの名前空間がアクティブなコンテキストに設定されます。
 ```bash
 azdata login [--auth] 
              [--endpoint -e]  
-             [--accept-eula -a]  
-             [--namespace -n]  
-             [--username -u]  
-             [--principal -p]
+             
+[--accept-eula -a]  
+             
+[--namespace -n]  
+             
+[--username -u]  
+             
+[--principal -p]
 ```
 ### <a name="examples"></a>例
 基本認証を使用してログインします。
@@ -89,7 +93,7 @@ Kerberos 領域。 ほとんどの場合、Kerberos 領域は、大文字のド�
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-logout"></a>azdata logout
@@ -110,7 +114,7 @@ azdata logout
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 

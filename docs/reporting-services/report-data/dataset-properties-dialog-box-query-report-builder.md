@@ -1,5 +1,6 @@
 ---
 title: '[クエリ] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー) | Microsoft Docs'
+description: レポート ビルダーの [データセットのプロパティ] ダイアログ ボックスにある [クエリ] を使用して、レポート サーバーから共有データセットを選択したり、埋め込みデータセットを作成したりする方法について説明します。
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,18 +13,18 @@ f1_keywords:
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e05ae59d963bd9b165d2f6f825955ee276683328
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 14380ba698101c76a84d0b9eef27a4ea31953f2d
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66500448"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458934"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>「クエリ」 (「データセットのプロパティ」 ダイアログ ボックス) (レポート ビルダー)
  
 **[データセットのプロパティ]** ダイアログ ボックスの **[クエリ]** を選択すると、レポート サーバーから共有データセットを選択したり、埋め込みデータセットを作成したりできます。 埋め込みデータセットを作成するには、データ ソースを選択し、クエリを構築する必要があります。  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>オプション  
  **名前**  
  データセットの名前を入力します。 名前は、レポートのすべてのデータ領域名またはグループ名と異なっている必要があります。  
   

@@ -1,5 +1,6 @@
 ---
 title: '[サーバーのプロパティ] ([ログ記録] ページ) | Microsoft Docs'
+description: SQL Server Management Studio の [Reporting Services] ページのオプションを使用して、レポート サーバーによって収集されるレポート実行データに制限を設定する方法について説明します。
 ms.date: 06/10/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e9286363970b568e0690b622fac6d94c2b01f6b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b06ebb1151d68b462fa96cd1c7493460209d33d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571386"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912398"
 ---
 # <a name="server-properties-logging-page"></a>[サーバーのプロパティ]\([ログ記録] ページ)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] で、この [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] ページを使用すると、レポート サーバーで収集されるレポート実行データに制限を設定できます。 実行データはレポート サーバー データベースに内部的に格納されます。 ネイティブ モードまたは SharePoint 統合モードで実行されているレポート サーバーのレポート処理を追跡できます。 レポート サーバーがスケールアウト配置の一部である場合、レポート実行ログでは、配置全体に対するすべてのレポート処理のレコードが 1 つのログ ファイルで保持されます。  
@@ -26,7 +27,7 @@ ms.locfileid: "65571386"
  3) レポート サーバー名を右クリックして、 **[プロパティ]** をクリックします。 
  4) **[ログ記録]** をクリックするとこのページが開きます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[レポート実行のログ記録を有効にする]**  
  サーバーのレポート処理に関する情報を作成して保存する場合にクリックします。 このオプションを有効にした場合、レポート サーバーにより、使用されたレポートの種類、レポート処理の頻度、実行されたレポート操作の種類、出力形式、およびレポートの実行者が追跡されます。 ログにキャプチャされるその他のデータ ポイントの詳細については、「 [レポート サーバー ExecutionLog と ExecutionLog3 ビュー](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)」を参照してください。  
   

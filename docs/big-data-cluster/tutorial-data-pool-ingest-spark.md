@@ -10,16 +10,16 @@ ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ff4038fd5a09b0776533c2ffa94cb6c1afeb567b
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: d87d817f2bc7c23e2df3dd18d55ce21d12304cb4
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531134"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943214"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>チュートリアル:Spark ジョブを使用して SQL Server のデータ プールにデータを取り込む
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 このチュートリアルでは、Spark ジョブを使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] の[データ プール](concept-data-pool.md)にデータを取り込む方法について説明します。 
 
@@ -111,7 +111,12 @@ ms.locfileid: "80531134"
 2. 新しいノートブックを作成し、カーネルとして Spark | Scala を選択します。
 
 3. Spark インジェスト ジョブを実行する
+
    1. Spark-SQL コネクタ パラメーターを構成する
+
+    > [!NOTE]
+    > ビッグ データ クラスターが Active Directory 統合を使用して展開されている場合は、以下の **hostname** の値を置き換えて、サービス名に追加された FQDN を含めます。 例: *hostname=master-p-svc.\<domainName>* 。
+
       ```
       import org.apache.spark.sql.types._
       import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
@@ -129,7 +134,7 @@ ms.locfileid: "80531134"
       StructField("wcs_web_page_sk",LongType,true), StructField("wcs_user_sk",LongType,true)
       ))
 
-      val hostname = "master-0.master-svc"
+      val hostname = "master-p-svc"
       val port = 1433
       val url = s"jdbc:sqlserver://${hostname}:${port};database=${database};user=${user};password=${password};"
       ```

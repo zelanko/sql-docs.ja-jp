@@ -1,30 +1,28 @@
 ---
 title: microsoftml Python パッケージ
-description: SQL Server 機械学習ワークロードとの関連で、Microsoft の機械学習アルゴリズムと Python 向けモデルについて説明します。
+description: microsoftml は、Microsoft が提供する Python パッケージであり、ハイパフォーマンスの機械学習アルゴリズムを備えています。 トレーニング、変換、スコアリング、テキストと画像の分析、既存のデータから値を派生させるための特徴抽出を行うための関数が含まれています。 このパッケージは、SQL Server Machine Learning Services に含まれています。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 212f739d7786cd3bd080972ab4b61ebff8b32bd9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ae408162ada9b43a9601c4058b9850db5a4afec4
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117865"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406195"
 ---
-# <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (SQL Server の Python モジュール)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="microsoftml-python-package-in-sql-server-machine-learning-services"></a>microsoftml (SQL Server Machine Learning Services の Python パッケージ)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**microsoftml** は、高パフォーマンスの機械学習アルゴリズムを提供する Microsoft の Python35 互換モジュールです。 トレーニング、変換、スコアリング、テキストと画像の分析、既存のデータから値を派生させるための特徴抽出を行うための関数が含まれています。
-
-機械学習 API は、内部機械学習アプリケーション用に Microsoft によって開発されたものです。マルチコア処理と高速データ ストリーミングを使用してビッグ データに対する高パフォーマンスをサポートするために、長年にわたって改善され続けています。 このパッケージは Python の R バージョンである [MicrosoftML](../r/ref-r-microsoftml.md) として開発され、同じような機能が与えられています。 
+**microsoftml** は、Microsoft が提供する Python パッケージであり、ハイパフォーマンスの機械学習アルゴリズムを備えています。 トレーニング、変換、スコアリング、テキストと画像の分析、既存のデータから値を派生させるための特徴抽出を行うための関数が含まれています。 このパッケージは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) に含まれており、マルチコア処理を使用したビッグ データでのハイパフォーマンス、および高速データ ストリーミングをサポートしています。
 
 ## <a name="full-reference-documentation"></a>完全なリファレンス ドキュメント
 
-**microsoftml** ライブラリは複数の Microsoft 製品で配布されていますが、SQL Server または別の製品のどちらでライブラリを取得した場合でも、使用方法は同じです。 これらの関数は同じであるため、[個々の microsoftml 関数のドキュメント](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)は Microsoft Machine Learning Server の [Python リファレンス](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)の下でのみ公開されています。 製品固有の動作が存在する場合、関数のヘルプ ページにその相違点が示されます。
+**microsoftml** パッケージは、複数の Microsoft 製品で配布されていますが、このパッケージを SQL Server または別の製品のどちらで取得しても、使用方法は同じです。 これらの関数は同じであるため、[個々の microsoftml 関数のドキュメント](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)は Microsoft Machine Learning Server の [Python リファレンス](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)の下でのみ公開されています。 製品固有の動作が存在する場合、関数のヘルプ ページにその相違点が示されます。
 
 ## <a name="versions-and-platforms"></a>バージョンとプラットフォーム
 
@@ -42,7 +40,7 @@ ms.locfileid: "81117865"
 **microsoftml** のアルゴリズムは、次に関して [revoscalepy](ref-py-revoscalepy.md) に依存します。
 
 + データ ソース オブジェクト。 **microsoftml** 関数によって使用されるデータは、**revoscalepy** 関数を使用して作成されます。
-+ リモート コンピューティング (関数の実行をリモート SQL Server インスタンスにシフトする)。 **revoscalepy** ライブラリには、SQL Server のリモート計算コンテキストを作成およびアクティブ化するための関数が用意されています。
++ リモート コンピューティング (関数の実行をリモート SQL Server インスタンスにシフトする)。 **revoscalepy** パッケージには、SQL Server のリモート計算コンテキストを作成およびアクティブ化するための関数が用意されています。
 
 ほとんどの場合、**microsoftml** を使用しているときは常に、パッケージをまとめて読み込みます。
 

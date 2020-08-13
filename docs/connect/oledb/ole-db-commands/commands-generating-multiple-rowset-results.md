@@ -1,5 +1,5 @@
 ---
-title: 複数行セットの結果を生成するコマンド | Microsoft Docs
+title: 複数行セットの結果を生成するコマンド (OLE DB ドライバー) | Microsoft Docs
 description: 複数行セットの結果を生成するコマンド
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - multiple-rowset results
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f24f338252ab788cd395147c0a9a1cfdcd94162a
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68016059"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942802"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>複数行セットの結果を生成するコマンド
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

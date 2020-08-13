@@ -1,6 +1,7 @@
 ---
 title: SQL Server プロファイラー
 titleSuffix: SQL Server Profiler
+description: SQL Server プロファイラーの機能について説明します。 このツールを使用してトレースを作成し、トレース結果を分析および再生することにより、問題のトラブルシューティングに役立つ情報を得ることができます。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 05/01/2020
-ms.openlocfilehash: 127c8dc055118612bff2382b2cf01a899be5f8fd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93fb645af08eaef372694e492cc211ed4f82b922
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719223"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914810"
 ---
 # <a name="sql-server-profiler"></a>SQL Server プロファイラー
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+ [!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、トレースを作成および管理し、トレースの結果を分析および再生するためのインターフェイスです。 イベントはトレース ファイルに保存され、後で分析したり、問題を診断する際に具体的な一連のステップを再現するために利用できます。
 

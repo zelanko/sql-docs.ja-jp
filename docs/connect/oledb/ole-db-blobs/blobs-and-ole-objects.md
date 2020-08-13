@@ -1,8 +1,8 @@
 ---
-title: BLOB と OLE オブジェクト | Microsoft Docs
+title: BLOB と OLE オブジェクト (OLE DB ドライバー) | Microsoft Docs
 description: BLOB と OLE オブジェクト
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,20 +16,22 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 54f8b4c38c22bcb32b039d9f0f0887c298051302
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67988671"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942798"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB と OLE オブジェクト
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server で公開されている **ISequentialStream** インターフェイスにより、コンシューマーはバイナリ ラージ オブジェクト (BLOB) として [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **ntext** 型、**text** 型、**image** 型、**varchar(max)** 型、**nvarchar(max)** 型、**varbinary(max)** 型、および XML データ型にアクセスできます。 **ISequentialStream** の **Read** メソッドを使用すると、扱いやすい単位で大量のデータを取得できます。  
-  
+  OLE DB Driver for SQL Server で公開されている **ISequentialStream** インターフェイスにより、コンシューマーはバイナリ ラージ オブジェクト (BLOB) として [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **ntext**、**text**<a href="#text_note"><sup>**1**</sup></a>、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、および xml の各データ型にアクセスできます。 **ISequentialStream** の **Read** メソッドを使用すると、扱いやすい単位で大量のデータを取得できます。
+
+ <b id="text_note">[1]:</b>ISequentialStream インターフェイスを使用して UTF-8 でエンコードされたデータをレガシ テキスト列に挿入することは、UTF-8 をサポートするサーバーのみに制限されます。 UTF-8 をサポートしていないサーバーをターゲットにしてこのシナリオを実行しようとすると、ドライバーによって次のエラー メッセージが送信されます。"*選択された列の型上でストリームはサポートされていません*"。
+
  この機能を示すサンプルについては、「[大きなデータの設定 (OLE DB)](../../oledb/ole-db-how-to/set-large-data-ole-db.md)」を参照してください。  
   
  コンシューマーからデータ変更用にバインドされたアクセサーにインターフェイス ポインターを渡すとき、OLE DB Driver for SQL Server は、コンシューマーに実装された **IStorage** インターフェイスを使用できます。  

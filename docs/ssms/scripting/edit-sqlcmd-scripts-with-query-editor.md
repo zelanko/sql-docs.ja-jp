@@ -1,5 +1,6 @@
 ---
 title: クエリ エディターによる SQLCMD スクリプトの編集
+description: Windows システムのコマンドと Transact-SQL ステートメントを同じスクリプトで処理する必要がある場合は、SQLCMD スクリプトを使用します。 データベース エンジン クエリ エディターを使用して SQLCMD スクリプトを記述および編集する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 637de4e8168b97e27da707f3f189d3608786d973
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed1171649c422ccb451fc7540cae8ca6629b65b1
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253910"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122963"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>クエリ エディターによる SQLCMD スクリプトの編集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用すると、クエリを SQLCMD スクリプトとして作成したり、編集したりできます。 Windows システムのコマンドと [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを同じスクリプトで処理する必要がある場合は、SQLCMD スクリプトを使用します。  
   
 ## <a name="sqlcmd-mode"></a>SQLCMD モード  
@@ -78,7 +79,7 @@ ms.locfileid: "75253910"
   
     -   (6 件処理されました)  
   
-    -   \< ディレクトリ情報 >  
+    -   \<The directory information>  
   
     -   (4 行処理されました)  
   
@@ -88,7 +89,7 @@ ms.locfileid: "75253910"
  SQLCMD の実行方法の詳細については、「 [sqlcmd Utility](../../tools/sqlcmd-utility.md)」または SQLCMD のチュートリアルを参照してください。  
   
 ## <a name="enable-sqlcmd-scripting-by-default"></a>SQLCMD スクリプト操作を既定で有効にする方法  
- SQLCMD スクリプト操作を既定でオンにするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[クエリ実行]** 、 **[SQL Server]** の順に展開します。次に、 **[全般]** ページをクリックし、 **[既定で、新しいクエリを SQLCMD モードで開始する]** チェック ボックスをオンにします。  
+ SQLCMD スクリプト操作を既定でオンにするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[クエリ実行]**、 **[SQL Server]** の順に展開します。次に、 **[全般]** ページをクリックし、 **[既定で、新しいクエリを SQLCMD モードで開始する]** チェック ボックスをオンにします。  
   
 ## <a name="writing-and-editing-sqlcmd-scripts"></a>SQLCMD スクリプトの作成と編集  
  スクリプト モードを有効にしたら、SQLCMD コマンドと [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを作成できます。 次の規則が適用されます。  
@@ -140,7 +141,7 @@ ms.locfileid: "75253910"
 > [!NOTE]  
 >  `:error` と `:out`の場合、 `stderr` と `stdout` のどちらを指定しても、出力は [メッセージ] タブに送信されます。  
   
- クエリ エディターでは、上記以外の SQLCMD コマンドをサポートしていません。 サポートされていない SQLCMD キーワードが実行されると、サポートされていないキーワードごとに、"Ignoring command *\<ignored command*>" (<無視されたコマンド> コマンドを無視しています) メッセージがクエリ エディターから宛先に送信されます。 スクリプトは正常に実行されますが、サポートされていないコマンドは無視されます。  
+ クエリ エディターでは、上記以外の SQLCMD コマンドをサポートしていません。 サポートされていない SQLCMD キーワードを含むスクリプトが実行されると、サポートされていないキーワードごとに、"コマンド \<ignored command*> を無視します" というメッセージがクエリ エディターから宛先に送信されます。 スクリプトは正常に実行されますが、サポートされていないコマンドは無視されます。  
   
 > [!CAUTION]  
 >  コマンド ラインから SQLCMD を実行する場合とは異なり、クエリ エディターの SQLCMD モードにはいくつかの制限事項があります。 まず、変数などのコマンド ライン パラメーターを受け渡すことができません。また、クエリ エディターはオペレーティング システムのプロンプトに応答できないため、対話型のステートメントを実行しないように注意してください。  

@@ -1,5 +1,6 @@
 ---
 title: レポート デザイナーを使用してレポートをデザインする | Microsoft Docs
+description: SQL Server Reporting Services のレポート デザイナーを使用して、フル機能を備えたページ分割されたレポートおよびレポート ソリューションを作成する方法について説明します。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e4cfac1ba56647ae0218242d0fb9228a3e80579
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8f83c1f169706af4a02d1940049d2a1814bc26ca
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286166"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914088"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>レポート デザイナーを使用して Reporting Services の改ページ調整されたレポートをデザインする (SSRS)
 

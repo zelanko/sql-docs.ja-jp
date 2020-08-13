@@ -1,5 +1,6 @@
 ---
 title: '[フォルダーを指定して検索]'
+description: 指定された一連のファイルで文字列または式を検索する方法と、検索結果の場所を指定する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81ddd51b2b005a104e2311dc7853484d081c3391
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d22ecc6a36e64d064a9429eea02644428762c44
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261878"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122937"
 ---
 # <a name="find-in-files"></a>[フォルダーを指定して検索]
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  **[検索と置換]** ウィンドウの [フォルダーを指定して検索] タブでは、指定したファイルのセットのコードで文字列や式を検索できます。 検出された項目および実行するアクションは、 **[結果オプション]** で選択された検索結果ウィンドウに表示されます。  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+   [検索と置換] ウィンドウの **[フォルダーを指定して検索]** タブでは、指定したファイルのセットのコードで文字列や式を検索できます。 検出された項目および実行するアクションは、 **[結果オプション]** で選択された検索結果ウィンドウに表示されます。  
   
  ツール バー ボタンやショートカット キーを使用して **[検索と置換]** ダイアログ ボックスを開くこともできます。  
   

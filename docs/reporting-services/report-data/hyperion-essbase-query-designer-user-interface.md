@@ -1,5 +1,6 @@
 ---
 title: Hyperion Essbase クエリ デザイナーのユーザー インターフェイス | Microsoft Docs
+description: レポートの処理時に Hyperion Essbase クエリ デザイナーのユーザー インターフェイスを使用してデータを取得する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 302abe3e6fc8639c0db27057973b19c0eb277101
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eca030e4dd20931307f904f27d9a2d6ea42c368c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572242"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457792"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Hyperion Essbase クエリ デザイナーのユーザー インターフェイス
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] データ ソースに対する多次元式 (MDX) クエリを作成するためのグラフィカル クエリ デザイナーが用意されています。 MDX のグラフィカル クエリ デザイナーには、デザイン モードとクエリ モードという 2 つのモードがあります。 いずれのモードにもメタデータ ペインが表示されます。ここから、データ ソースで定義されているキューブのメンバーをドラッグすることによって、MDX クエリを作成できます。レポートの処理時には、このクエリに基づいてデータが取得されます。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] データ ソースに対する多次元式 (MDX) クエリを作成するためのグラフィカル クエリ デザイナーが用意されています。 MDX のグラフィカル クエリ デザイナーには、デザイン モードとクエリ モードの 2 つのモードがあります。 いずれのモードにもメタデータ ペインが表示されます。ここから、データ ソースで定義されているキューブのメンバーをドラッグすることによって、MDX クエリを作成できます。レポートの処理時には、このクエリに基づいてデータが取得されます。  
   
 > [!IMPORTANT]  
 >  ユーザーは、クエリを作成して実行する際にデータ ソースにアクセスします。 したがって、データ ソースに対する最小限の権限 (読み取り専用権限など) を付与する必要があります。  
@@ -43,7 +44,7 @@ ms.locfileid: "65572242"
   
  このモードのペインの一覧を次の表に示します。  
   
-|ペイン|Function|  
+|ペイン|機能|  
 |----------|--------------|  
 |キューブの選択ボタン|現在選択されているキューブを表示します。|  
 |メタデータ ペイン|キューブの階層リストを表示します。|  
@@ -58,7 +59,7 @@ ms.locfileid: "65572242"
 ### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>グラフィカル クエリ デザイナーのツール バー (デザイン モード)  
  クエリ デザイナーのツール バーにある各種のボタンを使用すると、グラフィカル インターフェイスを使用して MDX クエリをデザインできます。 これらのボタンと機能の対応関係を次の表に示します。  
   
-|ボタン|説明|  
+|Button|説明|  
 |------------|-----------------|  
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。 このデータ ソースの種類では使用できません。|  
 |**[インポート]**|ファイル システムのレポート定義 (.rdl) ファイルから既存のクエリをインポートします。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。|  
@@ -78,7 +79,7 @@ ms.locfileid: "65572242"
   
  次の表に各ペインの機能を示します。  
   
-|ペイン|Function|  
+|ペイン|機能|  
 |----------|--------------|  
 |キューブの選択ボタン|現在選択されているキューブを表示します。|  
 |メタデータ/関数ペイン|クエリ テキストの作成に使用できるメタデータや関数がタブ付きウィンドウに一覧表示されます。|  

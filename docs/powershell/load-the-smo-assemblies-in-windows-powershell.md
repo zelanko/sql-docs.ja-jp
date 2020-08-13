@@ -1,5 +1,6 @@
 ---
 title: Windows PowerShell への SMO アセンブリの読み込み | Microsoft Docs
+description: SQL Server PowerShell プロバイダーを使用しない Windows PowerShell スクリプトに SQL Server 管理オブジェクト (SMO) アセンブリを読み込む方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2262de78691c14b14bf9177306c0eb7526ef290b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f3ac67e05f5a94de1c45e44b2fc466d5f4097751
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67951692"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919122"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Windows PowerShell への SMO アセンブリの読み込み
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この記事では、SQL Server PowerShell プロバイダーを使用しない Windows PowerShell スクリプトに SQL Server 管理オブジェクト (SMO) アセンブリを読み込む方法について説明します。  
   
@@ -35,7 +36,7 @@ SMO アセンブリを読み込むための推奨メカニズムは、**SqlServe
   
 -   プロバイダーやコマンドレットを使用しない別の言語 (C#、Visual Basic など) から SMO コードを移植する場合。  
   
-## <a name="example-loading-the-sql-server-management-objects"></a>例: SQL Server 管理オブジェクトの読み込み  
+## <a name="example-loading-the-sql-server-management-objects"></a>例:SQL Server 管理オブジェクトの読み込み  
  SMO アセンブリを読み込むコードを次に示します。  
   
 ```  

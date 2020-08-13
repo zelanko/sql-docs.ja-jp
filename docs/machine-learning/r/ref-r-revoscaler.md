@@ -1,39 +1,39 @@
 ---
-title: RevoScaleR R 関数ライブラリ
-description: SQL Server 2016 R Services での RevoScaleR 関数ライブラリと、R を使用した SQL Server Machine Learning Services の概要について説明します。
+title: RevoScaleR R パッケージ
+description: RevoScaleR は Microsoft が提供する R パッケージであり、分散コンピューティング、リモート計算コンテキスト、ハイパフォーマンス データ サイエンス アルゴリズムをサポートしています。 また、データ インポート、データ変換、概要作成、視覚化、分析もサポートしています。 このパッケージは、SQL Server Machine Learning Services と SQL Server 2016 R Services に含まれています。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b24d5499e618a09c4d80e8614b08219e6c6f788
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2288c1898d9299fb346a80e2cd0a53104e308724
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117435"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406155"
 ---
-# <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (SQL Server の R ライブラリ)
+# <a name="revoscaler-r-package-in-sql-server-machine-learning-services"></a>RevoScaleR (SQL Server Machine Learning Services の R パッケージ)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**RevoScaleR** は Microsoft のハイパフォーマンス データ サイエンス関数のライブラリです。 関数では、データ インポート、データ変換、概要作成、視覚化、分析がサポートされています。
+**RevoScaleR** は Microsoft が提供する R パッケージであり、分散コンピューティング、リモート計算コンテキスト、ハイパフォーマンス データ サイエンス アルゴリズムをサポートしています。 また、データ インポート、データ変換、概要作成、視覚化、分析もサポートしています。 このパッケージは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) と [SQL Server 2016 R Services](sql-server-r-services.md) に含まれています。
 
-基本の R 関数とは異なり、RevoScaleR の演算は非常に大規模なデータセットに対して実行したり、並列で実行したり、分散ファイル システムで実行したりできます。 関数は、チャンクを使用し、演算の完了時、結果を再び組み立てることで、メモリに収まらないデータセットに対して実行できます。
+基本の R 関数とは異なり、RevoScaleR の演算は、大規模なデータセットに対しての実行、並列での実行、分散ファイル システムでの実行が可能です。 関数は、チャンクを使用し、演算の完了時、結果を再び組み立てることで、メモリに収まらないデータセットに対して実行できます。
 
-RevoScaleR 関数には **rx** または **Rx** というプレフィックスが付き、簡単に識別できるようになっています。
+RevoScaleR 関数には、rx** または **Rx** というプレフィックスが付いており、簡単に識別できるようになっています。
 
 RevoScaleR は、分散データ サイエンスのプラットフォームとして機能します。 たとえば、[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-the-microsoftml-package) の最新式アルゴリズムと共に RevoScaleR の計算コンテキストと変換を使用できます。 [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) を使用し、基本の R 関数を並列実行することもできます。
 
 ## <a name="full-reference-documentation"></a>完全なリファレンス ドキュメント
 
-**RevoScaleR** ライブラリは複数の Microsoft 製品で配布されていますが、SQL Server または別の製品のどちらでライブラリを取得した場合でも、使用方法は同じです。 これらの関数は同じであるため、[個々の RevoScaleR 関数のドキュメント](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)は Microsoft Machine Learning Server の [R リファレンス](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)の下でのみ公開されています。 製品固有の動作が存在する場合、関数のヘルプ ページにその相違点が示されます。
+**RevoScaleR** パッケージは、複数の Microsoft 製品で配布されていますが、このパッケージを SQL Server または別の製品のどちらで取得しても、使用方法は同じです。 これらの関数は同じであるため、[個々の RevoScaleR 関数のドキュメント](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)は Microsoft Machine Learning Server の [R リファレンス](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)の下でのみ公開されています。 製品固有の動作が存在する場合、関数のヘルプ ページにその相違点が示されます。
 
 ## <a name="versions-and-platforms"></a>バージョンとプラットフォーム
 
-**RevoScaleR** ライブラリは R 3.4.3 に基づいており、次のいずれかの Microsoft 製品またはダウンロードをインストールした場合にのみ利用できます。
+**RevoScaleR** パッケージは R 3.4.3 に基づいており、次のいずれかの Microsoft 製品またはダウンロードをインストールした場合にのみ利用できます。
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server Machine Learning サービス](../install/sql-machine-learning-services-windows-install.md)

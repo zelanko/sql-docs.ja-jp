@@ -1,5 +1,6 @@
 ---
 title: 結果一覧を使用してドキュメントを検索する方法
+description: プロジェクト、ソリューション、またはファイル システムフォルダーに含まれるすべてのファイル内のテキストを検索および置換する方法について説明します。 [検索結果 1] ウィンドウに一致項目が表示されます。一致項目をダブルクリックすると、それが含まれている行を確認できます。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,16 +16,16 @@ ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b06660f3bc175e9869d669e7996f31d1a704f9b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fa62cc76deab4f40f7db63ebd119fc9cd227c72e
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253668"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122826"
 ---
 # <a name="search-documents-using-results-lists"></a>結果一覧を使用してドキュメントを検索する方法
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  **[検索と置換]** ダイアログ ボックスでは、プロジェクト内、ソリューション内、ファイル システム フォルダー内のすべてのファイルを対象にしてテキストの検索と置換を実行できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で開いていないファイルも対象になります。 **[検索と置換]** ダイアログ ボックスで実行した検索の一致項目は、[検索結果 1] ウィンドウと [検索結果 2] ウィンドウに表示されるので、一致項目を含んだ行のテキストを実際に確認できます。  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+  **[検索と置換]** ダイアログ ボックスでは、プロジェクト内、ソリューション内、ファイル システム フォルダー内のすべてのファイルを対象にしてテキストの検索と置換を実行できます。[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で開いていないファイルも対象になります。 **[検索と置換]** ダイアログ ボックスで実行した検索の一致項目は、[検索結果 1] ウィンドウと [検索結果 2] ウィンドウに表示されるので、一致項目を含んだ行のテキストを実際に確認できます。  
   
 ### <a name="to-search-in-multiple-files"></a>複数のファイルで検索を実行するには  
   

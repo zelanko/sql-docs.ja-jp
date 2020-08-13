@@ -1,5 +1,6 @@
 ---
 title: 外部データ ソースのデータを追加する | Microsoft Docs
+description: 外部データ ソースからレポートにデータを追加する方法と、データ アクセス テクノロジによるレポートのしくみについて説明します。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +10,12 @@ ms.author: maggies
 reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
-ms.openlocfilehash: c6d5ebdcc4866c30b9fda3967304cda747a13a83
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7f1dec73677f0893bd7777efb2786af8eb0d4e5f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081838"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86459006"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>外部データ ソースのデータを追加する (SSRS)
   外部データ ソースからデータを取得するには、データ接続を使用します。 データ接続情報は、通常は権限の付与と使用する資格情報の指定を担う外部データ ソースの所有者によって提供されます。 データ接続情報は、レポート データ ソースとして保存されます。 データ ソースの種類により、データの取得に使用するデータ拡張機能が決まります。  
@@ -97,7 +98,7 @@ ms.locfileid: "77081838"
 |トピック|説明|  
 |-----------|-----------------|  
 |[レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)|レポートのデータへのアクセスの概要について説明します。|  
-|[データ接続文字列の作成 - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|データ接続とデータ ソースについて説明します。|  
+|[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|データ接続とデータ ソースについて説明します。|  
 |[レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|埋め込みデータセットと共有データセットについて説明します。|  
 |[データセット フィールド コレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|クエリによって生成されるデータセット フィールド コレクションについて説明します。|  
 |[Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)|各データ拡張機能のプラットフォームおよびバージョン サポートに関する詳細な情報です。|  

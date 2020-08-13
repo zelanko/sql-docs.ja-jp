@@ -1,5 +1,6 @@
 ---
 title: データ ソースの変換 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーおよびレポート デザイナーでレポート データ ペインのオプションを使用してデータ ソースを変換する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 05aee467c3e69c115bedfa498a546a4e1664ba71
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 799e3f877f2a92fb0b476037f08013e624f2d518
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081750"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458184"
 ---
 # <a name="convert-data-sources-report-builder-and-ssrs"></a>データ ソースの変換 (レポート ビルダーおよび SSRS)
   レポート データ ペインの各データ ソースは、レポートに固有のものとして埋め込まれている場合と、共有されている場合とがあります。 レポート ビルダーにおける共有データ ソースの参照先は、レポート サーバー上または SharePoint サイト上にパブリッシュされた共有データ ソースです。 レポート デザイナーにおける共有データ ソースの参照先は、ソリューション エクスプローラーの **[共有データ ソース]** フォルダーに表示される共有データ ソースです。  
@@ -61,6 +62,6 @@ ms.locfileid: "77081750"
   
 ## <a name="see-also"></a>参照  
  [レポート データ ソースを管理する](../../reporting-services/report-data/manage-report-data-sources.md)   
- [データ接続文字列の作成 - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

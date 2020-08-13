@@ -5,29 +5,31 @@ description: この 4 部構成のチュートリアル シリーズでは、SQL
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 04/15/2020
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8b3be490a6da01d34f8c762bf9c6cae1a35dbe40
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: e1482824da2d83e56538ce094e74c91cee224867
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606554"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967861"
 ---
 # <a name="python-tutorial-categorizing-customers-using-k-means-clustering-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習で K-Means クラスタリングを使用して顧客を分類する
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズでは、Python を使用して、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) または[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)で K-Means クラスタリング モデルを開発およびデプロイして、顧客データを分類します。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズでは、Python を使用して、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) で K-Means クラスタリング モデルを開発および展開して、顧客データをクラスター化します。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+この 4 部構成のチュートリアル シリーズでは、Python を使用して、「[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)」で K-Means クラスタリング モデルを開発および展開して、顧客データをクラスター化します。
 ::: moniker-end
 
 このシリーズのパート 1 では、チュートリアルの前提条件を設定してから、サンプル データセットをデータベースに復元します。 このシリーズの後半では、このデータを使用して、SQL 機械学習を使用する Python でクラスタリング モデルをトレーニングしデプロイします。
@@ -55,6 +57,11 @@ ms.locfileid: "83606554"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) に Python 言語オプションがあること。[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)に記載されているインストール手順に従ってください。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+* Azure SQL Managed Instance の Machine Learning Services。 サインアップ方法については、[Azure SQL Managed Instance の Machine Learning Services の概要](/azure/azure-sql/managed-instance/machine-learning-services-overview)に関するページを参照してください。
+
+* サンプル データベースを Azure SQL Managed Instance に復元するための [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
+::: moniker-end
 
 * [Azure Data Studio](../../azure-data-studio/what-is.md) Azure Data Studio では、Python と SQL の両方にノートブックを使用します。 ノードブックの詳細については、「[Azure Data Studio でノートブックを使用する方法](../../azure-data-studio/sql-notebooks.md)」を参照してください。
 
@@ -72,13 +79,14 @@ ms.locfileid: "83606554"
 
 ## <a name="restore-the-sample-database"></a>サンプル データベースを復元する
 
-このチュートリアルで使用するサンプル データセットは、ダウンロードして使用できるように **.bak** データベース バックアップ ファイルに保存されています。 このデータセットは、[トランザクション処理性能評議会 (TPC)](http://www.tpc.org/default.asp) によって提供される [tpcx-bb](http://www.tpc.org/tpcx-bb/default.asp) データセットから派生しています。
+このチュートリアルで使用するサンプル データセットは、ダウンロードして使用できるように **.bak** データベース バックアップ ファイルに保存されています。 このデータセットは、[トランザクション処理性能評議会 (TPC)](http://www.tpc.org/) によって提供される [tpcx-bb](http://www.tpc.org/tpcx-bb/default5.asp) データセットから派生しています。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
 > ビッグ データ クラスターで Machine Learning Services を使用している場合は、[SQL Server ビッグ データ クラスターのマスター インスタンスにデータベースを復元する](../../big-data-cluster/data-ingestion-restore-database.md)方法に関する記事を参照してください。
 ::: moniker-end
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 1. [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak) ファイルをダウンロードします。
 
 1. Azure Data Studio で、以下の詳細情報を使用して、「[バックアップ ファイルからデータベースを復元する](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file)」に記載されている手順に従います。
@@ -92,6 +100,22 @@ ms.locfileid: "83606554"
     USE tpcxbb_1gb;
     SELECT * FROM [dbo].[customer];
     ```
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+1. [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak) ファイルをダウンロードします。
+
+1. 次の詳細を使用して、SQL Server Management Studio で [Managed Instance へのデータベースの復元](/azure/sql-database/sql-database-managed-instance-get-started-restore)の指示に従います。
+
+   * ダウンロードした **tpcxbb_1gb.bak** ファイルからインポートします
+   * ターゲット データベースに "tpcxbb_1gb" という名前を指定します
+
+1. **dbo.customer** テーブルに対してクエリを実行することで、データベースを復元した後にデータセットが存在することを確認できます。
+
+    ```sql
+    USE tpcxbb_1gb;
+    SELECT * FROM [dbo].[customer];
+    ```
+::: moniker-end
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップする
 

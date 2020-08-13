@@ -1,5 +1,6 @@
 ---
-title: 暗号化のサポートについて | Microsoft Docs
+title: 暗号化のサポートについて
+description: JDBC ドライバーが TLS 暗号化を使用して SQL データベースへの接続を確実にセキュリティで保護する方法について説明します。
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5ec3ad142e3dc5e2945afebeb2c9a6c97350672c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: aa20ac9d4118e5fec4dbaf225d27c9db8257a88f
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71713297"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393120"
 ---
 # <a name="understanding-encryption-support"></a>暗号化のサポートについて
 
@@ -36,11 +37,11 @@ TLS 暗号化をアプリケーションで使用できるようにするため�
   
  次の表は、想定される TLS 接続シナリオでの [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] バージョンの動作をまとめたものです。 使用する TLS 接続プロパティの組み合わせをシナリオごとに変えています。 表の値の意味を以下に示します。  
   
-- **blank**: "接続文字列にプロパティが存在しない"  
+- **blank**:"接続文字列にプロパティが存在しない"  
   
-- **value**: "接続文字列にプロパティが存在し、その値が有効である"  
+- **value**:"接続文字列にプロパティが存在し、その値が有効である"  
   
-- **any**: "接続文字列にプロパティが存在するかどうか、またはその値が有効であるかどうかは関係ない"  
+- **any**:"接続文字列にプロパティが存在するかどうか、またはその値が有効であるかどうかは関係ない"  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー認証でも Windows 統合認証でも同じ動作になります。  
@@ -48,7 +49,7 @@ TLS 暗号化をアプリケーションで使用できるようにするため�
 | encrypt        | trustServerCertificate | hostNameInCertificate | trustStore | trustStorePassword | 動作                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | -------------- | ---------------------- | --------------------- | ---------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | false または blank | any                    | any                   | any        | any                | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は TLS 暗号化のサポートを強制されません。 サーバーに自己署名証明書が存在する場合、その TLS 証明書の交換がドライバーによって開始されます。 TLS 証明書の検証は行われず、(ログイン パケット内の) 資格情報のみが暗号化されます。<br /><br /> サーバーによってクライアントに TLS 暗号化のサポートが要求されている場合は、TLS 証明書の交換が開始されます。 TLS 証明書の検証は行われませんが、通信全体が暗号化されます。                                                                                                                                                                                    |
-| true           | true                   | any                   | any        | any                | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に TLS 暗号化を使用するよう要求されます。<br /><br /> サーバーによってクライアントに TLS 暗号化のサポートが要求されている場合、またはサーバーで暗号化がサポートされている場合、ドライバーによって TLS 証明書の交換が開始されます。 **trustServerCertificate** プロパティが "true" に設定されている場合は TLS 証明書の検証が行われないことに注意してください。<br /><br /> サーバーが暗号化をサポートするように構成されていない場合、ドライバーはエラーを生成して接続を終了します。                                                                                                                                                                                          |
+| true           | true                   | any                   | any        | any                | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に TLS 暗号化を使用するよう要求されます。<br /><br /> サーバーによってクライアントに TLS 暗号化のサポートが要求されている場合、またはサーバーで暗号化がサポートされている場合、ドライバーによって TLS 証明書の交換が開始されます。 **trustServerCertificate** プロパティが "true" に設定されている場合、TLS 証明書は検証されません。<br /><br /> サーバーが暗号化をサポートするように構成されていない場合、ドライバーはエラーを生成して接続を終了します。                                                                                                                                                                                          |
 | true           | false または blank         | blank                 | blank      | blank              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に TLS 暗号化を使用するよう要求されます。<br /><br /> サーバーによってクライアントに TLS 暗号化のサポートが要求されている場合、またはサーバーで暗号化がサポートされている場合、ドライバーによって TLS 証明書の交換が開始されます。<br /><br /> ドライバーにより、接続 URL に指定されている **serverName** プロパティを使用してサーバーの TLS 証明書が検証され、信頼マネージャー ファクトリの検索ルールに従って、使用する証明書ストアが決定されます。<br /><br /> サーバーが暗号化をサポートするように構成されていない場合、ドライバーはエラーを生成して接続を終了します。                                                                             |
 | true           | false または blank         | value                 | blank      | blank              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に TLS 暗号化を使用するよう要求されます。<br /><br /> サーバーによってクライアントに TLS 暗号化のサポートが要求されている場合、またはサーバーで暗号化がサポートされている場合、ドライバーによって TLS 証明書の交換が開始されます。<br /><br /> ドライバーにより、**hostNameInCertificate** プロパティに指定されている値を使用して、TLS 証明書のサブジェクトの値が検証されます。<br /><br /> サーバーが暗号化をサポートするように構成されていない場合、ドライバーはエラーを生成して接続を終了します。                                                                                                                                                                 |
 | true           | false または blank         | blank                 | value      | value              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に TLS 暗号化を使用するよう要求されます。<br /><br /> サーバーによってクライアントに TLS 暗号化のサポートが要求されている場合、またはサーバーで暗号化がサポートされている場合、ドライバーによって TLS 証明書の交換が開始されます。<br /><br /> ドライバーは、**trustStore** プロパティの値を使用して証明書の trustStore ファイルを検索し、**trustStorePassword** プロパティの値を使用して trustStore ファイルの整合性をチェックします。<br /><br /> サーバーが暗号化をサポートするように構成されていない場合、ドライバーはエラーを生成して接続を終了します。                                                                                                                |
@@ -58,7 +59,7 @@ TLS 暗号化をアプリケーションで使用できるようにするため�
 | true           | false または blank         | value                 | value      | blank              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に TLS 暗号化を使用するよう要求されます。<br /><br /> サーバーによってクライアントに TLS 暗号化のサポートが要求されている場合、またはサーバーで暗号化がサポートされている場合、ドライバーによって TLS 証明書の交換が開始されます。<br /><br /> ドライバーは、**trustStore** プロパティの値を使用して、trustStore ファイルの場所を調べます。 また、**hostNameInCertificate** プロパティの値を使用して、TLS 証明書が検証されます。<br /><br /> サーバーが暗号化をサポートするように構成されていない場合、ドライバーはエラーを生成して接続を終了します。                                                                                  |
 | true           | false または blank         | value                 | value      | value              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に TLS 暗号化を使用するよう要求されます。<br /><br /> サーバーによってクライアントに TLS 暗号化のサポートが要求されている場合、またはサーバーで暗号化がサポートされている場合、ドライバーによって TLS 証明書の交換が開始されます。<br /><br /> ドライバーは、**trustStore** プロパティの値を使用して証明書の trustStore ファイルを検索し、**trustStorePassword** プロパティの値を使用して trustStore ファイルの整合性をチェックします。 また、**hostNameInCertificate** プロパティの値を使用して、TLS 証明書が検証されます。<br /><br /> サーバーが暗号化をサポートするように構成されていない場合、ドライバーはエラーを生成して接続を終了します。 |
   
-encrypt プロパティが **true** に設定されている場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、JVM の既定の JSSE セキュリティ プロバイダーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と TLS 暗号化がネゴシエートされます。 既定のセキュリティ プロバイダーでは、TLS 暗号化の正常なネゴシエートに必要なすべての機能がサポートされているとは限りません。 たとえば、既定のセキュリティ プロバイダーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の TLS 証明書で使用されている RSA 公開キーのサイズがサポートされていない場合があります。 この場合、既定のセキュリティ プロバイダーでエラーが発生し、その結果 JDBC ドライバーが接続を終了する可能性があります。 この問題を解決するには、次のいずれかを実行します。  
+encrypt プロパティが **true** に設定されている場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、JVM の既定の JSSE セキュリティ プロバイダーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と TLS 暗号化がネゴシエートされます。 既定のセキュリティ プロバイダーでは、TLS 暗号化の正常なネゴシエートに必要なすべての機能がサポートされているとは限りません。 たとえば、既定のセキュリティ プロバイダーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の TLS 証明書で使用されている RSA 公開キーのサイズがサポートされていない場合があります。 この場合、既定のセキュリティ プロバイダーでエラーが発生し、その結果 JDBC ドライバーが接続を終了する可能性があります。 この問題を解決するには、次のオプションのいずれかを使用できます。  
   
 - サイズの小さい RSA 公開キーを持つサーバー証明書を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成します。  
   
@@ -80,7 +81,7 @@ encrypt プロパティが **true** に設定されている場合、[!INCLUDE[j
   
 - DNS 名にはワイルドカード文字を含めることができます。 ただし、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、ワイルドカードでのマッチングがサポートされません。 つまり、abc.com は \*.com とは一致せず、\*.com は \*.com と一致します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [暗号化の使用](../../connect/jdbc/using-ssl-encryption.md)
 

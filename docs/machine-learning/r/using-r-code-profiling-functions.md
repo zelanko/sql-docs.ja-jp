@@ -1,27 +1,27 @@
 ---
-title: R コード プロファイル関数の使用
-description: R プロファイリング関数を使用して内部関数呼び出しに関する情報を返すことによって、SQL Server での R 計算のパフォーマンスを向上させ、結果を高速化します。
+title: R コード プロファイル関数を使用してパフォーマンスを向上させる
+description: R プロファイリング関数を使用することで、パフォーマンスを向上させるのに役立つ情報を収集し、SQL Server での R 計算の結果をより速く得られるようにします。 *rprof* 関数は、内部関数呼び出しに関する情報を収集して返します。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 12/12/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e03ae1a8c4cdab87f46f63da6271886b4518b5e3
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 16a1ed8df29de58450f87118068e43646c46fd90
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117195"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484643"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>R コード プロファイル関数を使用してパフォーマンスを向上させる
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server のリソースとツールを使用して R スクリプトの実行を監視できるほか、他の R パッケージが提供するパフォーマンス ツールを使用して、内部関数の呼び出しに関する情報を取得できます。 
 
 > [!TIP]
-> この記事では、作業を開始するための基本的なリソースについて説明します。 専門家によるガイダンスとしては、*Hadley Wickham 著 "Advanced R"* の「[Performance](http://adv-r.had.co.nz)」の章をお勧めします。
+> この記事では、作業を開始するための基本的なリソースについて説明します。 専門家によるガイダンスとしては、[Hadley Wickham 著 "Advanced R"](http://adv-r.had.co.nz) の「*Performance*」の章をお勧めします。
 
 ## <a name="using-rprof"></a>rprof の使用
 
@@ -61,7 +61,7 @@ help("Sys.time")
 
 既定でインストールされる Microsoft R Open のドキュメントには、R 言語の拡張機能の開発に関するマニュアルが含まれており、[プロファイルとデバッグ](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)の詳細について説明しています。 お使いのコンピューターでこちらから同じドキュメントを取得できます。C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 + [utils R パッケージ](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
 + [Hadley Wickham 著 "Advanced R"](http://adv-r.had.co.nz)

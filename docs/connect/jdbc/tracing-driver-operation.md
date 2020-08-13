@@ -1,5 +1,6 @@
 ---
-title: ドライバー操作のトレース | Microsoft Docs
+title: ドライバー操作のトレース
+description: トレースを使用して詳細を記録し、JDBC Driver for SQL Server を使用する場合の問題を解決する方法について説明します。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 91f71543b9fecd994cc2b951758caacd23e8ae1f
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: b89be9709f04e995ed560e291a5199cebfd2bd75
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219361"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393130"
 ---
 # <a name="tracing-driver-operation"></a>ドライバー操作のトレース
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

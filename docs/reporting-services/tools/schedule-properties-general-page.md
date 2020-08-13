@@ -1,5 +1,6 @@
 ---
 title: '[スケジュールのプロパティ] ([全般] ページ) | Microsoft Docs'
+description: SQL Server Management Studio の [Reporting Services] ページで共有スケジュールを表示または変更するためのオプションについて学習します。
 ms.date: 06/11/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a05afd2a99ca8680d5c3d38538a9fcee03d5dc5f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd34cc584049eb363f6119e1131eaaaa853b3ce4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571397"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920938"
 ---
 # <a name="schedule-properties-general-page"></a>[スケジュールのプロパティ]\([全般] ページ)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] ページを使用すると、共有スケジュールを表示したり変更したりできます。 共有スケジュールは、レポート固有のスケジュールやサブスクリプション固有のスケジュールの代わりに使用できます。 スケジュールに対する変更は、スケジュールを保存した後に適用されます。 スケジュールを編集しても、現在実行中のジョブには影響しません。 使用中のスケジュールを編集すると、そのスケジュールからトリガーされた現在処理中のレポートおよびサブスクリプションはすべて終了できるようになります。  
@@ -34,7 +35,7 @@ ms.locfileid: "65571397"
 >この機能は、すべてのエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用できるわけではなく、この機能がないエディションを実行している場合は、このページが表示されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。  
   
 ## <a name="options"></a>オプション  
- **Name**  
+ **名前**  
  共有スケジュールの名前を指定します。  
   
  **[このスケジュールの実行開始日]**  

@@ -1,5 +1,6 @@
 ---
 title: SQL Server 識別子のエスケープ | Microsoft Docs
+description: SQL Server の区切られた識別子に使用できる文字には、Windows PowerShell パスでサポートされないものがあります。 これらの一部をバック ティック文字でエスケープする方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 8a73e945-daa6-4e5d-93da-10f000f1f3a2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c196b316424c941cba52eb50c61c82ca772ba18c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d766a4856d83800115d68938c10b36fe032edec8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67951704"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919128"
 ---
 # <a name="escape-sql-server-identifiers"></a>SQL Server 識別子のエスケープ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の区切られた識別子には使用でき、Windows PowerShell パス名には使用できない文字をエスケープするためによく使用されるのが、バック ティック エスケープ文字 (`) です。 ただし、エスケープできない文字もあります。 たとえば、Windows PowerShell ではコロン文字 (:) をエスケープできません。 この文字を含んだ識別子は、エンコードする必要があります。 エンコードは、すべての文字に有効であるため、エスケープよりも確実です。  
 

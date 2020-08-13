@@ -1,5 +1,6 @@
 ---
 title: '[Reporting Services ログイン] ダイアログ ボックス | Microsoft Docs'
+description: '[Reporting Services ログイン] ダイアログ ボックスを使用して、レポートをレポート サーバーにパブリッシュする際に使用する資格情報を指定する方法について学習します。'
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,20 +11,20 @@ f1_keywords:
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3d60450f0f4c7feb7d6a00f66fcedeb89c764bf5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d3e34d7ff9f92506f1225aea173521ee7d30e79
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082175"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919618"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>[Reporting Services ログイン] ダイアログ ボックス (SSRS)
   **[Reporting Services ログイン]** ダイアログ ボックスを使用すると、レポートをレポート サーバーにパブリッシュする際に使用する資格情報を指定できます。  
   
 -   **注** : プロジェクトの配置プロパティ **TargetServerURL** を設定してから初めてレポートをレポート サーバーにパブリッシュする場合は、サーバー名に **reports** ではなく **server**が含まれることを確認します。 たとえば、 `https://localhost/reportserver`ではなく `https://localhost/reports`のようになります。 ローカル サーバーの `reports` ディレクトリではなく `reportserver` ディレクトリを指定すると、このダイアログ ボックスが間接的に開かれます。 **TargetServerURL** の設定の詳細については、「[配置プロパティを設定する &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
- **[サーバー]**  
+## <a name="options"></a>Options  
+ **サーバー**  
  レポート サーバーの名前を表示します。 たとえば、「 `https://localhost/reportserver` 」のように入力します。 既定のポート 80 と異なるポートを使用するレポート サーバーの場合は、ポート番号を含めます。 たとえば、「 `https://localhost:81/reportserver` 」のように入力します。  
   
  **ユーザー名**  

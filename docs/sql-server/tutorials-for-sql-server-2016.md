@@ -1,23 +1,22 @@
 ---
 title: SQL Server チュートリアル | Microsoft Docs
-ms.custom: ''
+description: これらの SQL Server チュートリアルを使用して、新しいテクノロジと機能について学習します。 以前のバージョンの SQL Server のチュートリアルでは、通常、より新しいバージョンが使用されます。
 ms.date: 11/01/2017
 ms.prod: sql
-ms.reviewer: ''
-ms.technology: performance
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 95cf7a3b2d7be413df8ddc0f84ff8d71cffffdd0
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8d86c5a3662417c1af39f12fc3d32167a73912c3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000676"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913954"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server チュートリアル
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] には、新しいテクノロジと機能の学習に役立つチュートリアルが用意されています。 通常、以前のバージョンのチュートリアルを新しいバージョンで使用できます。 チュートリアルで新しい機能を扱っている場合は、そのチュートリアルを完了するための最低限のバージョンが示されています。  
      
 -   チュートリアルでいずれかの [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] データベースが使われている場合は、最新のバージョンを CodePlex からダウンロードして使う必要があります。 詳しくは、「[AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)」(SQL Server 2016 CTP3 の AdventureWorks データベースとスクリプト) をご覧ください。    

@@ -1,5 +1,6 @@
 ---
 title: エディターの表示 (SQL Server Management Studio)
+description: SQL Server Management Studio でデータベース エンジン クエリ、MDX、DMX、および XML/A エディターを開く方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 478f48cbea6bccb1cb66838a34d12689a94cf05a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab96c21c9ac7d6e8b90564d6759c85744adc27f8
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253777"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122573"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>エディターの表示 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター、MDX エディター、DMX エディター、または XML/A エディターを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で開く方法について説明します。 エディターを開くと、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の中央のペインに、それぞれのエディター ウィンドウがタブとして表示されます。  
   
 ## <a name="before-you-begin"></a>はじめに  
@@ -30,7 +31,7 @@ ms.locfileid: "75253777"
 ### <a name="permissions"></a>アクセス許可  
  コード エディター内で実行する操作には、ログインに使用した認証アカウントに付与されている権限が適用されます。 たとえば、Windows 認証を使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウを開いた場合、自分の Windows ログイン アカウントでアクセスできないオブジェクトを参照する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することはできません。  
   
-## <a name="how-to-open-editors"></a>方法: エディターを開く  
+## <a name="how-to-open-editors"></a>方法:エディターを開く  
  このセクションでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の各種エディターを開く方法について説明します。  
   
 ### <a name="using-the-filenew-menu"></a>[ファイル] メニューの [新規作成] の使用  

@@ -1,5 +1,6 @@
 ---
 title: '[サーバーのプロパティ] ([履歴] ページ) | Microsoft Docs'
+description: SQL Server Management Studio の [Reporting Services 履歴] ページを使用して、保持されるレポート履歴のコピー数の既定値を設定する方法について説明します。
 ms.date: 06/10/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f4f3c13e6393dc935c09d54a274d2dbe357401f1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 47238e11a5c4d1b455914fca948dacc680286a14
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571360"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913908"
 ---
 # <a name="server-properties-history-page"></a>[サーバーのプロパティ]\([履歴] ページ)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] この [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] ページを使用すると、保持されるレポート履歴のコピー数の既定値を設定できます。 既定値には、すべてのレポートのレポート履歴の制限を規定する初期設定が用意されています。 これらの設定は、レポートごとに変えることができます。  
@@ -30,7 +31,7 @@ ms.locfileid: "65571360"
  3) レポート サーバー名を右クリックして、 **[プロパティ]** をクリックします。
  4) **[履歴]** をクリックすると、このページが開きます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[レポート履歴に無制限の数のスナップショットを保持する]**  
  すべてのレポート履歴スナップショットを保持します。 このレポート ヒストリのサイズを減らすには、スナップショットを手動で削除する必要があります。  
   

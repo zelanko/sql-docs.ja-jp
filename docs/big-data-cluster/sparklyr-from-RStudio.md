@@ -5,20 +5,20 @@ description: RStudio から sparklyr を使用してビッグ データ クラ�
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: 375993e4fd9506c129e4f98d9ad2193472e03edb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: e6767d32ae1f6c5f397141d1eddb15a5ec3f94a6
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531615"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970013"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>SQL Server のビッグ データ クラスターで sparklyr を使用する
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Sparklyr には、Apache Spark 用の R インターフェイスが用意されています。 Sparklyr は、Spark を使用する R 開発者にとって一般的な方法です。 この記事では、RStudio を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] で sparklyr を使用する方法について説明します。
 
@@ -49,7 +49,11 @@ sparklyr を使用し、Livy と HDFS/Spark ゲートウェイを使用してク
 RStudio で、次の例のように R スクリプトを作成し、Spark に接続します。
 
 > [!TIP]
-> `<AZDATA_USERNAME>` と `<AZDATA_PASSWORD>` の値については、ビッグ データ クラスターの展開中に設定したユーザー名 (root など) とパスワードを使用します。 `<IP>` と `<PORT>` の値については、[ビッグ データ クラスターへの接続](connect-to-big-data-cluster.md)に関するドキュメントを参照してください。
+> `<AZDATA_USERNAME>` と `<AZDATA_PASSWORD>` の値については、ビッグ データ クラスターの展開中に設定したユーザー名とパスワードを使用します。
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
+
+`<IP>` と `<PORT>` の値については、[ビッグ データ クラスターへの接続](connect-to-big-data-cluster.md)に関するドキュメントを参照してください。
 
 ```r
 library(sparklyr)
@@ -80,7 +84,7 @@ iris_count
 
 ## <a name="distributed-r-computations"></a>分散 R 計算
 
-sparklyr の機能の 1 つとして、[spark_apply](https://spark.rstudio.com/reference/spark_apply/) を使用して [R 計算を分散](https://spark.rstudio.com/guides/distributed-r/)する機能があります。
+sparklyr の機能の 1 つとして、[spark_apply](https://spark.rstudio.com/guides/distributed-r/#apply-an-r-function-to-a-spark-object) を使用して [R 計算を分散](https://spark.rstudio.com/guides/distributed-r/)する機能があります。
 
 ビッグ データ クラスターは Livy 接続が使用されるため、**spark_apply** の呼び出しで `packages = FALSE` を設定する必要があります。 詳細については、分散 R 計算に関する sparklyr のドキュメントの「[Livy](https://spark.rstudio.com/guides/distributed-r/#livy)」セクションを参照してください。 この設定では、**spark_apply** に渡された R コードで、Spark クラスターに既にインストールされている R パッケージのみを使用できます。 この機能について、次の例を示します。
 

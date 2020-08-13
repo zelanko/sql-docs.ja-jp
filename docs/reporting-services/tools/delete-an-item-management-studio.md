@@ -1,5 +1,6 @@
 ---
 title: アイテムの削除 (Management Studio) | Microsoft Docs
+description: SQL Management Studio でロールの定義と共有スケジュールを削除する方法について学習します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8eaed89901b98cecb90e0c3a4ecae24714c7c180
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 840a61a34389c1013d26f2ef87791b376bfd19cf
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574327"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918394"
 ---
 # <a name="delete-an-item-management-studio"></a>アイテムの削除 (Management Studio)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のレポート サーバー インスタンスに接続している場合は、ロールの定義や共有スケジュールを削除できます。 レポートやモデルなどのアイテムをレポート サーバーから削除することはできません。 レポート サーバーのコンテンツを削除するには、代わりにレポート マネージャーを使用します。 また、レポート サーバーが SharePoint 統合モード用に構成されている場合は、コンテンツが格納されている SharePoint ライブラリのアイテム管理機能を使用します。  

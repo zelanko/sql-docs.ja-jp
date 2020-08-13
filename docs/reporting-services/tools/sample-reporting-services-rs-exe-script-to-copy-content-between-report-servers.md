@@ -1,5 +1,6 @@
 ---
 title: レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト | Microsoft Docs
+description: RS.exe ユーティリティを使用して Reporting Services RSS スクリプトを実行することで、SQL Server Reporting Services レポート サーバー間でコンテンツ アイテムと設定をコピーする方法について学習します。
 ms.date: 05/23/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18d10f94696f901efd4f3938bf9b5e06d1c7078d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1f56cd8793d75776335769b22195abb27b1818dc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70176289"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916918"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト
 
@@ -56,7 +57,7 @@ ms.locfileid: "70176289"
 |ロールとシステム ポリシー|はい|はい|既定では、スクリプトはカスタム アクセス許可スキーマをサーバー間でコピーしません。 既定の動作では、[次の親アイテムからアクセス許可を継承する] フラグが TRUE に設定されている移行先サーバーにアイテムがコピーされます。 スクリプトで個々のアイテムの権限をコピーする場合は、SECURITY スイッチを使用します。<br /><br /> ソース サーバーとターゲット サーバーが**同じレポート サーバー モードでない**場合、たとえばネイティブ モードから SharePoint モードへの移行のとき、スクリプトは、「[Reporting Services のロールおよびタスクと SharePoint のグループおよびアクセス許可の比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)」の記事で説明している比較に基づいて、既定のロールとグループをマップしようとします。 カスタムのロールとグループは移行先サーバーにコピーされません。<br /><br /> スクリプトが **同じモードの**サーバー間でコピーする場合は、SECURITY スイッチを使用してください。スクリプトは移行先サーバーで新しいロール (ネイティブ モード) またはグループ (SharePoint モード) を作成します。<br /><br /> ロールが移行先サーバーに既に存在する場合、スクリプトは次のような "FAILURE" メッセージを表示し、他のアイテムの移行を続行します。 スクリプトの完了後、移行先サーバー上のロールがご自分のニーズを満たすように構成されていることを確認してください。 移行中のロール:8 個の項目が見つかりました。<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 詳細については、「[レポート サーバーへのユーザー アクセスを許可する](../../reporting-services/security/grant-user-access-to-a-report-server.md)」をご覧ください。<br /><br /> **注:** 移行元サーバー上に存在するユーザーが移行先サーバーに存在しない場合、スクリプトは移行先サーバーでロールの割り当てを適用することはできません。SECURITY スイッチを使用している場合でも同様です。|  
 |[共有データ ソース]|はい|はい|スクリプトはターゲット サーバー上の既存のアイテムを上書きしません。 同じ名前のアイテムがターゲット サーバーに既に存在する場合は、次のようなエラー メッセージが表示されます。<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> 資格情報は、データ ソースの一部としてコピー **されません** 。 コンテンツ アイテムの移行後、移行先サーバーで資格情報を更新します。|  
 |共有データセット|はい|はい|| 
-|Folder|はい|はい|スクリプトはターゲット サーバー上の既存のアイテムを上書きしません。 同じ名前のアイテムがターゲット サーバーに既に存在する場合は、次のようなエラー メッセージが表示されます。<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
+|フォルダー|はい|はい|スクリプトはターゲット サーバー上の既存のアイテムを上書きしません。 同じ名前のアイテムがターゲット サーバーに既に存在する場合は、次のようなエラー メッセージが表示されます。<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
 |レポート|はい|はい|スクリプトはターゲット サーバー上の既存のアイテムを上書きしません。 同じ名前のアイテムがターゲット サーバーに既に存在する場合は、次のようなエラー メッセージが表示されます。<br /><br /> `Migrating Report: /Reports/testThe item '/Reports/test' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports/test' already exists.`|  
 |パラメーター|はい|はい||  
 |サブスクリプション|はい|はい||  
@@ -310,11 +311,11 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
 ##  <a name="troubleshooting"></a><a name="bkmk_troubleshoot"></a> トラブルシューティング  
  より詳細な情報が表示されるようにするには、トレース フラグ **-t** を使用します。 たとえば、スクリプトを実行し、次のようなメッセージが表示されたとします。  
   
--   Could not connect to server: https://\<servername>/ReportServer/ReportService2010.asmx  
+-   次のサーバーに接続できませんでした: https://\<servername>servername>/ReportServer/ReportService2010.asmx  
   
  **-t** フラグを指定してスクリプトをもう一度実行すると、次のようなメッセージが表示されます。  
   
--   System.Exception:Could not connect to server: https://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException:**The request failed with HTTP status 401:Unauthorized**.   System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage メッセージ、WebResponse 応答、Stream responseStream, Boolean asyncCall) System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (文字列であります。methodName、オブジェクトのパラメーター) (文字列 url 文字列のユーザー名、文字列パスワード Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService で Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() で、文字列ドメイン、Int32 タイムアウト) で Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---内部例外スタック トレースの終わり--  
+-   System.Exception:次のサーバーに接続できませんでした: https://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **The request failed with HTTP status 401:Unauthorized**.   System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage メッセージ、WebResponse 応答、Stream responseStream, Boolean asyncCall) System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (文字列であります。methodName、オブジェクトのパラメーター) (文字列 url 文字列のユーザー名、文字列パスワード Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService で Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() で、文字列ドメイン、Int32 タイムアウト) で Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---内部例外スタック トレースの終わり--  
   
 ## <a name="see-also"></a>関連項目  
  [RS.exe ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   

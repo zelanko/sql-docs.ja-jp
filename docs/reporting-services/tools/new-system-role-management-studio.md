@@ -1,5 +1,6 @@
 ---
 title: 新しいシステム ロール (Management Studio) |Microsoft ドキュメント
+description: Management Studio の [新しいシステム ロール] ページについて説明します。そこでは、レポート サーバー全体に適用される一連のタスクを指定するシステムレベルのロールの定義を作成します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4bb010a6f3b9c21661cfa840e6975cec51f90c84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 22c3442e16503fd58f8fcb099018b88ab6bfbf92
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582191"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915540"
 ---
 # <a name="new-system-role-management-studio"></a>[新しいシステム ロール]\(Management Studio)
   このページを使用すると、システムレベルのロールの定義を作成できます。 システム ロールの定義には、レポート サーバー全体に適用する、システムレベルのタスクのセットを指定します。  
@@ -24,7 +25,7 @@ ms.locfileid: "65582191"
 >  ロールの定義は、ネイティブ モードで実行されているレポート サーバーでのみ使用されます。 レポート サーバーが SharePoint 統合モード用に構成されている場合、このページは使用できません。  
   
 ## <a name="options"></a>オプション  
- **Name**  
+ **名前**  
  ロールの定義名を入力します。 ロールの定義名は、レポート サーバーの名前空間内で一意である必要があります。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよびいくつかの記号を含めることもできます。 名前を指定するときに使用できない記号は次のとおりです。  
   
  ; ? : \@ & = + , $ / * < >  

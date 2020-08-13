@@ -1,7 +1,7 @@
 ---
 title: PowerShell:認証を管理する
+description: データベース エンジンのインスタンスに接続するときに、Windows 認証 (既定) ではなく SQL Server 認証を使用する方法について学習します。
 titleSuffix: SQL Server on Linux
-description: PowerShell を使用して SQL Server への Windows および SQL 認証を管理する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 22c48323aa7570440a3edb06400d9a96e9bd9924
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 13ec62ac5adfd818de429f087f9b5d8dc83bb8a2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75557967"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919109"
 ---
 # <a name="powershell-manage-authentication-to-sql-server"></a>PowerShell: SQL Server への認証を管理する
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell コンポーネントは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンスへの接続に Windows 認証を使用します。 SQL Server 認証を使用するには、PowerShell 仮想ドライブを定義するか、**Invoke-Sqlcmd** の **-Username** および **-Password** パラメーターを指定します。  
   

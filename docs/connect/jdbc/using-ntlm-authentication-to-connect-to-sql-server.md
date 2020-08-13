@@ -1,5 +1,6 @@
 ---
-title: NTLM 認証を使用して SQL Server に接続する | Microsoft Docs
+title: NTLM 認証を使用して SQL Server に接続する
+description: JDBC ドライバーで NTLM 認証を使用して SQL データベースの接続を確立する方法について説明します。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93b4956b70e6e81e215da4fcde61a3a3287b50ec
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69026102"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393150"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>NTLM 認証を使用して SQL Server に接続する
 
@@ -72,7 +73,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 サービス プリンシパル名 (SPN) は、クライアントがサービスのインスタンスを一意に識別するための名前です。
 
-**serverSpn** 接続プロパティを使用して SPN を指定できますが、ドライバーで自動的に作成することもできます (既定)。 このプロパティの形式は、"MSSQLSvc/fqdn:port\@REALM" です。fqdn は完全修飾ドメイン名、port はポート番号、REALM は SQL Server の領域を大文字で示します。 既定の領域がサーバーの領域と同じであるため、このプロパティの領域部分は省略可能です。
+**serverSpn** 接続プロパティを使用して SPN を指定できますが、ドライバーで自動的に作成することもできます (既定)。 このプロパティの形式は "MSSQLSvc/fqdn:port\@REALM" です。ここで、fqdn は完全修飾ドメイン名、port はポート番号、REALM は大文字で表記された SQL Server の領域です。 既定の領域がサーバーの領域と同じであるため、このプロパティの領域部分は省略可能です。
 
 たとえば、SPN は次のようになります。"MSSQLSvc/some-server.zzz.corp.contoso.com:1433"
 

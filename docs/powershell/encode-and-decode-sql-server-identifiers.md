@@ -1,5 +1,6 @@
 ---
 title: SQL Server 識別子のエンコードとデコード | Microsoft Docs
+description: SQL Server の区切られた識別子に使用できる文字には、Windows PowerShell パスでサポートされないものがあります。 16 進数値で表すことで、それらを含める方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 21e642feba6a2726aa4d5615f6ae508fa33c1694
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 54ecf5fc3205ce3648f4783f846dd5954df684e9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67934650"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919143"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>SQL Server 識別子のエンコードとデコード
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SQL Server の区切られた識別子には、Windows PowerShell パスでサポートされない文字が含まれる場合があります。 これらの文字は、16 進数値にエンコードすることによって指定できます。  
 

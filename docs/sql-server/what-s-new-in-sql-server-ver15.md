@@ -9,16 +9,16 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb85d1867461ba25bb4fc572634fba443dd14282
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 299182ad45f8c96f4b2f07d38f1b3f366eea7b33
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665362"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923411"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] は以前のリリースに基づいて構築され、開発言語、データ型、オンプレミスまたはクラウド環境、オペレーティング システムを選択できるプラットフォームとしての SQL Server がいっそう成長しています。
 
@@ -39,7 +39,7 @@ ms.locfileid: "80665362"
 
 ## <a name="data-virtualization-and-big-data-clusters-2019"></a>データの仮想化と [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
-現代の企業はしばしば、データという財産を大量に管理しています。その財産はさまざまなデータ セットからなりますが、サイロ化されたデータ ソースでホストされるデータ セットは会社全体で増加の一途をたどります。 SQL Server 2019 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] を利用すると、機械学習機能や AI 機能など、大量のデータ セットを処理できる環境を実現し、あらゆるデータから分析情報をほぼリアルタイムで取得できます。
+現代の企業はしばしば、データという財産を大量に管理しています。その財産はさまざまなデータ セットからなりますが、サイロ化されたデータ ソースでホストされるデータ セットは会社全体で増加の一途をたどります。 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] では、機械学習機能や AI 機能など、大量のデータ セットを処理する完全な環境が与えられ、あらゆるデータから分析情報をほぼリアルタイムに取得できます。
 
 | 新機能または更新 | 詳細 |
 |:---|:---|
@@ -222,7 +222,7 @@ ms.locfileid: "80665362"
 
 |新機能または更新 | 詳細 |
 |:---|:---| 
-|新しいメモリ セットアップ オプション | インストール中に "*最小サーバー メモリ (MB)* " および "*最大サーバー メモリ (MB)* " のサーバー構成を設定します。 「[[データベース エンジンの構成] - [メモリ] ページ](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)」および「[コマンド プロンプトからの SQL Server のインストール](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)」の `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY`、`SQLMAXMEMORY` パラメーターを参照してください。 提案される値は、「[サーバー メモリ構成オプション](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)」のメモリ構成ガイドラインに沿っています。| 
+|新しいメモリ セットアップ オプション | インストール中に "*最小サーバー メモリ (MB)* " および "*最大サーバー メモリ (MB)* " のサーバー構成を設定します。 「[[データベース エンジンの構成] - [メモリ] ページ](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)」および「[コマンド プロンプトからの SQL Server のインストール](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)」の `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY`、`SQLMAXMEMORY` パラメーターを参照してください。 提案される値は、「[サーバー メモリ構成オプション](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually)」のメモリ構成ガイドラインに沿っています。| 
 |新しい並列処理セットアップ オプション | インストールの間に "*並列処理の最大限度*" サーバー構成オプションを設定します。 「[[データベース エンジンの構成] - [MAXDOP] ページ](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)」および「[コマンド プロンプトからの SQL Server のインストール](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)」の `SQLMAXDOP` パラメーターを参照してください。 既定値は、「[max degree of parallelism サーバー構成オプションの構成](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)」の並列処理の最大限度ガイドラインに沿っています。| 
 |サーバーおよび CAL ライセンス プロダクト キーに関するセットアップ警告|Enterprise Server または Enterprise CAL ライセンス プロダクト キーが入力されていて、マシンに 20 個を超える物理コアがある場合、またはハイパースレッディングが有効になっている場合に 40 個の論理コアがある場合は、セットアップ中に警告が表示されます。 ユーザーは、引き続き制限を確認してセットアップを続行するか、オペレーティング システムの最大プロセッサ数をサポートするライセンス キーを入力することができます。|
 | &nbsp; | &nbsp; |

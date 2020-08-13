@@ -1,27 +1,32 @@
 ---
 title: R 言語拡張機能
-description: SQL Server R Services または SQL Server Machine Learning Services での R コードの実行と組み込み R ライブラリについて学習します。
+description: SQL Server Machine Learning Services と SQL Server R Services で外部 R スクリプトを実行するための R 拡張機能について説明します。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c85839d89fbdb2d69752ac989abb40637f9d13ca
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: e51e4121a7e941512a84e3acf577af0ff687f4d7
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487564"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406275"
 ---
-# <a name="r-language-extension-in-sql-server"></a>SQL Server の R 言語拡張機能
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="r-language-extension-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の R 言語拡張機能
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-R 拡張機能は、リレーショナル データベース エンジンに対する SQL Server Machine Learning Services アドオンの一部です。 これにより、R 実行環境、標準ライブラリとツールを使用した基本の R ディストリビューション、Microsoft R ライブラリ (大規模な分析用の [RevoScaleR](../r/ref-r-revoscaler.md)、機械学習アルゴリズム用の [MicrosoftML](../r/ref-r-microsoftml.md)、SQL Server のデータまたは R コードにアクセスするためのその他のライブラリ) が追加されます。
+この記事では、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) と [SQL Server 2016 R Services](../r/sql-server-r-services.md) で外部 Python スクリプトを実行するための R 拡張機能について説明します。 拡張機能により、次のものが追加されます。
 
-R 統合は、[SQL Server R Services](../r/sql-server-r-services.md) と [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) で使用できます。
+- R 実行環境
+- 標準ライブラリとツールを使用した基本の R ディストリビューション
+- Microsoft R ライブラリ:
+  - 大規模な分析のための [RevoScaleR](../r/ref-r-revoscaler.md)
+  - 機械学習アルゴリズム用の [MicrosoftML](../r/ref-r-microsoftml.md)
+  - SQL Server のデータまたは R コードにアクセスするためのその他のライブラリ
 
 ## <a name="r-components"></a>R コンポーネント
 

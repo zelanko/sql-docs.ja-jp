@@ -1,5 +1,6 @@
 ---
 title: SQL Server Management Studio から Windows PowerShell を実行する方法 | Microsoft Docs
+description: パスが、選択したオブジェクトの場所にあらかじめ設定されている場合に、SQL Server Management Studio のオブジェクト エクスプローラーから Windows PowerShell セッションを開始する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 1f841825-da1f-4062-9a81-3cdbab03845b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 239a031c64a8f195a5731d9ff9930b9b0d345034
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6551696a47eae7cbc64423b4be98d6520c553392
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68049094"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915775"
 ---
 # <a name="run-windows-powershell-from-sql-server-management-studio"></a>SQL Server Management Studio から Windows PowerShell を実行する方法
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Windows PowerShell セッションは、 **の** オブジェクト エクスプローラー [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]から起動できます。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] によって Windows PowerShell が起動され、**SqlServer** モジュールが読み込まれて、パス コンテキストが、**オブジェクト エクスプローラー** ツリー内の関連ノードに設定されます。  
   

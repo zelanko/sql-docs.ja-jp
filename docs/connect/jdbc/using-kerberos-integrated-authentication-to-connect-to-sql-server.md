@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4494931e0ee189e785ed057471e5560f4737ecc0
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 8eaa889f12adb2470040cab4c0fba5df295a1cb2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922309"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916238"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Kerberos 統合認証による SQL Server への接続
 
@@ -37,13 +37,13 @@ Java **Krb5LoginModule** で統合認証を使用する場合、[Krb5LoginModule
 
 ## <a name="remarks"></a>解説
 
-[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] より前、アプリケーションでは、「[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)」に示されているように、**integratedSecurity** 接続プロパティを使用し、**mssql-jdbc_auth-\<バージョン>-\<arch>.dll** を参照することによって、(どちらが使用できるかにより、Kerberos または NTLM を使用する) 統合認証を指定できました。
+[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] より前、アプリケーションでは、「[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)」に示されているように、**integratedSecurity** 接続プロパティを使用し、**mssql-jdbc_auth-\<version>-\<arch>.dll** を参照することによって、(使用可能性に基づいて Kerberos または NTLM を使用する) 統合認証を指定できました。
 
 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 以降、アプリケーションは、**authenticationScheme** 接続プロパティを使用して、ピュア Java Kerberos 実装を使用した Kerberos 統合認証を使用してデータベースに接続することを示すことができます。
 
 - **Krb5LoginModule** による統合認証を使用するには、依然として **integratedSecurity=true** 接続プロパティを指定する必要があります。 その後、**authenticationScheme=JavaKerberos** 接続プロパティも指定します。
 
-- **mssql-jdbc_auth-\<バージョン>-\<arch>.dll** による統合認証を引き続き使用するには、**integratedSecurity=true** 接続プロパティ (また、必要に応じて **authenticationScheme=NativeAuthentication**) を指定します。
+- **mssql-jdbc_auth-\<version>-\<arch>.dll** による統合認証を引き続き使用するには、単に **integratedSecurity=true** 接続プロパティ (また、必要に応じて **authenticationScheme=NativeAuthentication**) を指定します。
 
 - **authenticationScheme=JavaKerberos** を指定するが **integratedSecurity=true** を指定しない場合は、ドライバーによって **authenticationScheme** 接続プロパティが無視され、ユーザー名とパスワードの資格情報が接続文字列に含まれていると見なされます。
 
@@ -71,7 +71,7 @@ Kerberos を構成する場合は、次のガイドラインに従ってくだ�
 
 サービス プリンシパル名 (SPN) の詳細については、以下を参照してください。
 
-- [SQL Server で Kerberos 認証を使用する方法](https://support.microsoft.com/kb/319723)
+- [Kerberos 接続用のサービス プリンシパル名の登録](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)
 
 - [SQL Server での Kerberos の使用](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 

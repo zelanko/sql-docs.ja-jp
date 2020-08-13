@@ -1,5 +1,6 @@
 ---
 title: サーバーのプロパティ ([実行] ページ) | Microsoft Docs
+description: サーバーのプロパティの [実行] ページ内のオプションを使用して、レポートの実行におけるタイムアウト値を設定する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,19 +11,19 @@ f1_keywords:
 ms.assetid: 53b77db1-b013-4dac-82dd-30c0de276639
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8259591c54068cde134c98ae405dd77fac6fab4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6a7023a7cdea8281594f1a934d7eeed03847b794
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571366"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912408"
 ---
 # <a name="server-properties-execution-page"></a>[サーバーのプロパティ] [実行] ページ)
   このページを使用すると、レポート実行のタイムアウト値を設定できます。 この値は、現在のレポート サーバー インスタンスによって処理されるすべてのレポートに適用されます。 この設定は、レポートごとにオーバーライドすることができます。 レポート サーバーで行われるすべてのレポート処理の時間に加え、レポート内で使用されるデータをレポート サーバーが取得するときにデータベース サーバーで実行されるクエリ処理に対応する時間も指定する必要があります。  
   
  このページを開くには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を起動してレポート サーバー インスタンスに接続し、レポート サーバー名を右クリックして **[プロパティ]** をクリックします。 **[実行]** をクリックするとこのページが開きます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[レポートの実行をタイムアウトしない]**  
  レポート サーバーでレポート処理が完了するまでの時間を制限しないようにします。  
   

@@ -1,5 +1,6 @@
 ---
 title: SQL Server PowerShell パスの操作 | Microsoft Docs
+description: コマンドレット、またはプロバイダー パスで識別されるオブジェクトのメソッドとプロパティのいずれかを使用して、情報を操作および取得する方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 17c898e02f63a9d491c514967137e1f357b2db74
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f075dcbbe4123c8395844a18a5aaee1bd53c0482
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68121351"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922308"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>SQL Server PowerShell パスの操作
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssDE](../includes/ssde-md.md)] プロバイダーのパスでノードに移動した後、ノードに関連付けられている [!INCLUDE[ssDE](../includes/ssde-md.md)] 管理オブジェクトのメソッドとプロパティを使用して、作業を実行したり、情報を取得したりできます。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "68121351"
   
  特定のオブジェクトまたはオブジェクト クラスで使用できるメソッドとプロパティを表示するには、 **Get-Member** コマンドレットを使用します。  
   
-### <a name="examples-listing-methods-and-properties"></a>例: メソッドとプロパティの一覧表示  
+### <a name="examples-listing-methods-and-properties"></a>例 :メソッドとプロパティの一覧表示  
  次の例では、Windows PowerShell 変数に SMO <xref:Microsoft.SqlServer.Management.Smo.Database> クラスを設定し、メソッドとプロパティを一覧表示します。  
   
 ```  
@@ -70,7 +71,7 @@ Get-Item . | Get-Member -Type Properties
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] プロバイダー パスからオブジェクトの操作を実行するには、SMO メソッドとプロパティを使用します。  
   
-### <a name="examples-using-methods-and-properties"></a>例: メソッドとプロパティの使用  
+### <a name="examples-using-methods-and-properties"></a>例 :メソッドとプロパティの使用  
  次の例では、SMO の **Schema** プロパティを使用して、AdventureWorks2012 の Sales スキーマからテーブルの一覧を取得します。  
   
 ```  

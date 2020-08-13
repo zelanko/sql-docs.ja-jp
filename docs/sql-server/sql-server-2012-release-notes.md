@@ -2,9 +2,9 @@
 title: SQL Server 2012 リリース ノート | Microsoft Docs
 description: このリリース ノートでは、Microsoft SQL Server 2012 のインストールやトラブルシューティングを行う前に知っておく必要がある、既知の問題について説明しています。
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.custom: ''
-ms.date: 02/01/2017
+ms.date: 07/22/2020
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d60d53f11096343e96c0c309ba3aeb7bed419856
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f07d5ea10fbb762b46dcf47fb15e9acdfe8404a9
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999402"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111146"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 リリース ノートします。
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
-このリリース ノートでは、SQL Server 2012 について、インストールやトラブルシューティングを行う前に知っておく必要がある、既知の問題について説明しています ([SQL Server 2012 をダウンロードするにはここをクリックしてください](https://go.microsoft.com/fwlink/?LinkId=238647))。 このリリース ノートは、オンラインのみで入手でき、インストール メディアには含まれていません。また、定期的に更新されます。  
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+このリリース ノートでは、[Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=238647) のインストールやトラブルシューティングを行う前に知っておく必要がある、既知の問題について説明しています。 このリリース ノートは、オンラインのみで入手でき、インストール メディアには含まれていません。また、定期的に更新されます。  
   
 SQL Server 2012 の開始方法およびインストール方法の詳細については、SQL Server 2012 の Readme をご覧ください。 Readme ドキュメントは、インストール メディアまたは [Readme](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) ダウンロード ページから入手できます。 「 [SQL Server オンライン ブック](https://go.microsoft.com/fwlink/?LinkId=190948) 」または [SQL Server フォーラム](https://go.microsoft.com/fwlink/?LinkId=213599)でも詳細な情報を参照することができます。  
   
@@ -62,13 +62,17 @@ SQL Server 2012 の開始方法およびインストール方法の詳細につ�
 ### <a name="13-sql-server-setup-might-fail-while-trying-to-start-the-sql-server-browser-service"></a>1.3 SQL Server Browser サービスを開始しようとすると、SQL Server セットアップが失敗する場合がある  
 **問題:** SQL Server Browser サービスを開始しようとすると、次のようなエラーが表示され、SQL Server のセットアップが失敗する場合があります。  
   
-<pre>The following error has occurred:  
-Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
+```
+The following error has occurred:  
+Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.
+```
   
 or  
   
-<pre>The following error has occurred:  
-SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
+```
+The following error has occurred:  
+SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.
+```
   
 **対処法:** このエラーは、SQL Server エンジンまたは Analysis Services のインストールに失敗したとき発生する場合があります。 この問題を解決するには、SQL Server セットアップ ログを参照して、SQL Server エンジンと Analysis Services のエラーをトラブルシューティングします。 詳細については、「SQL Server セットアップ ログ ファイルの表示と読み取り」をご覧ください。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
   
@@ -105,8 +109,10 @@ SQL Server を Windows Server 2008 R2 Server Core SP1 にインストールす�
   
 上記のタスクが完了していない場合に、セマンティック インデックスを作成しようとすると、次のようなメッセージが表示されます。  
   
-<pre>Msg 41209, Level 16, State 3, Line 1  
-A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated.</pre>  
+```
+Msg 41209, Level 16, State 3, Line 1  
+A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated.
+```
   
 ### <a name="17-installation-prerequisite-handling-during-sql-server-2012-setup"></a>1.7 SQL Server 2012 のセットアップ時のインストール前提条件の扱い  
 ここでは、SQL Server 2012 セットアップ時のインストール前提条件の扱いについて説明します。  
@@ -343,7 +349,7 @@ Analysis Services (AS) 用の SQL Server Integration Services (SSIS) コンポ�
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 大きなフォント サイズで、コントロールのサイズが正しく調整されない  
 **問題:** (Windows Server 2008 または Windows 7 で) テキストのサイズを [大 - 150%] に変更した場合、または (Windows 7 で) [カスタム DPI] の設定を [200%] に変更した場合は、 **[新しいナレッジ ベース]** ページの **[キャンセル]** ボタンおよび **[作成]** ボタンにアクセスできません。  
   
-**回避策:** この問題を解決するには、フォントを小さいサイズに設定します。  
+**対処法:** この問題を解決するには、フォントを小さいサイズに設定します。  
   
 ### <a name="46-screen-resolution-of-800x600-is-not-supported"></a>4.6 画面の解像度 800x600 はサポートされていない  
 **問題:** 画面の解像度が 800x600 に設定されていると、Data Quality Client アプリケーションが正しく表示されません。  
@@ -378,9 +384,9 @@ Data Quality Client のマップ ステージ中にいずれかの DQS アクテ
 ### <a name="414-issue-with-date-or-datetime-values-in-unmapped-source-fields-in-excel-during-cleansing-and-matching"></a>4.14 クレンジングおよび照合中の Excel のマップされていないソース フィールドの Date または DateTime 値の問題  
 **問題点**: ソース データが Excel で、**Date** または **DateTime** データ型の値が含まれるソース フィールドをマップしていない場合は、クレンジングおよび照合アクティビティ中に次が発生します。  
   
--   マップされていない **Date** 値が yyyymmdd の形式で表示およびエクスポートされる。  
+-   マップされていない **Date** 値が yyyy-mm-dd の形式で表示およびエクスポートされる。  
   
--   マップされていない **DateTime** 値の時間値が失われ、yyyymmdd の形式で表示およびエクスポートされる。  
+-   マップされていない **DateTime** 値の時間値が失われ、yyyy-mm-dd の形式で表示およびエクスポートされる。  
   
 **対処法:** マップされていないフィールド値は、クレンジング アクティビティでは **[結果の管理と表示]** ページの右下のペイン、照合アクティビティでは **[照合]** ページで確認できます。  
   
@@ -464,12 +470,12 @@ Data Quality Client のマップ ステージ中にいずれかの DQS アクテ
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4 スクリプト生成ウィザードでの移動時にエラーが発生することがある  
 **問題:** **[スクリプトの保存またはパブリッシュ]** をクリックしてスクリプトの生成ウィザードでスクリプトを生成してから、 **[オプションの選択]** または **[スクリプト作成オプションの設定]** をクリックして移動するか、 **[スクリプトの保存またはパブリッシュ]** を再度クリックすると、次のエラーが発生することがあります。  
   
-<pre>
+```
 An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
 ADDITIONAL INFORMATION:  
 Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
-</pre>  
+```
   
 **対処法:** スクリプトの生成ウィザードを閉じて再度開きます。  
   
@@ -636,4 +642,3 @@ SQL Server 2012 には StreamInsight 2.0 が含まれています。 StreamInsig
 **回避策**:オペレーティング システム アーキテクチャに応じて、SQL Server 2012 メディアの `\1028_CHT_LP\x64\redist\Upgrade Advisor` または `\1028_CHT_LP\x86\redist\Upgrade Advisor` にある **SQLUA.msi** ファイルを検索してください。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
-  

@@ -1,5 +1,6 @@
 ---
 title: ブレークポイントの位置の編集
+description: Transact-SQL スクリプト ファイル内のブレークポイントをスクリプト内の別の場所または別のスクリプトに移動する方法について説明します。
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,16 +15,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82709b15e729eb972c28b22c0113682464232809
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ada37fc6ca1b90e65b2cc4531b13c090db05736
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253970"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122953"
 ---
 # <a name="edit-a-breakpoint-location"></a>ブレークポイントの位置の編集
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ブレークポイントの位置では、ブレークポイントを設定する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイル内の行や文字を指定します。 ブレークポイントの位置を編集して、ブレークポイントを別の位置や別のスクリプトに移動できます。
 

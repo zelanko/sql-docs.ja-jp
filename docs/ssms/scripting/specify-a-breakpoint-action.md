@@ -1,5 +1,6 @@
 ---
 title: ブレークポイント アクションの指定
+description: ブレークポイントにヒットし、特定の他の条件が満たされたときに Transact-SQL デバッガーが実行するカスタム タスクであるヒット アクションを指定する方法について説明します。
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -14,16 +15,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4bffc7742a9833d8715c9479e051cdd732d7596
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbe5cd84c13c84f8902ac82bd8ef3ef54dc82bda
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253650"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122730"
 ---
 # <a name="specify-a-breakpoint-action"></a>ブレークポイント アクションの指定
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ブレークポイント **ヒット時** アクションは、ブレークポイントに対して [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーが実行するカスタム タスクを指定します。 指定したヒット カウントに達し、指定したブレークポイントの条件が満たされると、ブレークポイントに指定されたアクションがデバッガーによって実行されます。
 

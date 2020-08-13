@@ -1,5 +1,6 @@
 ---
 title: '[新しい共有スケジュール] (Management Studio) | Microsoft Docs'
+description: SQL Server Management Studio の [新しいスケジュール] ページのオプションを使用して、パブリッシュされたレポートおよびサブスクリプションを実行するための新しい共有スケジュールを作成する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 61be4b4668b6736d30e28adb30fd16f289fb7c56
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00ad35697044427b47a07cd9a3b44105ab1d5c8a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582198"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915558"
 ---
 # <a name="new-shared-schedule-management-studio"></a>[新しい共有スケジュール] (Management Studio)
   このページを使用すると、パブリッシュされたレポートおよびサブスクリプションを実行するための共有スケジュールを作成できます。 共有スケジュールは、レポート固有のスケジュールやサブスクリプション固有のスケジュールの代わりに使用できます。 集中管理されるスケジュール情報と、スケジュールされた操作を一時停止して再開する機能は、アイテム固有のスケジュールと共有スケジュールを区別する 2 つの重要な機能です。  
@@ -30,7 +31,7 @@ ms.locfileid: "65582198"
 >  この機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」(https://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
   
 ## <a name="options"></a>オプション  
- **Name**  
+ **名前**  
  共有スケジュールの名前を入力します。 この名前は、ユーザーがレポートおよびサブスクリプションの共有スケジュールを選択するときにドロップダウン リストに表示されます。 リスト内に納まり、共有スケジュールと別のスケジュールとを簡単に区別できるわかりやすい名前を付けてください。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよびいくつかの記号を含めることもできます。 名前を指定するときに使用できない記号は次のとおりです。  
   
  ; ? : \@ & = + , $ / * < >  

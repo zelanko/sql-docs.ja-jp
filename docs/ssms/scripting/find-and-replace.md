@@ -1,5 +1,6 @@
 ---
 title: '[検索と置換]'
+description: '[検索と置換] ダイアログ ボックスを使用して、テキストの検索と置換を行う方法について説明します。'
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6598fafd54ba3b5e517e39869c45b3fd7ad7f47b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c3eef56e8db1a92d021d074de9a1c821f8d3fbc9
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261877"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122944"
 ---
 # <a name="find-and-replace"></a>[検索と置換]
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   **[検索と置換]** ダイアログ ボックスを使用すると、ファイル内のテキストを検索し、必要に応じて置換できます。 **[検索と置換]** ダイアログ ボックスを開く方法に応じて、表示されるオプションが多少異なることがあります。 **[編集]** メニューで **[検索と置換]** をポイントし、 **[クイック検索]** をクリックすると、検索オプションがあって置換オプションがないダイアログ ボックスが開きます。 **[編集]** メニューで **[検索と置換]** をポイントし、 **[クイック置換]** をクリックすると、検索オプションと置換オプションの両方が表示されるダイアログ ボックスが開きます。  
   
  ツール バー ボタンやショートカット キーを使用して **[検索と置換]** ダイアログ ボックスを開くこともできます。  

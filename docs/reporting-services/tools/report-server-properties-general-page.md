@@ -1,5 +1,6 @@
 ---
 title: '[サーバーのプロパティ] ([全般] ページ) | Microsoft Docs'
+description: '[レポート サーバーのプロパティ] ページのオプションについて学習します。'
 ms.date: 06/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71c0d3d28de1a9c63770b37f2bb6013768aaee78
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 718121027064cc44e540ea710097da9added0c0b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576164"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916612"
 ---
 # <a name="report-server-properties-general-page"></a>[レポート サーバーのプロパティ] ([全般] ページ)
   このページを使用すると、レポート マネージャーで使用されるタイトルの表示と変更、個人用レポートの有効化と無効化、個人用レポートのセキュリティに関するロール定義の選択、およびクライアントの印刷コントロールの有効化または無効化ができます。  
@@ -28,10 +29,10 @@ ms.locfileid: "65576164"
  サーバー モードによって、設定できるサーバー プロパティが決まります。 SharePoint 統合モード用に構成されたレポート サーバーを管理している場合は、個人用レポートを有効にしたり、Web ポータルのタイトルを設定したりすることができません。  
   
 ## <a name="options"></a>オプション  
- **Name**  
+ **名前**  
  Web ポータルの上部に表示される名前を入力します。 この値の既定値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] です。 指定した名前は、レポート マネージャーでのみ表示されます。  
   
- **バージョン**  
+ **Version**  
  このプロパティは読み取り専用です。 使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のバージョンを示します。  
   
  **のエディション**  
@@ -40,7 +41,7 @@ ms.locfileid: "65576164"
  **認証モード**  
  このプロパティは読み取り専用です。 レポート サーバー インスタンスで受け入れられる認証要求の種類を示します。 認証モードを変更するには、 **RSReportServer.config** ファイルを編集する必要があります。 詳細については、「 [レポート サーバーでの認証](../../reporting-services/security/authentication-with-the-report-server.md)」を参照してください。  
   
- **[URL]**  
+ **URL**  
  このプロパティは読み取り専用です。 レポート サーバー Web サービスへの URL を示します。 この値は [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで指定されます。 詳細については、「[URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)」をご覧ください。  
   
  **[ユーザーごとに個人用レポート フォルダーを有効にする]**  

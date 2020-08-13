@@ -1,5 +1,6 @@
 ---
 title: レポートで Office Data Connection (.odc) を使用する | Microsoft Docs
+description: 既存の Office データ接続 (.odc) ファイルを使用して Reporting Services レポートに接続情報を提供する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a33b5bae668835ca1dbf52b2e7852c3af731ddfe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b8fd87736e84336cc206235dd78aa76576bfdf1
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574946"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458505"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>レポートで Office Data Connection (.odc) を使用する
   限られたシナリオでは、既存の Office データ接続 (.odc) ファイルを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートに接続情報を提供できます。 共有データ ソースの作成時には、.rsds ファイルの代わりに .odc ファイルを使用できます。 レポート サーバーでは、.rsds ファイルの場合と同様に .odc ファイルを使用して、データ ソースの種類、接続文字列、および資格情報をファイルから読み取ります。  

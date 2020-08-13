@@ -1,5 +1,6 @@
 ---
 title: '[プロパティ ページ] ダイアログ ボックス | Microsoft Docs'
+description: レポート サーバー プロジェクトの配置プロパティを構成するための [プロジェクト プロパティ ページ] ダイアログ ボックス内のオプションについて説明します。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a3be836ba4df9bcb4ef6f8b6ca24caa5c7a67bf
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578236"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86910002"
 ---
 # <a name="project-property-pages-dialog-box"></a>[プロパティ ページ] ダイアログ ボックス
 
-  プロジェクトのプロパティ ページを使用すると、レポート サーバー プロジェクトの配置プロパティを構成できます。 このダイアログ ボックスを開くには、 **[プロジェクト]** メニューの _[\<レポート プロジェクト名>_ **のプロパティ]** をクリックします。  
+  プロジェクトのプロパティ ページを使用すると、レポート サーバー プロジェクトの配置プロパティを構成できます。 このダイアログ ボックスを開くには、 **[プロジェクト]** メニューの _\<Report Project Name>_ **のプロパティ**をクリックします。  
   
  構成プロパティを定義した後は、ツール バーの **[ソリューション構成]** ボックスの一覧から構成を選択できるようになります。  
 
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
-## <a name="options"></a>オプション  
- **構成**  
- 編集する構成を選択します。 初期状態で使用できる構成は、 **[Debug]** 、 **[DebugLocal]** 、および **[Release]** です。 アクティブな構成が、 **Active(Debug)** のように最初に表示されます。  
+## <a name="options"></a>Options  
+ **Configuration**  
+ 編集する構成を選択します。 初期状態で使用できる構成は、 **[Debug]** 、 **[DebugLocal]** 、 **[Release]** です。 アクティブな構成が、 **Active(Debug)** のように最初に表示されます。  
   
  複数の構成のプロパティを同時に表示するには、 **[すべての構成]** または **[複数の構成]** を選択します。  
   
@@ -78,7 +79,7 @@ ms.locfileid: "65578236"
  SharePoint 統合モードで動作しているレポート サーバーにパブリッシュする場合は、SharePoint トップレベル サイトまたはサブサイトの URL を使用します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます。 次に例を示します。 
 + `http:\\<servername>`, 
 + `http:\\<servername\<site>` 
-+ [https://login.microsoftonline.com/consumers/](`http:\\<servername>\<site>\<subsite>`)  
++ `http:\\<servername>\<site>\<subsite>`.  
 
 ## <a name="next-steps"></a>次のステップ
 

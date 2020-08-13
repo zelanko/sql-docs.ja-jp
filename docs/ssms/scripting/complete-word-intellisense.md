@@ -1,5 +1,6 @@
 ---
 title: 入力候補 (IntelliSense)
+description: Microsoft IntelliSense の入力候補機能では、ユーザーが入力している内容を一意に識別するために十分なだけ入力すると、それを完成させたり、または選択できる候補の一覧を表示させたりすることができます。 この機能を呼び出す 4 つの方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b516e75ce312dbc2970ccb31975d892f7ab98cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3fb33d179463383e41f73ddba30525ce908e2cb5
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253989"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122883"
 ---
 # <a name="complete-word-intellisense"></a>入力候補 (IntelliSense)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense の [入力候補] オプションを使用すると、一意に識別できる部分まで変数名、コマンド名、関数名を入力した時点で、残りの部分が自動的に入力されます。  
   
  この入力候補の機能は、次の 4 つの方法で呼び出すことができます。  

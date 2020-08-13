@@ -1,5 +1,6 @@
 ---
 title: ドキュメントの対話形式の検索
+description: '[検索と置換] ダイアログ ボックスを使用して 1 つ以上の開いているファイルまたはウィンドウを検索し、一致ごとに一時停止して、検出された内容をそのコンテキストで確認する方法について説明します。 また、一括検索操作を実行して、検索一致をレポート形式で確認することもできます。'
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bcdb8d269deb90d7c88c0f88a98e55289c89635
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c6bfdd07a0af13e5b0e8923a7549b3401db485b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253660"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122834"
 ---
 # <a name="search-documents-interactively"></a>ドキュメントの対話形式の検索
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   **[検索と置換]** ダイアログ ボックスを使用して、1 つ以上の開いているファイルやウィンドウで検索し、検索結果の文字列に 1 つずつ移動して確認することができます。 この方法では、検索結果の各文字列をその前後のテキストのコンテキストで個別に確認できます。 さらに、 **[検索と置換]** ダイアログ ボックスには、一括検索操作を実行し、結果をレポート形式で確認するオプションも用意されています。  
   
 ### <a name="to-search-all-open-documents"></a>開いているドキュメントをすべて検索するには  

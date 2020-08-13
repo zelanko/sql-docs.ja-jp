@@ -1,5 +1,6 @@
 ---
 title: 埋め込みデータセットと共有データセット (レポート ビルダー) | Microsoft Docs
+description: 埋め込みデータセットと共有データセットについて説明します。 データセットには、クエリ コマンド、パラメーター、および大文字と小文字の区別と照合順序を含むデータ オプションがあります。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f1d665699dc2051745b08a56796588dab51e3bcf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: be5419348e7fa14ada37b119a9df9078dfe8bba8
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077624"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458367"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
   レポートにおけるデータセットとは、外部データ ソースに対してクエリを実行することによって返されるレポート データをいいます。 外部データ ソースに関する情報はデータ接続に含まれており、データセットは、そのデータ接続によって異なります。 レポート定義にデータそのものは含まれていません。 データセットには、クエリ コマンド、フィールド コレクション、パラメーター、フィルター、および大文字と小文字の区別と照合順序を含むデータ オプションがあります。 データセットには次の 2 種類があります。  
@@ -60,6 +61,6 @@ ms.locfileid: "77077624"
  [埋め込みデータ ソースと共有データ ソースの比較 - レポート ビルダーおよび SSRS](compare-shared-embedded-data-sources-report-builder-ssrs.md) [共有データセットまたは埋め込みデータセット &#40;レポートビルダーおよび SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [データ接続文字列の作成 - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

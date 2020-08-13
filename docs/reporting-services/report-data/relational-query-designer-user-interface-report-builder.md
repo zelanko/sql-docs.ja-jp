@@ -1,5 +1,6 @@
 ---
 title: リレーショナル クエリ デザイナーのユーザー インターフェイス (レポート ビルダー) | Microsoft Docs
+description: グラフィカル クエリ デザイナーを使用してメタデータを検索し、クエリを対話的に作成して、クエリの結果を表示する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: faa47b9ac36cc4606b327b1eec0ff73220d58934
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593388"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86455594"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>リレーショナル クエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
   レポート ビルダーと [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のレポート デザイナーにはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーの両方が用意されていて、レポート データセット用に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] リレーショナル データベース、および [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] から取得するデータを指定するクエリの作成に使用できます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
@@ -182,7 +183,7 @@ ms.locfileid: "73593388"
 ### <a name="graphical-query-designer-toolbar"></a>グラフィカル クエリ デザイナーのツール バー  
  リレーショナル クエリ デザイナーのツール バーにある次のボタンを使用すると、クエリを指定したりその結果を表示したりすることができます。  
   
-|ボタン|説明|  
+|Button|説明|  
 |------------|-----------------|  
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーに切り替えて、自動的に生成されたクエリの表示や変更を行います。|  
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は .sql と .rdl です。|  

@@ -1,5 +1,6 @@
 ---
 title: '[スケジュールのプロパティ] ([レポート] ページ) | Microsoft Docs'
+description: 特定の共有スケジュールのレポートをすべて一覧表示する SQL Server Management Studio の Reporting Services の [スケジュールのプロパティ] ページについて学習します。
 ms.date: 06/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0e8441dec655398ec530bc95049a339edd9e01ab
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 155df0fc52ffc390a0bf528fb2a907751dbbfe6b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571405"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916898"
 ---
 # <a name="schedule-properties-reports-page"></a>[スケジュールのプロパティ] ([レポート] ページ)
   特定の共有スケジュールを使用するすべてのレポートの一覧を見るには、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)][!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] スケジュール プロパティを使用します。 スケジュールを使用して、レポート スナップショットの更新、レポート履歴の生成、サブスクリプションのトリガー、またはレポートのキャッシュされたコピーの期限の終了を実行できます。 スケジュールがどのように使用されているかを確認するには、レポートのプロパティおよびサブスクリプション情報を参照します。  
@@ -34,7 +35,7 @@ ms.locfileid: "65571405"
 > [!NOTE]  
 >  この機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **フォルダー**  
  レポートのパスを指定します。  
   

@@ -2,7 +2,7 @@
 title: レポート ビューアー コントロールの概要
 description: Report Viewer コントロールを使用して、Reporting Services の RDL レポートを WebForms アプリと WinForms アプリに統合できます。
 ms.custom: seo-lt-2019
-ms.date: 12/12/2019
+ms.date: 06/03/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d7e1e64bddcdcc7efed701770aea0e97c8e84ec5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a559bdb5b525b8d95c121b8059076d86029a37fd
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241827"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943195"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>ReportViewer コントロールを使用した Reporting Services の統合 - 概要
 
@@ -252,15 +252,23 @@ Report Viewer コントロールは NuGet パッケージとして出荷され�
     
 ビューアー コントロールは、モダン ブラウザー向けに設計されています。 IE 互換モードを使用してブラウザーにページを表示すると、コントロールが想定どおりに動作しない場合があります。 イントラネット サイトでは、既定のブラウザーの動作をオーバーライドするメタ タグが必要な場合があります。
 
-    ```
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    ```
-      
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+```
+
+## <a name="nugetorg-pages"></a>NuGet.org ページ
+
+レポート ビューアー コントロールの WebForm と WinForm のバージョンに関する NuGet.org サイトの記事のリンクは次のとおりです。
+
+- Microsoft.ReportingServices.ReportViewerControl.WebForms [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/)
+- Microsoft.ReportingServices.ReportViewerControl.Winforms [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/)
+
+
 ## <a name="feedback"></a>フィードバック
 
 問題が発生した場合は、[Reporting Services フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices) でチームにお知らせください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Report Viewer コントロールのデータ コレクション](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 その他の質問 [Reporting Services のフォーラムにアクセスします](https://go.microsoft.com/fwlink/?LinkId=620231)

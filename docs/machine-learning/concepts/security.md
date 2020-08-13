@@ -2,26 +2,26 @@
 title: 機能拡張のセキュリティの概要
 description: SQL Server Machine Learning Services の機能拡張フレームワークのセキュリティの概要。 ログイン アカウントとユーザー アカウント、SQL Server スタート パッド サービス、ワーカー アカウント、実行中の複数のスクリプト、およびファイルのアクセス許可のセキュリティ。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 03/11/2020
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 562cc28d09b7c1341b58c45bfcc517db553bff16
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 80f14fc69a6abf0720f3f9d9fb3c170f0ab1da0d
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118545"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406225"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の機能拡張フレームワークのセキュリティの概要
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-この記事では、SQL Server データベース エンジンおよび関連するコンポーネントと機能拡張フレームワークを統合するために使用されるセキュリティ アーキテクチャ全体について説明します。 セキュリティ保護可能なリソース、サービス、プロセス ID、およびアクセス許可について詳しく説明します。 SQL Server での機能拡張の主要概念とコンポーネントの詳細については、「[SQL Server Machine Learning Services の機能拡張アーキテクチャ](extensibility-framework.md)」を参照してください。
+この記事では、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) で SQL Server データベース エンジンおよび関連するコンポーネントと機能拡張フレームワークを統合するために使用されるセキュリティ アーキテクチャ全体について説明します。 セキュリティ保護可能なリソース、サービス、プロセス ID、およびアクセス許可について詳しく説明します。 SQL Server での機能拡張の主要概念とコンポーネントの詳細については、「[SQL Server Machine Learning Services の機能拡張アーキテクチャ](extensibility-framework.md)」を参照してください。
 
 ## <a name="securables-for-external-script"></a>外部スクリプトでのセキュリティ保護可能リソース
 

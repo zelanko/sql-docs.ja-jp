@@ -1,5 +1,6 @@
 ---
 title: カタログ アイテムの削除 (Management Studio) | Microsoft Docs
+description: 共有スケジュールとロールの定義を削除できる、Management Studio の [カタログアイテムの削除] ページのオプションについて学習します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8576a1946368c7adc1a32aa66ce44e28603616a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6a41e1ed676a00f05837ed502f020b888fe05ca1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573936"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918378"
 ---
 # <a name="delete-catalog-items-management-studio"></a>カタログ アイテムの削除 (Management Studio)
   このページを使用すると、共有スケジュールとロール定義を削除できます。  
@@ -27,13 +28,13 @@ ms.locfileid: "65573936"
  削除操作は元に戻せません。 削除したアイテムを復旧するには、そのアイテムを再作成するか、レポート サーバー データベースのバックアップ コピーを復元する必要があります。  
   
 ## <a name="options"></a>オプション  
- **Name**  
+ **名前**  
  削除するアイテムの名前を指定します。  
   
  **Type**  
  削除するアイテムの種類を表示します。  
   
- **[所有者]**  
+ **所有者**  
  所有者の名前を表示します。 ほとんどの場合は [システム] です。  
   
  **状態**  

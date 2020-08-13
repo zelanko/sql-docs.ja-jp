@@ -1,6 +1,6 @@
 ---
-title: OLE DB Driver for SQL Server を使用したアプリケーションのビルド | Microsoft Docs
-description: OLE DB Driver for SQL Server を使用したアプリケーションのビルド
+title: OLE DB Driver for SQL Server を使用したアプリケーションのビルド
+description: OLE DB Driver for SQL Server を使用してアプリケーションをビルドするときの一般的な問題と、古い OLE DB Driver からアップグレードするときに予想されることについて説明します。
 ms.custom: ''
 ms.date: 02/12/2019
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: c0f168ee99ebaedebf2102363694b5ae6b33687f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c1004ef0005c841ad09818252ec82f82f1fcc6de
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989343"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393030"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server を使用したアプリケーションのビルド
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

@@ -2,22 +2,22 @@
 title: R と SQL のデータ型を変換する
 description: データ サイエンスおよび機械学習のソリューションで、R と SQL Server の間の暗黙的および明示的なデータ型の変換について確認します。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 08/08/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/15/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f7a6a95033d16e7bc39f07d6b72324e3aea6634
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: bf08045adba7298d5a5b8e261c406915b44effe0
+ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486731"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86411640"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R と SQL Server の間のデータ型マッピング
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server Machine Learning Services の R 統合機能で実行される R ソリューションについて、サポートされないデータ型の一覧と、R ライブラリと SQL Server の間でデータが受け渡されるときに暗黙的に実行される可能性のあるデータ型の変換について確認します。
 
@@ -41,17 +41,17 @@ SQL Server の特定のインスタンスに関連付けられている R のバ
 
 |SQL 型|R クラス|RESULT SET の型|説明|
 |-|-|-|-|
-|**bigint**|`numeric`|**float**||
+|**bigint**|`numeric`|**float**|`sp_execute_external_script` で R スクリプトを実行すると、bigint データ型が入力データとして許可されます。 ただし、それらは R の数値型に変換されるため、きわめて大きい値や小数点値を持つ値では精度が失われます。 R では最大 53 ビットの整数がサポートされるだけであり、その後は精度が失われ始めます。|
 |**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|入力パラメーターと出力にのみ使用できます。|
 |**bit**|`logical`|**bit**||
-|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
+|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|入力データ フレーム (input_data_1) は、*stringsAsFactors* パラメーターを明示的に設定することなく作成されるため、列の型は R の *default.stringsAsFactors()* に依存します|
 |**datetime**|`POSIXct`|**datetime**|GMT として表現されます|
 |**date**|`POSIXct`|**datetime**|GMT として表現されます|
-|**decimal(p,s)**|`numeric`|**float**||
+|**decimal(p,s)**|`numeric`|**float**|`sp_execute_external_script` で R スクリプトを実行すると、decimal データ型が入力データとして許可されます。 ただし、それらは R の数値型に変換されるため、きわめて大きい値や小数点値を持つ値では精度が失われます。 R スクリプトによる `sp_execute_external_script` では、このデータ型の範囲全体はサポートされておらず、小数部分がある場合は特に、末尾の数桁が変更される場合があります。|
 |**float**|`numeric`|**float**||
 |**int**|`integer`|**int**||
-|**money**|`numeric`|**float**||
-|**numeric(p,s)**|`numeric`|**float**||
+|**money**|`numeric`|**float**|`sp_execute_external_script` で R スクリプトを実行すると、money データ型が入力データとして許可されます。 ただし、それらは R の数値型に変換されるため、きわめて大きい値や小数点値を持つ値では精度が失われます。 セント値が不正確になり、次のような警告が発行されることがあります。"*警告: セント値を正確に表すことができません*"。  |
+|**numeric(p,s)**|`numeric`|**float**|`sp_execute_external_script` で R スクリプトを実行すると、numeric データ型が入力データとして許可されます。 ただし、それらは R の数値型に変換されるため、きわめて大きい値や小数点値を持つ値では精度が失われます。 R スクリプトによる `sp_execute_external_script` では、このデータ型の範囲全体はサポートされておらず、小数部分がある場合は特に、末尾の数桁が変更される場合があります。|
 |**real**|`numeric`|**float**||
 |**smalldatetime**|`POSIXct`|**datetime**|GMT として表現されます|
 |**smallint**|`integer`|**int**||
@@ -60,8 +60,7 @@ SQL Server の特定のインスタンスに関連付けられている R のバ
 |**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|入力パラメーターと出力にのみ使用できます。|
 |**varbinary(max)**|`raw`|**varbinary(max)**|入力パラメーターと出力にのみ使用できます。|
-|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
-
+|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|入力データ フレーム (input_data_1) は、*stringsAsFactors* パラメーターを明示的に設定することなく作成されるため、列の型は R の *default.stringsAsFactors()* に依存します|
 
 ## <a name="data-types-not-supported-by-r"></a>R でサポートされていないデータ型
 

@@ -1,5 +1,6 @@
 ---
 title: グラフィカル クエリ デザイナーのユーザー インターフェイス | Microsoft Docs
+description: レポート デザイナーでレポート データ セットのデータをリレーショナル データベースから取得できるように、グラフィカル クエリ デザイナーのユーザー インターフェイスについて説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ff907d83a4d793169872d5abaa059e8b6a1d91b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bd66f5f839c101343babf642e40fdfd999a528e9
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572748"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458274"
 ---
 # <a name="graphical-query-designer-user-interface"></a>グラフィカル クエリ デザイナーのユーザー インターフェイス
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート デザイナーでレポート データセットのリレーショナル データベースからデータを取得するクエリの作成に使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、OLE DB、ODBC の各データ ソースの種類に対して、対話形式でクエリを作成して結果を表示するには、グラフィカル クエリ デザイナーを使用します。 テキスト ベースのクエリ デザイナーは、複数の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、複雑なクエリやコマンド構文、式ベースのクエリを指定する場合に使用します。 詳細については、「 [テキストベースのクエリ デザイナーのユーザー インターフェイス](https://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)」を参照してください。 特定の種類のデータ ソースで作業する方法の詳細については、「 [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)」を参照してください。  
   
- 。  
+ .  
   
 ## <a name="graphical-query-designer"></a>グラフィカル クエリ デザイナー  
- グラフィカル クエリ デザイナーでサポートされているクエリ コマンドの種類は、 **Text**、 **StoredProcedure**、および **TableDirect**の 3 つです。 データセットに対するクエリを作成する前に、 [[データセットのプロパティ]](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) ダイアログ ボックスの [クエリ] ページにあるコマンドの種類のオプションを選択する必要があります。  
+ グラフィカル クエリ デザイナーでサポートされているクエリ コマンドの種類は、**Text**、**StoredProcedure**、および **TableDirect** の 3 つです。 データセットに対するクエリを作成する前に、 [[データセットのプロパティ]](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) ダイアログ ボックスの [クエリ] ページにあるコマンドの種類のオプションを選択する必要があります。  
   
  クエリの種類には、次のオプションがあります。  
   
--   **Text** [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] および Oracle のデータ処理拡張機能を含め、リレーショナル データベース データ ソースの標準の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ テキストをサポートします。  
+-   **Text** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Oracle のデータ処理拡張機能を含め、リレーショナル データベース データ ソースの標準の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ テキストをサポートします。  
   
 -   **[TableDirect]** 指定したテーブルのすべての列を選択します。 たとえば、Customers という名前のテーブルの場合、これは [!INCLUDE[tsql](../../includes/tsql-md.md)] という `SELECT * FROM Customers`ステートメントと同じです。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "65572748"
   
  次の表に各ペインの機能を示します。  
   
-|ペイン|Function|  
+|ペイン|機能|  
 |----------|--------------|  
 |ダイアグラム|クエリのテーブルをグラフィカルに表示します。 フィールドを選択し、テーブル間のリレーションシップを定義する際に、このペインを使用します。|  
 |グリッド|クエリにより返されるフィールドの一覧を表示します。 別名、並べ替え順、フィルター、グループ、パラメーターを定義するには、このペインを使用します。|  
@@ -66,7 +67,7 @@ ms.locfileid: "65572748"
 #### <a name="toolbar-for-the-graphical-query-designer"></a>グラフィカル クエリ デザイナーのツール バー  
  グラフィカル クエリ デザイナーのツール バーにあるボタンを使用すると、グラフィカル インターフェイスを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリをデザインできます。  
   
-|ボタン|説明|  
+|Button|説明|  
 |------------|-----------------|  
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。|  
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。|  
@@ -103,7 +104,7 @@ EXEC uspGetEmployeeManagers '1';
   
  次の表に各ペインの機能を示します。  
   
-|ペイン|Function|  
+|ペイン|機能|  
 |----------|--------------|  
 |[テーブル] ドロップダウン リスト|データ ソースで利用可能なすべてのテーブルが一覧表示されます。 いずれかを一覧から選択するとアクティブになります。|  
 |結果|選択したテーブルのすべての列が表示されます。 テーブル クエリを実行するには、ツール バーの **[実行]** をクリックします。|  
@@ -111,7 +112,7 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-the-command-type-tabledirect"></a>ツール バー ボタン (コマンドの種類が TableDirect の場合)  
  グラフィカル クエリ デザイナーのツール バーに、データ ソースで利用可能なテーブルが、ドロップダウン リストで一覧表示されます。 次の表は、各ボタンとその機能を示しています。  
   
-|ボタン|説明|  
+|Button|説明|  
 |------------|-----------------|  
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。|  
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。|  
@@ -121,7 +122,7 @@ EXEC uspGetEmployeeManagers '1';
 ### <a name="command-type-storedprocedure"></a>コマンドの種類 (StoredProcedure)  
  コマンドの種類が **[StoredProcedure]** の場合、グラフィカル クエリ デザイナーには、データ ソースで利用可能なストアド プロシージャを一覧にしたドロップダウン リストと結果ペインが表示されます。 次の表に各ペインの機能を示します。  
   
-|ペイン|Function|  
+|ペイン|機能|  
 |----------|--------------|  
 |[ストアド プロシージャ] ドロップダウン リスト|データ ソースで利用可能なすべてのストアド プロシージャが一覧表示されます。 いずれかを一覧から選択するとアクティブになります。|  
 |結果|ストアド プロシージャの実行結果が表示されます。 選択したストアド プロシージャを実行するには、ツール バーの **[実行]** をクリックします。|  
@@ -129,7 +130,7 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-command-type-storedprocedure"></a>ツール バー ボタン (コマンドの種類が StoredProcedure の場合)  
  グラフィカル クエリ デザイナーのツール バーに、データ ソースで利用可能なストアド プロシージャが、ドロップダウン リストで一覧表示されます。 次の表は、各ボタンとその機能を示しています。  
   
-|ボタン|説明|  
+|Button|説明|  
 |------------|-----------------|  
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。|  
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。|  

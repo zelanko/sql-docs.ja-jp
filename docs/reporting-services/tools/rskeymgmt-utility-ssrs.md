@@ -1,5 +1,6 @@
 ---
 title: rskeymgmt ユーティリティ | Microsoft Docs
+description: 重要なレポート サーバー データを不正アクセスから保護するための対称キーを管理する reskeymgmt ユーティリティについて学習します。
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5ebbda456c402372e7505968414bc044eec87ec4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c3acdc15b2d5eaf5e8e38e0929757fd44157a148
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082146"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916269"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt ユーティリティ (SSRS)
   重要なレポート サーバー データを不正アクセスから保護するための対称キーを、抽出、復元、作成、および削除します。 また、このユーティリティは、レポート サーバー インスタンスをスケール アウト配置に追加する場合にも使用されます。 *レポート サーバーのスケール アウト配置* とは、複数のレポート サーバー インスタンスが 1 つのレポート サーバー データベースを共有する状態を表しています。  
@@ -163,7 +164,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>ファイルの場所  
- Rskeymgmt.exe is は、 **\<*ドライブ*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** または **\<*ドライブ*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn** にあります。 このユーティリティは、ファイル システム上の任意のフォルダーから実行できます。  
+ Rskeymgmt.exe は、 **\<*drive*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** または **\<*drive*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn** にあります。 このユーティリティは、ファイル システム上の任意のフォルダーから実行できます。  
   
 ## <a name="remarks"></a>解説  
  レポート サーバーは、格納された資格情報および接続情報を暗号化します。 データの暗号化には、公開キーおよび対称キーが使用されます。 レポート サーバーを実行するには、レポート サーバー データベースに有効なキーが含まれている必要があります。 キーのバックアップ、削除、復元を行うには **rskeymgmt** を使用します。 このツールには、キーを復元できない場合に、使用できなくなった暗号化されたコンテンツを削除する方法が用意されています。  

@@ -1,22 +1,22 @@
 ---
 title: SQL Server の高可用性とディザスター リカバリーのパートナー
 description: サーバー監視のソリューションを提供しているサードパーティ パートナーの一覧を表示します。
-services: sql-server
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.date: 09/17/2017
 ms.prod: sql
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 4d01deaf94e18fcf277e11e4a880f99a70693ead
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5fd19ca04a383ca8485d2668a7988c8558040f76
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75656947"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923048"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server の高可用性とディザスター リカバリーのパートナー
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 SQL Server サービスの高可用性とディザスター リカバリーを提供するためのツールを、業界をリードする豊富な種類の中から選びます。  この記事では、Microsoft SQL Server をサポートする高可用性とディザスター リカバリーのソリューションを提供する Microsoft パートナー会社を示します。
 
 ## <a name="high-availability-and-disaster-recovery-partners"></a>高可用性とディザスター リカバリーのパートナー
@@ -25,7 +25,7 @@ SQL Server サービスの高可用性とディザスター リカバリーを�
 | --- | --- | --- |
 |![Azure][5] |**Azure Site Recovery**<br>Site Recovery は、ワークロードをレプリケートすることで、仮想マシンまたは物理サーバーで実行中のワークロードがプライマリ サイトを使用できない場合に、2 番目の場所で引き続き使用できるようにします。 SQL Server 仮想マシンをオンプレミスのデータ センターから Azure またはその他のオンプレミスのデータ センター、もしくはある Azure データ センターから別の Azure データ センターにレプリケートしてフェールオーバーすることができます。<br><br> SQL Server 2008 R2 - SQL Server 2016 の Enterprise および Standard エディション|[Web サイト][azure_website]<br>[Marketplace][azure_marketplace]<br>[データシート][azure_datasheet]<br>[Twitter][azure_twitter]<br>[ビデオ][azure_youtube]|
 |![DH2i][2] |**DH2i**<br>DxEnterprise は、計画/計画外のダウンタイムをほぼゼロに抑え、大幅なコスト削減を実現し、管理を著しく簡素化し、物理と論理の両方を統合するために役立つ、Windows、Linux、Docker 向けのスマート可用性ソフトウェアです。<br><br>SQL Server 2005 以降、Windows Server 2008 R2 以降、Ubuntu 16 以降、RHEL 7 以降、CentOS 7 以降|[Web サイト][dh2i_website]<br>[データシート][dh2i_datasheet]<br>[Twitter][dh2i_twitter]<br>[ビデオ][dh2i_youtube]|
-|![HPE][4] |**HPE Serviceguard**<br>HPE Serviceguard for Linux (SGLX) は、物理環境か仮想環境かに関わらず、インフラストラクチャとアプリケーションの大量のエラーから発生する計画されてた、または計画外のダウンタイムから Linux ® の SQL Server 2017 の重要なワークロードを保護します。 HPE SGLX A.12.20.00 以降では、フェールオーバー クラスター インスタンスと Always On 可用性グループの SQL Server ワークロード向けの状況依存型の監視と回復のオプションを提供しています。 HPE SGLX ではデータ整合性とパフォーマンスを損なわずに、アップタイムを最大化します。<br><br>Linux 上の SQL Server 2017 - RedHat 7.3、7.4、SUSE 12 SP2、SP3|[Web サイト][hpe_website]<br>[データシート][hpe]<br>[評価版をダウンロードする][hpe_download]<br>[ブログ][hpe_download]<br>[Twitter][hpe_twitter]
+|![HPE][4] |**HPE Serviceguard**<br>HPE Serviceguard for Linux (SGLX) を使用して、物理と仮想の環境全体で、インフラストラクチャとアプリケーションの大量のエラーから発生する計画された、または計画外のダウンタイムから Linux &reg; の SQL Server 2017 の重要なワークロードを保護します。 HPE SGLX A.12.20.00 以降では、フェールオーバー クラスター インスタンスと Always On 可用性グループの SQL Server ワークロード向けの状況依存型の監視と回復のオプションを提供しています。 HPE SGLX ではデータ整合性とパフォーマンスを損なわずに、アップタイムを最大化します。<br><br>Linux 上の SQL Server 2017 - RedHat 7.3、7.4、SUSE 12 SP2、SP3|[Web サイト][hpe_website]<br>[データシート][hpe]<br>[評価版をダウンロードする][hpe_download]<br>[ブログ][hpe_download]<br>[Twitter][hpe_twitter]
 |![IDERA][3]|**IDERA**<br>SQL の安全なバックアップは、SQL Server の高性能なバックアップと回復のソリューションです。データベースのバックアップ時間とバックアップ ファイルのサイズを削減し、バックアップ ファイル内のデータベースへのインスタント読み取り/書き込みアクセスを提供することで、コストを削減します。<br><br>Microsoft SQL Server: 2005 SP1 以降、2008、2008 R2、2012、2014、2016 すべてのエディション |[Web サイト][idera_website]|
 |![NEC][7]|**NEC**<br>ExpressCluster は、総合的で完全に自動化された高可用なディザスター リカバリー ソリューションです。オンプレミスまたはクラウド環境の物理マシンや仮想マシン上で実行される SQL Server と関連アプリケーションのハードウェア、ソフトウェア、ネットワーク、サイトの障害など、あらゆる主な障害に対応します。<br><br>Microsoft SQL Server: 2005 以降 (すべてのエディション) |[Web サイト][necec_website]<br>[データシート][necec_datasheet]<br>[ビデオ][necec_youtube]<br>[ダウンロード][necec_download]|
 |![Portworx][6] |**Portworx**<br>Portworx は、実稼働環境で実行されているステートフル コンテナーのソリューションです。 Portworx では、ユーザーは、Kubernetes、Mesosphere DC/OS、Docker Swarm を含む任意のコンテナー スケジューラーを使用して、すべてのインフラストラクチャのすべてのデータベースまたはステートフル サービスを管理できます。 Portworx は DevOps チームが実稼働環境のコンテナー化されたデータベースまたはその他のステートフル サービスを実行する際に遭遇する、特に一般的な 5 つの問題 (永続化、高可用性、データの自動化、複数のデータ ストアとインフラストラクチャのサポート、セキュリティ) を解決します。<br><br>Docker 上の SQL Server 2017 |[Web サイト][portworx_website]<br>[ドキュメント][portworx_docs]<br>[ビデオ][portworx_youtube]|

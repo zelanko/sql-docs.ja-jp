@@ -1,5 +1,6 @@
 ---
 title: レポート デザイナーのレポート データ ペインをドッキングする | Microsoft Docs
+description: SQL Server Data Tools の Reporting Services レポート デザイナーでレポート データ オブジェクトの階層ビューを表示する [レポート データ] ペインを表示およびドッキングする方法について説明します。
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e865cb5d12a66a1225a037fdc3a191333de7179c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e1faf69fd193279e4f914651b483402ff993da3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080578"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914053"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>レポート デザイナーのレポート データ ペインをドッキングする (SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]レポート デザイナーでは、データ ソース、データセット、フィールド、パラメーター、画像など、レポートで使用できるデータ オブジェクトの階層ビューがレポート データ ペインに表示されます。 このビューのデータ ソースは、埋め込みデータ ソースである場合と、ソリューション エクスプローラーに表示される共有データ ソースのデータ ソース参照である場合があります。  
@@ -42,6 +43,6 @@ ms.locfileid: "77080578"
   
 ## <a name="see-also"></a>参照  
  [レポート データ ペイン](../../reporting-services/report-data/report-data-pane.md)   
- [データ接続文字列の作成 - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

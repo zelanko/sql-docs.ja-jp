@@ -1,5 +1,6 @@
 ---
 title: Analysis Services データベースに対する拡張フィールド プロパティ | Microsoft Docs
+description: Analysis Services データベースの拡張フィールド プロパティについて、および拡張フィールド プロパティ値をレポートに含める方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa0f8b8d8b8ee4cbd3ebdaf70fcb63b9cb5005b9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: beae593bc4673a1fd31d27c5f807553a2b960872
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077680"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458357"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services データベースに対する拡張フィールド プロパティ (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、拡張フィールド プロパティがサポートされています。 拡張フィールド プロパティとは、データ ソースにありデータ処理拡張機能でサポートされるフィールド プロパティ **Value** および **IsMissing** に加えて使用するプロパティです。 拡張プロパティは、レポート データセットのフィールド コレクションの一部としてレポート データ ペインには表示されません。 拡張フィールド プロパティ値をレポートに含めるには、組み込み **Fields** コレクションを使用して名前で拡張フィールド プロパティ値を指定する式を記述します。  
@@ -40,7 +41,7 @@ ms.locfileid: "77077680"
   
  次の表に、使用できる定義済みフィールド プロパティの一覧を示します。  
   
-|**プロパティ**|**Type**|**説明/有効値**|  
+|**Property**|**Type**|**説明/有効値**|  
 |------------------|--------------|---------------------------------------|  
 |**Value**|**Object**|フィールドのデータ値を指定します。|  
 |**IsMissing**|**Boolean**|フィールドが結果データセットに存在するかどうかを示します。|  
@@ -53,7 +54,7 @@ ms.locfileid: "77077680"
 |**FontStyle**|**String**|データベースで定義されたアイテムのフォントのスタイルを返します。|  
 |**TextDecoration**|**String**|データベースで定義されたアイテムの特殊なテキストの書式設定を返します。|  
 |**FormattedValue**|**String**|メジャーまたは主要データに対して書式設定した値を返します。 たとえば、 **Sales Amount Quota** の **FormattedValue** プロパティは、$1,124,400.00 などの通貨形式を返します。|  
-|**[キー]**|**Object**|レベルのキーを返します。|  
+|**キー**|**Object**|レベルのキーを返します。|  
 |**LevelNumber**|**整数**|親子階層の場合は、レベル番号またはディメンション番号を返します。|  
 |**ParentUniqueName**|**String**|親子階層の場合は、親レベルの完全修飾名を返します。|  
   

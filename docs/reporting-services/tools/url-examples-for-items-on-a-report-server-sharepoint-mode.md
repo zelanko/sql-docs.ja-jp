@@ -1,5 +1,6 @@
 ---
 title: レポート サーバー上のアイテムの URL の例 - SharePoint モード | Microsoft Docs
+description: レポート サーバー上の SharePoint サイト Web 階層内の場所を指定する URL の使用例を確認します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 860cecad6e375098b4f437608b54db515beb1949
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574017"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921468"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>レポート サーバー上のアイテムの URL の例 - SharePoint モード
   レポートおよび関連アイテムを SharePoint ライブラリにパブリッシュするには、レポート デザイナーなどの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 作成ツールを使用してコンテンツをパブリッシュするか、SharePoint サイトのアクションを使用してコンテンツをアップロードします。  
@@ -34,7 +35,7 @@ ms.locfileid: "65574017"
 |SharePoint Web アプリケーション|SharePoint Web アプリケーションは、スタンドアロン サーバーとしてインストールするか、一連の仮想サーバーを含むファームの下にインストールできます。 Web アプリケーションには `http:*//servername*` などの URL を指定します。複数のサイトを指定することもできます。|  
 |サイト|サイトは、Web アプリケーションの親サイトまたはサブサイトになります。|  
 |SharePoint ライブラリ|ライブラリには、ドキュメントやフォルダーが格納されます。 レポート、レポート モデル、共有データ ソース、および外部画像を保存できるサイト オブジェクトは、ライブラリまたはライブラリ内のフォルダーのみです。|  
-|アイテム|URL 内で参照できるレポート サーバーのアイテムとしては、レポートまたはサブレポートのレポート定義、レポート モデル、共有データ ソース、外部画像などがあります。|  
+|Item|URL 内で参照できるレポート サーバーのアイテムとしては、レポートまたはサブレポートのレポート定義、レポート モデル、共有データ ソース、外部画像などがあります。|  
   
 ## <a name="url-syntax-and-rules"></a>URL の構文と規則  
  ライブラリ内の各レポート サーバー アイテムを識別するには、完全修飾 URL を使用します。完全修飾 URL は、プロトコルを表すプレフィックス、サーバー名、サイト、ライブラリ、ファイル名、ファイルの種類を示すファイル名拡張子で構成されます。  
@@ -117,7 +118,7 @@ ms.locfileid: "65574017"
 ### <a name="file-names"></a>ファイル名  
  レポート アイテムに対して URL 内に指定するファイル名にはファイル名拡張子が必要です。 ファイル名拡張子によってファイルの種類が識別されます。 レポート アイテムをレポート作成ツールからパブリッシュする場合は、ファイル名拡張子が自動的に含まれます。 レポート アイテムを SharePoint ライブラリにアップロードする場合は、ファイル名拡張子を含める必要があります。  
   
- SharePoint サイトにアップロードするアイテムにファイル名拡張子を指定しないと、 **rsInvalidDataSourceReference** エラーが発生します。 SharePoint アプリケーションで有効なファイル名文字として認識されない文字を、ファイル名に含めることはできません。 # % & * : < > ? / { | } は、使わないでください。  
+ SharePoint サイトにアップロードするアイテムにファイル名拡張子を指定しないと、 **rsInvalidDataSourceReference** エラーが発生します。 SharePoint アプリケーションで有効なファイル名文字として認識されない文字を、ファイル名に含めることはできません。 # % & * : < > ? / { | }.  
   
 ## <a name="differences-between-uploading-and-publishing"></a>アップロードとパブリッシュの相違点  
  レポート デザイナーまたはレポート ビルダーを使用してレポートと関連ファイルをライブラリにパブリッシュする場合、ファイルは検証されてから追加されます。 SharePoint ライブラリで **[アップロード]** アクションを使用してレポートと関連ファイルをアップロードする場合、検証チェックは行われません。 ファイルが有効かどうかは、管理、編集、または実行のためにレポートにアクセスするまで知ることができません。  

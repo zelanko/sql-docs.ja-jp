@@ -1,5 +1,6 @@
 ---
 title: ブロックの挿入 Transact-SQL スニペットの挿入
+description: コード ブロックにステートメントを配置するための開始点として機能する、ブロックの挿入スニペットを挿入する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ad887bc26ca9b320ff62130633d3a77b08b9f8f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0d6016456bc37a5172d6dc169b2670948ce84ae8
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253848"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123128"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>ブロックの挿入 Transact-SQL スニペットの挿入
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   ブロックの挿入スニペットは、BEGIN、IF、または WHILE ブロックで一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを囲むときに出発点として使用できるテンプレートです。  
   
 ## <a name="inserting-surround-with-snippets"></a>ブロックの挿入スニペットの挿入  

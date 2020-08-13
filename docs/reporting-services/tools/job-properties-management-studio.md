@@ -1,5 +1,6 @@
 ---
 title: '[ジョブのプロパティ] (Management Studio) | Microsoft Docs'
+description: レポート サーバー上のジョブに関する情報を表示する SQL Server Management Studio の [ジョブのプロパティ] ページについて説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fb1a989876126a57553a1ae833bcf847f9c005bc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8aabf771f7bd87f138e188a41be4b46ed43d2045
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571126"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915568"
 ---
 # <a name="job-properties-management-studio"></a>[ジョブのプロパティ]\(Management Studio)
   **[ジョブのプロパティ]** ページを使用して、進行中のレポートまたはサブスクリプションを取り消す前にそれらの情報を表示できます。  
@@ -25,7 +26,7 @@ ms.locfileid: "65571126"
 > [!NOTE]  
 >  この機能は、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services ではサポートされません。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]を実行している場合、このページは表示されません。  
   
-## <a name="tasks"></a>処理手順  
+## <a name="tasks"></a>タスク  
  ジョブに関する情報を表示する前に、ページを更新してレポート サーバーで現在実行されているジョブに関する情報を取得します。  
   
 1.  レポート サーバーのフォルダーを開きます。  
@@ -34,7 +35,7 @@ ms.locfileid: "65571126"
   
 3.  ジョブが表示されたら、ジョブを右クリックして、 **[プロパティ]** をクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[ジョブ ID]**  
  処理中にジョブに割り当てられる GUID。 この値は、レポートまたはサブスクリプションが実行されるたびにランダムに生成されます。  
   

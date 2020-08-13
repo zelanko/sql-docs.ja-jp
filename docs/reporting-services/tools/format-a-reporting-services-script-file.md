@@ -1,5 +1,6 @@
 ---
 title: Reporting Services スクリプト ファイルを書式設定する | Microsoft Docs
+description: ユーザー定義のプロシージャとモジュール レベルの変数を含む Microsoft Visual Basic .NET で Reporting Services スクリプト ファイルを書式設定する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1979e19b3d93e9687d6abb137758bc71548b10ce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1733a3f8a5e87086b696f81fec669229a443a275
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65577796"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923388"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Reporting Services スクリプト ファイルを書式設定する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のスクリプトは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET コード ファイルであり、Web サービス記述言語 (WSDL) で構築されたプロキシに対して記述され、Reporting Services SOAP API を定義します。 スクリプト ファイルは、拡張子 .rss が付く Unicode または UTF-8 テキスト ファイルです。  
@@ -46,7 +47,7 @@ End Sub
 > [!IMPORTANT]  
 >  ユーザーの資格情報はスクリプト環境によって管理され、RS.exe の使用によりコマンド プロンプト引数をとおして渡されます。 *rs* 変数を使用して Web サービスの認証を設定できますが、スクリプト環境を使用することをお勧めします。 スクリプト ファイル内自体では Web サービスを認証する必要がありません。 スクリプト環境の認証の詳細については、「 [RS.exe ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)」を参照してください。  
   
- スクリプト ファイル内では名前空間を宣言しません。 スクリプト環境では、便利な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 名前空間、**System.Web.Services**、**System.Web.Services.Protocols**、**System.Xml**、**System.IO** が利用できます。  
+ スクリプト ファイル内では名前空間を宣言しません。 スクリプト環境では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] namespaces available to you: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**, and **System.IO**.  
   
  スクリプトのサンプルについては、「 [SQL Server Reporting Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=177889)」参照してください。  
   

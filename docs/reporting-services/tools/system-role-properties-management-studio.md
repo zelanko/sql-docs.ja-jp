@@ -1,5 +1,6 @@
 ---
 title: システム ロールのプロパティ (Management Studio) | Microsoft Docs
+description: レポート サーバーに対して現在定義されているシステム ロールの定義を確認できる [システム ロール] ページのオプションについて説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,23 +11,23 @@ f1_keywords:
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f3084f12a417986571c3feb2195e513f071f9dbb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6099c12a66ebcca61ac18ed1ca3f612512bf2fad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576030"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914903"
 ---
 # <a name="system-role-properties-management-studio"></a>システム ロールのプロパティ (Management Studio)
   [システム ロール] ページは、レポート サーバーで現在定義されているシステム ロールの定義を表示するために使用します。 システム ロールの定義には、個別のアイテムではなく、サイト全体に関連して実行される名前付きのタスクのコレクションが含まれています。 ロールの定義は、ロールの割り当てを作成するために、ユーザーまたはグループに割り当てられます。 ロールの定義のタスクには、ユーザーまたはグループが実行できる操作を指定します。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、 **システム管理者** と **システム ユーザー**という 2 つのシステム ロールがあらかじめ定義されています。 タスクの一覧を変更することにより、ロールの定義を変更できます。また、異なるタスクの組み合わせをサポートする新しいシステム ロールを作成できます。 ロールの定義を編集すると、そのロールの定義を含むすべてのロールの割り当てに反映されます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、**システム管理者**と**システム ユーザー**という 2 つのシステム ロールが事前定義されています。 タスクの一覧を変更することにより、ロールの定義を変更できます。また、異なるタスクの組み合わせをサポートする新しいシステム ロールを作成できます。 ロールの定義を編集すると、そのロールの定義を含むすべてのロールの割り当てに反映されます。  
   
 > [!NOTE]  
 >  システム ロールの割り当ては、ネイティブ モードで実行されているレポート サーバーでのみ使用されます。 レポート サーバーが SharePoint 統合モード用に構成されている場合、このページは使用できません。  
   
 ## <a name="options"></a>オプション  
- **Name**  
+ **名前**  
  システム ロールの定義名を指定します。  
   
  **説明**  

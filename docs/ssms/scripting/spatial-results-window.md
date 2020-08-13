@@ -1,5 +1,6 @@
 ---
 title: '[空間結果] ウィンドウ'
+description: 空間データを表示するための視覚的なマッピング ツールが用意されている [空間結果] ウィンドウを使用する方法について説明します。 空間結果を表示するには、geometry 型または geography 型のデータを含む空間列がクエリ結果に含まれている必要があります。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,21 +11,21 @@ ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 523cd3ffd5b72c08106e7d128e74138001619fdb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f6d173343b91f1434ab107c62c6b460b6961b1e
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253612"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122543"
 ---
 # <a name="spatial-results-window"></a>[空間結果] ウィンドウ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   **[空間結果]** ウィンドウには、空間データを表示するための視覚的なマッピング ツールが用意されています。 空間結果を表示するには、geometry 型または geography 型のデータを含む空間列がクエリ結果に含まれている必要があります。  
   
 > [!NOTE]  
 >  **[空間結果]** ウィンドウを使用できるのは、 **[結果]** ウィンドウ内のグリッドに結果が返される場合だけです。 結果がテキストとして返されるように設定すると、このウィンドウは使用できません。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[空間列の選択]**  
  クエリ結果の空間列から、表示する空間列を指定します。 列は、一度に 1 つしか選択できません。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "75253612"
  クエリで Point インスタンスのみが返される場合は、このオプションを使用できません。  
   
  **[投影の選択]**  
- geography 型のデータを、正距円筒図法、メルカトル図法、ロビンソン図法、ボンヌ図法という 4 つの投影法のいずれかで表示します。  
+ geography 型のデータを、4 つの投影法のいずれかで表示します:正距円筒図法、メルカトル図法、ロビンソン図法、ボンヌ図法。  
   
  このオプションは、geometry 型のデータには使用できません。  
   

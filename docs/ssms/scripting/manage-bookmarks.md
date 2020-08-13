@@ -1,5 +1,6 @@
 ---
 title: ブックマークの管理
+description: コードエディターの [ブックマーク] ウィンドウを使用して、コード内の場所へのリンクを作成できます。 ブックマークの作成、削除、アクティブ化、無効化の方法、およびそれらを使用してコード内を移動する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7879c6c7d07e7e0caeb075652b87b42fdf3ab66c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4b75287c722757e6bb6f12a7eb282b7f141a9483
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261839"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122603"
 ---
 # <a name="manage-bookmarks"></a>ブックマークの管理
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   コード エディターでの作業中に、 **[ブックマーク]** ウィンドウで、ドキュメント内のコードの特定の行へのリンクを作成できます。 このウィンドウは、 **[表示]** メニューから表示できます。  
   
  ブックマークの作成やブックマーク間の移動は、 **[ブックマーク]** ウィンドウ上部の **[テキスト エディター]** ツール バーにあるボタンをクリックして実行します。 ブックマークの追加および削除や有効化および無効化を行ったり、ブックマークをフォルダーに構成したりできます。 また、 **[ブックマーク]** ウィンドウ ショートカット メニューから、特定のコマンドも利用できます。 ブックマークを追加または削除するには、エディターで目的の行にカーソルを置き、 **[ブックマークの設定/解除]** をクリックします。 ブックマークを有効化するには、 **[ブックマーク]** ウィンドウで対象ブックマークのチェック ボックスをオンにします。ブックマークを無効化する (ただし、削除しない) 場合は、チェック ボックスをオフにします。  

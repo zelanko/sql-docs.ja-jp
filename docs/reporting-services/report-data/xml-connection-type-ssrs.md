@@ -1,5 +1,6 @@
 ---
 title: XML の接続の種類 | Microsoft Docs
+description: XML ドキュメント、Web サービス、またはクエリに埋め込まれた XML に接続してデータを取得するための、XML の接続の種類について説明します。
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9355ac713c502acbbd319ec7bdc9cb035079ca34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 120e99440b77a27be4f83f8e4355a4ec75cab7bb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081685"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458509"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML の接続の種類 (SSRS)
   XML データ ソースのデータをレポートに含めるには、種類が XML のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、XML データ拡張機能に基づいています。 このデータ ソースの種類を使用して、XML ドキュメント、Web サービス、またはクエリに埋め込まれた XML に接続し、データを取得します。  
@@ -79,7 +80,7 @@ ms.locfileid: "77081685"
   
          `-- or --`  
   
-         `<SoapAction>` *SOAP アクション* `</SoapAction>`  
+         `<SoapAction>`*SOAP アクション*`</SoapAction>`  
   
          省略可能な XML 要素:  
   
@@ -93,7 +94,7 @@ ms.locfileid: "77081685"
   
     -   **XML データ ソースが XML ドキュメント**  
   
-         必須の XML 要素: なし  
+         必須の XML 要素:なし  
   
          省略可能な XML 要素:  
   
@@ -115,7 +116,7 @@ ms.locfileid: "77081685"
   
  クエリ構文の詳細については、「[XML レポート データの XML クエリ構文 &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)」を参照してください。  
   
- 例については、「 [Reporting Services: XML と Web サービス データ ソースの使用](https://go.microsoft.com/fwlink/?LinkId=81654)」を参照してください。  
+ 例については、「[Reporting Services:XML および Web サービス データ ソースを使用する](https://go.microsoft.com/fwlink/?LinkId=81654)」を参照してください。  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>XML Web サービスのデータを取得するための要件  
  これらは XML データ処理拡張機能では検出されません。 そのため、必要なデータを取得する SOAP メソッドを検索するための、なんらかの手段が必要です。 また、Web サービスがそのデータに対して使用するアドレス指定スキームや名前空間を把握しておく必要もあります。  
@@ -156,7 +157,7 @@ ms.locfileid: "77081685"
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  レポートのデータへのアクセスの概要について説明します。  
   
- [データ接続文字列の作成 - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  データ接続とデータ ソースについて説明します。  
   
  [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

@@ -1,5 +1,6 @@
 ---
 title: SQL Server PowerShell プロバイダー | Microsoft Docs
+description: ファイル システム パスと同様のパスを使用して SQL Server オブジェクトへのアクセスを実現する、Windows PowerShell 用の SQL Server プロバイダーについて説明します。
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: scripting
@@ -16,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: 1017620181ac127576f02fc792e3c4b85213a6d9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9434ad33aee0f00856e4c59ece38c0729830c977
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68731116"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912467"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Windows PowerShell 用の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、ファイル システム パスと同様のパスで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの階層を公開します。 このパスを使用してオブジェクトの場所を指定し、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) モデルのメソッドを使用してオブジェクトの操作を実行できます。  
   
@@ -50,7 +51,7 @@ Windows PowerShell 用の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 |`SQLSERVER:\SQLPolicy`|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|ポリシー ベースの管理オブジェクト (ポリシーやファセットなど)|  
 |`SQLSERVER:\SQLRegistration`|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|登録済みサーバー オブジェクト (サーバー グループや登録済みサーバーなど)|  
 |`SQLSERVER:\Utility`|<xref:Microsoft.SqlServer.Management.Utility>|ユーティリティ オブジェクト ( [!INCLUDE[ssDE](../includes/ssde-md.md)]のマネージド インスタンスなど)|  
-|`SQLSERVER:\DAC`|<xref:Microsoft.SqlServer.Management.DAC>|データ層アプリケーション オブジェクト (DAC パッケージなど) と操作 (DAC の配置など)|  
+|`SQLSERVER:\DAC`|[Microsoft.SqlServer.Management.Dac](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ee212127(v=sql.110))|データ層アプリケーション オブジェクト (DAC パッケージなど) と操作 (DAC の配置など)|  
 |`SQLSERVER:\DataCollection`|<xref:Microsoft.SqlServer.Management.Collector>|コレクション セットや構成ストアなどのデータ コレクター オブジェクト|  
 |`SQLSERVER:\SSIS`|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト、パッケージ、環境などのオブジェクト。|  
 |`SQLSERVER:\XEvent`|<xref:Microsoft.SqlServer.Management.XEvent>|SQL Server 拡張イベント|

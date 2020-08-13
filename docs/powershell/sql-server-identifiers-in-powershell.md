@@ -1,5 +1,6 @@
 ---
 title: PowerShell での SQL Server 識別子 | Microsoft Docs
+description: Windows PowerShell プロバイダーがデータ階層を公開するために使用するパス、およびこれらのパスにおいて PowerShell でサポートされていない特定の文字をエンコードする必要性について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f2f37cc56a0d485abc89909e4d02a076b4474c63
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ce7bfce6fb21ab7a8e5307b7b06ac8735554169c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67912233"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923191"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>PowerShell での SQL Server 識別子
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Windows PowerShell 用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、Windows Powershell のパスに [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子を使用します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子には、Windows PowerShell でパスとしてサポートされない文字が含まれている場合があります。 Windows PowerShell パスでこの識別子を使用する場合は、これらの文字をエスケープするか、この文字に特殊なエンコードを使用する必要があります。  
   

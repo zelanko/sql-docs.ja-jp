@@ -1,5 +1,6 @@
 ---
 title: カスタム データ処理拡張機能の接続を指定する | Microsoft Docs
+description: サードパーティのカスタム データ処理拡張機能の接続を指定する方法については、この情報を参照してください。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2f6bea94776853f23a02f44ff91748c510fd6f03
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f236fe67a8d551cd7a7ada15550770c34503c026
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190618"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86455374"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>カスタム データ処理拡張機能の接続を指定する
   サード パーティ製のカスタム データ処理拡張機能をレポート サーバー上で作成または使用して、サポートされているデータ ソースのデータ処理能力を向上したり、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の既定のインストールで使用できないその他の種類のデータ ソースをサポートしたりできます。 接続の処理方法は実装によって異なります。 データ処理拡張機能に使用できる実装は次のとおりです。  
@@ -46,10 +47,10 @@ ms.locfileid: "74190618"
 ## <a name="connections-for-custom-net-framework-data-providers"></a>カスタム .NET Framework データ プロバイダーの接続  
  レポートを構成して特定のデータ ソースを使用する場合、データ ソースの種類、接続文字列、およびデータ ソースへのアクセスに使用される資格情報を決定するプロパティを設定します。 次の表では、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーでサポートされている資格情報の種類を示します。 レポート データ ソースのプロパティの設定の詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  
   
-|[資格情報]|接続|  
+|資格情報|接続|  
 |-----------------|-----------------|  
 |統合セキュリティ|データ プロバイダーがこの資格情報をサポートする場合は、Windows 統合セキュリティを使用できます。 現在のユーザーの資格情報を使用して要求が送信されます。<br /><br /> 接続文字列を定義する場合は、統合セキュリティを指定する引数を指定してください (たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ ソースへ接続する場合は接続文字列に **Integrated Security=SSPI** を含めます)。|  
-|[Windows 認証]|データ プロバイダーがこの資格情報をサポートする場合は、Windows ドメイン ユーザー アカウントを使用できます。 レポート サーバーでは、データ処理拡張機能が呼び出される前にユーザー アカウントの権限が借用されます。<br /><br /> 接続文字列を定義する場合は、統合セキュリティを指定する引数を指定してください (たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ ソースへ接続する場合は接続文字列に **Integrated Security=SSPI** を含めます)。|  
+|Windows 認証|データ プロバイダーがこの資格情報をサポートする場合は、Windows ドメイン ユーザー アカウントを使用できます。 レポート サーバーでは、データ処理拡張機能が呼び出される前にユーザー アカウントの権限が借用されます。<br /><br /> 接続文字列を定義する場合は、統合セキュリティを指定する引数を指定してください (たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ ソースへ接続する場合は接続文字列に **Integrated Security=SSPI** を含めます)。|  
 |データベース資格情報|データベース認証は、カスタム .NET データ プロバイダー経由の接続に対してはサポートされていません。 すべての場合において、レポート サーバーは接続に失敗します。|  
 |資格情報なし|カスタム .NET データ プロバイダーでは、資格情報なしのオプションを使用できます。 自動実行アカウントが指定されている場合、使用する資格情報は接続文字列によって決定されます。 レポート サーバーでは、自動実行アカウントの権限が借用され、接続が行われます。<br /><br /> 自動実行アカウントが定義されていない場合、レポート サーバーは接続に失敗します。 アカウントの定義の詳細については、「 [自動実行アカウントの構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。|  
   
@@ -67,10 +68,10 @@ ms.locfileid: "74190618"
 ## <a name="connections-for-idbconnectionextension"></a>IDbConnectionExtension の接続  
  カスタム データ処理拡張機能を使用し、 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>がサポートされる場合、次の方法で接続を指定できます。  
   
-|[資格情報]|接続|  
+|資格情報|接続|  
 |-----------------|-----------------|  
 |統合セキュリティ|データ プロバイダーがこの資格情報をサポートする場合は、 **IDbConnectionExtension**を使用するカスタム データ処理拡張機能を持つ Windows 統合セキュリティを使用できます。<br /><br /> 接続文字列を定義する場合は、統合セキュリティを指定する引数を指定してください (たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ ソースへ接続する場合は接続文字列に **Integrated Security=SSPI** を含めます)。|  
-|[Windows 認証]|データ プロバイダーがこの資格情報をサポートする場合は、 **IDbConnectionExtension**を使用するカスタム データ処理拡張機能の Windows ドメイン ユーザー アカウントを使用できます。<br /><br /> レポート サーバーでは、データ処理拡張機能が呼び出される前にユーザー アカウントの権限が借用されます。 接続文字列を定義する場合は、統合セキュリティを指定する引数を指定してください (たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ ソースへ接続する場合は接続文字列に **Integrated Security=SSPI** を含めます)。|  
+|Windows 認証|データ プロバイダーがこの資格情報をサポートする場合は、 **IDbConnectionExtension**を使用するカスタム データ処理拡張機能の Windows ドメイン ユーザー アカウントを使用できます。<br /><br /> レポート サーバーでは、データ処理拡張機能が呼び出される前にユーザー アカウントの権限が借用されます。 接続文字列を定義する場合は、統合セキュリティを指定する引数を指定してください (たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ ソースへ接続する場合は接続文字列に **Integrated Security=SSPI** を含めます)。|  
 |データベース資格情報|データベース認証を使用して、 **IDbConnectionExtension**を使用するカスタム データ処理拡張機能の接続を構成できます。|  
 |資格情報なし|自動実行アカウントが指定されている場合、使用する資格情報は接続文字列によって決定されます。<br /><br /> 自動実行アカウントが定義されていない場合、レポート サーバーは接続に失敗します。|  
   

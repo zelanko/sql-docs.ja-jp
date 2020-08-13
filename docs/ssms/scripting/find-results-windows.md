@@ -1,5 +1,6 @@
 ---
 title: 検索結果ウィンドウ
+description: '[フォルダーを指定して検索] 操作と [フォルダーを指定して置換] 操作で見つかった一致項目を保持する 2 つの [検索結果] ウィンドウがあります。 これらのウィンドウを表示する方法と、一致に対応するコード ファイルと行を表示する方法について説明します。'
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 463e2943fbad1b8ad03843d94267c2d0a009104b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2063c8d9c5d4645ad96826400e14e9d2eea870
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253842"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122918"
 ---
 # <a name="find-results-windows"></a>検索結果ウィンドウ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   2 つの検索結果ウィンドウには、 **[検索と置換]** ダイアログの **[フォルダーを指定して検索]** タブまたは **[フォルダーを指定して置換]** タブを使用して検出された項目が表示されます。 **[フォルダーを指定して検索]** または **[フォルダーを指定して置換]** の **[検索結果]** コマンドを使用すると、検出された項目が表示される検索結果ウィンドウを選択できます。  
   
  条件に一致する項目が検出されると、選択された検索結果ウィンドウが自動的に開きます。 検索結果ウィンドウを手動で表示するには、 **[表示]** メニューの **[その他のウィンドウ]** をクリックし、 **[検索結果 1]** または **[検索結果 2]** をクリックします。  

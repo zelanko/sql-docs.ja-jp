@@ -1,5 +1,6 @@
 ---
 title: グループ化ペイン | Microsoft Docs
+description: 現在選択されている Tablix データ領域の行グループと列グループを表示する、Reporting Services の [レポート] メニューの [グループ化] ペインについて説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0359a53fafa4c738b80d4ad44b3c9babdd534cf7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2d52ef6b9d9ac23afee2f6c9187da0da22ef4dd0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68892552"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915688"
 ---
 # <a name="grouping-pane"></a>グループ化ペイン
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のレポートをデザインする際、グループ化ペインには、現在選択されている Tablix データ領域の行グループと列グループが表示されます。 グラフおよびゲージのデータ領域では、グループ化ペインは使用できません。 グループ化ペインは、行グループ ペインと列グループ ペインで構成されています。 グループ化ペインには、既定モードと詳細設定モードの 2 つのモードがあります。 既定モードでは、行グループおよび列グループの動的メンバーの階層ビューが表示されます。 詳細設定モードでは、行グループと列グループの動的メンバーと静的メンバーの両方が表示されます。 グループは、データ領域に表示されるレポート データセットの名前付きセットです。 グループは、静的および動的なメンバーを含む階層で構成されます。 詳細については、「[グループについて &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  

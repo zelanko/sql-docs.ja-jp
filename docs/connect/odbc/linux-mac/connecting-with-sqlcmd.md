@@ -2,7 +2,7 @@
 title: sqlcmd による接続
 description: Linux と macOS の Microsoft ODBC Driver for SQL Server で sqlcmd ユーティリティを使用する方法について説明します。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 628968b7d93b9278eb4aaf6ebca3d03fb3cde102
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e96d05b14cb9922572ee5f5c9e773f1c7bc35590
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632822"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465309"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "81632822"
   
 次のコマンドは、Windows 認証 (Kerberos) と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証の使用方法をそれぞれ示しています。
   
-```  
+```console
 sqlcmd -E -Sxxx.xxx.xxx.xxx  
 sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx  
 ```  
@@ -170,22 +170,30 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 次の代替方法を使用できます。パラメーターを 1 つのファイル内に配置すると、それを別のファイルに追加することができます。 これにより、パラメーター ファイルを使用して値を置き換えることができます。 たとえば、次のコンテンツを使用して、`a.sql` というファイル (パラメーター ファイル) を作成します。
   
+```console
     :setvar ColumnName object_id  
     :setvar TableName sys.objects  
+```
   
 次に、置換のためのパラメーターを使用して、`b.sql` というファイルを作成します。  
   
+```sql
     select $(ColumnName) from $(TableName)  
+```
 
 コマンド ラインで、次のコマンドを使用して `a.sql` と `b.sql` を `c.sql` へと結合します。  
   
+```console
     cat a.sql > c.sql 
   
     cat b.sql >> c.sql  
+```
   
 `sqlcmd` を実行し、入力ファイルとして `c.sql` を使用します。  
   
-    slqcmd -S<...> -P<..> -U<..> -I c.sql  
+```console
+    sqlcmd -S<...> -P<..> -U<..> -I c.sql  
+```
 
 - -z *password* パスワードを変更します。  
   
@@ -203,24 +211,12 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 ## <a name="dsn-support-in-sqlcmd-and-bcp"></a>sqlcmd および bcp の DSN サポート
 
--D を指定した場合は、**sqlcmd** または **bcp** `-S` オプション (または **sqlcmd**: 接続コマンド) でサーバー名ではなくデータ ソース名 (DSN) を指定できます。 -D を指定すると、**sqlcmd** または **bcp** が、-S オプションを使用して DSN で指定されたサーバーに接続されます。  
+`-D` を指定した場合は、**sqlcmd** または **bcp** `-S` オプション (または **sqlcmd**: 接続コマンド) でサーバー名ではなくデータ ソース名 (DSN) を指定できます。 `-D` を指定すると、**sqlcmd** または **bcp** が、`-S` オプションを使用して DSN で指定されたサーバーに接続されます。  
   
 システム DSN は、ODBC SysConfigDir ディレクトリ (標準インストールでは `/etc/odbc.ini`) 内の `odbc.ini` ファイルに格納されます。 ユーザー DSN は、ユーザーのホーム ディレクトリ (`~/.odbc.ini`) 内の `.odbc.ini` に格納されます。
-  
-Linux または macOS 上の DSN では、次のエントリがサポートされています。
 
--   **ApplicationIntent=ReadOnly**  
+ドライバーがサポートするエントリの一覧については、「[DSN と接続文字列のキーワードと属性](../dsn-connection-string-attribute.md)」を参照してください。
 
--   **Database=** _database\_name_  
-  
--   **Driver=ODBC Driver 11 for SQL Server** または **Driver=ODBC Driver 13 for SQL Server**
-  
--   **MultiSubnetFailover=Yes**  
-  
--   **Server=** _server\_name\_or\_IP\_address_  
-  
--   **Trusted_Connection=yes**|**no**  
-  
 DSN では DRIVER エントリのみが必要ですが、サーバーに接続するには、`sqlcmd` または `bcp` が SERVER エントリ内の値を必要とします。  
 
 DSN と `sqlcmd` または `bcp` コマンド ラインの両方で同じオプションが指定されている場合は、コマンドライン オプションが、DSN で使用される値をオーバーライドします。 たとえば、DSN に DATABASE エントリがあり、`sqlcmd` コマンドラインに **-d** が含まれる場合、 **-d** に渡される値が使用されます。 DSN で **Trusted_Connection=yes** が指定されている場合は、Kerberos 認証が使用され、ユーザー名 ( **-U**) とパスワード ( **-P**) は無視されます (指定されている場合)。

@@ -1,5 +1,6 @@
 ---
 title: Analysis Services の MDX クエリ デザイナーでのパラメーターの定義 | Microsoft Docs
+description: Analysis Services の多次元式 (MDX) クエリ デザイナーでクエリ パラメーターを定義する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02b9884d4f1f9d7928db80091c68678dbc55fa10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72fe1a64e1aa474d0aa0233e8065cf351acfe432
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573655"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458199"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Analysis Services の MDX クエリ デザイナーでのパラメーターの定義
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに対する MDX クエリをパラメーター化するには、そのクエリにクエリ パラメーターを追加する必要があります。 MDX クエリ デザイナーでは、デザイン モードとクエリ モードの両方で、フィルターを指定することによって、クエリ パラメーターを追加できます。 クエリ パラメーターを使用してクエリを定義すると、Reporting Services によってレポート パラメーターとデータセットが自動的に作成され、有効な値の一覧が示されます。 これにより、クエリに直接渡される値を指定できます。  
@@ -59,7 +60,7 @@ ms.locfileid: "65573655"
   
 3.  MDX クエリ デザイナー ツール バーで **[クエリ パラメーター]** (![[クエリ パラメーター] ダイアログ ボックスのアイコン](../../reporting-services/report-data/media/iconqueryparameter.gif "[クエリ パラメーター] ダイアログ ボックスのアイコン")) をクリックします。 [クエリ パラメーター] ダイアログ ボックスが表示されます。  
   
-4.  **[パラメーター]** 列で **[\<パラメーターの入力>]** をクリックし、パラメーター名を入力します。  
+4.  **[パラメーター]** 列で **\<Enter Parameter>** をクリックし、パラメーター名を入力します。  
   
 5.  **[ディメンション]** 列のボックスの一覧から値を選択します。  
   

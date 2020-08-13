@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05ab2bfea73d7419613d21a3cce85135743e48f5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286176"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941294"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint モードでの最初のレポート サーバーのインストール
 
@@ -92,13 +92,17 @@ ms.locfileid: "79286176"
     > [!NOTE]
     > SharePoint サーバーの正しい名前を指定していることを確認してください。
     
-        Set-SPServer SERVERNAME -Role Custom
+    ```powershell
+    Set-SPServer SERVERNAME -Role Custom
+    ```
 
 4. タイマー ジョブがスケジュールされたという応答が表示されます。 ジョブが実行されるまで待機する必要があります。
 
 5. 次のコマンドを使用すると、サーバーの割り当てられたロールを確認できます。
 
-        Get-SPServer SERVERNAME 
+    ```powershell
+    Get-SPServer SERVERNAME 
+    ```
  
  6. **[ロール]** の一覧に **[ユーザー定義]** が含まれているはずです。
  
@@ -209,7 +213,9 @@ ms.locfileid: "79286176"
     > [!IMPORTANT]
     > 次のようなエラー メッセージが表示される場合があります。  
     >   
-    >     Install-SPRSService: 用語 'Install-SPRSService' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として**認識されません**。 名前が正しく記述されていることを確認し、パスが含まれている場合はそのパスが正しいことを確認してから、再試行してください。  
+    ```powershell
+    >     Install-SPRSService : The term 'Install-SPRSService' **is not recognized** as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.  
+    ```
     >
     > SharePoint 管理シェルではなく Windows Powershell が表示されているか、Reporting Services SharePoint モードがインストールされていません。 Reporting Services と PowerShell については、「[Reporting Services SharePoint モードの PowerShell コマンドレット](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)」を参照してください。  
   
@@ -224,7 +230,7 @@ ms.locfileid: "79286176"
     > [!NOTE]  
     >  Reporting Services サービスが **[開始中]** ステータスのままで、 **[開始]** に変わらない場合は、Windows サーバー マネージャーで "SharePoint 2013 Administration" サービスが開始されていることを確認します。  
   
-##  <a name="step-3-create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a> 手順 3: Reporting Services サービス アプリケーションの作成  
+##  <a name="step-3-create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a> ステップ 3:Reporting Services サービス アプリケーションの作成  
  ここでは、既存のサービス アプリケーションを確認している場合に、サービス アプリケーションおよびプロパティの説明を作成する手順について説明します。  
   
 1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
@@ -260,7 +266,7 @@ ms.locfileid: "79286176"
   
 -   トピック「 [PowerShell を使用して Reporting Services サービス アプリケーションを作成するには](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)」。  
 
-##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a> 手順 4: Power View のサイト コレクション機能のアクティブ化
+##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a> 手順 4:Power View のサイト コレクション機能のアクティブ化。
 
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 製品用の SQL Server 2016 Reporting Services アドインの機能である [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は、サイト コレクション機能です。 この機能は、ルート サイト コレクションと、Reporting Services アドインのインストール後に作成されたサイト コレクションで自動的にアクティブ化されます。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]を使用する場合は、この機能がアクティブ化されていることを確認してください。  
   
@@ -270,7 +276,7 @@ ms.locfileid: "79286176"
   
 1.  次の手順は、SharePoint 2013 の場合に、SharePoint サイトが 2013 の **体験版**用に構成されていることを前提としています。  
   
-     ブラウザーで目的の SharePoint サイトを開きます。 例: https://\<サーバー名>/sites/bi  
+     ブラウザーで目的の SharePoint サイトを開きます。 たとえば https://\<servername>/sites/bi です  
   
 2.  **[設定]** ![[SharePoint の設定]](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定") の順に選択します。  
   
@@ -410,7 +416,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  Reporting Services のデータ警告機能は、電子メール メッセージで警告を送信します。 電子メールを送信するには、Reporting Services サービス アプリケーションを構成して、このサービス アプリケーションの電子メール配信拡張機能を変更しなければならない場合があります。 Reporting Services サブスクリプション機能の電子メール配信拡張機能を使う場合は、電子メールの設定が必要です。 詳細については、「[Reporting Services サービス アプリケーションの電子メールの構成 &#40;SharePoint 2013 および SharePoint 2016&#41;](https://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f)」を参照してください。 
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>コンテンツ ライブラリに Reporting Services のコンテンツの種類を追加する  
- Reporting Services では、共有データ ソース (.rsds) ファイル、レポート ビルダーのレポート定義 (.rdl) ファイルを管理するときに使われるコンテンツの種類が、あらかじめ定義されています。 コンテンツの種類として、 **[レポート ビルダー レポート]** および **[レポート データ ソース]** をライブラリに追加すると、 **[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」をご覧ください。  
+ Reporting Services では、共有データ ソース (.rsds) ファイル、レポート ビルダーのレポート定義 (.rdl) ファイルを管理するときに使われるコンテンツの種類が、あらかじめ定義されています。 コンテンツの種類として、**[レポート ビルダー レポート]** および **[レポート データ ソース]** をライブラリに追加すると、**[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」をご覧ください。  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>レポート サーバーのファイル同期機能をアクティブにする  
  ユーザーがパブリッシュされたレポート アイテムを SharePoint ドキュメント ライブラリに頻繁に直接アップロードする場合は、サイト レベルの **レポート サーバー ファイル同期** 機能が役立ちます。 ファイル同期機能では、レポート サーバー カタログとドキュメント ライブラリのアイテムの同期が、より頻繁に行われます。 詳しくは、「 [SharePoint サーバーの全体管理でレポート サーバーのファイル同期機能をアクティブにする](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)」をご覧ください。  

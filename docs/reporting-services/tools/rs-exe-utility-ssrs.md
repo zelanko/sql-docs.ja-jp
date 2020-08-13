@@ -1,5 +1,6 @@
 ---
 title: RS.exe ユーティリティ | Microsoft Docs
+description: レポート サーバーの配置および管理タスクを自動化するのに使用されるスクリプトを処理する、rs.exe ユーティリティのコマンドと構文について説明します。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ebd9d811c39247822d2200327fefe02026c067e8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e92646e27dcabed21aa387a8cf22caf95770ff6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081691"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914980"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe ユーティリティは入力ファイル内に指定したスクリプトを処理します。 このユーティリティを使用して、レポート サーバーの配置と管理タスクを自動化します。  
@@ -90,7 +91,7 @@ rs {-?}
   
  `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- 指定した値に設定された名前を使用して、グローバル変数を作成します。 たとえば、 **-v a=** "**1**" **-v b=** "**2**" は、" **1** " の値を持つ**a**という名前の変数と、" **2** " の値を持つ**b**という変数を表します。  
+ 指定した値に設定された名前を使用して、グローバル変数を作成します。 たとえば、 **-v a=**"**1**" **-v b=**"**2**" は、" **1** " の値を持つ**a**という名前の変数と、" **2** " の値を持つ**b**という変数を表します。  
   
  グローバル変数は、スクリプト内のすべての関数で使用できます。 円記号と引用符 ( **\\"** ) は、二重引用符と解釈されます。 引用符は、文字列にスペースが含まれている場合のみ必要です。 変数名は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で有効な名前であることが必要です。また変数名は、アルファベットやアンダースコアで始まり、アルファベット文字、数字、およびアンダースコアを含めることができます。 予約語は、変数名として使用できません。 グローバル変数の使用の詳細については、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
   

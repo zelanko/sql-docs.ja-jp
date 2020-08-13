@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 976fae5e1f906e80248ac11d1f89e889bcbb5e0e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1b41b9a68776a41b9b7aaab480ea749187becf5b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000519"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122658"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server トランザクション ログのアーキテクチャと管理ガイド
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,11 +95,11 @@ ms.locfileid: "86000519"
   
  トランザクション ログは、循環して使用されるファイルです。 たとえば、4 つの VLF に分割された 1 つの物理ログ ファイルが格納されたデータベースがあるとします。 このデータベースの作成時、論理ログ ファイルは物理ログ ファイルの先頭から始まります。 新しいログ レコードは論理ログの末尾に追加され、物理ログの末尾に向かって拡張されます。 ログの切り捨てにより、最小復旧ログ シーケンス番号 (MinLSN) より前にあるすべての仮想ログ レコードが解放されます。 *MinLSN* は、データベース全体を正常にロールバックするために必要な最も古いログ レコードのログ シーケンス番号です。 例として挙げたデータベースのトランザクション ログは、次の図のようになります。  
   
- ![tranlog3](../relational-databases/media/tranlog3.gif)  
+ ![物理ログ ファイルを仮想ログに分割する方法について示します](../relational-databases/media/tranlog3.png)  
   
  論理ログの末尾が物理ログ ファイルの末尾に達すると、新しいログ レコードはまた物理ログ ファイルの先頭から記録されていきます。  
   
-![tranlog4](../relational-databases/media/tranlog4.gif)   
+![論理トランザクション ログが物理ログ ファイル内でどのようにラップされるかを示します](../relational-databases/media/tranlog4.png)   
   
  このサイクルは、論理ログの末尾が論理ログの先頭に達しない限り、無限に繰り返されます。 古いログ レコードが頻繁に切り捨てられ、次のチェックポイントで作成されるすべての新規ログ レコードを格納するのに必要な領域が常に確保されている場合、論理ログがいっぱいになることはありません。 ただし、論理ログの末尾が論理ログの先頭に達した場合には、次のいずれかの処理が発生します。  
   
@@ -117,11 +117,11 @@ ms.locfileid: "86000519"
   
  次の図は、切り捨てを行う前と後のトランザクション ログを示しています。 最初の図は、切り捨てが行われていないトランザクション ログを示しています。 現在、4 つの仮想ログ ファイルが論理ログで使用されています。 この論理ログは最初の仮想ログ ファイルの先頭から始まり、仮想ログ 4 で終了します。 MinLSN レコードは仮想ログ 3 にあります。 仮想ログ 1 および仮想ログ 2 には、非アクティブなログ レコードのみが含まれています。 これらのレコードは切り捨てることができます。 仮想ログ 5 はまだ使用されていないので、現在の論理ログには含まれていません。  
   
-![tranlog2](../relational-databases/media/tranlog2.gif)  
+![トランザクション ログが切り捨てられる前にどのように表示されるかを示します](../relational-databases/media/tranlog2.png)  
   
  2 番目の図は、切り捨て後のログの状態を示しています。 仮想ログ 1 および仮想ログ 2 は再利用のために解放されています。 この時点で、論理ログは仮想ログ 3 の先頭から始まっています。 仮想ログ 5 はまだ使用されていないので、現在の論理ログには含まれていません。  
   
-![tranlog3](../relational-databases/media/tranlog3.gif)  
+![トランザクション ログが切り捨てられた後にどのように表示されるかを示します](../relational-databases/media/tranlog3.png)  
   
  何かの理由で遅延が発生している場合を除いて、ログの切り捨ては、次のイベントの後に自動的に発生します。  
   
@@ -228,7 +228,7 @@ CHECKPOINT ステートメントでは、チェックポイントが終了する
 
 下図に、2 つのアクティブなトランザクションがあるトランザクション ログの末尾を単純化したものを示します。 チェックポイント レコードは単一のレコードに圧縮されています。
 
-![active_log](../relational-databases/media/active-log.gif) 
+![2 つのアクティブなトランザクションと、圧縮されたチェックポイント レコードを含むトランザクション ログの終了を示します](../relational-databases/media/active-log.png) 
 
 LSN 148 はトランザクション ログの最後のレコードです。 LSN 147 に記録されたチェックポイントが処理された時点では、Tran 1 は既にコミットされており、Tran 2 だけがアクティブなトランザクションでした。 このため、Tran 2 の最初のログ レコードが、前回のチェックポイントの時点でアクティブなトランザクションの最も古いログ レコードになります。 したがって LSN 142、つまり Tran 2 の Begin トランザクション レコードが MinLSN になります。
 

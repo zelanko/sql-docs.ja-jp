@@ -1,22 +1,22 @@
 ---
 title: SQLRUserGroup のログインｎ作成
-description: 暗黙の認証を使用したループ バック接続の場合は、SQLRUserGroup に対して SQL Server でログインを作成し、ID 変換が呼び出し元のユーザーへ返るようにするため、ワーカー アカウントがサーバーにログインできるようにします。
+description: ID を呼び出し元のユーザーに変換するために、暗黙の認証を使用して SQL Server 内で SQLRUserGroup 用のログインを作成してサーバーにログインします。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 01/25/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c57a62e954ae8cb0fc52c9a5ead22d418243c0b8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f3d7bd23c2a6b218e56f4de57d5b281b34d0687d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117125"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484637"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>SQLRUserGroup のログインｎ作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 スクリプト内の[ループ バック接続](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)が[信頼関係接続](../concepts/security.md#sqlrusergroup)を指定するとき、[SQLRUserGroup](../../machine-learning/concepts/security.md#implied-authentication) のための *SQL Server へのログイン*を作成すると、あなたのコードを含むオブジェクトの実行に使用される ID は Windows のユーザー アカウントです。
 

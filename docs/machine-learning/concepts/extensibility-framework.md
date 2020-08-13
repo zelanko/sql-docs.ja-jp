@@ -1,30 +1,30 @@
 ---
 title: 機能拡張アーキテクチャ
-description: この記事では、SQL Server で R や Python などの外部スクリプトを実行するための機能拡張フレームワークのアーキテクチャについて説明します。
+description: この記事では、SQL server Machine Learning Services で外部 Python スクリプトまたは外部 R スクリプトを実行するための機能拡張フレームワークのアーキテクチャについて説明します。 このスクリプトは、言語ランタイム環境でコア データベース エンジンの拡張機能として実行されます。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 408125a3369d35a28893852a2f674e3e4562b063
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 14611369afe42da2e87aab87d675fd77e710c461
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118825"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406295"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の機能拡張アーキテクチャ 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-SQL Server は、サーバーで R や Python などの外部スクリプトを実行するための機能拡張フレームワークのアーキテクチャを備えています。 このスクリプトは、言語ランタイム環境でコア データベース エンジンの拡張機能として実行されます。
+この記事では、SQL server Machine Learning Services で外部 Python スクリプトまたは外部 R スクリプトを実行するための機能拡張フレームワークのアーキテクチャについて説明します。 このスクリプトは、言語ランタイム環境でコア データベース エンジンの拡張機能として実行されます。
 
 ## <a name="background"></a>バックグラウンド
 
-この機能拡張フレームワークは、R ランタイムをサポートするために SQL Server 2016 で導入されました。 SQL Server 2017 以降では、Python がサポートされています。
+この機能拡張フレームワークは、[R Services](../r/sql-server-r-services.md) で R ランタイムをサポートするために SQL Server 2016 で導入されました。 SQL Server 2017 以降では、[Machine Learning Services](../sql-server-machine-learning-services.md) で Python がサポートされています。
 
 機能拡張フレームワークの目的は、SQL Server と、R や Python などのデータ サイエンス言語の間のインターフェイスを提供することです。 データ サイエンス ソリューションを運用環境に移行し、開発プロセス中に無防備になるデータを保護する際に、摩擦を軽減することを目標としています。 SQL Server によって管理される安全なフレームワーク内で信頼できるスクリプト言語を実行することで、データベース管理者は、データ科学者による企業データへのアクセスを許可しながら、セキュリティを維持することができます。
 

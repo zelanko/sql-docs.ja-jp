@@ -1,5 +1,6 @@
 ---
 title: '[フォルダーを指定して置換]'
+description: '[検索と置換] ウィンドウの [フォルダーを指定して置換] 機能を使用して、一連のファイルのテキストから文字列または式を検索し、見つかったテキストの一部またはすべてを変更する方法について説明します。'
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 062fd4a1ecdf9e858e75d4d36292296bdee619fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b14b359a71de345a245e874cca0c191296c823f7
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261681"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122525"
 ---
 # <a name="replace-in-files"></a>[フォルダーを指定して置換]
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   **[検索と置換]** ウィンドウの [フォルダーを指定して置換] タブを使用すると、指定したファイル セットのコード内で文字列や正規表現を検索したり、検出された項目の一部またはすべてを置き換えたりできます。 検出された項目および実行するアクションは、 **[結果オプション]** で選択された検索結果ウィンドウに表示されます。  
   
  ツール バー ボタンやショートカット キーを使用して **[検索と置換]** ダイアログ ボックスを開くこともできます。  

@@ -5,26 +5,27 @@ description: azdata bdc コマンドのリファレンス記事です。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d5d5cb5256f4a1b8389d882300a89f0ee0012a99
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eaecb3075b01817e7281b562834a23010d7653b9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820988"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942656"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-以下の記事では、`azdata` ツールの `bdc` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
+以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。
 
 ## <a name="commands"></a>コマンド
-|     |     |
+| command | 説明 |
 | --- | --- |
+[azdata bdc spark](reference-azdata-bdc-spark.md) | Spark コマンドを使用してセッション、ステートメント、およびバッチを作成および管理することで、ユーザーは Spark システムと対話できます。
 [azdata bdc create](#azdata-bdc-create) | ビッグ データ クラスターを作成します。
 [azdata bdc delete](#azdata-bdc-delete) | ビッグ データ クラスターを削除します。
 [azdata bdc upgrade](#azdata-bdc-upgrade) | SQL Server ビッグ データ クラスターの各コンテナーにデプロイされているイメージを更新します。
@@ -38,29 +39,31 @@ ms.locfileid: "74820988"
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Spark サービス コマンド。
 [azdata bdc gateway](reference-azdata-bdc-gateway.md) | ゲートウェイ サービス コマンド。
 [azdata bdc app](reference-azdata-bdc-app.md) | アプリ サービス コマンド。
-[azdata bdc spark](reference-azdata-bdc-spark.md) | Spark コマンドを使用してセッション、ステートメント、およびバッチを作成および管理することで、ユーザーは Spark システムと対話できます。
 [azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | HDFS モジュールには、HDFS ファイル システムにアクセスするコマンドが用意されています。
 ## <a name="azdata-bdc-create"></a>azdata bdc create
 SQL Server ビッグ データ クラスターを作成します。Kubernetes の構成と環境変数 ['AZDATA_USERNAME', 'AZDATA_PASSWORD'] がシステムに必要です。
 ```bash
 azdata bdc create [--name -n] 
                   [--config-profile -c]  
-                  [--accept-eula -a]  
-                  [--node-label -l]  
-                  [--force -f]
+                  
+[--accept-eula -a]  
+                  
+[--node-label -l]  
+                  
+[--force -f]
 ```
 ### <a name="examples"></a>例
 ガイド付きの BDC 展開のエクスペリエンス。必要な値の入力を求めるプロンプトが表示されます。
 ```bash
 azdata bdc create
 ```
-引数を使用した BDC 展開。
+引数と、`azdata bdc config init` を介して初期化されたカスタム構成プロファイルを使用した BDC 展開。
 ```bash
-azdata bdc create --accept-eula yes --config-profile aks-dev-test
+azdata bdc create --accept-eula yes --config-profile ./path/to/config/profile
 ```
-既定の名前ではなくプロファイルに名前を指定した BDC 展開。
+カスタム クラスター名が指定され、既定の構成プロファイルが aks-dev-test である BDC 展開。
 ```bash
-azdata bdc create --name <cluster_name> --accept-eula yes --config-profile aks-dev-test --force
+azdata bdc create --name <cluster_name> --accept-eula yes --config-profile aks-dev-test
 ```
 引数を使用した BDC 展開。--force フラグが使用されるため、プロンプトは表示されません。
 ```bash
@@ -70,9 +73,9 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 ビッグ データ クラスターの名前。kubernetes 名前空間に使用されます。
 #### `--config-profile -c`
-ビッグ データ クラスター構成プロファイル。クラスターの展開に使用されます: ['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
+クラスターの展開に使用されるビッグ データ クラスター構成プロファイル: ['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
 #### `--accept-eula -a`
-Do you accept the license terms? (ライセンス条項に同意しますか?) [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 Azdata のライセンス条項は https://aka.ms/eula-azdata-en で確認できます。ビッグ データ クラスターのライセンス条項は、次の場所で確認できます: Enterprise: https://go.microsoft.com/fwlink/?linkid=2104292 、Standard: https://go.microsoft.com/fwlink/?linkid=2104294 、Developer: https://go.microsoft.com/fwlink/?linkid=2104079 。
+Do you accept the license terms? (ライセンス条項に同意しますか?) [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 azdata のライセンス条項については、 https://aka.ms/eula-azdata-en を参照してください。
 #### `--node-label -l`
 ビッグ データ クラスター ノードのラベル。展開先のノードを指定するために使用されます。
 #### `--force -f`
@@ -85,7 +88,7 @@ Do you accept the license terms? (ライセンス条項に同意しますか?) [
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-delete"></a>azdata bdc delete
@@ -113,7 +116,7 @@ azdata bdc delete --name <cluster_name>
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-upgrade"></a>azdata bdc upgrade
@@ -121,7 +124,14 @@ SQL Server ビッグ データ クラスターの各コンテナーにデプロ�
 ```bash
 azdata bdc upgrade --name -n 
                    --tag -t  
-                   [--repository -r]
+                   
+[--repository -r]  
+                   
+[--controller-timeout -k]  
+                   
+[--stability-threshold -s]  
+                   
+[--component-timeout -p]
 ```
 ### <a name="examples"></a>例
 同じリポジトリからの新しいイメージ タグ "cu2" への BDC のアップグレード。
@@ -132,6 +142,10 @@ azdata bdc upgrade -t cu2
 ```bash
 azdata bdc upgrade -t cu2 -r foo/bar/baz
 ```
+同じリポジトリからのタグ "cu2" を持つ新しいイメージへの BDC のアップグレード。アップグレードは、コントローラーがアップグレードされるまで 30 分間、コントローラー db がアップグレードされるまで 30 分間待機します。 その後、残りのクラスターのアップグレードをクラッシュさせることなく、コントローラーとコントローラー db が実行されるのを 3 分間待機します。 アップグレードの後続の各フェーズは、完了するまでに 40 分かかります。
+```bash
+azdata bdc upgrade -t cu2 --controller-timeout=30 --component-timeout=40 --stability-threshold=3
+```
 ### <a name="required-parameters"></a>必須のパラメーター
 #### `--name -n`
 ビッグ データ クラスターの名前。kubernetes 名前空間に使用されます。
@@ -140,6 +154,12 @@ azdata bdc upgrade -t cu2 -r foo/bar/baz
 ### <a name="optional-parameters"></a>省略可能なパラメーター
 #### `--repository -r`
 クラスター内のすべてのコンテナーでイメージをプルする Docker リポジトリ。
+#### `--controller-timeout -k`
+アップグレードがロールバックされるまでの、コントローラーまたはコントローラー データベースのアップグレードを待機する分数。
+#### `--stability-threshold -s`
+アップグレード後、安定とマークされるまで待機する分数。
+#### `--component-timeout -p`
+(コントローラーのアップグレード後に) アップグレードを一時停止する前にアップグレードの各フェーズが完了するまで待機する分数。
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
 すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
@@ -148,7 +168,7 @@ azdata bdc upgrade -t cu2 -r foo/bar/baz
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 

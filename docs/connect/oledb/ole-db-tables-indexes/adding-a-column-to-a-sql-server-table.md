@@ -1,5 +1,5 @@
 ---
-title: SQL Server テーブルに列を追加する | Microsoft Docs
+title: SQL Server テーブルに列を追加する (OLE DB ドライバー) | Microsoft Docs
 description: OLE DB Driver for SQL Server を利用し、SQL Server テーブルに列を追加する
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - adding columns
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 2c6cd539e499f80342a30371d047c9870c4fda08
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ce22cc49060451e7d47a1f9452f1c10a134ae610
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994102"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943144"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>SQL Server テーブルへの列の追加
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

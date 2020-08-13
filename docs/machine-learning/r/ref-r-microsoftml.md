@@ -1,34 +1,32 @@
 ---
-title: MicrosoftML R 関数ライブラリ
-description: SQL Server 2016 R Services での MicrosoftML 関数ライブラリと、R を使用した SQL Server Machine Learning Services の概要について説明します。
+title: MicrosoftML R パッケージ
+description: MicrosoftML は、Microsoft が提供する R パッケージであり、ハイパフォーマンスの機械学習アルゴリズムを備えています。 トレーニング、変換、スコアリング、テキストと画像の分析、既存のデータから値を派生させるための特徴抽出を行うための関数が含まれています。 このパッケージは、SQL Server Machine Learning Services と SQL Server 2016 R Services に含まれており、マルチコア処理を使用したビッグ データでのハイパフォーマンス、および高速データ ストリーミングをサポートしています。 また、MicrosoftML には、テキストと画像処理のための変換も多数含まれています。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 450091bba39cf10e551b8da5e62993ca676c64af
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 28f043ea0005f1020581218c358aed559285a5a4
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117445"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406175"
 ---
-# <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (SQL Server の R ライブラリ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="microsoftml-r-package-in-sql-server-machine-learning-services"></a>MicrosoftML (SQL Server Machine Learning Services の R パッケージ)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**MicrosoftML** は、高パフォーマンスの機械学習アルゴリズムを提供する Microsoft の R 関数ライブラリです。 トレーニング、変換、スコアリング、テキストと画像の分析、既存のデータから値を派生させるための特徴抽出を行うための関数が含まれています。
-
-機械学習 API は、内部機械学習アプリケーション用に Microsoft によって開発されたものです。マルチコア処理と高速データ ストリーミングを使用してビッグ データに対する高パフォーマンスをサポートするために、長年にわたって改善され続けています。 また、MicrosoftML には、テキストと画像処理のための変換も多数含まれています。
+**MicrosoftML** は、Microsoft が提供する R パッケージであり、ハイパフォーマンスの機械学習アルゴリズムを備えています。 トレーニング、変換、スコアリング、テキストと画像の分析、既存のデータから値を派生させるための特徴抽出を行うための関数が含まれています。 このパッケージは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) と [SQL Server 2016 R Services](sql-server-r-services.md) に含まれており、マルチコア処理を使用したビッグ データでのハイパフォーマンス、および高速データ ストリーミングをサポートしています。 また、MicrosoftML には、テキストと画像処理のための変換も多数含まれています。
 
 ## <a name="full-reference-documentation"></a>完全なリファレンス ドキュメント
 
-**MicrosoftML** ライブラリは複数の Microsoft 製品で配布されていますが、SQL Server または別の製品のどちらでライブラリを取得した場合でも、使用方法は同じです。 これらの関数は同じであるため、[個々の RevoScaleR 関数のドキュメント](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)は Microsoft Machine Learning Server の [R リファレンス](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)の下でのみ公開されています。 製品固有の動作が存在する場合、関数のヘルプ ページにその相違点が示されます。
+**MicrosoftML** パッケージは、複数の Microsoft 製品で配布されていますが、このパッケージを SQL Server または別の製品のどちらで取得しても、使用方法は同じです。 これらの関数は同じであるため、[個々の RevoScaleR 関数のドキュメント](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)は Microsoft Machine Learning Server の [R リファレンス](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)の下でのみ公開されています。 製品固有の動作が存在する場合、関数のヘルプ ページにその相違点が示されます。
 
 ## <a name="versions-and-platforms"></a>バージョンとプラットフォーム
 
-**MicrosoftML** ライブラリは R 3.4.3 に基づいており、次のいずれかの Microsoft 製品またはダウンロードをインストールした場合にのみ利用できます。
+**MicrosoftML** パッケージは R 3.4.3 に基づいており、次のいずれかの Microsoft 製品またはダウンロードをインストールした場合にのみ利用できます。
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server Machine Learning サービス](../install/sql-machine-learning-services-windows-install.md)
@@ -43,7 +41,7 @@ ms.locfileid: "81117445"
 **MicrosoftML** のアルゴリズムは、次に関して [RevoScaleR](ref-r-revoscaler.md) に依存します。
 
 + データ ソース オブジェクト。 **MicrosoftML** 関数によって使用されるデータは、**RevoScaleR** 関数を使用して作成されます。
-+ リモート コンピューティング (関数の実行をリモート SQL Server インスタンスにシフトする)。 **RevoScaleR** ライブラリには、SQL Server のリモート計算コンテキストを作成およびアクティブ化するための関数が用意されています。
++ リモート コンピューティング (関数の実行をリモート SQL Server インスタンスにシフトする)。 **RevoScaleR** パッケージには、SQL Server のリモート計算コンテキストを作成およびアクティブ化するための関数が用意されています。
 
 ほとんどの場合、**MicrosoftML** を使用しているときは常に、パッケージをまとめて読み込みます。
 

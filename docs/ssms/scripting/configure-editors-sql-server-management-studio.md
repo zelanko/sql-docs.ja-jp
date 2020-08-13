@@ -1,5 +1,6 @@
 ---
 title: エディターの構成 (SQL Server Management Studio)
+description: '[オプション] ダイアログでオプションを設定して。SQL Server Management Studio エディターの操作をカスタマイズする方法について説明します。'
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c70980653cd23241d0021d85a507e55573cf43b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2fe8cc40b18678e080e97285f5566a3a0de7a73b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253960"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122873"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>エディターの構成 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] エディターのオプションを構成することにより、各エディターの操作をカスタマイズできます。  
   
-## <a name="settng-editor-options"></a>エディター オプションの設定  
+## <a name="setting-editor-options"></a>エディター オプションの設定  
  ほとんどのエディター オプションは、 **[ツール]** メニューで **[オプション]** を選択し、 **[オプション]** ダイアログを表示して設定します。 **[オプション]** ダイアログの左ペインの **[テキスト エディター]** ノードを開いて、コードとテキストの編集オプションを設定します。 [テキスト エディター] の下のノードは特定のエディターに適用されます。  
   
 1.  **すべての言語**: このノードを使用して設定されたオプションは、すべての [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] エディターに適用されます。 これらの設定は、他のノードを使用して特定のエディターの別のオプションを設定することによりオーバーライドできます。  

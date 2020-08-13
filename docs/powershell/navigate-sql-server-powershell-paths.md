@@ -1,5 +1,6 @@
 ---
 title: SQL Server PowerShell パスの移動 | Microsoft Docs
+description: PowerShell プロバイダーによりサポートされるオブジェクトの階層を表すパス構造を、PowerShell を使用して移動する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4ced679315a8e682a438f2ab99ca610219768172
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93055cda4e87e36ff430486842d4aa86073e5c50
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68049120"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86904544"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell パスの移動
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell プロバイダーは、ファイル パスと同様の構造で、SQL Server のインスタンス内のオブジェクトのセットを公開します。 Windows PowerShell コマンドレットを使用することで、プロバイダー パスを移動し、カスタム ドライブを作成して、入力するパスを短くすることができます。  
 

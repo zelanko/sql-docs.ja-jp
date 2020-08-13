@@ -1,5 +1,6 @@
 ---
 title: SQL Server データ ツールの配置およびバージョン サポート (SSDT) | Microsoft Docs
+description: SQL Server Data Tools でレポートの作成とパブリッシュがサポートされているバージョンについて、およびプロジェクトの構成と配置のプロパティを設定する方法について学習します。
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a33626c529d59d9ffa2b80e012dbb325c93b670a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571495"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917964"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの配置およびバージョン サポート (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] では、次のシナリオがサポートされます。  
@@ -57,7 +58,7 @@ ms.locfileid: "65571495"
 > [!NOTE]  
 >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降にスキーマが変更されました。  
   
-|プロジェクトまたはファイルの種類|Version|レポートの作成|レポートのパブリッシュ|メモ|  
+|プロジェクトまたはファイルの種類|Version|レポートの作成|レポートのパブリッシュ|Notes|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
 |レポート サーバー プロジェクト<br /><br /> or<br /><br /> レポート サーバー プロジェクト ウィザード|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|2016 RDL スキーマ|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
 |レポート サーバー プロジェクト<br /><br /> or<br /><br /> レポート サーバー プロジェクト ウィザード|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|2014 RDL スキーマ|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
