@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 248377fa1c4d498d6ffeb5b72518b2baf322362a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 67dc81b5a0a3c8c5e7dabdd1013f5927ceedff0b
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248527"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877797"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (Transact-SQL)
 
@@ -54,7 +54,7 @@ ms.locfileid: "87248527"
 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用できるトレース フラグの一覧とその説明です。 
 
 > [!NOTE]
-> Azure SQL Database Managed Instance では、次のグローバル トレース フラグがサポートされています。460、2301、2389、2390、2453、2467、7471、8207、9389、10316、および 11024。 Managed Instance では、セッション トレース フラグはまだサポートされていません。
+> Azure SQL Managed Instance では、次のグローバル トレース フラグがサポートされています。460、2301、2389、2390、2453、2467、7471、8207、9389、10316、および 11024。 Managed Instance では、セッション トレース フラグはまだサポートされていません。
  
 > [!NOTE]
 > 一部のトレース フラグは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のバージョンで導入されました。 該当するバージョンについて詳しくは、特定のトレース フラグに関連する Microsoft サポート記事をご覧ください。
