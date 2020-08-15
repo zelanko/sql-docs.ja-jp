@@ -1,7 +1,7 @@
 ---
 title: dm_resource_governor_external_resource_pools (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.reviewer: ''
@@ -19,13 +19,13 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ee42a9a7b4fe026df8e9a424ed25224e7a7edb7b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: bfc975662e2efef22957bb78b03125d67d2188d5
+ms.sourcegitcommit: cd1a5d152d05aeee3252ce313e63d396734f85bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88171021"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88239210"
 ---
 # <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>dm_resource_governor_external_resource_pools (Transact-sql)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88171021"
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
-|名前の指定      |データ型      |説明|  
+|列名      |データ型      |説明|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|リソースプールの ID。 NULL 値は許可されません。 |
 | name|**sysname**|共有リソースの名前。 NULL 値は許可されません。 
@@ -44,16 +44,19 @@ ms.locfileid: "88171021"
 | max_memory_percent|**int**|このリソースプール内の要求で使用できる合計サーバーメモリの割合の現在の構成。 NULL 値は許可されません。 |
 | statistics_start_time|**datetime**|このプールの統計がリセットされた時刻。 NULL 値は許可されません。 
 | peak_memory_kb|**bigint**|リソースプールに使用されるメモリの最大量 (kb 単位)。 NULL 値は許可されません。 |
-| write_io_count|**int**|リソースガバナー統計がリセットされた後に発行された書き込み Io の合計。 NULL 値は許可されません。 |
-| read_io_count|**int**|リソースガバナー統計がリセットされた後に発行された読み取り Io の合計。 NULL 値は許可されません。 |
-| total_cpu_kernel_ms|**bigint**|リソースガバナー統計がリセットされてからの累積 CPU ユーザーカーネル時間 (ミリ秒単位)。 NULL 値は許可されません。 |
-| total_cpu_user_ms|**bigint**|リソースガバナー統計がリセットされてからの累積 CPU ユーザー時間 (ミリ秒単位)。 NULL 値は許可されません。 |
+| write_io_count|**int**|Resource Governor の統計がリセットされてから発行された書き込み IO の合計。 NULL 値は許可されません。 |
+| read_io_count|**int**|Resource Governor の統計がリセットされてから発行された読み取り IO の合計。 NULL 値は許可されません。 |
+| total_cpu_kernel_ms|**bigint**|Resource Governor の統計がリセットされてからの累積 CPU ユーザー カーネル時間 (ミリ秒単位)。 NULL 値は許可されません。 |
+| total_cpu_user_ms|**bigint**|Resource Governor の統計がリセットされてからの累積 CPU ユーザー時間 (ミリ秒単位)。 NULL 値は許可されません。 |
 | active_processes_count|**int**|要求の時点で実行されている外部プロセスの数。 NULL 値は許可されません。 |
 
  
 ## <a name="permissions"></a>アクセス許可
 
 `VIEW SERVER STATE` 権限が必要です。
+
+> [!NOTE]
+> Linux 用 SQL Machine Learning Services 2019 では、CPU 関係を設定する機能はサポートされていません。
 
 ## <a name="see-also"></a>参照  
  [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
