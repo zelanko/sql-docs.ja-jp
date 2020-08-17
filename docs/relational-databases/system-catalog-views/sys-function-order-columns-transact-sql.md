@@ -1,4 +1,5 @@
 ---
+description: sys.function_order_columns (Transact-SQL)
 title: function_order_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,31 +20,31 @@ helpviewer_keywords:
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 040ed7a26a96e22fe2959159b8d7495c49fc0f63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 77617e5be43286218fce0b40dbd35825fa8d105a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88324008"
 ---
 # <a name="sysfunction_order_columns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  共通言語ランタイム (CLR) テーブル値関数の**ORDER**式の一部である列ごとに1行の値を返します。  
+  共通言語ランタイム (CLR) テーブル値関数の **ORDER** 式の一部である列ごとに1行の値を返します。  
 
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|順序が定義されているオブジェクト (CLR テーブル値関数) の ID です。|  
-|**order_column_id**|**int**|順序列の ID です **order_column_id**は**object_id**内でのみ一意です。<br /><br /> **order_column_id**は、順序付けにおけるこの列の位置を表します。|  
-|**column_id**|**int**|**Object_id**内の列の ID。<br /><br /> **column_id**は**object_id**内でのみ一意です。|  
+|**order_column_id**|**int**|順序列の ID です **order_column_id** は **object_id**内でのみ一意です。<br /><br /> **order_column_id** は、順序付けにおけるこの列の位置を表します。|  
+|**column_id**|**int**|**Object_id**内の列の ID。<br /><br /> **column_id** は **object_id**内でのみ一意です。|  
 |**is_descending**|**bit**|1 = 順序列には、降順の並べ替え方向があります。<br /><br /> 0 = 順序列には昇順の並べ替え方向があります。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

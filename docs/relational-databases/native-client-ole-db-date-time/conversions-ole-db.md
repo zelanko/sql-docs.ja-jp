@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client 変換 (OLE DB)
 title: バインドと変換 (OLE DB)
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dec84f95cf60818336956e2d6e86d871a3fdc00
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a513ca320f072dc74b525ae4511973fa438a7624
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245891"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328038"
 ---
 # <a name="sql-server-native-client-conversions-ole-db"></a>SQL Server Native Client 変換 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "87245891"
   
 -   **datetime** および **datetimeoffset** 文字列の形式は次のとおりです。  
   
-     *yyyy* -*mm* -*dd*[ *hh*:*mm*:*ss*[.*9999999*] [± *hh*:*mm*]]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
 -   **time** 型の文字列の形式は次のとおりです。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "87245891"
   
 -   **date** 文字列の形式は次のとおりです。  
   
-     *yyyy* -*mm* -*dd*  
+     *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
 >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client および SQLOLEDB では、標準の変換が失敗した場合に備えて OLE 変換が実装されていました。 このため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 以降によって実行された変換には、OLE DB 仕様と異なるものがあります。  

@@ -1,4 +1,5 @@
 ---
+description: 'SQL Server の例: モデルの配置パッケージ (MDS)'
 title: モデルの配置パッケージの例
 ms.custom: ''
 ms.date: 07/28/2017
@@ -13,12 +14,12 @@ keywords:
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 76ef4f409fd5a4072d27cdfa3e4180896534eaa0
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 70375fd359e56081267f2478a582281d96c253eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342378"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server の例: モデルの配置パッケージ (MDS)
 
@@ -42,7 +43,7 @@ ms.locfileid: "85811381"
 >      詳細については、「[ドメイン ベースの属性を作成する (マスター データ サービス)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)」を参照してください。  
 > -   エンティティの変更に承認が必要。  
 > 
->      詳細については、「[承認が必要 &#40;マスターデータサービス&#41;](../master-data-services/approval-required-master-data-services.md)」を参照してください。  
+>      詳細については、「 [承認が必要 &#40;マスターデータサービス&#41;](../master-data-services/approval-required-master-data-services.md)」を参照してください。  
 > -   ビジネス ルールでの Not および Else 演算子の使用。  
 > 
 >      詳細については、「 [ビジネス ルールの例](../master-data-services/business-rule-examples-master-data-services.md)」を参照してください。  
@@ -54,7 +55,7 @@ ms.locfileid: "85811381"
  
  マスター データ サービスのパッケージは、配置可能なモデル構造と (必要に応じて) モデル データを含んだ XML ファイルです。 モデル パッケージを使用して、モデルのコピーを MDS 環境間で移動したり、既存の [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 環境に新しいモデルを作成したりすることができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDSModelDeploy を使用したモデルの配置パッケージの配置](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
   

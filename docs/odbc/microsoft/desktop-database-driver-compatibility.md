@@ -1,4 +1,5 @@
 ---
+description: デスクトップ データベース ドライバーの互換性
 title: デスクトップデータベースドライバーの互換性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89eea7ab112eaefdc73c7cbc72ee3555797c7efd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b15ec35a01b61eef401f217733917a80bbe32b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340778"
 ---
 # <a name="desktop-database-driver-compatibility"></a>デスクトップ データベース ドライバーの互換性
 Unicode は、すべての文字を2バイトの固定幅として扱う、ソフトウェア文字エンコーディングの方法です。 このメソッドは、Windows ANSI 文字エンコーディングの代わりに使用されます。これは、1バイトの文字を表すため、256文字に制限されます。 Unicode は65000文字を超えることができるため、ANSI エンコーディングでは文字が表現されない多くの言語に対応します。  
@@ -33,4 +34,4 @@ Unicode は、すべての文字を2バイトの固定幅として扱う、ソ�
   
  ANSI アプリケーションで ODBC デスクトップデータベースドライバー4.0 を使用していて、Microsoft Access 4.0 以降にアクセスする場合、Jet 4.0 ではワイドバージョンがサポートされていますが、ドライバーは SQL_CHAR、SQL_VARCHAR、または SQL_LONGVARCHAR としてデータ型を公開します。 以前のバージョンの Jet では、SQL_WCHAR、SQL_WVARCHAR、および SQL_WLONGVARCHAR はサポートされていません。 この制限は、Jet 4.0 データベースエンジンで古い形式が使用されている場合にも適用されます。  
   
- ODBC に関する Unicode の問題の詳細については、「プログラミングにおける[unicode](../../odbc/reference/develop-app/unicode.md)の考慮事項」を参照してください。
+ ODBC に関する Unicode の問題の詳細については、「プログラミングにおける [unicode](../../odbc/reference/develop-app/unicode.md) の考慮事項」を参照してください。

@@ -1,4 +1,5 @@
 ---
+description: トランザクション (マスター データ サービス)
 title: トランザクション
 ms.custom: ''
 ms.date: 01/10/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0b9f2eeec0e5936d215595755bbc92bb5b9a8c42
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: bfaa5eb1d111b29de1354a48f779c5d628e041dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342248"
 ---
 # <a name="transactions-master-data-services"></a>トランザクション (マスター データ サービス)
 

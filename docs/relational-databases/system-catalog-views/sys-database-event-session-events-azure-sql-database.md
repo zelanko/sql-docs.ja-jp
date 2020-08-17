@@ -1,4 +1,5 @@
 ---
+description: sys.database_event_session_events (Azure SQL Database)
 title: database_event_session_events (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -11,12 +12,12 @@ ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ab2f62063c87dcf55fdbb52eaaa9f7ba2d075a8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b4cc0cee2b7acea6bbe465f0fc3cef9f40954e0d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913168"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88323358"
 ---
 # <a name="sysdatabase_event_session_events-azure-sql-database"></a>sys.database_event_session_events (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,10 +41,10 @@ ms.locfileid: "86913168"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW DATABASE STATE 権限が必要です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  このビューには、次のリレーションシップ基数があります。  
   
-| ソース | ターゲット | リレーションシップ |
+| ソース | 終了 | リレーションシップ |
 | ---- | -- | ------------ |
 |database_event_session_events。 event_session_id|database_event_sessions。 event_session_id|多対一|  
   

@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo (カーソル ライブラリ)
 title: SQLGetInfo (カーソルライブラリ) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 1b4d220d-2c07-4f56-987e-36813bb1a6ce
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9067fd8b33cb2408f1ef6f0e58603eb4f1f7eb09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08fbc40dfc7245e6f72349acc2ac63de8f0838bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339318"
 ---
 # <a name="sqlgetinfo-cursor-library"></a>SQLGetInfo (カーソル ライブラリ)
 > [!IMPORTANT]  
 >  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- このトピックでは、カーソルライブラリで**SQLGetInfo**関数を使用する方法について説明します。 **Sqlgetinfo**に関する一般的な情報については、「 [sqlgetinfo 関数](../../../odbc/reference/syntax/sqlgetinfo-function.md)」を参照してください。  
+ このトピックでは、カーソルライブラリで **SQLGetInfo** 関数を使用する方法について説明します。 **Sqlgetinfo**に関する一般的な情報については、「 [sqlgetinfo 関数](../../../odbc/reference/syntax/sqlgetinfo-function.md)」を参照してください。  
   
- カーソルライブラリは、 *InfoType*の次の値の値を返します (&#124; はビットごとの or を表します)。*InfoType*のその他のすべての値については、ドライバーで**SQLGetInfo**を呼び出します。  
+ カーソルライブラリは、 *InfoType* の次の値の値を返します (&#124; はビットごとの or を表します)。 *InfoType*のその他のすべての値については、ドライバーで **SQLGetInfo** を呼び出します。  
   
 |*InfoType*|戻り値|  
 |----------------|--------------------|  
@@ -35,7 +36,7 @@ ms.locfileid: "81307813"
 |SQL_FETCH_DIRECTION [1]|SQL_FD_FETCH_ABSOLUTE &#124; SQL_FD_FETCH_FIRST &#124; SQL_FD_FETCH_LAST &#124; SQL_FD_FETCH_NEXT &#124; SQL_FD_FETCH_PRIOR &#124; SQL_FD_FETCH_RELATIVE &#124; SQL_FD_FETCH_BOOKMARK|  
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT &#124; SQL_CA1_ABSOLUTE &#124; SQL_CA1_RELATIVE &#124; SQL_CA1_LOCK_NO_CHANGE &#124; SQL_CA1_POS_POSITION &#124; SQL_CA1_POSITIONED_DELETE &#124; SQL_CA1_POSITIONED_UPDATE &#124; SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|SQL_CA2_READ_ONLY_CONCUR &#124; SQL_CA2_OPT_VALUES_CONCURRENCY &#124; SQL_CA2_SENSITIVITY_UPDATES|  
-|SQL_GETDATA_EXTENSIONS|ドライバーによって返されるすべての値 &#124; SQL_GD_BLOCK **:** **sqlfetchscroll**を使用してデータを取得すると、 **SQLGetData**は、SQL_GD_ANY_COLUMN と SQL_GD_BOUND ビットマスクで指定された機能をサポートします。|  
+|SQL_GETDATA_EXTENSIONS|ドライバーによって返されるすべての値 &#124; SQL_GD_BLOCK **:** **sqlfetchscroll**を使用してデータを取得すると、 **SQLGetData** は、SQL_GD_ANY_COLUMN と SQL_GD_BOUND ビットマスクで指定された機能をサポートします。|  
 |SQL_KEYSET_DRIVEN_CURSOR_ATTRIBUTES1|0|  
 |SQL_KEYSET_DRIVEN_CURSOR_ATTRIBUTES2|0|  
 |SQL_LOCK_TYPES [1]|SQL_LCK_NO_CHANGE|  
@@ -51,4 +52,4 @@ ms.locfileid: "81307813"
  [1] カーソルライブラリが ODBC 2.x ドライバーで使用されている場合にのみ使用されます。  
   
 > [!IMPORTANT]  
->  トランザクションがデータソースとしてコミットまたはロールバックされる場合、カーソルライブラリは同じカーソル動作を実装します。 つまり、 **SQLEndTran**を呼び出すか SQL_ATTR_AUTOCOMMIT 接続属性を使用して、トランザクションをコミットまたはロールバックすると、データソースによってアクセスプランが削除され、接続上のすべてのステートメントのカーソルが閉じられる可能性があります。 詳細については、「 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)」の SQL_CURSOR_COMMIT_BEHAVIOR と SQL_CURSOR_ROLLBACK_BEHAVIOR の情報の種類を参照してください。
+>  トランザクションがデータソースとしてコミットまたはロールバックされる場合、カーソルライブラリは同じカーソル動作を実装します。 つまり、 **SQLEndTran** を呼び出すか SQL_ATTR_AUTOCOMMIT 接続属性を使用して、トランザクションをコミットまたはロールバックすると、データソースによってアクセスプランが削除され、接続上のすべてのステートメントのカーソルが閉じられる可能性があります。 詳細については、「 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)」の SQL_CURSOR_COMMIT_BEHAVIOR と SQL_CURSOR_ROLLBACK_BEHAVIOR の情報の種類を参照してください。

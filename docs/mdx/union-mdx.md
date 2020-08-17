@@ -1,4 +1,5 @@
 ---
+description: Union (MDX)
 title: Union (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 170e3764795e1bb6db3fc9589ecf1fe486078633
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b0b4240d6c646761c5d962e4b9fa1ca54e0dcc0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341208"
 ---
 # <a name="union--mdx"></a>Union (MDX)
 
@@ -41,11 +42,11 @@ Alternate syntax 2
  *式2の設定*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
- この関数は、2つ以上の指定されたセットの和集合を返します。 標準構文を使用し、別の構文1を使用すると、既定では重複が除去されます。 標準構文では、 **ALL**フラグを使用すると、結合されたセット内の重複部分が保持されます。 重複は、セットの末尾から削除されます。 代替構文 2 では、重複部分が常に保持されます。  
+## <a name="remarks"></a>解説  
+ この関数は、2つ以上の指定されたセットの和集合を返します。 標準構文を使用し、別の構文1を使用すると、既定では重複が除去されます。 標準構文では、 **ALL** フラグを使用すると、結合されたセット内の重複部分が保持されます。 重複は、セットの末尾から削除されます。 代替構文 2 では、重複部分が常に保持されます。  
   
-## <a name="examples"></a>使用例  
- 次の例では、各構文を使用した**Union**関数の動作を示します。  
+## <a name="examples"></a>例  
+ 次の例では、各構文を使用した **Union** 関数の動作を示します。  
   
 ### <a name="standard-syntax-duplicates-eliminated"></a>標準構文、重複部分の除去  
   

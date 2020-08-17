@@ -1,4 +1,5 @@
 ---
+description: Change Tracking カタログビュー-sys. change_tracking_databases
 title: change_tracking_databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
@@ -21,12 +22,12 @@ ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 414286c06884721fad81ea25dd100fa5a7cd13b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f5bdc89402ed43464fb84c02177ca9e07de3a1cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753008"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88324568"
 ---
 # <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>Change Tracking カタログビュー-sys. change_tracking_databases
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85753008"
 ## <a name="permissions"></a>アクセス許可  
  sys.change_tracking_databases には、sys.databases に行われるのと同じ権限チェックが行われます。 sys.change_tracking_databases の呼び出し元がデータベースの所有者でない場合、対応する行を表示するには、少なくとも、ALTER ANY DATABASE または VIEW ANY DATABASE のサーバー レベルの権限か、master データベースまたは現在のデータベースの CREATE DATABASE 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Change Tracking カタログビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   

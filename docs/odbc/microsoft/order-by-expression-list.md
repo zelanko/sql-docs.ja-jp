@@ -1,4 +1,5 @@
 ---
+description: ORDER BY 式リスト
 title: ORDER BY 式-list |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5ef88186-a99f-4e2c-a3f3-98a42d4f03a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 272fa0be844569d322679d444807f8c332b4837b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fd084a1012d445c89cacba168f21267238bc250f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340618"
 ---
 # <a name="order-by-expression-list"></a>ORDER BY 式リスト
 式は ORDER BY 句で使用できます。 たとえば、次の句では、テーブルは a + b、c + d、e という3つのキー式で並べ替えられます。  

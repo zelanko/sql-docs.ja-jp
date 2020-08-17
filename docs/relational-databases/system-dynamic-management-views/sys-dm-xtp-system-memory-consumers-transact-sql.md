@@ -1,4 +1,5 @@
 ---
+description: dm_xtp_system_memory_consumers (Transact-sql)
 title: dm_xtp_system_memory_consumers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12cfa8fa0ebde7fe2cb6d1a6e9402a0466a4895f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4dbecba15c5f60c0b3818739ccd842d5a31a66a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648023"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322598"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>dm_xtp_system_memory_consumers (Transact-sql)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +43,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |memory_consumer_id|**bigint**|メモリコンシューマーの内部 ID。|  
 |memory_consumer_type|**int**|次のいずれかの値を持つメモリコンシューマーの種類を表す整数。<br /><br /> 0: 表示されません。 複数のコンシューマーのメモリ使用量を集計します。<br /><br /> 1-ルックアサイド: システムルックアサイドのメモリ使用量を追跡します。<br /><br /> 2-VARHEAP: 可変長ヒープのメモリ使用量を追跡します。<br /><br /> 4-IO ページプール: IO 操作に使用されるシステムページプールのメモリ使用量を追跡します。|  
 |memory_consumer_type_desc|**nvarchar (16)**|メモリコンシューマーの種類の説明。<br /><br /> 0: 表示されません。<br /><br /> 1-ルックアサイド<br /><br /> 2-VARHEAP<br /><br /> 4-PGPOOL|  
-|memory_consumer_desc|**nvarchar (64)**|メモリ コンシューマー インスタンスの説明。<br /><br /> VARHEAP <br />システム ヒープ。 汎用的な用途。 現在、ガベージコレクション作業項目の割り当てにのみ使用されます。<br />- または -<br />ルックアサイドヒープ。 ルック アサイド リストに含まれる項目の数が事前に定義された上限 (通常は約 5,000 個の項目) に達した場合にルック アサイドで使用されます。<br /><br /> PGPOOL: IO システムプールには、システム4K ページプール、システム 64 K ページプール、およびシステム 256 K ページプールの3種類のサイズがあります。|  
+|memory_consumer_desc|**nvarchar (64)**|メモリ コンシューマー インスタンスの説明。<br /><br /> VARHEAP <br />システム ヒープ。 汎用的な用途。 現在、ガベージコレクション作業項目の割り当てにのみ使用されます。<br />\- または -<br />ルックアサイドヒープ。 ルック アサイド リストに含まれる項目の数が事前に定義された上限 (通常は約 5,000 個の項目) に達した場合にルック アサイドで使用されます。<br /><br /> PGPOOL: IO システムプールには、システム4K ページプール、システム 64 K ページプール、およびシステム 256 K ページプールの3種類のサイズがあります。|  
 |lookaside_id|**bigint**|スレッドローカルのルックアサイドメモリプロバイダーの ID。|  
 |pagepool_id|**bigint**|スレッドローカルのページプールメモリプロバイダーの ID。|  
 |allocated_bytes|**bigint**|このコンシューマーのために予約されたバイト数。|  
@@ -104,7 +105,7 @@ total_allocated_MB   total_used_MB
 2                    2  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

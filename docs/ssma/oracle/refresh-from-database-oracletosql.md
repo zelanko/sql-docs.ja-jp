@@ -1,4 +1,5 @@
 ---
+description: データベースからの更新 (OracleToSQL)
 title: データベースからの更新 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,15 +11,15 @@ ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 694953d914b9811208f2ea143f93e2c91878f07b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 66bb67e64f3b95b78cdcf78d84145df25a02d4b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320178"
 ---
 # <a name="refresh-from-database-oracletosql"></a>データベースからの更新 (OracleToSQL)
-[**データベースから更新**] ダイアログボックスでは、Oracle データベースから更新するオブジェクトを選択できます。 ダイアログボックス内の行は、メタデータの状態に基づいて色分けされています。  
+[ **データベースから更新** ] ダイアログボックスでは、Oracle データベースから更新するオブジェクトを選択できます。 ダイアログボックス内の行は、メタデータの状態に基づいて色分けされています。  
   
 -   オブジェクトメタデータがローカルと Oracle データベースで変更されている場合、行は青色になります。  
   
@@ -28,9 +29,9 @@ ms.locfileid: "87933013"
   
 -   オブジェクトが Oracle データベースで新しく追加された場合、行はピンクです。  
   
-既定のオブジェクト更新設定は、[**プロジェクトの設定**] ダイアログボックスで指定できます。 詳細については、「[プロジェクトの設定&#40;同期&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)」を参照してください。  
+既定のオブジェクト更新設定は、[ **プロジェクトの設定** ] ダイアログボックスで指定できます。 詳細については、「 [プロジェクトの設定&#40;同期&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)」を参照してください。  
   
-[**データベースから更新**] ダイアログボックスにアクセスするには、Oracle メタデータエクスプローラーでオブジェクトを右クリックし、[**データベースからの更新**] をクリックします。  
+[ **データベースから更新** ] ダイアログボックスにアクセスするには、Oracle メタデータエクスプローラーでオブジェクトを右クリックし、[ **データベースからの更新**] をクリックします。  
   
 ## <a name="options"></a>オプション  
 **折りたたみ (-)**  
@@ -49,7 +50,7 @@ Oracle データベースと SSMA のオブジェクトメタデータが同じ�
 [X] ボタンを使用して、選択したオブジェクトのメタデータを SSMA で更新しないように指定します。  
   
 **凡例**  
-[**凡例**] ダイアログボックスを表示します。 凡例には、行の色とメタデータの状態との間のマッピングが含まれます。  
+[ **凡例** ] ダイアログボックスを表示します。 凡例には、行の色とメタデータの状態との間のマッピングが含まれます。  
   
 [**データベースからの更新**] ダイアログボックスの上部にある [**凡例**] ダイアログボックスを維持するには、[上**に表示**] チェックボックスをオンにします。  
   

@@ -1,4 +1,5 @@
 ---
+description: dm_tran_transactions_snapshot (Transact-sql)
 title: dm_tran_transactions_snapshot (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
@@ -20,17 +21,17 @@ ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 257878b1995a779f7e6f317864a627eaa27f1e88
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7497dbdce71e0989cc6bfa06da0acbaea118dbd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88323738"
 ---
 # <a name="sysdm_tran_transactions_snapshot-transact-sql"></a>dm_tran_transactions_snapshot (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  各スナップショットトランザクションの開始時にアクティブになっているトランザクションの**sequence_number**の仮想テーブルを返します。 このビューで返される情報を基に、次のことを確認できます。  
+  各スナップショットトランザクションの開始時にアクティブになっているトランザクションの **sequence_number** の仮想テーブルを返します。 このビューで返される情報を基に、次のことを確認できます。  
   
 -   現在アクティブなスナップショットトランザクションの数を調べます。  
   
@@ -71,13 +72,13 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  スナップショットトランザクションが開始されると、その [!INCLUDE[ssDE](../../includes/ssde-md.md)] 時点でアクティブになっているすべてのトランザクションがによって記録されます。 dm_tran_transactions_snapshot は、現在アクティブなすべてのスナップショットトランザクションについて、この情報を報告し**ます。**  
   
  各トランザクションは、トランザクションの開始時に割り当てられたトランザクションシーケンス番号によって識別されます。 トランザクションは、BEGIN TRANSACTION または BEGIN WORK ステートメントが実行されたときに開始されますが、 トランザクション シーケンス番号は、BEGIN TRANSACTION または BEGIN WORK ステートメントの後、最初にデータにアクセスする [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントが実行されたときに[!INCLUDE[tsql](../../includes/tsql-md.md)]によって割り当てられます。 トランザクション シーケンス番号は 1 ずつ増加します。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>参照  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

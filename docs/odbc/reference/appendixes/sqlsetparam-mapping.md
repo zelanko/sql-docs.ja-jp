@@ -1,4 +1,5 @@
 ---
+description: SQLSetParam のマッピング
 title: SQLSetParam Mapping |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 022dfbc0-8d18-4c35-8a28-d9eb16063188
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d8e632412965664e5cdd9c87dc1e26787dcdab2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2c16f942920b5fefff664cc647f4edfc9ab6d13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339298"
 ---
 # <a name="sqlsetparam-mapping"></a>SQLSetParam のマッピング
-**SQLSetParam**は、ODBC 2 の場合と同様に、 **SQLBindParameter**の上で引き続きマップされます。*x*。 概念的には**SQLBindParam**と似ていますが、ドライバーマネージャーは**SQLSetParam**を**SQLBindParam**にマップしません。 これは、特定の既存の ODBC 2 が原因です。*x*ドライバーは、 **SQLBindParameter**の上に**SQLSetParam**をマップするときにドライバーマネージャーによって生成される*bufferlength* (SQL_SETPARAM_VALUE_MAX) の特殊な値を使用して、1によっていつ呼び出されるかを判断します。*x* ODBC アプリケーション。  
+**SQLSetParam** は、ODBC 2 の場合と同様に、 **SQLBindParameter** の上で引き続きマップされます。*x*。 概念的には **SQLBindParam**と似ていますが、ドライバーマネージャーは **SQLSetParam** を **SQLBindParam**にマップしません。 これは、特定の既存の ODBC 2 が原因です。*x*ドライバーは、 **SQLBindParameter**の上に**SQLSetParam**をマップするときにドライバーマネージャーによって生成される*bufferlength* (SQL_SETPARAM_VALUE_MAX) の特殊な値を使用して、1によっていつ呼び出されるかを判断します。*x* ODBC アプリケーション。  
   
  の呼び出し  
   

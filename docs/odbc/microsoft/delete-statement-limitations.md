@@ -1,4 +1,5 @@
 ---
+description: DELETE ステートメントの制限事項
 title: DELETE ステートメントの制限事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 084761fe-e65b-4f38-ba4f-69884b2a7700
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 365b54ab8c0678253e184b397f1f71e39aed3b9b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ffb3a6d0ab28fc2b8bc8785df586ac6bbc86aa0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340898"
 ---
 # <a name="delete-statement-limitations"></a>DELETE ステートメントの制限事項
 DELETE ステートメントは、Microsoft Excel またはテキストドライバーではサポートされていません。 Text ドライバーでは INSERT ステートメントがサポートされていることに注意してください。  

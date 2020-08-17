@@ -1,4 +1,5 @@
 ---
+description: check_constraints (Transact-sql)
 title: check_constraints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
@@ -20,17 +21,17 @@ ms.assetid: 940ebc5e-44ba-4dae-8b29-da94f2d1d6c4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af931a3ac76186b0ac583155b0d45e4dbe7ed055
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 767714d75fcb885a23899161714695237fcb8149
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88323858"
 ---
 # <a name="syscheck_constraints-transact-sql"></a>check_constraints (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  CHECK 制約であるオブジェクトごとに1行の値を保持**します。 type** = ' C '。  
+  CHECK 制約であるオブジェクトごとに1行の値を保持 **します。 type** = ' C '。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -46,8 +47,8 @@ ms.locfileid: "85718874"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

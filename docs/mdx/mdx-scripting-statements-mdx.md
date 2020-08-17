@@ -1,4 +1,5 @@
 ---
+description: MDX スクリプトステートメント (MDX)
 title: MDX スクリプトステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5564c73ec8d10b37285c1d3e7e7f65fd295894a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 633a44f28852898e2638438a5e8395d8d865fca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341470"
 ---
 # <a name="mdx-scripting-statements-mdx"></a>MDX スクリプトステートメント (MDX)
 
@@ -33,8 +34,8 @@ ms.locfileid: "68893336"
   
 ## <a name="see-also"></a>参照  
  [Mdx ステートメントリファレンス &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
- [Mdx&#41;&#40;mdx データ定義ステートメント](../mdx/mdx-data-definition-statements-mdx.md)   
- [Mdx&#41;&#40;MDX データ操作ステートメント](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Mdx&#41;&#40;mdx データ定義ステートメント ](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Mdx&#41;&#40;MDX データ操作ステートメント ](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [MDX スクリプティングの基礎 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)  
   
   

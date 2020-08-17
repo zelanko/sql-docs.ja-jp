@@ -1,4 +1,5 @@
 ---
+description: IsAncestor (MDX)
 title: IsAncestor (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5cc8352b0d087b54a623cce892a05dfed29258b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ccc61de94c87972eda3dbebdba798f9b1c4028b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105262"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341488"
 ---
 # <a name="isancestor-mdx"></a>IsAncestor (MDX)
 
@@ -34,11 +35,11 @@ IsAncestor(Member_Expression1, Member_Expression2)
  *Member_Expression2*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
- **Isancestor**関数は、指定された最初のメンバーが2番目に指定されたメンバーの先祖である場合に**true**を返します。 それ以外の場合、関数は**false**を返します。  
+## <a name="remarks"></a>解説  
+ **Isancestor**関数は、指定された最初のメンバーが2番目に指定されたメンバーの先祖である場合に**true**を返します。 それ以外の場合、関数は **false**を返します。  
   
 ## <a name="example"></a>例  
- 次の例では、[Date] の場合に**true**を返します。[会計]。CurrentMember は2003年1月の先祖です。  
+ 次の例では、[Date] の場合に **true** を返します。[会計]。CurrentMember は2003年1月の先祖です。  
   
  `WITH MEMBER MEASURES.ISANCESTORDEMO AS`  
   

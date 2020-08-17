@@ -1,4 +1,5 @@
 ---
+description: グレゴリオ暦カレンダーの制限
 title: グレゴリオ暦 | の制約Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f88842c7426e17af1fdc0533b8b97e2c559de237
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e473c090a889d54de5ca63bd10b07b410936223f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339368"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>グレゴリオ暦カレンダーの制限
 日付と時刻のデータ型、および interval データ型の末尾のフィールドは、グレゴリオ暦の制約に準拠している必要があります。 これらの制約は次のとおりです。  
@@ -31,6 +32,6 @@ ms.locfileid: "81284762"
   
 -   分のフィールドの値は 0 ~ 59 の範囲で指定する必要があります。  
   
--   Interval データ型の末尾の秒のフィールドでは、秒の値は 0 ~ 59.9 (*n*) の範囲で指定する必要があります。ここで、 *n*は秒の小数部の有効桁数です。  
+-   Interval データ型の末尾の秒のフィールドでは、秒の値は 0 ~ 59.9 (*n*) の範囲で指定する必要があります。ここで、 *n* は秒の小数部の有効桁数です。  
   
--   Datetime データ型の末尾の秒のフィールドの場合、秒の値は 0 ~ 61.9 (*n*) の範囲で指定する必要があります。ここで、 *n*は "9" 桁の数字、 *n*の値は秒の小数部の有効桁数です。 (秒の範囲では、sidereal time の同期を維持するために、2つのうるう秒を指定できます)。
+-   Datetime データ型の末尾の秒のフィールドの場合、秒の値は 0 ~ 61.9 (*n*) の範囲で指定する必要があります。ここで、 *n* は "9" 桁の数字、 *n* の値は秒の小数部の有効桁数です。 (秒の範囲では、sidereal time の同期を維持するために、2つのうるう秒を指定できます)。

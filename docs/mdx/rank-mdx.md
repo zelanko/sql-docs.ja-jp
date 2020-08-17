@@ -1,4 +1,5 @@
 ---
+description: Rank (MDX)
 title: Rank (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1081cacd0676f4eb0512780e9ddc7641edb99ca1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 391ba9d805684a9fd469d8e6c66727caba71ce70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037069"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341338"
 ---
 # <a name="rank-mdx"></a>Rank (MDX)
 
@@ -37,15 +38,15 @@ Rank(Tuple_Expression, Set_Expression [ ,Numeric Expression ] )
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
- 数値式が指定されている場合、 **Rank**関数は、組に対して指定された数値式を評価することによって、指定された組の1から始まる順位を決定します。 数値式が指定されている場合、 **rank**関数は、セット内の重複する値を持つ組に同じランクを割り当てます。 このように重複する値に同じランクを割り当てる動作は、セット内の後続の組のランクに影響を与えます。 たとえば、セットは次の組で`{(a,b), (e,f), (c,d)}`構成されます。 タプル`(a,b)`は組`(c,d)`と同じ値を持ちます。 組`(a,b)`のランクが1の場合、と`(a,b)` `(c,d)`の両方にランクが1になります。 ただし、`(e,f)` のランクは 3 になります。 ランクが 2 の組はこのセットには存在できません。  
+## <a name="remarks"></a>解説  
+ 数値式が指定されている場合、 **Rank** 関数は、組に対して指定された数値式を評価することによって、指定された組の1から始まる順位を決定します。 数値式が指定されている場合、 **rank** 関数は、セット内の重複する値を持つ組に同じランクを割り当てます。 このように重複する値に同じランクを割り当てる動作は、セット内の後続の組のランクに影響を与えます。 たとえば、セットは次の組で構成さ `{(a,b), (e,f), (c,d)}` れます。 タプルは `(a,b)` 組と同じ値を持ち `(c,d)` ます。 組の `(a,b)` ランクが1の場合、 `(a,b)` との両方に `(c,d)` ランクが1になります。 ただし、`(e,f)` のランクは 3 になります。 ランクが 2 の組はこのセットには存在できません。  
   
- 数値式が指定されていない場合、 **Rank**関数は、指定された組の1から始まる序数位置を返します。  
+ 数値式が指定されていない場合、 **Rank** 関数は、指定された組の1から始まる序数位置を返します。  
   
- Rank 関数では、セットは順序**付け**されません。  
+ Rank 関数では、セットは順序 **付け** されません。  
   
 ## <a name="example"></a>例  
- 次の例では、各顧客が購入した最後の日付を検索するために、 **Filter**、**空**でない、 **Item**、および**Rank**関数を使用して、顧客と購入日を含む組のセットを返します。  
+ 次の例では、各顧客が購入した最後の日付を検索するために、 **Filter**、 **空**でない、 **Item**、および **Rank** 関数を使用して、顧客と購入日を含む組のセットを返します。  
   
 ```  
 WITH SET MYROWS AS FILTER  
@@ -81,7 +82,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX&#41;&#40;順序](../mdx/order-mdx.md)   
+ [MDX&#41;&#40;順序 ](../mdx/order-mdx.md)   
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

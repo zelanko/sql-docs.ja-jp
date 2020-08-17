@@ -1,4 +1,5 @@
 ---
+description: table_types (Transact-sql)
 title: table_types (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -23,17 +24,17 @@ ms.assetid: c05fd873-aff2-4a89-9936-a54c2ea09996
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8faf838b12c82fd2dff25db87dbae96ff891e81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a826a248735435c00fb58629c39266c9952625c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85664032"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88375338"
 ---
 # <a name="systable_types-transact-sql"></a>table_types (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  ユーザー定義テーブル型のプロパティを表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 テーブル型は、テーブル変数またはテーブル値パラメーターを宣言できる型です。 各テーブル型には、 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログビューの外部キーである**type_table_object_id**があります。 この ID 列を使用すると、通常のテーブルの**object_id**列に似た方法でさまざまなカタログビューに対してクエリを実行し、列や制約などのテーブル型の構造を検出することができます。    
+  ユーザー定義テーブル型のプロパティを表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 テーブル型は、テーブル変数またはテーブル値パラメーターを宣言できる型です。 各テーブル型には、 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログビューの外部キーである**type_table_object_id**があります。 この ID 列を使用すると、通常のテーブルの **object_id** 列に似た方法でさまざまなカタログビューに対してクエリを実行し、列や制約などのテーブル型の構造を検出することができます。    
  
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -44,8 +45,8 @@ ms.locfileid: "85664032"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [テーブル値パラメーターを使用する &#40;データベースエンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)   
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

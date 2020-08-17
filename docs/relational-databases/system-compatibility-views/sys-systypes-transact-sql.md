@@ -1,4 +1,5 @@
 ---
+description: sys.sysの型 (Transact-sql)
 title: sys.sysの型 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,11 +22,12 @@ ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f0e341c069b1ce7e095e5ee8e17c098f21fd088
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6b5e4f2d0974889d0ce4158648b2fc44692926b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85987041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88375228"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.sysの型 (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,15 +50,15 @@ ms.locfileid: "85987041"
 |**domain**|**int**|このデータ型の整合性チェックが含まれているストアドプロシージャの ID。|  
 |**uid**|**smallint**|型の所有者のスキーマ ID です。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の前のバージョンからアップグレードしたデータベースの場合、スキーマ ID は所有者のユーザー ID と同じです。<br /><br /> 重要次のいずれかの DDL ステートメントを使用する場合は、sys.sys** \* 型ではなく、sys カタログビューを使用する必要があります。 \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) **sys.systypes**<br /><br /> 型に対する ALTER AUTHORIZATION<br /><br /> CREATE TYPE<br /><br /> ユーザーおよびロールの数が32767を超えた場合、オーバーフローまたは NULL を返します。|  
 |**確保**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**collationid**|**int**|文字ベースの場合、 **collationid**は現在のデータベースの照合順序の id です。それ以外の場合は NULL になります。|  
+|**collationid**|**int**|文字ベースの場合、 **collationid** は現在のデータベースの照合順序の id です。それ以外の場合は NULL になります。|  
 |**usertype**|**smallint**|ユーザー型の ID です。 データ型の数が32767を超えた場合、オーバーフローまたは NULL を返します。|  
 |**変動**|**bit**|可変長データ型です。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**allownulls**|**bit**|このデータ型の既定の null 値の許容属性を示します。 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)または[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)を使用して null 値を許容する場合、この既定値はによってオーバーライドされます。|  
 |**type**|**tinyint**|物理記憶データ型です。|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**prec**|**smallint**|このデータ型の有効桁数。<br /><br /> -1 = **xml**または大きな値の型。|  
+|**prec**|**smallint**|このデータ型の有効桁数。<br /><br /> -1 = **xml** または大きな値の型。|  
 |**scale**|**tinyint**|このデータ型の有効桁数に基づく小数点以下桁数です。<br /><br /> NULL = データ型は数値型ではありません。|  
-|**規則**|**sysname**|文字ベースの場合、 **collation**は現在のデータベースの照合順序です。それ以外の場合は NULL になります。|  
+|**規則**|**sysname**|文字ベースの場合、 **collation** は現在のデータベースの照合順序です。それ以外の場合は NULL になります。|  
   
 ## <a name="see-also"></a>参照  
  [互換性ビュー &#40;Transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   

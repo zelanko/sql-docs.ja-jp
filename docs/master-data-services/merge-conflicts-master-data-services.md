@@ -1,4 +1,5 @@
 ---
+description: 競合のマージ (マスター データ サービス)
 title: 競合のマージ
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8422b9300b374cbf78eb602dc8ad8f36f7a5e39c
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 908d4d5de8fac337529a8e581a658159c47e3d8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811897"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88343948"
 ---
 # <a name="merge-conflicts-master-data-services"></a>競合のマージ (マスター データ サービス)
 
@@ -23,7 +24,7 @@ ms.locfileid: "85811897"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でパブリッシュしようとしているデータが他のユーザーによって変更されている場合、パブリッシュ操作は競合エラーで失敗します。 このエラーを解決するには、競合のマージを実行した後で変更を再パブリッシュします。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
@@ -46,7 +47,7 @@ ms.locfileid: "85811897"
   
 4.  **[適用]** をクリックした後、さらに変更を加えて、再びパブリッシュすることができます。 または、 **[キャンセル]** をクリックして更新を取り消し、サーバーから最新のバージョンを再び読み込むことができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)  
   
   

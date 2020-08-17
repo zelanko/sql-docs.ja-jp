@@ -1,4 +1,5 @@
 ---
+description: グローバル設定 (テスター) (OracleToSQL)
 title: グローバル設定 (テスター) (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,21 +11,21 @@ ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 12ca00b130367495ba725627b7fbd5c523505387
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 789d2cbb22e03053ab8f03e0bdd50b6383ea788e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320398"
 ---
 # <a name="global-settings-tester-oracletosql"></a>グローバル設定 (テスター) (OracleToSQL)
-[**グローバル設定**] ダイアログボックスの [テスト担当者] ページを使用して、Ssma tester の設定を指定します。  
+[ **グローバル設定** ] ダイアログボックスの [テスト担当者] ページを使用して、Ssma tester の設定を指定します。  
   
-テスト担当者の設定にアクセスするには、[**ツール**] メニューの [**グローバル設定**] を選択し、左側のウィンドウの下部にある [**テスト担当**者] をクリックします。  
+テスト担当者の設定にアクセスするには、[ **ツール** ] メニューの [ **グローバル設定**] を選択し、左側のウィンドウの下部にある [ **テスト担当** 者] をクリックします。  
   
 ## <a name="options"></a>オプション  
 **テスト可能オブジェクト分析**  
-この設定では、テスト可能オブジェクトの分析を実行するかどうかを指定します。 SSMA Tester が依存オブジェクトを分析し、自動的に確認するようにする場合は、[**はい]** を選択します。 既定のオプションセットは **[はい]** です。  
+この設定では、テスト可能オブジェクトの分析を実行するかどうかを指定します。 SSMA Tester が依存オブジェクトを分析し、自動的に確認するようにする場合は、[ **はい]** を選択します。 既定のオプションセットは **[はい]** です。  
   
 この設定では、次のオプションを使用できます。  
   
@@ -43,10 +44,10 @@ ms.locfileid: "87934775"
   
 4.  テーブル比較に失敗した場合にユーザーに確認する  
   
-既定のオプションセットは、[**常に削除**] です。  
+既定のオプションセットは、[ **常に削除**] です。  
   
 **データのロールバックを実行する**  
-この設定では、各テストケースが実行された後にロールバック操作を実行するかどうかを指定します。 既定のオプションセットは [**いいえ**] です。  
+この設定では、各テストケースが実行された後にロールバック操作を実行するかどうかを指定します。 既定のオプションセットは [ **いいえ**] です。  
   
 この設定では、次のオプションを使用できます。  
   
@@ -64,5 +65,5 @@ ms.locfileid: "87934775"
 2.  いいえ  
   
 ## <a name="see-also"></a>参照  
-[テストケースの準備 &#40;OracleToSQL&#41;を終了しています](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[テストケースの準備 &#40;OracleToSQL&#41;を終了しています ](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   

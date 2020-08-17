@@ -1,4 +1,5 @@
 ---
+description: Microsoft Access データ型
 title: Microsoft Access のデータ型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 024fb65b6fdc81ae0a8e007d1cee150c6a35b91c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24428c436e9e60c8ca5e42288b217f2c576cbd0d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340768"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access データ型
 次の表に、Microsoft Access のデータ型、テーブルの作成に使用されるデータ型、および ODBC SQL データ型を示します。  
@@ -33,7 +34,7 @@ ms.locfileid: "81307731"
 |BINARY|BINARY|SQL_BINARY|  
 |BIT|BIT|SQL_BIT|  
 |対抗|対抗|SQL_INTEGER|  
-|通貨|通貨|SQL_NUMERIC|  
+|CURRENCY|通貨|SQL_NUMERIC|  
 |日付/時刻|DATETIME|SQL_TIMESTAMP|  
 |GUID|GUID|SQL_GUID|  
 |LONG バイナリ|LONGBINARY|SQL_LONGVARBINARY|  
@@ -56,7 +57,7 @@ ms.locfileid: "81307731"
  [3] Unicode では、4.0 アプリケーションのみにアクセスします。  
   
 > [!NOTE]  
->  **SQLGetTypeInfo**は ODBC データ型を返します。 複数の Microsoft access の種類が同じ ODBC SQL データ型にマップされている場合、Microsoft Access のすべてのデータ型は返されません。 *ODBC プログラマーズリファレンス*の付録 D のすべての変換は、前の表に記載されている SQL データ型に対してサポートされています。  
+>  **SQLGetTypeInfo** は ODBC データ型を返します。 複数の Microsoft access の種類が同じ ODBC SQL データ型にマップされている場合、Microsoft Access のすべてのデータ型は返されません。 *ODBC プログラマーズリファレンス*の付録 D のすべての変換は、前の表に記載されている SQL データ型に対してサポートされています。  
   
  次の表は、Microsoft Access のデータ型に関する制限を示しています。  
   

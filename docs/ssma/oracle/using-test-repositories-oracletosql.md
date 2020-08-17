@@ -1,4 +1,5 @@
 ---
+description: テスト リポジトリの使用 (OracleToSQL)
 title: テストリポジトリの使用 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ef417365ce2bb6993fb634d453c78d36d3c34965
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ce33aca0939a6a956f053824da1f7fdd35930b30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932553"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320078"
 ---
 # <a name="using-test-repositories-oracletosql"></a>テスト リポジトリの使用 (OracleToSQL)
 SSMA テストリポジトリには、後で使用するために SSMA Tester テストケースとテスト結果が格納されます。 リポジトリデータは、 **ssmatesterdb**データベースのスキーマ**ssma_oracle_utilities**の SQL Server テーブル**TestCaseRepository**および**runtestcaseresultrepository**に保存されます。  
   
 [テストケースのリポジトリ] ダイアログボックスでは、次のボタンを使用できます。  
   
--   [**更新**] ボタンをクリックして、テストケースまたはテスト結果一覧を更新します。  
+-   [ **更新** ] ボタンをクリックして、テストケースまたはテスト結果一覧を更新します。  
   
--   [**閉じる**] ボタンをクリックして、[テストケースのリポジトリ] ダイアログボックスを閉じます。  
+-   [ **閉じる** ] ボタンをクリックして、[テストケースのリポジトリ] ダイアログボックスを閉じます。  
   
 ## <a name="test-cases-repository"></a>テストケースリポジトリ  
 テストケースリポジトリを表示するには、テスト**担当**者メニューの [**テストケース**] をクリックします。 SSMA は、[テストケース **] ページに**保存されているテストケースの一覧を含む [テストケース] ダイアログウィンドウ**のリポジトリ**を表示します。  
@@ -43,22 +44,22 @@ SSMA テストリポジトリには、後で使用するために SSMA Tester �
   
 [テストケース] ページでは、次のボタンを使用できます。  
   
--   [**追加**] ボタンをクリックして、テストケースウィザードを実行し、新しいテストを作成します。  
+-   [ **追加** ] ボタンをクリックして、テストケースウィザードを実行し、新しいテストを作成します。  
   
--   選択したテストをリポジトリから削除するには、[**削除**] ボタンをクリックします。テストケースが削除されると、関連するすべてのテスト結果も削除されます。  
+-   選択したテストをリポジトリから削除するには、[ **削除** ] ボタンをクリックします。テストケースが削除されると、関連するすべてのテスト結果も削除されます。  
   
--   [**編集**] ボタンをクリックして、テストケースウィザードを実行し、選択したテストを変更します。  
+-   [ **編集** ] ボタンをクリックして、テストケースウィザードを実行し、選択したテストを変更します。  
   
--   [**実行**] ボタンをクリックして [[実行中のテストケース (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) ] ダイアログを開き、選択したテストを実行します。  
+-   [ **実行** ] ボタンをクリックして [ [実行中のテストケース (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) ] ダイアログを開き、選択したテストを実行します。  
   
 ## <a name="test-results-repository"></a>テスト結果リポジトリ  
 テスト結果リポジトリは、[**テストケース**] ウィンドウの [リポジトリ] の [**テスト結果**] ページで確認できます。 [**テスト担当**者] メニューの [**テスト結果...** ] をクリックして開きます。  
   
 **テスト結果**のページでは、次の2つのフィルターを使用できます。  
   
--   テストケース名フィルター: テストケース名でテスト結果を選択できます。 このフィルターの**すべてのテストケース**値で、すべてのテストケースのテスト結果を表示できます。  
+-   テストケース名フィルター: テストケース名でテスト結果を選択できます。 このフィルターの **すべてのテストケース** 値で、すべてのテストケースのテスト結果を表示できます。  
   
--   テストケース実行日付フィルター: 保存日によってテスト結果をフィルター処理します。このフィルターの**すべての期間**の値を使用すると、保存する日付に対してテスト結果を表示できます。  
+-   テストケース実行日付フィルター: 保存日によってテスト結果をフィルター処理します。このフィルターの **すべての期間** の値を使用すると、保存する日付に対してテスト結果を表示できます。  
   
 テスト結果に関する次の情報がグリッドに表示されます。  
   
@@ -70,11 +71,11 @@ SSMA テストリポジトリには、後で使用するために SSMA Tester �
   
 [テスト結果] ページでは、次のボタンを使用できます。  
   
--   [**表示**] ボタンをクリックして、現在のテストケースの結果の [[テストケースレポートの表示 &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)を開きます。  
+-   [ **表示** ] ボタンをクリックして、現在のテストケースの結果の [ [テストケースレポートの表示 &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md) を開きます。  
   
--   選択したテスト結果を削除するには、[**削除**] ボタンをクリックします  
+-   選択したテスト結果を削除するには、[ **削除** ] ボタンをクリックします  
   
 ## <a name="see-also"></a>参照  
-[OracleToSQL&#41;&#40;のテストケースの実行](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[移行されたデータベースオブジェクト &#40;OracleToSQL&#41;のテスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[OracleToSQL&#41;&#40;のテストケースの実行 ](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[移行されたデータベースオブジェクト &#40;OracleToSQL&#41;のテスト ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

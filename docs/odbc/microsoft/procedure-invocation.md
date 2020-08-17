@@ -1,4 +1,5 @@
 ---
+description: プロシージャの呼び出し
 title: プロシージャの呼び出し |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b9ff2c3a-2003-4832-adbe-08dd0f5ad948
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 32617cdb753f5fc1b9c52520cb609d2902137b54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2643a36c834b577dfcecdcc81fd938a3a7d1018
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340448"
 ---
 # <a name="procedure-invocation"></a>プロシージャの呼び出し
-Microsoft Access ドライバーを使用する場合、次の構文で**SQLExecDirect**または**SQLPrepare**関数を使用して、プロシージャをドライバーから呼び出すことができます: {CALL *procedure-name* [(*parameter*[,*parameter*]...)]}。 式は、呼び出されたプロシージャのパラメーターとしてはサポートされていないことに注意してください。  
+Microsoft Access ドライバーを使用する場合、次の構文で **SQLExecDirect** または **SQLPrepare** 関数を使用して、プロシージャをドライバーから呼び出すことができます: {CALL *procedure-name* [(*parameter*[,*parameter*]...)]}。 式は、呼び出されたプロシージャのパラメーターとしてはサポートされていないことに注意してください。  
   
  プロシージャ名にダッシュが含まれている場合は、名前を引用符 (') で区切る必要があります。  
   

@@ -1,4 +1,5 @@
 ---
+description: RollupChildren (MDX)
 title: RollupChildren (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 89f7545af0d98de2a6bd97630a893057aac36b12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb4e3552b5c5f5a708a70754d816ab1a78008248
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341318"
 ---
 # <a name="rollupchildren-mdx"></a>RollupChildren (MDX)
 
@@ -34,7 +35,7 @@ RollupChildren(Member_Expression, Unary_Operator)
  *Unary_Operator*  
  単項演算子を指定する有効な文字列式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Rollupchildren**関数は、指定された単項演算子を使用して、指定されたメンバーの子の値をロールアップします。  
   
  次の表では、この関数の有効な単項演算子について説明します。  
@@ -51,7 +52,7 @@ RollupChildren(Member_Expression, Unary_Operator)
  メンバープロパティの演算子が一覧に表示されない場合は、エラーが発生します。 評価の順序は、演算子の優先順位ではなく、兄弟の順序によって決まります。  
   
 ## <a name="example"></a>例  
- 次の例は、単項演算子の代替値が格納されている "Alternate Rollup Operator" というメンバー プロパティを使用して、Account ディメンションの Net Profit 階層の子メンバーを別の方法でロール アップします。 このメンバープロパティは、Adventure Works キューブには存在しませんが、作成することもできます。 この**Rollupchildren**関数の使用は、what-if 分析のために、予算アプリケーションで使用できます。  
+ 次の例は、単項演算子の代替値が格納されている "Alternate Rollup Operator" というメンバー プロパティを使用して、Account ディメンションの Net Profit 階層の子メンバーを別の方法でロール アップします。 このメンバープロパティは、Adventure Works キューブには存在しませんが、作成することもできます。 この **Rollupchildren** 関数の使用は、what-if 分析のために、予算アプリケーションで使用できます。  
   
 ```  
 RollupChildren  

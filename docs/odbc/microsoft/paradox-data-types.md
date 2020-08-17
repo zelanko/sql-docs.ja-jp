@@ -1,4 +1,5 @@
 ---
+description: Paradox データ型
 title: Paradox データ型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a85cf643a6d22b9b2fce15984539d74dc43c62ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44494e9945a84f978449b6bab02bd967e40d9a20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340458"
 ---
 # <a name="paradox-data-types"></a>Paradox データ型
 ODBC Paradox ドライバーは、Paradox データ型を ODBC SQL データ型にマップします。 次の表に、すべての Paradox データ型の一覧と、マップ先の ODBC SQL データ型を示します。  
@@ -46,10 +47,10 @@ ODBC Paradox ドライバーは、Paradox データ型を ODBC SQL データ型�
   
  [1] は、Paradox バージョン5でのみ有効です。*x*。  
   
- [2] は、Paradox バージョン4に対してのみ有効です。*x*および5。*x*。  
+ [2] は、Paradox バージョン4に対してのみ有効です。*x* および5。*x*。  
   
 > [!NOTE]  
->  **SQLGetTypeInfo**は、ODBC SQL データ型を返します。 *Odbc プログラマーズリファレンス*の付録 D のすべての変換は、このトピックで前述した odbc SQL データ型に対してサポートされています。  
+>  **SQLGetTypeInfo** は、ODBC SQL データ型を返します。 *Odbc プログラマーズリファレンス*の付録 D のすべての変換は、このトピックで前述した odbc SQL データ型に対してサポートされています。  
   
  次の表は、Paradox データ型に関する制限を示しています。  
   
@@ -57,7 +58,7 @@ ODBC Paradox ドライバーは、Paradox データ型を ODBC SQL データ型�
 |---------------|-----------------|  
 |英数字|0または指定されていない長さの英数字列を作成すると、実際には255バイトの列が返されます。|  
 |BYTES|Paradox5 ドライバーを使用してバイナリ列に NULL を挿入すると、0に変更されます。|  
-|LONG|Paradox 5 の Long データ型に対して、Paradox ドライバーでサポートされる最大の負の値。*x*は-2 ^ 31 (-2147483648) ではありません。これは、LONG が ODBC データ型 SQL_INTEGER にマップされているためです。 Long に対してサポートされる最大の負の値は、実際には-2 ^ 31 + 1 (-2147483647) です。|  
+|LONG|Paradox 5 の Long データ型に対して、Paradox ドライバーでサポートされる最大の負の値。*x* は-2 ^ 31 (-2147483648) ではありません。これは、LONG が ODBC データ型 SQL_INTEGER にマップされているためです。 Long に対してサポートされる最大の負の値は、実際には-2 ^ 31 + 1 (-2147483647) です。|  
 |timestamp|Paradox ドライバーによってタイムスタンプ列に値が挿入され、その後列から取得された場合、取得した値と挿入された値が、丸め処理によって1秒ほどに異なる場合があります。|  
   
  データ型に関する制限事項の詳細については、 [「データ型の制限](../../odbc/microsoft/data-type-limitations.md)」を参照してください。

@@ -1,4 +1,5 @@
 ---
+description: 記述子およびデスクトップ データベース ドライバー
 title: 記述子とデスクトップデータベースドライバー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4ef79855f71d23e5a884822371f1894eb83442a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80565f912ef3136dc03cf7216ff3f997ee3eeba3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303513"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340798"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>記述子およびデスクトップ データベース ドライバー
-記述子は、列データまたは動的パラメーターに関する情報を保持するデータ構造です。 **SQLGetDescField**は、次に示すサポートされている記述子を取得するために使用できます。 **SQLDescribeParam**はサポートされていないため、実装パラメーター記述子 (IPD) は自動的に設定されません。 Jet で使用できない記述子フィールド (SQL_DESC_BASE_TABLE_NAME など) もサポートされていません。  
+記述子は、列データまたは動的パラメーターに関する情報を保持するデータ構造です。 **SQLGetDescField** は、次に示すサポートされている記述子を取得するために使用できます。 **SQLDescribeParam**はサポートされていないため、実装パラメーター記述子 (IPD) は自動的に設定されません。 Jet で使用できない記述子フィールド (SQL_DESC_BASE_TABLE_NAME など) もサポートされていません。  
   
  Jet でサポートされる記述子フィールドの詳細については、 *『 Microsoft Jet データベースエンジンプログラマーズガイド』* を参照してください。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "81303513"
 |SQL_DESC_LITERAL_SUFFIX|サポートされています|  
 |SQL_DESC_LOCAL_TYPE_NAME|サポートされていません (空の文字列を返します)|  
 |SQL_DESC_NAME|サポートされています|  
-|SQL_DESC_NULLABLE|サポートされています<br /><br /> **メモ**Jet 4.0 より前のバージョンではサポートされません|  
+|SQL_DESC_NULLABLE|サポートされています<br /><br /> **メモ** Jet 4.0 より前のバージョンではサポートされません|  
 |SQL_DESC_NUM_PREC_RADIX|サポートされています|  
 |SQL_DESC_OCTET_LENGTH|サポートされています|  
 |SQL_DESC_OCTET_LENGTH_PTR|サポートされています|  

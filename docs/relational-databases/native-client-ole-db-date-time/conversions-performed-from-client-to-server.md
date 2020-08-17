@@ -1,4 +1,5 @@
 ---
+description: クライアントからサーバーへの変換が実行される SQL Server Native Client
 title: クライアントからサーバーへの変換
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +14,19 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da80b44c2b24d58906d4b8fab6c0989caceec544
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 3bd997af611ec04a67d937752bde8318eb70ee84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328018"
 ---
 # <a name="sql-server-native-client-conversions-performed-from-client-to-server"></a>クライアントからサーバーへの変換が実行される SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB を使用して作成されたクライアント アプリケーションと [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降) との間で実行される日付または時刻の変換について説明します。  
   
-## <a name="conversions"></a>変換  
+## <a name="conversions"></a>コンバージョン  
  このトピックでは、クライアントで行われる変換について説明します。 パラメーターに対して、サーバーで定義されているのとは異なる、秒の小数部の有効桁数をクライアントで指定した場合、サーバー側で変換すると処理に成功するのに、クライアント側で変換すると処理に失敗することがあります。 具体的には、クライアントでは、秒の小数部の切り捨てがエラーとして処理されますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では時刻値が最も近い秒単位の値に丸められます。  
   
  ICommandWithParameters::SetParameterInfo が呼び出されない場合、DBTYPE_DBTIMESTAMP バインドは **datetime2** の場合と同様に変換されます。  
@@ -39,19 +40,19 @@ ms.locfileid: "87472268"
 |DBTIMESTAMP|1、2|1、3、4|1、4、10|1、10、14|1、10、15|1、10|1、5、10|1、10、11|1、10、11|1、10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1、2、8|1、3、4、8|1、4、8、10|1、8、10、14|1、8、10、15|1、8、10|1、10|1、10、11|1、10、11|1、10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1、2|1、3、4|1、4、13|1、13|1、13|1、13|1、5、13|1、13|1、10|1、13<br /><br /> datetime2(3)|  
-|BYTES|-|-|-|-|-|-|-|N/A|該当なし|該当なし|  
-|VARIANT|1|1|1|1、10|1、10|1、10|1、10|N/A|該当なし|1、10|  
-|SSVARIANT|1、16|1、16|1、16|1、10、16|1、10、16|1、10、16|1、10、16|N/A|該当なし|1、16|  
-|BSTR|1、9|1、9|1、9、10|1、9、10|1、9、10|1、9、10|1、9、10|N/A|該当なし|該当なし|  
-|STR|1、9|1、9|1、9、10|1、9、10|1、9、10|1、9、10|1、9、10|N/A|該当なし|該当なし|  
-|WSTR|1、9|1、9|1、9、10|1、9、10|1、9、10|1、9、10|1、9、10|N/A|該当なし|該当なし|  
+|BYTES|-|-|-|-|-|-|-|該当なし|該当なし|該当なし|  
+|VARIANT|1|1|1|1、10|1、10|1、10|1、10|該当なし|該当なし|1、10|  
+|SSVARIANT|1、16|1、16|1、16|1、10、16|1、10、16|1、10、16|1、10、16|該当なし|該当なし|1、16|  
+|BSTR|1、9|1、9|1、9、10|1、9、10|1、9、10|1、9、10|1、9、10|該当なし|該当なし|該当なし|  
+|STR|1、9|1、9|1、9、10|1、9、10|1、9、10|1、9、10|1、9、10|該当なし|該当なし|該当なし|  
+|WSTR|1、9|1、9|1、9、10|1、9、10|1、9、10|1、9、10|1、9、10|該当なし|該当なし|該当なし|  
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
 |Symbol|意味|  
 |------------|-------------|  
 |-|変換はサポートされていません。 IAccessor::CreateAccessor の呼び出し時にバインドが検証される場合、DBBINDSTATUS_UPSUPPORTEDCONVERSION が *rgStatus* で返されます。 アクセサー検証が遅延する場合は、DBSTATUS_E_BADACCESSOR が設定されます。|  
-|N/A|適用不可。|  
+|該当なし|適用不可。|  
 |1|指定されたデータが有効でない場合、DBSTATUS_E_CANTCONVERTVALUE が設定されます。 入力データが検証されてから変換が適用されるので、コンポーネントは後続の変換で無視されることがあっても、変換を成功させるには有効である必要があります。|  
 |2|時刻フィールドは無視されます。|  
 |3|秒の小数部は 0 である必要があります。そうでなければ、DBSTATUS_E_DATAOVERFLOW が設定されます。|  

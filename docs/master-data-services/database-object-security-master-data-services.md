@@ -1,4 +1,5 @@
 ---
+description: データベース オブジェクト セキュリティ (マスター データ サービス)
 title: データベース オブジェクト セキュリティ
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 656b36f796d05d6ea7533c8c35e4b6ffe9572f99
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f9b2089b72f11872df0dc0c0b2758fb8272a4c06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344908"
 ---
 # <a name="database-object-security-master-data-services"></a>データベース オブジェクト セキュリティ (マスター データ サービス)
 
@@ -55,9 +56,9 @@ ms.locfileid: "85811585"
 |リレーションシップ ステージング テーブルから MDS の適切なテーブルにデータを読み込む|stg.udp_name_Relationship|EXECUTE|  
 |ステージング テーブルのデータが MDS データベース テーブルに挿入されたときに発生したエラーを表示する|stg.udp_name_Relationship|SELECT|  
   
- 詳細については、「[概要: テーブルからのデータのインポート &#40;マスターデータサービス&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
+ 詳細については、「 [概要: テーブルからのデータのインポート &#40;マスターデータサービス&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
   
-##  <a name="validating-data-against-business-rules"></a><a name="rules"></a>ビジネスルールに対してデータを検証する  
+##  <a name="validating-data-against-business-rules"></a><a name="rules"></a> ビジネスルールに対してデータを検証する  
   
 |アクション|セキュリティ保護可能|アクセス許可|  
 |------------|---------------|-----------------|  
@@ -65,7 +66,7 @@ ms.locfileid: "85811585"
   
  詳細については、「 [検証ストアド プロシージャ (マスター データ サービス)](../master-data-services/validation-stored-procedure-master-data-services.md)」を参照してください。  
   
-##  <a name="deleting-versions"></a><a name="Versions"></a>バージョンの削除  
+##  <a name="deleting-versions"></a><a name="Versions"></a> バージョンの削除  
   
 |アクション|[セキュリティ保護可能なリソース]|アクセス許可|  
 |------------|----------------|-----------------|  
@@ -74,7 +75,7 @@ ms.locfileid: "85811585"
   
  詳細については、「[バージョンを削除する (マスター データ サービス)](../master-data-services/delete-a-version-master-data-services.md)」を参照してください。  
   
-##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a>階層メンバーの権限を直ちに適用する  
+##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a> 階層メンバーの権限を直ちに適用する  
   
 |アクション|[セキュリティ保護可能なリソース]|アクセス許可|  
 |------------|----------------|-----------------|  
@@ -82,10 +83,10 @@ ms.locfileid: "85811585"
   
  詳細については、「[メンバー権限を直ちに適用する (マスター データ サービス)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)」を参照してください。  
   
-##  <a name="configuring-system-settings"></a><a name="SysSettings"></a>システム設定の構成  
+##  <a name="configuring-system-settings"></a><a name="SysSettings"></a> システム設定の構成  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]での動作を制御するために構成可能なシステム設定が用意されています。 これらの設定は [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] で調整できます。または、UPDATE アクセス権を持つ場合は、mdm.tblSystemSetting データベース テーブルで直接調整できます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../master-data-services/system-settings-master-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: backupfilegroup (Transact-SQL)
 title: backupfilegroup (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1494796dd0a57e786abae0c97a7278892aa422e6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dc0f1651c0c5532e387e4b878182a2cb99f66936
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373938"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  バックアップ時に、データベース内のファイルグループごとに1行のデータを格納します。 **backupfilegroup**は**msdb**データベースに格納されます。  
+  バックアップ時に、データベース内のファイルグループごとに1行のデータを格納します。 **backupfilegroup** は **msdb** データベースに格納されます。  
   
 > [!NOTE]  
 >  **Backupfilegroup**テーブルには、バックアップセットではなく、データベースのファイルグループの構成が表示されます。 バックアップセットにファイルが含まれているかどうかを確認するには、 [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)テーブルの**is_present**列を使用します。  
@@ -37,7 +38,7 @@ ms.locfileid: "85890679"
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|ファイル グループが含まれているバックアップ セット。|  
 |**name**|**sysname**|ファイルグループの名前。|  
-|**filegroup_id**|**int**|ファイルグループの ID。データベース内で一意です。 は、 **data_space_id**に**対応します**。|  
+|**filegroup_id**|**int**|ファイルグループの ID。データベース内で一意です。 は、 **data_space_id** に **対応します**。|  
 |**filegroup_guid**|**uniqueidentifier**|ファイルグループのグローバル一意識別子。 NULL にすることができます。|  
 |**type**|**char(2)**|コンテンツの種類。次のいずれかになります。<br /><br /> FG = "Rows" ファイルグループ<br /><br /> SL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイル グループ|  
 |**type_desc**|**nvarchar(60)**|関数の種類の説明。次のいずれかになります。<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP |  
@@ -45,17 +46,17 @@ ms.locfileid: "85890679"
 |**is_readonly**|**bit**|1 = ファイルグループは読み取り専用です。|  
 |**log_filegroup_guid**|**uniqueidentifier**|NULL にすることができます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
 >  同じファイルグループ名を別のデータベースに表示できます。ただし、各ファイルグループには独自の GUID があります。 したがって、 **(backup_set_id、filegroup_guid)** は、 **backupfilegroup**内のファイルグループを識別する一意のキーです。  
   
- LOADHISTORY を使用した*backup_device*からの RESTORE verifyonly は、 **backupmediaset**テーブルの列に、メディアセットヘッダーからの適切な値を設定します。  
+ LOADHISTORY を使用した *backup_device* からの RESTORE verifyonly は、 **backupmediaset** テーブルの列に、メディアセットヘッダーからの適切な値を設定します。  
   
- このテーブルおよびその他のバックアップテーブルと履歴テーブルの行の数を減らすには、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)ストアドプロシージャを実行します。  
+ このテーブルおよびその他のバックアップテーブルと履歴テーブルの行の数を減らすには、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) ストアドプロシージャを実行します。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のテーブルのバックアップと復元](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のテーブルのバックアップと復元 ](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   

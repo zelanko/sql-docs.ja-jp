@@ -1,4 +1,5 @@
 ---
+description: UnknownMember (MDX)
 title: UnknownMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a0332b200a74044dcd4e7d8d308923cc4b759738
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0489556836b943ba91d4e17b3a164aeca0c648d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097283"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341148"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember (MDX)
 
@@ -38,25 +39,25 @@ Hierarchy_Expression.UnknownMember
  *Hierarchy_Expression*  
  階層を返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  Analysis Services は、階層が不明な場合に、ファクトテーブルデータを階層に関連付けるための不明なメンバーを作成します。 不明なメンバーは、次のいずれかのレベルにすることができます。  
   
 -   集計されない属性階層の場合、最上位レベル。  
   
--   自然階層の**すべて**のレベルの最初のレベル。  
+-   自然階層の **すべて** のレベルの最初のレベル。  
   
 -   不自然階層の場合、任意のレベル。  
   
- メンバー式が指定されている場合、 **UnknownMember**関数は、指定されたメンバーの不明なメンバーの子を返します。 指定されたメンバーが存在しない場合、関数は NULL を返します。  
+ メンバー式が指定されている場合、 **UnknownMember** 関数は、指定されたメンバーの不明なメンバーの子を返します。 指定されたメンバーが存在しない場合、関数は NULL を返します。  
   
- 階層式が指定されている場合、 **UnknownMember**関数は、最上位レベルに不明なメンバーが存在する場合は、そのメンバーを返します。  
+ 階層式が指定されている場合、 **UnknownMember** 関数は、最上位レベルに不明なメンバーが存在する場合は、そのメンバーを返します。  
   
- レベルまたはメンバーに不明なメンバーが存在しない場合、 **UnknownMember**関数は null メンバーを作成します。  
+ レベルまたはメンバーに不明なメンバーが存在しない場合、 **UnknownMember** 関数は null メンバーを作成します。  
   
 > [!NOTE]  
 >  その階層またはメンバーに不明なメンバーが存在しない場合、エラーが生成されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、Measures ディメンションのすべてのメンバーについて、Product 属性階層の All Products メンバーの不明なメンバーを返します。  
   
 ```  

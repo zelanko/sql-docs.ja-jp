@@ -1,4 +1,5 @@
 ---
+description: fn_get_audit_file (Transact-sql)
 title: fn_get_audit_file (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2020
@@ -21,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 4d280a00eb9d972cea510ae650c4598561b77fef
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: cda66aed0e3ddea4bcb14bc30ca5805bf943afb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321798"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>fn_get_audit_file (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -45,13 +46,13 @@ fn_get_audit_file ( file_pattern,
   
 ## <a name="arguments"></a>引数  
  *file_pattern*  
- 読み取り対象に設定する監査ファイルのディレクトリまたはパスとファイル名を指定します。 種類は**nvarchar (260)** です。 
+ 読み取り対象に設定する監査ファイルのディレクトリまたはパスとファイル名を指定します。 種類は **nvarchar (260)** です。 
  
  - **SQL Server**:
     
-    この引数には、パス (ドライブ文字またはネットワーク共有) とファイル名の両方を含める必要があります。ファイル名にはワイルドカードを使用できます。 1つのアスタリスク (*) を使用して、監査ファイルセットから複数のファイルを収集できます。 例:  
+    この引数には、パス (ドライブ文字またはネットワーク共有) とファイル名の両方を含める必要があります。ファイル名にはワイルドカードを使用できます。 1つのアスタリスク (*) を使用して、監査ファイルセットから複数のファイルを収集できます。 次に例を示します。  
   
-    -   **\<path>\\\***-指定された場所にあるすべての監査ファイルを収集します。  
+    -   **\<path>\\\*** -指定された場所にあるすべての監査ファイルを収集します。  
   
     -   ** \<path> \ LOGINSAUDIT_ {GUID}***-指定した名前と GUID のペアを持つすべての監査ファイルを収集します。  
   
@@ -59,9 +60,9 @@ fn_get_audit_file ( file_pattern,
   
  - **Azure SQL Database**:
  
-    この引数は、blob の URL (ストレージエンドポイントとコンテナーを含む) を指定するために使用されます。 アスタリスクのワイルドカードはサポートされていませんが、完全な blob 名ではなく、部分的なファイル (blob) 名プレフィックスを使用して、このプレフィックスで始まる複数のファイル (blob) を収集できます。 例:
+    この引数は、blob の URL (ストレージエンドポイントとコンテナーを含む) を指定するために使用されます。 アスタリスクのワイルドカードはサポートされていませんが、完全な blob 名ではなく、部分的なファイル (blob) 名プレフィックスを使用して、このプレフィックスで始まる複数のファイル (blob) を収集できます。 次に例を示します。
  
-      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/**-特定のデータベースのすべての監査ファイル (blob) を収集します。    
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** -特定のデータベースのすべての監査ファイル (blob) を収集します。    
       
       - ** \<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . xel** -特定の監査ファイル (blob) を収集します。
   
@@ -69,7 +70,7 @@ fn_get_audit_file ( file_pattern,
 >  ファイル名のパターンがないパスを渡すとエラーが発生します。  
   
  *initial_file_name*  
- 監査レコードの読み取りを開始する監査ファイルセット内の特定のファイルのパスと名前を指定します。 種類は**nvarchar (260)** です。  
+ 監査レコードの読み取りを開始する監査ファイルセット内の特定のファイルのパスと名前を指定します。 種類は **nvarchar (260)** です。  
   
 > [!NOTE]  
 >  *Initial_file_name*引数には、有効なエントリが含まれているか、または default | を含んでいる必要があります。NULL 値。  
@@ -78,12 +79,12 @@ fn_get_audit_file ( file_pattern,
  Initial_file_name に対して指定されたファイルを持つ既知の場所を指定します。 この引数を使用した場合、関数は、指定されたオフセットの直後にあるバッファーの最初のレコードから読み取りを開始します。  
   
 > [!NOTE]  
->  *Audit_record_offset*引数には、有効なエントリが含まれているか、または default | を含んでいる必要があります。NULL 値。 型は**bigint**です。  
+>  *Audit_record_offset*引数には、有効なエントリが含まれているか、または default | を含んでいる必要があります。NULL 値。 型は **bigint**です。  
   
 ## <a name="tables-returned"></a>返されるテーブル  
  次の表に、この関数から返される監査ファイルの内容を示します。  
   
-| 列名 | 種類 | 説明 |  
+| 列名 | Type | 説明 |  
 |-------------|------|-------------|  
 | action_id | **varchar (4)** | アクションの ID。 NULL 値は許可されません。 |  
 | additional_information | **nvarchar (4000)** | 単一のイベントに対してだけ適用される固有の情報が XML として返されます。 少数の監査可能なアクションには、この種の情報が含まれています。<br /><br /> Tsql スタックが関連付けられているアクションに対して、1レベルの TSQL スタックが XML 形式で表示されます。 XML 形式は次のようになります。<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> frame nest_level は、フレームの現在の入れ子レベルを示します。 モジュール名は、3つの部分形式 (database_name、schema_name と object_name) で表されます。  モジュール名は、、、、などの無効な xml 文字をエスケープするために解析され `'\<'` `'>'` `'/'` `'_x'` ます。 これらは、としてエスケープされ `_xHHHH\_` ます。 HHHH は、文字の4桁の16進数の UCS 2 コードを表します。<br /><br /> NULL 値が許可されます。 イベントから追加情報が報告されない場合は NULL を返します。 |
@@ -102,8 +103,8 @@ fn_get_audit_file ( file_pattern,
 | event_time | **datetime2** | 監査可能なアクションが発生した日時。 NULL 値は許可されません。 |  
 | file_name | **varchar(260)** | レコードの送信元の監査ログファイルのパスと名前。 NULL 値は許可されません。 |
 | is_column_permission | **bit** | 列レベルのアクセス許可であるかどうかを示すフラグ。 NULL 値は許可されません。 Permission_bitmask が0の場合は0を返します。<br /> 1 = true<br /> 0 = false |
-| object_id | **int** | 監査が発生したエンティティの ID。 これには、次の内容が含まれます。<br /> サーバー オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値は許可されません。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は 0 を返します。 たとえば、認証などの場合です。 |  
-| object_name | **sysname** | 監査が発生したエンティティの名前。 これには、次の内容が含まれます。<br /> サーバー オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値が許可されます。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は NULL を返します。 たとえば、認証などの場合です。 |
+| object_id | **int** | 監査が発生したエンティティの ID。 次に例を示します。<br /> サーバー オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値は許可されません。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は 0 を返します。 たとえば、認証などの場合です。 |  
+| object_name | **sysname** | 監査が発生したエンティティの名前。 次に例を示します。<br /> サーバー オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値が許可されます。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は NULL を返します。 たとえば、認証などの場合です。 |
 | permission_bitmask | **varbinary(16)** | 一部のアクションでは、権限の許可、拒否、または取り消しを示します。 |
 | response_rows | **bigint** | **適用対象**: AZURE SQL DATABASE と SQL Managed Instance<br /><br /> 結果セットで返される行の数。 |  
 | schema_name | **sysname** | アクションが発生したスキーマ コンテキスト。 NULL 値が許可されます。 スキーマの外部で発生する監査の場合は NULL を返します。 |  
@@ -127,13 +128,13 @@ fn_get_audit_file ( file_pattern,
 | user_defined_information | **nvarchar (4000)** | **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、Azure SQL Database および SQL Managed Instance<br /><br /> **Sp_audit_write**ストアドプロシージャを使用して、監査ログに記録する必要のある追加情報を記録するために使用します。 |  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Fn_get_audit_file**に渡された*file_pattern*引数が、存在しないパスまたはファイルを参照している場合、またはファイルが監査ファイルでない場合は、 **MSG_INVALID_AUDIT_FILE**エラーメッセージが返されます。  
   
 ## <a name="permissions"></a>アクセス許可
 
-- **SQL Server**: **CONTROL Server**権限が必要です。  
-- **Azure SQL Database**: **CONTROL Database**権限が必要です。     
+- **SQL Server**: **CONTROL Server** 権限が必要です。  
+- **Azure SQL Database**: **CONTROL Database** 権限が必要です。     
   - サーバー管理者は、サーバー上のすべてのデータベースの監査ログにアクセスできます。
   - 非サーバー管理者は、現在のデータベースからの監査ログにのみアクセスできます。
   - 上記の条件を満たしていない blob はスキップされます (スキップされた blob の一覧がクエリ出力メッセージに表示されます)。関数は、アクセスが許可されている blob からのログのみを返します。  
@@ -158,7 +159,7 @@ fn_get_audit_file ( file_pattern,
   GO  
   ```  
 
-  この例では、上記と同じファイルから読み取りますが、追加の T-sql 句 (関数によって返される監査レコードをフィルター処理するために、**TOP**句、 **ORDER BY**句、 **WHERE**句) を使用します。
+  この例では、上記と同じファイルから読み取りますが、追加の T-sql 句 (関数によって返される監査レコードをフィルター処理するために、**TOP**句、 **ORDER BY**句、 **WHERE** 句) を使用します。
   
   ```  
   SELECT TOP 10 * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default)

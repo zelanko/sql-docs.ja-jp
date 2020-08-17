@@ -1,4 +1,5 @@
 ---
+description: Members (Set) (MDX)
 title: Members (Set) (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d3e5bb14455d2d2ea67c4187e8e1a2a420031944
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0358f20d0aeba0e4d455fabadb6dc1e4361081e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138261"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341398"
 ---
 # <a name="members-set-mdx"></a>Members (Set) (MDX)
 
@@ -38,15 +39,15 @@ Level_Expression.Members
  *Level_Expression*  
  レベルを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
- 階層式が指定されている場合、 **members (セット)** 関数は、計算されるメンバーを含まない、指定された階層内のすべてのメンバーのセットを返します。 すべてのメンバーのセットを取得するには、階層で、all メンバー [&#40;MDX&#41;](../mdx/allmembers-mdx.md)関数を使用します。  
+## <a name="remarks"></a>解説  
+ 階層式が指定されている場合、 **members (セット)** 関数は、計算されるメンバーを含まない、指定された階層内のすべてのメンバーのセットを返します。 すべてのメンバーのセットを取得するには、階層で、all メンバー [&#40;MDX&#41;](../mdx/allmembers-mdx.md) 関数を使用します。  
   
  レベル式が指定されている場合、 **members (セット)** 関数は、指定されたレベル内のすべてのメンバーのセットを返します。  
   
 > [!IMPORTANT]  
 >  ディメンションに表示される階層が1つだけの場合、このシナリオのディメンション名は、表示されている唯一の階層に解決されるので、階層はディメンション名または階層名で参照できます。 たとえば、Measures。 Members は、Measures ディメンション内の唯一の階層に解決されるため、有効な MDX 式です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、Adventure Works キューブの Calendar Year 階層のすべてのメンバーのセットを返しています。  
   
 ```  

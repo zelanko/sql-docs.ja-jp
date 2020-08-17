@@ -1,4 +1,5 @@
 ---
+description: SQL Server エージェントでの自動管理タスクのスケジュール設定
 title: SQL Server エージェントでの自動管理タスクのスケジュール設定
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -15,11 +16,12 @@ ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b455db0d597e4b7affb6da98497ae3638b095e9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2ca351a2e3a6104a4bcc5c8fb7192d0f00ea6a56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325606"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>SQL Server エージェントでの自動管理タスクのスケジュール設定
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -39,7 +41,7 @@ ms.locfileid: "86005973"
 ## <a name="examples"></a>例  
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
-エージェントを使用するプログラムの場合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、エージェントの名前空間を修飾するには、 **using**ステートメントを含める必要があります。 次のように、アプリケーションの宣言の前に、ステートメントを他の**using**ステートメントの後に挿入します。
+エージェントを使用するプログラムの場合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、エージェントの名前空間を修飾するには、 **using** ステートメントを含める必要があります。 次のように、アプリケーションの宣言の前に、ステートメントを他の **using** ステートメントの後に挿入します。
   
  ```
 using Microsoft.SqlServer.Management.Smo;

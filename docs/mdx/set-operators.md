@@ -1,4 +1,5 @@
 ---
+description: 集合演算子
 title: Set 演算子 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6ad0b92a970c3618584365d9ad6e99420daef05d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eb4434c9fe1991e1398baaa9c7bfd9602995652d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341238"
 ---
 # <a name="set-operators"></a>集合演算子
 
@@ -24,10 +25,10 @@ ms.locfileid: "68037013"
   
 |演算子|説明|  
 |--------------|-----------------|  
-|[- (を除く)](../mdx/except-mdx-operator.md)|重複したメンバーを削除する2つのセットの差を返します。<br /><br /> この演算子は、機能的には[Except](../mdx/except-mdx-function.md)関数と同等です。|  
-|[* (クロス積)](../mdx/crossjoin-mdx-operator-reference.md)|2つのセットのクロス積を返します。<br /><br /> この演算子は、機能的には[Crossjoin](../mdx/crossjoin-mdx.md)関数に相当します。|  
+|[- (を除く)](../mdx/except-mdx-operator.md)|重複したメンバーを削除する2つのセットの差を返します。<br /><br /> この演算子は、機能的には [Except](../mdx/except-mdx-function.md) 関数と同等です。|  
+|[* (クロス積)](../mdx/crossjoin-mdx-operator-reference.md)|2つのセットのクロス積を返します。<br /><br /> この演算子は、機能的には [Crossjoin](../mdx/crossjoin-mdx.md) 関数に相当します。|  
 |[: (範囲)](../mdx/range-mdx.md)|指定された2つのメンバーをエンドポイントとして持ち、指定された2つのメンバー間のすべてのメンバーがセットのメンバーとして含まれる、自然な順序付きセットを返します。|  
-|[+ (和集合)](../mdx/union-mdx-operator-reference.md)|重複するメンバーを除外して、2つのセットの和集合を返します。<br /><br /> この演算子は、機能的に[Union &#40;MDX&#41;](../mdx/union-mdx.md)関数と同等です。|  
+|[+ (和集合)](../mdx/union-mdx-operator-reference.md)|重複するメンバーを除外して、2つのセットの和集合を返します。<br /><br /> この演算子は、機能的に [Union &#40;MDX&#41;](../mdx/union-mdx.md) 関数と同等です。|  
   
 ## <a name="see-also"></a>参照  
  [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   

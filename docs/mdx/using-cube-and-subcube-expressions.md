@@ -1,4 +1,5 @@
 ---
+description: キューブ式とサブキューブ式の使用
 title: Cube 式およびサブキューブ式の使用 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b431d82f24e5bf531dfa407d459ff9f36b543160
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341128"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>キューブ式とサブキューブ式の使用
 
@@ -23,7 +24,7 @@ ms.locfileid: "68893537"
 ## <a name="cube-expressions"></a>キューブ式  
  キューブ式には、キューブ識別子または CURRENTCUBE キーワードが含まれているので、単純式のみを指定できます。 多くの MDX ステートメントでは、キューブ識別子を要求する代わりに、CURRENTCUBE キーワードを使用して現在のキューブコンテキストを識別します。  
   
- キューブ識別子は、MDX ステートメントの BNF 表記の説明に*Cube_Name*として表示されます。  
+ キューブ識別子は、MDX ステートメントの BNF 表記の説明に *Cube_Name* として表示されます。  
   
  キューブ式は複数の場所に表示される場合があります。 MDX の SELECT ステートメントでは、キューブ式は、データの取得元のキューブを指定します。 次のクエリの例では、[Adventure Works] という式は、その名前のキューブを参照しています。  
   
@@ -66,12 +67,12 @@ ms.locfileid: "68893537"
   
  `END SCOPE;`  
   
- サブキューブ識別子が*Subcube_Name*として表示されます。 MDX ステートメントの BNF 表記について説明します。  
+ サブキューブ識別子が *Subcube_Name*として表示されます。 MDX ステートメントの BNF 表記について説明します。  
   
 ## <a name="see-also"></a>参照  
  [MDX の基本的なクエリ &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
- [Mdx &#40;mdx&#41;のサブキューブの作成](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
- [MDX&#41;&#40;サブキューブステートメントの作成](../mdx/mdx-data-definition-create-subcube.md)   
+ [Mdx &#40;mdx&#41;のサブキューブの作成 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
+ [MDX&#41;&#40;サブキューブステートメントの作成 ](../mdx/mdx-data-definition-create-subcube.md)   
  [MDX &#40;式&#41;](../mdx/expressions-mdx.md)   
  [SCOPE ステートメント (MDX)](../mdx/mdx-scripting-scope.md)  
   

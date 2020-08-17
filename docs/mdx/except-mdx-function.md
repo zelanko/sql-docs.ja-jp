@@ -1,4 +1,5 @@
 ---
+description: Except (MDX) 関数
 title: Except (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d53a88ce78eb5a1b106cefb0832ca1023f67c000
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e4cd8dcf3a8c3100a064e8ba5888060477de979
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68077247"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341508"
 ---
 # <a name="except-mdx-function"></a>Except (MDX) 関数
 
@@ -34,10 +35,10 @@ Except(Set_Expression1, Set_Expression2 [, ALL ] )
  *Set_Expression2*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **ALL**を指定した場合、関数は、1番目のセットで見つかった重複部分を保持します。2番目のセットで見つかった重複部分は削除されます。 メンバーは、最初のセットに出現する順序で返されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この関数の使用例を次に示します。  
   
 ```  
