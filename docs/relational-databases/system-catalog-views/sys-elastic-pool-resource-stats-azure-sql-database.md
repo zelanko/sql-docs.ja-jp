@@ -1,4 +1,5 @@
 ---
+description: sys.elastic_pool_resource_stats (Azure SQL Database)
 title: sys.elastic_pool_resource_stats
 titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
@@ -18,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4c6d2e7cccc7e1aa07327480415c0acd2a3db192
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 899621325f6299b2faf0e99df3578fdbf5ee8996
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88377848"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "87822933"
   
 ||  
 |-|  
-|**に適用さ**れます: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12。|  
+|**に適用さ**れます:  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12。|  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -49,7 +50,7 @@ ms.locfileid: "87822933"
 |**elastic_pool_storage_limit_mb**|**bigint**|この期間中のこのエラスティック プールに対する現在の最大エラスティック プール ストレージ制限 (メガバイト単位)。|
 |**avg_allocated_storage_percent**|**decimal (5, 2)**|エラスティックプール内のすべてのデータベースによって割り当てられたデータ領域の割合。  これは、エラスティックプールのデータの最大サイズに割り当てられたデータ領域の比率です。  詳細については[、「SQL Database でのファイル領域管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)」を参照してください。|  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
  このビューは、SQL Database サーバーの master データベースに存在します。 **Elastic_pool_resource_stats**を照会するには、master データベースに接続している必要があります。  
   

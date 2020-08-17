@@ -1,4 +1,5 @@
 ---
+description: ADO の概要と利点
 title: ADO の概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 811d850127b215e69c3710e7680f655714773f57
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b702f96fab776c383e309a94eea9358ed95cab90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761700"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355438"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO の概要と利点
 ActiveX データオブジェクト (ADO) は、OLE DB するための高レベルで使いやすいインターフェイスです。 OLE DB は、さまざまなデータストアに対する低レベルの高パフォーマンスのインターフェイスです。 ADO と OLE DB はどちらも、リレーショナル (テーブル) データと非リレーショナルデータ (階層またはストリーム) で使用できます。

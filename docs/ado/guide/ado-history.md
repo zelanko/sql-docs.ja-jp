@@ -1,4 +1,5 @@
 ---
+description: 各リリースの ADO 機能
 title: ADO 履歴 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 726487d366450f003ca745624a916d400990723b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d97e81eca94867ad00317667d08ef6bdf4c6f058
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355428"
 ---
 # <a name="ado-features-for-each-release"></a>各リリースの ADO 機能
 
@@ -38,14 +39,14 @@ ms.locfileid: "82761710"
 これらのメソッドは、ファイルハンドルが物理ファイルのみを指していることを確認するようになりました。
 
  **Recordset. ActiveCommand**_は、HTML/ASP ページから呼び出されたときにエラーを返し_ます。  
-これにより、**コマンド**オブジェクトが誤用されるのを防ぐことができます。
+これにより、 **コマンド** オブジェクトが誤用されるのを防ぐことができます。
 
  入れ子になった**Shape**コマンド_によって返される_**レコードセット**_の数__には上限があります。_        
-入れ子になった shape コマンドで、最大で512の**レコードセット**が返されるようになりました。 これは、 **Shape**コマンドをどの深さでも入れ子にできなくなることを意味します。 代わりに、各コマンドの結果が単一の (子)**レコードセット**になる場合、最大レベルの深さは512です。 任意のレベルで、 **Shape**コマンドが複数の**レコードセット**を返す場合、深さの最大レベルは512未満になります。
+入れ子になった shape コマンドで、最大で512の **レコードセット**が返されるようになりました。 これは、 **Shape** コマンドをどの深さでも入れ子にできなくなることを意味します。 代わりに、各コマンドの結果が単一の (子) **レコードセット**になる場合、最大レベルの深さは512です。 任意のレベルで、 **Shape** コマンドが複数の **レコードセット**を返す場合、深さの最大レベルは512未満になります。
 
 ## <a name="ado-27"></a>ADO 2.7
 
- *64 ビットプラットフォームのサポート*ADO 2.7 では、64ビットプロセッサのサポートが導入されています。
+ *64 ビットプラットフォームのサポート* ADO 2.7 では、64ビットプロセッサのサポートが導入されています。
 
 ## <a name="ado-26"></a>ADO 2.6
 
@@ -53,24 +54,24 @@ ms.locfileid: "82761710"
 
  *コマンドストリーム***Command**オブジェクトは、 **CommandText**プロパティを使用する代わりに、ストリーム形式のコマンドをサポートしています。 [Commandstream プロパティ (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md)を使用して、XML テンプレートまたはアップデートグラムを、Microsoft OLE DB Provider for SQL Server と共に**コマンド**入力として指定できます。
 
- **言語**  _プロパティ_の[言語](../../ado/reference/ado-api/dialect-property.md)は、文字列またはストリームを解析するためにプロバイダーが使用する構文と一般規則を定義する新しいプロパティです。
+ **言語**  _プロパティ_の [言語](../../ado/reference/ado-api/dialect-property.md) は、文字列またはストリームを解析するためにプロバイダーが使用する構文と一般規則を定義する新しいプロパティです。
 
- **コマンド実行**_メソッド_ADO**コマンド**オブジェクトの[execute メソッド](../../ado/reference/ado-api/execute-method-ado-command.md)が拡張され、入力と出力にストリームを使用できるようになりました。  
+ **Command.Exeかわいらしい**_メソッド_ADO**コマンド**オブジェクトの[Execute メソッド](../../ado/reference/ado-api/execute-method-ado-command.md)が拡張され、入力と出力にストリームを使用できるようになりました。  
 
  *フィールドの statusvalues***レコードセット**の**フィールド**を変更するときに DB_E_ERRORSOCCURRED エラーが発生した場合は、ADO によって **"status** " プロパティに適切な状態情報が入力され、問題が発生した原因に関する詳細情報がユーザーに表示されるようになります。 「 [Status プロパティ (ADO Field)](../../ado/reference/ado-api/status-property-ado-field.md)」を参照してください。
 
- **Namedparameters**  _プロパティ_ [namedparameters](../../ado/reference/ado-api/namedparameters-property-ado.md)は、プロバイダーが名前付きパラメーターを使用する必要があることを示す**Command**オブジェクトの新しいプロパティです。
+ **Namedparameters**  _プロパティ_ [namedparameters](../../ado/reference/ado-api/namedparameters-property-ado.md) は、プロバイダーが名前付きパラメーターを使用する必要があることを示す **Command** オブジェクトの新しいプロパティです。
 
- *ストリーム内の結果セット*ADO は、**レコードセット**オブジェクトではなく、**ストリーム**内のデータソースから結果セットを返すことができます。 最新バージョンの Microsoft OLE DB Provider for SQL Server を使用すると、"For XML" クエリを実行することで、プロバイダーから XML の結果を取得できます。 Resultset を受け取る**ストリーム**は、ソースとして "For XML" コマンドを使用して開くことができます。 「[結果セットをストリームに取得](../../ado/guide/data/retrieving-resultsets-into-streams.md)する」を参照してください。
+ *ストリーム内の結果セット*ADO は、**レコードセット**オブジェクトではなく、**ストリーム**内のデータソースから結果セットを返すことができます。 最新バージョンの Microsoft OLE DB Provider for SQL Server を使用すると、"For XML" クエリを実行することで、プロバイダーから XML の結果を取得できます。 Resultset を受け取る **ストリーム** は、ソースとして "For XML" コマンドを使用して開くことができます。 「 [結果セットをストリームに取得](../../ado/guide/data/retrieving-resultsets-into-streams.md)する」を参照してください。
 
- *単一行の結果セット*ADO **Record**オブジェクトを、プロバイダーから1行のデータを返すコマンド文字列または**コマンド**オブジェクトで開くことができるようになりました。 その結果、MDAC 2.6 プロバイダーのパフォーマンスが向上します。 「 [Open メソッド (ADO Record)](../../ado/reference/ado-api/open-method-ado-record.md)」を参照してください。
+ *単一行の結果セット* ADO **Record** オブジェクトを、プロバイダーから1行のデータを返すコマンド文字列または **コマンド** オブジェクトで開くことができるようになりました。 その結果、MDAC 2.6 プロバイダーのパフォーマンスが向上します。 「 [Open メソッド (ADO Record)](../../ado/reference/ado-api/open-method-ado-record.md)」を参照してください。
 
 ## <a name="ado-25"></a>ADO 2.5
 
  **レコード**_オブジェクト_ADO 2.5 では、レコード**セット**またはデータプロバイダーの行を表す**レコード**オブジェクト、またはファイルやディレクトリなどの半構造化データをカプセル化するオブジェクトが導入されています。
 
- **Stream** _オブジェクト_ADO 2.5 では、バイナリデータまたはテキストデータのストリームを表す**ストリーム**オブジェクトも導入されています。
+ **Stream** _オブジェクト_ ADO 2.5 では、バイナリデータまたはテキストデータのストリームを表す **ストリーム** オブジェクトも導入されています。
 
- *URL バインド*ADO 2.5 では、接続文字列とコマンドテキストの代わりに URL を使用して、データストアオブジェクトに名前を付けます。 URL は、既存の**接続**および**レコードセット**オブジェクト、および新しい**レコード**および**ストリーム**オブジェクトと共に使用できます。
+ *URL バインド* ADO 2.5 では、接続文字列とコマンドテキストの代わりに URL を使用して、データストアオブジェクトに名前を付けます。 URL は、既存の **接続** および **レコードセット** オブジェクト、および新しい **レコード** および **ストリーム** オブジェクトと共に使用できます。
 
- *URL バインドをサポートするデータプロバイダー*ADO 2.5 では、URL スキームを認識する OLE DB プロバイダーがサポートされています。 これには、Windows 2000 ファイルシステムにアクセスして既存の HTTP スキームを認識する、インターネット公開の OLE DB プロバイダーが含まれます。
+ *URL バインドをサポートするデータプロバイダー* ADO 2.5 では、URL スキームを認識する OLE DB プロバイダーがサポートされています。 これには、Windows 2000 ファイルシステムにアクセスして既存の HTTP スキームを認識する、インターネット公開の OLE DB プロバイダーが含まれます。

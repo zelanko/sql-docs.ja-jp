@@ -1,4 +1,5 @@
 ---
+description: エクスポート (DMX)
 title: エクスポート (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 620bb13d50461e850cc08de1e1b1b71709d78c7c
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 689ab632604d26a349dbb3f2a40d5f1b7cf8d702
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353228"
 ---
 # <a name="export-dmx"></a>エクスポート (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,8 +38,8 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  *ファイル名*  
  文字列としてエクスポートするファイルの名前と場所です。  
   
-## <a name="remarks"></a>注釈  
- ステートメントがマイニング モデルを指定する場合、結果ファイルは関連するマイニング構造も含みます。 ステートメントで**依存関係が**指定されている場合は、オブジェクトを処理するために必要なすべてのオブジェクト (たとえば、データソースとデータソースビュー) が abf ファイルに含まれます。  
+## <a name="remarks"></a>解説  
+ ステートメントがマイニング モデルを指定する場合、結果ファイルは関連するマイニング構造も含みます。 ステートメントで **依存関係が**指定されている場合は、オブジェクトを処理するために必要なすべてのオブジェクト (たとえば、データソースとデータソースビュー) が abf ファイルに含まれます。  
   
  データベースからオブジェクトをエクスポートまたはインポートするには、データベースまたはサーバーの管理者である必要があり [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。  
   
@@ -50,7 +51,7 @@ EXPORT MINING STRUCTURE [Targeted Mailing], [Forecasting] MINING MODEL Associati
 ```  
   
 ## <a name="export-mining-model-example"></a>マイニングモデルのエクスポートの例  
- 次の例では、指定されたファイルの場所にアソシエーションマイニングモデルをエクスポートします。 ステートメントでは**依存関係が**指定されているので、データソースとデータソースビューオブジェクトも abf ファイルに含まれます。  
+ 次の例では、指定されたファイルの場所にアソシエーションマイニングモデルをエクスポートします。 ステートメントでは **依存関係が**指定されているので、データソースとデータソースビューオブジェクトも abf ファイルに含まれます。  
   
 ```  
 EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES  

@@ -1,4 +1,5 @@
 ---
+description: server_resource_stats (Azure SQL Database)
 title: server_resource_stats (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
@@ -19,12 +20,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 716d9703ca684adc653d1f43e674b7d99ae91765
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: ef3f27b814405cf6ca56a47ffcac8dd467f939f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88376708"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>server_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -54,12 +55,12 @@ Azure SQL Managed Instance の CPU 使用率、IO、およびストレージデ�
 
  
 > [!TIP]  
->  これらの制限とサービスレベルの詳細については、[サービス階層の Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)に関するトピックを参照してください。  
+>  これらの制限とサービスレベルの詳細については、 [サービス階層の Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)に関するトピックを参照してください。  
     
 ## <a name="permissions"></a>アクセス許可  
- このビューは、 **master**データベースに接続する権限を持つすべてのユーザーロールで使用できます。  
+ このビューは、 **master** データベースに接続する権限を持つすべてのユーザーロールで使用できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Server_resource_stats**によって返されるデータは、実行しているサービス階層/パフォーマンスレベルで許容される最大限度に対する割合として表される、avg_cpu 以外のバイトまたはメガバイト (列名で示される) で使用される合計として表現されます。  
  
 ## <a name="examples"></a>例  

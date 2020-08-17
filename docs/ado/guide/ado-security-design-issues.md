@@ -1,4 +1,5 @@
 ---
+description: ADO のセキュリティデザイン機能
 title: ADO セキュリティ設計の問題 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/08/2018
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8dde159e0b04b319b978e9a3743d866d05c64253
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fc525a10d6211ee5f15517618f2cc5b99c8abee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761680"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355398"
 ---
 # <a name="ado-security-design-features"></a>ADO のセキュリティデザイン機能
 以下のセクションでは、ActiveX データオブジェクト (ADO) 2.8 以降のセキュリティ設計機能について説明します。 これらの変更は、セキュリティを強化するために ADO 2.8 で行われました。 Windows Vista の Windows DAC 6.0 に含まれる ADO 6.0 は、windows XP および Windows Server 2003 の MDAC 2.8 に含まれていた ADO 2.8 と機能的には同等です。 このトピックでは、ADO 2.8 以降でアプリケーションを最適に保護する方法について説明します。
@@ -54,9 +55,9 @@ Website, click OK, otherwise click Cancel.
 ### <a name="disk-accessible-code-limited-now-to-trusted-sites"></a>ディスクからアクセス可能なコードが、信頼済みサイトに限定されるようになりました
  ADO 2.8 では、ローカルコンピューター上のファイルの読み取りまたは書き込みの可能性を公開する可能性がある制限付きの Api セットの機能を制限する追加のデザイン変更が行われました。 Internet Explorer の実行時に安全性に関してさらに制限されている API メソッドを次に示します。
 
--   ADO**ストリーム**オブジェクトの場合は、 [LoadFromFile](../../ado/reference/ado-api/loadfromfile-method-ado.md)または[SaveToFile](../../ado/reference/ado-api/savetofile-method.md)メソッドが使用されている場合はです。
+-   ADO **ストリーム** オブジェクトの場合は、 [LoadFromFile](../../ado/reference/ado-api/loadfromfile-method-ado.md) または [SaveToFile](../../ado/reference/ado-api/savetofile-method.md) メソッドが使用されている場合はです。
 
--   ADO**レコードセット**オブジェクトの場合、 [Save](../../ado/reference/ado-api/save-method.md)メソッドまたは[Open](../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドがある場合 ( **adcmdfile**オプションが設定されている場合や、 [Microsoft OLE DB 永続化プロバイダー (mspersist)](../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)が使用されている場合など)。
+-   ADO **レコードセット** オブジェクトの場合、 [Save](../../ado/reference/ado-api/save-method.md) メソッドまたは [Open](../../ado/reference/ado-api/open-method-ado-recordset.md) メソッドがある場合 ( **adcmdfile** オプションが設定されている場合や、 [Microsoft OLE DB 永続化プロバイダー (mspersist)](../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) が使用されている場合など)。
 
  これらの制限されたディスクアクセス関数のセットについては、これらのメソッドを使用するコードが Internet Explorer で実行されている場合に、ADO 2.8 以降で次の動作が発生します。
 
@@ -73,7 +74,7 @@ Website, click OK, otherwise click Cancel.
 ### <a name="changes-in-handling-for-ole-db-providers-and-integrated-security"></a>OLE DB プロバイダーと統合セキュリティの処理の変更
  ADO 2.7 およびそれ以前のバージョンを確認しながら、潜在的なセキュリティの問題と懸念が発生した場合は、次のシナリオが検出されました。
 
- 場合によっては、統合セキュリティ[DBPROP_AUTH_INTEGRATED](https://msdn.microsoft.com/library/windows/desktop/ms712973.aspx)プロパティをサポートする OLE DB プロバイダーは、スクリプト化された Web ページが ADO Connection オブジェクトを再利用して、ユーザーの現在のログイン資格情報を使用して、他のサーバーに誤って接続することを許可する可能性があります。 これを回避するために、ADO 2.8 以降では、統合セキュリティを提供するかどうかを選択した方法に応じて OLE DB プロバイダーが処理されます。
+ 場合によっては、統合セキュリティ [DBPROP_AUTH_INTEGRATED](https://msdn.microsoft.com/library/windows/desktop/ms712973.aspx) プロパティをサポートする OLE DB プロバイダーは、スクリプト化された Web ページが ADO Connection オブジェクトを再利用して、ユーザーの現在のログイン資格情報を使用して、他のサーバーに誤って接続することを許可する可能性があります。 これを回避するために、ADO 2.8 以降では、統合セキュリティを提供するかどうかを選択した方法に応じて OLE DB プロバイダーが処理されます。
 
  信頼済みサイトゾーンの一覧に表示されているサイトから読み込まれた Web ページの場合、次の表に、各ケースで ADO 2.8 以降で ADO 接続をどのように管理するかを示します。
 
@@ -102,12 +103,12 @@ This Website is using your identity to access a data source. If you trust this W
 
 2.  [DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO](https://msdn.microsoft.com/library/windows/desktop/ms714905.aspx)プロパティの OLE DB プロバイダーの設定によっては、パスワードが返されるその他の接続文字列情報と共に使用されます。
 
- たとえば、ADO Connection の動的プロパティ永続化**セキュリティ情報**が**True**に設定されている場合、パスワード情報は返された接続文字列に含まれます。 それ以外の場合、基になるプロバイダーがプロパティを**False**に設定している場合 (たとえば、SQLOLEDB プロバイダーを使用した場合)、返された接続文字列ではパスワード情報が省略されます。
+ たとえば、ADO Connection の動的プロパティ永続化 **セキュリティ情報** が **True**に設定されている場合、パスワード情報は返された接続文字列に含まれます。 それ以外の場合、基になるプロバイダーがプロパティを **False** に設定している場合 (たとえば、SQLOLEDB プロバイダーを使用した場合)、返された接続文字列ではパスワード情報が省略されます。
 
- ADO アプリケーションコードを使用してサードパーティ (Microsoft 以外の) OLE DB プロバイダーを使用している場合は、 **DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO**プロパティがどのように実装されているかを確認し、ado 接続文字列でパスワード情報を含めることが許可されているかどうかを確認できます。
+ ADO アプリケーションコードを使用してサードパーティ (Microsoft 以外の) OLE DB プロバイダーを使用している場合は、 **DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO** プロパティがどのように実装されているかを確認し、ado 接続文字列でパスワード情報を含めることが許可されているかどうかを確認できます。
 
 ## <a name="checking-for-non-file-devices-when-loading-and-saving-recordsets-or-streams"></a>レコードセットまたはストリームの読み込み時または保存時にファイル以外のデバイスを確認する
- ADO 2.7 以前では、ファイルベースのデータの読み取りと書き込みに使用された、 [Open](../../ado/reference/ado-api/open-method-ado-recordset.md)や[Save](../../ado/reference/ado-api/save-method.md)などのファイル入出力操作により、ディスクベースでないファイルの種類を指定した URL またはファイル名を使用できる場合がありました。 たとえば、LPT1、COM2、PRN などです。TXT, AUX は、プリンターとシステム上の補助デバイス間の入出力のエイリアスとして使用できます。
+ ADO 2.7 以前では、ファイルベースのデータの読み取りと書き込みに使用された、 [Open](../../ado/reference/ado-api/open-method-ado-recordset.md) や [Save](../../ado/reference/ado-api/save-method.md) などのファイル入出力操作により、ディスクベースでないファイルの種類を指定した URL またはファイル名を使用できる場合がありました。 たとえば、LPT1、COM2、PRN.TXT、AUX は、特定のを使用して、システム上のプリンターと補助デバイス間の入出力のエイリアスとして使用できます。
 
  ADO 2.8 以降では、この機能は更新されています。 **レコードセット**と**ストリーム**オブジェクトを開いたり保存したりするために、ADO では、URL またはファイル名に指定されている入力デバイスまたは出力デバイスが実際のファイルであることを確認するために、ファイルの種類のチェックを実行するようになりました。
 

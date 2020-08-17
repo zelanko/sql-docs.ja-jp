@@ -1,4 +1,5 @@
 ---
+description: sys.server_principals (Transact-SQL)
 title: server_principals (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,11 +21,12 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 822d0663d13e4ad03c852758e97277e6711af0bd
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: e3d8a54afa21c46a7881b95d100c4c7746c6e3f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88377298"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -44,7 +46,7 @@ ms.locfileid: "86091887"
 |**default_database_name**|**sysname**|プリンシパルの既定のデータベース。|  
 |**default_language_name**|**sysname**|このプリンシパルの既定の言語。|  
 |**credential_id**|**int**|このプリンシパルに関連付けられている資格情報の ID。 このプリンシパルに関連付けられている資格情報がない場合、credential_id は NULL になります。|  
-|**owning_principal_id**|**int**|サーバーロールの所有者の**principal_id** 。 プリンシパルがサーバーロールでない場合は NULL になります。|  
+|**owning_principal_id**|**int**|サーバーロールの所有者の **principal_id** 。 プリンシパルがサーバーロールでない場合は NULL になります。|  
 |**is_fixed_role**|**bit**|プリンシパルが固定アクセス許可を持つ組み込みのサーバーロールの1つである場合は1を返します。 詳細については、「 [サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)」を参照してください。|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -67,8 +69,8 @@ JOIN sys.server_permissions AS pe
 ```  
   
 ## <a name="see-also"></a>参照  
- [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [権限の階層 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
   

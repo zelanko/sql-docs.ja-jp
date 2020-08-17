@@ -1,4 +1,5 @@
 ---
+description: server_event_notifications (Transact-sql)
 title: server_event_notifications (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee534061f95a9b33ff3febcea758326662599556
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6e6a8decda6dd98ad4c6bda353c70884d0f0c84c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88377218"
 ---
 # <a name="sysserver_event_notifications-transact-sql"></a>server_event_notifications (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,13 +35,13 @@ ms.locfileid: "85896474"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|サーバーイベント通知名。 は、すべてのサーバーレベルのイベント通知に対して一意です。|  
-|**object_id**|**int**|オブジェクト ID 番号。 は、 **master**データベース内で一意です。|  
+|**object_id**|**int**|オブジェクト ID 番号。 は、 **master** データベース内で一意です。|  
 |**parent_class**|**tinyint**|親のクラス。 常に 100 = サーバーです。|  
 |**parent_class_desc**|**nvarchar(60)**|親のクラスの説明です。 常にサーバーです。|  
 |**parent_id**|**int**|は常に0です。|  
 |**create_date**|**datetime**|作成日。|  
 |**modify_date**|**datetime**|オブジェクトが ALTER ステートメントを使用して最後に変更された日付です。|  
-|**service_name**|**nvarchar(256)**|通知の送信先のサービスの名前です。|  
+|**service_name**|**nvarchar (256)**|通知の送信先のサービスの名前です。|  
 |**broker_instance**|**nvarchar(128)**|指定された通知先サービスが定義されている Service Broker です。|  
 |**creator_sid**|**varbinary (85)**|イベント通知を作成するステートメントを実行するログインの SID。 WITH FAN_IN がイベント通知定義に指定されていない場合は NULL になります。|  
 |**principal_id**|**int**|これを所有しているサーバー プリンシパルの ID です。|  
@@ -48,8 +49,8 @@ ms.locfileid: "85896474"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

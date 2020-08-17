@@ -1,4 +1,5 @@
 ---
+description: 付録 - 1 (SybaseToSQL)
 title: 付録-1 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ccd075529e5ecb3277ab698632cca9c948802690
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8feb8a1a7de67ecac01946f025545eb3536d977c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372528"
 ---
 # <a name="appendix---1-sybasetosql"></a>付録 - 1 (SybaseToSQL)
 SSMA コンソールのコマンドラインオプションのクイックビューを次に示します。  
   
-|法. いいえ。|Switch|必須|スイッチ引数|許可される値|  
+|法. いいえ。|スイッチ|必須|スイッチ引数|許可される値|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/スクリプト|はい|scriptfile|有効な XML ファイル名です。<br /><br />コンソールスクリプト定義ファイル。|  
 |2|-v/variable|いいえ|変数 valuefile|有効な XML ファイル名です。<br /><br />スクリプトファイルで変数を使用する場合は、このファイルを指定する必要があります。|  

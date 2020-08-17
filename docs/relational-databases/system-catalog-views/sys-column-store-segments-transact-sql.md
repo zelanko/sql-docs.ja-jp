@@ -1,4 +1,5 @@
 ---
+description: sys.column_store_segments (Transact-SQL)
 title: column_store_segments (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2018
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9b177fe44c3f94e77e2dc1f770d3c617b80c6dd
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: ebc2fe3ce3ddbdd02184e56d3629e8e6ccb0ce03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88379228"
 ---
 # <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "87442754"
 |**null_value**|**bigint**|NULL を表すために使用される値。|  
 |**on_disk_size**|**bigint**|セグメントのサイズ (バイト単位)。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次のクエリは、列ストアインデックスのセグメントに関する情報を返します。  
   
 ```sql  
@@ -67,7 +68,7 @@ GO
 ```  
   
 ## <a name="permissions"></a>アクセス許可  
- すべての列には、少なくともテーブルに対する**VIEW DEFINITION**権限が必要です。 次の列は、ユーザーが**SELECT**権限 (has_nulls、base_id、マグニチュード、min_data_id、max_data_id、および null_value を持っていない限り、null を返します。  
+ すべての列には、少なくともテーブルに対する **VIEW DEFINITION** 権限が必要です。 次の列は、ユーザーが **SELECT** 権限 (has_nulls、base_id、マグニチュード、min_data_id、max_data_id、および null_value を持っていない限り、null を返します。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   

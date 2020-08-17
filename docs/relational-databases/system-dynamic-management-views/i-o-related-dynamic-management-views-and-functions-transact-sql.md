@@ -1,4 +1,5 @@
 ---
+description: I/o 関連の動的管理ビューおよび関数 (Transact-sql)
 title: I/o 関連の動的管理ビューおよび関数 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f876d32b-c07f-4ccc-a691-5e580bc50c40
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7423c9ad9966615dfef788a0926ea810d320e53c
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 91117be71d309d8b6a8530eea3e6a16e5fe9e79b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374528"
 ---
 # <a name="io-related-dynamic-management-views-and-functions-transact-sql"></a>I/o 関連の動的管理ビューおよび関数 (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

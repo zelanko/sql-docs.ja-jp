@@ -1,4 +1,5 @@
 ---
+description: ADO エラーコードのキャプチャ
 title: ADO エラーコード |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3aee61c7-a9b7-4596-b78e-5828a00d0281
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bceca521ebbf79f3e25fc0585130bc6bc96f7244
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2502e1dec35ec0d6450190650a18ac765ce14421
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355228"
 ---
 # <a name="capture-ado-error-codes"></a>ADO エラーコードのキャプチャ
-ADO 自体は、 [errors](../../../ado/reference/ado-api/errors-collection-ado.md)コレクションの[Error](../../../ado/reference/ado-api/error-object.md)オブジェクトで返されるプロバイダーエラーに加えて、実行時環境の例外処理機構にエラーを返すことができます。 ADO エラーをキャプチャするには、Microsoft® Visual Basic の**On error**ステートメントや Microsoft Visual C++®の**try-catch**ブロックなどのプログラミング言語を使用します。
+ADO 自体は、 [errors](../../../ado/reference/ado-api/errors-collection-ado.md)コレクションの[Error](../../../ado/reference/ado-api/error-object.md)オブジェクトで返されるプロバイダーエラーに加えて、実行時環境の例外処理機構にエラーを返すことができます。 ADO エラーをキャプチャするには、Microsoft® Visual Basic の **On error** ステートメントや Microsoft Visual C++®の **try-catch** ブロックなどのプログラミング言語を使用します。
 
  ADO エラーコードの一覧については、「 [Errorvalueenum](../../../ado/reference/ado-api/errorvalueenum.md)」を参照してください。
 

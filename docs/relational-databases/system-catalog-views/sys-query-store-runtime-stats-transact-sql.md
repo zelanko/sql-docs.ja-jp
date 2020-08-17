@@ -1,4 +1,5 @@
 ---
+description: query_store_runtime_stats (Transact-sql)
 title: query_store_runtime_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2019
@@ -21,12 +22,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8956eda2e25ecd96df58f863743ae39d0bb88d8f
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 3ca567df477cf06c6f40e7f9a2d7c8b4964eaa6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88377378"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>query_store_runtime_stats (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87823727"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_id**|**bigint**|**Plan_id**、 **execution_type** 、および**runtime_stats_interval_id**のランタイム実行の統計を表す行の識別子。 これは、過去の実行時統計の間隔に対してのみ一意です。 現在アクティブな間隔では、 **plan_id**によって参照されるプランの実行時統計を表す複数の行が**execution_type**によって表される実行の種類と共に存在する場合があります。 通常、1つの行はディスクにフラッシュされる実行時の統計情報を表し、他の行はメモリ内の状態を表します。 したがって、各間隔の実際の状態を取得するには、メトリックを集計し、 **plan_id**、 **execution_type** 、および**runtime_stats_interval_id**でグループ化する必要があります。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
+|**runtime_stats_id**|**bigint**|**Plan_id**、 **execution_type** 、および**runtime_stats_interval_id**のランタイム実行の統計を表す行の識別子。 これは、過去の実行時統計の間隔に対してのみ一意です。 現在アクティブな間隔では、 **plan_id**によって参照されるプランの実行時統計を表す複数の行が **execution_type**によって表される実行の種類と共に存在する場合があります。 通常、1つの行はディスクにフラッシュされる実行時の統計情報を表し、他の行はメモリ内の状態を表します。 したがって、各間隔の実際の状態を取得するには、メトリックを集計し、 **plan_id**、 **execution_type** 、および **runtime_stats_interval_id**でグループ化する必要があります。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
 |**plan_id**|**bigint**|外部キー。 [Query_store_plan &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)に結合します。|  
 |**runtime_stats_interval_id**|**bigint**|外部キー。 [Query_store_runtime_stats_interval &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)に結合します。|  
 |**execution_type**|**tinyint**|クエリ実行の種類を決定します。<br /><br /> 0-通常の実行 (正常に完了)<br /><br /> 3-クライアントが開始した実行中止<br /><br /> 4-例外が実行を中止しました|  

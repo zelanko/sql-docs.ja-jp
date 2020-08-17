@@ -1,4 +1,5 @@
 ---
+description: ADO プログラミングタスクテーブル
 title: ADO タスクテーブル |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cfae068fdac58f7e6e6d1320b301aa9c52701dd4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2793674d8952af09856d37400a2d0c34c97aa720
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355388"
 ---
 # <a name="ado-programming-task-table"></a>ADO プログラミングタスクテーブル
-次の表に、 *ADO プログラマーズガイド*に含まれるプログラミングタスクと、各タスクのリファレンスを示します。 これらの参照には、テキストの説明、またはタスクを実行する ADO 機能に関する情報が記載されているコード例を使用できます。
+次の表に、 *ADO プログラマーズガイド* に含まれるプログラミングタスクと、各タスクのリファレンスを示します。 これらの参照には、テキストの説明、またはタスクを実行する ADO 機能に関する情報が記載されているコード例を使用できます。
 
 |ADO タスク|References|
 |--------------|----------------|
