@@ -1,4 +1,5 @@
 ---
+description: OPENXML (Transact-SQL)
 title: OPENXML (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2018
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ca8ececca1e40762aa386ba05a53bdf8a1932090
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f081b224d80537943946b5d4e31eff43bbf88de1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363638"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +62,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|XML_ATTRIBUTES または XML_ELEMENTS と組み合わせる (論理和) ことができます。 取得のコンテキストにおいて、このフラグは、使用したデータをオーバーフロー プロパティ **\@mp:xmltext** にコピーしないことを示します。|  
   
  _SchemaDeclaration_  
- フォームのスキーマ定義です。 _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
+ フォームのスキーマ定義です。 _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  行セット内の列名を指定します。  
@@ -70,7 +71,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  行セット内の列の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を指定します。 列のデータ型が、基になる属性の **xml** データ型とは異なる場合、強制型変換が行われます。  
   
  *ColPattern*  
- XML ノードを列へマップする方法を表す標準 XPath パターンを指定します (省略可能)。 *ColPattern* を指定しない場合、既定のマッピング (**flags** で指定した**属性中心**または*要素中心*のマッピング) が適用されます。  
+ XML ノードを列へマップする方法を表す標準 XPath パターンを指定します (省略可能)。 *ColPattern* を指定しない場合、既定のマッピング (*flags* で指定した**属性中心**または**要素中心**のマッピング) が適用されます。  
   
  *ColPattern* として指定した XPath パターンは、**属性中心**および**要素中心**のマッピングの場合に、*flags* で指定される既定のマッピングを上書きまたは拡張する、特殊なマッピング特性を指定するときに使用されます。  
   
@@ -82,7 +83,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *TableName*  
  目的のスキーマを備えたテーブルが既に存在し、列パターンが必要ない場合は、*SchemaDeclaration* の代わりにテーブル名を指定できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  WITH 句を、*SchemaDeclaration*、または既存の *TableName* と共に使用すると、行セットの形式、および必要に応じて追加のマッピング情報を指定できます。 WITH 句の指定を省略すると、結果は**エッジ** テーブル形式で返されます。 エッジ テーブルでは、1 つのテーブル内での詳細な XML ドキュメントの構造 (要素/属性名、ドキュメント階層、名前空間、PI など) が表されます。  
   
  次の表で、**エッジ** テーブルの構造について説明します。  
@@ -145,7 +146,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- `SELECT`flags*を* に設定して (`2`要素中心**のマッピングを示します) 同じ**  ステートメントを実行すると、XML ドキュメント内の両方の顧客に対する `CustomerID` および `ContactName` の値が NULL として返されます。これは、`CustomerID` または `ContactName` という名前の要素が XML ドキュメント内に存在しないためです。  
+ *flags* を `2` に設定して (**要素中心**のマッピングを示します) 同じ `SELECT` ステートメントを実行すると、XML ドキュメント内の両方の顧客に対する `CustomerID` および `ContactName` の値が NULL として返されます。これは、`CustomerID` または `ContactName` という名前の要素が XML ドキュメント内に存在しないためです。  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -163,9 +164,9 @@ NULL       NULL
   
 -   行セット内の `OrderID`、`CustomerID`、および `OrderDate` 列は、XML ドキュメント内の *rowpattern* によって識別されるノードの親の属性にマップされます。  
   
--   行セット内の `ProdID` 列は `ProductID` 属性にマップされます。行セット内の `Qty` 列は `Quantity`rowpattern*によって識別されるノードの* 属性にマップされます。  
+-   行セット内の `ProdID` 列は `ProductID` 属性にマップされます。行セット内の `Qty` 列は *rowpattern* によって識別されるノードの `Quantity` 属性にマップされます。  
   
- **flags** パラメーターでは*要素中心*のマッピングを指定しますが、これは *ColPattern* で指定するマッピングで上書きされます。  
+ *flags* パラメーターでは**要素中心**のマッピングを指定しますが、これは *ColPattern* で指定するマッピングで上書きされます。  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   
@@ -246,6 +247,6 @@ EXEC sp_xml_removedocument @idoc;
   
 ```  
   
-## <a name="see-also"></a>参照  
- [例: OPENXML の使用](../../relational-databases/xml/examples-using-openxml.md)  
+## <a name="see-also"></a>関連項目  
+ [例 :OPENXML の使用](../../relational-databases/xml/examples-using-openxml.md)  
   

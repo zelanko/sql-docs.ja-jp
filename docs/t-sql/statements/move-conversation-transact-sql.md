@@ -1,4 +1,5 @@
 ---
+description: MOVE CONVERSATION (Transact-SQL)
 title: MOVE CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c06776bc9d3c8080349607a6d349b3bd0b7505de
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2bfd1e22b79749abf8747362a8e7181def375643
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484058"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358168"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,11 +56,11 @@ MOVE CONVERSATION conversation_handle
  TO *conversation_group_id*  
  メッセージ交換の移動先となるメッセージ交換グループの識別子を含む、変数または定数。 *conversation_group_id* は型 **uniqueidentifier** にする必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  MOVE CONVERSATION ステートメントは、*conversation_handle* で指定されたメッセージ交換を、*conversation_group_id* で識別されるメッセージ交換グループに移動します。 同じキューに関連付けられているメッセージ交換グループ間でのみ、ダイアログをリダイレクトできます。  
   
 > [!IMPORTANT]  
->  MOVE CONVERSATION ステートメントがバッチまたはストアド プロシージャで最初のステートメントではない場合は、前のステートメントの後に、 **ステートメントのターミネータであるセミコロン (** ;[!INCLUDE[tsql](../../includes/tsql-md.md)]) を指定する必要があります。  
+>  MOVE CONVERSATION ステートメントがバッチまたはストアド プロシージャで最初のステートメントではない場合は、前のステートメントの後に、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのターミネータであるセミコロン (**;**) を指定する必要があります。  
   
  MOVE CONVERSATION ステートメントは、ステートメントを含むトランザクションがコミットまたはロールバックされるまで、*conversation_handle* に関連付けられているメッセージ交換グループ、および *conversation_group_id* で指定されたメッセージ交換グループをロックします。  
   
@@ -83,7 +84,7 @@ SET @conversation_group_id =
 MOVE CONVERSATION @conversation_handle TO @conversation_group_id ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   

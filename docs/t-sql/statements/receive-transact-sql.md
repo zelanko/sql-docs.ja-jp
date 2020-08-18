@@ -1,4 +1,5 @@
 ---
+description: RECEIVE (Transact-SQL)
 title: RECEIVE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 45ad55bdf67be6dae67a69994320f9cf282a7beb
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ab5a7dc7dd87c518a070b123145acad020efeb89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485423"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357348"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -107,7 +108,7 @@ ms.locfileid: "86485423"
  TIMEOUT *timeout*  
  ステートメントでメッセージを待機する時間をミリ秒で指定します。 この句は WAITFOR 句と共に使用する必要があります。 この句を指定しないか、タイムアウトが -**1** の場合、待機時間は無制限になります。 タイムアウトの時間を過ぎると、RECEIVE では空の結果セットが返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!IMPORTANT]  
 >  RECEIVE ステートメントがバッチまたはストアド プロシージャで最初のステートメントではない場合は、前のステートメントの後にセミコロン (;) を指定する必要があります。  
@@ -329,7 +330,7 @@ WAITFOR(
 ), TIMEOUT 60000 ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   

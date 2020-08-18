@@ -1,4 +1,5 @@
 ---
+description: SESSION_USER (Transact-SQL)
 title: SESSION_USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82172de7034ad8579d4e1952ca23dae8f7002be1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5a69a4d5f7cd7153b6acd4b6d487fbb2a201deb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362818"
 ---
 # <a name="session_user-transact-sql"></a>SESSION_USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ SESSION_USER
 ## <a name="return-types"></a>戻り値の型
  **nvarchar(128)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  SESSION_USER は、DEFAULT 制約と共に CREATE TABLE または ALTER TABLE ステートメント内で使用するか、標準の関数として使用します。 SESSION_USER は、既定値が指定されていなければテーブルに挿入できます。 この関数は引数を取りません。 SESSION_USER はクエリで使用できます。  
   
  コンテキスト切り替え後に SESSION_USER が呼び出された場合、SESSION_USER では借用したコンテキストのユーザー名が返されます。  

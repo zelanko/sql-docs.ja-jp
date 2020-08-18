@@ -1,4 +1,5 @@
 ---
+description: OPEN SYMMETRIC KEY (Transact-SQL)
 title: OPEN SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0855dd1c7e57827d99bdeaa78813fa54b75e2fb8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: cdcee07d25c05ca8571071dfe8f98b00c9259f9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484513"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357858"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +70,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  PASSWORD ='*password*'  
  対称キーの保護に使用されているパスワードを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  開いている対称キーは、セキュリティ コンテキストではなくセッションにバインドされており、 明示的に閉じられるか、セッションが終了するまで引き続き使用できます。 対称キーを開いてからコンテキストを切り替えた場合、キーは開かれたままになり、権限を借用したコンテキストでも使用できます。 開いている対称キーに関する情報は、[sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) カタログ ビューで確認できます。  
   
  対称キーが別のキーで暗号化された場合は、そのキーを最初に開く必要があります。  
@@ -85,7 +86,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
   
 -   DECRYPTION BY CERTIFICATE:証明書に対する CONTROL 権限と、秘密キーを暗号化したパスワードの情報が必要です。  
   
--   DECRYPTION BY ASYMMETRIC KEY:非対称キーに対する CONTROL 権限と、秘密キーを暗号化したパスワードの情報が必要です。  
+-   DECRYPTION BY ASYMMETRIC KEY の場合は、非対称キーに対する CONTROL 権限と、秘密キーを暗号化したパスワードの情報が必要です。  
   
 -   DECRYPTION BY PASSWORD の場合は、対称キーの暗号化に使用されたパスワードの 1 つについての情報が必要です。  
   
@@ -115,7 +116,7 @@ OPEN SYMMETRIC KEY MarketingKey11
 GO   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   

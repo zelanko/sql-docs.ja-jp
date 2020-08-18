@@ -1,4 +1,5 @@
 ---
+description: EXECUTE AS 句 (Transact-SQL)
 title: EXECUTE AS 句 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5ad156a9164d2b59833b3103a8f08b9cbe1ab284
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 999773d8e8406dac20f86e9f19a2b886a4988619
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358408"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 句 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -107,7 +108,7 @@ DDL Triggers with Database Scope
   
  *login_name* には、グループ、ロール、証明書、キー、および、NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService、NT AUTHORITY\LocalSystem などのビルトイン アカウントを指定できません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]による、モジュール内で参照されるオブジェクトに対する権限の評価方法は、呼び出し元のオブジェクトと参照されるオブジェクト間に存在する所有権の継承によって異なります。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、呼び出し元のユーザーに対して、参照されるすべてのオブジェクトへのアクセスを許可するためには、所有権の継承を使用する方法しかありませんでした。  
   
  所有権の継承には、次のような制限があります。  
@@ -223,7 +224,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: BufferWithTolerance (geography データ型)
 title: BufferWithTolerance (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f70cbf47179d9f8fadf2bf121520df0707881ab3
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 50c8e19dd3ed6782a7a8fe8532ab0edb61cceb34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88360408"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -85,7 +86,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [STBuffer &#40;geography データ型&#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
 [Geography インスタンスの拡張メソッド](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
