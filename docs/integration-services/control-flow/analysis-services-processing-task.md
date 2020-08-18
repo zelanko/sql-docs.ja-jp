@@ -1,4 +1,5 @@
 ---
+description: Analysis Services 処理タスク
 title: Analysis Services 処理タスク | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c39fdf1f63084d7f1340dae6b11f17124a52138
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2287bb2e429eba74f7ca98dcdf2b18b8d11cfda2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349988"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 処理タスク
 
@@ -84,7 +85,7 @@ ms.locfileid: "86908668"
 ## <a name="analysis-services-processing-task-editor-general-page"></a>[Analysis Services 処理タスク エディター] ([全般] ページ)
   **[Analysis Services 処理タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、Analysis Services 処理タスクの名前と説明を指定できます。  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>オプション  
  **名前**  
  Analysis Services 処理タスクに一意の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
@@ -107,14 +108,14 @@ ms.locfileid: "86908668"
   
 4.  テーブル モデルでは、バッチ設定が無視されます。  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>オプション  
  **Analysis Services 接続マネージャー**  
  既存の Analysis Services 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
   
  **[新規作成]**  
  新しい Analysis Services 接続マネージャーを作成します。  
   
- **関連トピック:** [Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md)、[[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **関連トピック:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)、 [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **[オブジェクト一覧]**  
  
@@ -122,7 +123,7 @@ ms.locfileid: "86908668"
 |--------------|-----------------|  
 |**[オブジェクト名]**|指定されたオブジェクト名を表示します。|  
 |**Type**|指定されたオブジェクトの種類を表示します。|  
-|**[処理オプション]**|一覧から処理オプションを選択します。<br /><br /> **関連トピック:** [多次元モデルの処理 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
+|**[処理オプション]**|一覧から処理オプションを選択します。<br /><br /> **関連トピック**: [多次元モデルの処理 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**設定**|指定されたオブジェクトの処理設定を表示します。|  
   
  **追加**  
@@ -134,7 +135,7 @@ ms.locfileid: "86908668"
  **[影響分析]**  
  選択したオブジェクトに対して影響分析を実行します。  
   
- **関連トピック:** [[影響分析] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+ **関連トピック:** [[影響分析] ダイアログ ボックス (Analysis Services - 多次元データ)](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **[バッチ設定の概要]**  
  
@@ -149,4 +150,4 @@ ms.locfileid: "86908668"
  **[設定の変更]**  
  処理オプションおよびディメンション キー内のエラー処理を変更します。  
   
- **関連トピック:** [[設定の変更] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+ **関連トピック:** [[設定の変更] ダイアログ ボックス (Analysis Services - 多次元データ)](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  

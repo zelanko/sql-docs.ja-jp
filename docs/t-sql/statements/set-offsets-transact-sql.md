@@ -1,4 +1,5 @@
 ---
+description: SET OFFSETS (Transact-SQL)
 title: SET OFFSETS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cd9375a6ac4aefe0d0e63996d68c2d291040bd66
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: aad9ee74497867cf7eead3fab0b0e5250277dcd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356238"
 ---
 # <a name="set-offsets-transact-sql"></a>SET OFFSETS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ SET OFFSETS keyword_list { ON | OFF }
  *keyword_list*  
  SELECT、FROM、ORDER、TABLE、PROCEDURE、STATEMENT、PARAM、EXECUTE などの [!INCLUDE[tsql](../../includes/tsql-md.md)] 構成要素をコンマで区切って指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  SET OFFSETS は DB-Library アプリケーションだけで使用されます。  
   
  SET OFFSETS は、実行時ではなく、解析時に設定されます。 解析時に設定されるということは、SET ステートメントがバッチまたはストアド プロシージャ内に指定されている場合、コードが実際にその場所まで実行されるかどうかに関係なく、設定が有効になることを意味します。つまり他のどのステートメントが実行されるよりも前に、SET ステートメントが効力を発するということになります。 たとえば、絶対に実行されることのない IF...ELSE ステートメント ブロックに SET ステートメントが指定されていたとしても、IF...ELSE ステートメント ブロックは解析されるので、SET ステートメントは有効になります。  

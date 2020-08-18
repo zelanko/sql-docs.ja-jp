@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;IDENTITY (Transact-SQL)'
 title: '@@IDENTITY (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/29/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d5a41eec147978e3e794c77e4c79336daa780e29
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d4c3f909144846292acf1247411582e7d9d638bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88365388"
 ---
 # <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "87113438"
 ## <a name="return-types"></a>戻り値の型
  **numeric(38,0)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  INSERT ステートメント、SELECT INTO ステートメント、または一括コピーが終了すると、@@IDENTITY にはステートメントが最後に生成した ID 値が含まれます。 ID 列のあるテーブルがステートメントによって影響されなかった場合、@@IDENTITY は NULL 値を返します。 複数の行を挿入して、複数の ID 値を生成する場合、@@IDENTITY は最後に生成した ID 値を返します。 ステートメントが、ID 値を生成する挿入操作を実行する 1 つ以上のトリガーを起動する場合、このステートメントの直後で @@IDENTITY を呼び出すと、トリガーにより最後に生成された ID 値が返されます。 ID 列のあるテーブルで挿入操作を行った後に起動されるトリガーによって、ID 列のない別のテーブルへの挿入操作が実行される場合、@@IDENTITY は最初の挿入の ID 値を返します。 INSERT ステートメントか SELECT INTO ステートメント、または一括コピーが失敗した場合、あるいは、トランザクションがロールバックされた場合、@@IDENTITY 値は前の設定に戻りません。  
   
  失敗したステートメントとトランザクションによって、テーブルに対する現在の ID が変更され、ID 列値に差異が生じる可能性があります。 ID 値がロールバックされることはありません。これは、テーブルに値を挿入するトランザクションがコミットされない場合でも同じです。 たとえば、INSERT ステートメントが IGNORE_DUP_KEY 違反のために失敗しても、テーブルの現在の ID 値は増分されます。  

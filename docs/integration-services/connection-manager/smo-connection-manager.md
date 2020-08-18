@@ -1,4 +1,5 @@
 ---
+description: SMO 接続マネージャー
 title: SMO 接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cfa304fa19b8d2f259a0cad77d4c25b5d81aa8be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0b89d916df89535bcd48fd383714457d6bcbc494
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350278"
 ---
 # <a name="smo-connection-manager"></a>SMO 接続マネージャー
 
@@ -50,7 +51,7 @@ ms.locfileid: "86922908"
   
  SMO 接続マネージャーの詳細については、「 [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **サーバー名**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前を入力するか、サーバーを一覧から選択します。  
   
@@ -72,7 +73,7 @@ ms.locfileid: "86922908"
  **[接続テスト]**  
  構成されたとおりに接続をテストします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

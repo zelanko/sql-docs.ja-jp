@@ -1,4 +1,5 @@
 ---
+description: あいまいグループ化変換
 title: あいまいグループ化変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4e00be6f692bd3e4bec21acec6c2de6359622b7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e69c2b63e617e37fcd4dec1b7589e9b1808fefce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919338"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348448"
 ---
 # <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
 
@@ -121,7 +122,7 @@ ms.locfileid: "86919338"
  **使用できる入力列**  
  重複する値を持つ行をグループ化するために使用する入力列を、この一覧から選択します。  
   
- **Name**  
+ **名前**  
  使用できる入力列の名前を表示します。  
   
  **[パススルー]**  
@@ -150,7 +151,7 @@ ms.locfileid: "86919338"
   
 |値|説明|  
 |-----------|-----------------|  
-|**[Neither]**|先頭および末尾の数字は考慮されません。|  
+|**どちらもオフ**|先頭および末尾の数字は考慮されません。|  
 |**[Leading]**|先頭の数字のみが考慮されます。|  
 |**[Trailing]**|末尾の数字のみが考慮されます。|  
 |**[Leading and Trailing]**|先頭および末尾の両方の数字が考慮されます。|  
@@ -180,7 +181,7 @@ ms.locfileid: "86919338"
  **[トークン区切り記号]**  
  変換により、トークンにするデータの区切り記号の既定のセットが提供されます。必要に応じて、一覧を編集して区切り記号の追加や削除を行うことができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [あいまい参照変換](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

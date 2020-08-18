@@ -1,4 +1,5 @@
 ---
+description: SAP BW 転送元
 title: SAP BW 変換元 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 894d94e277f1304a5d9d1e1986e5f769fbc5f4e9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0506eb531462702870ef726b585dd5f07c1d4db4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349028"
 ---
 # <a name="sap-bw-source"></a>SAP BW 転送元
 
@@ -123,25 +124,25 @@ ms.locfileid: "86917822"
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>SSIS デザイナーを使用してソースを構成する  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できる SAP BW 変換元のプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [SAP BW ソース エディター ([接続マネージャー] ページ)](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [SAP BW ソース エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
 -   [SAP BW ソース エディター ([列] ページ)](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
 -   [SAP BW ソース エディター ([エラー出力] ページ)](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [SAP BW ソース エディター ([詳細設定] ページ)](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [SAP BW ソース エディター &#40;[詳細設定] ページ&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
  SAP BW 変換元を構成するときに、SAP Netweaver BW オブジェクトを参照したり、ソース データをプレビューしたりするためにさまざまなダイアログ ボックスを使用できます。 これらのダイアログ ボックスの詳細については、次のトピックのいずれかを参照してください。  
   
--   [RFC 転送先の参照](../../integration-services/data-flow/look-up-rfc-destination.md)  
+-   [[RFC 転送先の参照]](../../integration-services/data-flow/look-up-rfc-destination.md)  
   
--   [プロセス チェーンの参照](../../integration-services/data-flow/look-up-process-chain.md)  
+-   [[プロセス チェーンの参照]](../../integration-services/data-flow/look-up-process-chain.md)  
   
--   [要求のログ](../../integration-services/data-flow/request-log.md)  
+-   [[要求のログ]](../../integration-services/data-flow/request-log.md)  
   
 -   [プレビュー](../../integration-services/data-flow/preview.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft Connector for SAP BW のコンポーネント](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

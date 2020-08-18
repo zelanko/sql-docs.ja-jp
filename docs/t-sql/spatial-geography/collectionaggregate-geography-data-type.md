@@ -1,4 +1,5 @@
 ---
+description: CollectionAggregate (geography データ型)
 title: CollectionAggregate (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: cdb2269e38b482d51a8320c6dd91403bdf7cc289
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b49f1ab03be85c2c83caf50b548528ff36fd97b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88360388"
 ---
 # <a name="collectionaggregate-geography-data-type"></a>CollectionAggregate (geography データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ConvexHullAggregate ( geography_operand )
 ## <a name="exception"></a>例外  
  入力値が無効である場合は、`FormatException` をスローします。 「[STIsValid &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  入力が空である場合または入力の SRID が異なる場合は、**null** が返されます。 「[SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
  メソッドでは、**null** 入力は無視されます。  
