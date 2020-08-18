@@ -1,4 +1,5 @@
 ---
+description: dm_exec_distributed_requests (Transact-sql)
 title: dm_exec_distributed_requests (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52a1ee453d0a516bc2dc1fd42dcd4439272d844c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f0f878ef98d0935920db9b4abedbc753d10124a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398768"
 ---
 # <a name="sysdm_exec_distributed_requests-transact-sql"></a>dm_exec_distributed_requests (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "82821153"
   
  ユーザーは、セッションと要求 ID に基づいて、実行されるように生成された実際の分散要求を取得できます。そのためには、dm_exec_distributed_requests を使用します。 たとえば、通常の SQL テーブルと外部 SQL テーブルを使用するクエリは、さまざまなコンピューティングノードに対して実行されるさまざまなステートメント/要求に分解されます。 すべてのコンピューティングノードの分散された手順を追跡するには、"グローバル" 実行 ID を導入します。これを使用すると、1つの特定の要求と演算子に関連付けられた計算ノードで、すべての操作を追跡できます。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |sql_handle|**varbinary(64)**|このビューのキー。 要求に関連付けられている一意の数値 id。|システム内のすべての要求間で一意です。|  
 |execution_id|**nvarchar (32**|このクエリが実行されたセッションに関連付けられている一意の数値 id。||  
@@ -48,7 +49,7 @@ ms.locfileid: "82821153"
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューを使用した PolyBase のトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;データベース関連の動的管理ビュー ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

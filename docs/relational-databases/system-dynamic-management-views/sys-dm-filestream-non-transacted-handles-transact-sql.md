@@ -1,4 +1,5 @@
 ---
+description: dm_filestream_non_transacted_handles (Transact-sql)
 title: dm_filestream_non_transacted_handles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a2380091f44c4a78930cb3769e15b9cc9c176857
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d38b5e210e5a9c7a0b75d2ecb619ae84a61373e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398738"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>dm_filestream_non_transacted_handles (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85898884"
 |correlation_process_id|varbinary (8)|要求を発信したプロセスの一意の識別子を格納します。|  
 |correlation_thread_id|varbinary (8)|要求を生成したスレッドの一意な識別子を格納します。|  
 |file_context|varbinary (8)|このハンドルで使用されるファイル オブジェクトへのポインター。|  
-|state|INT|ハンドルの現在の状態。 アクティブ、終了、強制終了のいずれかになります。|  
+|状態|INT|ハンドルの現在の状態。 アクティブ、終了、強制終了のいずれかになります。|  
 |state_desc|nvarchar(120)|"ACTIVE"、<br />"CLOSED"、<br />キル|  
 |current_workitem_type|INT|このハンドルが現在処理されている状態。|  
 |current_workitem_type_desc|nvarchar(120)|"NoSetWorkItemType"、<br />"FFtPreCreateWorkitem",<br />"FFtGetPhysicalFileNameWorkitem",<br />"FFtPostCreateWorkitem"、<br />"FFtPreCleanupWorkitem",<br />"FFtPostCleanupWorkitem"、<br />"FFtPreCloseWorkitem"、<br />"FFtQueryDirectoryWorkItem"、<br />"FFtQueryInfoWorkItem"、<br />"FFtQueryVolumeInfoWorkItem",<br />"FFtSetInfoWorkitem"、<br />FFtWriteCompletionWorkitem|  

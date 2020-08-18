@@ -1,4 +1,5 @@
 ---
+description: sys.xml_indexes (Transact-sql)
 title: sys.xml_indexes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3408de72-b067-4fda-b5d5-8e856dfd9db3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d4d0b42472bdaf8d634dd75d9bb8ca8bcd5a1847
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2dcbefc1a9ea50841a7807002e31d236130eb038
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88400408"
 ---
 # <a name="sysxml_indexes-transact-sql"></a>sys.xml_indexes (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85896769"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<inherited columns>**||は[、列を継承](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)します。|  
+|**\<inherited columns>**||は [、列を継承](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)します。|  
 |**using_xml_index_id**|**int**|NULL = プライマリ XML インデックス<br /><br /> Null 以外 = セカンダリ XML インデックス。<br /><br /> Null 以外の場合は、プライマリ XML インデックスへの自己結合参照です。|  
 |**secondary_type**|**char (1)**|セカンダリインデックスの説明を入力してください:<br /><br /> P = PATH セカンダリ XML インデックス<br /><br /> V = VALUE セカンダリ XML インデックス<br /><br /> R = PROPERTY セカンダリ XML インデックス<br /><br /> NULL = プライマリ XML インデックス|  
 |**secondary_type_desc**|**nvarchar(60)**|セカンダリインデックスの説明を入力してください:<br /><br /> PATH = PATH セカンダリ XML インデックス<br /><br /> VALUE = VALUE セカンダリ XML インデックス<br /><br /> プロパティ = プロパティセカンダリ xml インデックス。<br /><br /> NULL = プライマリ XML インデックス|  
@@ -44,8 +45,8 @@ ms.locfileid: "85896769"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   
