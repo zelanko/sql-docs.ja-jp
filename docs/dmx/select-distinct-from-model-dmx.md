@@ -1,4 +1,5 @@
 ---
+description: SELECT DISTINCT FROM &lt; model &gt; (DMX)
 title: SELECT DISTINCT FROM &lt; model &gt; (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3413ec29cb2f1f3e710a1d52037161094ab713ce
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3a8c65f6d0321ae74d18d32bd3c5208bbc2df5b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413268"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt; model &gt; (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -44,7 +45,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *式 (expression)*  
  任意。 スカラー値を返す式。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  **SELECT DISTINCT FROM**ステートメントは、1つの列、または関連する列のセットでのみ機能します。 この句は、関連しない列のセットでは動作しません。  
   
  **SELECT DISTINCT FROM**ステートメントを使用すると、入れ子になったテーブル内の列を直接参照できます。 次に例を示します。  
@@ -99,10 +100,10 @@ FROM [TM Decision Tree]
  また、このクエリでは、欠損値を表すために null 値の単一行が返されます。  
   
 ## <a name="discretized-column-example"></a>離散化列の例  
- 次のコード サンプルは、列 `Yearly Income]` のアルゴリズムで作成された各バケットの中間点、最大値、および最小値を返します。 この例の結果を再現するには、と同じ新しいマイニング構造を作成する必要があり `[Targeted Mailing]` ます。 ウィザードで、列のコンテンツの種類を [ `Yearly Income` **連続**] から [**分離**] に変更します。  
+ 次のコード サンプルは、列 `Yearly Income]` のアルゴリズムで作成された各バケットの中間点、最大値、および最小値を返します。 この例の結果を再現するには、と同じ新しいマイニング構造を作成する必要があり `[Targeted Mailing]` ます。 ウィザードで、列のコンテンツの種類を [ `Yearly Income` **連続** ] から [ **分離**] に変更します。  
   
 > [!NOTE]  
->  また、「基本的なマイニングチュートリアル」で作成したマイニングモデルを変更して、マイニング構造列を分離することもでき `Yearly Income]` ます。 この方法の詳細については、「[マイニングモデルの列の分離を変更](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model)する」を参照してください。 ただし、列の分離を変更した場合は、マイニング構造が強制的に再処理され、その構造を使用して作成した他のモデルの結果が変更されます。  
+>  また、「基本的なマイニングチュートリアル」で作成したマイニングモデルを変更して、マイニング構造列を分離することもでき `Yearly Income]` ます。 この方法の詳細については、「 [マイニングモデルの列の分離を変更](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model)する」を参照してください。 ただし、列の分離を変更した場合は、マイニング構造が強制的に再処理され、その構造を使用して作成した他のモデルの結果が変更されます。  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   

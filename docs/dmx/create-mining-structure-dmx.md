@@ -1,4 +1,5 @@
 ---
+description: マイニング構造の作成 (DMX)
 title: マイニング構造の作成 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414028"
 ---
 # <a name="create-mining-structure-dmx"></a>マイニング構造の作成 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  データベースに新しいマイニング構造を作成し、必要に応じてトレーニングパーティションとテストパーティションを定義します。 マイニング構造を作成した後は、 [ALTER マイニング構造 &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)ステートメントを使用して、マイニング構造にモデルを追加できます。  
+  データベースに新しいマイニング構造を作成し、必要に応じてトレーニングパーティションとテストパーティションを定義します。 マイニング構造を作成した後は、 [ALTER マイニング構造 &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) ステートメントを使用して、マイニング構造にモデルを追加できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,7 +35,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>引数  
- *データ*  
+ *structure*  
  構造の一意の名前です。  
   
  *列定義の一覧*  
@@ -61,7 +62,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  既定値 : REPEATABLE(0)  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  マイニング構造を定義するには、列リストを指定し、必要に応じて列間の階層リレーションシップを指定して、さらに必要に応じてマイニング構造をトレーニング データセットとテスト データセットにパーティション分割します。  
   
  オプションの SESSION キーワードは、その構造が、現在のセッションの間しか使用できない一時的な構造であることを示します。 セッションが終了すると、構造と、その構造に基づくすべてのモデルが削除されます。 一時的なマイニング構造およびモデルを作成するには、まずデータベースプロパティ AllowSessionMiningModels を設定する必要があります。 詳細については、「 [データ マイニング プロパティ](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)」を参照してください。  
@@ -106,7 +107,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  列には複数のモデリング フラグ値を定義できます。 ただし、1つの列に対して使用できるコンテンツの種類は1つとデータ型は1つだけです。  
   
 ### <a name="column-relationships"></a>列のリレーションシップ  
- 任意の列定義ステートメントに句を追加して、2つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、次の句の使用がサポートされてい \<column relationship> ます。  
+ 任意の列定義ステートメントに句を追加して、2つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、次の句の使用がサポートされてい \<column relationship> ます。  
   
  **関連**  
  値の階層を示します。 関連する列のターゲットには、入れ子になったテーブルのキー列、ケース行の個別値列、または関連する TO 句を持つ別の列 (より深い階層を示す) を指定できます。  
@@ -119,7 +120,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  **ALTER マイニング STRUCTURE**ステートメントでは、予約はサポートされていません。  
   
- 提示されたパラメーターは 3 つまで指定できます。 提示されたケースの最大数と提示されたケースの割合の両方を指定すると、ケースの最大数に達するまでケースの割合が予約されます。 予約のパーセンテージを整数として指定し、その後に**パーセント**キーワードを付けて、ケースの最大数を整数として指定し、その後に**ケース**キーワードを指定します。 次の例に示すように、条件を任意の順序で組み合わせることができます。  
+ 提示されたパラメーターは 3 つまで指定できます。 提示されたケースの最大数と提示されたケースの割合の両方を指定すると、ケースの最大数に達するまでケースの割合が予約されます。 予約のパーセンテージを整数として指定し、その後に **パーセント** キーワードを付けて、ケースの最大数を整数として指定し、その後に **ケース** キーワードを指定します。 次の例に示すように、条件を任意の順序で組み合わせることができます。  
   
 ```  
 WITH HOLDOUT (20 PERCENT)   
@@ -131,7 +132,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  提示されたシードは、トレーニングデータセットまたはテストデータセットにケースをランダムに割り当てるプロセスの開始点を制御します。 提示されたシードを設定すると、パーティションを反復可能にすることができます。 提示されたシードを指定しない場合、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、マイニング構造の名前を使用してシードが作成されます。 構造の名前を変更すると、シード値が変わります。 提示されたシードパラメーターは、他の提示されたパラメーターのいずれかまたは両方で使用できます。  
   
 > [!NOTE]  
->  パーティション情報はトレーニングデータと共にキャッシュされるため、提示を使用するには、マイニング構造の**Cachemode**プロパティが**KeepTrainingData**に設定されていることを確認する必要があります。 これは、の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 新しいマイニング構造の既定の設定です。 提示されたパーティションを含む既存のマイニング構造で**Cachemode**プロパティを**ClearTrainingCases**に変更しても、処理されたマイニングモデルには影響しません。 ただし、 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> が**KeepTrainingData**に設定されていない場合、提示されたパラメーターは無効になります。 これは、すべてのソースデータがトレーニングに使用され、テストセットは使用できなくなることを意味します。 パーティションの定義は、構造体を使用してキャッシュされます。トレーニングケースのキャッシュをクリアすると、テストデータのキャッシュと提示されたセットの定義もクリアされます。  
+>  パーティション情報はトレーニングデータと共にキャッシュされるため、提示を使用するには、マイニング構造の **Cachemode** プロパティが **KeepTrainingData**に設定されていることを確認する必要があります。 これは、の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 新しいマイニング構造の既定の設定です。 提示されたパーティションを含む既存のマイニング構造で **Cachemode** プロパティを **ClearTrainingCases** に変更しても、処理されたマイニングモデルには影響しません。 ただし、 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> が **KeepTrainingData**に設定されていない場合、提示されたパラメーターは無効になります。 これは、すべてのソースデータがトレーニングに使用され、テストセットは使用できなくなることを意味します。 パーティションの定義は、構造体を使用してキャッシュされます。トレーニングケースのキャッシュをクリアすると、テストデータのキャッシュと提示されたセットの定義もクリアされます。  
   
 ## <a name="examples"></a>例  
  次の例では、DMX を使用して、提示されたマイニング構造を作成する方法を示します。  

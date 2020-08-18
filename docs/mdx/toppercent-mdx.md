@@ -1,4 +1,5 @@
 ---
+description: TopPercent (MDX)
 title: TopPercent (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362652"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412865"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -35,7 +36,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  返される組の割合を指定する有効な数値式です。  
   
 > [!IMPORTANT]  
->  *パーセント*は正の値である必要があります。負の値を指定すると、エラーが発生します。  
+>  *パーセント*  は正の値である必要があります。負の値を指定すると、エラーが発生します。  
   
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
@@ -49,7 +50,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
 >  この動作の詳細については、2番目の例を参照してください。  
   
 > [!IMPORTANT]  
->  下位[パーセント](../mdx/bottompercent-mdx.md)関数と同様に、 **TopPercent**関数は常に階層を解除します。  
+>  下位 [パーセント](../mdx/bottompercent-mdx.md) 関数と同様に、 **TopPercent** 関数は常に階層を解除します。  
   
 ## <a name="example"></a>例  
  次の例では、自転車カテゴリについて、再販業者の売上の上位10% を作成するのに役立つ、最適な都市が返されます。 結果は降順に並べ替えられ、sales の最高値を持つ都市から順に並べ替えられます。  
@@ -120,7 +121,7 @@ FROM [Adventure Works]
   
 ```  
   
- クエリでは 100% (100%) が要求されることに注意してください。これは、すべての行が返されることを意味します。 ただし、 *Numeric_Expression*には負の値があるため、1行だけが返されます。  
+ クエリでは 100% (100%) が要求されることに注意してください。これは、すべての行が返されることを意味します。 ただし、 *Numeric_Expression* には負の値があるため、1行だけが返されます。  
   
 |ツーリング バイク|Reseller Sales Amount|再販業者の製品コストの合計|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  

@@ -21,14 +21,14 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4f959ddb388be7f0f21441629239a3d479a0c711
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 71241e4a76e90a7c42e4dbd6e176d43bb5281fdb
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669814"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088170"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>マークされたトランザクションを含む関連データベースの復旧
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "85669814"
 ## <a name="transact-sql-syntax-for-inserting-named-marks-into-a-transaction-log"></a>名前付きマークをトランザクション ログに挿入するための Transact-SQL 構文  
  トランザクション ログにマークを挿入するには、 [BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md) ステートメントと WITH MARK [*description*] 句を使用します。 マークの名前はトランザクションの名前と同じです。 省略可能な *description* は、マークの名前ではなく、マークの説明テキストです。 たとえば、次の `BEGIN TRANSACTION` ステートメントで作成されるトランザクションとマークは、いずれも名前が `Tx1`になります。  
   
-```wmimof  
+```sql  
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   

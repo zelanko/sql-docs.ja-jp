@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c07c92b65fe8ebed54ac75f3b9180bbd39534109
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6bf07a7c949c76ebeae0d17b632d47e4a87fce1b
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882514"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178241"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-docker"></a>Docker に SQL Server Machine Learning Services (Python と R) をインストールする
 
-[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
 この記事では、Docker に SQL Server Machine Learning Services をインストールする方法について説明します。 Machine Learning Services を使用して、データベース内で Python または R スクリプトを実行できます。 Machine Learning Services には、事前に構築されたコンテナーは用意されていません。 [GitHub で入手できるテンプレートの例](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)使用して、SQL Server コンテナーから作成できます。
 
