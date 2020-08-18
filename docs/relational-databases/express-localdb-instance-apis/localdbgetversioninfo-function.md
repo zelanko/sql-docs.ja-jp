@@ -1,4 +1,5 @@
 ---
+description: LocalDBGetVersionInfo 関数
 title: LocalDBGetVersionInfo 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 23b5c34bf378254e097a3f9c80417d8f96eac0c8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c4e39c8bf22b4baeccfdd782d48fde7be342f68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408748"
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo 関数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +67,7 @@ HRESULT LocalDBGetVersionInfo(
  [出力] LocalDB バージョンについての情報を格納するバッファー。  
   
  *dwVersionInfoSize*  
- 代入*VersionInfo*バッファーのサイズを保持します。  
+ 代入 *VersionInfo* バッファーのサイズを保持します。  
   
 ## <a name="returns"></a>戻り値  
  S_OK  
@@ -84,12 +85,12 @@ HRESULT LocalDBGetVersionInfo(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="details"></a>詳細  
+## <a name="details"></a>説明  
  **構造体**のサイズ引数 (*lpVersionInfoSize*) の導入の背後にある原理は、API がさまざまなバージョンの**LocalDBVersionInfostruct**を返すことができるようにし、上位互換性と下位互換性を効果的に有効にすることです。  
   
  **構造体**のサイズ引数 (*lpVersionInfoSize*) が既知のバージョンの**LocalDBVersionInfostruct**のサイズと一致する場合、その**構造体**のバージョンが返されます。 それ以外の場合、LOCALDB_ERROR_INVALID_PARAMETER が返されます。  
   
- 一般的な**LocalDBGetVersionInfo** API の使用例は次のようになります。  
+ 一般的な **LocalDBGetVersionInfo** API の使用例は次のようになります。  
   
 ```  
 LocalDBVersionInfo vi;  
@@ -97,10 +98,10 @@ LocalDBVersionInfo(L"11.0", &vi, sizeof(LocalDBVersionInfo));
   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../../relational-databases/sql-server-express-localdb-reference.md)を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   
