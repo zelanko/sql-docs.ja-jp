@@ -1,4 +1,5 @@
 ---
+description: システムカタログビュー (Transact-sql)
 title: カタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/02/2016
@@ -23,12 +24,12 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7b106652573b5324794848dff69e9ae51c81a20
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6e0fd2e8ee936d9ecf9b7b433870edd3f6da19f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402608"
 ---
 # <a name="system-catalog-views-transact-sql"></a>システムカタログビュー (Transact-sql)
 
@@ -39,7 +40,7 @@ ms.locfileid: "86914308"
 > [!NOTE]
 > カタログ ビューには、レプリケーション、バックアップ、データベース メンテナンス プラン、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントなどのカタログ データに関する情報は含まれていません。
 
- カタログ ビューの中には、他のカタログ ビューの行を継承するものもあります。 たとえば、、[テーブル](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)カタログビューは[、の各カタログビュー](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)を継承します。 sys.objects カタログ ビューはベース ビューと呼ばれ、sys.tables ビューは派生ビューと呼ばれます。 sys.tables カタログ ビューではテーブルに固有の列のほか、sys.objects カタログ ビューで返されるすべての列が返されます。 sys.objects カタログ ビューでは、テーブル以外の、ストアド プロシージャやビューなどのオブジェクトの行が返されます。 テーブルが作成されると、両方のビューでテーブルのメタデータが返されます。 これら 2 つのカタログ ビューではテーブルに関する異なるレベルの情報が返されますが、このテーブルのメタデータ内のエントリは 1 つだけで、名前と object_id が、それぞれ 1 つだけ含まれています。 まとめると次のようになります。
+ カタログ ビューの中には、他のカタログ ビューの行を継承するものもあります。 たとえば、、 [テーブル](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) カタログビューは [、の各カタログビュー](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) を継承します。 sys.objects カタログ ビューはベース ビューと呼ばれ、sys.tables ビューは派生ビューと呼ばれます。 sys.tables カタログ ビューではテーブルに固有の列のほか、sys.objects カタログ ビューで返されるすべての列が返されます。 sys.objects カタログ ビューでは、テーブル以外の、ストアド プロシージャやビューなどのオブジェクトの行が返されます。 テーブルが作成されると、両方のビューでテーブルのメタデータが返されます。 これら 2 つのカタログ ビューではテーブルに関する異なるレベルの情報が返されますが、このテーブルのメタデータ内のエントリは 1 つだけで、名前と object_id が、それぞれ 1 つだけ含まれています。 まとめると次のようになります。
 
 - ベース ビューには列のサブセットと行のスーパーセットが含まれます。
 - 派生ビューには列のスーパーセットと行のサブセットが含まれます。
@@ -79,7 +80,7 @@ ms.locfileid: "86914308"
         
         [Filestream および FileTable のカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
         
-        [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索カタログビュー](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)
+        [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索カタログビュー ](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)
         
         [リンクサーバーのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)
     :::column-end:::
@@ -96,7 +97,7 @@ ms.locfileid: "86914308"
         
         [クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
         
-        [Transact-sql&#41;&#40;スカラー型のカタログビュー](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)
+        [Transact-sql&#41;&#40;スカラー型のカタログビュー ](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)
         
         [スキーマカタログビュー &#40;Transact-sql&#41;](../system-catalog-views/schemas-catalog-views-sys-schemas.md)
         

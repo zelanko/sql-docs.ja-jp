@@ -1,4 +1,5 @@
 ---
+description: external_file_formats (Transact-sql)
 title: external_file_formats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: a89efb2c-0a3a-4b64-9284-6e93263e29ac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75e3f884e09d41c2ae7aa5c7610b0c7ac24691a7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cfdbcd0d436176d11ba5702403a2fc032df28f25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401509"
 ---
 # <a name="sysexternal_file_formats-transact-sql"></a>external_file_formats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "82828516"
   
  のサーバー上の外部ファイル形式ごとに1行の値を格納 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] します。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|外部ファイル形式のオブジェクト ID。||  
 |name|**sysname**|ファイル形式の名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]とで [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は、これはデータベースに対して一意です。 で [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、これはサーバーに対して一意です。||  
@@ -36,13 +37,13 @@ ms.locfileid: "82828516"
 |string_delimiter|**nvarchar (10)**|Format_type = DELIMITEDTEXT の場合、これは文字列の区切り記号です。||  
 |date_format|**nvarchar (50)**|Format_type = DELIMITEDTEXT の場合は、ユーザー定義の日付と時刻の形式です。||  
 |use_type_default|**bit**|Format_type = 区切られたテキストの場合、PolyBase が HDFS テキストファイルからにデータをインポートするときに欠損値を処理する方法を指定し [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ます。|0-文字列 ' NULL ' として欠損値を格納します。<br /><br /> 1-欠損値を列の既定値として格納します。|  
-|serde_method|**nvarchar(255)**|Format_type = RCFILE の場合、これはシリアル化/逆シリアル化の方法です。||  
+|serde_method|**nvarchar (255)**|Format_type = RCFILE の場合、これはシリアル化/逆シリアル化の方法です。||  
 |row_terminator|**nvarchar (10)**|Format_type = DELIMITEDTEXT の場合、これは外部の Hadoop ファイル内の各行を終了する文字列です。|常に ' \n ' です。|  
 |encoding|**nvarchar (10)**|Format_type = DELIMITEDTEXT の場合、これは外部の Hadoop ファイルのエンコード方法です。|常に ' UTF8 ' です。|  
-|data_compression|**nvarchar(255)**|外部データのデータ圧縮方法。|Format_type = DELIMITEDTEXT の場合:<br /><br /> -' org. hadoop...........................<br />-' Org.apache.hadoop.io.compress.gzipcodec ' のようになります。<br /><br /> Format_type = RCFILE の場合:<br /><br /> -' org. hadoop...........................<br /><br /> Format_type = ORC の場合:<br /><br /> -' org. hadoop...........................<br />-' Org.apache.io.compress.snappycodec ' のようになります。<br /><br /> Format_type = PARQUET の場合:<br /><br /> -' Org.apache.hadoop.io.compress.gzipcodec ' のようになります。<br />-' Org.apache.io.compress.snappycodec ' のようになります。|  
+|data_compression|**nvarchar (255)**|外部データのデータ圧縮方法。|Format_type = DELIMITEDTEXT の場合:<br /><br /> -' org. hadoop...........................<br />-' Org.apache.hadoop.io.compress.gzipcodec ' のようになります。<br /><br /> Format_type = RCFILE の場合:<br /><br /> -' org. hadoop...........................<br /><br /> Format_type = ORC の場合:<br /><br /> -' org. hadoop...........................<br />-' Org.apache.io.compress.snappycodec ' のようになります。<br /><br /> Format_type = PARQUET の場合:<br /><br /> -' Org.apache.hadoop.io.compress.gzipcodec ' のようになります。<br />-' Org.apache.io.compress.snappycodec ' のようになります。|  
   
 ## <a name="permissions"></a>アクセス許可  
- カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。  詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [external_data_sources &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
