@@ -1,4 +1,5 @@
 ---
+description: cdc. index_columns (Transact-sql)
 title: cdc. index_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fcd54786ee9f1746429232619dd605a5587a60b8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0725f3eaa01da493681b2f45186c077a46d20e5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460417"
 ---
 # <a name="cdcindex_columns-transact-sql"></a>cdc. index_columns (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   変更テーブルに関連付けられている各インデックス列に対して1行の値を返します。 インデックス列は、ソーステーブル内の行を一意に識別するために、変更データキャプチャによって使用されます。 既定では、ソース テーブルの主キー列が含まれます。 ただし、ソース テーブルに対して変更データ キャプチャを有効にする際、ソース テーブルの一意のインデックスが指定された場合は、代わりにそのインデックスの列が使用されます。 差分変更の追跡が有効になっている場合、ソーステーブルには主キーまたは一意のインデックスが必要です。 詳細については、「 [sys. sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)」を参照してください。  
   
- システムテーブルに対して直接クエリを実行しないことをお勧めします。 代わりに、 [sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)ストアドプロシージャを実行します。  
+ システムテーブルに対して直接クエリを実行しないことをお勧めします。 代わりに、 [sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) ストアドプロシージャを実行します。  
 
   
 |列名|データ型|説明|  
@@ -39,7 +40,7 @@ ms.locfileid: "85890612"
 |**index_ordinal**|**tinyint**|インデックス内の列の 1 から始まる序数。|  
 |**column_id**|**int**|ソーステーブル内の列の ID。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [cdc. change_tables &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
   
   
