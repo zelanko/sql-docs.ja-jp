@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_xtp_object_stats (Transact-SQL)
 title: dm_db_xtp_object_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
@@ -20,12 +21,12 @@ ms.assetid: 07300b59-3cab-4d3e-8138-5ea8f584f88f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a01a1d5bb61e72a00e7a140e5f6767fab8af57d7
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 0b350b45f22ab520508ebb799fcba62b0f9fb525
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399028"
 ---
 # <a name="sysdm_db_xtp_object_stats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -42,13 +43,13 @@ ms.locfileid: "87442827"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|object_id|**bigint**|オブジェクトの ID です。|  
+|object_id|**bigint**|オブジェクトの ID。|  
 |row_insert_attempts|**bigint**|コミットされたトランザクションと中止されたトランザクションの両方によって最後のデータベースが再起動されてからテーブルに挿入された行数。|  
 |row_update_attempts|**bigint**|コミットされたトランザクションと中止されたトランザクションの両方によって最後のデータベースが再起動された後に、テーブル内で更新された行の数。|  
 |row_delete_attempts|**bigint**|コミットされたトランザクションと中止されたトランザクションの両方によって、前回のデータベースの再起動以降にテーブルから削除された行の数。|  
 |write_conflicts|**bigint**|前回データベースが再起動されてから発生した書き込み競合の数。|  
 |unique_constraint_violations|**bigint**|前回のデータベースの再起動以降に発生した unique 制約違反の数。|  
-|object_address|**varbinary (8)**|内部使用のみ。|  
+|object_address|**varbinary (8)**|内部使用のみです。|  
   
 ## <a name="permissions"></a>アクセス許可  
  現在のデータベースに対する VIEW DATABASE STATE 権限が必要です。  

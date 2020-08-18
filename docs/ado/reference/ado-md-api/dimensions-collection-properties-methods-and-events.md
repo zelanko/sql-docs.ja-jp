@@ -1,4 +1,5 @@
 ---
+description: Dimensions コレクションのプロパティ、メソッド、およびイベント
 title: Dimensions コレクションのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0025687e-e20d-4c36-8242-b9ab56e50706
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40d3a6e5bb88e8b38441a8ff4869ac17b74e8bb1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0024a8b0c96d5007f821da86293d40662ca02d98
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441054"
 ---
 # <a name="dimensions-collection-properties-methods-and-events"></a>Dimensions コレクションのプロパティ、メソッド、およびイベント
 ## <a name="properties"></a>プロパティ  
@@ -28,7 +29,7 @@ ms.locfileid: "82764253"
 ## <a name="methods"></a>メソッド  
  [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

@@ -1,4 +1,5 @@
 ---
+description: pdw_materialized_view_mappings (Transact-sql)
 title: pdw_materialized_view_mappings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
@@ -12,12 +13,12 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: bf5146b885839b88268b5ffbd6fe642503523655
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0ee83b26439397066806c50ba6e3056042f628a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460604"
 ---
 # <a name="syspdw_materialized_view_mappings-transact-sql"></a>pdw_materialized_view_mappings (Transact-sql)  
 

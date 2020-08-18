@@ -1,4 +1,5 @@
 ---
+description: Dimensions コレクション (ADO MD)
 title: Dimensions コレクション (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91d535097ce43b910aac24afc841d2a061d29956
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c76d8b6e18c3ae8e348d0ee443b9602945585e30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441064"
 ---
 # <a name="dimensions-collection-ado-md"></a>Dimensions コレクション (ADO MD)
-キューブを構成する[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)オブジェクトを格納します。  
+キューブを構成する [ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) オブジェクトを格納します。  
   
-## <a name="remarks"></a>Remarks  
- **ディメンション**は、標準の ADO コレクションです。 コレクションのプロパティとメソッドを使用して、次の操作を実行できます。  
+## <a name="remarks"></a>解説  
+ **ディメンション** は、標準の ADO コレクションです。 コレクションのプロパティとメソッドを使用して、次の操作を実行できます。  
   
 -   [Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを使用して、コレクション内のオブジェクトの数を取得します。  
   
--   既定の[Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクションからオブジェクトを返します。  
+-   既定の [Item](../../../ado/reference/ado-api/item-property-ado.md) プロパティを使用して、コレクションからオブジェクトを返します。  
   
 -   [更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、プロバイダーからコレクション内のオブジェクトを更新します。  
   
