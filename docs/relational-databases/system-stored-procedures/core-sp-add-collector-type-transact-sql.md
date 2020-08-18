@@ -1,4 +1,5 @@
 ---
+description: sp_add_collector_type (Transact-sql)
 title: sp_add_collector_type (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 28353a7b2112be801f465b5a919b537f17a17f4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fcaf70019a38a0306d56c94e86ec6376626a2991
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397028"
 ---
 # <a name="coresp_add_collector_type-transact-sql"></a>sp_add_collector_type (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,10 +44,10 @@ core.sp_add_collector_type [ @collector_type_uid = ] 'collector_type_uid'
   
 ## <a name="arguments"></a>引数  
  [ @collector_type_uid =] '*collector_type_uid*'  
- コレクター型の GUID を指定します。 *collector_type_uid*は**uniqueidentifier**,、既定値はありません。  
+ コレクター型の GUID を指定します。 *collector_type_uid* は **uniqueidentifier**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
  **Mdw_admin** (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
@@ -65,9 +66,9 @@ SELECT @collector_type_uid = (SELECT collector_type_uid FROM msdb.dbo.syscollect
 EXECUTE @RC = core.sp_add_collector_type @collector_type_uid;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [管理データ ウェアハウス (management data warehouse)](../../relational-databases/data-collection/management-data-warehouse.md)  
+ [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [管理データ ウェアハウス](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

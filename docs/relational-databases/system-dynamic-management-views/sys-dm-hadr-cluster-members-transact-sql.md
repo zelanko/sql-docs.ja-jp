@@ -1,4 +1,5 @@
 ---
+description: sys.dm_hadr_cluster_members (Transact-SQL)
 title: dm_hadr_cluster_members (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2019
@@ -22,17 +23,17 @@ ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ec0ed5aa4ddedd7e3fcfd544d53a270eb9e3372
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4257a29449dff7b55d0c9673368504b6e481b04a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790457"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398508"
 ---
 # <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  が有効になっているのローカルインスタンスをホストする WSFC ノードに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] wsfc クォーラムがある場合、はクォーラムを構成するメンバーごとに1行の値を返し、それぞれの状態を返します。 これには、クラスター内のすべてのノード ( **Clusterenum**関数によって CLUSTER_ENUM_NODE の種類で返されます) とディスクまたはファイル共有監視 (存在する場合) が含まれます。 特定のメンバーに対して返される行には、そのメンバーの状態に関する情報が含まれています。 たとえば、1つのノードがダウンしているノードが5つあるノードクラスターの場合、クォーラムを持つノード上に存在するが有効になっているサーバーインスタンスから**sys. dm_hadr_cluster_members**を照会すると、dm_hadr_cluster_members には、 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ダウンノードの状態が "NODE_DOWN" として反映され**ます**。  
+  が有効になっているのローカルインスタンスをホストする WSFC ノードに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] wsfc クォーラムがある場合、はクォーラムを構成するメンバーごとに1行の値を返し、それぞれの状態を返します。 これには、クラスター内のすべてのノード ( **Clusterenum** 関数によって CLUSTER_ENUM_NODE の種類で返されます) とディスクまたはファイル共有監視 (存在する場合) が含まれます。 特定のメンバーに対して返される行には、そのメンバーの状態に関する情報が含まれています。 たとえば、1つのノードがダウンしているノードが5つあるノードクラスターの場合、クォーラムを持つノード上に存在するが有効になっているサーバーインスタンスから **sys. dm_hadr_cluster_members** を照会すると、dm_hadr_cluster_members には、 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ダウンノードの状態が "NODE_DOWN" として反映され **ます** 。  
   
  WSFC ノードにクォーラムが存在しない場合、行は返されません。  
   
@@ -61,8 +62,8 @@ ms.locfileid: "85790457"
   
 ## <a name="see-also"></a>参照  
  [Always On 可用性グループの動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Always On 可用性グループのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;可用性グループの監視](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [AlwaysOn 可用性グループのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;可用性グループの監視 ](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

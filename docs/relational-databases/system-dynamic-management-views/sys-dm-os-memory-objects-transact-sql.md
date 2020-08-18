@@ -1,4 +1,5 @@
 ---
+description: dm_os_memory_objects (Transact-sql)
 title: dm_os_memory_objects (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,11 +21,12 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31af260a5290b899bb64fa3942d1e2aa0a076d31
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3378ee753ebc9205ac4607930801fdf3cc434b3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398068"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>dm_os_memory_objects (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,16 +55,16 @@ ms.locfileid: "85999047"
 |**contention_factor**|**real**|**適用対象**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 以降。<br /><br /> このメモリオブジェクトの競合を指定する値。0は競合しないことを意味します。 値は、指定された数のメモリ割り当てがその期間中に競合を反映したときに更新されます。 スレッドセーフなメモリオブジェクトにのみ適用されます。|  
 |**waiting_tasks_count**|**bigint**|**適用対象**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 以降。<br /><br /> このメモリオブジェクトで待機している回数。 このカウンターは、メモリオブジェクトからメモリが割り当てられるたびにインクリメントされます。 インクリメントは、このメモリオブジェクトへのアクセスを現在待機しているタスクの数です。 スレッドセーフなメモリオブジェクトにのみ適用されます。 これは、正確性を保証せずに、ベストエフォートの値です。|  
 |**exclusive_access_count**|**bigint**|**適用対象**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 以降。<br /><br /> このメモリオブジェクトに排他的にアクセスする頻度を指定します。 スレッドセーフなメモリオブジェクトにのみ適用されます。  これは、正確性を保証せずに、ベストエフォートの値です。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
- **partition_type**、 **contention_factor**、 **waiting_tasks_count**、および**exclusive_access_count**は、にまだ実装されていません [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 。  
+ **partition_type**、 **contention_factor**、 **waiting_tasks_count**、および **exclusive_access_count** は、にまだ実装されていません [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 。  
   
 ## <a name="permissions"></a>アクセス許可
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  メモリ オブジェクトはヒープであり、 割り当ての粒度はメモリ クラークよりも細かくなります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントでは、メモリ クラークの代わりにメモリ オブジェクトが使用されます。 メモリオブジェクトは、メモリクラークのページアロケーターインターフェイスを使用してページを割り当てます。 メモリオブジェクトは、仮想または共有メモリインターフェイスを使用しません。 割り当てパターンに応じて、コンポーネントでは各種メモリ オブジェクトを作成し、任意のサイズの領域を割り当てることができます。  
   
  メモリオブジェクトの一般的なページサイズは 8 KB です。 ただし、増分メモリオブジェクトのページサイズは、512バイトから 8 KB の範囲で指定できます。  

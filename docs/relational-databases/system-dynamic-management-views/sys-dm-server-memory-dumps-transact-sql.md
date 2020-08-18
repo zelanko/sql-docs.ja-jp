@@ -1,4 +1,5 @@
 ---
+description: sys.dm_server_memory_dumps (Transact-SQL)
 title: dm_server_memory_dumps (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 40e8457a4f31e0961560c1c48cc5885fa3cfd053
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 636beea5b820aef3d37b8ac27f6e75c66bc6da3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397708"
 ---
 # <a name="sysdm_server_memory_dumps-transact-sql"></a>sys.dm_server_memory_dumps (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,14 +33,14 @@ ms.locfileid: "85898641"
  
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**filename**|**nvarchar(256)**|メモリダンプファイルのパスと名前。 null にすることはできません。|  
+|**ファイル名**|**nvarchar (256)**|メモリダンプファイルのパスと名前。 null にすることはできません。|  
 |**creation_time**|**datetimeoffset(7)**|ファイルが作成された日付と時刻。 null にすることはできません。|  
 |**size_in_bytes**|**bigint**|ファイルのサイズ (バイト単位)。 NULL 値が許可されます。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  ダンプの種類として、ミニダンプ、すべてのスレッドのダンプ、または完全なダンプを使用できます。 ファイルの拡張子は mdmp です。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
  ダンプ ファイルには機密情報が含まれている場合があります。 機密情報を保護するには、アクセス制御リスト (ACL) を使用してこのファイルへのアクセスを制限するか、アクセスが制限されたフォルダーにファイルをコピーすることができます。 たとえば、デバッグファイルを Microsoft サポートサービスに送信する前に、機密情報または機密情報をすべて削除することをお勧めします。  
   
 ### <a name="permissions"></a>アクセス許可  

@@ -1,4 +1,5 @@
 ---
+description: dm_os_memory_cache_counters (Transact-sql)
 title: dm_os_memory_cache_counters (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
@@ -18,24 +19,24 @@ helpviewer_keywords:
 ms.assetid: ca7bd036-d661-4c17-b00a-e1a975bd8932
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2a856e06f5deb0e013a680d4b614695e45f4c7f7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e6ba50ffa5695a5137c1bccd30b6c63ff7b0fa9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397868"
 ---
 # <a name="sysdm_os_memory_cache_counters-transact-sql"></a>dm_os_memory_cache_counters (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、キャッシュのヘルスのスナップショットを返します。 **dm_os_memory_cache_counters**は、割り当てられたキャッシュエントリ、その使用、およびキャッシュエントリのメモリのソースに関する実行時の情報を提供します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、キャッシュのヘルスのスナップショットを返します。 **dm_os_memory_cache_counters** は、割り当てられたキャッシュエントリ、その使用、およびキャッシュエントリのメモリのソースに関する実行時の情報を提供します。  
   
 > **注:** またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_os_memory_cache_counters**という名前を使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary (8)**|特定のキャッシュに関連付けられているカウンターのアドレス (主キー) を示します。 NULL 値は許可されません。|  
-|**name**|**nvarchar(256)**|キャッシュの名前を指定します。 NULL 値は許可されません。|  
+|**name**|**nvarchar (256)**|キャッシュの名前を指定します。 NULL 値は許可されません。|  
 |**type**|**nvarchar(60)**|このエントリに関連付けられているキャッシュの型を示します。 NULL 値は許可されません。|  
 |**single_pages_kb**|**bigint**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /><br /> 割り当てられた単一ページメモリの量 (kb 単位)。 これは、単一ページアロケーターを使用して割り当てられたメモリの量です。 キャッシュ用にバッファー プールから直接取得された 8 KB ページを表します。 NULL 値は許可されません。|  
 |**pages_kb**|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> キャッシュに割り当てられたメモリの量 (kb 単位) を指定します。 NULL 値は許可されません。|  
@@ -45,14 +46,14 @@ ms.locfileid: "85898734"
 |**multi_pages_in_use_kb**|**bigint**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /><br /> 使用されている複数ページメモリの量 (kb 単位)。 NULLABLE. この情報は USERSTORE_ 型のオブジェクトに対しては追跡されず、 \<*> これらの値は NULL になります。|  
 |**entries_count**|**bigint**|キャッシュ内のエントリの数を示します。 NULL 値は許可されません。|  
 |**entries_in_use_count**|**bigint**|キャッシュ内の使用されているエントリの数を示します。 NULL 値は許可されません。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可 
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
   [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

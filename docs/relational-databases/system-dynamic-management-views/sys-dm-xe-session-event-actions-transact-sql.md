@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xe_session_event_actions (Transact-SQL)
 title: dm_xe_session_event_actions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e50688acee036511d102247d4bff9b8d9a4df84b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 614d460ef83dd44a6ce4455f44ea930ee089b0a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397588"
 ---
 # <a name="sysdm_xe_session_event_actions-transact-sql"></a>sys.dm_xe_session_event_actions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,9 +35,9 @@ ms.locfileid: "85898570"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary (8)**|イベントセッションのメモリアドレス。 NULL 値は許可されません。|  
-|action_name|**nvarchar(256)**|アクションの名前。 NULL 値は許可されません。|  
+|action_name|**nvarchar (256)**|アクションの名前。 NULL 値は許可されません。|  
 |action_package_guid|**uniqueidentifier**|アクションを含むパッケージの GUID。 NULL 値は許可されません。|  
-|event_name|**nvarchar(256)**|アクションが関連付けられているイベントの名前。 NULL 値は許可されません。|  
+|event_name|**nvarchar (256)**|アクションが関連付けられているイベントの名前。 NULL 値は許可されません。|  
 |event_package_guid|**uniqueidentifier**|イベントを含むパッケージの GUID。 NULL 値は許可されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -44,14 +45,14 @@ ms.locfileid: "85898570"
   
 ### <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|From|終了|リレーションシップ|  
+|ソース|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |sys.dm_xe_session_event_actions.event_session_address|sys.dm_xe_sessions.address|多対一|  
 |dm_xe_session_event_actions。 action_name、<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name、<br /><br /> sys.dm_xe_session_events.event_package_guid|多対一|  
 |dm_xe_session_event_actions。 event_name、<br /><br /> sys.dm_xe_session_event_actions.event_package_guid|sys.dm_xe_objects.name、<br /><br /> sys.dm_xe_objects.package_guid|多対一|  
   
-## <a name="see-also"></a>関連項目  
- [動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
+## <a name="see-also"></a>参照  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   
 

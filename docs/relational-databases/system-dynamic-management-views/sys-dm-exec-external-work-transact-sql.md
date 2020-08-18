@@ -1,4 +1,5 @@
 ---
+description: dm_exec_external_work (Transact-sql)
 title: dm_exec_external_work (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -22,12 +23,12 @@ ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8348ebacb68f2df122b73d6ad3480cadedd27c1b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d8854b1e784fb6bdbfe8f12d749a937e9f1a6b9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821107"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398288"
 ---
 # <a name="sysdm_exec_external_work-transact-sql"></a>dm_exec_external_work (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,13 +37,13 @@ ms.locfileid: "82821107"
   
  Dm_exec_external_work を照会して、外部データソース (Hadoop、外部 SQL Server など) と通信するためにスピンアップされる作業を識別します。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|`nvarchar(32)`|関連する PolyBase クエリの一意の識別子。|『 [Transact-sql&#41;&#40;dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)の*request_ID*を参照してください。|  
 |step_index|`int`|このワーカーが実行している要求。|『 [Transact-sql&#41;&#40;dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)の*step_index*を参照してください。|  
 |dms_step_index|`int`|このワーカーが実行している DMS プランのステップ。|「 [Sys. dm_exec_dms_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)」を参照してください。|  
 |compute_node_id|`int`|ワーカーが実行されているノード。|「 [Sys. dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)」を参照してください。|  
-|型|`nvarchar(60)`|外部作業の種類。|' ファイル分割 '|  
+|type|`nvarchar(60)`|外部作業の種類。|' ファイル分割 '|  
 |work_id|`int`|実際の分割の ID。|0以上。|  
 |input_name|`nvarchar(4000)`|読み取る入力の名前|Hadoop を使用する場合のファイル名。|  
 |read_location|`bigint`|オフセットまたは読み取り位置。|読み取るファイルのオフセット。|  
@@ -56,7 +57,7 @@ ms.locfileid: "82821107"
 
 ## <a name="see-also"></a>参照  
  [動的管理ビューを使用した PolyBase のトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;データベース関連の動的管理ビュー ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   
