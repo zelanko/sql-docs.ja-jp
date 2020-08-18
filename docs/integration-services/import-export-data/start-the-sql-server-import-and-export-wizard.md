@@ -1,4 +1,5 @@
 ---
+description: SQL Server インポートおよびエクスポート ウィザードを起動する
 title: SQL Server インポートおよびエクスポート ウィザードを起動する
 titleSuffix: Integration Services (SSIS)
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.author: chugu
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/18/2019
-ms.openlocfilehash: a80b12db0f303ee82f91be9e3eb60c975396063e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: adbb8eee477e9f021c011b91e586492e64747851
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346578"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを起動する
 
@@ -123,7 +124,7 @@ Visual Studio がインストールされていない場合、あるいは Visua
 > [!TIP]
 > ウィザードのページまたはダイアログ ボックスで F1 キーをタップすると、現在のページの文書が表示されます。   
 
-## <a name="whats-next"></a>次の操作
+## <a name="whats-next"></a>次の手順
 
 ウィザードを起動すると、最初のページは **[SQL Server インポートおよびエクスポート ウィザードへようこそ]** になります。 このページでいかなる操作も必要はありません。 詳細については、「 [SQL Server インポートおよびエクスポート ウィザードへようこそ](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)」を参照してください。  
   
@@ -139,7 +140,7 @@ Visual Studio がインストールされていない場合、あるいは Visua
 
   - **ウィザードのしくみについては、以下を参照してください。**
 
-  - **ウィザードのしくみについては、以下を参照してください。** ウィザードの概要をお探しの場合は、「 [SQL Server でサポートされるインポートとエクスポートのデータ ソース](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。
+  - **ウィザードの詳細については、以下を参照してください。** ウィザードの概要をお探しの場合は、「 [SQL Server でサポートされるインポートとエクスポートのデータ ソース](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。
 
   - **ウィザードの手順について学習する。** ウィザードの手順についての情報を探している場合は、「[SQL Server インポートおよびエクスポート ウィザードの手順](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)」をご覧ください。 ウィザードのページごとに別のドキュメント ページもあります。
 

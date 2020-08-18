@@ -1,4 +1,5 @@
 ---
+description: COL_LENGTH (Transact-SQL)
 title: COL_LENGTH (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4a03934759aa32ca9c852eef0588d9cec17b0983
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a46720f3752e5588221a3af686d2449554dc0fe4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310928"
 ---
 # <a name="col_length-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +59,7 @@ COL_LENGTH ( 'table' , 'column' )
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有している、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する適切な権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (COL_LENGTH など) が NULL を返す可能性があります。 詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。
   
 ## <a name="remarks"></a>解説  
-**max** 指定子 (**varchar (max)** ) で宣言された **varchar** 列の場合、COL_LENGTH では値 -1 が返されます。
+**max** 指定子 (**varchar (max)**) で宣言された **varchar** 列の場合、COL_LENGTH では値 -1 が返されます。
   
 ## <a name="examples"></a>例  
 この例では、`varchar(40)` 型と `nvarchar(40)` 型の列の値を返します。
@@ -81,7 +82,7 @@ VarChar     NVarChar
 40          80  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [COL_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/col-name-transact-sql.md)  

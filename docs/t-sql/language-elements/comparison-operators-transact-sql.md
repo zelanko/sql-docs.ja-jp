@@ -1,4 +1,5 @@
 ---
+description: 比較演算子 (Transact-SQL)
 title: 比較演算子 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fbe10ec2f0d36a94b2c00ad07d71a510c2975c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 940b0ab0250a626673c883542fc2e1f1700f0c52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307393"
 ---
 # <a name="comparison-operators-transact-sql"></a>比較演算子 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   比較演算子は、2 つの式が同じかどうかをテストします。 比較演算子は **text**、**ntext**、または **image** データ型の式を除くすべての式で使用できます。 次の表は、[!INCLUDE[tsql](../../includes/tsql-md.md)] の比較演算子の一覧です。  
   
-|演算子|意味|  
+|演算子|説明|  
 |--------------|-------------|  
 |[= (等しい)](../../t-sql/language-elements/equals-transact-sql.md)|等しい|  
 |[> (より大きい)](../../t-sql/language-elements/greater-than-transact-sql.md)|より大きい|  
@@ -44,7 +45,7 @@ ms.locfileid: "85706611"
 |[\!< (以上)](../../t-sql/language-elements/not-less-than-transact-sql.md)|より小さくない (ISO 標準外)|  
 |[\!> (以下)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|より大きくない (ISO 標準外)|  
   
-## <a name="boolean-data-type"></a>ブール値型  
+## <a name="boolean-data-type"></a>Boolean データ型  
  比較演算子の結果は**ブール** データ型になります。 有効値には、TRUE、FALSE、UNKNOWN があります。 **ブール** データ型を返す式は、ブール式とも呼ばれます。  
   
  **ブール** データ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他のデータ型と異なり、テーブルの列や変数のデータ型として指定することはできず、結果セットで返すこともできません。  
@@ -64,7 +65,7 @@ IF (@MyProduct <> 0)
    WHERE ProductID = @MyProduct;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
  [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   

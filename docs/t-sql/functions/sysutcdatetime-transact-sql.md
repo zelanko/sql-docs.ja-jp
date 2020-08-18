@@ -1,4 +1,5 @@
 ---
+description: SYSUTCDATETIME (Transact-SQL)
 title: SYSUTCDATETIME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2015
@@ -24,12 +25,12 @@ ms.assetid: f14fc2cd-9ea8-4daf-88f4-418cf523ab55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0edee9ce54e5736632c560467ecf38a88b072feb
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 624910a714816d93d892991591674a076858aa4c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111819"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88308399"
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ SYSUTCDATETIME ( )
 ## <a name="return-type"></a>戻り値の型  
  **datetime2**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを参照できます SYSUTCDATETIME を参照できる任意の場所、 **datetime2** 式です。  
   
  SYSUTCDATETIME は非決定的関数です。 この関数を列内で参照するビューと式には、インデックスを付けることができません。  
@@ -128,7 +129,7 @@ Time             Date Time
 13:49:33.6330000 2009-04-22 13:49:33.633
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [日付と時刻のデータ型および関数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: TRIGGER_NESTLEVEL (Transact-SQL)
 title: TRIGGER_NESTLEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 105e3ebe3b5d19461732dfcaaac415f707ea4e44
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 183d2e295fcdaf7de1bf20351272662979c888b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307566"
 ---
 # <a name="trigger_nestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
  **'** *trigger_event_category* **'**  
  DML トリガーと DDL トリガーのどちらに TRIGGER_NESTLEVEL を適用するかを指定します。 DML トリガーの場合は **DML** を指定します。 DDL トリガーの場合は **DDL** を指定します。 *trigger_event_category* を指定するときは *trigger_type* も指定する必要があります。 **DDL** の場合は **AFTER** だけを指定できます。DDL トリガーは必ず AFTER トリガーであるためです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  パラメーターを指定しない場合、TRIGGER_NESTLEVEL は呼び出し履歴上のトリガーの合計数を返します。 この合計数にはそのトリガー自身も含まれます。 トリガーがコマンドを実行することにより、別のトリガーが起動されたり、トリガーを起動するセッションを作成するときはパラメーターを省略できます。  
   
  特定の種類のトリガーおよび特定のイベント カテゴリについて、呼び出し履歴上のトリガーの合計数を返すには、*object_id* に値 0 を指定します。  
@@ -86,7 +87,7 @@ IF ( (SELECT trigger_nestlevel() ) > 5 )
       ('This statement nested over 5 levels of triggers.',16,-1)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
   

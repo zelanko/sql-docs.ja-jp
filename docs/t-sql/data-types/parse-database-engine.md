@@ -1,4 +1,5 @@
 ---
+description: Parse (データベース エンジン)
 title: Parse (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e024024726ab6366b6dbb3580f1c27367195c130
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 78ff3df45fd3d835d273d2f00f4d7ddf65170a62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86548627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311508"
 ---
 # <a name="parse-database-engine"></a>Parse (データベース エンジン)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ CLR : 評価される String 値。
   
 **CLR 戻り値の型:SqlHierarchyId**
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 場合 解析 の有効な文字列表記ではない値を受け取る、 **hierarchyid**, 、例外が発生します。 たとえば場合、 **cha**r データ型には、末尾のスペースが含まれている、例外が発生します。
   
 ## <a name="examples"></a>例  

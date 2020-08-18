@@ -1,4 +1,5 @@
 ---
+description: RADIANS (Transact-SQL)
 title: RADIANS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -18,12 +19,12 @@ ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5cde3c074d1e63ffbf193a083e06829d5c275f0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a85032d93f1326bacca6727c1923c70e6824eff7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88309868"
 ---
 # <a name="radians-transact-sql"></a>RADIANS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +43,7 @@ RADIANS ( numeric_expression )
 
 ## <a name="arguments"></a>引数
  *numeric_expression*  
- [bit](../../t-sql/language-elements/expressions-transact-sql.md) データ型を除く、真数または概数データ型カテゴリの**式**です。  
+ **bit** データ型を除く、真数または概数データ型カテゴリの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
 ## <a name="return-types"></a>戻り値の型  
  *numeric_expression*と同じ型を返します。  
@@ -50,7 +51,7 @@ RADIANS ( numeric_expression )
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-radians-to-show-00"></a>A. RADIANS を使用して 0.0 を表示する  
- 次の例では、ラジアンに変換する数値式が `0.0` 関数にとって小さすぎる値であるため、`RADIANS` という結果を返します。  
+ 次の例では、ラジアンに変換する数値式が `RADIANS` 関数にとって小さすぎる値であるため、`0.0` という結果を返します。  
   
 ```  
 SELECT RADIANS(1e-307)  
@@ -121,7 +122,7 @@ The RADIANS of the angle is: 3.44022
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [decimal 型と numeric 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
  [float と real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   

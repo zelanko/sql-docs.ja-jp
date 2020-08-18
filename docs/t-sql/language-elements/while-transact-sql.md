@@ -1,4 +1,5 @@
 ---
+description: WHILE (Transact-SQL)
 title: WHILE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f11e2a6261976b3e96533647d37fcad3a1eaa792
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 78b7ac5ab0a9b65e50059f45e5bdca5e4219bf11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307326"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +60,7 @@ WHILE Boolean_expression
 
 ## <a name="arguments"></a>引数
  *Boolean_expression*  
- [TRUE](../../t-sql/language-elements/expressions-transact-sql.md) または **FALSE** を返す**式**です。 ブール式が SELECT ステートメントを含む場合は、SELECT ステートメントをかっこで囲む必要があります。  
+ **TRUE** または **FALSE** を返す[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 ブール式が SELECT ステートメントを含む場合は、SELECT ステートメントをかっこで囲む必要があります。  
   
  {*sql_statement* | *statement_block*}  
  1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、またはステートメント ブロックとして定義した一連のステートメントです。 ステートメント ブロックを定義するには、流れ制御キーワードの BEGIN と END を使用してください。  
@@ -70,7 +71,7 @@ WHILE Boolean_expression
  CONTINUE  
  CONTINUE キーワード以降のすべてのステートメントを無視し、WHILE ループを再開します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  2 つ以上の WHILE ループを入れ子にする場合、内側の BREAK が終了すると、1 つ外側のループに出ます。 まず、この内側ループの終了の後にあるステートメントがすべて実行され、次にこの外側のループの実行が再開されます。  
   
 ## <a name="examples"></a>例  
@@ -136,7 +137,7 @@ END
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

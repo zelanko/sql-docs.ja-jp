@@ -1,4 +1,5 @@
 ---
+description: SUSER_SNAME (Transact-SQL)
 title: SUSER_SNAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -26,12 +27,12 @@ ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8dc14225d150bb3a8783ffa01e53f95a45f3673
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 570372e0ca0f40284f89e862eee75e5a3d419440
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88308418"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +58,7 @@ SUSER_SNAME ( [ server_user_sid ] )
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  SUSER_SNAME は、ALTER TABLE または CREATE TABLE の中で、DEFAULT 制約として使用できます。 SUSER_SNAME は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。 SUSER_SNAME の後には、パラメーターを指定しない場合も含め、常にかっこが必要です。  
   
  SUSER_SNAME を引数なしで呼び出すと、現在のセキュリティ コンテキストの名前が返されます。 EXECUTE AS を使用してコンテキストを切り替えたバッチ内で SUSER_SNAME を引数なしで呼び出すと、権限を借用したコンテキストの名前が返されます。 権限を借用したコンテキストから ORIGINAL_LOGIN を呼び出すと、元のコンテキストの名前が返されます。  
@@ -147,7 +148,7 @@ SELECT SUSER_SNAME() AS CurrentLogin;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SUSER_SID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: レプリケーション関数 - PUBLISHINGSERVERNAME
 title: PUBLISHINGSERVERNAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7c278e5-ab23-419e-ab3e-3bb20b0636df
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5ce454f544fd1c1216b0c72dbdad3490e5fb11e6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 67a2f52fa6fcf54204a28dc37604bebc1546736d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88309008"
 ---
 # <a name="replication-functions---publishingservername"></a>レプリケーション関数 - PUBLISHINGSERVERNAME
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ PUBLISHINGSERVERNAME()
   
  この関数はパブリケーション データベースのコンテキスト内で実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のミラーリング サーバー インスタンスのパブリケーション データベースで PUBLISHINGSERVERNAME を実行すると、パブリッシュされたデータベースの発行元パブリッシャー インスタンスの名前が返されます。 この関数が、パブリッシュされていない、またはフェールオーバー後にミラー サーバー インスタンスからパブリッシュされたミラー サーバー インスタンスにあるデータベース上で実行されると、ミラー サーバー インスタンスの名前が返されます。 この関数が元のパブリッシャー インスタンスで実行されると、パブリッシャーの名前が返されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリングとレプリケーション &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
  [レプリケーションの動作 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
   

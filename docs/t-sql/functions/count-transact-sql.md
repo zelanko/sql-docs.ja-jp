@@ -1,4 +1,5 @@
 ---
+description: COUNT (Transact-SQL)
 title: COUNT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -23,12 +24,12 @@ ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82928e721df413a1d5194492726734b1986b0294
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a5b660c4b55f01f794a07e19374a4c6a8ba38bfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311108"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +59,7 @@ DISTINCT
 `COUNT` で一意の NULL ではない値の数を返すことを指定します。
   
 *式 (expression)*  
-[image](../../t-sql/language-elements/expressions-transact-sql.md)、**ntext**、**text** を除く、任意の型の**式**です。 `COUNT` は、式の集計関数またはサブクエリをサポートしていません。
+**image**、**ntext**、**text** を除く、任意の型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 `COUNT` は、式の集計関数またはサブクエリをサポートしていません。
   
 \*  
 `COUNT` ですべての行をカウントし、返すテーブルの合計行数を決定することを指定します。 `COUNT(*)` はパラメーターを受け取らず、DISTINCT の使用をサポートしていません。 `COUNT(*)` では、この関数の定義上、特定の列についての情報は使用されないため、*expression* パラメーターは必要ありません。 `COUNT(*)` は、指定されたテーブル内の行数を返し、重複する行を保持します。 各行は 1 行としてカウントされ、 これには NULL 値を保持している行も含まれます。
@@ -279,7 +280,7 @@ ProductCount   SalesOrderID`
 1              SO55981
 ```
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [COUNT_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/count-big-transact-sql.md)  
 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)

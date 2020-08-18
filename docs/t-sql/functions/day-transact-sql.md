@@ -1,4 +1,5 @@
 ---
+description: DAY (Transact-SQL)
 title: DAY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -23,19 +24,19 @@ ms.assetid: 2f4410ea-fd3e-4d69-ac4b-3b0091a084bc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e901af549839834daf9d0c7f6c75703f7dc018d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c785d96e43944e758627c948a5249971d05401be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113059"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310808"
 ---
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この関数は、指定された *date* の日 (月の日にち) を表す整数を返します。
   
-[ の日付と時刻のあらゆるデータ型と関数に関する概要については、「](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)]」を参照してください。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のあらゆるデータ型と関数に関する概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -81,7 +82,7 @@ SELECT DAY('2015-04-30 01:01:01.1234567');
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cc94e5f36b6c36ed44185c47356f67efb8729fe
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fe3f756c08229631a76effe5fc8b16bc5fe6f965
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947517"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216702"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>インメモリ OLTP のサンプル データベース
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -183,8 +183,7 @@ ms.locfileid: "87947517"
   
  ハッシュ インデックスを使用すると、ワークロードをさらに最適化できます。 これは、特にポイント参照と行挿入に合わせて最適化されています。 ただし、範囲スキャン、並べ替えられたスキャン、または先頭のインデックス キー列での検索がサポートされていないことを考慮する必要があります。 したがって、このインデックスを使用するときは注意が必要です。 また、作成時に bucket_count を指定する必要もあります。 一般的にはインデックス キー値の数の 1 ～ 2 倍に設定しますが、多めに設定しても通常は問題ありません。  
   
-詳細については、オンライン ブックの [インデックスのガイドライン](https://docs.microsoft.com/sql/relational-databases/indexes/guidelines-for-online-index-operations)、および [適切な bucket_count の選択](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)に関するガイドラインをご覧ください。  
-
+詳細については、オンライン ブックの [インデックスのガイドライン](https://docs.microsoft.com/sql/relational-databases/indexes/guidelines-for-online-index-operations)、および [適切な bucket_count の選択](https://sqlserver-help.com/tag/bucket_count/)に関するガイドラインをご覧ください。  
 
 オンライン ブックからは、次のトピックに関する詳細が得られます。
 - [インデックス ガイドライン](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->

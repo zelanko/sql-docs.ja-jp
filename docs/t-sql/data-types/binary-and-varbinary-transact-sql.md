@@ -1,4 +1,5 @@
 ---
+description: binary と varbinary (Transact-SQL)
 title: binary と varbinary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/16/2017
@@ -21,12 +22,12 @@ ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f267da97eeb409be81bfcca71af602ebce1ffe1c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 842cde194f39b32b2140c09afed458f903dc772d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86548744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312488"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary と varbinary (Transact-SQL)
 
@@ -40,7 +41,7 @@ ms.locfileid: "86548744"
   
 **varbinary** [ ( _n_ | **max**) ] 可変長のbinary データ。 _n_ には 1 ～ 8,000 の値を指定できます。 **max** 記憶域の最大サイズが 2 であることを示します。 ^ 31-1 バイトです。 格納サイズは、入力したデータの実際の長さ + 2 バイトとなります。 入力するデータの長さは 0 バイトでもかまいません。 **varbinary** の ANSI SQL シノニム **binary** 可変です。
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 データ定義または変数宣言ステートメントで _n_ を指定しないと、既定の長さは 1 になります。 CAST 関数で _n_ を指定しないと、既定の長さは 30 になります。
 
 | データ型 | 次の場合に使用 |
@@ -61,7 +62,7 @@ ms.locfileid: "86548744"
 * **varbinary**
 * **text**
 * **ntext**
-* **画像**
+* **image**
 
 他のデータ型が変換される場合 **binary** または **varbinary**, 、データが埋め込まれるか、左側に切り捨てられます。 桁の埋め込みには 16 進数の 0 が使用されます。
   
@@ -96,7 +97,7 @@ GO
 > [!NOTE]  
 >  すべてのデータ間の変換の入力と **binary** データ型は、バージョンの間で同じであるとは限りません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [データ型の変換&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

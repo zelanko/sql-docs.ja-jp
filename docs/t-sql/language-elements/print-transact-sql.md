@@ -1,4 +1,5 @@
 ---
+description: PRINT (Transact-SQL)
 title: PRINT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -23,12 +24,12 @@ ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 058c87be49d3089d699b0abbafb0d500f3cb9580
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: be33ffe8e52349e2eb7daad69b0648ae9ea53494
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307305"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +56,7 @@ PRINT msg_str | @local_variable | string_expr
  *string_expr*  
  文字列を返す式を指定します。 連結したリテラル値、関数、および変数を含むことができます。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  メッセージ文字列は、Unicode 以外の文字列の場合は 8,000 バイトまで指定でき、Unicode 文字列の場合は 4,000 バイトまで指定できます。 これより長い文字列は切り詰められます。 **Varchar (max)** と **nvarchar (max)** データ型は、**varchar(8000)** および **nvarchar(4000)** ではなくなったデータ型に切り詰められます。  
   
  RAISERROR を使用してメッセージを返すこともできます。 RAISERROR には、PRINT にはない次のような利点があります。  

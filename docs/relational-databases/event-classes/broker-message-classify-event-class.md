@@ -1,4 +1,5 @@
 ---
+description: Broker:Message Classify イベント クラス
 title: Broker:Message Classify イベント クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,18 +13,18 @@ ms.assetid: e51f3351-1239-4c41-b87c-1dd86968e027
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62227ad9938f94a1381431b57ebed7c3f63c0169
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e5e8e0bc84e26798716ba1635580b81dbfc08c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88331078"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify イベント クラス
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Service Broker によりメッセージのルーティングが決定されると、 **Broker:Message Classify** イベントを生成します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Service Broker によりメッセージのルーティングが決定されると、**Broker:Message Classify** イベントを生成します。  
   
 ## <a name="brokermessage-classify-event-class-data-columns"></a>Broker:Message Classify イベント クラスのデータ列  
   
@@ -39,7 +40,7 @@ ms.locfileid: "85763000"
 |**GUID**|**uniqueidentifier**|ダイアログのメッセージ交換 ID。 この ID はメッセージの一部として転送され、メッセージ交換の両側で共有されます。|54|いいえ|  
 |**HostName**|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|いいえ|  
-|**LoginSid**|**画像**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
 |**OwnerName**|**nvarchar**|メッセージ送信先のブローカー ID。|37|いいえ|  
@@ -50,7 +51,7 @@ ms.locfileid: "85763000"
 |**TargetUserName**|**nvarchar**|次のホップ ブローカーのネットワーク アドレス。|39|いいえ|  
 |**TransactionID**|**bigint**|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

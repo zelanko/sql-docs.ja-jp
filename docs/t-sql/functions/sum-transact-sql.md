@@ -1,4 +1,5 @@
 ---
+description: SUM (Transact-SQL)
 title: SUM (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -25,12 +26,12 @@ ms.assetid: 9af94d0f-55d4-428f-a840-ec530160f379
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cde407d28782ff8fc81a10cf4bc564042cb04bf8
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: bc684b2a344594632fe02eb9e1ecfd6bcd45fa70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88308858"
 ---
 # <a name="sum-transact-sql"></a>SUM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,7 +78,7 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 |**money** および **smallmoney** カテゴリ|**money**|  
 |**float** および **real** カテゴリ|**float**|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  SUM は、OVER 句や ORDER BY 句なしで使用される場合は決定的関数です。 OVER 句や ORDER BY 句と共に使用される場合は、非決定的関数です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
@@ -109,7 +110,7 @@ White           19.00                 6.7926
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. OVER 句を使用する  
- 次の例では、OVER 句を指定した SUM 関数を使用して、`Sales.SalesPerson` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルに各区域の年間売り上げの累積合計を入力します。 データは `TerritoryID` によってパーティションに分割され、`SalesYTD` によって論理的に順序付けされます。 つまり、SUM 関数は年を基にして区域ごとに計算されます。 `TerritoryID` 1 の 2005 年については、その年の 2 人の営業担当者を表す 2 行があります。 これら 2 行の合計売上が計算された後、2006 年の売上を表す 3 番目の行が計算に組み込まれます。  
+ 次の例では、OVER 句を指定した SUM 関数を使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Sales.SalesPerson` テーブルに各区域の年間売り上げの累積合計を入力します。 データは `TerritoryID` によってパーティションに分割され、`SalesYTD` によって論理的に順序付けされます。 つまり、SUM 関数は年を基にして区域ごとに計算されます。 `TerritoryID` 1 の 2005 年については、その年の 2 人の営業担当者を表す 2 行があります。 これら 2 行の合計売上が計算された後、2006 年の売上を表す 3 番目の行が計算に組み込まれます。  
   
 ```  
 SELECT BusinessEntityID, TerritoryID   

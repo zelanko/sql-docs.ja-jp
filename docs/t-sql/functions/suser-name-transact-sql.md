@@ -1,4 +1,5 @@
 ---
+description: SUSER_NAME (Transact-SQL)
 title: SUSER_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b62e29885c9e23ae7f391106ce83cdf77c1b8d3
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b47d97f42c1da9420a79f3ed45bd4fb5d6071220
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307978"
 ---
 # <a name="suser_name-transact-sql"></a>SUSER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -54,7 +55,7 @@ _server\_user\_id_
 ## <a name="return-types"></a>戻り値の型  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 では、サーバー ユーザー識別番号 (SUID) の代わりにセキュリティ識別番号 (SID) が使用されます。  
   
 SUSER_NAME では、**syslogins** システム テーブル内にエントリがあるログインに対してのみログイン名が返されます。  
@@ -71,7 +72,7 @@ SUSER_NAME は、選択リストの中、WHERE 句の中、また、式を使え
 SELECT SUSER_NAME(1);  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SUSER_ID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-id-transact-sql.md)   
 [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

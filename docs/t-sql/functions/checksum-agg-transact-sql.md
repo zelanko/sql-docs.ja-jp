@@ -1,4 +1,5 @@
 ---
+description: CHECKSUM_AGG (Transact-SQL)
 title: CHECKSUM_AGG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7b01f8dd8ed2b460a347ef2f80fb1f2f6eef9ffe
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6190b42e9e52f9f20e9ad645c0169f08dc7694a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311128"
 ---
 # <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ DISTINCT
 ## <a name="return-types"></a>戻り値の型
 すべてのチェックサムを返します *式* 値としての **int**です。
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 `CHECKSUM_AGG` は、テーブルの変更を検出できます。
   
 `CHECKSUM_AGG` の結果は、テーブル内の行の順序に依存しません。 また、`CHECKSUM_AGG` 関数では、`DISTINCT` キーワードと `GROUP BY` 句の使用が許可されます。
@@ -64,7 +65,7 @@ DISTINCT
 `CHECKSUM_AGG` には、他の集計関数と同様の機能があります。 詳細については、[集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)を参照してください。
   
 ## <a name="examples"></a>例  
-次の例では、`CHECKSUM_AGG` を使用して、`Quantity` データベースの `ProductInventory` テーブルの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 列の変更を検出します。
+次の例では、`CHECKSUM_AGG` を使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `ProductInventory` テーブルの `Quantity` 列の変更を検出します。
   
 ```sql
 --Get the checksum value before the column value is changed.  
@@ -99,7 +100,7 @@ FROM Production.ProductInventory;
 287  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
 [HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
 [BINARY_CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)

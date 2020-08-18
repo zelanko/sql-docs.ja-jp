@@ -1,4 +1,5 @@
 ---
+description: HOST_NAME (Transact-SQL)
 title: HOST_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/21/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b0705-c083-4b07-b954-c83ee73b2ebb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ec753666e5baac90e9098bc8718d0f0b8fa1878e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 120580a238307981610179389f39cd7639baf785
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88309748"
 ---
 # <a name="host_name-transact-sql"></a>HOST_NAME (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87113491"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 HOST_NAME ()  
 ```  
@@ -42,7 +43,7 @@ HOST_NAME ()
 ## <a name="return-types"></a>戻り値の型
  **nvarchar(128)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  システム関数へのパラメーターが省略可能の場合は、現在のデータベース、ホスト コンピューター、サーバー ユーザー、またはデータベース ユーザーが推測されます。 組み込み関数の後には常にかっこが必要です。  
   
  システム関数は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。  

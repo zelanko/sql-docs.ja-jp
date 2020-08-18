@@ -1,4 +1,5 @@
 ---
+description: '[操作を実行しています] (SQL Server インポートおよびエクスポート ウィザード)'
 title: '[操作を実行しています] (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/11/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7c9749d32a0e08a6b755db739bb226540b519b85
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1ce2552519eeecb654478f522d3dd3b8880d2697
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347278"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>[操作を実行しています] (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -52,12 +53,12 @@ ms.locfileid: "86917651"
  **Report**  
  結果レポートを表示したり、ファイルに保存することができます。さらに、レポートをクリップボードにコピーすることも、電子メールで送信することもできます。  
   
-## <a name="whats-next"></a>次の操作  
+## <a name="whats-next"></a>次の手順  
  構成した操作が正常に実行されて完了したら、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードの実行は終了です。  
 -   操作をすぐに実行した場合は、選択したコピー先を開いてウィザードがコピーしたデータを確認できます。  
 -   ウィザードによって作成された SSIS パッケージを保存した場合は、それを SQL Server Data Tools で開いてカスタマイズし、再利用できます。 保存されたパッケージをカスタマイズし、後でもう一度実行する方法の詳細については、 [SSIS パッケージの保存](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)に関するページを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 

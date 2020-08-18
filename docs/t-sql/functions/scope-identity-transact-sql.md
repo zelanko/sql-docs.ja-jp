@@ -1,4 +1,5 @@
 ---
+description: SCOPE_IDENTITY (Transact-SQL)
 title: SCOPE_IDENTITY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1c3a04c1fdb01ff87543789bd2f9da8bfd685b78
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d4543adc695f7de97394bc02e8b2c478f7a22d34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112833"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88308798"
 ---
 # <a name="scope_identity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ SCOPE_IDENTITY()
 ## <a name="return-types"></a>戻り値の型
  **numeric(38,0)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  SCOPE_IDENTITY、IDENT_CURRENT、および @@IDENTITY は、ID 列に挿入された値を返すという点で似ています。  
   
  IDENT_CURRENT はスコープとセッションには限定されませんが、特定のテーブルに限定されます。 IDENT_CURRENT では、任意のセッションとスコープ内の特定のテーブルに対して生成された値が返されます。 詳しくは、「[IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)」をご覧ください。  
@@ -177,7 +178,7 @@ GO
  89
  ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)  
   
   
