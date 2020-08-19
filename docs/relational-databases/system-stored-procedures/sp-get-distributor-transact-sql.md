@@ -1,4 +1,5 @@
 ---
+description: sp_get_distributor (Transact-SQL)
 title: sp_get_distributor (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3a4dd6763c738d87aac706e3d1f648a101068dad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 737437b6bdd3de8b0d261345de47bad4fdf55eea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447111"
 ---
 # <a name="sp_get_distributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,20 +41,20 @@ sp_get_distributor
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ら**|**int**|**0** = いいえ、**1** = はい|  
+|**ら**|**int**|**0** = いいえ、 **1** = はい|  
 |**ディストリビューションサーバー**|**sysname**|ディストリビューター サーバーの名前。|  
-|**インストールされているディストリビューション db**|**int**|**0** = いいえ、**1** = はい|  
-|**is distribution publisher**|**int**|**0** = いいえ、**1** = はい|  
-|**リモートディストリビューションパブリッシャーがある**|**int**|**0** = いいえ、**1** = はい|  
+|**インストールされているディストリビューション db**|**int**|**0** = いいえ、 **1** = はい|  
+|**is distribution publisher**|**int**|**0** = いいえ、 **1** = はい|  
+|**リモートディストリビューションパブリッシャーがある**|**int**|**0** = いいえ、 **1** = はい|  
   
-## <a name="remarks"></a>Remarks  
- **sp_get_distributor**は、主に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_get_distributor** は、主に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- すべてのユーザーが**sp_get_distributor**を実行できます。 ディストリビューションデータベースの固定データベースロール**db_owner**または**replmonitor**のメンバー、または少なくとも1つのパブリッシュされたデータベースの**db_owner**固定データベースロールのメンバーによって、このストアドプロシージャが実行されると、NULL 以外の結果セットが返されます。 また、少なくとも1つのパブリッシュされたデータベースのパブリケーションアクセスリスト (PAL) のユーザーがこのストアドプロシージャを実行した場合、または SQL Server 以外のパブリッシャーのディストリビューションデータベースの PAL で**sp_get_distributor**も、NULL 以外の結果セットが返されます。  
+ すべてのユーザーが **sp_get_distributor**を実行できます。 ディストリビューションデータベースの固定データベースロール **db_owner** または **replmonitor** のメンバー、または少なくとも1つのパブリッシュされたデータベースの **db_owner** 固定データベースロールのメンバーによって、このストアドプロシージャが実行されると、NULL 以外の結果セットが返されます。 また、少なくとも1つのパブリッシュされたデータベースのパブリケーションアクセスリスト (PAL) のユーザーがこのストアドプロシージャを実行した場合、または SQL Server 以外のパブリッシャーのディストリビューションデータベースの PAL で **sp_get_distributor**も、NULL 以外の結果セットが返されます。  
   
-## <a name="see-also"></a>関連項目  
- [パブリッシングおよびディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
+## <a name="see-also"></a>参照  
+ [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [ディストリビューターおよびパブリッシャーの情報スクリプト](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

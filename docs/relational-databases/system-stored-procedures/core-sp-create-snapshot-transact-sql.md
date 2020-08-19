@@ -1,4 +1,5 @@
 ---
+description: sp_create_snapshot (Transact-sql)
 title: sp_create_snapshot (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b3ffe874615e58d276428548cb1c2ad318f111d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 763421a7c6c774c02ca6a20eb7a495ce9afecd3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898229"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447451"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>sp_create_snapshot (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,27 +49,27 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
   
 ## <a name="arguments"></a>引数  
  [ @collection_set_uid =] '*collection_set_uid*'  
- コレクション セットの GUID を指定します。 *collection_set_uid*は**uniqueidentifier**で、既定値はありません。 GUID を取得するには、msdb データベースの dbo.syscollector_collection_sets ビューにクエリを実行します。  
+ コレクション セットの GUID を指定します。 *collection_set_uid* は **uniqueidentifier** で、既定値はありません。 GUID を取得するには、msdb データベースの dbo.syscollector_collection_sets ビューにクエリを実行します。  
   
  [ @collector_type_uid =] '*collector_type_uid*'  
- コレクター型の GUID。 *collector_type_uid*は**uniqueidentifier**で、既定値はありません。 GUID を取得するには、msdb データベースの dbo.syscollector_collector_types ビューにクエリを実行します。  
+ コレクター型の GUID。 *collector_type_uid* は **uniqueidentifier** で、既定値はありません。 GUID を取得するには、msdb データベースの dbo.syscollector_collector_types ビューにクエリを実行します。  
   
  [ @machine_name =] '*machine_name*'  
- コレクション セットが存在するサーバーの名前を指定します。 *machine_name*は**sysname**であり、既定値はありません。  
+ コレクション セットが存在するサーバーの名前を指定します。 *machine_name* は **sysname**であり、既定値はありません。  
   
  [ @named_instance =] '*named_instance*'  
- コレクションセットのインスタンスの名前です。 *named_instance*は**sysname**であり、既定値はありません。  
+ コレクションセットのインスタンスの名前です。 *named_instance* は **sysname**であり、既定値はありません。  
   
  [ @log_id =] *log_id*  
- データを収集したサーバー上のコレクションセットのイベントログにマップされる一意の識別子。 *log_id*は**bigint**で、既定値はありません。 *Log_id*の値を取得するには、msdb データベースの dbo.syscollector_execution_log ビューに対してクエリを実行します。  
+ データを収集したサーバー上のコレクションセットのイベントログにマップされる一意の識別子。 *log_id* は **bigint** で、既定値はありません。 *Log_id*の値を取得するには、msdb データベースの dbo.syscollector_execution_log ビューに対してクエリを実行します。  
   
  [ @snapshot_id =] *snapshot_id*  
- コアスナップショットビューに挿入される行の一意の識別子です。 *snapshot_id*は**INT**で、出力として返されます。  
+ コアスナップショットビューに挿入される行の一意の識別子です。 *snapshot_id* は **INT** で、出力として返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  アップロード パッケージが管理データ ウェアハウスへのデータのアップロードを開始するごとに、データ コレクターの実行時コンポーネントが core.sp_create_snapshot を呼び出します。  
   
  このプロシージャでは、次の条件がチェックされます。  
@@ -82,7 +83,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="permissions"></a>アクセス許可  
  **Mdw_writer** (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ディスク使用量コレクション セットのスナップショットを作成し、それを管理データ ウェアハウスに追加して、スナップショット識別子を返します。 この例では、既定のインスタンスが使用されています。  
   
 ```  
@@ -97,9 +98,9 @@ EXEC core.sp_create_snapshot
     @snapshot_id = @snapshot_id OUTPUT;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [管理データ ウェアハウス (management data warehouse)](../../relational-databases/data-collection/management-data-warehouse.md)  
+ [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [管理データ ウェアハウス](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

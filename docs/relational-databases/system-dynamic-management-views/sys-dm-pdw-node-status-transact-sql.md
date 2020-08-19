@@ -1,4 +1,5 @@
 ---
+description: dm_pdw_node_status (Transact-sql)
 title: dm_pdw_node_status (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e13043774528228eaa46e70abe5ee00f9e51ac9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b93d177ad3f73982386407e019629401d70ec57f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395937"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447498"
 ---
 # <a name="sysdm_pdw_node_status-transact-sql"></a>dm_pdw_node_status (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "87395937"
 |received_time|**datetime**|ネットワークパッケージがこのノードによって最後に受信された時刻。||  
 |error_id|**nvarchar (36)**|このノードで発生した最後のエラーの一意の識別子。||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

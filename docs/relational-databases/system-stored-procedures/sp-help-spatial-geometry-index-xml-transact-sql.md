@@ -1,4 +1,5 @@
 ---
+description: sp_help_spatial_geometry_index_xml (Transact-SQL)
 title: sp_help_spatial_geometry_index_xml (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1f29fd66b10c9e1f18203693a2b1474781e8065a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a5f266f35096a57ef60f2c9b356639ad66cc36fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720280"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447015"
 ---
 # <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,21 +46,21 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>引数  
- 「[空間インデックスストアドプロシージャの引数とプロパティ」を](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)参照してください。  
+ 「 [空間インデックスストアドプロシージャの引数とプロパティ」を](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)参照してください。  
   
-## <a name="properties"></a>Properties  
- 「[空間インデックスストアドプロシージャの引数とプロパティ」を](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)参照してください。  
+## <a name="properties"></a>プロパティ  
+ 「 [空間インデックスストアドプロシージャの引数とプロパティ」を](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- ユーザーは、 **public**ロールのメンバーである必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
+ ユーザーは、 **public** ロールのメンバーである必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  NULL 値を含むプロパティは、XML の戻り値のセットに含まれません。  
   
 ## <a name="example"></a>例  
  次の例では、を使用し `sp_help_spatial_geometry_index_xml` て、 ** \@ qs**の指定されたクエリサンプルのテーブル**geometry_col**で定義されている空間インデックス**SIndx_SpatialTable_geometry_col2**を調査します。 この例では、選択したプロパティの名前と値を表示する XML フラグメント内の指定されたインデックスのコアプロパティを返します。  
   
- その後、 [XQuery](../../xquery/xquery-basics.md)が結果セットで実行され、特定のプロパティが返されます。  
+ その後、 [XQuery](../../xquery/xquery-basics.md) が結果セットで実行され、特定のプロパティが返されます。  
   
 ```  
 DECLARE @qs geometry  
@@ -73,7 +74,7 @@ SELECT @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
   
 ## <a name="requirements"></a>必要条件  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [空間インデックスストアドプロシージャの引数とプロパティ](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)   
  [空間インデックスストアドプロシージャ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: sp_help_spatial_geometry_index (Transact-SQL)
 title: sp_help_spatial_geometry_index (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56db1455b1b85ea50fc5bdea7f6f3d06778d329f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c69826d4d76ae518cc119cfc46418ade8407c7cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447067"
 ---
 # <a name="sp_help_spatial_geometry_index-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +43,15 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>引数  
- 「[空間インデックスストアドプロシージャの引数とプロパティ」を](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)参照してください。  
+ 「 [空間インデックスストアドプロシージャの引数とプロパティ」を](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)参照してください。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 「[空間インデックスストアドプロシージャの引数とプロパティ」を](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)参照してください。  
+ 「 [空間インデックスストアドプロシージャの引数とプロパティ」を](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  プロシージャにアクセスするには、ユーザーに PUBLIC ロールが割り当てられている必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  NULL 値を含むプロパティは、返されるセットに含まれません。  
   
 ## <a name="example"></a>例  
@@ -62,7 +63,7 @@ declare @qs geometry
 exec sp_help_spatial_geometry_index 'geometry_col', 'SIndx_SpatialTable_geometry_col2', 0, @qs;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [空間インデックスストアドプロシージャ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index_xml](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)   
  [空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)   

@@ -1,4 +1,5 @@
 ---
+description: dm_db_column_store_row_group_physical_stats (Transact-sql)
 title: dm_db_column_store_row_group_physical_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/05/2017
@@ -20,11 +21,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db8bfa11e87e4a8f595c559444907aef3c3e3e81
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cabadc5cd42afa7a001d27f55e22c138bb6f9002
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447698"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>dm_db_column_store_row_group_physical_stats (Transact-sql)
 
@@ -32,7 +34,7 @@ ms.locfileid: "86012888"
 
 現在のデータベース内のすべての列ストアインデックスについて、現在の行グループレベルの情報を提供します。  
 
-これにより、カタログビューの[column_store_row_groups &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)が拡張されます。  
+これにより、カタログビューの [column_store_row_groups &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)が拡張されます。  
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -65,9 +67,9 @@ ms.locfileid: "86012888"
 ## <a name="examples"></a>例  
   
 ### <a name="a-calculate-fragmentation-to-decide-when-to-reorganize-or-rebuild-a-columnstore-index"></a>A. 断片化を計算して、列ストアインデックスを再編成または再構築するタイミングを決定します。  
- 列ストアインデックスの場合、行グループの断片化を解消するには、削除された行の割合を使用することをお勧めします。 断片化が20% 以上の場合は、削除された行を削除します。 他の例については、「[インデックスの再編成と再構築](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
+ 列ストアインデックスの場合、行グループの断片化を解消するには、削除された行の割合を使用することをお勧めします。 断片化が20% 以上の場合は、削除された行を削除します。 他の例については、「 [インデックスの再編成と再構築](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
   
- この例では、 **sys. dm_db_column_store_row_group_physical_stats**を他のシステムテーブルと結合し、 `Fragmentation` 現在のデータベース内の各行グループの効率の推定値として列を計算します。 1つのテーブルに関する情報を検索するには、 **WHERE**句の前にあるコメントハイフンを削除し、テーブル名を指定します。  
+ この例では、 **sys. dm_db_column_store_row_group_physical_stats** を他のシステムテーブルと結合し、 `Fragmentation` 現在のデータベース内の各行グループの効率の推定値として列を計算します。 1つのテーブルに関する情報を検索するには、 **WHERE** 句の前にあるコメントハイフンを削除し、テーブル名を指定します。  
   
 ```sql  
 SELECT i.object_id,   
@@ -85,11 +87,11 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
 ```  
   
 ## <a name="see-also"></a>参照  
- [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
  [列ストア インデックスのアーキテクチャ](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)         
  [SQL Server システムカタログに対するクエリについてよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [&#40;Transact-sql&#41;の列](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [computed_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
  [column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   

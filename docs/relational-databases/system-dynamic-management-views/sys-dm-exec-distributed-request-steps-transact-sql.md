@@ -1,4 +1,5 @@
 ---
+description: dm_exec_distributed_request_steps (Transact-sql)
 title: dm_exec_distributed_request_steps (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,19 +23,19 @@ ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e5b2dcf0cf62d9fe6157284409d96bec8f105b4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 64e2e63c3b2bd7696ec9915b21e726a82bce7b07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447539"
 ---
 # <a name="sysdm_exec_distributed_request_steps-transact-sql"></a>dm_exec_distributed_request_steps (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   指定された PolyBase 要求またはクエリを構成するすべてのステップに関する情報を保持します。 クエリステップごとに1行が表示されます。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**int**|execution_id と step_index このビューのキーを構成します。 要求に関連付けられている一意の数値 id。|詳細については、「 [sys. dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)」を参照してください。|  
 |step_index|**int**|要求を構成する一連の手順におけるこのステップの位置。|n 個の手順を含む要求の場合は 0 ~ (n-1)。|  
@@ -47,11 +48,11 @@ ms.locfileid: "82833774"
 |end_time|**datetime**|このステップの実行が完了した時刻。が取り消されたか、失敗しました。|小または現在の時刻に等しいか start_time 以上で、現在実行中またはキューに置かれているステップに対して NULL に設定されます。|  
 |total_elapsed_time|**int**|クエリステップが実行されていた合計時間 (ミリ秒)|0 ~ end_time と start_time の差。 キューに登録されたステップの場合は0。|  
 |row_count|**bigint**|この要求によって変更または返された行の合計数|データが変更または返されなかったステップの場合は0。それ以外の場合は、影響を受けた行の数。 DMS ステップの場合は-1 に設定します。|  
-|コマンドを使用します|nvarchar(4000)|このステップのコマンドの完全なテキストを保持します。|ステップの任意の有効な要求文字列。 4000文字を超える場合は切り捨てられます。|  
+|command|nvarchar(4000)|このステップのコマンドの完全なテキストを保持します。|ステップの任意の有効な要求文字列。 4000文字を超える場合は切り捨てられます。|  
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューを使用した PolyBase のトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;データベース関連の動的管理ビュー ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

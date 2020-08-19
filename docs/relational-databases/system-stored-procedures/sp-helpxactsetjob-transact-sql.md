@@ -1,4 +1,5 @@
 ---
+description: sp_helpxactsetjob (Transact-sql)
 title: sp_helpxactsetjob (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f5a32c9706947471908966be59378a0d34147e1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 60d17af686d0ff289589d09dff0177b9696f17a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446981"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`ジョブが属する以外のパブリッシャーの名前を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定します。 *publisher*は**sysname**で、既定値はありません。  
+`[ @publisher = ] 'publisher'` ジョブが属する以外のパブリッシャーの名前を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定します。 *publisher* は **sysname**で、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -58,18 +59,18 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**xactsetshortthreshold**|**int**|ジョブの短いしきい値です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>注釈  
- **sp_helpxactsetjob**は、Oracle パブリッシャーのスナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_helpxactsetjob** は、Oracle パブリッシャーのスナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
- **sp_helpxactsetjob**は、常にパブリッシャーで Xactset ジョブ (HREPL_XactSetJob) の現在の設定を返します。 Xactset ジョブが現在ジョブキューにある場合は、Oracle パブリッシャーの管理者アカウントで作成された USER_JOB データディクショナリビューから、さらにジョブの属性が返されます。  
+ **sp_helpxactsetjob** は、常にパブリッシャーで Xactset ジョブ (HREPL_XactSetJob) の現在の設定を返します。 Xactset ジョブが現在ジョブキューにある場合は、Oracle パブリッシャーの管理者アカウントで作成された USER_JOB データディクショナリビューから、さらにジョブの属性が返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helpxactsetjob**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [Oracle パブリッシャー &#40;レプリケーション Transact-sql プログラミングのトランザクションセットジョブの構成&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+## <a name="see-also"></a>参照  
+ [Oracle パブリッシャー用のトランザクション セット ジョブの構成 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [sp_publisherproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   
   

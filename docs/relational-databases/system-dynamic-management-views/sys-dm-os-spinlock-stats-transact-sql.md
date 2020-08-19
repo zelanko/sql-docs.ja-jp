@@ -1,4 +1,5 @@
 ---
+description: dm_os_spinlock_stats (Transact-sql)
 title: dm_os_spinlock_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
@@ -22,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 8343a5aa5d8e95474fb87c1b6a39e2a013323295
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: df183fe9b6ee5365f623e59dd1c94738afe5df8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447594"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>dm_os_spinlock_stats (Transact-sql)
 
@@ -38,7 +39,7 @@ ms.locfileid: "85718775"
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(256)**|スピンロックの種類の名前。|  
+|name|**nvarchar (256)**|スピンロックの種類の名前。|  
 |発生|**bigint**|現在、別のスレッドがスピンロックを保持しているために、スレッドがスピンロックを取得しようとしてブロックされた回数。|  
 |スピン|**bigint**|スピンロックを取得しようとしているときに、スレッドがループを実行する回数。|  
 |spins_per_collision|**real**|競合ごとのスピンの比率。|  
@@ -50,7 +51,7 @@ ms.locfileid: "85718775"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。    
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  
  スピンロックの競合の原因を特定するには、dm_os_spinlock_stats を使用できます。 場合によっては、スピンロックの競合を解決または減少させることができます。 ただし、場合によっては、カスタマーサポートサービスに問い合わせる必要があり [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。  
   

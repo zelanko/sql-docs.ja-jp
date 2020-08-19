@@ -1,4 +1,5 @@
 ---
+description: sp_monitor (Transact-sql)
 title: sp_monitor (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 400d6f484ee80d9b4b1244aad6b91c8836aa95d4
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 6722a59873dcf672fe2c1b953931f44da4515a8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446991"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_monitor
 ```  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -59,10 +60,10 @@ sp_monitor
 |**total_errors**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の読み書き中に発生したエラー数|  
 |**connections**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのログインまたはログイン試行の回数|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、いくつかの関数によって処理量が追跡されます。 **Sp_monitor**を実行すると、これらの関数によって返された現在の値が表示され、最後にプロシージャが実行されてから変更された量が表示されます。  
   
- 各列について、統計情報は*number*(*number)-**number*% または*number*(*number*) の形式で出力されます。 最初の*数値*は、が再起動されてからの秒数 ( **cpu_busy**、 **io_busy**、および**アイドル**の場合) または合計数 (他の変数の場合) を表し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 かっこ内の*数値*は、最後に**sp_monitor**が実行されてからの秒数または合計数を表します。 割合は**sp_monitor**が最後に実行されてからの時間の割合です。 たとえば、レポートに**cpu_busy** (215)-68% と表示されている場合、cpu は、前回の起動以降に4250秒 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sp_monitor**が最後に実行されてから215秒、 **sp_monitor**が最後に実行されてからの合計時間の68% に達しています。  
+ 各列について、統計情報は*number*(*number)-**number*% または*number*(*number*) の形式で出力されます。 最初の *数値* は、が再起動されてからの秒数 ( **cpu_busy**、 **io_busy**、および **アイドル**の場合) または合計数 (他の変数の場合) を表し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 かっこ内の *数値* は、最後に **sp_monitor** が実行されてからの秒数または合計数を表します。 割合は **sp_monitor** が最後に実行されてからの時間の割合です。 たとえば、レポートに **cpu_busy** (215)-68% と表示されている場合、cpu は、前回の起動以降に4250秒 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sp_monitor** が最後に実行されてから215秒、 **sp_monitor** が最後に実行されてからの合計時間の68% に達しています。  
   
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  

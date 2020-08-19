@@ -1,4 +1,5 @@
 ---
+description: sys.resource_stats (Azure SQL データベース)
 title: resource_stats (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2018
@@ -19,12 +20,12 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: be336780f5bbfd45660ea376c0d689b577f052da
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 29862abf480aa5470314a531558839154886cc04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447855"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL データベース)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "87822922"
 |sku|**nvarchar(128)**|データベースのサービス階層。 使用できる値を次に示します。<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />General Purpose<br /><br />Business Critical|  
 |storage_in_megabytes|**float**|データベースデータ、インデックス、ストアドプロシージャ、およびメタデータを含む、期間の最大ストレージサイズ (mb)。|  
 |avg_cpu_percent|**decimal (5, 2)**|サービス層の制限に対する割合での平均コンピューティング使用率。|  
-|avg_data_io_percent|**decimal (5, 2)**|サービス層の制限に基づく平均 i/o 使用率 (%)。 Hyperscale データベースについては、「[リソース使用率の統計情報のデータ IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)」を参照してください。|  
+|avg_data_io_percent|**decimal (5, 2)**|サービス層の制限に基づく平均 i/o 使用率 (%)。 Hyperscale データベースについては、「 [リソース使用率の統計情報のデータ IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)」を参照してください。|  
 |avg_log_write_percent|**decimal (5, 2)**|サービス層の上限に対するパーセンテージで示した、平均書き込みリソース使用率。|  
 |max_worker_percent|**decimal (5, 2)**|データベースのサービスレベルの上限に基づく割合の最大同時実行ワーカー (要求)。<br /><br /> 現在、最大値は、同時実行ワーカー数の15秒のサンプルに基づいて、5分間隔で計算されます。|  
 |max_session_percent|**decimal (5, 2)**|データベースのサービス階層の上限に基づく割合の最大同時セッション数。<br /><br /> 現在、最大値は、同時セッション数の15秒のサンプルに基づいて、5分間隔で計算されます。|  
@@ -56,17 +57,17 @@ ms.locfileid: "87822922"
 |allocated_storage_in_megabytes|**float**|データベースデータを格納するために使用できる、フォーマットされたファイル領域のサイズ (MB)。 フォーマットされたファイル領域は、割り当てられたデータ領域とも呼ばれます。  詳細については、「 [SQL Database でのファイル領域管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)」を参照してください。|
   
 > [!TIP]  
->  これらの制限とサービスレベルの詳細については、「[サービスレベル](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)」を参照してください。  
+>  これらの制限とサービスレベルの詳細については、「 [サービスレベル](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)」を参照してください。  
     
 ## <a name="permissions"></a>アクセス許可  
- このビューは、仮想**master**データベースに接続するためのアクセス許可を持つすべてのユーザーロールで使用できます。  
+ このビューは、仮想 **master** データベースに接続するためのアクセス許可を持つすべてのユーザーロールで使用できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Resource_stats**によって返されるデータは、実行しているサービス階層/パフォーマンスレベルに対して許容される最大制限の割合として表されます。  
   
  データベースがエラスティックプールのメンバーである場合、パーセント値として表示されるリソース統計は、エラスティックプール構成で設定されたデータベースの上限に対する比率として表されます。  
   
- このデータをより詳細に表示するには、ユーザーデータベースの**dm_db_resource_stats**動的管理ビューを使用します。 このビューでは、15秒ごとにデータをキャプチャし、1時間の履歴データを保持します。  詳細については、「 [sys. dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)」を参照してください。  
+ このデータをより詳細に表示するには、ユーザーデータベースの **dm_db_resource_stats** 動的管理ビューを使用します。 このビューでは、15秒ごとにデータをキャプチャし、1時間の履歴データを保持します。  詳細については、「 [sys. dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)」を参照してください。  
 
 ## <a name="examples"></a>例  
  次の例では、過去1週間のコンピューティング使用率の平均が80% 以上のすべてのデータベースを返します。  

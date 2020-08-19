@@ -1,4 +1,5 @@
 ---
+description: パーティション テーブルとパーティション インデックスのレプリケート
 title: パーティション テーブルとパーティション インデックスのレプリケート | Microsoft Docs
 ms.custom: ''
 ms.date: 09/10/2015
@@ -17,12 +18,12 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6d4e7dc85c98e368217b7d556e4c0a8fbd2501e7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c8d6d59dc29060a10fc0ad15f1b2fbbfbba5fb34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448186"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスのレプリケート
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,7 +79,7 @@ ms.locfileid: "86915754"
   
  これらのプロパティは、パブリケーションの作成時に [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) を使用するか、パブリケーションの作成後に [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を使用することによって設定できます。 既に述べたとおり、マージ レプリケーションではパーティション切り替えがサポートされません。 マージ レプリケーションが有効になっているテーブルで SWITCH PARTITION を実行するには、パブリケーションからテーブルを削除します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データとデータベース オブジェクトのパブリッシュ](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

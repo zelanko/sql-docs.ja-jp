@@ -1,4 +1,5 @@
 ---
+description: SRID (Spatial Reference Identifier)
 title: SRID (Spatial Reference Identifier) | Microsoft Docs
 ms.date: 03/29/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7d95c1c3b1c8f578a80601b4996e1c6bd9dd63c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4ce3d6732b42640755f92e64244ae10c870b4666
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447986"
 ---
 # <a name="spatial-reference-identifiers-srids"></a>SRID (Spatial Reference Identifier)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85666545"
 > [!NOTE]  
 >  空間参照識別系は、地図制作、測量、および測地のデータの格納のために開発された一連の標準である [European Petroleum Survey Group (EPSG)](https://go.microsoft.com/fwlink/?LinkId=99349) 標準によって定義されています。 この標準は、Oil and Gas Producers (OGP) Surveying and Positioning Committee が所有しています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [空間データ型の概要](../../relational-databases/spatial/spatial-data-types-overview.md)  
   
   

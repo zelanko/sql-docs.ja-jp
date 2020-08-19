@@ -1,4 +1,5 @@
 ---
+description: sp_execute (Transact-sql)
 title: sp_execute (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12bfa6e7d37aae2a5ffc58828d47ace11d558487
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4f98a4ea55123cbb3b74d476e13768b9aa5d9231
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87392937"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447161"
 ---
 # <a name="sp_execute-transact-sql"></a>sp_execute (Transact-sql)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -43,10 +44,10 @@ sp_execute handle OUTPUT
   
 ## <a name="arguments"></a>引数  
  *扱え*  
- Sp_prepare によって返される*ハンドル*値です。 *handle*は、 **int**入力値を呼び出す必須のパラメーターです。  
+ Sp_prepare によって返される *ハンドル* 値です。 *handle* は、 **int** 入力値を呼び出す必須のパラメーターです。  
   
  *bound_param*  
- 追加のパラメーターを使用することを示します。 *bound_param*は、プロシージャの追加パラメーターを示すために、任意のデータ型の入力値を呼び出す必須のパラメーターです。  
+ 追加のパラメーターを使用することを示します。 *bound_param* は、プロシージャの追加パラメーターを示すために、任意のデータ型の入力値を呼び出す必須のパラメーターです。  
   
 > [!NOTE]  
 >  *bound_param*は、sp_prepare*params*値によって行われた宣言と一致する必要があり、 * @name = value*または*value*の形式で指定できます。  

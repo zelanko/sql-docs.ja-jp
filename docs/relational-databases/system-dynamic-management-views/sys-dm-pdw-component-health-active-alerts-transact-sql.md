@@ -1,4 +1,5 @@
 ---
+description: dm_pdw_component_health_active_alerts (Transact-sql)
 title: dm_pdw_component_health_active_alerts (Transact-sql
 ms.custom: seo-dt-2019
 ms.date: 03/07/2017
@@ -10,12 +11,12 @@ ms.assetid: c53e4a36-b841-424a-b8e2-255b1878deb6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0a8a1808e20accfadd3adc6f5a5c326f78870ed7
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1dd5369c30de5ce70601b51c47cac2b7ad7f3014
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447502"
 ---
 # <a name="sysdm_pdw_component_health_active_alerts-transact-sql"></a>dm_pdw_component_health_active_alerts (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87395202"
   
  このビューで保持される最大行数の詳細については、「」の「最小値と最大値」を参照してください [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

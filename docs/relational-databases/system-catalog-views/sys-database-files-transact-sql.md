@@ -1,4 +1,5 @@
 ---
+description: sys.database_files (Transact-SQL)
 title: database_files (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
@@ -20,11 +21,12 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c12fdc6ebdd5932715de28083ff5bbb9169d930
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1c57ffe323ce471c8c5e524ff5b7ba7ee3a85adf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447997"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,11 +37,11 @@ ms.locfileid: "86003035"
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|データベース内のファイルの ID。|  
 |**file_guid**|**uniqueidentifier**|ファイルの GUID。<br /><br /> NULL = データベースは、以前のバージョンのからアップグレードされました [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2005 以前では有効)。|  
-|**type**|**tinyint**|ファイルの種類です。<br/><br /> 0 = 行<br /><br/> 1 = ログ<br/><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト|  
+|**type**|**tinyint**|ファイルの種類です。<br/><br /> 0 = 行<br /><br/> 1 = ログ<br/><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト|  
 |**type_desc**|**nvarchar(60)**|ファイルの種類の説明。<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|値には0または0より大きい値を指定できます。 値0はデータベースログファイルを表し、0より大きい値はこのデータファイルが格納されているファイルグループの ID を表します。|  
 |**name**|**sysname**|データベース内のファイルの論理名。|  
-|**physical_name**|**nvarchar(260)**|オペレーティングシステムのファイル名。 データベースが AlwaysOn の[読み取り可能なセカンダリレプリカ](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)によってホストされている場合、 **physical_name**は、プライマリレプリカデータベースのファイルの場所を示します。 読み取り可能なセカンダリデータベースの正しいファイルの場所に対して、クエリ[sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)を使用します。|  
+|**physical_name**|**nvarchar(260)**|オペレーティングシステムのファイル名。 データベースが AlwaysOn の [読み取り可能なセカンダリレプリカ](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)によってホストされている場合、 **physical_name** は、プライマリレプリカデータベースのファイルの場所を示します。 読み取り可能なセカンダリデータベースの正しいファイルの場所に対して、クエリ [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)を使用します。|  
 |**状態**|**tinyint**|ファイルの状態です。<br /><br /> 0 = ONLINE<br /><br /> 1 = 復元中<br /><br /> 2 = 回復中<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = 問題あり<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|ファイルの状態の説明です。<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 詳しくは、「[ファイルの状態](../../relational-databases/databases/file-states.md)」をご覧ください。|  
 |**size**|**int**|ファイルの現在のサイズ (8 KB ページ単位)。<br /><br /> 0 = 適用なし<br /><br /> データベース スナップショットの場合、size は、スナップショットがファイルに対して使用する中で最大の領域を表します。<br /><br /> FILESTREAM ファイルグループコンテナーの場合、サイズはコンテナーの現在使用されているサイズを反映します。|  
@@ -78,14 +80,14 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-を使用する場合の詳細につい [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ては、SQL Customer アドバイザリチームブログの「 [Azure SQL Database V12 でのデータベースサイズの決定](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/)」を参照してください。
+を使用する場合の詳細につい [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ては、SQL Customer アドバイザリチームブログの「 [Azure SQL Database V12 でのデータベースサイズの決定](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) 」を参照してください。
   
 ## <a name="see-also"></a>参照  
- [データベースとファイルのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [データベースとファイルのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [ファイルの状態](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [データベースファイルとファイルグループ](../../relational-databases/databases/database-files-and-filegroups.md)   
+ [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   

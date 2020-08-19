@@ -1,4 +1,5 @@
 ---
+description: PowerShell を使用して Always Encrypted キーをローテーションする
 title: PowerShell を使用して Always Encrypted キーをローテーションする | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -11,12 +12,12 @@ ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f5e9cbaffe30849f5e2bb2385f49fabd603bc1f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1f2010ad30f38d2e7bf89a18b833d93e00aec1f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448114"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>PowerShell を使用して Always Encrypted キーをローテーションする
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_wait_stats (Transact-SQL)
 title: dm_os_wait_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2019
@@ -20,16 +21,17 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4a381c891c7cab2f4c14baaf87e9c5108cea714
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: a10193722529fabd7cce09569107520fe1b6410d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447588"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-実行されたスレッドによって検出されたすべての待機に関する情報を返します。 この集計ビューを使って、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および特定のクエリとバッチに関するパフォーマンスの問題を診断できます。 [transact-sql&#41;&#40;dm_exec_session_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)は、セッションによって同様の情報を提供します。  
+実行されたスレッドによって検出されたすべての待機に関する情報を返します。 この集計ビューを使って、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および特定のクエリとバッチに関するパフォーマンスの問題を診断できます。 [transact-sql&#41;&#40;dm_exec_session_wait_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) は、セッションによって同様の情報を提供します。  
   
 > [!NOTE] 
 > ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] また [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は**からこれを呼び出すには、 **dm_pdw_nodes_os_wait_stats**という名前を使用します。  
@@ -41,15 +43,15 @@ ms.locfileid: "86091546"
 |wait_time_ms|**bigint**|この待機の種類における総待機時間 (ミリ秒単位)。 この時間には signal_wait_time_ms が含まれます。|  
 |max_wait_time_ms|**bigint**|この待機の種類における最大待機時間。|  
 |signal_wait_time_ms|**bigint**|待機スレッドがシグナルを受け取ってから実行を開始するまでの時間。|  
-|pdw_node_id|**int**|このディストリビューションが配置されているノードの識別子。 <br/> **適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|このディストリビューションが配置されているノードの識別子。 <br/> **適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>アクセス許可
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-##  <a name="types-of-waits"></a><a name="WaitTypes"></a>待機の種類  
- **リソース待機**リソース待機は、ワーカーが、リソースが他のワーカーによって使用されているか、まだ使用できないために利用できないリソースへのアクセスを要求したときに発生します。 リソース待機の例としては、ロック、ラッチ、ネットワークおよびディクス I/O 待機があります。 ロックおよびラッチ待機は同期オブジェクトで待機します  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a> 待機の種類  
+ **リソース待機** リソース待機は、ワーカーが、リソースが他のワーカーによって使用されているか、まだ使用できないために利用できないリソースへのアクセスを要求したときに発生します。 リソース待機の例としては、ロック、ラッチ、ネットワークおよびディクス I/O 待機があります。 ロックおよびラッチ待機は同期オブジェクトで待機します  
   
 **キュー待機**  
  キュー待機は、ワーカーが作業割り当ての待機でアイドル状態となっている場合に発生します。 キュー待機は、デッドロック監視のようなシステム バックグラウンド タスクや、削除されたレコードのクリーンアップ タスクで最も多く発生します。 これらのタスクは、作業要求が作業キューに配置されるまで待機します。 キュー待機は、新しいパケットがキューに配置されていない場合でも、定期的にアクティブになることがあります。  
@@ -57,7 +59,7 @@ ms.locfileid: "86091546"
  **外部待機**  
  外部待機は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ワーカーが、拡張ストアド プロシージャの呼び出しやリンク サーバー クエリなどの外部イベントの終了を待機しているときに発生します。 ブロッキングの問題を診断するときには、外部待機が発生していてもワーカーがアイドル状態になっているとは限らないことに注意してください。ワーカーはアクティブ状態で外部コードを実行している可能性があるためです。  
   
- `sys.dm_os_wait_stats`完了した待機時間を示します。 この動的管理ビューには、現在の待機が表示されません。  
+ `sys.dm_os_wait_stats` 完了した待機時間を示します。 この動的管理ビューには、現在の待機が表示されません。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次のいずれかに該当する場合、ワーカースレッドは待機しているとは見なされません。  
   
@@ -69,7 +71,7 @@ ms.locfileid: "86091546"
   
  スレッドは、待機中でなくなってもすぐに実行を開始する必要はありません。 このようなスレッドは、最初に実行可能なワーカーのキューに配置された後、スケジューラに従って実行するために、クォンタムの間待機する必要があります。  
   
- では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、待機時間カウンターは**bigint**値であるため、以前のバージョンのの同等のカウンターとしてカウンターロールオーバーが発生する可能性は低く [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] なります。  
+ では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、待機時間カウンターは **bigint** 値であるため、以前のバージョンのの同等のカウンターとしてカウンターロールオーバーが発生する可能性は低く [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] なります。  
   
  クエリ実行中に発生している待機時間の種類によって、クエリにボトルネックや機能停止ポイントがあるかどうかを判断できます。 また、サーバー全体の待機時間や待機カウントが高い値を示している場合は、サーバー インスタンス内の対話型クエリの対話にボトルネックまたはホット スポットが存在していることを表しています。 たとえば、ロック待機の場合はクエリによるデータ競合、ページ I/O ラッチ待機の場合は遅い I/O 反応時間、ページ ラッチ更新待機の場合は不正なファイル レイアウトが存在していると判断できます。  
   
@@ -166,8 +168,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 以降。| 
 |COUNT/YMGR |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |CREATE_DATINISERVICE |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
-|CXCONSUMER<a name="cxconsumer"></a>|コンシューマースレッド (親) がプロデューサースレッドによる行の送信を待機しているときに、並列クエリプランで発生します。 CXCONSUMER の待機は、そのプロデューサースレッドから行を使い果たした Exchange 反復子によって発生します。 これは、並列クエリの実行の通常の部分です。 <br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] )、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET<a name="cxpacket"></a>|クエリプロセッサ交換反復子を同期するとき、および行を生成および使用するときに、並列クエリプランで発生します。 待機時間が長く、クエリのチューニング (インデックスの追加など) によって減らすことができない場合は、並列処理のコストしきい値を調整するか、並列処理の最大限度 (MaxDOP) を下げることを検討してください。<br /> **注:**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2、 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3、およびでは [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 、CXPACKET は、クエリプロセッサ交換反復子と行の生成時の同期のみを指します。 コンシューマースレッドが遅すぎると、交換反復子バッファーがいっぱいになり、CXPACKET 待機が発生する可能性があります。 コンシューマースレッドは、CXCONSUMER の待機の種類で個別に追跡されます。| 
+|CXCONSUMER <a name="cxconsumer"></a>|コンシューマースレッド (親) がプロデューサースレッドによる行の送信を待機しているときに、並列クエリプランで発生します。 CXCONSUMER の待機は、そのプロデューサースレッドから行を使い果たした Exchange 反復子によって発生します。 これは、並列クエリの実行の通常の部分です。 <br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] )、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET <a name="cxpacket"></a>|クエリプロセッサ交換反復子を同期するとき、および行を生成および使用するときに、並列クエリプランで発生します。 待機時間が長く、クエリのチューニング (インデックスの追加など) によって減らすことができない場合は、並列処理のコストしきい値を調整するか、並列処理の最大限度 (MaxDOP) を下げることを検討してください。<br /> **注:**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2、 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3、およびでは [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 、CXPACKET は、クエリプロセッサ交換反復子と行の生成時の同期のみを指します。 コンシューマースレッドが遅すぎると、交換反復子バッファーがいっぱいになり、CXPACKET 待機が発生する可能性があります。 コンシューマースレッドは、CXCONSUMER の待機の種類で個別に追跡されます。| 
 |CXROWSET_SYNC |範囲の並列スキャン中に発生します。| 
 |DAC_INIT |専用管理者接続の初期化中に発生します。| 
 |DBCC_SCALE_OUT_EXPR_CACHE |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
@@ -1014,7 +1016,7 @@ GO
 |XTPPROC_PARTITIONED_STACK_CREATE |特定のプロシージャに対して、NUMA ノードごとのネイティブコンパイルストアドプロシージャキャッシュ構造 (シングルスレッドで実行する必要があります) を割り当てるときに発生します。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。|
 
   
- 次の Xevent は、パーティション**切り替え**とオンラインインデックス再構築に関連しています。 構文の詳細については、「 [ALTER TABLE &#40;transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md) 」および「 [Alter INDEX &#40;transact-sql&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
+ 次の Xevent は、パーティション **切り替え** とオンラインインデックス再構築に関連しています。 構文の詳細については、「 [ALTER TABLE &#40;transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md) 」および「 [Alter INDEX &#40;transact-sql&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
   
 -   lock_request_priority_state  
   

@@ -1,4 +1,5 @@
 ---
+description: dm_exec_compute_node_status (Transact-sql)
 title: dm_exec_compute_node_status (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -21,19 +22,19 @@ ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 604b7cc86ecd0bc191de50bb07baa0690c16ca57
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 182a6fff7ff2cf0af1b009a3c5acc79e00c8365a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447633"
 ---
 # <a name="sysdm_exec_compute_node_status-transact-sql"></a>dm_exec_compute_node_status (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   すべての PolyBase ノードのパフォーマンスと状態に関する追加情報を保持します。 ノードごとに1行を一覧表示します。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|`int`|ノードに関連付けられている一意の数値 id。|種類に関係なく、スケールアウトクラスター全体で一意です。|  
 |process_id|`int`|||  
@@ -53,7 +54,7 @@ ms.locfileid: "82830687"
 
 ## <a name="see-also"></a>参照  
  [動的管理ビューを使用した PolyBase のトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;データベース関連の動的管理ビュー ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   
