@@ -1,4 +1,5 @@
 ---
+description: CREATE DEFAULT (Transact-SQL)
 title: CREATE DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 361963d6836cb4c4b89c62f8ca1481b292bc803e
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 8d1001196c5b4e88c105f0fa7e0355e97e3ee884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426784"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,9 +57,9 @@ AS constant_expression [ ; ]
  デフォルトの名前。 デフォルトの名前は、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。 既定の所有者名の指定は省略可能です。  
   
 *constant_expression*  
-定数値のみを含む[式](../../t-sql/language-elements/expressions-transact-sql.md) (列名や他のデータベース オブジェクト名を含めることはできません)。 任意の定数、組み込み関数、または数式を使用できます。別名データ型を含むものは使用できません。 ユーザー定義関数は使用できません。 文字および日付定数は単一引用符 ( **'** ) で囲んでください。金額、整数、および浮動小数点定数には引用符は必要ありません。 バイナリ データの前には 0x を付ける必要があり、通貨データの前にはドル記号 ($) を付ける必要があります。 既定値は、列のデータ型と互換性がある必要があります。  
+定数値のみを含む[式](../../t-sql/language-elements/expressions-transact-sql.md) (列名や他のデータベース オブジェクト名を含めることはできません)。 任意の定数、組み込み関数、または数式を使用できます。別名データ型を含むものは使用できません。 ユーザー定義関数は使用できません。 文字および日付定数は単一引用符 (**'**) で囲んでください。金額、整数、および浮動小数点定数には引用符は必要ありません。 バイナリ データの前には 0x を付ける必要があり、通貨データの前にはドル記号 ($) を付ける必要があります。 既定値は、列のデータ型と互換性がある必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  デフォルト名は現在のデータベース内にのみ作成できます。 データベース内で、既定の名前はスキーマにより一意である必要があります。 デフォルトを作成したら、**sp_bindefault** を使用してデフォルトを列または別名データ型にバインドします。  
   
  デフォルトとバインド先の列に互換性がない場合、既定値の挿入を試みると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラー メッセージが生成されます。 たとえば、**numeric** 型の列のデフォルトとして N/A を使用することはできません。  
@@ -81,8 +82,8 @@ AS constant_expression [ ; ]
   
 |列の定義|入力なし、既定値なし|入力なし、デフォルトあり|NULL を入力、デフォルトなし|NULL を入力、既定値あり|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
-|**NULL**|NULL|既定値 (default)|NULL|NULL|  
-|**NOT NULL**|エラー|既定値 (default)|error|error|  
+|**NULL**|NULL|default|NULL|NULL|  
+|**NOT NULL**|エラー|default|error|error|  
   
  デフォルトの名前を変更するには、**sp_rename** を使用します。 デフォルトに関するレポートを表示するには、**sp_help** を使用します。  
   
@@ -101,7 +102,7 @@ CREATE DEFAULT phonedflt AS 'unknown';
 ```  
   
 ### <a name="b-binding-a-default"></a>B. 既定値をバインドする  
- 次の例では、例 A で作成したデフォルトをバインドします。デフォルトが有効になるのは、`Phone` テーブルの `Contact` 列にエントリが指定されていない場合のみです。 
+ 次の例では、例 A で作成したデフォルトをバインドします。デフォルトが有効になるのは、`Contact` テーブルの `Phone` 列にエントリが指定されていない場合のみです。 
  
  > [!Note] 
  >  任意のエントリを省略することは、INSERT ステートメントで NULL を明示的に示すこととは異なります。  

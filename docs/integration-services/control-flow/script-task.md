@@ -1,4 +1,5 @@
 ---
+description: スクリプト タスク
 title: スクリプト タスク | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18ff96f3fd227507d57051cec69f5704b7b64749
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 506b99d81a47df7a88a2ef33ea91815b99e165fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425884"
 ---
 # <a name="script-task"></a>スクリプト タスク
 
@@ -80,7 +81,7 @@ ms.locfileid: "86921158"
   
 -   [[スクリプト タスク エディター] &#40;[全般] ページ&#41;](../../integration-services/control-flow/script-task-editor-general-page.md)  
   
--   [[スクリプト タスク エディター] &#40;[スクリプト] ページ&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
+-   [[スクリプト タスク エディター] ([スクリプト] ページ)](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
 -   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   

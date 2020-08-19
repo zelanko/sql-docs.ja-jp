@@ -1,4 +1,5 @@
 ---
+description: レコードセット変換先を使用する
 title: レコードセット変換先を使用する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 605cdbdc7b813fbbecb819bd31bde42f8f5afdc7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d823048d128d8837c80c724064ea0d8afe1a5a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916660"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425604"
 ---
 # <a name="use-a-recordset-destination"></a>レコードセット変換先を使用する
 
@@ -157,7 +158,7 @@ ms.locfileid: "86916660"
   
     5.  **[MessageSourceType]** に対して **[直接入力]** を選択します。  
   
-5.  **[メール送信タスク エディター]** の **[式]** ページで、参照ボタン ( **[...]** ) をクリックして **[プロパティ式エディター]** を開きます。  
+5.  **[メール送信タスク エディター]** の **[式]** ページで、参照ボタン (**[...]**) をクリックして **[プロパティ式エディター]** を開きます。  
   
 6.  **[プロパティ式エディター]** で、次の情報を入力します。  
   

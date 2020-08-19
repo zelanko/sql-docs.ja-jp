@@ -1,4 +1,5 @@
 ---
+description: 全体結合変換
 title: 全体結合変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 45b21ea454e7c40f7af28863802d1678b3095d50
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9cb32c68f05e4be6b25d0fc20ae088aa6760bfd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425624"
 ---
 # <a name="union-all-transformation"></a>全体結合変換
 
@@ -32,7 +33,7 @@ ms.locfileid: "86920343"
 
   全体結合変換は、複数の入力を 1 つの出力に結合します。 たとえば、5 つの異なるフラット ファイル ソースからの出力を全体結合変換への入力とし、1 つの出力に結合できます。  
   
-## <a name="inputs-and-outputs"></a>入力および出力  
+## <a name="inputs-and-outputs"></a>入力と出力  
  変換入力は、変換出力に 1 つずつ追加されます。行の並べ替えは発生しません。 パッケージで並べ替え出力が必要な場合は、全体結合変換ではなくマージ変換を使用する必要があります。  
   
  全体結合変換に連結した最初の入力が変換出力のソースとなり、これから変換出力が作成されます。 全体結合変換に次に連結した入力の列は、変換出力の列にマップされます。  
@@ -56,7 +57,7 @@ ms.locfileid: "86920343"
   **[全体結合変換エディター]** ダイアログ ボックスを使用すると、複数の入力行セットを 1 つの出力行セットにマージできます。 データ フローに全体結合変換を含めることで、複数のデータ フローのデータをマージしたり、全体結合変換を入れ子にして複雑なデータセットを作成したり、データ内のエラーを修正した後で行を再マージしたりできます。  
   
 ### <a name="options"></a>オプション  
- **[出力列の名前]**  
+ **出力列の名前**  
  各列に対して別名を入力します。 既定では最初の (参照) 入力の入力列の名前が使用されますが、一意なわかりやすい名前を任意に付けることもできます。  
   
  **[全体結合 入力 1]**  

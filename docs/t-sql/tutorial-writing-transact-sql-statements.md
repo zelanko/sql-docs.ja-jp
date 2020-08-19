@@ -1,4 +1,5 @@
 ---
+description: 'チュートリアル: Transact-SQL ステートメントの作成'
 title: 'チュートリアル: Transact-SQL ステートメントの作成 | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/03/2016
@@ -14,12 +15,12 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae6f97bd7aeea2bb587f5c572204d76f7167aafa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9d842186c057df54276d19c2b5b5774225961b3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051338"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426474"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>チュートリアル: Transact-SQL ステートメントの作成
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "68051338"
 [レッスン 1: データベース オブジェクトの作成](../t-sql/lesson-1-creating-database-objects.md)  
 このレッスンでは、データベースを作成し、データベースにテーブルを作成し、データをテーブルに挿入します。さらに、データを更新し、読み取ります。  
   
-[レッスン 2: データベース オブジェクトに対するアクセス許可の構成](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
+[レッスン 2: データベース オブジェクトに対する権限の構成](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
 このレッスンでは、ログインとユーザーを作成します。 また、ビューとストアド プロシージャも作成し、ストアド プロシージャにユーザー権限を与えます。  
   
 [レッスン 3: データベース オブジェクトの削除](../t-sql/lesson-3-deleting-database-objects.md)  

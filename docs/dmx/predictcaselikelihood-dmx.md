@@ -1,4 +1,5 @@
 ---
+description: PredictCaseLikelihood 度 (DMX)
 title: PredictCaseLikelihood 度 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3c1134e5cf1ca053cba52c943226f41fe3d4b625
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: b182e4a3a842065152b050ed1b428d71b7d0cf07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426124"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood 度 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -40,8 +41,8 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
 ## <a name="return-type"></a>戻り値の型  
  0から1までの倍精度浮動小数点数。 1に近い数値は、このモデルでケースが発生する確率が高いことを示します。 値が 0 に近いほど、このモデルでケースが発生する確率が低くなります。  
   
-## <a name="remarks"></a>注釈  
- 既定では、 **Predictcaselikelihood**関数の結果は正規化されます。 通常、正規化された値は、ケース内の属性の数が増え、任意の 2 つのケースの未加工の確率の差が小さくなるほど、有用性が増します。  
+## <a name="remarks"></a>解説  
+ 既定では、 **Predictcaselikelihood** 関数の結果は正規化されます。 通常、正規化された値は、ケース内の属性の数が増え、任意の 2 つのケースの未加工の確率の差が小さくなるほど、有用性が増します。  
   
  次の式は、x と y を指定して正規化された値を計算するために使用します。  
   
@@ -82,7 +83,7 @@ NATURAL PREDICTION JOIN
 ## <a name="see-also"></a>参照  
  [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)  
+ [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)  
   
   

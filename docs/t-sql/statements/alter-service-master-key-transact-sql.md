@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVICE MASTER KEY (Transact-SQL)
 title: ALTER SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9cc3706e371f1c9c4fcc031fd4665459e65937ca
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 53526aa2ba6a59b623382aa1c47b11443759756b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426824"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -88,7 +89,7 @@ ALTER SERVICE MASTER KEY
 > [!WARNING]  
 >  このオプションは、互換性のために残されています。 使用しないでください。 代わりに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager を使用してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  サービス マスター キーは、リンク サーバーのパスワード、資格情報、またはデータベースのマスター キーの暗号化が最初に必要になったときに、自動的に生成されます。 サービス マスター キーは、ローカル コンピューターのキーまたは Windows Data Protection API を使用して暗号化されます。 この API では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントの Windows 資格情報から派生するキーが使用されます。  
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] AES 暗号化アルゴリズムを使用してサービス マスター キー (SMK) とデータベース マスター キー (DMK) を保護します。 AES は、以前のバージョンで使用されていた 3DES よりも新しい暗号化アルゴリズムです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] にアップグレードした後で、マスター キーを AES にアップグレードするために SMK と DMK を再度生成する必要があります。 DMK を再作成する方法については、「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。  

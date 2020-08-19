@@ -1,4 +1,5 @@
 ---
+description: '[ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス'
 title: '[ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 226dd6c94787af8c32d17cd7bf923a860645c5ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8096ccaf1fc92710e46970744a7a4f7cbe000700
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921718"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426034"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>[ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス
 
@@ -39,7 +40,7 @@ ms.locfileid: "86921718"
   
 |値|説明|  
 |-----------|-----------------|  
-|**[ファイルの作成]**|接続マネージャーはファイルを作成します。|  
+|**ファイルを作成する**|接続マネージャーはファイルを作成します。|  
 |**[既存のファイル]**|接続マネージャーは既存のファイルを使用します。|  
 |**[フォルダーの作成]**|接続マネージャーはフォルダーを作成します。|  
 |**[既存のフォルダー]**|接続マネージャーは既存のフォルダーを使用します。|  
@@ -60,6 +61,6 @@ ms.locfileid: "86921718"
  ファイルまたはフォルダーを選択し、矢印ボタンを使用して上または下に移動して、アクセスのシーケンスを指定します。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services のエラーとメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)  
+ [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

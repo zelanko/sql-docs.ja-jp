@@ -1,4 +1,5 @@
 ---
+description: XML ソース
 title: XML ソース | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 310381f04bc48eeb3d4732ea1e9b0d7fd99aed43
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 14aeae01cecd283ae480b337543fa0e1c4fe8bfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425614"
 ---
 # <a name="xml-source"></a>XML ソース
 
@@ -125,17 +126,17 @@ ms.locfileid: "86920299"
  **[開く]** ダイアログ ボックスを使用して、XML データ ファイルを指定します。  
   
 #### <a name="data-access-mode--xml-file-from-variable"></a>[データ アクセス モード] が [変数からの XML ファイル] の場合  
- **[変数名]**  
+ **変数名**  
  XML ファイルのパスとファイル名を含む変数を選択します。  
   
 #### <a name="data-access-mode--xml-data-from-variable"></a>[データ アクセス モード] が [変数からの XML データ] の場合  
- **[変数名]**  
+ **変数名**  
  XML データを含む変数を選択します。  
   
 ## <a name="xml-source-editor-columns-page"></a>[XML ソース エディター] ([列] ページ)
   **[XML ソース エディター]** ダイアログ ボックスの **[列]** ノードを使用して、出力列を外部 (変換元) 列にマップします。  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>オプション  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
@@ -148,7 +149,7 @@ ms.locfileid: "86920299"
 ## <a name="xml-source-editor-error-output-page"></a>[XML ソース エディター] ([エラー出力] ページ)
   **[XML ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>オプション  
  **[入力または出力]**  
  データ ソースの名前を表示します。  
   
