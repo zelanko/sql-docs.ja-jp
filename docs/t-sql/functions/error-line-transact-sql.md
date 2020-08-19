@@ -1,5 +1,6 @@
 ---
-title: ERROR_LINE (Transact-SQL) | Microsoft Docs
+description: ERROR_LINE (Transact-SQL)
+title: ERROR_LINE (Transact-SQL)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,29 +23,32 @@ helpviewer_keywords:
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d9d1c16c94f51bdfd961c0173bea635e38da3acb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 928cdcd92ceb2bfc6ace1be7d5cd6b1c785d5f48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85682028"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366268"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数では、TRY...CATCH 構文の CATCH ブロックが実行される原因となったエラーが発生した行番号が返されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>構文  
-  
-```  
-ERROR_LINE ( )  
-```  
-  
-## <a name="return-type"></a>戻り値の型  
-**int**  
-  
+## <a name="syntax"></a>構文
+
+```syntaxsql
+ERROR_LINE ( )
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-type"></a>戻り値の型
+**int**
+
 ## <a name="return-value"></a>戻り値  
 CATCH ブロック内で呼び出されると、`ERROR_LINE` は次の値を返します。  
   
@@ -52,7 +56,7 @@ CATCH ブロック内で呼び出されると、`ERROR_LINE` は次の値を返�
 -   ストアド プロシージャまたはトリガー内でエラーが発生した場合は、ルーチン内の行番号  
 -   CATCH ブロックの範囲外で呼び出された場合は、NULL  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 `ERROR_LINE` は、CATCH ブロックのスコープ内の任意の場所で呼び出すことができます。  
   
 `ERROR_LINE` はエラーが発生した行番号を返します。 これは、CATCH ブロックのスコープ内で `ERROR_LINE` が呼び出された位置に関係なく、また `ERROR_LINE` の呼び出し回数に関係なく発生します。 これは @@ERROR などの関数とは対照的です。 @@ERROR は、エラーが発生したステートメントの直後のステートメントまたは CATCH ブロックの最初のステートメントでエラー番号を返します。  
@@ -75,7 +79,7 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-error_line-in-a-catch-block-with-a-stored-procedure"></a>B. CATCH ブロックで ERROR_LINE をストアド プロシージャと一緒に使用する  
+### <a name="b-using-error_line-in-a-catch-block-with-a-stored-procedure"></a>B.  CATCH ブロックで ERROR_LINE をストアド プロシージャと一緒に使用する  
 この例では、0 除算エラーを生成したストアド プロシージャを示します。 `ERROR_LINE` は、エラーが発生した行番号を返します。  
   
 ```  
@@ -122,7 +126,7 @@ END CATCH;
 GO  
 ``` 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
