@@ -1,4 +1,5 @@
 ---
+description: カーソル オプションの設定 (ODBC)
 title: カーソルオプションの設定 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,16 +14,17 @@ ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60b97e8b52d985aeb9ba97f95e39c5e94d3188fa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2622fc28743da2e2eed4224e7a2f0eb21c09e665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423782"
 ---
 # <a name="set-cursor-options-odbc"></a>カーソル オプションの設定 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  カーソルオプションを設定するには、 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を呼び出して、カーソルの動作を制御するステートメントオプションを設定または[SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)に取得します。  
+  カーソルオプションを設定するには、 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) を呼び出して、カーソルの動作を制御するステートメントオプションを設定または [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) に取得します。  
   
 |*属性*|指定内容|  
 |-----------------|---------------|  

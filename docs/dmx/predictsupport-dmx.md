@@ -1,4 +1,5 @@
 ---
+description: PredictSupport (DMX)
 title: PredictSupport (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: da8673d58a6d1889017b0f79ea7cb4bf41c64466
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: cea4913bf3668c89fb0c1c66632359a372f3d54b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970700"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422256"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,13 +34,13 @@ PredictSupport(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>戻り値の型  
  によって指定された型のスカラー値 *\<*scalar column reference*>* 。  
   
-## <a name="remarks"></a>注釈  
- 予測された状態が省略されている場合、省略した状態バケットを除いて、最も予測可能性が高い状態が使用されます。 欠落している状態バケットを含めるには、 \<predicted state> を**INCLUDE_NULL**に設定します。  
+## <a name="remarks"></a>解説  
+ 予測された状態が省略されている場合、省略した状態バケットを除いて、最も予測可能性が高い状態が使用されます。 欠落している状態バケットを含めるには、 \<predicted state> を **INCLUDE_NULL**に設定します。  
   
  不足状態のサポートを返すには、を \<predicted state> NULL に設定します。  
   
 > [!NOTE]  
->  サポートされている値の計算方法は異なります。つまり、クエリの対象となるモデルに応じてこの値の解釈は異なる場合があります。 特定の種類のモデルのサポートを計算する方法の詳細については、「[マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」の個々のアルゴリズムの種類を参照してください。  
+>  サポートされている値の計算方法は異なります。つまり、クエリの対象となるモデルに応じてこの値の解釈は異なる場合があります。 特定の種類のモデルのサポートを計算する方法の詳細については、「 [マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」の個々のアルゴリズムの種類を参照してください。  
   
 ## <a name="examples"></a>例  
  次の例では、単一クエリを使用して、個人が自転車購入者であるかどうかを予測します。また、TM デシジョンツリーマイニングモデルに基づく予測のサポートも決定します。  
@@ -60,7 +61,7 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)  
+ [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)  
   
   

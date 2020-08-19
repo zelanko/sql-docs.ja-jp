@@ -1,4 +1,5 @@
 ---
+description: フルテキスト検索に使用するストップワードとストップリストの構成と管理
 title: フルテキスト検索に使用するストップワードとストップリストの構成と管理
 ms.date: 02/02/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3f3274fa08c121fc9dfd3ee4c5268c975eca2661
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dad86600ba067bd0e03eb0e9b8a05be49593bf7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423386"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>フルテキスト検索に使用するストップワードとストップリストの構成と管理
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -97,7 +98,7 @@ ms.locfileid: "85725980"
   
 5.  [[フルテキスト ストップリストのプロパティ]](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) ダイアログ ボックスで:  
   
-    1.  **[アクション]** ボックスの一覧で、 **[ストップワードの追加]** 、 **[ストップワードの削除]** 、 **[すべてのストップワードの削除]** 、 **[ストップリストのクリア]** のいずれかのアクションを選択します。  
+    1.  **[アクション]** ボックスの一覧で、 **[ストップワードの追加]**、 **[ストップワードの削除]**、 **[すべてのストップワードの削除]**、 **[ストップリストのクリア]** のいずれかのアクションを選択します。  
   
     2.  選択したアクションに対して **[ストップワード]** ボックスが有効になっている場合は、単一のストップワードを入力します。 このストップワードは一意である必要があります。つまり、選択した言語で、このストップリストにまだ含まれていないものである必要があります。  
   
@@ -127,7 +128,7 @@ ms.locfileid: "85725980"
 |Instructions|1|  
 |are|2|  
 |applicable|3|  
-|から|4|  
+|を|4|  
 |these|5|  
 |Adventure|6|  
 |Works|7|  

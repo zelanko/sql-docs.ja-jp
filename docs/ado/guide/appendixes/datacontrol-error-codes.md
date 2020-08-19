@@ -1,4 +1,5 @@
 ---
+description: DataControl オブジェクトのエラーコード
 title: DataControl のエラーコード |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 90501e24a9d4ec3dd5a68f641bf25c3adade1a62
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 057bd0f7a1023e32ef8bc9fd4da6aeca56e36a97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422196"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl オブジェクトのエラーコード
-次の表に、RDS の一覧を示し[ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトのエラーコード。 小さい2バイトの正の10進変換、完全なエラーコードの負の10進変換、および16進数の値が表示されます。
+次の表に、RDS の一覧を示し [ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) オブジェクトのエラーコード。 小さい2バイトの正の10進変換、完全なエラーコードの負の10進変換、および16進数の値が表示されます。
 
-|RDS.DataControl エラーコード|Number|説明|
+|RDS.DataControl エラーコード|数値|説明|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107-2146824175 0x800A1011|非同期操作が保留中であるため、操作を実行できません。|
 |**IDS_BadInlineTablegram**|4105-2146824183 0x800A1009|インライン tablegram が正しくありません。|
@@ -39,12 +40,12 @@ ms.locfileid: "82760518"
 |**IDS_NOINTERFACE**|5377-2147019519 0x80071501|そのようなインターフェイスはサポートされていません。|
 |**IDS_NotReentrant**|4111-2146824171 0x800A1015|イベントハンドラーがまだ処理中であるため、要求を実行できません。|
 |**IDS_ObjectNotSafe**|4103-2146824185 0x800A1007|このコンピューターの安全性の設定により、ビジネスオブジェクトの作成が禁止されています。|
-|**IDS_RecordsetNotOpen**|4109-2146824173 0x800A1013|**レコードセット**が開かれていません。|
+|**IDS_RecordsetNotOpen**|4109-2146824173 0x800A1013|**レコードセット** が開かれていません。|
 |**IDS_ResetInvalidField**|4108-2146824174 0x800A1012|**Sortcolumn**または**filtercolumn**に指定された列が存在しません。|
 |**IDS_RowsetNotUpdateable**|4104-2146824184 0x800A1008|行セットは更新できません。|
 |**IDS_UnexpectedError**|4351-2146823937 0x800A10FF|予期しないエラー。|
 |**IDS_UpdatesFailed**|4098-2146824190 0x800A1002|データベースを更新できません。|
-|**IDS_URLMONNotFound**|4119-2146824169 0x800A1017|DataControl **URL**プロパティには、見つからないシステムファイルの urlmon.dll が必要です。|
+|**IDS_URLMONNotFound**|4119-2146824169 0x800A1017|DataControl **URL** プロパティには Urlmon.dll システムファイルが必要ですが、見つかりません。|
 
 ## <a name="see-also"></a>参照
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)

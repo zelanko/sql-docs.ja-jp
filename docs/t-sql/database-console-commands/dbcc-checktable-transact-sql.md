@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKTABLE (Transact-SQL)
 title: DBCC CHECKTABLE (Transact-SQL) | Microsoft Docs
 ms.date: 11/14/2017
 ms.prod: sql
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: db4bc3e53cd5016cbf6f89c5f0a1d6951ce12c50
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1c4563a10433d4cbead089da026d086f9c021ccb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422866"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -132,7 +133,7 @@ MAXDOP
  > [!NOTE]  
  > MAXDOP が 0 に設定されている場合、サーバーでは最大限の並列処理が実行されます。  
     
-## <a name="remarks"></a>解説    
+## <a name="remarks"></a>注釈    
     
 > [!NOTE]    
 > データベース内のすべてのテーブルに対して DBCC CHECKTABLE を実行するには、[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を使用します。    

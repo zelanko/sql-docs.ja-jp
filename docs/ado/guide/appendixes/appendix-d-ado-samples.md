@@ -1,4 +1,5 @@
 ---
+description: '付録 D: Windows SDK の ADO サンプル'
 title: '付録 D: ADO Samples |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9c3e853910f0be04b8cd483f5a21264ca096e9e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ae72176eb0913ef8563612e0847fe346a60eadc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422206"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>付録 D: Windows SDK の ADO サンプル
 Windows SDK には、ADO と RDS コードの使用方法を示すサンプルアプリケーションがいくつか含まれています。 これらのサンプルは、ADO と RDS の使用方法を学習するのに役立ちますが、実稼働サーバーに配置するためのものではありません。

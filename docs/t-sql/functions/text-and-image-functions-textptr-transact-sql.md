@@ -1,4 +1,5 @@
 ---
+description: テキスト関数とイメージ関数 - TEXTPTR (Transact-SQL)
 title: TEXTPTR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0150b1b9dace457b76130b7b0b3f863471637970
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 510f2e6f0097b79cd458907a73ae094ff5cc637d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422596"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>テキスト関数とイメージ関数 - TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +68,7 @@ TEXTPTR ( column )
 |PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|**text** または **ntext** 列で指定された文字列の文字位置を返します。|  
 |DATALENGTH<b>(</b>_expression_ **)**|**text**、**ntext**、**image** 列のデータの長さを返します。|  
 |[SET TEXTSIZE]|SELECT ステートメントで返される **text**、**ntext**、または **image** データの制限値をバイト単位で返します。|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|指定された **start** オフセットと *length* で指定される *varchar* 文字列を返します。 長さは 8 KB 未満で指定してください。|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|指定された *start* オフセットと *length* で指定される **varchar** 文字列を返します。 長さは 8 KB 未満で指定してください。|  
   
 ## <a name="examples"></a>例  
   
@@ -75,7 +76,7 @@ TEXTPTR ( column )
 >  次の例を実行するには、**pubs** データベースをインストールする必要があります。  
   
 ### <a name="a-using-textptr"></a>A. TEXTPTR を使用する  
- 次の例では、`TEXTPTR` 関数を使用して、**データベースの** テーブル内の `logo` に関連付けられている `New Moon Books`image`pub_info` 列 `pubs` を検索します。 テキスト ポインターは、ローカル変数 `@ptrval.` に格納されます。  
+ 次の例では、`TEXTPTR` 関数を使用して、`pubs` データベースの `pub_info` テーブル内の `New Moon Books` に関連付けられている **image** 列 `logo` を検索します。 テキスト ポインターは、ローカル変数 `@ptrval.` に格納されます。  
   
 ```  
 USE pubs;  
@@ -106,7 +107,7 @@ COMMIT;
 ```  
   
 ### <a name="c-returning-text-data"></a>C. テキスト データを返す  
- 次の例では、`pub_id` テーブルから `pr_info` 列、および `pub_info` 列の 16 バイトのテキスト ポインターを選択します。  
+ 次の例では、`pub_info` テーブルから `pub_id` 列、および `pr_info` 列の 16 バイトのテキスト ポインターを選択します。  
   
 ```  
 USE pubs;  
@@ -165,7 +166,7 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ```  
   
 ### <a name="d-returning-specific-text-data"></a>D. 特定のテキスト データを返す  
- 次の例では、`text` データベースの `pr_info` テーブル内の `pub_id``0736` に関連付けられた `pub_info` 列 (`pubs`) を検索します。 まず、ローカル変数 `@val` が宣言されます。 次に、テキスト ポインター (長いバイナリ文字列) が `@val` に挿入され、`READTEXT` ステートメントにパラメーターとして指定されます。 これによって、5 番目のバイト (オフセットは 4) から開始して、10 バイトのデータが返されます。  
+ 次の例では、`pubs` データベースの `pub_info` テーブル内の `pub_id``0736` に関連付けられた `text` 列 (`pr_info`) を検索します。 まず、ローカル変数 `@val` が宣言されます。 次に、テキスト ポインター (長いバイナリ文字列) が `@val` に挿入され、`READTEXT` ステートメントにパラメーターとして指定されます。 これによって、5 番目のバイト (オフセットは 4) から開始して、10 バイトのデータが返されます。  
   
 ```  
 USE pubs;  
@@ -187,7 +188,7 @@ pr_info
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   

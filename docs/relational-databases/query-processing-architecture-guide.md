@@ -1,4 +1,5 @@
 ---
+description: クエリ処理アーキテクチャ ガイド
 title: クエリ処理アーキテクチャ ガイド | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2020
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b6964ee33ecbd52f538a60446c72d66bcde9927d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ddc409af7352ce7770d905b4bc5b859497123645
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423726"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -104,7 +105,7 @@ GO
   `TableC`、 `TableB`、 `TableA`、または  
   `TableB`、 `TableA`、 `TableC`、または  
   `TableB`、 `TableC`、 `TableA`、または  
-  `TableC`、`TableA`、`TableB`  
+  `TableC`, `TableA`, `TableB`  
 
 - **各テーブルからデータを取り出すための方法。**  
   通常、各テーブルのデータにアクセスする方法にも何とおりかあります。 特定のキー値を持つ数行だけが必要な場合、データベース サーバーではインデックスを使用できます。 テーブル内のすべての行が必要な場合は、インデックスを無視してテーブル スキャンを実行できます。 テーブル内のすべての行が必要で、 `ORDER BY`で指定されたキー列のインデックスがある場合、テーブル スキャンではなくインデックス スキャンを行うと、結果セットの並べ替えを個別に行わずに済みます。 テーブルが非常に小さい場合は、テーブルにどのようにアクセスするときでもテーブル スキャンが最も効率的な方法です。

@@ -1,4 +1,5 @@
 ---
+description: Constants (Transact-SQL)
 title: Constants (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -32,12 +33,12 @@ ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a63cfeca3d5843d29c68eece832fec4f8e330bf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cd464b8b08948d913dc003df0b488fd85f5bdda7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422936"
 ---
 # <a name="constants-transact-sql"></a>Constants (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "85999205"
 "O'Brien"  
 ```  
   
-空文字列は、2 つの単一引用符の間に何も挿入しないで表します。 6\.x 互換性モードでは、空文字列は 1 つのスペースと見なされます。
+空文字列は、2 つの単一引用符の間に何も挿入しないで表します。 6.x 互換性モードでは、空文字列は 1 つのスペースと見なされます。
   
 文字列は、拡張照合順序をサポートします。
   
@@ -126,7 +127,7 @@ binary 型定数は 16 進数の文字列であり、`0x` というプレフィ�
 ## <a name="decimal-constants"></a>decimal 型定数
 **decimal** 型定数は、小数点を含む数値文字列で表し、引用符では囲みません。
   
-例を次に **decimal** 定数。
+例を次に **decimal **定数。
   
 ```sql
 1894.1204  
@@ -199,9 +200,9 @@ $542023.14
 ```
   
 ## <a name="enhanced-collations"></a>拡張照合順序  
-SQL Server は、拡張照合順序をサポートする文字および Unicode 文字列定数をサポートしています。 詳細については、[COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) 句をご確認ください。
+SQL Server は、拡張照合順序をサポートする文字および Unicode 文字列定数をサポートしています。 詳細については、[[COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) 句をご確認ください。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)

@@ -1,4 +1,5 @@
 ---
+description: ツールボックス コンポーネントの F1 ヘルプ
 title: ツールボックス コンポーネントの F1 ヘルプ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67681c110015ae119c9f5a28812f9fba68f968a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b2cc50fc56b82ac8e98a6bcbb4b31f7db5beb81c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420756"
 ---
 # <a name="toolbox-component-f1-help"></a>ツールボックス コンポーネントの F1 ヘルプ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85715332"
  コード エディターまたは**内のデザイン ビュー画面に、** [ツールボックス] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のアイテムをドラッグしてドロップするか、コピーして貼り付けることができます。  
   
 ## <a name="how-the-toolbox-works"></a>ツールボックスのしくみ  
- [ツールボックス] はスライド式のツリー コントロールで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows エクスプローラーの動作と似ていますが、グリッド線や接続線はありません。 **[ツールボックス]** の複数のセグメント (タブ) を同時に展開し、ツリー全体をスクロールして **[ツールボックス]** ウィンドウ内を移動することができます。 **[ツールボックス]** のタブを展開するには、名前の横のプラス記号 ( **[+]** ) をクリックします。 展開したタブを折りたたむには、名前の横のマイナス記号 ( **[-]** ) をクリックします。  
+ [ツールボックス] はスライド式のツリー コントロールで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows エクスプローラーの動作と似ていますが、グリッド線や接続線はありません。 **[ツールボックス]** の複数のセグメント (タブ) を同時に展開し、ツリー全体をスクロールして **[ツールボックス]** ウィンドウ内を移動することができます。 **[ツールボックス]** のタブを展開するには、名前の横のプラス記号 (**[+]**) をクリックします。 展開したタブを折りたたむには、名前の横のマイナス記号 ( **[-]** ) をクリックします。  
   
  エディターまたはデザイナーに戻るたびに、 **[ツールボックス]** は最新のタブおよび選択されているアイテムに自動的にスクロールされます。 別のエディターまたはデザイナーにフォーカスを移すと、 **[ツールボックス]** 内の現在の選択も一緒に変わります。  
   
