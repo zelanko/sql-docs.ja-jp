@@ -1,4 +1,5 @@
 ---
+description: ADORecordConstruction インターフェイス
 title: ADORecordConstruction Interface |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4dca796e9ba3c353d48fd3620c34a141c35a3fe8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a52b8006ed97809690ec874c27e20ee8f1b05d0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451334"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction インターフェイス
 **ADORecordConstruction**インターフェイスは、C/c + + アプリケーションの OLE DB **ROW**オブジェクトから ADO**レコード**オブジェクトを構築するために使用されます。  
@@ -35,15 +36,15 @@ ms.locfileid: "87242832"
 |[行](../../../ado/reference/ado-api/row-property-ado.md)|読み取り/書き込み。<br />この ADO **Record**オブジェクトから OLE DB **Row**オブジェクトを取得/設定します。|  
   
 ## <a name="methods"></a>メソッド  
- [なし] :  
+ なし。  
   
 ## <a name="events"></a>events  
  [なし] :  
   
 ## <a name="remarks"></a>解説  
- OLE DB **Row**オブジェクト () を指定した場合、 `pRow` ADO**レコード**オブジェクト () の構造は `adoR` 、次の3つの基本的な操作になります。  
+ OLE DB **Row** オブジェクト () を指定した場合、 `pRow` ADO **レコード** オブジェクト () の構造は `adoR` 、次の3つの基本的な操作になります。  
   
-1.  ADO**レコード**オブジェクトを作成します。  
+1.  ADO **レコード** オブジェクトを作成します。  
   
     ```  
     _RecordPtr adoR;  
@@ -68,9 +69,9 @@ ms.locfileid: "87242832"
   
  結果の**adoR**オブジェクトは、OLE DB **Row**オブジェクトから構築された ADO**レコード**オブジェクトを表します。  
   
- ADO**レコード**オブジェクトは、OLE DB **Row**オブジェクトのコンテナーから構築することもできます。  
+ ADO **レコード** オブジェクトは、OLE DB **Row** オブジェクトのコンテナーから構築することもできます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **バージョン:** ADO 2.0 以降  
   
  **ライブラリ:** msado15.dll  

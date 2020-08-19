@@ -1,4 +1,5 @@
 ---
+description: EventReasonEnum
 title: Event理由 Enum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94b36cbab5ffe7c22f4d1941e61af8fabc8b9973
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0dc0c811f989b0fd91c47827718d1d8480ddb769
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443924"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 イベントの発生原因となった理由を指定します。  
@@ -28,16 +29,16 @@ ms.locfileid: "87242732"
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adRsnAddNew**|1|操作によって新しいレコードが追加されました。|  
-|**adRsnClose**|9|操作が**レコードセット**を閉じました。|  
+|**adRsnClose**|9|操作が **レコードセット**を閉じました。|  
 |**adRsnDelete**|2|操作によってレコードが削除されました。|  
 |**adRsnFirstChange**|11|レコードに対する最初の変更を行った操作。|  
-|**adRsnMove**|10|操作によってレコード**セット**内のレコードポインターが移動されました。|  
-|**adRsnMoveFirst**|12|操作は、レコードポインターをレコード**セット**内の最初のレコードに移動しました。|  
-|**adRsnMoveLast**|15|操作はレコードポインターをレコード**セット**内の最後のレコードに移動しました。|  
-|**adRsnMoveNext**|13|操作は、レコードポインターをレコード**セット**内の次のレコードに移動しました。|  
-|**adRsnMovePrevious**|14|操作はレコードポインターをレコード**セット**内の前のレコードに移動しました。|  
-|**adRsnRequery**|7|操作は、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を再度実行します。|  
-|**adRsnResynch 同期**|8|操作は、データベースを使用して**レコードセット**を再同期します。|  
+|**adRsnMove**|10|操作によってレコード **セット**内のレコードポインターが移動されました。|  
+|**adRsnMoveFirst**|12|操作は、レコードポインターをレコード **セット**内の最初のレコードに移動しました。|  
+|**adRsnMoveLast**|15|操作はレコードポインターをレコード **セット**内の最後のレコードに移動しました。|  
+|**adRsnMoveNext**|13|操作は、レコードポインターをレコード **セット**内の次のレコードに移動しました。|  
+|**adRsnMovePrevious**|14|操作はレコードポインターをレコード **セット**内の前のレコードに移動しました。|  
+|**adRsnRequery**|7|操作は、 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を再度実行します。|  
+|**adRsnResynch 同期**|8|操作は、データベースを使用して **レコードセット** を再同期します。|  
 |**adRsnUndoAddNew**|5|操作によって、新しいレコードの追加が取り消されました。|  
 |**adRsnUndoDelete**|6|操作により、レコードの削除が取り消されました。|  
 |**adRsnUndoUpdate**|4|操作により、レコードの更新が取り消されました。|  

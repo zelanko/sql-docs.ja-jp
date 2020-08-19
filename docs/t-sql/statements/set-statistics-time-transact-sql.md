@@ -1,4 +1,5 @@
 ---
+description: SET STATISTICS TIME (Transact-SQL)
 title: SET STATISTICS TIME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12e5acfd9436a4295ded63e7db8572dd27ce6e39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d6a735e68b49216ea1e9f5604000cef2243c6ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765669"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414818"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,9 @@ ms.locfileid: "85765669"
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
  SET STATISTICS TIME が ON の場合、ステートメントの処理時間の統計が表示されます。 OFF の場合、時間の統計は表示されません。  
   
  SET STATISTICS TIME は、解析時ではなく実行時に設定されます。  

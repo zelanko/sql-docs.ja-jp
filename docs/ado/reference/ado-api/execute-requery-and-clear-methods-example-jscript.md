@@ -1,4 +1,5 @@
 ---
+description: Execute、Requery、および Clear メソッドの例 (JScript)
 title: Execute、Requery、および Clear メソッドの例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c5ca02f8f3ca6b8b525bdc3fb7875c3f1638640
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f30dfef8bcfb769dd124f2501143eac6e619315c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443884"
 ---
 # <a name="execute-requery-and-clear-methods-example-jscript"></a>Execute、Requery、および Clear メソッドの例 (JScript)
-この例では、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方から実行する場合の**Execute**メソッドを示します。 また、 [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドを使用して[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の現在のデータを取得し、 [clear](../../../ado/reference/ado-api/clear-method-ado.md)メソッドを使用して[Errors](../../../ado/reference/ado-api/errors-collection-ado.md)コレクションの内容をクリアします。 (**エラー**コレクションには、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティの**Connection**オブジェクトを使用してアクセスします)。ファイルに「 **Executejs. asp**」という名前を指定します。  
+この例では、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方から実行する場合の**Execute**メソッドを示します。 また、 [Requery](../../../ado/reference/ado-api/requery-method.md) メソッドを使用して [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の現在のデータを取得し、 [clear](../../../ado/reference/ado-api/clear-method-ado.md) メソッドを使用して [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) コレクションの内容をクリアします。 (**エラー**コレクションには、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティの**Connection**オブジェクトを使用してアクセスします)。ファイルに「 **Executejs. asp**」という名前を指定します。  
   
 ```  
 <!-- BeginExecuteJS -->  

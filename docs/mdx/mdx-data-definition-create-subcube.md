@@ -1,4 +1,5 @@
 ---
+description: MDX データ操作 - CREATE SUBCUBE
 title: CREATE サブキューブステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1034d96ce0d683d38139636d53471d23581807a1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 24f8ade9255543fcb1d2c23b7959a5def93b21dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477024"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX データ操作 - CREATE SUBCUBE
 
@@ -52,10 +53,10 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  サブキューブのコンテキストで作成されたセッションオブジェクトは、サブキューブが削除されると削除されます。  
   
- サブキューブの詳細については、「mdx[でのサブキューブの作成 &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)」を参照してください。  
+ サブキューブの詳細については、「mdx [でのサブキューブの作成 &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、サブキューブを作成し、そのサブキューブ空間をカナダの国に存在するメンバーに制限します。 次に、 **MEMBERS**関数を使用して、Geography ユーザー定義階層の国レベルのすべてのメンバーを返します。カナダの国のみが返されます。  
+ 次の例では、サブキューブを作成し、そのサブキューブ空間をカナダの国に存在するメンバーに制限します。 次に、 **MEMBERS** 関数を使用して、Geography ユーザー定義階層の国レベルのすべてのメンバーを返します。カナダの国のみが返されます。  
   
 ```  
 CREATE SUBCUBE [Adventure Works] AS  
@@ -89,7 +90,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  では、次の結果が生成されます。  
   
-|ビジネスタイプ + カテゴリ|All Products|アクセサリ|衣服|  
+|ビジネスタイプ + カテゴリ|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |All Resellers|$2031079.39|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$767388.52|$175,002.81|$592,385.71|  
@@ -117,7 +118,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  では、次のような結果が生成されます。  
   
-|ビジネスタイプ + カテゴリ|All Products|アクセサリ|衣服|  
+|ビジネスタイプ + カテゴリ|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |All Resellers|$80,450,596.98|$571,297.93|$1,777,840.84|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
@@ -127,8 +128,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
 ## <a name="see-also"></a>参照  
  [MDX &#40;Analysis Services の主な概念&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
- [Mdx&#41;&#40;MDX スクリプトステートメント](../mdx/mdx-scripting-statements-mdx.md)   
- [MDX&#41;&#40;のサブキューブの削除](../mdx/mdx-data-definition-drop-subcube.md)   
+ [Mdx&#41;&#40;MDX スクリプトステートメント ](../mdx/mdx-scripting-statements-mdx.md)   
+ [MDX&#41;&#40;のサブキューブの削除 ](../mdx/mdx-data-definition-drop-subcube.md)   
  [SELECT ステートメント &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

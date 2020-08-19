@@ -1,4 +1,5 @@
 ---
+description: ADO イベント モデルの例 (VC++)
 title: ADO Events モデルの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bce894f1e0cce8c8d8800b2633924f9cc5bc6bd9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2bdb668584a0a725add4decc0bd64217d5dacbb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451434"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO イベント モデルの例 (VC++)
-「[言語による Ado イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)」の Visual C++ セクションでは、ado イベントモデルをインスタンス化する方法について一般的な説明を示します。 次に、 **#import**ディレクティブによって作成された環境内でイベントモデルをインスタンス化する具体的な例を示します。  
+「 [言語による Ado イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md) 」の Visual C++ セクションでは、ado イベントモデルをインスタンス化する方法について一般的な説明を示します。 次に、 **#import** ディレクティブによって作成された環境内でイベントモデルをインスタンス化する具体的な例を示します。  
   
- 一般的な説明では、メソッドシグネチャの参照として**adoint**を使用します。 ただし、一般的な説明のいくつかの詳細は、 **#import**ディレクティブを使用した結果として若干異なります。  
+ 一般的な説明では、メソッドシグネチャの参照として **adoint** を使用します。 ただし、一般的な説明のいくつかの詳細は、 **#import** ディレクティブを使用した結果として若干異なります。  
   
 -   **#Import**ディレクティブは、 **typedef**の、メソッドシグネチャのデータ型、および修飾子をその基本的な形式に解決します。  
   

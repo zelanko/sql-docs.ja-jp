@@ -1,4 +1,5 @@
 ---
+description: 付録-1 (DB2ToSQL)
 title: 付録-1 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a6683a435262012f67d7690766f32a802a138226
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d6bd27b4c437d2dded9941feec3cedaa3ccd4ccb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468884"
 ---
 # <a name="appendix---1-db2tosql"></a>付録-1 (DB2ToSQL)
 SSMA コンソールのコマンドラインオプションのクイックビューを次に示します。  
   
-|法. いいえ。|Switch|必須|スイッチ引数|許可される値|  
+|法. いいえ。|スイッチ|必須|スイッチ引数|許可される値|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/スクリプト|はい|scriptfile|有効な XML ファイル名です。<br /><br />コンソールスクリプト定義ファイル。|  
 |2|-v/variable|いいえ|変数 valuefile|有効な XML ファイル名です。<br /><br />スクリプトファイルで変数を使用する場合は、このファイルを指定する必要があります。|  

@@ -1,4 +1,5 @@
 ---
+description: ADO の列挙定数
 title: ADO 列挙定数 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74d3cc347d14a1d02ae5953b7762513b252493e6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7d126d0783e448dab786a228b4e10a8ec7c0f840
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451444"
 ---
 # <a name="ado-enumerated-constants"></a>ADO の列挙定数
 デバッグを支援するために、ADO 列挙体には各定数の値が一覧表示されます。 ただし、この値は純粋にアドバイザリであり、あるリリースの ADO から別のリリースに変更される可能性があります。 コードは、各列挙定数の実際の値ではなく、名前のみに依存する必要があります。  
   
 |定数|説明|  
 |-|-|  
-|[ADCPROP_ASYNCTHREADPRIORITY_ENUM](../../../ado/reference/ado-api/adcprop-asyncthreadpriority-enum.md)|RDS**レコードセット**オブジェクトの場合は、データを取得する非同期スレッドの実行の優先度を指定します。|  
+|[ADCPROP_ASYNCTHREADPRIORITY_ENUM](../../../ado/reference/ado-api/adcprop-asyncthreadpriority-enum.md)|RDS **レコードセット** オブジェクトの場合は、データを取得する非同期スレッドの実行の優先度を指定します。|  
 |[ADCPROP_AUTORECALC_ENUM](../../../ado/reference/ado-api/adcprop-autorecalc-enum.md)|**MSDataShape**プロバイダーが階層**レコードセット**の集計列と計算列を再計算するタイミングを指定します。|  
 |[ADCPROP_UPDATECRITERIA_ENUM](../../../ado/reference/ado-api/adcprop-updatecriteria-enum.md)|**レコードセット**オブジェクトを使用してデータソースの行をオプティミスティック更新するときに、競合を検出するために使用できるフィールドを指定します。|  
 |[ADCPROP_UPDATERESYNC_ENUM](../../../ado/reference/ado-api/adcprop-updateresync-enum.md)|**UpdateBatch**メソッドの後に暗黙の再**同期**メソッド操作が続くかどうかを指定します。それを行う場合は、その操作のスコープを指定します。|  
@@ -48,10 +49,10 @@ ms.locfileid: "87242882"
 |[FieldEnum](../../../ado/reference/ado-api/fieldenum.md)|**レコード**オブジェクトの**fields**コレクションで参照される特殊なフィールドを指定します。|  
 |[FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md)|**Field**オブジェクトの1つまたは複数の属性を指定します。|  
 |[FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md)|**フィールド**オブジェクトの状態を指定します。|  
-|[FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)|レコード**セット**からフィルター選択するレコードのグループを指定します。|  
-|[GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md)|レコード**セット**から取得するレコードの数を指定します。|  
+|[FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)|レコード **セット**からフィルター選択するレコードのグループを指定します。|  
+|[GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md)|レコード **セット**から取得するレコードの数を指定します。|  
 |[IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md)|**接続**オブジェクトのトランザクション分離レベルを指定します。|  
-|[LineSeparatorsEnum](../../../ado/reference/ado-api/lineseparatorsenum.md)|テキスト**ストリーム**オブジェクトの行区切り記号として使用される文字を指定します。|  
+|[LineSeparatorsEnum](../../../ado/reference/ado-api/lineseparatorsenum.md)|テキスト **ストリーム** オブジェクトの行区切り記号として使用される文字を指定します。|  
 |[LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)|編集中にレコードに適用されるロックの種類を指定します。|  
 |[MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)|サーバーに返すレコードを指定します。|  
 |[MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)|**Record**オブジェクトの**MoveRecord**メソッドの動作を指定します。|  
@@ -59,25 +60,25 @@ ms.locfileid: "87242882"
 |[ParameterAttributesEnum](../../../ado/reference/ado-api/parameterattributesenum.md)|**パラメーター**オブジェクトの属性を指定します。|  
 |[ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md)|**パラメーター**が入力パラメーター、出力パラメーター、またはその両方を表すか、またはパラメーターがストアドプロシージャからの戻り値であるかを指定します。|  
 |[PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md)|**レコードセット**を保存する形式を指定します。|  
-|[PositionEnum](../../../ado/reference/ado-api/positionenum.md)|レコード**セット**内のレコードポインターの現在位置を指定します。|  
+|[PositionEnum](../../../ado/reference/ado-api/positionenum.md)|レコード **セット**内のレコードポインターの現在位置を指定します。|  
 |[PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md)|**プロパティ**オブジェクトの属性を指定します。|  
 |[RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md)|**Record**オブジェクト**Open**メソッドに対して、既存の**レコード**を開くか、新しい**レコード**を作成するかを指定します。|  
 |[RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md)|**レコード**を開くためのオプションを指定します。 これらの値は、OR 演算子を使用して組み合わせることができます。|  
 |[RecordStatusEnum](../../../ado/reference/ado-api/recordstatusenum.md)|バッチ更新やその他の一括操作に関して、レコードの状態を指定します。|  
 |[RecordTypeEnum](../../../ado/reference/ado-api/recordtypeenum.md)|**レコード**オブジェクトの種類を指定します。|  
-|[ResyncEnum](../../../ado/reference/ado-api/resyncenum.md)|再**同期**の呼び出しによって基になる値を上書きするかどうかを指定します。|  
+|[ResyncEnum](../../../ado/reference/ado-api/resyncenum.md)|再 **同期**の呼び出しによって基になる値を上書きするかどうかを指定します。|  
 |[SaveOptionsEnum](../../../ado/reference/ado-api/saveoptionsenum.md)|**ストリーム**オブジェクトから保存するときにファイルを作成するか上書きするかを指定します。 値は AND 演算子と組み合わせることができます。|  
-|[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)|**OpenSchema**メソッドによって取得されるスキーマ**レコードセット**の種類を指定します。 レコード**セット**内のレコード検索の方向を指定します。|  
-|[SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)|レコード**セット**内のレコード検索の方向を指定します。 実行する**シーク**の種類を指定します。|  
-|[SeekEnum](../../../ado/reference/ado-api/seekenum.md)|実行する**シーク**の種類を指定します。 **ストリーム**オブジェクトを開くためのオプションを指定します。 値は AND 演算子と組み合わせることができます。|  
-|[StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md)|**ストリーム**オブジェクトを開くためのオプションを指定します。 値は AND 演算子と組み合わせることができます。 ストリーム全体または次の行を**ストリーム**オブジェクトから読み取るかどうかを指定します。|  
-|[StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)|ストリーム全体または次の行を**ストリーム**オブジェクトから読み取るかどうかを指定します。 **ストリーム**オブジェクトに格納されているデータの型を指定します。|  
+|[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)|**OpenSchema**メソッドによって取得されるスキーマ**レコードセット**の種類を指定します。 レコード **セット**内のレコード検索の方向を指定します。|  
+|[SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)|レコード **セット**内のレコード検索の方向を指定します。 実行する **シーク** の種類を指定します。|  
+|[SeekEnum](../../../ado/reference/ado-api/seekenum.md)|実行する **シーク** の種類を指定します。 **ストリーム**オブジェクトを開くためのオプションを指定します。 値は AND 演算子と組み合わせることができます。|  
+|[StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md)|**ストリーム**オブジェクトを開くためのオプションを指定します。 値は AND 演算子と組み合わせることができます。 ストリーム全体または次の行を **ストリーム** オブジェクトから読み取るかどうかを指定します。|  
+|[StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)|ストリーム全体または次の行を **ストリーム** オブジェクトから読み取るかどうかを指定します。 **ストリーム**オブジェクトに格納されているデータの型を指定します。|  
 |[StreamTypeEnum](../../../ado/reference/ado-api/streamtypeenum.md)|**ストリーム**オブジェクトに格納されているデータの型を指定します。 **ストリーム**オブジェクトに書き込まれる文字列に行の区切り記号を追加するかどうかを指定します。|  
 |[StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md)|**ストリーム**オブジェクトに書き込まれる文字列に行の区切り記号を追加するかどうかを指定します。 **レコードセット**を文字列として取得する場合の形式を指定します。|  
 |[StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)|**レコードセット**を文字列として取得する場合の形式を指定します。 **接続**オブジェクトのトランザクション属性を指定します。|  
 |[XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md)|**接続**オブジェクトのトランザクション属性を指定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO コレクション](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

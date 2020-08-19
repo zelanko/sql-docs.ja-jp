@@ -1,4 +1,5 @@
 ---
+description: 変数 (Transact-SQL)
 title: 変数 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -13,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abbfbd518796041c18f9bfe97522791c2ddf5f1f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b4eed82330e1a70ddbe269f3a0be845199b4931d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459259"
 ---
 # <a name="variables-transact-sql"></a>変数 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -94,7 +95,7 @@ DECLARE @MyCounter int;
 ```
 複数のローカル変数を宣言するには、最初のローカル変数を定義した後にコンマを付け、次のローカル変数名とデータ型を指定します。
 
-たとえば、次の **DECLARE** ステートメントでは、 **\@LastName**、 **\@FirstName**、および **\@StateProvince** という 3 つのローカル変数が作成され、各変数が NULL に初期化されます。  
+たとえば、次の **DECLARE** ステートメントでは、**\@LastName**、**\@FirstName**、および **\@StateProvince** という 3 つのローカル変数が作成され、各変数が NULL に初期化されます。  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```

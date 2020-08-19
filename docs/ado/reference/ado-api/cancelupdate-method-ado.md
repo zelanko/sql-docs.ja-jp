@@ -1,4 +1,5 @@
 ---
+description: CancelUpdate メソッド (ADO)
 title: CancelUpdate メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ecc08dde974826846058d4d8927df202367d28d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 6482336ceed00e131da38b151a8b6ffe33b3638c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451024"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate メソッド (ADO)
 [Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出す前に、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの現在または新しい行、または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに対して行われたすべての変更をキャンセルします。  

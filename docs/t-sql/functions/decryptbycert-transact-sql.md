@@ -1,4 +1,5 @@
 ---
+description: DECRYPTBYCERT (Transact-SQL)
 title: DECRYPTBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bca9ad46bb101f16c4709e03a2206bfa354be435
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 73564c7c5a06e778d6f3c602b0cb61e9cc56dfda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422796"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +70,7 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
 `DECRYPTBYCERT` には、証明書に対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>例  
-この例では、証明書 `[AdventureWorks2012].[ProtectedData04]` によって最初に暗号化されたデータとしてマークされている、`JanainaCert02` からの行が選択されます。 最初に、証明書 `JanainaCert02` のパスワードで証明書 `pGFD4bb925DGvbd2439587y` の秘密キーが復号されます。 次に、この秘密キーで暗号化テキストが復号されます。 暗号化データが **varbinary** から **nvarchar** に変換されます。  
+この例では、証明書 `JanainaCert02` によって最初に暗号化されたデータとしてマークされている、`[AdventureWorks2012].[ProtectedData04]` からの行が選択されます。 最初に、証明書 `pGFD4bb925DGvbd2439587y` のパスワードで証明書 `JanainaCert02` の秘密キーが復号されます。 次に、この秘密キーで暗号化テキストが復号されます。 暗号化データが **varbinary** から **nvarchar** に変換されます。  
 
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  

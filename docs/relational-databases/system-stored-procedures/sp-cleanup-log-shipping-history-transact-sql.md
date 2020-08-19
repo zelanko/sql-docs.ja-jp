@@ -1,4 +1,5 @@
 ---
+description: sp_cleanup_log_shipping_history (Transact-sql)
 title: sp_cleanup_log_shipping_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7b69c82e4e2043c8647ba19a8b40306d6836307
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 42edf059f077f0896cd3c62b1420658c982b3d5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486153"
 ---
 # <a name="sp_cleanup_log_shipping_history-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_cleanup_log_shipping_history
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @agent_id = ] 'agent_id',`バックアップ用のプライマリ ID、またはコピーまたは復元用のセカンダリ ID。 *agent_id*は**uniqueidentifier**であり、NULL にすることはできません。  
+`[ @agent_id = ] 'agent_id',` バックアップ用のプライマリ ID、またはコピーまたは復元用のセカンダリ ID。 *agent_id* は **uniqueidentifier** であり、NULL にすることはできません。  
   
-`[ @agent_type = ] 'agent_type'`ログ配布ジョブの種類です。 0 = バックアップ、1 = コピー、2 = 復元。 *agent_type*は**tinyint**であり、NULL にすることはできません。  
+`[ @agent_type = ] 'agent_type'` ログ配布ジョブの種類です。 0 = バックアップ、1 = コピー、2 = 復元。 *agent_type* は **tinyint** であり、NULL にすることはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -51,11 +52,11 @@ sp_cleanup_log_shipping_history
 ## <a name="result-sets"></a>結果セット  
  [なし] :  
   
-## <a name="remarks"></a>Remarks  
- **sp_cleanup_log_shipping_history**は、すべてのログ配布サーバーの**master**データベースから実行する必要があります。 このストアドプロシージャは、履歴の保有期間に基づいて**log_shipping_monitor_history_detail**および**log_shipping_monitor_error_detail**のローカルコピーとリモートコピーをクリーンアップします。  
+## <a name="remarks"></a>解説  
+ **sp_cleanup_log_shipping_history** は、すべてのログ配布サーバーの **master** データベースから実行する必要があります。 このストアドプロシージャは、履歴の保有期間に基づいて **log_shipping_monitor_history_detail** および **log_shipping_monitor_error_detail** のローカルコピーとリモートコピーをクリーンアップします。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ このプロシージャを実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

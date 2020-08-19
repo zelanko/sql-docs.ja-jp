@@ -1,4 +1,5 @@
 ---
+description: Errors コレクションのプロパティ、メソッド、およびイベント
 title: Errors コレクションのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 606f2b92-3821-4d11-a207-4c22f6f35619
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a910f0c86603a257b37fe4a27b1d2d9e57fdcb07
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f7208baaafdcce5fccbf6ba5fdf1716f427a47c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443944"
 ---
 # <a name="errors-collection-properties-methods-and-events"></a>Errors コレクションのプロパティ、メソッド、およびイベント
 ## <a name="properties"></a>プロパティ  
@@ -30,7 +31,7 @@ ms.locfileid: "82765483"
   
  [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

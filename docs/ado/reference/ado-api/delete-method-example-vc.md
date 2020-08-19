@@ -1,4 +1,5 @@
 ---
+description: Delete メソッドの例 (VC++)
 title: Delete メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 121db203f5f30abe54bf021f1ecf52784215074d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d67a0a5c73c258bbd2f176897acefd7f2cd8464d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444114"
 ---
 # <a name="delete-method-example-vc"></a>Delete メソッドの例 (VC++)
-この例では、 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)メソッドを使用して、レコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)から指定されたレコードを削除します。  
+この例では、 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) メソッドを使用して、レコード [セット](../../../ado/reference/ado-api/recordset-object-ado.md)から指定されたレコードを削除します。  
   
 ## <a name="example"></a>例  
   
@@ -271,7 +272,7 @@ void PrintComError(_com_error &e) {
 TC4203  
 ```  
   
-## <a name="sample-output"></a>出力例  
+## <a name="sample-output"></a>サンプル出力  
   
 ```  
 Before delete there are 7 titles with 20 percent royalty :  
