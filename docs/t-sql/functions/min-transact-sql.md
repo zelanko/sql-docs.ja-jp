@@ -1,4 +1,5 @@
 ---
+description: MIN (Transact-SQL)
 title: MIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,12 +21,12 @@ ms.assetid: 56cf6ec5-34f5-47e3-a402-7129039d4429
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a22e8ff95677c51faeec59b19e0c6321abb9e77
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0223be182fc7e29466f0a8a676cea6dc94eb915b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364098"
 ---
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +66,7 @@ MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> 
 ## <a name="return-types"></a>戻り値の型  
  *式*と同じ値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  MIN は NULL 値をすべて無視します。  
   
  文字型列の場合は、並べ替え順での最小の値が返されます。  
@@ -94,7 +95,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. OVER 句を使用する  
- 次の例では、MIN、MAX、AVG、および COUNT 関数を OVER 句と共に使用して、`HumanResources.Department` データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルの部署ごとに集計値を入力します。  
+ 次の例では、MIN、MAX、AVG、および COUNT 関数を OVER 句と共に使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `HumanResources.Department` テーブルの部署ごとに集計値を入力します。  
   
 ```  
 SELECT DISTINCT Name  
