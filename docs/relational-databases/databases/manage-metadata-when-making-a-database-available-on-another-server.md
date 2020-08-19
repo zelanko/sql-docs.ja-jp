@@ -1,4 +1,5 @@
 ---
+description: データベースを別のサーバーで使用できるようにするときのメタデータの管理
 title: データベースを別のサーバーで使用できるようにするときのメタデータの管理
 ms.date: 06/03/2020
 ms.prod: sql
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 - credentials [SQL Server], metadata
 - copying databases
-ms.openlocfilehash: 0d0a777b42bc601d2f656cfbf3c31d488a3732e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3dc93671874de47f45bd26ae12fa9ded44c9a4fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412848"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>データベースを別のサーバーで使用できるようにするときのメタデータの管理
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -129,7 +130,7 @@ ms.locfileid: "85726448"
   
  サーバー インスタンスでデータベース マスター キーの暗号化を自動的に解除できるようにするには、サービス マスター キーを使用してデータベース マスター キーのコピーを暗号化します。 この暗号化されたコピーをデータベースと **master**データベースの両方に格納します。 通常、 **master** に格納されたコピーは、マスター キーが変更されるたびに暗黙的に更新されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、インスタンスのサービス マスター キーを使用して、データベース マスター キーの暗号化解除が最初に試行されます。 暗号化解除が失敗した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では資格情報ストア内で、マスター キーが必要なデータベースと同じファミリ GUID のマスター キー資格情報が検索されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次に、一致した資格情報を順に使用してデータベースのマスター キーの暗号化解除が試行されます。これは暗号化解除が成功するか、資格情報がなくなった時点で終了します。 サービス マスター キーによって暗号化されていないマスター キーは、OPEN MASTER KEY ステートメントとパスワードを使用して開かれている必要があります。  
   
- 暗号化されたデータベースがコピー、復元、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチされた場合、サービス マスター キーによって暗号化されたデータベース マスター キーのコピーは、対象のサーバー インスタンスの **master** データベースに格納されません。 対象のサーバー インスタンスで、データベースのマスター キーを開く必要があります。 マスター キーを開くには、次のステートメントを実行します:OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _password_ **'** 。 その後、次のステートメントを実行して、データベース マスター キーの自動暗号化解除を有効にすることをお勧めします:ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 この ALTER MASTER KEY ステートメントにより、サービス マスター キーを使用して暗号化されたデータベース マスター キーのコピーが対象のサーバー インスタンスに提供されます。 詳細については、「[OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。  
+ 暗号化されたデータベースがコピー、復元、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチされた場合、サービス マスター キーによって暗号化されたデータベース マスター キーのコピーは、対象のサーバー インスタンスの **master** データベースに格納されません。 対象のサーバー インスタンスで、データベースのマスター キーを開く必要があります。 マスター キーを開くには、OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_password_**'** ステートメントを実行します。 次に、ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY ステートメントを実行して、データベース マスター キーの自動暗号化解除を有効にすることをお勧めします。 この ALTER MASTER KEY ステートメントにより、サービス マスター キーを使用して暗号化されたデータベース マスター キーのコピーが対象のサーバー インスタンスに提供されます。 詳細については、「[OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。  
   
  ミラー データベースのデータベース マスター キーの自動暗号化解除を有効にする方法については、「 [暗号化されたミラー データベースの設定](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)」を参照してください。  
   
@@ -156,11 +157,11 @@ ms.locfileid: "85726448"
 ### <a name="windows-management-instrumentation-wmi-events"></a>Windows Management Instrumentation (WMI) イベント  
  WMI Provider for Server Events を使用すれば、Windows Management Instrumentation (WMI) を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のイベントを監視できます。 データベースが依存する WMI プロバイダーによって公開されているサーバーレベルのイベントに依存するすべてのアプリケーションは、対象のサーバー インスタンスのコンピューターで定義されている必要があります。 WMI イベント プロバイダーは、 **msdb**で定義されている対象サービスでイベント通知を作成します。  
   
-> **注:** 詳細については、「 [WMI Provider for Server Events の概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)」を参照してください。  
+> **注:** 詳細については、「 [WMI Provider for Server Events の概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)」をご覧ください。  
   
  **SQL Server Management Studio を使用して WMI 警告を作成するには**  
   
--   [WMI イベント警告の作成](../../ssms/agent/create-a-wmi-event-alert.md)  
+-   [Create a WMI Event Alert](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### <a name="how-event-notifications-work-for-a-mirrored-database"></a>ミラー化されたデータベースに対するイベント通知の動作のしくみ  
  ミラー化されたデータベースはフェールオーバーできるため、ミラー化されたデータベースに関するイベント通知の複数データベースにまたがる配信は、定義上はリモートで行われます。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] には、 *ミラー化されたルート*の形式で、ミラー化されたデータベース用の特別なサポートが用意されています。 ミラー化されたルートには、プリンシパル サーバー インスタンス用とミラー サーバー インスタンス用の 2 つのアドレスがあります。  
@@ -242,7 +243,7 @@ ms.locfileid: "85726448"
   
 -   [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [ジョブ ステップ情報の表示](../../ssms/agent/view-job-step-information.md)  
+-   [View Job Step Information](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
@@ -259,7 +260,7 @@ ms.locfileid: "85726448"
   
  元のデータベースのコピーに含まれている一部またはすべてのオブジェクトに対するスクリプトは、SQL Server スクリプト生成ウィザードを使用して、 **[スクリプト オプションの選択]** ページで **[スクリプト ログイン]** オプションを **[True]** に設定することで作成できます。  
   
-> **注:** ミラー化されたデータベースのログインを設定する方法については、「[データベース ミラーリングまたは Always On 可用性グループのログイン アカウントの設定 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)」および「[役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)」をご覧ください。  
+> **注:** ミラー化されたデータベースのログインを設定する方法については、「[データベース ミラーリングまたは AlwaysOn 可用性グループのログイン アカウントの設定 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)」および「[役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)」をご覧ください。  
   
   
 ##  <a name="permissions"></a><a name="permissions"></a> Permissions  

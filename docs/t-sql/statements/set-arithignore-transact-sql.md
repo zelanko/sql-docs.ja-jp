@@ -1,4 +1,5 @@
 ---
+description: SET ARITHIGNORE (Transact-SQL)
 title: SET ARITHIGNORE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2017
@@ -23,12 +24,12 @@ ms.assetid: 71b2c2a5-c83a-4dfe-8469-237987a6e503
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99e72754414674f0617956e6be2ac2711ca0f850
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7bbb9188a082f87bb05f17d5641e12b6f73c66e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415048"
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +52,9 @@ SET ARITHIGNORE { ON | OFF }
 SET ARITHIGNORE OFF
 ```
 
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
  SET ARITHIGNORE の設定では、エラー メッセージを返すかどうかだけを制御できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの設定に関係なく、計算でオーバーフローや 0 除算のエラーが生じた場合には NULL が返されます。 SET ARITHABORT の設定は、クエリが終了したかどうかを判断するために使用できます。 この設定は、INSERT、UPDATE、DELETE ステートメント中に発生するエラーに影響を与えません。  
   
  SET ARITHABORT と SET ARITHIGNORE のいずれかが OFF でも、SET ANSI_WARNINGS が ON の場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で 0 除算やオーバーフロー エラーが検出されるとエラー メッセージが返されます。  

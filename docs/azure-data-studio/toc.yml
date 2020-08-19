@@ -1,0 +1,140 @@
+- name: Azure Data Studio のドキュメント
+  href: ../azure-data-studio/index.yml
+- name: Azure Data Studio のダウンロード
+  href: download-azure-data-studio.md
+- name: リリース ノート
+  href: release-notes-azure-data-studio.md
+- name: 概要
+  items:
+    - name: Azure Data Studio
+      href: what-is.md
+- name: クイックスタート
+  items:
+    - name: SQL Server に対する接続およびクエリ
+      href: quickstart-sql-server.md
+    - name: Azure SQL Database に対する接続およびクエリ
+      href: quickstart-sql-database.md
+    - name: Azure SQL Data Warehouse に対する接続およびクエリ
+      href: quickstart-sql-dw.md
+    - name: PostgreSQL に対する接続およびクエリ
+      href: quickstart-postgres.md
+- name: チュートリアル
+  items:
+    - name: T-SQL エディター
+      href: tutorial-sql-editor.md
+    - name: '分析情報の例: 速度の遅いクエリ'
+      href: tutorial-qds-sql-server.md
+    - name: '分析情報の例: テーブル領域使用状況'
+      href: tutorial-table-space-sql-server.md
+    - name: カスタム インサイトのビルド
+      href: tutorial-build-custom-insight-sql-server.md
+    - name: バックアップと復元
+      href: tutorial-backup-restore-sql-server.md
+- name: 概念
+  items:
+    - name: 拡張機能
+      items:
+        - name: 拡張機能
+          href: extensions.md
+        - name: Machine Learning 拡張機能
+          items:
+            - name: Machine Learning 拡張機能の概要
+              href: machine-learning-extension.md
+            - name: データベースでのパッケージの管理
+              href: machine-learning-extension-manage-packages.md
+            - name: 予測を作成します
+              href: machine-learning-extension-predictions.md
+            - name: モデルのインポートと表示
+              href: machine-learning-extension-import-view-models.md
+        - name: PostgreSQL の拡張機能
+          href: postgres-extension.md
+        - name: データの仮想化の拡張機能
+          href: data-virtualization-extension.md
+        - name: SQL Database プロジェクトの拡張機能
+          items:
+            - name: SQL Database プロジェクトの拡張機能の概要
+              href: sql-database-project-extension.md
+            - name: SQL Database プロジェクトの拡張機能をお使いになる前に
+              href: sql-database-project-extension-getting-started.md
+            - name: プロジェクトをビルドして公開する
+              href: sql-database-project-extension-build.md
+            - name: コマンド ラインからプロジェクトをビルドする
+              href: sql-database-project-extension-build-from-command-line.md
+        - name: SQL Server エージェント
+          href: sql-server-agent-extension.md
+        - name: SQL Server 中央管理サーバーの拡張機能
+          href: sql-server-cms-extension.md
+        - name: SQL Server dacpac の拡張機能
+          href: sql-server-dacpac-extension.md
+        - name: SQL Server インポート
+          href: sql-server-import-extension.md
+        - name: SQL Server プロファイラー
+          href: sql-server-profiler-extension.md
+        - name: スキーマ比較の拡張機能
+          href: schema-compare-extension.md
+        - name: PowerShell の拡張機能
+          href: powershell-extension.md
+        - name: Managed Instance の拡張機能
+          href: azure-sql-managed-instance-extension.md
+        - name: SandDance の拡張機能
+          href: sanddance-extension.md
+    - name: 拡張機能のオーサリング
+      items:
+        - name: 拡張性の概要
+          href: extensibility.md
+        - name: 拡張機能のオーサリング
+          href: extension-authoring.md
+        - name: 拡張機能を作成する
+          href: tutorial-create-extension.md
+        - name: 拡張性 API
+          href: extensibility-apis.md
+    - name: 統合ターミナル (PowerShell、Bash)
+      href: integrated-terminal.md
+    - name: キーボード ショートカット
+      href: keyboard-shortcuts.md
+    - name: サーバー グループ
+      href: server-groups.md
+    - name: ソース管理
+      href: source-control.md
+- name: 操作方法ガイド
+  items:
+    - name: ノートブック
+      items:
+        - name: Notebooks の概要
+          href: notebooks-guidance.md
+        - name: SQL カーネルを使用する
+          href: notebooks-tutorial-sql-kernel.md
+        - name: Python カーネルを使用する
+          href: notebooks-tutorial-python-kernel.md
+        - name: Kqlmagic 拡張機能
+          href: notebooks-kqlmagic.md
+    - name: ダッシュボードおよび分析情報のウィジェット
+      href: insight-widgets.md
+    - name: コード スニペット
+      href: code-snippets.md
+    - name: エクスプローラーの Azure SQL リソース
+      href: azure-resource-explorer.md
+    - name: 使用状況データ収集
+      href: usage-data-collection.md
+    - name: ワークスペースとユーザー設定
+      href: settings.md
+    - name: Windows 認証 (Kerberos)
+      href: enable-kerberos.md
+    - name: 使用状況データ収集
+      href: usage-data-collection.md
+- name: References
+  items:
+    - name: SQL ツール
+      href: ../tools/overview-sql-tools.md
+    - name: Azure 開発者ツール
+      href: 'https://docs.microsoft.com/azure/?product=developer-tools'
+- name: リソース
+  items:
+    - name: よく寄せられる質問
+      href: faq.md
+    - name: Azure Data Studio の GitHub リポジトリ >
+      href: 'https://www.github.com/Microsoft/azuredatastudio'
+    - name: 問題の報告とご提案 >
+      href: 'https://github.com/microsoft/azuredatastudio/issues'
+    - name: SQL Server のドキュメント >
+      href: ../sql-server/index.yml

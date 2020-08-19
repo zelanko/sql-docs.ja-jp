@@ -4,6 +4,8 @@
   href: ../sql-server/index.yml
 - name: SQL Server ドライバー
   href: ../connect/sql-connection-libraries.md
+- name: ドライバー機能のサポート マトリックス
+  href: ../connect/driver-feature-matrix.md
 - name: SQL Server のドライバーの履歴
   href: ../connect/connect-history.md
 - name: SQL データ開発者
@@ -30,6 +32,10 @@
           href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
         - name: Microsoft SqlClient Data Provider for SQL Server をダウンロードする
           href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
+        - name: SqlClient でのイベントのトレースの有効化
+          href: ../connect/ado-net/enable-eventsource-tracing.md
+        - name: SqlClient の AppContext スイッチ
+          href: ../connect/ado-net/appcontext-switches.md
         - name: SqlClient ドライバーのサポート ライフサイクル
           href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
         - name: 追加の SqlClient ドライバー情報の検索
@@ -92,6 +98,8 @@
                   href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
                 - name: トランザクションと一括コピー操作
                   href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
+                - name: 一括コピー操作の順序のヒント
+                  href: ../connect/ado-net/sql/bulk-copy-order-hints.md
             - name: 複数のアクティブな結果セット (MARS)
               href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
               items:
@@ -142,6 +150,15 @@
               href: ../connect/ado-net/sql/sqlclient-support-localdb.md
             - name: SqlClient による Always Encrypted のサポート
               href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
+              items:
+                - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して .NET アプリケーションを開発する
+                  href: ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
+                - name: Azure Key Vault での Always Encrypted の使用
+                  href: ado-net/sql/azure-key-vault-example.md
+                - name: Azure Key Vault でのセキュリティで保護されたエンクレーブが設定された Always Encrypted の使用
+                  href: ado-net/sql/azure-key-vault-enclave-example.md
+            - name: SqlClient でのデータの検出と分類
+              href: ../connect/ado-net/sql/data-classification.md
 - name: JDBC
   items:
     - name: SQL Server 用 Microsoft JDBC ドライバー
@@ -2631,8 +2648,8 @@
         - name: JDBC ドライバーで Always Encrypted を使用する
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
           items:
-            - name: セキュア エンクレーブを使用する Always Encrypted
-              href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
+            - name: JDBC Driver でのセキュリティで保護されたエンクレーブが設定された Always Encrypted の使用
+              href: ../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
         - name: ガイド記事
           items:
             - name: SQL でのステートメントの使用
@@ -2747,6 +2764,8 @@
               href: ../connect/jdbc/using-sql-escape-sequences.md
             - name: ストアド プロシージャでのステートメントの使用
               href: ../connect/jdbc/using-statements-with-stored-procedures.md
+            - name: Loopback シナリオにおけるクライアント証明書の認証
+              href: ../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md
             - name: 7.0 とその他用の Azure Key Vault サンプル
               href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
               items:
@@ -2790,14 +2809,16 @@
               href: ../connect/odbc/linux-mac/programming-guidelines.md
             - name: ツール
               items:
-                - name: bcp.exe による接続
+                - name: bcp による接続
                   href: ../connect/odbc/linux-mac/connecting-with-bcp.md
-                - name: sqlcmd.exe による接続
+                - name: sqlcmd による接続
                   href: ../connect/odbc/linux-mac/connecting-with-sqlcmd.md
             - name: 統合認証を使用する
               href: ../connect/odbc/linux-mac/using-integrated-authentication.md
         - name: リリース ノート
           href: ../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md
+        - name: リリース ノート (mssql ツール)
+          href: ../connect/odbc/linux-mac/release-notes-tools.md
         - name: 既知の問題
           href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
         - name: ODBC Linux と macOS のよく寄せられる質問 (FAQ)
@@ -2836,7 +2857,7 @@
       items:
         - name: カスタム キーストア プロバイダー
           href: ../connect/odbc/custom-keystore-providers.md
-        - name: DSN 接続文字列のキーワードと属性
+        - name: DSN と接続文字列のキーワードと属性
           href: ../connect/odbc/dsn-connection-string-attribute.md
         - name: Always Encrypted の使用
           href: ../connect/odbc/using-always-encrypted-with-the-odbc-driver.md
@@ -5111,6 +5132,8 @@
           href: ../connect/oledb/features/using-large-value-types.md
         - name: 複数のアクティブな結果セット (MARS) の使用
           href: ../connect/oledb/features/using-multiple-active-result-sets-mars.md
+        - name: 透過的なネットワーク IP の解決の使用
+          href: ../connect/oledb/features/using-transparent-network-ip-resolution.md
         - name: ユーザー定義型の使用
           href: ../connect/oledb/features/using-user-defined-types.md
         - name: XML データ型の使用
@@ -5500,7 +5523,7 @@
               href: ../connect/php/how-to-connect-on-a-specified-port.md
             - name: 接続のプール
               href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-            - name: '方法:複数のアクティブな結果セット (MARS) を無効にする'
+            - name: '方法:複数のアクティブな結果セット (MARS) の無効化'
               href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
             - name: 接続オプション
               href: ../connect/php/connection-options.md
@@ -5960,7 +5983,7 @@
               href: ../ado/guide/data/handling-errors-in-vbscript.md
             - name: Visual C++ でエラーを処理する
               href: ../ado/guide/data/handling-errors-in-visual-c.md
-            - name: Visual j++ でエラーを処理する
+            - name: Visual J++ でエラーを処理する
               href: ../ado/guide/data/handline-errors-in-visual-j.md
             - name: JScript でエラーを処理する
               href: ../ado/guide/data/handling-errors-in-jscript.md
@@ -6076,7 +6099,7 @@
           href: ../ado/guide/data/streams-and-persistence.md
         - name: コマンド ストリーム
           href: ../ado/guide/data/command-streams.md
-        - name: ストリーム形式で結果セットを取得する
+        - name: ストリームに結果セットを取得する
           href: ../ado/guide/data/retrieving-resultsets-into-streams.md
         - name: インターネットへの発行に ADO を使用する
           href: ../ado/guide/data/using-ado-for-internet-publishing.md

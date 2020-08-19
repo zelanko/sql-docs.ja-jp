@@ -1,4 +1,5 @@
 ---
+description: BACPAC ファイルのインポートによる新しいユーザー データベースの作成
 title: BACPAC ファイルのインポートによる新しいユーザー データベースの作成
 ms.date: 06/03/2020
 ms.prod: sql
@@ -25,12 +26,12 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed5a14278e9114b9408406a103553280dd9e4f8f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5e02041dd6801f5ab0b819f4bffd91ca8ba38e8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412438"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC ファイルのインポートによる新しいユーザー データベースの作成
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85781675"
 2.  エクスポート ファイルからデータを一括コピーします。  
 
 ## <a name="sql-server-utility"></a>SQL Server ユーティリティ (SQL Server Utility)  
- データベース エンジンのインスタンスに DAC をインポートした場合、そのインポートした DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 その後、DAC は  **の**ユーティリティ エクスプローラー[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の **[配置済みのデータ層アプリケーション]** ノードに現れるようになり、 **[配置済みのデータ層アプリケーション]** の詳細ページで報告されます。  
+ データベース エンジンのインスタンスに DAC をインポートした場合、そのインポートした DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の**ユーティリティ エクスプローラー**の **[配置済みのデータ層アプリケーション]** ノードに現れるようになり、 **[配置済みのデータ層アプリケーション]** の詳細ページで報告されます。  
   
 ## <a name="database-options-and-settings"></a>データベースのオプションと設定  
  既定では、インポート時に作成されたデータベースには、CREATE DATABASE ステートメントによる既定の設定がすべて適用されます。ただし、データベースの照合順序および互換性レベルは、DAC のエクスポート ファイルで定義された値に設定されます。 DAC のエクスポート ファイルには、元のデータベースに基づく値が使用されます。  
@@ -57,7 +58,7 @@ ms.locfileid: "85781675"
 ## <a name="prerequisites"></a>前提条件  
  ソースが不明または信頼されていない DAC エクスポート ファイルはインポートしないことをお勧めします。 こうしたファイルには、意図しない Transact-SQL コードを実行したり、スキーマを変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 エクスポート ファイルのソースが不明または信頼されていない場合は、使用する前に、DAC をアンパックして、ストアド プロシージャやその他のユーザー定義コードなどのコードも確認してください。 これらのチェックの実行方法の詳細については、「 [Validate a DAC Package](validate-a-dac-package.md)」をご覧ください。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  セキュリティを強化するために、SQL Server 認証のログインは、パスワードなしで DAC エクスポート ファイルに格納されます。 ファイルがインポートされると、ログインは、生成されたパスワードを伴う無効なログインとして作成されます。 ログインを有効にするには、ALTER ANY LOGIN 権限を持つログインとしてサインインし、ALTER LOGIN を使用してログインを有効にします。さらに、新しいパスワードを割り当て、そのパスワードを該当ユーザーに通知します。 Windows 認証ログインの場合、ログインのパスワードは SQL Server で管理されていないため、この操作は必要ありません。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -98,7 +99,7 @@ ms.locfileid: "85781675"
 ###  <a name="import-settings-page"></a><a name="Import_settings"></a> [インポートの設定] ページ  
  このページを使用して、インポートする .bacpac ファイルの場所を指定します。  
   
--   **[ローカル ディスクからインポート]** : **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。 パス名には、ファイル名および .bacpac 拡張子を含める必要があります。  
+-   **[ローカル ディスクからインポート]**: **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。 パス名には、ファイル名および .bacpac 拡張子を含める必要があります。  
   
 -   **[Import from Azure]\(Azure からインポート\)** : BACPAC ファイルを Microsoft Azure コンテナーからインポートします。 このオプションを検証するには、Microsoft Azure コンテナーに接続する必要があります。 [Import from Azure]\(Azure からインポート\) オプションでは、一時ファイル用のローカル ディレクトリを指定する必要もあります。 一時ファイルは、指定した場所に作成され、操作の完了後も残ります。  
   
@@ -113,9 +114,9 @@ ms.locfileid: "85781675"
   
 -   **[新しいデータベース名]** : インポートするデータベースの名前を指定します。  
   
--   **[データ ファイルのパス]** : データ ファイル用のローカル ディレクトリを指定します。 **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。  
+-   **[データ ファイルのパス]**: データ ファイル用のローカル ディレクトリを指定します。 **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。  
   
--   **[ログ ファイルのパス]** : ログ ファイル用のローカル ディレクトリを指定します。 **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。  
+-   **[ログ ファイルのパス]**: ログ ファイル用のローカル ディレクトリを指定します。 **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。  
   
  続行するには、 **[次へ]** をクリックします。  
   
@@ -142,8 +143,8 @@ ms.locfileid: "85781675"
   
  **[閉じる]** をクリックしてウィザードを閉じます。  
   
-## <a name="see-also"></a>参照  
-[BACPAC ファイルをインポートして新しい Azure SQL データベースを作成する](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+## <a name="see-also"></a>関連項目  
+[BACPAC ファイルをインポートして新しい Azure SQL Database を作成する](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
  [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [データ層アプリケーションのエクスポート](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   

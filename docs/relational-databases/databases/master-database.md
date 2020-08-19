@@ -1,4 +1,5 @@
 ---
+description: master データベース
 title: master データベース | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e313c18ef81f298a7ebd802bcf2b2cc0f69a09dc
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 7be82eb5eaa61307cd5421033adc1634de9a946b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863340"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411368"
 ---
 # <a name="master-database"></a>master データベース
 
@@ -101,7 +102,7 @@ SQL Server と Azure SQL Managed Instance に向けた **master** データベ�
 - データベースの OFFLINE への設定。  
 - データベースまたはプライマリ ファイル グループの READ_ONLY への設定。  
   
-## <a name="recommendations"></a>Recommendations  
+## <a name="recommendations"></a>推奨事項  
 **master** データベースで作業を行っているときは、次の推奨設定を考慮してください。  
   
 - **master** データベースの現在のバックアップを、常に使用可能にする。  
