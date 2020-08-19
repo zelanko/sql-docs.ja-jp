@@ -1,4 +1,5 @@
 ---
+description: IDENTITY (関数) (Transact-SQL)
 title: IDENTITY (関数) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: daf9effbc4c130b4783500014554c4512b6581d1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6f8cd22140dd78ace01d685498306885b0081f21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88365238"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY (関数) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +64,7 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
 ## <a name="return-types"></a>戻り値の型  
  同じを返します *data_type*です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  この関数ではテーブルに列が作成されるので、次のいずれかの方法で選択リストから列名を指定する必要があります。  
   
 ```  
@@ -80,7 +81,7 @@ FROM OldTable;
 ```  
   
 ## <a name="examples"></a>例  
- 次の例では、`Contact` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルにあるすべての行を、`NewContact` という新しいテーブルに追加します。 IDENTITY 関数を使用して、`NewContact` テーブルの識別番号を 1 ではなく 100 から開始するようにします。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Contact` テーブルにあるすべての行を、`NewContact` という新しいテーブルに追加します。 IDENTITY 関数を使用して、`NewContact` テーブルの識別番号を 1 ではなく 100 から開始するようにします。  
   
 ```  
 USE AdventureWorks2012;  
