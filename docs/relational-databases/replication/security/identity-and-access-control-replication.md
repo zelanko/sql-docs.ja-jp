@@ -1,4 +1,5 @@
 ---
+description: ID およびアクセス制御 (レプリケーション)
 title: ID およびアクセス制御 (レプリケーション) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/20/2018
@@ -16,12 +17,12 @@ ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ea34f0b2b7e0a6ab2770178d926a5a9710f43575
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c44efad10aeade68f42e76d4aa5622807159110f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920738"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404828"
 ---
 # <a name="identity-and-access-control-replication"></a>ID およびアクセス制御 (レプリケーション)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "86920738"
 
 グループのマネージド サービス アカウント (gMSA) の使用のサポートは、SQL Server 2014 で導入されました。 詳細については、ブログ「[Replication and group Managed Service Accounts](https://repltalk.com/2019/03/26/replication-and-group-managed-service-accounts/)」 (レプリケーションとグループのマネージド サービス アカウント) を参照してください。
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [脅威と脆弱性の対策 &#40;レプリケーション&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md) [レプリケーション エージェントのセキュリティ モデル](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [レプリケーション セキュリティの推奨事項](../../../relational-databases/replication/security/replication-security-best-practices.md)   
 

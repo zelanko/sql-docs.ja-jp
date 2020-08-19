@@ -1,4 +1,5 @@
 ---
+description: Indexes
 title: インデックス | Microsoft Docs
 ms.custom: ''
 ms.date: 12/21/2016
@@ -13,14 +14,14 @@ ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e980013658fd83c4f8c934e6e8b2b51d27783893
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b8487f821b698974744fdc18453a2a5c8285d889
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408008"
 ---
-# <a name="indexes"></a>インデックス
+# <a name="indexes"></a>Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 ## <a name="available-index-types"></a>使用可能なインデックスの種類
