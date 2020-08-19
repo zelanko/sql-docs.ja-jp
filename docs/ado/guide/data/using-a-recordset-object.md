@@ -1,4 +1,5 @@
 ---
+description: レコードセット オブジェクトを使用する
 title: レコードセットオブジェクトを使用する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 183c8b3379d2ac90fa089f2f2834b46473961abf
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fef7e779c11dac06b2cda5401250577e9bb7162e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452614"
 ---
 # <a name="using-a-recordset-object"></a>レコードセット オブジェクトを使用する
-または、**レコードセット**を使用して、暗黙的に接続を確立し、1回の操作でその接続に対してコマンドを発行することもできます。 たとえば、Visual Basic の場合は次のようになります。  
+または、 **レコードセット** を使用して、暗黙的に接続を確立し、1回の操作でその接続に対してコマンドを発行することもできます。 たとえば、Visual Basic の場合は次のようになります。  
   
 ```  
 Dim oRs As ADODB.Recordset  
@@ -47,4 +48,4 @@ oRs.Close
 Set oRs = Nothing  
 ```  
   
- **ActiveConnection**パラメーターの値として**接続**オブジェクト (*oconn*) の代わりに接続文字列 (*sconn*) が実行されることに注意してください **。** また、クライアント側のカーソルの種類は、**レコードセット**オブジェクトの**cursor location**プロパティを設定することによって適用されます。 ここでも、 **HelloData**の例と比較してください。
+ **ActiveConnection**パラメーターの値として**接続**オブジェクト (*oconn*) の代わりに接続文字列 (*sconn*) が実行されることに注意してください **。** また、クライアント側のカーソルの種類は、**レコードセット**オブジェクトの**cursor location**プロパティを設定することによって適用されます。 ここでも、 **HelloData** の例と比較してください。

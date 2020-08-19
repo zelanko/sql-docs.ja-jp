@@ -1,4 +1,5 @@
 ---
+description: 多次元スキーマとデータの概要
 title: 多次元スキーマとデータの概要 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4a2f6dbd2c5d075bb888e61bb01e1094c8ef5c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 449bfe5056cdf96f86b5371731c2d1c0b00ba31e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452424"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多次元スキーマとデータの概要
 ## <a name="understanding-multidimensional-schemas"></a>多次元スキーマについて  
- ADO MD の中央のメタデータオブジェクトは、*キューブ*です。これは、関連するディメンション、階層、レベル、およびメンバーの構造化されたセットで構成されます。  
+ ADO MD の中央のメタデータオブジェクトは、 *キューブ*です。これは、関連するディメンション、階層、レベル、およびメンバーの構造化されたセットで構成されます。  
   
  *ディメンション*は、ビジネスエンティティから派生した多次元データベースのデータの独立したカテゴリです。 ディメンションには、通常、データベースのメジャーのクエリ条件として使用するアイテムが含まれています。  
   
@@ -31,7 +32,7 @@ ms.locfileid: "82748089"
   
  *メンバー*とは、ディメンション内のデータアイテムのことです。 通常は、キャプションを作成するか、メンバーを使用してデータベースのメジャーを記述します。  
   
- キューブは ADO MD の[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)オブジェクトによって表されます。 ディメンション、階層、レベル、およびメンバーも、対応する ADO MD オブジェクト ([ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)、および[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)) によって表されます。  
+ キューブは ADO MD の [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) オブジェクトによって表されます。 ディメンション、階層、レベル、およびメンバーも、対応する ADO MD オブジェクト ( [ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、 [階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、 [レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)、および [メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)) によって表されます。  
   
 ### <a name="dimensions"></a>Dimensions  
  キューブのディメンションは、ビジネスエンティティと、データベースでモデル化されるデータの種類によって異なります。 通常、各ディメンションは、データを選択するための独立したエントリポイントまたはメカニズムです。  
@@ -58,15 +59,15 @@ Hamburg, Munich, Stuttgart}
   
  各レベルには、次のようにメンバーのセットがあります。  
   
--   世界`= {All}`  
+-   世界 `= {All}`  
   
--   世界`= {North America, Europe}`  
+-   世界 `= {North America, Europe}`  
   
--   国々`= {Canada, USA, UK, Germany}`  
+-   国々 `= {Canada, USA, UK, Germany}`  
   
--   報酬`= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
+-   報酬 `= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
   
--   地域`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
+-   地域 `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
 ### <a name="members"></a>メンバー  
  階層のリーフレベルのメンバーには子がなく、ルートレベルのメンバーには親がありません。 他のすべてのメンバーには少なくとも1つの親と少なくとも1つの子があります。 たとえば、Geography ディメンションの階層ツリーを部分的に検査すると、次の親子関係が生成されます。  

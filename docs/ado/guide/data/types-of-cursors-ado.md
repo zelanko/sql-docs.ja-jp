@@ -1,4 +1,5 @@
 ---
+description: カーソルの種類 (ADO)
 title: カーソルの種類 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4953b0509cade52a8badd8d578c9fa13f0c2b42b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ea996827565f0cc6d593078e7772c336699260bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452714"
 ---
 # <a name="types-of-cursors-ado"></a>カーソルの種類 (ADO)
 一般的な規則として、アプリケーションでは、必要なデータアクセスを提供する最も単純なカーソルを使用する必要があります。 基本を超える各カーソル特性 (順方向専用、読み取り専用、静的、スクロール、バッファーなし) には、クライアントメモリ、ネットワーク負荷、またはパフォーマンスの価格があります。 多くの場合、既定のカーソルオプションでは、アプリケーションで実際に必要とされるよりも複雑なカーソルが生成されます。  
@@ -26,11 +27,11 @@ ms.locfileid: "82759048"
   
  最も基本的なカーソルの選択は、データを変更する必要があるか、単にデータを表示する必要があるかによって異なります。  
   
--   結果のセットをスクロールするだけで、変更データをスクロールする必要がない場合は、[順方向専用](../../../ado/guide/data/forward-only-cursors.md)カーソルまたは[静的](../../../ado/guide/data/static-cursors.md)カーソルを使用します。  
+-   結果のセットをスクロールするだけで、変更データをスクロールする必要がない場合は、 [順方向専用](../../../ado/guide/data/forward-only-cursors.md) カーソルまたは [静的](../../../ado/guide/data/static-cursors.md) カーソルを使用します。  
   
--   大きな結果セットがあり、少数の行だけを選択する必要がある場合は、[キーセット](../../../ado/guide/data/keyset-cursors.md)カーソルを使用します。  
+-   大きな結果セットがあり、少数の行だけを選択する必要がある場合は、 [キーセット](../../../ado/guide/data/keyset-cursors.md) カーソルを使用します。  
   
--   すべての同時実行ユーザーが最近追加、変更、および削除した結果セットを同期する場合は、[動的](../../../ado/guide/data/dynamic-cursors.md)カーソルを使用します。  
+-   すべての同時実行ユーザーが最近追加、変更、および削除した結果セットを同期する場合は、 [動的](../../../ado/guide/data/dynamic-cursors.md) カーソルを使用します。  
   
  各カーソルの種類は個別であるように見えますが、これらのカーソルの種類は、重複する特性やオプションの結果とはあまり異なる性質を持つという点に注意してください。  
   

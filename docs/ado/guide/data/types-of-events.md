@@ -1,4 +1,5 @@
 ---
+description: イベントの種類
 title: イベントの種類 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8d0dd197b5f74b25aad2f7e9e888165c2dc02ba
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3fa59b0faeb5b1c74ccd4dff3f9d3c274a8f12c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759028"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452684"
 ---
 # <a name="types-of-events"></a>イベントの種類
-イベントには、次の2つの基本的な種類があります。 "は、操作が開始される前に呼び出されるイベントです。通常は、名前に" **WillChangeRecordset** "が含まれます。たとえば、「」と**接続**します。 イベントの完了後に呼び出されるイベントには、通常、名前に "Complete" が含まれます。たとえば、 **RecordChangeComplete**や**connectcomplete**などです。 **Infomessage**などの例外が存在しますが、関連付けられた操作が完了した後に発生します。  
+イベントには、次の2つの基本的な種類があります。 "は、操作が開始される前に呼び出されるイベントです。通常は、名前に" **WillChangeRecordset** "が含まれます。たとえば、「」と **接続**します。 イベントの完了後に呼び出されるイベントには、通常、名前に "Complete" が含まれます。たとえば、 **RecordChangeComplete** や **connectcomplete**などです。 **Infomessage**などの例外が存在しますが、関連付けられた操作が完了した後に発生します。  
   
 ## <a name="will-events"></a>イベントを発生させる  
  操作が開始される前に呼び出されるイベントハンドラーによって、操作パラメーターを確認または変更し、操作をキャンセルするか、または完了を許可することができます。 これらのイベントハンドラールーチンには、通常、<strong>という*Event*</strong>形式の名前が付いています。  
@@ -35,7 +36,7 @@ ms.locfileid: "82759028"
  通常、と完了イベントはペアで使用されます。  
   
 ## <a name="other-events"></a>その他のイベント  
- その他のイベントハンドラー (名前がフォームに含まれていないイベントは、 <strong>*イベント*</strong>または<strong>*イベント*が完了</strong>します) は、操作が完了した後にのみ呼び出されます。 これらのイベントは、 **Disconnect**、 **Endofrecordset**、および**infomessage**です。  
+ その他のイベントハンドラー (名前がフォームに含まれていないイベントは、 <strong>*イベント*</strong>または<strong>*イベント*が完了</strong>します) は、操作が完了した後にのみ呼び出されます。 これらのイベントは、 **Disconnect**、 **Endofrecordset**、および **infomessage**です。  
   
 ## <a name="see-also"></a>参照  
  [ADO イベントハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
