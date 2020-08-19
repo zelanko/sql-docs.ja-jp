@@ -1,4 +1,5 @@
 ---
+description: ポリシー ベースの管理ポリシーがスケジュールに従っていることの評価
 title: ポリシー ベースの管理ポリシーがスケジュールに従っていることの評価 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5ef43c8e973d9d3695d900d40e3ed92c1e5ec27c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 79e16f9a39e235f7ceed5a77e55d03f4c5efed72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88381188"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>ポリシー ベースの管理ポリシーがスケジュールに従っていることの評価
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85749445"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してポリシーがスケジュールに従っていることを評価するには:**  
   

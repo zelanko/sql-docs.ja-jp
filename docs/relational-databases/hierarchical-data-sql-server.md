@@ -1,4 +1,5 @@
 ---
+description: 階層データ (SQL Server)
 title: 階層データ (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2019
@@ -18,12 +19,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 137557b633b80067205be1cdea9f0b7c6cfd82bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1638e581a384f79842109c83352fc7292fa15de7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88382528"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層データ (SQL Server)
 
@@ -325,7 +326,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>シリアル化可能なトランザクションの使用例  
- **Org_BreadthFirst** インデックスによって、 **\@last_child** が範囲シークを使用するかどうかを判断できるようになります。 アプリケーションでチェックできるその他のエラーの場合だけでなく、挿入後の重複キー違反は、同じ ID を持つ複数の従業員を追加しようとしていることを示します。したがって、 **\@last_child** を再計算する必要があります。 次のコードでは、シリアル化可能なトランザクション内の新しいノード値が計算されます。  
+ **Org_BreadthFirst** インデックスによって、**\@last_child** が範囲シークを使用するかどうかを判断できるようになります。 アプリケーションでチェックできるその他のエラーの場合だけでなく、挿入後の重複キー違反は、同じ ID を持つ複数の従業員を追加しようとしていることを示します。したがって、 **\@last_child** を再計算する必要があります。 次のコードでは、シリアル化可能なトランザクション内の新しいノード値が計算されます。  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -463,7 +464,7 @@ EXTERNAL NAME HierarchyId_Operations.HierarchyId_Operations.ListAncestors
 GO  
 ```  
   
- 使用例  
+ 使用例:  
   
 ```sql
 DECLARE @h hierarchyid  
@@ -490,7 +491,7 @@ EXTERNAL NAME HierarchyId_Operations.HierarchyId_Operations.CommonAncestor
 GO  
 ```  
   
- 使用例  
+ 使用例:  
   
 ```sql
 DECLARE @h1 hierarchyid, @h2 hierarchyid;
@@ -538,9 +539,9 @@ GO
 ```  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [チュートリアル : hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [チュートリアル:hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: データ層アプリケーションのアップグレード
 title: データ層アプリケーションのアップグレード | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,20 +23,20 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ed1b1698fb945d92fce7cb2a0d1a9d0e2713afb5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0cba55e7c9f979098b9f761fbc43cad7a8edc2b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386448"
 ---
 # <a name="upgrade-a-data-tier-application"></a>データ層アプリケーションのアップグレード
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   データ層アプリケーションのアップグレード ウィザードまたは Windows PowerShell スクリプトを使用すると、現在配置されているデータ層アプリケーション (DAC) のスキーマとプロパティを、新しいバージョンの DAC で定義されているスキーマとプロパティに一致するように変更できます。  
   
--   **作業を開始する準備:** [DAC アップグレード オプションの選択](#ChoseDACUpgOptions)、[制限事項と制約事項](#LimitationsRestrictions)、[前提条件](#Prerequisites)、[セキュリティ](#Security)、[権限](#Permissions)  
+-   **作業を開始する準備:**  [DAC アップグレード オプションの選択](#ChoseDACUpgOptions)、 [制限事項と制約事項](#LimitationsRestrictions)、 [前提条件](#Prerequisites)、 [セキュリティ](#Security)、 [権限](#Permissions)  
   
--   **DAC のアップグレード:** [データ層アプリケーションのアップグレード ウィザードの使用](#UsingDACUpgradeWizard)、[PowerShell の使用](#UpgradeDACPowerShell)  
+-   **DAC のアップグレード:**  [データ層アプリケーションのアップグレード ウィザードの使用](#UsingDACUpgradeWizard)、 [PowerShell の使用](#UpgradeDACPowerShell)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
  DAC アップグレードは、既存のデータベースのスキーマを新しい DAC バージョンで定義されているスキーマに一致するように変更するインプレース アップグレードです。 新しい DAC バージョンは、DAC パッケージ ファイルで提供されます。 DAC パッケージの作成の詳細については、「 [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)」を参照してください。  
@@ -45,11 +46,11 @@ ms.locfileid: "85781623"
   
 -   **[データ損失を無視する]** : **True** の場合、一部の操作によってデータが失われても、アップグレードは続行されます。 **False**の場合、これらの操作によってアップグレードは終了します。 たとえば、現在のデータベースにあるテーブルが新しい DAC のスキーマにない場合は、 **True** が指定されていると、テーブルは削除されます。 既定値の設定は **True**です。  
   
--   **[変更時にブロック]** : **True** の場合、データベース スキーマが前の DAC で定義したものと異なっていると、アップグレードは終了します。 **False**の場合、変更が検出されても、アップグレードは続行されます。 既定の設定は **False**です。  
+-   **[変更時にブロック]** : **True** の場合、データベース スキーマが前の DAC で定義したものと異なっていると、アップグレードは終了します。 **False**の場合、変更が検出されても、アップグレードは続行されます。 既定の設定は **False** です。  
   
--   **[失敗時にロールバック]** : **True** の場合、アップグレードはトランザクションに含まれ、エラーが発生すると、ロールバックが試行されます。 **False**の場合、すべての変更が実行時にコミットされます。エラーが発生する場合は、データベースの前のバックアップの復元が必要になる場合があります。 既定の設定は **False**です。  
+-   **[失敗時にロールバック]** : **True** の場合、アップグレードはトランザクションに含まれ、エラーが発生すると、ロールバックが試行されます。 **False**の場合、すべての変更が実行時にコミットされます。エラーが発生する場合は、データベースの前のバックアップの復元が必要になる場合があります。 既定の設定は **False** です。  
   
--   **[ポリシーの検証をスキップ]** : **True** の場合、DAC サーバー選択ポリシーは評価されません。 **False**の場合は、ポリシーが評価され、検証エラーがあるとアップグレードは終了します。 既定の設定は **False**です。  
+-   **[ポリシーの検証をスキップ]** : **True** の場合、DAC サーバー選択ポリシーは評価されません。 **False**の場合は、ポリシーが評価され、検証エラーがあるとアップグレードは終了します。 既定の設定は **False** です。  
   
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  DAC アップグレードは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 以降でのみ実行できます。  
@@ -136,7 +137,7 @@ ms.locfileid: "85781623"
   
  **[戻る]** : **[パッケージの選択]** ページの初期状態に戻ります。  
   
- **[次へ >]** : **[パッケージの選択]** ページの最終状態に進みます。  
+ **[次へ >]**: **[パッケージの選択]** ページの最終状態に進みます。  
   
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   
@@ -215,7 +216,7 @@ ms.locfileid: "85781623"
   
  **[戻る]** : **[アップグレード計画の確認]** ページに戻ります。  
   
- **[次へ]** : DAC を配置し、 **[DAC のアップグレード]** ページに結果を表示します。  
+ **[次へ]** : DAC を配置し、**[DAC のアップグレード]** ページに結果を表示します。  
   
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   

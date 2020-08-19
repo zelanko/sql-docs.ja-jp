@@ -1,4 +1,5 @@
 ---
+description: データ層アプリケーションの削除
 title: データ層アプリケーションの削除 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 555867ca058b1249c30dc330512a8e6bc0fe3d76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bde888ff6091ae8d05445acce1afb1469843c18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386638"
 ---
 # <a name="delete-a-data-tier-application"></a>データ層アプリケーションの削除
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -83,7 +84,7 @@ ms.locfileid: "85781720"
   
  **[次回からこのページを表示しない]** : 今後このページを表示しないようにするには、このチェック ボックスをオンにします。  
   
- **[次へ >]** : **[方法の選択]** ページに進みます。  
+ **[次へ >]**: **[方法の選択]** ページに進みます。  
   
  **[キャンセル]** : データ層アプリケーションもデータベースも削除することなくウィザードを終了します。  
   
@@ -115,9 +116,9 @@ ms.locfileid: "85781720"
   
  **[選択内容の概要の確認]** : ボックスに表示されている DAC、データベース、および削除方法を確認します。 情報が正しい場合は、 **[次へ]** または **[完了]** をクリックして DAC を削除します。 DAC とデータベースの情報が正しくない場合は、 **[キャンセル]** をクリックしてから正しい DAC を選択します。 削除方法が正しくない場合は、 **[戻る]** をクリックして **[方法の選択]** ページに戻り、別の方法を選択します。  
   
- **[< 戻る]** : **[方法の選択]** ページに戻り、別の削除方法を選択します。  
+ **[< 戻る]**: **[方法の選択]** ページに戻り、別の削除方法を選択します。  
   
- **[次へ >]** : 前のページで選択した方法で DAC インスタンスを削除して、 **[データ層アプリケーションの削除]** ページに進みます。  
+ **[次へ >]**: 前のページで選択した方法で DAC インスタンスを削除して、**[データ層アプリケーションの削除]** ページに進みます。  
   
  **[キャンセル]** : DAC インスタンスを削除することなくウィザードを終了します。  
   

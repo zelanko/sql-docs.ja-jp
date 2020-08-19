@@ -1,4 +1,5 @@
 ---
+description: SQL Server Profiler の使用による SQL トレース コレクション セットの作成
 title: プロファイラーで SQL トレース コレクション セットを作成する
 ms.date: 06/03/2020
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fdd751f282f1ba62150d5257dde04798962ecb84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 25e6685166177b6adc436a1fc024d899be5f0233
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386428"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>SQL Server Profiler の使用による SQL トレース コレクション セットの作成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +79,7 @@ ms.locfileid: "85715527"
   
 10. ツール バーの **[選択されたトレースの停止]** または **[選択されたトレースの一時停止]** をクリックします。  
   
-11. **[ファイル]** メニューで **[エクスポート]** 、 **[トレース定義のスクリプト]** の順にポイントし、 **[SQL トレース コレクション セット]** をクリックします。  
+11. **[ファイル]** メニューで **[エクスポート]**、 **[トレース定義のスクリプト]** の順にポイントし、 **[SQL トレース コレクション セット]** をクリックします。  
   
 12. **[名前を付けてファイルを保存]** ダイアログ ボックスの **[ファイル名]** ボックスに、トレース定義に使用する名前を入力し、目的の場所に保存します。 この例では、ファイル名はトレース名 (SPgt80) と同じです。  
   
@@ -104,7 +105,7 @@ ms.locfileid: "85715527"
   
     1.  **[管理]** を右クリックし、 **[更新]** をクリックします。  
   
-    2.  **[管理]** 、 **[データ コレクション]** の順に展開します。  
+    2.  **[管理]**、 **[データ コレクション]** の順に展開します。  
   
      **[SPROC_CollectionSet]** コレクション セットは、 **[システム データ コレクション セット]** ノードと同じレベルに表示されます。 既定では、このコレクション セットは無効になっています。  
   
