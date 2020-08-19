@@ -1,4 +1,5 @@
 ---
+description: LEAD (Transact-SQL)
 title: LEAD (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/09/2017
@@ -19,12 +20,12 @@ ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4660d84e45ae092f97c08bd472052d8ed6a35f3
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: aec9fccaeb0ba0a6a0fd67e575bbc1a7877fad72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459699"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  *offset*  
  値を取得する現在の行よりも前にある行の数。 指定しない場合は、1 が既定値です。 *offset* は、列、サブクエリ、または正の整数と評価されたり、暗黙的に **bigint** に変換される可能性があるその他の式です。 *offset* は、負の値または分析関数にはなりません。  
   
- *既定値*  
+ *default*  
  *offset* がパーティションの範囲外である場合に返される値。 既定値を指定しない場合、NULL が返されます。 *default* には、列、サブクエリ、または式を指定できますが、分析関数は指定できません。 *default* には、*scalar_expression* の型との互換性が必要です。
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  

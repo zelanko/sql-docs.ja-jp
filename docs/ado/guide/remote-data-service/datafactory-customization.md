@@ -1,4 +1,5 @@
 ---
+description: DataFactory のカスタマイズ
 title: DataFactory のカスタマイズ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a5339af431c913af21591124960e0e59a939dc14
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b7ec3707df187e09de92fa42d7ed2b1c1b8e1130
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749660"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452224"
 ---
 # <a name="datafactory-customization"></a>DataFactory のカスタマイズ
-リモートデータサービス (RDS) を使用すると、3層のクライアント/サーバーシステムで簡単にデータアクセスを実行できます。 クライアントデータコントロールは、リモートデータソースに対してクエリを実行するための接続とコマンド文字列パラメーター、または更新を実行するための接続文字列および[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトパラメーターを指定します。  
+リモートデータサービス (RDS) を使用すると、3層のクライアント/サーバーシステムで簡単にデータアクセスを実行できます。 クライアントデータコントロールは、リモートデータソースに対してクエリを実行するための接続とコマンド文字列パラメーター、または更新を実行するための接続文字列および [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトパラメーターを指定します。  
   
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- パラメーターは、リモートデータソースに対するデータアクセス操作を実行するサーバープログラムに渡されます。 RDS には、 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトと呼ばれる既定のサーバープログラムが用意されています。 **DataFactory**オブジェクトは、クエリによって生成されたすべての**レコードセット**オブジェクトをクライアントに返します。  
+ パラメーターは、リモートデータソースに対するデータアクセス操作を実行するサーバープログラムに渡されます。 RDS には、 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) オブジェクトと呼ばれる既定のサーバープログラムが用意されています。 **DataFactory**オブジェクトは、クエリによって生成されたすべての**レコードセット**オブジェクトをクライアントに返します。  
   
  ただし、RDSServer はクエリと更新の実行に制限されてい**ます。** 接続またはコマンド文字列に対して検証や処理を実行することはできません。  
   
- ADO では、 **DataFactory**が*ハンドラー*と呼ばれる別の種類のサーバープログラムと連携して動作するように指定できます。 ハンドラーは、データソースへのアクセスに使用する前に、クライアント接続とコマンド文字列を変更できます。 また、ハンドラーは、データソースに対するデータの読み取りおよび書き込みをクライアントが行う機能を制御するアクセス権を適用できます。  
+ ADO では、 **DataFactory** が *ハンドラー*と呼ばれる別の種類のサーバープログラムと連携して動作するように指定できます。 ハンドラーは、データソースへのアクセスに使用する前に、クライアント接続とコマンド文字列を変更できます。 また、ハンドラーは、データソースに対するデータの読み取りおよび書き込みをクライアントが行う機能を制御するアクセス権を適用できます。  
   
  ハンドラーがクライアントパラメーターを変更するために使用するパラメーターとアクセス権は、カスタマイズファイルのセクションで指定されます。  
   
- 次のトピックでは、 **DataFactory**オブジェクトのカスタマイズの詳細について説明します。  
+ 次のトピックでは、 **DataFactory** オブジェクトのカスタマイズの詳細について説明します。  
   
 -   [カスタマイズ ファイルの概要](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: フルテキスト インデックス作成時の言語の選択
 title: フルテキスト インデックス作成時の言語の選択 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 882a7e1acfa8baf49b90e0ebda8d3cef212d511a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9f8c0860bb5ef874a6095b993478fa9cbc117fc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726025"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475543"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>フルテキスト インデックス作成時の言語の選択
 
@@ -46,11 +47,11 @@ ms.locfileid: "85726025"
   
  新しいワード ブレーカーには次の利点があります。  
   
--   堅牢性  
+-   保全性  
   
      負荷の高いクエリ環境における新しいワード ブレーカーの堅牢性が、テストによって明らかにされています。  
   
--   Security  
+-   セキュリティ  
   
      言語コンポーネントのセキュリティが向上したため、SQL Server の新しいワード ブレーカーは既定で有効になります。 SQL Server の全体的なセキュリティと堅牢性を強化するためには、ワード ブレーカーやフィルターなどの外部コンポーネントに署名することを強くお勧めします。 次のようにフルテキストを構成すると、これらのコンポーネントが署名されていることを確認できます。  
   
@@ -58,7 +59,7 @@ ms.locfileid: "85726025"
     EXEC sp_fulltext_service 'verify_signature';  
     ```  
   
--   [品質]  
+-   品質  
   
      ワード ブレーカーの設計が変更されました。新しいワード ブレーカーのセマンティクスの品質が以前よりも向上したことが、テストによって明らかにされています。 このため、再呼び出しの精度が向上します。  
   

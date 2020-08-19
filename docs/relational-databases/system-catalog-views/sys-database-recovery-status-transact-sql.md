@@ -1,4 +1,5 @@
 ---
+description: sys.database_recovery_status (Transact-SQL)
 title: database_recovery_status (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3144dc8349bbadc7b7682c757811cc731d67be8c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e026c2a2677e542f219569d9194299e5a2a2c28b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475438"
 ---
 # <a name="sysdatabase_recovery_status-transact-sql"></a>sys.database_recovery_status (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,9 +53,9 @@ ms.locfileid: "85897536"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [データベースとファイルのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [データベースとファイルのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

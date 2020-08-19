@@ -1,4 +1,5 @@
 ---
+description: EVENTDATA (Transact-SQL)
 title: EVENTDATA (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 95996934e6d8334376533b4abf04e2cc7607fd78
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32cfa9a876d13a1c8827649c3fe8ad145b4cb8da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459778"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,11 +41,12 @@ ms.locfileid: "85784578"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-EVENTDATA( )  
-```  
-  
+```syntaxsql
+EVENTDATA( )
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>解説  
 `EVENTDATA` は、DDL トリガーまたはログオン トリガーの内部で直接参照された場合のみ、データを返します。 他のルーチンから呼び出された場合は、たとえ DDL トリガーまたはログオン トリガーがそのルーチンを呼びだした場合であっても、`EVENTDATA` は null を返します。
   
@@ -85,7 +87,7 @@ EVENTDATA は、**xml** データ型の値を返します。 既定では、す�
 この例では、新しいデータベース テーブルが作成されないようにする DDL トリガーを作成します。 `EVENTDATA` によって生成された XML データに対して XQuery を使用して、トリガーを発生させる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをキャプチャします。 詳しくは、「[XQuery 言語リファレンス &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)」をご覧ください。  
   
 > [!NOTE]  
->  **で**[結果をグリッドに表示][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して `<TSQLCommand>` 要素をクエリすると、コマンド テキストに改行が表示されません。 代わりに、 **[結果をテキストで表示]** を使用してください。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[結果をグリッドに表示]** を使用して `<TSQLCommand>` 要素をクエリすると、コマンド テキストに改行が表示されません。 代わりに、**[結果をテキストで表示]** を使用してください。  
   
 ```  
 USE AdventureWorks2012;  

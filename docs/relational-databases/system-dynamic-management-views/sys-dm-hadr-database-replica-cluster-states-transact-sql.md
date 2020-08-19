@@ -1,4 +1,5 @@
 ---
+description: sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 title: dm_hadr_database_replica_cluster_states (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c7924044720c001951ac80e303ac8fe19fc3e489
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6e12ac1d979d1acfab0614bad27ae2f937245870
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489846"
 ---
 # <a name="sysdm_hadr_database_replica_cluster_states-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,11 +57,11 @@ ms.locfileid: "85718761"
 ### <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Always On 可用性グループの動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Always On 可用性グループのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;可用性グループの監視](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;可用性グループの監視 ](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
   

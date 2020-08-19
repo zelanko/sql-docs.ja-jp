@@ -1,4 +1,5 @@
 ---
+description: AbsolutePosition プロパティ (ADO)
 title: AbsolutePosition プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56b21fe8cddf4d855ec1655a83cea306c0a3000c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e406012b917dd6e1694f5914088bac09201ff99e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451754"
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition プロパティ (ADO)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの現在のレコードの位置を表す序数を示します。  
@@ -31,18 +32,18 @@ ms.locfileid: "82747520"
  64ビットコードの場合は、64ビット値を格納するためにに用意されているデータ型を使用します。 たとえば、Long または DBORDINAL などの64ビット長の別の値を使用することができます。 **Positionenum**値は、32ビットの長さに制限されているため、使用しないでください。  
   
 ## <a name="remarks"></a>解説  
- ADO では、 **AbsolutePosition**プロパティを設定するために、使用している OLE DB プロバイダーが[IRowsetLocate: IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx)インターフェイスを実装する必要があります。  
+ ADO では、 **AbsolutePosition** プロパティを設定するために、使用している OLE DB プロバイダーが [IRowsetLocate: IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) インターフェイスを実装する必要があります。  
   
- 順方向専用カーソルまたは動的カーソルで開かれた**レコードセット**の**AbsolutePosition**プロパティにアクセスすると、エラー **adErrFeatureNotAvailable**が発生します。 その他の種類のカーソルでは、OLE DB プロバイダーが**IRowsetScroll: IRowsetLocate**インターフェイスをサポートしている限り、正しい位置が返されます。 プロバイダーで**IRowsetScroll**インターフェイスがサポートされていない場合、プロパティは**adposunknown**に設定されます。 **IRowsetScroll**がサポートされているかどうかを判断するには、プロバイダーのドキュメントを参照してください。  
+ 順方向専用カーソルまたは動的カーソルで開かれた**レコードセット**の**AbsolutePosition**プロパティにアクセスすると、エラー **adErrFeatureNotAvailable**が発生します。 その他の種類のカーソルでは、OLE DB プロバイダーが **IRowsetScroll: IRowsetLocate** インターフェイスをサポートしている限り、正しい位置が返されます。 プロバイダーで **IRowsetScroll** インターフェイスがサポートされていない場合、プロパティは **adposunknown**に設定されます。 **IRowsetScroll**がサポートされているかどうかを判断するには、プロバイダーのドキュメントを参照してください。  
   
  **AbsolutePosition**プロパティを使用して、レコード**セット**オブジェクトの序数位置に基づいてレコードに移動するか、現在のレコードの序数位置を決定します。 このプロパティを使用できるようにするには、プロバイダーが適切な機能をサポートしている必要があります。  
   
- [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)プロパティと同様に、 **AbsolutePosition**は1から始まる、現在のレコードが**レコードセット**内の最初のレコードの場合は1になります。 レコード**セット**オブジェクト内のレコードの合計数は、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)プロパティから取得できます。  
+ [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)プロパティと同様に、 **AbsolutePosition**は1から始まる、現在のレコードが**レコードセット**内の最初のレコードの場合は1になります。 レコード **セット** オブジェクト内のレコードの合計数は、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) プロパティから取得できます。  
   
- **AbsolutePosition**プロパティを設定すると、現在のキャッシュ内のレコードの場合でも、ADO は、指定したレコードで始まる新しいレコードのグループを使用してキャッシュを再読み込みします。 このグループのサイズは、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)プロパティによって決定されます。  
+ **AbsolutePosition**プロパティを設定すると、現在のキャッシュ内のレコードの場合でも、ADO は、指定したレコードで始まる新しいレコードのグループを使用してキャッシュを再読み込みします。 このグループのサイズは、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) プロパティによって決定されます。  
   
 > [!NOTE]
->  **AbsolutePosition**プロパティは、サロゲートレコード番号として使用しないでください。 前のレコードを削除すると、特定のレコードの位置が変更されます。 また、**レコードセット**オブジェクトが再クエリまたは再度開かれた場合、特定のレコードの**AbsolutePosition**が同じであることは保証されません。 ブックマークは、特定の位置を保持して返すための推奨される方法であり、すべての種類の**レコードセット**オブジェクトに対して配置する唯一の方法です。  
+>  **AbsolutePosition**プロパティは、サロゲートレコード番号として使用しないでください。 前のレコードを削除すると、特定のレコードの位置が変更されます。 また、**レコードセット**オブジェクトが再クエリまたは再度開かれた場合、特定のレコードの**AbsolutePosition**が同じであることは保証されません。 ブックマークは、特定の位置を保持して返すための推奨される方法であり、すべての種類の **レコードセット** オブジェクトに対して配置する唯一の方法です。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

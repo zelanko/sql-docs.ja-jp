@@ -1,4 +1,5 @@
 ---
+description: MAX (Transact-SQL)
 title: MAX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
@@ -20,12 +21,12 @@ ms.assetid: 9b002b69-ab5e-472d-b12e-dc2fbe35ef42
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63beea910b2598ffc014ebd508906aecfddd75b0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b344d71bb3bd526e0b49624de3176d5b203b8049
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467994"
 ---
 # <a name="max-transact-sql"></a>MAX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] 
  重複する値は 1 つだけカウントします。 DISTINCT は MAX では意味がなく、ISO との互換性を保つためだけに指定可能になっています。  
   
  *式 (expression)*  
- 定数、列名、関数、および算術演算子、ビット演算子、文字列演算子の組み合わせを指定します。 使用できる最大 **数値**, 、**文字**, 、**一意識別子**, 、および **datetime** 、列は使用できません **ビット** 列です。 集計関数とサブクエリは使用できません。  
+ 定数、列名、関数、および算術演算子、ビット演算子、文字列演算子の組み合わせを指定します。 使用できる最大 **数値**, 、**文字**, 、**一意識別子**, 、および** datetime** 、列は使用できません **ビット** 列です。 集計関数とサブクエリは使用できません。  
   
  詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
@@ -64,7 +65,7 @@ MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] 
 ## <a name="return-types"></a>戻り値の型  
  *式*と同じ値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  NULL 値はすべて無視されます。  
  
  選択できる行がない場合、MAX は NULL を返します。  
@@ -95,7 +96,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. OVER 句を使用する  
- 次の例では、MIN、MAX、AVG、および COUNT 関数を OVER 句と共に使用して、`HumanResources.Department` データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルの部署ごとに集計値を入力します。  
+ 次の例では、MIN、MAX、AVG、および COUNT 関数を OVER 句と共に使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `HumanResources.Department` テーブルの部署ごとに集計値を入力します。  
   
 ```sql  
 SELECT DISTINCT Name  

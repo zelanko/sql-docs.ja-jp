@@ -1,4 +1,5 @@
 ---
+description: SET @local_variable (Transact-SQL)
 title: SET @local_variable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2393d6e51eb7c5b0df6ff1d710829a772b58dfd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f60866f303302b45092592124fb5cb6ff9bdb118
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459313"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,7 +82,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 共通言語ランタイム (CLR) ユーザー定義型の名前。  
   
 `{ . | :: }`  
-CLR ユーザー定義型のメソッドを指定します。 静的メソッド以外のインスタンス メソッドでは、ピリオド ( **.** ) を使用します。 静的メソッドでは、2 つのコロン ( **::** ) を使用します。 CLR ユーザー定義型のメソッド、プロパティ、またはフィールドを呼び出すには、その型に対する EXECUTE 権限が必要です。  
+CLR ユーザー定義型のメソッドを指定します。 静的メソッド以外のインスタンス メソッドでは、ピリオド (**.**) を使用します。 静的メソッドでは、2 つのコロン (**::**) を使用します。 CLR ユーザー定義型のメソッド、プロパティ、またはフィールドを呼び出すには、その型に対する EXECUTE 権限が必要です。  
   
 _method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 ユーザー定義型のメソッド。このメソッドでは、ある型のインスタンスの状態を変更するために、1 つ以上の引数を受け取ります。 静的メソッドはパブリックであることが必要です。  
@@ -168,7 +169,7 @@ READ ONLY
 このカーソルによる更新を禁止します。 UPDATE または DELETE ステートメントの WHERE CURRENT OF 句で、このカーソルを参照することはできません。 このオプションは、更新対象のカーソルの既定の機能をオーバーライドします。 このキーワードは、以前は READ_ONLY と表記していましたが、今後は、READ と ONLY の間にアンダースコアではなくスペースを指定するようになりました。  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-カーソル内で更新できる列を定義します。 OF *column_name* [ **,** ...*n*] を指定した場合は、指定した列に対してのみ更新ができます。 一覧を指定しないと、カーソルを READ ONLY として定義していない限り、すべての列を更新できます。  
+カーソル内で更新できる列を定義します。 OF *column_name* [**,**...*n*] を指定した場合は、指定した列に対してのみ更新ができます。 一覧を指定しないと、カーソルを READ ONLY として定義していない限り、すべての列を更新できます。  
   
 ## <a name="remarks"></a>解説  
 変数は宣言後、NULL に初期化されます。 宣言された変数に NULL 以外の値を代入するには、SET ステートメントを使用します。 変数に値を代入する SET ステートメントでは、1 つの値が返されます。 複数の変数を初期化する場合は、各ローカル変数に対して 1 つずつ、SET ステートメントを使用してください。  

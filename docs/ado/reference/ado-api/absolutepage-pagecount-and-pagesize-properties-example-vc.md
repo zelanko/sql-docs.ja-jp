@@ -1,4 +1,5 @@
 ---
+description: AbsolutePage、PageCount、および PageSize プロパティの例 (VC + +)
 title: AbsolutePage、PageCount、および PageSize プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46b0b7c4eab855c33366550c981df8f03e9e1819
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ce6c0042c92611c65bf243da7bbbf59bbeb748be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451804"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage、PageCount、および PageSize プロパティの例 (VC + +)
-この例では、 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)、 [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)、および[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)プロパティを使用して、 ***Employee***テーブルからの名前と入社日を一度に5つずつ表示します。  
+この例では、 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)、 [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)、および [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) プロパティを使用して、 ***Employee*** テーブルからの名前と入社日を一度に5つずつ表示します。  
   
 ```  
 // BeginAbsolutePageCpp.cpp  
