@@ -1,4 +1,5 @@
 ---
+description: Write (データベース エンジン)
 title: Write (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3394e41418a45c56625af084e4dca0afeefa50b8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 08f593fc3123e6f99f3e44473d75101eacd406e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554787"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88368078"
 ---
 # <a name="write-database-engine"></a>Write (データベース エンジン)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,8 +32,8 @@ ms.locfileid: "86554787"
   
 ## <a name="syntax"></a>構文  
   
-```sql
-void Write( BinaryWriter w )   
+```syntaxsql
+void Write( BinaryWriter w )
 ```  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -57,7 +58,7 @@ byte[] encoding = stream.ToArray();
   
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Read &#40;データベース エンジン&#41;](../../t-sql/data-types/read-database-engine.md)  
 [ToString &#40;データベース エンジン&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
