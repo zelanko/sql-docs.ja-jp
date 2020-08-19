@@ -1,4 +1,5 @@
 ---
+description: データ型の変換 (データベース エンジン)
 title: データ型の変換 (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -21,12 +22,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 656f76bfb0b015742824b02e8d7f2f09c8bfe098
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e778bdf4adc24b95d5ffa1d8eb438222117c07c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008108"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88368558"
 ---
 # <a name="data-type-conversion-database-engine"></a>データ型の変換 (データベース エンジン)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -109,18 +110,18 @@ SELECT @notastring + '1'
  - [decimal 型と numeric 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
  - [sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)  
  - [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)  
- - [float 型と real 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+ - [float と real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
  - [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)  
  - [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)  
- - [int、bigint、smallint、および tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
- - [uniqueidentifier &#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)  
+ - [int、bigint、smallint、tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
+ - [一意識別子 &#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)  
   
 ###  <a name="converting-data-types-by-using-ole-automation-stored-procedures"></a>OLE オートメーション ストアド プロシージャを使用したデータ型の変換  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は [!INCLUDE[tsql](../../includes/tsql-md.md)] のデータ型を使用し、OLE オートメーションは [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] のデータ型を使用するため、OLE オートメーション ストアド プロシージャでは両方の間で渡されるデータの型を変換する必要があります。
   
 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型から [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] データ型への変換を示します。
   
-|SQL Server のデータ型|Visual Basic データ型|  
+|SQL Server のデータ型|Visual Basic のデータ型|  
 |--------------------------|----------------------------|  
 |**char**、**varchar**、**text**、**nvarchar**、**ntext**|**String**|  
 |**decimal**、**numeric**|**String**|  
@@ -132,25 +133,25 @@ SELECT @notastring + '1'
 |**float**|**Double**|  
 |**real**|**Single**|  
 |**money**、 **smallmoney**|**通貨**|  
-|**datetime**、**smalldatetime**|**Date**|  
+|**datetime**、**smalldatetime**|**日付**|  
 |上記以外は NULL に設定|null 値に設定された **Variant**|  
   
-**binary**、**varbinary**、**image** の各型の値を除いて、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値はすべて 1 つの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 値に変換されます。 これらの値は [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の 1 次元 **Byte()** 配列に変換されます。 この配列の範囲は、**Byte(** 0 から _length_ 1 **)** です。*length* は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **binary**、**varbinary**、または **image** の値のバイト数です。
+**binary**、**varbinary**、**image** の各型の値を除いて、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値はすべて 1 つの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 値に変換されます。 これらの値は [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の 1 次元 **Byte()** 配列に変換されます。 この配列の範囲は、**Byte(** 0 から _length_ 1 **)** です。*length* は、 の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**、**varbinary**、または **image** の値のバイト数です。
   
 次の表は、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] データ型から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型への変換を示しています。
   
-|Visual Basic データ型|SQL Server のデータ型|  
+|Visual Basic のデータ型|SQL Server のデータ型|  
 |----------------------------|--------------------------|  
 |**Long**、**Integer**、**Byte**、**Boolean**、**Object**|**int**|  
 |**Double**、**Single**|**float**|  
 |**通貨**|**money**|  
-|**Date**|**datetime**|  
+|**日付**|**datetime**|  
 |4,000 文字以下の **String**|**varchar**/**nvarchar**|  
 |4,000 文字を超える **String**|**text**/**ntext**|  
 |8,000 バイト以下の 1 次元 **Byte()** 配列|**varbinary**|  
-|8,000 バイトを超える 1 次元 **Byte()** 配列|**画像**|  
+|8,000 バイトを超える 1 次元 **Byte()** 配列|**image**|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [OLE オートメーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

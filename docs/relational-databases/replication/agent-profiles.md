@@ -1,4 +1,5 @@
 ---
+description: '[エージェント プロファイル]'
 title: '[エージェント プロファイル] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e90b24ea20076a8af4622c144358e50e7b998ad1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 71c77753c578b825ca04ff26fbe172f9a990db16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85739124"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88380438"
 ---
 # <a name="agent-profiles"></a>[エージェント プロファイル]
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85739124"
  **[新規の既定]**  
  特定の種類のエージェントに対してジョブを作成するときに使用するプロファイルを選択します。 たとえば、マージ パブリケーションに対していくつかのサブスクリプションを作成する場合、選択されたプロファイルが各サブスクリプションのマージ エージェント ジョブで使用されます。 既存のジョブのプロファイルを変更するには、プロファイルを選択し、 **[既存のエージェントの変更]** をクリックします。  
   
- **Name**  
+ **名前**  
  プロファイルの名前。  
   
  **Type**  
