@@ -1,4 +1,5 @@
 ---
+description: NumericScale および Precision プロパティの例 (VC++)
 title: NumericScale および Precision プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35df19bc706e1844e7f6c9e5f3004614c1df5bd2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ba9487a8fb3db896a69664d8ea0075627ba457c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443044"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale および Precision プロパティの例 (VC++)
 この例では、 [numericscale](../../../ado/reference/ado-api/numericscale-property-ado.md)プロパティと[precision](../../../ado/reference/ado-api/precision-property-ado.md)プロパティを使用して、 ***Pubs***データベースの***割引***テーブルのフィールドの数値の小数点以下桁数と有効桁数を表示します。  

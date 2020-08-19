@@ -1,4 +1,5 @@
 ---
+description: Properties コレクション (ADO)
 title: Properties コレクション (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d3d6d019d00f683826a417aa73c216e8fca9565
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b9915366d96975ffd02f6fae7ddd25ce35c81f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442654"
 ---
 # <a name="properties-collection-ado"></a>Properties コレクション (ADO)
-オブジェクトの特定のインスタンスのすべての[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトを含みます。  
+オブジェクトの特定のインスタンスのすべての [プロパティ](../../../ado/reference/ado-api/property-object-ado.md) オブジェクトを含みます。  
   
 ## <a name="remarks"></a>解説  
- 一部の ADO**オブジェクトには、プロパティオブジェクトで**構成される**Properties**コレクションがあります。 各**プロパティ**オブジェクトは、プロバイダー固有の ADO オブジェクトの特性に対応します。  
+ 一部の ADO**オブジェクトには、プロパティオブジェクトで**構成される**Properties**コレクションがあります。 各 **プロパティ** オブジェクトは、プロバイダー固有の ADO オブジェクトの特性に対応します。  
   
 > [!NOTE]
 >  **プロパティ**オブジェクトの使用方法の詳細については、「 [property](../../../ado/reference/ado-api/property-object-ado.md)オブジェクト」を参照してください。  

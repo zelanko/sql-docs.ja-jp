@@ -1,4 +1,5 @@
 ---
+description: Open および Close メソッドの例 (VB)
 title: Open および Close メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9d46d7ec04d5b19331ecda3b887e59862cdcf48
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bbfd00f1cda9fcfc38a7b13b39e1f3e08a24b209
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443014"
 ---
 # <a name="open-and-close-methods-example-vb"></a>Open および Close メソッドの例 (VB)
 この例では、開いている[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)と[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方に対して、 **Open**メソッドと[Close](../../../ado/reference/ado-api/close-method-ado.md)メソッドを使用します。  

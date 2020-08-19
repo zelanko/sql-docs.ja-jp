@@ -1,4 +1,5 @@
 ---
+description: Read メソッド
 title: Read メソッド |Microsoft Docs
 ms.prod: sql
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75b39b758d48a173bcfbe84e3fecbd20cce5ee12
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6600c02af5c24fc1ce27a04422678f8a3f40a179
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754269"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442554"
 ---
 # <a name="read-method"></a>Read メソッド
-バイナリ[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトから、指定されたバイト数を読み取ります。  
+バイナリ [ストリーム](../../../ado/reference/ado-api/stream-object-ado.md) オブジェクトから、指定されたバイト数を読み取ります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,10 +41,10 @@ Variant = Stream.Read ( NumBytes)
  **Read**メソッドは、指定されたバイト数またはストリーム全体を**ストリーム**オブジェクトから読み取り、結果のデータを**バリアント**として返します。  
   
 ## <a name="remarks"></a>解説  
- *Numbytes*が**ストリーム**の残りのバイト数よりも大きい場合は、残っているバイトだけが返されます。 読み取られたデータは、 *Numbytes*によって指定された長さと一致するように埋め込まれていません。 読み取るバイトが残っていない場合は、null 値を持つバリアントが返されます。 **Read**を使用して後方に読み取ることはできません。  
+ *Numbytes*が**ストリーム**の残りのバイト数よりも大きい場合は、残っているバイトだけが返されます。 読み取られたデータは、 *Numbytes*によって指定された長さと一致するように埋め込まれていません。 読み取るバイトが残っていない場合は、null 値を持つバリアントが返されます。 **Read** を使用して後方に読み取ることはできません。  
   
 > [!NOTE]
->  *Numbytes*は常にバイトを計測します。 テキスト**ストリーム**オブジェクト ([型](../../../ado/reference/ado-api/type-property-ado-stream.md)は**adTypeText**) の場合は、 [ReadText](../../../ado/reference/ado-api/readtext-method.md)を使用します。  
+>  *Numbytes* は常にバイトを計測します。 テキスト **ストリーム** オブジェクト ([型](../../../ado/reference/ado-api/type-property-ado-stream.md) は **adTypeText**) の場合は、 [ReadText](../../../ado/reference/ado-api/readtext-method.md)を使用します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

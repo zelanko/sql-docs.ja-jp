@@ -1,4 +1,5 @@
 ---
+description: Provider プロパティ (ADO)
 title: Provider プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af95544a998963ffd81b4ebf9098089cc1a9915f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c4e8b5f57a9d6ba15a12c8da8bb4e85012b53da9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442584"
 ---
 # <a name="provider-property-ado"></a>Provider プロパティ (ADO)
 [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトのプロバイダーの名前を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- プロバイダー名を示す**文字列**値を設定または返します。  
+ プロバイダー名を示す **文字列** 値を設定または返します。  
   
 ## <a name="remarks"></a>解説  
  **プロバイダー**のプロパティを使用して、接続のプロバイダーの名前を設定または取得します。 このプロパティは、 [connectionstring](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティの内容、または[Open](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドの*connectionstring*引数によって設定することもできます。ただし、 **Open**メソッドを呼び出しているときに複数の場所でプロバイダーを指定すると、予期しない結果になる可能性があります。 プロバイダーが指定されていない場合、プロパティは既定で MSDASQL ([Microsoft OLE DB provider FOR ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)) に設定されます。  

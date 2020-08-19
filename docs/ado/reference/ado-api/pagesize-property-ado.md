@@ -1,4 +1,5 @@
 ---
+description: PageSize プロパティ (ADO)
 title: PageSize プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97902985dcd2110b165498be5324393ad5588bac
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 99365747e5049da4b8dd3cc58f58fd6e2a542e76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442854"
 ---
 # <a name="pagesize-property-ado"></a>PageSize プロパティ (ADO)
-レコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)内の1つのページを構成するレコードの数を示します。  
+レコード [セット](../../../ado/reference/ado-api/recordset-object-ado.md)内の1つのページを構成するレコードの数を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- ページ上のレコード数を示す**Long 型**の値を設定または返します。 既定値は**10**です。  
+ ページ上のレコード数を示す **Long 型** の値を設定または返します。 既定値は **10**です。  
   
 ## <a name="remarks"></a>解説  
- データの論理ページを構成するレコードの数を確認するには、 **PageSize**プロパティを使用します。 ページサイズを設定すると、 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)プロパティを使用して、特定のページの最初のレコードに移動できます。 これは、ユーザーがデータをページごとに表示し、一度に特定の数のレコードを表示できるようにする場合に、Web サーバーのシナリオで役立ちます。  
+ データの論理ページを構成するレコードの数を確認するには、 **PageSize** プロパティを使用します。 ページサイズを設定すると、 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) プロパティを使用して、特定のページの最初のレコードに移動できます。 これは、ユーザーがデータをページごとに表示し、一度に特定の数のレコードを表示できるようにする場合に、Web サーバーのシナリオで役立ちます。  
   
  このプロパティはいつでも設定でき、その値は特定のページの最初のレコードの位置を計算するために使用されます。  
   

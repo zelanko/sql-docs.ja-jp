@@ -1,4 +1,5 @@
 ---
+description: Open および Close メソッドの例 (VBScript)
 title: Open および Close メソッドの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04273e3aec32e45b49e1ad9addc3cd9467579bf3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb26a778e3d484ba024a5a38564d9e3abc0a3ef0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762270"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443004"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Open および Close メソッドの例 (VBScript)
 この例では、開いている[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)と[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方に対して、 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドと[Close](../../../ado/reference/ado-api/close-method-ado.md)メソッドを使用します。  
   
- Active Server ページ (ASP) で次の例を使用します。 [**検索**] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **Openvbs. asp**として保存します。 結果は任意のブラウザーで表示できます。  
+ Active Server ページ (ASP) で次の例を使用します。 [ **検索** ] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **Openvbs. asp**として保存します。 結果は任意のブラウザーで表示できます。  
   
 ```  
 <!-- BeginOpenVBS -->  

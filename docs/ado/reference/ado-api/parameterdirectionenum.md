@@ -1,4 +1,5 @@
 ---
+description: ParameterDirectionEnum
 title: Parameterdirection Enum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c109ea1c44fc44a4cdbb585e2c612ebf8c9b2909
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8c586b4e7ce2e18411d147e8aafb4eb144e01e6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442784"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 [パラメーター](../../../ado/reference/ado-api/parameter-object.md)が入力パラメーター、出力パラメーター、入力パラメーターと出力パラメーターの両方、またはストアドプロシージャからの戻り値を表すかどうかを指定します。  

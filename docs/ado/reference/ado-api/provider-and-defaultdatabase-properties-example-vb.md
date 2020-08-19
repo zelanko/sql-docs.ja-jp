@@ -1,4 +1,5 @@
 ---
+description: Provider および DefaultDatabase プロパティの例 (VB)
 title: Provider および DefaultDatabase プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d1c72fd2e84bfe8c39570181a7f975c70140d91c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db5e40a1f82f95e7b4d78f4e6e3ce7703305abb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759928"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442594"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider および DefaultDatabase プロパティの例 (VB)
-この例では、異なるプロバイダーを使用する3つの[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを開くことによって、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)プロパティを示します。 また、 [defaultdatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)プロパティを使用して、Microsoft ODBC プロバイダーの既定のデータベースを設定します。  
+この例では、異なるプロバイダーを使用する3つの[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを開くことによって、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)プロパティを示します。 また、 [defaultdatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) プロパティを使用して、Microsoft ODBC プロバイダーの既定のデータベースを設定します。  
   
 > [!NOTE]
->  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes**または**INTEGRATED Security = SSPI**を指定する必要があります。  
+>  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes** または **INTEGRATED Security = SSPI** を指定する必要があります。  
   
 ```  
 'BeginProviderVB  

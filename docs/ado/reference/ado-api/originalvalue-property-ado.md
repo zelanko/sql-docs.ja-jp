@@ -1,4 +1,5 @@
 ---
+description: OriginalValue プロパティ (ADO)
 title: OriginalValue プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,25 +16,25 @@ helpviewer_keywords:
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b46b9e76a397d81b339aef231634b3b16f717ce4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 13353013575db87f5ec30ceb8cf4a5aab6a06079
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762025"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443124"
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue プロパティ (ADO)
-変更が行われる前にレコード内に存在していた[フィールド](../../../ado/reference/ado-api/field-object.md)の値を示します。  
+変更が行われる前にレコード内に存在していた [フィールド](../../../ado/reference/ado-api/field-object.md) の値を示します。  
   
 ## <a name="return-value"></a>戻り値  
- 変更前のフィールドの値を表す**バリアント**値を返します。  
+ 変更前のフィールドの値を表す **バリアント** 値を返します。  
   
 ## <a name="remarks"></a>解説  
- 現在のレコードからフィールドの元のフィールド値を返すには、 **Originalvalue**プロパティを使用します。  
+ 現在のレコードからフィールドの元のフィールド値を返すには、 **Originalvalue** プロパティを使用します。  
   
- *即時更新モード*( [update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出した後に、プロバイダーが基になるデータソースに変更を書き込む) では、 **originalvalue**プロパティは、変更前 (つまり、最後の**更新**メソッドの呼び出し以降) に存在していたフィールド値を返します。 これは、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)メソッドが[value](../../../ado/reference/ado-api/value-property-ado.md)プロパティを置き換えるために使用するのと同じ値です。  
+ *即時更新モード*( [update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出した後に、プロバイダーが基になるデータソースに変更を書き込む) では、 **originalvalue**プロパティは、変更前 (つまり、最後の**更新**メソッドの呼び出し以降) に存在していたフィールド値を返します。 これは、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) メソッドが [value](../../../ado/reference/ado-api/value-property-ado.md) プロパティを置き換えるために使用するのと同じ値です。  
   
- *バッチ更新モード*(プロバイダーによって複数の変更がキャッシュされ、 [updatebatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドを呼び出したときに基になるデータソースに書き込まれる) では、 **originalvalue**プロパティは、変更前 (つまり、最後の**updatebatch**メソッド呼び出し以降) に存在していたフィールド値を返します。 これは、 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッドが**value**プロパティを置き換えるために使用するのと同じ値です。 このプロパティを[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)プロパティと共に使用すると、バッチ更新で発生した競合を解決できます。  
+ *バッチ更新モード*(プロバイダーによって複数の変更がキャッシュされ、 [updatebatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドを呼び出したときに基になるデータソースに書き込まれる) では、 **originalvalue**プロパティは、変更前 (つまり、最後の**updatebatch**メソッド呼び出し以降) に存在していたフィールド値を返します。 これは、 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) メソッドが **value** プロパティを置き換えるために使用するのと同じ値です。 このプロパティを [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) プロパティと共に使用すると、バッチ更新で発生した競合を解決できます。  
   
 ## <a name="record"></a>Record  
  [レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの場合、 [Update](../../../ado/reference/ado-api/update-method.md)が呼び出される前に追加されたフィールドの**originalvalue**プロパティは空になります。  

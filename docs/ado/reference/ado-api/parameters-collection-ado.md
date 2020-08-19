@@ -1,4 +1,5 @@
 ---
+description: Parameters コレクション (ADO)
 title: Parameters コレクション (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e087c769fe84e79ca9a41c33912f150249ab2cd9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 70a3554ed1ef0c94965e340f303cc3208c1962fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442764"
 ---
 # <a name="parameters-collection-ado"></a>Parameters コレクション (ADO)
 [Command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトのすべての[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトを含みます。  
@@ -34,7 +35,7 @@ ms.locfileid: "82763393"
   
  独自の**パラメーター**オブジェクトを定義しておらず、 **Refresh**メソッドを呼び出す前に**Parameters**コレクションにアクセスすると、ADO は自動的にメソッドを呼び出し、コレクションにデータを設定します。  
   
- 呼び出すストアドプロシージャやパラメーター化されたクエリに関連付けられているパラメーターのプロパティがわかっている場合は、プロバイダーへの呼び出しを最小化してパフォーマンスを向上させることができます。 [Createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md)メソッドを使用して、適切なプロパティ設定を持つ**パラメーター**オブジェクトを作成し、 [Append](../../../ado/reference/ado-api/append-method-ado.md)メソッドを使用して**Parameters**コレクションに追加します。 これにより、パラメーター情報のプロバイダーを呼び出さなくても、パラメーター値を設定して返すことができます。 パラメーター情報を提供しないプロバイダーに書き込む場合は、このメソッドを使用してパラメーター**コレクションを**手動で設定し、パラメーターを使用できるようにする必要があります。 必要に応じて、 [Delete](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)メソッドを使用して**Parameters**コレクションから**パラメーター**オブジェクトを削除します。  
+ 呼び出すストアドプロシージャやパラメーター化されたクエリに関連付けられているパラメーターのプロパティがわかっている場合は、プロバイダーへの呼び出しを最小化してパフォーマンスを向上させることができます。 [Createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md)メソッドを使用して、適切なプロパティ設定を持つ**パラメーター**オブジェクトを作成し、 [Append](../../../ado/reference/ado-api/append-method-ado.md)メソッドを使用して**Parameters**コレクションに追加します。 これにより、パラメーター情報のプロバイダーを呼び出さなくても、パラメーター値を設定して返すことができます。 パラメーター情報を提供しないプロバイダーに書き込む場合は、このメソッドを使用してパラメーター **コレクションを** 手動で設定し、パラメーターを使用できるようにする必要があります。 必要に応じて、 [Delete](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)メソッドを使用して**Parameters**コレクションから**パラメーター**オブジェクトを削除します。  
   
  レコード**セットの** **Parameters**コレクション内のオブジェクトは、**レコードセット**が閉じられたときにスコープから除外されます (したがって使用できなくなります)。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "82763393"
   
 1.  パラメーターのないストアドプロシージャを呼び出す場合は、 **Command**オブジェクトの**Execute**メソッドを呼び出す前に、 **parameters**コレクションの**Refresh**メソッドを呼び出す必要があります。  
   
-2.  パラメーターを指定してストアドプロシージャを呼び出し、**パラメーターコレクションに** **Append**を指定してパラメーターを明示的に追加する場合、戻り値/出力パラメーターを**parameters**コレクションに追加する必要があります。 戻り値は、最初に**Parameters**コレクションに追加する必要があります。 他のパラメーターを定義の順序で**parameters**コレクションに追加するには、 **Append**を使用します。 たとえば、ストアドプロシージャ SPWithParam には2つのパラメーターがあります。 最初のパラメーターである*Inparam*は、adVarChar (20) として定義されている入力パラメーターであり、2番目のパラメーターである*Outparam*は、adVarChar (20) として定義された出力パラメーターです。 戻り値/出力パラメーターを取得するには、次のコードを使用します。  
+2.  パラメーターを指定してストアドプロシージャを呼び出し、 **パラメーターコレクションに** **Append**を指定してパラメーターを明示的に追加する場合、戻り値/出力パラメーターを **parameters** コレクションに追加する必要があります。 戻り値は、最初に **Parameters** コレクションに追加する必要があります。 他のパラメーターを定義の順序で**parameters**コレクションに追加するには、 **Append**を使用します。 たとえば、ストアドプロシージャ SPWithParam には2つのパラメーターがあります。 最初のパラメーターである *Inparam*は、adVarChar (20) として定義されている入力パラメーターであり、2番目のパラメーターである *Outparam*は、adVarChar (20) として定義された出力パラメーターです。 戻り値/出力パラメーターを取得するには、次のコードを使用します。  
   
     ```vb
     ' Open Connection Conn  
@@ -63,7 +64,7 @@ ms.locfileid: "82763393"
   
     ```  
   
-3.  パラメーターを使用してストアドプロシージャを呼び出し、 **parameters コレクションで** **Item**メソッドを呼び出すことによってパラメーターを構成する場合は、ストアドプロシージャの戻り値/出力パラメーターを**parameters**コレクションから取得できます。 たとえば、ストアドプロシージャ SPWithParam には2つのパラメーターがあります。 最初のパラメーターである*Inparam*は、adVarChar (20) として定義されている入力パラメーターであり、2番目のパラメーターである*Outparam*は、adVarChar (20) として定義された出力パラメーターです。 戻り値/出力パラメーターを取得するには、次のコードを使用します。  
+3.  パラメーターを使用してストアドプロシージャを呼び出し、 **parameters コレクションで** **Item**メソッドを呼び出すことによってパラメーターを構成する場合は、ストアドプロシージャの戻り値/出力パラメーターを**parameters**コレクションから取得できます。 たとえば、ストアドプロシージャ SPWithParam には2つのパラメーターがあります。 最初のパラメーターである *Inparam*は、adVarChar (20) として定義されている入力パラメーターであり、2番目のパラメーターである *Outparam*は、adVarChar (20) として定義された出力パラメーターです。 戻り値/出力パラメーターを取得するには、次のコードを使用します。  
   
     ```vb
     ' Open Connection Conn  
