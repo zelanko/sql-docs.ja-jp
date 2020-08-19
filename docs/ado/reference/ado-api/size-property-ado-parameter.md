@@ -1,4 +1,5 @@
 ---
+description: Size プロパティ (ADO Parameter)
 title: Size プロパティ (ADO Parameter) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58f989ab60099673f95debbe4eb5f8217beb0ccd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 78a22e22f5bf65c211a18bd68767537af164b452
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442154"
 ---
 # <a name="size-property-ado-parameter"></a>Size プロパティ (ADO Parameter)
 [パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトの最大サイズをバイト数または文字数で示します。  
@@ -35,7 +36,7 @@ ms.locfileid: "82759888"
   
  **Parameter**オブジェクトを[Command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの**Parameters**コレクションに既に追加していて、その型を可変長データ型に変更した場合は、 **command**オブジェクトを実行する前に、**パラメーター**オブジェクトの**Size**プロパティを設定する必要があります。それ以外の場合は、エラーが発生します。  
   
- [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用してプロバイダーからパラメーター情報を取得し、1つまたは複数の可変長データ型**パラメーター**オブジェクトを返す場合、ADO では、可能な最大サイズに基づいてパラメーターにメモリが割り当てられるため、実行中にエラーが発生する可能性があります。 エラーを回避するには、コマンドを実行する前に、これらのパラメーターの**Size**プロパティを明示的に設定する必要があります。  
+ [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用してプロバイダーからパラメーター情報を取得し、1つまたは複数の可変長データ型**パラメーター**オブジェクトを返す場合、ADO では、可能な最大サイズに基づいてパラメーターにメモリが割り当てられるため、実行中にエラーが発生する可能性があります。 エラーを回避するには、コマンドを実行する前に、これらのパラメーターの **Size** プロパティを明示的に設定する必要があります。  
   
  **Size**プロパティは読み取り/書き込み可能です。  
   

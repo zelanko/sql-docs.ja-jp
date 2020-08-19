@@ -1,4 +1,5 @@
 ---
+description: WillChangeField および FieldChangeComplete イベント (ADO)
 title: Changefield および FieldChangeComplete イベント (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4a4fb74e95bf0e1ba9dc9d0001b3d653f9294c1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: be000a8ff9154c79c2b98c9bc57f79f3537743c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441534"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField および FieldChangeComplete イベント (ADO)
 イベントは、保留**中の操作**によって[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の1つまたは複数の[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの値が変更される前に呼び出されます。 **FieldChangeComplete**イベントは、1つまたは複数の**フィールド**オブジェクトの値が変更された後に呼び出されます。  
@@ -50,7 +51,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *adStatus*  
  [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md)状態の値です。  
   
- が**呼び出されたときに**、イベントを発生させた操作が成功した場合、このパラメーターは**adstatusok**に設定されます。 このイベントが保留中の操作の取り消しを要求できない場合は、 **Adstatuscantdeny**に設定されます。  
+ が **呼び出されたときに** 、イベントを発生させた操作が成功した場合、このパラメーターは **adstatusok** に設定されます。 このイベントが保留中の操作の取り消しを要求できない場合は、 **Adstatuscantdeny** に設定されます。  
   
  **FieldChangeComplete**が呼び出されると、このパラメーターは、イベントの原因となった操作が成功した場合は**adstatusok**に、操作が失敗した場合は**Adstatuserror curred**に設定されます。  
   
@@ -59,9 +60,9 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  **FieldChangeComplete**が返される前に、このパラメーターを**adStatusUnwantedEvent**に設定して、後続の通知が行われないようにします。  
   
  *pRecordset*  
- **レコードセット**オブジェクトです。 このイベントが発生した**レコードセット**。  
+ **レコードセット**オブジェクトです。 このイベントが発生した **レコードセット** 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティを設定し**FieldChangeComplete** 、フィールドと値の配列パラメーターを使用して[Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出す**と、が**発生する可能性があります。  
   
 ## <a name="see-also"></a>参照  

@@ -1,4 +1,5 @@
 ---
+description: Sort プロパティ
 title: Sort プロパティ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -21,21 +22,21 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3dc6f7799e28fff65a1b6e60329ba9fb94d84824
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a8ec5c6812e2800825677cd844756d1dd9325729
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442064"
 ---
 # <a name="sort-property"></a>Sort プロパティ
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)が並べ替えられる1つ以上のフィールド名と、各フィールドを昇順と降順のどちらで並べ替えるかを示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 並べ替えの対象となる**レコードセット**内のフィールド名を示す**文字列**値を設定または返します。 各名前はコンマで区切られます。オプションで、空白とキーワード**ASC**を使用します。この場合、フィールドは昇順に並べ替えられ、 **DESC**はフィールドが降順に並べ替えられます。 既定では、キーワードが指定されていない場合、フィールドは昇順に並べ替えられます。  
+ 並べ替えの対象となる**レコードセット**内のフィールド名を示す**文字列**値を設定または返します。 各名前はコンマで区切られます。オプションで、空白とキーワード **ASC**を使用します。この場合、フィールドは昇順に並べ替えられ、 **DESC**はフィールドが降順に並べ替えられます。 既定では、キーワードが指定されていない場合、フィールドは昇順に並べ替えられます。  
   
-## <a name="remarks"></a>Remarks  
- このプロパティでは、[カーソル位置](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを**adUseClient**に設定する必要があります。 インデックスがまだ存在しない場合は、 **Sort**プロパティで指定された各フィールドに対して一時インデックスが作成されます。  
+## <a name="remarks"></a>解説  
+ このプロパティでは、 [カーソル位置](../../../ado/reference/ado-api/cursorlocation-property-ado.md) プロパティを **adUseClient**に設定する必要があります。 インデックスがまだ存在しない場合は、 **Sort** プロパティで指定された各フィールドに対して一時インデックスが作成されます。  
   
  データは物理的には再配置されませんが、単純にインデックスで指定された順序でアクセスされるため、並べ替え操作は効率的です。  
   
@@ -45,9 +46,9 @@ ms.locfileid: "82759838"
   
  **Sort**プロパティを空の文字列に設定すると、行が元の順序にリセットされ、一時インデックスが削除されます。 既存のインデックスは削除されません。  
   
- **レコードセット**に*firstName*、 *middleInitial*、 *lastName*という3つのフィールドが含まれているとします。 [**並べ替え**] プロパティを "" に設定します。この文字列は、 `lastName DESC, firstName ASC` **レコードセット**を姓で降順に並べ替え、名を昇順に並べ替えます。 ミドルネームのイニシャルは無視されます。  
+ **レコードセット**に*firstName*、 *middleInitial*、 *lastName*という3つのフィールドが含まれているとします。 [ **並べ替え** ] プロパティを "" に設定します。この文字列は、 `lastName DESC, firstName ASC` **レコードセット** を姓で降順に並べ替え、名を昇順に並べ替えます。 ミドルネームのイニシャルは無視されます。  
   
- "ASC" または "DESC" という名前のフィールドは使用できません。これらの名前は、キーワード**ASC**および**DESC**と競合しています。 **レコードセット**を返すクエリで AS キーワードを使用する**と**、競合する名前を持つフィールドの別名を作成できます。  
+ "ASC" または "DESC" という名前のフィールドは使用できません。これらの名前は、キーワード **ASC** および **DESC**と競合しています。 **レコードセット**を返すクエリで AS キーワードを使用する**と**、競合する名前を持つフィールドの別名を作成できます。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

@@ -1,4 +1,5 @@
 ---
+description: Record オブジェクトのプロパティ、メソッド、およびイベント
 title: オブジェクトのプロパティ、メソッド、およびイベントを記録します。Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 156861996bc62e968c192fdd8687c7654e0d2b60
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a354504bcc81d73f3856c8265da908f84e1b019e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442504"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Record オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -52,7 +53,7 @@ ms.locfileid: "82754041"
   
  [Open メソッド (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

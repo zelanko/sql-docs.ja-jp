@@ -1,4 +1,5 @@
 ---
+description: Hierarchy オブジェクト (ADO MD)
 title: Hierarchy オブジェクト (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1232d228d597188364cb20a7f60dfaa11c8af21a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 757de54d56b5220b2759e670584e432c595fc45f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440984"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy オブジェクト (ADO MD)
 [ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)のメンバーを集計または "ロールアップ" できる1つの方法を表します。 ディメンションは、1つまたは複数の階層に沿って集計できます。  
@@ -34,7 +35,7 @@ ms.locfileid: "82753966"
   
 -   [レベルコレクションを](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)持つ**階層**を構成する[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクトを返します。  
   
--   標準の ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを使用して、 **Hierarchy**オブジェクトに関する追加情報を取得します。  
+-   標準の ADO [プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md) コレクションを使用して、 **Hierarchy** オブジェクトに関する追加情報を取得します。  
   
  **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "82753966"
 |HierarchyCaption|階層に関連付けられたラベルまたはキャプション。|  
 |HierarchyCardinality|階層内のメンバーの数。|  
 |HierarchyGUID|階層の GUID。|  
-|HierarchyName|階層の名前です。|  
+|HierarchyName|階層の名前。|  
 |HierarchyUniqueName|階層の明確な名前。|  
 |SchemaName|このキューブが所属するスキーマの名前です。|  
   

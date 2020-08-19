@@ -1,4 +1,5 @@
 ---
+description: State プロパティの例 (VB)
 title: State プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e03f64c5f5312bc6f3f0409cb5b701e854919b0e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ee0adf7b308ada45eee0c21c44f2a38a2e8a0b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441974"
 ---
 # <a name="state-property-example-vb"></a>State プロパティの例 (VB)
-この例では、非同期接続が開いており、非同期コマンドが実行中の場合に、 [State](../../../ado/reference/ado-api/state-property-ado.md)プロパティを使用してメッセージを表示します。  
+この例では、非同期接続が開いており、非同期コマンドが実行中の場合に、 [State](../../../ado/reference/ado-api/state-property-ado.md) プロパティを使用してメッセージを表示します。  
   
 ```  
 'BeginStateVB  

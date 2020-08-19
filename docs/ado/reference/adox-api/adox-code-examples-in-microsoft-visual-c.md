@@ -1,4 +1,5 @@
 ---
+description: Microsoft Visual C++ での ADOX のコード例
 title: Microsoft Visual C++ | の ADOX のコード例Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab7c47857ac8a25b50567660ca8fbcc0ed51994c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e316cb14da5b10e7eb0525c621c5ffaa67ec53e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440624"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C++ での ADOX のコード例
 これらのトピックでは、ADOX の使用方法を理解するのに役立つサンプルコードを提供しています。 すべてのコード例は Microsoft Visual C++ を使用して記述されます。  

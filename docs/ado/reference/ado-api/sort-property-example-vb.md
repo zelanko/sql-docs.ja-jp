@@ -1,4 +1,5 @@
 ---
+description: Sort プロパティの例 (VB)
 title: Sort プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a2ae26c61534996fcfb5094432ff2e0e81c90c9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b7821e971d32f855fc219a2883f4190b9434d998
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442084"
 ---
 # <a name="sort-property-example-vb"></a>Sort プロパティの例 (VB)
 この例では、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[Sort](../../../ado/reference/ado-api/sort-property.md)プロパティを使用して、 ***Pubs***データベースの***Authors***テーブルから派生した**レコードセット**の行を並べ替えます。 セカンダリユーティリティルーチンによって各行が出力されます。  
@@ -103,7 +104,7 @@ End Sub
 'EndSortVB  
 ```  
   
- これは、指定されたタイトルと、指定された**レコードセット**の内容を出力するセカンダリユーティリティルーチンです。  
+ これは、指定されたタイトルと、指定された **レコードセット**の内容を出力するセカンダリユーティリティルーチンです。  
   
 ```  
 Attribute VB_Name = "Sort"  

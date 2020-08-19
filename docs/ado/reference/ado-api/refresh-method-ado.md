@@ -1,4 +1,5 @@
 ---
+description: Refresh メソッド (ADO)
 title: Refresh メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0688fc8b45f444ca8c711f3229623484fa2139a8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 83a6153e0017dafb0ac48c27aebc49c51c9b22d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442354"
 ---
 # <a name="refresh-method-ado"></a>Refresh メソッド (ADO)
 プロバイダーによって使用可能なオブジェクトを反映するように、コレクション内のオブジェクトを更新します。  
@@ -48,7 +49,7 @@ collection.Refresh
 >  **Refresh**メソッドを使用してプロバイダーからパラメーター情報を取得し、1つまたは複数の可変長データ型[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトを返す場合、ADO では、可能な最大サイズに基づいてパラメーターにメモリが割り当てられ、実行中にエラーが発生します。 エラーを回避するには、 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッドを呼び出す前に、これらのパラメーターの[Size](../../../ado/reference/ado-api/size-property-ado-parameter.md)プロパティを明示的に設定する必要があります。  
   
 ### <a name="fields"></a>フィールド  
- [フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに対して**Refresh**メソッドを使用しても、可視効果はありません。 基になるデータベース構造から変更を取得するには、 [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドを使用するか、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトでブックマークがサポートされていない場合は[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッドを使用する必要があります。  
+ [フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに対して**Refresh**メソッドを使用しても、可視効果はありません。 基になるデータベース構造から変更を取得するには、 [Requery](../../../ado/reference/ado-api/requery-method.md) メソッドを使用するか、 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトでブックマークがサポートされていない場合は [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) メソッドを使用する必要があります。  
   
 ### <a name="properties"></a>プロパティ  
  一部のオブジェクトの**プロパティ**コレクションで**Refresh**メソッドを使用すると、プロバイダーが公開する動的プロパティがコレクションに設定されます。 これらのプロパティは、ADO によってサポートされる組み込みプロパティ以外の、プロバイダー固有の機能に関する情報を提供します。  

@@ -1,4 +1,5 @@
 ---
+description: Stat メソッド
 title: Stat メソッド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6295640a0d9ec0815ebac9086efc3835915e0e0c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5375335fe0964107aed54de71d7e700b0588f209
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441994"
 ---
 # <a name="stat-method"></a>Stat メソッド
 [ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトに関する情報を取得します。  
@@ -33,21 +34,21 @@ Long stream.Stat(StatStg, StatFlag)
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 操作の状態を示す**Long 型**の値。  
+ 操作の状態を示す **Long 型** の値。  
   
 #### <a name="parameters"></a>パラメーター  
  *StatStg*  
- ストリームに関する情報が格納される STATSTG 構造体。 ADO ストリームオブジェクトによって使用される**Stat**メソッドの実装では、構造体のすべてのフィールドが格納されるわけではありません。  
+ ストリームに関する情報が格納される STATSTG 構造体。 ADO ストリームオブジェクトによって使用される **Stat** メソッドの実装では、構造体のすべてのフィールドが格納されるわけではありません。  
   
  *StatFlag*  
  このメソッドが STATSTG 構造体の一部のメンバーを返さないことを指定します。これにより、メモリ割り当て操作が保存されます。 値は STATFLAG 列挙体から取得されます。 STATFLAG 列挙体には2つの値があります  
   
-|定数|[値]|  
+|定数|値|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ADO Stream オブジェクトに実装されている Stat メソッドのバージョンは、STATSTG 構造体の次のフィールドに入力します。  
   
  *pwcsName*  

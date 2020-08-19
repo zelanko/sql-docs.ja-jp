@@ -1,4 +1,5 @@
 ---
+description: Catalog オブジェクト (ADO MD)
 title: Catalog オブジェクト (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ef77f61703178bfe30fc4ce823d7c56be48836f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7fe8cb849b5b770f23fab92da84bc3bc58fdf55d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441274"
 ---
 # <a name="catalog-object-ado-md"></a>Catalog オブジェクト (ADO MD)
 多次元データプロバイダー (.MDP) に固有の多次元スキーマ情報 (つまり、キューブおよび基になるディメンション、階層、レベル、およびメンバー) が含まれています。  

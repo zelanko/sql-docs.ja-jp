@@ -1,4 +1,5 @@
 ---
+description: RecordType プロパティ (ADO)
 title: RecordType プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d215f959a921247520efeb470754e0abc5bb0d40
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 578e9a0d03382e5e0dc143e07351cfb8890f278d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442374"
 ---
 # <a name="recordtype-property-ado"></a>RecordType プロパティ (ADO)
 [レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの種類を示します。  
@@ -30,7 +31,7 @@ ms.locfileid: "82756650"
 ## <a name="return-value"></a>戻り値  
  [Recordtypeenum](../../../ado/reference/ado-api/recordtypeenum.md)値を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **RecordType**プロパティは読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  

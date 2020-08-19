@@ -1,4 +1,5 @@
 ---
+description: RecordStatusEnum
 title: RecordStatusEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f84f43a90479064c2a95d407b7f816fd48c1c679
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0d48e9538fb8ec4f0dac8c3a17457b04b0ace963
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442391"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
-バッチ更新やその他の一括操作に関して、レコードの[状態](../../../ado/reference/ado-api/status-property-ado-recordset.md)を指定します。  
+バッチ更新やその他の一括操作に関して、レコードの [状態](../../../ado/reference/ado-api/status-property-ado-recordset.md) を指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|操作が取り消されたため、レコードが保存されなかったことを示します。|  
 |**adRecCantRelease**|0x400|既存のレコードがロックされていたため、新しいレコードが保存されなかったことを示します。|  

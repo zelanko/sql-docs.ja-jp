@@ -1,4 +1,5 @@
 ---
+description: Resync メソッドの例 (VC++)
 title: Resync メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f777d3b7af34fe29e9794bb470ba90e71b8b9dd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e846743090f84419d824f60de47edb0f0060d509
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442284"
 ---
 # <a name="resync-method-example-vc"></a>Resync メソッドの例 (VC++)
-この例では、再[同期](../../../ado/reference/ado-api/resync-method.md)メソッドを使用して、静的レコードセット内のデータを更新する方法を示します。  
+この例では、再 [同期](../../../ado/reference/ado-api/resync-method.md) メソッドを使用して、静的レコードセット内のデータを更新する方法を示します。  
   
 ```  
 // Resync_Method_Sample.cpp  

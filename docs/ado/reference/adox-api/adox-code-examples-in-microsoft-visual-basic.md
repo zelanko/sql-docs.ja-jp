@@ -1,4 +1,5 @@
 ---
+description: Microsoft Visual Basic での ADOX コードの例
 title: Microsoft Visual Basic の ADOX のコード例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5591d721bde378023ef2b1f285426d036fc76cc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4cadc2a2f3681e9a993b398a03e44a856a11729a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764183"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440634"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Microsoft Visual Basic での ADOX コードの例
 これらのトピックでは、ADOX の使用方法を理解するのに役立つサンプルコードを提供しています。 すべてのコード例は、Microsoft Visual Basic を使用して記述されています。  

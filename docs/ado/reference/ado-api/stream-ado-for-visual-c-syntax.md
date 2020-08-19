@@ -1,4 +1,5 @@
 ---
+description: Stream (Visual C++ 構文用の ADO)
 title: Stream (Visual C++ 構文用の ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b570b21caed38042cfe975332791251426236c98
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 032987bbf7f1b8b0e4780f94ba5794f7f661f85b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441874"
 ---
 # <a name="stream-ado-for-visual-c-syntax"></a>Stream (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  

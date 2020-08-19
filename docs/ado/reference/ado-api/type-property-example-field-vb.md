@@ -1,4 +1,5 @@
 ---
+description: Type プロパティの例 (Field) (VB)
 title: Type プロパティの例 (Field) (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d3f13b0f76884f4b5e0077bdebef0c009d7b546
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94eeb6eb22e72b6db45d178c9d19ced33009be8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765353"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441724"
 ---
 # <a name="type-property-example-field-vb"></a>Type プロパティの例 (Field) (VB)
 この例では、 ***Employees***テーブル内のすべての[Field](../../../ado/reference/ado-api/field-object.md)オブジェクトの[type](../../../ado/reference/ado-api/type-property-ado.md)プロパティの値に対応する定数の名前を表示することによって、 [type](../../../ado/reference/ado-api/type-property-ado.md)プロパティを示します。 このプロシージャを実行するには、FieldType 関数が必要です。  

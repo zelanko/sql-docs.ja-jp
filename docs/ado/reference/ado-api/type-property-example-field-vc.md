@@ -1,4 +1,5 @@
 ---
+description: Type プロパティの例 (Field) (VC++)
 title: Type プロパティの例 (Field) (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3f957e4ed81eeb1853689162f61b1945d26730b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: eb2ad6e448f215c29c278ba3f767ad995e713d26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441714"
 ---
 # <a name="type-property-example-field-vc"></a>Type プロパティの例 (Field) (VC++)
 この例では、 ***Employees***テーブル内のすべての[Field](../../../ado/reference/ado-api/field-object.md)オブジェクトの**type**プロパティの値に対応する定数の名前を表示することによって、 [type](../../../ado/reference/ado-api/type-property-ado.md)プロパティを示します。 このプロシージャを実行するには、FieldType 関数が必要です。  

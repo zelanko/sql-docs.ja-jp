@@ -1,4 +1,5 @@
 ---
+description: Supports メソッド
 title: Method | をサポートします。Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fbfbf28c430fb698f5e024fe3359027c84512c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b0c05118b0f4b8f952b933bc2474bd1f0879865
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441754"
 ---
 # <a name="supports-method"></a>Supports メソッド
-指定した[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトが特定の種類の機能をサポートするかどうかを判断します。  
+指定した [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトが特定の種類の機能をサポートするかどうかを判断します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,11 +41,11 @@ boolean = recordset.Supports(CursorOptions )
  *CursorOptions*  
  1つ以上の[カーソルオプションの列挙](../../../ado/reference/ado-api/cursoroptionenum.md)値で構成される**Long**式です。  
   
-## <a name="remarks"></a>Remarks  
- **サポート**メソッドを使用して、**レコードセット**オブジェクトがサポートする機能の種類を決定します。 対応する定数が*カーソルオプション*に含まれる機能を**レコードセット**オブジェクトがサポートしている場合、 **supports**メソッドは**True**を返します。 それ以外の場合は**False**を返します。  
+## <a name="remarks"></a>解説  
+ **サポート**メソッドを使用して、**レコードセット**オブジェクトがサポートする機能の種類を決定します。 対応する定数が*カーソルオプション*に含まれる機能を**レコードセット**オブジェクトがサポートしている場合、 **supports**メソッドは**True**を返します。 それ以外の場合は **False**を返します。  
   
 > [!NOTE]
->  **サポート**メソッドは特定の機能に対して**True**を返す場合がありますが、プロバイダーがすべての状況でこの機能を使用できるようにすることは保証されません。 **サポート**メソッドは、特定の条件が満たされていることを前提として、プロバイダーが指定された機能をサポートできるかどうかを単純に返します。 たとえば、**サポート**されているメソッドは、カーソルが複数のテーブルの結合に基づいている場合でも、**レコードセット**オブジェクトが更新をサポートしていることを示している可能性があります。この場合、更新できない列もあります。  
+>  **サポート**メソッドは特定の機能に対して**True**を返す場合がありますが、プロバイダーがすべての状況でこの機能を使用できるようにすることは保証されません。 **サポート**メソッドは、特定の条件が満たされていることを前提として、プロバイダーが指定された機能をサポートできるかどうかを単純に返します。 たとえば、 **サポート** されているメソッドは、カーソルが複数のテーブルの結合に基づいている場合でも、 **レコードセット** オブジェクトが更新をサポートしていることを示している可能性があります。この場合、更新できない列もあります。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

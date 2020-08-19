@@ -1,4 +1,5 @@
 ---
+description: Name プロパティ (ADO MD)
 title: Name プロパティ (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -22,21 +23,21 @@ helpviewer_keywords:
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40a392e355e2ec8a468034b382956489f554ac78
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 957afb5eaff886824c53069ad42721d5013adf25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440844"
 ---
 # <a name="name-property-ado-md"></a>Name プロパティ (ADO MD)
 オブジェクトの名前を示します。  
   
 ## <a name="return-values"></a>戻り値  
- は**文字列**を返し、読み取り専用です。  
+ は **文字列** を返し、読み取り専用です。  
   
 ## <a name="remarks"></a>解説  
- オブジェクトの**name**プロパティは、序数参照によって取得できます。その後、オブジェクトを名前で直接参照できます。 たとえば、に `cdf.CubeDefs(0).Name` よって "Bobs ビデオストア" が生成された場合、この[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)をと呼び出すことができ `cdf.CubeDefs("Bobs Video Store")` ます。  
+ オブジェクトの **name** プロパティは、序数参照によって取得できます。その後、オブジェクトを名前で直接参照できます。 たとえば、に `cdf.CubeDefs(0).Name` よって "Bobs ビデオストア" が生成された場合、この [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) をと呼び出すことができ `cdf.CubeDefs("Bobs Video Store")` ます。  
   
 ## <a name="applies-to"></a>適用対象  
 

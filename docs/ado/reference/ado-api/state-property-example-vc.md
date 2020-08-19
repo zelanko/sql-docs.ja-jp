@@ -1,4 +1,5 @@
 ---
+description: State プロパティの例 (VC++)
 title: State プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 63518ccce25b9c3597b0baf45ad1a7cfd03d5031
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 90c08625fb319733f391af5d84f5de053021904c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441963"
 ---
 # <a name="state-property-example-vc"></a>State プロパティの例 (VC++)
-この例では、非同期接続が開いており、非同期コマンドが実行中の場合に、 [State](../../../ado/reference/ado-api/state-property-ado.md)プロパティを使用してメッセージを表示します。  
+この例では、非同期接続が開いており、非同期コマンドが実行中の場合に、 [State](../../../ado/reference/ado-api/state-property-ado.md) プロパティを使用してメッセージを表示します。  
   
 ```  
 // BeginStateCpp.cpp  

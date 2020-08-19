@@ -1,4 +1,5 @@
 ---
+description: Source プロパティ (ADO Recordset)
 title: Source プロパティ (ADO Recordset) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc7d3336b9c346a070266b4ef1d104d0e32eb042
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8306a1031600ccf03236a09249ed9b5f3d0bfc20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759808"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442004"
 ---
 # <a name="source-property-ado-recordset"></a>Source プロパティ (ADO Recordset)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトのデータソースを示します。  
@@ -34,7 +35,7 @@ ms.locfileid: "82759808"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **文字列**値または[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト参照を設定します。**レコードセット**のソースを示す**文字列**値のみを返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **コマンド**オブジェクト変数、SQL ステートメント、ストアドプロシージャ、またはテーブル名のいずれかを使用して、**レコードセット**オブジェクトのデータソースを指定するには、 **Source**プロパティを使用します。  
   
  **Source**プロパティを**command**オブジェクトに設定した場合、 **Recordset**オブジェクトの[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティは、指定された**command**オブジェクトの**ActiveConnection**プロパティの値を継承します。 ただし、 **Source**プロパティを読み取ると、 **Command**オブジェクトは返されません。代わりに、 **Source**プロパティを設定する**Command**オブジェクトの[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)プロパティを返します。  

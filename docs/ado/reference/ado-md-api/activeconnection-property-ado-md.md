@@ -1,4 +1,5 @@
 ---
+description: ActiveConnection プロパティ (ADO MD)
 title: ActiveConnection プロパティ (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,21 +18,21 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e504b442116f0a137d40a0932b00e51753deae5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3f226f9687f1bce3def616739f43f4d283d019ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441444"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection プロパティ (ADO MD)
-現在のセルセットまたはカタログが現在どの ADO[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトに属しているかを示します。  
+現在のセルセットまたはカタログが現在どの ADO [接続](../../../ado/reference/ado-api/connection-object-ado.md) オブジェクトに属しているかを示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  接続または**接続**オブジェクトを定義する文字列を含む**Variant**を設定します。値の取得もできます。 既定値は空です。  
   
 ## <a name="remarks"></a>解説  
- このプロパティは、有効な ADO**接続**オブジェクトまたは有効な接続文字列に設定できます。 このプロパティが接続文字列に設定されている場合、プロバイダーはこの定義を使用して新しい**接続**オブジェクトを作成し、接続を開きます。  
+ このプロパティは、有効な ADO **接続** オブジェクトまたは有効な接続文字列に設定できます。 このプロパティが接続文字列に設定されている場合、プロバイダーはこの定義を使用して新しい **接続** オブジェクトを作成し、接続を開きます。  
   
  [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md)メソッドの*ActiveConnection*引数を使用して[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクトを開くと、 **ActiveConnection**プロパティは引数の値を継承します。  
   

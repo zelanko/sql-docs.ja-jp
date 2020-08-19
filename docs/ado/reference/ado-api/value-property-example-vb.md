@@ -1,4 +1,5 @@
 ---
+description: Value プロパティの例 (VB)
 title: Value プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef7f31068c6ced2aab693756987ebccc1feaedca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb8c23168cb68438b2f8a74359f14b05795ad913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441584"
 ---
 # <a name="value-property-example-vb"></a>Value プロパティの例 (VB)
 この例では、 ***Employees***テーブルのフィールドとプロパティの値を表示することにより、 [Field](../../../ado/reference/ado-api/field-object.md)オブジェクトと[property](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトを含む[Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティを示します。  

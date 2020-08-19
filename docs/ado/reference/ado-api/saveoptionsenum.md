@@ -1,4 +1,5 @@
 ---
+description: SaveOptionsEnum
 title: SaveOptionsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3423d215fa4a52286509769bb2ac0b75d2283a02
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 27284d84bb89c0e742c5166589a60fdc949e7b2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442194"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
-[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトから保存するときにファイルを作成するか上書きするかを指定します。 値には、 **adSaveCreateNotExist**または**adSaveCreateOverWrite**を指定できます。  
+[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトから保存するときにファイルを作成するか上書きするかを指定します。 値には、 **adSaveCreateNotExist** または **adSaveCreateOverWrite**を指定できます。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adSaveCreateNotExist**|1|既定値。 *FileName*パラメーターで指定したファイルがまだ存在しない場合は、新しいファイルを作成します。|  
 |**adSaveCreateOverWrite**|2|*Filename*パラメーターで指定されたファイルが既に存在する場合、ファイルを現在開いている**ストリーム**オブジェクトのデータで上書きします。 *Filename*パラメーターで指定されたファイルが存在しない場合は、新しいファイルが作成されます。|  

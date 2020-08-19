@@ -1,4 +1,5 @@
 ---
+description: Rowset プロパティ (ADO)
 title: Rowset プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3eb383bb0e5cadf557ff67a1e97d1b6b5a6bf988
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8f6342de5be5b2c6ba6e1bf58408cfabc6e31088
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442234"
 ---
 # <a name="rowset-property-ado"></a>Rowset プロパティ (ADO)
-**ADORecordsetConstruction**オブジェクトの/から OLE DB**行セット**オブジェクトを取得します。値の設定もできます。 Put_Rowset を使用すると、行セットは ADO**レコードセット**オブジェクトに変換されます。  
+**ADORecordsetConstruction**オブジェクトの/から OLE DB**行セット**オブジェクトを取得します。値の設定もできます。 Put_Rowset を使用すると、行セットは ADO **レコードセット** オブジェクトに変換されます。  
   
  読み取りと書き込みが可能です。  
   
@@ -40,10 +41,10 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
   
 ## <a name="parameters"></a>パラメーター  
  *ppRowset*  
- OLE DB**行セット**オブジェクトへのポインター。  
+ OLE DB **行セット** オブジェクトへのポインター。  
   
  *PRowset*  
- OLE DB**行セット**オブジェクト。  
+ OLE DB **行セット** オブジェクト。  
   
 ## <a name="return-values"></a>戻り値  
  このプロパティメソッドは、S_OK および E_FAIL を含む標準の HRESULT 値を返します。  

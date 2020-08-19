@@ -1,4 +1,5 @@
 ---
+description: Save および Open メソッドの例 (VB)
 title: Save および Open メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37237094c3778fad9c45a2ccad3eebdce02a62bc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 048fbb83c8a6b9de150642f6094a1f07e0c1e11e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755926"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442224"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save および Open メソッドの例 (VB)
-次の3つの例は、 [Save](../../../ado/reference/ado-api/save-method.md)メソッドと[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドを一緒に使用する方法を示しています。  
+次の3つの例は、 [Save](../../../ado/reference/ado-api/save-method.md) メソッドと [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) メソッドを一緒に使用する方法を示しています。  
   
- データベースからテーブルを使用して、事業旅行を行っているとします。 前に、データを[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)としてアクセスし、転送可能な形式で保存します。 宛先に到達すると、**レコードセット**にローカルの切断された**レコードセット**としてアクセスします。 **レコードセット**に変更を加え、再度保存します。 最後に、home を返したときに、もう一度データベースに接続し、その時点で行った変更を反映して更新します。  
+ データベースからテーブルを使用して、事業旅行を行っているとします。 前に、データを [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) としてアクセスし、転送可能な形式で保存します。 宛先に到達すると、 **レコードセット** にローカルの切断された **レコードセット**としてアクセスします。 **レコードセット**に変更を加え、再度保存します。 最後に、home を返したときに、もう一度データベースに接続し、その時点で行った変更を反映して更新します。  
   
- まず、 ***Authors***テーブルにアクセスして保存します。  
+ まず、 ***Authors*** テーブルにアクセスして保存します。  
   
 ```  
 'BeginSaveVB  
@@ -84,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- この時点で、宛先に到達しました。 ***Authors***テーブルには、ローカルの接続されていない**レコードセット**としてアクセスします。 保存したファイルにアクセスするために使用しているコンピューターには、 **Mspersist**プロバイダーが必要です。 a:\Pubs.xml.  
+ この時点で、宛先に到達しました。 ***Authors***テーブルには、ローカルの接続されていない**レコードセット**としてアクセスします。 保存したファイルへのアクセスに使用しているコンピューターに、a:\Pubs.xml の **Mspersist** プロバイダーが必要です。  
   
 ```  
 Attribute VB_Name = "Save"  

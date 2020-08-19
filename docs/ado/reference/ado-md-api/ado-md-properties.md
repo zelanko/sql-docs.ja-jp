@@ -1,4 +1,5 @@
 ---
+description: ADO MD のプロパティ
 title: ADO MD のプロパティ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70153e52186ac4f15629b32cca0c303fc81209a9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e05befd8346dd66337be0b876d493b9b5a6fed19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441336"
 ---
 # <a name="ado-md-properties"></a>ADO MD のプロパティ
 
 |プロパティ|説明|  
 |-|-|  
-|[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|現在のセルセットまたはカタログが現在どの ADO**接続**オブジェクトに属しているかを示します。|  
+|[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|現在のセルセットまたはカタログが現在どの ADO **接続** オブジェクトに属しているかを示します。|  
 |[Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|**レベル**または**メンバー**オブジェクトを表示するときに使用するテキストキャプションを示します。|  
-|[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|現在の**メンバー**オブジェクトが階層内の親であるメンバーの数を示します。|  
+|[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|現在の **メンバー** オブジェクトが階層内の親であるメンバーの数を示します。|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|現在の**メンバー**が階層内の親である**メンバー**のコレクションを返します。|  
 |[Count](../../../ado/reference/ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
 |[[奥行]](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|**レベル**と階層レベルのルートとの間のレベル数を示します。|  
@@ -45,7 +46,7 @@ ms.locfileid: "87242532"
 |[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|階層内の現在のメンバーの親であるメンバーを示します。|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|この位置メンバーの親が、直前のメンバーの親と同じであるかどうかを示します。|  
 |[ソース](../../../ado/reference/ado-md-api/source-property-ado-md.md)|セルセット内のデータのソースを示します。|  
-|[状態](../../../ado/reference/ado-md-api/state-property-ado-md.md)|セルセットの現在の状態を示します。|  
+|[State](../../../ado/reference/ado-md-api/state-property-ado-md.md)|セルセットの現在の状態を示します。|  
 |[Type](../../../ado/reference/ado-md-api/type-property-ado-md.md)|現在のメンバーの型を示します。|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|現在のオブジェクトの明確な名前を示します。|  
 |[Value](../../../ado/reference/ado-md-api/value-property-ado-md.md)|現在のセルの値を示します。|  

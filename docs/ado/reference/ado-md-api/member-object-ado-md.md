@@ -1,4 +1,5 @@
 ---
+description: Member オブジェクト (ADO MD)
 title: Member オブジェクト (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4d512d651c8162124c935ffdb260c4abe4ecb14
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6e0797a4d273c51b950e3973d1864480755a20d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440924"
 ---
 # <a name="member-object-ado-md"></a>Member オブジェクト (ADO MD)
 キューブ内のレベルのメンバー、レベルのメンバーの子、またはセルセットの軸に沿った位置のメンバーを表します。  
   
-## <a name="remarks"></a>Remarks  
- メンバーのプロパティは、**メンバー**が使用されているコンテキストによって異なります。 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)の[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)の**メンバー**には、現在の**メンバー**から階層内の次の下位レベルにある**メンバー**を返す[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)プロパティがあります。 [位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)の**メンバー**の場合、**子**コレクションは常に空です。 また、 [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md)プロパティは、**レベル**の**メンバー**にのみ適用されます。  
+## <a name="remarks"></a>解説  
+ メンバーのプロパティは、 **メンバー** が使用されているコンテキストによって異なります。 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)の[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)の**メンバー**には、現在の**メンバー**から階層内の次の下位レベルにある**メンバー**を返す[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)プロパティがあります。 [位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)の**メンバー**の場合、**子**コレクションは常に空です。 また、 [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md)プロパティは、**レベル**の**メンバー**にのみ適用されます。  
   
  **Position**の**メンバー**には、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)を表示するときに便利な2つのプロパティがあります。 [Drilleddown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)および[parentsameasprev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)。 **レベル**の**メンバー**でこれらのプロパティにアクセスすると、エラーが発生します。  
   
@@ -46,7 +47,7 @@ ms.locfileid: "82753209"
   
 -   [Childcount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)プロパティを使用して**メンバー**の子をカウントします。  
   
--   標準の ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを使用して、 **Level**オブジェクトに関する追加情報を取得します。  
+-   標準の ADO [プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md) コレクションを使用して、 **Level** オブジェクトに関する追加情報を取得します。  
   
  [軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)に沿った**位置**の**メンバー**のコレクションとプロパティを使用して、次の操作を実行できます。  
   
@@ -64,7 +65,7 @@ ms.locfileid: "82753209"
   
 -   この**メンバー**の親が直前の**メンバー**の親と同じであるかどうかを判断するには、 [parentsameasprev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)プロパティを使用します。  
   
--   標準の ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを使用して、 **Level**オブジェクトに関する追加情報を取得します。  
+-   標準の ADO [プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md) コレクションを使用して、 **Level** オブジェクトに関する追加情報を取得します。  
   
  **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   

@@ -1,4 +1,5 @@
 ---
+description: Refresh メソッドの例 (VC++)
 title: Refresh メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abd6a67cdec9e330cb2f21baeedfe3518fd3b7d0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 521ed958411e2943d0f01d25cb417aee569f1912
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442334"
 ---
 # <a name="refresh-method-example-vc"></a>Refresh メソッドの例 (VC++)
 この例では、 [refresh](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、ストアドプロシージャ[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションを更新します。  
@@ -224,7 +225,7 @@ void PrintComError(_com_error &e) {
 25  
 ```  
   
-## <a name="sample-output"></a>出力例  
+## <a name="sample-output"></a>サンプル出力  
   
 ```  
 Authors with 25 percent royalty  

@@ -1,4 +1,5 @@
 ---
+description: Type プロパティの例 (プロパティ) (VC++)
 title: Type プロパティの例 (プロパティ) (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16f3e7152c939567b6fdcccf670a7df26334d588
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 00c0121f7418fa63280950191c445ff499dcb133
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441684"
 ---
 # <a name="type-property-example-property-vc"></a>Type プロパティの例 (プロパティ) (VC++)
-この例では、 [Type](../../../ado/reference/ado-api/type-property-ado.md)プロパティを示します。 これは、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)などのコレクションの名前と種類を一覧表示するためのユーティリティのモデルです。  
+この例では、 [Type](../../../ado/reference/ado-api/type-property-ado.md) プロパティを示します。 これは、 [プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)、 [フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)などのコレクションの名前と種類を一覧表示するためのユーティリティのモデルです。  
   
- **プロパティ**コレクションにアクセスするために[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開く必要はありません。これらは、**レコードセット**オブジェクトがインスタンス化されるときに存在します。 ただし、[[カーソルの場所](../../../ado/reference/ado-api/cursorlocation-property-ado.md)] プロパティを**adUseClient**に設定すると、**レコードセット**オブジェクトの**properties**コレクションに動的なプロパティがいくつか追加されるため、この例はもう少し興味深いものになります。 具体的には、 [Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して各[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトにアクセスします。  
+ **プロパティ**コレクションにアクセスするために[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開く必要はありません。これらは、**レコードセット**オブジェクトがインスタンス化されるときに存在します。 ただし、[ [カーソルの場所](../../../ado/reference/ado-api/cursorlocation-property-ado.md) ] プロパティを **adUseClient** に設定すると、 **レコードセット** オブジェクトの **properties** コレクションに動的なプロパティがいくつか追加されるため、この例はもう少し興味深いものになります。 具体的には、 [Item](../../../ado/reference/ado-api/item-property-ado.md) プロパティを使用して各 [プロパティ](../../../ado/reference/ado-api/property-object-ado.md) オブジェクトにアクセスします。  
   
 ```  
 // BeginTypePropertyCpp.cpp  

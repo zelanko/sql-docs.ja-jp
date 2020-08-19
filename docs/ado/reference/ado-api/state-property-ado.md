@@ -1,4 +1,5 @@
 ---
+description: State プロパティ (ADO)
 title: State プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4fa19bf21764437d3713c434e288b3bb3a3d25d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ca8a2421f15e5999347b0b7879f3faf707598ba2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441984"
 ---
 # <a name="state-property-ado"></a>State プロパティ (ADO)
 オブジェクトの状態が開いているか閉じられているかにかかわらず、適用可能なすべてのオブジェクトを示します。 オブジェクトが非同期メソッドを実行している場合は、オブジェクトの現在の状態が接続中、実行中、または取得中かどうかを示します。  
   
 ## <a name="return-value"></a>戻り値  
- [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md)値を指定できる**Long 型**の値を返します。 既定値は**adStateClosed**です。  
+ [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md)値を指定できる**Long 型**の値を返します。 既定値は **adStateClosed**です。  
   
 ## <a name="remarks"></a>解説  
  **State**プロパティを使用して、特定のオブジェクトの現在の状態をいつでも確認できます。  
   
- オブジェクトの**State**プロパティは、値の組み合わせを持つことができます。 たとえば、ステートメントが実行されている場合、このプロパティには**Adstateopen**と**adstateopen**の合計値が設定されます。  
+ オブジェクトの **State** プロパティは、値の組み合わせを持つことができます。 たとえば、ステートメントが実行されている場合、このプロパティには **Adstateopen** と **adstateopen**の合計値が設定されます。  
   
  **State**プロパティは読み取り専用です。  
   

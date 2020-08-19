@@ -1,4 +1,5 @@
 ---
+description: Levels コレクション (ADO MD)
 title: Levels コレクション (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 133fff62129390c8dd0b843c48c3db81b742ea3d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 384eec0cf4d0790415eb69948981e32c86b86495
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440944"
 ---
 # <a name="levels-collection-ado-md"></a>Levels コレクション (ADO MD)
-階層を構成する[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクトを格納します。  
+階層を構成する [レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md) オブジェクトを格納します。  
   
 ## <a name="remarks"></a>解説  
- **レベル**は、標準の ADO コレクションです。 コレクションのプロパティとメソッドを使用すると、次の操作を実行できます。  
+ **レベル** は、標準の ADO コレクションです。 コレクションのプロパティとメソッドを使用すると、次の操作を実行できます。  
   
 -   [Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを使用して、コレクション内のオブジェクトの数を取得します。  
   
--   既定の[Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクションからオブジェクトを返します。  
+-   既定の [Item](../../../ado/reference/ado-api/item-property-ado.md) プロパティを使用して、コレクションからオブジェクトを返します。  
   
 -   [更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、プロバイダーからコレクション内のオブジェクトを更新します。  
   

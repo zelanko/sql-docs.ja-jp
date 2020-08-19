@@ -1,4 +1,5 @@
 ---
+description: UniqueName プロパティ (ADO MD)
 title: UniqueName プロパティ (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5960495a9c5069aa9145d5aee47365b84b7175c
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d2059538f43f4cc124f0841bd1d228019fa0a08e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440724"
 ---
 # <a name="uniquename-property-ado-md"></a>UniqueName プロパティ (ADO MD)
 現在のオブジェクトの明確な名前を示します。  
   
 ## <a name="return-values"></a>戻り値  
- は**文字列**を返し、読み取り専用です。  
+ は **文字列** を返し、読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  
   
