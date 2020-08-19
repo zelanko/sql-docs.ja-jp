@@ -1,4 +1,5 @@
 ---
+description: OBJECTPROPERTYEX (Transact-SQL)
 title: OBJECTPROPERTYEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5083f6e8bf8fd47dfca6f5191a8ed9702714461c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 197b3c2f473a9711f2bf79e94d400f85224d8235
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445683"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -117,7 +118,7 @@ OBJECTPROPERTYEX ( id , property )
 |IsTrigger|任意のスキーマ スコープ オブジェクト|トリガー。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsUniqueCnst|任意のスキーマ スコープ オブジェクト|UNIQUE 制約。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |IsUserTable|テーブル|ユーザー定義テーブル。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
-|IsView|表示|ビュー。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
+|IsView|View|ビュー。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
 |OwnerId|任意のスキーマ スコープ オブジェクト|オブジェクトの所有者。<br /><br /> **注:** スキーマ所有者はオブジェクト所有者である必要はありません。 たとえば、子オブジェクト (*parent_object_id* が NULL でないオブジェクト) では、常に親オブジェクトと同じ所有者 ID が返されます。<br /><br /> NULL 以外 = オブジェクト所有者のデータベース ユーザー ID<br /><br /> NULL = サポートされていないオブジェクトの種類、またはオブジェクト ID が有効でない<br /><br /> 基本データ型: **int**|  
 |SchemaId|任意のスキーマ スコープ オブジェクト|オブジェクトに関連付けられているスキーマの ID。<br /><br /> NULL 以外 = オブジェクトのスキーマ ID。<br /><br /> 基本データ型: **int**|  
 |SystemDataAccess|関数、ビュー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンス内にある、システム データ、システム カタログ、または仮想システム テーブルにオブジェクトがアクセスします。<br /><br /> 0 = なし<br /><br /> 1 = 読み取り<br /><br /> 基本データ型: **int**|  
@@ -163,7 +164,7 @@ OBJECTPROPERTYEX ( id , property )
 |TableUpdateTriggerCount|テーブル|テーブルに、指定された数の UPDATE トリガーがあります。<br /><br /> > 0 = UPDATE トリガーの数。<br /><br /> 基本データ型: **int**|  
 |UserDataAccess|関数、ビュー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンス内にある、ユーザー データやユーザー テーブルにオブジェクトがアクセスします。<br /><br /> 1 = 読み取り<br /><br /> 0 = なし<br /><br /> 基本データ型: **int**|  
 |TableHasColumnSet|テーブル|テーブルに列セットがあります。<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> 詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。|  
-|Cardinality|テーブル (システムまたはユーザー定義)、ビュー、またはインデックス|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 指定されたオブジェクト内の行数。|  
+|カーディナリティ|テーブル (システムまたはユーザー定義)、ビュー、またはインデックス|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 指定されたオブジェクト内の行数。|  
 |TableTemporalType|テーブル|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。<br /><br /> テーブルの種類を指定します。<br /><br /> 0 = 非テンポラル テーブル<br /><br /> 1 = システムのバージョン情報のテーブルの履歴テーブル<br /><br /> 2 = システムのバージョン情報のテンポラル テーブル|  
   
 ## <a name="return-types"></a>戻り値の型  
@@ -174,7 +175,7 @@ OBJECTPROPERTYEX ( id , property )
   
  ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (OBJECTPROPERTYEX など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  を前提としています *object_id* が現在のデータベース コンテキストでします。 別のデータベースの *object_id* を参照するクエリは、NULL または正しくない値を返します。 たとえば、次のクエリでは、現在のデータベース コンテキストは master データベースです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は、クエリ内で指定されたデータベースではなく、このデータベースの指定された *object_id* のプロパティ値を返します。 ビュー `vEmployee` は master データベース内にないため、このクエリでは正しくない結果が返されます。  
   
 ```  
@@ -192,7 +193,7 @@ GO
   
 ## <a name="examples"></a>例  
   
-### <a name="a-finding-the-base-type-of-an-object"></a>A. オブジェクトの基本の種類を検索する  
+### <a name="a-finding-the-base-type-of-an-object"></a>A.  オブジェクトの基本の種類を検索する  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内の `MyEmployeeTable` テーブルに対して SYNONYM `Employee` を作成した後、SYNONYM の基本の種類を返します。  
   
 ```  
@@ -239,7 +240,7 @@ GO
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-finding-the-base-type-of-an-object"></a>D: オブジェクトの基本の種類を検索する  
+### <a name="d-finding-the-base-type-of-an-object"></a>D: オブジェクトの基本型を検索する  
  次の例では、`dbo.DimReseller` オブジェクトの基本型を返します。  
   
 ```  
@@ -256,7 +257,7 @@ BaseType
 U   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
  [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   

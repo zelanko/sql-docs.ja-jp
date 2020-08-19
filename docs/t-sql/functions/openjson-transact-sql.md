@@ -1,4 +1,5 @@
 ---
+description: OPENJSON (Transact-SQL)
 title: OPENJSON (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -17,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 27f83649fc0549854fa131bf1a859f0c20ebf65c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2f91b160ed5fc6dbab1c9d7ec225b479dc6b82d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445668"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -64,8 +65,6 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 ![OPENJSON TVF 内の WITH 句の構文](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH の構文")
 
 *with_clause* には、**OPENJSON** が返す列とそれらの型の一覧が含まれます。 既定では、**OPENJSON** は、*with_clause* に指定された列名を持つ *jsonExpression* 内のキーと照合されます ( (この場合のキーの一致は、大文字と小文字の区別があるという意味を含みます)。 列名がキー名と一致しない場合は、省略可能な *column_path* を指定できます。これは *jsonExpression* 内のキーを参照する [JSON パス式](../../relational-databases/json/json-path-expressions-sql-server.md) です。 
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
 

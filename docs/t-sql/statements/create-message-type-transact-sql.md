@@ -1,4 +1,5 @@
 ---
+description: CREATE MESSAGE TYPE (Transact-SQL)
 title: CREATE MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/10/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70cdaf07914a409e83c8fc291964d79ce706a808
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 4966690508bdc48b73471519595b3010443128b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444864"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -79,7 +80,7 @@ CREATE MESSAGE TYPE message_type_name
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
  メッセージの本文に、指定されたスキーマ コレクション内のスキーマに準拠する XML が含まれている必要があることを指定します。*schema_collection_name* は、既存の XML スキーマ コレクションの名前にする必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] では受信メッセージが検証されます。 メッセージに、指定された検証の種類に準拠しないメッセージの本文が含まれている場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって無効なメッセージが破棄され、メッセージを送信したサービスにエラー メッセージが返されます。  
   
  メッセージ交換の両側で、メッセージ型に同じ名前を定義する必要があります。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、メッセージ交換の両側で同じ検証を使用する必要はありませんが、トラブルシューティングで役立つように、通常はメッセージ交換の両側でメッセージ型に同じ検証を指定します。  
@@ -161,7 +162,7 @@ CREATE MESSAGE TYPE
     VALIDATION = NONE ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
  [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

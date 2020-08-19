@@ -1,4 +1,5 @@
 ---
+description: DATETIMEOFFSETFROMPARTS (Transact-SQL)
 title: DATETIMEOFFSETFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -18,12 +19,12 @@ ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0a383d6a9405d0aa80b8f0c1e4f3c2bc98c9667
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: bcb6fea31efdc42e95f28fba01b416b00cee7038
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445816"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,16 +71,16 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 タイム ゾーン オフセットの分部分を指定する整数式。  
   
 *有効桁数 (precision)*  
-**が返す**datetimeoffset`DATETIMEOFFSETFROMPARTS` 値の有効桁数を指定する整数リテラル値です。  
+`DATETIMEOFFSETFROMPARTS` が返す **datetimeoffset** 値の有効桁数を指定する整数リテラル値です。  
   
 ## <a name="return-types"></a>戻り値の型
 **datetimeoffset(** *precision* **)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 
 `DATETIMEOFFSETFROMPARTS` は、完全に初期化された **datetimeoffset** データ型を返します。 オフセット引数は、タイム ゾーンのオフセットを表します。 オフセット引数を省略すると、`DATETIMEOFFSETFROMPARTS` はタイム ゾーン オフセットが `00:00` (つまり、タイム ゾーン オフセットなし) であるものと想定します。 オフセット引数が指定される場合、`DATETIMEOFFSETFROMPARTS` は両方の引数の値が指定され、両方とも正の値または両方とも負の値であるものと想定します。 *minute_offset* の値が設定されていて、*hour_offset* の値が設定されていない場合、`DATETIMEOFFSETFROMPARTS` はエラーになります。 他の引数が無効な値の場合、`DATETIMEOFFSETFROMPARTS` はエラーになります。 必須引数の少なくとも 1 つが `NULL` 値である場合、`DATETIMEOFFSETFROMPARTS` は `NULL` を返します。 ただし、*precision* 引数が `NULL` 値の場合は、`DATETIMEOFFSETFROMPARTS` はエラーを生成します。  
   
-*fractions* 引数は、precision 引数によって異なります。 たとえば、precision の値が 7 の場合、小数部分はそれぞれ 100 ナノ秒を表します。precision の値が 3 の場合、小数部分はそれぞれ 1 ミリ秒を表します。 precision 値がゼロの場合、fractions の値もゼロでなければなりません。それ以外の場合、`DATETIMEOFFSETFROMPARTS` はエラーを生成します。  
+*分数* 引数によって異なります、 有効桁数 引数。 たとえば、precision の値が 7 の場合、小数部分はそれぞれ 100 ナノ秒を表します。precision の値が 3 の場合、小数部分はそれぞれ 1 ミリ秒を表します。 precision 値がゼロの場合、fractions の値もゼロでなければなりません。それ以外の場合、`DATETIMEOFFSETFROMPARTS` はエラーを生成します。  
   
 この関数は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー以降のリモート処理に対応しています。 バージョンが [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前の場合、サーバーのリモート処理には対応していません。
   
@@ -137,7 +138,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
 [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   

@@ -1,4 +1,5 @@
 ---
+description: DATETIME2FROMPARTS (Transact-SQL)
 title: DATETIME2FROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -18,12 +19,12 @@ ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97c4158d8c425a252d3bb0c09743706422761af5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2183bdd6d636ec7b8a63cc6bc73896de3eb69981
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445801"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,12 +64,12 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
 秒の小数部を指定する整数式。
   
 *有効桁数 (precision)*  
-**が返す**datetime2`DATETIME2FROMPARTS` 値の有効桁数を指定する整数式。
+`DATETIME2FROMPARTS` が返す **datetime2** 値の有効桁数を指定する整数式。
   
 ## <a name="return-types"></a>戻り値の型
 **datetime2(** *precision* **)**
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 `DATETIME2FROMPARTS` は、完全に初期化された **datetime2** 値を返します。 `DATETIME2FROMPARTS` は、必須引数に 1 つでも無効な値が含まれている場合、エラーを生成します。 `DATETIME2FROMPARTS` は、必須引数に 1 つでも NULL 値が含まれている場合、NULL を返します。 ただし、*precision* 引数に NULL 値が含まれる場合、`DATETIME2FROMPARTS` はエラーを生成します。
 
 *分数* 引数によって異なります、 *有効桁数* 引数。 たとえば、*precision* の値が 7 の場合、小数部分はそれぞれ 100 ナノ秒を表します。*precision* の値が 3 の場合、小数部分はそれぞれ 1 ミリ秒を表します。 *precision* 値がゼロの場合、*fractions* の値もゼロでなければなりません。それ以外の場合、`DATETIME2FROMPARTS` はエラーを生成します。
@@ -128,7 +129,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)
   
   

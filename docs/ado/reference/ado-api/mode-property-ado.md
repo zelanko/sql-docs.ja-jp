@@ -1,4 +1,5 @@
 ---
+description: Mode プロパティ (ADO)
 title: Mode プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3487463bf4a13cc97cbc7cd031e18cef5dccb2a7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7fd002f54010a9bc8d5cf543fe1fd4521bc6d221
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242642"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443254"
 ---
 # <a name="mode-property-ado"></a>Mode プロパティ (ADO)
 [接続](../../../ado/reference/ado-api/connection-object-ado.md)、[レコード](../../../ado/reference/ado-api/record-object-ado.md)、または[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトのデータを変更するために使用できるアクセス許可を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- [Connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md)値を設定または返します。 **接続**の既定値は**admodeunknown**です。 **レコード**オブジェクトの既定値は**adModeRead**です。 基になるソースに関連付けられている**ストリーム**の既定値 (ソースとして URL を使用して開かれるか、**レコード**の既定の**ストリーム**として開かれる) は、 **adModeRead**です。 基になるソース (メモリ内でインスタンス化) に関連付けられていない**ストリーム**の既定値は**admodeunknown**です。  
+ [Connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md)値を設定または返します。 **接続**の既定値は**admodeunknown**です。 **レコード**オブジェクトの既定値は**adModeRead**です。 基になるソースに関連付けられている**ストリーム**の既定値 (ソースとして URL を使用して開かれるか、**レコード**の既定の**ストリーム**として開かれる) は、 **adModeRead**です。 基になるソース (メモリ内でインスタンス化) に関連付けられていない **ストリーム** の既定値は **admodeunknown**です。  
   
 ## <a name="remarks"></a>解説  
  **Mode**プロパティを使用して、現在の接続でプロバイダーによって使用されているアクセス許可を設定または取得します。 **Mode**プロパティを設定できるのは、**接続**オブジェクトが閉じている場合のみです。  
@@ -38,7 +39,7 @@ ms.locfileid: "87242642"
  オブジェクトが開いている間は、オブジェクトが閉じられ、読み取り専用になっている間、このプロパティは読み取り/書き込み可能です。  
   
 > [!NOTE]
->  **リモートデータサービスの使用状況**クライアント側の**接続**オブジェクトで使用する場合、 **Mode**プロパティは**admodeunknown**にのみ設定できます。  
+>  **リモートデータサービスの使用状況** クライアント側の **接続** オブジェクトで使用する場合、 **Mode** プロパティは **admodeunknown**にのみ設定できます。  
   
 ## <a name="applies-to"></a>適用対象  
 

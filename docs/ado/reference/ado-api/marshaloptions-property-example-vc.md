@@ -1,4 +1,5 @@
 ---
+description: MarshalOptions プロパティの例 (VC++)
 title: MarshalOptions プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92d6939f067563c00890ad2481c86c39bc9bfa49
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2e591ca4524bbbdd13ccd934434c743e49c0b2c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443304"
 ---
 # <a name="marshaloptions-property-example-vc"></a>MarshalOptions プロパティの例 (VC++)
-この例では、 [Marshaloptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)プロパティを使用して、サーバーに送信される行を指定します。すべての行または変更された行のみが返されます。  
+この例では、 [Marshaloptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) プロパティを使用して、サーバーに送信される行を指定します。すべての行または変更された行のみが返されます。  
   
 ```  
 // BeginMarshalOptionsCpp.cpp  

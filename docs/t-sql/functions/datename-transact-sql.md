@@ -1,4 +1,5 @@
 ---
+description: DATENAME (Transact-SQL)
 title: DATENAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -25,19 +26,19 @@ ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6cc4e3155662e7674ce058bf975ef93c8033420
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5b0644cca11dd0d0e02b69219c1ebb78d0d8bddb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445845"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この関数は、指定された *date* の指定された *datepart* を表す文字列を返します。
 
-[ の日付と時刻のあらゆるデータ型と関数に関する概要については、「](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)]」を参照してください。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のあらゆるデータ型と関数に関する概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -51,7 +52,7 @@ DATENAME ( datepart , date )
 
 ## <a name="arguments"></a>引数
 *datepart*  
-*によって返される*date`DATENAME` 引数の特定の部分。 この表には、有効な *datepart* 引数をすべて一覧表示しています。
+`DATENAME` によって返される *date* 引数の特定の部分。 この表には、有効な *datepart* 引数をすべて一覧表示しています。
 
 > [!NOTE]
 > `DATENAME` は、*datepart* 引数に関して、ユーザー定義変数に相当するものは受け入れられません。
@@ -94,7 +95,7 @@ DATENAME ( datepart , date )
   
 -   *-各日付構成要素とその省略形は、同じ値を返します。*  
   
-戻り値は、[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) と、ログインの [default language サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)で設定した言語環境に依存します。 [date](../../t-sql/statements/set-dateformat-transact-sql.md) がなんらかの形式の文字列リテラルである場合、戻り値は *SET DATEFORMAT* に依存します。 date が日付データ型や時刻データ型の列式である場合、SET DATEFORMAT によって戻り値が変わることはありません。
+戻り値は、[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) と、ログインの [default language サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)で設定した言語環境に依存します。 *date* がなんらかの形式の文字列リテラルである場合、戻り値は [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) に依存します。 date が日付データ型や時刻データ型の列式である場合、SET DATEFORMAT によって戻り値が変わることはありません。
   
 *date* パラメーターに **date** データ型引数がある場合、戻り値は [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) によって指定された設定に依存します。
   
@@ -137,7 +138,7 @@ SELECT DATENAME(year, @t);
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , 、DATENAME は、文字列リテラルを暗黙的にキャスト、 **datetime2** 型です。 つまり、`DATENAME` では、日付が文字列として渡される場合、YDM 形式がサポートされません。 文字列を明示的にキャストする必要があります、 **datetime** または **smalldatetime** YDM 形式を使用する型。
   
 ## <a name="examples"></a>例  
-この例は、指定された日付の日付部分を返します。 SELECT ステートメントの *引数の代わりにテーブルの*datepart`datepart` 値を使用します。
+この例は、指定された日付の日付部分を返します。 SELECT ステートメントの `datepart` 引数の代わりにテーブルの *datepart* 値を使用します。
   
 `SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');`
   
@@ -163,7 +164,7 @@ SELECT DATENAME(year, @t);
   
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-この例は、指定された日付の日付部分を返します。 SELECT ステートメントの *引数の代わりにテーブルの*datepart`datepart` 値を使用します。
+この例は、指定された日付の日付部分を返します。 SELECT ステートメントの `datepart` 引数の代わりにテーブルの *datepart* 値を使用します。
   
 ```sql
 SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');  
@@ -189,7 +190,7 @@ SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');
 |**TZoffset、tz**|+05:10|  
 |**ISO_WEEK、ISOWK、ISOWW**|44|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

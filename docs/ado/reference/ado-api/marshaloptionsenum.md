@@ -1,4 +1,5 @@
 ---
+description: MarshalOptionsEnum
 title: MarshalOptionsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1aae84d12c098bdabf68cd014a359be54b0dcba
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6243621ad7127e475f89052dc0d860fba6bad510
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443294"
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 サーバーに返すレコードを指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adMarshalAll**|0|既定値。 サーバーにすべての行を返します。|  
 |**adMarshalModifiedOnly**|1|サーバーに変更された行のみを返します。|  

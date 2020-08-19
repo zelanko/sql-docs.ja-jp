@@ -1,4 +1,5 @@
 ---
+description: Filter プロパティと RecordCount プロパティの例 (VC + +)
 title: Filter プロパティと RecordCount プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d079a56268d903970f7e99d987b1315d1decec44
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb95298fbc88749acdb5058cc45694688e0c2c6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443674"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter プロパティと RecordCount プロパティの例 (VC + +)
-この例では、 [Filter](../../../ado/reference/ado-api/filter-property.md)プロパティを使用して、既存の**レコードセット**に適用された指定の条件に基づいて新しい[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開きます。 この例では、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)プロパティを使用して、2つのレコード**セット**内のレコードの数を表示しています。 このプロシージャを実行するには、FilterField 関数が必要です。  
+この例では、 [Filter](../../../ado/reference/ado-api/filter-property.md)プロパティを使用して、既存の**レコードセット**に適用された指定の条件に基づいて新しい[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開きます。 この例では、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) プロパティを使用して、2つのレコード **セット**内のレコードの数を表示しています。 このプロシージャを実行するには、FilterField 関数が必要です。  
   
 ## <a name="example"></a>例  
   
@@ -286,7 +287,7 @@ void PrintComError(_com_error &e) {
 USA  
 ```  
   
-## <a name="sample-output"></a>出力例  
+## <a name="sample-output"></a>サンプル出力  
   
 ```  
 Orders in original recordset:  

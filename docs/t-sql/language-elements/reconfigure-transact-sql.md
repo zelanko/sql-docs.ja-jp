@@ -1,4 +1,5 @@
 ---
+description: RECONFIGURE (Transact-SQL)
 title: RECONFIGURE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/20/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44ccb855d3a9a4d545d2c882b1d3ff7b788419d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bab30e48ce9b9452ab3e8c28ad409df30a6516aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445474"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  WITH OVERRIDE オプションを使用してほとんどすべての構成オプションを再構成できますが、それでも一部の致命的なエラーは防止されています。 たとえば、**min server memory** 構成オプションを、**max server memory** 構成オプションで指定されている値よりも大きい値を使用して構成することはできません。
       
-## <a name="remarks"></a>解説    
+## <a name="remarks"></a>注釈    
  **sp_configure** では、各構成オプションに定義されている有効値の範囲外の値を新しい構成オプションの値として使用することはできません。    
     
  RECONFIGURE は、明示的または暗黙的なトランザクションでは使用できません。 複数のオプションを同時に再構成すると、いずれかの再構成オプションが失敗した場合に、すべての再構成オプションが無効になります。    

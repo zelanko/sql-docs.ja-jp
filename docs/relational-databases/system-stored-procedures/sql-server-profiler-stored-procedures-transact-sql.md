@@ -1,4 +1,5 @@
 ---
+description: SQL Server Profiler のストアド プロシージャ (Transact-SQL)
 title: SQL Server プロファイラーストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 8c99c3db-0b04-46c3-aa59-d6f680522fdd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: df298c59e95a799a42bbad856612c6502912ffe6
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 67176aa5448e68ede24896fe06f448f1523fce34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122513"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446711"
 ---
 # <a name="sql-server-profiler-stored-procedures-transact-sql"></a>SQL Server Profiler のストアド プロシージャ (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] パフォーマンスと利用状況を監視するためにで使用される次のシステムストアドプロシージャをサポートしています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] パフォーマンスと利用状況を監視するためにで使用される次のシステムストアドプロシージャをサポートしています。  
 
 :::row:::
     :::column:::
@@ -47,7 +48,7 @@ ms.locfileid: "87122513"
 
  トレース ストアド プロシージャを使用した例については、「[トレースの作成 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server イベント クラスの参照](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL トレース](../../relational-databases/sql-trace/sql-trace.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

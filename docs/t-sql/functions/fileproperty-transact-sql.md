@@ -1,4 +1,5 @@
 ---
+description: FILEPROPERTY (Transact-SQL)
 title: FILEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bebbaff7f4a09732705bc7168ca034f8f99a3e2c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f05d17efce6b568d5abd2cc81f3a7954f19fb34e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445762"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ FILEPROPERTY ( file_name , property )
  プロパティ情報を返す基になる、現在のデータベースに関連付けられたファイルの名前を含む式を指定します。 *file_name* は **nchar (128)** です。  
   
  *property*  
- 返されるファイル プロパティの名前を含む式を指定します。 *プロパティ* は **varchar (128)** , 、値は次のいずれかを指定することができます。  
+ 返されるファイル プロパティの名前を含む式を指定します。 *プロパティ* は **varchar (128)**, 、値は次のいずれかを指定することができます。  
   
 |値|説明|返される値|  
 |-----------|-----------------|--------------------|  
@@ -83,7 +84,7 @@ Primary File
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FILEGROUPPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/filegroupproperty-transact-sql.md)   
  [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   

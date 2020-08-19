@@ -1,4 +1,5 @@
 ---
+description: ALTER RESOURCE POOL (Transact-SQL)
 title: ALTER RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a51d04f848e86c5b8dc242cd959aef6da393aa38
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 17b7e78f6d5a57b15aa2bde0eaba68b86ae53fc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444887"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -119,7 +120,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  プールの MAX_IOPS_PER_VOLUME を 0 に設定した場合、プールはまったく管理されなくなり、他のプールで MIN_IOPS_PER_VOLUME が設定されていても、システムですべての IOPS を行うことがあります。 この場合、IO についてこのプールが管理されるようにするには、このプールの MAX_IOPS_PER_VOLUME の値をより大きな数値 (たとえば、最大値 2^31-1) に設定することをお勧めします。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  MAX_CPU_PERCENT と MAX_MEMORY_PERCENT には、それぞれ MIN_CPU_PERCENT と MIN_MEMORY_PERCENT 以上の値を指定する必要があります。  
   
  MAX_CPU_PERCENT は、使用可能になる場合、MAX_CPU_PERCENT の値を上回る CPU 容量を使用できます。 CAP_CPU_PERCENT を上回る急増が定期的に発生する場合がありますが、追加の CPU 容量が使用可能な場合でも、長時間にわたって CAP_CPU_PERCENT を超えることはありません。  
@@ -141,7 +142,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、`default` を `MAX_CPU_PERCENT` に変更する以外は、すべて `25` プールの既定のリソース プール設定が保持されます。  
+ 次の例では、`MAX_CPU_PERCENT` を `25` に変更する以外は、すべて `default` プールの既定のリソース プール設定が保持されます。  
   
 ```  
 ALTER RESOURCE POOL "default"  

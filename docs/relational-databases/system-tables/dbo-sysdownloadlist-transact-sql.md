@@ -1,4 +1,5 @@
 ---
+description: dbo.sysdownloadlist (Transact-SQL)
 title: dbo.sysdownloadlist (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ad996430a5286f95b83e18a5a6d4bd7efff18ec6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0240d13b1f787eb9b0356b1443f8401477176d0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446664"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,6 +46,6 @@ ms.locfileid: "85890511"
 |**status**|**tinyint**|ジョブの状態:<br /><br /> **0** = まだダウンロードされていません<br /><br /> **1** = 正常にダウンロードされました|  
 |**deleted_object_name**|**sysname**|削除されたオブジェクトの名前。|  
   
- <sup>1</sup> **object_id**列の値には **-1**を指定できます。この値は、 **operation_code**列の値が DELETE の場合に ALL の値に対応します。  
+ <sup>1</sup> **object_id** 列の値には **-1**を指定できます。この値は、 **operation_code** 列の値が DELETE の場合に ALL の値に対応します。  
   
   

@@ -1,4 +1,5 @@
 ---
+description: GetChildren メソッド (ADO)
 title: GetChildren メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7255b88c6c8ee7f6045c13ef3b7af926141a42a3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 906c20d19143f4f1e8fe0b6c1e91585893acfa5d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443584"
 ---
 # <a name="getchildren-method-ado"></a>GetChildren メソッド (ADO)
 コレクション[レコード](../../../ado/reference/ado-api/record-object-ado.md)の子を表す行を含む[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を返します。  
@@ -34,10 +35,10 @@ Set recordset = record.GetChildren
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 各行が現在の**レコード**オブジェクトの子を表す**Recordset**オブジェクト。 たとえば、ディレクトリを表す**レコード**の子は、親ディレクトリに格納されているファイルおよびサブディレクトリになります。  
+ 各行が現在の**レコード**オブジェクトの子を表す**Recordset**オブジェクト。 たとえば、ディレクトリを表す **レコード** の子は、親ディレクトリに格納されているファイルおよびサブディレクトリになります。  
   
 ## <a name="remarks"></a>解説  
- プロバイダーは、返された**レコードセット**に存在する列を決定します。 たとえば、ドキュメントソースプロバイダーは常にリソース**レコードセット**を返します。  
+ プロバイダーは、返された **レコードセット**に存在する列を決定します。 たとえば、ドキュメントソースプロバイダーは常にリソース **レコードセット**を返します。  
   
 ## <a name="applies-to"></a>適用対象  
 

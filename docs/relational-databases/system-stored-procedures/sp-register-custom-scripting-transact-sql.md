@@ -1,4 +1,5 @@
 ---
+description: sp_register_custom_scripting (Transact-SQL)
 title: sp_register_custom_scripting (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80736db0e2356d3592744393ff8964ac6f6073c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 35e70da9de3239fa7f147acf8ffe5a6ecc724606
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446867"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  レプリケーションでは、トランザクションレプリケーションで使用される1つ以上の既定のプロシージャを、ユーザー定義のカスタムストアドプロシージャで置き換えることができます。 レプリケートされたテーブルにスキーマ変更が行われると、これらのストアド プロシージャは再作成されます。 **sp_register_custom_scripting**は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 新しいユーザー定義カスタムストアドプロシージャの定義をスクリプト化するためにスキーマ変更が発生したときに実行されるストアドプロシージャまたはスクリプトファイルを登録します。 この新しいユーザー定義カスタム ストアド プロシージャには、テーブルに対する新しいスキーマを反映する必要があります。 パブリッシャー側のパブリケーションデータベースに対して**sp_register_custom_scripting**が実行されます。登録されているスクリプトファイルまたはストアドプロシージャは、スキーマの変更が発生したときにサブスクライバー側で実行されます。  
+  レプリケーションでは、トランザクションレプリケーションで使用される1つ以上の既定のプロシージャを、ユーザー定義のカスタムストアドプロシージャで置き換えることができます。 レプリケートされたテーブルにスキーマ変更が行われると、これらのストアド プロシージャは再作成されます。 **sp_register_custom_scripting** は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 新しいユーザー定義カスタムストアドプロシージャの定義をスクリプト化するためにスキーマ変更が発生したときに実行されるストアドプロシージャまたはスクリプトファイルを登録します。 この新しいユーザー定義カスタム ストアド プロシージャには、テーブルに対する新しいスキーマを反映する必要があります。 パブリッシャー側のパブリケーションデータベースに対して**sp_register_custom_scripting**が実行されます。登録されているスクリプトファイルまたはストアドプロシージャは、スキーマの変更が発生したときにサブスクライバー側で実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,7 +41,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @type = ] 'type'`登録するカスタムストアドプロシージャまたはスクリプトの種類を設定します。 *型*は**varchar (16)**,、既定値はありません、次の値のいずれかを指定することができます。  
+`[ @type = ] 'type'` 登録するカスタムストアドプロシージャまたはスクリプトの種類を設定します。 *型* は **varchar (16)**,、既定値はありません、次の値のいずれかを指定することができます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -49,29 +50,29 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |**delete**|登録したカスタム ストアド プロシージャを、DELETE ステートメントがレプリケートされるときに実行。|  
 |**custom_script**|スクリプトは、データ定義言語 (DDL) トリガーの最後に実行されます。|  
   
-`[ @value = ] 'value'`ストアドプロシージャの名前、または登録するスクリプトファイルの完全修飾パス名 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *値*は**nvarchar (1024)**,、既定値はありません。  
+`[ @value = ] 'value'` ストアドプロシージャの名前、または登録するスクリプトファイルの完全修飾パス名 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *値* は **nvarchar (1024)**,、既定値はありません。  
   
 > [!NOTE]  
 >  *値*パラメーターに NULL を指定すると、以前に登録したスクリプトの登録が解除されます。これは[sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)を実行した場合と同じです。  
   
- *型*の値が**custom_script**の場合、スクリプトファイルの名前と完全パス [!INCLUDE[tsql](../../includes/tsql-md.md)] が必要です。 それ以外の場合、*値*は登録されたストアドプロシージャの名前である必要があります。  
+ *型*の値が**custom_script**の場合、スクリプトファイルの名前と完全パス [!INCLUDE[tsql](../../includes/tsql-md.md)] が必要です。 それ以外の場合、 *値* は登録されたストアドプロシージャの名前である必要があります。  
   
-`[ @publication = ] 'publication'`カスタムストアドプロシージャまたはスクリプトを登録するパブリケーションの名前。 *publication*は**sysname**,、既定値は**NULL**です。  
+`[ @publication = ] 'publication'` カスタムストアドプロシージャまたはスクリプトを登録するパブリケーションの名前。 *publication* は **sysname**,、既定値は **NULL**です。  
   
-`[ @article = ] 'article'`カスタムストアドプロシージャまたはスクリプトを登録するアーティクルの名前。 *アーティクル*は**sysname**で、既定値は**NULL**です。  
+`[ @article = ] 'article'` カスタムストアドプロシージャまたはスクリプトを登録するアーティクルの名前。 *アーティクル* は **sysname**で、既定値は **NULL**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>注釈  
- **sp_register_custom_scripting**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_register_custom_scripting** は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
- レプリケートされたテーブルにスキーマを変更する前に、このストアドプロシージャを実行する必要があります。 このストアドプロシージャの使用方法の詳細については、「[カスタムトランザクションプロシージャの再生成によるスキーマ変更の反映](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)」を参照してください。  
+ レプリケートされたテーブルにスキーマを変更する前に、このストアドプロシージャを実行する必要があります。 このストアドプロシージャの使用方法の詳細については、「 [カスタムトランザクションプロシージャの再生成によるスキーマ変更の反映](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_register_custom_scripting**を実行できるのは、 **sysadmin**固定サーバーロール、 **db_owner**固定データベースロール、または**db_ddladmin**固定データベースロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_unregister_custom_scripting &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
   
   

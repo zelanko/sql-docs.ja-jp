@@ -1,4 +1,5 @@
 ---
+description: MoveFirst、MoveLast、MoveNext、および MovePrevious メソッドの例 (VB)
 title: レコードセットのレコードポインターの移動の例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 31d3b083-c677-423e-8d26-a212eaeea281
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4f0d0394e660bc691b4e13a2971d9d3181bbcee
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 38725ffc91ff14d45c8f7d3fa1fb65825833f797
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443194"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>MoveFirst、MoveLast、MoveNext、および MovePrevious メソッドの例 (VB)
-この例では、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、および[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッドを使用して、指定されたコマンドに基づいてレコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)のレコードポインターを移動します。 このプロシージャを実行するには、MoveAny プロシージャを指定する必要があります。  
+この例では、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、および [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) メソッドを使用して、指定されたコマンドに基づいてレコード [セット](../../../ado/reference/ado-api/recordset-object-ado.md) のレコードポインターを移動します。 このプロシージャを実行するには、MoveAny プロシージャを指定する必要があります。  
   
 ```  
 'BeginMoveFirstVB  

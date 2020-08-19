@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;NESTLEVEL (Transact-SQL)'
 title: '@@NESTLEVEL (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/17/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b161917c13cba013b06a292493b58dca23e35b97
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a6c28eca6f0496e8e66deef9a26aa4e7ef45ea81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445736"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "87110908"
 ## <a name="remarks"></a>解説  
  ストアド プロシージャが、別のストアド プロシージャを呼び出すか、または共通言語ランタイム (CLR) ルーチン、型、集計を参照してマネージド コードを実行するたびに、入れ子のレベルがインクリメントされます。 最大の 32 を超えると、トランザクションが終了します。  
   
- @NESTLEVEL 文字列内で @[!INCLUDE[tsql](../../includes/tsql-md.md)] が実行されると、返される値は、現在の入れ子レベルに 1 を加えた値になります。 sp_executesql を使用して @@NESTLEVEL が動的に実行されると、返される値は、現在の入れ子レベルに 2 を加えた値になります。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 文字列内で @@NESTLEVEL が実行されると、返される値は、現在の入れ子レベルに 1 を加えた値になります。 sp_executesql を使用して @@NESTLEVEL が動的に実行されると、返される値は、現在の入れ子レベルに 2 を加えた値になります。  
   
 ## <a name="examples"></a>例  
   
@@ -121,7 +122,7 @@ TwoGreater
 (1 row(s) affected)
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構成関数 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [ストアド プロシージャの作成](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  

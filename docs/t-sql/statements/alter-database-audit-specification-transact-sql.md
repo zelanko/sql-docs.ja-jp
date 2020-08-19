@@ -1,4 +1,5 @@
 ---
+description: ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 title: ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f4262b850a2afc9799c15d3a4155c9ab85432366
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 5c4eef4555867208ae71b0495dfd9393c2459ca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444964"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -86,7 +87,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  監査による、この監査仕様についてのレコードの収集を有効または無効にします。 監査仕様の状態の変更はユーザー トランザクション外部で実行する必要があります。また、状態が ON から OFF に遷移中の場合、同じステートメントで他の変更を行うことはできません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  データベース監査仕様は、セキュリティ保護できないオブジェクトであり、特定のデータベースに保存されます。 データベース監査仕様を変更する場合は、監査仕様の状態のオプションを OFF に設定する必要があります。 STATE=OFF 以外のオプションを使用して監査仕様を有効にしているときに ALTER DATABASE AUDIT SPECIFICATION を実行すると、エラー メッセージが表示されます。 詳細については、「 [tempdb Database](../../relational-databases/databases/tempdb-database.md)」をご覧ください。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -109,7 +110,7 @@ GO
   
  監査を作成する方法の完全な例については、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

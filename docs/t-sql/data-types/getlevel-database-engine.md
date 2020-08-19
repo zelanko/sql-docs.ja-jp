@@ -1,4 +1,5 @@
 ---
+description: GetLevel (データベース エンジン)
 title: GetLevel (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f205c91f7375e52a944dbcc18c026edb9712d944
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d2a8f93d51cd61e9a6a7654472fabbab95475913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445927"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (データベース エンジン)
 
@@ -45,11 +46,11 @@ SqlInt16 GetLevel ( )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>戻り値の型  
-**SQL Server の戻り値の型: smallint**
+**SQL Server の戻り値の型: smallint **
   
 **CLR の戻り値の型: SqlInt16**
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 1 つ以上のノードのレベルを決定したり、指定したレベルのメンバーにノードをフィルタリングしたりするために使用します。 階層のルートはレベル 0 です。
   
 GetLevel は、幅優先の検索のインデックスに便利です。 詳しくは、「[階層データ &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)」をご覧ください。

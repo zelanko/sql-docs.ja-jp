@@ -1,4 +1,5 @@
 ---
+description: GetRoot (データベース エンジン)
 title: GetRoot (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4dfb1988f2f1405b2e69459824ee47983295ad31
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: cdefe46b9e2baa546b76375af4c6a2272fe1f584
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445934"
 ---
 # <a name="getroot-database-engine"></a>GetRoot (データベース エンジン)
 
@@ -49,7 +50,7 @@ static SqlHierarchyId GetRoot ( )
   
 **CLR 戻り値の型:SqlHierarchyId**
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 階層ツリー内のルート ノードを決定するために使用されます。
   
 ## <a name="examples"></a>例  

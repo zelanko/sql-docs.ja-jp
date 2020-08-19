@@ -1,4 +1,5 @@
 ---
+description: Name プロパティ (ADO)
 title: Name プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,29 +17,29 @@ helpviewer_keywords:
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 368def89951e7d0eacca9b999b647abd949c3b10
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 60bf64f57c4373d814f2b207808aa2d7dbe7c497
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243233"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443134"
 ---
 # <a name="name-property-ado"></a>Name プロパティ (ADO)
 オブジェクトの名前を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- オブジェクトの名前を示す**文字列**値を設定または返します。  
+ オブジェクトの名前を示す **文字列** 値を設定または返します。  
   
 ## <a name="remarks"></a>解説  
  **Name プロパティを**使用して、**コマンド**、**プロパティ**、**フィールド**、または**パラメーター**オブジェクトの名前を割り当てるか、名前を取得します。  
   
- この値は、 **Command**オブジェクトでは読み取り/書き込みが可能で、**プロパティ**オブジェクトでは読み取り専用です。  
+ この値は、 **Command** オブジェクトでは読み取り/書き込みが可能で、 **プロパティ** オブジェクトでは読み取り専用です。  
   
  **Field**オブジェクトの場合、通常、**名前**は読み取り専用です。 ただし、[レコード](../../../ado/reference/ado-api/record-object-ado.md)の[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに追加された新しい**フィールド**オブジェクトの場合、 **Name**は、**フィールド**の[Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティが指定され、データプロバイダーが**フィールド**コレクションの[Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出すことによって新しい**フィールド**を正常に追加した後にのみ、読み取り/書き込みになります。  
   
- [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションにまだ追加されていない**パラメーター**オブジェクトの場合、 **Name**プロパティは読み取り/書き込み可能です。 追加された**パラメーター**オブジェクトおよびその他すべてのオブジェクトについては、 **Name**プロパティは読み取り専用です。 名前はコレクション内で一意である必要はありません。  
+ [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションにまだ追加されていない**パラメーター**オブジェクトの場合、 **Name**プロパティは読み取り/書き込み可能です。 追加された **パラメーター** オブジェクトおよびその他すべてのオブジェクトについては、 **Name** プロパティは読み取り専用です。 名前はコレクション内で一意である必要はありません。  
   
- オブジェクトの**name**プロパティは、序数参照によって取得できます。その後、オブジェクトを名前で直接参照できます。 たとえば、がを生成した場合、 `rstMain.Properties(20).Name` `Updatability` このプロパティをとして参照でき `rstMain.Properties("Updatability")` ます。  
+ オブジェクトの **name** プロパティは、序数参照によって取得できます。その後、オブジェクトを名前で直接参照できます。 たとえば、がを生成した場合、 `rstMain.Properties(20).Name` `Updatability` このプロパティをとして参照でき `rstMain.Properties("Updatability")` ます。  
   
 ## <a name="applies-to"></a>適用対象  
 

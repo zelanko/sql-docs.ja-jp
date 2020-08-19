@@ -1,4 +1,5 @@
 ---
+description: Fields コレクション (ADO)
 title: Fields コレクション (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,25 +18,25 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ecf6d672bd82b6ac532306cd1ca6fc2400b215e8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1374770ab86038d50c4dd8cafabff328a5275ace
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443734"
 ---
 # <a name="fields-collection-ado"></a>Fields コレクション (ADO)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトのすべての[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトを格納します。  
   
 ## <a name="remarks"></a>解説  
- **レコードセット**オブジェクトには、 **Field**オブジェクトで構成された**フィールド**コレクションがあります。 各**Field**オブジェクトは、**レコードセット**内の列に対応します。 コレクションの[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを呼び出すことによって、**レコードセット**を開く前に**フィールド**コレクションを設定できます。  
+ **レコードセット**オブジェクトには、 **Field**オブジェクトで構成された**フィールド**コレクションがあります。 各 **Field** オブジェクトは、 **レコードセット**内の列に対応します。 コレクションの[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを呼び出すことによって、**レコードセット**を開く前に**フィールド**コレクションを設定できます。  
   
 > [!NOTE]
 >  **Field**オブジェクトの使用方法の詳細については、「 **field**オブジェクト」を参照してください。  
   
  **Fields**コレクションには、仮メソッドがあります。[このメソッドは](../../../ado/reference/ado-api/append-method-ado.md)、**フィールド**オブジェクトを作成し、コレクションに追加し、 **Update**メソッドを使用して、追加または削除を終了します。  
   
- **レコード**オブジェクトには、2つの特殊なフィールドがあります。これらのフィールドには、定数定数を使用[してインデックス](../../../ado/reference/ado-api/fieldenum.md)を作成できます。 一方の定数は、**レコード**の既定のストリームを格納しているフィールドにアクセスします。もう1つの定数は、**レコード**の絶対 URL 文字列を含むフィールドにアクセスします。  
+ **レコード**オブジェクトには、2つの特殊なフィールドがあります。これらのフィールドには、定数定数を使用[してインデックス](../../../ado/reference/ado-api/fieldenum.md)を作成できます。 一方の定数は、 **レコード**の既定のストリームを格納しているフィールドにアクセスします。もう1つの定数は、 **レコード**の絶対 URL 文字列を含むフィールドにアクセスします。  
   
  特定のプロバイダー (たとえば、 [Microsoft OLE DB Provider For Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) では、**レコード**または**レコードセット**に使用できるフィールドのサブセットを**フィールド**コレクションに設定できます。 その他のフィールドは、名前によって最初に参照されるか、コードによってインデックスが作成されるまで、コレクションに追加されません。  
   

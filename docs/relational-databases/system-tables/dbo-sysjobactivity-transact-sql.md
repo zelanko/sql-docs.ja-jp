@@ -1,4 +1,5 @@
 ---
+description: dbo.sysjobactivity (Transact-SQL)
 title: dbo.sysjobactivity (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2016
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aee1a088e4b2c95b33f8bdb4002853877d8c1275
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75a517f8a55eabbda1c9d50d37c6254079cc33b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446653"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの利用状況と状態を記録します。  このテーブルは、 **msdb**データベースに格納されます。
+  現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの利用状況と状態を記録します。  このテーブルは、 **msdb** データベースに格納されます。
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -61,7 +62,7 @@ WHERE session_id = (
     SELECT MAX(session_id) FROM msdb.dbo.sysjobactivity); 
 ```
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [dbo.sysjobhistory &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   
   

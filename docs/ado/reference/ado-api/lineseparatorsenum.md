@@ -1,4 +1,5 @@
 ---
+description: LineSeparatorsEnum
 title: LineSeparatorsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 0440b793-99c7-49a2-b3e2-ec5b1a7e3e60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7431242fb331fd4a8f2a24e1dd9bf0d4d201595
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0c92b70fdee1fb492b55b18e613284d25277f55b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443364"
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
-テキスト[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトの行区切り記号として使用される文字を指定します。  
+テキスト [ストリーム](../../../ado/reference/ado-api/stream-object-ado.md) オブジェクトの行区切り記号として使用される文字を指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adCR**|13|キャリッジリターンを示します。|  
 |**adCRLF**|-1|既定値。 キャリッジリターンラインフィードを示します。|  

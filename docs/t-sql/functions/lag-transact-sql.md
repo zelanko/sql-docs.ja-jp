@@ -1,4 +1,5 @@
 ---
+description: LAG (Transact-SQL)
 title: LAG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/09/2017
@@ -19,12 +20,12 @@ ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0a331ba23c92f84615284dab9440d85a1c1f577
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 7edaea7f6e1f2e491674454aeac9b90d5e00d29e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394107"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445768"
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ LAG (scalar_expression [,offset] [,default])
  *offset*  
  値を取得する現在の行から戻る行の数。 指定しない場合は、1 が既定値です。 *offset* は、列、サブクエリ、または正の整数と評価されたり、暗黙的に **bigint** に変換される可能性があるその他の式です。 *offset* は、負の値または分析関数にはなりません。  
   
- *既定値*  
+ *default*  
  *offset* がパーティションの範囲外である場合に返される値。 既定値を指定しない場合、NULL が返されます。 *default* には、列、サブクエリ、または式を指定できますが、分析関数は指定できません。 *default* には、*scalar_expression* の型との互換性が必要です。  
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
@@ -170,7 +171,7 @@ Year Quarter  SalesQuota  PrevQuota  Diff
 2002 4       154000.0000   7000.0000   84000.0000
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [LEAD &#40;Transact-SQL&#41;](../../t-sql/functions/lead-transact-sql.md)  
   
   

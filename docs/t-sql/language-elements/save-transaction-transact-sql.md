@@ -1,4 +1,5 @@
 ---
+description: SAVE TRANSACTION (Transact-SQL)
 title: SAVE TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5b19832b7bf14cf872e6d90db53b72ea3ac703a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 03af390ecf43a70d3d80ad876e1d9944cd9297bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445462"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,12 +52,12 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
 
 ## <a name="arguments"></a>引数
  *savepoint_name*  
- セーブポイントに割り当てる名前を指定します。 セーブポイント名は識別子の規則に従う必要があります。文字数は半角 32 文字に制限されます。 *のインスタンスで大文字と小文字が区別されない場合であっても、* savepoint_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では常に大文字と小文字が区別されます。  
+ セーブポイントに割り当てる名前を指定します。 セーブポイント名は識別子の規則に従う必要があります。文字数は半角 32 文字に制限されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで大文字と小文字が区別されない場合であっても、*savepoint_name* では常に大文字と小文字が区別されます。  
   
  @*savepoint_variable*  
  有効なセーブポイント名を含むユーザー定義の変数名を指定します。 変数は、**char**、**varchar**、**nchar**、または **nvarchar** データ型を使用して宣言する必要があります。 この変数には 32 文字を超える文字列も渡されますが、使用されるのは最初の 32 文字だけです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  ユーザーは、トランザクション内にセーブポイントというマーカーを設定できます。 セーブポイントでは、トランザクションの一部が条件付きで取り消された場合に、トランザクションが戻ることのできる位置を定義します。 トランザクションがセーブポイントまでロールバックされた場合は、必要であれば追加の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと、COMMIT TRANSACTION ステートメントを使用して、トランザクションを最後まで実行します。最後まで実行しない場合は、開始位置までロールバックしてトランザクション全体を取り消す必要があります。 トランザクション全体を取り消す場合は、ROLLBACK TRANSACTION *transaction_name* を使用します。 この場合、そのトランザクションのすべてのステートメントまたはプロシージャが取り消されます。  
   
  1 つのトランザクションでは同じセーブポイント名を重複して指定できますが、ROLLBACK TRANSACTION ステートメントでそのセーブポイント名を指定した場合は、そのセーブポイント名を使用している最新の SAVE TRANSACTION のみにロールバックできます。  

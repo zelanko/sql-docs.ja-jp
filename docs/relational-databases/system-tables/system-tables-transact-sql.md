@@ -1,4 +1,5 @@
 ---
+description: システム テーブル (Transact-SQL)
 title: システムテーブル (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bcd2869c583f51b5ab9d00a7bbb68e9dd47b534d
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: bb4aba7e3ad13edd1d71266b96d6ef956a162cba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446602"
 ---
 # <a name="system-tables-transact-sql"></a>システム テーブル (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "87122763"
   
 -   システム ストアド プロシージャ  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントと関数  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと関数  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO)  
   
@@ -48,14 +49,14 @@ ms.locfileid: "87122763"
   
 -   データベース API カタログ関数  
   
- これらのコンポーネントは、からシステム情報を取得するための公開された API を構成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]では、これらのコンポーネントとリリース間の互換性が維持されます。 システム テーブルの形式は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部アーキテクチャに依存し、リリースごとに変化する可能性があります。 このため、ドキュメントに記載されていないシステム テーブルの列に直接アクセスするアプリケーションを作成すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新バージョンにアクセスするために変更を余儀なくされることがあります。  
+ これらのコンポーネントは、からシステム情報を取得するための公開された API を構成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、これらのコンポーネントとリリース間の互換性が維持されます。 システム テーブルの形式は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部アーキテクチャに依存し、リリースごとに変化する可能性があります。 このため、ドキュメントに記載されていないシステム テーブルの列に直接アクセスするアプリケーションを作成すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新バージョンにアクセスするために変更を余儀なくされることがあります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  システムテーブルのトピックは、次の機能領域によって整理されています。  
 
 :::row:::
     :::column:::
-        [Transact-sql&#41;&#40;のテーブルのバックアップと復元](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)
+        [Transact-sql&#41;&#40;のテーブルのバックアップと復元 ](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)
 
         [変更データ キャプチャのテーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)
 
@@ -78,7 +79,7 @@ ms.locfileid: "87122763"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [互換性ビュー &#40;Transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

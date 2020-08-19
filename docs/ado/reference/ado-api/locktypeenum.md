@@ -1,4 +1,5 @@
 ---
+description: LockTypeEnum
 title: LockTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e609a51d6b9f42cb6101ff485633302193757fbd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 52a6e4af75ac8887c23dd245a58981b1bbfb7eb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242652"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443334"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 編集中にレコードに適用されるロックの種類を指定します。  
@@ -28,7 +29,7 @@ ms.locfileid: "87242652"
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|オプティミスティックバッチ更新を示します。 バッチ更新モードでは必須です。|  
-|**adLockOptimistic**|3|オプティミスティックロック、レコードごとのレコードを示します。 プロバイダーはオプティミスティックロックを使用し、 [Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出したときにのみレコードをロックします。|  
+|**adLockOptimistic**|3|オプティミスティックロック、レコードごとのレコードを示します。 プロバイダーはオプティミスティックロックを使用し、 [Update](../../../ado/reference/ado-api/update-method.md) メソッドを呼び出したときにのみレコードをロックします。|  
 |**adLockPessimistic**|2|ペシミスティックロック、レコードごとのレコードを示します。 プロバイダーは、レコードを正常に編集するために必要な処理を実行します。通常は、編集後すぐにデータソースのレコードをロックします。|  
 |**adLockReadOnly**|1|読み取り専用レコードを示します。 データを変更することはできません。|  
 |**adLockUnspecified**|-1|はロックの種類を指定していません。 複製の場合、複製は元と同じロックの種類で作成されます。|  

@@ -1,4 +1,5 @@
 ---
+description: sp_MSchange_merge_agent_properties (Transact-SQL)
 title: sp_MSchange_merge_agent_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65cb1e298293c0be44439fb732554baa2914788a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7e81812af12cf7789c48d890ced2aa06a5829ad0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446922"
 ---
 # <a name="sp_mschange_merge_agent_properties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,19 +44,19 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値はありません。  
   
-`[ @publisher_db = ] 'publisher_db'`パブリケーションデータベースの名前を指定します。 *publisher_db*は**sysname**であり、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリケーションデータベースの名前を指定します。 *publisher_db* は **sysname**であり、既定値はありません。  
   
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @subscriber = ] 'subscriber'`サブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**,、既定値はありません。  
+`[ @subscriber = ] 'subscriber'` サブスクライバーの名前を指定します。 *サブスクライバー* は **sysname**,、既定値はありません。  
   
-`[ @subscriber_db = ] 'subscriber_db'`サブスクリプションデータベースの名前を指定します。 *subscriber_db*は**sysname**であり、既定値はありません。  
+`[ @subscriber_db = ] 'subscriber_db'` サブスクリプションデータベースの名前を指定します。 *subscriber_db* は **sysname**であり、既定値はありません。  
   
-`[ @property = ] 'property'`変更するパブリケーションプロパティを設定します。 *プロパティ*は**sysname**,、既定値はありません。  
+`[ @property = ] 'property'` 変更するパブリケーションプロパティを設定します。 *プロパティ* は **sysname**,、既定値はありません。  
   
-`[ @value = ] 'value'`新しいプロパティ値を指定します。 *値*は**nvarchar (524)**,、既定値は NULL です。  
+`[ @value = ] 'value'` 新しいプロパティ値を指定します。 *値* は **nvarchar (524)**,、既定値は NULL です。  
   
  次の表では、変更可能なマージエージェントジョブのプロパティと、それらのプロパティの値に関する制限について説明します。  
   
@@ -77,17 +78,17 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 >  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>注釈  
- **sp_MSchange_merge_agent_properties**は、マージレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_MSchange_merge_agent_properties** は、マージレプリケーションで使用します。  
   
- パブリッシャーが以降のバージョンのインスタンスで実行されている場合は [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)を使用して、ディストリビューターで実行されるプッシュサブスクリプションを同期するマージエージェントジョブのプロパティを変更する必要があります。  
+ パブリッシャーが以降のバージョンのインスタンスで実行されている場合は [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) を使用して、ディストリビューターで実行されるプッシュサブスクリプションを同期するマージエージェントジョブのプロパティを変更する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_MSchange_merge_agent_properties**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_addmergepushsubscription_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
  [sp_addmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
   

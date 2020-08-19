@@ -1,4 +1,5 @@
 ---
+description: ATN2 (Transact-SQL)
 title: ATN2 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ ms.assetid: 014b291e-7cd7-4c39-b20d-5db3a9f0505d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 796184257e42db7545744483eba9c47a0f03fa41
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1fc9c293eec94a0bacc24bdd2c4b70811f535cb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445904"
 ---
 # <a name="atn2-transact-sql"></a>ATN2 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,7 @@ ATN2 ( float_expression , float_expression )
 
 ## <a name="arguments"></a>引数
 *float_expression*  
-[float](../../t-sql/language-elements/expressions-transact-sql.md) データ型の**式**。
+**float** データ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>戻り値の型
 **float**
@@ -65,9 +66,9 @@ The ATN2 of the angle is: 1.30545
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[float 型と real 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+[float と real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
 [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   

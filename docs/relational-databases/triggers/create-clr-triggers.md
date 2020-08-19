@@ -1,4 +1,5 @@
 ---
+description: CLR トリガーの作成
 title: CLR トリガーの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31f41703-134d-49fc-9850-76c297351c2c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f81446e6ea56fbb16570e6b5555b8b704e7c92be
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f3d7218b9d2524fd2312ea0364268821524eb926
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446375"
 ---
 # <a name="create-clr-triggers"></a>CLR トリガーの作成
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "85889087"
   
 -   [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DML トリガー](../../relational-databases/triggers/dml-triggers.md)   
  [CLR &#40;共通言語ランタイム&#41; 統合のプログラミング概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)   
  [CLR データベース オブジェクトからのデータ アクセス](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  

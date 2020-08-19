@@ -1,4 +1,5 @@
 ---
+description: ConnectionString プロパティ (SqlServerAlias クラス)
 title: ConnectionString プロパティ (SqlServerAlias)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d2b4818020d0580847535267ae0b3ee4fce6f4cb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 15bf8e72cfccbb6d1c9790ab4f8c48dcfaf661b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888463"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446159"
 ---
 # <a name="connectionstring-property-sqlserveralias-class"></a>ConnectionString プロパティ (SqlServerAlias クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,5 +42,5 @@ object.ConnectionString [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サーバー接続別名に対応する接続を確立するために使用される接続文字列を指定する文字列。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   

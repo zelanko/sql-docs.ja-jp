@@ -1,4 +1,5 @@
 ---
+description: GetRows メソッドの例 (VB)
 title: GetRows メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72c6a4755b05399605828e73f69bca7b8da632eb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3d05785a005ea6f0bbeb000d8abb74609318b741
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443524"
 ---
 # <a name="getrows-method-example-vb"></a>GetRows メソッドの例 (VB)
-この例では、 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)メソッドを使用して、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)から指定された数の行を取得し、結果のデータを配列に格納します。 **Getrows**メソッドは、必要な数の行を返します。2つの場合は、 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に達した場合、または別のユーザーによって削除されたレコードを**getrows**が取得しようとした場合のいずれかです。 関数は、2番目のケースが発生した場合にのみ**False**を返します。 このプロシージャを実行するには、GetRowsOK 関数が必要です。  
+この例では、 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) メソッドを使用して、 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) から指定された数の行を取得し、結果のデータを配列に格納します。 **Getrows**メソッドは、必要な数の行を返します。2つの場合は、 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に達した場合、または別のユーザーによって削除されたレコードを**getrows**が取得しようとした場合のいずれかです。 関数は、2番目のケースが発生した場合にのみ **False** を返します。 このプロシージャを実行するには、GetRowsOK 関数が必要です。  
   
 ```  
 'BeginGetRowsVB  

@@ -1,4 +1,5 @@
 ---
+description: Move メソッドの例 (VBScript)
 title: Move メソッドの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 23db96e87538227691f00548c47c2f3d1858349b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d16881ba6ee448ab8efda506e506b0a7f3bde02c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443224"
 ---
 # <a name="move-method-example-vbscript"></a>Move メソッドの例 (VBScript)
-この例では、 [Move](../../../ado/reference/ado-api/move-method-ado.md)メソッドを使用して、ユーザー入力に基づいてレコードポインターを配置します。  
+この例では、 [Move](../../../ado/reference/ado-api/move-method-ado.md) メソッドを使用して、ユーザー入力に基づいてレコードポインターを配置します。  
   
  Active Server ページ (ASP) で次の例を使用します。 この完全に機能する例を表示するには、C:\Program た advworks-srv01 Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb にあるデータソース (SDK と共にインストールされます) があるか、このファイルの実際の場所を反映するようにコード例のパスを編集する必要があります。 これは、Microsoft Access データベースファイルです。  
   
- [**検索**] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Movevbs**として保存します。 結果は任意のブラウザーで表示できます。  
+ [ **検索** ] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Movevbs**として保存します。 結果は任意のブラウザーで表示できます。  
   
  エラー処理作業を確認するには、文字または整数を入力してください。  
   

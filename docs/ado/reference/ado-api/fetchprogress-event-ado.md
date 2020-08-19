@@ -1,4 +1,5 @@
 ---
+description: FetchProgress イベント (ADO)
 title: FetchProgress イベント (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5e75dd96a77261bfee44da0db9025fb02af6871
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 53f22936f17e70c02a7640355250cdb5f2bcea95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443814"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress イベント (ADO)
 **Fetchprogress**イベントは、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)に現在取得されている行の数を報告するために、長い非同期操作中に定期的に呼び出されます。  
@@ -35,22 +36,22 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
   
 #### <a name="parameters"></a>パラメーター  
  *進行状況*  
- フェッチ操作によって現在取得されているレコードの数を示す**Long 型**の値。  
+ フェッチ操作によって現在取得されているレコードの数を示す **Long 型** の値。  
   
  *MaxProgress*  
- 取得する必要があるレコードの最大数を示す**Long**値。  
+ 取得する必要があるレコードの最大数を示す **Long** 値。  
   
  *adStatus*  
  [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md)状態の値です。  
   
  *pRecordset*  
- レコードを取得する対象のオブジェクトである**レコードセット**オブジェクト。  
+ レコードを取得する対象のオブジェクトである **レコードセット** オブジェクト。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  子**レコードセット**で**fetchprogress**を使用する場合は、 *Progress*および*maxprogress*パラメーターの値が基になる[Cursor Service](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)行セットから派生することに注意してください。 返される値は、現在のチャプター内のレコード数だけでなく、基になる行セット内のレコードの合計数を表します。  
   
 > [!NOTE]
->  Microsoft Visual Basic で**Fetchprogress**を使用するには Visual Basic 6.0 以降が必要です。  
+>  Microsoft Visual Basic で **Fetchprogress** を使用するには Visual Basic 6.0 以降が必要です。  
   
 ## <a name="see-also"></a>参照  
  [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

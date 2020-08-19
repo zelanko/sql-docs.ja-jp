@@ -1,4 +1,5 @@
 ---
+description: COMMIT TRANSACTION (Transact-SQL)
 title: COMMIT TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2016
@@ -29,12 +30,12 @@ ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8ead92fb3a4f44bee96cdf12dc8bddc164fe310
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 46622a1249834fa4d768abebf8864ba1ebe5d80e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445565"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,26 +65,26 @@ COMMIT [ TRAN | TRANSACTION ]
 
 ## <a name="arguments"></a>引数
  *transaction_name*  
- **適用対象:** SQL Server および Azure SQL Database
+ **適用対象:** SQL Server と Azure SQL Database
  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] では無視されます。 *transaction_name* には前の BEGIN TRANSACTION により割り当てられるトランザクション名を指定します。 *transaction_name* は識別子の規則に従っている必要があります。ただし、32 文字を超えることはできません。 *transaction_name* は、入れ子にされたどの BEGIN TRANSACTION と COMMIT TRANSACTION が関連しているかをプログラマが把握しやすくします。  
   
  *\@tran_name_variable*  
- **適用対象:** SQL Server および Azure SQL Database  
+ **適用対象:** SQL Server と Azure SQL Database  
  
 有効なトランザクション名を格納しているユーザー定義変数の名前を指定します。 変数は、char、varchar、nchar、または nvarchar データ型を使用して宣言する必要があります。 変数に 32 文字を超える文字が渡された場合は、32 文字だけが使用され、残りの文字は切り捨てられます。  
   
  DELAYED_DURABILITY  
- **適用対象:** SQL Server および Azure SQL Database   
+ **適用対象:** SQL Server と Azure SQL Database   
 
  このトランザクションを遅延持続性でコミットすることを要求するオプション。 データベースが `DELAYED_DURABILITY = DISABLED` または `DELAYED_DURABILITY = FORCED` によって変更されている場合、要求は無視されます。 詳しくは、「[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)」をご覧ください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] のプログラマは、このトランザクションで参照されるすべてのデータが論理的に正しいことを確認した上で COMMIT TRANSACTION を実行する必要があります。  
   
  コミットされるトランザクションが [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散トランザクションの場合、COMMIT TRANSACTION では MS DTC が起動され、2 フェーズ コミット プロトコルによって、トランザクションに参加しているすべてのサーバーがコミットされます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の同じインスタンス上にある 2 つ以上のデータベースがローカル トランザクションの対象となっている場合、インスタンスでは内部の 2 フェーズ コミットを使用して、トランザクションに参加しているすべてのデータベースをコミットします。  
   
- 入れ子にされたトランザクションで使用する場合は、入れ子内のトランザクションをコミットしてもリソースは解放されず、修正も永久保存されません。 データ修正が永久保存され、リソースが解放されるのは、入れ子の外側のトランザクションをコミットした場合だけです。 @@TRANCOUNT が 1 より大きい場合に発行される各 COMMIT TRANSACTION では、@@TRANCOUNT が単純に 1 ずつ減らされます。 最終的に @@TRANCOUNT が 0 になると、外側のトランザクション全体がコミットされます。 *では*transaction_name[!INCLUDE[ssDE](../../includes/ssde-md.md)] は無視されるので、入れ子内に完了していないトランザクションがあるとき、外側のトランザクションの名前を参照する COMMIT TRANSACTION を実行しても、@@TRANCOUNT が 1 減少されるだけです。  
+ 入れ子にされたトランザクションで使用する場合は、入れ子内のトランザクションをコミットしてもリソースは解放されず、修正も永久保存されません。 データ修正が永久保存され、リソースが解放されるのは、入れ子の外側のトランザクションをコミットした場合だけです。 @@TRANCOUNT が 1 より大きい場合に発行される各 COMMIT TRANSACTION では、@@TRANCOUNT が単純に 1 ずつ減らされます。 最終的に @@TRANCOUNT が 0 になると、外側のトランザクション全体がコミットされます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では *transaction_name* は無視されるので、入れ子内に完了していないトランザクションがあるとき、外側のトランザクションの名前を参照する COMMIT TRANSACTION を実行しても、@@TRANCOUNT が 1 減少されるだけです。  
   
  @@TRANCOUNT が 0 のときに COMMIT TRANSACTION を実行すると、対応する BEGIN TRANSACTION がないためエラーが発生します。  
   
@@ -109,7 +110,7 @@ COMMIT TRANSACTION;
 ```  
   
 ### <a name="b-committing-a-nested-transaction"></a>B. 入れ子になったトランザクションをコミットする  
-**適用対象:** SQL Server および Azure SQL Database    
+**適用対象:** SQL Server と Azure SQL Database    
 
 次の例では、テーブルを作成し、3 レベルの入れ子にされたトランザクションを生成してから、入れ子になったトランザクションをコミットします。 各 `COMMIT TRANSACTION` ステートメントには *transaction_name* パラメーターがありますが、`COMMIT TRANSACTION` ステートメントと `BEGIN TRANSACTION` ステートメントの間には関連はありません。 *transaction_name* パラメーターは、プログラマが `@@TRANCOUNT` を 0 まで減らすための正しいコミット数を指定できます。これにより、外側のトランザクションをコミットできます。 
   

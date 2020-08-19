@@ -1,4 +1,5 @@
 ---
+description: STIsClosed (geometry データ型)
 title: STIsClosed (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 61c72f4953bfad6d54c46b3b710d2f9c0b9f98d7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c92d311ba67c71f77fef8052bcfe8e5938d1f1b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445041"
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86552456"
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **geometry** インスタンスの任意の図形が地点の場合、またはインスタンスが空の場合、このメソッドは 0 を返します。  
   
  すべての **Polygon** インスタンスは閉じていると見なされます。  
@@ -57,7 +58,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STIsClosed();  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Geometry インスタンスの OGC メソッド](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

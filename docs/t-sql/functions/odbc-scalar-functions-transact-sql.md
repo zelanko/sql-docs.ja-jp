@@ -1,4 +1,5 @@
 ---
+description: ODBC スカラー関数 (Transact-SQL)
 title: ODBC スカラー関数 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -52,17 +53,17 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebe21e82e6065aa28e4967b7d2f4d13f0fafe9d6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4ce160465056b18c7f6f347b0587603dd489fa06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445694"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC スカラー関数 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [ ステートメントでは、](https://go.microsoft.com/fwlink/?LinkID=88579)ODBC スカラー関数[!INCLUDE[tsql](../../includes/tsql-md.md)]を使用できます。 これらのステートメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって解釈されます。 具体的には、ストアド プロシージャやユーザー定義関数の中で、 文字列、数値、時刻、日付、間隔を扱う関数のほか、システム関数を使用することができます。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、[ODBC スカラー関数](https://go.microsoft.com/fwlink/?LinkID=88579)を使用できます。 これらのステートメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって解釈されます。 具体的には、ストアド プロシージャやユーザー定義関数の中で、 文字列、数値、時刻、日付、間隔を扱う関数のほか、システム関数を使用することができます。  
   
 ## <a name="usage"></a>使用法  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
@@ -72,7 +73,7 @@ ms.locfileid: "86003825"
   
 ### <a name="string-functions"></a>文字列関数  
   
-|Function|説明|  
+|機能|説明|  
 |--------------|-----------------|  
 |BIT_LENGTH(string_exp) (ODBC 3.0)|文字列式の長さ (ビット単位) を返します。<br /><br /> string_exp を文字列に変換せず、指定されたデータ型の内部サイズを返します。|  
 |CONCAT(string_exp1,string_exp2) (ODBC 1.0)|string_exp1 に対して string_exp2 を連結した結果の文字列を返します。 結果の文字列は DBMS に依存します。 たとえば、string_exp1 に指定された列に NULL 値が格納されていた場合、DB2 では NULL が返されますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では非 NULL 文字列が返されます。|  
@@ -80,19 +81,19 @@ ms.locfileid: "86003825"
   
 ### <a name="numeric-function"></a>数値関数  
   
-|Function|説明|  
+|機能|説明|  
 |--------------|-----------------|  
 |TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|numeric_exp を、小数点の右側の integer_exp 桁までに切り詰めて返します。 integer_exp が負数の場合、numeric_exp は、小数点の左側 &#124;integer_exp&#124; 桁に切り詰められます。|  
   
 ### <a name="time-date-and-interval-functions"></a>時刻、日付、および間隔を扱う関数  
   
-|Function|説明|  
+|機能|説明|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|現在の日付を返します。|  
 |CURDATE( ) (ODBC 3.0)|現在の日付を返します。|  
 |CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|現在のローカル時間を返します。 time-precision 引数には、返される値の秒の有効桁数を指定します|  
 |CURTIME() (ODBC 3.0)|現在のローカル時間を返します。|  
-|DAYNAME(date_exp) (ODBC 2.0)|date_exp の日の部分に対するデータ ソース固有の曜日名を含む文字列を返します。 たとえば、名前 Sunday - Saturday、または Sun. \- Sat. は、英語を使用するデータ ソースの場合です。 ドイツ語を使用するデータ ソースの場合の名前は、Sonntag - Samstag などです。|
+|DAYNAME(date_exp) (ODBC 2.0)|date_exp の日の部分に対するデータ ソース固有の曜日名を含む文字列を返します。 たとえば、名前 Sunday - Saturday、または Sun. - Sat. は、英語を使用するデータ ソースの場合です。 ドイツ語を使用するデータ ソースの場合の名前は、Sonntag - Samstag などです。|
 |DAYOFMONTH(date_exp) (ODBC 1.0)|date_exp の月部分に基づき、月初から数えた日を整数値として返します。 戻り値の範囲は、1 - 31 です。|  
 |DAYOFWEEK(date_exp) (ODBC 1.0)|date_exp の週部分に基づき、週初から数えた日を整数値として返します。 戻り値の範囲は 1 - 7 で、1 は日曜日を表します。|  
 |HOUR(time_exp) (ODBC 1.0)|time_exp の時部分に基づき、対応する時刻を 0 から 23 の整数値として返します。|  
