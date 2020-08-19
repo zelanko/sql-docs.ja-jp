@@ -1,4 +1,5 @@
 ---
+description: 監査変換
 title: 監査変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e0f716564eee0d867081576a36eba81735966c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e04af79dc2020a2273717785fca57aac5e4de451
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392278"
 ---
 # <a name="audit-transformation"></a>監査変換
 
@@ -75,11 +76,11 @@ ms.locfileid: "86915753"
 |**[実行インスタンスの GUID]**|パッケージの実行インスタンスを個別に識別する GUID を挿入します。|  
 |**[パッケージ ID]**|パッケージを個別に識別する GUID を挿入します。|  
 |**パッケージ名**|パッケージ名を挿入します。|  
-|**[バージョン ID]**|パッケージのバージョンを個別に識別する GUID を挿入します。|  
+|**バージョン ID**|パッケージのバージョンを個別に識別する GUID を挿入します。|  
 |**[実行開始時刻]**|パッケージの実行が開始される時刻を挿入します。|  
 |**コンピューター名**|パッケージを起動したコンピューターの名前を挿入します。|  
 |**ユーザー名**|パッケージを起動したユーザーのログイン名を挿入します。|  
 |**タスク名**|監査変換が関連付けられているデータ フロー タスクの名前を挿入します。|  
-|**[タスク ID]**|監査変換が関連付けられているデータ フロー タスクを個別に識別する GUID を挿入します。|  
+|**タスク ID**|監査変換が関連付けられているデータ フロー タスクを個別に識別する GUID を挿入します。|  
   
   

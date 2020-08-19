@@ -1,4 +1,5 @@
 ---
+description: Change Data Capture for Oracle by Attunity の既知のエラーと解決策
 title: Change Data Capture for Oracle by Attunity の既知のエラーと解決策 | Microsoft Docs
 ms.date: 07/23/2019
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee1e8f3ae65b4a906d42a4b00644456d89f9b900
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6841092edcb5eac4005d0a068f31c768aedf5bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71713427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394388"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Change Data Capture for Oracle by Attunity の既知のエラーと解決策
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -108,7 +109,7 @@ SQL Server 内で CDC データベースのトレース テーブルにクエリ
 
 ![診断情報の収集のリンク](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
 
-開始時刻を選択し、ログ ファイルの場所を選択します。 次に、 **[作成]** を選択し、診断情報収集を開始します。 
+開始時刻を選択し、ログ ファイルの場所を選択します。 次に、**[作成]** を選択し、診断情報収集を開始します。 
 
 ![診断情報の収集のリンク](media/known-issues-resolutions-with-cdc-for-oracle-attunity/start-diagnostics.png)
 
@@ -118,7 +119,7 @@ SQL Server 内で CDC データベースのトレース テーブルにクエリ
 
 ![診断情報の収集のリンク](media/known-issues-resolutions-with-cdc-for-oracle-attunity/properties.png)
 
-エラーを再現し、 **[診断情報の収集]** オプションを選択してログを収集します。 
+エラーを再現し、**[診断情報の収集]** オプションを選択してログを収集します。 
 
 ![診断情報の収集のリンク](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
 
@@ -144,7 +145,7 @@ SQL Server 内で CDC データベースのトレース テーブルにクエリ
 
 これは、CDC インスタンスから Oracle サーバーに接続しようとしている Oracle アカウントにシステム ログ ビューを表示する権限が与えられていないときに発生します。 
 
-### <a name="resolution"></a>解決方法
+### <a name="resolution"></a>解決策
 
 このエラーを解決するには、現在構成されているユーザーに、Oracle データベース システム内で適切なアクセス許可を与えるか、CDC インスタンスから Oracle サーバーに接続する際に使用されるアカウントを変更します。 
 

@@ -1,4 +1,5 @@
 ---
+description: Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する
 title: Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2018
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6bdcfd84f1b12c48e31bd9d56fe6db3e4155c543
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0eaa6b0cbe19656096cdb47a31ec73b5fd4ade7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915428"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392628"
 ---
 # <a name="loop-through-excel-files-and-tables-with-a-foreach-loop-container"></a>Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する
 
@@ -97,7 +98,7 @@ ms.locfileid: "86915428"
   
 9. Foreach ループ コンテナー内で、Excel 接続マネージャーを使用して、指定したブック内の各 Excel テーブルに対して同じ操作を実行するタスクを作成します。 スクリプト タスクを使用して、列挙されるテーブル名を調べたり各テーブルを操作したりする場合、スクリプト タスクの ReadOnlyVariables プロパティに文字列変数を追加することを忘れないでください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む](../load-data-to-from-excel-with-ssis.md)  
  [Foreach ループ コンテナーを構成する](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [プロパティ式を追加または変更する](../../integration-services/expressions/add-or-change-a-property-expression.md)   

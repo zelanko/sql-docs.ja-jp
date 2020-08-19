@@ -1,4 +1,5 @@
 ---
+description: ディメンション処理変換先
 title: ディメンション処理変換先 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f3458ea4fd1a8c82896fd1c06a76ee4bfd8074bb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5531a102eb4ec24fde1c9693c8f9939eb63b4335
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392638"
 ---
 # <a name="dimension-processing-destination"></a>ディメンション処理変換先
 
@@ -60,7 +61,7 @@ ms.locfileid: "86916732"
 ## <a name="dimension-processing-destination-editor-connection-manager-page"></a>[ディメンション処理変換先エディター] ([接続マネージャー] ページ)
   **[ディメンション処理変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスへの接続を指定できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **Connection manager**  
  既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
@@ -116,7 +117,7 @@ ms.locfileid: "86916732"
  **[エラー時に停止する]**  
  エラーが発生した場合に処理を停止することを指定します。  
   
- **[エラー数]**  
+ **エラーの数**  
  **[エラー時に停止する]** を選択した場合は、処理を停止するエラーのしきい値を指定します。  
   
  **[エラー時のアクション]**  
@@ -164,7 +165,7 @@ ms.locfileid: "86916732"
 |**ReportAndStop**|エラーを報告して処理を停止します。|  
   
  **[エラー ログのパス]**  
- エラー ログのパスを入力するか、 **[...]** ボタンをクリックしてログの保存先を選択します。  
+ エラー ログのパスを入力するか、**[...]** ボタンをクリックしてログの保存先を選択します。  
   
  **[...]**  
  エラー ログのパスを選択します。  

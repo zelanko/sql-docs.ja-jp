@@ -1,4 +1,5 @@
 ---
+description: フル キャッシュ モードの参照変換 - キャッシュ接続マネージャー
 title: フル キャッシュ モードの参照変換 - キャッシュ接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4e37921c8844b94c3974682ab8b088b0015c5ac6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8c4bd90a73c0723baf716b5c503f18d1f690d77e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923140"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394218"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>フル キャッシュ モードの参照変換 - キャッシュ接続マネージャー
 
@@ -172,7 +173,7 @@ ms.locfileid: "86923140"
   
 9. 子パッケージで、キャッシュ接続マネージャーを作成します。その場合、 **[接続マネージャー]** 領域内を右クリックして **[新しい接続]** をクリックし、 **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[CACHE] を選択し** 、 **[追加]** をクリックします。  
   
-     **デザイナーの** [制御フロー] **タブ、** [データ フロー] **タブ、および**[イベント ハンドラー] **タブの下部に、** [接続マネージャー] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 領域が表示されます。  
+     **デザイナーの** [制御フロー] **タブ、**[データ フロー] **タブ、および**[イベント ハンドラー] **タブの下部に、** [接続マネージャー] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 領域が表示されます。  
   
 10. **[キャッシュ接続マネージャー エディター]** の **[全般]** タブで、次のオプションを設定して選択したキャッシュ ファイルからデータを読み取るようにキャッシュ接続マネージャーを構成します。  
   
@@ -226,7 +227,7 @@ ms.locfileid: "86923140"
   
 2.  **[接続マネージャー]** 領域内を右クリックし、 **[新しい接続]** をクリックします。  
   
-     **デザイナーの** [制御フロー] **タブ、** [データ フロー] **タブ、および**[イベント ハンドラー] **タブの下部に、** [接続マネージャー] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 領域が表示されます。  
+     **デザイナーの** [制御フロー] **タブ、**[データ フロー] **タブ、および**[イベント ハンドラー] **タブの下部に、** [接続マネージャー] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 領域が表示されます。  
   
 3.  **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[CACHE]** を選択し、 **[追加]** をクリックしてキャッシュ接続マネージャーを追加します。  
   
@@ -283,7 +284,7 @@ ms.locfileid: "86923140"
   
 9. パッケージを実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB 接続マネージャーを使用してフル キャッシュ モードの参照変換を実装する](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [キャッシュなしモードまたは部分キャッシュ モードの参照を実装する](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services の変換](../../integration-services/data-flow/transformations/integration-services-transformations.md)  

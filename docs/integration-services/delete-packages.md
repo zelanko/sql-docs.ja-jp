@@ -1,4 +1,5 @@
 ---
+description: パッケージを削除する
 title: パッケージを削除する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3e7d3c0f25f34685af4531e5d59541f028098291
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2c7bdaa7f8d7a049794f3965b3fe9d50b3dbb958
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391718"
 ---
 # <a name="delete-packages"></a>パッケージを削除する
 
@@ -25,7 +26,7 @@ ms.locfileid: "86916654"
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]では、ファイル システムに保存したパッケージを削除できます。 パッケージを削除した場合は完全に削除されるため、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに復元することはできません。  
   
 > [!NOTE]  
->  パッケージを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトから削除しても、他のプロジェクトでそのパッケージを使用する場合は、 **[削除]** オプションではなく、 **[プロジェクトから削除]** オプションを使用する必要があります。  
+>   パッケージを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトから削除しても、他のプロジェクトでそのパッケージを使用する場合は、 **[削除]** オプションではなく、 **[プロジェクトから削除]** オプションを使用する必要があります。  
   
 ### <a name="to-delete-a-package-in-business-intelligence"></a>Business Intelligence でパッケージを削除するには  
   
