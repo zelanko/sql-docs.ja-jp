@@ -1,4 +1,5 @@
 ---
+description: Index オブジェクト (ADOX)
 title: Index オブジェクト (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 840484cbfcb1feeb56022835b6c1b3157101edb8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 81f0bf8d07bbb89105a0ceab421d8433d52f1672
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439944"
 ---
 # <a name="index-object-adox"></a>Index オブジェクト (ADOX)
 データベーステーブルのインデックスを表します。  
   
-## <a name="remarks"></a>Remarks  
- 次のコードでは、新しい**インデックス**を作成します。  
+## <a name="remarks"></a>解説  
+ 次のコードでは、新しい **インデックス**を作成します。  
   
 ```  
 Dim obj As New Index  
@@ -38,11 +39,11 @@ Dim obj As New Index
   
 -   [Columns](../../../ado/reference/adox-api/columns-collection-adox.md)コレクションを使用して、インデックスのデータベース列にアクセスします。  
   
--   インデックスキーが[一意](../../../ado/reference/adox-api/unique-property-adox.md)のプロパティで一意である必要があるかどうかを指定します。  
+-   インデックスキーが [一意](../../../ado/reference/adox-api/unique-property-adox.md) のプロパティで一意である必要があるかどうかを指定します。  
   
--   インデックスが[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)プロパティを持つテーブルの主キーであるかどうかを指定します。  
+-   インデックスが [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) プロパティを持つテーブルの主キーであるかどうかを指定します。  
   
--   インデックスフィールドに null 値を持つレコードのインデックスエントリが[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)プロパティに設定されているかどうかを指定します。  
+-   インデックスフィールドに null 値を持つレコードのインデックスエントリが [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) プロパティに設定されているかどうかを指定します。  
   
 -   [クラスター](../../../ado/reference/adox-api/clustered-property-adox.md)化されたプロパティを使用してインデックスをクラスター化するかどうかを指定します。  
   
@@ -52,7 +53,7 @@ Dim obj As New Index
 >  [テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)コレクションに既に追加されている[テーブル](../../../ado/reference/adox-api/table-object-adox.md)オブジェクト**に列が**存在しない場合、**インデックス**の**Columns**コレクションに[列](../../../ado/reference/adox-api/column-object-adox.md)を追加すると、エラーが発生します。  
   
 > [!NOTE]
->  データプロバイダーが、**インデックス**オブジェクトのすべてのプロパティをサポートしていない可能性があります。 プロバイダーでサポートされていないプロパティの値を設定した場合は、エラーが発生します。 新しい**インデックス**オブジェクトの場合、オブジェクトがコレクションに追加されるとエラーが発生します。 既存のオブジェクトの場合、プロパティの設定時にエラーが発生します。  
+>  データプロバイダーが、 **インデックス** オブジェクトのすべてのプロパティをサポートしていない可能性があります。 プロバイダーでサポートされていないプロパティの値を設定した場合は、エラーが発生します。 新しい **インデックス** オブジェクトの場合、オブジェクトがコレクションに追加されるとエラーが発生します。 既存のオブジェクトの場合、プロパティの設定時にエラーが発生します。  
   
 > [!NOTE]
 >  **インデックス**オブジェクトを作成するときに、オプションのプロパティに適切な既定値が存在しても、プロバイダーがプロパティをサポートしているかどうかは保証されません。 プロバイダーがサポートしているプロパティの詳細については、プロバイダーのドキュメントを参照してください。  

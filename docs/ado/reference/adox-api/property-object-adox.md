@@ -1,4 +1,5 @@
 ---
+description: Property オブジェクト (ADOX)
 title: Property オブジェクト (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f866b20bb8157239a6deb7fd37a1ec044e27479
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5a836b5b0778aea77732036d1951db81aa790198
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439604"
 ---
 # <a name="property-object-adox"></a>Property オブジェクト (ADOX)
 ADOX オブジェクトの特性を表します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ADOX オブジェクトには、組み込みと動的の2種類のプロパティがあります。  
   
- 組み込みプロパティは、新しいオブジェクトですぐに使用できるプロパティで、MyObject 構文を使用します。 オブジェクトの[プロパティコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)にはプロパティオブジェクトとして表示されません。そのため、値を変更することはできますが、その特性を変更することはできません。  
+ 組み込みプロパティは、新しいオブジェクトですぐに使用できるプロパティで、MyObject 構文を使用します。 オブジェクトの [プロパティコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)にはプロパティオブジェクトとして表示されません。そのため、値を変更することはできますが、その特性を変更することはできません。  
   
  動的プロパティは、基になるデータプロバイダーによって定義され、適切な ADOX オブジェクトの Properties コレクションに表示されます。  動的プロパティを参照できるのは、コレクションを介して、MyObject (0) または MyObject. Properties ("Name") 構文を使用する場合のみです。  
   

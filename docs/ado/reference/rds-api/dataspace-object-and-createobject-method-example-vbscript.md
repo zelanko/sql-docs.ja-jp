@@ -1,4 +1,5 @@
 ---
+description: DataSpace オブジェクトおよび CreateObject メソッドの例 (VBScript)
 title: 領域スペースオブジェクトと CreateObject メソッドの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 406c0b8d6782352b88ca0712ad6173045228f241
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8c3606f321ba8647e2d997b125c4c002bf7739b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439074"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace オブジェクトおよび CreateObject メソッドの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- 次の例は、RDS の[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)メソッドの使用方法を示して[います。既定のビジネスオブジェクトを使用し](../../../ado/reference/rds-api/dataspace-object-rds.md)た、 [RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)。 この例をテストするには、通常の HTML ドキュメントで body> と body> タグの間でこのコードを切り取って貼り付け、「 \< \< **Dataspacevbs. asp**」という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
+ 次の例は、RDS の [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) メソッドの使用方法を示して [います。既定のビジネスオブジェクトを使用し](../../../ado/reference/rds-api/dataspace-object-rds.md) た、 [RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)。 この例をテストするには、 \<Body> \</Body> 通常の HTML ドキュメントのタグとタグの間でこのコードを**DataSpaceVBS.asp**切り取って貼り付けます。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginDataSpaceVBS -->  
@@ -130,12 +131,12 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
 <!-- EndDataSpaceVBS -->  
 ```  
   
- 次の例では、 **CreateObject**メソッドを使用して、カスタムビジネスオブジェクトのインスタンス (vbbusobj) を作成する方法を示します。 また、Active Server ページのスクリプトを使用して、Web サーバー名を識別します。  
+ 次の例では、 **CreateObject** メソッドを使用して、カスタムビジネスオブジェクトのインスタンス (vbbusobj) を作成する方法を示します。 また、Active Server ページのスクリプトを使用して、Web サーバー名を識別します。  
   
- 完全な例を表示するには、サンプルアプリケーションセレクターを開きます。 [**クライアント層**] 列で、 **Internet Explorer の [VBScript**] を選択します。 [**中間層**] 列で、[**カスタム Visual Basic ビジネスオブジェクト**] を選択します。  
+ 完全な例を表示するには、サンプルアプリケーションセレクターを開きます。 [ **クライアント層** ] 列で、 **Internet Explorer の [VBScript**] を選択します。 [ **中間層** ] 列で、[ **カスタム Visual Basic ビジネスオブジェクト**] を選択します。  
   
 > [!NOTE]
->  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes**または**INTEGRATED Security = SSPI**を指定する必要があります。  
+>  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes** または **INTEGRATED Security = SSPI** を指定する必要があります。  
   
 ```  
 Sub Window_OnLoad()  

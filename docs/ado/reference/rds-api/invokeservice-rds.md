@@ -1,4 +1,5 @@
 ---
+description: InvokeService (RDS)
 title: InvokeService (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ead0a42c0c5239a0f3bb4cafecb584788e06832
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b14c4f2b97f3002291f5be765b1b0dfe6cf4f1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438914"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 サポートされているオブジェクトのバージョンで、要求されたインターフェイスへのポインターを返します。  
   
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、  [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,13 +45,13 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
   
  *ppunkMoreFunctionalInterface*  
   
- 入出力*Riid*で要求されたインターフェイスポインターを受け取るポインター変数のアドレス。 正常に返された場合、 *ppunkMoreFunctionalInterface*パラメーターには、オブジェクトへの要求されたインターフェイスポインターが格納されます。 オブジェクトが、 *riid*で指定されたインターフェイスをサポートしていない場合、 *ppunkMoreFunctionalInterface*は NULL に設定されます。  
+ 入出力 *Riid*で要求されたインターフェイスポインターを受け取るポインター変数のアドレス。 正常に返された場合、 *ppunkMoreFunctionalInterface* パラメーターには、オブジェクトへの要求されたインターフェイスポインターが格納されます。 オブジェクトが、 *riid*で指定されたインターフェイスをサポートしていない場合、 *ppunkMoreFunctionalInterface* は NULL に設定されます。  
   
 ## <a name="return-value"></a>戻り値  
  **InvokeService**メソッドの呼び出しが成功したかどうかを示す HRESULT 値。  
   
-## <a name="remarks"></a>Remarks  
- RDS カーソルエンジンの**InvokeService**の実装では、入力行セット (または複数の結果オブジェクト) を取得し、入力行セットからカーソルエンジンを設定してから、ポインターをそれ自体に返します。  
+## <a name="remarks"></a>解説  
+ RDS カーソルエンジンの **InvokeService** の実装では、入力行セット (または複数の結果オブジェクト) を取得し、入力行セットからカーソルエンジンを設定してから、ポインターをそれ自体に返します。  
   
 ## <a name="applies-to"></a>適用対象  
  [IRDSService インターフェイス (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  

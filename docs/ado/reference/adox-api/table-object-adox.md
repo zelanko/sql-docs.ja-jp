@@ -1,4 +1,5 @@
 ---
+description: Table オブジェクト (ADOX)
 title: Table オブジェクト (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bcebe14b7b989e584539dd3f92fd8ea676ebd48a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c9bbf6a33eeb76f406a6fd6dc87ef591a3d4f12a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439484"
 ---
 # <a name="table-object-adox"></a>Table オブジェクト (ADOX)
 列、インデックス、およびキーを含むデータベーステーブルを表します。  
   
 ## <a name="remarks"></a>解説  
- 次のコードでは、新しい**テーブル**を作成します。  
+ 次のコードでは、新しい **テーブル**を作成します。  
   
 ```  
 Dim obj As New Table  
@@ -51,7 +52,7 @@ Dim obj As New Table
 -   [プロパティコレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを使用して、プロバイダー固有のテーブルプロパティにアクセスします。  
   
 > [!NOTE]
->  データプロバイダーが**テーブル**オブジェクトのすべてのプロパティをサポートしていない可能性があります。 プロバイダーがサポートしていないプロパティの値を設定した場合、エラーが発生します。 新しい**テーブル**オブジェクトの場合、オブジェクトがコレクションに追加されるとエラーが発生します。 既存のオブジェクトの場合、プロパティの設定時にエラーが発生します。  
+>  データプロバイダーが **テーブル** オブジェクトのすべてのプロパティをサポートしていない可能性があります。 プロバイダーがサポートしていないプロパティの値を設定した場合、エラーが発生します。 新しい **テーブル** オブジェクトの場合、オブジェクトがコレクションに追加されるとエラーが発生します。 既存のオブジェクトの場合、プロパティの設定時にエラーが発生します。  
 >   
 >  **テーブル**オブジェクトを作成するときに、オプションのプロパティに適切な既定値が存在しても、プロバイダーがプロパティをサポートしているかどうかは保証されません。 プロバイダーがサポートしているプロパティの詳細については、プロバイダーのドキュメントを参照してください。  
   

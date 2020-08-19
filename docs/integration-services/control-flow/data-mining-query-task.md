@@ -1,4 +1,5 @@
 ---
+description: データ マイニング クエリ タスク
 title: データ マイニング クエリ タスク | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e678774a8da38b8ff2e8c64adc7309828d6dffb6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 285bc5e3b2bdf9dfb1497539def56ecbaa77ccb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431024"
 ---
 # <a name="data-mining-query-task"></a>データ マイニング クエリ タスク
 
@@ -87,7 +88,7 @@ ms.locfileid: "86919838"
  **接続**  
  既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+ **関連トピック:**  [Analysis Services 接続マネージャーの追加](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
  **[新規作成]**  
  新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを作成します。  
@@ -119,12 +120,12 @@ ms.locfileid: "86919838"
  **[データ マイニング クエリ]**  
  データ マイニング クエリを入力します。  
   
- **関連トピック:** [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)  
+ **関連項目:**  [データ マイニング拡張機能 (DMX) リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)  
   
  **[新しいクエリの作成]**  
  グラフィカル ツールを使用してデータ マイニング クエリを作成します。  
   
- **関連トピック:** [データ マイニング クエリ](../../integration-services/control-flow/data-mining-query.md)  
+ **関連項目:** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
   
 ### <a name="parameter-mapping-tab-options"></a>[パラメーター マッピング] タブのオプション  
  **パラメーター名**  

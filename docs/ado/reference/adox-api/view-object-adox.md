@@ -1,4 +1,5 @@
 ---
+description: View オブジェクト (ADOX)
 title: View オブジェクト (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b468ccc3edc4cc5453b4f08371cd2b4b962f0c72
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3cc635db04358417948e709a4c47605fae17669b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439364"
 ---
 # <a name="view-object-adox"></a>View オブジェクト (ADOX)
-フィルター処理されたレコードセットまたは仮想テーブルを表します。 ADO[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと組み合わせて使用すると、ビュー**オブジェクトを使用して**、ビューの追加、削除、または変更を行うことができます。  
+フィルター処理されたレコードセットまたは仮想テーブルを表します。 ADO [コマンド](../../../ado/reference/ado-api/command-object-ado.md) オブジェクトと組み合わせて使用すると、ビュー **オブジェクトを使用して** 、ビューの追加、削除、または変更を行うことができます。  
   
 ## <a name="remarks"></a>解説  
  ビューは、他のデータベーステーブルまたはビューから作成された仮想テーブルです。 **ビュー**オブジェクトを使用すると、プロバイダーの "create View" 構文を知らない場合や使用しなくても、ビューを作成できます。  

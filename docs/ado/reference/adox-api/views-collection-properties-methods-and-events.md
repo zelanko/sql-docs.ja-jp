@@ -1,4 +1,5 @@
 ---
+description: Views コレクションのプロパティ、メソッド、およびイベント
 title: Views コレクションのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 04e119a4-39e1-45fe-8e39-c9b9afbfeb27
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a6b037e13be2d760d752fd5c9c4b4a9843bbc1b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 56e08a600fbd49c42b0e615580ce6880ab134555
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439304"
 ---
 # <a name="views-collection-properties-methods-and-events"></a>Views コレクションのプロパティ、メソッド、およびイベント
 ## <a name="properties"></a>プロパティ  
@@ -32,7 +33,7 @@ ms.locfileid: "82761730"
   
  [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

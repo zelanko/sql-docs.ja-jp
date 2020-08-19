@@ -1,4 +1,5 @@
 ---
+description: Cancel メソッドの例 (VBScript)
 title: Cancel メソッドの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c71b52508861560571131e812e14393b10339ea
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ad6b7e95f654482e7026e288420d2ad10f36ab71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439264"
 ---
 # <a name="cancel-method-example-vbscript"></a>Cancel メソッドの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- 次の例は、実行時に[Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)メソッドを読み取る方法を示しています。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、CancelVBS. asp として保存します。 結果は任意のクライアントブラウザーで表示できます。  
+ 次の例は、実行時に [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) メソッドを読み取る方法を示しています。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、CancelVBS. asp として保存します。 結果は任意のクライアントブラウザーで表示できます。  
   
 ```  
 <!-- BeginCancelVBS -->  

@@ -1,4 +1,5 @@
 ---
+description: ExecuteOptions と FetchOptions プロパティの例 (VBScript)
 title: ExecuteOptions および FetchOptions プロパティの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c1aae50a774818c5d2cc4c719a41760a486888bb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b241eb84e4ea7766d209a61542562c2522a80849
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439044"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions と FetchOptions プロパティの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- 次のコードは、デザイン時に[executeoptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)および[fetchoptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md)プロパティを設定する方法を示しています。 設定を解除したままにすると、 **Executeoptions**は既定で**Adcexecsync**になります。 この設定は、RDS の起動時にを示し**ます。Refresh**メソッドが呼び出され、現在の呼び出し元スレッドで (同期的に) 実行されます。 次のコードを切り取り、メモ帳または別のテキストエディターに貼り付け、 **Executeoptionsdesignvbs**として保存します。  
+ 次のコードは、デザイン時に [executeoptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) および [fetchoptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) プロパティを設定する方法を示しています。 設定を解除したままにすると、 **Executeoptions** は既定で **Adcexecsync**になります。 この設定は、RDS の起動時にを示し **ます。Refresh** メソッドが呼び出され、現在の呼び出し元スレッドで (同期的に) 実行されます。 次のコードを切り取り、メモ帳または別のテキストエディターに貼り付け、 **Executeoptionsdesignvbs**として保存します。  
   
 ```  
 <!-- BeginExecuteOptionsDesignVBS -->  
@@ -94,7 +95,7 @@ body {
 <!-- EndExecuteOptionsDesignVBS -->  
 ```  
   
- 次の例は、実行時に VBScript コードで**executeoptions**プロパティと**fetchoptions**プロパティを設定する方法を示しています。 これらのプロパティの実際の例については、 [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md)メソッドを参照してください。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Executeoptionsruntimevbs**として保存します。  
+ 次の例は、実行時に VBScript コードで **executeoptions** プロパティと **fetchoptions** プロパティを設定する方法を示しています。 これらのプロパティの実際の例については、 [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) メソッドを参照してください。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Executeoptionsruntimevbs**として保存します。  
   
 ```  
 <!-- BeginExecuteOptionsRuntimeVBS -->  

@@ -1,4 +1,5 @@
 ---
+description: Index オブジェクトのプロパティ、メソッド、およびイベント
 title: Index オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f4e92e1-e7cb-45d8-aa86-cd749474f825
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b581a3c953d666d771ccdc80d06cdcc951cd60bd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 060c6bb1ec99ba2a8fa758d320cb57780601cf58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439934"
 ---
 # <a name="index-object-properties-methods-and-events"></a>Index オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -36,9 +37,9 @@ ms.locfileid: "82762733"
  [Unique プロパティ](../../../ado/reference/adox-api/unique-property-adox.md)  
   
 ## <a name="methods"></a>メソッド  
- [なし] :  
+ なし。  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

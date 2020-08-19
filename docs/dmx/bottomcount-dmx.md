@@ -1,4 +1,5 @@
 ---
+description: 下端のカウント (DMX)
 title: 下端のカウント (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: db7e660b5b92d49f5a5151d5d71e9ac31f9e9013
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: a2b810d2b268e12c97857475e474d3ed597978ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431174"
 ---
 # <a name="bottomcount-dmx"></a>下端のカウント (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,11 +34,11 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>戻り値の型  
  \<table expression>  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  引数によって指定された値によって、 \<rank expression> 引数に指定された行のランクの増加順序が決定され、 \<table expression> 引数に指定されている最下位行の数 \<count> が返されます。  
   
 ## <a name="examples"></a>例  
- 次の例では、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
+ 次の例では、「 [基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
   
  下位カウントのしくみを理解するために、入れ子になったテーブルのみを返す予測クエリを最初に実行すると便利な場合があります。  
   
@@ -50,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「[データマイニングデザイナーでの単一クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
+>  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「 [データマイニングデザイナーでの単一クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
   
  結果の例:  
   
@@ -96,13 +97,13 @@ NATURAL PREDICTION JOIN
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Fender Set - Mountain|1415|0.095100477|0.090718432|  
   
- **メモ**この例は、下端の使用方法を示すためだけに提供されています。 データセットのサイズによっては、このクエリの実行に時間がかかることがあります。  
+ **メモ** この例は、下端の使用方法を示すためだけに提供されています。 データセットのサイズによっては、このクエリの実行に時間がかかることがあります。  
   
 ## <a name="see-also"></a>参照  
- [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)   
- [DMX&#41;&#40;の割合](../dmx/bottompercent-dmx.md)   
- [DMX&#41;&#40;BottomSum](../dmx/bottomsum-dmx.md)   
- [DMX&#41;&#40;TopCount](../dmx/topcount-dmx.md)  
+ [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)   
+ [DMX&#41;&#40;の割合 ](../dmx/bottompercent-dmx.md)   
+ [DMX&#41;&#40;BottomSum ](../dmx/bottomsum-dmx.md)   
+ [DMX&#41;&#40;TopCount ](../dmx/topcount-dmx.md)  
   
   

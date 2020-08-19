@@ -1,4 +1,5 @@
 ---
+description: User オブジェクトのプロパティ、メソッド、およびイベント
 title: ユーザーオブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: becd590c-0db7-485c-8bf4-fa3456e4ba20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e993688a7ac1c0dfe8e03f875d4cd91153debc2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4f1dd6d4e443a0426a5bd88231be944238e58bd7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762693"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439384"
 ---
 # <a name="user-object-properties-methods-and-events"></a>User オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -36,7 +37,7 @@ ms.locfileid: "82762693"
   
  [SetPermissions メソッド](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

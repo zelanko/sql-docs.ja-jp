@@ -1,4 +1,5 @@
 ---
+description: Data Flow
 title: データ フロー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 757015f38213730973ec67c014f5b17d00fbce0b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa3fff63528c11e57c6517393c28a5deb2acfcfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430964"
 ---
 # <a name="data-flow"></a>Data Flow
 
@@ -77,7 +78,7 @@ ms.locfileid: "86916838"
   
  データ フローに式を使用するコンポーネントが含まれている場合は、該当する式も [プロパティ] ウィンドウに表示されます。 式を表示するには、コンポーネントが属するデータ フロー タスクを選択します。 プロパティは項目別またはアルファベット順に表示できます。 [プロパティ] ウィンドウで項目別のビューを使用すると、特定のプロパティで使用されていないすべての式は **[その他]** カテゴリに一覧表示されます。 アルファベット順のビューを使用すると、データ フロー コンポーネントの名前順に式が一覧表示されます。  
   
-## <a name="sources"></a>変換元  
+## <a name="sources"></a>ソース  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]での変換元とは、さまざまな外部データ ソースのデータを、データ フロー内の別のコンポーネントで使用できるようにするデータ フロー コンポーネントのことです。 フラット ファイル、XML ファイル、Microsoft Excel ブック、および生データが含まれるファイルからデータを抽出できます。 また、データベースのテーブルやビューにアクセスしたり、クエリを実行したりすることによっても、データを抽出できます。  
   
  1 つのデータ フローには、1 つまたは複数の変換元を含めることができます。  
@@ -178,7 +179,7 @@ ms.locfileid: "86916838"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトには、オフライン モードが用意されています。 オフラインで作業すると、パッケージが使用する変換元または変換先には連結されません。また、外部列のメタデータも更新されません。  
   
-## <a name="inputs-and-outputs"></a>入力および出力  
+## <a name="inputs-and-outputs"></a>入力と出力  
  変換元は出力をとり、変換先は入力をとります。また、変換は入力と出力の両方をとります。 さらに、多くのデータ フロー コンポーネントで、エラー出力を使用するように構成できます。  
   
 ### <a name="inputs"></a>入力  

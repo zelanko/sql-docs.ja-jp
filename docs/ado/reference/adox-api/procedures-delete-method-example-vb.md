@@ -1,4 +1,5 @@
 ---
+description: Procedures Delete メソッドの例 (VB)
 title: Procedures Delete メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d270dbc8bc14ba0ce5fdde9a5c964117856e8f51
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c3f7d26eded130f22bda4f707f451ddf78c4b3d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439614"
 ---
 # <a name="procedures-delete-method-example-vb"></a>Procedures Delete メソッドの例 (VB)
 次のコード[は、プロシージャコレクションの](../../../ado/reference/adox-api/procedures-collection-adox.md) [delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)メソッドを使用してプロシージャを削除する方法を示しています。  

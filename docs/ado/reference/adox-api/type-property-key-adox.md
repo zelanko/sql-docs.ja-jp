@@ -1,4 +1,5 @@
 ---
+description: Type プロパティ (キー) (ADOX)
 title: Type プロパティ (キー) (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,21 +20,21 @@ helpviewer_keywords:
 ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 000169993f3aae1047369449b7df71551b52ea22
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 28c61045a301047b944447f6037f06324a49cadb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439444"
 ---
 # <a name="type-property-key-adox"></a>Type プロパティ (キー) (ADOX)
 キーの種類を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- [Keytypeenum](../../../ado/reference/adox-api/keytypeenum.md)定数のいずれかを指定できる**Long 型**の値を設定または返します。 既定値は**adKeyPrimary**です。  
+ [Keytypeenum](../../../ado/reference/adox-api/keytypeenum.md)定数のいずれかを指定できる**Long 型**の値を設定または返します。 既定値は **adKeyPrimary**です。  
   
 ## <a name="remarks"></a>解説  
- このプロパティは、既にコレクションに追加されている[キー](../../../ado/reference/adox-api/key-object-adox.md)オブジェクトに対しては読み取り専用です。  
+ このプロパティは、既にコレクションに追加されている [キー](../../../ado/reference/adox-api/key-object-adox.md) オブジェクトに対しては読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  
  [Key オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  

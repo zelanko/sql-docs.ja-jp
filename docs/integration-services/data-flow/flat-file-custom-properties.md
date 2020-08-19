@@ -1,4 +1,5 @@
 ---
+description: フラット ファイルのカスタム プロパティ
 title: フラット ファイルのカスタム プロパティ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eef1dd7c7cf1a977f8443f22e7bf3af9158b8ae7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9c20e9a830439e8065a1bbccfe7d25540c9ae639
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430854"
 ---
 # <a name="flat-file-custom-properties"></a>フラット ファイルのカスタム プロパティ
 
@@ -31,7 +32,7 @@ ms.locfileid: "86919780"
 |プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |FileNameColumnName|String|ファイル名を格納する出力列の名前。 名前が指定されていない場合、ファイル名を格納する出力列は生成されません。<br /><br /> 注: このプロパティは、 **フラット ファイル ソース エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
-|RetainNulls|Boolean|データ変換のパイプライン エンジンによってデータが処理される際に、ソース ファイルの NULL 値を NULL 値として保持するかどうかを示す値。 このプロパティの既定値は **False**です。|  
+|RetainNulls|ブール型|データ変換のパイプライン エンジンによってデータが処理される際に、ソース ファイルの NULL 値を NULL 値として保持するかどうかを示す値。 このプロパティの既定値は **False**です。|  
   
  フラット ファイル ソースの出力には、カスタム プロパティがありません。  
   
@@ -52,13 +53,13 @@ ms.locfileid: "86919780"
 |プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |ヘッダー|String|データが書き込まれる前にファイルに挿入される、テキストのブロック。<br /><br /> このプロパティの値は、プロパティ式を使用して指定することができます。|  
-|Overwrite|Boolean|同じ名前の既存の変換先ファイルに対して、上書きまたは追加のどちらを実行するかを指定する値。 このプロパティの既定値は **True**です。|  
+|Overwrite|ブール型|同じ名前の既存の変換先ファイルに対して、上書きまたは追加のどちらを実行するかを指定する値。 このプロパティの既定値は **True**です。|  
   
  フラット ファイル変換先の入力および入力列には、カスタム プロパティはありません。  
   
  詳細については、「 [フラット ファイル変換先](../../integration-services/data-flow/flat-file-destination.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

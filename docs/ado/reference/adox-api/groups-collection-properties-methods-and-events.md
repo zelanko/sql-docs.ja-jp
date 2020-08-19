@@ -1,4 +1,5 @@
 ---
+description: Groups コレクションのプロパティ、メソッド、およびイベント
 title: グループコレクションのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 424a57e47b9e9f788126680a2090071f517abeeb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9489321120377a0ec5c53132a3e9b07224776e48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439964"
 ---
 # <a name="groups-collection-properties-methods-and-events"></a>Groups コレクションのプロパティ、メソッド、およびイベント
 ## <a name="properties"></a>プロパティ  
@@ -32,7 +33,7 @@ ms.locfileid: "82761720"
   
  [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

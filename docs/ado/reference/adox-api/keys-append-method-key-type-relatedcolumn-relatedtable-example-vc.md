@@ -1,4 +1,5 @@
 ---
+description: Keys Append メソッド、Key Type、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VC++)
 title: 新しい外部キーの作成の例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 260c29c18f6d8c95cbca6e06c25ebf05fceeec64
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 078e3078f57dea91cd5f73b6cce504545771f59e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439824"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Keys Append メソッド、Key Type、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VC++)
 次のコードは、新しい外部キーを作成する方法を示しています。 2つのテーブル (顧客と注文) が存在することを前提としています。  

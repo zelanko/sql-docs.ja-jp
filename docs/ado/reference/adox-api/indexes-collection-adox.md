@@ -1,4 +1,5 @@
 ---
+description: Indexes コレクション (ADOX)
 title: Indexes コレクション (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af209229519470b121e3c69ba857b145c0874e73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 916671fdf9722c7894ee122f3d68167a8047b72c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439914"
 ---
 # <a name="indexes-collection-adox"></a>Indexes コレクション (ADOX)
-テーブルのすべての[Index](../../../ado/reference/adox-api/index-object-adox.md)オブジェクトを格納します。  
+テーブルのすべての [Index](../../../ado/reference/adox-api/index-object-adox.md) オブジェクトを格納します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Indexes**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-indexes.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
   
 -   **追加**メソッドを使用して、新しいインデックスをコレクションに追加します。  

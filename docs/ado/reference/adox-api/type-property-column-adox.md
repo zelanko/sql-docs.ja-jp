@@ -1,4 +1,5 @@
 ---
+description: Type プロパティ (列) (ADOX)
 title: Type プロパティ (列) (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,21 +20,21 @@ helpviewer_keywords:
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c819d5b58f0153db84a624c79cef829605e54df8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 855c7aabd3ac94fff5250f4a6c1fab3d02a7ec65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439434"
 ---
 # <a name="type-property-column-adox"></a>Type プロパティ (列) (ADOX)
 列のデータ型を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)定数のいずれかを指定できる**Long 型**の値を設定または返します。 既定値は**adVarWChar**です。  
+ [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)定数のいずれかを指定できる**Long 型**の値を設定または返します。 既定値は **adVarWChar**です。  
   
 ## <a name="remarks"></a>解説  
- このプロパティは、[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトがコレクションまたは別のオブジェクトに追加されるまで、読み取り/書き込みが行われます。その後、読み取り専用になります。  
+ このプロパティは、 [列](../../../ado/reference/adox-api/column-object-adox.md) オブジェクトがコレクションまたは別のオブジェクトに追加されるまで、読み取り/書き込みが行われます。その後、読み取り専用になります。  
   
 ## <a name="applies-to"></a>適用対象  
  [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  

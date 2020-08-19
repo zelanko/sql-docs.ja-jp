@@ -1,4 +1,5 @@
 ---
+description: SortOrder プロパティの例 (VB)
 title: 順序のプロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd58cb2ec579586b25365abab9d6ff8b2b9c6617
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a66fcb11780731424563526d30a4d544c60ea693
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439504"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder プロパティの例 (VB)
-この例では、インデックスの[Columns](../../../ado/reference/adox-api/columns-collection-adox.md)コレクションに追加された[列](../../../ado/reference/adox-api/column-object-adox.md)の[順序](../../../ado/reference/adox-api/sortorder-property-adox.md)[付け](../../../ado/reference/adox-api/index-object-adox.md)プロパティを示します。 このコードでは、 **Employees**テーブルの Country 列に昇順のインデックスが追加され、レコードが表示されます。 次に、このコードにより、 **Employees**テーブルの Country 列に降順のインデックスが追加され、レコードが再び表示されます。 昇順と降順のインデックスの違いを示します。  
+この例では、インデックスの[Columns](../../../ado/reference/adox-api/columns-collection-adox.md)コレクションに追加された[列](../../../ado/reference/adox-api/column-object-adox.md)の[順序](../../../ado/reference/adox-api/sortorder-property-adox.md)[付け](../../../ado/reference/adox-api/index-object-adox.md)プロパティを示します。 このコードでは、 **Employees** テーブルの Country 列に昇順のインデックスが追加され、レコードが表示されます。 次に、このコードにより、 **Employees** テーブルの Country 列に降順のインデックスが追加され、レコードが再び表示されます。 昇順と降順のインデックスの違いを示します。  
   
 ```  
 ' BeginSortOrderVB  

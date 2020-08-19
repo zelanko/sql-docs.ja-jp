@@ -1,4 +1,5 @@
 ---
+description: Views および Fields コレクションの例 (VB)
 title: Views および Fields コレクションの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7b8650dc2714b7d21450aed5bf816bda21f8201
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 30be1e48aca9a942b0a98d0f119f1f8e8218144b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439334"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Views および Fields コレクションの例 (VB)
-次のコードは、[コマンド](../../../ado/reference/adox-api/command-property-adox.md)プロパティと[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを使用して、ビューのフィールド情報を取得する方法を示しています。  
+次のコードは、 [コマンド](../../../ado/reference/adox-api/command-property-adox.md) プロパティと [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトを使用して、ビューのフィールド情報を取得する方法を示しています。  
   
 ```  
 ' BeginViewFieldsVB  

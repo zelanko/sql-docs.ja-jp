@@ -1,4 +1,5 @@
 ---
+description: Tables コレクション (ADOX)
 title: Tables コレクション (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f788376d76692f3dc86011cc1d35b293116250a3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9d959578d647e74248fdb58b8c27269c0454c304
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763283"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439474"
 ---
 # <a name="tables-collection-adox"></a>Tables コレクション (ADOX)
-カタログのすべての[テーブル](../../../ado/reference/adox-api/table-object-adox.md)オブジェクトが含まれます。  
+カタログのすべての [テーブル](../../../ado/reference/adox-api/table-object-adox.md) オブジェクトが含まれます。  
   
 ## <a name="remarks"></a>解説  
  **Tables**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-tables.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
@@ -41,7 +42,7 @@ ms.locfileid: "82763283"
   
 -   [更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、現在のデータベーススキーマを反映するように、コレクション内のオブジェクトを更新します。  
   
- プロバイダーによっては、 **Tables**コレクション内の他のスキーマオブジェクト (ビューなど) が返される場合があります。 そのため、一部の ADOX コレクションには、同じオブジェクトへの複数の参照を含めることができます。 オブジェクトを1つのコレクションから削除すると、その変更は、コレクションで**Refresh**メソッドが呼び出されるまで、削除されたオブジェクトを参照する別のコレクションに表示されません。 たとえば、Microsoft Jet の OLE DB Provider を使用すると、 **Tables**コレクションと共にビューが返されます。 ビューを削除する場合は、コレクションに変更が反映される前に、 **Tables**コレクションを更新する必要があります。  
+ プロバイダーによっては、 **Tables** コレクション内の他のスキーマオブジェクト (ビューなど) が返される場合があります。 そのため、一部の ADOX コレクションには、同じオブジェクトへの複数の参照を含めることができます。 オブジェクトを1つのコレクションから削除すると、その変更は、コレクションで **Refresh** メソッドが呼び出されるまで、削除されたオブジェクトを参照する別のコレクションに表示されません。 たとえば、Microsoft Jet の OLE DB Provider を使用すると、 **Tables** コレクションと共にビューが返されます。 ビューを削除する場合は、コレクションに変更が反映される前に、 **Tables** コレクションを更新する必要があります。  
   
  ここでは、次のトピックについて説明します。  
   

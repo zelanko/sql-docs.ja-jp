@@ -1,4 +1,5 @@
 ---
+description: RightsEnum
 title: 右 Senum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b49fbddab49266ee5a5d530867c281e72878b6d7
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: ead66b4c3215ef0d7a42e8ec029e97502dac2f4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439554"
 ---
 # <a name="rightsenum"></a>RightsEnum
 オブジェクトのグループまたはユーザーの権限または権限を指定します。  
@@ -29,7 +30,7 @@ ms.locfileid: "86943024"
 |--------------|-----------|-----------------|  
 |**Adall の作成**|16384 (&H4000)|このユーザーまたはグループには、この種類の新しいオブジェクトを作成する権限があります。|  
 |**Adall の削除**|65536 (&H10000)|ユーザーまたはグループには、オブジェクトからデータを削除する権限が与えられています。 **テーブル**などのオブジェクトの場合、ユーザーはレコードからデータ値を削除する権限を持っています。|  
-|**Adの削除**|256 (&H100)|ユーザーまたはグループには、カタログからオブジェクトを削除する権限があります。 たとえば、**テーブル**は DROP TABLE SQL コマンドで削除できます。|  
+|**Adの削除**|256 (&H100)|ユーザーまたはグループには、カタログからオブジェクトを削除する権限があります。 たとえば、 **テーブル** は DROP TABLE SQL コマンドで削除できます。|  
 |**Adexclusive 排他**|512 (&H200)|ユーザーまたはグループは、オブジェクトに排他的にアクセスする権限を持っています。|  
 |**Adall の実行**|536870912 (&H20000000)|このユーザーまたはグループには、オブジェクトを実行する権限があります。|  
 |**Adfull フル**|268435456 (&H10000000)|ユーザーまたはグループは、オブジェクトに対するすべての権限を持っています。|  

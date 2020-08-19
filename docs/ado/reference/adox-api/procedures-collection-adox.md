@@ -1,4 +1,5 @@
 ---
+description: Procedures コレクション (ADOX)
 title: Procedures コレクション (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91ce9f74f0198c52ecce404cb0145e33b941271c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3719107d002e91880d59b0ba33c25c09596a80b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763652"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439624"
 ---
 # <a name="procedures-collection-adox"></a>Procedures コレクション (ADOX)
-カタログのすべての[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)オブジェクトを格納します。  
+カタログのすべての [プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md) オブジェクトを格納します。  
   
 ## <a name="remarks"></a>解説  
  **Procedures**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-procedures.md)メソッドは、ADOX で一意です。 次のようにすることができます。  

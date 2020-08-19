@@ -1,4 +1,5 @@
 ---
+description: Precision プロパティ (ADOX)
 title: Precision プロパティ (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 67512b74e4c2b869cb7b1f9397462ce5566557a8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 82df9a1dcd53fa5f64f59e7fd86262a03ae5f8aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763723"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439704"
 ---
 # <a name="precision-property-adox"></a>Precision プロパティ (ADOX)
 [列](../../../ado/reference/adox-api/column-object-adox.md)のデータ値の最大有効桁数を示します。  
@@ -35,7 +36,7 @@ ms.locfileid: "82763723"
 ## <a name="remarks"></a>解説  
  既定値はゼロ (**0**) です。  
   
- このプロパティは、既にコレクションに追加されている[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトに対しては読み取り専用です。  
+ このプロパティは、既にコレクションに追加されている [列](../../../ado/reference/adox-api/column-object-adox.md) オブジェクトに対しては読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  
  [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  

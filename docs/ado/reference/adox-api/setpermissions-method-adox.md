@@ -1,4 +1,5 @@
 ---
+description: SetPermissions メソッド (ADOX)
 title: SetPermissions メソッド (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4287e836dd46c579ee81a4baf0e175e8b49acf67
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 3d5af996442e0451a80265b7fbd9fb31450f9475
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439524"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions メソッド (ADOX)
-オブジェクトの[グループ](../../../ado/reference/adox-api/group-object-adox.md)または[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)に対する権限を指定します。  
+オブジェクトの [グループ](../../../ado/reference/adox-api/group-object-adox.md) または [ユーザー](../../../ado/reference/adox-api/user-object-adox.md) に対する権限を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,7 +38,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
   
 #### <a name="parameters"></a>パラメーター  
  *名前*  
- 権限を設定するオブジェクトの名前を示す**文字列**値です。  
+ 権限を設定するオブジェクトの名前を示す **文字列** 値です。  
   
  *ObjectType*  
  [Objecttypeenum](../../../ado/reference/adox-api/objecttypeenum.md)定数の1つであり、アクセス許可を取得するオブジェクトの型を指定する**Long 型**の値です。  
@@ -49,12 +50,12 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  設定する権限を示す1つ以上の[右 Senum](../../../ado/reference/adox-api/rightsenum.md)定数のビットマスクとして使用できる**Long 型**の値。  
   
  *識別子*  
- 任意。 オブジェクトがこれらのアクセス許可を継承する方法を指定する、 [Inherittypeenum](../../../ado/reference/adox-api/inherittypeenum.md)定数の1つである**Long**値。 既定値は**Adinheritnone**です。  
+ 任意。 オブジェクトがこれらのアクセス許可を継承する方法を指定する、 [Inherittypeenum](../../../ado/reference/adox-api/inherittypeenum.md)定数の1つである**Long**値。 既定値は **Adinheritnone**です。  
   
  *ObjectTypeId*  
- 任意。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す**バリアント**値です。 *ObjectType*が**Adpermobjproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
+ 任意。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す **バリアント** 値です。 *ObjectType*が**Adpermobjproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  プロバイダーがグループまたはユーザーのアクセス権の設定をサポートしていない場合、エラーが発生します。  
   
 > [!NOTE]

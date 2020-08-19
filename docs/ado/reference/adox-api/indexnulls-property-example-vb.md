@@ -1,4 +1,5 @@
 ---
+description: IndexNulls プロパティの例 (VB)
 title: IndexNulls プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a1141c4ae31faff946f9380da622bfd492dc8f0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 527e510979afd81a5e90ea207027479cde5c5f63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439884"
 ---
 # <a name="indexnulls-property-example-vb"></a>IndexNulls プロパティの例 (VB)
-この例では、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)の[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)プロパティを示します。 このコードは、新しいインデックスを作成し、ユーザー入力に基づいて**IndexNulls**の値を設定します (List1 という名前のリストボックスから)。 次に、 *Northwind* [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の**Employees** [テーブル](../../../ado/reference/adox-api/table-object-adox.md)に**インデックス**が追加されます。 **Employees**テーブルに基づいて[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)に新しい**インデックス**が適用され、**レコードセット**が開かれます。 **Employees**テーブルに新しいレコードが追加され、インデックス付きフィールドに**Null**値が設定されます。 この新しいレコードが表示されるかどうかは、 **IndexNulls**プロパティの設定によって異なります。  
+この例では、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)の[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)プロパティを示します。 このコードは、新しいインデックスを作成し、ユーザー入力に基づいて **IndexNulls** の値を設定します (List1 という名前のリストボックスから)。 次に、 *Northwind* [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の**Employees** [テーブル](../../../ado/reference/adox-api/table-object-adox.md)に**インデックス**が追加されます。 **Employees**テーブルに基づいて[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)に新しい**インデックス**が適用され、**レコードセット**が開かれます。 **Employees**テーブルに新しいレコードが追加され、インデックス付きフィールドに**Null**値が設定されます。 この新しいレコードが表示されるかどうかは、 **IndexNulls** プロパティの設定によって異なります。  
   
 ```  
 ' BeginIndexNullsVB  

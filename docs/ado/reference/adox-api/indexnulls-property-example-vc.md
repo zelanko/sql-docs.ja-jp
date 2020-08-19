@@ -1,4 +1,5 @@
 ---
+description: IndexNulls プロパティの例 (VC++)
 title: IndexNulls プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc1c58ea2b7a496dfe0b101969d18c5274e2b784
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b61f2a0ee6437ca233a60032c1b25911ad48b194
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439874"
 ---
 # <a name="indexnulls-property-example-vc"></a>IndexNulls プロパティの例 (VC++)
-この例では、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)の[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)プロパティを示します。 このコードは、新しいインデックスを作成し、ユーザー入力に基づいて**IndexNulls**の値を設定します。 次に、 *Northwind* [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の**Employees** [テーブル](../../../ado/reference/adox-api/table-object-adox.md)に**インデックス**が追加されます。 **Employees**テーブルに基づいて[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)に新しい**インデックス**が適用され、**レコードセット**が開かれます。 **Employees**テーブルに新しいレコードが追加され、インデックス付きフィールドに**Null**値が設定されます。 この新しいレコードが表示されるかどうかは、 **IndexNulls**プロパティの設定によって異なります。  
+この例では、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)の[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)プロパティを示します。 このコードは、新しいインデックスを作成し、ユーザー入力に基づいて **IndexNulls** の値を設定します。 次に、 *Northwind* [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の**Employees** [テーブル](../../../ado/reference/adox-api/table-object-adox.md)に**インデックス**が追加されます。 **Employees**テーブルに基づいて[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)に新しい**インデックス**が適用され、**レコードセット**が開かれます。 **Employees**テーブルに新しいレコードが追加され、インデックス付きフィールドに**Null**値が設定されます。 この新しいレコードが表示されるかどうかは、 **IndexNulls** プロパティの設定によって異なります。  
   
 ```  
 // BeignIndexNullCpp.cpp  

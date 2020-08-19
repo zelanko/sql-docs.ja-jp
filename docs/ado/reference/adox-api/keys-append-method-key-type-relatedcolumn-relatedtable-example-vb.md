@@ -1,4 +1,5 @@
 ---
+description: Keys Append メソッド、Key Type、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)
 title: テーブル間に新しい外部キーリレーションシップを作成する例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87cae622b8c25a37bb5d2de833ca98e044f36351
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ab6a3130f0c1d2d87fa5f56f7096db4aaf943037
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439834"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Keys Append メソッド、Key Type、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)
-次のコードは、 **Customers**と**Orders**という名前の2つの既存のテーブル間に新しい外部キーリレーションシップを作成する方法を示しています。  
+次のコードは、 **Customers** と **Orders**という名前の2つの既存のテーブル間に新しい外部キーリレーションシップを作成する方法を示しています。  
   
 ```  
 ' BeginCreateKeyVB  
