@@ -1,4 +1,5 @@
 ---
+description: '更新プログラムの送信: UpdateBatch メソッド'
 title: '更新プログラムを送信しています: UpdateBatch メソッド |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abb0051ef336a145b2da75906831d7adc168e6e3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b5378cad96bc2827badc2e15a23d7f48f683381
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452884"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>更新プログラムの送信: UpdateBatch メソッド
 次のコードでは、LockType プロパティを adLockBatchOptimistic に設定し、カーソル位置を adUseClient に設定することによって、レコードセットをバッチモードで開きます。 2つの新しいレコードを追加し、既存のレコードのフィールドの値を変更して元の値を保存した後、UpdateBatch を呼び出して変更内容をデータソースに送り返します。  
@@ -54,5 +55,5 @@ ms.locfileid: "82760888"
   
  現在のレコードを編集している場合、または UpdateBatch メソッドを呼び出したときに新しいレコードを追加している場合、ADO は Update メソッドを自動的に呼び出して、保留中の変更を現在のレコードに保存してから、バッチされた変更をプロバイダーに送信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バッチ モード](../../../ado/guide/data/batch-mode.md)

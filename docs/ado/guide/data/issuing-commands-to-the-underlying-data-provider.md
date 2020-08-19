@@ -1,4 +1,5 @@
 ---
+description: 基になるデータ プロバイダーにコマンドを発行する
 title: 基になる Data Provider | にコマンドを発行するMicrosoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6bc30f35ebfe2ddc59e9ef1404253e9bc99d62e0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6d9000fdf63a908257c9dbdfa29dc7b57dbb7ecf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757808"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453234"
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>基になるデータ プロバイダーにコマンドを発行する
 図形で始まらないコマンドは、データプロバイダーに渡されます。 これは、"SHAPE {provider command}" という形式で shape コマンドを発行することと同じです。 これらのコマンドでは、**レコードセット**を生成する必要はあり*ません*。 たとえば、データプロバイダーが DROP TABLE をサポートしていると仮定した場合、"SHAPE {DROP TABLE MyTable} は完全に有効な shape コマンドです。  

@@ -1,4 +1,5 @@
 ---
+description: CompareBookmarks メソッドの例 (VB)
 title: CompareBookmarks メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d2eb2d5db5fe7c1803e32413fd214993444e494
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 40382c77198a50a08ec41101fbda9c1aafcae08c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760358"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450789"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>CompareBookmarks メソッドの例 (VB)
-この例は、 [Comparebookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)メソッドを示しています。 ブックマークの相対値は、特定のブックマークが特別に特殊な場合を除き、ほとんど必要ありません。  
+この例は、 [Comparebookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) メソッドを示しています。 ブックマークの相対値は、特定のブックマークが特別に特殊な場合を除き、ほとんど必要ありません。  
   
  ***Authors***テーブルから派生した[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のランダムな行を検索の対象として指定します。 次に、そのターゲットに対して相対的な各行の位置を表示します。  
   

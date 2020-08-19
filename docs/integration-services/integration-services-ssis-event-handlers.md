@@ -1,4 +1,5 @@
 ---
+description: Integration Services (SSIS) のイベント ハンドラー
 title: Integration Services (SSIS) のイベント ハンドラー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7e70c3119d7c5058cf62a3194bc2c6a83f62c022
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7e2c7fb36708d615bd19dfb2c5854748081a9dbb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449844"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) のイベント ハンドラー
 
@@ -97,7 +98,7 @@ ms.locfileid: "86917540"
   
  イベント ハンドラーを作成するには、 **デザイナーにある** [イベント ハンドラー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブのデザイン画面を使用します。  
   
- **[イベント ハンドラー]** タブがアクティブな場合、 **デザイナーにあるツールボックスの** [制御フロー項目] **および** [メンテナンス プランのタスク] [!INCLUDE[ssIS](../includes/ssis-md.md)] ノードには、イベント ハンドラーで制御フローを作成するためのタスクとコンテナーが含まれます。 **[データ フローの変換元]** 、 **[変換]** 、および **[データ フローの変換先]** ノードには、イベント ハンドラーでデータ フローを作成するためのデータ ソース、変換、および変換先が含まれます。 詳細については、「 [制御フロー](../integration-services/control-flow/control-flow.md) 」と「 [データ フロー](../integration-services/data-flow/data-flow.md)」を参照してください。  
+ **[イベント ハンドラー]** タブがアクティブな場合、 **デザイナーにあるツールボックスの** [制御フロー項目] **および** [メンテナンス プランのタスク] [!INCLUDE[ssIS](../includes/ssis-md.md)] ノードには、イベント ハンドラーで制御フローを作成するためのタスクとコンテナーが含まれます。 **[データ フローの変換元]**、 **[変換]**、および **[データ フローの変換先]** ノードには、イベント ハンドラーでデータ フローを作成するためのデータ ソース、変換、および変換先が含まれます。 詳細については、「 [制御フロー](../integration-services/control-flow/control-flow.md) 」と「 [データ フロー](../integration-services/data-flow/data-flow.md)」を参照してください。  
   
  **[イベント ハンドラー]** タブには、 **[接続マネージャー]** 領域も含まれ、イベント ハンドラーがサーバーおよびデータ ソースに接続するために使用する、接続マネージャーの作成および変更を行うことができます。 詳細については、「 [接続マネージャーを作成する](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)」を参照してください。  
   

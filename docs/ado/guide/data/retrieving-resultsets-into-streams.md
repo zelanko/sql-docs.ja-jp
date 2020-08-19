@@ -1,4 +1,5 @@
 ---
+description: ストリーム形式で結果セットを取得する
 title: 結果セットをストリームに取得する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b20363f3ffae96750046ab98bd623ea44d68a8e2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 53dcb66eb2abb311b1114928a8696c6502454770
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760928"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452924"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>ストリーム形式で結果セットを取得する
-ADO では、従来の**Recordset**オブジェクトの結果を受け取る代わりに、クエリの結果をストリームに取得できます。 ADO**ストリーム**オブジェクト (または、ASP**要求**オブジェクトや**応答**オブジェクトなど、COM **IStream**インターフェイスをサポートするその他のオブジェクト) は、これらの結果を格納するために使用できます。 この機能の使用方法の1つは、結果を XML 形式で取得することです。 たとえば、SQL Server では、XML の結果を複数の方法で返すことができます。たとえば、SQL SELECT クエリで FOR XML 句を使用する場合や、XPath クエリを使用する場合などです。  
+ADO では、従来の **Recordset** オブジェクトの結果を受け取る代わりに、クエリの結果をストリームに取得できます。 ADO**ストリーム**オブジェクト (または、ASP**要求**オブジェクトや**応答**オブジェクトなど、COM **IStream**インターフェイスをサポートするその他のオブジェクト) は、これらの結果を格納するために使用できます。 この機能の使用方法の1つは、結果を XML 形式で取得することです。 たとえば、SQL Server では、XML の結果を複数の方法で返すことができます。たとえば、SQL SELECT クエリで FOR XML 句を使用する場合や、XPath クエリを使用する場合などです。  
   
  **レコードセット**ではなくストリーム形式でクエリ結果を受け取るには、 **executeoptionenum**から**adExecuteStream**定数を**Command**オブジェクトの**Execute**メソッドのパラメーターとして指定する必要があります。 プロバイダーがこの機能をサポートしている場合、結果は実行時にストリームで返されます。 コードを実行する前に、追加のプロバイダー固有のプロパティを指定する必要がある場合があります。 たとえば、Microsoft OLE DB Provider for SQL Server では、 **Command**オブジェクトの**properties**コレクション内の**出力ストリーム**などのプロパティを指定する必要があります。 この機能に関連する SQL Server 固有の動的プロパティの詳細については、SQL Server オンラインブックの「XML 関連のプロパティ」を参照してください。  
   
@@ -156,7 +157,7 @@ FOR XML [RAW|AUTO|EXPLICIT]
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
- コマンドは、前に示した文字列、 **CommandText**に割り当てられた文字列、または**commandstream**に割り当てられた XML テンプレートクエリの形式で指定できます。 XML テンプレートクエリの詳細については、「ADO の[コマンドストリーム](../../../ado/guide/data/command-streams.md)」または「SQL Server オンラインブックでのコマンド入力用ストリームの使用」を参照してください。  
+ コマンドは、前に示した文字列、 **CommandText**に割り当てられた文字列、または **commandstream**に割り当てられた XML テンプレートクエリの形式で指定できます。 XML テンプレートクエリの詳細については、「ADO の [コマンドストリーム](../../../ado/guide/data/command-streams.md) 」または「SQL Server オンラインブックでのコマンド入力用ストリームの使用」を参照してください。  
   
  XML テンプレートクエリとして、FOR XML クエリは次のように表示されます。  
   

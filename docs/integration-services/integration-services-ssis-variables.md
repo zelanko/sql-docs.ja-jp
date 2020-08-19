@@ -1,4 +1,5 @@
 ---
+description: Integration Services (SSIS) の変数
 title: Integration Services (SSIS) の変数 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d4ee6dda0fbd91649a085cfda429ea3e554a83d4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c27f3936edfc031f336b487d90e185a56d366363
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917488"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449775"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) の変数
 
@@ -133,7 +134,7 @@ ms.locfileid: "86917488"
 **値**    
 ユーザー定義変数の値には、リテラルまたは式を設定できます。 変数の値を null にすることはできません。 変数の既定値は次のようになります。
 
-| データ型 | 既定値 |
+| データの種類 | 既定値 |
 |---|---|
 | Boolean | False |
 | 数値データ型とバイナリ データ型 | 0 (ゼロ) |
@@ -199,7 +200,7 @@ ms.locfileid: "86917488"
  **コンテナー**  
  一覧からコンテナーを選択します。 コンテナーにより、変数の有効範囲が定義されます。 パッケージまたはパッケージ内の実行可能ファイルがコンテナーになります。  
   
- **Name**  
+ **名前**  
  変数名を入力します。  
   
  **Namespace**  
@@ -292,7 +293,7 @@ ms.locfileid: "86917488"
   
 4.  必要に応じて、 **[変数]** ウィンドウで **[グリッドのオプション]** をクリックして、 **[変数]** ウィンドウに表示する列を選択したり、変数の一覧に適用するフィルターを選択したりします。  
   
-5.  一覧から変数を選択し、 **[名前]** 、 **[データ型]** 、 **[値]** 、 **[名前空間]** 、 **[Raise Change Event (変更イベントの発生)]** 、 **[説明]** 、 **[式]** の各列の値を更新します。  
+5.  一覧から変数を選択し、 **[名前]**、 **[データ型]**、 **[値]**、 **[名前空間]**、 **[Raise Change Event (変更イベントの発生)]**、 **[説明]** 、 **[式]** の各列の値を更新します。  
   
 6.  一覧で変数を選択し、 **[変数の移動]** をクリックしてスコープを変更します。  
   

@@ -1,4 +1,5 @@
 ---
+description: データ内の移動
 title: データを移動する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66079842d950e108a3cdc4e6ad52ad1feff6ab2a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 93ea157cd3982046ccc44d10e4fbb8d712c80d7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453134"
 ---
 # <a name="navigating-through-data"></a>データ内の移動
-**レコードセット**は、結果のデータセット内を移動するためのさまざまなメソッドとプロパティをサポートしています。 この機能を確認するには、サンプルの**レコードセット**オブジェクトを使用していくつかのシナリオを実行します。  
+**レコードセット** は、結果のデータセット内を移動するためのさまざまなメソッドとプロパティをサポートしています。 この機能を確認するには、サンプルの **レコードセット** オブジェクトを使用していくつかのシナリオを実行します。  
   
  このセクションでは、次のトピックを扱います。  
   

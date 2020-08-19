@@ -1,4 +1,5 @@
 ---
+description: 'HelloData: 単純な ADO アプリケーション'
 title: 'HelloData: 単純な ADO アプリケーション |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18f9f0cd227a258b1d2d9cd2d201527f614bcc49
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c2ac1d2ed987b1385c581f147431eaa208b035fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453284"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: 単純な ADO アプリケーション
 この単純なアプリケーションでは、データの取得、検査、編集、および更新の4つの主要な ADO 操作を実行します。 これらの操作は、Microsoft® SQL Server に含まれる Northwind サンプルデータベースに対して実行されます。 ADO の基礎に注目し、コードが乱雑にならないようにするために、この例のエラー処理は最小限に抑えられています。  
@@ -27,11 +28,11 @@ ms.locfileid: "82758828"
   
 1.  ADO ライブラリを参照する新しい標準 EXE Visual Basic プロジェクトを作成します。 詳細については、「 [ADO ライブラリの参照](../../../ado/guide/referencing-the-ado-libraries.md)」を参照してください。  
   
-2.  フォームの上部に4つのコマンドボタンを作成し、このトピックの最後にある表に示すように、 **Name**プロパティと**Caption**プロパティに値を設定します。  
+2.  フォームの上部に4つのコマンドボタンを作成し、このトピックの最後にある表に示すように、 **Name** プロパティと **Caption** プロパティに値を設定します。  
   
-3.  ボタンの下に、 **Microsoft DataGrid コントロール**(Msdatgrd) を追加します。 Msdatgrd ファイルは Visual Basic に含まれており、\windows\system32 または \winnt\system32 ディレクトリにあります。 DataGrid コントロールを Visual Basic ツールボックスウィンドウに追加するには、[**プロジェクト**] メニューの [**コンポーネント**] をクリックします。 次に、[Microsoft DataGrid コントロール 6.0 (SP3) (OLEDB)] の横にあるチェックボックスをオンにして、[ **OK]** をクリックします。 コントロールをプロジェクトに追加するには、DataGrid コントロールをツールボックスから Visual Basic フォームにドラッグします。  
+3.  ボタンの下に、 **Microsoft DataGrid コントロール** (Msdatgrd) を追加します。 Msdatgrd ファイルは Visual Basic に含まれており、\windows\system32 または \winnt\system32 ディレクトリにあります。 DataGrid コントロールを Visual Basic ツールボックスウィンドウに追加するには、[**プロジェクト**] メニューの [**コンポーネント**] をクリックします。 次に、[Microsoft DataGrid コントロール 6.0 (SP3) (OLEDB)] の横にあるチェックボックスをオンにして、[ **OK]** をクリックします。 コントロールをプロジェクトに追加するには、DataGrid コントロールをツールボックスから Visual Basic フォームにドラッグします。  
   
-4.  次の表に示すように、グリッドの下のフォームに**テキストボックス**を作成し、そのプロパティを設定します。 完了すると、フォームは次の図のようになります。  
+4.  次の表に示すように、グリッドの下のフォームに **テキストボックス** を作成し、そのプロパティを設定します。 完了すると、フォームは次の図のようになります。  
   
 5.  最後に、 [HelloData コード](../../../ado/guide/data/hellodata-code.md)に一覧表示されているコードをコピーし、フォームのコードエディターウィンドウに貼り付けます。 **F5**キーを押してコードを実行します。  
   

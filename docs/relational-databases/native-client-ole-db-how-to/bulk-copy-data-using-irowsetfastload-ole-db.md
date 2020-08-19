@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client での IRowsetFastLoad (OLE DB) を使用した一括データコピー
 title: IRowsetFastLoad (Native Client OLE DB provider) を使用してデータを一括コピーする |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a898f45d80a266b0d385b73832312e9046b157b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1a2586a6f3a741f81cb30756006c5a2b4ae84b02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448495"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db-in--sql-server-native-client"></a>SQL Server Native Client での IRowsetFastLoad (OLE DB) を使用した一括データコピー
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "87247911"
   
  コンシューマーは、SQLOLEDB プロバイダー固有のプロパティ SSPROP_ENABLEFASTLOAD を VARIANT_TRUE に設定することにより、一括コピーを実行する必要があることを SQLOLEDB に通知します。 コンシューマーはデータ ソースのプロパティ セットを使用して、SQLOLEDB セッションを作成します。 この新しいセッションによって、コンシューマーから **IRowsetFastLoad** にアクセスできるようになります。  
   
- **IRowsetFastLoad** を使用してレコードをテーブルに一括コピーする方法を示す完全なサンプル コードが用意されています。 このサンプルでは、テーブル **IRFLTable** に 10 個のレコードを追加します。 データベースにテーブル**Irfltable**を作成する必要があります。  
+ **IRowsetFastLoad** を使用してレコードをテーブルに一括コピーする方法を示す完全なサンプル コードが用意されています。 このサンプルでは、テーブル **IRFLTable** に 10 個のレコードを追加します。 テーブル **IRFLTable** をデータベース内に作成する必要があります。  
   
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   

@@ -1,4 +1,5 @@
 ---
+description: 介在する Shape COMPUTE 句
 title: 中間図形の COMPUTE 句 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4db8d9be4bb797bffd4fc3b033dfc7e5693c1f88
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7674ccde0c2e8cd4a89218c50d19ea15653f2b2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453224"
 ---
 # <a name="intervening-shape-compute-clauses"></a>介在する Shape COMPUTE 句
 次の例に示すように、パラメーター化された shape コマンドで親と子の間に1つ以上の COMPUTE 句を埋め込むことが有効です。  

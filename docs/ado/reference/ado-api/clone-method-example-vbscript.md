@@ -1,4 +1,5 @@
 ---
+description: Clone メソッドの例 (VBScript)
 title: Clone メソッドの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8382abfb78b67f900101ec27c33abeba988800e8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e56e93f851d2f5f0dac7df2339dec37c0b6a1ac2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450944"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone メソッドの例 (VBScript)
-この例では、 [Clone](../../../ado/reference/ado-api/clone-method-ado.md)メソッドを使用して[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のコピーを作成し、ユーザーが各コピーのレコードポインターを個別に配置できるようにします。  
+この例では、 [Clone](../../../ado/reference/ado-api/clone-method-ado.md) メソッドを使用して [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) のコピーを作成し、ユーザーが各コピーのレコードポインターを個別に配置できるようにします。  
   
- Active Server ページ (ASP) で次の例を使用します。 この例では、Microsoft Access と共に配布される**Northwind**データベースを使用します。 次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、CloneVBS として保存します。 結果は任意のクライアントブラウザーで表示できます。  
+ Active Server ページ (ASP) で次の例を使用します。 この例では、Microsoft Access と共に配布される **Northwind** データベースを使用します。 次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、CloneVBS として保存します。 結果は任意のクライアントブラウザーで表示できます。  
   
  この例を実行するには、行をに変更して、 `RsCustomerList.Source = "Customers"` `RsCustomerList.Source = "Products"` より大きなテーブルをカウントします。  
   

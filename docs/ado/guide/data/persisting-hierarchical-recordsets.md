@@ -1,4 +1,5 @@
 ---
+description: 階層レコードセットの保持
 title: 階層レコードセットの保持 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9c671adb19bd2e955b67ce23f268738ccf9033f5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4bfcb79e532609ad9b3eeb14fb07dec4fd1239f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453054"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>階層レコードセットの保持
-ADTG 形式または XML 形式のファイルに階層**レコードセット**を保存するには、 [save](../../../ado/reference/ado-api/save-method.md)メソッドを呼び出します。 ただし、階層**レコード**セットを xml 形式で保存する場合は、2つの制限があります。階層**レコードセット**に保留中の更新が含まれている場合は xml で保存できません。また、パラメーター化された階層**レコードセット**を保存することもできません。  
+ADTG 形式または XML 形式のファイルに階層 **レコードセット** を保存するには、 [save](../../../ado/reference/ado-api/save-method.md) メソッドを呼び出します。 ただし、階層 **レコード**セットを xml 形式で保存する場合は、2つの制限があります。階層 **レコードセット** に保留中の更新が含まれている場合は xml で保存できません。また、パラメーター化された階層 **レコードセット**を保存することもできません。  
   
- データシェイププロバイダーの詳細については、「 [Microsoft data](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) OLE DB for OLE DB (ADO)」および「[データシェイプサービスの概要](https://msdn.microsoft.com/9f51e471-8e85-448e-9fb8-b64bbf767bf3)」を参照してください。  
+ データシェイププロバイダーの詳細については、「 [Microsoft data](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) OLE DB for OLE DB (ADO)」および「 [データシェイプサービスの概要](https://msdn.microsoft.com/9f51e471-8e85-448e-9fb8-b64bbf767bf3)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データシェイプの例](../../../ado/guide/data/data-shaping-example.md)   

@@ -1,4 +1,5 @@
 ---
+description: 名前付きコマンド
 title: 名前付きコマンド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b630d589cf20039a72091fb526302d3652f8ed31
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 607142ec89a1032fe42bab87c0dfad0f2a276387
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765613"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453154"
 ---
 # <a name="named-commands"></a>名前付きコマンド
-[単純なコマンドを作成して実行すると](../../../ado/guide/data/creating-and-executing-a-simple-command.md)、コマンドを実行する1つの方法が表示されます。 別の方法として、名前付きコマンドを作成し、この名前付きコマンドを**接続**オブジェクト ( **Command**オブジェクトの**ActiveConnection**プロパティに割り当てられている) で直接呼び出すことができます。 コマンドに名前を付けるということは、**コマンド**オブジェクトの**name**プロパティに名前を割り当てることを意味します。 たとえば、オブジェクトに適用された  
+[単純なコマンドを作成して実行すると](../../../ado/guide/data/creating-and-executing-a-simple-command.md) 、コマンドを実行する1つの方法が表示されます。 別の方法として、名前付きコマンドを作成し、この名前付きコマンドを**接続**オブジェクト ( **Command**オブジェクトの**ActiveConnection**プロパティに割り当てられている) で直接呼び出すことができます。 コマンドに名前を付けるということは、**コマンド**オブジェクトの**name**プロパティに名前を割り当てることを意味します。 たとえば、次のように入力します。  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -29,7 +30,7 @@ objCmd.ActiveConnection = objConn
 objConn.GetCustomers objRs  
 ```  
   
- 名前付きコマンドは、**接続**オブジェクトの "カスタムメソッド" のように機能します。 コマンドの結果は、この "カスタムメソッド" の out パラメーターとして返されます。  
+ 名前付きコマンドは、 **接続** オブジェクトの "カスタムメソッド" のように機能します。 コマンドの結果は、この "カスタムメソッド" の out パラメーターとして返されます。  
   
  この機能の例を次に示します。  
   

@@ -1,4 +1,5 @@
 ---
+description: Integration Services (SSIS) の開発と管理ツール
 title: 開発ツールと管理ツール | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4b64d20ecb26a143c373a1073b379f0ae9debfb1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a84ff3b6f655ee0c0e797f7cfcda541ee6e964c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449854"
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>Integration Services (SSIS) の開発と管理ツール
 

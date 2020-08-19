@@ -1,4 +1,5 @@
 ---
+description: 'コレクション (Visual C++ 構文インデックス #import)'
 title: 'コレクション (Visual C++ 構文インデックス #import) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9142282c2ee2cda5a2b545a3ef164581403ccba3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 58f7761cc67cd1320594988ba50bfcc79bcfc0d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450914"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>コレクション (Visual C++ 構文インデックス #import)
 コレクションが特定の共通メソッドとプロパティを継承することを理解しておくと便利です。  
   
- すべてのコレクションは**Count**プロパティと**Refresh**メソッドを継承し、すべてのコレクションが**Item**プロパティを追加します。 **Errors**コレクションは**Clear**メソッドを追加します。 **Parameters**コレクションは、 **Append**メソッドと**delete**メソッドを継承しますが、Fields コレクションは、 **Append**、 **delete**、および**Update**の**各**メソッドを追加します。  
+ すべてのコレクションは **Count** プロパティと **Refresh** メソッドを継承し、すべてのコレクションが **Item** プロパティを追加します。 **Errors**コレクションは**Clear**メソッドを追加します。 **Parameters**コレクションは、 **Append**メソッドと**delete**メソッドを継承しますが、Fields コレクションは、 **Append**、 **delete**、および**Update**の**各**メソッドを追加します。  
   
 ## <a name="properties-collection"></a>プロパティのコレクション  
   

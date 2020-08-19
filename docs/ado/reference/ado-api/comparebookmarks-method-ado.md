@@ -1,4 +1,5 @@
 ---
+description: CompareBookmarks メソッド (ADO)
 title: CompareBookmarks メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa4be74086e4d35af70ac52aa9db0066f4279e3e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4729574b92b841da48f7cf6de6f1dcabc369b4a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450804"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks メソッド (ADO)
 2つのブックマークを比較し、それらの相対値を示す値を返します。  
@@ -35,7 +36,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 各ブックマークによって表される2つのレコードの相対行の位置を示す[Compareenum](../../../ado/reference/ado-api/compareenum.md)値を返します。  
+ 各ブックマークによって表される2つのレコードの相対行の位置を示す [Compareenum](../../../ado/reference/ado-api/compareenum.md) 値を返します。  
   
 #### <a name="parameters"></a>パラメーター  
  *Bookmark1*  
@@ -44,12 +45,12 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  *Bookmark2*  
  2番目の行のブックマーク。  
   
-## <a name="remarks"></a>Remarks  
- ブックマークは、同じ[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、または**レコードセット**オブジェクトとその[複製](../../../ado/reference/ado-api/clone-method-ado.md)に適用する必要があります。 同じソースまたはコマンドから作成されたものであっても、異なる**レコードセット**オブジェクトのブックマークを確実に比較することはできません。 また、基になるプロバイダーで比較がサポートされていない**レコードセット**オブジェクトのブックマークを比較することもできません。  
+## <a name="remarks"></a>解説  
+ ブックマークは、同じ [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクト、または **レコードセット** オブジェクトとその [複製](../../../ado/reference/ado-api/clone-method-ado.md)に適用する必要があります。 同じソースまたはコマンドから作成されたものであっても、異なる **レコードセット** オブジェクトのブックマークを確実に比較することはできません。 また、基になるプロバイダーで比較がサポートされていない **レコードセット** オブジェクトのブックマークを比較することもできません。  
   
- ブックマークは、**レコードセット**オブジェクト内の行を一意に識別します。 ブックマークを取得するには、現在の行の[bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)プロパティを使用します。  
+ ブックマークは、 **レコードセット** オブジェクト内の行を一意に識別します。 ブックマークを取得するには、現在の行の [bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) プロパティを使用します。  
   
- ブックマークのデータ型は各プロバイダーに固有であるため、ADO はそれを**バリアント**として公開します。 たとえば、SQL Server のブックマークの種類は DBTYPE_R8 (**Double**) です。 この型は、 **Double**型のサブタイプの**バリアント**として ADO によって公開されます。  
+ ブックマークのデータ型は各プロバイダーに固有であるため、ADO はそれを **バリアント**として公開します。 たとえば、SQL Server のブックマークの種類は DBTYPE_R8 (**Double**) です。 この型は、 **Double**型のサブタイプの**バリアント**として ADO によって公開されます。  
   
  ブックマークを比較するとき、ADO はどのような型の強制型変換も試行しません。 値は、比較が発生したプロバイダーに渡されるだけです。 **Comparebookmarks**メソッドに渡されるブックマークが異なる型の変数に格納されている場合、次のような型の不一致エラーが発生する可能性があります。 "引数の型が間違っているか、許容範囲外であるか、競合しています。"  
   

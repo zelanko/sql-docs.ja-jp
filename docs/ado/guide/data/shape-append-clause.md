@@ -1,4 +1,5 @@
 ---
+description: Shape の APPEND 句
 title: Shape APPEND 句 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d26f83985ce74edc0581ff9ff8fee31d5064c7e5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f2a04e532256de30295f2179f7b15386bceaa8b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452864"
 ---
 # <a name="shape-append-clause"></a>Shape の APPEND 句
-Shape コマンド APPEND 句は、1つまたは複数の列を**レコードセット**に追加します。 多くの場合、これらの列は、子**レコードセット**を参照するチャプター列です。  
+Shape コマンド APPEND 句は、1つまたは複数の列を **レコードセット**に追加します。 多くの場合、これらの列は、子 **レコードセット**を参照するチャプター列です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,7 +35,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  この句の部分は次のとおりです。  
   
  *親-コマンド*  
- 0または次のいずれかです (*親コマンド*を完全に省略できます)。  
+ 0または次のいずれかです ( *親コマンド* を完全に省略できます)。  
   
 -   {}**レコードセット**オブジェクトを返す、中かっこ ("") で囲まれたプロバイダーコマンド。 コマンドは基になるデータプロバイダーに対して発行され、その構文はそのプロバイダーの要件によって異なります。 これは通常 SQL 言語ですが、ADO では特定のクエリ言語を必要としません。  
   
@@ -43,7 +44,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
 -   テーブルキーワードと、その後にデータプロバイダーのテーブル名を指定します。  
   
  *parent-alias*  
- 親**レコードセット**を参照する、省略可能なエイリアス。  
+ 親 **レコードセット**を参照する、省略可能なエイリアス。  
   
  *列一覧*  
  次の1つまたは複数を実行します。  
@@ -70,12 +71,12 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 -   かっこで囲まれた別の shape コマンド。  
   
--   既存の形状が指定された**レコードセット**の名前。  
+-   既存の形状が指定された **レコードセット**の名前。  
   
 -   テーブルキーワードと、その後にデータプロバイダーのテーブル名を指定します。  
   
  *子-エイリアス*  
- 子**レコードセット**を参照する別名。  
+ 子 **レコードセット**を参照する別名。  
   
  *親列*  
  *親コマンド*によって返される**レコードセット**内の列。  
@@ -84,7 +85,7 @@ SHAPE [parent-command [[AS] parent-alias]]
  *子コマンド*によって返される**レコードセット**内の列。  
   
  *param-数値*  
- 「[パラメーター化コマンドの操作」を](../../../ado/guide/data/operation-of-parameterized-commands.md)参照してください。  
+ 「 [パラメーター化コマンドの操作」を](../../../ado/guide/data/operation-of-parameterized-commands.md)参照してください。  
   
  *章-エイリアス*  
  親に追加されたチャプター列を参照する別名。  

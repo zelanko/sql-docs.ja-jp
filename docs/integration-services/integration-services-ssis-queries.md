@@ -1,4 +1,5 @@
 ---
+description: Integration Services (SSIS) のクエリ
 title: Integration Services (SSIS) のクエリ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 01a292229c29720b91d66d1f607b375b759e75fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 79d6e93c536828e0de44c77ebd1377fab5021d69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917498"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449804"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) のクエリ
 
@@ -100,7 +101,7 @@ SQL ステートメントは次の方法で提供できます。
 |**[グリッド ペインの表示/非表示]**|**[グリッド]** ペインの表示と非表示を切り替えます。|  
 |**[SQL ペインの表示/非表示]**|**[SQL]** ペインの表示と非表示を切り替えます。|  
 |**[結果ペインの表示/非表示]**|**[結果]** ペインの表示と非表示を切り替えます。|  
-|**[実行]**|クエリを実行します。 結果は結果ペインに表示されます。|  
+|**実行**|クエリを実行します。 結果は結果ペインに表示されます。|  
 |**[SQL の確認]**|SQL ステートメントが有効であることを確認します。|  
 |**[昇順で並べ替え]**|[グリッド] ペインで選択した列の出力行を昇順で並べ替えます。|  
 |**[降順で並べ替え]**|[グリッド] ペインで選択した列の出力行を降順で並べ替えます。|  

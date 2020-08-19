@@ -1,4 +1,5 @@
 ---
+description: データベース メール:メールがキューされました、配信されません
 title: データベース メール:メールがキューされました、配信されません | Microsoft Docs
 ms.custom: ''
 ms.date: 04/22/2019
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b35c244e086c32cf62882a5e3f09b8fcc410b23
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8e70b32c2cee28acf4b886f0bf738f4ed8857619
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448865"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>データベース メール:メールがキューされました、配信されません 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -69,7 +70,7 @@ sysmail_help_queue_sp @queue_type = 'Mail' ;
 
 ## <a name="message-status-failed"></a>メッセージの状態 - failed
 
-状態 failed は、電子メール メッセージをデータベース メール外部プログラムから SMTP サーバーに配信できなかったことを表します。 この場合、**sysmail_event_log** ビューにデータベース メールからの詳細情報が含まれています。 **sysmail_faileditems** と **sysmail_event_log** を結合して詳細なエラー メッセージを入手するサンプル クエリについては、「[データベース メールから送信された電子メール メッセージの状態の確認](check-the-status-of-e-mail-messages-sent-with-database-mail.md)」を参照してください。 このような問題では、宛先のアドレスが間違っているか、ネットワーク上で問題が発生したためにデータベース メールが 1 つ以上のフェールオーバー アカウントにアクセスできないことが最も一般的な原因です。 SMTP サーバーで問題が発生すると、その SMTP サーバーでメールが拒否されることがあります。 データベース メール構成ウィザードを使用して、 **[ログ記録レベル]** を **[詳細]** に変更し、テスト メールを送信して障害発生時点を調べます。
+状態 failed は、電子メール メッセージをデータベース メール外部プログラムから SMTP サーバーに配信できなかったことを表します。 この場合、**sysmail_event_log** ビューにデータベース メールからの詳細情報が含まれています。 **sysmail_faileditems** と **sysmail_event_log** を結合して詳細なエラー メッセージを入手するサンプル クエリについては、「[データベース メールから送信された電子メール メッセージの状態の確認](check-the-status-of-e-mail-messages-sent-with-database-mail.md)」を参照してください。 このような問題では、宛先のアドレスが間違っているか、ネットワーク上で問題が発生したためにデータベース メールが 1 つ以上のフェールオーバー アカウントにアクセスできないことが最も一般的な原因です。 SMTP サーバーで問題が発生すると、その SMTP サーバーでメールが拒否されることがあります。 データベース メール構成ウィザードを使用して、**[ログ記録レベル]** を **[詳細]** に変更し、テスト メールを送信して障害発生時点を調べます。
 
 
 
