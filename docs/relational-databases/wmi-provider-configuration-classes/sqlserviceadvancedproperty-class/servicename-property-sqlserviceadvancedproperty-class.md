@@ -1,4 +1,5 @@
 ---
+description: ServiceName プロパティ (SqlServiceAdvancedProperty クラス)
 title: ServiceName プロパティ (Sqlserviceadvanced プロパティ)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59a22566ab25d667652ae47b8e27dc170893a55e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 937171a5267ac2b8dc6bab4b019fcfa9189e3404
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427164"
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>ServiceName プロパティ (SqlServiceAdvancedProperty クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.ServiceName [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  詳細プロパティに関連付けられたサービスの名前を指定する文字列値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

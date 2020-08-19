@@ -1,4 +1,5 @@
 ---
+description: '[ポリシーの表示] ダイアログ ボックス'
 title: '[ポリシーの表示] ダイアログ ボックス | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,18 +13,18 @@ f1_keywords:
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 93106e092c6f0b78f54a24af97ce5b0aa4101880
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 06ab429a5e3524485793bdf118f0c4039869f868
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428024"
 ---
 # <a name="view-policies-dialog-box"></a>[ポリシーの表示] ダイアログ ボックス
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスを使用すると、この対象に対して有効なポリシーを表示できます。 このダイアログ ボックスには、関連するポリシー、それらのポリシー カテゴリ、およびポリシーに関する情報が表示されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[ポリシー正常性状態]**  
  この対象に対するポリシーの状態を示します。 状態が不明な場合は空白になります。  
   
@@ -42,13 +43,13 @@ ms.locfileid: "85774094"
  **HISTORY**  
  ハイパーリンクをクリックして、実行履歴レポートを表示します。  
   
- **[評価]**  
+ **Evaluate**  
  ハイパーリンクをクリックして **[ポリシーの評価]** ダイアログ ボックスを開き、ポリシーを実行します。  
   
  **[最終実行]**  
  ポリシーが最後に実行された日時。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

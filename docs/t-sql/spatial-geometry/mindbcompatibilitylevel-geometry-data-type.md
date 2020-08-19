@@ -1,4 +1,5 @@
 ---
+description: MinDbCompatibilityLevel (geometry データ型)
 title: MinDbCompatibilityLevel (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c848b974-8ccb-4c5c-a7eb-b019a9538d99
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 373c9eb4a1482bf92ae41c39af2f8852d19aac9f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 0136c2f53b70b6180bb380d72e1c9e4d70351ffb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427054"
 ---
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel (geometry データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "86554345"
   
  CLR の戻り値の型: **int**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  `MinDbCompatibilityLevel()` を使用すると、データベースで互換性レベルを変更する前に、空間オブジェクトの互換性をテストできます。  
   
 ## <a name="examples"></a>例  

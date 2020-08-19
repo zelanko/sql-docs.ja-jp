@@ -1,4 +1,5 @@
 ---
+description: 列名の変更 (データベース エンジン)
 title: 列名の変更 (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -15,12 +16,12 @@ ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1d24cbf22eb8c188237931daa49e50cdc0648ee
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d2a3c92773a3dd2f36ce7591324dd8505d02abdd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427444"
 ---
 # <a name="rename-columns-database-engine"></a>列名の変更 (データベース エンジン)
 
@@ -66,7 +67,7 @@ ms.locfileid: "86011104"
 
 1. **オブジェクト エクスプローラー**で、列の名前を変更するテーブルを右クリックし、 **[デザイン]** をクリックします。
 2. **[列名]** の下の変更する名前を選択して、新しい名前を入力します。
-3. **[ファイル]** メニューの **[ _<テーブル名>_ を保存]** をクリックします。
+3. **[ファイル]** メニューの **[** _<テーブル名>_ を保存] をクリックします。
 
 > [!NOTE]
 > **[列のプロパティ]** タブで列の名前を変更することもできます。名前を変更する列を選択して、 **[名前]** に新しい値を入力します。

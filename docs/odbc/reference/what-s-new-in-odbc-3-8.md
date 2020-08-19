@@ -1,4 +1,5 @@
 ---
+description: ODBC 3.8 の新&#39;
 title: ODBC 3.8 | の新機能&#39;Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 65ba097629005598e6942577e3498813749fd91d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 324d7133a5d63b2b6322357be79daa0ce263e092
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428804"
 ---
 # <a name="what39s-new-in-odbc-38"></a>ODBC 3.8 の新&#39;
 Windows 8 には、ODBC 3.8 の更新バージョンが含まれています。 Windows 8 の ODBC 3.8 には、次の機能が含まれています。  
@@ -30,13 +31,13 @@ Windows 8 には、ODBC 3.8 の更新バージョンが含まれています。 
   
  Windows 7 には、ODBC 3.8 の更新バージョンが含まれています。 ODBC 3.8 には、次の機能が含まれています。  
   
--   接続操作を非同期に実行します。 詳細については、「[非同期実行 (ポーリングメソッド)](../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)」を参照してください。  
+-   接続操作を非同期に実行します。 詳細については、「 [非同期実行 (ポーリングメソッド)](../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)」を参照してください。  
   
 -   ストリーム出力パラメーター。 詳細については、「 [SQLGetData を使用した出力パラメーターの取得](../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)」を参照してください。  
   
 -   ODBC C データ型の拡張性。 詳細については、「 [ODBC の C データ型](../../odbc/reference/develop-app/c-data-types-in-odbc.md)」を参照してください。  
   
- ドライバーの作成者は[、3.5 ドライバーの3.8 ドライバーへのアップグレード](../../odbc/reference/develop-driver/upgrading-a-3-5-driver-to-a-3-8-driver.md)を読み取る必要があります。  
+ ドライバーの作成者は [、3.5 ドライバーの3.8 ドライバーへのアップグレード](../../odbc/reference/develop-driver/upgrading-a-3-5-driver-to-a-3-8-driver.md)を読み取る必要があります。  
   
  Odbc 3.8 ドライバーを使用して、odbc 3.x および ODBC 2.x アプリケーションで非同期接続操作を使用できます。  
   

@@ -1,4 +1,5 @@
 ---
+description: サーバー接続ファイルの作成 (MySQLToSQL)
 title: サーバー接続ファイルの作成 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fa9505c0f5c40dcf2ff7cd84fc956240728385b3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: df3eaf968bb43b9b6e3adac1027f8fe1a49db2d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426884"
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>サーバー接続ファイルの作成 (MySQLToSQL)
 サーバー情報は、スクリプトファイルの [サーバー] セクションで、または別のサーバー接続ファイルで指定できます。 サーバー接続ファイルのコマンドラインパラメーターは、 `-c <serverconnectionfile>` です。 スクリプトファイルとサーバー接続ファイルの両方に同じサーバー id が存在する場合は、スクリプトファイル内のサーバー定義が考慮されます。  
@@ -85,7 +86,7 @@ ms.locfileid: "87935731"
 ```  
   
 ## <a name="server-connection-file-validation"></a>サーバー接続ファイルの検証  
-ユーザーは、' スキーマ ' フォルダーで使用可能なスキーマ定義ファイル**m 2ssconsolescriptserversschema '** に対して、サーバー接続ファイルを簡単に検証できます。  
+ユーザーは、' スキーマ ' フォルダーで使用可能なスキーマ定義ファイル **m 2ssconsolescriptserversschema '** に対して、サーバー接続ファイルを簡単に検証できます。  
   
 ## <a name="next-step"></a>次の手順  
 コンソールを操作する次の手順では、 [SSMA コンソール &#40;MySQLToSQL を実行](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)して&#41;  
