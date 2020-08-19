@@ -1,4 +1,5 @@
 ---
+description: HAS_PERMS_BY_NAME (Transact-SQL)
 title: HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7ca0bb9b4fb03cc3f567c6c642a3593d23963993
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e2fa743ae09dc8a09a8edbc8e4a6e3b5cf8415db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417348"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  *securable_class*  
  権限のテスト対象とするセキュリティ保護可能なリソースのクラスの名前を指定します。 *securable_class* には **nvarchar(60)** 型のスカラー式を指定します。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、securable_class 引数を次のいずれかに設定する必要があります。**DATABASE**、**OBJECT**、**ROLE**、**SCHEMA**、または **USER**。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] において、securable_class 引数は、**DATABASE**、**OBJECT**、**ROLE**、**SCHEMA**、**USER** のうちのいずれか 1 つに設定する必要があります。  
   
  *permission*  
  チェックする権限名を表す、NULL 以外の **sysname** 型のスカラー式を指定します。 既定値はありません。 権限名 ANY はワイルドカードです。  
@@ -62,7 +63,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  権限をチェックするセキュリティ保護可能なサブエンティティの名前を表す、**sysname** 型のスカラー式を指定します (省略可能)。 既定値は NULL です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降のバージョンでは、sub-securables に **'[** _sub name_ **]'** の形式で角かっこを使用することはできません。 代わりに **'** _sub name_ **'** を使用してください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降のバージョンでは、sub-securables に **'[**_sub name_**]'** の形式で角かっこを使用することはできません。 代わりに **'** _sub name_ **'** を使用してください。  
   
  *sub-securable_class*  
  権限をチェックするセキュリティ保護可能なサブエンティティのクラスを表す、**nvarchar(60)** 型のスカラー式を指定します (省略可能)。 既定値は NULL です。  
@@ -99,7 +100,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 -   現在のデータベースの照合順序: データベース レベルのセキュリティ保護可能なリソース (スキーマに含まれていないセキュリティ保護可能なリソースを含む)。スキーマ スコープの 1 部または 2 部構成のセキュリティ保護可能なリソース。3 部構成の名前を使用する場合のターゲット データベース。  
   
--   マスター データベース照合順序: サーバー レベルのセキュリティ保護可能なリソース。  
+-   master データベースの照合順序 : サーバー レベルのセキュリティ保護可能なリソース。  
   
 -   列レベルのチェックの場合、"ANY" はサポートされません。 適切な権限を指定する必要があります。  
   

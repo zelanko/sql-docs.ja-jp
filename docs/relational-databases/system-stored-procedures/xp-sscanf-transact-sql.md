@@ -1,4 +1,5 @@
 ---
+description: xp_sscanf (Transact-sql)
 title: xp_sscanf (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a980f048d6a8f5fae333381f07be3c889ad70366
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d121e9a0c1540ec42ee5c9becb0facc24d49c287
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890700"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419166"
 ---
 # <a name="xp_sscanf-transact-sql"></a>xp_sscanf (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,10 +44,10 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
  引数の値を読み取る文字列を指定します。  
   
  OUTPUT  
- 指定した場合、*引数*の値が出力パラメーターに格納されます。  
+ 指定した場合、 *引数* の値が出力パラメーターに格納されます。  
   
  *format*  
- は、C 言語の**sscanf**関数でサポートされているものに類似した書式設定された文字列です。 現在、% s 書式引数のみがサポートされています。  
+ は、C 言語の **sscanf** 関数でサポートされているものに類似した書式設定された文字列です。 現在、% s 書式引数のみがサポートされています。  
   
  *argument*  
  **Varchar**変数は、対応する*format*引数の値に設定されます。  
@@ -58,7 +59,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- **xp_sscanf**は次のメッセージを返します。  
+ **xp_sscanf** は次のメッセージを返します。  
   
  `Command(s) completed successfully.`  
   
@@ -82,9 +83,9 @@ SELECT @filename, @message;
 products10.tmp        random  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;の一般的な拡張ストアドプロシージャ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;の一般的な拡張ストアドプロシージャ ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_sprintf &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
   
   

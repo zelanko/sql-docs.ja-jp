@@ -1,4 +1,5 @@
 ---
+description: Views
 title: ビュー |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ef24d6eeb1739d40fb88eccd2fb18220ef6fea9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: dda5e49aa6f51382beb390ae48a544565e2703d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418926"
 ---
-# <a name="views"></a>ビュー
+# <a name="views"></a>Views
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   ビューとは、クエリによって内容が定義される仮想テーブルです。 ビューは、テーブルと同様に、一連の名前の付いた列とデータ行で構成されます。 インデックスが設定されていないと、データベース内に保存された一連のデータ値としてビューが作成されることはありません。 データは、ビューを定義するクエリが参照するテーブルから取り出され、ビューの行と列はビューを参照したときに動的に作成されます。  
   

@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;OPTIONS (Transact-SQL)'
 title: '@@OPTIONS (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6bfbf40042b47d4c6773b0887348e5f1f7075526
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 12e2d3418a021a3ffee5db530d35f0fc8522dec1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417228"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "87112664"
   
  **\@\@OPTIONS** 関数によって、10 進数の整数に変換された、オプションのビットマップが返されます。 ビット設定は、「[user options サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)」トピックで説明されている場所に格納されます。  
   
- **\@\@OPTIONS** 値をデコードするには、 **\@\@OPTIONS** によって返された整数をバイナリに変換し、その値を「[user options サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)」の表で検索します。 たとえば、`SELECT @@OPTIONS;` によって値 `5496` が返された場合、Windows のプログラマ電卓 (**calc.exe**) を使用して、10 進数の `5496` をバイナリに変換します。 結果は `1010101111000`です。 右端の文字 (バイナリ 1、2、および 4) は 0 で、テーブル内の最初の 3 つの項目がオフであることを示します。 表を見ると、これらは **DISABLE_DEF_CNST_CHK**、**IMPLICIT_TRANSACTIONS**、**CURSOR_CLOSE_ON_COMMIT** であることがわかります。 次の項目 (**位置の**ANSI_WARNINGS`1000`) はオンです。 ビットマップを左へ、オプションの一覧を下へ見ていきます。 左端のオプションが 0 の場合、これらは型変換によって切り捨てられています。 ビットマップ `1010101111000` は実際は `001010101111000` であり、全部で 15 個のオプションを表しています。  
+ **\@\@OPTIONS** 値をデコードするには、 **\@\@OPTIONS** によって返された整数をバイナリに変換し、その値を「[user options サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)」の表で検索します。 たとえば、`SELECT @@OPTIONS;` によって値 `5496` が返された場合、Windows のプログラマ電卓 (**calc.exe**) を使用して、10 進数の `5496` をバイナリに変換します。 結果は `1010101111000`です。 右端の文字 (バイナリ 1、2、および 4) は 0 で、テーブル内の最初の 3 つの項目がオフであることを示します。 表を見ると、これらは **DISABLE_DEF_CNST_CHK**、**IMPLICIT_TRANSACTIONS**、**CURSOR_CLOSE_ON_COMMIT** であることがわかります。 次の項目 (`1000` 位置の **ANSI_WARNINGS**) はオンです。 ビットマップを左へ、オプションの一覧を下へ見ていきます。 左端のオプションが 0 の場合、これらは型変換によって切り捨てられています。 ビットマップ `1010101111000` は実際は `001010101111000` であり、全部で 15 個のオプションを表しています。  
   
 ## <a name="examples"></a>例  
   

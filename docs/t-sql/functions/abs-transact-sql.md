@@ -1,4 +1,5 @@
 ---
+description: ABS (Transact-SQL)
 title: ABS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -21,17 +22,17 @@ ms.assetid: e2ea7a6d-3e2f-472c-afbc-437d3b835c03
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efa759a700a092a78d13bf3e7a9f299939152e40
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e0dfabccec3d2d5e914a31c4464ff71c1136b685
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417578"
 ---
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-指定した数値式の絶対値 (正値) を返す数学関数です。 (`ABS` は、負の値を正の値を変更します `ABS` は、0 または正の値には影響しません)。
+指定した数値式の絶対値 (正値) を返す数学関数です。 (`ABS` は、負の値を正の値を変更します  `ABS` は、0 または正の値には影響しません)。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -80,7 +81,7 @@ GO
 "式をデータ型 int に変換中に演算のオーバーフロー エラーが発生しました"
 
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  

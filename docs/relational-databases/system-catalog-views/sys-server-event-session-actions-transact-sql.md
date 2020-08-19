@@ -1,4 +1,5 @@
 ---
+description: sys.server_event_session_actions (Transact-SQL)
 title: server_event_session_actions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a204858e7d2fcf78505e41de95d5301b2382b23a
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: e03838505119082f2b382546ec774ee5ca4fbed5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419996"
 ---
 # <a name="sysserver_event_session_actions-transact-sql"></a>sys.server_event_session_actions (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -43,10 +44,10 @@ ms.locfileid: "87442481"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューには、次のリレーションシップ基数があります。  
   
-| ソース | ターゲット | リレーションシップ |
+| ソース | 終了 | リレーションシップ |
 | ---- | -- | ------------ |
 |sys.server_event_session_actions.event_session_id|sys.sys.server_event_sessions.event_session_id|多対一|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|多対一|  

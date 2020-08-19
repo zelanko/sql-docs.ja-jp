@@ -1,4 +1,5 @@
 ---
+description: STBuffer (geography データ型)
 title: STBuffer (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 55160039220f949f68837e71d75b11e916839378
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9e869aa4f5f5056ef29968b6ad0d7446b0849a25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417048"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (geography データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "86554736"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
 ## <a name="remarks"></a>解説  
  STBuffer() は、*tolerance* = abs(distance) \* .001 および *relative* = **false** を指定して [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md) を呼び出すのと同じ方法でバッファーを計算します。  
@@ -77,6 +78,6 @@ SELECT @g.STBuffer(1).ToString();
   
 ## <a name="see-also"></a>参照  
  [BufferWithTolerance &#40;geography データ型&#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
- [Geography インスタンスの OGC メソッド](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [geography インスタンスの OGC メソッド](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

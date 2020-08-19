@@ -1,4 +1,5 @@
 ---
+description: TRANSLATE (Transact-SQL)
 title: TRANSLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -16,12 +17,12 @@ ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1fbd5285ff4b794ea90ad3f8513e24ac166c0be
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 49a16c2b5f18eeda3a6abd1396650131543ead4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417138"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 
@@ -51,7 +52,7 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="remarks"></a>解説
 
-`TRANSLATE`characters*式と*translations *式の長さが異なる場合、* はエラーを返します。 `TRANSLATE` は、いずれかの引数が NULL の場合は NULL を返します。  
+*characters* 式と *translations* 式の長さが異なる場合、`TRANSLATE` はエラーを返します。 `TRANSLATE` は、いずれかの引数が NULL の場合は NULL を返します。  
 
 `TRANSLATE` 関数の動作は、複数の [REPLACE](../../t-sql/functions/replace-transact-sql.md) 関数を使用した場合と似ています。 ただし、`TRANSLATE` では `inputString` 内の個々の文字が複数回置き換えられることはありません。 `characters` パラメーター内の 1 つの値で、`inputString` 内の複数の文字を置き換えることができます。 
 

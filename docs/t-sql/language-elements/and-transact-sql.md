@@ -1,4 +1,5 @@
 ---
+description: AND (Transact-SQL)
 title: AND (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3d054610c1c44f5d3826c90b28bc8dd899c23c3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cf84d48b89218d4d37a7c1c1b9cf57df6a45775e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417168"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +47,7 @@ boolean_expression AND boolean_expression
 
 ## <a name="arguments"></a>引数
  *boolean_expression*  
- [TRUE](../../t-sql/language-elements/expressions-transact-sql.md)、**FALSE** または、**UNKNOWN** のブール値を返す有効な**式**を指定します。  
+ **TRUE**、**FALSE** または、**UNKNOWN** のブール値を返す有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
 ## <a name="result-types"></a>戻り値の型  
  **Boolean**  
@@ -57,10 +58,10 @@ boolean_expression AND boolean_expression
 ## <a name="remarks"></a>解説  
  次の表は、TRUE 値と FALSE 値を AND 演算子を使用して比較する場合の結果です。  
   
-||TRUE|FALSE|UNKNOWN|  
+||true|false|UNKNOWN|  
 |------|----------|-----------|-------------|  
-|**TRUE**|TRUE|FALSE|UNKNOWN|  
-|**FALSE**|FALSE|FALSE|FALSE|  
+|**TRUE**|true|false|UNKNOWN|  
+|**FALSE**|FALSE|FALSE|false|  
 |**UNKNOWN**|UNKNOWN|FALSE|UNKNOWN|  
   
 ## <a name="examples"></a>例  

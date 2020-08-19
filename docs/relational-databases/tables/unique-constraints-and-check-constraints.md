@@ -1,4 +1,5 @@
 ---
+description: UNIQUE 制約と CHECK 制約
 title: UNIQUE 制約と CHECK 制約 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/27/2017
@@ -14,19 +15,19 @@ ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6339bdedffb2f2ee2f8379f63e123ab2e1d71c15
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: efd7fb070a81715b88d6949fac47c972bdd0643d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418966"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE 制約と CHECK 制約
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   UNIQUE 制約と CHECK 制約は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のデータに整合性を適用するために使用できる 2 種類の制約です。 これらは重要なデータベース オブジェクトです。  
   
- このトピックの内容は次のとおりです。  
+ このトピックは、次のセクションで構成されています。  
   
  [UNIQUE 制約](#Unique)  
   

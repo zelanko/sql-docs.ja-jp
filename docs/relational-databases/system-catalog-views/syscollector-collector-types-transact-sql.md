@@ -1,4 +1,5 @@
 ---
+description: syscollector_collector_types (Transact-sql)
 title: syscollector_collector_types (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1ff2329d0070d554f87e405a6030b744e98d23a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f7e0a45066cdc159f12ae9e6568be8d2d131b639
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419846"
 ---
 # <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85896748"
 |**upload_package_id**|**uniqueidentifer**|アップロード パッケージの GUID。 NULL 値は許可されません。|  
 |**upload_package_path**|**nvarchar (4000)**|アップロード パッケージのパス。 NULL 値が許可されます。|  
 |**upload_package_name**|**sysname**|アップロードパッケージの名前です。 NULL 値は許可されません。|  
-|**is_system**|**bit**|コレクター型がデータコレクターに付属しているかどうか、または後で**dc_admin**によって追加されたかどうかを示すには、(1) または off (0) をオンにします。 たとえば、社内またはサード パーティによって開発されたカスタム型が考えられます。 NULL 値は許可されません。|  
+|**is_system**|**bit**|コレクター型がデータコレクターに付属しているかどうか、または後で **dc_admin**によって追加されたかどうかを示すには、(1) または off (0) をオンにします。 たとえば、社内またはサード パーティによって開発されたカスタム型が考えられます。 NULL 値は許可されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
  **Dc_operator**、 **dc_proxy**を選択する必要があります。  
@@ -57,9 +58,9 @@ ms.locfileid: "85896748"
 |**Collection_package_path**列のデータ型を修正し、値が null 許容であることを示す説明を更新しました。|  
 |**Upload_package_path**列のデータ型を修正し、値が null 許容であることを示す説明を更新しました。|  
   
-## <a name="see-also"></a>関連項目  
- [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [データコレクタービュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [データコレクション](../../relational-databases/data-collection/data-collection.md)  
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   
   

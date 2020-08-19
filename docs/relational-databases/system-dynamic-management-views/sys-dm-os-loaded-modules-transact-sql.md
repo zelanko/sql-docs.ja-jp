@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_loaded_modules (Transact-SQL)
 title: dm_os_loaded_modules (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ecf9858f1cc37290cf9079470498d3ad1ecbdc84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d5678c74d6fbbb703e6f6fd0a93b205bc2903059
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419686"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,16 +45,16 @@ ms.locfileid: "85898759"
 |**private_build**|**bit**|1 = モジュールは読み込まれたモジュールの個人用ビルドです。|  
 |**special_build**|**bit**|1 = モジュールは、読み込まれたモジュールの特別なビルドです。|  
 |**language**|**int**|モジュールのバージョン情報の言語。|  
-|**全社**|**nvarchar(256)**|モジュールを作成した会社の名前。|  
-|**description**|**nvarchar(256)**|モジュールの説明。|  
-|**name**|**nvarchar(255)**|モジュールの名前。 モジュールの完全パスが含まれます。|  
+|**company**|**nvarchar (256)**|モジュールを作成した会社の名前。|  
+|**description**|**nvarchar (256)**|モジュールの説明。|  
+|**name**|**nvarchar (255)**|モジュールの名前。 モジュールの完全パスが含まれます。|  
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>参照  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

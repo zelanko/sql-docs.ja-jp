@@ -1,4 +1,5 @@
 ---
+description: NEXT VALUE FOR (Transact-SQL)
 title: NEXT VALUE FOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cb3fd2d18f5602030de6231a0dbbcc92a200a5fc
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8d383cc1530835635cc4c25957c25221a653dbfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417278"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -96,7 +97,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   **ORDER BY** 句を使用するステートメン内で使用する場合。ただし、**NEXT VALUE FOR** ...**OVER** (**ORDER BY** ...) が使用されている場合を除く。  
   
--   次の各句で使用する場合。**FETCH**、**OVER**、**OUTPUT**、**ON**、**PIVOT**、**UNPIVOT**、**GROUP BY**、**HAVING**、**COMPUTE**、**COMPUTE BY**、**FOR XML**。  
+-   次の句で: **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY**, or **FOR XML**です。  
   
 -   使用して条件付きの式で **CASE**, **CHOOSE**, **COALESCE**, **IIF**, **ISNULL**, or **NULLIF**です。  
   
@@ -104,7 +105,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   CHECK 制約の定義で使用する場合。  
   
--   ルールまたは既存のオブジェクトの定義で使用する場合 (既定の制約では使用できます)。  
+-   ルールまたは既存のオブジェクトの定義で使用する場合  (既定の制約では使用できます)。  
   
 -   既定では、ユーザー定義テーブル型で使用します。  
   
@@ -148,10 +149,10 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   別のプロセスが同時にシーケンス オブジェクトにアクセスしている場合は、非連続的な番号が返される可能性があります。  
   
-## <a name="metadata"></a>Metadata  
+## <a name="metadata"></a>メタデータ  
  シーケンスに関する情報を取得するには、[sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md) カタログ ビューに対してクエリを実行します。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  必要があります **更新** シーケンス オブジェクトまたはシーケンスのスキーマに対するアクセスを許可します。 権限を付与する例については、後の例 F を参照してください。  

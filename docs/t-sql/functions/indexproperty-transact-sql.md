@@ -1,4 +1,5 @@
 ---
+description: INDEXPROPERTY (Transact-SQL)
 title: INDEXPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -20,12 +21,12 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: deeed76ed033531695b321c3e185e03dd988739c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 065b792b1e9edec5bc8e1b12859e9152797ebfb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417368"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  インデックス プロパティ情報の提供元となるテーブルまたはインデックス付きビューのオブジェクト ID 番号を含む式です。 *object_ID* は **int** です。  
   
  *index_or_statistics_name*  
- 返されるプロパティ情報の基となるインデックスまたは統計の名前を含む式です。 *index_or_statistics_name* is **nvarchar(128)** .  
+ 返されるプロパティ情報の基となるインデックスまたは統計の名前を含む式です。 *index_or_statistics_name* is **nvarchar(128)**.  
   
  *property*  
  返されるデータベース プロパティの名前を含む式です。 *property* のデータ型は **varchar(128)** で、次のいずれかの値を指定できます。  
@@ -82,7 +83,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (INDEXPROPERTY など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
- 次の例では、**データベースにある** テーブルの **インデックスについて**IsClustered **、** IndexDepth`PK_Employee_BusinessEntityID`、および `Employee`IndexFillFactor[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] プロパティの値を返します。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにある `Employee` テーブルの `PK_Employee_BusinessEntityID` インデックスについて **IsClustered**、**IndexDepth**、および **IndexFillFactor** プロパティの値を返します。  
   
 ```  
 SELECT   

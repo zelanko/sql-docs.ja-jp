@@ -1,4 +1,5 @@
 ---
+description: fn_hadr_distributed_ag_database_replica (Transact-sql)
 title: fn_hadr_distributed_ag_database_replica (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2016
@@ -19,11 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d7b894919a4149d37181d543b8d58fc820aad10b
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: f54cfdf987474435b452421620246b6432892a36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053028"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419506"
 ---
 # <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>fn_hadr_distributed_ag_database_replica (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,10 +43,10 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
   
 ## <a name="arguments"></a>引数  
  '*lag_Id*'  
- 分散型可用性グループの識別子を示します。 *lag_Id*型は**uniqueidentifier**です。  
+ 分散型可用性グループの識別子を示します。 *lag_Id* 型は **uniqueidentifier**です。  
   
  '*database_id*'  
- 分散型可用性グループ内のデータベースの識別子を示します。 *database_id*型は**uniqueidentifier**です。  
+ 分散型可用性グループ内のデータベースの識別子を示します。 *database_id* 型は **uniqueidentifier**です。  
   
 ## <a name="tables-returned"></a>返されるテーブル  
  次の情報を返します。  
@@ -68,7 +70,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [Always On 可用性グループの関数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [分散型可用性グループ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  

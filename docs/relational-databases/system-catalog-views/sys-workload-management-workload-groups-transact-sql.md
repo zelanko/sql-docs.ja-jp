@@ -1,4 +1,5 @@
 ---
+description: workload_management_workload_groups (Transact-sql)
 title: workload_management_workload_groups (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/05/2019
@@ -12,12 +13,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 491b4d2dcbd84bd1f53d44716f457686d277d25f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 051793030a4151385957e7c3f9fcb047c98fb743
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419876"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>workload_management_workload_groups (Transact-sql)
 
@@ -44,6 +45,6 @@ modify_time|**datetime**|ワークロードグループが最後に変更され�
 
 VIEW SERVER STATE 権限が必要です。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
- SQL Data Warehouse と並列データウェアハウスのすべてのカタログビューの一覧については、「 [SQL Data Warehouse および並列データウェアハウスのカタログビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)」を参照してください。 ワークロードグループを作成するには、「[ワークロードグループの作成](../../t-sql/statements/create-workload-group-transact-sql.md)」を参照してください。 ワークロードの分類の詳細については、「[ワークロードの分離](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)」を参照してください。
+ SQL Data Warehouse と並列データウェアハウスのすべてのカタログビューの一覧については、「 [SQL Data Warehouse および並列データウェアハウスのカタログビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)」を参照してください。 ワークロードグループを作成するには、「 [ワークロードグループの作成](../../t-sql/statements/create-workload-group-transact-sql.md)」を参照してください。 ワークロードの分類の詳細については、「[ワークロードの分離](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)」を参照してください。

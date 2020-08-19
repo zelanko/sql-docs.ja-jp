@@ -1,4 +1,5 @@
 ---
+description: 付録-1 (Sql)
 title: 付録-1 (フルリファレンス Sql) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: debeb7ee176cd2127a74ba896de839b1f30ca4cc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ea9a89eadfd03f31573fd3a25e41e8bb8c1ed73f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934040"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418578"
 ---
 # <a name="appendix---1-accesstosql"></a>付録-1 (Sql)
 SSMA コンソールのコマンドラインオプションのクイックビューを次に示します。  
   
-|法. いいえ。|Switch|必須|スイッチ引数|許可される値|  
+|法. いいえ。|スイッチ|必須|スイッチ引数|許可される値|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/スクリプト|はい|scriptfile|有効な XML ファイル名です。<br /><br />コンソールスクリプト定義ファイル。|  
 |2|-v/variable|いいえ|変数 valuefile|有効な XML ファイル名です。 スクリプトファイルで変数を使用する場合は、このファイルを指定する必要があります。|  

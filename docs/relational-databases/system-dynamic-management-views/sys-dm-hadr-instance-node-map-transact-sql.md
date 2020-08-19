@@ -1,4 +1,5 @@
 ---
+description: dm_hadr_instance_node_map (Transact-sql)
 title: dm_hadr_instance_node_map (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 32001d88c17358406b5b855cbb698c9d2686e40f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 26e070d66fee1c7555d5448cace35318c6e4de66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760258"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419716"
 ---
 # <a name="sysdm_hadr_instance_node_map-transact-sql"></a>dm_hadr_instance_node_map (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,17 +39,17 @@ ms.locfileid: "85760258"
    
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ag_resource_id**|**nvarchar(256)**|WSFC 内のリソースとしての可用性グループの一意の ID。|  
-|**instance_name**|**nvarchar(256)**|名前-*サーバー* / *インスタンス*-可用性グループのレプリカをホストするサーバーインスタンス。|  
-|**node_name**|**nvarchar(256)**|WSFC ノードの名前。|  
+|**ag_resource_id**|**nvarchar (256)**|WSFC 内のリソースとしての可用性グループの一意の ID。|  
+|**instance_name**|**nvarchar (256)**|名前-*サーバー* / *インスタンス*-可用性グループのレプリカをホストするサーバーインスタンス。|  
+|**node_name**|**nvarchar (256)**|WSFC ノードの名前。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Always On 可用性グループの動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Always On 可用性グループのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;可用性グループの監視](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [AlwaysOn 可用性グループのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;可用性グループの監視 ](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

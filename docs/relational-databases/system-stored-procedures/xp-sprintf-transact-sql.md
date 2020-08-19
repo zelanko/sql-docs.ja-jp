@@ -1,4 +1,5 @@
 ---
+description: xp_sprintf (Transact-sql)
 title: xp_sprintf (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2020
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 157b027580592f2d4663788911530c282bebfcc4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bd830fc35da8604538d0d70171988e218ee5200
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419196"
 ---
 # <a name="xp_sprintf-transact-sql"></a>xp_sprintf (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ xp_sprintf { string OUTPUT , format }
   
 ## <a name="arguments"></a>引数  
  *string*  
- 出力を受け取る**varchar**変数を示します。  
+ 出力を受け取る **varchar** 変数を示します。  
   
  OUTPUT  
  指定すると、変数の値が出力パラメーターに格納されます。  
@@ -59,16 +60,16 @@ xp_sprintf { string OUTPUT , format }
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- **xp_sprintf**は次のメッセージを返します。  
+ **xp_sprintf** は次のメッセージを返します。  
   
  `The command(s) completed successfully.`  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;の一般的な拡張ストアドプロシージャ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;の一般的な拡張ストアドプロシージャ ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_sscanf &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  
   
   

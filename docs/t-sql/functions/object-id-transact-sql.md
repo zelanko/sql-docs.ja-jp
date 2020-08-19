@@ -1,4 +1,5 @@
 ---
+description: OBJECT_ID (Transact-SQL)
 title: OBJECT_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -26,12 +27,12 @@ ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2ae4289776787d2e91b3c9c911629b38ced975d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 34139155f6d5e7f58657a5f8e8adf6ac2d4ecbf3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112676"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417248"
 ---
 # <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +58,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
  使用するオブジェクトです。 *object_name* は **varchar** または **nvarchar** です。 場合 *object_name* は **varchar**, に暗黙的に変換されます **nvarchar** です。 データベース名とスキーマ名の指定は省略可能です。  
   
  **'** *object_type* **'**  
- スキーマ スコープのオブジェクトの種類です。 *object_type* は **varchar** または **nvarchar** です。 場合 *object_type* は **varchar**, に暗黙的に変換されます **nvarchar** です。 オブジェクトの種類の一覧については、「**sys.objects &#40;Transact-SQL&#41;** 」 の [type](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 列を参照してください。  
+ スキーマ スコープのオブジェクトの種類です。 *object_type* は **varchar** または **nvarchar** です。 場合 *object_type* は **varchar**, に暗黙的に変換されます **nvarchar** です。 オブジェクトの種類の一覧については、「[sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」 の **type** 列を参照してください。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
@@ -79,7 +80,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-object-id-for-a-specified-object"></a>A. 指定したオブジェクトのオブジェクト ID を返す  
- 次の例では、`Production.WorkOrder` データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルのオブジェクト ID を返します。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Production.WorkOrder` テーブルのオブジェクト ID を返します。  
   
 ```  
 USE master;  
@@ -100,7 +101,7 @@ GO
 ```  
   
 ### <a name="c-using-object_id-to-specify-the-value-of-a-system-function-parameter"></a>C. OBJECT_ID を使用して、システム関数パラメーターの値を指定する  
- 次の例では、`Person.Address` データベース内にある [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルのすべてのインデックスとパーティションについて、[sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) 関数を使用して情報を返しています。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内にある `Person.Address` テーブルのすべてのインデックスとパーティションについて、[sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) 関数を使用して情報を返しています。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数 DB_ID および OBJECT_ID を使ってパラメーター値を返すときには、有効な ID が返されることを常に確認してください。 存在しない場合やスペルが正しくない場合など、データベースまたはオブジェクト名が見つからない場合、両方の関数が NULL を返します。 **sys.dm_db_index_operational_stats** 関数では、NULL 値はすべてのデータベースまたはすべてのオブジェクトを指定するワイルドカード値として解釈されます。 これは、意図しない操作である可能性があるため、このセクションの例では、データベースおよびオブジェクト ID を確認する安全な方法を示します。  
@@ -128,7 +129,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-returning-the-object-id-for-a-specified-object"></a>D. 指定したオブジェクトのオブジェクト ID を返す  
- 次の例では、`FactFinance` データベース内の [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] テーブルのオブジェクト ID を返します。  
+ 次の例では、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] データベース内の `FactFinance` テーブルのオブジェクト ID を返します。  
   
 ```  
 SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  

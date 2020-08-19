@@ -1,4 +1,5 @@
 ---
+description: POWER (Transact-SQL)
 title: POWER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -18,12 +19,12 @@ ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c11afa07f04e01919b51daf92025ed5d82902ee7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 857ad909b2f471edaebf661ccab4cca0077bc099
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111893"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417318"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +43,7 @@ POWER ( float_expression , y )
 
 ## <a name="arguments"></a>引数
  *float_expression*  
- [float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に **float** 型に変換できる**式**を指定します。  
+ **float** 型、または暗黙的に **float** 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
  *y*  
  *float_expression* の乗数を指定します。 *y* を除く、真数または概数数値の正確なデータ型に分類される式を指定できます、 **ビット** データ型。  
@@ -50,7 +51,7 @@ POWER ( float_expression , y )
 ## <a name="return-types"></a>戻り値の型  
  戻り値の型は、*float_expression* の入力型によって異なります。
  
-|入力型|の戻り値の型 :|  
+|入力の種類|の戻り値の型 :|  
 |----------|-----------|  
 |**float**、**real**|**float**|
 |**decimal(*p*, *s*)**|**decimal(38, *s*)**|
@@ -151,7 +152,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D: POWER を使用して数値の 3 乗を返す  
- 次の例は、`POWER` の 3 乗の `2.0` 結果を示しています。  
+ 次の例は、`2.0` の 3 乗の `POWER` 結果を示しています。  
   
 ```  
 SELECT POWER(2.0, 3);  

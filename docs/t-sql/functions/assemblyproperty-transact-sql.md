@@ -1,4 +1,5 @@
 ---
+description: ASSEMBLYPROPERTY (Transact-SQL)
 title: ASSEMBLYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 50fd500a3ce7248b60e423df662b5d9eeda2cef5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9e466b8d66760704ce7ee90028210dfa5dfabc22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417478"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 
 ## <a name="arguments"></a>引数
 *assembly_name*  
-アセンブリの名前です。
+アセンブリの名前。
   
 *property_name*  
 情報を取得するプロパティの名前を指定します。 *property_name* 値は次のいずれかを指定することができます。
@@ -72,7 +73,7 @@ GO
 SELECT ASSEMBLYPROPERTY ('HelloWorld' , 'PublicKey');  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
 [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)
   

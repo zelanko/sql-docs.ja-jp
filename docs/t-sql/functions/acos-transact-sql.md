@@ -1,4 +1,5 @@
 ---
+description: ACOS (Transact-SQL)
 title: ACOS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ ms.assetid: 4ec6b46e-9438-4f0f-8b96-461edd84280a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c7c8ebd6256980842ca85f10f200518fe0bac2a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 16c6a83f914c577fd239f3c28b6d302dfb2523f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417568"
 ---
 # <a name="acos-transact-sql"></a>ACOS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,7 @@ ACOS ( float_expression )
 
 ## <a name="arguments"></a>引数
 *float_expression*  
-[float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に float 型に変換できる**式**を指定します。 -1.00 ～ 1.00 の範囲の値のみが有効です。 この範囲外の値を指定すると、NULL が返され、ASIN がドメイン エラーを報告します。
+**float** 型、または暗黙的に float 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 -1.00 ～ 1.00 の範囲の値のみが有効です。 この範囲外の値を指定すると、NULL が返され、ASIN がドメイン エラーを報告します。
   
 ## <a name="return-types"></a>戻り値の型  
 **float**
@@ -68,7 +69,7 @@ The ACOS of the number is: 3.14159
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [関数](../../t-sql/functions/functions.md)
   

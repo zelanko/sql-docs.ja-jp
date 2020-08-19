@@ -1,4 +1,5 @@
 ---
+description: IS_ROLEMEMBER (Transact-SQL)
 title: IS_ROLEMEMBER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: 73efa688-ae91-4014-98bc-1cabe47321f7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ca3410ae5fe2b8f3d1504141d07d4d6856eaa21
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0df369f34c1993132ff6df45b1495c81f6ef6665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417378"
 ---
 # <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +63,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## <a name="remarks"></a>解説  
  IS_ROLEMEMBER は、現在のユーザーがデータベース ロールの権限を必要とするアクションを実行できるかどうかを判断するために使用します。  
   
- unless the *database_principal* が許可または拒否された  *への直接アクセスである場合を除き、* database_principal[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が Contoso\Mary5 などの Windows ログインに基づいている場合、IS_ROLEMEMBER は NULL を返します。  
+  unless the *database_principal* が許可または拒否された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への直接アクセスである場合を除き、*database_principal* が Contoso\Mary5 などの Windows ログインに基づいている場合、IS_ROLEMEMBER は NULL を返します。  
   
  場合、省略可能な *database_principal* パラメーターを指定しない場合、 *database_principal* ベースは、Windows ドメイン ログインに Windows グループのメンバーシップを通じて、データベース ロールのメンバーである可能性があります。 そのような間接的なメンバーシップを解決するために、IS_ROLEMEMBER は、Windows グループのメンバーシップ情報をドメイン コントローラーに要求します。 ドメイン コントローラーにアクセスできないか、またはドメイン コントローラーが応答しない場合、IS_ROLEMEMBER はユーザーとそのローカル グループのみを考慮したロール メンバーシップ情報を返します。 指定されたユーザーが現在のユーザーでない場合、IS_ROLEMEMBER が返す値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対する認証システム (Active Directory など) の最後のデータ更新と異なることがあります。  
   

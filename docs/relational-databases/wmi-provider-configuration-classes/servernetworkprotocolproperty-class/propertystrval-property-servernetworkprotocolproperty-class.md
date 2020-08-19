@@ -1,4 +1,5 @@
 ---
+description: PropertyStrVal プロパティ (ServerNetworkProtocolProperty クラス)
 title: PropertyStrVal プロパティ (ServerNetworkProtocolProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7df3cf21-15b7-4813-93e7-c2bae1209f5a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c5277bf0e3f4bf6d31c835da64d89cc57c4fd14f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8c1184085b2b4d999e9b52402511748f6558292f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418708"
 ---
 # <a name="propertystrval-property-servernetworkprotocolproperty-class"></a>PropertyStrVal プロパティ (ServerNetworkProtocolProperty クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.PropertyStrVal [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  プロパティの値を指定する文字列値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

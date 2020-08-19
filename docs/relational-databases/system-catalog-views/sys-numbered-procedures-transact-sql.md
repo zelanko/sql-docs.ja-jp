@@ -1,4 +1,5 @@
 ---
+description: sys.numbered_procedures (Transact-SQL)
 title: numbered_procedures (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,17 +21,17 @@ ms.assetid: 5b6d6498-bac6-4266-94b9-d16ef5089cf0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 722aca86c43839e9deb4e558f447f5377dffe99a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: a65b642a00243c5e6ec9c17dea9f238b2607ade6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420106"
 ---
 # <a name="sysnumbered_procedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  番号付きプロシージャとして作成された SQL Server ストアドプロシージャごとに1行の値を格納します。 この場合、ベース (number = 1) ストアドプロシージャの行は表示されません。 基本ストアドプロシージャのエントリは、 **sys. objects**や**sys. プロシージャ**などのビューにあります。  
+  番号付きプロシージャとして作成された SQL Server ストアドプロシージャごとに1行の値を格納します。 この場合、ベース (number = 1) ストアドプロシージャの行は表示されません。 基本ストアドプロシージャのエントリは、 **sys. objects** や **sys. プロシージャ**などのビューにあります。  
   
 > [!IMPORTANT]  
 >  番号付きプロシージャは非推奨とされます。 番号付きプロシージャの使用は推奨されません。 このカタログビューを使用するクエリがコンパイルされると、DEPRECATION_ANNOUNCEMENT イベントが発生します。  
