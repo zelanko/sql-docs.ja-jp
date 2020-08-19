@@ -1,4 +1,5 @@
 ---
+description: ADOX のメソッド
 title: ADOX のメソッド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b2af54e33aeaa42cab3de76f1ffc6bf5fd758dd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9d8a2c7e02b4b7efeb17166e1fcab8ee2c457b6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243103"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440584"
 ---
 # <a name="adox-methods"></a>ADOX のメソッド
 
-|Method|説明|  
+|メソッド|説明|  
 |-|-|  
 |[追加 (列)](../../../ado/reference/adox-api/append-method-adox-columns.md)|**Columns**コレクションに新しい**Column**オブジェクトを追加します。|  
 |[追加 (グループ)](../../../ado/reference/adox-api/append-method-adox-groups.md)|**グループ**コレクションに新しい**グループ**オブジェクトを追加します。|  
-|[追加 (インデックス)](../../../ado/reference/adox-api/append-method-adox-indexes.md)|新しい**Index**オブジェクトを**Indexes**コレクションに追加します。|  
-|[追加 (キー)](../../../ado/reference/adox-api/append-method-adox-keys.md)|新しい**キー**オブジェクトを**Keys**コレクションに追加します。|  
+|[追加 (インデックス)](../../../ado/reference/adox-api/append-method-adox-indexes.md)|新しい **Index** オブジェクトを **Indexes** コレクションに追加します。|  
+|[追加 (キー)](../../../ado/reference/adox-api/append-method-adox-keys.md)|新しい **キー** オブジェクトを **Keys** コレクションに追加します。|  
 |[Append (プロシージャ)](../../../ado/reference/adox-api/append-method-adox-procedures.md)|**Procedures**コレクションに新しい**プロシージャ**オブジェクトを追加します。|  
 |[追加 (テーブル)](../../../ado/reference/adox-api/append-method-adox-tables.md)|**Tables**コレクションに新しい**Table**オブジェクトを追加します。|  
-|[追加 (ユーザー)](../../../ado/reference/adox-api/append-method-adox-users.md)|新しい**ユーザー**オブジェクトを**Users**コレクションに追加します。|  
+|[追加 (ユーザー)](../../../ado/reference/adox-api/append-method-adox-users.md)|新しい **ユーザー** オブジェクトを **Users** コレクションに追加します。|  
 |[追加 (ビュー)](../../../ado/reference/adox-api/append-method-adox-views.md)|**Views**コレクションに新しい**ビュー**オブジェクトを追加します。|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|ユーザーアカウントのパスワードを変更します。|  
 |[作成](../../../ado/reference/adox-api/create-method-adox.md)|新しいカタログを作成します。|  

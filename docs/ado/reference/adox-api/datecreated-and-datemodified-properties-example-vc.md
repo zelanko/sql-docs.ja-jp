@@ -1,4 +1,5 @@
 ---
+description: DateCreated および DateModified プロパティの例 (VC++)
 title: DateCreated プロパティと DateModified プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 63ff7406b192bc8ecb759a5fe234efd1397cf11b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 19f8f15f35cae97d4c6882df90889513ce0eb430
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759228"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440194"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated および DateModified プロパティの例 (VC++)
 この例では、既存の[テーブル](../../../ado/reference/adox-api/table-object-adox.md)に新しい[列](../../../ado/reference/adox-api/column-object-adox.md)を追加し、新しい**テーブル**を作成することによって、 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)プロパティと[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)プロパティを示します。 この例を実行するには、DateOutput プロシージャが必要です。  

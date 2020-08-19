@@ -1,4 +1,5 @@
 ---
+description: GetObjectOwner および SetObjectOwner メソッドの例 (VC++)
 title: GetObjectOwner メソッドと SetObjectOwner メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04c8a84da02d31314146b4f54b93cc0edf7bb30e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 76ac35f396f09ee7e6f4360fb03e69c005d03c42
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440064"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner および SetObjectOwner メソッドの例 (VC++)
-この例では、 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)メソッドと[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)メソッドを示します。 このコードは、グループアカウンティングが存在することを前提としています (グループ[とユーザー Append、ChangePassword メソッドの例 (VC + +)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md)を参照して、システムにこのグループを追加する方法を確認してください)。 Categories テーブルの所有者は、Accounting に設定されています。  
+この例では、 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) メソッドと [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) メソッドを示します。 このコードは、グループアカウンティングが存在することを前提としています (グループ [とユーザー Append、ChangePassword メソッドの例 (VC + +)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) を参照して、システムにこのグループを追加する方法を確認してください)。 Categories テーブルの所有者は、Accounting に設定されています。  
   
 ```  
 // BeginOwnersCpp.cpp  

@@ -1,4 +1,5 @@
 ---
+description: Append メソッド (ADOX Users)
 title: Append メソッド (ADOX Users) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c010b291468432544a037d15fbaa790fc3ee789d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e774ab590e3f405cab157293405eba5e575ecb52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764023"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440464"
 ---
 # <a name="append-method-adox-users"></a>Append メソッド (ADOX Users)
-新しい[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)オブジェクトを[Users](../../../ado/reference/adox-api/users-collection-adox.md)コレクションに追加します。  
+新しい [ユーザー](../../../ado/reference/adox-api/user-object-adox.md) オブジェクトを [Users](../../../ado/reference/adox-api/users-collection-adox.md) コレクションに追加します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,13 +35,13 @@ Users.Append User[,Password]
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *ユーザー*  
+ *User*  
  追加する**ユーザー**オブジェクトまたは作成して追加するユーザーの名前を含む**バリアント**値。  
   
  *パスワード*  
- 省略可能。 ユーザーのパスワードを含む**文字列**値です。 *Password*パラメーターは、**ユーザー**オブジェクトの[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)メソッドによって指定された値に対応します。  
+ 任意。 ユーザーのパスワードを含む **文字列** 値です。 *Password*パラメーターは、**ユーザー**オブジェクトの[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)メソッドによって指定された値に対応します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の**ユーザー**コレクションは、すべてのカタログのユーザーを表します。 [グループ](../../../ado/reference/adox-api/group-object-adox.md)の**ユーザー**コレクションは、特定のグループのメンバーシップを持つユーザーのみを表します。  
   
  プロバイダーがユーザーの作成をサポートしていない場合、エラーが発生します。  

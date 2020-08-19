@@ -1,4 +1,5 @@
 ---
+description: Append メソッド (ADOX Indexes)
 title: Append メソッド (ADOX Indexes) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6996f3a0a3ad9f2ffa727a6cbd7b48d3fbf32777
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b13115a657f3bc25ae79cf3ba92a7fe339492536
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440544"
 ---
 # <a name="append-method-adox-indexes"></a>Append メソッド (ADOX Indexes)
-新しい[Index](../../../ado/reference/adox-api/index-object-adox.md)オブジェクトを[Indexes](../../../ado/reference/adox-api/indexes-collection-adox.md)コレクションに追加します。  
+新しい [Index](../../../ado/reference/adox-api/index-object-adox.md) オブジェクトを [Indexes](../../../ado/reference/adox-api/indexes-collection-adox.md) コレクションに追加します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,13 +34,13 @@ Indexes.Append Index [,Columns]
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *化*  
- 追加する**インデックス**オブジェクト、または作成および追加するインデックスの名前。  
+ *Index*  
+ 追加する **インデックス** オブジェクト、または作成および追加するインデックスの名前。  
   
  *[列]*  
- 省略可能。 インデックスを作成する列の名前を指定する**バリアント**値です (複数可)。 *Columns*パラメーターは、[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトまたはオブジェクトの[Name](../../../ado/reference/adox-api/name-property-adox.md)プロパティの値に対応します。  
+ 任意。 インデックスを作成する列の名前を指定する **バリアント** 値です (複数可)。 *Columns*パラメーターは、[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトまたはオブジェクトの[Name](../../../ado/reference/adox-api/name-property-adox.md)プロパティの値に対応します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *Columns*パラメーターには、列名または列名の配列のいずれかを指定できます。  
   
  プロバイダーがインデックスの作成をサポートしていない場合、エラーが発生します。  

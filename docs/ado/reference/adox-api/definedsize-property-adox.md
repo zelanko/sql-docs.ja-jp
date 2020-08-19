@@ -1,4 +1,5 @@
 ---
+description: DefinedSize プロパティ (ADOX)
 title: "\"未定義のサイズ\" プロパティ (ADOX) |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,23 +20,23 @@ helpviewer_keywords:
 ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a13a0ef430404735d15303549dfd6f812864f81
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2f122574ba5aa405ca4493b498bb0179249cccf1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759198"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440144"
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize プロパティ (ADOX)
 列の最大サイズを示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- データ値の最大文字数である**Long 型**の値を設定して返します。  
+ データ値の最大文字数である **Long 型** の値を設定して返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  既定値は 0 です。  
   
- このプロパティは、既にコレクションに追加されている[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトに対しては読み取り専用です。  
+ このプロパティは、既にコレクションに追加されている [列](../../../ado/reference/adox-api/column-object-adox.md) オブジェクトに対しては読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  
  [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  

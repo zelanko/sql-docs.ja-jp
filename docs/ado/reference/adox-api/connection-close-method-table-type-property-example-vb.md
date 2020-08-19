@@ -1,4 +1,5 @@
 ---
+description: Connection Close メソッド、Table Type プロパティの例 (VB)
 title: Connection Close メソッド、Table Type プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7bd2e7f536cceb3a70ab70f0deda1bfe427fa45
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a77ff78be14566f472af277459b2bdaa52aad748
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440234"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Connection Close メソッド、Table Type プロパティの例 (VB)
 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティを**Nothing**に設定する場合は、カタログへの接続を閉じる必要があります。 関連付けられたコレクションは空になります。 カタログ内のスキーマオブジェクトから作成されたオブジェクトは孤立します。 キャッシュされているオブジェクトのプロパティは引き続き利用できますが、プロバイダーの呼び出しを必要とするプロパティの読み取りは失敗します。  
@@ -66,7 +67,7 @@ End Sub
 ' EndCloseConnectionVB  
 ```  
   
- カタログを開くために使用された[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを閉じるには、 **ActiveConnection**プロパティを**Nothing**に設定するのと同じ効果が得られます。  
+ カタログを開くために使用された [接続](../../../ado/reference/ado-api/connection-object-ado.md) オブジェクトを閉じるには、 **ActiveConnection** プロパティを **Nothing**に設定するのと同じ効果が得られます。  
   
 ```  
 Attribute VB_Name = "Connection"  

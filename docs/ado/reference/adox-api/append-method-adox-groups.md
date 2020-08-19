@@ -1,4 +1,5 @@
 ---
+description: Append メソッド (ADOX Groups)
 title: Append メソッド (ADOX Groups) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3896de6c921f85d4b3e5a2194b1baa2fe511f22b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2dc46d1c0d44ec175b442df943ce72a38ec2b761
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440494"
 ---
 # <a name="append-method-adox-groups"></a>Append メソッド (ADOX Groups)
 [グループ](../../../ado/reference/adox-api/groups-collection-adox.md)コレクションに新しい[グループ](../../../ado/reference/adox-api/group-object-adox.md)オブジェクトを追加します。  
@@ -35,9 +36,9 @@ Groups.Append Group
   
 #### <a name="parameters"></a>パラメーター  
  *グループ*  
- 追加する**グループ**オブジェクト、または作成して追加するグループの名前。  
+ 追加する **グループ** オブジェクト、または作成して追加するグループの名前。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の**Groups**コレクションは、すべてのカタログのグループアカウントを表します。 [ユーザー](../../../ado/reference/adox-api/user-object-adox.md)の**Groups**コレクションは、ユーザーが属しているグループのみを表します。  
   
  プロバイダーがグループの作成をサポートしていない場合、エラーが発生します。  

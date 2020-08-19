@@ -1,4 +1,5 @@
 ---
+description: Append メソッド (ADOX Keys)
 title: Append メソッド (ADOX Keys) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d4797344958391dca278e23be2efafa6d1b3f69
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7ae3ef035594b696b829f0f1898e1749a2c33f11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764033"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440534"
 ---
 # <a name="append-method-adox-keys"></a>Append メソッド (ADOX Keys)
-新しい[キー](../../../ado/reference/adox-api/key-object-adox.md)オブジェクトを[Keys](../../../ado/reference/adox-api/keys-collection-adox.md)コレクションに追加します。  
+新しい [キー](../../../ado/reference/adox-api/key-object-adox.md) オブジェクトを [Keys](../../../ado/reference/adox-api/keys-collection-adox.md) コレクションに追加します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,21 +36,21 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
   
 #### <a name="parameters"></a>パラメーター  
  *キー*  
- 追加する**キー**オブジェクト、または作成および追加するキーの名前。  
+ 追加する **キー** オブジェクト、または作成および追加するキーの名前。  
   
  *KeyType*  
- 任意。 キーの種類を指定する**Long**型の値です。 *キー*パラメーターは、**キー**オブジェクトの[Type](../../../ado/reference/adox-api/type-property-key-adox.md)プロパティに対応します。  
+ 任意。 キーの種類を指定する **Long** 型の値です。 *キー*パラメーターは、**キー**オブジェクトの[Type](../../../ado/reference/adox-api/type-property-key-adox.md)プロパティに対応します。  
   
  *列*  
- 任意。 インデックスを作成する列の名前を指定する**文字列**値。 *Columns*パラメーターは、 [Column](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトの[Name](../../../ado/reference/adox-api/name-property-adox.md)プロパティの値に対応しています。  
+ 任意。 インデックスを作成する列の名前を指定する **文字列** 値。 *Columns*パラメーターは、 [Column](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトの[Name](../../../ado/reference/adox-api/name-property-adox.md)プロパティの値に対応しています。  
   
  *RelatedTable*  
- 任意。 関連するテーブルの名前を示す**文字列**値です。 関連性*テーブル*のパラメーターは、 [Table](../../../ado/reference/adox-api/table-object-adox.md)オブジェクトの**Name**プロパティの値に対応しています。  
+ 任意。 関連するテーブルの名前を示す **文字列** 値です。 関連性*テーブル*のパラメーターは、 [Table](../../../ado/reference/adox-api/table-object-adox.md)オブジェクトの**Name**プロパティの値に対応しています。  
   
  *RelatedColumn*  
- 任意。 外部キーに関連付けられている列の名前を示す**文字列**値です。 [関連性のある*列*のパラメーターは、 [Column](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトの**Name**プロパティの値に対応します。  
+ 任意。 外部キーに関連付けられている列の名前を示す **文字列** 値です。 [関連性のある*列*のパラメーターは、 [Column](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトの**Name**プロパティの値に対応します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *Columns*パラメーターには、列名または列名の配列のいずれかを指定できます。  
   
 ## <a name="applies-to"></a>適用対象  

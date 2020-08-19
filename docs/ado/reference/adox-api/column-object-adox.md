@@ -1,4 +1,5 @@
 ---
+description: Column オブジェクト (ADOX)
 title: Column オブジェクト (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80e462e3bc7a8f5d4833c78bcaf6b4a45705c083
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 582014342380ed5ec77c8a6f0e2adacba52bbdcc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440344"
 ---
 # <a name="column-object-adox"></a>Column オブジェクト (ADOX)
 テーブル、インデックス、またはキーからの列を表します。  
   
 ## <a name="remarks"></a>解説  
- 次のコードでは、新しい**列**を作成します。  
+ 次のコードでは、新しい **列**を作成します。  
   
  `Dim obj As New Column`  
   
@@ -36,24 +37,24 @@ ms.locfileid: "82759398"
   
 -   [Type プロパティ (キー) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)プロパティを使用して、列のデータ型を指定します。  
   
--   列が固定長であるかどうか、または[Attributes プロパティ (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)プロパティを使用して null 値を含むことができるかどうかを確認します。  
+-   列が固定長であるかどうか、または [Attributes プロパティ (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md) プロパティを使用して null 値を含むことができるかどうかを確認します。  
   
--   列の最大サイズを指定するには、"設定された[サイズ" プロパティ (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)プロパティを使用します。  
+-   列の最大サイズを指定するには、"設定された [サイズ" プロパティ (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md) プロパティを使用します。  
   
--   数値データ値の場合は、 [Numericscale プロパティ (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md)プロパティを使用して小数点以下桁数を指定します。  
+-   数値データ値の場合は、 [Numericscale プロパティ (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md) プロパティを使用して小数点以下桁数を指定します。  
   
--   数値データ値については、 [Precision プロパティ (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md)プロパティを使用して最大有効桁数を指定します。  
+-   数値データ値については、 [Precision プロパティ (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md) プロパティを使用して最大有効桁数を指定します。  
   
 -   [ParentCatalog property (adox)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)プロパティを使用して、列を所有する[カタログオブジェクト (adox)](../../../ado/reference/adox-api/catalog-object-adox.md)を指定します。  
   
--   キー列の場合は、関連テーブル内の関連する列の名前を、"関連付け[列のプロパティ (ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md) " プロパティを使用して指定します。  
+-   キー列の場合は、関連テーブル内の関連する列の名前を、"関連付け [列のプロパティ (ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md) " プロパティを使用して指定します。  
   
--   [インデックス列] では、並べ替え順序が並べ替え順序[として](../../../ado/reference/adox-api/sortorder-property-adox.md)昇順と降順のどちらであるかを指定します。  
+-   [インデックス列] では、並べ替え順序が並べ替え順序 [として](../../../ado/reference/adox-api/sortorder-property-adox.md) 昇順と降順のどちらであるかを指定します。  
   
 -   [プロパティコレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを使用して、プロバイダー固有のプロパティにアクセスします。  
   
 > [!NOTE]
->  **列**オブジェクトのすべてのプロパティがデータプロバイダーでサポートされているとは限りません。 プロバイダーがサポートしていないプロパティの値を設定した場合、エラーが発生します。 新しい**列**オブジェクトの場合、オブジェクトがコレクションに追加されるとエラーが発生します。 既存のオブジェクトの場合、プロパティの設定時にエラーが発生します。  
+>  **列**オブジェクトのすべてのプロパティがデータプロバイダーでサポートされているとは限りません。 プロバイダーがサポートしていないプロパティの値を設定した場合、エラーが発生します。 新しい **列** オブジェクトの場合、オブジェクトがコレクションに追加されるとエラーが発生します。 既存のオブジェクトの場合、プロパティの設定時にエラーが発生します。  
 >   
 >  **列**オブジェクトを作成するときに、オプションのプロパティに適切な既定値が存在しても、プロバイダーがプロパティをサポートしているかどうかは保証されません。 プロバイダーがサポートしているプロパティの詳細については、プロバイダーのドキュメントを参照してください。  
   

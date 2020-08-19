@@ -1,4 +1,5 @@
 ---
+description: DefinedSize プロパティの例 (VC++)
 title: "\"持つサイズ\" プロパティの例 (VC + +) |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9cafc18fb00a0adeb6d219d901ea40ca79510be5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f4d2f7ef20e5fb67450dccee7e7fb29b32d46286
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759178"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440124"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize プロパティの例 (VC++)
-この例では、[列](../../../ado/reference/adox-api/column-object-adox.md)の "値の[サイズ](../../../ado/reference/adox-api/definedsize-property-adox.md)" プロパティを示します。 コードによって、 *Northwind*データベースの**Employees**テーブルの FirstName 列のサイズが再定義されます。 次に、 **Employees**テーブルに基づいて[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の FirstName[フィールド](../../../ado/reference/ado-api/field-object.md)の値が変更されます。 既定では、"定義された**サイズ**" プロパティを再定義した後、[FirstName] フィールドに空白が埋め込まれていることに注意してください。  
+この例では、[列](../../../ado/reference/adox-api/column-object-adox.md)の "値の[サイズ](../../../ado/reference/adox-api/definedsize-property-adox.md)" プロパティを示します。 コードによって、 *Northwind*データベースの**Employees**テーブルの FirstName 列のサイズが再定義されます。 次に、 **Employees**テーブルに基づいて[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の FirstName[フィールド](../../../ado/reference/ado-api/field-object.md)の値が変更されます。 既定では、"定義された **サイズ** " プロパティを再定義した後、[FirstName] フィールドに空白が埋め込まれていることに注意してください。  
   
 ```  
 // BeginDefinedSizeCpp.cpp  

@@ -1,4 +1,5 @@
 ---
+description: ADOX オブジェクト モデル
 title: ADOX オブジェクトモデル |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c521a1db30a35e43e5e0a7dbb118320769d4756
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0a221cf2a36cb49b1005362d4cda5ad0ca986ca5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440574"
 ---
 # <a name="adox-object-model"></a>ADOX オブジェクト モデル
-次の図は、ADOX でオブジェクトがどのように表され、関連付けられているかを示しています。 特定のオブジェクトまたはコレクションの詳細については、特定のリファレンストピック、または[Adox オブジェクト](../../../ado/reference/adox-api/adox-objects.md)と[adox コレクション](../../../ado/reference/adox-api/adox-collections.md)に関するトピックを参照してください。  
+次の図は、ADOX でオブジェクトがどのように表され、関連付けられているかを示しています。 特定のオブジェクトまたはコレクションの詳細については、特定のリファレンストピック、または [Adox オブジェクト](../../../ado/reference/adox-api/adox-objects.md) と [adox コレクション](../../../ado/reference/adox-api/adox-collections.md)に関するトピックを参照してください。  
   
  ![ADOX オブジェクト モデル](../../../ado/reference/adox-api/media/adox_object_model.gif "ADOX_object_model")  
   

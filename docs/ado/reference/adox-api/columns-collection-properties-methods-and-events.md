@@ -1,4 +1,5 @@
 ---
+description: Columns コレクションのプロパティ、メソッド、およびイベント
 title: Columns コレクションのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3d9ec89a-cc85-4091-b6f0-2bb6a6826d5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db712b4f5779f421188863c51f5b4c014a768dd1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 52845dfe57cf84b2cffa25940186a8197f548ac4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759328"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440274"
 ---
 # <a name="columns-collection-properties-methods-and-events"></a>Columns コレクションのプロパティ、メソッド、およびイベント
 ## <a name="properties"></a>プロパティ  
@@ -32,7 +33,7 @@ ms.locfileid: "82759328"
   
  [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

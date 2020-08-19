@@ -1,4 +1,5 @@
 ---
+description: GetObjectOwner メソッド (ADOX)
 title: GetObjectOwner メソッド (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c9892ddc3be28e63dae0f3f6440cc4a668498e3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f4acea759ba213eac4365d79fa040c20e5a673cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440044"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner メソッド (ADOX)
 [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)内のオブジェクトの所有者を返します。  
@@ -38,15 +39,15 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
   
 #### <a name="parameters"></a>パラメーター  
  *ObjectName*  
- 所有者を返す対象のオブジェクトの名前を示す**文字列**値です。  
+ 所有者を返す対象のオブジェクトの名前を示す **文字列** 値です。  
   
  *ObjectType*  
  オブジェクトの所有者を取得するオブジェクトの型を指定する、 [Objecttypeenum](../../../ado/reference/adox-api/objecttypeenum.md)定数の1つを指定する**Long 型**の値です。  
   
  *ObjectTypeId*  
- 任意。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す**バリアント**値です。 *ObjectType*が**Adpermobjproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
+ 任意。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す **バリアント** 値です。 *ObjectType*が**Adpermobjproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  プロバイダーがオブジェクトの所有者を返すことをサポートしていない場合、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  

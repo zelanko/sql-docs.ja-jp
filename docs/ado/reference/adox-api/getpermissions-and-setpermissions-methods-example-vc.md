@@ -1,4 +1,5 @@
 ---
+description: GetPermissions および SetPermissions メソッドの例 (VC++)
 title: GetPermissions および SetPermissions メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 238b9d82c3d71fde58a967b9d73d6a410f3883a5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 15680dc29e8731d03978d32f9b21ba33cb74794e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764875"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440034"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>GetPermissions および SetPermissions メソッドの例 (VC++)
-この例では、 [Getpermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)メソッドと[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)メソッドを示します。 次のコードは、Orders テーブルへのフルアクセスを管理ユーザーに提供します。  
+この例では、 [Getpermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) メソッドと [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) メソッドを示します。 次のコードは、Orders テーブルへのフルアクセスを管理ユーザーに提供します。  
   
 ```  
 // BeginGrantPermissionCpp.cpp  

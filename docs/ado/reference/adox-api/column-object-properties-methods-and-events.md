@@ -1,4 +1,5 @@
 ---
+description: Column オブジェクトのプロパティ、メソッド、およびイベント
 title: Column オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5905bbee711d63d86ddc2988799ee8ab5e5c9e79
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 025f5c3caafd950df9510c41129cea8f5da17c5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440334"
 ---
 # <a name="column-object-properties-methods-and-events"></a>Column オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -42,9 +43,9 @@ ms.locfileid: "82759378"
  [Type プロパティ (Column)](../../../ado/reference/adox-api/type-property-column-adox.md)  
   
 ## <a name="methods"></a>メソッド  
- [なし] :  
+ なし。  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

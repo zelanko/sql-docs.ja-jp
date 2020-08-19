@@ -1,4 +1,5 @@
 ---
+description: Catalog オブジェクト (ADOX)
 title: Catalog オブジェクト (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f13533ce9d14a650e409507e646eb536bad14e4d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 35fa08ba0d93a7adacf6d58338f4808e2a5eba9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440384"
 ---
 # <a name="catalog-object-adox"></a>Catalog オブジェクト (ADOX)
-データソースのスキーマカタログを記述するコレクション ([テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)、[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)、[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)、[グループ](../../../ado/reference/adox-api/groups-collection-adox.md)、および[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)) が格納されます。  
+データソースのスキーマカタログを記述するコレクション ([テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)、 [ビュー](../../../ado/reference/adox-api/views-collection-adox.md)、 [ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)、 [グループ](../../../ado/reference/adox-api/groups-collection-adox.md)、および [プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)) が格納されます。  
   
-## <a name="remarks"></a>Remarks  
- **カタログ**オブジェクトを変更するには、オブジェクトを追加または削除するか、既存のオブジェクトを変更します。 一部のプロバイダーでは、すべての**カタログ**オブジェクトがサポートされていない場合や、スキーマ情報の表示のみがサポートされている場合があります。  
+## <a name="remarks"></a>解説  
+ **カタログ**オブジェクトを変更するには、オブジェクトを追加または削除するか、既存のオブジェクトを変更します。 一部のプロバイダーでは、すべての **カタログ** オブジェクトがサポートされていない場合や、スキーマ情報の表示のみがサポートされている場合があります。  
   
  **Catalog**オブジェクトのプロパティとメソッドを使用すると、次のことができます。  
   

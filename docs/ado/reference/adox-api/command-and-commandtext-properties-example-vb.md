@@ -1,4 +1,5 @@
 ---
+description: Command プロパティおよび CommandText プロパティの例 (VB)
 title: Command プロパティと CommandText プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 413263a8-05c0-4404-929d-69f82b987ba3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 116aaa974255352e0d51171f804e86ac02191737
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a607b44311ab9229ecbcf8171e1a506d7b6713d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440264"
 ---
 # <a name="command-and-commandtext-properties-example-vb"></a>Command プロパティおよび CommandText プロパティの例 (VB)
-次のコードは、 [Command](../../../ado/reference/adox-api/command-property-adox.md)プロパティを使用してプロシージャのテキストを更新する方法を示しています。  
+次のコードは、 [Command](../../../ado/reference/adox-api/command-property-adox.md) プロパティを使用してプロシージャのテキストを更新する方法を示しています。  
   
 ```  
 ' BeginProcedureTextVB  

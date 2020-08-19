@@ -1,4 +1,5 @@
 ---
+description: Delete メソッド (ADOX Collections)
 title: Delete メソッド (ADOX Collections) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -30,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd9992804702a3b968e0a42b3a50a777f0690d35
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 7345337ab35f4154fd9dc53f749e04dba96dad48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440114"
 ---
 # <a name="delete-method-adox-collections"></a>Delete メソッド (ADOX Collections)
 オブジェクトをコレクションから削除します。  
@@ -49,9 +50,9 @@ Collection.Delete Name
   
 #### <a name="parameters"></a>パラメーター  
  *名前*  
- 削除するオブジェクトの名前または序数位置 (インデックス) を指定する**バリアント**です。  
+ 削除するオブジェクトの名前または序数位置 (インデックス) を指定する **バリアント** です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  *名前*がコレクションに存在しない場合、エラーが発生します。  
   
  [テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)と[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)のコレクションでは、プロバイダーがテーブルまたはユーザーの削除をサポートしていない場合に、エラーが発生します。 [プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)および[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)コレクションでは、プロバイダーがコマンドの永続化をサポートしていない場合、 **Delete**は失敗します。  

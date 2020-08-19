@@ -1,4 +1,5 @@
 ---
+description: Command プロパティ (ADOX)
 title: Command プロパティ (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6be0b6193c925ae7fc25ca400181d9f9077f3dfa
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: ec710b0ea9a208963efec64e75dc826d8d0e6b01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440244"
 ---
 # <a name="command-property-adox"></a>Command プロパティ (ADOX)
-プロシージャを作成または実行するために使用できる ADO[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトを指定します。  
+プロシージャを作成または実行するために使用できる ADO [コマンド](../../../ado/reference/ado-api/command-object-ado.md) オブジェクトを指定します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 有効な ADO**コマンド**オブジェクトを設定または返します。  
+ 有効な ADO **コマンド** オブジェクトを設定または返します。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  プロバイダーがコマンドの永続化をサポートしていない場合、このプロパティを取得して設定すると、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  

@@ -1,4 +1,5 @@
 ---
+description: Append メソッド (ADOX Columns)
 title: Append メソッド (ADOX Columns) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e69f2510e825a935cf7eb34951051c1e3848bb9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bd33dc71c9adcbe8e6ed25f965b227fbc76d96fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440524"
 ---
 # <a name="append-method-adox-columns"></a>Append メソッド (ADOX Columns)
 [Columns](../../../ado/reference/adox-api/columns-collection-adox.md)コレクションに新しい[Column](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトを追加します。  
@@ -35,13 +36,13 @@ Columns.Append Column [,Type] [,DefinedSize]
   
 #### <a name="parameters"></a>パラメーター  
  *列*  
- 追加する**列**オブジェクト、または作成して追加する列の名前。  
+ 追加する **列** オブジェクト、または作成して追加する列の名前。  
   
  *Type*  
- 任意。 列のデータ型を指定する**Long**型の値です。 *Type*パラメーターは、 **Column**オブジェクトの[type](../../../ado/reference/adox-api/type-property-column-adox.md)プロパティに対応しています。  
+ 任意。 列のデータ型を指定する **Long** 型の値です。 *Type*パラメーターは、 **Column**オブジェクトの[type](../../../ado/reference/adox-api/type-property-column-adox.md)プロパティに対応しています。  
   
  *DefinedSize*  
- 任意。 列のサイズを指定する**Long 型**の値です。 指定された*サイズ*のパラメーターは、 **Column**オブジェクトの "指定された[サイズ](../../../ado/reference/adox-api/definedsize-property-adox.md)" プロパティに対応します。  
+ 任意。 列のサイズを指定する **Long 型** の値です。 指定された*サイズ*のパラメーターは、 **Column**オブジェクトの "指定された[サイズ](../../../ado/reference/adox-api/definedsize-property-adox.md)" プロパティに対応します。  
   
 > [!NOTE]
 >  [テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)コレクションに既に追加されている[テーブル](../../../ado/reference/adox-api/table-object-adox.md)**に列が**存在しない場合、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)の**Columns**コレクションに**列**を追加すると、エラーが発生します。  
