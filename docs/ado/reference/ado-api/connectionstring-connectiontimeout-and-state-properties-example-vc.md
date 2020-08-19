@@ -1,4 +1,5 @@
 ---
+description: ConnectionString、ConnectionTimeout、State プロパティの例 (VC + +)
 title: 接続プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f70a5e98a34811af2b6d2b173da3f6c4215682d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b0281b569a6bfaf4f28d6958011ab3efacb4221
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444464"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString、ConnectionTimeout、State プロパティの例 (VC + +)
-この例では、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを使用して[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを開くさまざまな方法を示します。 また、 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)プロパティを使用して接続タイムアウト期間を設定し、 [state](../../../ado/reference/ado-api/state-property-ado.md)プロパティを使用して接続の状態を確認します。 このプロシージャを実行するには、GetState 関数が必要です。  
+この例では、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) プロパティを使用して [接続](../../../ado/reference/ado-api/connection-object-ado.md) オブジェクトを開くさまざまな方法を示します。 また、 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) プロパティを使用して接続タイムアウト期間を設定し、 [state](../../../ado/reference/ado-api/state-property-ado.md) プロパティを使用して接続の状態を確認します。 このプロシージャを実行するには、GetState 関数が必要です。  
   
 > [!NOTE]
->  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes**または**INTEGRATED Security = SSPI**を指定する必要があります。  
+>  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes** または **INTEGRATED Security = SSPI** を指定する必要があります。  
   
 ```  
 // ConnectionStringSampleCpp.cpp  

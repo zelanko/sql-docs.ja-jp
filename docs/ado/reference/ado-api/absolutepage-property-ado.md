@@ -1,4 +1,5 @@
 ---
+description: AbsolutePage プロパティ (ADO)
 title: AbsolutePage プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0da08a0c51c8d4d89329bbe9c36cacd7979c1e71
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: eaa88db423e255efc419dd50ccb6ec34d309aa98
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451794"
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage プロパティ (ADO)
 現在のレコードが存在するページを示します。  
@@ -28,10 +29,10 @@ ms.locfileid: "82747547"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  32ビットコードの場合、は、1から[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト ([PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)) 内のページ数までの**Long 型**の値を設定または返します。または、 [positionenum](../../../ado/reference/ado-api/positionenum.md)値の1つを返します。  
   
- 64ビットコードの場合は、64ビット値を格納するためにに用意されているデータ型を使用します。 たとえば、 **Long 型**の値を使用することも、dbordinal などの64ビットの長さになる別の値を使用することもできます。 **Positionenum**値は、32ビットの長さに制限されているため、使用しないでください。  
+ 64ビットコードの場合は、64ビット値を格納するためにに用意されているデータ型を使用します。 たとえば、 **Long 型** の値を使用することも、dbordinal などの64ビットの長さになる別の値を使用することもできます。 **Positionenum**値は、32ビットの長さに制限されているため、使用しないでください。  
   
-## <a name="remarks"></a>Remarks  
- このプロパティは、現在のレコードが配置されているページ番号を識別するために使用できます。 この例では、 [pagesize](../../../ado/reference/ado-api/pagesize-property-ado.md)プロパティを使用して、レコード**セット**オブジェクトの合計行セット数を一連のページに論理的に分割しています。各ページには、レコード数が**pagesize**に等しいものが含まれています (最後のページを除き、レコードが少なくなる場合があります)。 このプロパティを使用できるようにするには、プロバイダーが適切な機能をサポートしている必要があります。  
+## <a name="remarks"></a>解説  
+ このプロパティは、現在のレコードが配置されているページ番号を識別するために使用できます。 この例では、 [pagesize](../../../ado/reference/ado-api/pagesize-property-ado.md) プロパティを使用して、レコード **セット** オブジェクトの合計行セット数を一連のページに論理的に分割しています。各ページには、レコード数が **pagesize** に等しいものが含まれています (最後のページを除き、レコードが少なくなる場合があります)。 このプロパティを使用できるようにするには、プロバイダーが適切な機能をサポートしている必要があります。  
   
 -   **AbsolutePage**プロパティを取得または設定するとき、ADO は[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティと[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)プロパティを次のように一緒に使用します。  
   

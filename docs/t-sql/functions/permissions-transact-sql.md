@@ -1,4 +1,5 @@
 ---
+description: PERMISSIONS (Transact-SQL)
 title: PERMISSIONS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1985ba159951718772d6a7bc16b4ea76f59d5686
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0681d22c6a48d8680c7b44e767558f02e2a4c251
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467939"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 
 ## <a name="arguments"></a>引数
  *objectid*  
- セキュリティ保護可能なリソースの ID を指定します。 *objectid* を指定しない場合、ビットマップ値には現在のユーザーのステートメント権限が含まれます。それ以外の場合、ビットマップ値には現在のユーザーのセキュリティ保護可能なリソースについての権限が含まれます。 指定したセキュリティ保護可能なリソースは、現在のデータベースに存在する必要があります。 [objectid](../../t-sql/functions/object-id-transact-sql.md) 値を確認するには、*OBJECT_ID* 関数を使用します。  
+ セキュリティ保護可能なリソースの ID を指定します。 *objectid* を指定しない場合、ビットマップ値には現在のユーザーのステートメント権限が含まれます。それ以外の場合、ビットマップ値には現在のユーザーのセキュリティ保護可能なリソースについての権限が含まれます。 指定したセキュリティ保護可能なリソースは、現在のデータベースに存在する必要があります。 *objectid* 値を確認するには、[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 関数を使用します。  
   
  **'** *column* **'**  
  権限情報を返す列の名前を指定します (省略可能)。 *objectid* で指定したテーブル内の有効な列名を指定する必要があります。  

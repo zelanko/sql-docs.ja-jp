@@ -1,4 +1,5 @@
 ---
+description: Count プロパティ (ADO)
 title: Count プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ecf53c6743e20ec3fe960d10dd16f5577a7d69f0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: cc0e15e4f5157e28eb35325f09fa5f27a1540d6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444354"
 ---
 # <a name="count-property-ado"></a>Count プロパティ (ADO)
 コレクション内のオブジェクトの数を示します。  
@@ -31,7 +32,7 @@ ms.locfileid: "87242752"
 ## <a name="remarks"></a>解説  
  **Count**プロパティを使用して、特定のコレクションに含まれるオブジェクトの数を確認します。  
   
- コレクションのメンバーの番号はゼロで始まるので、常にゼロのメンバーで始まり、 **Count**プロパティの値から1を引いた値で終わる必要があります。 Microsoft Visual Basic を使用していて、 **Count**プロパティを確認せずにコレクションのメンバーをループする場合は、for each を使用します。 **次**のコマンド。  
+ コレクションのメンバーの番号はゼロで始まるので、常にゼロのメンバーで始まり、 **Count** プロパティの値から1を引いた値で終わる必要があります。 Microsoft Visual Basic を使用していて、 **Count** プロパティを確認せずにコレクションのメンバーをループする場合は、for each を使用します。 **次** のコマンド。  
   
  **Count**プロパティが0の場合、コレクションにはオブジェクトが存在しません。  
   

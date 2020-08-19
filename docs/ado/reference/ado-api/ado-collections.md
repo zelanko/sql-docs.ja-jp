@@ -1,4 +1,5 @@
 ---
+description: ADO のコレクション
 title: ADO コレクション |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c19252e14ba5a04329c9cdc1c38b5ee6398b7874
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7fb960d7539dd2d47be6eb2aad424808d44db10d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451474"
 ---
 # <a name="ado-collections"></a>ADO のコレクション
 これらのコレクションと ADO オブジェクトの間のリレーションシップは、 [Ado オブジェクトモデル](../../../ado/reference/ado-api/ado-object-model.md)で表現されます。  
   
- 各コレクションには、対応するオブジェクトを含めることができます。 たとえば、[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトを[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクションに含めることができます。 オブジェクトの詳細については、「 [ADO オブジェクト](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)」または「特定のオブジェクト」を参照してください。  
+ 各コレクションには、対応するオブジェクトを含めることができます。 たとえば、 [エラー](../../../ado/reference/ado-api/error-object.md) オブジェクトを [エラー](../../../ado/reference/ado-api/errors-collection-ado.md) コレクションに含めることができます。 オブジェクトの詳細については、「 [ADO オブジェクト](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) 」または「特定のオブジェクト」を参照してください。  
   
 |コレクション|説明|  
 |-|-|  
-|[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)|プロバイダーに関連する単一のエラーへの応答として作成されたすべての**エラー**オブジェクトが含まれます。|  
-|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|**レコードセット**オブジェクトのすべての**Field**オブジェクトを格納します。|  
+|[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)|プロバイダーに関連する単一のエラーへの応答として作成されたすべての **エラー** オブジェクトが含まれます。|  
+|[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)|**レコードセット**オブジェクトのすべての**Field**オブジェクトを格納します。|  
 |[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)|**Command**オブジェクトのすべての**パラメーター**オブジェクトを含みます。|  
-|[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)|オブジェクトの特定のインスタンスのすべての**プロパティ**オブジェクトを含みます。|  
+|[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)|オブジェクトの特定のインスタンスのすべての **プロパティ** オブジェクトを含みます。|  
   
 ## <a name="see-also"></a>参照  
  [ADO API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   

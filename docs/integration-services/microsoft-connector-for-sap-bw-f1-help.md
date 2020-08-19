@@ -1,4 +1,5 @@
 ---
+description: Microsoft Connector for SAP BW の F1 ヘルプ
 title: Microsoft Connector for SAP BW の F1 ヘルプ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aee724d88bfc203472c09d80e3e3ceec9bafa7f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f52bd1f1c56a8f9dc84b1474bf4447c6311cb508
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924015"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430164"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Microsoft Connector for SAP BW の F1 ヘルプ
 
@@ -40,49 +41,49 @@ ms.locfileid: "86924015"
   
 ### <a name="sap-bw-source-f1-help"></a>SAP BW 変換元の F1 ヘルプ  
   
--   [SAP BW ソース エディター ([接続マネージャー] ページ)](../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [SAP BW ソース エディター &#40;[接続マネージャー] ページ&#41;](../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
 -   [SAP BW ソース エディター ([列] ページ)](../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
 -   [SAP BW ソース エディター ([エラー出力] ページ)](../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [SAP BW ソース エディター ([詳細設定] ページ)](../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [SAP BW ソース エディター &#40;[詳細設定] ページ&#41;](../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
--   [RFC 転送先の参照](../integration-services/data-flow/look-up-rfc-destination.md)  
+-   [[RFC 転送先の参照]](../integration-services/data-flow/look-up-rfc-destination.md)  
   
--   [プロセス チェーンの参照](../integration-services/data-flow/look-up-process-chain.md)  
+-   [[プロセス チェーンの参照]](../integration-services/data-flow/look-up-process-chain.md)  
   
--   [要求のログ](../integration-services/data-flow/request-log.md)  
+-   [[要求のログ]](../integration-services/data-flow/request-log.md)  
   
 -   [プレビュー](../integration-services/data-flow/preview.md)  
   
 ### <a name="sap-bw-destination-f1-help"></a>SAP BW 変換先の F1 ヘルプ  
   
--   [SAP BW 変換先エディター ([接続マネージャー] ページ)](../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [SAP BW 変換先エディター &#40;[接続マネージャー] ページ&#41;](../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [SAP BW 変換先エディター ([マッピング] ページ)](../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [SAP BW 変換先エディター &#40;[マッピング] ページ&#41;](../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [SAP BW 変換先エディター ([エラー出力] ページ)](../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [SAP BW 変換先エディター &#40;[エラー出力] ページ&#41;](../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [SAP BW 変換先エディター ([詳細設定] ページ)](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [SAP BW 変換先エディター &#40;[詳細設定] ページ&#41;](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
--   [インフォパッケージの参照](../integration-services/data-flow/look-up-infopackage.md)  
+-   [[インフォパッケージの参照]](../integration-services/data-flow/look-up-infopackage.md)  
   
--   [新しいインフォオブジェクトの作成](../integration-services/data-flow/create-new-infoobject.md)  
+-   [[新しいインフォオブジェクトの作成]](../integration-services/data-flow/create-new-infoobject.md)  
   
--   [トランザクション データのインフォキューブの作成](../integration-services/data-flow/create-infocube-for-transaction-data.md)  
+-   [[トランザクション データのインフォキューブの作成]](../integration-services/data-flow/create-infocube-for-transaction-data.md)  
   
--   [インフォオブジェクトの参照](../integration-services/data-flow/look-up-infoobject.md)  
+-   [[インフォオブジェクトの参照]](../integration-services/data-flow/look-up-infoobject.md)  
   
--   [インフォソースの作成](../integration-services/data-flow/create-infosource.md)  
+-   [[インフォソースの作成]](../integration-services/data-flow/create-infosource.md)  
   
--   [トランザクション データのインフォソースの作成](../integration-services/data-flow/create-infosource-for-transaction-data.md)  
+-   [[トランザクション データのインフォソースの作成]](../integration-services/data-flow/create-infosource-for-transaction-data.md)  
   
--   [マスター データのインフォソースの作成](../integration-services/data-flow/create-infosource-for-master-data.md)  
+-   [[マスター データのインフォソースの作成]](../integration-services/data-flow/create-infosource-for-master-data.md)  
   
 -   [インフォパッケージの作成](../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft Connector for SAP BW のコンポーネント](../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

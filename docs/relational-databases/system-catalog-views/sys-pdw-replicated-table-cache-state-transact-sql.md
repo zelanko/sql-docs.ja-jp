@@ -1,4 +1,5 @@
 ---
+description: sys.pdw_replicated_table_cache_state (Transact-SQL)
 title: sys.pdw_replicated_table_cache_state (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 07/03/2017
@@ -11,12 +12,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6fa3c064a2fb54d474afee9cbd4d20c878ff1893
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ee5476020cfcece9bf9168bc048f3a0f3d34b635
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475364"
 ---
 # <a name="syspdw_replicated_table_cache_state-transact-sql"></a>sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -25,8 +26,8 @@ ms.locfileid: "87394037"
   
 |列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|object_id|**int**|テーブルのオブジェクト ID。 「 [Sys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。<br /><br /> **object_id**は、このビューのキーです。||  
-|state|**nvarchar(40)**|このテーブルのレプリケートされたテーブルのキャッシュ状態です。|' NotReady '、' Ready '|  
+|object_id|**int**|テーブルのオブジェクト ID。 「 [Sys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。<br /><br /> **object_id** は、このビューのキーです。||  
+|状態|**nvarchar(40)**|このテーブルのレプリケートされたテーブルのキャッシュ状態です。|' NotReady '、' Ready '|  
   
 ## <a name="example"></a>例
 この例では、sys. pdw_replicated_table_cache_state をテーブルと結合して、レプリケートされたテーブルキャッシュのテーブル名と状態を取得します。
@@ -39,6 +40,6 @@ SELECT t.[name], p.[object_id], p.[state]
 
 
 
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
  SQL Data Warehouse と並列データウェアハウスのすべてのカタログビューの一覧については、「 [SQL Data Warehouse および並列データウェアハウスのカタログビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)」を参照してください。   
   

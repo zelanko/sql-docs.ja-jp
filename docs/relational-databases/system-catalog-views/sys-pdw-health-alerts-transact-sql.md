@@ -1,4 +1,5 @@
 ---
+description: pdw_health_alerts (Transact-sql)
 title: pdw_health_alerts (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f28f48d8530111e2de12bbb6f075b69147ad1cff
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 3b2da23d973042638f39e52ed7c1173422a97eeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475411"
 ---
 # <a name="syspdw_health_alerts-transact-sql"></a>pdw_health_alerts (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "87396044"
 |alert_id|**int**|警告の一意識別子。<br /><br /> このビューのキー。|NOT NULL|  
 |component_id|**int**|このアラートが適用されるコンポーネントの ID。 コンポーネントは、"パワーサプライ" などの一般的なコンポーネント識別子であり、インストールに固有のものではありません。 「 [Sys. pdw_health_components &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)」を参照してください。|NOT NULL|  
 |alert_name|**nvarchar (255)**|アラートの名前。|NOT NULL|  
-|state|**nvarchar(32)**|アラートの状態。|NOT NULL<br /><br /> 指定できる値<br /><br /> 操作<br /><br /> 'NonOperational'<br /><br /> Degraded<br /><br /> 障害|  
+|状態|**nvarchar(32)**|アラートの状態。|NOT NULL<br /><br /> 指定できる値<br /><br /> 操作<br /><br /> 'NonOperational'<br /><br /> Degraded<br /><br /> 障害|  
 |severity|**nvarchar(32)**|アラートの重大度。|NOT NULL<br /><br /> 指定できる値<br /><br /> 専用<br /><br /> 要する<br /><br /> エラー|  
 |type|**nvarchar(32)**|アラートの種類。|NOT NULL<br /><br /> 指定できる値<br /><br /> StatusChange-デバイスの状態が変更されました。<br /><br /> しきい値-値がしきい値を超えました。|  
 |description|**nvarchar (4000)**|アラートの説明。|NOT NULL|  

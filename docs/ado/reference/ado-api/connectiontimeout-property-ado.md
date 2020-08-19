@@ -1,4 +1,5 @@
 ---
+description: ConnectionTimeout プロパティ (ADO)
 title: ConnectionTimeout プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 252707003d3471d611ffafb637250009da20504f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c117974f9335ef3aa939f742781f3f381ab6cbd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444444"
 ---
 # <a name="connectiontimeout-property-ado"></a>ConnectionTimeout プロパティ (ADO)
 接続の確立中に、試行を終了してエラーを生成するまでの待機時間を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 接続を開くまでの待機時間を秒単位で示す**Long 型**の値を設定または返します。 既定値は 15 です。  
+ 接続を開くまでの待機時間を秒単位で示す **Long 型** の値を設定または返します。 既定値は 15 です。  
   
 ## <a name="remarks"></a>解説  
- ネットワークトラフィックまたはサーバーが過負荷になっている場合[は、接続オブジェクトの](../../../ado/reference/ado-api/connection-object-ado.md) **ConnectionTimeout**プロパティを使用して、接続試行を破棄する必要があります。 接続を開始する前に**ConnectionTimeout**プロパティの設定から経過した時間が経過すると、エラーが発生し、ADO は試行をキャンセルします。 このプロパティを0に設定した場合、ADO は接続が開かれるまで無制限に待機します。 コードを記述しているプロバイダーで、 **ConnectionTimeout**機能がサポートされていることを確認します。  
+ ネットワークトラフィックまたはサーバーが過負荷になっている場合[は、接続オブジェクトの](../../../ado/reference/ado-api/connection-object-ado.md) **ConnectionTimeout**プロパティを使用して、接続試行を破棄する必要があります。 接続を開始する前に **ConnectionTimeout** プロパティの設定から経過した時間が経過すると、エラーが発生し、ADO は試行をキャンセルします。 このプロパティを0に設定した場合、ADO は接続が開かれるまで無制限に待機します。 コードを記述しているプロバイダーで、 **ConnectionTimeout** 機能がサポートされていることを確認します。  
   
  **ConnectionTimeout**プロパティは、接続が閉じられている場合は読み取り/書き込みが、開いている場合は読み取り専用になります。  
   

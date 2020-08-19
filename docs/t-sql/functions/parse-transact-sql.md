@@ -1,4 +1,5 @@
 ---
+description: PARSE (Transact-SQL)
 title: PARSE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/05/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 36649527ab73d15de4c811bcbe5c3234980e6a86
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7dac50281c264412e288fe3fce25fda84d99b659
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459650"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,13 +75,13 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  *data_type* パラメーターの値は、スタイルと共に、次の表に示す型に制限されます。 スタイル情報は、許可するパターンの種類を決定するために提供されます。 スタイルについて詳しくは、.NET Framework のドキュメントで **System.Globalization.NumberStyles** および **DateTimeStyles** 列挙型を参照してください。  
   
-|カテゴリ|種類|.NET Framework 型|使用されるスタイル|  
+|カテゴリ|Type|.NET Framework 型|使用されるスタイル|  
 |--------------|----------|-------------------------|-----------------|  
 |数値|bigint|Int64|NumberStyles.Number|  
 |数値|INT|Int32|NumberStyles.Number|  
 |数値|smallint|Int16|NumberStyles.Number|  
 |数値|tinyint|Byte|NumberStyles.Number|  
-|数値|decimal|Decimal|NumberStyles.Number|  
+|数値|decimal|Decimal (10 進数型)|NumberStyles.Number|  
 |数値|numeric|Decimal|NumberStyles.Number|  
 |数値|float|Double|NumberStyles.Float|  
 |数値|real|Single|NumberStyles.Float|  
@@ -99,39 +100,39 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 |完全名|エイリアス|LCID|特定のカルチャ|  
 |---------------|-----------|----------|----------------------|  
-|us_english|English|1033|ja-JP|  
-|Deutsch|German|1031|de-DE|  
-|Français|French|1036|fr-FR|  
-|Japanese|Japanese|1041|ja-JP|  
-|Dansk|Danish|1030|da-DK|  
-|Español|Spanish|3082|es-ES|  
-|Italiano|Italian|1040|it-IT|  
-|Nederlands|Dutch|1043|nl-NL|  
+|us_english|英語|1033|ja-JP|  
+|Deutsch|ドイツ語|1031|de-DE|  
+|Français|フランス語|1036|fr-FR|  
+|Japanese|日本語|1041|ja-JP|  
+|Dansk|デンマーク語|1030|da-DK|  
+|Español|スペイン語|3082|es-ES|  
+|Italiano|イタリア語|1040|it-IT|  
+|Nederlands|オランダ語|1043|nl-NL|  
 |Norsk|ノルウェー語|2068|nn-NO|  
-|Português|Portuguese|2070|pt-PT|  
-|Suomi|Finnish|1035|fi-FI|  
-|Svenska|Swedish|1053|sv-SE|  
-|čeština|Czech|1029|Cs-CZ|  
-|magyar|Hungarian|1038|Hu-HU|  
-|polski|Polish|1045|Pl-PL|  
-|română|Romanian|1048|Ro-RO|  
-|hrvatski|Croatian|1050|hr-HR|  
-|slovenčina|Slovak|1051|Sk-SK|  
-|slovenski|Slovenian|1060|Sl-SI|  
-|ελληνικά|Greek|1032|El-GR|  
-|български|Bulgarian|1026|bg-BG|  
-|русский|Russian|1049|Ru-RU|  
-|Türkçe|Turkish|1055|Tr-TR|  
+|Português|ポルトガル語|2070|pt-PT|  
+|Suomi|フィンランド語|1035|fi-FI|  
+|Svenska|スウェーデン語|1053|sv-SE|  
+|čeština|チェコ語|1029|Cs-CZ|  
+|magyar|ハンガリー語|1038|Hu-HU|  
+|polski|ポーランド語|1045|Pl-PL|  
+|română|ルーマニア語|1048|Ro-RO|  
+|hrvatski|クロアチア語|1050|hr-HR|  
+|slovenčina|スロバキア語|1051|Sk-SK|  
+|slovenski|スロベニア語|1060|Sl-SI|  
+|ελληνικά|ギリシャ語|1032|El-GR|  
+|български|ブルガリア語|1026|bg-BG|  
+|русский|ロシア語|1049|Ru-RU|  
+|Türkçe|トルコ語|1055|Tr-TR|  
 |British|英語 (U.K.)|2057|en-GB|  
-|eesti|Estonian|1061|Et-EE|  
-|latviešu|Latvian|1062|lv-LV|  
-|lietuvių|Lithuanian|1063|lt-LT|  
+|eesti|エストニア語|1061|Et-EE|  
+|latviešu|ラトビア語|1062|lv-LV|  
+|lietuvių|リトアニア語|1063|lt-LT|  
 |Português (Brasil)|Brazilian|1046|pt-BR|  
 |繁體中文|Traditional Chinese|1028|zh-TW|  
-|한국어|Korean|1042|Ko-KR|  
+|한국어|韓国語|1042|Ko-KR|  
 |简体中文|簡体中国語|2052|zh-CN|  
 |アラビア語|アラビア語|1025|ar-SA|  
-|ไทย|Thai|1054|Th-TH|  
+|ไทย|タイ語|1054|Th-TH|  
   
 ## <a name="examples"></a>例  
   

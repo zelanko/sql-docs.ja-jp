@@ -1,4 +1,5 @@
 ---
+description: ConnectionString プロパティ (ADO)
 title: ConnectionString プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39eb67a98d710e27c051d77aa7843663c853b9e0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 617ceace87a7f265d3d4db901b0a586481c19e32
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444454"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString プロパティ (ADO)
 データソースへの接続を確立するために使用される情報を示します。  
@@ -31,7 +32,7 @@ ms.locfileid: "82762633"
 ## <a name="remarks"></a>解説  
  **ConnectionString**プロパティを使用して、セミコロンで区切られた一連の*引数* *= value*ステートメントを含む詳細な接続文字列を渡して、データソースを指定します。  
   
- ADO は**ConnectionString**プロパティの5つの引数をサポートしています。その他の引数は、ADO によって処理されることなくプロバイダーに直接渡されます。 ADO でサポートされる引数は次のとおりです。  
+ ADO は **ConnectionString** プロパティの5つの引数をサポートしています。その他の引数は、ADO によって処理されることなくプロバイダーに直接渡されます。 ADO でサポートされる引数は次のとおりです。  
   
 |引数|説明|  
 |--------------|-----------------|  

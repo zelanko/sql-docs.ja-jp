@@ -1,4 +1,5 @@
 ---
+description: MSmerge_conflicts_info (Transact-SQL)
 title: MSmerge_conflicts_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,31 +18,31 @@ helpviewer_keywords:
 ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff17275823540538a1ddb35cf17b0fa393a6ee11
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2acd79359758c4bc5c14d8d204a5b5ac6b889c48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469073"
 ---
 # <a name="msmerge_conflicts_info-transact-sql"></a>MSmerge_conflicts_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_conflicts_info**テーブルは、サブスクリプションをマージパブリケーションと同期するときに発生する競合を追跡します。 競合している行データの損失は、競合が発生したアーティクルの[MSmerge_conflict_publication_article](../../relational-databases/system-tables/msmerge-conflict-publication-article-transact-sql.md)テーブルに格納されます。 このテーブルは、パブリッシャー側のパブリケーションデータベースに格納され、サブスクライバー側のサブスクリプションデータベースに格納されます。  
+  **MSmerge_conflicts_info**テーブルは、サブスクリプションをマージパブリケーションと同期するときに発生する競合を追跡します。 競合している行データの損失は、競合が発生したアーティクルの [MSmerge_conflict_publication_article](../../relational-databases/system-tables/msmerge-conflict-publication-article-transact-sql.md) テーブルに格納されます。 このテーブルは、パブリッシャー側のパブリケーションデータベースに格納され、サブスクライバー側のサブスクリプションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|パブリッシュされたテーブルのニックネーム。|  
 |**rowguid**|**uniqueidentifier**|競合している行の識別子です。|  
-|**origin_datasource**|**nvarchar(255)**|競合している変更が発生したデータベースの名前です。|  
+|**origin_datasource**|**nvarchar (255)**|競合している変更が発生したデータベースの名前です。|  
 |**conflict_type**|**int**|発生した競合の種類。次のいずれかを指定できます。<br /><br /> **1** = 更新の競合: 行レベルで競合が検出されます。<br /><br /> **2** = 列更新の競合: 列レベルで競合が検出されました。<br /><br /> **3** = 更新の削除 Wins の競合: 削除によって競合が優先されます。<br /><br /> **4** = 更新 Wins 削除の競合: 競合が失われた削除済みの rowguid がこのテーブルに記録されます。<br /><br /> **5** = 挿入のアップロードに失敗しました: サブスクライバーからの挿入をパブリッシャーで適用できませんでした。<br /><br /> **6** = ダウンロードの挿入に失敗しました: パブリッシャーからの挿入をサブスクライバーで適用できませんでした。<br /><br /> **7** = 削除のアップロードに失敗しました: サブスクライバーでの削除をパブリッシャーにアップロードできませんでした。<br /><br /> **8** = 削除のダウンロードに失敗: パブリッシャーでの削除をサブスクライバーにダウンロードできませんでした。<br /><br /> **9** = 更新のアップロードに失敗しました: サブスクライバーでの更新をパブリッシャーで適用できませんでした。<br /><br /> **10** = 更新のダウンロードに失敗しました: パブリッシャーでの更新をサブスクライバーに適用できませんでした。<br /><br /> **11** = 解決策<br /><br /> **12** = 論理レコードの更新による Wins の削除: 競合が失われた削除された論理レコードがこのテーブルに記録されます。<br /><br /> **13** = 論理レコードの競合の挿入更新: 論理レコードへの挿入が更新と競合しています。<br /><br /> **14** = 論理レコードの削除 Wins 更新の競合: 競合が失われる更新された論理レコードがこのテーブルに記録されます。|  
-|**reason_code**|**int**|状況に依存する可能性があるエラーコード。 更新-更新および更新-削除の競合の場合、この列に使用される値は**conflict_type**と同じになります。 ただし、失敗した変更の競合については、理由コードは、マージエージェントが変更を適用できない原因となったエラーです。 たとえば、主キー違反のためにマージエージェントがサブスクライバーで挿入を適用できない場合、6の**conflict_type** ("download insert failed") と2627の**reason_code**がログに記録されます。これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主キー違反の内部エラーメッセージです。 "% ls 制約 '%. * ls ' の違反です。 オブジェクト '% には重複するキーを挿入できません。 \*ls '. "|  
+|**reason_code**|**int**|状況に依存する可能性があるエラーコード。 更新-更新および更新-削除の競合の場合、この列に使用される値は **conflict_type**と同じになります。 ただし、失敗した変更の競合については、理由コードは、マージエージェントが変更を適用できない原因となったエラーです。 たとえば、主キー違反のためにマージエージェントがサブスクライバーで挿入を適用できない場合、6の **conflict_type** ("download insert failed") と2627の **reason_code** がログに記録されます。これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主キー違反の内部エラーメッセージです。 "% ls 制約 '%. * ls ' の違反です。 オブジェクト '% には重複するキーを挿入できません。 \*ls '. "|  
 |**reason_text**|**nvarchar (720)**|状況に依存する可能性があるエラーの説明。|  
 |**pubid**|**uniqueidentifier**|パブリケーションの識別子。|  
 |**MSrepl_create_time**|**datetime**|競合が発生した時刻。|  
 |**origin_datasource_id**|**uniqueidentifier**|競合する変更が発生したデータベースの識別子。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_partition_stats (Transact-SQL)
 title: dm_db_partition_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/28/2020
@@ -20,11 +21,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 191dc00caa5ab39d3a3adf7882aa3bb88ea0d3f3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eddc690043c541c3726c66bba40f4a81d188e91a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490012"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,10 +52,10 @@ ms.locfileid: "86011637"
 |**used_page_count**|**bigint**|パーティションで使用されているページの合計数。 **In_row_used_page_count**lob_used_page_count row_overflow_used_page_count として計算さ  +  **lob_used_page_count**  +  **row_overflow_used_page_count**れます。|  
 |**reserved_page_count**|**bigint**|パーティションで予約されているページの合計数。 **In_row_reserved_page_count**lob_reserved_page_count row_overflow_reserved_page_count として計算さ  +  **lob_reserved_page_count**  +  **row_overflow_reserved_page_count**れます。|  
 |**row_count**|**bigint**|パーティション内の行数の概算値です。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
-|**distribution_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 分布に関連付けられている一意の数値 id です。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**distribution_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 分布に関連付けられている一意の数値 id です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **sys.dm_db_partition_stats** では、データベースにあるすべてのパーティションの行内データ、LOB データ、行オーバーフロー データについて、格納と管理に使用されている領域に関する情報が表示されます。 ここではパーティションごとに 1 行が表示されます。  
   
  出力の基になる数字は、メモリにキャッシュされるか、各種システム テーブルのディスクに格納されます。  
@@ -65,7 +67,7 @@ ms.locfileid: "86011637"
  各テーブルまたはインデックスの合計数は、関連するすべてのパーティションにおける数を加算することで取得されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- `VIEW DATABASE STATE` `VIEW DEFINITION` には、 **dm_db_partition_stats**動的管理ビューを照会するための権限とアクセス許可が必要です。 動的管理ビューに対する権限の詳細については、「 [transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
+ `VIEW DATABASE STATE` `VIEW DEFINITION` には、 **dm_db_partition_stats**動的管理ビューを照会するための権限とアクセス許可が必要です。 動的管理ビューに対する権限の詳細については、「 [transact-sql&#41;&#40;の動的管理ビューおよび関数 ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
   
@@ -103,9 +105,9 @@ WHERE object_id=OBJECT_ID('HumanResources.Employee')    AND (index_id=0 or index
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;データベース関連の動的管理ビュー ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   
 

@@ -1,4 +1,5 @@
 ---
+description: CLR アセンブリカタログビュー (Transact-sql)
 title: CLR アセンブリカタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b2e71480-92b2-4610-a4ff-dafb121087d9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3bae2182aec6b86776c28fa6573d7f249c5e11de
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: ef288226d99e8a582c82f94b686e6689fc5b432d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475491"
 ---
 # <a name="clr-assembly-catalog-views-transact-sql"></a>CLR アセンブリカタログビュー (Transact-sql)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

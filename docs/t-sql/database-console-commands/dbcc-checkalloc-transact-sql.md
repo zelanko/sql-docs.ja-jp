@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKALLOC (Transact-SQL)
 title: DBCC CHECKALLOC (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 3b85dbd8d97583b6895dfb61bf7d0f50197f0635
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b4631e88e76aeb9657327d9dbe4d6300b36b70df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485579"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459963"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 
@@ -136,7 +137,7 @@ DBCC CHECKALLOC でエラーがレポートされた場合は、修復を実行�
 ## <a name="result-sets"></a>結果セット  
 次の表は、DBCC CHECKALLOC によって返される情報です。
   
-|アイテム|説明|  
+|項目|説明|  
 |---|---|  
 |FirstIAM|内部使用のみです。|  
 |Root|内部使用のみです。|  
@@ -146,14 +147,14 @@ DBCC CHECKALLOC でエラーがレポートされた場合は、修復を実行�
   
 DBCC CHECKALLOC では、各ファイルのインデックスとパーティションの割り当ての概要もレポートされます。 この概要では、データの分布が示されます。
   
-|アイテム|説明|  
+|項目|説明|  
 |---|---|  
 |Reserved pages|インデックスに割り当てられているページ、および割り当てられているエクステント内の未使用ページ。|  
 |Used pages|インデックスによって割り当てられ、使用中のページ。|  
 |Partition ID|内部使用のみです。|  
 |Alloc Unit ID|内部使用のみです。|  
 |In-row data|インデックスまたはヒープ データが含まれるページ。|  
-|LOB データ|ページには、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**text**、**ntext**、**xml**、**image** データが含まれています。|  
+|LOB データ|ページには、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**text**、**ntext**、**xml**、**image** データが含まれています。|  
 |Row-overflow data|行外に移動した可変長の列のデータが含まれるページ。|  
   
 DBCC CHECKALLOC では、ESTIMATEONLY または NO_INFOMSGS を指定した場合を除き、次の結果セットが返されます。値は変化することがあります。
@@ -234,7 +235,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 Sysadmin 固定サーバー ロールまたは db_owner 固定データベース ロールのメンバーシップが必要です。
   
 ## <a name="examples"></a>例  
-次の例では、現在のデータベースと `DBCC CHECKALLOC` データベースに対して `AdventureWorks2012` を実行します。
+次の例では、現在のデータベースと `AdventureWorks2012` データベースに対して `DBCC CHECKALLOC` を実行します。
   
 ```sql  
 -- Check the current database.  

@@ -1,4 +1,5 @@
 ---
+description: AddNew メソッドの例 (JScript)
 title: AddNew メソッドの例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3943b06e623eca2e90a3a5a3aeefaf2dede83bb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3c1e4ca8f4019153620494a3b6d945d9fdb75338
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760638"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451574"
 ---
 # <a name="addnew-method-example-jscript"></a>AddNew メソッドの例 (JScript)
-この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを使用して、指定した名前の新しいレコードを作成します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Addnewjs. asp**として保存します。  
+この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) メソッドを使用して、指定した名前の新しいレコードを作成します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Addnewjs. asp**として保存します。  
   
 ```  
 <!-- BeginAddNewJS -->  

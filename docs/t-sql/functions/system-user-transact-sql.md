@@ -1,4 +1,5 @@
 ---
+description: SYSTEM_USER (Transact-SQL)
 title: SYSTEM_USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -26,12 +27,12 @@ ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93b31a9f6b86ed256f84fb1dba731e1d248c3c5d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 02877aa808d53a586ae9191154dc0bfe3f9a785e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459551"
 ---
 # <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -51,12 +52,12 @@ SYSTEM_USER
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  SYSTEM_USER 関数は、CREATE TABLE および ALTER TABLE ステートメント内で DEFAULT 制約と共に使用できます。 標準的な関数としても使用できます。  
   
  ユーザー名とログイン名が異なる場合、SYSTEM_USER ではログイン名が返されます。  
   
- 現在のユーザーが Windows 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインしている場合、*ドメイン*\\*user_login_name* という形式で SYSTEM_USER は Windows ログインの識別名を返します。 現在のユーザーが SQL Server 認証によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインした場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの識別名が返されます。たとえば、`WillisJo` としてログインしたユーザーの場合は `WillisJo` が返されます。  
+ 現在のユーザーが Windows 認証によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインされた場合、SYSTEM_USER から、次の形式で Windows ログインの識別名が返されます。*DOMAIN*\\*user_login_name*。 現在のユーザーが SQL Server 認証によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインした場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの識別名が返されます。たとえば、`WillisJo` としてログインしたユーザーの場合は `WillisJo` が返されます。  
   
  SYSTEM_USER では、現在の実行コンテキストの名前が返されます。 EXECUTE AS ステートメントを使用してコンテキストを切り替えた場合、SYSTEM_USER では権限を借用したコンテキストの名前が返されます。  
 
@@ -64,7 +65,7 @@ SYSTEM_USER
 
 ## <a name="examples"></a>例  
   
-### <a name="a-using-system_user-to-return-the-current-system-user-name"></a>A. SYSTEM_USER を使用して現在のシステム ユーザー名を返す  
+### <a name="a-using-system_user-to-return-the-current-system-user-name"></a>A.  SYSTEM_USER を使用して現在のシステム ユーザー名を返す  
  次の例では、`char` 変数を宣言し、`SYSTEM_USER` の現在の値をこの変数に格納した後、変数に格納されている値を出力します。  
   
 ```  
@@ -83,7 +84,7 @@ The current system user is: WillisJo
 (1 row(s) affected)
  ```  
   
-### <a name="b-using-system_user-with-default-constraints"></a>B. SYSTEM_USER を DEFAULT 制約と共に使用する  
+### <a name="b-using-system_user-with-default-constraints"></a>B.  SYSTEM_USER を DEFAULT 制約と共に使用する  
  次の例では、テーブルを作成し、`SYSTEM_USER` 列の `DEFAULT` 制約として `SRep_tracking_user` を使用します。  
   
 ```  
