@@ -1,4 +1,5 @@
 ---
+description: service_queue_usages (Transact-sql)
 title: service_queue_usages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d58dcdaf-f82d-43d9-941b-f520581442bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f7faaeb7aa9a66a2738beaf75cf6fa28683f5b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d9769758ba457bb110e238c1449153e66d87b5c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490091"
 ---
 # <a name="sysservice_queue_usages-transact-sql"></a>service_queue_usages (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85897384"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のサービス](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のサービス ](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)  
   
   

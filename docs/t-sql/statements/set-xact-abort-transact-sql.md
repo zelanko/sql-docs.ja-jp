@@ -1,4 +1,5 @@
 ---
+description: SET XACT_ABORT (Transact-SQL)
 title: SET XACT_ABORT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2019
@@ -26,12 +27,12 @@ ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a4eeff8a2ee64a318931fad63d74bb4cd780c49
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b745de81c42af218c71c1b99e02369fad3feb797
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85990356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444641"
 ---
 # <a name="set-xact_abort-transact-sql"></a>SET XACT_ABORT (Transact-SQL)
 
@@ -40,7 +41,7 @@ ms.locfileid: "85990356"
 > [!NOTE]
 > **THROW** ステートメントは **SET XACT_ABORT** に従いますが、 **RAISERROR** は従いません。 新しいアプリケーションでは、**RAISERROR** の代わりに **THROW** を使ってください。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントによって実行時エラーが発生した場合に、[!INCLUDE[tsql](../../includes/tsql-md.md)] が自動的に現在のトランザクションをロールバックするかどうかを指定します。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントによって実行時エラーが発生した場合に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が自動的に現在のトランザクションをロールバックするかどうかを指定します。
 
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -49,6 +50,8 @@ ms.locfileid: "85990356"
 ```syntaxsql
 SET XACT_ABORT { ON | OFF }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>解説
 
@@ -121,7 +124,7 @@ SELECT *
 GO
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)
 - [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)

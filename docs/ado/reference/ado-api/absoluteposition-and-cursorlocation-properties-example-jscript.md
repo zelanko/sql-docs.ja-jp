@@ -1,4 +1,5 @@
 ---
+description: AbsolutePosition およびカーソルのプロパティの例 (JScript)
 title: AbsolutePosition およびカーソルのプロパティの例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b946d98214047203147fb5c0bbba0e01ea09b7c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8e1840f567cf4d1285aa7257081f9dfc9d48a4bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451784"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition およびカーソルのプロパティの例 (JScript)
-この例では、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティを使用して、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のすべてのレコードを列挙するループの進行状況を追跡する方法を示します。 カーソルをクライアントカーソルに設定することによって、 **AbsolutePosition**プロパティを有効にするには、cursor [location](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを使用します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **AbsolutePositionJS**として保存します。  
+この例では、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) プロパティを使用して、 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のすべてのレコードを列挙するループの進行状況を追跡する方法を示します。 カーソルをクライアントカーソルに設定することによって、 **AbsolutePosition**プロパティを有効にするには、cursor [location](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを使用します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **AbsolutePositionJS**として保存します。  
   
 ```  
 <!-- BeginAbsolutePositionJS -->  

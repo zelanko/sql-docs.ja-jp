@@ -1,4 +1,5 @@
 ---
+description: 手順 2:サーバー プログラムを呼び出す (RDS チュートリアル)
 title: '手順 2: サーバープログラムを起動する (RDS チュートリアル) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0e85b276ed8cc38419035d48357180c7952ff98
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b864578b67eda29c703bcf4952a9a2878aafe9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451944"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>手順 2:サーバー プログラムを呼び出す (RDS チュートリアル)
-クライアント*プロキシ*でメソッドを呼び出すと、サーバー上の実際のプログラムによってメソッドが実行されます。 この手順では、サーバーでクエリを実行します。  
+クライアント *プロキシ*でメソッドを呼び出すと、サーバー上の実際のプログラムによってメソッドが実行されます。 この手順では、サーバーでクエリを実行します。  
   
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- **パート A**このチュートリアルで RDSServer を使用して[い](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)ない場合、この手順を実行する最も便利な方法は、RDS を使用することです。 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。 **RDS。DataControl**は、プロキシを作成する前の手順を結合します。この手順では、クエリを発行します。  
+ **パート A** このチュートリアルで RDSServer を使用して [い](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) ない場合、この手順を実行する最も便利な方法は、RDS を使用することです。 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) オブジェクト。 **RDS。DataControl**は、プロキシを作成する前の手順を結合します。この手順では、クエリを発行します。  
   
- RDS を設定し**ます。** サーバープログラムをインスタンス化する必要がある場所を識別する DataControl Object[サーバー](../../../ado/reference/rds-api/server-property-rds.md)プロパティ。接続[プロパティを](../../../ado/reference/rds-api/connect-property-rds.md)使用して、データソースにアクセスするための接続文字列を指定します。クエリコマンドテキストを指定する[SQL](../../../ado/reference/rds-api/sql-property.md)プロパティ。 次に、 [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md)メソッドを発行して、サーバープログラムがデータソースに接続し、クエリで指定された行を取得し、**レコードセット**オブジェクトをクライアントに返すようにします。  
+ RDS を設定し **ます。** サーバープログラムをインスタンス化する必要がある場所を識別する DataControl Object [サーバー](../../../ado/reference/rds-api/server-property-rds.md) プロパティ。接続 [プロパティを](../../../ado/reference/rds-api/connect-property-rds.md) 使用して、データソースにアクセスするための接続文字列を指定します。クエリコマンドテキストを指定する [SQL](../../../ado/reference/rds-api/sql-property.md) プロパティ。 次に、 [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) メソッドを発行して、サーバープログラムがデータソースに接続し、クエリで指定された行を取得し、 **レコードセット** オブジェクトをクライアントに返すようにします。  
   
  このチュートリアルでは、RDS は使用しません **。DataControl**ですが、次のようになります。  
   
@@ -49,9 +50,9 @@ rs.Open "SELECT * FROM Authors","Provider=MS Remote;Data Source=Pubs;" & _
         "Remote Server=https://yourServer;Remote Provider=SQLOLEDB;"  
 ```  
   
- **パート B**この手順を実行する一般的な方法は、 **DataFactory**オブジェクト[クエリ](../../../ado/reference/rds-api/query-method-rds.md)メソッドを呼び出すことです。 このメソッドは、データソースへの接続に使用される接続文字列と、データソースから返される行を指定するために使用されるコマンドテキストを受け取ります。  
+ **パート B** この手順を実行する一般的な方法は、 **DataFactory** オブジェクト [クエリ](../../../ado/reference/rds-api/query-method-rds.md) メソッドを呼び出すことです。 このメソッドは、データソースへの接続に使用される接続文字列と、データソースから返される行を指定するために使用されるコマンドテキストを受け取ります。  
   
- このチュートリアルでは、 **DataFactory** object**クエリ**メソッドを使用します。  
+ このチュートリアルでは、 **DataFactory** object **クエリ** メソッドを使用します。  
   
 ```vb
 Sub RDSTutorial2B()  

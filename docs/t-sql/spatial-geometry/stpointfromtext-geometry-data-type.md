@@ -1,4 +1,5 @@
 ---
+description: STPointFromText (geometry データ型)
 title: STPointFromText (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f9dcc83f9b164f27d50e047792a069b148239872
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 469971c7a5b40f97ac67feca3dfb20f25a679486
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444994"
 ---
 # <a name="stpointfromtext-geometry-data-type"></a>STPointFromText (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ STPointFromText ( 'point_tagged_text' , SRID )
   
  OGC の型: **Point**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  
   
 ## <a name="examples"></a>例  

@@ -1,4 +1,5 @@
 ---
+description: ADO のイベント
 title: ADO Events |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a93353be1737b38e7acb557a682e84cbb947c2a1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 07ef1c379dcf59b386b86d5b9fce38f77c521e01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451424"
 ---
 # <a name="ado-events"></a>ADO のイベント
 
@@ -30,9 +31,9 @@ ms.locfileid: "87242872"
 |[Disconnect (切断)](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|接続の終了後に呼び出されます。|  
 |[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|**レコードセット**の末尾を越えて行を移動しようとしたときに呼び出されます。|  
 |[ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|コマンドの実行が完了した後に呼び出されます。|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|長い非同期操作内のすべてのレコードが**レコードセット**に取得された後に呼び出されます。|  
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|長い非同期操作中に、**レコードセット**に現在取得されている行の数を報告するために定期的に呼び出されます。|  
-|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|1つまたは複数の**フィールド**オブジェクトの値が変更された後に呼び出されます。|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|長い非同期操作内のすべてのレコードが **レコードセット**に取得された後に呼び出されます。|  
+|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|長い非同期操作中に、 **レコードセット**に現在取得されている行の数を報告するために定期的に呼び出されます。|  
+|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|1つまたは複数の **フィールド** オブジェクトの値が変更された後に呼び出されます。|  
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**Connectionevent**操作中に警告が発生するたびに呼び出されます。|  
 |[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|**レコードセット**内の現在位置が変更された後に呼び出されます。|  
 |[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|1つ以上のレコードが変更した後に呼び出されます。|  
@@ -40,12 +41,12 @@ ms.locfileid: "87242872"
 |[RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**RollbackTrans**操作の後に呼び出されます。|  
 |[Changefield](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|保留中の操作が**レコードセット**内の1つまたは複数の**フィールド**オブジェクトの値を変更する前に呼び出されます。|  
 |[Changerecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**レコードセット**内の1つ以上のレコード (行) が変更される前に呼び出されます。|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|保留中の操作によって**レコードセット**が変更される前に呼び出されます。|  
+|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|保留中の操作によって **レコードセット**が変更される前に呼び出されます。|  
 |[接続](../../../ado/reference/ado-api/willconnect-event-ado.md)|接続が開始される前に呼び出されます。|  
 |[実行する](../../../ado/reference/ado-api/willexecute-event-ado.md)|保留中のコマンドがこの接続で実行される直前に呼び出され、保留中の実行パラメーターを確認および変更する機会をユーザーに与えます。|  
 |[移動](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|"イベントの**移動**" は、保留中の操作が**レコードセット**内の現在の位置を変更*する前に*呼び出されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO コレクション](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

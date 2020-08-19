@@ -1,4 +1,5 @@
 ---
+description: TOP (Transact-SQL)
 title: TOP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -21,12 +22,12 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce9c31baedb0b423e93e96080ea6697c553e549e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 7dbaf282383bfeb83efc1b7ccf6f74ad90ed1764
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445308"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +70,7 @@ WITH TIES
   
 TOP 句で WITH TIES 引数を指定できるのは、SELECT ステートメントの中だけで、ORDER BY 句も指定した場合のみです。 同順位のレコードが返される順序は任意です。 ORDER BY はこの規則に影響しません。  
   
-## <a name="best-practices"></a>ベスト プラクティス  
+## <a name="best-practices"></a>推奨する運用方法  
 SELECT ステートメントでは、必ず ORDER BY 句と TOP 句を使用してください。 これは、TOP によって処理される行を予想して指定するための唯一の方法です。  
   
 クエリ ページング ソリューションを実装するには、TOP 句ではなく ORDER BY 句で OFFSET と FETCH を使用します。 OFFSET 句と FETCH 句を使用した方が、ページング ソリューション (データのチャンクつまり "ページ" をクライアントに送信するソリューション) を容易に実装できます。 詳細については、「[ORDER BY 句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)」を参照してください。  
@@ -88,7 +89,7 @@ TOP 式は、トリガーによって実行される可能性があるステー�
   
 MERGE ステートメントで指定した TOP 句は、ソース テーブル全体とターゲット テーブル全体が結合された "*後*" で適用されます。 また、結合された行で挿入、更新、または削除操作の対象にならないものは削除されます。 TOP 句を使用すると、結合された行の数が指定の値まで減少し、挿入、更新、または削除操作が残りの結合された行に順序付けなしで適用されます。 つまり、WHEN 句に定義された操作に行が割り当てられる順序は決まっていません。 たとえば、TOP (10) と指定して 10 行が影響を受けた場合、そのうちの 7 行は更新されたもので、3 行は挿入されたものかもしれません。 または、1 行が削除され、5 行が更新され、4 行が挿入されている場合もあります。 MERGE ステートメントではソース テーブルとターゲット テーブルの両方のフル テーブル スキャンが行われるので、TOP 句を使用し、複数のバッチを作成して大きなテーブルを変更すると、I/O パフォーマンスが影響を受ける場合があります。 このシナリオでは、連続するすべてのバッチで確実に新しい行が対象になっていることが重要です。  
   
-UNION、UNION ALL、EXCEPT、または INTERSECT 演算子を含む TOP 句をクエリで指定する場合は注意が必要です。 これらの演算子を選択操作で使用するとき、TOP 句および ORDER BY 句が論理的に処理される順序は必ずしも直感的ではないため、記述したクエリによって予期しない結果が返される場合があります。 たとえば、次のテーブルとデータがある場合に、最も安価な赤色の自動車と青色の自動車 (つまり赤色のセダンと青色のバン) を取得する必要があるとします。  
+UNION、UNION ALL、EXCEPT、または INTERSECT 演算子を含む TOP 句をクエリで指定する場合は注意が必要です。 これらの演算子を選択操作で使用するとき、TOP 句および ORDER BY 句が論理的に処理される順序は必ずしも直感的ではないため、記述したクエリによって予期しない結果が返される場合があります。 たとえば、次のテーブルとデータがある場合に、最も安価な赤色の自動車と青色の自動車  (つまり赤色のセダンと青色のバン) を取得する必要があるとします。  
   
 ```sql  
 CREATE TABLE dbo.Cars(Model varchar(15), Price money, Color varchar(10));  
@@ -327,7 +328,7 @@ SELECT TOP (31) FirstName, LastName
 FROM DimEmployee ORDER BY LastName;  
 ```  
   
-結果:31 行が返されます。  
+結果: 31 行が返されます。  
   
 WITH TIES を指定して TOP を使用する。  
   

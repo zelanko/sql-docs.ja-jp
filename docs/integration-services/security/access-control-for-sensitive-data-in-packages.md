@@ -1,4 +1,5 @@
 ---
+description: パッケージ内の機微なデータへのアクセス制御
 title: パッケージ内の機微なデータへのアクセス制御 | Microsoft Docs
 ms.custom: security
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b5347b8b3d241bc7d65fb4d344b74822150185e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 01e2b133fcd1e4fbf008ae591c92cb549b22479a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922070"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430134"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>パッケージ内の機微なデータへのアクセス制御
 
@@ -76,7 +77,7 @@ ms.locfileid: "86922070"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーからファイル システムにプロジェクト (.ispac ファイル) をエクスポートすると、保護レベルが自動的に **EncryptSensitiveWithUserKey**に変更されます。 **で** Integration Services プロジェクトのインポート ウィザード [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用してプロジェクトをインポートする場合、 **[プロパティ]** ウィンドウの **[ProtectionLevel]** プロパティには **EncryptSensitiveWithUserKey**の値が表示されます。  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>パッケージのライフ サイクルに基づく保護レベルの設定  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で初めて [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] パッケージを開発するときは、パッケージの保護レベルを設定します。 パッケージの保護レベルは、後でパッケージを配置するとき、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]からインポートまたはエクスポートするとき、または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、またはファイル システムにコピーするときに、更新できます。 たとえば、作成したパッケージをユーザー キー保護レベル オプションの 1 つを指定してコンピューターに保存している場合、通常はそのパッケージを他のユーザーに渡すときに保護レベルを変更します。そのままでは、相手ユーザーがパッケージを開くことができません。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で初めて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを開発するときは、パッケージの保護レベルを設定します。 パッケージの保護レベルは、後でパッケージを配置するとき、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]からインポートまたはエクスポートするとき、または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、またはファイル システムにコピーするときに、更新できます。 たとえば、作成したパッケージをユーザー キー保護レベル オプションの 1 つを指定してコンピューターに保存している場合、通常はそのパッケージを他のユーザーに渡すときに保護レベルを変更します。そのままでは、相手ユーザーがパッケージを開くことができません。  
   
  通常、次に示す手順に従って保護レベルを変更します。  
   
@@ -148,7 +149,7 @@ ms.locfileid: "86922070"
  **パスワード**  
  保護レベルとして **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** を使用する場合は、パスワードを入力します。  
   
- **パスワードの再入力**  
+ **[パスワードの再入力]**  
  パスワードを再度入力します。  
 
 ## <a name="package-password-dialog-box"></a><a name="password_dialog"></a> [パッケージ パスワード] ダイアログ ボックス
@@ -158,7 +159,7 @@ ms.locfileid: "86922070"
  **パスワード**  
  パスワードを入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; パッケージ](../../integration-services/integration-services-ssis-packages.md)   
  [セキュリティの概要 &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
  [dtutil ユーティリティ](../../integration-services/dtutil-utility.md)  

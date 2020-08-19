@@ -1,4 +1,5 @@
 ---
+description: pdw_database_mappings (Transact-sql)
 title: pdw_database_mappings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2017
@@ -12,12 +13,12 @@ ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 013a6bcbba5e7647db1bec04204f8e8fec710c16
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c406f00d6ee9848ab5f09631d77436ef6b6dbddf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490295"
 ---
 # <a name="syspdw_database_mappings-transact-sql"></a>pdw_database_mappings (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "87396095"
 |列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |physical_name|**nvarchar (36)**|計算ノード上のデータベースの物理名。<br /><br /> このビューのキーは**physical_name**と**database_id**によって形成されます。||  
-|database_id|**int**|データベースのオブジェクト ID。 「[データベース &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)」を参照してください。<br /><br /> このビューのキーは**physical_name**と**database_id**によって形成されます。||  
+|database_id|**int**|データベースのオブジェクト ID。 「 [データベース &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)」を参照してください。<br /><br /> このビューのキーは**physical_name**と**database_id**によって形成されます。||  
   
 ## <a name="examples-sspdw"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、pdw_database_mappings を他のシステムテーブルに結合して、データベースがどのようにマップされているかを示します。  

@@ -1,4 +1,5 @@
 ---
+description: ADO MD と ADO の併用
 title: ADO MD | での ADO の使用Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 591a10e8c91aa22f939ff48f341b376bbd8ebe1b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6314ae9a0682e1c10b1ecd45c8f8d5217e7d6426
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452404"
 ---
 # <a name="using-ado-with-ado-md"></a>ADO MD と ADO の併用
 ADO と ADO MD は関連がありますが、個別のオブジェクトモデルです。 ADO には、データソースに接続したり、コマンドを実行したり、表形式のデータとスキーマメタデータを表形式で取得したり、プロバイダーのエラー情報を表示したりするためのオブジェクトが用意されています。 ADO MD には、多次元データを取得し、多次元スキーマメタデータを表示するためのオブジェクトが用意されています。  
   
  .MDP を使用する場合は、アプリケーションで ADO、ADO MD、またはその両方を使用することを選択できます。 プロジェクト内で両方のライブラリを参照することにより、.MDP によって提供される機能に完全にアクセスできるようになります。  
   
- 多くの場合、コンシューマーは多次元データセットのフラット化された表形式ビューを取得すると便利です。 これを行うには、ADO[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを使用します。 ADO MD**セル**セットのソースとしてではなく、**レコードセット**の[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドの***source***パラメーターとして、[セル](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)セットのソースを指定します。  
+ 多くの場合、コンシューマーは多次元データセットのフラット化された表形式ビューを取得すると便利です。 これを行うには、ADO [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトを使用します。 ADO MD**セル**セットのソースとしてではなく、**レコードセット**の[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドの***source***パラメーターとして、[セル](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)セットのソースを指定します。  
   
  また、オブジェクトの階層としてではなく、表形式ビューでスキーマメタデータを表示すると便利な場合もあります。 [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの ADO [OpenSchema](../../../ado/reference/ado-api/openschema-method.md)メソッドを使用すると、スキーマ情報を含む**レコードセット**をユーザーが開くことができます。 **OpenSchema**メソッドの***QueryType***パラメーターには、具体的には mdps に関連する複数の[schemaenum](../../../ado/reference/ado-api/schemaenum.md)値があります。 これらの値は次のとおりです。  
   

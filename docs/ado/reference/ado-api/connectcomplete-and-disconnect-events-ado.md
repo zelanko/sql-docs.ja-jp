@@ -1,4 +1,5 @@
 ---
+description: ConnectComplete および Disconnect イベント (ADO)
 title: ConnectComplete イベントと Disconnect イベント (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88aa5ee6b1d4eabecb65323f557e4bf594da8629
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db04bbeed12f9097768763024270ece7275d5c3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760328"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444544"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete および Disconnect イベント (ADO)
 **Connectcomplete**イベントは、接続の開始後に呼び出されます。 **切断**イベントは、接続が終了した後に呼び出されます。  
@@ -46,10 +47,10 @@ Disconnect adStatus, pConnection
   
  **Connectcomplete**が呼び出されると、このパラメーターは、が保留中の接続のキャンセルを**要求した**場合に**adstatuscancel**に設定されます。  
   
- いずれかのイベントが返される前に、このパラメーターを**adStatusUnwantedEvent**に設定して、後続の通知を防止します。 ただし、[接続](../../../ado/reference/ado-api/connection-object-ado.md)を閉じて再度開くと、これらのイベントが再び発生します。  
+ いずれかのイベントが返される前に、このパラメーターを **adStatusUnwantedEvent** に設定して、後続の通知を防止します。 ただし、 [接続](../../../ado/reference/ado-api/connection-object-ado.md) を閉じて再度開くと、これらのイベントが再び発生します。  
   
  *pConnection*  
- このイベントが適用される**接続**オブジェクト。  
+ このイベントが適用される **接続** オブジェクト。  
   
 ## <a name="see-also"></a>参照  
  [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

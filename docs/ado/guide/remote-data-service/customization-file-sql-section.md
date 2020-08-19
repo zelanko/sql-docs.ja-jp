@@ -1,4 +1,5 @@
 ---
+description: カスタマイズ ファイルの SQL セクション
 title: カスタマイズファイル SQL Section |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 934b982004bf27e28a8daeed09061101886ce444
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3ceb97d4859126c2116383196db5e6c71affb77f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452244"
 ---
 # <a name="customization-file-sql-section"></a>カスタマイズ ファイルの SQL セクション
 **Sql**セクションには、クライアントのコマンド文字列を置き換える新しい sql 文字列を含めることができます。 セクションに SQL 文字列がない場合、セクションは無視されます。  
   
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- 新しい SQL 文字列を*パラメーター化*することができます。 つまり、 **sql**セクションの sql 文字列 ('? ' 文字で指定された) のパラメーターは、クライアントのコマンド文字列内の*識別子*内の対応する引数に置き換えることができます (かっこで囲まれたコンマ区切りのリストで指定されます)。 識別子と引数リストは関数呼び出しのように動作します。  
+ 新しい SQL 文字列を *パラメーター化*することができます。 つまり、 **sql** セクションの sql 文字列 ('? ' 文字で指定された) のパラメーターは、クライアントのコマンド文字列内の *識別子* 内の対応する引数に置き換えることができます (かっこで囲まれたコンマ区切りのリストで指定されます)。 識別子と引数リストは関数呼び出しのように動作します。  
   
  たとえば、クライアントのコマンド文字列がで、 `"CustomerByID(4)"` sql section ヘッダーがで、 `[SQL CustomerByID]` 新しい sql section 文字列がハンドラーによって生成され、 `"SELECT * FROM Customers WHERE CustomerID = ?".` その文字列を使用してデータソースにクエリを実行するとし `"SELECT * FROM Customers WHERE CustomerID = 4"` ます。  
   

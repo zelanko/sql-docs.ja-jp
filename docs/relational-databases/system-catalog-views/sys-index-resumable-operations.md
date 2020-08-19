@@ -1,4 +1,5 @@
 ---
+description: index_resumable_operations (Transact-sql)
 title: index_resumable_operations (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/12/2019
@@ -19,24 +20,24 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c57cc780bc3e05347daf8dd7778e7e5de274d303
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa2ae5221dbd360c5bad7279d27dbaedc7ae7f16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490312"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>index_resumable_operations (Transact-sql)
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
-**index_resumable_operations**は、再開可能なインデックスの再構築または作成のために現在の実行状態を監視して確認するシステムビューです。  
+**index_resumable_operations** は、再開可能なインデックスの再構築または作成のために現在の実行状態を監視して確認するシステムビューです。  
 **適用対象**: SQL Server (2017 以降)、および Azure SQL Database
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|このインデックスが所属するオブジェクトの ID (null 値は許容されません)。|  
-|**index_id**|**int**|インデックスの ID (null 値は許容されません)。 **index_id**は、オブジェクト内でのみ一意です。|
-|**name**|**sysname**|インデックス名。 **name**は、オブジェクト内でのみ一意です。|  
+|**index_id**|**int**|インデックスの ID (null 値は許容されません)。 **index_id** は、オブジェクト内でのみ一意です。|
+|**name**|**sysname**|インデックス名。 **name** は、オブジェクト内でのみ一意です。|  
 |**sql_text**|**nvarchar(max)**|DDL T-sql ステートメントのテキスト|
 |**last_max_dop**|**smallint**|最後に使用された MAX_DOP (既定 = 0)|
 |**partition_number**|**int**|所有しているインデックスまたはヒープ内のパーティション番号。 パーティション分割されていないテーブルとインデックスの場合、またはすべてのパーティションが再構築される場合は、この列の値が NULL になります。|
@@ -60,11 +61,11 @@ ms.locfileid: "85790487"
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
-- [カタログビュー](catalog-views-transact-sql.md)
+- [カタログ ビュー](catalog-views-transact-sql.md)
 - [オブジェクトカタログビュー](object-catalog-views-transact-sql.md)
 - [sys.indexes](sys-xml-indexes-transact-sql.md)
 - [sys.index_columns](sys-index-columns-transact-sql.md)
