@@ -1,4 +1,5 @@
 ---
+description: Command オブジェクトのパラメーター
 title: Command オブジェクトのパラメーター |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0935fa2b45d0ab496072f4f3a9619c821afc8383
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f2e2cd8da9522c7aead905cc0c19debe132faf4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453674"
 ---
 # <a name="command-object-parameters"></a>Command オブジェクトのパラメーター
-前のトピックでは、[単純なコマンドの作成と実行に](../../../ado/guide/data/creating-and-executing-a-simple-command.md)ついて説明しました。 [コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトのより興味深い使用方法を次の例に示します。この例では、SQL コマンドがパラメーター化されています。 この変更により、コマンドを再利用し、毎回パラメーターに別の値を渡すことができます。 **Command**オブジェクトの[準備済みプロパティ](../../../ado/reference/ado-api/prepared-property-ado.md)プロパティが**true**に設定されているため、ADO では、最初に実行する前に、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)で指定されたコマンドをコンパイルする必要があります。 また、コンパイルされたコマンドをメモリ内に保持します。 これにより、準備に必要なオーバーヘッドによってコマンドの初回実行時の処理が少し遅くなりますが、その後、コマンドが呼び出されるたびにパフォーマンスが向上します。 したがって、コマンドは、複数回使用する場合にのみ準備する必要があります。  
+前のトピックでは、 [単純なコマンドの作成と実行に](../../../ado/guide/data/creating-and-executing-a-simple-command.md)ついて説明しました。 [コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトのより興味深い使用方法を次の例に示します。この例では、SQL コマンドがパラメーター化されています。 この変更により、コマンドを再利用し、毎回パラメーターに別の値を渡すことができます。 **Command**オブジェクトの[準備済みプロパティ](../../../ado/reference/ado-api/prepared-property-ado.md)プロパティが**true**に設定されているため、ADO では、最初に実行する前に、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)で指定されたコマンドをコンパイルする必要があります。 また、コンパイルされたコマンドをメモリ内に保持します。 これにより、準備に必要なオーバーヘッドによってコマンドの初回実行時の処理が少し遅くなりますが、その後、コマンドが呼び出されるたびにパフォーマンスが向上します。 したがって、コマンドは、複数回使用する場合にのみ準備する必要があります。  
   
 ```  
 'BeginManualParamCmd  
@@ -118,4 +119,4 @@ End Function
 'EndNewConnection  
 ```  
   
- すべてのプロバイダーが準備コマンドをサポートしているわけではありません。 プロバイダーがコマンドの準備をサポートしていない場合、このプロパティが**True**に設定されるとすぐにエラーが返されることがあります。 エラーが返されない場合は、コマンドを準備する要求を無視し、**準備**されたプロパティを**false**に設定します。
+ すべてのプロバイダーが準備コマンドをサポートしているわけではありません。 プロバイダーがコマンドの準備をサポートしていない場合、このプロパティが **True**に設定されるとすぐにエラーが返されることがあります。 エラーが返されない場合は、コマンドを準備する要求を無視し、 **準備** されたプロパティを **false**に設定します。

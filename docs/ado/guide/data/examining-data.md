@@ -1,4 +1,5 @@
 ---
+description: データの調査
 title: データの調査 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80f41778d1afa806b739e43edda6fb5b79e8f432
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fef2189af66c6777e2c337026db76e85b2cb42d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453414"
 ---
 # <a name="examining-data"></a>データの調査
-「[データの取得](../../../ado/guide/data/getting-data.md)」セクションでは、1つまたは複数の**レコードセット**オブジェクトとしてデータソースからデータを取得する方法について説明しました。 このセクションでは、**レコードセット内を移動して**そのデータを表示する方法など、**レコードセット**について詳しく説明します。  
+「 [データの取得](../../../ado/guide/data/getting-data.md) 」セクションでは、1つまたは複数の **レコードセット** オブジェクトとしてデータソースからデータを取得する方法について説明しました。 このセクションでは、**レコードセット内を移動して**そのデータを表示する方法など、**レコードセット**について詳しく説明します。  
   
- **レコードセット**では、内に含まれるデータの移動や確認を行うためのさまざまな[プロパティとメソッド](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)がサポートされています。 これらの機能は、プロバイダーに依存します。 一部のプロバイダーでは、一部のプロパティまたはメソッドがサポートされない場合があります。  
+ **レコードセット** では、内に含まれるデータの移動や確認を行うためのさまざまな [プロパティとメソッド](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) がサポートされています。 これらの機能は、プロバイダーに依存します。 一部のプロバイダーでは、一部のプロパティまたはメソッドがサポートされない場合があります。  
   
  このセクションでは、次のトピックを扱います。  
   

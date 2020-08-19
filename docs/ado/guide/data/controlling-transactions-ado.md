@@ -1,4 +1,5 @@
 ---
+description: トランザクションの制御 (ADO)
 title: トランザクションの制御 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36b75231cddc276a9f0889f3a569dedce2380732
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 861fe39f270a007fdd3896c4150a02a0fd905b47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453634"
 ---
 # <a name="controlling-transactions-ado"></a>トランザクションの制御 (ADO)
-ADO は、接続オブジェクトの**BeginTrans**、 **CommitTrans**、および**RollbackTrans**の各メソッドを使用して **、接続内**のトランザクション処理をサポートします。 ADO でトランザクション処理を実装する一般的な考え方を、次の単純なコードスニペットに示します。  
+ADO は、接続オブジェクトの **BeginTrans**、 **CommitTrans**、および **RollbackTrans** の各メソッドを使用して **、接続内** のトランザクション処理をサポートします。 ADO でトランザクション処理を実装する一般的な考え方を、次の単純なコードスニペットに示します。  
   
 ```  
 Const DS = "MySqlServer"  
@@ -79,4 +80,4 @@ oConn.Close
   
  ここでは、2つのレコードが1つの操作単位として更新され、2つの製品名が入れ替えられているか、まったく変更されていないことを確認するために、トランザクション処理が使用されています。  
   
- トランザクション処理の詳細については[、「データの更新と永続](../../../ado/guide/data/updating-and-persisting-data.md)化」を参照してください。
+ トランザクション処理の詳細については [、「データの更新と永続](../../../ado/guide/data/updating-and-persisting-data.md)化」を参照してください。

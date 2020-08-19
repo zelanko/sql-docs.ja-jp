@@ -1,4 +1,5 @@
 ---
+description: データ プロバイダー
 title: データプロバイダー |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6dfb672b57b95224cf6ff056c3298c7c8a437d2a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cb448efeb0b78ba6cb29d9acff661308a6bf14bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761108"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453584"
 ---
 # <a name="data-providers"></a>データ プロバイダー
 データプロバイダーは、SQL データベース、インデックス付きシーケンシャルファイル、スプレッドシート、ドキュメントストア、メールファイルなど、さまざまなデータソースを表します。 プロバイダーは、行セットと呼ばれる共通の抽象化を使用して、一様にデータを公開します。  

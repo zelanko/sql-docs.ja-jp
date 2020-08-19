@@ -1,4 +1,5 @@
 ---
+description: 集計関数、CALC 関数、NEW キーワード
 title: 集計関数、CALC 関数、および NEW キーワード |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bda85bae42b294fa63c67adfe51d8c60c5b56af
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ad6bf4b041fbae0f30e327bd32dd067c1e9c429a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453754"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>集計関数、CALC 関数、NEW キーワード
-データシェイプは、次の関数をサポートしています。 操作対象の列を含むチャプターに割り当てられた名前は、*チャプターエイリアス*です。  
+データシェイプは、次の関数をサポートしています。 操作対象の列を含むチャプターに割り当てられた名前は、 *チャプターエイリアス*です。  
   
- チャプターエイリアスは完全修飾することができます。各チャプター列名は、*列名*を含む章に至るまで、ピリオドで区切られています。 たとえば、親章 chap1 に、amount 列を含む chap2 という子のチャプターが含まれている場合、修飾名は chap1 になります。  
+ チャプターエイリアスは完全修飾することができます。各チャプター列名は、 *列名* を含む章に至るまで、ピリオドで区切られています。 たとえば、親章 chap1 に、amount 列を含む chap2 という子のチャプターが含まれている場合、修飾名は chap1 になります。  
   
 |集計関数|説明|  
 |-------------------------|-----------------|  
@@ -35,17 +36,17 @@ ms.locfileid: "82761278"
 |MIN (*チャプターエイリアス)*。*列名*)|指定された列の最小値を計算します。|  
 |COUNT (*chapter-alias*[.*列名*])|指定された別名の行数をカウントします。 列が指定されている場合、その列が Null 以外の行だけがカウントに含まれます。|  
 |STDEV (*チャプターエイリアス*。*列名*)|指定された列の標準偏差を計算します。|  
-|任意 (*チャプターエイリアス*。*列名*)|指定された列の値。 では、列の値がチャプター内のすべての行で同じ場合にのみ、予測可能な値が使用されます。<br /><br /> **メモ**列に、チャプター内のすべての行に対して同じ値が含まれていない場合、SHAPE コマンドは任意の値を ANY 関数の値として返します。|  
+|任意 (*チャプターエイリアス*。*列名*)|指定された列の値。 では、列の値がチャプター内のすべての行で同じ場合にのみ、予測可能な値が使用されます。<br /><br /> **メモ** 列に、チャプター内のすべての行に対して同じ値が含まれていない場合、SHAPE コマンドは任意の値を ANY 関数の値として返します。|  
   
 |計算式|説明|  
 |---------------------------|-----------------|  
-|CALC (*式*)|任意の式を計算しますが、CALC 関数を含む**レコードセット**の行のみを計算します。 これらの[Visual Basic for Applications (VBA) 関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)を使用する式はすべて許可されます。|  
+|CALC (*式*)|任意の式を計算しますが、CALC 関数を含む **レコードセット** の行のみを計算します。 これらの [Visual Basic for Applications (VBA) 関数](../../../ado/guide/data/visual-basic-for-applications-functions.md) を使用する式はすべて許可されます。|  
   
 |NEW キーワード|説明|  
 |-----------------|-----------------|  
-|新しい*フィールドの種類*[(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|指定した型の空の列を**レコードセット**に追加します。|  
+|新しい *フィールドの種類* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|指定した型の空の列を **レコードセット**に追加します。|  
   
- NEW キーワードで渡される*フィールド型*には、次のいずれかのデータ型を指定できます。  
+ NEW キーワードで渡される *フィールド型* には、次のいずれかのデータ型を指定できます。  
   
 |データ型の OLE DB|ADO データ型に相当するもの|  
 |-----------------------|-----------------------------------|  
@@ -72,7 +73,7 @@ ms.locfileid: "82761278"
   
  新しいフィールドの型が decimal (OLE DB、DBTYPE_DECIMAL、または ADO で adDecimal) の場合、有効桁数と小数点以下桁数の値を指定する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データシェイプの例](../../../ado/guide/data/data-shaping-example.md)   
  [仮形の文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般的な Shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)

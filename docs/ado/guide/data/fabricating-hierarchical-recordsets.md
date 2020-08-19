@@ -1,4 +1,5 @@
 ---
+description: 階層レコードセットの作成
 title: 造詣階層レコードセット |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 105dee3121252e94b53d1d8211b94af5e6004c31
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2f418d2eb21f2cb02223234f6231efb39b232faa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453404"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>階層レコードセットの作成
-次の例では、データシェイプの文法を使用して、親、子、および孫**レコードセット**の列を定義することで、基になるデータソースのない階層レコードセットを作成する方法を示します。  
+次の例では、データシェイプの文法を使用して、親、子、および孫 **レコードセット**の列を定義することで、基になるデータソースのない階層レコードセットを作成する方法を示します。  
   
- 階層**レコードセット**を作成するには、 [OLE DB (ADO サービスプロバイダー) (MSDataShape) 用の Microsoft データ整形サービス](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)を指定する必要があります。また、 [connection](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[OPEN](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドの接続文字列パラメーターで NONE の Data Provider 値を指定できます。 詳細については、「[データシェイプの必須プロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)」を参照してください。  
+ 階層**レコードセット**を作成するには、 [OLE DB (ADO サービスプロバイダー) (MSDataShape) 用の Microsoft データ整形サービス](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)を指定する必要があります。また、 [connection](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[OPEN](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドの接続文字列パラメーターで NONE の Data Provider 値を指定できます。 詳細については、「 [データシェイプの必須プロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)」を参照してください。  
   
 ```  
 Dim cn As New ADODB.Connection  

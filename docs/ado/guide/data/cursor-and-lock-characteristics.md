@@ -1,4 +1,5 @@
 ---
+description: カーソルとロックの特性
 title: カーソルとロックの特性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 459c29cb-4230-42bf-8cc2-f3132ccc7aba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02f4be413ddcfc9215cdbf12142b883ade644f41
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f903cdf8feab9b3e6d649f95b33b68c2de107194
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453594"
 ---
 # <a name="cursor-and-lock-characteristics"></a>カーソルとロックの特性
 カーソルの特性はプロバイダーの機能によって異なりますが、一般的に、次のような長所と短所がさまざまな種類のカーソルやロックに適用されます。  

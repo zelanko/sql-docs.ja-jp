@@ -1,4 +1,5 @@
 ---
+description: 更新されたレコードのフィルター処理
 title: 更新されたレコードのフィルター処理 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8dae572da8f87051a58415929657f77be6c91d14
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a0c3a33b9c45afacfdb790606da22713a0a82478
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453384"
 ---
 # <a name="filtering-for-updated-records"></a>更新されたレコードのフィルター処理
 UpdateBatch を呼び出す前に、レコードセットフィルタープロパティを使用して、レコードセットが開かれた後、または UpdateBatch を最後に呼び出した後に変更されたレコードのみを表示することができます。 これを行うには、次のセクションのコード例に示すように、フィルターを adFilterPendingRecords に設定して、更新するレコードの数を決定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この例では、以前の UpdateBatch の例を拡張します。この例では、UpdateBatch を呼び出す直前にレコードセットをフィルター処理して、レコードが変更されるユーザーを表示し、ユーザーが更新をキャンセルできるようにします (CancelBatch メソッドを使用)。  
   
 ```  

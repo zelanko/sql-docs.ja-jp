@@ -1,4 +1,5 @@
 ---
+description: Connection オブジェクトに対するメソッドとしてストアド プロシージャを呼び出す
 title: 接続オブジェクトのメソッドとしてストアドプロシージャを呼び出す |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bb81e82e27decadbf6d31ce9bc391023474ecba
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8e5e019760c4496b7dab769cb96fbd7b2eab4f47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761238"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453704"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Connection オブジェクトに対するメソッドとしてストアド プロシージャを呼び出す
-ストアドプロシージャは、関連付けられた開いている**接続**オブジェクトでネイティブメソッドであるかのように呼び出すことができます。 これは、**接続**オブジェクトで名前付きコマンドを呼び出す場合と似ています。  
+ストアドプロシージャは、関連付けられた開いている **接続** オブジェクトでネイティブメソッドであるかのように呼び出すことができます。 これは、 **接続** オブジェクトで名前付きコマンドを呼び出す場合と似ています。  
   
  次の Visual Basic コード例では、CustOrdersOrders Northwind サンプルデータベースのストアドプロシージャを呼び出します。このデータベースは、便宜上、ここに記載されています。  
   
@@ -34,7 +35,7 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- 次のコード例では、ストアドプロシージャが、関連付けられた開いている**接続**オブジェクトでネイティブメソッドであるかのように呼び出す方法を示します。  
+ 次のコード例では、ストアドプロシージャが、関連付けられた開いている **接続** オブジェクトでネイティブメソッドであるかのように呼び出す方法を示します。  
   
 ```  
 Const DS = "MySQLServer"  

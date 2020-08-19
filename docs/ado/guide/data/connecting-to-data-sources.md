@@ -1,4 +1,5 @@
 ---
+description: データ ソースへの接続
 title: データソースへの接続 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ef641bbfb94b8fde5f12af6cadd03f13fbfa91f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 78d7395adfb30dbf78d88baadabc42ede409f47a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761168"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453644"
 ---
 # <a name="connecting-to-data-sources"></a>データ ソースへの接続
-ADO**接続**オブジェクトは、DBMS、ファイルストア、またはコンマ区切りのテキストファイルを含む、データソースとの一意のセッションを表します。 クライアント/サーバーデータベースシステムの場合、ADO 接続はサーバーへの実際のネットワーク接続にすることができます。  
+ADO **接続** オブジェクトは、DBMS、ファイルストア、またはコンマ区切りのテキストファイルを含む、データソースとの一意のセッションを表します。 クライアント/サーバーデータベースシステムの場合、ADO 接続はサーバーへの実際のネットワーク接続にすることができます。  
   
- 接続**オブジェクトは**、接続構成の指定、接続の開始と終了、データソースに対するコマンドの作成と実行、および基になるデータソースのデザインに関する情報のスキーマ行セットの形式での提供など、さまざまな[プロパティとメソッド](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md)をサポートしています。プロバイダーでサポートされている機能によっては、**接続**オブジェクトの一部のコレクション、メソッド、またはプロパティが使用できないことがあります。  
+ 接続 **オブジェクトは** 、接続構成の指定、接続の開始と終了、データソースに対するコマンドの作成と実行、および基になるデータソースのデザインに関する情報のスキーマ行セットの形式での提供など、さまざまな [プロパティとメソッド](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md) をサポートしています。プロバイダーでサポートされている機能によっては、 **接続** オブジェクトの一部のコレクション、メソッド、またはプロパティが使用できないことがあります。  
   
  **接続**オブジェクトを使用するか、**レコードセット**オブジェクトを使用して、データソースに接続できます。  
   
