@@ -1,4 +1,5 @@
 ---
+description: AppendChunk および GetChunk メソッドの例 (VC++)
 title: AppendChunk および GetChunk メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f74c65a2a732c6875cf71a69420616f0b619f1e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c6d8089bc7a3f0b59684a7dc1065c5b8c5dcc04c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451244"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>AppendChunk および GetChunk メソッドの例 (VC++)
-この例では、 [Appendchunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)メソッドと[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)メソッドを使用して、イメージフィールドに別のレコードのデータを格納します。  
+この例では、 [Appendchunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) メソッドと [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) メソッドを使用して、イメージフィールドに別のレコードのデータを格納します。  
   
 ```  
 // BeginAppendChunkCpp.cpp  

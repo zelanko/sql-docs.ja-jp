@@ -1,4 +1,5 @@
 ---
+description: AppendChunk および GetChunk メソッドの例 (VB)
 title: AppendChunk および GetChunk メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa4c9e41da8d28a0171d0c7ddf3b53d2ee77c174
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2c37ac5209e7244a76f62a2d6979efb2df73a8e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451254"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk および GetChunk メソッドの例 (VB)
-この例では、 [Appendchunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)メソッドと[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)メソッドを使用して、イメージフィールドに別のレコードのデータを格納します。  
+この例では、 [Appendchunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) メソッドと [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) メソッドを使用して、イメージフィールドに別のレコードのデータを格納します。  
   
 ```  
 'BeginAppendChunkVB  

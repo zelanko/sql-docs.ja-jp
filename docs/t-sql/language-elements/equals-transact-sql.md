@@ -1,4 +1,5 @@
 ---
+description: = (等しい) (Transact-SQL)
 title: = (等しい) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/06/2016
@@ -21,12 +22,12 @@ ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 140545235928e356d143aa2a5164c0b054adf0f9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6acac2a2a67974945c6e934994c7823fc3d75bde
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422516"
 ---
 # <a name="-equals-transact-sql"></a>= (等しい) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,9 +49,9 @@ expression = expression
  任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 2 つの式のデータ型が異なる場合、1 つの式のデータ型がもう一方の式のデータ型に暗黙的に変換可能である必要があります。 変換は、[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)のルールに基づいています。  
   
 ## <a name="result-types"></a>戻り値の型  
- Boolean  
+ ブール型  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  NULL 式を使用して比較した場合、結果は `ANSI_NULLS` の設定に応じて以下のように異なります。  
   
 -   `ANSI_NULLS` が ON に設定されている場合、NULL は不明な値であり、別の NULL を含む、他の値と比較できないという ANSI 規則に従って、NULL との比較結果が UNKNOWN となります。  

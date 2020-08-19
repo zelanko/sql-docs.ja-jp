@@ -1,4 +1,5 @@
 ---
+description: CacheSize プロパティの例 (JScript)
 title: CacheSize プロパティの例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9aad983c315aae76dc30cbbbef645c25b9302bdf
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6f161c3e8e8b693b4a5be474406213116feae8ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451094"
 ---
 # <a name="cachesize-property-example-jscript"></a>CacheSize プロパティの例 (JScript)
-この例では、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)プロパティを使用して、30レコードキャッシュなしで実行された操作のパフォーマンスの違いを示します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Cachesizejs. asp**として保存します。  
+この例では、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) プロパティを使用して、30レコードキャッシュなしで実行された操作のパフォーマンスの違いを示します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Cachesizejs. asp**として保存します。  
   
 ```  
 <!-- BeginCacheSizeJS -->  

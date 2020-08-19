@@ -1,4 +1,5 @@
 ---
+description: ストアド プロシージャの使用 (MDX)
 title: ストアドプロシージャの使用 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c7cc3a7ba79b15b0eee36ac6907013673a5b7bf9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 2c9bd8f20ffae61656dd30f139ce12665ff57f4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476974"
 ---
 # <a name="using-stored-procedures-mdx"></a>ストアド プロシージャの使用 (MDX)
 
@@ -32,7 +33,7 @@ WHERE [Measures].[Reseller Freight Cost]
 ```  
   
 > [!NOTE]  
->  *ストアドプロシージャ*は、これらの種類の関数で使用される用語です [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 以前のバージョンのでは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、これらの型の関数を*ユーザー定義関数*と呼びました。  
+>  *ストアドプロシージャ* は、これらの種類の関数で使用される用語です [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 以前のバージョンのでは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、これらの型の関数を *ユーザー定義関数*と呼びました。  
   
 ## <a name="types-of-stored-procedures"></a>ストアドプロシージャの種類  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は COM アセンブリと CLR アセンブリの両方をサポートします。 Clr アセンブリで使用可能なセキュリティが強化されているため、CLR アセンブリを使用することをお勧めします。 サーバーに Microsoft Office Excel がインストールされている場合、Excel 関数も使用可能です。  

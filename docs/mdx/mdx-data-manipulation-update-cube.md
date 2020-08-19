@@ -1,4 +1,5 @@
 ---
+description: MDX データ操作 - UPDATE CUBE
 title: UPDATE CUBE ステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f52dd59b67b42ad430df9bb1e9d00dce7ad6d697
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9958fa6e7efe7b3bc42dd04aebc295f1ee2d0944
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68003531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476994"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX データ操作 - UPDATE CUBE
 
@@ -52,8 +53,8 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  0 ～ 1 の範囲の 10 進値を返す有効な多次元式 (MDX) 数値式です。  
   
-## <a name="remarks"></a>Remarks  
- キューブ内の指定されたリーフ セルまたは非リーフ セルの値を更新できます。指定された非リーフ セルの値を、それに依存するすべてのリーフ セルに割り当てることもできます。 組式で指定されるセルは、多次元空間内の任意の有効なセルにすることができます (つまり、セルはリーフセルである必要はありません)。 ただし、セルは[Sum](../mdx/sum-mdx.md)集計関数を使用して集計する必要があり、セルの識別に使用される組には計算されるメンバーを含めないでください。  
+## <a name="remarks"></a>解説  
+ キューブ内の指定されたリーフ セルまたは非リーフ セルの値を更新できます。指定された非リーフ セルの値を、それに依存するすべてのリーフ セルに割り当てることもできます。 組式で指定されるセルは、多次元空間内の任意の有効なセルにすることができます (つまり、セルはリーフセルである必要はありません)。 ただし、セルは [Sum](../mdx/sum-mdx.md) 集計関数を使用して集計する必要があり、セルの識別に使用される組には計算されるメンバーを含めないでください。  
   
  **UPDATE CUBE**ステートメントは、指定された合計にロールアップされるリーフセルと非リーフセルに対して、一連の個別のセルの書き戻し操作を自動的に生成するサブルーチンと考えると役に立つ場合があります。  
   
@@ -87,7 +88,7 @@ Count(leaf cells contained in <tuple>)
 (<New Value> - <existing value>)  * Weight_Expression  
 ```  
   
- 重み式が指定されていない場合、 **UPDATE CUBE**ステートメントは暗黙的に次の式を使用します。  
+ 重み式が指定されていない場合、 **UPDATE CUBE** ステートメントは暗黙的に次の式を使用します。  
   
 ```  
 Weight_Expression = <leaf cell value> / <existing value>  
@@ -98,7 +99,7 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!CAUTION]  
 >  クライアントアプリケーションは、正しくないロールアップ値やデータの不整合などの予期しない結果を回避するために、すべてのディメンションの割り当てを同時に検討する必要があります。  
   
- 各**更新キューブ**の割り当ては、トランザクションのためにアトミックであると見なす必要があります。 つまり、数式のエラーやセキュリティ違反など、何かの理由でいずれかの割り当て操作が失敗すると、UPDATE CUBE 操作全体が失敗します。 個々の割り当て操作の計算が処理される前に、データのスナップショットが作成され、計算結果が正しいかどうかの確認が行われます。  
+ 各 **更新キューブ** の割り当ては、トランザクションのためにアトミックであると見なす必要があります。 つまり、数式のエラーやセキュリティ違反など、何かの理由でいずれかの割り当て操作が失敗すると、UPDATE CUBE 操作全体が失敗します。 個々の割り当て操作の計算が処理される前に、データのスナップショットが作成され、計算結果が正しいかどうかの確認が行われます。  
   
 > [!CAUTION]  
 >  USE_WEIGHTED_ALLOCATION メソッドは、整数を含むメジャーで使用する場合、増分丸めの変更によって発生する不正確な結果を返すことができます。  
@@ -108,6 +109,6 @@ Weight_Expression = <leaf cell value> / <existing value>
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [Mdx&#41;&#40;MDX データ操作ステートメント](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [Mdx&#41;&#40;MDX データ操作ステートメント ](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: CancelBatch メソッド (ADO)
 title: CancelBatch メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2e9f3b57137b4c113b9e177e9fecefec4070ac0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f8fa4d02dd10325726c83a6b645ebdd5b94397f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451034"
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch メソッド (ADO)
 保留中のバッチ更新をキャンセルします。  
@@ -40,11 +41,11 @@ recordset.CancelBatchAffectRecords
 ## <a name="remarks"></a>解説  
  バッチ更新モードで[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の保留中の更新を取り消すには、 **CancelBatch**メソッドを使用します。 **レコードセット**が即時更新モードである場合、 **AdCancelBatch**が**current**を指定せずにを呼び出すと、エラーが生成されます。  
   
- 現在のレコードを編集している場合、または**CancelBatch**を呼び出したときに新しいレコードを追加している場合、ADO は最初に[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)メソッドを呼び出して、キャッシュされた変更を取り消します。 その後、**レコードセット**内のすべての保留中の変更が取り消されます。  
+ 現在のレコードを編集している場合、または **CancelBatch**を呼び出したときに新しいレコードを追加している場合、ADO は最初に [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) メソッドを呼び出して、キャッシュされた変更を取り消します。 その後、 **レコードセット** 内のすべての保留中の変更が取り消されます。  
   
- **CancelBatch**呼び出しの後に現在のレコードがわからないされている可能性があります。特に、新しいレコードを追加するプロセスを実行していた場合に発生します。 このため、 **CancelBatch**の呼び出し後に、レコード**セット**内の既知の場所に現在のレコードの位置を設定することは賢明です。 たとえば、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッドを呼び出します。  
+ **CancelBatch**呼び出しの後に現在のレコードがわからないされている可能性があります。特に、新しいレコードを追加するプロセスを実行していた場合に発生します。 このため、 **CancelBatch**の呼び出し後に、レコード**セット**内の既知の場所に現在のレコードの位置を設定することは賢明です。 たとえば、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) メソッドを呼び出します。  
   
- 基になるデータと競合しているために保留中の更新をキャンセルしようとした場合 (たとえば、別のユーザーによってレコードが削除された場合)、プロバイダは[Errors](../../../ado/reference/ado-api/errors-collection-ado.md)コレクションに警告を返しますが、プログラムの実行を停止することはありません。 実行時エラーは、要求されたすべてのレコードに競合がある場合にのみ発生します。 [フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティ (**AdFilterAffectedRecords**) と[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)プロパティを使用して、競合しているレコードを検索します。  
+ 基になるデータと競合しているために保留中の更新をキャンセルしようとした場合 (たとえば、別のユーザーによってレコードが削除された場合)、プロバイダは [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) コレクションに警告を返しますが、プログラムの実行を停止することはありません。 実行時エラーは、要求されたすべてのレコードに競合がある場合にのみ発生します。 [フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティ (**AdFilterAffectedRecords**) と[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)プロパティを使用して、競合しているレコードを検索します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

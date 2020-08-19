@@ -1,4 +1,5 @@
 ---
+description: sp_check_subset_filter (Transact-SQL)
 title: sp_check_subset_filter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f006cba8bfe0abecce995753863944f7d5bf0b71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55b5160842e5be4bda385fd23afd22d304dc2dae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486184"
 ---
 # <a name="sp_check_subset_filter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,34 +45,34 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @filtered_table = ] 'filtered_table'`フィルター選択されたテーブルの名前を指定します。 *filtered_table*は**nvarchar (400)**,、既定値はありません。  
+`[ @filtered_table = ] 'filtered_table'` フィルター選択されたテーブルの名前を指定します。 *filtered_table* は **nvarchar (400)**,、既定値はありません。  
   
-`[ @subset_filterclause = ] 'subset_filterclause'`テストするフィルター句を選択します。 *subset_filterclause*は**nvarchar (1000)**,、既定値はありません。  
+`[ @subset_filterclause = ] 'subset_filterclause'` テストするフィルター句を選択します。 *subset_filterclause* は **nvarchar (1000)**,、既定値はありません。  
   
-`[ @has_dynamic_filters = ] has_dynamic_filters`フィルター句がパラメーター化された行フィルターであるかどうかを示します。 *has_dynamic_filters*は**ビット**,、既定値は NULL の場合、は出力パラメーターです。 フィルター句がパラメーター化された行フィルターの場合、値**1**を返します。  
+`[ @has_dynamic_filters = ] has_dynamic_filters` フィルター句がパラメーター化された行フィルターであるかどうかを示します。 *has_dynamic_filters* は **ビット**,、既定値は NULL の場合、は出力パラメーターです。 フィルター句がパラメーター化された行フィルターの場合、値 **1** を返します。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|パブリケーションが事前計算済みパーティションを使用するように修飾されているかどうかを示します。**1**は事前計算済みパーティションを使用できることを示し、 **0**は使用できないことを示します。|  
-|**has_dynamic_filters**|**bit**|指定したフィルター句にパラメーター化された行フィルターが少なくとも1つ含まれているかどうかを示します。**1**は、パラメーター化された行フィルターが使用されることを示します。 **0**は、このような関数が使用されないことを示します。|  
+|**can_use_partition_groups**|**bit**|パブリケーションが事前計算済みパーティションを使用するように修飾されているかどうかを示します。 **1** は事前計算済みパーティションを使用できることを示し、 **0** は使用できないことを示します。|  
+|**has_dynamic_filters**|**bit**|指定したフィルター句にパラメーター化された行フィルターが少なくとも1つ含まれているかどうかを示します。 **1** は、パラメーター化された行フィルターが使用されることを示します。 **0** は、このような関数が使用されないことを示します。|  
 |**dynamic_filters_function_list**|**nvarchar (500)**|アーティクルを動的にフィルター選択するフィルター句内の関数の一覧です。各関数は、セミコロンで区切られます。|  
 |**uses_host_name**|**bit**|[HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md)関数がフィルター句で使用されている場合は、 **1**はこの関数が存在することを意味します。|  
 |**uses_suser_sname**|**bit**|[SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md)関数がフィルター句で使用されている場合は、 **1**はこの関数が存在することを意味します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_check_subset_filter**は、マージレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_check_subset_filter** は、マージレプリケーションで使用します。  
   
  テーブルがパブリッシュされていない場合でも、任意のテーブルに対して**sp_check_subset_filter**を実行できます。 フィルター選択されたアーティクルを定義する前に、このストアドプロシージャを使用してフィルター句を検証することができます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_check_subset_filter**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)  
   
   
