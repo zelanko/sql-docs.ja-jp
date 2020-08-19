@@ -1,4 +1,5 @@
 ---
+description: 検索用フィルターの構成と管理
 title: 検索用フィルターの構成と管理 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6dc1e17228e9ccf5f4f7bf17d8083ffd7a9f390d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ebeaebbc4a082bcb7051dc3d6c784b6ce1ec11fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420356"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>検索用フィルターの構成と管理
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  **varbinary**、**varbinary(max)** 、**image**、または **xml** データ型列のドキュメントにインデックスを作成するには、追加の処理が必要です。 この処理はフィルターによって実行します。 フィルターは、ドキュメントから (フォーマットを解除して) 文字情報を抽出します。 次に、テーブル列に関連付けられている言語のワード ブレーカー コンポーネントにテキストを送ります。  
+  **varbinary**、**varbinary(max)**、**image**、または **xml** データ型列のドキュメントにインデックスを作成するには、追加の処理が必要です。 この処理はフィルターによって実行します。 フィルターは、ドキュメントから (フォーマットを解除して) 文字情報を抽出します。 次に、テーブル列に関連付けられている言語のワード ブレーカー コンポーネントにテキストを送ります。  
  
 ## <a name="filters-and-document-types"></a>フィルターおよびドキュメントの種類
 フィルターは、ドキュメント型 (.doc、.pdf、.xls、.xml など) に固有です。 これらのフィルターは IFilter インターフェイスを実装しています。 ドキュメント型の一覧を参照するには、 [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) カタログ ビューに対してクエリを実行してください。  
