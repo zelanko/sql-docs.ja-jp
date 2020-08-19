@@ -1,4 +1,5 @@
 ---
+description: ADO Dynamic プロパティ インデックス
 title: ADO 動的プロパティインデックス |Microsoft Docs
 ms.prod: sql
 ms.technology: connectivity
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7d2c5bcc1b07107164b8df73c8239ebd66b9fa4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fbd7933ac206f81460a7d0d50d0a7ac332cf154a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749226"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451464"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO Dynamic プロパティ インデックス
 データプロバイダー、サービスプロバイダー、およびサービスコンポーネントは、開かれていない[接続](../../../ado/reference/ado-api/connection-object-ado.md)および[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの**プロパティ**コレクションに動的なプロパティを追加できます。 また、これらのオブジェクトを開いたときに、指定したプロバイダーによって追加のプロパティが挿入される場合もあります。 これらのプロパティの一部は、「 [ADO Dynamic properties](../../../ado/reference/ado-api/ado-dynamic-properties.md) 」セクションに一覧表示されています。 詳細については、 [「付録 a: providers](../../../ado/guide/appendixes/appendix-a-providers.md) 」セクションの特定のプロバイダーに記載されています。  
@@ -51,7 +52,7 @@ ms.locfileid: "82749226"
 |分離レベル|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |分離の保持|DBPROP_SUPPORTEDTXNISORETAIN|  
 |[Locale Identifier]|DBPROP_INIT_LCID|  
-|Location|DBPROP_INIT_LOCATION|  
+|場所|DBPROP_INIT_LOCATION|  
 |インデックスの最大サイズ|DBPROP_MAXINDEXSIZE|  
 |行の最大サイズ|DBPROP_MAXROWSIZE|  
 |行の最大サイズに BLOB が含まれる|DBPROP_MAXROWSIZEINCLUDESBLOB|  
@@ -70,7 +71,7 @@ ms.locfileid: "82749226"
 |Select リスト内の列の並べ替え|DBPROP_ORDERBYCOLUMNSINSELECT|  
 |出力パラメーターの可用性|DBPROP_OUTPUTPARAMETERAVAILABILITY|  
 |Ref アクセサーで渡す|DBPROP_BYREFACCESSORS|  
-|パスワード|DBPROP_AUTH_PASSWORD|  
+|Password|DBPROP_AUTH_PASSWORD|  
 |Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|  
 |永続的な ID の種類|DBPROP_PERSISTENTIDTYPE|  
 |中止動作の準備|DBPROP_PREPAREABORTBEHAVIOR|  

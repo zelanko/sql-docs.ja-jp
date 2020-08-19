@@ -1,4 +1,5 @@
 ---
+description: Attributes および Name プロパティの例 (VB)
 title: Attributes と Name プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6993ea70496673d3aae23e4a4b6c5982637a5f8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ed744b6cb39b37958de8dcd6cb4dd6dde8b2a9a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451224"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Attributes および Name プロパティの例 (VB)
 この例では、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[フィールド](../../../ado/reference/ado-api/field-object.md)、および[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトの[Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティの値を表示します。 [Name](../../../ado/reference/ado-api/name-property-ado.md)プロパティを使用して、各**フィールド**と**プロパティ**オブジェクトの名前を表示します。  

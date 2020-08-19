@@ -1,4 +1,5 @@
 ---
+description: EOS および LineSeparator プロパティと SkipLine メソッドの例 (VB)
 title: EOS および LineSeparator プロパティと SkipLine メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4998ffe368a9f7773474514a7d53922d1b6cb36
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3265cf082790da2b9be844bd58b7af466cb45a18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444024"
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS および LineSeparator プロパティと SkipLine メソッドの例 (VB)
 この例では、テキストストリームを一度に1行ずつ操作する方法を示します。 既定のキャリッジリターン/ラインフィード (**Adcrlf**) から単なるラインフィード (**adcrlf**) または復帰 (**adcrlf**) に行区切り記号を変更した場合の結果を示します。  

@@ -1,4 +1,5 @@
 ---
+description: '[変数] ウィンドウ'
 title: '[変数] ウィンドウ | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 061adfeced9ab5caa6da3e303593310761fa9e96
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ad545578e9d3baf019be37b1bc9c7969df5ee1ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495105"
 ---
 # <a name="variables-window"></a>[変数] ウィンドウ
 
@@ -36,8 +37,8 @@ ms.locfileid: "86913698"
 > [!NOTE]
 >  **Name** プロパティと **Namespace** プロパティの値の最初の文字は、Unicode Standard 2.0 に定義されているアルファベット文字か、アンダースコア (_) にする必要があります。 2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (\_) を使用できます。  
   
-## <a name="options"></a>オプション  
- **変数の追加**  
+## <a name="options"></a>Options  
+ **[変数の追加]**  
  ユーザー定義変数を追加します。  
   
  **変数の移動**  

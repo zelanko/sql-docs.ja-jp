@@ -1,4 +1,5 @@
 ---
+description: ActiveCommand プロパティの例 (VC++)
 title: ActiveCommand プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f0f0b39b26fb349222a3ad04cd1414d9cf3ddafe
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c36744944fb88be4da22642246b54908809145cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451714"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand プロパティの例 (VC++)
-この例では、 [activecommand](../../../ado/reference/ado-api/activecommand-property-ado.md)プロパティを示します。  
+この例では、 [activecommand](../../../ado/reference/ado-api/activecommand-property-ado.md) プロパティを示します。  
   
  サブルーチンには、**レコードセット**を作成したコマンドテキストとパラメーターを表示するために**activecommand**プロパティを使用する[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトが指定されています。  
   
@@ -212,7 +213,7 @@ void PrintComError(_com_error &e) {
 Ringer  
 ```  
   
-## <a name="sample-output"></a>出力例  
+## <a name="sample-output"></a>サンプル出力  
   
 ```  
 Command text = 'SELECT * FROM authors WHERE au_lname = ?'  

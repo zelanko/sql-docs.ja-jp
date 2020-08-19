@@ -1,4 +1,5 @@
 ---
+description: ADO の動的プロパティ
 title: ADO 動的プロパティ |Microsoft Docs
 ms.prod: sql
 ms.technology: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c727f73abed5fe9a30ebf191e2c6da60f8baa13a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 32e592d7e6d89789168db962a5788c0280e28c14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451454"
 ---
 # <a name="ado-dynamic-properties"></a>ADO の動的プロパティ
 動的プロパティは、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)、または[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[properties](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションに追加できます。 これらのプロパティのソースは、データプロバイダー ( [SQL Server の OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)、 [OLE DB 用の Microsoft Cursor service](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)などのサービスプロバイダー) のいずれかです。 特定の動的プロパティの詳細については、適切なデータプロバイダーまたはサービスプロバイダーのドキュメントを参照してください。  
@@ -32,7 +33,7 @@ ms.locfileid: "87242892"
 |[プロンプト](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|OLE DB プロバイダーがユーザーに初期化情報の入力を求めるかどうかを指定します。|  
 |[名前のリシェイプ](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|**レコードセット**オブジェクトの名前を指定します。|  
 |[再同期コマンド](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|**一意のテーブル**動的プロパティに指定されたテーブル内のデータを更新するために再**同期**メソッドによって発行される、ユーザーが指定したコマンド文字列を指定します。|  
-|[一意のテーブル、一意のスキーマ、一意のカタログ](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**一意のテーブル**更新、挿入、および削除が許可されるベーステーブルの名前を指定します。<br /><br /> **一意のスキーマ**スキーマ、またはテーブルの所有者の名前を指定します。<br /><br /> **一意のカタログ**カタログ、またはテーブルを含むデータベースの名前を指定します。|  
+|[一意のテーブル、一意のスキーマ、一意のカタログ](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**一意のテーブル** 更新、挿入、および削除が許可されるベーステーブルの名前を指定します。<br /><br /> **一意のスキーマ** スキーマ、またはテーブルの所有者の名前を指定します。<br /><br /> **一意のカタログ** カタログ、またはテーブルを含むデータベースの名前を指定します。|  
 |[再同期の更新](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|**UpdateBatch**メソッドの後に暗黙の再**同期**メソッド操作を実行するかどうかを指定します。それを行う場合は、その操作のスコープを指定します。|
 | &nbsp; | &nbsp; |
 

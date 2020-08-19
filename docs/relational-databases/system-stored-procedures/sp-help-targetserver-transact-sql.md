@@ -1,4 +1,5 @@
 ---
+description: sp_help_targetserver (Transact-SQL)
 title: sp_help_targetserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8b29b5d7698fdaceced322e30048c6c789f076e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b997402b52469342ebd8a034f6fb306dc389cee0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891677"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485975"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,10 +41,10 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @server_name = ] 'server_name'`情報を返すサーバーの名前。 *server_name*は**nvarchar (30)**,、既定値は NULL です。  
+`[ @server_name = ] 'server_name'` 情報を返すサーバーの名前。 *server_name* は **nvarchar (30)**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  *Server_name*が指定されていない場合、 **sp_help_targetserver**はこの結果セットを返します。  
@@ -57,7 +58,7 @@ sp_help_targetserver
 |**enlist_date**|**datetime**|指定したサーバーの参加日。|  
 |**last_poll_date**|**datetime**|ジョブに対してサーバーが最後にポーリングされた日付。|  
 |**status**|**int**|指定されたサーバーの状態。|  
-|**unread_instructions**|**int**|サーバーに未読の指示があるかどうか。 すべての行がダウンロードされている場合、この列は**0**になります。|  
+|**unread_instructions**|**int**|サーバーに未読の指示があるかどうか。 すべての行がダウンロードされている場合、この列は **0**になります。|  
 |**local_time**|**datetime**|対象サーバーのローカルの日付と時刻。これは、マスターサーバーの最後のポーリング時点での対象サーバーのローカル時刻に基づいています。|  
 |**enlisted_by_nt_user**|**nvarchar (100)**|ターゲット サーバーに参加した Microsoft Windows のユーザー。|  
 |**poll_interval**|**int**|ジョブをダウンロードしてジョブの状態をアップロードするために、対象サーバーがマスター SQLServerAgent サービスをポーリングする間隔 (秒単位)。|  
@@ -78,7 +79,7 @@ EXEC dbo.sp_help_targetserver ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-target-server"></a>B: 特定の対象サーバーの情報を一覧表示する  
+### <a name="b-listing-information-for-a-specific-target-server"></a>B. 特定の対象サーバーの情報を一覧表示する  
  次の例では、対象サーバーの情報を一覧表示し `SEATTLE2` ます。  
   
 ```  
@@ -89,7 +90,7 @@ EXEC dbo.sp_help_targetserver N'SEATTLE2' ;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_add_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [sp_delete_targetserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
  [sp_delete_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   

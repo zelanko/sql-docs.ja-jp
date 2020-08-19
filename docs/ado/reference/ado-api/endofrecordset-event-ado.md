@@ -1,4 +1,5 @@
 ---
+description: EndOfRecordset イベント (ADO)
 title: EndOfRecordset イベント (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd7710ebc7a5af323c247860baedd4b30d91fe21
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d96d11333c47aeb190cd2842a5a65a832642eb8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765553"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444034"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset イベント (ADO)
 **Endofrecordset**イベントは、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の末尾を越えて行を移動しようとしたときに呼び出されます。  
@@ -40,17 +41,17 @@ EndOfRecordset fMoreData, adStatus, pRecordset
  *adStatus*  
  [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md)状態の値です。  
   
- **Endofrecordset**が呼び出されると、このパラメーターは、イベントの原因となった操作が成功した場合に**adstatusok**に設定されます。 このイベントの原因となった操作のキャンセルをこのイベントが要求できない場合は、 **Adstatuscantdeny**に設定されます。  
+ **Endofrecordset**が呼び出されると、このパラメーターは、イベントの原因となった操作が成功した場合に**adstatusok**に設定されます。 このイベントの原因となった操作のキャンセルをこのイベントが要求できない場合は、 **Adstatuscantdeny** に設定されます。  
   
  **Endofrecordset**が返される前に、このパラメーターを**adStatusUnwantedEvent**に設定して、後続の通知が行われないようにします。  
   
  *pRecordset*  
- **レコードセット**オブジェクトです。 このイベントが発生した**レコードセット**。  
+ **レコードセット**オブジェクトです。 このイベントが発生した **レコードセット** 。  
   
-## <a name="remarks"></a>Remarks  
- MoveNext**レコードセット**イベントは、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)操作が失敗した場合に発生する可能性があります。  
+## <a name="remarks"></a>解説  
+ MoveNext **レコードセット** イベントは、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 操作が失敗した場合に発生する可能性があります。  
   
- このイベントハンドラーは、おそらく**MoveNext**を呼び出した結果として、**レコードセット**オブジェクトの末尾を越えて移動しようとしたときに呼び出されます。 ただし、このイベントでは、データベースからより多くのレコードを取得し、レコード**セット**の末尾に追加することができます。 その場合は、 *Ffar データ*を VARIANT_TRUE に設定し、 **endofrecordset**からを返します。 次に、再度**MoveNext**を呼び出して、新しく取得したレコードにアクセスします。  
+ このイベントハンドラーは、おそらく**MoveNext**を呼び出した結果として、**レコードセット**オブジェクトの末尾を越えて移動しようとしたときに呼び出されます。 ただし、このイベントでは、データベースからより多くのレコードを取得し、レコード **セット**の末尾に追加することができます。 その場合は、 *Ffar データ* を VARIANT_TRUE に設定し、 **endofrecordset**からを返します。 次に、再度 **MoveNext** を呼び出して、新しく取得したレコードにアクセスします。  
   
 ## <a name="see-also"></a>参照  
  [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

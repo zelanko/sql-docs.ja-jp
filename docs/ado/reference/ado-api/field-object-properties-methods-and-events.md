@@ -1,4 +1,5 @@
 ---
+description: Field オブジェクトのプロパティ、メソッド、およびイベント
 title: Field オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8225c3903fc0b7dddb5c91c592bc73fa662e2bcd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5705a557a3a0152430b696497899a46073d76ca0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443794"
 ---
 # <a name="field-object-properties-methods-and-events"></a>Field オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -50,7 +51,7 @@ ms.locfileid: "82756853"
   
  [GetChunk メソッド](../../../ado/reference/ado-api/getchunk-method-ado.md)  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
 ## <a name="see-also"></a>参照  
