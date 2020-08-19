@@ -1,4 +1,5 @@
 ---
+description: LocalDBGetInstanceInfo 関数
 title: LocalDBGetInstanceInfo 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b392098091a3a439271a6f01a28ae152405e17b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f33e9f820eebd80680b4c2c631f30d74ca0f79da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475870"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 関数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -93,7 +94,7 @@ HRESULT LocalDBGetInstanceInfo(
  [出力] LocalDB インスタンスについての情報を格納するバッファー。  
   
  *dwInstanceInfoSize*  
- 代入*Instanceinfo*バッファーのサイズを保持します。  
+ 代入 *Instanceinfo* バッファーのサイズを保持します。  
   
 ## <a name="returns"></a>戻り値  
  S_OK  
@@ -126,7 +127,7 @@ HRESULT LocalDBGetInstanceInfo(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="details"></a>詳細  
+## <a name="details"></a>説明  
  **構造体**のサイズ引数 (*Lpinstanceinfosize*) の導入の背後にある論理的な理由は、API が異なるバージョンの**localdbinstanceinfostruct**を返すことができるようにすることです。これにより、上位互換性と下位互換性が効果的に有効になります。  
   
  **構造体**のサイズ引数 (*Lpinstanceinfosize*) が既知のバージョンの**localdbinstanceinfostruct**のサイズと一致する場合、その**構造体**のバージョンが返されます。 それ以外の場合、LOCALDB_ERROR_INVALID_PARAMETER が返されます。  
@@ -141,7 +142,7 @@ LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));
   
  LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../../relational-databases/sql-server-express-localdb-reference.md)を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

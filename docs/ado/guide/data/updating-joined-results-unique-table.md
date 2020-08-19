@@ -1,4 +1,5 @@
 ---
+description: 'JOINed の結果の更新: Unique Table'
 title: '結合された結果を更新しています: 一意のテーブル |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d52e6926-5c22-43dc-9f32-7b32c1a071e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d6076fc4c3566d13dfe4a583aefcb0e3e1ba1f6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2a867f918bd6a7650686482640478e8b820d363a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452634"
 ---
 # <a name="updating-joined-results-unique-table"></a>JOINed の結果の更新: Unique Table
 ADO を使用すると、Unique Table 動的プロパティを使用して、複数のベーステーブルに対する結合操作によって形成されたレコードセット内の特定のベーステーブルに対する変更を厳密に制御できます。 一意のテーブルの使用方法の詳細については、「Unique テーブル」の ADO プログラマーのリファレンストピックと、「再同期の動的プロパティ」を参照してください。  

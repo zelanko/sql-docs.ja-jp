@@ -1,4 +1,5 @@
 ---
+description: RDS チュートリアル
 title: RDS チュートリアル |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f646bd95e3ae9cb809f04c2ef66c47386fbde6c6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aedb4037d4f6c37ad70086a4e2a51a6210c219c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452074"
 ---
 # <a name="rds-tutorial"></a>RDS チュートリアル
 このチュートリアルでは、RDS プログラミングモデルを使用してデータソースを照会および更新する方法について説明します。 まず、このタスクを実行するために必要な手順について説明します。 このチュートリアルは、Microsoft® Visual Basic Scripting Edition (Windows Foundation クラス (ADO/WFC) 用の ADO を使用) で繰り返されています。  
@@ -29,7 +30,7 @@ ms.locfileid: "82762983"
 -   特定の RDS 機能が不明で、別の言語が少しわからない場合は、別の言語で表現された同じ機能を検索することで、質問を解決できる可能性があります。  
   
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 ## <a name="how-the-tutorial-is-presented"></a>チュートリアルの表示方法  
  このチュートリアルは、RDS プログラミングモデルに基づいています。 プログラミングモデルの各ステップについて個別に説明します。 また、Visual Basic コードのフラグメントを使用した各手順についても説明します。  
@@ -44,11 +45,11 @@ ms.locfileid: "82762983"
   
 -   サーバープログラムを起動します。 データソースと発行するコマンドを識別するパラメーターをサーバープログラムに渡します。  
   
--   サーバープログラムは、通常は ADO を使用して、データソースから[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを取得します。 必要に応じて、**レコードセット**オブジェクトがサーバー上で処理されます。  
+-   サーバープログラムは、通常は ADO を使用して、データソースから [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトを取得します。 必要に応じて、 **レコードセット** オブジェクトがサーバー上で処理されます。  
   
--   サーバープログラムによって、最終的な**レコードセット**オブジェクトがクライアントアプリケーションに返されます。  
+-   サーバープログラムによって、最終的な **レコードセット** オブジェクトがクライアントアプリケーションに返されます。  
   
--   クライアントでは、必要に応じて、**レコードセット**オブジェクトを、ビジュアルコントロールで簡単に使用できる形式にすることができます。  
+-   クライアントでは、必要に応じて、 **レコードセット** オブジェクトを、ビジュアルコントロールで簡単に使用できる形式にすることができます。  
   
 -   **Recordset**オブジェクトへの変更は、サーバーに返され、データソースの更新に使用されます。  
   

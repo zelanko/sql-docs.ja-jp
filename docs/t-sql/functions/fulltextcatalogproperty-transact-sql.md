@@ -1,4 +1,5 @@
 ---
+description: FULLTEXTCATALOGPROPERTY (Transact-SQL)
 title: FULLTEXTCATALOGPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bcf1047008c59844630aa0391f798ddf751c4e89
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c6e8c856b81bd4ff4ab03c988af1edf6a8b3ac43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468019"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
 ## <a name="arguments"></a>引数
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]LogSize**プロパティと**PopulateStatus **プロパティは、** の将来のリリースでは削除される予定です。 新しい開発作業では、これらのプロパティの使用は避け、現在これらのプロパティのいずれかを使用しているアプリケーションは修正するようにしてください。  
+>  **LogSize** プロパティと **PopulateStatus** プロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のリリースでは削除される予定です。 新しい開発作業では、これらのプロパティの使用は避け、現在これらのプロパティのいずれかを使用しているアプリケーションは修正するようにしてください。  
   
 _catalog\_name_  
 フルテキスト カタログの名前を含む式を指定します。  
