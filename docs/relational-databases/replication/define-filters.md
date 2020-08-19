@@ -1,4 +1,5 @@
 ---
+description: '[フィルターの定義]'
 title: '[フィルターの定義] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7ef180ac401b540d1abe50688b98e691c819f55f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4834e78ec82a681faba9f6c0fa780d78f890def
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654057"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498788"
 ---
 # <a name="define-filters"></a>[フィルターの定義]
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85654057"
   
 ## <a name="options"></a>オプション  
  **[オペレーター]**  
- フィルターで使用する演算子 (たとえば、 **[次の値以下]** ) を選択します。
+ フィルターで使用する演算子 (たとえば、 **[次の値以下]**) を選択します。
   
  **Value**  
  フィルターの値を入力します。 ほとんどの演算子は 1 番目の **[値]** 列に値を入力するだけで済みますが、 **[次の値の間]** と **[次の値の範囲外]** の操作は、2 つの **[値]** 列に値を入力する必要があります。  

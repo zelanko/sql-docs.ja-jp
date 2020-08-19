@@ -1,4 +1,5 @@
 ---
+description: MSmerge_contents (Transact-SQL)
 title: MSmerge_contents (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 147e1c2843fc88bbeed4d23e0119cec0f4575ac3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 81320e7cc5301577369d6d3d89cbfb53f77b0e6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469106"
 ---
 # <a name="msmerge_contents-transact-sql"></a>MSmerge_contents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +38,12 @@ ms.locfileid: "85889863"
 |**partchangegen**|**bigint**|行がフィルター選択されたパブリケーションに属しているかどうかを変更した可能性のある、最後のデータ変更に関連付けられた生成。|  
 |**継承**|**varbinary (501)**|この行に対する変更の履歴を保持するために使用されるサブスクライバーのニックネームとバージョン番号のペアです。|  
 |**colvl**|**varbinary (7489)**|列のバージョン情報です。|  
-|**記号**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**marker**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|論理レコード内の対応する各子行について、( **rowguid**によって) **MSmerge_contents**の最上位レベルの親行を識別します。|  
 |**logical_record_lineage**|**varbinary (501)**|サブスクライバーのニックネーム。バージョン番号のペアです。論理レコードの最上位の親行に対する変更の履歴を保持するために使用されます。 論理レコードのすべての子行に対しては、この値は NULL です。|  
 |**logical_relation_change_gen**|**bigint**|論理レコードの再調整の原因となった最後の変更に関連付けられている生成値。既存の行が論理レコードの内外に移動された場合。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

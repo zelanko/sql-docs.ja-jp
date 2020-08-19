@@ -1,4 +1,5 @@
 ---
+description: '[履歴属性オプション] (緩やかに変化するディメンション ウィザード)'
 title: 履歴属性オプション (緩やかに変化するディメンション ウィザード) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4dfa3579fb37fab94f8bc5731738ed024676018e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9610a734543c9199e54d3f8489d86e03089f10ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430704"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>[履歴属性オプション] (緩やかに変化するディメンション ウィザード)
 
@@ -47,7 +48,7 @@ ms.locfileid: "86919308"
 |**[終了日の列]**|ディメンション テーブルで終了日を含む列を選択します。|  
 |**[日付の値を設定する変数]**|日付の変数を一覧から選択します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [緩やかに変化するディメンション ウィザードを使用して出力を構成する](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   
