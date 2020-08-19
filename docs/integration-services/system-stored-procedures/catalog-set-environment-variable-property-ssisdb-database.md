@@ -1,4 +1,5 @@
 ---
+description: catalog.set_environment_variable_property (SSISDB データベース)
 title: catalog.set_environment_variable_property (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: c1deb31e-b8d1-44ca-b355-570959bc6478
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: adb5a783c928cf9bac1f3ac9668306bff5eb8456
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f4cf7d169d9cdd3e319b243f831a76bb3fe3ab4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425124"
 ---
 # <a name="catalogset_environment_variable_property-ssisdb-database"></a>catalog.set_environment_variable_property (SSISDB データベース)
 
@@ -80,7 +81,7 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
   
 -   ユーザーに適切な権限がない  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  このリリースで設定できるのは `Description` プロパティだけです。 `Description` プロパティのプロパティ値は 4,000 文字を超えることはできません。  
   
   

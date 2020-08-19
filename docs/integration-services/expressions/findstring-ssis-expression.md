@@ -1,4 +1,5 @@
 ---
+description: FINDSTRING (SSIS 式)
 title: FINDSTRING (SSIS 式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 765957c11bee784305ebc1a54c2de80ba7375d3d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3c4da6f54ead49d01d9d691cc081ac9b9955c693
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425474"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (SSIS 式)
 
@@ -46,7 +47,7 @@ FINDSTRING(character_expression, searchstring, occurrence)
 ## <a name="result-types"></a>戻り値の型  
  DT_I4  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  FINDSTRING は DT_WSTR データ型でのみ機能します。  *character_expression* および *searchstring* 引数が DT_STR データ型の文字列リテラルまたはデータ列である場合は、FINDSTRING による演算の実行前に、暗黙的に DT_WSTR データ型にキャストされます。 その他のデータ型は、明示的に DT_WSTR データ型にキャストされる必要があります。 詳しくは、「[Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」および「[Cast &#40;SSIS 式&#41;](../../integration-services/expressions/cast-ssis-expression.md)」をご覧ください。  
   
  FINDSTRING は、 *character_expression* または *searchstring* が null の場合は null を返します。  
@@ -80,7 +81,7 @@ FINDSTRING(Name, "n", 2)
 FINDSTRING(Name,Size,1)   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [REPLACE &#40;SSIS &#41;](../../integration-services/expressions/replace-ssis-expression.md)   
  [関数 (SSIS 式)](../../integration-services/expressions/functions-ssis-expression.md)  
   

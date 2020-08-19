@@ -1,4 +1,5 @@
 ---
+description: '&lt;= (以下) (SSIS 式)'
 title: '&lt;= (以下) (SSIS 式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dbc5ff8aeceff48d203e15242cf8dfc305694c33
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5241cb30244dd3a3ee9371990d5843988ba4e16d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425434"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (以下) (SSIS 式)
 
@@ -106,7 +107,7 @@ ListPrice <= 500
 @LPrice <= 500  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [&#62; &#40;より大きい&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
  [&#60; &#40;より小さい&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
  [&#62;= &#40;以上&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   

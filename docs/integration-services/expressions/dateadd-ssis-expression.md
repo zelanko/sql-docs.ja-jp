@@ -1,4 +1,5 @@
 ---
+description: DATEADD (SSIS 式)
 title: DATEADD (SSIS 式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2285a23325b91a78759d1dac26725e0e570b23fb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f6dd42e81d3b1d2db558962cbb9843488dd1ad16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425554"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS 式)
 
@@ -53,16 +54,16 @@ DATEADD(datepart, number, date)
   
 |datepart|省略形|  
 |--------------|-------------------|  
-|年|yy、yyyy|  
+|Year|yy、yyyy|  
 |Quarter|qq、q|  
 |Month|mm、m|  
 |Dayofyear|dy、y|  
-|日|dd、d|  
-|Week|wk、ww|  
+|日間|dd、d|  
+|週|wk、ww|  
 |平日|dw、w|  
-|時|Hh|  
+|時間|Hh|  
 |分|mi、n|  
-|秒|ss、s|  
+|Second|ss、s|  
 |Millisecond|Ms|  
   
  式が解析される際、 *number* 引数が使用できる必要があります。 引数には定数または変数を指定できます。 式が解析される際に既知の値が提供されないため、列の値を使用することはできません。  

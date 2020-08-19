@@ -1,4 +1,5 @@
 ---
+description: '? :(条件) (SSIS 式)'
 title: '? : (条件) (SSIS 式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 07e6668750bfd58e31d5f9dda0205cf8d57e967f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f63ea95489b639672ddb50b44fa882eecc463025
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425564"
 ---
-# <a name="--conditional-ssis-expression"></a>? : (条件) (SSIS 式)
+# <a name="--conditional-ssis-expression"></a>? :(条件) (SSIS 式)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
@@ -48,7 +49,7 @@ boolean_expression?expression1:expression2
 ## <a name="result-types"></a>戻り値の型  
  *expression1* または *expression2*のデータ型です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  *boolean_expression* が NULL に評価された場合、式の結果は NULL になります。 選択された式 ( *expression1* または *expression2* のいずれか) が NULL の場合、結果は NULL になります。 選択された式が NULL でなく、選択されていない式が NULL の場合、結果は選択された式の値になります。  
   
  *expression1* と *expression2* のデータ型が同じ場合、結果はそのデータ型になります。 次の追加のルールが結果の型に適用されます。  
@@ -101,7 +102,7 @@ boolean_expression?expression1:expression2
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

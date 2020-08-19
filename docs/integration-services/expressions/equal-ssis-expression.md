@@ -1,4 +1,5 @@
 ---
+description: == (等しい) (SSIS 式)
 title: == (等しい) (SSIS 式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5a8e26da00bf530052b1ae7f342d40f922a71d25
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 65ef2568a30ada4503252adf404c24b2c8b5017d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86910851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425574"
 ---
 # <a name="-equal-ssis-expression"></a>== (等しい) (SSIS 式)
 
@@ -44,7 +45,7 @@ expression1 == expression2
 ## <a name="result-types"></a>戻り値の型  
  DT_BOOL  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  比較する式のいずれかが NULL の場合、比較結果は NULL になります。 両方の式が NULL の場合も、結果は NULL になります。  
   
  設定する式の *expression1* と *expression2*は、次のいずれかのルールに従う必要があります。  
@@ -106,7 +107,7 @@ ListPrice == 500
 @LPrice == 500  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [\!= (等しくない) (SSIS 式)](../../integration-services/expressions/unequal-ssis-expression.md)   
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
