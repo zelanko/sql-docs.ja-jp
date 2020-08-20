@@ -1,4 +1,5 @@
 ---
+description: メンバー式の使用
 title: メンバー式を使用する |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8d40d6a3b6cacb65cf1463b0eeb8b29e59e079e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e833d8d579841a3fc15aad89612a1d25b71fd0f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494828"
 ---
 # <a name="using-member-expressions"></a>メンバー式の使用
 
@@ -59,7 +60,7 @@ Dimension_Name
  MDX 関数には、メンバーを返すものが多数存在します。 完全な一覧については、「mdx[関数リファレンス &#40;mdx](../mdx/mdx-function-reference-mdx.md) 」を参照してください&#41;  
   
 > [!NOTE]  
->  メンバー名とメンバーキーの詳細については、「 [MDX&#41;&#40;メンバー、組、およびセットの操作](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)」を参照してください。  
+>  メンバー名とメンバーキーの詳細については、「 [MDX&#41;&#40;メンバー、組、およびセットの操作 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [MDX &#40;式&#41;](../mdx/expressions-mdx.md)  

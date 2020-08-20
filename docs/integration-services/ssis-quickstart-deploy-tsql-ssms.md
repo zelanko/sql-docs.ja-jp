@@ -1,4 +1,5 @@
 ---
+description: Transact-SQL を使用して SSMS から SSIS プロジェクトを配置する
 title: Transact-SQL (SSMS) を使用して SSIS プロジェクトを配置する | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9bdd9a10d5ab30cba8f12e07ee3475e902c3e35f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4c03bf004b95e4321cb93198750a798a019a1eb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495455"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Transact-SQL を使用して SSMS から SSIS プロジェクトを配置する
 
@@ -59,7 +60,7 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
    | **Login** | サーバー管理者アカウント | このアカウントは、サーバーの作成時に指定したアカウントです。 |
    | **パスワード** | サーバー管理者アカウントのパスワード | このパスワードは、サーバーの作成時に指定したパスワードです。 |
 
-3. **[接続]** をクリックします。 SSMS で [オブジェクト エクスプローラー] ウィンドウが開きます。 
+3. **[Connect]** をクリックします。 SSMS で [オブジェクト エクスプローラー] ウィンドウが開きます。 
 
 4. オブジェクト エクスプローラーで、 **[Integration Services カタログ]** 、 **[SSISDB]** の順に展開し、SSIS カタログ データベース内のオブジェクトを表示します。
 

@@ -1,4 +1,5 @@
 ---
+description: MDX データ操作 - CREATE GLOBAL CUBE
 title: CREATE GLOBAL CUBE ステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d678622c67a83c279cce094b849829e668af30cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1bc5a787f6bc1b214aa60ef54b5b8172f07c11a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494865"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX データ操作 - CREATE GLOBAL CUBE
 
 
-  サーバー上のキューブのサブキューブに基づいて、ローカルに保存されたキューブを作成して設定します。 ローカルに保存されたキューブに接続するために、サーバーへの接続は必要ありません。 ローカルキューブの詳細については、「[ローカルキューブ &#40;Analysis Services-多次元データ&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data)」を参照してください。  
+  サーバー上のキューブのサブキューブに基づいて、ローカルに保存されたキューブを作成して設定します。 ローカルに保存されたキューブに接続するために、サーバーへの接続は必要ありません。 ローカルキューブの詳細については、「 [ローカルキューブ &#40;Analysis Services-多次元データ&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -104,16 +105,16 @@ FROM source_cube_name (<param list>)
  dimension_name  
  ローカル キューブのディメンションの名前です。  
   
- FROM \<dim from 句>  
+ FROM \<dim from clause>  
  派生ディメンションの定義のみの有効な仕様です。  
   
  NOT_RELATED_TO_FACTS  
  派生ディメンションの定義のみの有効な仕様です。  
   
- \<レベルの種類>  
+ \<level type>  
  派生ディメンションの定義のみの有効な仕様です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ローカルキューブは、メジャーとそれを定義する定義の definedin 用語です。 ディメンションには、次の2種類があります。  
   
 -   ソースディメンション-これは、ソースキューブの1つに含まれていたディメンションです。  
@@ -133,7 +134,7 @@ FROM source_cube_name (<param list>)
   
  CREATE GLOBAL CUBE ステートメントは、以下の規則に従います。  
   
--   CREATE GLOBAL CUBE ステートメントは、計算されるメジャーやアクションなどのすべてのコマンドを自動的にローカル キューブにコピーします。 親キューブを明示的に参照する多次元式 (MDX) 式がコマンドに含まれている場合、ローカルキューブでそのコマンドを実行することはできません。 この問題を回避するには、コマンドの MDX 式を定義するときに、 **Currentcube**キーワードを使用します。 **Currentcube**キーワードは、MDX 式内のキューブを参照するときに現在のキューブコンテキストを使用します。  
+-   CREATE GLOBAL CUBE ステートメントは、計算されるメジャーやアクションなどのすべてのコマンドを自動的にローカル キューブにコピーします。 親キューブを明示的に参照する多次元式 (MDX) 式がコマンドに含まれている場合、ローカルキューブでそのコマンドを実行することはできません。 この問題を回避するには、コマンドの MDX 式を定義するときに、 **Currentcube** キーワードを使用します。 **Currentcube**キーワードは、MDX 式内のキューブを参照するときに現在のキューブコンテキストを使用します。  
   
 -   ローカルキューブファイル内の既存のグローバルキューブから作成されたグローバルキューブを同じローカルキューブファイルに保存することはできません。 たとえば、SalesLocal1 という名前のグローバルキューブを作成し、このキューブを C:\ ファイルに保存します。 次に、SalesLocal2 という名前の2つ目のグローバルキューブを作成します。 これで、SalesLocal2 グローバルキューブを C:\ ファイルに保存しようとすると、エラーが発生します。 ただし、SalesLocal2 グローバルキューブを別のローカルキューブファイルに保存することはできます。  
   
@@ -197,7 +198,7 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx&#41;&#40;mdx データ定義ステートメント](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Mdx&#41;&#40;mdx データ定義ステートメント ](../mdx/mdx-data-definition-statements-mdx.md)   
  [CREATE SESSION CUBE ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

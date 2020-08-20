@@ -1,4 +1,5 @@
 ---
+description: MDX データ操作 - ALTER CUBE
 title: ALTER CUBE ステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 750f8ae7a1b9275bdab734a15134d255916e7d44
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 470a71cb88a6ea35ddadcc53e83fe60ebd369bbb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68098522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494895"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX データ操作 - ALTER CUBE
 
@@ -113,7 +114,7 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  メンバー名またはメンバーキーを指定する有効な文字列式です。  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>解説  
  WITH DESCENDANTS 句を使用しなかった場合、削除したメンバーの子は、削除したメンバーの親の子になります。 WITH 子孫句が使用されている場合は、ディメンションテーブル内のすべての子孫とその行も削除されます。  
   
 > [!NOTE]  
@@ -129,7 +130,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  1つのメンバーを返す有効な MDX 式です。  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>解説  
  指定された MDX 式は、静的または動的にすることができます。  
   
 ## <a name="moving-a-dimension-member"></a>ディメンション メンバーの移動  
@@ -164,6 +165,6 @@ CELL CALCULATION Calculation_Name
  ALTER CUBE ステートメントを使用してセル計算を作成する方法の詳細については、「 [DROP CELL Calculation ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Mdx&#41;&#40;mdx データ定義ステートメント](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Mdx&#41;&#40;mdx データ定義ステートメント ](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

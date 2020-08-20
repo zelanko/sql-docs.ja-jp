@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo
 title: SQLGetInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,26 +15,27 @@ ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e716e9400b41a2b8c7726efa6f3208ea637727d9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 283839b12d70d732c3406b729fa166f5e9fbc9c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000359"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494155"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   この表は、 **SQLGetInfo**によって返される値を示しています。 返される値は、接続先サーバーのバージョン番号によって異なる場合があります。  
   
- **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネイティブクライアントの Sqlgetinfo は、 **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sqlgetinfo**が SQL_KEYWORDS でバッファー長が0の場合に、ODBC ドライバー (SQLSRV32.DLL) の sqlgetinfo とは異なります。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーは SQL_SUCCESS を返しますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーは SQL_SUCCESS_WITH_INFO を返します。  ただし、出力キーワード文字列よりも小さい0以外のバッファー長を指定して呼び出された場合、Native Client の**SQLGetInfo**は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO と SQLState 01004 を返します。  
+ **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネイティブクライアントの Sqlgetinfo は、 **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sqlgetinfo**が SQL_KEYWORDS でバッファー長が0の場合に、ODBC ドライバー (SQLSRV32.DLL) の sqlgetinfo とは異なります。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーは SQL_SUCCESS を返しますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーは SQL_SUCCESS_WITH_INFO を返します。  ただし、出力キーワード文字列よりも小さい0以外のバッファー長を指定して呼び出された場合、Native Client の **SQLGetInfo** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO と SQLState 01004 を返します。  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
-|SQL_ACTIVE_CONNECTIONS|接続数は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって制限されます。 ドライバーは、この**SQLGetInfo**要求に対して0を返します。|  
-|SQL_ACTIVE_ENVIRONMENTS|環境の数はドライバーによって制限されません。 ドライバーは、この**SQLGetInfo**要求に対して0を返します。|  
-|SQL_ACTIVE_STATEMENTS|ドライバーは、この**SQLGetInfo**要求に対して1を返します。 アプリケーションで使用できるステートメント ハンドルの数はドライバーによって制限されませんが、あるステートメント ハンドルでの既定の実行が、別のハンドルでの実行をブロックすることがあります。|  
+|SQL_ACTIVE_CONNECTIONS|接続数は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって制限されます。 ドライバーは、この **SQLGetInfo** 要求に対して0を返します。|  
+|SQL_ACTIVE_ENVIRONMENTS|環境の数はドライバーによって制限されません。 ドライバーは、この **SQLGetInfo** 要求に対して0を返します。|  
+|SQL_ACTIVE_STATEMENTS|ドライバーは、この **SQLGetInfo** 要求に対して1を返します。 アプリケーションで使用できるステートメント ハンドルの数はドライバーによって制限されませんが、あるステートメント ハンドルでの既定の実行が、別のハンドルでの実行をブロックすることがあります。|  
 |SQL_ALTER_DOMAIN|false|  
 |SQL_ALTER_TABLE|SQL_AT_ADD_COLUMN、SQL_AT_ADD_COLUMN_DEFAULT、SQL_AT_ADD_COLUMN_SINGLE、SQL_AT_ADD_CONSTRAINT、SQL_AT_ADD_TABLE_CONSTRAINTSQL_AT_CONSTRAINT_NAME_DEFINITION、SQL_AT_DROP_COLUMN_RESTRICT|  
 |SQL_SQL_CONFORMANCE|SQL_SC_SQL92_ENTRY|  
@@ -87,7 +89,7 @@ ms.locfileid: "86000359"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_SENSITIVE|  
-|SQL_DATA_SOURCE_NAME|現在のデータ ソース名。 接続でデータソース名が指定されていない場合、 *Stringlength ptr*によって示される値を0に設定します。|  
+|SQL_DATA_SOURCE_NAME|現在のデータ ソース名。 接続でデータソース名が指定されていない場合、 *Stringlength ptr* によって示される値を0に設定します。|  
 |SQL_DATA_SOURCE_READ_ONLY|接続属性 SQL_ATTR_ACCESS_MODE の設定によって異なります。|  
 |SQL_DATABASE_NAME|接続の現在のデータベース。|  
 |SQL_DBMS_NAME|"Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"|  

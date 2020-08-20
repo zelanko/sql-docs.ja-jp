@@ -1,4 +1,5 @@
 ---
+description: LocalDBStartInstance 関数
 title: LocalDBStartInstance 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b228c97280a2152f14a2ea97d9b1ac56c567afdd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cf46ccf1e972dc34b4f0500fdf654a76aa32f086
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494226"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 関数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ HRESULT LocalDBStartInstance(
  [出力] LocalDB インスタンスへの接続文字列を格納するバッファー。  
   
  *lpcchSqlConnection*  
- [入力/出力]入力時には、末尾の null を含め、 *wszSqlConnection*バッファーのサイズを文字数で格納します。 出力時に、指定されたバッファーサイズが小さすぎる場合、には、末尾の null を含め、必要なバッファーサイズが文字数で格納されます。  
+ [入力/出力]入力時には、末尾の null を含め、 *wszSqlConnection* バッファーのサイズを文字数で格納します。 出力時に、指定されたバッファーサイズが小さすぎる場合、には、末尾の null を含め、必要なバッファーサイズが文字数で格納されます。  
   
 ## <a name="returns"></a>戻り値  
  S_OK  
@@ -69,7 +70,7 @@ HRESULT LocalDBStartInstance(
  インスタンスは存在しません。  
   
  [LOCALDB_ERROR_INSUFFICIENT_BUFFER](../../relational-databases/express-localdb-error-messages/localdb-error-insufficient-buffer.md)  
- 指定されたバッファー *wszSqlConnection*が小さすぎます。  
+ 指定されたバッファー *wszSqlConnection* が小さすぎます。  
   
  [LOCALDB_ERROR_WAIT_TIMEOUT](../../relational-databases/express-localdb-error-messages/localdb-error-wait-timeout.md)  
  同期ロックを取得しようとしているときにタイムアウトが発生しました。  
@@ -104,7 +105,7 @@ HRESULT LocalDBStartInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="details"></a>詳細  
+## <a name="details"></a>説明  
  接続バッファー引数 (*wszSqlConnection*) と接続バッファーサイズ引数 (*lpcchSqlConnection*) はどちらも省略可能です。 次の表は、これらの引数を使用するためのオプションとその結果を示しています。  
   
 |バッファー|バッファーサイズ|理由|アクション|  
@@ -116,7 +117,7 @@ HRESULT LocalDBStartInstance(
   
  LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../../relational-databases/sql-server-express-localdb-reference.md)を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: データ コレクションの管理
 title: データ コレクションの管理 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7e63c3bd8f95e8edf20b51f22ee828636f7160b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1056cfe7d80bdf97c97c344d3b9f3dfc4dc6fdcd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494675"
 ---
 # <a name="manage-data-collection"></a>データ コレクションの管理
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -171,7 +172,7 @@ ms.locfileid: "85758133"
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|コレクション セットまたはパッケージの実行統計を取得します。 この情報には、ログに記録されたエラーが含まれます。|  
 |[snapshots.fn_trace_getdata &#40;Transact-SQL&#41;](../../relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md)|ジェネリック SQL トレース コレクター型を使用したデータ収集時にログに記録されたイベントを取得します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ストアド プロシージャの実行](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
  [SQL Server Management Studio の使用 [SQL Server]](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
  [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
