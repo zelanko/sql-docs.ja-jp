@@ -1,4 +1,5 @@
 ---
+description: sp_enumdsn (Transact-sql)
 title: sp_enumdsn (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 092866e2f8efd69ad0baccc73984dcf8a7db051c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: afc6b97a969aa833e96bd4d8c2ad1a35ae35d14b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469484"
 ---
 # <a name="sp_enumdsn-transact-sql"></a>sp_enumdsn (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_enumdsn
 ```  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -48,7 +49,7 @@ sp_enumdsn
 |**Type**|**int**|データ ソースの種類です。<br /><br /> **1** = ODBC DSN<br /><br /> **3** = データソースの OLE DB|  
 |**プロバイダー名**|**varchar(255)**|OLE DB プロバイダーの名前です。 ODBC DSN の場合、値は NULL です。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスにユーザーコンテキストがあります。 ユーザーコンテキストは、ユーザーの ODBC データソースの定義を含むレジストリエントリのセットです。 ユーザーコンテキストは、が実行されているユーザー名によって提供され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  たとえば、サーバーがシステムアカウントのユーザーコンテキストで実行されている場合、返されるデータソース名 (Dsn) はすべて、システムアカウントに関連付けられているシステム Dsn になります。 サーバーがプライベートユーザーアカウントで実行されている場合は、そのユーザーのそのプライベートアカウントに対して定義されている Dsn だけが返されます。  
@@ -56,7 +57,7 @@ sp_enumdsn
 ## <a name="permissions"></a>アクセス許可  
  **Sp_enumdsn**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_dsninfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dsninfo-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

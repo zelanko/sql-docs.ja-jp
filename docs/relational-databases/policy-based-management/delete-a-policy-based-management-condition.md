@@ -1,4 +1,5 @@
 ---
+description: ポリシー ベースの管理条件の削除
 title: ポリシー ベースの管理条件の削除 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0c710c1b90f432abdb93d9013dd2310d93f2b651
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3265e970fbad572e09527dedcb35397d811daefa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470333"
 ---
 # <a name="delete-a-policy-based-management-condition"></a>ポリシー ベースの管理条件の削除
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85749454"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用して条件を削除するには:**  
   

@@ -1,4 +1,5 @@
 ---
+description: データベースのパブリッシュ (SQL Server Management Studio)
 title: データベースのパブリッシュ (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4e865731f65b58ab47bbab9a169917f377fa8cd9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 503fe13d4f2d24c1795993bea84f2e04fb4ba0e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471177"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>データベースのパブリッシュ (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **スクリプトの生成とパブリッシュ ウィザード** を使用して、データベース全体または個々のデータベース オブジェクトを Web ホスティング プロバイダーにパブリッシュできます。  
+  **スクリプトの生成とパブリッシュ ウィザード**を使用して、データベース全体または個々のデータベース オブジェクトを Web ホスティング プロバイダーにパブリッシュできます。  
   
 > [!NOTE]  
 >  以前のバージョンでは、このトピックで説明する機能がデータベース パブリッシュ ウィザードで提供されていました。 今回のバージョンから、パブリッシュ機能はスクリプトの生成とパブリッシュ ウィザードに追加され、データベース パブリッシュ ウィザードは廃止されました。  
@@ -41,7 +42,7 @@ ms.locfileid: "85728415"
   
     2.  パブリッシングの詳細オプションを指定するには、 **[Web サービスにパブリッシュ]** セクションの **[詳細設定]** をクリックします。  
   
-4.  **[概要]** ページで選択内容を確認します。 選択内容を変更するには、 **[戻る]** をクリックします。 選択したオブジェクトをパブリッシュするには、 **[次へ]** をクリックします。  
+4.  **[概要]** ページで、選択内容を確認します。 選択内容を変更するには、 **[戻る]** をクリックします。 選択したオブジェクトをパブリッシュするには、 **[次へ]** をクリックします。  
   
 5.  **[スクリプトの保存またはパブリッシュ]** ページで、パブリケーションの進行状況を監視します。  
 

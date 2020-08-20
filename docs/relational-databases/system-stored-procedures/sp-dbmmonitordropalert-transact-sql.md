@@ -1,4 +1,5 @@
 ---
+description: sp_dbmmonitordropalert (Transact-sql)
 title: sp_dbmmonitordropalert (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00841f918a5b93b0ae27f907bff263f4c0a0174a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a8c627b9686a2937ec23c8333c128a12a8b39cb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85866381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469671"
 ---
 # <a name="sp_dbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ sp_dbmmonitordropalert database_name
  *alert_id*  
  削除する警告を識別する整数値を指定します。 この引数を省略した場合は、データベースのすべての警告が削除されます。 特定のパフォーマンスメトリックの警告を削除するには、次のいずれかの値を指定します。  
   
-|[値]|パフォーマンス基準|警告しきい値|  
+|値|パフォーマンス基準|警告しきい値|  
 |-----------|------------------------|-----------------------|  
 |1|最も古い未送信のトランザクション|送信キュー内にトランザクションを累積できる時間 (分単位) を指定します。この時間を経過すると、プリンシパル サーバー インスタンスで警告が生成されます。 この警告は、時間の観点からデータ損失の可能性を測定するのに役立ち、特に高パフォーマンスモードに関連しています。 パートナーとの通信が切断されたためにミラーリングが一時停止または中断している場合は、高安全モードにも関係します。|  
 |2|未送信のログ|未送信のログのサイズ (KB) を指定します。このサイズを超えると、プリンシパル サーバー インスタンスで警告が生成されます。 この警告は、データ損失の可能性を KB 単位で測定するのに役立ち、特に高パフォーマンスモードに関連しています。 パートナーとの通信が切断されたためにミラーリングが一時停止または中断している場合は、高安全モードにも関係します。|  
@@ -56,7 +57,7 @@ sp_dbmmonitordropalert database_name
 |5|保持期間|データベースミラーリング状態テーブルの行を保持する期間を制御するメタデータ。|  
   
 > [!NOTE]  
->  この手順では、 **sp_dbmmonitorchangealert**またはデータベースミラーリングモニターのどちらを使用して指定したかにかかわらず、警告しきい値を削除します。  
+>  この手順では、 **sp_dbmmonitorchangealert** またはデータベースミラーリングモニターのどちらを使用して指定したかにかかわらず、警告しきい値を削除します。  
   
  警告に対応するイベント Id の詳細については、「 [&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)」を参照してください。  
   
@@ -69,7 +70,7 @@ sp_dbmmonitordropalert database_name
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データベースの保有期間の設定を削除し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  
@@ -82,8 +83,8 @@ EXEC sp_dbmmonitordropalert AdventureWorks2012, 5;
 EXEC sp_dbmmonitordropalert AdventureWorks2012 ;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [データベースミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+## <a name="see-also"></a>参照  
+ [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)  
   
   

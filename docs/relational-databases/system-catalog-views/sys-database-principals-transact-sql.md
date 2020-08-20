@@ -1,4 +1,5 @@
 ---
+description: database_principals (Transact-sql)
 title: database_principals (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
@@ -20,11 +21,12 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8773d6a3a8b65520fad6342477300f8818e9ac4d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b5f5069c17300f6559181f0cd0a4038f7b2e3651
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469982"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>database_principals (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +42,7 @@ ms.locfileid: "86011963"
 |**default_schema_name**|**sysname**|SQL 名でスキーマが指定されていない場合に使用される名前です。 型が S、U、またはでないプリンシパルの場合は Null です。|  
 |**create_date**|**datetime**|プリンシパルが作成された日時。|  
 |**modify_date**|**datetime**|プリンシパルが最後に変更された時刻。|  
-|**owning_principal_id**|**int**|このプリンシパルを所有するプリンシパルの ID。 既定では、すべての固定データベースロールが**dbo**によって所有されています。|  
+|**owning_principal_id**|**int**|このプリンシパルを所有するプリンシパルの ID。 既定では、すべての固定データベースロールが **dbo** によって所有されています。|  
 |**sid**|**varbinary (85)**|プリンシパルの SID (セキュリティ識別子)。  SYS および INFORMATION スキーマの場合は NULL です。|  
 |**is_fixed_role**|**bit**|1の場合、この行は固定データベースロールの1つのエントリ (db_owner、db_accessadmin、db_datareader、db_datawriter、db_ddladmin、db_securityadmin、db_backupoperator、db_denydatareader、db_denydatawriter) を表します。|  
 |**authentication_type**|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 認証の種類を示します。 使用可能な値とその説明を次に示します。<br /><br /> 0: 認証なし<br />1: インスタンス認証<br />2: データベース認証<br />3: Windows 認証<br />4: 認証を Azure Active Directory|  
@@ -49,8 +51,8 @@ ms.locfileid: "86011963"
 |**default_language_lcid**|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> このプリンシパルの既定の LCID を示します。|  
 |**allow_encrypted_value_modifications**|**bit**|**適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 一括コピー操作でのサーバーの暗号化メタデータ チェックを抑制します。 これにより、データの暗号化を解除することなく、テーブルまたはデータベース間で Always Encrypted を使用して暗号化されたデータを一括コピーできます。 既定値は OFF です。 |      
   
-## <a name="remarks"></a>コメント  
- *PasswordLastSetTime*プロパティは、SQL Server のサポートされているすべての構成で使用できますが、その他のプロパティは SQL Server が Windows Server 2003 以降で実行されており、CHECK_POLICY と CHECK_EXPIRATION の両方が有効になっている場合にのみ使用できます。 詳細については、「[パスワードポリシー](../../relational-databases/security/password-policy.md) 」を参照してください。
+## <a name="remarks"></a>解説  
+ *PasswordLastSetTime*プロパティは、SQL Server のサポートされているすべての構成で使用できますが、その他のプロパティは SQL Server が Windows Server 2003 以降で実行されており、CHECK_POLICY と CHECK_EXPIRATION の両方が有効になっている場合にのみ使用できます。 詳細については、「 [パスワードポリシー](../../relational-databases/security/password-policy.md) 」を参照してください。
 Principal_id の値は、プリンシパルが削除された場合に再利用される可能性があるため、常に増加するとは限りません。
   
 ## <a name="permissions"></a>アクセス許可  
@@ -122,8 +124,8 @@ JOIN sys.schemas AS s
   
 ## <a name="see-also"></a>参照  
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [server_principals &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [包含データベースユーザー-データベースの移植性を高める](../../relational-databases/security/contained-database-users-making-your-database-portable.md)   
  [Azure Active Directory の認証を使用して、SQL データベースに接続します。](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)  
   

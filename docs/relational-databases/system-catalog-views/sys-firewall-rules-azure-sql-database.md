@@ -1,4 +1,5 @@
 ---
+description: sys.firewall_rules (Azure SQL データベース)
 title: firewall_rules (Azure SQL Database) |Microsoft Docs
 ms.date: 03/26/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 98845a3733477c13761dfdf236685be9edce2b4c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 71ce10d470e552041dc2282aa27c8af404302df1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775228"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469922"
 ---
 # <a name="sysfirewall_rules-azure-sql-database"></a>sys.firewall_rules (Azure SQL データベース)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -37,19 +38,19 @@ ms.locfileid: "85775228"
 |id|**通り**|サーバー レベルのファイアウォール設定の識別子。|  
 |name|**NVARCHAR (128)**|サーバーレベルのファイアウォール設定を説明し、区別するための名前です。|  
 |start_ip_address|**VARCHAR (45)**|サーバーレベルのファイアウォール設定の範囲の最下位の IP アドレスです。 この IP アドレス以上の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーへの接続を試行できます。 設定できる最下位の IP アドレスは `0.0.0.0` です。|  
-|end_ip_address|**VARCHAR (45)**|サーバーレベルのファイアウォール設定の範囲の最上位の IP アドレスです。 これ以下の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーへの接続を試みることができます。 設定できる最上位の IP アドレスは `255.255.255.255` です。<br /><br /> 注: このフィールドと**start_ip_address**フィールドの両方がと等しい場合は、Azure の接続試行が許可され `0.0.0.0` ます。|  
+|end_ip_address|**VARCHAR (45)**|サーバーレベルのファイアウォール設定の範囲の最上位の IP アドレスです。 これ以下の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーへの接続を試みることができます。 設定できる最上位の IP アドレスは `255.255.255.255` です。<br /><br /> 注: このフィールドと **start_ip_address** フィールドの両方がと等しい場合は、Azure の接続試行が許可され `0.0.0.0` ます。|  
 |create_date|**/**|サーバーレベルのファイアウォール設定が作成された UTC 日時です。<br /><br /> 注: UTC は、協定世界時の頭字語です。|  
 |modify_date|**/**|サーバーレベルのファイアウォール設定が最後に変更された UTC 日時です。|  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
  Microsoft Azure SQL Database に関連付けられているデータベースレベルのファイアウォール設定に関する情報を返すには、 [database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)を使用します。  
   
 ## <a name="permissions"></a>アクセス許可
 
- このビューへの読み取り専用アクセスは、 **master**データベースに接続する権限を持つすべてのユーザーが使用できます。  
+ このビューへの読み取り専用アクセスは、 **master** データベースに接続する権限を持つすべてのユーザーが使用できます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [sp_set_firewall_rule &#40;Azure SQL データベース&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 [sp_delete_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)   

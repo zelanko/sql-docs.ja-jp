@@ -1,4 +1,5 @@
 ---
+description: sp_copysnapshot (Transact-SQL)
 title: sp_copysnapshot (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17a554d6bccdfb067600f10122122bd542fe9c6b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 85d15ffb52e41d072db3d583644eb7269cd57a33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771196"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469706"
 ---
 # <a name="sp_copysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,19 +40,19 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`スナップショットの内容をコピーするパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` スナップショットの内容をコピーするパブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @destination_folder = ] 'destination_folder'`パブリケーションスナップショットの内容をコピーするフォルダーの名前を指定します。 *destination_folder*は**nvarchar (255)**,、既定値はありません。 *Destination_folder*は、別のサーバー、ネットワークドライブ、リムーバブルメディア (cd-rom やリムーバブルディスクなど) などの別の場所にすることができます。  
+`[ @destination_folder = ] 'destination_folder'` パブリケーションスナップショットの内容をコピーするフォルダーの名前を指定します。 *destination_folder*は **nvarchar (255)**,、既定値はありません。 *Destination_folder*は、別のサーバー、ネットワークドライブ、リムーバブルメディア (cd-rom やリムーバブルディスクなど) などの別の場所にすることができます。  
   
-`[ @subscriber = ] 'subscriber'`サブスクライバーの名前を指定します。 *サブスクライバー*の sysname,、既定値は NULL です。  
+`[ @subscriber = ] 'subscriber'` サブスクライバーの名前を指定します。 *サブスクライバー* の sysname,、既定値は NULL です。  
   
-`[ @subscriber_db = ] 'subscriber_db'`サブスクリプションデータベースの名前を指定します。 *subscriber_db*は sysname,、既定値は NULL です。  
+`[ @subscriber_db = ] 'subscriber_db'` サブスクリプションデータベースの名前を指定します。 *subscriber_db* は sysname,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_copysnapshot**は、すべての種類のレプリケーションで使用されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン7.0 以前を実行しているサブスクライバーでは、代替スナップショットの場所を使用できません。  
+## <a name="remarks"></a>解説  
+ **sp_copysnapshot** は、すべての種類のレプリケーションで使用されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン7.0 以前を実行しているサブスクライバーでは、代替スナップショットの場所を使用できません。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_copysnapshot**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  

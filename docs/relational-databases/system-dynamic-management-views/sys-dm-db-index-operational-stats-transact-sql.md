@@ -1,4 +1,5 @@
 ---
+description: dm_db_index_operational_stats (Transact-sql)
 title: dm_db_index_operational_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b2bc0b80ec19865c89376ac53dd333624524d18
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b45f7ae858a9769c1563d34397119b75273e3edc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469904"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>dm_db_index_operational_stats (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87394777"
  メモリ最適化インデックスは、この DMV には表示されません。    
     
 > [!NOTE]    
->  **dm_db_index_operational_stats**は、メモリ最適化インデックスに関する情報を返しません。 メモリ最適化インデックスの使用の詳細については、「 [dm_db_xtp_index_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)」を参照してください。    
+>  **dm_db_index_operational_stats** は、メモリ最適化インデックスに関する情報を返しません。 メモリ最適化インデックスの使用の詳細については、「 [dm_db_xtp_index_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)」を参照してください。    
         
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
@@ -68,7 +69,7 @@ sys.dm_db_index_operational_stats (
     :::column-end:::
 :::row-end:::
 
-  データベースの ID です。 *database_id*は**smallint**です。 有効な入力値は、データベースの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。    
+  データベースの ID です。 *database_id* は **smallint**です。 有効な入力値は、データベースの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。    
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのすべてのデータベースに関する情報を返すには NULL を指定します。 *Database_id*に null を指定した場合は、 *object_id*、 *index_id*、および*partition_number*にも null を指定する必要があります。    
     
@@ -89,7 +90,7 @@ sys.dm_db_index_operational_stats (
     :::column-end:::
 :::row-end:::
 
- インデックスがあるテーブルまたはビューのオブジェクト ID を指定します。 *object_id*は**int**です。    
+ インデックスがあるテーブルまたはビューのオブジェクト ID を指定します。 *object_id* は **int**です。    
     
  有効な入力値は、テーブルおよびビューの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。    
     
@@ -113,7 +114,7 @@ sys.dm_db_index_operational_stats (
     :::column-end:::
 :::row-end:::
 
- インデックスの ID。 *index_id*は**int**です。有効な入力値は、インデックスの ID 番号です。 *object_id*がヒープ、NULL、-1、または DEFAULT である場合は0になります。 既定値は -1 です。このコンテキストでは、NULL、-1、および DEFAULT は同じ値になります。    
+ インデックスの ID。 *index_id* は **int**です。有効な入力値は、インデックスの ID 番号です。 *object_id* がヒープ、NULL、-1、または DEFAULT である場合は0になります。 既定値は -1 です。このコンテキストでは、NULL、-1、および DEFAULT は同じ値になります。    
     
  NULL を指定すると、ベース テーブルまたはビューのすべてのインデックスに関するキャッシュされた情報が返されます。 *Index_id*に null を指定する場合は、 *partition_number*に null を指定する必要もあります。    
 
@@ -132,11 +133,11 @@ sys.dm_db_index_operational_stats (
     :::column-end:::
 :::row-end:::
 
- オブジェクト内のパーティション番号を指定します。 *partition_number*は**int**です。有効な入力値は、インデックスまたはヒープの*partion_number* 、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。    
+ オブジェクト内のパーティション番号を指定します。 *partition_number* は **int**です。有効な入力値は、インデックスまたはヒープの *partion_number* 、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。    
     
  NULL を指定すると、インデックスまたはヒープのすべてのパーティションについてキャッシュされた情報が返されます。    
     
- *partition_number*は1から始まるです。 非パーティションインデックスまたはヒープの*partition_number*が1に設定されています。    
+ *partition_number* は1から始まるです。 非パーティションインデックスまたはヒープの *partition_number* が1に設定されています。    
     
 ## <a name="table-returned"></a>返されるテーブル    
     
@@ -146,9 +147,9 @@ sys.dm_db_index_operational_stats (
 |**object_id**|**int**|テーブルまたはビューの ID。|    
 |**index_id**|**int**|インデックスまたはヒープの ID。<br /><br /> 0 = ヒープ| 
 |**partition_number**|**int**|インデックスまたはヒープ内の、1 から始まるパーティション番号。| 
-|**hobt_id**|**bigint**|**に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (を [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] です。<br /><br /> 列ストアインデックスの内部データを追跡するデータヒープまたは B ツリー行セットの ID。<br /><br /> NULL-これは内部列ストア行セットではありません。<br /><br /> 詳細については、「 [sys. internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md) 」を参照してください。|       
+|**hobt_id**|**bigint**|**に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (を [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 通じて [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] です。<br /><br /> 列ストアインデックスの内部データを追跡するデータヒープまたは B ツリー行セットの ID。<br /><br /> NULL-これは内部列ストア行セットではありません。<br /><br /> 詳細については、「 [sys. internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md) 」を参照してください。|       
 |**leaf_insert_count**|**bigint**|リーフレベルの挿入の累積数。|    
-|**leaf_delete_count**|**bigint**|リーフレベルの削除の累積数。 leaf_delete_count は、まずゴーストとしてマークされていない削除済みレコードに対してのみインクリメントされます。 削除されたレコードが最初にゴーストである場合は、代わりに**leaf_ghost_count**がインクリメントされます。|    
+|**leaf_delete_count**|**bigint**|リーフレベルの削除の累積数。 leaf_delete_count は、まずゴーストとしてマークされていない削除済みレコードに対してのみインクリメントされます。 削除されたレコードが最初にゴーストである場合は、代わりに **leaf_ghost_count** がインクリメントされます。|    
 |**leaf_update_count**|**bigint**|リーフレベルの更新の累積数。|    
 |**leaf_ghost_count**|**bigint**|削除とマークされており、まだ削除されていないリーフレベルの行の累積数。 この数には、ゴーストとしてマークされずにすぐに削除されるレコードは含まれません。 このような行は、設定された間隔でクリーンアップ スレッドにより削除されます。 この値には、未処理のスナップショット分離トランザクションが原因で保持されている行の数は含まれません。|    
 |**nonleaf_insert_count**|**bigint**|リーフ レベルより上の挿入の累積数。<br /><br /> 0 = ヒープまたは列ストア|    
@@ -161,11 +162,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|インデックスまたはヒープで開始された範囲スキャンとテーブル スキャンの累積数。|    
 |**singleton_lookup_count**|**bigint**|インデックスまたはヒープから取得した単一行の累積数。|    
 |**forwarded_fetch_count**|**bigint**|前方向レコードを介してフェッチされた行の数。<br /><br /> 0 = インデックス|    
-|**lob_fetch_in_pages**|**bigint**|LOB_DATA アロケーション ユニットから取得したラージ オブジェクト (LOB) ページの累積数。 これらのページには、 **text**、 **ntext**、 **image**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、および**xml**型の列に格納されているデータが含まれています。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。|    
+|**lob_fetch_in_pages**|**bigint**|LOB_DATA アロケーション ユニットから取得したラージ オブジェクト (LOB) ページの累積数。 これらのページには、 **text**、 **ntext**、 **image**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、および **xml**型の列に格納されているデータが含まれています。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。|    
 |**lob_fetch_in_bytes**|**bigint**|取得した LOB データの累積バイト数。|    
 |**lob_orphan_create_count**|**bigint**|一括操作用に作成された、孤立した LOB 値の累積数。<br /><br /> 0 = 非クラスター化インデックス|    
 |**lob_orphan_insert_count**|**bigint**|一括操作中に挿入された、孤立した LOB 値の累積数。<br /><br /> 0 = 非クラスター化インデックス|    
-|**row_overflow_fetch_in_pages**|**bigint**|ROW_OVERFLOW_DATA アロケーション ユニットから取得した行オーバーフロー データ ページの累積数。<br /><br /> これらのページには、行外にプッシュされた**varchar (n)**、 **nvarchar (n)**、 **varbinary (n)**、および**sql_variant**型の列に格納されているデータが含まれています。|    
+|**row_overflow_fetch_in_pages**|**bigint**|ROW_OVERFLOW_DATA アロケーション ユニットから取得した行オーバーフロー データ ページの累積数。<br /><br /> これらのページには、行外にプッシュされた **varchar (n)**、 **nvarchar (n)**、 **varbinary (n)**、および **sql_variant** 型の列に格納されているデータが含まれています。|    
 |**row_overflow_fetch_in_bytes**|**bigint**|取得した行オーバーフロー データの累積バイト数。|    
 |**column_value_push_off_row_count**|**bigint**|挿入または更新された行をページ内に収めるため、行外に出された LOB データおよび行オーバーフロー データに対する列値の累積数。|    
 |**column_value_pull_in_row_count**|**bigint**|行内に取り込まれた LOB データおよび行オーバーフロー データに対する列値の累積数。 これは、更新操作によりレコード内の領域が解放され、LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットから IN_ROW_DATA アロケーション ユニットに 1 つ以上の行外値を取り込めるようになったときに発生します。|    
@@ -255,7 +256,7 @@ sys.dm_db_index_operational_stats (
     
  VIEW DATABASE STATE 権限を拒否すると、特定のオブジェクトに対する CONTROL 権限が許可されていたとしても、そのデータベース内のどのオブジェクトも取得できません。 また、データベースのワイルドカード @*database_id*= NULL が指定されている場合、データベースは省略されます。    
     
- 詳細については、「 [transact-sql&#41;&#40;動的管理ビューと関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。    
+ 詳細については、「 [transact-sql&#41;&#40;動的管理ビューと関数 ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。    
     
 ## <a name="examples"></a>例    
     

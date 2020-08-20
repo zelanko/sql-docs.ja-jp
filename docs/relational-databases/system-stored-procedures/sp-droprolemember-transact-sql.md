@@ -1,4 +1,5 @@
 ---
+description: sp_droprolemember (Transact-SQL)
 title: sp_droprolemember (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -18,12 +19,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ffff6387f2129c2e3bdb2af726e6b87e665554e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1bbd0dfdeedb0954bb82f97dae6419a9a7f2d852
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469562"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
@@ -32,7 +33,7 @@ ms.locfileid: "88180102"
   現在のデータベースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロールからセキュリティ アカウントを削除します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md)を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,9 +54,9 @@ sp_droprolemember 'role' ,
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @rolename = ] 'role'`メンバーを削除するロールの名前を指定します。 *role*の型は**sysname**で、既定値はありません。 *ロール*は現在のデータベースに存在している必要があります。  
+`[ @rolename = ] 'role'` メンバーを削除するロールの名前を指定します。 *role* の型は **sysname**で、既定値はありません。 *ロール* は現在のデータベースに存在している必要があります。  
   
-`[ @membername = ] 'security_account'`ロールから削除するセキュリティアカウントの名前を指定します。 *security_account*は**sysname**であり、既定値はありません。 *security_account*には、データベースユーザー、別のデータベースロール、windows ログイン、または windows グループを指定できます。 *security_account*は、現在のデータベースに存在している必要があります。  
+`[ @membername = ] 'security_account'` ロールから削除するセキュリティアカウントの名前を指定します。 *security_account* は **sysname**であり、既定値はありません。 *security_account* には、データベースユーザー、別のデータベースロール、windows ログイン、または windows グループを指定できます。 *security_account* は、現在のデータベースに存在している必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

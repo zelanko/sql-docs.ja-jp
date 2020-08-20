@@ -1,4 +1,5 @@
 ---
+description: インデックスの名前変更
 title: インデックスの名前変更 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -15,12 +16,12 @@ ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29f7a3f1a7eeb34d7ce8ce3a5d886ea4137000d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b20ea3e11cc08463a377616e319c8398525c90b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786458"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470444"
 ---
 # <a name="rename-indexes"></a>インデックスの名前変更
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85786458"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してインデックスの名前を変更するには:**  
   
@@ -69,7 +70,7 @@ ms.locfileid: "85786458"
   
 7.  **[閉じる]** をクリックします。  
   
-8.  **ファイル** メニューの **テーブル名**_の保存_をクリックします。  
+8.  **[ファイル]** メニューの **テーブル名**_の保存]_ をクリックします。  
 
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用してインデックスの名前を変更するには  
   

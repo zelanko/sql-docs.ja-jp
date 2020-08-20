@@ -1,4 +1,5 @@
 ---
+description: XML スキーマ (XML 型システム) のカタログビュー (Transact-sql)
 title: XML スキーマ (XML 型システム) のカタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f4dc329a5872e8c34d1cd302d75c41aa8ba23e1
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 00d3b001ba8ee3856b0938956a01adea78994733
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469887"
 ---
 # <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>XML スキーマ (XML 型システム) のカタログビュー (Transact-sql)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: sp_delete_notification (Transact-sql)
 title: sp_delete_notification (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05682482a720bbf14a17497299676ac6a0cc23d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 65a8442c4f957cda4db9c33e0988ba5dca05ca88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469622"
 ---
 # <a name="sp_delete_notification-transact-sql"></a>sp_delete_notification (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,12 +42,12 @@ sp_delete_notification
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @alert_name = ] 'alert'`警告の名前。 *alert*は**sysname**で、既定値はありません。  
+`[ @alert_name = ] 'alert'` 警告の名前。 *alert* は **sysname**で、既定値はありません。  
   
-`[ @operator_name = ] 'operator'`オペレーターの名前。 *operator*は**sysname**,、既定値はありません。  
+`[ @operator_name = ] 'operator'` オペレーターの名前。 *operator* は **sysname**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -55,9 +56,9 @@ sp_delete_notification
  通知を削除すると、通知だけが削除されます。アラートとオペレーターはそのまま残ります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールがユーザーに付与されている必要があります。  
+ このストアドプロシージャを実行するには、 **sysadmin** 固定サーバーロールがユーザーに付与されている必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、警告が発生したときにオペレーターに送信される通知を削除し `François Ajenstat` `Test Alert` ます。  
   
 ```  
@@ -70,8 +71,8 @@ EXEC dbo.sp_delete_notification
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [sp_add_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_add_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_add_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   

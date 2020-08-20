@@ -1,4 +1,5 @@
 ---
+description: sys.index_columns (Transact-SQL)
 title: index_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
@@ -20,11 +21,12 @@ ms.assetid: 211471aa-558a-475c-9b94-5913c143ed12
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e6ad338ac15944ab2ac7113dc134ecec1f143a3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a7ab62980770499214f05fce8cfc1096aa7d088f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469999"
 ---
 # <a name="sysindex_columns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,8 +37,8 @@ ms.locfileid: "86000511"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|インデックスが定義されているオブジェクトの ID。|  
 |**index_id**|**int**|列が定義されているインデックスの ID です。|  
-|**index_column_id**|**int**|インデックス列の ID。 **index_column_id**は**index_id**内でのみ一意です。|  
-|**column_id**|**int**|**Object_id**内の列の ID。<br /><br /> 0 = 非クラスター化インデックス内の行識別子 (RID) です。<br /><br /> **column_id**は**object_id**内でのみ一意です。|  
+|**index_column_id**|**int**|インデックス列の ID。 **index_column_id** は **index_id**内でのみ一意です。|  
+|**column_id**|**int**|**Object_id**内の列の ID。<br /><br /> 0 = 非クラスター化インデックス内の行識別子 (RID) です。<br /><br /> **column_id** は **object_id**内でのみ一意です。|  
 |**key_ordinal**|**tinyint**|一連のキー列内での 1 から始まる序数です。<br /><br /> 0 = キー列ではないか、XML インデックス、列ストア インデックス、または空間インデックスです。<br /><br /> 注: 基になる列が比較できないため、XML インデックスまたは空間インデックスをキーにすることはできません。つまり、値を並べ替えることはできません。|  
 |**partition_ordinal**|**tinyint**|パーティション分割列のセット内での序数 (1 から始まる)。 クラスター化列ストア インデックスには、最大で 1 個のパーティション分割列を含めることができます。<br /><br /> 0 = パーティション分割列ではありません。|  
 |**is_descending_key**|**bit**|1 = インデックスキー列には、降順の並べ替え方向があります。<br /><br /> 0 = インデックスキー列に昇順の並べ替え方向があるか、列が列ストアまたはハッシュインデックスの一部です。|  
@@ -83,12 +85,12 @@ IX_BillOfMaterials_UnitMeasureCode                         UnitMeasureCode    1 
 ```  
   
 ## <a name="see-also"></a>参照  
- [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [SQL&#41;&#40;Transact-sql のインデックス](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [&#40;Transact-sql&#41;の列](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   
