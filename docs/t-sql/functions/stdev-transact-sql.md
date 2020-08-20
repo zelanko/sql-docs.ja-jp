@@ -1,4 +1,5 @@
 ---
+description: STDEV (Transact-SQL)
 title: STDEV (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,17 +21,17 @@ ms.assetid: ff41b4fc-4f71-4f18-bf78-96614ea908cc
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ecd6622a3b61002aaa153f80b1f88485f4c42556
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a2aecf91c7df7c434e476d2fee835217c1db0718
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467814"
 ---
 # <a name="stdev-transact-sql"></a>STDEV (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  指定された式にあるすべての値の統計的標準偏差を返します。  
+  指定された式のすべての値の統計的標準偏差を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +63,7 @@ STDEV ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="return-types"></a>戻り値の型  
  **float**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  SELECT ステートメントのすべてのアイテムに STDEV を適用すると、結果セット内のそれぞれの値が計算に含められます。 STDEV は、数値型列に対して使用できます。 NULL 値は無視されます。  
   
  STDEV は、OVER 句や ORDER BY 句なしで使用される場合は決定的関数です。 OVER 句や ORDER BY 句と共に使用される場合は、非決定的関数です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
@@ -70,7 +71,7 @@ STDEV ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-stdev"></a>A: STDEV を使用する  
- 次の例は、`SalesPerson` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルにあるすべてのボーナス値の標準偏差を返します。  
+ 次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `SalesPerson` テーブルにあるすべてのボーナス値の標準偏差を返します。  
   
 ```  
 SELECT STDEV(Bonus)  

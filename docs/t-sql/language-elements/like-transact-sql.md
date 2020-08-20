@@ -1,4 +1,5 @@
 ---
+description: LIKE (Transact-SQL)
 title: LIKE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -31,12 +32,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37cf0c961903707f86ec838c45d5935e72d72402
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f8886fbf2a94df7fd338572f2156e66ee6fc50ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467674"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -133,7 +134,7 @@ David          Barber               Snohomish
 ```
 
 ## <a name="pattern-matching-by-using-like"></a>LIKE を使用するパターン検索  
- LIKE では、ASCII のパターン マッチングと Unicode のパターン マッチングがサポートされています。 すべての引数 (*match_expression*、*pattern*、および *escape_character*) が ASCII 文字型の場合は、ASCII パターン検索が行われます。 引数のいずれかが Unicode データ型の場合は、すべての引数が Unicode に変換されて、Unicode パターン マッチングが実行されます。 LIKE で Unicode データ (**nchar** または **nvarchar** 型) を使用する場合、後続する空白は意味を持ちます。しかし、Unicode 以外のデータの場合、後続する空白は意味を持ちません。 Unicode LIKE は、ISO 標準と互換性があります。 ASCII LIKE は、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と互換性があります。  
+ LIKE では、ASCII パターン マッチと Unicode パターン マッチがサポートされています。 すべての引数 (*match_expression*、*pattern*、および *escape_character*) が ASCII 文字型の場合は、ASCII パターン検索が行われます。 引数のいずれかが Unicode データ型の場合は、すべての引数が Unicode に変換されて、Unicode パターン マッチングが実行されます。 LIKE で Unicode データ (**nchar** または **nvarchar** 型) を使用する場合、後続する空白は意味を持ちます。しかし、Unicode 以外のデータの場合、後続する空白は意味を持ちません。 Unicode LIKE は、ISO 標準と互換性があります。 ASCII LIKE は、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と互換性があります。  
   
  次の一連の例では、ASCII LIKE のパターン マッチングと Unicode LIKE のパターン マッチングで返される行の違いを示します。  
   
@@ -200,7 +201,7 @@ GO
   
  LIKE パターンでエスケープ文字の後に文字がない場合、そのパターンは無効になり、LIKE は FALSE を返します。 エスケープ文字の後にある文字がワイルドカード文字ではない場合、このパターンの中ではエスケープ文字は破棄され、次の文字は通常の文字として扱われます。 これらの文字には、2 つの角かっこ ([ ]) に囲まれたパーセント記号 (%)、アンダースコア (_)、および左角かっこ ([) の各ワイルドカード文字が含まれます。 エスケープ文字は、キャレット (^)、ハイフン (-)、または右大かっこ (]) をエスケープする場合などに、二重大かっこ ([]) で囲んで使用できます。  
   
- 0x0000 (**char(0)** ) の Windows 照合順序で未定義の文字は、LIKE に含めることができません。  
+ 0x0000 (**char(0)**) の Windows 照合順序で未定義の文字は、LIKE に含めることができません。  
   
 ## <a name="examples"></a>例  
   
@@ -270,7 +271,7 @@ Gail                  Westover             305-555-0100
 ```
 
 ### <a name="c-using-the-escape-clause"></a>C. ESCAPE 句を使用する  
- 次の例では、`ESCAPE` 句とエスケープ文字を使用して、`10-15%` テーブルの列 `c1` 内にある文字列 `mytbl2` と完全に一致する文字列を検索します。  
+ 次の例では、`ESCAPE` 句とエスケープ文字を使用して、`mytbl2` テーブルの列 `c1` 内にある文字列 `10-15%` と完全に一致する文字列を検索します。  
   
 ```sql
 USE tempdb;  
@@ -333,7 +334,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. NOT LIKE を % ワイルドカード文字と共に使用する  
- 次の例では、`DimEmployee` テーブルで `612` 以外で始まるすべての電話番号を検索します。  。  
+ 次の例では、`DimEmployee` テーブルで `612` 以外で始まるすべての電話番号を検索します。  .  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -345,7 +346,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>G. LIKE を _ ワイルドカード文字と共に使用する  
- 次の例では、`6` テーブルで、`2` で始まり `DimEmployee` で終る市外局番を持つすべての電話番号を検索します。 ワイルドカード文字 % は、検索パターンの末尾に含まれており、電話の列値の後続のすべての文字と一致します。  
+ 次の例では、`DimEmployee` テーブルで、`6` で始まり `2` で終る市外局番を持つすべての電話番号を検索します。 ワイルドカード文字 % は、検索パターンの末尾に含まれており、電話の列値の後続のすべての文字と一致します。  
   
 ```sql  
 -- Uses AdventureWorks  

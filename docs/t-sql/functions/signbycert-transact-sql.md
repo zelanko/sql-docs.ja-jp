@@ -1,4 +1,5 @@
 ---
+description: SIGNBYCERT (Transact-SQL)
 title: SIGNBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1c0705a6057842b80f7e9bf59412f0a64af30ae
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 32fa18577753641583ff5b6c12d864da0f0e36af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467884"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,11 +60,11 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
 ## <a name="return-types"></a>戻り値の型  
  **varbinary** 8,000 バイトの最大サイズ。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  証明書に対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、証明書 `@SensitiveData` を使用して `ABerglundCert07` 内のテキストに署名します。署名の前にはパスワード "pGFD4bb925DGvbd2439587y" を使用して証明書を暗号化解除します。 その後、クリアテキストと署名をテーブル `SignedData04` に挿入します。  
+ 次の例では、証明書 `ABerglundCert07` を使用して `@SensitiveData` 内のテキストに署名します。署名の前にはパスワード "pGFD4bb925DGvbd2439587y" を使用して証明書を暗号化解除します。 その後、クリアテキストと署名をテーブル `SignedData04` に挿入します。  
   
 ```  
 DECLARE @SensitiveData nvarchar(max);  

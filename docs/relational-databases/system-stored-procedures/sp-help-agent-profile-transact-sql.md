@@ -1,4 +1,5 @@
 ---
+description: sp_help_agent_profile (Transact-SQL)
 title: sp_help_agent_profile (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 24a95d193d483c35dac0f94a839555fecb52afca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5c6873ada83a846ae719e5498a296df02fa2a9c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469356"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +39,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @agent_type = ] agent_type`エージェントの種類を示します。 *agent_type*は**int**,、既定値は**0**,、これらの値のいずれかを指定することができます。  
+`[ @agent_type = ] agent_type` エージェントの種類を示します。 *agent_type* は **int**,、既定値は **0**,、これらの値のいずれかを指定することができます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -48,7 +49,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|[マージ エージェント]|  
 |**9**|キュー リーダー エージェント (Queue Reader Agent)|  
   
-`[ @profile_id = ] profile_id`表示するプロファイルの ID を指定します。 *profile_id*は**int**,、既定値は **-1**,、 **MSagent_profiles**テーブル内のすべてのプロファイルを返します。  
+`[ @profile_id = ] profile_id` 表示するプロファイルの ID を指定します。 *profile_id* は **int**,、既定値は **-1**,、 **MSagent_profiles** テーブル内のすべてのプロファイルを返します。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -62,16 +63,16 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**def_profile**|**bit**|このプロファイルがこの種類のエージェントの既定のプロファイルかどうかを指定します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_help_agent_profile**は、すべての種類のレプリケーションで使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_help_agent_profile** は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_help_agent_profile**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**replmonitor**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [レプリケーションエージェントプロファイルの操作](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
+## <a name="see-also"></a>参照  
+ [レプリケーション エージェント プロファイルの操作](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [sp_add_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_drop_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
  [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
