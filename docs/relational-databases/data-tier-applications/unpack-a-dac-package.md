@@ -1,4 +1,5 @@
 ---
+description: DAC パッケージのアンパック
 title: DAC パッケージのアンパック | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3cecfc696bda97e046acd80eb3e285e8da2a04de
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dee530c223890a51ab255d319db9a7772e0ce686
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499855"
 ---
 # <a name="unpack-a-dac-package"></a>DAC パッケージのアンパック
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85781641"
   
 1.  **作業を開始する準備:** [セキュリティ](#Security)  
   
-2.  **DAC のアンパック:** [[データ層アプリケーションのアンパック] ダイアログの使用](#UnpackDACDial)、[DAC パッケージの内容の確認](#ExamDACPack)  
+2.  **DAC のアンパック:**  [[データ層アプリケーションのアンパック] ダイアログの使用](#UnpackDACDial)、 [DAC パッケージの内容の確認](#ExamDACPack)  
 
 ##  <a name="security"></a><a name="Security"></a> セキュリティ  
  ソースが不明または信頼されていない DAC パッケージは配置しないことをお勧めします。 こうした DAC には、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマを変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 DAC のソースが不明または信頼されていない場合は、使用する前に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の隔離されたテスト インスタンスに DAC を配置し、DAC をアンパックして、ストアド プロシージャやその他のユーザー定義コードなどのコードを確認してください。  
