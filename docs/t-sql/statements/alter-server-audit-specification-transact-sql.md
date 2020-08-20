@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 title: ALTER SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3b955c95df0af36bac4f249aab547310d46a6220
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: fd2163114fb0b2ad6d21ca2ed827db160819c8ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467279"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -71,7 +72,7 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
  サーバー監査仕様の作成後は、CONTROL SERVER または ALTER ANY SERVER AUDIT 権限を持つプリンシパル、sysadmin アカウント、またはその監査への明示的なアクセス権を持つプリンシパルによってその仕様を表示できます。  
   
 ## <a name="examples"></a>例  
- 次の例では、`HIPAA_Audit_Specification` というサーバー監査仕様を作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という `HIPAA_Audit` 監査に対して、失敗したログインの監査アクション グループを削除し、データベース オブジェクト アクセスの監査アクション グループを追加します。  
+ 次の例では、`HIPAA_Audit_Specification` というサーバー監査仕様を作成します。 `HIPAA_Audit` という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査に対して、失敗したログインの監査アクション グループを削除し、データベース オブジェクト アクセスの監査アクション グループを追加します。  
   
 ```  
 ALTER SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
@@ -85,7 +86,7 @@ GO
  監査を作成する方法の完全な例については、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。  
   
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

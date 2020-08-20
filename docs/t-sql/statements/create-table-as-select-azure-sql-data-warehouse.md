@@ -1,4 +1,5 @@
 ---
+description: CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 title: CREATE TABLE AS SELECT (Azure SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/07/2016
@@ -11,12 +12,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6da86a89421fcee2c60bd0a46392dc1acc4cdd46
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: a3d851f7b9f2b1d6414d5c29d79983655a13fd3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467202"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -175,29 +176,29 @@ CTAS を使用してテーブルを作成するときに、パフォーマンス
 ```sql
 CREATE TABLE FactInternetSales
 (
-    ProductKey int NOT NULL,
-    OrderDateKey int NOT NULL,
-    DueDateKey int NOT NULL,
-    ShipDateKey int NOT NULL,
-    CustomerKey int NOT NULL,
-    PromotionKey int NOT NULL,
-    CurrencyKey int NOT NULL,
-    SalesTerritoryKey int NOT NULL,
-    SalesOrderNumber nvarchar(20) NOT NULL,
-    SalesOrderLineNumber tinyint NOT NULL,
-    RevisionNumber tinyint NOT NULL,
-    OrderQuantity smallint NOT NULL,
-    UnitPrice money NOT NULL,
-    ExtendedAmount money NOT NULL,
-    UnitPriceDiscountPct float NOT NULL,
-    DiscountAmount float NOT NULL,
-    ProductStandardCost money NOT NULL,
-    TotalProductCost money NOT NULL,
-    SalesAmount money NOT NULL,
-    TaxAmt money NOT NULL,
-    Freight money NOT NULL,
-    CarrierTrackingNumber nvarchar(25),
-    CustomerPONumber nvarchar(25)
+    ProductKey INT NOT NULL,
+    OrderDateKey INT NOT NULL,
+    DueDateKey INT NOT NULL,
+    ShipDateKey INT NOT NULL,
+    CustomerKey INT NOT NULL,
+    PromotionKey INT NOT NULL,
+    CurrencyKey INT NOT NULL,
+    SalesTerritoryKey INT NOT NULL,
+    SalesOrderNumber NVARCHAR(20) NOT NULL,
+    SalesOrderLineNumber TINYINT NOT NULL,
+    RevisionNumber TINYINT NOT NULL,
+    OrderQuantity SMALLINT NOT NULL,
+    UnitPrice MONEY NOT NULL,
+    ExtendedAmount MONEY NOT NULL,
+    UnitPriceDiscountPct FLOAT NOT NULL,
+    DiscountAmount FLOAT NOT NULL,
+    ProductStandardCost MONEY NOT NULL,
+    TotalProductCost MONEY NOT NULL,
+    SalesAmount MONEY NOT NULL,
+    TaxAmt MONEY NOT NULL,
+    Freight MONEY NOT NULL,
+    CarrierTrackingNumber NVARCHAR(25),
+    CustomerPONumber NVARCHAR(25)
 );
 ```
 
@@ -242,11 +243,11 @@ DROP TABLE FactInternetSales_old;
 
 この例では CTAS を使用して、DimCustomer2 テーブルのデータ型、NULL 値の許容、いくつかの列の照合順序を変更します。  
   
-```  
+```sql  
 -- Original table 
 CREATE TABLE [dbo].[DimCustomer2] (  
-    [CustomerKey] int NOT NULL,  
-    [GeographyKey] int NULL,  
+    [CustomerKey] INT NOT NULL,  
+    [GeographyKey] INT NULL,  
     [CustomerAlternateKey] nvarchar(15) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL  
 )  
 WITH (CLUSTERED COLUMNSTORE INDEX, DISTRIBUTION = HASH([CustomerKey]));  
@@ -270,15 +271,15 @@ FROM [dbo].[DimCustomer2]
   
 -- Resulting table 
 CREATE TABLE [dbo].[test] (
-    [CustomerKeyNoChange] int NOT NULL, 
-    [CustomerKeyChangeNullable] int NULL, 
-    [CustomerKeyChangeDataTypeNullable] decimal(10, 2) NULL, 
-    [CustomerKeyChangeDataTypeNotNullable] decimal(10, 2) NOT NULL, 
-    [GeographyKeyNoChange] int NULL, 
-    [GeographyKeyChangeNotNullable] int NOT NULL, 
-    [CustomerAlternateKeyNoChange] nvarchar(15) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL, 
-    [CustomerAlternateKeyNullable] nvarchar(15) COLLATE SQL_Latin1_General_CP1_CI_AS NULL, 
-    [CustomerAlternateKeyChangeCollation] nvarchar(15) COLLATE Latin1_General_CS_AS_KS_WS NOT NULL
+    [CustomerKeyNoChange] INT NOT NULL, 
+    [CustomerKeyChangeNullable] INT NULL, 
+    [CustomerKeyChangeDataTypeNullable] DECIMAL(10, 2) NULL, 
+    [CustomerKeyChangeDataTypeNotNullable] DECIMAL(10, 2) NOT NULL, 
+    [GeographyKeyNoChange] INT NULL, 
+    [GeographyKeyChangeNotNullable] INT NOT NULL, 
+    [CustomerAlternateKeyNoChange] NVARCHAR(15) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL, 
+    [CustomerAlternateKeyNullable] NVARCHAR(15) COLLATE SQL_Latin1_General_CP1_CI_AS NULL, 
+    [CustomerAlternateKeyChangeCollation] NVARCHAR(15) COLLATE Latin1_General_CS_AS_KS_WS NOT NULL
 )
 WITH (DISTRIBUTION = ROUND_ROBIN);
 ```
@@ -307,7 +308,7 @@ DROP TABLE DimCustomer2_old;
 
 この例では AdventureWorksDW サンプル データベースを使用します。 SQL Data Warehouse バージョンを読み込む場合は、[SQL Data Warehouse へのサンプル データの読み込み](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-sample-databases/)に関するページを参照してください。
  
-```
+```sql
 -- DimSalesTerritory is hash-distributed.
 -- Copy it to a round-robin table.
 CREATE TABLE [dbo].[myTable]   
@@ -324,11 +325,10 @@ RENAME OBJECT [dbo].[DimSalesTerritory] to [DimSalesTerritory_old];
 RENAME OBJECT [dbo].[myTable] TO [DimSalesTerritory];
 
 DROP TABLE [dbo].[DimSalesTerritory_old];
-
 ```  
 次に、ハッシュ分散テーブルに戻します。
 
-```
+```sql
 -- You just made DimSalesTerritory a round-robin table.
 -- Change it back to the original hash-distributed table. 
 CREATE TABLE [dbo].[myTable]   
@@ -354,7 +354,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 
 この例は、ラウンドロビン テーブルまたはハッシュ分散テーブルをレプリケートされたテーブルに変換する場合に適用されます。 この特定の例では、分散の種類を変更する前の方法を 1 歩進めた方法を使用します。  DimSalesTerritory はディメンションであり、より小さいテーブルである可能性があるため、テーブル間の結合時にデータが移動されないようにテーブルをレプリケート済みとして再作成することを選択できます。 
 
-```
+```sql
 -- DimSalesTerritory is hash-distributed.
 -- Copy it to a replicated table.
 CREATE TABLE [dbo].[myTable]   
@@ -378,7 +378,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 
 次の例では、`myTable (c, ln)` という名前のラウンドロビン分散テーブル テーブルを作成します。 新しいテーブルには 2 つの列のみがあります。 列名には、SELECT ステートメントの列の別名を使用します。  
   
-```  
+```sql  
 CREATE TABLE myTable  
 WITH   
   (   
@@ -386,8 +386,7 @@ WITH
     DISTRIBUTION = ROUND_ROBIN  
   )  
 AS SELECT CustomerKey AS c, LastName AS ln  
-    FROM dimCustomer;  
-  
+    FROM dimCustomer; 
 ```  
 
 <a name="examples-query-hints-bk"></a>
@@ -401,7 +400,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
   
 このクエリは、CTAS ステートメントでクエリの結合ヒントを使用するための基本構文を示しています。 クエリが送信されると、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、分散ごとにクエリ プランを生成する際にハッシュ結合方法が適用されます。 ハッシュ結合のクエリ ヒントの詳細については、「[OPTION 句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)」を参照してください。  
   
-```  
+```sql  
 CREATE TABLE dbo.FactInternetSalesNew  
 WITH   
   (   
@@ -426,13 +425,13 @@ OPTION ( HASH JOIN );
   
  次の例では、Azure BLOB ストレージ アカウントのデータに対して外部テーブルを定義します。 次に CREATE TABLE AS SELECT を使用して、外部テーブルから選択します。 これで、Azure BLOB ストレージのテキスト区切りファイルからデータがインポートされ、新しい [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] テーブルにデータが格納されます。  
   
-```  
+```sql  
 --Use your own processes to create the text-delimited files on Azure blob storage.  
 --Create the external table called ClickStream.  
 CREATE EXTERNAL TABLE ClickStreamExt (   
-    url varchar(50),  
-    event_date date,  
-    user_IP varchar(50)  
+    url VARCHAR(50),  
+    event_date DATE,  
+    user_IP VARCHAR(50)  
 )  
 WITH (  
     LOCATION='/logs/clickstream/2015/',  
@@ -461,12 +460,12 @@ AS SELECT * FROM ClickStreamExt
   
  次の例では、Hadoop クラスターに外部テーブルを定義します。 次に CREATE TABLE AS SELECT を使用して、外部テーブルから選択します。 これで、Hadoop のテキスト区切りファイルからデータがインポートされ、新しい [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] テーブルにデータが格納されます。  
   
-```  
+```sql  
 -- Create the external table called ClickStream.  
 CREATE EXTERNAL TABLE ClickStreamExt (   
-    url varchar(50),  
-    event_date date,  
-    user_IP varchar(50)  
+    url VARCHAR(50),  
+    event_date DATE,  
+    user_IP VARCHAR(50)  
 )  
 WITH (  
     LOCATION = 'hdfs://MyHadoop:5000/tpch1GB/employee.tbl',  
@@ -538,8 +537,8 @@ UPDATE または DELETE を実行するために ANSI 結合構文を使用し�
 ```sql
 CREATE TABLE [dbo].[AnnualCategorySales]
 (   [EnglishProductCategoryName]    NVARCHAR(50)    NOT NULL
-,   [CalendarYear]                  SMALLINT        NOT NULL
-,   [TotalSalesAmount]              MONEY           NOT NULL
+,   [CalendarYear]          SMALLINT    NOT NULL
+,   [TotalSalesAmount]      MONEY       NOT NULL
 )
 WITH
 (
@@ -684,8 +683,8 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 SQL Server コードを SQL Data Warehouse に移行したときに、次のようなコーディング パターンが発生する場合があります。
 
 ```sql
-DECLARE @d decimal(7,2) = 85.455
-,       @f float(24)    = 85.455
+DECLARE @d DECIMAL(7,2) = 85.455
+,       @f FLOAT(24)    = 85.455
 
 CREATE TABLE result
 (result DECIMAL(7,2) NOT NULL
@@ -702,8 +701,8 @@ SELECT @d*@f
 次のコードでは同じ結果が生成されません。
 
 ```sql
-DECLARE @d decimal(7,2) = 85.455
-,       @f float(24)    = 85.455
+DECLARE @d DECIMAL(7,2) = 85.455
+,       @f FLOAT(24)    = 85.455
 ;
 
 CREATE TABLE ctas_r
@@ -740,8 +739,8 @@ from ctas_r
 次の例ではコードを修正する方法を示します。
 
 ```sql
-DECLARE @d decimal(7,2) = 85.455
-,       @f float(24)    = 85.455
+DECLARE @d DECIMAL(7,2) = 85.455
+,       @f FLOAT(24)    = 85.455
 
 CREATE TABLE ctas_r
 WITH (DISTRIBUTION = ROUND_ROBIN)

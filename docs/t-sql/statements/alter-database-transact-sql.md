@@ -1,4 +1,5 @@
 ---
+description: ALTER DATABASE (Transact-SQL)
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
 ms.custom: ''
 ms.date: 07/21/2020
@@ -26,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c45877355d5cb47b8c9ba4ee86784c17d30a816
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 553d84c62dfb9de6bc1bd18cde7b09965bfdf0d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467334"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -449,10 +450,10 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) データベー
 |250 GB|該当なし|√ (D)|√ (D)|√|√|
 |300 GB|該当なし|√|√|√|√|
 |400 GB|該当なし|√|√|√|√|
-|500 GB|該当なし|√|√|√ (D)|√|
+|500 GB|該当なし|√|√ (D)|√ (D)|√|
 |750 GB|該当なし|√|√|√|√|
-|1024 GB|該当なし|√|√|√|√ (D)|
-|1024 GB から 4096 GB (256 GB ずつ増分)*|該当なし|N/A|N/A|該当なし|√|
+|1024 GB|該当なし|√|√|√ (D)|√ (D)|
+|1024 GB から 4096 GB (256 GB ずつ増分)*|N/A|N/A|該当なし|該当なし|√|
 
 \* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。 P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、US Gov バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 DTU モデルのリソースの制限事項に関する詳細については、[DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。
 
