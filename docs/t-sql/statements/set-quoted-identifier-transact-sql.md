@@ -1,4 +1,5 @@
 ---
+description: SET QUOTED_IDENTIFIER (Transact-SQL)
 title: SET QUOTED_IDENTIFIER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2019
@@ -25,12 +26,12 @@ ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8933c07f0cfcc70131738ba2936b4262fb7ae249
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f216887909893d91384fa91479820588dfdae1a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478739"
 ---
 # <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -53,6 +54,8 @@ SET QUOTED_IDENTIFIER { ON | OFF }
 
 SET QUOTED_IDENTIFIER ON
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>解説
 `SET QUOTED_IDENTIFIER` が ON のとき (既定)、識別子を二重引用符 (" ") で囲むことができ、リテラルは単一引用符 (' ') で囲む必要があります。 二重引用符で囲まれた文字列はすべて、オブジェクト識別子として解釈されます。 したがって、引用符で区切られた識別子は、識別子に関する [!INCLUDE[tsql](../../includes/tsql-md.md)] の規則に従う必要はありません。 このような識別子では予約済みキーワードを使用でき、通常は [!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子として許可されない文字を含めることもできます。 リテラル文字列式を二重引用符で区切ることはできません。リテラル文字列を区切るには、単一引用符を使用する必要があります。 単一引用符 (') がリテラル文字列の一部に含まれている場合は、2 つの連続する単一引用符 ('') を使用してください。 データベース内のオブジェクト名に対して予約済みキーワードを使用する場合は、`SET QUOTED_IDENTIFIER` を ON にする必要があります。

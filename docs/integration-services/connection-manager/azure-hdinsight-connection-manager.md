@@ -1,4 +1,5 @@
 ---
+description: Azure HDInsight 接続マネージャー
 title: Azure HDInsight 接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 29d01bd9-8b38-43b1-b937-67f8aea57c0f
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: 810ca8895157bc65e587d2faee89622ae9ec55f6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6acb9fec83da610246001df5bc68591ecab1a225
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478037"
 ---
 # <a name="azure-hdinsight-connection-manager"></a>Azure HDInsight 接続マネージャー
 
@@ -31,7 +32,7 @@ ms.locfileid: "86918584"
 
 **Azure HDInsight 接続マネージャー**を作成して構成するには、以下の手順のようにします。
 
-1. **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[AzureHDInsight]** を選び、 **[追加]** をクリックします。
-2. **[Azure HDInsight Connection Manager Editor]\(Azure HDInsight 接続マネージャー エディター\)** ダイアログ ボックスで、接続先の HDInsight クラスターの **[Cluster DNS name]\(クラスター DNS 名\)** (プロトコル プレフィックスなし)、 **[ユーザー名]** 、 **[パスワード]** を指定します。
+1. **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[AzureHDInsight]** を選び、**[追加]** をクリックします。
+2. **[Azure HDInsight Connection Manager Editor]\(Azure HDInsight 接続マネージャー エディター\)** ダイアログ ボックスで、接続先の HDInsight クラスターの **[Cluster DNS name]\(クラスター DNS 名\)** (プロトコル プレフィックスなし)、**[ユーザー名]**、**[パスワード]** を指定します。
 3. **[OK]** をクリックしてダイアログ ボックスを閉じます。
 4. 作成した接続マネージャーのプロパティは、 **[プロパティ]** ウィンドウに表示されます。

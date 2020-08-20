@@ -1,4 +1,5 @@
 ---
+description: キャッシュ接続マネージャー
 title: キャッシュ接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cc4725f69d35043734da6d9210bac0a6b65e4d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c546eee3e6dfe71d3e554f28c467407fc5baea16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477948"
 ---
 # <a name="cache-connection-manager"></a>キャッシュ接続マネージャー
 
@@ -70,7 +71,7 @@ ms.locfileid: "86920828"
 ###  <a name="general-tab"></a><a name="generaltab"></a> [全般] タブ  
  **[キャッシュ接続マネージャー エディター]** ダイアログ ボックスの **[全般]** タブを使用すると、ファイルからキャッシュを読み取るか、キャッシュをファイルに保存するかを指定できます。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **接続マネージャー名**  
  ワークフローにおけるキャッシュ接続マネージャーの一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
@@ -101,7 +102,7 @@ ms.locfileid: "86920828"
 ###  <a name="columns-tab"></a><a name="columnstab"></a> [列] タブ  
  **[キャッシュ接続マネージャー エディター]** ダイアログ ボックスの **[列]** タブを使用すると、キャッシュ内の各列のプロパティを構成できます。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **列**  
  列名を指定します。  
   

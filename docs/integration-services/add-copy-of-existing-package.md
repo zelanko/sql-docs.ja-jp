@@ -1,4 +1,5 @@
 ---
+description: '[既存のパッケージのコピーを追加]'
 title: '[既存のパッケージのコピーを追加] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f88355c8c2242d6dee36d52b7fb26e6016201ff4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c76e0178aa21a91cbbbb479aaf46e901fdd11992
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478154"
 ---
 # <a name="add-copy-of-existing-package"></a>[既存のパッケージのコピーを追加]
 
@@ -45,7 +46,7 @@ ms.locfileid: "86923759"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを指定します。  
   
  **[パッケージのパス]**  
- パッケージのパスを入力するか、 **[...]** をクリックしてコピーするパッケージを指定します。  
+ パッケージのパスを入力するか、**[...]** をクリックしてコピーするパッケージを指定します。  
   
 ## <a name="see-also"></a>参照  
  [[パッケージのコピーの保存]](https://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   

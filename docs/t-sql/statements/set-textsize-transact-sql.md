@@ -1,4 +1,5 @@
 ---
+description: SET TEXTSIZE (Transact-SQL)
 title: SET TEXTSIZE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2016
@@ -24,20 +25,20 @@ ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d2bc5f425655b7c1163648c1331c51efb0730c0
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 55de9c8c10e1827797d730736db6d0fe99704622
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478709"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  SELECT ステートメントによって返される **varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**text**、**ntext**、**image** データのサイズを指定します。  
+  SELECT ステートメントによって返される **varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**text**、**ntext**、**image** データのサイズを指定します。  
   
 > [!IMPORTANT]
->  **ntext**、**text**、および **image** データ型は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、 **nvarchar(max)** 、 **varchar(max)** 、 **varbinary(max)** を使用してください。  
+>  **ntext**、**text**、および **image** データ型は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、 **nvarchar(max)**、 **varchar(max)**、 **varbinary(max)** を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,11 +52,11 @@ SET TEXTSIZE { number }
 
 ## <a name="arguments"></a>引数
  *number*  
- **varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**text**、**ntext**、または **image** データのバイト単位の長さです。 *number* は、最大値が 2147483647 (2 GB) の整数です。  値 -1 は無制限のサイズを示します。 値 0 は、サイズを既定値の 4 KB にリセットします。  
+ **varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**text**、**ntext**、または **image** データのバイト単位の長さです。 *number* は、最大値が 2147483647 (2 GB) の整数です。  値 -1 は無制限のサイズを示します。 値 0 は、サイズを既定値の 4 KB にリセットします。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (10.0 以降) および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の ODBC ドライバーは、接続時に自動的に `-1` (無制限) を指定します。  
   
- **Drivers older than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Providerr (バージョン 9) for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、接続時に自動的に TEXTSIZE が 2147483647 に設定されます。  
+ **Drivers older than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008:**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Providerr (バージョン 9) for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、接続時に自動的に TEXTSIZE が 2147483647 に設定されます。  
   
 ## <a name="remarks"></a>解説  
  SET TEXTSIZE の設定は、@@TEXTSIZE 関数に影響します。  

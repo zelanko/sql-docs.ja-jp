@@ -1,4 +1,5 @@
 ---
+description: 柔軟なファイル ソース
 title: 柔軟なファイル ソース | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -12,12 +13,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfilesrc.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 996ee931207979b8741706673cdbf1ee02520613
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6e91be4a96d91117448def702a617d9e44acc70a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477843"
 ---
 # <a name="flexible-file-source"></a>柔軟なファイル ソース
 
@@ -54,7 +55,7 @@ ms.locfileid: "86912349"
 - **skipLineCount:** 入力ファイルからデータを読むとき、スキップする空ではない行の数を示します。 skipLineCount と firstRowAsHeader の両方が指定されている場合、行が最初にスキップされ、次に、入力ファイルからヘッダー情報が読まれます。
 - **treatEmptyAsNull:** 入力ファイルからデータを読むとき、null 値として null または空の文字列を扱うことを指定します。 既定値は **True** です。
 
-接続情報を指定した後、 **[列]** ページで、SSIS データ フローのマップ元の列をマップ先の列にマップします。
+接続情報を指定した後、**[列]** ページで、SSIS データ フローのマップ元の列をマップ先の列にマップします。
 
 **サービス プリンシパルのアクセス許可の構成に関する注意事項**
 

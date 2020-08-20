@@ -1,4 +1,5 @@
 ---
+description: Azure Data Lake Store 接続マネージャー
 title: Azure Data Lake Store 接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -12,12 +13,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
-ms.openlocfilehash: 64f79fc33e3dc5436df4a01e5398d0a262914d48
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e128b510c9bd40eedd89f7750c65bbd03a7d8670
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477985"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 接続マネージャー
 
@@ -44,7 +45,7 @@ Azure Data Lake Store 接続マネージャー は、[SQL Server Integration Ser
     1.  **[Azure AD のユーザー ID]** 認証オプションを選択する場合は、次の操作を行います。
         1. **[ユーザー名]** と **[パスワード]** のフィールドに値を指定します。 
     
-        2. 接続をテストするには、 **[接続テスト]** を選択します。 自分自身またはテナント管理者が SSIS から Data Lake Storage Gen1 データへのアクセスに同意していない場合は、プロンプトが表示されたときに **[同意する]** を選択します。 この同意エクスペリエンスの詳細については、「 [Azure Active Directory とアプリケーションの統合](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad)」を参照してください。
+        2. 接続をテストするには、**[接続テスト]** を選択します。 自分自身またはテナント管理者が SSIS から Data Lake Storage Gen1 データへのアクセスに同意していない場合は、プロンプトが表示されたときに **[同意する]** を選択します。 この同意エクスペリエンスの詳細については、「 [Azure Active Directory とアプリケーションの統合](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad)」を参照してください。
     
         > [!NOTE] 
         > **[Azure AD のユーザー ID]** 認証オプションを選択する場合、多要素認証と Microsoft アカウント認証はサポートされません。
@@ -54,11 +55,11 @@ Azure Data Lake Store 接続マネージャー は、[SQL Server Integration Ser
     
         2. 適切な権限を割り当てて、この AAD アプリケーションが Data Lake Storage Gen1 リソースにアクセスできるようにします。 この認証オプションの詳細については、「 [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)」 (ポータルを使用して、リソースにアクセスできる Active Directory アプリケーションとサービス プリンシパルを作成する) を参照してください。
     
-        3. **[クライアント ID]** 、 **[シークレット キー]** および **[テナント名]** の各フィールドに値を指定します。
+        3. **[クライアント ID]**、**[シークレット キー]** および **[テナント名]** の各フィールドに値を指定します。
     
-        4. 接続をテストするには、 **[接続テスト]** を選択します。  
+        4. 接続をテストするには、**[接続テスト]** を選択します。  
   
-6.  **[OK]** を選択して、 **[Azure Data Lake Store 接続マネージャー エディター]** ダイアログ ボックスを閉じます。  
+6.  **[OK]** を選択して、**[Azure Data Lake Store 接続マネージャー エディター]** ダイアログ ボックスを閉じます。  
 
 ## <a name="view-the-properties-of-the-connection-manager"></a>接続マネージャーのプロパティを表示する
 作成した接続マネージャーのプロパティは、 **[プロパティ]** ウィンドウに表示されます。  

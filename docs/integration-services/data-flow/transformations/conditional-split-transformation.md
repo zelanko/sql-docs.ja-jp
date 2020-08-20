@@ -1,4 +1,5 @@
 ---
+description: 条件分割変換
 title: 条件分割変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb286721fac9e90a5e1d34bfb8a30ac9ac52032f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0e63cd4f6c045d00ef3835f2207d8d8001ff1b27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477776"
 ---
 # <a name="conditional-split-transformation"></a>条件分割変換
 
@@ -78,7 +79,7 @@ ms.locfileid: "86923214"
 > [!NOTE]  
 >  条件分割変換は、1 つの出力に対してのみ各入力行を送信します。 複数の条件を入力した場合、変換によって、条件が True である最初の出力に各行が送信され、その行に対して後続する条件は無視されます。 複数の条件を継続して評価する必要がある場合、データ フローで複数の条件分割変換の連結が必要となることがあります。  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>オプション  
  **Order**  
  行を選択し、右側の矢印キーを使用して、式を評価する順序を変更します。  
   
@@ -90,7 +91,7 @@ ms.locfileid: "86923214"
   
  このプロパティの値は、プロパティ式を使用して指定することができます。  
   
- **関連項目:** [Integration Services &#40;SSIS&#41; 式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[演算子 &#40;SSIS 式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)、[関数 &#40;SSIS 式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **: **  [Integration Services &#40;SSIS&#41; の式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[ &#40;SSIS 式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)、および [ &#40;SSIS 式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **[既定の出力名]**  
  既定の出力の名前を入力するか、既定を使用します。  
