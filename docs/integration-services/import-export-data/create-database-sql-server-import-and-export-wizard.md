@@ -1,4 +1,5 @@
 ---
+description: '[データベースの作成] (SQL Server インポートおよびエクスポート ウィザード)'
 title: '[データベースの作成] (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs'
 ms.custom: ''
 ms.date: 02/17/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f3616da1034fa0c590a4544691e22ffd054eaa10
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5c9788c6a7e23759352f22acd543358305ad0a9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477287"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>[データベースの作成] (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -36,7 +37,7 @@ ms.locfileid: "86922408"
 ![インポートおよびエクスポート ウィザードの [データベースの作成] ページ](../../integration-services/import-export-data/media/create-database.png "インポートおよびエクスポート ウィザードの [データベースの作成] ページ")  
 
 ## <a name="provide-a-name-for-the-new-database"></a>新しいデータベースの名前を入力する  
-**Name**  
+**名前**  
  対象になる SQL Server データベースの名前を指定します。
  
 ### <a name="naming-requirements"></a>名前付けに関する要件
@@ -90,6 +91,6 @@ ms.locfileid: "86922408"
 ### <a name="more-info"></a>詳細情報
 このページに表示されるファイル サイズ オプションの詳細については、「[CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)」をご覧ください。 
 
-## <a name="whats-next"></a>次の操作  
+## <a name="whats-next"></a>次の手順  
  ウィザードで作成する新しいデータベースの名前を指定して **[OK]** をクリックしすると、 **[データベースの作成]** ダイアログ ボックスは **[変換先の選択]** ページに戻ります。 詳細については、「 [[変換先の選択] (SQL Server インポートおよびエクスポート ウィザード)](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)」をご覧ください。  
 

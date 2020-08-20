@@ -1,4 +1,5 @@
 ---
+description: マージ変換
 title: マージ変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a444abac97c69755e234e39a9c6e3ae623af8d89
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7d8ed9805a62095f732f3f4621d3c133793ac7bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477638"
 ---
 # <a name="merge-transformation"></a>マージ変換
 
@@ -81,7 +82,7 @@ ms.locfileid: "86919588"
 >  マージ変換では、入力データが並べ替えられている必要があります。 この重要な要件の詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。  
   
 ### <a name="options"></a>オプション  
- **[出力列の名前]**  
+ **出力列の名前**  
  出力列の名前を指定します。  
   
  **[マージの入力 1]**  

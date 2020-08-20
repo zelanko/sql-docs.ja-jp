@@ -1,4 +1,5 @@
 ---
+description: catalog.create_customized_logging_level
 title: catalog.create_customized_logging_level | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a3bff065a7a89a1e0708fc5a1d782979652cbd3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7aaf0fb0ccdd285944e5fceaba561bd626317121
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477138"
 ---
 # <a name="catalogcreate_customized_logging_level"></a>catalog.create_customized_logging_level 
 
@@ -49,7 +50,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @profile_value = ] *profile_value*  
  新しいする統計情報は、ログに記録するログ記録レベルをカスタマイズできます。  
   
- 統計情報の有効な値には、次の項目が含まれます。 これらの値は、 **[カスタマイズされたログ記録レベルの管理]** ダイアログ ボックスの **[統計]** タブの値に対応しています。  
+ 統計情報の有効な値には、次の項目が含まれます。 これらの値は、**[カスタマイズされたログ記録レベルの管理]** ダイアログ ボックスの **[統計]** タブの値に対応しています。  
   
 -   実行 = 0  
   
@@ -62,7 +63,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @events_value = ] *events_value*  
  新しいイベントは、ログに記録するログ記録レベルをカスタマイズできます。  
   
- イベントの有効な値には、次の項目が含まれます。 これらの値は、 **[カスタマイズされたログ記録レベルの管理]** ダイアログ ボックスの **[イベント]** タブの値に対応しています。  
+ イベントの有効な値には、次の項目が含まれます。 これらの値は、**[カスタマイズされたログ記録レベルの管理]** ダイアログ ボックスの **[イベント]** タブの値に対応しています。  
   
 |イベントをイベントのコンテキスト|イベントのコンテキストを持つイベント|  
 |----------------------------------|-------------------------------|  
@@ -75,7 +76,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
  *level_id* は **bigint** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  Transact-SQL で *profile_value* または *events_value* 引数の複数の値を結合するには、この例に従います。 OnError (8) と DiagnosticEx (15) イベントをキャプチャする場合、*event_value* を計算する式は `2^8 + 2^15 = 33024` です。  
   
 ## <a name="return-codes"></a>リターン コード  
