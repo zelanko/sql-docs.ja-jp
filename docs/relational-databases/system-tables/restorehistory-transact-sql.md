@@ -1,4 +1,5 @@
 ---
+description: restorehistory (Transact-SQL)
 title: restorehistory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3db109ef79cbe2c24691719d4bd48384cfda478b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 26b3d319738ce827d482aafcfb76f91cc2ab53ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460294"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  復元操作ごとに 1 行のデータを格納します。 このテーブルは、 **msdb**データベースに格納されます。  
+  復元操作ごとに 1 行のデータを格納します。 このテーブルは、 **msdb** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -45,11 +46,11 @@ ms.locfileid: "85881426"
 |**stop_at_mark_name**|**nvarchar(128)**|名前付きマークを含むトランザクションへの復旧。 NULL にすることができます。<br /><br /> データベースをデータベース スナップショットに戻す場合、この値は NULL になります。|  
 |**stop_before**|**bit**|名前付きマークを含むトランザクションが復旧に含まれていたかどうかを示します。<br /><br /> 0 = マークされたトランザクションの前に復旧が停止しました。<br /><br /> 1 = マーク付きのトランザクションも復旧された。<br /><br /> NULL にすることができます。<br /><br /> データベースをデータベース スナップショットに戻す場合、この値は NULL になります。|  
   
-## <a name="remarks"></a>Remarks  
- このテーブルおよびその他のバックアップテーブルと履歴テーブルの行の数を減らすには、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)ストアドプロシージャを実行します。  
+## <a name="remarks"></a>解説  
+ このテーブルおよびその他のバックアップテーブルと履歴テーブルの行の数を減らすには、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) ストアドプロシージャを実行します。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のテーブルのバックアップと復元](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のテーブルのバックアップと復元 ](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [restorefile &#40;Transact-sql&#41;](../../relational-databases/system-tables/restorefile-transact-sql.md)   
  [restorefilegroup &#40;Transact-sql&#41;](../../relational-databases/system-tables/restorefilegroup-transact-sql.md)   
  [システム テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  

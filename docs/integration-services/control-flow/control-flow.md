@@ -1,4 +1,5 @@
 ---
+description: 制御フロー
 title: 制御フロー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 789a0f51697c1a605a2c5e0b08f98ccc87d78b1d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c483cab97fe4eb218ef1e823f53ed4cb6a7fd5f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457576"
 ---
 # <a name="control-flow"></a>制御フロー
 
@@ -32,7 +33,7 @@ ms.locfileid: "86915794"
   
  次の図は、1 つのコンテナーと 6 つのタスクで構成される制御フローを示しています。 タスクのうち 5 つはパッケージ レベルで定義され、残りの 1 つのタスクはコンテナー レベルで定義されています。 タスクは、コンテナーの内部にあります。  
   
- ![6 つのタスクと 1 つのコンテナーで構成される制御フロー](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "6 つのタスクと 1 つのコンテナーとで構成される制御フロー")  
+ ![6 つのタスクと 1 つのコンテナーとで構成される制御フロー](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "6 つのタスクと 1 つのコンテナーとで構成される制御フロー")  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のアーキテクチャでは入れ子のコンテナーがサポートされており、制御フローには複数のレベルで入れ子になったコンテナーを含めることができます。 たとえば、パッケージには Foreach ループ コンテナーなどのコンテナーを含めることができ、Foreach ループ コンテナーには、さらに別の Foreach ループ コンテナーなどを含めることができます。  
   

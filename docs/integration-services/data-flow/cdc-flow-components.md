@@ -1,4 +1,5 @@
 ---
+description: CDC フロー コンポーネント
 title: CDC フロー コンポーネント | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0dc246a311a8c5488d78067adb6772bd0b399988
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 65836425e0f6cfa1533dfe28db8f8df483c74465
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457438"
 ---
 # <a name="cdc-flow-components"></a>CDC フロー コンポーネント
 
@@ -32,7 +33,7 @@ ms.locfileid: "86915519"
   
  **CDC 制御フロー コンポーネント**:  
   
- [CDC 制御タスク](../../integration-services/control-flow/cdc-control-task.md)  
+ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
   
  **CDC データ フロー コンポーネント**:  
   
@@ -218,7 +219,7 @@ CDC コンポーネントをインストールしたら、SQL [!INCLUDE[ssBIDevS
   
 -   technet.microsoft.com のビデオ「 [SQL Server Integration Services 2012 を使用した Oracle データベースの CDC (SQL Server ビデオ)](https://technet.microsoft.com/sqlserver/jj218898)」  
   
-## <a name="see-also"></a>参照  
- [CDC 制御タスク](../../integration-services/control-flow/cdc-control-task.md)  
+## <a name="see-also"></a>関連項目  
+ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
   
   

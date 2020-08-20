@@ -1,4 +1,5 @@
 ---
+description: catalog.create_environment_variable (SSISDB データベース)
 title: catalog.create_environment_variable (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3875650317c76b0b54608272eef0c56a7e11987d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 367f16f137bdb09de610ce8b0b8a2ab125ce25ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921388"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456974"
 ---
 # <a name="catalogcreate_environment_variable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB データベース)
 
@@ -84,7 +85,7 @@ catalog.create_environment_variable [ @folder_name = ] folder_name
   
 -   ユーザーに適切な権限がない  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  パッケージの実行で使用するため、値をプロジェクト パラメーターまたはパッケージ パラメーターに効率的に割り当てるには、環境変数を使用できます。 環境変数は、パラメーター値を編成できるようにします。 変数名は、環境内で一意である必要があります。  
   
  ストアド プロシージャは変数のデータ型を検証して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログでサポートされることを確認します。  

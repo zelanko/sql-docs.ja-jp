@@ -1,4 +1,5 @@
 ---
+description: プログラムによる接続の追加
 title: プログラムによる接続の追加 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7240ac7e24b2b9b6ca697809b3d06dc0da3d055f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 571037e357f6d4d99a0e1f0139c72bb2a8645be5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457855"
 ---
 # <a name="adding-connections-programmatically"></a>プログラムによる接続の追加
 
@@ -213,7 +214,7 @@ End Class
 ## <a name="external-resources"></a>外部リソース  
  carlprothman.net の [接続文字列](https://go.microsoft.com/fwlink/?LinkId=220743)に関する技術記事  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [接続マネージャーを作成する](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   

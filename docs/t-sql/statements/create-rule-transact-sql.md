@@ -1,4 +1,5 @@
 ---
+description: CREATE RULE (Transact-SQL)
 title: CREATE RULE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 72029c32440feac5d69e015a060d92bd204ec4f6
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 2615c5d5d75191067d64d7c562f50b330dfdc830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458788"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,10 +75,10 @@ AS condition_expression
 > [!NOTE]  
 >  別名データ型を使用する式にルールを作成することは避けてください。 別名データ型を使用する式にルールを作成することはできますが、ルールを列または別名データ型にバインドすると、参照時にこの式のコンパイルに失敗します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  CREATE RULE は、単一のバッチ内で他の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと組み合わせて使用することはできません。 ルールを作成した時点では、データベース内の既存のデータにルールは適用されません。また、ルールをシステム データ型にバインドすることはできません。  
   
- ルールは、現在のデータベース内でのみ作成できます。 ルールを作成したら、**sp_bindrule** を実行してルールを列または別名データ型にバインドします。 ルールと列のデータ型の間には互換性がとれている必要があります。 たとえば、数値型列のルールとして "\@value LIKE A%" は使用できません。 **text**、**ntext**、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml**、CLR ユーザー定義型、**timestamp** の列には、ルールをバインドできません。 ルールは計算列にバインドできません。  
+ ルールは、現在のデータベース内でのみ作成できます。 ルールを作成したら、**sp_bindrule** を実行してルールを列または別名データ型にバインドします。 ルールと列のデータ型の間には互換性がとれている必要があります。 たとえば、数値型列のルールとして "\@value LIKE A%" は使用できません。 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR ユーザー定義型、**timestamp** の列には、ルールをバインドできません。 ルールは計算列にバインドできません。  
   
  文字および日付定数は、必ず単一引用符 (') で囲み、バイナリ定数は 0x で始めてください。 ルールとバインド先の列の間に互換性がとれていない場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では、ルールがバインドされたときではなく値が挿入されたときにエラー メッセージが返されます。  
   

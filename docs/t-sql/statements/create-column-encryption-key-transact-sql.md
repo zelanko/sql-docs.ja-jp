@@ -1,4 +1,5 @@
 ---
+description: CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 title: CREATE COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 473d41dcc61113a331597a6de8f103517378bfdd
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9527007eb54e07747f3e6d12b9fdf98bc50ed3cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110692"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458808"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -74,8 +75,8 @@ _varbinary\_literal_
   
 > [!WARNING]  
 >  このステートメントでは、プレーンテキストで列暗号化キーの値を渡さないでください。 そうすれば、この機能の利点が得られます。  
-  
-## <a name="remarks"></a>解説  
+
+## <a name="remarks"></a>注釈
 `CREATE COLUMN ENCRYPTION KEY` ステートメントには、少なくとも 1 つまたは 2 つの値が含まれる必要があります。 後で [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](alter-column-encryption-key-transact-sql.md) を使用して 2 番目の値を追加できます。 `ALTER COLUMN ENCRYPTION KEY` ステートメントを使用して値を削除することもできます。  
   
 通常、列暗号化キーは、暗号化された値を 1 つだけ使用して作成されます。 列マスター キーをローテーションして、現在の列マスター キーを新しい列マスター キーに置き換えることが必要な場合があります。 キーをローテーションする必要がある場合は、新しい列マスター キーを使用して暗号化された列暗号化キーの値を追加します。 このローテーションにより、クライアント アプリケーションでは、列暗号化キーを使用して暗号化されたデータへのアクセスを維持しながら、新しい列マスター キーを使用できます。 新しいマスター キーにアクセスできないクライアント アプリケーションの、Always Encrypted が有効なドライバーでは、古い列マスター キーで暗号化された列暗号化キーの値が、機密データへのアクセスに使用されます。  
@@ -128,7 +129,7 @@ WITH VALUES
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
 [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   

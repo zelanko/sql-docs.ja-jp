@@ -1,4 +1,5 @@
 ---
+description: ALTER MASTER KEY (Transact-SQL)
 title: ALTER MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: fasttrack-edit
 ms.date: 02/21/2019
@@ -27,12 +28,12 @@ ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a069116263c0c03131cf26c950de7726830e08c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 02c4d4eb6b3e96a65af77bf0c0d5ca749d2d201b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458917"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
 
@@ -96,6 +97,8 @@ ALTER MASTER KEY <alter_option>
     DROP ENCRYPTION BY SERVICE MASTER KEY
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引数
 
 PASSWORD ='*password*': データベース マスター キーを暗号化または暗号化解除するパスワードを指定します。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。
@@ -136,7 +139,7 @@ ALTER MASTER KEY REGENERATE WITH ENCRYPTION BY PASSWORD = 'dsjdkflJ435907NnmM#sX
 GO
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [CREATE MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md)
 - [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md)

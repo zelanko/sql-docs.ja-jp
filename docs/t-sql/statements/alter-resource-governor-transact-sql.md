@@ -1,4 +1,5 @@
 ---
+description: ALTER RESOURCE GOVERNOR (Transact-SQL)
 title: ALTER RESOURCE GOVERNOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2bec2a5008b65ea5e20b8e6b784d9fe3ecda64c2
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 3591f9209b3af602474a9844b5b5daa230895f1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458873"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +102,7 @@ ALTER RESOURCE GOVERNOR
   
  キューに登録される I/O 操作のディスク ボリュームごとの最大数を設定します。 これらの I/O 操作では、任意のサイズの読み取りや書き込みを行うことができます。  MAX_OUTSTANDING_IO_PER_VOLUME の最大値は 100 です。 これはパーセントではありません。 この設定は、ディスク ボリュームの IO 特性に合わせて IO リソース管理をチューニングするために設計されています。 さまざまな値をテストし、ストレージ サブシステムの最大値を識別するために IOMeter、[DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223)、SQLIO (非推奨) などの調整ツールの使用を検討することをお勧めします。 この設定では、システム レベルの安全性チェックが提供され、他のプールで MAX_IOPS_PER_VOLUME が無制限に設定されている場合でも、SQL Server でリソース プールの最小 IOPS を満たすことができます。 MAX_IOPS_PER_VOLUME の詳細については、「[CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  ALTER RESOURCE GOVERNOR DISABLE、ALTER RESOURCE GOVERNOR RECONFIGURE、および ALTER RESOURCE GOVERNOR RESET STATISTICS は、ユーザー トランザクション内で使用できません。  
   
  RECONFIGURE パラメーターはリソース ガバナー構文の一部であり、個別の DDL ステートメントである [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) とは異なります。  
@@ -189,7 +190,7 @@ ALTER RESOURCE GOVERNOR
 WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   

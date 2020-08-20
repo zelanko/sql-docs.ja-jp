@@ -1,4 +1,5 @@
 ---
+description: STPointN (geography データ型)
 title: STPointN (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4bc3ce2749552ee5acca1ca3f2b50ebf007599de
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 00604f3066c746057e1ffaaefc0cffb00244d57b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459004"
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "86552460"
   
  Open Geospatial Consortium (OGC) の型: **Point**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  ユーザーが作成した **geography** インスタンスの場合、STPointN() は、最初に入力した順序で地点を並べ替えることで、*expression* で指定された地点を返します。  
   
  システムによって作成された **geography** インスタンスの場合、STPointN() は、出力する順序ですべての地点を並べ替えることで、*式*で指定された地点を返します。出力する順序にするには、**geography** インスタンス、インスタンス内のリング (必要な場合)、リング内の地点の順に並べ替えます。 この順序は決定的です。  
@@ -67,7 +68,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STPointN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Geography インスタンスの OGC メソッド](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

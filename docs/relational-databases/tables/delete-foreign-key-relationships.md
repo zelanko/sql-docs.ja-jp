@@ -1,4 +1,5 @@
 ---
+description: 外部キーのリレーションシップの削除
 title: 外部キーのリレーションシップの削除 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2017
@@ -15,12 +16,12 @@ ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fbc504ed754ad3181c6a6989f0efdec74af1f20
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b1af63b09d17af1d88b91b31f841df675ddbe6af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460249"
 ---
 # <a name="delete-foreign-key-relationships"></a>外部キーのリレーションシップの削除
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86002094"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用して外部キーの制約を削除するには:**  
   

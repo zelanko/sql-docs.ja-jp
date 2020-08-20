@@ -1,4 +1,5 @@
 ---
+description: CREATE PARTITION SCHEME (Transact-SQL)
 title: CREATE PARTITION SCHEME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/10/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b13706909d12d4fb27e981008aeca9e0b3e8ac2a
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: dd662f06ceff6ac917e8c56b830f7dd1241084fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458814"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,12 +65,12 @@ AS PARTITION partition_function_name
  パーティション構成を使用するパーティション関数の名前です。 パーティション関数によって作成されたパーティションは、パーティション構成で指定されたファイル グループにマップされます。 *partition_function_name* はデータベースに既に存在する必要があります。 1 つのパーティションに FILESTREAM ファイル グループと非 FILESTREAM ファイル グループの両方を含めることはできません。  
   
  ALL  
- すべてのパーティションを *file_group_name* で提供されるファイル グループにマップすることを指定します。 **[** PRIMARY **]** を指定した場合は、すべてのパーティションをプライマリ ファイル グループにマップすることを指定します。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。  
+ すべてのパーティションを *file_group_name* で提供されるファイル グループにマップすることを指定します。**[** PRIMARY **]** を指定した場合は、すべてのパーティションをプライマリ ファイル グループにマップすることを指定します。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。  
   
  *file_group_name* |  **[** PRIMARY **]** [ **,** _...n_]  
  *partition_function_name* によって指定されたパーティションを保持するファイル グループの名前を指定します。 *file_group_name* がデータベースに既に存在する必要があります。  
   
- **[** PRIMARY **]** を指定した場合、パーティションはプライマリ ファイル グループに格納されます。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。 パーティションは、パーティション 1 から始まり、[ **,** _...n_] で一覧表示されているファイル グループの順序で、ファイル グループに割り当てられます。 [ *,* **...n**] では、同じ _file_group_name_ を複数回指定できます。 *n* が *partition_function_name* で指定されたパーティションの数を保持するのに十分ではない場合、CREATE PARTITION SCHEME は失敗し、エラーが発生します。  
+ **[** PRIMARY **]** を指定した場合、パーティションはプライマリ ファイル グループに格納されます。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。 パーティションは、パーティション 1 から始まり、[ **,** _...n_] で一覧表示されているファイル グループの順序で、ファイル グループに割り当てられます。 [ **,** _...n_] では、同じ *file_group_name* を複数回指定できます。 *n* が *partition_function_name* で指定されたパーティションの数を保持するのに十分ではない場合、CREATE PARTITION SCHEME は失敗し、エラーが発生します。  
   
  *partition_function_name* によって生成されるパーティションの数がファイル グループより少ない場合、割り当てられていない最初のファイル グループが NEXT USED とマークされ、情報メッセージに NEXT USED ファイル グループの名前が表示されます。 ALL を指定した場合、唯一の *file_group_name* に、この *partition_function_name* に対する NEXT USED プロパティが設定されます。 ALTER PARTITION FUNCTION ステートメントで追加のパーティションを作成した場合は、NEXT USED ファイル グループがそのパーティションを受け取ります。 追加の割り当てられていないファイル グループを作成して新しいパーティションを保持するには、ALTER PARTITION SCHEME を使用します。  
   
@@ -100,7 +101,7 @@ AS PARTITION myRangePF1
 TO (test1fg, test2fg, test3fg, test4fg);  
 ```  
   
- パーティション分割列 `myRangePF1`col1**でパーティション関数** を使用するテーブルのパーティションは、次の表に示すように割り当てられます。  
+ パーティション分割列 **col1** でパーティション関数 `myRangePF1` を使用するテーブルのパーティションは、次の表に示すように割り当てられます。  
   
 ||||||  
 |-|-|-|-|-|  
@@ -120,7 +121,7 @@ AS PARTITION myRangePF2
 TO ( test1fg, test1fg, test1fg, test2fg );  
 ```  
   
- パーティション分割列 `myRangePF2`col1**でパーティション関数** を使用するテーブルのパーティションは、次の表に示すように割り当てられます。  
+ パーティション分割列 **col1** でパーティション関数 `myRangePF2` を使用するテーブルのパーティションは、次の表に示すように割り当てられます。  
   
 ||||||  
 |-|-|-|-|-|  
@@ -172,7 +173,7 @@ AS PARTITION myRangePF1
 ALL TO ( [PRIMARY] );  
 ```
    
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
  [ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
  [DROP PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   

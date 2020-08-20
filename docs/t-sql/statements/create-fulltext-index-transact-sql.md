@@ -1,4 +1,5 @@
 ---
+description: CREATE FULLTEXT INDEX (Transact-SQL)
 title: CREATE FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b385e3c69156bf7be9d806fa73ece30b2433f3a
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 134f2c83a7564ab8132d5078650aaac030a13a11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458776"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -155,7 +156,7 @@ OFF
 *property_list_name*       
 フルテキスト インデックスに関連付ける検索プロパティ リストの名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 フルテキスト インデックスについて詳しくは、「[フルテキスト インデックスの作成と管理](../../relational-databases/search/create-and-manage-full-text-indexes.md)」をご覧ください。  
   
 **xml** 列にフルテキスト インデックスを作成して XML 要素のコンテンツにインデックスを設定できますが、XML マークアップは無視されます。 属性値には、数値でない限り、フルテキスト インデックスが設定されます。 要素タグはトークンの境界として使用されます。 複数言語を含む整形式の XML または HTML ドキュメントやフラグメントはサポートされます。 詳細については、「 [XML 列でのフルテキスト検索の使用](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)」を参照してください。  
@@ -246,7 +247,7 @@ ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [フルテキスト インデックスの作成と管理](../../relational-databases/search/create-and-manage-full-text-indexes.md)       
 [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)       
 [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)       

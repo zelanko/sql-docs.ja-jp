@@ -1,4 +1,5 @@
 ---
+description: プログラムによるデータ フロー コンポーネントの追加
 title: プログラムによるデータ フロー コンポーネントの追加| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9a293e7d3151341753cdf1228f7a3d6958a8e3b3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e0c43fc088fbf6ed8f95fdd418b50dc93563b662
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917258"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457871"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>プログラムによるデータ フロー コンポーネントの追加
 
@@ -39,7 +40,7 @@ ms.locfileid: "86917258"
 ## <a name="adding-a-managed-component"></a>マネージド コンポーネントの追加  
  CLSID または PROGID を使用して、いずれかのマネージド データ フロー コンポーネントをデータ フローに追加することはできません。これらの値はコンポーネント自体ではなく、ラッパーを指しているためです。 代わりに、次のサンプルに示すように、**CreationName** プロパティまたは **AssemblyQualifiedName** プロパティを使用できます。  
   
- **AssemblyQualifiedName** プロパティを使用する場合は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロジェクトで、マネージド コンポーネントを含んでいるアセンブリに参照を追加する必要があります。 これらのアセンブリは、 **[参照の追加]** ダイアログ ボックスの [.NET] タブに一覧表示されません。 通常は、**C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** フォルダーを参照してアセンブリを見つける必要があります。  
+ **AssemblyQualifiedName** プロパティを使用する場合は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロジェクトで、マネージド コンポーネントを含んでいるアセンブリに参照を追加する必要があります。 これらのアセンブリは、**[参照の追加]** ダイアログ ボックスの [.NET] タブに一覧表示されません。 通常は、**C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** フォルダーを参照してアセンブリを見つける必要があります。  
   
  組み込みマネージド データ フロー コンポーネントの要素は次のとおりです。  
   

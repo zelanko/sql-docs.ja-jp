@@ -1,4 +1,5 @@
 ---
+description: パーティション処理変換先
 title: パーティション処理変換先 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50513545bf2737a8b331153c686acad7ebaf4bd2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba6441215b1f1462195b83a99ce040da11d694fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457321"
 ---
 # <a name="partition-processing-destination"></a>パーティション処理変換先
 
@@ -67,7 +68,7 @@ ms.locfileid: "86916094"
 > [!NOTE]  
 >  ここで説明されているタスクは、Analysis Services テーブル モデルには適用されません。  テーブル モデルで入力列をパーティション列にマップすることはできません。 代わりに Analysis Services DDL 実行タスク [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) を使用してパーティションを処理することができます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **Connection manager**  
  既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
@@ -129,7 +130,7 @@ ms.locfileid: "86916094"
  **[エラー時に停止する]**  
  エラーが発生した場合に処理を停止することを指定します。  
   
- **[エラー数]**  
+ **エラーの数**  
  **[エラー時に停止する]** を選択した場合は、処理を停止するエラーのしきい値を指定します。  
   
  **[エラー時のアクション]**  
@@ -182,5 +183,5 @@ ms.locfileid: "86916094"
  **[...]**  
  エラー ログのパスを選択します。  
   
-## <a name="see-also"></a>参照  
- [Integration Services のエラーとメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>関連項目  
+ [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   

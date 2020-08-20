@@ -1,4 +1,5 @@
 ---
+description: 主キーの削除
 title: 主キーの削除 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2017
@@ -15,12 +16,12 @@ ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7465a183241211fe4372eea0c57f93f3cfe0aa49
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e281a418dc6bfc1ebf9ca1920564f22a9ff2f306
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460264"
 ---
 # <a name="delete-primary-keys"></a>主キーの削除
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86002083"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **主キー制約を削除する方法:**  
   
@@ -65,7 +66,7 @@ ms.locfileid: "86002083"
     > [!NOTE]  
     >  この操作を元に戻すには、変更を保存せずにテーブルを閉じます。 主キーの削除を元に戻すと、テーブルに対するその他の変更はすべて失われます。  
   
-3.  **[ファイル]** メニューの **[ _<テーブル名>_ を保存]** をクリックします。  
+3.  **[ファイル]** メニューの **[_<テーブル名>_ を保存]** をクリックします。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   

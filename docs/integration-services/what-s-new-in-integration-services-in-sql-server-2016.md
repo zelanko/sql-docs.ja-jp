@@ -1,4 +1,5 @@
 ---
+description: SQL Server 2016 の Integration Services の新機能
 title: SQL Server 2016 の Integration Services の新機能 | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a715409dddf2c2de19624f2f5f0b770e0202c9b8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 386e58e63ee0f629baf5c9ad3009c678a1a966d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922324"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456874"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 の Integration Services の新機能
 
@@ -53,7 +54,7 @@ ms.locfileid: "86922324"
   
         -   [SSIS カタログでの Always Encrypted のサポート](#encrypted)  
   
-    -   デバッグの強化  
+    -   より優れたデバッグ  
   
         -   [SSIS カタログの新しい ssis_logreader データベース レベルのロール](#LogReader)  
   
@@ -191,7 +192,7 @@ ms.locfileid: "86922324"
   
 -   [Lookup transformation with Always Encrypted (参照変換と Always Encrypted)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282)  
 
-### <a name="better-debugging"></a>デバッグの強化
+### <a name="better-debugging"></a>より優れたデバッグ
 
 ####  <a name="new-ssis_logreader-database-level-role-in-the-ssis-catalog"></a><a name="LogReader"></a> SSIS カタログの新しい ssis_logreader データベース レベルのロール  
  SSIS カタログの以前のバージョンでは、 **ssis_admin** ロールのユーザーだけが、ログ出力を含むビューにアクセスできます。 管理者でないユーザーに対してログ出力を含むビューにアクセスするためのアクセス権を付与する、新しい **ssis_logreader** データベース レベルのロールが追加されました。  
@@ -373,6 +374,6 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)   
- [SQL Server 2016 の各エディションとサポートされる機能](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+ [SQL Server 2016 のエディションとサポートされている機能](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
