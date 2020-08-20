@@ -97,9 +97,7 @@
               href: ../machine-learning/tutorials/python-clustering-model-build.md
             - name: 4 - モデルをデプロイする
               href: ../machine-learning/tutorials/python-clustering-model-deploy.md
-        - name: revoscalepy を使用した Python モデルの作成
-          href: ../machine-learning/tutorials/use-python-revoscalepy-to-create-model.md
-        - name: SQL 開発者向けの Python
+        - name: NYC タクシーのヒント (分類)
           items:
             - name: 1 - 概要
               href: ../machine-learning/tutorials/python-taxi-classification-introduction.md
@@ -111,6 +109,8 @@
               href: ../machine-learning/tutorials/python-taxi-classification-train-model.md
             - name: 5 - 予測
               href: ../machine-learning/tutorials/python-taxi-classification-deploy-model.md
+        - name: revoscalepy を使用した Python モデルの作成
+          href: ../machine-learning/tutorials/use-python-revoscalepy-to-create-model.md
     - name: R
       items:
         - name: R のチュートリアル
@@ -135,9 +135,7 @@
               href: ../machine-learning/tutorials/r-clustering-model-build.md
             - name: 4 - モデルをデプロイする
               href: ../machine-learning/tutorials/r-clustering-model-deploy.md
-        - name: パーティション ベースのモデルの作成
-          href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
-        - name: SQL 開発者向けの R
+        - name: NYC タクシーのヒント (分類)
           items:
             - name: 1. はじめに
               href: ../machine-learning/tutorials/r-taxi-classification-introduction.md
@@ -149,6 +147,8 @@
               href: ../machine-learning/tutorials/r-taxi-classification-train-model.md
             - name: 5. 予測
               href: ../machine-learning/tutorials/r-taxi-classification-deploy-model.md
+        - name: パーティション ベースのモデルの作成
+          href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
         - name: R ツールでの SQL ML の使用
           items:
             - name: 1. はじめに
