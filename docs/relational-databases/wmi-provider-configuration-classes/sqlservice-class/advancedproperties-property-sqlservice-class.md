@@ -1,4 +1,5 @@
 ---
+description: AdvancedProperties プロパティ (SqlService クラス)
 title: Advanced Properties プロパティ (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9eeb0516aab43760476f37406d6396a5bb9220d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 95f6b8b63918122d85354f4f30694f22cbbaa4ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472755"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties プロパティ (SqlService クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ object.AdvancedProperties [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  **Sqlservice**オブジェクトの詳細プロパティを含む[Sqlserviceadvanced property クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)オブジェクトの配列です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

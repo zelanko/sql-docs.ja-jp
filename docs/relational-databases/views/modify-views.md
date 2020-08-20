@@ -1,4 +1,5 @@
 ---
+description: ビューの変更
 title: ビューの変更 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58f8e7f2d13c1a1c720ac13207d78a6b1fe9a1fa
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d273277eff9a9d731aca1f60115aef28ef27a25f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472974"
 ---
 # <a name="modify-views"></a>ビューの変更
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "87396442"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してビューを変更するには:**  
   
@@ -68,7 +69,7 @@ ms.locfileid: "87396442"
   
     1.  追加または削除する要素のチェック ボックスをオンまたはオフにします。  
   
-    2.  ダイアグラム ペイン内で右クリックし、 **[テーブルの追加]** を選択します。次に、 **[テーブルの追加]** ダイアログ ボックスで、ビューに追加する列を選択します。  
+    2.  ダイアグラム ペイン内で右クリックし、**[テーブルの追加]** を選択します。次に、**[テーブルの追加]** ダイアログ ボックスで、ビューに追加する列を選択します。  
   
     3.  削除するテーブルのタイトル バーを右クリックし、 **[削除]** をクリックします。  
   

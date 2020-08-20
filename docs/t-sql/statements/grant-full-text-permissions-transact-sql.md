@@ -1,4 +1,5 @@
 ---
+description: GRANT (フルテキストの権限の許可) (Transact-SQL)
 title: GRANT (フルテキストの権限の許可) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/17/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aa4de06e0e860fd88d682a582110d6b46527414d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e466840015f0b5d82a8e6430434239db6655ee81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472235"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT (フルテキストの権限の許可) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +63,7 @@ GRANT permission [ ,...n ] ON
  権限を許可するフルテキスト ストップリストを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  
- 権限を許可するプリンシパルを指定します。 次のいずれか:  
+ 権限を許可するプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -77,7 +78,7 @@ GRANT OPTION
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
   
 AS *granting_principal*  
- このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
+ このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -135,7 +136,7 @@ AS *granting_principal*
 ## <a name="examples"></a>例  
   
 ### <a name="a-granting-permissions-to-a-full-text-catalog"></a>A. フルテキスト カタログに対する権限を許可する  
- 次の例では、フルテキスト カタログ `Ted` に対する `CONTROL` 権限を `ProductCatalog` に許可します。  
+ 次の例では、フルテキスト カタログ `ProductCatalog` に対する `CONTROL` 権限を `Ted` に許可します。  
   
 ```  
 GRANT CONTROL  
@@ -144,7 +145,7 @@ GRANT CONTROL
 ```  
   
 ### <a name="b-granting-permissions-to-a-stoplist"></a>B. ストップリストに対する権限を許可する  
- 次の例では、フルテキスト ストップリスト `Mary` に対する `VIEW DEFINITION` 権限を `ProductStoplist` に許可します。  
+ 次の例では、フルテキスト ストップリスト `ProductStoplist` に対する `VIEW DEFINITION` 権限を `Mary` に許可します。  
   
 ```  
 GRANT VIEW DEFINITION  

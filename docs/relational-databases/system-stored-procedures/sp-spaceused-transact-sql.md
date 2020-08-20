@@ -1,4 +1,5 @@
 ---
+description: sp_spaceused (Transact-SQL)
 title: sp_spaceused (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
@@ -18,12 +19,12 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91b38115cfcd9f688187fc7663e3da8c90d3d457
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 4b07a4f8ece975662127797f6f25ecd19ecc759c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473807"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,14 +50,14 @@ sp_spaceused [[ @objname = ] 'objname' ]
 `[ @objname = ] 'objname'`
    
  領域の使用情報を要求するテーブル、インデックス付きビュー、またはキューの、修飾付きまたは修飾なしの名前を指定します。 引用符は、修飾されたオブジェクト名が指定されている場合にのみ必要です。 完全修飾オブジェクト名 (データベース名を含む) が指定されている場合、データベース名は現在のデータベースの名前である必要があります。  
-場合*objname*が指定されていない、データベース全体の結果が返されます。  
-*objname*は**nvarchar (776)**,、既定値は NULL です。  
+場合 *objname* が指定されていない、データベース全体の結果が返されます。  
+*objname* は **nvarchar (776)**,、既定値は NULL です。  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]と [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] は、データベースオブジェクトとテーブルオブジェクトのみをサポートしています。
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] と [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] は、データベースオブジェクトとテーブルオブジェクトのみをサポートしています。
   
-`[ @updateusage = ] 'updateusage'`領域の使用状況情報を更新するために DBCC UPDATEUSAGE を実行する必要があることを示します。 場合*objname*が指定されていない、ステートメントは、データベース全体で実行されます。それ以外の場合、ステートメントは*objname*で実行されます。 値は**true**または**false**です。 *updateusage*は**varchar (5)**,、既定値は**false**です。  
+`[ @updateusage = ] 'updateusage'` 領域の使用状況情報を更新するために DBCC UPDATEUSAGE を実行する必要があることを示します。 場合 *objname* が指定されていない、ステートメントは、データベース全体で実行されます。それ以外の場合、ステートメントは *objname*で実行されます。 値は **true** または **false**です。 *updateusage* は **varchar (5)**,、既定値は **false**です。  
   
-`[ @mode = ] 'mode'`結果のスコープを示します。 拡張されたテーブルまたはデータベースの場合、 *mode*パラメーターを使用すると、オブジェクトのリモート部分を含めたり、除外したりできます。 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。  
+`[ @mode = ] 'mode'` 結果のスコープを示します。 拡張されたテーブルまたはデータベースの場合、 *mode* パラメーターを使用すると、オブジェクトのリモート部分を含めたり、除外したりできます。 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。  
   
  *Mode*引数には、次の値を指定できます。  
   
@@ -66,16 +67,16 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |LOCAL_ONLY|オブジェクトまたはデータベースのローカル部分のみのストレージ統計情報を返します。 オブジェクトまたはデータベースで Stretch が有効になっていない場合、は = ALL と同じ統計を返し @mode ます。|  
 |REMOTE_ONLY|オブジェクトまたはデータベースのリモート部分のみのストレージ統計情報を返します。 このオプションでは、次のいずれかの条件に該当する場合にエラーが発生します。<br /><br /> テーブルで Stretch が有効になっていません。<br /><br /> テーブルで Stretch が有効になっていますが、データ移行が有効になっていません。 この場合、リモートテーブルにはまだスキーマがありません。<br /><br /> ユーザーはリモートテーブルを手動で削除しました。<br /><br /> リモートデータアーカイブのプロビジョニングは成功の状態を返しましたが、実際には失敗しました。|  
   
- *モード*は**varchar (11)**,、既定値は**N'ALL '** です。  
+ *モード* は **varchar (11)**,、既定値は **N'ALL '** です。  
   
-`[ @oneresultset = ] oneresultset`1つの結果セットを返すかどうかを示します。 *Oneresultset*引数には、次の値を指定できます。  
+`[ @oneresultset = ] oneresultset` 1つの結果セットを返すかどうかを示します。 *Oneresultset*引数には、次の値を指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |0|* \@ Objname*が null またはが指定されていない場合、2つの結果セットが返されます。 2つの結果セットが既定の動作です。|  
 |1|* \@ Objname* = null またはが指定されていない場合、1つの結果セットが返されます。|  
   
- *oneresultset*は**ビット**,、既定値は**0**です。  
+ *oneresultset* は **ビット**,、既定値は **0**です。  
 
 `[ @include_total_xtp_storage] 'include_total_xtp_storage'`
 **適用対象:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 、 [!INCLUDE[sssds-md](../../includes/sssds-md.md)] 。  
@@ -91,7 +92,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|現在のデータベースの名前。|  
-|**database_size**|**varchar (18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**には、データファイルとログファイルの両方が含まれます。|  
+|**database_size**|**varchar (18)**|現在のデータベースのサイズ (MB 単位)。 **database_size** には、データファイルとログファイルの両方が含まれます。|  
 |**未割り当て領域**|**varchar (18)**|データベースオブジェクト用に予約されていないデータベース内の領域。|  
   
 |列名|データ型|説明|  
@@ -106,7 +107,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|現在のデータベースの名前。|  
-|**database_size**|**varchar (18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**には、データファイルとログファイルの両方が含まれます。|  
+|**database_size**|**varchar (18)**|現在のデータベースのサイズ (MB 単位)。 **database_size** には、データファイルとログファイルの両方が含まれます。|  
 |**未割り当て領域**|**varchar (18)**|データベースオブジェクト用に予約されていないデータベース内の領域。|  
 |**確保**|**varchar (18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
 |**data**|**varchar (18)**|データの使用領域の合計。|  
@@ -117,7 +118,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(128)**|領域の使用情報を要求したオブジェクトの名前。<br /><br /> オブジェクトのスキーマ名は返されません。 スキーマ名が必要な場合は、 [dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)または[sys dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)動的管理ビューを使用して、同等のサイズ情報を取得します。|  
+|**name**|**nvarchar(128)**|領域の使用情報を要求したオブジェクトの名前。<br /><br /> オブジェクトのスキーマ名は返されません。 スキーマ名が必要な場合は、 [dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) または [sys dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 動的管理ビューを使用して、同等のサイズ情報を取得します。|  
 |**レコード**|**char (20)**|テーブルに含まれる行数。 指定されたオブジェクトが [!INCLUDE[ssSB](../../includes/sssb-md.md)] キューの場合、この列はキュー内のメッセージの数を示します。|  
 |**確保**|**varchar (18)**|*Objname*の予約済み領域の合計サイズ。|  
 |**data**|**varchar (18)**|*Objname*のデータによって使用されている領域の合計サイズ。|  
@@ -129,7 +130,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|現在のデータベースの名前。|  
-|**database_size**|**varchar (18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**には、データファイルとログファイルの両方が含まれます。 データベースに MEMORY_OPTIMIZED_DATA ファイルグループがある場合は、ファイルグループ内のすべてのチェックポイントファイルのディスク上の合計サイズが含まれます。|  
+|**database_size**|**varchar (18)**|現在のデータベースのサイズ (MB 単位)。 **database_size** には、データファイルとログファイルの両方が含まれます。 データベースに MEMORY_OPTIMIZED_DATA ファイルグループがある場合は、ファイルグループ内のすべてのチェックポイントファイルのディスク上の合計サイズが含まれます。|  
 |**未割り当て領域**|**varchar (18)**|データベースオブジェクト用に予約されていないデータベース内の領域。 データベースに MEMORY_OPTIMIZED_DATA ファイルグループがある場合は、ファイルグループで状態が PRECREATED になっているチェックポイントファイルのディスク上の合計サイズが含まれます。|  
 
 データベース内のテーブルによって使用される領域: (この resultset には、ディスク使用量のテーブルごとのアカウンティングがないため、メモリ最適化テーブルは反映されません) 
@@ -141,7 +142,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**index_size**|**varchar (18)**|インデックスによって使用されている領域の合計サイズ。|  
 |**未使用**|**varchar (18)**|データベース内のオブジェクト用に予約されている領域の合計サイズ。ただし、まだ使用されていません。|
 
-次の結果セットが返されるのは、データベースに少なくとも1つのコンテナーを含む MEMORY_OPTIMIZED_DATA ファイルグループがある**場合のみ**です。 
+次の結果セットが返されるのは、データベースに少なくとも1つのコンテナーを含む MEMORY_OPTIMIZED_DATA ファイルグループがある **場合のみ** です。 
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -154,7 +155,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|現在のデータベースの名前。|  
-|**database_size**|**varchar (18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**には、データファイルとログファイルの両方が含まれます。 データベースに MEMORY_OPTIMIZED_DATA ファイルグループがある場合は、ファイルグループ内のすべてのチェックポイントファイルのディスク上の合計サイズが含まれます。|
+|**database_size**|**varchar (18)**|現在のデータベースのサイズ (MB 単位)。 **database_size** には、データファイルとログファイルの両方が含まれます。 データベースに MEMORY_OPTIMIZED_DATA ファイルグループがある場合は、ファイルグループ内のすべてのチェックポイントファイルのディスク上の合計サイズが含まれます。|
 |**未割り当て領域**|**varchar (18)**|データベースオブジェクト用に予約されていないデータベース内の領域。 データベースに MEMORY_OPTIMIZED_DATA ファイルグループがある場合は、ファイルグループで状態が PRECREATED になっているチェックポイントファイルのディスク上の合計サイズが含まれます。|  
 |**確保**|**varchar (18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
 |**data**|**varchar (18)**|データの使用領域の合計。|  
@@ -164,17 +165,17 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**xtp_used**|**varchar (18)**|構築中、アクティブ、およびマージターゲットの状態を持つチェックポイントファイルの合計サイズ (KB 単位)。 これは、メモリ最適化テーブルのデータに対してアクティブに使用されるディスク領域です。 データベースに少なくとも1つのコンテナーを含む memory_optimized_data ファイルグループがない場合は、NULL を返します。 *この列は、 @include_total_xtp_storage = 1 の場合にのみ含ま*れます。| 
 |**xtp_pending_truncation**|**varchar (18)**|状態 WAITING_FOR_LOG_TRUNCATION のチェックポイントファイルの合計サイズ (KB 単位)。 これは、ログの切り捨てが行われると、クリーンアップを待機しているチェックポイントファイルに使用されるディスク領域です。 データベースに少なくとも1つのコンテナーを含む memory_optimized_data ファイルグループがない場合は、NULL を返します。 この列は、の場合にのみ含まれ `@include_total_xtp_storage=1` ます。|
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  **database_size**は**reserved**  +  ログファイルのサイズが含まれていますが、**予約済み**で**unallocated_space**データページのみを考慮しているため、通常は予約済みの**未割り当て領域**の合計より大きくなります。 Azure Synapse Analytics では、このステートメントが true でない場合があります。 
   
- XML インデックスとフルテキストインデックスによって使用されるページは、両方の結果セットの**index_size**に含まれています。 *Objname*を指定すると、オブジェクトの XML インデックスとフルテキストインデックスのページも、**予約**された結果と**index_size**の結果の合計にカウントされます。  
+ XML インデックスとフルテキストインデックスによって使用されるページは、両方の結果セットの **index_size** に含まれています。 *Objname*を指定すると、オブジェクトの XML インデックスとフルテキストインデックスのページも、**予約**された結果と**index_size**の結果の合計にカウントされます。  
   
- 空間インデックスを持つデータベースまたはオブジェクトに対して領域の使用量を計算する場合、 **database_size**、**予約済み**、 **index_size**などの領域サイズの列には、空間インデックスのサイズが含まれます。  
+ 空間インデックスを持つデータベースまたはオブジェクトに対して領域の使用量を計算する場合、 **database_size**、 **予約済み**、 **index_size**などの領域サイズの列には、空間インデックスのサイズが含まれます。  
   
- *Updateusage*を指定すると、は [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] データベース内のデータページをスキャンし、必要に応じて、各テーブルによって使用されるストレージ領域に関するカタログビュー **allocation_units**を**作成します**。 たとえば、インデックスが削除された後、テーブルの領域情報が最新でない可能性があります。 *updateusage*は、大規模なテーブルまたはデータベースで実行されるまでに時間がかかることがあります。 *Updateusage*を使用するのは、返される値が正しくないと思われる場合と、プロセスがデータベース内の他のユーザーやプロセスに悪影響を与えない場合のみです。 DBCC UPDATEUSAGE は、別に実行することもできます。  
+ *Updateusage*を指定すると、は [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] データベース内のデータページをスキャンし、必要に応じて、各テーブルによって使用されるストレージ領域に関するカタログビュー **allocation_units**を**作成します**。 たとえば、インデックスが削除された後、テーブルの領域情報が最新でない可能性があります。 *updateusage* は、大規模なテーブルまたはデータベースで実行されるまでに時間がかかることがあります。 *Updateusage*を使用するのは、返される値が正しくないと思われる場合と、プロセスがデータベース内の他のユーザーやプロセスに悪影響を与えない場合のみです。 DBCC UPDATEUSAGE は、別に実行することもできます。  
   
 > [!NOTE]  
->  大きなインデックスを削除または再構築したり、大きなテーブルを削除したり切り捨てたりすると、では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] トランザクションがコミットされるまで、実際のページの割り当て解除とそれに関連付けられているロックが延期されます。 遅延削除操作では、割り当てられた領域はすぐに解放されません。 このため、大きなオブジェクトを削除または切り捨てた直後に**sp_spaceused**によって返された値は、実際に使用可能なディスク領域を反映していない可能性があります。  
+>  大きなインデックスを削除または再構築したり、大きなテーブルを削除したり切り捨てたりすると、では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] トランザクションがコミットされるまで、実際のページの割り当て解除とそれに関連付けられているロックが延期されます。 遅延削除操作では、割り当てられた領域はすぐに解放されません。 このため、大きなオブジェクトを削除または切り捨てた直後に **sp_spaceused** によって返された値は、実際に使用可能なディスク領域を反映していない可能性があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  **sp_spaceused** の実行権限は、 **public** ロールに与えられています。 **\@updateusage** パラメーターを指定できるのは、**db_owner** 固定データベース ロールのメンバーだけです。  
@@ -253,7 +254,7 @@ GO
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [SQL&#41;&#40;Transact-sql のパーティション分割](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [SQL&#41;&#40;Transact-sql のパーティション分割 ](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

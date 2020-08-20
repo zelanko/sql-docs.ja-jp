@@ -1,4 +1,5 @@
 ---
+description: sp_pdw_log_user_data_masking (SQL Data Warehouse)
 title: sp_pdw_log_user_data_masking (SQL Data Warehouse) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ea363af9a4f9362e7aa9d09ab29b8a5a9e1a2b5c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 0857ffe4bae954efdbad4e1e692069a2b3eeab60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473988"
 ---
 # <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -24,9 +25,9 @@ ms.locfileid: "88173206"
   **Sp_pdw_log_user_data_masking**を使用して、アクティビティログでユーザーデータのマスキングを有効に [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] します。 ユーザーデータのマスキングは、アプライアンス上のすべてのデータベースのステートメントに影響します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] **Sp_pdw_log_user_data_masking**によって影響を受けるアクティビティログは、特定の [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] アクティビティログです。 **sp_pdw_log_user_data_masking**は、データベーストランザクションログまたはエラーログには影響しません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] **Sp_pdw_log_user_data_masking**によって影響を受けるアクティビティログは、特定の [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] アクティビティログです。 **sp_pdw_log_user_data_masking** は、データベーストランザクションログまたはエラーログには影響しません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- **背景:** 既定の構成 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] アクティビティログには完全なステートメントが含まれ [!INCLUDE[tsql](../../includes/tsql-md.md)] ており、場合によっては**INSERT**、 **UPDATE**、 **SELECT**ステートメントなどの操作に含まれるユーザーデータが含まれます。 アプライアンスで問題が発生した場合は、問題の原因となった状況を分析して問題を再現する必要がありません。 ユーザーデータがアクティビティログに書き込まれないようにするには [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 、このストアドプロシージャを使用してユーザーデータのマスキングを有効にすることを選択できます。 ステートメントは引き続きアクティビティログに書き込まれます [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] が、ユーザーデータを含む可能性のあるステートメント内のすべてのリテラルはマスクされ、いくつかの定義済みの定数値に置き換えられます。  
+ **背景:** 既定の構成 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] アクティビティログには完全なステートメントが含まれ [!INCLUDE[tsql](../../includes/tsql-md.md)] ており、場合によっては **INSERT**、 **UPDATE**、 **SELECT** ステートメントなどの操作に含まれるユーザーデータが含まれます。 アプライアンスで問題が発生した場合は、問題の原因となった状況を分析して問題を再現する必要がありません。 ユーザーデータがアクティビティログに書き込まれないようにするには [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 、このストアドプロシージャを使用してユーザーデータのマスキングを有効にすることを選択できます。 ステートメントは引き続きアクティビティログに書き込まれます [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] が、ユーザーデータを含む可能性のあるステートメント内のすべてのリテラルはマスクされ、いくつかの定義済みの定数値に置き換えられます。  
   
  アプライアンスで transparent data encryption を有効にすると、アクティビティログ内のユーザーデータのマスキングが自動的に有効になり [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ます。  
   
@@ -39,7 +40,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-`[ @masking_mode = ] masking_mode`透過的なデータ暗号化ログユーザーデータのマスキングが有効かどうかを指定します。 *masking_mode*は**int**,、値は次のいずれかを指定することができます。  
+`[ @masking_mode = ] masking_mode` 透過的なデータ暗号化ログユーザーデータのマスキングが有効かどうかを指定します。 *masking_mode* は **int**,、値は次のいずれかを指定することができます。  
   
 -   0 = 無効。ユーザーデータはアクティビティログに表示され [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ます。  
   
@@ -47,10 +48,10 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
 -   2 = ユーザーデータを含むステートメントは、アクティビティログには書き込まれません [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。  
   
- パラメーターを指定せずに**sp_pdw_ log_user_data_masking**を実行すると、アプライアンス上の tde ログユーザーデータマスクの現在の状態がスカラー結果セットとして返されます。  
+ パラメーターを指定せずに **sp_pdw_ log_user_data_masking** を実行すると、アプライアンス上の tde ログユーザーデータマスクの現在の状態がスカラー結果セットとして返されます。  
   
-## <a name="remarks"></a>注釈  
- ユーザーデータのマスキング [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] アクティビティログでは、ユーザーデータを含めることができる**SELECT**ステートメントと DML ステートメントで、定義済みの定数値を持つリテラルを置換できます。 *Masking_mode*を1に設定しても、列名やテーブル名などのメタデータはマスクされません。 *Masking_mode*を2に設定すると、列名やテーブル名などのメタデータを含むステートメントが削除されます。  
+## <a name="remarks"></a>解説  
+ ユーザーデータのマスキング [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] アクティビティログでは、ユーザーデータを含めることができる **SELECT** ステートメントと DML ステートメントで、定義済みの定数値を持つリテラルを置換できます。 *Masking_mode*を1に設定しても、列名やテーブル名などのメタデータはマスクされません。 *Masking_mode*を2に設定すると、列名やテーブル名などのメタデータを含むステートメントが削除されます。  
   
  アクティビティログでのユーザーデータのマスキング [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は、次のように実装されます。  
   

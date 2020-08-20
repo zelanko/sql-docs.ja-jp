@@ -1,4 +1,5 @@
 ---
+description: レッスン 3-3 - 配置したパッケージのテスト
 title: '手順 3: 配置したパッケージのテスト | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fb3889d57052bcd305056a6468a2fa42d79d5c4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f6c7fed5c20d9025be9ad9bce060d6fa83de378a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472034"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>レッスン 3-3 - 配置したパッケージのテスト
 
@@ -75,7 +76,7 @@ ms.locfileid: "86922208"
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバーの種類]** ボックスの一覧から **[データベース エンジン]** を選択し、チュートリアル パッケージをインストールしたサーバーの名前または種類 (local) を **[サーバー名]** ボックスに入力して、認証モードを選択します。 SQL Server 認証を使用する場合は、ユーザー名とパスワードを入力します。  
   
-3.  **[接続]** をクリックします。  
+3.  **[Connect]** をクリックします。  
   
 4.  クエリ ウィンドウで、次の SQL ステートメントを入力するか貼り付けます。  
   
@@ -95,7 +96,7 @@ ms.locfileid: "86922208"
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバーの種類]** ボックスの一覧から **[データベース エンジン]** を選択し、チュートリアル パッケージをインストールしたサーバーの名前または「(local)」を **[サーバー名]** ボックスに入力して、認証モードを選択します。 SQL Server 認証を使用する場合は、ユーザー名とパスワードを入力します。  
   
-3.  **[接続]** をクリックします。  
+3.  **[Connect]** をクリックします。  
   
 4.  クエリ ウィンドウで、次の SQL ステートメントを入力するか貼り付けます。  
   
@@ -107,7 +108,7 @@ ms.locfileid: "86922208"
   
     このクエリによって 21 行のデータが返されます。 返された結果は、XML データ ファイル orders.xml の行で構成されています。 各行は国/地域別の要約であり、国名/地域名、国/地域ごとの注文数、および最新と最古の注文日が示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [dtexec ユーティリティ](../integration-services/packages/dtexec-utility.md)  
   
   

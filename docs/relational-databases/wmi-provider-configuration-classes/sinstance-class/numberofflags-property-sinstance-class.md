@@ -1,4 +1,5 @@
 ---
+description: NumberOfFlags プロパティ (SInstance クラス)
 title: Number Offラグプロパティ (SInstance)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: da8d6992c081cf45c3abf486f307a824b4ad90f9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f5d800da626f6c3dfa9f2af2d8680d10d9712b97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472777"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>NumberOfFlags プロパティ (SInstance クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,14 +38,14 @@ object.NumberOfFlags [= value]
   
 ## <a name="parts"></a>指定項目  
  *object*  
- サーバーインスタンスを表す[Sinstance クラス](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)オブジェクト。  
+ サーバーインスタンスを表す [Sinstance クラス](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- のインスタンスのフラグの数を指定する**uint32**値 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ のインスタンスのフラグの数を指定する **uint32** 値 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   
