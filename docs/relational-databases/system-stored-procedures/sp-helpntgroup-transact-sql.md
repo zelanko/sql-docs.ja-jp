@@ -1,4 +1,5 @@
 ---
+description: sp_helpntgroup (Transact-SQL)
 title: sp_helpntgroup (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7f52bf995a4d8f24d2b987ad08602cf9184cff8f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9ad0853553de51ba53b363bc400facde0c01652e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485946"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @ntname = ] 'name'`Windows グループの名前を指定します。 *名前*は**sysname**,、既定値は NULL です。 *名前*は、現在のデータベースへのアクセス権を持つ有効な Windows グループである必要があります。 *名前*が指定されていない場合、現在のデータベースへのアクセス権を持つすべての Windows グループが出力に含まれます。  
+`[ @ntname = ] 'name'` Windows グループの名前を指定します。 *名前* は **sysname**,、既定値は NULL です。 *名前* は、現在のデータベースへのアクセス権を持つ有効な Windows グループである必要があります。 *名前*が指定されていない場合、現在のデータベースへのアクセス権を持つすべての Windows グループが出力に含まれます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -53,7 +54,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |**SID**|**varbinary (85)**|**Ntgroupname**のセキュリティ識別子 (SID)。|  
 |**HasDbAccess**|**int**|1 = Windows グループには、データベースにアクセスする権限があります。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  現在のデータベースのロールの一覧を表示するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sp_helprole**を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -66,7 +67,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 EXEC sp_helpntgroup;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [sp_helprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   

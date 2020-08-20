@@ -1,4 +1,5 @@
 ---
+description: sp_procoption (Transact-SQL)
 title: sp_procoption (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a7a4942e3109ec244cb7a16f4ef6a513b1cdcff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 161f819ba4d9cea76b6cf904b28236f6e6f9fefc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485850"
 ---
 # <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,17 +42,17 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @ProcName = ] 'procedure'`オプションを設定するプロシージャの名前を指定します。 *プロシージャ*は**nvarchar (776)**,、既定値はありません。  
+`[ @ProcName = ] 'procedure'` オプションを設定するプロシージャの名前を指定します。 *プロシージャ* は **nvarchar (776)**,、既定値はありません。  
   
-`[ @OptionName = ] 'option'`設定するオプションの名前を指定します。 *オプション*の値は**startup**だけです。  
+`[ @OptionName = ] 'option'` 設定するオプションの名前を指定します。 *オプション*の値は**startup**だけです。  
   
-`[ @OptionValue = ] 'value'`オプションを on (**true**または**on**) に設定するか、オフ (**false**または**off**) にするかを指定します。 *値*は**varchar (12)**,、既定値はありません。  
+`[ @OptionValue = ] 'value'` オプションを on (**true** または **on**) に設定するか、オフ (**false** または **off**) にするかを指定します。 *値* は **varchar (12)**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) またはエラー番号 (失敗)  
   
-## <a name="remarks"></a>注釈  
- スタートアッププロシージャは、 **master**データベースに存在する必要があり、入力パラメーターまたは出力パラメーターを含めることはできません。 ストアドプロシージャの実行は、すべてのデータベースが復旧され、"復旧が完了しました" というメッセージが起動時にログに記録されると開始されます。  
+## <a name="remarks"></a>解説  
+ スタートアッププロシージャは、 **master** データベースに存在する必要があり、入力パラメーターまたは出力パラメーターを含めることはできません。 ストアドプロシージャの実行は、すべてのデータベースが復旧され、"復旧が完了しました" というメッセージが起動時にログに記録されると開始されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
@@ -73,7 +74,7 @@ EXEC sp_procoption @ProcName = N'<procedure name>'
     , @OptionValue = 'off';   
 ```  
   
-## <a name="see-also"></a>関連項目  
- [ストアドプロシージャの実行](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)  
+## <a name="see-also"></a>参照  
+ [ストアド プロシージャの実行](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)  
   
   

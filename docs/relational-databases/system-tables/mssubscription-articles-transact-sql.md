@@ -1,4 +1,5 @@
 ---
+description: MSsubscription_articles (Transact-sql)
 title: MSsubscription_articles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e44a88869e4a064896e15a1040e90d6ff66e9da3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25fea9fb4f556c31b4986ae4ea113a95f6d48242
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485500"
 ---
 # <a name="mssubscription_articles-transact-sql"></a>MSsubscription_articles (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85889333"
 |**責任**|**sysname**|サブスクリプションの所有者|  
 |**cft_table**|**sysname**|キュー更新レプリケーションの種類について、このアーティクルの競合テーブルの名前。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

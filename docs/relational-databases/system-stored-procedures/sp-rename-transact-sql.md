@@ -1,4 +1,5 @@
 ---
+description: sp_rename (Transact-sql)
 title: sp_rename (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2018
@@ -21,12 +22,12 @@ ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1d9daa3350d252b6ef11c1dda88fc1383964e08
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c3705d08778a50cb603ed3fed5c0d609e3e5fb42
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485805"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,18 +49,18 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
 ## <a name="arguments"></a>引数  
  [ @objname =] '*object_name*'  
- ユーザーオブジェクトまたはデータ型の現在の修飾名または修飾され名を指定します。 名前を変更するオブジェクトがテーブル内の列である場合は、 *object_name*の形式である必要があります *。 column また*は schema.*テーブル*です。 名前を変更するオブジェクトがインデックスの場合、 *object_name* *テーブル*の形式である必要があります。インデックスまたは*スキーマ。* 名前を変更するオブジェクトが制約の場合、 *object_name*は*schema. 制約*の形式である必要があります。  
+ ユーザーオブジェクトまたはデータ型の現在の修飾名または修飾され名を指定します。 名前を変更するオブジェクトがテーブル内の列である場合は、 *object_name* の形式である必要があります *。 column また* は schema. *テーブル*です。 名前を変更するオブジェクトがインデックスの場合、 *object_name* *テーブル*の形式である必要があります。インデックスまたは*スキーマ。* 名前を変更するオブジェクトが制約の場合、 *object_name* は *schema. 制約*の形式である必要があります。  
   
- 引用符は、修飾オブジェクトを指定する場合のみ必要です。 データベース名を含む完全修飾名を指定する場合は、データベース名を現在のデータベースの名前にする必要があります。 *object_name*は**nvarchar (776)**,、既定値はありません。  
+ 引用符は、修飾オブジェクトを指定する場合のみ必要です。 データベース名を含む完全修飾名を指定する場合は、データベース名を現在のデータベースの名前にする必要があります。 *object_name* は **nvarchar (776)**,、既定値はありません。  
   
  [ @newname =] '*new_name*'  
- 指定したオブジェクトの新しい名前を指定します。 *new_name*は、1部構成の名前である必要があり、識別子の規則に従っている必要があります。 *newname*は**sysname**,、既定値はありません。  
+ 指定したオブジェクトの新しい名前を指定します。 *new_name* は、1部構成の名前である必要があり、識別子の規則に従っている必要があります。 *newname* は **sysname**,、既定値はありません。  
   
 > [!NOTE]  
 >  トリガー名の先頭に # または ## は使用できません。  
   
  [ @objtype =] '*object_type*'  
- 名前を変更するオブジェクトの種類を指定します。 *object_type*は**varchar (13)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
+ 名前を変更するオブジェクトの種類を指定します。 *object_type* は **varchar (13)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -73,14 +74,14 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または0以外の数値 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  現在のデータベースでのみ、オブジェクトまたはデータ型の名前を変更できます。 ほとんどのシステムデータ型とシステムオブジェクトの名前は変更できません。  
   
  sp_rename では、PRIMARY KEY (主キー) または UNIQUE (一意) 制約の名前を変更した場合、関連するインデックスの名前も自動的に変更されます。 名前を変更したインデックスが PRIMARY KEY 制約に関連付けられている場合、PRIMARY KEY 制約も sp_rename によって自動的に名前が変更されます。  
   
  sp_rename は、プライマリおよびセカンダリ XML インデックスの名前を変更する場合に使用できます。  
   
- ストアドプロシージャ、関数、ビュー、またはトリガーの名前を変更しても、対応するオブジェクトの名前は変更されません。これは、 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログビューの定義列、または[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)の組み込み関数を使用して取得したものです。 したがって、これらのオブジェクトの種類の名前を変更する場合は、sp_rename を使用しないことをお勧めします。 代わりに、オブジェクトを削除して新しい名前で再作成してください。  
+ ストアドプロシージャ、関数、ビュー、またはトリガーの名前を変更しても、対応するオブジェクトの名前は変更されません。これは、 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) カタログビューの定義列、または [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) の組み込み関数を使用して取得したものです。 したがって、これらのオブジェクトの種類の名前を変更する場合は、sp_rename を使用しないことをお勧めします。 代わりに、オブジェクトを削除して新しい名前で再作成してください。  
   
  テーブルや列などのオブジェクトの名前を変更しても、そのオブジェクトへの参照の名前は自動的に変更されません。 名前が変更されたオブジェクトを参照するオブジェクトは、手動で変更する必要があります。 たとえば、テーブルの列の名前を変更するとき、その列がトリガーで参照されている場合は、新しい列名が反映されるようにトリガーに変更を加える必要があります。 オブジェクトの名前を変更する前には、 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) を使ってオブジェクトの従属関係を一覧表示できます。  
   
@@ -99,7 +100,7 @@ EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';
 GO  
 ```  
   
-### <a name="b-renaming-a-column"></a>B: 列の名前を変更する  
+### <a name="b-renaming-a-column"></a>B. 列の名前を変更する  
  次の例では、テーブルの列の名前 `TerritoryID` `SalesTerritory` をに変更 `TerrID` します。  
   
 ```  
@@ -109,7 +110,7 @@ EXEC sp_rename 'Sales.SalesTerritory.TerritoryID', 'TerrID', 'COLUMN';
 GO  
 ```  
   
-### <a name="c-renaming-an-index"></a>C: インデックス名を変更する  
+### <a name="c-renaming-an-index"></a>C. インデックス名を変更する  
  次の例では、インデックスの名前 `IX_ProductVendor_VendorID` をに変更 `IX_VendorID` します。  
   
 ```  
@@ -119,7 +120,7 @@ EXEC sp_rename N'Purchasing.ProductVendor.IX_ProductVendor_VendorID', N'IX_Vendo
 GO  
 ```  
   
-### <a name="d-renaming-an-alias-data-type"></a>D: 別名データ型の名前を変更する  
+### <a name="d-renaming-an-alias-data-type"></a>D. 別名データ型の名前を変更する  
  次の例では、 `Phone` 別名データ型の名前をに変更し `Telephone` ます。  
   
 ```  
@@ -203,10 +204,10 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

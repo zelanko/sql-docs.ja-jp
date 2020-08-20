@@ -1,4 +1,5 @@
 ---
+description: sp_cdc_help_change_data_capture (Transact-sql)
 title: sp_cdc_help_change_data_capture (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7935bc8e0472b90d22a93190f5af81c8e5910e67
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d7b0fa1b0e6219ebfef9f281eec8e8503e22f0b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485551"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sp_cdc_help_change_data_capture (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,16 +47,16 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="arguments"></a>引数  
  [ @source_schema =] '*source_schema*'  
- ソーステーブルが属しているスキーマの名前を指定します。 *source_schema*は**sysname**,、既定値は NULL です。 *Source_schema*が指定されている場合は、 *source_name*も指定する必要があります。  
+ ソーステーブルが属しているスキーマの名前を指定します。 *source_schema* は **sysname**,、既定値は NULL です。 *Source_schema*が指定されている場合は、 *source_name*も指定する必要があります。  
   
- NULL 以外の場合は、 *source_schema*が現在のデータベースに存在している必要があります。  
+ NULL 以外の場合は、 *source_schema* が現在のデータベースに存在している必要があります。  
   
  *Source_schema*が null 以外の場合、 *source_name*も null 以外である必要があります。  
   
  [ @source_name =] '*source_name*'  
- ソーステーブルの名前を指定します。 *source_name*は**sysname**,、既定値は NULL です。 *Source_name*が指定されている場合は、 *source_schema*も指定する必要があります。  
+ ソーステーブルの名前を指定します。 *source_name* は **sysname**,、既定値は NULL です。 *Source_name*が指定されている場合は、 *source_schema*も指定する必要があります。  
   
- NULL 以外の場合は、 *source_name*が現在のデータベースに存在している必要があります。  
+ NULL 以外の場合は、 *source_name* が現在のデータベースに存在している必要があります。  
   
  *Source_name*が null 以外の場合、 *source_schema*も null 以外である必要があります。  
   
@@ -82,7 +83,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|ソーステーブル内の行を一意に識別するために使用されるインデックス列の一覧です。|  
 |captured_column_list|**nvarchar(max)**|キャプチャ対象のソース列のリスト。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  *Source_schema*と*source_name*が既定で null に設定されているか、明示的に null が設定されている場合、このストアドプロシージャは、呼び出し元が選択したアクセス権を持つすべてのデータベースキャプチャインスタンスに関する情報を返します。 *Source_schema*および*source_name*が NULL 以外の場合は、特定の名前が有効になっているテーブルに関する情報のみが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -102,7 +103,7 @@ EXECUTE sys.sp_cdc_help_change_data_capture
 GO  
 ```  
   
-### <a name="b-returning-change-data-capture-configuration-information-for-all-tables"></a>B: すべてのテーブルについて変更データ キャプチャの構成情報を取得する  
+### <a name="b-returning-change-data-capture-configuration-information-for-all-tables"></a>B. すべてのテーブルについて変更データ キャプチャの構成情報を取得する  
  次の例では、呼び出し元がアクセスを許可されている変更データを含む、データベース内のすべての有効なテーブルの構成情報を返します。  
   
 ```  

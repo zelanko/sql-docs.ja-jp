@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_upload_collection_set (Transact-sql)
 title: sp_syscollector_upload_collection_set (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 793b042f64dae7aa96341ee0794057f940ce4d72
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7ae866b15b11d88f7cea301e7c687edf75c9fb2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485661"
 ---
 # <a name="sp_syscollector_upload_collection_set-transact-sql"></a>sp_syscollector_upload_collection_set (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,14 +45,14 @@ sp_syscollector_upload_collection_set [[ @collection_set_id = ] collection_set_i
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @collection_set_id = ] collection_set_id`コレクションセットの一意なローカル識別子を設定します。 *collection_set_id*は**int**で、 *name*が NULL の場合は値が必要です。  
+`[ @collection_set_id = ] collection_set_id` コレクションセットの一意なローカル識別子を設定します。 *collection_set_id* は **int** で、 *name* が NULL の場合は値が必要です。  
   
-`[ @name = ] 'name'`コレクションセットの名前を指定します。 *名前*は**sysname**であり、 *collection_set_id*が NULL の場合は値を持つ必要があります。  
+`[ @name = ] 'name'` コレクションセットの名前を指定します。 *名前* は **sysname** であり、 *collection_set_id* が NULL の場合は値を持つ必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *Collection_set_id*または*名前*のいずれかに値を指定する必要があります。両方を NULL にすることはできません。  
   
  このプロシージャは、実行中のコレクションセットのオンデマンドアップロードを開始するために使用できます。 キャッシュモードのデータ収集とアップロード用に構成されているコレクションセットに対してのみ使用できます。 このプロシージャを使用すると、ユーザーは分析に必要なデータを、予定されているアップロードを待たずに取得できます。  
@@ -68,8 +69,8 @@ GO
 EXEC sp_syscollector_upload_collection_set @name = 'Simple Collection Set' ;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データコレクション](../../relational-databases/data-collection/data-collection.md)  
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   
   

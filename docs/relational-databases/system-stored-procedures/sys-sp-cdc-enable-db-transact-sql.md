@@ -1,4 +1,5 @@
 ---
+description: sp_cdc_enable_db (Transact-sql)
 title: sp_cdc_enable_db (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98258dbee3e2afa59314e340b27661a816a48b0f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 810e39bf9c4ff4626bf957978a12d77df6e60d54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485515"
 ---
 # <a name="syssp_cdc_enable_db-transact-sql"></a>sp_cdc_enable_db (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,12 +55,12 @@ sys.sp_cdc_enable_db
 ## <a name="remarks"></a>解説  
  [システムデータベース](../../relational-databases/databases/system-databases.md)またはディストリビューションデータベースでは、変更データキャプチャを有効にできません。  
   
- sys.sp_cdc_enable_db を実行すると、メタデータ テーブルや DDL トリガーなど、データベース全体のスコープを持つ変更データ キャプチャ オブジェクトが作成されます。 また、cdc スキーマと cdc データベースユーザーを作成し、データベースエントリの [is_cdc_enabled] 列を [ [sys. データベース](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)] カタログビューに1に設定します。  
+ sys.sp_cdc_enable_db を実行すると、メタデータ テーブルや DDL トリガーなど、データベース全体のスコープを持つ変更データ キャプチャ オブジェクトが作成されます。 また、cdc スキーマと cdc データベースユーザーを作成し、データベースエントリの [is_cdc_enabled] 列を [ [sys. データベース](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ] カタログビューに1に設定します。  
   
 ## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、変更データキャプチャを有効にします。  
   
 ```  

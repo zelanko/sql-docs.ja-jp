@@ -1,4 +1,5 @@
 ---
+description: sys.conversation_priorities (Transact-SQL)
 title: conversation_priorities (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0c0d365978fa8c8c336040db50655e96234ecb22
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0db91b1640390e2a04040d74413e4e55f8579c27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486432"
 ---
 # <a name="sysconversation_priorities-transact-sql"></a>sys.conversation_priorities (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,13 +40,13 @@ ms.locfileid: "85887627"
 |name|**sysname**|メッセージ交換の優先度の名前。 NULL 値は許容されません。|  
 |service_contract_id|**int**|メッセージ交換の優先度に指定されているコントラクトの識別子。 この列は、sys.service_contracts の service_contract_id 列に結合できます。 NULLABLE.|  
 |local_service_id|**int**|メッセージ交換の優先度のローカルサービスとして指定されたサービスの識別子。 この列は、sys. services の service_id 列に結合できます。 NULLABLE.|  
-|remote_service_name|**nvarchar(256)**|メッセージ交換の優先度のリモート サービスとして指定されているサービスの名前。 NULLABLE.|  
+|remote_service_name|**nvarchar (256)**|メッセージ交換の優先度のリモート サービスとして指定されているサービスの名前。 NULLABLE.|  
 |priority|**tinyint**|このメッセージ交換の優先度で指定されている優先順位。 NULL 値は許容されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、結合を使用してコントラクト名とローカル サービス名を表示することで、メッセージ交換の優先度を一覧表示します。  
   
 ```  
@@ -68,7 +69,7 @@ ORDER BY priority_name, contract_name,
  [ALTER BROKER PRIORITY &#40;Transact-sql&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [DROP BROKER PRIORITY &#40;Transact-sql&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [Transact-sql&#41;&#40;のサービス](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)   
+ [Transact-sql&#41;&#40;のサービス ](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)   
  [service_contracts &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-service-contracts-transact-sql.md)  
   
   

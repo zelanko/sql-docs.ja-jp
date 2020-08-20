@@ -1,4 +1,5 @@
 ---
+description: sp_refreshsqlmodule (Transact-SQL)
 title: sp_refreshsqlmodule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2018
@@ -26,12 +27,12 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11b7ec3592e73d890a6abab1e0d5df39e53eef18
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0c2621ffb96ad93d75e5b59e11963f93bf0f32eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485887"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -56,21 +57,21 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'module\_name'`ストアドプロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベースレベルの DDL トリガー、またはサーバーレベルの DDL トリガーの名前を指定します。 *module_name*を共通言語ランタイム (clr) ストアドプロシージャまたは clr 関数にすることはできません。 *module_name*をスキーマバインドにすることはできません。 *module_name*は**nvarchar**,、既定値はありません。 *module_name*にはマルチパート識別子を指定できますが、参照できるのは現在のデータベース内のオブジェクトだけです。  
+`[ @name = ] 'module\_name'` ストアドプロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベースレベルの DDL トリガー、またはサーバーレベルの DDL トリガーの名前を指定します。 *module_name* を共通言語ランタイム (clr) ストアドプロシージャまたは clr 関数にすることはできません。 *module_name* をスキーマバインドにすることはできません。 *module_name* は **nvarchar**,、既定値はありません。 *module_name* にはマルチパート識別子を指定できますが、参照できるのは現在のデータベース内のオブジェクトだけです。  
   
-`[ , @namespace = ] ' \<class> '`は、指定されたモジュールのクラスです。 *Module_name*が DDL トリガーである場合 \<class> は、が必要です。 *\<class>***nvarchar**(20) です。 有効な入力は次のとおりです。  
+`[ , @namespace = ] ' \<class> '` は、指定されたモジュールのクラスです。 *Module_name*が DDL トリガーである場合 \<class> は、が必要です。 *\<class>***nvarchar**(20) です。 有効な入力は次のとおりです。  
 
 * DATABASE_DDL_TRIGGER
 
-* SERVER_DDL_TRIGGER-以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。
+* SERVER_DDL_TRIGGER-以降 **に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。
 
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または0以外の数値 (失敗)  
   
 ## <a name="remarks"></a>解説  
- 定義に影響を与えるモジュールの基になるオブジェクトに変更が加えられたときに、 **sp_refreshsqlmodule**を実行する必要があります。 そうしないと、クエリまたは呼び出されたときに、予期しない結果が生成される可能性があります。 ビューを更新するには、 **sp_refreshsqlmodule**または**sp_refreshview**を同じ結果で使用できます。  
+ 定義に影響を与えるモジュールの基になるオブジェクトに変更が加えられたときに、 **sp_refreshsqlmodule**を実行する必要があります。 そうしないと、クエリまたは呼び出されたときに、予期しない結果が生成される可能性があります。 ビューを更新するには、 **sp_refreshsqlmodule** または **sp_refreshview** を同じ結果で使用できます。  
   
- **sp_refreshsqlmodule**は、オブジェクトに関連付けられている権限、拡張プロパティ、または SET オプションには影響しません。  
+ **sp_refreshsqlmodule** は、オブジェクトに関連付けられている権限、拡張プロパティ、または SET オプションには影響しません。  
   
  サーバーレベルの DDL トリガーを更新するには、任意のデータベースのコンテキストからこのストアドプロシージャを実行します。  
   
@@ -169,6 +170,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   
