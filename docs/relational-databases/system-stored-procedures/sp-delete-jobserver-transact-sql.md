@@ -1,4 +1,5 @@
 ---
+description: sp_delete_jobserver (Transact-sql)
 title: sp_delete_jobserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf97ac7ffd72cf6f3d8b0d04987fa1eacce47835
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ef3896c2e425d1b85c80bd4b7fa057df4f8b5df4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474348"
 ---
 # <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,25 +41,25 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id`指定された対象サーバーを削除するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
+`[ @job_id = ] job_id` 指定された対象サーバーを削除するジョブの識別番号を指定します。 *job_id* は **uniqueidentifier**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'`指定された対象サーバーを削除するジョブの名前。 *job_name*は**sysname**,、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` 指定された対象サーバーを削除するジョブの名前。 *job_name* は **sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
 >  *Job_id*または*job_name*のいずれかを指定する必要があります。両方を指定することはできません。  
   
-`[ @server_name = ] 'server'`指定したジョブから削除する対象サーバーの名前。 *サーバー*は**nvarchar (30)**,、既定値はありません。 *サーバー*には、 **(LOCAL)** またはリモートターゲットサーバーの名前を指定できます。  
+`[ @server_name = ] 'server'` 指定したジョブから削除する対象サーバーの名前。 *サーバー* は **nvarchar (30)**,、既定値はありません。 *サーバー* には、 **(LOCAL)** またはリモートターゲットサーバーの名前を指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
   
 ## <a name="permissions"></a>アクセス許可  
- このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールのメンバーである必要があります。  
+ このストアドプロシージャを実行するには、 **sysadmin** 固定サーバーロールのメンバーである必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、 `SEATTLE2` ジョブの処理からサーバーを削除し `Weekly Sales Backups` ます。  
   
 > [!NOTE]  
@@ -74,7 +75,7 @@ EXEC sp_delete_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_add_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [sp_help_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: sp_changemergepullsubscription (Transact-sql)
 title: sp_changemergepullsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 349fecb1324d0af0e6d6d7b099064781e6f8aeb1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 904db034372ce3be7b4f3bf3e1f7dc4a95d8383d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474434"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,17 +42,17 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値は% です。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値は% です。  
   
-`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は% です。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher*は **sysname**で、既定値は% です。  
   
-`[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。 *publisher_db*は**sysname**,、既定値は% です。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシャーデータベースの名前を指定します。 *publisher_db*は **sysname**,、既定値は% です。  
   
-`[ @property = ] 'property'`変更するプロパティの名前を指定します。 *プロパティ*は**sysname**,、テーブル内のいずれかの値を指定できます。  
+`[ @property = ] 'property'` 変更するプロパティの名前を指定します。 *プロパティ* は **sysname**,、テーブル内のいずれかの値を指定できます。  
   
-`[ @value = ] 'value'`指定したプロパティの新しい値を指定します。 *値*は**nvarchar (255)**,、テーブル内の値のいずれかを指定することができます。  
+`[ @value = ] 'value'` 指定したプロパティの新しい値を指定します。 *値*は **nvarchar (255)**,、テーブル内の値のいずれかを指定することができます。  
   
-|プロパティ|[値]|説明|  
+|プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||場所が既定の場所に加えてまたは以外の場合に、スナップショットフォルダーが格納される場所。|  
 |**description**||このマージ プル サブスクリプションの説明です。|  
@@ -74,12 +75,12 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**internet_url**||Web 同期用のレプリケーションリスナーの場所を表す URL。|  
 |**merge_job_login**||エージェントを実行する Windows アカウントのログイン。|  
 |**merge_job_password**||エージェントを実行する Windows アカウントのパスワード。|  
-|**的**||旧バージョンとの互換性のためにのみ使用できます。サブスクリプションの優先度を変更する代わりに、パブリッシャーで[sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)を実行します。|  
+|**的**||旧バージョンとの互換性のためにのみ使用できます。サブスクリプションの優先度を変更する代わりに、パブリッシャーで [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) を実行します。|  
 |**publisher_login**||パブリッシャーで認証に使用されるログイン ID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**publisher_password**||認証のためにパブリッシャーで使用されるパスワード (暗号化) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**publisher_security_mode**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するときに認証を使用します。|  
 ||**1**|パブリッシャーに接続するときに Windows 認証を使用。|  
-||**2**|同期トリガーは、静的な**sysservers**エントリを使用してリモートプロシージャコール (RPC) を実行します。また、パブリッシャーは、 **sysservers**テーブルのリモートサーバーまたはリンクサーバーとして定義されている必要があります。|  
+||**2**|同期トリガーは、静的な **sysservers** エントリを使用してリモートプロシージャコール (RPC) を実行します。また、パブリッシャーは、 **sysservers** テーブルのリモートサーバーまたはリンクサーバーとして定義されている必要があります。|  
 |**sync_type**|**自動**|パブリッシュされたテーブルのスキーマと初期データは、最初にサブスクライバーに転送されます。|  
 ||"**なし**"|サブスクライバーには、パブリッシュされたテーブルのスキーマと初期データが既にあります。システムテーブルとデータは常に転送されます。|  
 |**use_ftp**|**true**|一般的なプロトコルの代わりに FTP を使用してスナップショットを取得します。|  
@@ -92,10 +93,10 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |NULL (既定値)||*プロパティ*に対してサポートされている値の一覧を返します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_changemergepullsubscription**は、マージレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_changemergepullsubscription** は、マージレプリケーションで使用します。  
   
  現在のサーバーがサブスクライバー、現在のデータベースがサブスクライバー データベースであると解釈されます。  
   
@@ -104,7 +105,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changemergepullsubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プル サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   

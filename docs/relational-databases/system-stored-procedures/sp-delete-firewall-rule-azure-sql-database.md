@@ -1,4 +1,5 @@
 ---
+description: sp_delete_firewall_rule (Azure SQL データベース)
 title: sp_delete_firewall_rule
 titleSuffix: Azure SQL Database
 ms.date: 07/27/2016
@@ -19,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 41f4e779ccbab41557cb9ba20b5aa02c65e45919
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: f1af7d5fa3395be32840266656ffc4fccd3d3414
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474371"
 ---
 # <a name="sp_delete_firewall_rule-azure-sql-database"></a>sp_delete_firewall_rule (Azure SQL データベース)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
@@ -43,7 +44,7 @@ sp_delete_firewall_rule [@name =] 'name'
  このストアド プロシージャの引数は次のとおりです。  
   
  [ @name =] '*name*'  
- 削除されるサーバーレベルのファイアウォール設定の名前。 *名前*は**nvarchar (128)** で、既定値はありません。  
+ 削除されるサーバーレベルのファイアウォール設定の名前。 *名前* は **nvarchar (128)** で、既定値はありません。  
   
 ## <a name="remarks"></a>解説  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、接続の認証に必要なログイン データおよびサーバー レベルのファイアウォール規則は、各データベースで一時的にキャッシュされます。 このキャッシュは定期的に更新されます。 認証キャッシュを強制的に更新し、データベースにログイン テーブルの最新バージョンがあることを確認するには、[DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) を実行します。  

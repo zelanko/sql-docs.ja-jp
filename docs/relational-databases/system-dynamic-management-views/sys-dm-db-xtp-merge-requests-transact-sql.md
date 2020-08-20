@@ -1,4 +1,5 @@
 ---
+description: dm_db_xtp_merge_requests (Transact-sql)
 title: dm_db_xtp_merge_requests (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f489b01655f3b6836c1360bc0e473747e62ca59e
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: c8a03ef677c5c5ac3402f80c0b90eb32577fa8f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475019"
 ---
 # <a name="sysdm_db_xtp_merge_requests-transact-sql"></a>dm_db_xtp_merge_requests (Transact-sql)
 
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-データベースのマージ要求を追跡します。 マージ要求が SQL Server によって生成されたか、または[sp_xtp_merge_checkpoint_files (transact-sql)](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md)を使用してユーザーが要求を作成した可能性があります。
+データベースのマージ要求を追跡します。 マージ要求が SQL Server によって生成されたか、または [sp_xtp_merge_checkpoint_files (transact-sql)](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md)を使用してユーザーが要求を作成した可能性があります。
 
 > [!NOTE]
 > この動的管理ビュー (DMV) dm_db_xtp_merge_requests は、Microsoft SQL Server 2014 まで存在します。

@@ -1,4 +1,5 @@
 ---
+description: dm_pdw_exec_connections (Transact-sql)
 title: dm_pdw_exec_connections (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 74cfb2819cd462a2e3cf695cbb0daf92b4dac5a3
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 25b5edb0d1c89042b876fc0cefac278b867fb5ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474780"
 ---
 # <a name="sysdm_pdw_exec_connections-transact-sql"></a>dm_pdw_exec_connections (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,11 +35,11 @@ ms.locfileid: "87332384"
 |sql_spid|**int**|接続のサーバープロセス ID。 `@@SPID`現在の接続のを返すには、を使用し `sql_spid` ます。ほとんどの遂行では、代わりにを使用し `session_id` ます。|  
   
 ## <a name="permissions"></a>アクセス許可  
- サーバーに対する**VIEW SERVER STATE**権限が必要です。  
+ サーバーに対する **VIEW SERVER STATE** 権限が必要です。  
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-| ソース | ターゲット | リレーションシップ |
+| ソース | 終了 | リレーションシップ |
 | ---- | -- | ------------ |
 |dm_pdw_exec_sessions。 session_id|dm_pdw_exec_connections。 session_id|一対一|  
 |dm_pdw_exec_requests。 connection_id|dm_pdw_exec_connections。 connection_id|多対一|  

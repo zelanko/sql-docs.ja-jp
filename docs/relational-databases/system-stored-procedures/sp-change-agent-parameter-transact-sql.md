@@ -1,4 +1,5 @@
 ---
+description: sp_change_agent_parameter (Transact-SQL)
 title: sp_change_agent_parameter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86a450e69eb72724b64b9a2861e3cd282ebf87a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a934a171c7bfbe6a80c3540defde8e6861ca0ad6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474463"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,12 +38,12 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @profile_id = ] profile_id,`プロファイルの ID を示します。 *profile_id*は**int**,、既定値はありません。  
+`[ @profile_id = ] profile_id,` プロファイルの ID を示します。 *profile_id* は **int**,、既定値はありません。  
   
-`[ @parameter_name = ] 'parameter_name'`パラメーターの名前を指定します。 *parameter_name*は**sysname**であり、既定値はありません。 システムプロファイルの場合、変更可能なパラメーターはエージェントの種類によって異なります。 この*profile_id*が表すエージェントの種類を確認するには、 **Msagent_profiles**テーブルで*profile_id*列を見つけ、 *agent_type*の値をメモします。  
+`[ @parameter_name = ] 'parameter_name'` パラメーターの名前を指定します。 *parameter_name* は **sysname**であり、既定値はありません。 システムプロファイルの場合、変更可能なパラメーターはエージェントの種類によって異なります。 この*profile_id*が表すエージェントの種類を確認するには、 **Msagent_profiles**テーブルで*profile_id*列を見つけ、 *agent_type*の値をメモします。  
   
 > [!NOTE]  
->  パラメーターが特定の*agent_type*でサポートされていても、エージェントプロファイルで定義されていない場合は、エラーが返されます。 エージェントプロファイルにパラメーターを追加するには、 [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)を実行する必要があります。  
+>  パラメーターが特定の *agent_type*でサポートされていても、エージェントプロファイルで定義されていない場合は、エラーが返されます。 エージェントプロファイルにパラメーターを追加するには、 [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)を実行する必要があります。  
   
  スナップショットエージェント (*agent_type* = **1**) の場合、プロファイルで定義されている場合は、次のプロパティを変更できます。  
   
@@ -238,26 +239,26 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **SQLQueueMode**  
   
- 特定のプロファイルに対して定義されているパラメーターを確認するには、 **sp_help_agent_profile**を実行し、 *profile_id*に関連付けられている*profile_name*を確認します。 適切な*profile_id*を使用して、次にその*profile_id*を使用**sp_help_agent_parameters**を実行し、プロファイルに関連付けられているパラメーターを確認します。 パラメーターをプロファイルに追加するには[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)を実行します。  
+ 特定のプロファイルに対して定義されているパラメーターを確認するには、 **sp_help_agent_profile**を実行し、 *profile_id*に関連付けられている*profile_name*を確認します。 適切な*profile_id*を使用して、次にその*profile_id*を使用**sp_help_agent_parameters**を実行し、プロファイルに関連付けられているパラメーターを確認します。 パラメーターをプロファイルに追加するには [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)を実行します。  
   
-`[ @parameter_value = ] 'parameter_value'`パラメーターの新しい値を指定します。 *parameter_value*は**nvarchar (255)**,、既定値はありません。  
+`[ @parameter_value = ] 'parameter_value'` パラメーターの新しい値を指定します。 *parameter_value* は **nvarchar (255)**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_change_agent_parameter**は、すべての種類のレプリケーションで使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_change_agent_parameter** は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_change_agent_parameter**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [レプリケーションエージェントプロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [レプリケーションディストリビューションエージェント](../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [レプリケーションログリーダーエージェント](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [レプリケーションマージエージェント](../../relational-databases/replication/agents/replication-merge-agent.md)   
- [レプリケーションキューリーダーエージェント](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [レプリケーションスナップショットエージェント](../../relational-databases/replication/agents/replication-snapshot-agent.md)   
+## <a name="see-also"></a>参照  
+ [レプリケーション エージェント プロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)   
+ [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
+ [レプリケーション キュー リーダー エージェント](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
+ [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)   
  [sp_add_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [sp_drop_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
  [sp_help_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   

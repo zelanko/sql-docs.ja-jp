@@ -1,4 +1,5 @@
 ---
+description: dm_os_volume_stats (Transact-sql)
 title: dm_os_volume_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/06/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17bf3d47fe394407f848f4d9536fb202652e04db
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 75e6753328857be7f677a253fde790dd51defc51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474814"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>dm_os_volume_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -38,12 +39,12 @@ ms.locfileid: "82829326"
 sys.dm_os_volume_stats (database_id, file_id)  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  *database_id*  
  データベースの ID です。 *database_id* は** int**, 、既定値はありません。 Nll は指定できません。  
   
  *file_id*  
- ファイルの ID。 *file_id*は**int**,、既定値はありません。 Nll は指定できません。  
+ ファイルの ID。 *file_id* は **int**,、既定値はありません。 Nll は指定できません。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
