@@ -1,4 +1,5 @@
 ---
+description: sp_droptype (Transact-sql)
 title: sp_droptype (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f6417edeacfd9462e5619e2844d4a162976d038b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a20b3522e7e477af826e17d7fb654e3cd99220a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493269"
 ---
 # <a name="sp_droptype-transact-sql"></a>sp_droptype (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_droptype [ @typename = ] 'type'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @typename = ] 'type'`所有する別名データ型の名前を指定します。 *種類*は**sysname**で、既定値はありません。  
+`[ @typename = ] 'type'` 所有する別名データ型の名前を指定します。 *種類* は **sysname**で、既定値はありません。  
   
 ## <a name="return-code-type"></a>リターンコードの種類  
  0 (成功) または 1 (失敗)  
@@ -48,7 +49,7 @@ sp_droptype [ @typename = ] 'type'
  なし  
   
 ## <a name="remarks"></a>解説  
- テーブルまたは他のデータベースオブジェクトが参照している場合、**型**の別名データ型を削除することはできません。  
+ テーブルまたは他のデータベースオブジェクトが参照している場合、 **型** の別名データ型を削除することはできません。  
   
 > [!NOTE]  
 >  別名データ型がテーブル定義内で使用されている場合、またはルールまたは既定値がバインドされている場合、別名データ型を削除することはできません。  
@@ -56,7 +57,7 @@ sp_droptype [ @typename = ] 'type'
 ## <a name="permissions"></a>アクセス許可  
  **Db_owner**固定データベースロールまたは**db_ddladmin**固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、別名データ型を削除し `birthday` ます。  
   
 > [!NOTE]  
@@ -69,8 +70,8 @@ EXEC sp_droptype 'birthday';
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addtype &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

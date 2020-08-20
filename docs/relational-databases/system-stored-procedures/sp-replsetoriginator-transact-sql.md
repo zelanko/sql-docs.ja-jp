@@ -1,4 +1,5 @@
 ---
+description: sp_replsetoriginator (Transact-SQL)
 title: sp_replsetoriginator (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1811a523e23de9726517bfabd1ddf8417aa3c5fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0c75f590fc0482319783d1fb94f516d43581dd39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493106"
 ---
 # <a name="sp_replsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,20 +39,20 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @server_name = ] 'server_name'`トランザクションが適用されるサーバーの名前を指定します。 *originating_server*は**sysname**であり、既定値はありません。  
+`[ @server_name = ] 'server_name'` トランザクションが適用されるサーバーの名前を指定します。 *originating_server* は **sysname**であり、既定値はありません。  
   
-`[ @database_name = ] 'database_name'`トランザクションが適用されるデータベースの名前を指定します。 *originating_db*は**sysname**であり、既定値はありません。  
+`[ @database_name = ] 'database_name'` トランザクションが適用されるデータベースの名前を指定します。 *originating_db* は **sysname**であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_replsetoriginator**は、レプリケーションによって適用されたトランザクションのソースを記録するためにディストリビューションエージェントによって実行されます。 この情報は、ループバック プロパティ セットを持つ双方向のトランザクション サブスクリプションに対するループバックの検出を開始するために使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_replsetoriginator** は、レプリケーションによって適用されたトランザクションのソースを記録するためにディストリビューションエージェントによって実行されます。 この情報は、ループバック プロパティ セットを持つ双方向のトランザクション サブスクリプションに対するループバックの検出を開始するために使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_replsetoriginator**を実行できるのは、パブリッシャー側の**sysadmin**固定サーバーロールのメンバー、パブリケーションデータベースの固定データベースロール**db_owner**のメンバー、またはパブリケーションアクセスリスト (PAL) のユーザーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

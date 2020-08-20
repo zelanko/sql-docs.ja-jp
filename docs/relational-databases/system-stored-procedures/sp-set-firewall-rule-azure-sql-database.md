@@ -1,4 +1,5 @@
 ---
+description: sp_set_firewall_rule (Azure SQL データベース)
 title: sp_set_firewall_rule (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2016
@@ -19,12 +20,12 @@ ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c64e9a9773ae01d4714e5c36d49097ae4f4856f2
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: 372aad3acb06910c3c905a12486a6ece4adbd6ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493051"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule (Azure SQL データベース)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
@@ -48,7 +49,7 @@ sp_set_firewall_rule [@name =] 'name',
 |----------|--------------|-----------------|  
 |[ @name =] ' name '|**NVARCHAR (128)**|サーバーレベルのファイアウォールの設定を説明し、区別するための名前です。|  
 |[ @start_ip_address =] ' start_ip_address '|**VARCHAR (50)**|サーバーレベルのファイアウォール設定の範囲の最下位の IP アドレスです。 この IP アドレス以上の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーへの接続を試行できます。 設定できる最下位の IP アドレスは `0.0.0.0` です。|  
-|[ @end_ip_address =] ' end_ip_address '|**VARCHAR (50)**|サーバーレベルのファイアウォール設定の範囲の最上位の IP アドレスです。 これ以下の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーへの接続を試みることができます。 設定できる最上位の IP アドレスは `255.255.255.255` です。<br /><br /> 注: このフィールドと*start_ip_address*フィールドの両方がと等しい場合は、Azure の接続試行が許可され `0.0.0.0` ます。|  
+|[ @end_ip_address =] ' end_ip_address '|**VARCHAR (50)**|サーバーレベルのファイアウォール設定の範囲の最上位の IP アドレスです。 これ以下の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーへの接続を試みることができます。 設定できる最上位の IP アドレスは `255.255.255.255` です。<br /><br /> 注: このフィールドと *start_ip_address* フィールドの両方がと等しい場合は、Azure の接続試行が許可され `0.0.0.0` ます。|  
   
 ## <a name="remarks"></a>解説  
  サーバー レベルのファイアウォール設定の名前は一意である必要があります。 ストアド プロシージャの設定の名前がファイアウォール設定テーブルに既に存在する場合、開始 IP アドレスと終了 IP アドレスが更新されます。 そうでない場合は、新しいサーバー レベルのファイアウォール設定が作成されます。  

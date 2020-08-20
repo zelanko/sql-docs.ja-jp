@@ -1,4 +1,5 @@
 ---
+description: IHpublishercolumnconstraints (Transact-sql)
 title: IHpublishercolumnconstraints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cddbf1eda989fc46a8d74af22648aa62c3d4bad4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e683c32184ffa781fbd3e0b3a11d4e96343ee189
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492806"
 ---
 # <a name="ihpublishercolumnconstraints-transact-sql"></a>IHpublishercolumnconstraints (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,12 +34,12 @@ ms.locfileid: "85890278"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**publishercolumn_id**|**int**|制約が関連付けられている[IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)から列を識別します。|  
-|**publisherconstraint_id**|**int**|列に関連付けられている[IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md)から制約を識別します。|  
+|**publishercolumn_id**|**int**|制約が関連付けられている [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) から列を識別します。|  
+|**publisherconstraint_id**|**int**|列に関連付けられている [IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md) から制約を識別します。|  
 |**indid**|**int**|パブリッシュされたテーブル内の列の位置を示します。|  
   
-## <a name="see-also"></a>関連項目  
- [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+## <a name="see-also"></a>参照  
+ [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

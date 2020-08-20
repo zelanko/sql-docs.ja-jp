@@ -1,4 +1,5 @@
 ---
+description: データコレクターのストアドプロシージャ (Transact-sql)
 title: データコレクターのストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 710f9f13450eff01ab54eaf3ae3aa4ff03bd8524
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 7f89f82689677fbd43a1fdf3e66c189f19de4bb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493537"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>データコレクターのストアドプロシージャ (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -98,7 +99,7 @@ ms.locfileid: "86977612"
   
 -   sp_syscollector_event_onstatsupdate  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

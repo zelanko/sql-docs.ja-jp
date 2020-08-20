@@ -1,4 +1,5 @@
 ---
+description: sp_delete_database_backuphistory (Transact-sql)
 title: sp_delete_database_backuphistory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d1600578197545628c1b43fb80787f6565ba7c8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a820a9a1da8a3938835f02a68d481b5f88790d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493324"
 ---
 # <a name="sp_delete_database_backuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @database_name = ] database_name`バックアップ操作と復元操作に関係するデータベースの名前を指定します。 *database_name*は**sysname**であり、既定値はありません。  
+`[ @database_name = ] database_name` バックアップ操作と復元操作に関係するデータベースの名前を指定します。 *database_name* は **sysname**であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -48,7 +49,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
  なし  
   
 ## <a name="remarks"></a>解説  
- **sp_delete_database_backuphistory**は、 **msdb**データベースから実行する必要があります。  
+ **sp_delete_database_backuphistory** は、 **msdb** データベースから実行する必要があります。  
   
  このストアド プロシージャは次のテーブルに影響します。  
   
@@ -71,7 +72,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] バックアップと復元の履歴テーブルで、データベースのすべてのエントリを削除します。  
   
 ```  

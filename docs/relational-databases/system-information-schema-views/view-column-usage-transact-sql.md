@@ -1,4 +1,5 @@
 ---
+description: VIEW_COLUMN_USAGE (Transact-SQL)
 title: VIEW_COLUMN_USAGE (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -19,30 +20,31 @@ ms.assetid: fc0b3608-a7e8-4532-8215-32235d6670f1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bac8cda9a01e97d0f0b6746b15e55e6560ac541d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 897b626664976746a3e2048796fc31bbc7610c78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493592"
 ---
 # <a name="view_column_usage-transact-sql"></a>VIEW_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ビュー定義で使用される現在のデータベース内の列ごとに 1 行のデータを返します。 この情報スキーマビューでは、現在のユーザーがアクセス許可を持っているオブジェクトに関する情報が返されます。  
   
- これらのビューから情報を取得するには、INFORMATION_SCHEMA の完全修飾名を指定し**ます。**_view_name_。  
+ これらのビューから情報を取得するには、INFORMATION_SCHEMA の完全修飾名を指定し **ます。**_view_name_。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**VIEW_CATALOG**|**nvarchar (** 128 **)**|ビュー修飾子。|  
-|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|ビューを含むスキーマの名前です。<br /><br /> **&#42;&#42; 重要な**のは、オブジェクトのスキーマを検索する信頼できる方法は、 &#42;&#42;カタログビューに対してクエリを実行することだけです。|  
+|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|ビューを含むスキーマの名前です。<br /><br /> **&#42;&#42; 重要な **  のは、オブジェクトのスキーマを検索する信頼できる方法は、 &#42;&#42;カタログビューに対してクエリを実行することだけです。|  
 |**VIEW_NAME**|**sysname**|ビューの名前。|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|テーブル修飾子。|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|テーブルを含むスキーマの名前。<br /><br /> **&#42;&#42; 重要な**のは、オブジェクトのスキーマを検索する信頼できる方法は、 &#42;&#42;カタログビューに対してクエリを実行することだけです。|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|テーブルを含むスキーマの名前。<br /><br /> **&#42;&#42; 重要な **  のは、オブジェクトのスキーマを検索する信頼できる方法は、 &#42;&#42;カタログビューに対してクエリを実行することだけです。|  
 |**TABLE_NAME**|**sysname**|ベーステーブル。|  
 |**COLUMN_NAME**|**sysname**|列名。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [情報スキーマビュー &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sql_dependencies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)   
