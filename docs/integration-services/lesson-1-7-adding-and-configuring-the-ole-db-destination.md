@@ -1,4 +1,5 @@
 ---
+description: レッスン 1-7:OLE DB 変換先を追加し、構成する
 title: 手順 7:OLE DB 変換先を追加し、構成する | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c72ac0393733511f63844ae50b20a40e4c12ea4a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ebfca5c6b25f16bb4f86ca692b09bbc5d0beaaa9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462067"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>レッスン 1-7:OLE DB 変換先を追加し、構成する
 
@@ -33,7 +34,7 @@ ms.locfileid: "86917343"
   
 2.  **[Lookup Date Key]** 変換を選択し、青色の矢印を新しい **[OLE DB 変換先]** にドラッグし、2 つのコンポーネントを接続します。  
   
-3.  **[入出力の選択]** ダイアログの **[出力]** ボックスの一覧で **[参照の一致出力]** を選択し、 **[OK]** を選択します。  
+3.  **[入出力の選択]** ダイアログの **[出力]** ボックスの一覧で **[参照の一致出力]** を選択し、**[OK]** を選択します。  
   
 4.  **[データ フロー]** デザイン画面で、新しい **[OLE DB 変換先]** コンポーネントの名前 **[OLE DB 変換先]** を選択し、その名前を「**Sample OLE DB Destination**」に変更します。  
   
@@ -45,7 +46,7 @@ ms.locfileid: "86917343"
   
 8.  **[新規作成]** ボタンを選択して新しいテーブルを作成します。  スクリプトのテーブル名を **Sample OLE DB Destination** から **NewFactCurrencyRate** に変更します。  **[OK]** を選択します。  
   
-9. **[OK]** を選択すると、ダイアログが閉じ、 **[テーブル名またはビュー名]** が自動的に「**NewFactCurrencyRate**」に変更されます。  
+9. **[OK]** を選択すると、ダイアログが閉じ、**[テーブル名またはビュー名]** が自動的に「**NewFactCurrencyRate**」に変更されます。  
   
 10. **[マッピング]** を選択します。  
   
@@ -53,9 +54,9 @@ ms.locfileid: "86917343"
   
 12. **[OK]** を選択します。  
   
-13. **[Sample OLE DB Destination]** 変換先を右クリックし、 **[プロパティ]** を選択します。  
+13. **[Sample OLE DB Destination]** 変換先を右クリックし、**[プロパティ]** を選択します。  
   
-14. **[プロパティ]** ウィンドウで、**LocaleID** プロパティが **[英語 (米国)]** に、 **[DefaultCodePage]** プロパティが **[1252]** に設定されていることを確認します。  
+14. **[プロパティ]** ウィンドウで、**LocaleID** プロパティが **[英語 (米国)]** に、**[DefaultCodePage]** プロパティが **[1252]** に設定されていることを確認します。  
   
 ## <a name="go-to-next-task"></a>次のタスクに進む
 [手順 8: レッスン 1 パッケージに注釈を付け、書式を設定する](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
