@@ -1,4 +1,5 @@
 ---
+description: 列の既定値の指定
 title: 列の既定値の指定 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2020
@@ -14,12 +15,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e624926eb55adf65bd8390e6929cfa04aa742ba4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 361e98e19788f4d2c6aa921caf71e58552ee53a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488566"
 ---
 # <a name="specify-default-values-for-columns"></a>列の既定値の指定
 
@@ -64,7 +65,7 @@ ms.locfileid: "87395817"
    > [!NOTE]
    > 数値の既定値を入力するには、数値を入力します。 オブジェクトまたは関数の場合は、その名前を入力します。 英数字の場合は、その値を単一引用符で囲んで入力します。
 
-4. **[ファイル]** メニューの **[** <テーブル名> _を保存]_ をクリックします。
+4. **[ファイル]** メニューの **[** _<テーブル名>_ を保存] をクリックします。
 
 ## <a name="use-transact-sql-to-specify-a-default"></a><a name="TsqlProcedure"></a> Transact-SQL を使用して既定値を指定する
 

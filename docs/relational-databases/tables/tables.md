@@ -1,4 +1,5 @@
 ---
+description: テーブル
 title: テーブル | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2019
@@ -14,12 +15,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdb7bb3ef617d244e1e58f7c74cece3d47b87b72
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 588b33d51a2a3814c3be8ddf3b083050df856c41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488613"
 ---
 # <a name="tables"></a>テーブル
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -84,7 +85,7 @@ ms.locfileid: "87396884"
 |テーブルを削除する方法について説明します。|[テーブルの削除 &#40;データベース エンジン&#41;](../../relational-databases/tables/delete-tables-database-engine.md)|
 |既存のテーブルの一部またはすべての列を含む新しいテーブルを作成する方法について説明します。|[テーブルの複製](../../relational-databases/tables/duplicate-tables.md)|
 |テーブル名を変更する方法について説明します。|[テーブル名の変更 &#40;データベース エンジン&#41;](../../relational-databases/tables/rename-tables-database-engine.md)|
-|テーブルのプロパティを表示する方法について説明します。|[テーブル定義の表示](../../relational-databases/tables/view-the-table-definition.md)|
+|テーブルのプロパティを表示する方法について説明します。|[テーブルの定義の表示](../../relational-databases/tables/view-the-table-definition.md)|
 |ビューやストアド プロシージャなどの他のオブジェクトがテーブルに依存しているかどうかを判断する方法について説明します。|[テーブルの依存関係の表示](../../relational-databases/tables/view-the-dependencies-of-a-table.md)|
 
  次の表に、テーブル内の列の作成や変更に関連する一般的なタスクへのリンクを示します。 

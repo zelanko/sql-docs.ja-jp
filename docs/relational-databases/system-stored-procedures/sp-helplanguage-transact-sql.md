@@ -1,4 +1,5 @@
 ---
+description: sp_helplanguage (Transact-sql)
 title: sp_helplanguage (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2878d206d4bc90d801e1e8f42f4f3f2c04d2c121
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 72f2e867c8139045b107cbb99871742c26440ee4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489340"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @language = ] 'language'`情報を表示する代替言語の名前を指定します。 *language*は**sysname**,、既定値は NULL です。 *Language*を指定すると、指定した言語に関する情報が返されます。 言語が指定されていない場合は、 **sys.sys言語**の互換性ビューのすべての言語に関する情報が返されます。  
+`[ @language = ] 'language'` 情報を表示する代替言語の名前を指定します。 *language* は **sysname**,、既定値は NULL です。 *Language*を指定すると、指定した言語に関する情報が返されます。 言語が指定されていない場合は、 **sys.sys言語** の互換性ビューのすべての言語に関する情報が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -58,9 +59,9 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**alias**|**sysname**|言語の別名です。|  
 |**months**|**nvarchar(372)**|月の名前。|  
 |**shortmonths**|**nvarchar(132)**|短い月の名前。|  
-|**日時**|**nvarchar(217)**|曜日名。|  
+|**days**|**nvarchar(217)**|曜日名。|  
 |**lcid**|**int**|この言語を使用する  Windows のロケール ID。|  
-|**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メッセージグループ ID。|  
+|**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メッセージグループ ID。|  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
@@ -74,15 +75,15 @@ sp_helplanguage [ [ @language = ] 'language' ]
 sp_helplanguage French;  
 ```  
   
-### <a name="b-returning-information-about-all-languages"></a>B: すべての言語に関する情報を返す  
+### <a name="b-returning-information-about-all-languages"></a>B. すべての言語に関する情報を返す  
  次の例では、インストールされているすべての代替言語に関する情報を表示します。  
   
 ```  
 sp_helplanguage;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [SET LANGUAGE &#40;Transact-sql&#41;](../../t-sql/statements/set-language-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

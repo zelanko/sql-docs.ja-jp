@@ -1,4 +1,5 @@
 ---
+description: sp_addmessage (Transact-sql)
 title: sp_addmessage (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adf32fad3c233023529d362cd7382ca6376b3cee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86a7c1c41cf9b745efea8b2368d5120f0b03d3ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489572"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,20 +43,20 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @msgnum = ] msg_id`メッセージの ID を示します。 *msg_id*は**int**で、既定値は NULL です。 ユーザー定義エラーメッセージの*msg_id*には、50001 ~ 2147483647 の整数を指定できます。 *Msg_id*と*言語*の組み合わせは一意である必要があります。指定された言語の ID が既に存在する場合は、エラーが返されます。  
+`[ @msgnum = ] msg_id` メッセージの ID を示します。 *msg_id* は **int** で、既定値は NULL です。 ユーザー定義エラーメッセージの*msg_id*には、50001 ~ 2147483647 の整数を指定できます。 *Msg_id*と*言語*の組み合わせは一意である必要があります。指定された言語の ID が既に存在する場合は、エラーが返されます。  
   
-`[ @severity = ]severity`は、エラーの重大度レベルです。 *重大度*は**smallint**で、既定値は NULL です。 有効なレベルは 1 ～ 25 です。 重大度レベルの詳細については、「 [データベース エンジン エラーの重大度](../../relational-databases/errors-events/database-engine-error-severities.md)」を参照してください。  
+`[ @severity = ]severity` は、エラーの重大度レベルです。 *重大度* は **smallint** で、既定値は NULL です。 有効なレベルは 1 ～ 25 です。 重大度レベルの詳細については、「 [データベース エンジン エラーの重大度](../../relational-databases/errors-events/database-engine-error-severities.md)」を参照してください。  
   
-`[ @msgtext = ] 'msg'`エラーメッセージのテキストを示します。 *msg*は**nvarchar (255)** で、既定値は NULL です。  
+`[ @msgtext = ] 'msg'` エラーメッセージのテキストを示します。 *msg* は **nvarchar (255)** で、既定値は NULL です。  
   
-`[ @lang = ] 'language'`は、このメッセージの言語です。 *language*は**sysname**既定値は NULL です。 複数の言語を同じサーバーにインストールすることができるため、 *language*は各メッセージを記述する言語を指定します。 *Language*を省略すると、その言語はセッションの既定の言語になります。  
+`[ @lang = ] 'language'` は、このメッセージの言語です。 *language* は **sysname** 既定値は NULL です。 複数の言語を同じサーバーにインストールすることができるため、 *language* は各メッセージを記述する言語を指定します。 *Language*を省略すると、その言語はセッションの既定の言語になります。  
   
-`[ @with_log = ] { 'TRUE' | 'FALSE' }`メッセージが発生したときに Windows アプリケーションログに書き込むかどうかを指定します。 ** \@ with_log**は**varchar (5)** で、既定値は FALSE です。 TRUE の場合、エラーは常に Windows アプリケーションログに書き込まれます。 FALSE の場合、常に Windows のアプリケーション ログに書き込まれるわけではありませんが、エラーの発生状況によっては書き込まれることもあります。 このオプションを使用できるのは、 **sysadmin**サーバーロールのメンバーだけです。  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }` メッセージが発生したときに Windows アプリケーションログに書き込むかどうかを指定します。 ** \@ with_log**は**varchar (5)** で、既定値は FALSE です。 TRUE の場合、エラーは常に Windows アプリケーションログに書き込まれます。 FALSE の場合、常に Windows のアプリケーション ログに書き込まれるわけではありませんが、エラーの発生状況によっては書き込まれることもあります。 このオプションを使用できるのは、 **sysadmin** サーバーロールのメンバーだけです。  
   
 > [!NOTE]  
 >  Windows のアプリケーション ログにメッセージを書き込む場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のエラー ログ ファイルにも同じ内容が書き込まれます。  
   
-`[ @replace = ] 'replace'`文字列の*置換*として指定した場合、既存のエラーメッセージは新しいメッセージテキストと重大度レベルで上書きされます。 *replace*は**varchar (7)** で、既定値は NULL です。 *Msg_id*が既に存在する場合は、このオプションを指定する必要があります。 米国英語のメッセージを置き換えると、同じ*msg_id*を持つ他のすべての言語のすべてのメッセージの重大度レベルが置き換えられます。  
+`[ @replace = ] 'replace'` 文字列の *置換*として指定した場合、既存のエラーメッセージは新しいメッセージテキストと重大度レベルで上書きされます。 *replace* は **varchar (7)** で、既定値は NULL です。 *Msg_id*が既に存在する場合は、このオプションを指定する必要があります。 米国英語のメッセージを置き換えると、同じ *msg_id*を持つ他のすべての言語のすべてのメッセージの重大度レベルが置き換えられます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -80,7 +81,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ## <a name="examples"></a>例  
   
 ### <a name="a-defining-a-custom-message"></a>A. カスタムメッセージの定義  
- 次の例では、カスタムメッセージを**sys. メッセージ**に追加します。  
+ 次の例では、カスタムメッセージを **sys. メッセージ**に追加します。  
   
 ```  
 USE master;  
@@ -91,7 +92,7 @@ EXEC sp_addmessage 50001, 16,
 GO  
 ```  
   
-### <a name="b-adding-a-message-in-two-languages"></a>B: 2 種類の言語のメッセージを追加する  
+### <a name="b-adding-a-message-in-two-languages"></a>B. 2 種類の言語のメッセージを追加する  
  次の例では、まず英語のメッセージを追加し、次に同じメッセージのフランス語版を追加します。`.`  
   
 ```  
@@ -107,7 +108,7 @@ EXEC sp_addmessage @msgnum = 60000, @severity = 16,
 GO  
 ```  
   
-### <a name="c-changing-the-order-of-parameters"></a>C: パラメーターの順序を変更する  
+### <a name="c-changing-the-order-of-parameters"></a>C. パラメーターの順序を変更する  
  次の例では、まず英語のメッセージを追加し、次にパラメーターの順序を変えてローカライズされたメッセージを追加します。  
   
 ```  

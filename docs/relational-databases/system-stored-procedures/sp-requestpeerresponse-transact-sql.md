@@ -1,4 +1,5 @@
 ---
+description: sp_requestpeerresponse (Transact-SQL)
 title: sp_requestpeerresponse (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adcf5709bc3bf086123324095a796e024a08911e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2114460ca878b45bb0b850c066e1fd9356504a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489204"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,21 +40,21 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`状態を確認するピアツーピアトポロジ内のパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` 状態を確認するピアツーピアトポロジ内のパブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @description = ] 'description'`個々の状態要求を識別するために使用できるユーザー定義の情報。 *説明*は**nvarchar (4000)**,、既定値は NULL です。  
+`[ @description = ] 'description'` 個々の状態要求を識別するために使用できるユーザー定義の情報。 *説明* は **nvarchar (4000)**,、既定値は NULL です。  
   
-`[ @request_id = ] request_id`新しい要求の ID を返します。 *request_id*は**int**で、は出力パラメーターです。 この値は、 [sp_helppeerresponses &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)を実行して、状態要求に対するすべての応答を表示する場合に使用できます。  
+`[ @request_id = ] request_id` 新しい要求の ID を返します。 *request_id* は **int** で、は出力パラメーターです。 この値は、 [sp_helppeerresponses &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) を実行して、状態要求に対するすべての応答を表示する場合に使用できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>注釈  
- **sp_requestpeerresponse**は、ピアツーピアトランザクションレプリケーションで使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_requestpeerresponse** は、ピアツーピアトランザクションレプリケーションで使用されます。  
   
- **sp_requestpeerresponse**は、ピアツーピアトポロジでパブリッシュされたデータベースを復元する前に、すべてのコマンドが他のすべてのノードによって受信されたことを確認するために使用されます。 また、ノードがオフラインの間に行われたデータ定義言語 (DDL) の変更をレプリケートするときに、これらの変更が他のノードに到達する時間を推定する場合にも使用できます。  
+ **sp_requestpeerresponse** は、ピアツーピアトポロジでパブリッシュされたデータベースを復元する前に、すべてのコマンドが他のすべてのノードによって受信されたことを確認するために使用されます。 また、ノードがオフラインの間に行われたデータ定義言語 (DDL) の変更をレプリケートするときに、これらの変更が他のノードに到達する時間を推定する場合にも使用できます。  
   
- **sp_requestpeerresponse**は、ユーザー定義のトランザクション内では実行できません。  
+ **sp_requestpeerresponse** は、ユーザー定義のトランザクション内では実行できません。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_requestpeerresponse**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  

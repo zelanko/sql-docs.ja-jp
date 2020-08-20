@@ -1,4 +1,5 @@
 ---
+description: sp_prepare (Transact SQL)
 title: sp_prepare (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
@@ -18,17 +19,17 @@ ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9095536219fc0cdc419a0952217b0eeb2ef19f5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b3ccb20945f47aa7094de832faa8eb246022819a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489185"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-パラメーター化さ [!INCLUDE[tsql](../../includes/tsql-md.md)] れたステートメントを準備し、実行用のステートメント*ハンドル*を返します。  `sp_prepare` は、ID = 11 を指定した場合に表形式のデータ ストリーム (TDS) パケットで呼び出されます。  
+パラメーター化さ [!INCLUDE[tsql](../../includes/tsql-md.md)] れたステートメントを準備し、実行用のステートメント *ハンドル* を返します。  `sp_prepare` は、ID = 11 を指定した場合に表形式のデータ ストリーム (TDS) パケットで呼び出されます。  
   
  ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,16 +41,16 @@ sp_prepare handle OUTPUT, params, stmt, options
   
 ## <a name="arguments"></a>引数  
  *扱え*  
- は、SQL Server によって生成される*準備済みハンドル*識別子です。 *handle*は、 **int**戻り値を持つ必須パラメーターです。  
+ は、SQL Server によって生成される *準備済みハンドル* 識別子です。 *handle* は、 **int** 戻り値を持つ必須パラメーターです。  
   
  *params*  
- パラメーター化されたステートメントを指定します。 変数の*params*定義は、ステートメントのパラメーターマーカーに置き換えられます。 *params*は、 **ntext**、 **nchar**、または**nvarchar**の入力値を呼び出す必須のパラメーターです。 ステートメントがパラメーター化されていない場合は、NULL 値を入力します。  
+ パラメーター化されたステートメントを指定します。 変数の *params* 定義は、ステートメントのパラメーターマーカーに置き換えられます。 *params* は、 **ntext**、 **nchar**、または **nvarchar** の入力値を呼び出す必須のパラメーターです。 ステートメントがパラメーター化されていない場合は、NULL 値を入力します。  
   
  *stmt*  
  カーソル結果セットを定義します。 *Stmt*パラメーターは必須であり、 **ntext**、 **nchar**、または**nvarchar**の入力値に対してを呼び出します。  
   
  *options*  
- カーソル結果セット列の説明を返す省略可能なパラメーターです。 *オプション*には、次の int 入力値が必要です。  
+ カーソル結果セット列の説明を返す省略可能なパラメーターです。 *オプション* には、次の int 入力値が必要です。  
   
 |値|説明|  
 |-----------|-----------------|  

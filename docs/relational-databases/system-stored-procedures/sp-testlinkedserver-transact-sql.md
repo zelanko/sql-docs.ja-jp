@@ -1,4 +1,5 @@
 ---
+description: sp_testlinkedserver (Transact-SQL)
 title: sp_testlinkedserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 01ae2d33ab38b5a3f2720b817a036cd152f2c47f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ecd825b69ad3c78171ec8cb22a0b49488a6b9cd5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489089"
 ---
 # <a name="sp_testlinkedserver-transact-sql"></a>sp_testlinkedserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_testlinkedserver [ @servername ] = servername
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @servername = ]servername`リンクサーバーの名前を指定します。 *servername*は**sysname**,、既定値はありません。  
+`[ @servername = ]servername` リンクサーバーの名前を指定します。 *servername* は **sysname**,、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -61,8 +62,8 @@ sp_testlinkedserver SEATTLESales;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [sp_addlinkedserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
   
   

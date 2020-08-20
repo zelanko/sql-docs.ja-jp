@@ -1,4 +1,5 @@
 ---
+description: ビューに関する情報の取得
 title: ビューに関する情報の取得 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95611ab79850954506150785b4a4e26c50efe126
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1dd037349e2e8126a74fbd895598f3ef05e06583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488611"
 ---
 # <a name="get-information-about-a-view"></a>ビューに関する情報の取得
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "87396469"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してビューに関する情報を取得するには:**  
   
@@ -68,7 +69,7 @@ ms.locfileid: "87396469"
      **[データベース]**  
      このビューを含むデータベースの名前です。  
   
-     **[サーバー]**  
+     **サーバー**  
      現在のサーバー インスタンスの名前です。  
   
      **User**  
@@ -142,7 +143,7 @@ ms.locfileid: "87396469"
      SQL ステートメントの説明を表示します。 説明全体を表示したり、説明を編集したりするには、説明をクリックして、プロパティの右側にある省略記号 ( **[...]** ) をクリックします。 ビューの使用者やビューをいつ使用するかなどの情報をコメントに含めることもできます。  
   
      **[TOP の指定]**  
-     展開すると、 **[TOP]** 、 **[式]** 、 **[パーセント]** 、および **[With Ties]** の各プロパティのプロパティが表示されます。  
+     展開すると、 **[TOP]**、 **[式]**、 **[パーセント]**、および **[With Ties]** の各プロパティのプロパティが表示されます。  
   
      **[(Top)]**  
      ビューに TOP 句が含まれるように指定します。この場合、最初の n 行または最初の n% の行だけが結果セットに返されます。 既定では、ビューは最初の 10 行を結果セットに返します。 返される行数を変更するか、異なるパーセントを指定する場合に使用します。  
@@ -150,7 +151,7 @@ ms.locfileid: "87396469"
      **[式]**  
      ビューによって返されるパーセント ( **[パーセント]** が **[はい]** に設定されている場合) またはレコード数 ( **[パーセント]** が **[いいえ]** に設定されている場合) を示します。  
   
-     **[パーセント]**  
+     **Percent**  
      クエリに **TOP** 句が含まれるように指定します。この場合、最初の n% の行だけが結果セットに返されます。  
   
      **[With Ties]**  

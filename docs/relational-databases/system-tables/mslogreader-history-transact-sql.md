@@ -1,4 +1,5 @@
 ---
+description: MSlogreader_history (Transact-SQL)
 title: MSlogreader_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c4d3b61eb3031060674c248be4effd03766f1f7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c792ab21d4fb59df13f0cc86a2d81558b2c506a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889919"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488777"
 ---
 # <a name="mslogreader_history-transact-sql"></a>MSlogreader_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85889919"
 |**start_time**|**datetime**|ジョブの実行開始時刻です。|  
 |**time**|**datetime**|メッセージがログに記録される時刻。|  
 |**duration**|**int**|メッセージ セッションの実行時間 (秒) です。|  
-|**コメント**|**nvarchar(255)**|メッセージ テキストです。|  
+|**コメント**|**nvarchar (255)**|メッセージ テキスト。|  
 |**xact_seqno**|**varbinary(16)**|最後に処理されたトランザクション シーケンス番号です。|  
 |**delivery_time**|**int**|最初のトランザクションが配信された時刻。|  
 |**delivered_transactions**|**int**|セッションで配信されたトランザクションの合計数。|  
@@ -46,9 +47,9 @@ ms.locfileid: "85889919"
 |**delivery_latency**|**int**|コマンドがパブリッシュされたデータベースに入ってからディストリビューションデータベースに入ってくるまでの待機時間。 単位はミリ秒。|  
 |**error_id**|**int**|**MSrepl_error**システムテーブル内のエラーの ID。|  
 |**timestamp**|**timestamp**|このテーブルのタイムスタンプ列です。|  
-|**updateable_row**|**bit**|履歴行を上書きできる場合は、 **1**に設定します。|  
+|**updateable_row**|**bit**|履歴行を上書きできる場合は、 **1** に設定します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

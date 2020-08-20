@@ -1,4 +1,5 @@
 ---
+description: 分散クエリのストアドプロシージャ (Transact-sql)
 title: 分散クエリのストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 788140d9936b0e90f7f6e0ad5ea2f5aa6f04e239
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 7766180a9b93a8e6fd4af5eaf0855a8de182a063
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489777"
 ---
 # <a name="distributed-queries-stored-procedures-transact-sql"></a>分散クエリのストアドプロシージャ (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、分散クエリの実装と管理に使用される次のシステムストアドプロシージャをサポートしています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、分散クエリの実装と管理に使用される次のシステムストアドプロシージャをサポートしています。  
 
 :::row:::
     :::column:::
@@ -62,7 +63,7 @@ ms.locfileid: "86977572"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

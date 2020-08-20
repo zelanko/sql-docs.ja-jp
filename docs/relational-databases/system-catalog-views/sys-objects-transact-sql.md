@@ -1,4 +1,5 @@
 ---
+description: sys.objects (Transact-SQL)
 title: sys. objects (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/20/2020
@@ -23,11 +24,12 @@ ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c1f639331b352b6781d90cb0c87833684e3f636
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 547063527803280d8cbb2ed17a771eb5b05afe33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490335"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,10 +56,10 @@ ms.locfileid: "86004824"
 |is_published|**bit**|オブジェクトがパブリッシュされます。|  
 |is_schema_published|**bit**|オブジェクトのスキーマのみがパブリッシュされることを示します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)、 [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md)、および[objectproperty](../../t-sql/functions/objectproperty-transact-sql.md)() 組み込み関数を、sys. オブジェクトに表示されるオブジェクトに適用できます。  
   
- このビューには、システムオブジェクトを表示する[sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)という同じスキーマを持つバージョンがあります。 システムオブジェクトとユーザーオブジェクトの両方を表示する、 [sys. all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)という別のビューがあります。 3つのすべてのカタログビューの構造は同じです。  
+ このビューには、システムオブジェクトを表示する [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)という同じスキーマを持つバージョンがあります。 システムオブジェクトとユーザーオブジェクトの両方を表示する、 [sys. all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) という別のビューがあります。 3つのすべてのカタログビューの構造は同じです。  
   
  このバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XML インデックスや空間インデックスなどの拡張インデックスは、sys.objects で内部テーブルと見なされます (type = IT および type_desc = INTERNAL_TABLE)。 拡張インデックスの場合:  
   
@@ -160,11 +162,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [all_objects &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
  [sys.system_objects &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
- [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [SQL Server システムカタログに対するクエリについてよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [internal_tables &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_help_targetservergroup (Transact-SQL)
 title: sp_help_targetservergroup (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10f96877b346396166f2980d47085c726a66bc19
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75d725bec30d25d46216e292d7e96ff8f2b5f899
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489385"
 ---
 # <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,10 +41,10 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>引数  
-`[ @name = ] 'name'`情報を返す対象サーバーグループの名前を指定します。 *名前*は**sysname**,、既定値は NULL です。  
+`[ @name = ] 'name'` 情報を返す対象サーバーグループの名前を指定します。 *名前* は **sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -53,7 +54,7 @@ sp_help_targetservergroup
 |**name**|**sysname**|サーバーグループの名前|  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行する権限は、既定では**sysadmin**固定サーバーロールに設定されています。  
+ このプロシージャを実行する権限は、既定では **sysadmin** 固定サーバーロールに設定されています。  
   
 ## <a name="examples"></a>例  
   
@@ -68,7 +69,7 @@ EXEC dbo.sp_help_targetservergroup ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-target-server-group"></a>B: 特定の対象サーバーグループの情報を一覧表示する  
+### <a name="b-listing-information-for-a-specific-target-server-group"></a>B. 特定の対象サーバーグループの情報を一覧表示する  
  次の例では、ターゲット サーバー グループ `Servers Maintaining Customer Information` の情報を一覧表示します。  
   
 ```  
@@ -80,7 +81,7 @@ EXEC dbo.sp_help_targetservergroup
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_add_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [sp_delete_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
  [sp_update_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   

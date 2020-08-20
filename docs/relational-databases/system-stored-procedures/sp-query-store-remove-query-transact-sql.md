@@ -1,4 +1,5 @@
 ---
+description: sp_query_store_remove_query (Transact-sql)
 title: sp_query_store_remove_query (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
@@ -21,11 +22,12 @@ ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1751940417d7bf95d2745f46c9acb7f1eb8839a7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4aff0b1ce7544474899793e7f1cc7344021cb157
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489177"
 ---
 # <a name="sp_query_store_remove_query-transact-sql"></a>sp_query_store_remove_query (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -42,7 +44,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @query_id = ] query_id`クエリストアから削除するクエリの id を指定します。 *query_id*は**bigint**,、既定値はありません。  
+`[ @query_id = ] query_id` クエリストアから削除するクエリの id を指定します。 *query_id* は **bigint**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -50,7 +52,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ## <a name="remarks"></a>解説  
   
 ## <a name="permissions"></a>アクセス許可  
- データベースに対する**ALTER**権限が必要です。
+ データベースに対する **ALTER** 権限が必要です。
   
 ## <a name="examples"></a>例  
  次の例では、クエリストア内のクエリに関する情報を返します。  

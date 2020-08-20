@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergealternatepublisher (Transact-sql)
 title: sp_helpmergealternatepublisher (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 408d619ac06403c2d07b4b71b859cf49f6e2a071
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9d20e6273aaafd2c589dbd7e04b38e60890d5c21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489326"
 ---
 # <a name="sp_helpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +38,11 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`代替パブリッシャーの名前を指定します。*publisher*は**sysname**で、既定値はありません。  
+`[ @publisher = ] 'publisher'` 代替パブリッシャーの名前を指定します。*publisher* は **sysname**で、既定値はありません。  
   
-`[ @publisher_db = ] 'publisher_db'`パブリケーションデータベースの名前を指定します。*publisher_db*は**sysname**であり、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリケーションデータベースの名前を指定します。*publisher_db* は **sysname**であり、既定値はありません。  
   
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。*publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。*publication* は **sysname**,、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -51,21 +52,21 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 |**alternate_publisher_db**|**sysname**|パブリケーションデータベースの名前。|  
 |**alternate_publication**|**sysname**|パブリケーションの名前。|  
 |**alternate_distributor**|**sysname**|ディストリビューターの名前。|  
-|**friendly_name**|**nvarchar(255)**|代替パブリッシャーの説明。|  
-|**enabled**|**bit**|サーバーが代替パブリッシャーかどうかを示します。 **1**は、パブリッシャーが代替パブリッシャーとして有効になっていることを示します。 **0**は、有効になっていないことを示します。|  
+|**friendly_name**|**nvarchar (255)**|代替パブリッシャーの説明。|  
+|**有効**|**bit**|サーバーが代替パブリッシャーかどうかを示します。 **1** は、パブリッシャーが代替パブリッシャーとして有効になっていることを示します。 **0** は、有効になっていないことを示します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_helpmergealternatepublisher**は、マージレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_helpmergealternatepublisher** は、マージレプリケーションで使用します。  
   
  マージ セッションごとに、システムではパブリッシャーとサブスクライバーの両方に対し、代替パブリッシャーの一覧を求めるクエリが実行されます。 マージ処理では代替パブリッシャーの一覧に対してエントリの追加や削除が行われ、サブスクライバーとパブリッシャーの両方に一致する代替パブリッシャーの一覧が生成されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helpmergealternatepublisher**を実行できるのは、パブリケーションのパブリケーションアクセスリストのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
