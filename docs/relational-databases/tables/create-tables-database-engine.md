@@ -1,4 +1,5 @@
 ---
+description: テーブルの作成 (データベース エンジン)
 title: テーブルの作成 (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/22/2016
@@ -13,12 +14,12 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d37b8d87be1b6207ba9dcfd9bc1a8dcaa1ab039
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: de52eb6abbcbcbb23638c07663d78a80ccffd22f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463838"
 ---
 # <a name="create-tables-database-engine"></a>テーブルの作成 (データベース エンジン)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "87394587"
   
      スキーマの詳細については、「 [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md)」を参照してください。  
   
-9. **[ファイル]** メニューの [ **<テーブル名>** *を保存*] を選択します。  
+9. **[ファイル]** メニューの [ *<テーブル名>* **を保存**] を選択します。  
   
 10. **[名前の選択]** ダイアログ ボックスで、テーブルの名前を入力し、 **[OK]** をクリックします。  
   

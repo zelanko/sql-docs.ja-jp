@@ -1,4 +1,5 @@
 ---
+description: sp_xml_removedocument (Transact-sql)
 title: sp_xml_removedocument (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e3ee34c74a10414104f96190cd04244c28171db4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42f4c9f09846d590752e282dc19af9312236cecd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463961"
 ---
 # <a name="sp_xml_removedocument-transact-sql"></a>sp_xml_removedocument (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85790335"
   ドキュメント ハンドルで指定された XML ドキュメントの内部表現を削除し、ドキュメント ハンドルを無効にします。  
   
 > [!NOTE]  
->  解析されたドキュメントは、の内部キャッシュに格納され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 MSXML パーサー (Msxmlsql.dll) では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に割り当てられている総メモリの 8 分の 1 が使用されます。 メモリが不足しないようにするには、 **sp_xml_removedocument**を実行してメモリを解放します。  
+>  解析されたドキュメントは、の内部キャッシュに格納され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 MSXML パーサー (Msxmlsql.dll) では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に割り当てられている総メモリの 8 分の 1 が使用されます。 メモリが不足しないようにするには、 **sp_xml_removedocument** を実行してメモリを解放します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +44,7 @@ sp_xml_removedocument hdoc
   
 ## <a name="arguments"></a>引数  
  *hdoc*  
- 新しく作成されたドキュメントへのハンドルを指定します。 無効なハンドルはエラーを返します。 *hdoc*は整数です。  
+ 新しく作成されたドキュメントへのハンドルを指定します。 無効なハンドルはエラーを返します。 *hdoc* は整数です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または >0 (失敗)  
@@ -58,7 +59,7 @@ sp_xml_removedocument hdoc
 EXEC sp_xml_removedocument @hdoc;  
 ```  
   
-## <a name="see-also"></a>関連項目      
+## <a name="see-also"></a>参照      
  <br>[システムストアドプロシージャ (Transact-sql)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[XML ストアドプロシージャ (Transact-sql)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
  <br>[dm_exec_xml_handles (Transact-sql)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)

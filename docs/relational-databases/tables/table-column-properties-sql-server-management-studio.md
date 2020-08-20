@@ -1,4 +1,5 @@
 ---
+description: テーブル列のプロパティ (SQL Server Management Studio)
 title: テーブル列のプロパティ (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
@@ -15,12 +16,12 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cb7e20e8f310b6cb6786c2d4cc1a62409dc81c6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c5792d13fc9fcfff9ffeadaf5aadee948f6060e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463824"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>テーブル列のプロパティ (SQL Server Management Studio)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -31,9 +32,9 @@ ms.locfileid: "87397007"
 >  テーブルをレプリケーション用にパブリッシュする場合は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) か [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を使用して、スキーマを変更する必要があります。 テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用してスキーマを変更するとき、テーブルはいったん削除されてから再作成されます。 パブリッシュされたオブジェクトは削除できないので、スキーマの変更は失敗します。  
   
  **全般**  
- 展開すると、 **[オブジェクト名]** 、 **[Null を許容]** 、 **[データ型]** 、 **[既定値またはバインド]** 、 **[長さ]** 、 **[有効桁数]** 、 **[小数点以下桁数]** が表示されます。  
+ 展開すると、 **[オブジェクト名]**、 **[Null を許容]**、 **[データ型]**、 **[既定値またはバインド]**、 **[長さ]**、 **[有効桁数]**、 **[小数点以下桁数]** が表示されます。  
   
- **Name**  
+ **名前**  
  選択した列の名前を表示します。  
   
  **[NULL を許容]**  
@@ -79,7 +80,7 @@ ms.locfileid: "87397007"
  この列を説明するテキストを表示します。 説明を編集するには、プロパティを選択し、プロパティ値の右側にある省略記号 ([...]) をクリックします。次に、 **[説明のプロパティ]** ダイアログ ボックスで説明を編集します。  
   
  **決定的**  
- 選択した列のデータ型を明確に決定できるかどうかが表示されます  
+ 選択した列のデータ型を明確に決定できるかどうかが表示されます   
   
  **[DTS パブリッシュ済み]**  
  列が SSIS によりパブリッシュされているかどうかが表示されます ([データ変換サービスは非推奨](https://msdn.microsoft.com/library/cc707786(v=sql.130).aspx#Anchor_0))。 

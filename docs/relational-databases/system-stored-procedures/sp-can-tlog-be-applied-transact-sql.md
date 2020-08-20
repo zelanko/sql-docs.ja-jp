@@ -1,4 +1,5 @@
 ---
+description: sp_can_tlog_be_applied (Transact-sql)
 title: sp_can_tlog_be_applied (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2369c2db6003229ee54f9d7ef04784a470493faf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4e4596cfab5bb7a272e29b2d2749e38c9f38ddaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464477"
 ---
 # <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  トランザクションログバックアップをデータベースに適用できるかどうかを確認 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 **sp_can_tlog_be_applied**を使用するには、データベースが復元中の状態である必要があります。  
+  トランザクションログバックアップをデータベースに適用できるかどうかを確認 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 **sp_can_tlog_be_applied** を使用するには、データベースが復元中の状態である必要があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,11 +42,11 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @backup_file_name = ] 'backup_file_name'`バックアップファイルの名前を指定します。 *backup_file_name*は**nvarchar (128)** です。  
+`[ @backup_file_name = ] 'backup_file_name'` バックアップファイルの名前を指定します。 *backup_file_name* は **nvarchar (128)** です。  
   
-`[ @database_name = ] 'database_name'`データベースの名前を指定します。 *database_name* は **sysname** です。  
+`[ @database_name = ] 'database_name'` データベースの名前を指定します。 *database_name* は **sysname** です。  
   
-`[ @result = ] _result_ OUTPUT`トランザクションログをデータベースに適用できるかどうかを示します。 *結果*は**bit**です。  
+`[ @result = ] _result_ OUTPUT` トランザクションログをデータベースに適用できるかどうかを示します。 *結果* は **bit**です。  
   
  1 = ログを適用できる  
   
@@ -57,7 +58,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_can_tlog_be_applied**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、結果を格納するローカル変数 `@MyBitVar` を宣言します。  
   
 ```  

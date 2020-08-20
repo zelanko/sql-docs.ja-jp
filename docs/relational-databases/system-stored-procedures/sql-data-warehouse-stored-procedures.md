@@ -1,4 +1,5 @@
 ---
+description: ストアドプロシージャの SQL Data Warehouse
 title: ストアドプロシージャの SQL Data Warehouse |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -12,17 +13,17 @@ ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 97026172f23768f1393ab2b97d25b8b0b51fd1ad
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 50bb122223d9b2727f2d87fb076ac00fd46d0943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396262"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463916"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>ストアドプロシージャの SQL Data Warehouse
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]には、データベースロールに関連する操作を実行するために使用できる組み込みの手順が用意されています。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]には、次のシステムプロシージャが含まれています。  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] には、データベースロールに関連する操作を実行するために使用できる組み込みの手順が用意されています。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] には、次のシステムプロシージャが含まれています。  
   
 ##  <a name="sp_datatype_info_90-40sql-data-warehouse41"></a><a name="AggregateFunctions"></a>[sp_datatype_info_90 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   

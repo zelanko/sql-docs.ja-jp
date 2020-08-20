@@ -1,4 +1,5 @@
 ---
+description: sp_attach_db (Transact-sql)
 title: sp_attach_db (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 896a4791d1b04de37f57496fd8ff71961a54f7ab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 62f7ed238899f6fe99c10f2c3c558e5e16af2e49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464528"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85874619"
   データベースをサーバーにアタッチします。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、CREATE DATABASE *database_name* FOR ATTACH を使用することをお勧めします。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、CREATE DATABASE *database_name* FOR ATTACH を使用することをお勧めします。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
 >  複数のログファイルを再構築するには、1つまたは複数の場所に新しい場所がある場合は、CREATE DATABASE *database_name* FOR ATTACH_REBUILD_LOG を使用します。  
@@ -47,9 +48,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @dbname = ] 'dbnam_ '`サーバーにアタッチするデータベースの名前を指定します。 名前は一意である必要があります。 *dbname*は**sysname**,、既定値は NULL です。  
+`[ @dbname = ] 'dbnam_ '` サーバーにアタッチするデータベースの名前を指定します。 名前は一意である必要があります。 *dbname* は **sysname**,、既定値は NULL です。  
   
-`[ @filename1 = ] 'filename_n'`データベースファイルの物理名 (パスを含む) を指定します。 *filename_n*は**nvarchar (260)**,、既定値は NULL です。 ファイル名は 16 個まで指定できます。 パラメーター名は** \@ filename1**から始まり、 ** \@ filename16**にインクリメントされます。 ファイル名の一覧には、少なくともプライマリファイルが含まれている必要があります。 プライマリファイルには、データベース内の他のファイルを指すシステムテーブルが含まれています。 また、データベースをデタッチした後に移動されたすべてのファイルを一覧に含める必要があります。  
+`[ @filename1 = ] 'filename_n'` データベースファイルの物理名 (パスを含む) を指定します。 *filename_n* は **nvarchar (260)**,、既定値は NULL です。 ファイル名は 16 個まで指定できます。 パラメーター名は** \@ filename1**から始まり、 ** \@ filename16**にインクリメントされます。 ファイル名の一覧には、少なくともプライマリファイルが含まれている必要があります。 プライマリファイルには、データベース内の他のファイルを指すシステムテーブルが含まれています。 また、データベースをデタッチした後に移動されたすべてのファイルを一覧に含める必要があります。  
   
 > [!NOTE]  
 >  この引数は、CREATE DATABASE ステートメントの FILENAME パラメーターにマップされます。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
@@ -85,7 +86,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="permissions"></a>アクセス許可  
  データベースがアタッチされているときの権限の処理方法については、「 [CREATE database &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、から [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 現在のサーバーにファイルをアタッチします。  
   
 ```  
@@ -96,7 +97,7 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
 N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_log.ldf';  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_detach_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [sp_helpfile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   

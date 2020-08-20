@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_disable_collector (Transact-SQL)
 title: sp_syscollector_disable_collector (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9ef4c85d-cca6-452d-94be-2be6f616c3d8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 14eabed691aafe177de9674e985bd9c7f78cdc25
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e8f3e60112ed2f7e96d95652d370dac5fca44b80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463990"
 ---
 # <a name="sp_syscollector_disable_collector-transact-sql"></a>sp_syscollector_disable_collector (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,23 +44,23 @@ dbo.sp_syscollector_disable_collector
  None  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  既定値は、サーバー上のデータコレクターです。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、(EXECUTE 権限を持つ) **dc_admin** または **dc_operator** 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データコレクターを無効にします。  
   
 ```  
 EXEC dbo.sp_syscollector_disable_collector;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データコレクション](../../relational-databases/data-collection/data-collection.md)  
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   
   

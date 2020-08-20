@@ -1,4 +1,5 @@
 ---
+description: Table Properties - SSMS
 title: テーブルのプロパティ - SSMS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e476076084e23d3381f08a2e10dc130bee25b93
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1cc8c79f0a8020d4301e6bc8653f2d3fcf600149
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463778"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "87928673"
  **[データベース]**  
  このテーブルを含むデータベースの名前です。  
   
- **[サーバー]**  
+ **サーバー**  
  現在のサーバー インスタンスの名前です。  
   
  **User**  
@@ -52,7 +53,7 @@ ms.locfileid: "87928673"
  **[作成日]**  
  テーブルが作成された日付と時刻です。  
   
- **Name**  
+ **名前**  
  テーブルの名前。  
   
  **[スキーマ]**  
@@ -149,12 +150,12 @@ ms.locfileid: "87928673"
  インデックスがテーブル内で占有する領域の容量をメガバイト単位で表示します。 この値には、テーブルの XML インデックスの領域使用状況は含まれません。 テーブルに XML インデックスが含まれている場合は、代わりに [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) を使用してください。  
   
  **[行数]**  
- テーブルに含まれる行数です。  
+ 表の行数。  
   
  **[データ領域]**  
  データがテーブル内で占有する領域の容量をメガバイト単位で表示します。  
   
-### <a name="partitioning"></a>[パーティション分割]  
+### <a name="partitioning"></a>パーティション分割  
  このセクションは、テーブルがパーティション分割されている場合にのみ使用できます。 詳細については、「 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
   
  **[パーティション列]**  
@@ -163,7 +164,7 @@ ms.locfileid: "87928673"
  **[パーティション構成]**  
  テーブルがパーティション分割されている場合のパーティション構成の名前。 テーブルがパーティション分割されていない場合、このフィールドは空白です。  
   
- **[パーティション数]**  
+ **パーティションの数**  
  テーブルのパーティション数です。  
   
  **[FILESTREAM パーティション構成]**  

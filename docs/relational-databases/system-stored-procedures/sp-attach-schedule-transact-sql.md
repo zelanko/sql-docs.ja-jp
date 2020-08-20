@@ -1,4 +1,5 @@
 ---
+description: sp_attach_schedule (Transact-SQL)
 title: sp_attach_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bc01db6ae019694cbff4082c394fd8c736b9a5a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8108bdad26c02b02ae2e88b1780fada126e2c797
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464490"
 ---
 # <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,29 +43,29 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id`スケジュールを追加するジョブのジョブ識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
+`[ @job_id = ] job_id` スケジュールを追加するジョブのジョブ識別番号を指定します。 *job_id*は **uniqueidentifier**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'`スケジュールを追加するジョブの名前を指定します。 *job_name*は**sysname**,、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` スケジュールを追加するジョブの名前を指定します。 *job_name*は **sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
 >  *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @schedule_id = ] schedule_id`ジョブに設定するスケジュールの識別番号を指定します。 *schedule_id*は**int**,、既定値は NULL です。  
+`[ @schedule_id = ] schedule_id` ジョブに設定するスケジュールの識別番号を指定します。 *schedule_id*は **int**,、既定値は NULL です。  
   
-`[ @schedule_name = ] 'schedule_name'`ジョブに設定するスケジュールの名前を指定します。 *schedule_name*は**sysname**,、既定値は NULL です。  
+`[ @schedule_name = ] 'schedule_name'` ジョブに設定するスケジュールの名前を指定します。 *schedule_name*は **sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
 >  *Schedule_id*または*schedule_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  スケジュールとジョブの所有者は同じである必要があります。  
   
  スケジュールは複数のジョブに対して設定できます。 ジョブは、複数のスケジュールで実行できます。  
   
- このストアドプロシージャは、 **msdb**データベースから実行する必要があります。  
+ このストアドプロシージャは、 **msdb** データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -78,7 +79,7 @@ sp_attach_schedule
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ユーザーがジョブとスケジュールの両方を所有しているかどうかを確認します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、という名前のスケジュールを作成し `NightlyJobs` ます。 このスケジュールを使用するジョブは、毎日、サーバーの時間が `01:00` になると実行されます。 この例では、スケジュールをジョブ `BackupDatabase` とジョブにアタッチし `RunReports` ます。  
   
 > [!NOTE]  

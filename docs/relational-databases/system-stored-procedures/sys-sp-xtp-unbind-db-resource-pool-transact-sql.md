@@ -1,4 +1,5 @@
 ---
+description: sp_xtp_unbind_db_resource_pool (Transact-sql)
 title: sp_xtp_unbind_db_resource_pool (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de629f6ae966f8ea64dffa01676811650ac38b43
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 4dda2f6da0ee65b7bfa927739ac945407f28cbc7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463938"
 ---
 # <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sp_xtp_unbind_db_resource_pool (Transact-sql)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +64,7 @@ Database 'Hekaton_DB' does not have a binding to a resource pool.
 sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 -   によって指定されたデータベースには、 `database_name` リソースプールへのバインドが必要 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] です。  
   

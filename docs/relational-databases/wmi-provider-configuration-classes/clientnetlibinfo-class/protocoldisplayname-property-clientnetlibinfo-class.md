@@ -1,4 +1,5 @@
 ---
+description: ProtocolDisplayName プロパティ (ClientNetLibInfo クラス)
 title: ProtocolDisplayName プロパティ (ClientNetLibInfo)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d13ac43c6c7d02783bf40788c23a4ee34027d8bc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e5f87fbc4e3140fdcc0a7af0cde5128233ce5b8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881143"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463700"
 ---
 # <a name="protocoldisplayname-property-clientnetlibinfo-class"></a>ProtocolDisplayName プロパティ (ClientNetLibInfo クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.ProtocolDisplayName [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  プロトコルに使用される表示名を指定する文字列値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

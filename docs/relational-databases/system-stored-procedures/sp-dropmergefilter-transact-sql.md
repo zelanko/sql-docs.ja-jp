@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergefilter (Transact-SQL)
 title: sp_dropmergefilter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2de7b17ff172c5945c7bfb83cae6a8a11325e6d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5eb42c423d562ad251dc55ce015fdd111fa7d6fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464341"
 ---
 # <a name="sp_dropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,34 +40,34 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @article = ] 'article'`アーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値はありません。  
+`[ @article = ] 'article'` アーティクルの名前を指定します。 *アーティクル* は **sysname**で、既定値はありません。  
   
-`[ @filtername = ] 'filtername'`削除するフィルターの名前を指定します。 *filtername*は**sysname**,、既定値はありません。  
+`[ @filtername = ] 'filtername'` 削除するフィルターの名前を指定します。 *filtername* は **sysname**,、既定値はありません。  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`スナップショットを無効にする機能を有効または無効にします。 *force_invalidate_snapshot*は**ビット**であり、既定値は**0**です。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` スナップショットを無効にする機能を有効または無効にします。 *force_invalidate_snapshot* は **ビット**であり、既定値は **0**です。  
   
- **0**を指定すると、マージアーティクルへの変更によってスナップショットが無効になることはありません。  
+ **0** を指定すると、マージアーティクルへの変更によってスナップショットが無効になることはありません。  
   
- **1**は、マージアーティクルへの変更によってスナップショットが無効になる可能性があることを意味します。 この場合、値が**1**の場合は、新しいスナップショットを作成する権限が与えられます。  
+ **1** は、マージアーティクルへの変更によってスナップショットが無効になる可能性があることを意味します。 この場合、値が **1** の場合は、新しいスナップショットを作成する権限が与えられます。  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`サブスクリプションを無効としてマークする機能を有効または無効にします。 *force_reinit_subscription*は**ビット**であり、既定値は**0**です。  
+`[ @force_reinit_subscription = ] force_reinit_subscription` サブスクリプションを無効としてマークする機能を有効または無効にします。 *force_reinit_subscription* は **ビット**であり、既定値は **0**です。  
   
- **0**を指定すると、マージアーティクルフィルターへの変更によってサブスクリプションが無効になることはありません。  
+ **0** を指定すると、マージアーティクルフィルターへの変更によってサブスクリプションが無効になることはありません。  
   
- **1**は、マージアーティクルフィルターへの変更によってサブスクリプションが無効になることを意味します。  
+ **1** は、マージアーティクルフィルターへの変更によってサブスクリプションが無効になることを意味します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_dropmergefilter**は、マージレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_dropmergefilter** は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_dropmergefilter**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_changemergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   

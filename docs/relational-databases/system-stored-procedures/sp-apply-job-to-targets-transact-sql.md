@@ -1,4 +1,5 @@
 ---
+description: sp_apply_job_to_targets (Transact-sql)
 title: sp_apply_job_to_targets (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbefdf6a045dce468365aa585b7efad775709c2c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1f821418b5e6a75aa51264abb0d265f907b8957d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464558"
 ---
 # <a name="sp_apply_job_to_targets-transact-sql"></a>sp_apply_job_to_targets (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,29 +43,29 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id`指定した対象サーバーまたは対象サーバーグループに適用するジョブのジョブ識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
+`[ @job_id = ] job_id` 指定した対象サーバーまたは対象サーバーグループに適用するジョブのジョブ識別番号を指定します。 *job_id* は **uniqueidentifier**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'`指定した対象サーバーまたは対象サーバーグループに適用するジョブの名前。 *job_name*は**sysname**,、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` 指定した対象サーバーまたは対象サーバーグループに適用するジョブの名前。 *job_name* は **sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
 >  *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @target_server_groups = ] 'target_server_groups'`指定されたジョブを適用する対象サーバーグループのコンマ区切りのリスト。 *target_server_groups*は**nvarchar (2048)**,、既定値は NULL です。  
+`[ @target_server_groups = ] 'target_server_groups'` 指定されたジョブを適用する対象サーバーグループのコンマ区切りのリスト。 *target_server_groups* は **nvarchar (2048)**,、既定値は NULL です。  
   
-`[ @target_servers = ] 'target_servers'`指定されたジョブを適用する対象サーバーのコンマ区切りのリスト。 *target_servers*は**nvarchar (2048)**,、既定値は NULL です。  
+`[ @target_servers = ] 'target_servers'` 指定されたジョブを適用する対象サーバーのコンマ区切りのリスト。 *target_servers*は **nvarchar (2048)**,、既定値は NULL です。  
   
-`[ @operation = ] 'operation'`指定したジョブを、指定した対象サーバーまたは対象サーバーグループに適用するか、または削除するかを指定します。 *操作*は**varchar (7)**,、既定値は APPLY です。 有効な操作は**APPLY**と**REMOVE**です。  
+`[ @operation = ] 'operation'` 指定したジョブを、指定した対象サーバーまたは対象サーバーグループに適用するか、または削除するかを指定します。 *操作*は **varchar (7)**,、既定値は APPLY です。 有効な操作は **APPLY** と **REMOVE**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_apply_job_to_targets**を使用すると、複数の対象サーバーからジョブを簡単に適用 (または削除) できます。また、必要な対象サーバーごとに1回**sp_add_jobserver** (または**sp_delete_jobserver**) を呼び出すこともできます。  
+## <a name="remarks"></a>解説  
+ **sp_apply_job_to_targets** を使用すると、複数の対象サーバーからジョブを簡単に適用 (または削除) できます。また、必要な対象サーバーごとに1回 **sp_add_jobserver** (または **sp_delete_jobserver**) を呼び出すこともできます。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ このプロシージャを実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、以前に作成した `Backup Customer Information` ジョブを、グループ内のすべての対象サーバーに適用し `Servers Maintaining Customer Information` ます。  
   
 ```  
@@ -78,7 +79,7 @@ EXEC dbo.sp_apply_job_to_targets
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_add_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [sp_remove_job_from_targets &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   

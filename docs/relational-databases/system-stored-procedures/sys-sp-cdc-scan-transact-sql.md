@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_scan (Transact-SQL)
 title: sp_cdc_scan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 558a2fd9ff62baa3448609eb42e5f31883fbac53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0ad39bba5f8a3fbee5bcecde3e41ad9a7f7f4442
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463943"
 ---
 # <a name="syssp_cdc_scan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,16 +45,16 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @maxtrans = ] max_trans`各スキャンサイクルで処理するトランザクションの最大数。 *max_trans*は**int**で、既定値は500です。  
+`[ @maxtrans = ] max_trans` 各スキャンサイクルで処理するトランザクションの最大数。 *max_trans* は **int** で、既定値は500です。  
   
-`[ @maxscans = ] max_scans`ログからすべての行を抽出するために実行するスキャンサイクルの最大数。 *max_scans*は**int**で、既定値は10です。  
+`[ @maxscans = ] max_scans` ログからすべての行を抽出するために実行するスキャンサイクルの最大数。 *max_scans* は **int** で、既定値は10です。  
   
-`[ @continuous = ] continuous`1回のスキャンサイクル (0) を実行した後にストアドプロシージャを終了するか、連続して実行して、スキャンサイクルを再実行する前に*polling_interval*によって指定された時間一時停止するか (1) を示します。 *continuous*は**tinyint**で、既定値は0です。  
+`[ @continuous = ] continuous` 1回のスキャンサイクル (0) を実行した後にストアドプロシージャを終了するか、連続して実行して、スキャンサイクルを再実行する前に *polling_interval* によって指定された時間一時停止するか (1) を示します。 *continuous* は **tinyint** で、既定値は0です。  
   
-`[ @pollinginterval = ] polling_interval`ログスキャンサイクルの間隔を秒数で指定します。 *polling_interval*は**bigint**で、既定値は0です。  
+`[ @pollinginterval = ] polling_interval` ログスキャンサイクルの間隔を秒数で指定します。 *polling_interval* は **bigint** で、既定値は0です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -64,7 +65,7 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [dbo. cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
   
   

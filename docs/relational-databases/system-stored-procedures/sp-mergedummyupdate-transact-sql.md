@@ -1,4 +1,5 @@
 ---
+description: sp_mergedummyupdate (Transact-sql)
 title: sp_mergedummyupdate (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5502b64da269639d99fe54d4930f7f3b7b145d73
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dbacf385842d226c733c5c1baec9859f26e140d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464134"
 ---
 # <a name="sp_mergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,22 +38,22 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @source_object = ] 'source_object'`ソースオブジェクトの名前を指定します。 *source_object*は**nvarchar (386)**,、既定値はありません。  
+`[ @source_object = ] 'source_object'` ソースオブジェクトの名前を指定します。 *source_object*は **nvarchar (386)**,、既定値はありません。  
   
-`[ @rowguid = ] 'rowguid'`行識別子を示します。 *rowguid*は**uniqueidentifier**,、既定値はありません。  
+`[ @rowguid = ] 'rowguid'` 行識別子を示します。 *rowguid* は **uniqueidentifier**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>注釈  
- **sp_mergedummyupdate**は、マージレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_mergedummyupdate** は、マージレプリケーションで使用します。  
   
- **sp_mergedummyupdate**は、レプリケーション競合表示モジュール (Wzcnflct.exe) に独自の代替手段を記述する場合に便利です。  
+ **sp_mergedummyupdate** は、レプリケーション競合表示モジュール (Wzcnflct.exe) に独自の代替手段を記述する場合に便利です。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_mergedummyupdate**を実行できるのは、 **db_owner**固定データベースロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
