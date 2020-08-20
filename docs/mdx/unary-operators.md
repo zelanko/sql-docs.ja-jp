@@ -1,4 +1,5 @@
 ---
+description: 単項演算子
 title: 単項演算子 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9ec9ac3eef28c4deae08d577487599575852c132
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 32f5084190642bd4237d225404c92f0c4754da7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893554"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466474"
 ---
 # <a name="unary-operators"></a>単項演算子
 
@@ -40,7 +41,7 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
- さらに、MDX では、特別な単項演算子を使用して、 [Rollupchildren](../mdx/rollupchildren-mdx.md)関数によって実行される集計操作を決定します。 これらの特別な単項演算子の詳細については、「[ディメンションへのカスタム集計の追加](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension)」を参照してください。  
+ さらに、MDX では、特別な単項演算子を使用して、 [Rollupchildren](../mdx/rollupchildren-mdx.md) 関数によって実行される集計操作を決定します。 これらの特別な単項演算子の詳細については、「 [ディメンションへのカスタム集計の追加](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [MDX 構文 &#40;の演算子&#41;](../mdx/operators-mdx-syntax.md)  

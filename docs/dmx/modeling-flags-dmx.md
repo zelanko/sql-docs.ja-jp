@@ -1,4 +1,5 @@
 ---
+description: モデリング フラグ (DMX)
 title: モデリングフラグ (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7e05d629f46f1c94bbe9305510daf37c09a39c9b
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 52b28158c59e12886f8058883c65654b23ece9e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466546"
 ---
 # <a name="modeling-flags-dmx"></a>モデリング フラグ (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のモデリング フラグを使用すると、ケース テーブルで定義されているデータに関する追加情報をデータ マイニング アルゴリズムに提供できます。 アルゴリズムは、この情報を使用して、より正確なデータ マイニング モデルを作成することができます。 モデリングフラグは、マイニング構造列とマイニングモデル列の両方に定義できます。  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、次のモデリングフラグがサポートされています。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、次のモデリングフラグがサポートされています。  
   
  **NULL 以外**  
  属性列の値に null 値を含めることはできません。 モデルの学習プロセス中に、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] がこの属性列に NULL 値を検出した場合、エラーが発生します。 このフラグは、マイニング構造列に対して定義されています。  
@@ -31,7 +32,7 @@ ms.locfileid: "86969123"
  **MODEL_EXISTENCE_ONLY**  
  この属性列の値は、属性の有無ほど重要ではありません。 このフラグはマイニング モデル列で定義されます。  
   
- サード パーティのアルゴリズムによっては、別のモデリング フラグもサポートしている場合があります。 アルゴリズムでサポートされているモデリングフラグを確認するには、 **SUPPORTED_MODELING_FLAGS**スキーマ行セットを使用します。 また、サーバーのマイニング サービスに対してクエリを実行し、特定のアルゴリズムでサポートされているモデリング フラグを判別することもできます。 たとえば、次のクエリでは、現在のサーバー上の Microsoft 線形回帰アルゴリズムでサポートされているモデリング フラグが返されます。  
+ サード パーティのアルゴリズムによっては、別のモデリング フラグもサポートしている場合があります。 アルゴリズムでサポートされているモデリングフラグを確認するには、 **SUPPORTED_MODELING_FLAGS** スキーマ行セットを使用します。 また、サーバーのマイニング サービスに対してクエリを実行し、特定のアルゴリズムでサポートされているモデリング フラグを判別することもできます。 たとえば、次のクエリでは、現在のサーバー上の Microsoft 線形回帰アルゴリズムでサポートされているモデリング フラグが返されます。  
   
 ```  
 SELECT SUPPORTED_MODELING_FLAGS  
@@ -48,7 +49,7 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
   
  マイニングモデル列でのモデリングフラグを指定する構文の例については、「 [ALTER マイニング STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)」を参照してください。  
   
- マイニングモデル列の操作の詳細については、「[マイニングモデル列](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)」を参照してください。  
+ マイニングモデル列の操作の詳細については、「 [マイニングモデル列](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
@@ -58,7 +59,7 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  [DMX&#41; オペレーターリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)   
  [DMX&#41; 構文表記規則を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)   
  [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   

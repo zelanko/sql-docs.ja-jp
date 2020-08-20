@@ -1,4 +1,5 @@
 ---
+description: 列の照合順序の設定または変更
 title: 列の照合順序の設定または変更 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/05/2019
@@ -13,12 +14,12 @@ ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06e96206160557eaaa71d3b44dd6960182b47a20
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c57021e300168a5e912dfce4ce1e0c62f728dfd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85694974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465614"
 ---
 # <a name="set-or-change-the-column-collation"></a>列の照合順序の設定または変更
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -75,7 +76,7 @@ ms.locfileid: "85694974"
         
     詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。
   
--   [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 詳細については、「[列の変更 (データベース エンジン)](../../relational-databases/tables/modify-columns-database-engine.md#SSMSProcedure)」を参照してください。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 詳細については、「[列の変更 (データベース エンジン)](../../relational-databases/tables/modify-columns-database-engine.md#SSMSProcedure)」を参照してください。  
   
 -   **管理オブジェクト (SMO) の** Column.Collation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロパティ。  
   

@@ -1,4 +1,5 @@
 ---
+description: テーブルおよび列に対するセマンティック検索の有効化
 title: テーブルおよび列に対するセマンティック検索の有効化 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 49691cea038a121ac27bdea729e3646e3375889f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c891b2089225de1560a8371440524846b7a96163
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465016"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>テーブルおよび列に対するセマンティック検索の有効化
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -258,16 +259,16 @@ GO
   
 |言語|LCID|  
 |--------------|----------|  
-|German|1031|  
+|ドイツ語|1031|  
 |英語 (米国)|1033|  
-|French|1036|  
-|Italian|1040|  
+|フランス語|1036|  
+|イタリア語|1040|  
 |ポルトガル語 (ブラジル)|1046|  
-|Russian|1049|  
-|Swedish|1053|  
+|ロシア語|1049|  
+|スウェーデン語|1053|  
 |英語 (英国)|2057|  
 |ポルトガル語 (ポルトガル)|2070|  
-|Spanish|3082|  
+|スペイン語|3082|  
   
 ###  <a name="determine-which-document-types-can-be-indexed"></a><a name="doctypes"></a> どのドキュメントの種類でインデックス作成ができるかを判断する  
  カタログ ビュー [sys.fulltext_document_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) のクエリを実行します。  

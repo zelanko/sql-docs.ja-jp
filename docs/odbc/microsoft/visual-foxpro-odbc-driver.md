@@ -1,4 +1,5 @@
 ---
+description: Visual FoxPro ODBC ドライバー
 title: Visual FoxPro ODBC ドライバー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 27359133-dd41-478f-8902-996022deb845
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7bfe59fd2b4a5b290fe34c3496ac4a76aeaaad76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c5e7e9ccd0e71b8fe798b1b8f1cca7a7c3097d1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466274"
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC ドライバー
 Microsoft Visual FoxPro は、データベース構築とアプリケーション開発を行うための強力なオブジェクト指向環境です。 Microsoft Visual FoxPro ODBC ドライバーを使用すると、アプリケーションは、Open Database Connectivity (ODBC) インターフェイスを使用して、Visual FoxPro およびそれ以前のバージョンの FoxPro のデータを開いたり、クエリを実行したり、更新したりすることができます。  

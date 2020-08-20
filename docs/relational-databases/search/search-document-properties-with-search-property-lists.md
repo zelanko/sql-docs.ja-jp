@@ -1,4 +1,5 @@
 ---
+description: 検索プロパティ リストを使用したドキュメント プロパティの検索
 title: 検索プロパティ リストを使用したドキュメント プロパティの検索
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: daead13f4a3069966d1ede9aa677c47c8a784099
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4938844b0014745dd50060b0e1da43b4e574a20e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464968"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>検索プロパティ リストを使用したドキュメント プロパティの検索
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -189,7 +190,7 @@ GO
   
 2.  **[データベース]** を展開し、データベースを展開します。  
   
-3.  **[ストレージ]** を展開します。  
+3.  **[記憶域]** を展開します。  
   
 4.  **[検索プロパティ リスト]** を展開して、検索プロパティ リストを表示します。  
   
