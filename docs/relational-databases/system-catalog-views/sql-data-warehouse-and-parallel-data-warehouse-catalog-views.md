@@ -1,4 +1,5 @@
 ---
+description: SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)
 title: カタログ ビュー
 titleSuffix: Azure SQL Data Warehouse and Parallel Data Warehouse
 ms.date: 10/29/2019
@@ -12,12 +13,12 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 258c08acbccc80a90a03b70f5f586960aa763f02
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 8682f7d5549389ff98d20862ce86f6d177b3116e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197296"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486515"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)
 
@@ -25,7 +26,7 @@ ms.locfileid: "86197296"
 
  このトピックでは、およびカタログビューの一覧を示し [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ます。  
   
-## <a name="sssdw-and-sspdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] カタログビュー  
+## <a name="sssdw-and-sspdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] カタログビュー  
  次のカタログビューは、との両方に適用され [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ます。  
   
  [pdw_column_distribution_properties &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-column-distribution-properties-transact-sql.md)  
@@ -60,7 +61,7 @@ ms.locfileid: "86197296"
   
  [pdw_table_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md) 
 
-## <a name="sssdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]カタログビュー
+## <a name="sssdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] カタログビュー
 
  次のカタログビューはにのみ適用され [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ます。
 
@@ -77,7 +78,7 @@ ms.locfileid: "86197296"
  [workload_management_workload_groups &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest) 
 
 
-## <a name="sspdw-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]カタログビュー
+## <a name="sspdw-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] カタログビュー
 
  次のカタログビューはにのみ適用され [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ます。
 

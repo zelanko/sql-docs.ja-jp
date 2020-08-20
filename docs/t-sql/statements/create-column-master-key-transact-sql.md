@@ -1,4 +1,5 @@
 ---
+description: CREATE COLUMN MASTER KEY (Transact-SQL)
 title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 02d57df3e018e558f5e8a42a63647aeefdff77ff
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3e6b80b2737517e0d78a5ca4adbd1c66e619fc8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488067"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -94,7 +95,7 @@ key_path
   
 -   **プロバイダー名:** MSSQL_CERTIFICATE_STORE  
   
-    **キーのパスの形式:** *CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
+    **キー パスの形式:** *CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
   
      各値の説明:  
   
@@ -117,7 +118,7 @@ key_path
   
 -   **プロバイダー名:** MSSQL_CSP_PROVIDER  
   
-    **キーのパスの形式:** *ProviderName*/*KeyIdentifier*  
+    **キー パスの形式:** *ProviderName*/*KeyIdentifier*  
   
     各値の説明:  
   
@@ -135,12 +136,12 @@ key_path
   
 -   **プロバイダー名:** MSSQL_CNG_STORE  
   
-    **キーのパスの形式:** *ProviderName*/*KeyIdentifier*  
+    **キー パスの形式:** *ProviderName*/*KeyIdentifier*  
   
     各値の説明:  
   
     *ProviderName*  
-    列マスター キー ストアのキー ストレージ プロバイダー (KSP) の名前。Cryptography: Next Generation (CNG) API が実装されています。 キー ストアとして HSM を使用する場合、プロバイダー名は HSM ベンダー提供の KSP の名前にする必要があります。 クライアント コンピューターにプロバイダーをインストールする必要があります。  
+    キー ストレージ プロバイダー (KSP) の名前。列マスター キー ストアの場合、Cryptography: Next Generation (CNG) API を実装しています。 キー ストアとして HSM を使用する場合、プロバイダー名は HSM ベンダー提供の KSP の名前にする必要があります。 クライアント コンピューターにプロバイダーをインストールする必要があります。  
   
     *KeyIdentifier*  
     キー ストア内のキーの識別子。列マスター キーとして使用されます。  
@@ -153,7 +154,7 @@ key_path
 
 -   **プロバイダー名:** AZURE_KEY_STORE  
   
-    **キーのパスの形式:** *KeyUrl*  
+    **キー パスの形式:** *KeyUrl*  
   
     各値の説明:  
   
@@ -165,9 +166,8 @@ ENCLAVE_COMPUTATIONS
 
 *signature*  
 "*キーのパス*" のデジタル署名と列マスター キーでの ENCLAVE_COMPUTATIONS の設定の結果であるバイナリ リテラル。 署名には、ENCLAVE_COMPUTATIONS が指定されているかどうかが反映されます。 この署名は、承認されていないユーザーが符号付きの値を変更できないようにします。 Always Encrypted 対応のクライアント ドライバーでは、署名が検証されて、署名が無効な場合はアプリケーションにエラーが返されます。 署名は、クライアント側のツールを使用して生成されている必要があります。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。
-  
-  
-## <a name="remarks"></a>解説  
+
+## <a name="remarks"></a>解説
 
 データベースに列暗号化キー メタデータ エントリを作成する前、および Always Encrypted を使用してデータベース内の列を暗号化する前に、列マスター キー メタデータ エントリを作成します。 メタデータ内の列マスター キー エントリには、実際の列マスター キーは含まれません。 列マスター キーは、(SQL Server の外部にある) 外部列キー ストアに格納する必要があります。 メタデータ内のキー ストア プロバイダー名と列マスター キー パスは、クライアント アプリケーションに対して有効である必要があります。 クライアント アプリケーションでは、列マスター キーを使用して、列暗号化キーの暗号化を解除する必要があります。 列暗号化キーは、列マスター キーで暗号化されています。 また、クライアント アプリケーションでは、暗号化された列のクエリを実行する必要があります。
 

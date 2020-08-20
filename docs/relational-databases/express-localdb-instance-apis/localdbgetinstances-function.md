@@ -1,4 +1,5 @@
 ---
+description: LocalDBGetInstances 関数
 title: LocalDBGetInstances 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7804207c887d95a719575406cfc85ae78d1bd7f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de9e71560a66fb376d6aab2a6e334173be311aca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765228"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486911"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 関数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ HRESULT LocalDBGetInstances(
  Outputこの関数から制御が戻るときに、ユーザーのワークステーション上の名前付き LocalDB インスタンスと既定の LocalDB インスタンスの両方の名前が含まれています。  
   
  *lpdwNumberOfInstances*  
- [入力/出力]入力時には、 *pInstanceNames*バッファー内のインスタンス名のスロット数が格納されます。 出力時には、ユーザーのワークステーションで見つかった LocalDB インスタンスの数が含まれます。  
+ [入力/出力]入力時には、 *pInstanceNames* バッファー内のインスタンス名のスロット数が格納されます。 出力時には、ユーザーのワークステーションで見つかった LocalDB インスタンスの数が含まれます。  
   
 ## <a name="returns"></a>戻り値  
  S_OK  
@@ -70,7 +71,7 @@ HRESULT LocalDBGetInstances(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../../relational-databases/sql-server-express-localdb-reference.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目  

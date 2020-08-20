@@ -1,4 +1,5 @@
 ---
+description: データベースからの DAC の抽出
 title: データベースからの DAC の抽出 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d4c45a6b720fde31618f384bcc2df2cceacc4102
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 52d895380cb76a094b46787b1cbc16cfac6ce39f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487198"
 ---
 # <a name="extract-a-dac-from-a-database"></a>データベースからの DAC の抽出
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +67,7 @@ ms.locfileid: "85781689"
   
  **[次回からこのページを表示しない]** : 今後このページを表示しないようにするには、このチェック ボックスをオンにします。  
   
- **[次へ >]** : **[方法の選択]** ページに進みます。  
+ **[次へ >]**: **[方法の選択]** ページに進みます。  
   
  **[キャンセル]** : データベースからデータ層アプリケーションを抽出せずにウィザードを終了します。  
   
@@ -101,11 +102,11 @@ ms.locfileid: "85781689"
   
  **[概要]** : 選択したオプションの概要が **[DAC のプロパティ]** の下に表示されます。 検証の結果は **[DAC オブジェクト]** の下に表示されます。 検証の結果には、次の 3 種類があります。  
   
--   **[DAC に正常に含まれるオブジェクト]** : これらのオブジェクトとその依存関係はサポートされており、DAC に正常に含めることができます。  
+-   **[DAC に正常に含まれるオブジェクト]**: これらのオブジェクトとその依存関係はサポートされており、DAC に正常に含めることができます。  
   
--   **[DAC に含まれるオブジェクト (警告あり)]** : これらのオブジェクトはサポートされていますが、DAC でサポートされていない他のオブジェクトに依存しています。  
+-   **[DAC に含まれるオブジェクト (警告あり)]**: これらのオブジェクトはサポートされていますが、DAC でサポートされていない他のオブジェクトに依存しています。  
   
--   **[DAC に含まれないオブジェクト]** : これらのオブジェクトはサポートされていないため、DAC を正常に抽出する前にデータベースから削除する必要があります。  
+-   **[DAC に含まれないオブジェクト]**: これらのオブジェクトはサポートされていないため、DAC を正常に抽出する前にデータベースから削除する必要があります。  
   
  検証プロセスでは、複数レベルで依存関係の確認が行われます。 たとえば、あるストアド プロシージャがサポートされていない CLR データ型を使用するテーブルに依存している場合、そのストアド プロシージャは **[DAC に含まれるオブジェクト (警告あり)]** の下に表示されます。  
   
@@ -160,7 +161,7 @@ $extractionunit.Description = $description
 $extractionunit.Extract($dacpacPath)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

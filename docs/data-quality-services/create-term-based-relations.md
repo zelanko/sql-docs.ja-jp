@@ -1,4 +1,5 @@
 ---
+description: 用語ベースのリレーションの作成
 title: 用語ベースのリレーションの作成
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b6b0a4fe9786e47ec8352ce829be628c11bea928
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 29d8da0efeb42d554353fa25395b3058e82e3dbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487856"
 ---
 # <a name="create-term-based-relations"></a>用語ベースのリレーションの作成
 
@@ -62,7 +63,7 @@ ms.locfileid: "85882580"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  用語ベースのリレーションを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="create-term-based-relations"></a><a name="Create"></a>用語ベースのリレーションを作成する  
+##  <a name="create-term-based-relations"></a><a name="Create"></a> 用語ベースのリレーションを作成する  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
