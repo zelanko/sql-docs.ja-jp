@@ -1,4 +1,5 @@
 ---
+description: ServerNetworkProtocolProperty クラス
 title: ServerNetworkProtocolProperty クラス
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e548826432fb19263c7a54cb84109cf4731f9eb7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a9185e085dd3fe871fcf81e152f5704ed94fb89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488386"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>ServerNetworkProtocolProperty クラス
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85888673"
   
 -   現在のプロパティに対するフラグの設定  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

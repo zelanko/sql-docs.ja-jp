@@ -1,4 +1,5 @@
 ---
+description: SetStartMode メソッド (SqlService クラス)
 title: SetStartMode メソッド (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 15cfa1eddcd9a32b51984d3833c288fc006d395b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b60886ac53fc31a2c0a0da469ace5adfdb1b1d74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488348"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>SetStartMode メソッド (SqlService クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,24 +42,24 @@ object.SetStartMode(StartMode)
   
 #### <a name="parameters"></a>パラメーター  
  *StartMode*  
- サービスインスタンスの開始モードを指定する**uint32**値。  
+ サービスインスタンスの開始モードを指定する **uint32** 値。  
   
  有効な値は次のとおりです。  
   
  値 = 0。 (Boot)。デバイス ドライバーがオペレーティング システム ローダーによって開始されます。 この値は、ドライバー サービスに対してのみ指定できます。  
   
- 値 = 1。 システムデバイスドライバーが**Ioinitsystem**メソッドによって開始されました。 この値は、ドライバー サービスに対してのみ指定できます。  
+ 値 = 1。 システムデバイスドライバーが **Ioinitsystem** メソッドによって開始されました。 この値は、ドライバー サービスに対してのみ指定できます。  
   
  値 = 2。 (Automatic)。システムの起動時に、サービス コントロール マネージャーによってサービスが自動的に開始されます。  
   
- 値 = 3。 Manual-プロセスが**startservice**メソッドを呼び出すときに、コンピューターマネージャーによって開始されるサービス。  
+ 値 = 3。 Manual-プロセスが **startservice** メソッドを呼び出すときに、コンピューターマネージャーによって開始されるサービス。  
   
  値 = 4。 (Disabled)。サービスを開始できません。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  **Uint32**値。サービスが正常に変更された場合は0、要求がサポートされていない場合は1になります。 それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>関連項目  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
