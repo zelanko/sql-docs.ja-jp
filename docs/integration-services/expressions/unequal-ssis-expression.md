@@ -1,4 +1,5 @@
 ---
+description: '!= (等しくない) (SSIS 式)'
 title: '!= (等しくない) (SSIS 式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f0b5ac96de291ac5fb9d452bd6ad8a10a9832f5f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7149d9e82243d1bd377fd4e7f75c2ce16edd2947
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484345"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (等しくない) (SSIS 式)
 
@@ -44,7 +45,7 @@ expression1 != expression2
 ## <a name="result-types"></a>戻り値の型  
  DT_BOOL  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  比較する式のいずれかが NULL の場合、比較結果は NULL になります。 両方の式が NULL の場合も、結果は NULL になります。  
   
  設定する式の *expression1* と *expression2*は、次のいずれかのルールに従う必要があります。  

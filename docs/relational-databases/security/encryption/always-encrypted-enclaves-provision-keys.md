@@ -1,4 +1,5 @@
 ---
+description: エンクレーブ対応キーをプロビジョニングする
 title: エンクレーブ対応キーをプロビジョニングする | Microsoft Docs
 ms.custom: ''
 ms.date: 10/01/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0ac3a5c0f7f1752fe26581db1f14f25e2d157508
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 13e6fd165c65aa8aeaed4394ec91a17c82b72097
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482238"
 ---
 # <a name="provision-enclave-enabled-keys"></a>エンクレーブ対応キーをプロビジョニングする
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -46,7 +47,7 @@ SQL Server Management Studio 18.3 以降では、以下のプロビジョニン�
 > 現在、[Always Encrypted ウィザード](always-encrypted-wizard.md)では、エンクレーブ対応キーの生成はサポートされていません。 ただし、最初に上記のダイアログを使用してエンクレーブ対応キーを作成した後、ウィザードを実行するときに、暗号化する列に対して既存のエンクレーブ対応の列暗号化を選択することができます。
 
 ### <a name="provision-enclave-enabled-column-master-keys-with-the-new-column-master-key-dialog"></a>[新しい列マスター キー] ダイアログを使用してエンクレーブ対応の列マスター キーをプロビジョニングする
-エンクレーブ対応の列マスター キーをプロビジョニングするには、「[[新しい列マスター キー] ダイアログを使用して列マスター キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)」の手順に従います。 必ず、 **[エンクレーブ計算を許可する]** を選択します。 次のスクリーンショットをご覧ください。
+エンクレーブ対応の列マスター キーをプロビジョニングするには、「[[新しい列マスター キー] ダイアログを使用して列マスター キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)」の手順に従います。 必ず、**[エンクレーブ計算を許可する]** を選択します。 次のスクリーンショットをご覧ください。
 
 ![エンクレーブ計算を許可する](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
@@ -54,13 +55,13 @@ SQL Server Management Studio 18.3 以降では、以下のプロビジョニン�
 > **[エンクレーブ計算を許可する]** チェック ボックスは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに正しく初期化されたセキュリティで保護されたエンクレーブが含まれている場合にのみ表示されます。 詳しくは、[Always Encrypted のエンクレーブの種類の構成](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)に関する記事をご覧ください。
 
 > [!TIP]
-> 列マスター キーがエンクレーブ対応かどうかを確認するには、オブジェクト エクスプローラーでキーを右クリックし、 **[プロパティ]** を選択します。 キーがエンクレーブ対応の場合は、 **[エンクレーブ計算: 許可]** と、キーのプロパティを示すウィンドウに表示されます。 または、[sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md) ビューを使用することもできます。
+> 列マスター キーがエンクレーブ対応かどうかを確認するには、オブジェクト エクスプローラーでキーを右クリックし、**[プロパティ]** を選択します。 キーがエンクレーブ対応の場合は、 **[エンクレーブ計算: 許可]** と、キーのプロパティを示すウィンドウに表示されます。 または、[sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md) ビューを使用することもできます。
 
 ### <a name="provision-enclave-enabled-column-encryption-keys-with-the-new-column-encryption-key-dialog"></a>[新しい列の暗号化キー] ダイアログを使用してエンクレーブ対応の列暗号化キーをプロビジョニングする
 エンクレーブ対応の列暗号化キーをプロビジョニングするには、「[[新しい列の暗号化キー] ダイアログを使用して列の暗号化キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)」の手順に従います。 列マスター キーを選択するときは、エンクレーブ対応であることを確認します。
 
 > [!TIP]
-> 列暗号化キーがエンクレーブ対応かどうかを確認するには、オブジェクト エクスプローラーでキーを右クリックし、 **[プロパティ]** を選択します。 キーがエンクレーブ対応の場合は、 **[エンクレーブ計算: 許可]** と、キーのプロパティを示すウィンドウに表示されます。
+> 列暗号化キーがエンクレーブ対応かどうかを確認するには、オブジェクト エクスプローラーでキーを右クリックし、**[プロパティ]** を選択します。 キーがエンクレーブ対応の場合は、 **[エンクレーブ計算: 許可]** と、キーのプロパティを示すウィンドウに表示されます。
 
 ## <a name="provision-enclave-enabled-keys-using-powershell"></a>PowerShell を使用してエンクレーブ対応キーをプロビジョニングする
 PowerShell を使用してエンクレーブ対応キーをプロビジョニングするには、SqlServer PowerShell モジュール バージョン 21.1.18179 以降が必要です。

@@ -1,4 +1,5 @@
 ---
+description: 検索用のワード ブレーカーとステミング機能の構成と管理 (SQL Server)
 title: 検索用のワード ブレーカーとステミング機能の構成と管理
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8ae5dbc9652ed690edc6964db38cc8e0d5536625
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7a33d02cb6ca1cbc100a458d254cf962d2d0d34b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629529"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482300"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>検索用のワード ブレーカーとステミング機能の構成と管理 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85629529"
 
 -   **単語の境界 (単語区切り) の検出**。 *ワード ブレーカー* が、言語の語彙の規則に基づいて単語の境界を検出し、個々の単語を識別します。 各単語 ( *トークン*ともいいます) は、サイズを縮小するために圧縮された表現でフルテキスト インデックスに挿入されます。
 
--   **動詞の活用 (ステミング)** 。 *ステミング機能* はその言語の規則に基づいて特定の語の変化形を生成します (たとえば、"running"、"ran"、"runner" は、"run" という語の変化形です)。
+-   **動詞の活用 (ステミング)**。 *ステミング機能* はその言語の規則に基づいて特定の語の変化形を生成します (たとえば、"running"、"ran"、"runner" は、"run" という語の変化形です)。
 
 ## <a name="word-breakers-and-stemmers-are-language-specific"></a>言語固有のワード ブレーカーとステマー
 

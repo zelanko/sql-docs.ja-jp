@@ -1,4 +1,5 @@
 ---
+description: Attunity の Change Data Capture Designer for Oracle
 title: Attunity の Change Data Capture Designer for Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4b2bcc1153aa1e90d38a7aedf83d176d34294cd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b8f93db32602579feaff3a3230739f6fa2621fd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484719"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Attunity の Change Data Capture Designer for Oracle
 
@@ -50,16 +51,16 @@ ms.locfileid: "86918682"
   
 -   [Change Data Capture Designer for Oracle by Attunity 操作ガイド](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
   
--   [インスタンスの作成のための SQL Server 接続](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
+-   [インスタンスの作成のための SQL サーバー接続](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
 -   [高度な接続プロパティ](../../integration-services/change-data-capture/advanced-connection-properties.md)  
   
--   [スクリプトを実行するための Oracle 資格情報](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+-   [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
 -   [Oracle の補足ログ スクリプト](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)  
   
 -   [CDC インスタンス配置スクリプト](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)  
   
--   [CDC デザイナーで使用する SQL Server 接続に必要なアクセス許可](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+-   [CDC デザイナーで使用する SQL Server 接続に必要な権限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

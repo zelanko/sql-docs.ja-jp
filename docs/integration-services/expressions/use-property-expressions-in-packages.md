@@ -1,4 +1,5 @@
 ---
+description: パッケージでプロパティ式を使用する
 title: パッケージでプロパティ式を使用する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c02dfe0e479873b50399a2dfcdbe8ae20a984f1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8d0df4ebde316b640314f37788ccc39475fd8686
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484376"
 ---
 # <a name="use-property-expressions-in-packages"></a>パッケージでプロパティ式を使用する
 

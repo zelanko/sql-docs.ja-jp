@@ -1,4 +1,5 @@
 ---
+description: 構文 (SSIS)
 title: 構文 (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50e6319c78bedccb0b34cd48a2d09e6b6cc0ba3a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3262135632cc10036bf03c93edd448de16fbbc79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484398"
 ---
 # <a name="syntax-ssis"></a>構文 (SSIS)
 
@@ -65,7 +66,7 @@ ms.locfileid: "86913504"
 ###### <a name="logical-operators"></a>論理演算子  
  式言語では、論理 NOT 演算子の ! 文字がサポートされています。 Transact-SQL では、! 演算子は関係演算子のセットに組み込まれています。 たとえば、Transact-SQL には、> 演算子および !> 演算子が用意されています。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 式言語では、! 演算子とその他の演算子の組み合わせはサポートされません。 たとえば、! と > を結合して !> にすることはできません。 ただし、この式言語では、等しくない比較を表すために、!= の文字の組み合わせがあらかじめサポートされています。  
   
-###### <a name="equality-operators"></a>等価演算子  
+###### <a name="equality-operators"></a>等値演算子  
  式エバリュエーターの文法では、== 等価演算子が用意されています。 この演算子は、Transact-SQL での = 演算子、および C# での == 演算子と同等です。  
   
 ## <a name="functions"></a>関数  
