@@ -1,4 +1,5 @@
 ---
+description: ODBC 入力先を使用したデータ読み込み
 title: ODBC 入力先を使用したデータ読み込み | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: abbe91428fdf30d5b598063831f400b69c18f859
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fbcb0fa1f7618a7cf6d2a78b18d9193e09f81f02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495847"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>ODBC 入力先を使用したデータ読み込み
 
@@ -40,7 +41,7 @@ ms.locfileid: "86904847"
   
     -   **[テーブル名 - バッチ]** バッチモードで動作する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、 **[バッチ サイズ]** を設定できます。  
   
-    -   **[テーブル名 - 行ごと]** : 一度に 1 行ずつ、入力先に各行を挿入する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、データは一度に 1 行ずつ、テーブルに読み込まれます。  
+    -   **[テーブル名 - 行ごと]**: 一度に 1 行ずつ、入力先に各行を挿入する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、データは一度に 1 行ずつ、テーブルに読み込まれます。  
   
 7.  **[テーブル名またはビュー名]** フィールドで、使用できるテーブルまたはビューを一覧のデータベースから選択するか、正規表現を入力してテーブルを指定します。この一覧には、最初の 1,000 テーブルのみが表示されます。 データベースに 1,000 を超えるテーブルがある場合、テーブル名の最初の文字を入力するか、名前の一部の入力にワイルドカード (*) を使用すると、目的のテーブルが表示されます。  
   

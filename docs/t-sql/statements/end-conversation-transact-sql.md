@@ -1,4 +1,5 @@
 ---
+description: END CONVERSATION (Transact-SQL)
 title: END CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16fa18b79361cf6d448d7d75b63208e882ac0b36
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 76784d22919fc492c715ffa876c825e14794a511
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496723"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +65,7 @@ END CONVERSATION conversation_handle
  WITH CLEANUP  
  正常に完了できなかったメッセージ交換の一方の側のメッセージとカタログ ビュー エントリをすべて削除します。 メッセージ交換の相手側にはクリーンアップは通知されません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、メッセージ交換エンドポイントが削除され、転送キューにあるメッセージ交換のすべてのメッセージおよびサービス キューにあるメッセージ交換のすべてのメッセージも削除されます。 管理者は、このオプションを使用して、正常に完了できなかったメッセージ交換のメッセージを削除できます。 たとえば、リモート サービスが永久的に削除された場合、管理者は WITH CLEANUP を使ってこのサービスに対するメッセージを削除できます。 WITH CLEANUP は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] アプリケーションのコードでは使用しないでください。 受信エンドポイントでメッセージの受信を確認する前に END CONVERSATION WITH CLEANUP が実行されると、送信エンドポイントからそのメッセージが再び送信されます。 これにより、ダイアログが再実行される可能性があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  メッセージ交換を終了すると、指定した *conversation_handle* が属するメッセージ交換グループがロックされます。 メッセージ交換の終了時、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってこのメッセージ交換のすべてのメッセージがサービス キューから削除されます。  
   
  メッセージ交換が終了した後、アプリケーションではそのメッセージ交換のメッセージを送受信できなくなります。 メッセージ交換を完了するには、メッセージ交換の両方の参加者が END CONVERSATION を呼び出す必要があります。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] が、メッセージ交換の相手側から終了ダイアログ メッセージまたはエラー メッセージを受信しなかった場合は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] から相手側に、メッセージ交換が終了したことが通知されます。 この場合、このメッセージ交換のメッセージ交換ハンドルが無効になる一方、メッセージ交換のエンドポイントはアクティブなまま残り、この状態はリモート サービスをホストするインスタンスからメッセージの受信確認が返されるまで継続されます。  

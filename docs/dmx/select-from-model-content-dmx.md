@@ -1,4 +1,5 @@
 ---
+description: '[モデルから] を選択し &lt; &gt; ます。コンテンツ (DMX)'
 title: '[モデルから] を選択し &lt; &gt; ます。コンテンツ (DMX) |Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15294c85fc119aff6b8c3cc43b1a99a6b79dc141
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 02e95e2620799e596bc5deaeb203bbc8c2c1a4e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496292"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>[モデルから] を選択し &lt; &gt; ます。コンテンツ (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -45,13 +46,13 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *式 (expression)*  
  任意。 スカラー値を返す式。  
   
-## <a name="remarks"></a>注釈  
- **SELECT FROM** _\<model>_ **です。CONTENT**ステートメントでは、各アルゴリズムに固有のコンテンツが返されます。 たとえば、カスタムアプリケーションでのアソシエーションルールモデルのすべてのルールの説明を使用することができます。 SELECT FROM を使用でき** \<model> ます。** モデルの NODE_RULE 列の値を返すコンテンツステートメント。  
+## <a name="remarks"></a>解説  
+ **SELECT FROM** _\<model>_ **です。CONTENT**ステートメントでは、各アルゴリズムに固有のコンテンツが返されます。 たとえば、カスタムアプリケーションでのアソシエーションルールモデルのすべてのルールの説明を使用することができます。 SELECT FROM を使用でき ** \<model> ます。** モデルの NODE_RULE 列の値を返すコンテンツステートメント。  
   
  次の表に、マイニングモデルコンテンツに含まれる列を示します。  
   
 > [!NOTE]  
->  アルゴリズムでは、コンテンツを正しく表現するために、列の解釈が異なる場合があります。 各アルゴリズムのマイニングモデルコンテンツの説明、および各種類のモデルのマイニングモデルコンテンツの解釈とクエリの方法に関するヒントについては、「[マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」を参照してください。  
+>  アルゴリズムでは、コンテンツを正しく表現するために、列の解釈が異なる場合があります。 各アルゴリズムのマイニングモデルコンテンツの説明、および各種類のモデルのマイニングモデルコンテンツの解釈とクエリの方法に関するヒントについては、「 [マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」を参照してください。  
   
 |コンテンツ行セット列|説明|  
 |---------------------------|-----------------|  
@@ -88,10 +89,10 @@ WHERE NODE_TYPE = 1
 |-----------------|----------------|  
 |TM_DecisionTree|0|  
   
- 次のクエリでは、 **Isdescendant**関数を使用して、前のクエリで返されたノードの直下の子を返します。  
+ 次のクエリでは、 **Isdescendant** 関数を使用して、前のクエリで返されたノードの直下の子を返します。  
   
 > [!NOTE]  
->  NODE_NAME の値は文字列であるため、サブ select ステートメントを使用して、 **Isdescendant**関数の引数として NODE_ID を返すことはできません。  
+>  NODE_NAME の値は文字列であるため、サブ select ステートメントを使用して、 **Isdescendant** 関数の引数として NODE_ID を返すことはできません。  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   

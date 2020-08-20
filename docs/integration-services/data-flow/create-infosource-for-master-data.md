@@ -1,4 +1,5 @@
 ---
+description: '[マスター データのインフォソースの作成]'
 title: '[マスター データのインフォソースの作成] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9178637db42329ba6a46644fdf2595e2bb7541bf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8077abe2c92b9ce724b8e40613dde65ec5335f37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495904"
 ---
 # <a name="create-infosource-for-master-data"></a>[マスター データのインフォソースの作成]
 
@@ -41,7 +42,7 @@ ms.locfileid: "86923558"
   
 5.  **[インフォソースの作成]** ダイアログ ボックスで、 **[マスター データ]** を選択して **[OK]** をクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **インフォオブジェクトの名前**  
  新しいインフォソースの基にするインフォオブジェクトの名前を入力します。  
   

@@ -1,4 +1,5 @@
 ---
+description: dm_user_db_resource_governance (Transact-sql)
 title: dm_user_db_resource_governance (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2019
@@ -20,12 +21,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: f853f1778a62b345accff745aade5fb5608322fd
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 869a5d802e36e74c22a88e599065b04df35c62a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498259"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>dm_user_db_resource_governance (Transact-sql)
 
@@ -43,15 +44,15 @@ ms.locfileid: "84627399"
 |**slo_name**|nvarchar|ハードウェアの生成を含むサービスレベル目標。|
 |**dtu_limit**|INT|データベースの DTU 制限 (vCore の場合は NULL)。|
 |**cpu_limit**|INT|データベースの vCore の制限 (DTU データベースの場合は NULL)。|
-|**min_cpu**|tinyint|ユーザーワークロードリソースプールの MIN_CPU_PERCENT 値。 「[リソースプールの概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)」を参照してください。|
-|**max_cpu**|tinyint|ユーザーワークロードリソースプールの MAX_CPU_PERCENT 値。 「[リソースプールの概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)」を参照してください。|
-|**cap_cpu**|tinyint|ユーザーワークロードリソースプールの CAP_CPU_PERCENT 値。 「[リソースプールの概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)」を参照してください。|
+|**min_cpu**|tinyint|ユーザーワークロードリソースプールの MIN_CPU_PERCENT 値。 「 [リソースプールの概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)」を参照してください。|
+|**max_cpu**|tinyint|ユーザーワークロードリソースプールの MAX_CPU_PERCENT 値。 「 [リソースプールの概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)」を参照してください。|
+|**cap_cpu**|tinyint|ユーザーワークロードリソースプールの CAP_CPU_PERCENT 値。 「 [リソースプールの概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)」を参照してください。|
 |**min_cores**|smallint|内部使用のみです。|
-|**max_dop**|smallint|ユーザーワークロードグループの MAX_DOP 値。 「[ワークロードグループの作成](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)」を参照してください。|
-|**min_memory**|INT|ユーザーワークロードリソースプールの MIN_MEMORY_PERCENT 値。 「[リソースプールの概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)」を参照してください。|
-|**max_memory**|INT|ユーザーワークロードリソースプールの MAX_MEMORY_PERCENT 値。 「[リソースプールの概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)」を参照してください。|
+|**max_dop**|smallint|ユーザーワークロードグループの MAX_DOP 値。 「 [ワークロードグループの作成](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)」を参照してください。|
+|**min_memory**|INT|ユーザーワークロードリソースプールの MIN_MEMORY_PERCENT 値。 「 [リソースプールの概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)」を参照してください。|
+|**max_memory**|INT|ユーザーワークロードリソースプールの MAX_MEMORY_PERCENT 値。 「 [リソースプールの概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)」を参照してください。|
 |**max_sessions**|INT|ユーザーワークロードグループで許可されているセッションの最大数。|
-|**max_memory_grant**|INT|ユーザーワークロードグループの REQUEST_MAX_MEMORY_GRANT_PERCENT 値。 「[ワークロードグループの作成](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)」を参照してください。|
+|**max_memory_grant**|INT|ユーザーワークロードグループの REQUEST_MAX_MEMORY_GRANT_PERCENT 値。 「 [ワークロードグループの作成](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)」を参照してください。|
 |**max_db_memory**|INT|内部使用のみです。|
 |**govern_background_io**|bit|内部使用のみです。|
 |**min_db_max_size_in_mb**|bigint|データファイルの最小 max_size 値 (MB 単位)。 「 [Sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)」を参照してください。|
@@ -94,7 +95,7 @@ ms.locfileid: "84627399"
 
 このビューには、VIEW DATABASE STATE 権限が必要です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 Azure SQL Database でのリソースガバナンスの詳細については、「 [SQL Database リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server)」を参照してください。
 

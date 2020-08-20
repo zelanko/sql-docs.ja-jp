@@ -1,4 +1,5 @@
 ---
+description: sys.dm_broker_forwarded_messages (Transact-SQL)
 title: dm_broker_forwarded_messages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5576376d-6364-417a-8475-aa770e060845
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2040eb35dbc44e319737525b74d6c23ccb77ff83
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4f4f5c7d504176d983eafa5996fbfe1a4f5a1ff5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498397"
 ---
 # <a name="sysdm_broker_forwarded_messages-transact-sql"></a>sys.dm_broker_forwarded_messages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "85893943"
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Service Broker 関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   

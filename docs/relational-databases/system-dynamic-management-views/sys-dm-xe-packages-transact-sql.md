@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xe_packages (Transact-SQL)
 title: dm_xe_packages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ae80e8db245c5a70db238a17b5d09bb682b09b1
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 98c43952212ffd101bfc822f68c39a1e04bce150
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498267"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,14 +46,14 @@ ms.locfileid: "86942354"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  拡張イベント エンジンに登録されているパッケージでは、イベント、イベントの発生時に実行できるアクション、およびイベント データの同期処理および非同期処理の対象が公開されます。  
   
  これらのパッケージは、プロセスのアドレス空間に動的に読み込むことができます。 パッケージが読み込まれるときに、拡張イベントエンジンによって公開されるすべてのオブジェクトが登録されます。  
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-| ソース | ターゲット | リレーションシップ |
+| ソース | 終了 | リレーションシップ |
 | ---- | -- | ------------ |  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|多対一|  
   

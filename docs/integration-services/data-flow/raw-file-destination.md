@@ -1,4 +1,5 @@
 ---
+description: RAW ファイル変換先 (Raw File destination)
 title: RAW ファイル変換先 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93b992e9931c2e62f359beeca98d7d53e46a95eb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9cf51661228dcb9b6dd5e42ff900b3770b540898
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495784"
 ---
 # <a name="raw-file-destination"></a>RAW ファイル変換先 (Raw File destination)
 
@@ -61,7 +62,7 @@ ms.locfileid: "86916046"
   
 |オプション|説明|  
 |------------|-----------------|  
-|Append|既存のファイルにデータを追加します。 追加するデータのメタデータは、ファイル形式と一致している必要があります。|  
+|追加する|既存のファイルにデータを追加します。 追加するデータのメタデータは、ファイル形式と一致している必要があります。|  
 |常に作成する|常に新しいファイルを作成します。|  
 |1 回だけ作成する|新しいファイルを 1 つ作成します。 ファイルが存在する場合、コンポーネントは失敗します。|  
 |切り捨てと追加|既存のファイルを切り捨て、データをそのファイルに書き込みます。 追加するデータのメタデータは、ファイル形式と一致している必要があります。|  

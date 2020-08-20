@@ -1,4 +1,5 @@
 ---
+description: BEGIN DIALOG CONVERSATION (Transact-SQL)
 title: BEGIN DIALOG CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -30,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ae198ad14426a71c8c86838c15e60ce0464cebf
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 980563b7aa2b8a169f271a40f97f1f49295e7a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496963"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -108,7 +109,7 @@ WHERE database_id = DB_ID() ;
 > [!NOTE]  
 >  同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにあるサービス間で交換されるメッセージは暗号化されません。 ただし、メッセージ交換を行うサービスが異なるデータベースにある場合は、暗号化したメッセージ交換を行うために、データベースのマスター キーと暗号化の証明書が必要になります。 これらを用意しておくと、メッセージ交換中にデータベースの 1 つが別のインスタンスに移動した場合でも、メッセージ交換を続行できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  すべてのメッセージはメッセージ交換の一部になります。 したがって、発信先サービスにメッセージを送信するには、発信側サービスで、発信先サービスとのメッセージ交換を開始する必要があります。 BEGIN DIALOG CONVERSATION ステートメントで指定する情報は、手紙の住所に似ています。[!INCLUDE[ssSB](../../includes/sssb-md.md)] ではこの情報を使用して、正しいサービスにメッセージを配信します。 TO SERVICE 句で指定するサービスは、メッセージの送信先アドレスです。 FROM SERVICE 句で指定するサービスは、メッセージの返信先アドレスです。  
   
  メッセージ交換の発信先で BEGIN DIALOG CONVERSATION を呼び出す必要はありません。 発信側からメッセージ交換の最初のメッセージが届くと、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって発信先データベースにメッセージ交換が作成されます。  

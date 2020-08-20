@@ -1,4 +1,5 @@
 ---
+description: SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 title: SET REMOTE_PROC_TRANSACTIONS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d72a643f1bc9774ebfa412ff50db21b8800e934e
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: cf6aea4c14daf325e6b1a4f9af398118ae5591be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496446"
 ---
 # <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ SET REMOTE_PROC_TRANSACTIONS { ON | OFF }
   
  REMOTE_PROC_TRANSACTIONS が OFF の場合、ローカル トランザクションの一部としてリモート ストアド プロシージャは呼び出されません。 リモート ストアド プロシージャによる変更は、ストアド プロシージャの完了時にコミットまたはロールバックされます。 リモート ストアド プロシージャを呼び出した接続によって実行される後続の COMMIT TRANSACTION または ROLLBACK TRANSACTION ステートメントは、ストアド プロシージャによる処理に影響を与えません。  
   
- REMOTE_PROC_TRANSACTIONS オプションは互換性のためのオプションであり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_addserver**でリモート サーバーとして定義された** のインスタンスに対してリモート ストアド プロシージャを呼び出す場合にのみ、影響を及ぼします。 このオプションは、インスタンス上でストアド プロシージャを実行する分散クエリには適用されません。このインスタンスは、**sp_addlinkedserver** でリンク サーバーとして定義されたインスタンスです。  
+ REMOTE_PROC_TRANSACTIONS オプションは互換性のためのオプションであり、**sp_addserver** でリモート サーバーとして定義された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対してリモート ストアド プロシージャを呼び出す場合にのみ、影響を及ぼします。 このオプションは、インスタンス上でストアド プロシージャを実行する分散クエリには適用されません。このインスタンスは、**sp_addlinkedserver** でリンク サーバーとして定義されたインスタンスです。  
   
  SET REMOTE_PROC_TRANSACTIONS は、解析時ではなく実行時に設定されます。  
   

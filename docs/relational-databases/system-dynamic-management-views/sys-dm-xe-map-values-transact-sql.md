@@ -1,4 +1,5 @@
 ---
+description: dm_xe_map_values (Transact-sql)
 title: dm_xe_map_values (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c9bfff654bf29326e5bb5c781215b4da7a7e28d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46f94a90a63c64e8a2b841337b875256154e2e22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498325"
 ---
 # <a name="sysdm_xe_map_values-transact-sql"></a>dm_xe_map_values (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85898619"
  
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(256)**|マップの名前。 名前はローカルシステム全体で一意です。 NULL 値は許可されません。|  
+|name|**nvarchar (256)**|マップの名前。 名前はローカルシステム全体で一意です。 NULL 値は許可されません。|  
 |object_package_guid|**uniqueidentifier**|マップを含むパッケージの GUID。 NULL 値は許可されません。|  
 |map_key|**int**|内部キー値。 NULL 値は許可されません。|  
 |map_value|**nvarchar (3072)**|キー値の説明。 NULL 値は許可されません。|  
@@ -43,12 +44,12 @@ ms.locfileid: "85898619"
   
 ### <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|From|終了|リレーションシップ|  
+|ソース|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |dm_xe_map_values.object_package_guid<br /><br /> dm_xe_map_values.name|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|多対一| 
   
 ## <a name="see-also"></a>関連項目  
- [動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   
 

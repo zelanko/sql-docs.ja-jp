@@ -1,4 +1,5 @@
 ---
+description: 列エクスポート変換
 title: 列エクスポート変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 450d7856924f5a7f8292ce65b1184aeb657ff40e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d7741de0a6a1d0195344613330bffd3f0c0c62d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495730"
 ---
 # <a name="export-column-transformation"></a>列エクスポート変換
 
@@ -38,7 +39,7 @@ ms.locfileid: "86919371"
 ## <a name="append-and-truncate-options"></a>追加オプションと切り捨てオプション  
  次の表では、追加オプションと切り捨てオプションが結果に与える影響について説明します。  
   
-|Append|Truncate|ファイルが存在するか|[結果]|  
+|追加する|Truncate|ファイルが存在するか|結果|  
 |------------|--------------|-----------------|-------------|  
 |False|False|いいえ|新しいファイルが作成され、そのファイルにデータが書き込まれます。|  
 |True|False|いいえ|新しいファイルが作成され、そのファイルにデータが書き込まれます。|  
@@ -78,7 +79,7 @@ ms.locfileid: "86919371"
 ## <a name="export-column-transformation-editor-columns-page"></a>[列エクスポート変換エディター] ([列] ページ)
   **[列エクスポート変換エディター]** ダイアログ ボックスの **[列]** ページを使用すると、ファイルに抽出するデータ フロー内の列を指定できます。 列エクスポート変換でファイルにデータを追加するか、既存のファイルを上書きするかどうかを指定できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[列の抽出]**  
  テキストまたは画像データを持つ入力列の一覧から選択します。 すべての行には、 **[列の抽出]** と **[ファイル パス列]** の定義が含まれます。  
   
@@ -97,7 +98,7 @@ ms.locfileid: "86919371"
 ## <a name="export-column-transformation-editor-error-output-page"></a>[列エクスポート変換エディター] ([エラー出力] ページ)
   **[列エクスポート変換エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラーをどのように処理するかを指定できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[入力または出力]**  
  出力の名前を表示します。 名前をクリックすると、ビューを展開して列を含めることができます。  
   

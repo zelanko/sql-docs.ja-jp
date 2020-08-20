@@ -1,4 +1,5 @@
 ---
+description: ODBC 接続マネージャー
 title: ODBC 接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2b362f60e2fb38ce9a9eda476dd4b1077055da18
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a70375f6ad677dcec18fe0606d5a09cec8960f70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496101"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 接続マネージャー
 
@@ -69,7 +70,7 @@ ms.locfileid: "86914165"
   
  **削除**  
  接続を選択し、 **[削除]** ボタンを使用して削除します。  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

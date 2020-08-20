@@ -1,4 +1,5 @@
 ---
+description: DROP SERVER ROLE (Transact-SQL)
 title: DROP SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f55027afe2452acd6b9eb3f0dd39f4212fe08081
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 40e9be1315ee89990d6cfec8dc5e6ac7042bdbc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929245"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496736"
 ---
 # <a name="drop-server-role-transact-sql"></a>DROP SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -45,7 +46,7 @@ DROP SERVER ROLE role_name
  *role_name*  
  サーバーから削除するユーザー定義サーバー ロールを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  セキュリティ保護可能なリソースを所有するユーザー定義サーバー ロールは、サーバーから削除できません。 セキュリティ保護可能なリソースを所有するユーザー定義サーバー ロールを削除するには、まず、セキュリティ保護可能なリソースの所有権を転送するか、リソースを削除する必要があります。  
   
  メンバーを含むユーザー定義サーバー ロールは削除できません。 メンバーを含むユーザー定義サーバー ロールを削除するには、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) を使用して先にロールのメンバーを削除しておく必要があります。  

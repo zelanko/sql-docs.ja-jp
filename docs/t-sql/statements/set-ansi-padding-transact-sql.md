@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_PADDING (Transact-SQL)
 title: SET ANSI_PADDING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2017
@@ -24,12 +25,12 @@ ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29ae3ce5c5398a6ac8006f8b3af7ceb0477576fb
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: be98a76b74f9c4b9882c55de8b18ea045a1be85c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496506"
 ---
 # <a name="set-ansi_padding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -52,7 +53,9 @@ SET ANSI_PADDING { ON | OFF }
 SET ANSI_PADDING ON
 ```
 
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
  **char**、**varchar**、**binary**、および **varbinary** データ型で定義された列は、定義されたサイズを持ちます。  
   
  この設定は新しい列の定義にだけ影響します。 列が作成された後は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では列の作成時の設定に基づいて値が格納されます。 この設定を後で変更しても、既存の列には影響がありません。  
@@ -74,7 +77,7 @@ SET ANSI_PADDING ON
   
 既定では、SET ANSI_PADDING は ON に設定されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、接続時に自動的に ANSI_PADDING が ON に設定されます。 この構成は、ODBC データ ソースまたは ODBC 接続属性で定義でき、接続前にアプリケーションで設定される OLE DB 接続プロパティでも定義できます。 DB-Library アプリケーションからの接続に対しては、既定で SET ANSI_PADDING は OFF に設定されています。  
   
- SET ANSI_PADDING 設定は、**nchar**、**nvarchar**、**ntext**、**text**、**image**、**varbinary(max)** 、**varchar(max)** 、および **nvarchar(max)** データ型には影響しません。 これらの値では、常に SET ANSI_PADDING ON の動作が示されます。 つまり、末尾の空白と 0 は切り捨てられません。  
+ SET ANSI_PADDING 設定は、**nchar**、**nvarchar**、**ntext**、**text**、**image**、**varbinary(max)**、**varchar(max)**、および **nvarchar(max)** データ型には影響しません。 これらの値では、常に SET ANSI_PADDING ON の動作が示されます。 つまり、末尾の空白と 0 は切り捨てられません。  
   
 ANSI_DEFAULTS が ON の場合は、ANSI_PADDING が有効になります。  
   

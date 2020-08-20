@@ -1,4 +1,5 @@
 ---
+description: Azure HDInsight Create Cluster Task
 title: Azure HDInsight Create Cluster Task | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3fff08c4259424319621127d3e91762beaa46885
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: f86a35316de80caa1a6db487518f0080f6097a17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472423"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496084"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight Create Cluster Task
 
@@ -43,7 +44,7 @@ ms.locfileid: "87472423"
 |AzureStorageConnection|既存の Azure ストレージ接続マネージャーを選ぶか、HDInsight クラスターに関連付けられている Azure ストレージ アカウントを参照する新しい接続マネージャーを作成します。|
 |SubscriptionId|HDInsight クラスターが作成されるサブスクリプションの ID を指定します。|
 |ResourceGroup|HDInsight クラスターが作成される Azure リソース グループを指定します。|
-|Location|HDInsight クラスターの場所を指定します。 クラスターは、指定された Azure ストレージ アカウントと同じ場所に作成する必要があります。|  
+|場所|HDInsight クラスターの場所を指定します。 クラスターは、指定された Azure ストレージ アカウントと同じ場所に作成する必要があります。|  
 |ClusterName|作成する HDInsight クラスターの名前を指定します。|  
 |ClusterSize|クラスターに作成するノードの数を指定します。|  
 |BlobContainer|HDInsight クラスターに関連付けられる既定のストレージ コンテナーの名前を指定します。|  

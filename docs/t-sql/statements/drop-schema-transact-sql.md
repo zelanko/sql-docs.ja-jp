@@ -1,4 +1,5 @@
 ---
+description: DROP SCHEMA (Transact-SQL)
 title: DROP SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -22,12 +23,12 @@ ms.assetid: 874aa29e-c8ad-41e4-a672-900fdc58f1f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bd04321eba4f590a20e61be24fb3756ad92277d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: f70e5b4c355414a284aaf6db1d64c7ed182cd35a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86481852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496835"
 ---
 # <a name="drop-schema-transact-sql"></a>DROP SCHEMA (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "86481852"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP SCHEMA  [ IF EXISTS ] schema_name  
@@ -61,12 +62,12 @@ DROP SCHEMA schema_name
  *schema_name*  
  データベースで認識されるスキーマの名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  削除するスキーマは、オブジェクトが含まれていないスキーマであることが必要です。 オブジェクトがスキーマに含まれている場合、DROP ステートメントは失敗します。  
   
  スキーマに関する情報は、[sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md) カタログ ビューで確認できます。  
   
- **注意** [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+ **注意事項** [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する CONTROL 権限、またはデータベースに対する ALTER ANY SCHEMA 権限が必要です。  
@@ -74,9 +75,9 @@ DROP SCHEMA schema_name
 ## <a name="examples"></a>例  
  次の例では、まず単一の `CREATE SCHEMA` ステートメントを実行し、 `Sprockets` が所有するスキーマ `Krishna` を作成します。次にテーブル `Sprockets.NineProngs` を作成した後、`SELECT` に対して `Anibal` 権限を許可し、`SELECT` に対して `Hung-Fu` 権限を拒否します。  
   
-```  
+```sql  
 CREATE SCHEMA Sprockets AUTHORIZATION Krishna   
-    CREATE TABLE NineProngs (source int, cost int, partnumber int)  
+    CREATE TABLE NineProngs (source INT, cost INT, partnumber INT)  
     GRANT SELECT TO Anibal   
     DENY SELECT TO [Hung-Fu];  
 GO  
@@ -84,7 +85,7 @@ GO
   
  次のステートメントでは、このスキーマを削除します。 先に、スキーマに含まれるテーブルを削除する必要があることに注意してください。  
   
-```  
+```sql  
 DROP TABLE Sprockets.NineProngs;  
 DROP SCHEMA Sprockets;  
 GO  

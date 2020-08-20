@@ -1,4 +1,5 @@
 ---
+description: IsNull (geometry データ型)
 title: IsNull (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7cb1cccba4c880fd2e92d707e51c8c4e324fba9c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 02e8775089f6e8112452ff2a0ff780bc9a848f31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497053"
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,14 +42,14 @@ ms.locfileid: "86555674"
   
  CLR の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  `IsNull` を使用して、**geometry** インスタンスが NULL かどうかをテストできます。 `IsNull` は、インスタンスが NULL でない場合は 0 を返しますが、NULL の場合は NULL を返します。  
   
  このメソッドは、主に SQL Server インフラストラクチャによって使用されます。インスタンスが NULL かどうかをテストするために `IsNull` を使用することはお勧めしません。  
   
 
 ## <a name="see-also"></a>参照  
- [Geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
 

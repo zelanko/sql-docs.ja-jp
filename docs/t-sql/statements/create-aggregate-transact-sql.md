@@ -1,4 +1,5 @@
 ---
+description: CREATE AGGREGATE (Transact-SQL)
 title: CREATE AGGREGATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2235751cc4c198a39a3e3c368f4d07f5451dedd7
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 46cca1e2e955b96a11d9be648f3f7ac7f042995b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380815"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496905"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,11 +81,11 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  現在のデータベースに既に作成されている CLR ユーザー定義型の名前です。 *udt_schema_name* を指定しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、型は現在のユーザーのスキーマに所属すると見なされます。  
   
- *assembly_name* [ **.** _class_name_ ]  
+ *assembly_name* [ **.**_class_name_ ]  
  ユーザー定義集計関数にバインドするアセンブリ、および必要に応じて、アセンブリが所属するスキーマの名前とユーザー定義集計を実装するアセンブリ内のクラス名を指定します。 アセンブリは、CREATE ASSEMBLY ステートメントを使用してデータベース内に作成されている必要があります。 *class_name* は有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子でなければならず、アセンブリに存在するクラスの名前と一致する必要があります。 C# など、クラスを記述するのに使用するプログラミング言語で名前空間を使用する場合、*class_name* には名前空間で修飾された名前を指定できます。 *class_name* を指定しない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*aggregate_name* と同じであると見なされます。  
   
-## <a name="remarks"></a>解説  
- 既定では、CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能はオフになっています。 マネージド コード モジュールを参照するデータベース オブジェクトを作成、変更、削除できますが、これらのモジュールのコードは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_configure[ を使用して ](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)clr enabled option[ を有効にしない限り ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) のインスタンスでは動作しません。  
+## <a name="remarks"></a>注釈  
+ 既定では、CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能はオフになっています。 マネージド コード モジュールを参照するデータベース オブジェクトを作成、変更、削除できますが、これらのモジュールのコードは、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) を有効にしない限り [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでは動作しません。  
   
  *assembly_name* とそのメソッドで参照されているアセンブリのクラスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでユーザー定義集計関数を実装するためのすべての要件を満たしている必要があります。 詳細については、「[CLR ユーザー定義集計](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)」を参照してください。  
   

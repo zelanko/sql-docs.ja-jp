@@ -1,4 +1,5 @@
 ---
+description: sys.dm_broker_activated_tasks (Transact-SQL)
 title: dm_broker_activated_tasks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 99e8e606ecddc6b57549947a1c72ba8115262bef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a09275a9b000ab673e187fdb2e1a47d35c1e548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498395"
 ---
 # <a name="sysdm_broker_activated_tasks-transact-sql"></a>sys.dm_broker_activated_tasks (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85893964"
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**調べる**|**int**|アクティブ化されたストアドプロシージャのセッションの ID。 NULLABLE.|  
+|**spid**|**int**|アクティブ化されたストアドプロシージャのセッションの ID。 NULLABLE.|  
 |**database_id**|**smallint**|キューが定義されているデータベースの ID。 NULLABLE.|  
 |**queue_id**|**int**|ストアドプロシージャがアクティブ化されたキューのオブジェクトの ID。 NULLABLE.|  
 |**procedure_name**|**nvarchar (650)**|アクティブ化されたストアドプロシージャの名前。 NULLABLE.|  
@@ -47,12 +48,12 @@ ms.locfileid: "85893964"
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|From|終了|リレーションシップ|  
+|ソース|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |dm_broker_activated_tasks。|dm_exec_sessions。 session_id|一対一|  
   
 ## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Service Broker 関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   

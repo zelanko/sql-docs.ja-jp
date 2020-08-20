@@ -1,4 +1,5 @@
 ---
+description: sys.dm_audit_actions (Transact-SQL)
 title: dm_audit_actions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1532cc75fdcfa10e92c8fa000ab069f3bc679b2
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f887261b4221da26c79b673d6c4a88f75f4e8645
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498408"
 ---
 # <a name="sysdm_audit_actions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "87394848"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**action_id**|**varchar (4)**|監査アクションの ID。 各監査レコードに書き込まれた**action_id**値に関連します。 NULL 値が許可されます。 監査グループの場合は NULL。|  
+|**action_id**|**varchar (4)**|監査アクションの ID。 各監査レコードに書き込まれた **action_id** 値に関連します。 NULL 値が許可されます。 監査グループの場合は NULL。|  
 |**action_in_log**|**bit**|アクションを監査ログに書き込むことができるかどうかを示します。 値は次のとおりです。<br /><br /> 1 = はい<br /><br /> 0 = いいえ|  
 |**name**|**sysname**|監査アクションまたはアクショングループの名前。 NULL 値は許可されません。|  
 |**class_desc**|**nvarchar(120)**|監査アクションが適用されるオブジェクトのクラス名。 には、サーバー、データベース、またはスキーマスコープオブジェクトのいずれかを指定できますが、スキーマオブジェクトは含まれません。 NULL 値は許可されません。|  
@@ -42,11 +43,11 @@ ms.locfileid: "87394848"
 |**containing_group_name**|**nvarchar(120)**|指定されたアクションを含む監査グループの名前。 Name の値がグループの場合は NULL になります。|  
   
 ## <a name="permissions"></a>アクセス許可  
- プリンシパルには**SELECT**権限が必要です。 既定では、これは Public に与えられます。  
+ プリンシパルには **SELECT** 権限が必要です。 既定では、これは Public に与えられます。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

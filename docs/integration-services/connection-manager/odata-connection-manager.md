@@ -1,4 +1,5 @@
 ---
+description: OData 接続マネージャー
 title: OData 接続マネージャー | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 788aaa50e7bf083a91a4c919708e0677fc190476
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 37ebb31c408d20708d6398be95a30883cceb04d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496102"
 ---
 # <a name="odata-connection-manager"></a>OData 接続マネージャー
 
@@ -34,12 +35,12 @@ ms.locfileid: "87472438"
   
 -   **ソリューション エクスプローラー** で **[接続マネージャー]** を右クリックし、 **[新しい接続マネージャー]** をクリックします。 **[接続マネージャーの種類]** の **[ODATA]** をクリックします。  
   
--   パッケージ デザイナーの下部にある **[接続マネージャー]** ペインを右クリックし、 **[新しい接続]** を選択します。 **[接続マネージャーの種類]** の **[ODATA]** をクリックします。  
+-   パッケージ デザイナーの下部にある **[接続マネージャー]** ペインを右クリックし、**[新しい接続]** を選択します。 **[接続マネージャーの種類]** の **[ODATA]** をクリックします。  
   
 ## <a name="connection-manager-authentication"></a>接続マネージャーの認証  
  OData 接続マネージャーでは、5 つの認証モードがサポートされています。  
   
--   [Windows 認証]  
+-   Windows 認証  
   
 -   基本認証 (ユーザー名とパスワードを使用)  
 
@@ -51,7 +52,7 @@ ms.locfileid: "87472438"
   
 匿名アクセスを使用するには、[Windows 認証] オプションを選択します。  
 
-Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続する場合、 **[Microsoft Online Services]** 認証オプションを使用することはできません。 また、多要素認証に構成されているオプションを使用することもできません。 現時点では、先進認証はサポートされていません。 
+Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続する場合、**[Microsoft Online Services]** 認証オプションを使用することはできません。 また、多要素認証に構成されているオプションを使用することもできません。 現時点では、先進認証はサポートされていません。 
   
 ### <a name="specifying-and-securing-credentials"></a>資格情報の指定とセキュリティ保護  
  OData サービスで基本認証が必要とされる場合は、 [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md)でユーザー名とパスワードを指定できます。 エディターに入力した値は、パッケージ内に保存されます。 パスワードの値は、パッケージの保護レベルに応じて暗号化されます。  
@@ -71,16 +72,16 @@ Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続�
 ## <a name="odata-connection-manager-editor"></a>[OData 接続マネージャー エディター]
   **[OData 接続マネージャー エディター]** ダイアログ ボックスを使用して、OData データ ソースへの接続を追加するか、既存の接続を編集します。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **接続マネージャー名**  
  接続マネージャーの名前です。  
   
  **サービス ドキュメントの場所**  
- OData サービスに対応する URL。 (例: https://services.odata.org/V3/Northwind/Northwind.svc/ )。  
+ OData サービスに対応する URL。 (例: https://services.odata.org/V3/Northwind/Northwind.svc/)。  
   
  **認証**  
 以下のオプションの 1 つを選択します。
--   **Windows 認証**。 匿名アクセスの場合は、このオプションを選択します。
+-   **Windows 認証** 匿名アクセスの場合は、このオプションを選択します。
 -   **基本認証** 
 -   **Microsoft Dynamics AX Online** (Dynamics AX Online の場合)
 -   **Microsoft Dynamics CRM Online** (Dynamics CRM Online の場合)
@@ -88,7 +89,7 @@ Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続�
 
 Windows 認証以外のオプションを選択する場合は、**ユーザー名**と**パスワード**を入力します。 
 
-Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続する場合、 **[Microsoft Online Services]** 認証オプションを使用することはできません。 また、多要素認証に構成されているオプションを使用することもできません。
+Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続する場合、**[Microsoft Online Services]** 認証オプションを使用することはできません。 また、多要素認証に構成されているオプションを使用することもできません。
 
  **[接続テスト]**  
  OData ソースへの接続をテストするには、このボタンをクリックします。  

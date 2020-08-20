@@ -1,4 +1,5 @@
 ---
+description: DROP AVAILABILITY GROUP (Transact-SQL)
 title: DROP AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 35639381335232acb6c7438321ec037f5aa0f83d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c47ca2a1697752068902a26d20322232648dc2f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484723"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496784"
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +67,7 @@ DROP AVAILABILITY GROUP group_name
   
 -   セカンダリ レプリカについては、**DROP AVAILABILITY GROUP** は緊急の目的だけに使用してください。 理由は、可用性グループを削除すると可用性グループがオフラインになるためです。 セカンダリ レプリカから可用性グループを削除した場合、プライマリ レプリカは、**OFFLINE** 状態が、クォーラム損失、強制フェールオーバー、または **DROP AVAILABILITY GROUP** コマンドのどの原因で発生したのかを特定できません。 スプリット ブレイン状況の発生を防ぐために、プライマリ レプリカは **RESTORING** 状態に遷移します。 詳細については、「 [動作方法: DROP AVAILABILITY GROUP の動作](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) 」(CSS SQL Server エンジニアのブログ) を参照してください。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  可用性グループの **ALTER AVAILABILITY GROUP** 権限、**CONTROL AVAILABILITY GROUP** 権限、**ALTER ANY AVAILABILITY GROUP** 権限、または **CONTROL SERVER** 権限が必要です。 ローカル サーバー インスタンスによってホストされていない可用性グループを削除するには、その可用性グループ上の **CONTROL SERVER** 権限または **CONTROL** 権限が必要です。  

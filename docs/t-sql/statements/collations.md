@@ -1,4 +1,5 @@
 ---
+description: COLLATE (Transact-SQL)
 title: COLLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/30/2019
@@ -19,12 +20,12 @@ ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab4b79abe293e01ac0087ea68363f7378d180a07
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: e6f5df8b371ded189d63095c86baeb417afe4ca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380875"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496939"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
@@ -54,7 +55,7 @@ COLLATE { <collation_name> | database_default }
 
 **database_default** COLLATE 句によって、現在のデータベースの照合順序が継承されます。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 COLLATE 句は、さまざまなレベルで指定できます。 コーディネートは次のとおりです。
 
@@ -154,7 +155,7 @@ Chiapas
 
 **COLLATE** を使用するその他の例については、「[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples)」の例「**G. データベースを作成し、照合順序名とオプションを指定する**」と「[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column)」の例「**V. 列の照合順序を変更する**」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
 - [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)
@@ -163,4 +164,4 @@ Chiapas
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
 - [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
-- [table データ型](../../t-sql/data-types/table-transact-sql.md)
+- [テーブル データ型](../../t-sql/data-types/table-transact-sql.md)

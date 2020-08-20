@@ -1,4 +1,5 @@
 ---
+description: Azure Data Lake Store ファイル システム タスク
 title: Azure Data Lake Store ファイル システム タスク | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
@@ -11,12 +12,12 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
-ms.openlocfilehash: 9460730ae4756bb2862de751bc72cad649e38298
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 27ee71393bfbad6c824de25bd95c9ca465cf2a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496080"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store ファイル システム タスク
 
@@ -30,7 +31,7 @@ Azure Data Lake Store ファイル システム タスクは、[SQL Server Integ
 
 ## <a name="configure-the-azure-data-lake-store-file-system-task"></a>Azure Data Lake Store ファイル システム タスクの構成
 
-パッケージに Azure Data Lake Store ファイル システム タスクを追加するには、SSIS ツールボックスからデザイナー キャンバスにドラッグします。 次に、タスクをダブルクリックするか、右クリックして **[編集]** を選択し、 **[Azure Data Lake Store File System Task Editor]\(Azure Data Lake Store ファイル システム タスク エディター\)** ダイアログ ボックスを開きます。
+パッケージに Azure Data Lake Store ファイル システム タスクを追加するには、SSIS ツールボックスからデザイナー キャンバスにドラッグします。 次に、タスクをダブルクリックするか、右クリックして **[編集]** を選択し、**[Azure Data Lake Store File System Task Editor]\(Azure Data Lake Store ファイル システム タスク エディター\)** ダイアログ ボックスを開きます。
 
 **[操作]** プロパティでは、実行するファイル システム操作を指定します。 以下の操作のいずれかを選択します。
 

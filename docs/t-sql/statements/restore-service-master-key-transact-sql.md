@@ -1,4 +1,5 @@
 ---
+description: RESTORE SERVICE MASTER KEY (Transact-SQL)
 title: RESTORE SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8565124ea527b5c9de885a5b342d6368b99149d6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8eab13b0089b289dd7a6835b20c17b4fbc2ee60c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483130"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496682"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
  FORCE  
  データが失われる可能性があっても、強制的にサービス マスター キーを置換します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  サービス マスター キーを復元するとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、現在のサービス マスター キーで暗号化されているすべてのキーとシークレットの暗号化が解除され、次にそれらがバックアップ ファイルから読み込まれたサービス マスター キーで暗号化されます。  
   
  暗号化解除が 1 つでも失敗した場合、復元は失敗します。 FORCE オプションを使用するとエラーを無視できますが、暗号化を解除できないデータが失われる可能性があります。  
