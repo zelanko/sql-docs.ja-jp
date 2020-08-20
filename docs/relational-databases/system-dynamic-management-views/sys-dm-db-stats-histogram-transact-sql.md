@@ -21,16 +21,16 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 783a7033e9db323ea774b4456c2159670104fecb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: de7e998ff91295c62d28efbcdbde4a40c3bfdf14
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482005"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646152"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 現在のデータベース内の指定されたデータベースオブジェクト (テーブルまたはインデックス付きビュー) の統計ヒストグラムを返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 `DBCC SHOW_STATISTICS WITH HISTOGRAM` に似ています。
 
@@ -63,7 +63,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |distinct_range_rows |**bigint** |ヒストグラム区間内 (上限は除く) にある個別の列値を持つ行の予測数。 |
 |average_range_rows |**real** |上限を除く、ヒストグラムのステップ内で重複する列値を持つ行の平均数 ( `RANGE_ROWS / DISTINCT_RANGE_ROWS` の場合 `DISTINCT_RANGE_ROWS > 0` )。 |
   
- ## <a name="remarks"></a>解説  
+ ## <a name="remarks"></a>注釈  
  
  の resultset は `sys.dm_db_stats_histogram` 、と同様の情報を返し `DBCC SHOW_STATISTICS WITH HISTOGRAM` ます。また、、、およびも含まれ `object_id` `stats_id` `step_number` ます。
 

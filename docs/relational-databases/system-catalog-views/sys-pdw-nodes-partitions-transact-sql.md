@@ -13,12 +13,12 @@ ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b13e5da130d7b122f9b79e1996ea3fdb0792e25a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f015d17f401cb2457d3e5cf657ce85342c1628e
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475389"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646272"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>pdw_nodes_partitions (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "88475389"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|partition_id|**bigint**|パーティションの id。 データベース内で一意です。|  
-|object_id|**int**|このパーティションが所属するオブジェクトの id。 すべてのテーブルまたはビューは、少なくとも1つのパーティションで構成されます。|  
-|index_id|**int**|このパーティションが所属するオブジェクト内のインデックスの id。|  
+|partition_id|**bigint**|パーティションの ID。 データベース内で一意です。|  
+|object_id|**int**|このパーティションが所属するオブジェクトの ID です。 すべてのテーブルまたはビューは、少なくとも1つのパーティションで構成されます。|  
+|index_id|**int**|このパーティションが所属するオブジェクト内のインデックスの ID です。|  
 |partition_number|**int**|所有しているインデックスまたはヒープ内の1から始まるパーティション番号。 の場合 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 、この列の値は1です。|  
 |hobt_id|**bigint**|このパーティションの行を含むデータヒープまたは B ツリー (HoBT) の ID。|  
 |rows|**bigint**|このパーティション内の行の概数です。 |  
@@ -69,6 +69,9 @@ JOIN sys.objects AS o
 WHERE o.name = 'myTable'  
 ORDER BY o.name, pnp.index_id, pnp.partition_id;  
 ```    
+
+>[!TIP]
+> Synapse SQL のパフォーマンスを向上させるには、永続的なユーザーテーブルで**pdw_table_mappings**の代わりに**pdw_permanent_table_mappings**を使用することを検討してください。 詳細については **[、「pdw_permanent_table_mappings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** 」を参照してください。
   
 ## <a name="see-also"></a>参照  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

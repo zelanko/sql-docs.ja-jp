@@ -21,15 +21,16 @@ ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc11ec8d075d52643f06eb91f0a55a1b6948c88c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23a58092954d1026071a469676e3fbfcc6628158
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455247"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646344"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 ユーザー メモリ最適化テーブルを格納するために使用される各内部メモリ最適化テーブルの行が含まれます。 各ユーザー テーブルは、1 つ以上の内部テーブルに対応します。 1 つのテーブルは、コア データ ストレージで使用されます。 その他の内部テーブルは、メモリ最適化テーブルの一時的な列ストア インデックスおよび行外 (LOB) ストレージなどの機能をサポートするために使用されます。
  
