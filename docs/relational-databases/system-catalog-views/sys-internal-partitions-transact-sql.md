@@ -14,15 +14,16 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: abfff1a5f8a9ed447566e5f6a91fe23c51654890
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7e6f8d248ef4d000c98a664148a5a5b33f0786b
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88401458"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645939"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>internal_partitions (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   ディスクベーステーブルの列ストアインデックスの内部データを追跡する行セットごとに1行のデータを返します。 これらの行セットは、列ストアインデックスの内部にあり、削除された行、行グループのマッピング、およびデルタストアの行グループを追跡します。 各テーブルパーティションのデータを追跡します。各テーブルには、少なくとも1つのパーティションがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列ストアインデックスを再構築するたびに、行セットを再作成します。   
   

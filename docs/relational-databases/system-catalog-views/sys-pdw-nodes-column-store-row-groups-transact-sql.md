@@ -13,12 +13,12 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8f323ccec312a1d2e11d72b582d1b574c923591f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9cabbcd9a47bbea4eaaf2d01bca1044c66ff9112
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447886"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646029"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>pdw_nodes_column_store_row_groups (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "88447886"
 |**total_rows**|**bigint**|行グループに物理的に格納されている行の合計。 削除されたものの、まだ保存されているものもあります。 行グループ内の行の最大数は 1048576 (16 進数 FFFFF) です。|  
 |**deleted_rows**|**bigint**|削除対象としてマークされている行グループに物理的に格納されている行の数。<br /><br /> デルタ行グループの場合は常に0です。|  
 |**size_in_bytes**|**int**|この行グループ内のすべてのページの合計サイズ (バイト単位)。 このサイズには、メタデータまたは共有辞書を格納するために必要なサイズは含まれていません。|  
-|**pdw_node_id**|**int**|ノードの一意の id [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|  
-|**distribution_id**|**int**|ディストリビューションの一意の id。|
+|**pdw_node_id**|**int**|ノードの一意の ID [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|  
+|**distribution_id**|**int**|ディストリビューションの一意の ID。|
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  クラスター化または非クラスター化列ストアインデックスを持つ各テーブルの列ストア行グループごとに1行の値を返します。  
   
  行グループに含まれる行の数と行グループのサイズを決定するには、 **pdw_nodes_column_store_row_groups** を使用します。  
@@ -107,6 +107,8 @@ FROM sys.pdw_nodes_column_store_row_groups rg
 GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```
+>[!TIP]
+> Synapse SQL のパフォーマンスを向上させるには、永続的なユーザーテーブルで**pdw_table_mappings**の代わりに**pdw_permanent_table_mappings**を使用することを検討してください。 詳細については **[、「pdw_permanent_table_mappings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** 」を参照してください。
   
 ## <a name="see-also"></a>参照  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   

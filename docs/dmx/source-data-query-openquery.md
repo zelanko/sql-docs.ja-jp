@@ -1,4 +1,5 @@
 ---
+description: '&lt;ソースデータクエリ &gt; -OPENQUERY'
 title: OPENQUERY (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a075f314af0eb8ea2eb0bc941ada0bc38e22fec3
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fd654bf63cfbb961b6aaa3c6369358db25371846
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500878"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;ソースデータクエリ &gt; -OPENQUERY
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -34,17 +35,17 @@ OPENQUERY(<named datasource>, <query syntax>)
  *クエリ構文*  
  行セットを返すクエリ構文です。  
   
-## <a name="remarks"></a>注釈  
- **OPENQUERY**は、データソースのアクセス許可をサポートすることにより、外部データにアクセスするより安全な方法を提供します。 接続文字列はデータソースに格納されるため、管理者はデータソースのプロパティを使用してデータへのアクセスを管理できます。 データソースの詳細については、「[サポートされるデータソース &#40;SSAS-多次元&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)」を参照してください。  
+## <a name="remarks"></a>解説  
+ **OPENQUERY** は、データソースのアクセス許可をサポートすることにより、外部データにアクセスするより安全な方法を提供します。 接続文字列はデータソースに格納されるため、管理者はデータソースのプロパティを使用してデータへのアクセスを管理できます。 データソースの詳細については、「 [サポートされるデータソース &#40;SSAS-多次元&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)」を参照してください。  
   
- サーバーで使用できるデータソースの一覧を取得するには、 **MDSCHEMA_INPUT_DATASOURCES**スキーマ行セットに対してクエリを実行します。 **MDSCHEMA_INPUT_DATASOURCES**の使用方法の詳細については、「 [MDSCHEMA_INPUT_DATASOURCES 行セット](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126243(v=sql.110))」を参照してください。  
+ サーバーで使用できるデータソースの一覧を取得するには、 **MDSCHEMA_INPUT_DATASOURCES** スキーマ行セットに対してクエリを実行します。 **MDSCHEMA_INPUT_DATASOURCES**の使用方法の詳細については、「 [MDSCHEMA_INPUT_DATASOURCES 行セット](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126243(v=sql.110))」を参照してください。  
   
  次の DMX クエリを使用して、現在の Analysis Services データベースのデータソースの一覧を返すこともできます。  
   
  `SELECT * FROM $system.MDSCHEMA_INPUT_DATASOURCES`  
   
 ## <a name="examples"></a>例  
- 次の例では、データベースに既に定義されている MyDS データソースを使用して、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースへの接続を作成 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] し、 **vtargetmail**ビューに対してクエリを実行します。  
+ 次の例では、データベースに既に定義されている MyDS データソースを使用して、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースへの接続を作成 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] し、 **vtargetmail** ビューに対してクエリを実行します。  
   
 ```  
 OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')  

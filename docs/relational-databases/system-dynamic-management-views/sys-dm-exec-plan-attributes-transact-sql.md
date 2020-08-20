@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46c41c4bf06082e36df1ea48165520afbc4a3210
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddfa137e0efd93bfad2a59a4fc2c8da2c189cdc3
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481983"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618114"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -84,7 +84,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 ## <a name="set-options"></a>SET オプション  
  同じコンパイル済みプランのコピーは、 **set_options** 列の値によってのみ異なる場合があります。 これは、異なる接続が同じクエリに対して異なる SET オプションセットを使用していることを示します。 通常、異なるオプション セットを使用することは望ましくありません。異なるオプション セットを使用すると、余分なコンパイルが発生し、プランの再利用が減少して、キャッシュ内にプランの複数のコピーが存在することが原因でプラン キャッシュが増加します。  
@@ -95,7 +95,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |オプション|値|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
-|Parallel Plan|2|  
+|ParallelPlan<br /><br /> プランの並列化オプションが変更されたことを示します。|2|  
 |FORCEPLAN|4|  
 |CONCAT_NULL_YIELDS_NULL|8|  
 |ANSI_WARNINGS|16|  
@@ -122,7 +122,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |オプション|値|  
 |------------|-----------|  
-|None|0|  
+|なし|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  

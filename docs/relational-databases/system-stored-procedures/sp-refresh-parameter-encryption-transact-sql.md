@@ -20,15 +20,16 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1af6c8584c9190bd4611eed4875ec146b6f3656b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 64ca46d46ac648fdebeb8c028df312472e4f5d58
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446913"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645066"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 現在のデータベースのスキーマバインドされていないストアドプロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベースレベルの DDL トリガー、またはサーバーレベルの DDL トリガーのパラメーターの Always Encrypted メタデータを更新します。 
 
@@ -56,7 +57,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 0 (成功) または0以外の数値 (失敗)
 
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 次の場合、モジュールのパラメーターの暗号化メタデータが古くなる可能性があります。   
 * モジュールが参照しているテーブル内の列の暗号化プロパティが更新されました。 たとえば、列が削除され、同じ名前の新しい列が存在しますが、別の暗号化の種類、暗号化キー、または暗号化アルゴリズムが追加されています。  

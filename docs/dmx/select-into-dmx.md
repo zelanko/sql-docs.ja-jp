@@ -1,4 +1,5 @@
 ---
+description: SELECT INTO (DMX)
 title: SELECT INTO (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a0a245d152ddd9946142f5f115ee1db64ee5998b
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e7bc85d20ab3c1c087b6352d16777b2bb7d7dcd0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500873"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -45,7 +46,7 @@ FROM <existing model>
  *既存のモデル*  
  コピーする既存のモデルの名前。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  既存のモデルがトレーニングされている場合は、このステートメントの実行時に新しいモデルが自動的に処理されます。 学習済みではない場合、新しいモデルは処理されないままとなります。  
   
  **SELECT INTO**ステートメントは、既存のモデルの構造が新しいモデルのアルゴリズムと互換性がある場合にのみ機能します。 このため、このステートメントは、同じアルゴリズムに基づくモデルを迅速に作成およびテストする場合に最も役立ちます。 アルゴリズムの種類を変更する場合、新しいアルゴリズムでは、既存のモデル内の各列のデータ型をサポートする必要があります。または、モデルの処理時にエラーが発生する可能性があります。  
@@ -53,7 +54,7 @@ FROM <existing model>
  **WITH ドリルスルー**句を使用すると、新しいマイニングモデルでドリルスルーを実行できます。 ドリルスルーは、モデルの作成時にのみ可能です。  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>例 1: モデルのパラメーターを変更する  
- 次の例では、 `TM_Clustering` 「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」で作成した既存のマイニングモデルに基づいて、新しいマイニングモデルを作成します。 新しいモデルでは、CLUSTER_COUNT パラメーターが変更され、最大5つのクラスターが新しいモデルに存在するようになりました。 これに対して、既存のモデルでは既定値 10 が使用されています。  
+ 次の例では、 `TM_Clustering` 「 [基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」で作成した既存のマイニングモデルに基づいて、新しいマイニングモデルを作成します。 新しいモデルでは、CLUSTER_COUNT パラメーターが変更され、最大5つのクラスターが新しいモデルに存在するようになりました。 これに対して、既存のモデルでは既定値 10 が使用されています。  
   
 ```  
 SELECT * INTO [New_Clustering]  

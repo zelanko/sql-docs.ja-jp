@@ -1,4 +1,5 @@
 ---
+description: トランザクション - 可用性グループとデータベース ミラーリング
 title: 'トランザクション: 可用性グループとデータベース ミラーリング'
 descripton: Learn about cross-database and distributed transaction support for SQL Server Always On availability groups and database mirroring.
 ms.custom: seo-lt-2019
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 87a2d5dc4e4c7109db09217e975c1a8c8c9b9434
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a738c1eb308ccafa0c744a66d069cbefee46ad26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500939"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>トランザクション - 可用性グループとデータベース ミラーリング
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ Microsoft 分散トランザクション コーディネーター (MSDTC また�
 
 SQL Server 2016 では、トランザクションの 1 つ以上のデータベースが可用性グループに含まれる場合、分散トランザクションを使用する機能を導入します。 SQL Server 2016 より前の分散トランザクションでは、可用性グループのデータベースはサポートされていませんでした。 SQL Server 2016 では、データベースごとにリソース マネージャーを登録できます。 この新機能を使用すると、分散トランザクションでデータベースを可用性グループに含めることができます。
   
- 次の要件が満たされる必要があります。  
+ 次の要件を満たす必要があります。  
   
 -   可用性グループは、Windows Server 2012 R2 以降で実行されている必要があります。 Windows Server 2012 R2 の場合は、[https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973) で入手できる KB3090973 の更新プログラムをインストールする必要があります。  
   
@@ -91,6 +92,6 @@ SQL Server 2016 では、トランザクションの 1 つ以上のデータベ�
 >  この記事で承認されていない DTC とデータベース ミラーリングの使用や DTC と可用性グループの使用はサポートされていません。  これは、DTC に関係しない部分はサポートされないことを意味するものではありません。ただし、分散トランザクションの不適切な使用により発生する問題はサポートされません。  
   
 ## <a name="next-steps"></a>次のステップ  
- [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+ [Always On 可用性グループ:相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6ad5bdd6b8fbf294a1c4f45a825910ec6a82af2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f746b454b18de7d88ca4c42d049eb058f671ba8e
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452804"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512298"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>手順 2:Main リスト ボックスを初期化する
 グローバルレコードとレコードセットオブジェクトを宣言するには、Form1 の (宣言) に次のコードを挿入します。  
@@ -46,11 +46,11 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- このコードは、グローバルレコードとレコードセットオブジェクトをインスタンス化します。 レコードオブジェクトは、 `grec` ActiveConnection として指定された URL で開かれます。 URL が存在する場合は、それが開かれます。まだ存在しない場合は、作成されます。 " <https://servername/foldername/> " は、使用している環境の有効な URL に置き換える必要があることに注意してください。  
+ このコードは、グローバルレコードとレコードセットオブジェクトをインスタンス化します。 レコードオブジェクトは、 `grec` ActiveConnection として指定された URL で開かれます。 URL が存在する場合は、それが開かれます。まだ存在しない場合は、作成されます。 は、 `https://servername/foldername/` 実際の環境の有効な URL に置き換える必要があることに注意してください。  
   
  レコードセットオブジェクトは、 `grs` レコードの子で開かれ `grec` ます。 次に、 `lstMain` URL に発行されたリソースのファイル名を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インターネット公開のシナリオ](../../../ado/guide/data/internet-publishing-scenario.md)   
  [手順 1: Visual Basic プロジェクトを設定する](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
  [手順 3:Fields リスト ボックスに値を設定する](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
