@@ -1,4 +1,5 @@
 ---
+description: dm_exec_background_job_queue (Transact-sql)
 title: dm_exec_background_job_queue (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -20,18 +21,19 @@ ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84be14f04a39f3697c6cf0bca87c5369cced2c48
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0e169cfdf49a4808f53796acc4a6c2923b722d54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011609"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454981"
 ---
 # <a name="sysdm_exec_background_job_queue-transact-sql"></a>dm_exec_background_job_queue (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   非同期 (バックグラウンド) 実行用にスケジュールされているクエリプロセッサジョブごとに1行の値を返します。  
   
-> **メモ** またはからこれを呼び出すに **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** は **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** 、 **dm_pdw_nodes_exec_background_job_queue**という名前を使用します。  
+> **注:** またはからこれを呼び出すに **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** は **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** 、 **dm_pdw_nodes_exec_background_job_queue**という名前を使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -47,15 +49,15 @@ ms.locfileid: "86011609"
 |**retry_count**|**smallint**|ジョブがキューから選択され、リソース不足またはその他の理由により再挿入された回数。|  
 |**in_progress**|**smallint**|ジョブが実行を開始したかどうかを示します。<br /><br /> 1 = 開始<br /><br /> 0 = 待機中|  
 |**session_id**|**smallint**|セッション識別子。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="remarks"></a>コメント  
- このビューは、統計の非同期更新ジョブに関する情報のみを返します。 統計の非同期更新の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。  
+## <a name="remarks"></a>解説  
+ このビューは、統計の非同期更新ジョブに関する情報のみを返します。 統計の非同期更新の詳細については、「 [統計](../../relational-databases/statistics/statistics.md)」を参照してください。  
   
  **Object_id4**を通じて**object_id1**の値は、ジョブ要求の種類によって異なります。 次の表は、それぞれのジョブの種類の列に関する説明です。  
   
@@ -75,9 +77,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [値](../../relational-databases/statistics/statistics.md)   
+ [統計](../../relational-databases/statistics/statistics.md)   
  [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  
   
   

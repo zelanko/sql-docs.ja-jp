@@ -1,4 +1,5 @@
 ---
+description: ADO の基礎
 title: ADO の基礎 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6571ee28b9b069613ecb6aa9df991751118ca74
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 02574be8fc8333e357e31fe1e1425d6e237871a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453774"
 ---
 # <a name="ado-fundamentals"></a>ADO の基礎
 ADO を使用すると、開発者は、OLE DB システムインターフェイスを使用して、さまざまなデータソースからプログラムを使用してデータにアクセスしたり、編集したり、更新したりすることができます。 ADO の最も一般的な使用方法は、リレーショナルデータベース内の1つまたは複数のテーブルに対してクエリを実行し、その結果を取得してアプリケーションで表示し、ユーザーがデータの変更を行って保存できるようにすることです。 その他のタスクは次のとおりです。  
@@ -48,7 +49,7 @@ ADO を使用すると、開発者は、OLE DB システムインターフェイ
   
 -   データベースフィールドをデータ対応コンポーネントにバインドしています。  
   
--   リモートの切断された**レコードセット**を作成しています。  
+-   リモートの切断された **レコードセット**を作成しています。  
   
  ADO は、このような柔軟性を提供するさまざまなオプションと設定を公開しています。 そのため、アプリケーションで ADO を使用する方法を学習し、それぞれの目標を管理しやすい部分に分割することが重要です。  
   

@@ -1,4 +1,5 @@
 ---
+description: VBScript での ADO プログラミング
 title: VBScript ADO プログラミング |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2029b6d661e520a4ed18631c611ed9e283e4aa7c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8bea576e55537d2b4ee75fb8e7a0fcdebea4847e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453964"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript での ADO プログラミング
 ## <a name="creating-an-ado-project"></a>ADO プロジェクトの作成  
@@ -39,7 +40,7 @@ ms.locfileid: "82761540"
 ```  
   
 ## <a name="creating-ado-objects-in-vbscript"></a>VBScript での ADO オブジェクトの作成  
- **Dim**ステートメントを使用して、VBScript の特定の型にオブジェクトを割り当てることはできません。 また、VBScript では、Visual Basic for Applications の**Dim**ステートメントで使用される**新しい**構文はサポートされていません。 代わりに、 **CreateObject**関数の呼び出しを使用する必要があります。  
+ **Dim**ステートメントを使用して、VBScript の特定の型にオブジェクトを割り当てることはできません。 また、VBScript では、Visual Basic for Applications の**Dim**ステートメントで使用される**新しい**構文はサポートされていません。 代わりに、 **CreateObject** 関数の呼び出しを使用する必要があります。  
   
 ```vb
 Dim Rs1  
@@ -81,6 +82,6 @@ Response.Write("Success!")
   
 -   VBScript は、さまざまな種類のデータを保持できる Variant データ型のみをサポートしています。 必要なデータをバリアントデータ型に格納すると、VBScript によって実行されるキャストによってデータが適切に機能します。 ADO が必要とする型を認識し、それに応じてバリアントの値を変換します。  
   
--   VBScript 内で **>on error goto \< label**を使用することはできません。  
+-   VBScript 内で**on error goto \<label> **を使用することはできません。  
   
--   VBScript では、 **Msgbox**、 **Date**、 **IsNumeric**などの組み込みの Visual Basic 関数の一部がサポートされています。 ただし、VBScript は Visual Basic のサブセットであるため、一部の組み込み関数はサポートされていません。 たとえば、VBScript では**Format**関数とファイル i/o 関数はサポートされていません。
+-   VBScript では、 **Msgbox**、 **Date**、 **IsNumeric**などの組み込みの Visual Basic 関数の一部がサポートされています。 ただし、VBScript は Visual Basic のサブセットであるため、一部の組み込み関数はサポートされていません。 たとえば、VBScript では **Format** 関数とファイル i/o 関数はサポートされていません。

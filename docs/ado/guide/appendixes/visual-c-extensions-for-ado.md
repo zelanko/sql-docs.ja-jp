@@ -1,4 +1,5 @@
 ---
+description: ADO 用の Visual C++ Extensions
 title: ADO の Visual C++ 拡張 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f623bd3eb0c0c4cdde47c6fea7e7cd8af2ad0de6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f9fa962d4710811cf376634dcc299707f6b0e654
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453934"
 ---
 # <a name="visual-c-extensions-for-ado"></a>ADO 用の Visual C++ Extensions
 Visual C++ で ADO をプログラミングする場合は、「 [Ado プログラミングの Microsoft Visual C++](../../../ado/guide/appendixes/visual-c-ado-programming.md)」で説明されているように、 **#import**ディレクティブを使用することをお勧めします。 ただし、以前のバージョンの ADO には、Visual C++ を使用した別のプログラミング方法が付属しています。 Visual C++ の拡張機能です。 このセクションでは、Visual C++ の拡張機能のコードを維持する必要があるユーザー向けに、この機能について説明しますが、新しい ADO コードは #**import**を使用して記述する必要があります
@@ -29,7 +30,7 @@ Visual C++ で ADO をプログラミングする場合は、「 [Ado プログ�
 
  ADO には、バリアントを経由せずにネイティブの C/c + + データ型へのデータの取得をサポートするインターフェイスが用意されています。また、インターフェイスの使用を簡略化するプリプロセッサマクロも用意されています。 結果は柔軟なツールであり、使いやすく、パフォーマンスが優れています。
 
- C/c + + クライアントの一般的なシナリオでは、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内のレコードを c/c + + 構造体またはネイティブ c/c + + 型を含むクラスにバインドします。 バリアントを使用する場合は、VARIANT から C/c + + ネイティブ型に変換コードを記述する必要があります。 ADO の Visual C++ 拡張機能は、このシナリオを Visual C++ プログラマーにとってはるかに簡単にすることを目的としています。
+ C/c + + クライアントの一般的なシナリオでは、 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) 内のレコードを c/c + + 構造体またはネイティブ c/c + + 型を含むクラスにバインドします。 バリアントを使用する場合は、VARIANT から C/c + + ネイティブ型に変換コードを記述する必要があります。 ADO の Visual C++ 拡張機能は、このシナリオを Visual C++ プログラマーにとってはるかに簡単にすることを目的としています。
 
  ADO の Visual C++ 拡張機能の詳細については、次のトピックを参照してください。
 

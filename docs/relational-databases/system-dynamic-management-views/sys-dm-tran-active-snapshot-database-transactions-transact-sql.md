@@ -1,4 +1,5 @@
 ---
+description: dm_tran_active_snapshot_database_transactions (Transact-sql)
 title: dm_tran_active_snapshot_database_transactions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,11 +21,12 @@ ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79f609de2cc683656eb7c6b1b2db27962246bbf2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 67fc1004da354aca3eebb446300d284c85b944e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454857"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>dm_tran_active_snapshot_database_transactions (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +50,7 @@ ms.locfileid: "86009372"
 > [!NOTE]  
 >  またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_tran_active_snapshot_database_transactions**という名前を使用します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -68,14 +70,14 @@ sys.dm_tran_active_snapshot_database_transactions
 |**max_version_chain_traversed**|**int**|トランザクション全体で一貫性のあるバージョンを検索するためにスキャンされるバージョン チェーンの最大長。|  
 |**average_version_chain_traversed**|**real**|走査されるバージョンチェーン内の行バージョンの平均数。|  
 |**elapsed_time_seconds**|**bigint**|トランザクションがトランザクションシーケンス番号を取得してから経過した時間。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  dm_tran_active_snapshot_database_transactions は、トランザクションシーケンス番号 (XSN) が割り当てられているトランザクションを報告し**ます。** XSN は、トランザクションが最初にバージョンストアにアクセスしたときに割り当てられます。 行のバージョン管理を使用するスナップショット分離または READ COMMITTED 分離が有効なデータベースにおいて、XSN がトランザクションに割り当てられるときの例を次に示します。  
   
 -   トランザクションが serializable 分離レベルで実行されている場合、更新操作などのステートメントをトランザクションが最初に実行するときに XSN が割り当てられ、行バージョンが作成されます。  
@@ -142,9 +144,9 @@ elapsed_time_seconds
 333  
 ```  
   
- 次の情報は、dm_tran_active_snapshot_database_transactions の結果を評価し**ます**。  
+ 次の情報は、dm_tran_active_snapshot_database_transactions の結果を評価し **ます**。  
   
--   XSN-57: このトランザクションはスナップショット分離で実行されていないため、 `is_snapshot` 値と `first_snapshot_sequence_num` は `0` です。 `transaction_sequence_num`ALLOW_SNAPSHOT_ISOLATION または READ_COMMITTED_SNAPSHOT データベースオプションのいずれかまたは両方がオンになっているため、トランザクションシーケンス番号がこのトランザクションに割り当てられていることを示します。  
+-   XSN-57: このトランザクションはスナップショット分離で実行されていないため、 `is_snapshot` 値と `first_snapshot_sequence_num` は `0` です。 `transaction_sequence_num` ALLOW_SNAPSHOT_ISOLATION または READ_COMMITTED_SNAPSHOT データベースオプションのいずれかまたは両方がオンになっているため、トランザクションシーケンス番号がこのトランザクションに割り当てられていることを示します。  
   
 -   XSN-58: このトランザクションはスナップショット分離で実行されていません。 XSN-57 についても同じ情報が適用されます。  
   
@@ -153,8 +155,8 @@ elapsed_time_seconds
 -   XSN-60: これは、スナップショット分離で実行されている2番目のトランザクションです。 出力では、XSN-59 と同じ情報が示されます。  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;トランザクション分離レベルを設定する](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;トランザクション分離レベルを設定する ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: service_message_types (Transact-sql)
 title: service_message_types (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02f210ddee531fe48e7bf2861fe353b1b04ac442
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b56665ff1a780cdcf8052c063f817b542e65ac3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455184"
 ---
 # <a name="sysservice_message_types-transact-sql"></a>service_message_types (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85883191"
 |**message_type_id**|**int**|メッセージ型の識別子。データベース内で一意です。 NULL 値は許容されません。|  
 |**principal_id**|**int**|このメッセージ型を所有するデータベースプリンシパルの識別子。 NULLABLE.|  
 |**検査**|**char(2)**|この型のメッセージを送信する前に、ブローカーによって実行される検証。 NULL 値は許容されません。 つぎのいずれかです。<br /><br /> N = なし<br /><br /> X = XML<br /><br /> E = 空|  
-|**validation_desc**|**nvarchar(60)**|この型のメッセージを送信する前に、ブローカーで実行される検証の説明。 NULLABLE. つぎのいずれかです。<br /><br /> なし<br /><br /> XML<br /><br /> EMPTY|  
+|**validation_desc**|**nvarchar(60)**|この型のメッセージを送信する前に、ブローカーで実行される検証の説明。 NULLABLE. つぎのいずれかです。<br /><br /> NONE<br /><br /> XML<br /><br /> EMPTY|  
 |**xml_collection_id**|**int**|XML スキーマを使用する検証の場合、使用されるスキーマ コレクションの識別子。<br /><br /> それ以外の場合は NULL。|  
   
 ## <a name="permissions"></a>アクセス許可  

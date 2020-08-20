@@ -1,4 +1,5 @@
 ---
+description: sys. servers (Transact-sql)
 title: sys. servers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/16/2020
@@ -20,28 +21,28 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c4ebbcdb8fa1f13d7c0d40c4ac66ac1d3453dffb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f588f0c472432cc4dc68819d32ee57cf65a59358
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894928"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455194"
 ---
 # <a name="sysservers-transact-sql"></a>sys. servers (Transact-sql)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  登録されているリンクまたはリモートサーバーごとに1行、および**server_id** = 0 のローカルサーバーの行が含まれています。  
+  登録されているリンクまたはリモートサーバーごとに1行、および **server_id** = 0 のローカルサーバーの行が含まれています。  
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|リンクサーバーのローカル ID。|  
 |**name**|**sysname**|**Server_id** = 0 の場合、返される値はサーバー名です。<br /><br /> **Server_id** > 0 の場合、返される値はリンクサーバーのローカル名になります。|  
 |**梱包**|**sysname**|リンクサーバーの製品名。 値 "SQL Server" は、の別のインスタンスを示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
-|**provider**|**sysname**|リンク サーバー接続用の OLE DB プロバイダー名です。<br /><br />以降では [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 、値 "SQLNCLI" は既定で[Microsoft OLE DB Driver for SQL SERVER (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md)にマップされます。 以前のバージョンでは、値 "SQLNCLI" は[SQL Server Native Client OLE DB プロバイダー (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md)にマップされていました。|  
+|**provider**|**sysname**|リンク サーバー接続用の OLE DB プロバイダー名です。<br /><br />以降では [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 、値 "SQLNCLI" は既定で [Microsoft OLE DB Driver for SQL SERVER (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) にマップされます。 以前のバージョンでは、値 "SQLNCLI" は [SQL Server Native Client OLE DB プロバイダー (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md)にマップされていました。|  
 |**data_source**|**nvarchar (4000)**|データソース接続プロパティを OLE DB します。|  
 |**location**|**nvarchar (4000)**|OLE DB 場所接続プロパティです。 None の場合は NULL です。|  
 |**provider_string**|**nvarchar (4000)**|OLE DB プロバイダー文字列接続プロパティです。<br /><br /> は、呼び出し元がアクセス許可を持っていない限り NULL です `ALTER ANY LINKED SERVER` 。|  
-|**カタログ**|**sysname**|カタログ接続プロパティを OLE DB します。 None の場合は NULL です。|  
+|**catalog**|**sysname**|カタログ接続プロパティを OLE DB します。 None の場合は NULL です。|  
 |**connect_timeout**|**int**|接続タイムアウト (秒単位)、0 (なしの場合)。|  
 |**query_timeout**|**int**|クエリタイムアウト (秒単位)。存在しない場合は0です。|  
 |**is_linked**|**bit**|0 = **sp_addserver**を使用して追加された古い形式のサーバーであり、RPC と分散トランザクションの動作が異なります。<br /><br /> 1 の場合、標準リンク サーバーです。|  
@@ -66,17 +67,17 @@ ms.locfileid: "85894928"
   
  ローカルサーバーを表示するためにアクセス許可は必要ありません (**server_id** = 0)。  
   
- リンクサーバーまたはリモートサーバーを作成すると、に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] よって、既定のログインマッピングが**public**サーバーロールに対して作成されます。 既定のログインマッピングは、すべてのログインがリンクされたサーバーとリモートサーバーをすべて表示できることを意味します。 これらのサーバーの可視性を制限するには、 [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)を実行し、 *LOCALLOGIN*パラメーターに NULL を指定することで、既定のログインマッピングを削除します。  
+ リンクサーバーまたはリモートサーバーを作成すると、に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] よって、既定のログインマッピングが **public** サーバーロールに対して作成されます。 既定のログインマッピングは、すべてのログインがリンクされたサーバーとリモートサーバーをすべて表示できることを意味します。 これらのサーバーの可視性を制限するには、 [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) を実行し、 *LOCALLOGIN* パラメーターに NULL を指定することで、既定のログインマッピングを削除します。  
   
  既定のログインマッピングが削除された場合、リンクされたログインまたはリモートログインとして明示的に追加されたユーザーのみが、ログインがあるリンクサーバーまたはリモートサーバーを表示できます。  既定のログインマッピングの後、すべてのリンクサーバーとリモートサーバーを表示するには、次のアクセス許可が必要です。  
   
 - `ALTER ANY LINKED SERVER` または `ALTER ANY LOGIN ON SERVER`  
 - **Setupadmin**または**sysadmin**固定サーバーロールのメンバーシップ  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [リンクサーバーのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
  

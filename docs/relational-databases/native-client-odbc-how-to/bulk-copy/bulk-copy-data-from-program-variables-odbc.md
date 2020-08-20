@@ -1,4 +1,5 @@
 ---
+description: プログラム変数からのデータの一括コピー (ODBC)
 title: プログラム変数からの一括データコピー (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,20 +15,21 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4928c4b4cc06b4ad7824f1b581c972369eb8c7cc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c4934409d9403d2edc956f6efd436a3d2abd6833
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455887"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>プログラム変数からのデータの一括コピー (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  このサンプルでは、一括コピー関数を使用して、 **bcp_bind**と**bcp_sendrow**を使用してプログラム変数から SQL Server にデータを一括コピーする方法を示します。 (この例では、簡略化のためエラーチェック コードが削除されています)。  
+  このサンプルでは、一括コピー関数を使用して、 **bcp_bind** と **bcp_sendrow**を使用してプログラム変数から SQL Server にデータを一括コピーする方法を示します。 (この例では、簡略化のためエラーチェック コードが削除されています)。  
   
  このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
   
- **セキュリティ**に関する注意可能であれば、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保存する必要がある場合は、[Win32 CryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504) を使用して暗号化してください。  
+ **セキュリティ** に関する注意可能であれば、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保存する必要がある場合は、[Win32 CryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504) を使用して暗号化してください。  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>プログラム変数に対して一括コピー関数を直接使用するには  
   
@@ -47,20 +49,20 @@ ms.locfileid: "86009980"
   
     -   コピーの方向 (アプリケーションからビューまたはテーブルへのコピーの場合は DB_IN、テーブルまたはビューからアプリケーションへのコピーの場合は DB_OUT)。  
   
-5.  一括コピーの各列に対して[bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)を呼び出して、列をプログラム変数にバインドします。  
+5.  一括コピーの各列に対して [bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) を呼び出して、列をプログラム変数にバインドします。  
   
-6.  プログラム変数にデータを入力し、 [bcp_sendrow](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)を呼び出してデータ行を送信します。  
+6.  プログラム変数にデータを入力し、 [bcp_sendrow](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) を呼び出してデータ行を送信します。  
   
-7.  複数の行が送信された後、 [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)を呼び出して、既に送信されている行をチェックポイントします。 1000行ごとに少なくとも1回は[bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)を呼び出すことをお勧めします。  
+7.  複数の行が送信された後、 [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) を呼び出して、既に送信されている行をチェックポイントします。 1000行ごとに少なくとも1回は [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) を呼び出すことをお勧めします。  
   
-8.  すべての行が送信されたら、 [bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)を呼び出して操作を完了します。  
+8.  すべての行が送信されたら、 [bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) を呼び出して操作を完了します。  
 
- 一括コピー操作中に、 [bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)と[bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)を呼び出すことによって、プログラム変数の場所と長さを変更できます。 [Bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)を使用して、さまざまな一括コピーオプションを設定します。 [Bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)を使用して、 **text**、 **ntext**、および**image**型のデータをセグメント単位でサーバーに送信します。  
+ 一括コピー操作中に、 [bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) と [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)を呼び出すことによって、プログラム変数の場所と長さを変更できます。 [Bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)を使用して、さまざまな一括コピーオプションを設定します。 [Bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)を使用して、 **text**、 **ntext**、および**image**型のデータをセグメント単位でサーバーに送信します。  
   
 ## <a name="example"></a>例  
  このサンプルは IA64 ではサポートされていません。  
   
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384) のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   

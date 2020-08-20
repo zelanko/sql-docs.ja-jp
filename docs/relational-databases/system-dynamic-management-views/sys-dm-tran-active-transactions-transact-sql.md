@@ -1,4 +1,5 @@
 ---
+description: sys.dm_tran_active_transactions (Transact-SQL)
 title: dm_tran_active_transactions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
@@ -20,11 +21,12 @@ ms.assetid: 154ad6ae-5455-4ed2-b014-e443abe2c6ee
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b12eec9f50e49d624661d7a6af68bf78b764b29
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 614c53545631de7de3a62edd30e8b8e1f71b664f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454828"
 ---
 # <a name="sysdm_tran_active_transactions-transact-sql"></a>sys.dm_tran_active_transactions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,11 +46,11 @@ ms.locfileid: "86009367"
 |transaction_state|**int**|0 = トランザクションはまだ完全に初期化されていません。<br /><br /> 1 = トランザクションは初期化されていますが、開始されていません。<br /><br /> 2 = トランザクションはアクティブです。<br /><br /> 3 = トランザクションは終了しました。 これは、読み取り専用トランザクションに使用されます。<br /><br /> 4 = 分散トランザクションでコミット処理が開始されています。 これは、分散トランザクションのみに使用されます。 分散トランザクションはまだアクティブですが、追加の処理は行えません。<br /><br /> 5 = トランザクションは準備された状態で解決を待機しています。<br /><br /> 6 = トランザクションはコミットされました。<br /><br /> 7 = トランザクションはロールバック中です。<br /><br /> 8 = トランザクションはロールバックされました。|  
 |transaction_status |**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |transaction_status2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|dtc_state|**int**|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (最初のリリースから[現在のリリース](https://go.microsoft.com/fwlink/p/?LinkId=299659)まで)。<br /><br /> 1 = アクティブ<br /><br /> 2 = PREPARED<br /><br /> 3 = COMMITTED<br /><br /> 4 = 中止<br /><br /> 5 = 回復済み|  
+|dtc_state|**int**|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (最初のリリースから [現在のリリース](https://go.microsoft.com/fwlink/p/?LinkId=299659)まで)。<br /><br /> 1 = アクティブ<br /><br /> 2 = PREPARED<br /><br /> 3 = COMMITTED<br /><br /> 4 = 中止<br /><br /> 5 = 回復済み|  
 |dtc_status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |dtc_isolation_level|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|filestream_transaction_id|**varbinary (128)**|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (最初のリリースから[現在のリリース](https://go.microsoft.com/fwlink/p/?LinkId=299659)まで)。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|filestream_transaction_id|**varbinary (128)**|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (最初のリリースから [現在のリリース](https://go.microsoft.com/fwlink/p/?LinkId=299659)まで)。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可
 
@@ -58,7 +60,7 @@ ms.locfileid: "86009367"
 ## <a name="see-also"></a>参照  
  [dm_tran_session_transactions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   
  [dm_tran_database_transactions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: MSmerge_articlehistory (Transact-SQL)
 title: MSmerge_articlehistory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86f2432073b580dfa59b92683d4401cb53296b02
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b12fea643b97bda83758288459681ff98e9423cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454652"
 ---
 # <a name="msmerge_articlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85889882"
 |**estimated_changes**|**int**|アーティクルに適用する必要がある行の変更の推定数。|  
 |**relative_cost**|**decimal**|この記事の変更を適用するために費やされた時間と、セッション全体の合計時間。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

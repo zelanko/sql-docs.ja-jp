@@ -1,4 +1,5 @@
 ---
+description: STOverlaps (geometry データ型)
 title: STOverlaps (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1dc18a4aaabb04cb0fc200b1158ff865203caf72
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d92e984fb803cc8b15c58f4b137df2dd51e83f9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554951"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454270"
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86554951"
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  2 つの **geometry** インスタンスが重なるのは、重なる部分を表す領域がインスタンスと同次元にあり、その領域がどちらのインスタンスとも異なる場合です。  
   
  **geometry** インスタンスが重なる地点の次元が異なる場合、`STOverlaps()` は常に 0 を返します。  
@@ -65,7 +66,7 @@ SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
 SELECT @g.STOverlaps(@h);  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Geometry インスタンスの OGC メソッド](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

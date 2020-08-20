@@ -1,4 +1,5 @@
 ---
+description: SQL トレース (SQL Trace)
 title: SQL トレース | Microsoft Docs
 ms.custom: ''
 ms.date: 11/27/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9941f85f14d5b1f820ad7166a7bb106db4bf0fb1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7368f8e10c38008836d86d7dea14d2ab8add4a93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455331"
 ---
 # <a name="sql-trace"></a>SQL トレース (SQL Trace)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -130,7 +131,7 @@ SQL トレースでは、トレース出力のデータ列を使用して、ト�
 |**SqlHandle**|63|64 ビット ハッシュ。アドホック クエリやデータベースのテキスト、および SQL オブジェクトのオブジェクト ID に基づいています。 この値を **sys.dm_exec_sql_text()** に渡して、関連付けられている SQL テキストを取得できます。|  
 |**StartTime**|14|イベントの開始時刻 (取得できた場合)。|  
 |**State**|30|エラー状態コード。|  
-|**Success**|23|イベントが正常に終了したかどうかを表します。 値は次のとおりです。<br /><br /> **1** = 成功。<br /><br /> **0** = 失敗。<br /><br /> たとえば、 **1** は、権限チェックの成功を表し、 **0** は失敗を表します。|  
+|**Success**|23|イベントが正常に終了したかどうかを表します。 次の値が含まれます。<br /><br /> **1** = 成功。<br /><br /> **0** = 失敗。<br /><br /> たとえば、 **1** は、権限チェックの成功を表し、 **0** は失敗を表します。|  
 |**TargetLoginName**|42|ログインを対象とする操作 (新規ログインの追加など) の場合の対象ログインの名前。|  
 |**TargetLoginSid**|43|ログインを対象とする操作 (新規ログインの追加など) の場合の対象ログインの SID。|  
 |**TargetUserName**|39|データベース ユーザーを対象とした操作 (ユーザーへの権限の許可など) を行う場合の対象となるユーザーの名前。|  

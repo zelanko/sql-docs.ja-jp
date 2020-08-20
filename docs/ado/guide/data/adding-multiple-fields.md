@@ -1,4 +1,5 @@
 ---
+description: 複数のフィールドと値の追加
 title: 複数のフィールドの追加 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd5999d62056582d5739f50f415680b9b0dc8a3f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e2543741749c1521526aea18bc4600168559eb45
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761418"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453894"
 ---
 # <a name="adding-multiple-fields-and-values"></a>複数のフィールドと値の追加
-場合によっては、新しいフィールドごとに**値**を何度も設定するのではなく、フィールドの配列とそれに対応する値を**AddNew**メソッドに渡す方が効率的な場合があります。 *FieldList*が配列の場合、*値*も同じメンバー数の配列である必要があります。それ以外の場合は、エラーが発生します。 フィールド名の順序は、各配列のフィールド値の順序と一致している必要があります。 次のコードは、フィールドの配列と値の配列を**AddNew**メソッドに渡します。
+場合によっては、新しいフィールドごとに**値**を何度も設定するのではなく、フィールドの配列とそれに対応する値を**AddNew**メソッドに渡す方が効率的な場合があります。 *FieldList*が配列の場合、*値*も同じメンバー数の配列である必要があります。それ以外の場合は、エラーが発生します。 フィールド名の順序は、各配列のフィールド値の順序と一致している必要があります。 次のコードは、フィールドの配列と値の配列を **AddNew** メソッドに渡します。
 
 ```
 'BeginAddNew2

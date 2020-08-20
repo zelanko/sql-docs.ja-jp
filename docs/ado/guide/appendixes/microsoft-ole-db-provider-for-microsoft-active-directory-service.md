@@ -1,4 +1,5 @@
 ---
+description: Microsoft OLE DB Provider for Microsoft Active Directory サービス
 title: Microsoft OLE DB Provider for Microsoft Active Directory Service |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 837f5fbcbb6c7730cdfcbe08e532a73c5faad06f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f5a2513d8440adedaa0faecae2b544c9ea99bef0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758328"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454124"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory サービス
 Active Directory サービスインターフェイス (ADSI) プロバイダーにより、ADO は、ADSI を介して異種のディレクトリサービスに接続できます。 これにより、ADO アプリケーションは、LDAP に準拠しているディレクトリサービスと Novell ディレクトリサービスに加えて、Microsoft Windows NT 4.0 および Microsoft Windows 2000 ディレクトリサービスへの読み取り専用アクセスを提供します。 ADSI 自体はプロバイダーモデルに基づいているため、別のディレクトリへのアクセスを提供する新しいプロバイダーがあると、ADO アプリケーションはシームレスにアクセスできるようになります。 ADSI プロバイダーは、フリースレッドで、Unicode が有効になっています。  
@@ -50,7 +51,7 @@ ADSDSOObject
 |**パスワード**|ユーザーのパスワードを指定します。 このキーワードが省略されている場合は。 その後、現在のログオンが使用されます。|  
   
 > [!NOTE]
->  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes**または**INTEGRATED Security = SSPI**を指定する必要があります。  
+>  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes** または **INTEGRATED Security = SSPI** を指定する必要があります。  
   
 ## <a name="command-text"></a>コマンド テキスト  
  次の構文では、4つの要素から構成されるコマンドテキスト文字列がプロバイダーによって認識されます。  
@@ -59,12 +60,12 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|*ルート*|検索を開始する**ADsPath**オブジェクト (つまり、検索のルート) を示します。|  
+|*ルート*|検索を開始する **ADsPath** オブジェクト (つまり、検索のルート) を示します。|  
 |*Assert*|RFC 1960 形式の検索フィルターを示します。|  
 |*属性*|返される属性のコンマ区切りのリストを示します。|  
-|*スコープ*|任意。 検索のスコープを指定する**文字列**。 次のいずれかを指定できます。<br /><br /> -Base-ベースオブジェクト (検索のルート) のみを検索します。<br />-OneLevel-1 つのレベルのみを検索します。<br />-Subtree-サブツリー全体を検索します。|  
+|*スコープ*|任意。 検索のスコープを指定する **文字列** 。 以下のいずれかを指定できます。<br /><br /> -Base-ベースオブジェクト (検索のルート) のみを検索します。<br />-OneLevel-1 つのレベルのみを検索します。<br />-Subtree-サブツリー全体を検索します。|  
   
  次に例を示します。  
   
@@ -80,16 +81,16 @@ objectClass='user' AND objectCategory='Person'"
 ```  
   
 ## <a name="remarks"></a>解説  
- プロバイダーは、ストアドプロシージャ呼び出しまたは単純なテーブル名を受け入れません (たとえば、 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)プロパティは常に**adcmdtext**になります)。 コマンドテキスト要素の詳細な説明については、Active Directory サービスインターフェイスのドキュメントを参照してください。  
+ プロバイダーは、ストアドプロシージャ呼び出しまたは単純なテーブル名を受け入れません (たとえば、 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) プロパティは常に **adcmdtext**になります)。 コマンドテキスト要素の詳細な説明については、Active Directory サービスインターフェイスのドキュメントを参照してください。  
   
 ## <a name="recordset-behavior"></a>レコードセットの動作  
- 次の表は、このプロバイダーを使用して開かれた[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトで使用できる機能を示しています。 静的カーソルの種類 (**Adopenstatic**) のみを使用できます。  
+ 次の表は、このプロバイダーを使用して開かれた [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトで使用できる機能を示しています。 静的カーソルの種類 (**Adopenstatic**) のみを使用できます。  
   
  プロバイダー構成の**レコードセット**の動作の詳細については[、サポート](../../../ado/reference/ado-api/supports-method.md)メソッドを実行し、**レコードセット**の[properties](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを列挙して、プロバイダー固有の動的プロパティが存在するかどうかを判断します。  
   
  **標準の ADO レコードセットプロパティの可用性:**  
   
-|プロパティ|使用できるかどうか|  
+|プロパティ|可用性|  
 |--------------|------------------|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|読み取り/書き込み|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|読み取り/書き込み|  
@@ -97,9 +98,9 @@ objectClass='user' AND objectCategory='Person'"
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|読み取り専用|  
 |[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)|読み取り/書き込み|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|読み取り/書き込み|  
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|常に**Aduseserver**|  
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|常に**Adopenstatic**|  
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|常に**adEditNone**|  
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|常に **Aduseserver**|  
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|常に **Adopenstatic**|  
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|常に **adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|読み取り専用|  
 |[Assert](../../../ado/reference/ado-api/filter-property.md)|読み取り/書き込み|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|読み取り/書き込み|  
@@ -121,7 +122,7 @@ objectClass='user' AND objectCategory='Person'"
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|いいえ|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|いいえ|  
 |[複製](../../../ado/reference/ado-api/clone-method-ado.md)|はい|  
-|[[閉じる]](../../../ado/reference/ado-api/close-method-ado.md)|はい|  
+|[閉じる](../../../ado/reference/ado-api/close-method-ado.md)|はい|  
 |[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|いいえ|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|はい|  
 |[移動](../../../ado/reference/ado-api/move-method-ado.md)|はい|  
@@ -130,7 +131,7 @@ objectClass='user' AND objectCategory='Person'"
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|  
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|はい|  
-|[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|  
+|[[ファイル]](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|はい|  
 |[再同期](../../../ado/reference/ado-api/resync-method.md)|はい|  
 |[サポート](../../../ado/reference/ado-api/supports-method.md)|はい|  

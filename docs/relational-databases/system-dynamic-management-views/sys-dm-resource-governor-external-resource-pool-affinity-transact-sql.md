@@ -1,4 +1,5 @@
 ---
+description: dm_resource_governor_external_resource_pool_affinity (Transact-sql)
 title: dm_resource_governor_external_resource_pool_affinity (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
@@ -19,11 +20,12 @@ helpviewer_keywords:
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d583ec570c7532fbafc354d4d5c70016a8cebd1
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 0ff51fc11dd2b74c2a8e83d4a42cd83d403282d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454825"
 ---
 # <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>dm_resource_governor_external_resource_pool_affinity (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -37,9 +39,9 @@ ms.locfileid: "86053164"
 |processor_group|**smallint**|Windows 論理プロセッサグループの ID。 NULL 値は許可されません。|
 |cpu_mask|**bigint**|このプールに関連付けられている Cpu を表すバイナリマスク。 NULL 値は許可されません。|
   
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-アフィニティを使用して作成されたプールは、アフィニティがない `AUTO` ため、このビューに表示されません。 詳細については、「 [CREATE EXTERNAL RESOURCE pool &#40;transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) 」および「 [ALTER external Resource pool &#40;transact-sql&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)ステートメント」を参照してください。
+アフィニティを使用して作成されたプールは、アフィニティがない `AUTO` ため、このビューに表示されません。 詳細については、「 [CREATE EXTERNAL RESOURCE pool &#40;transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) 」および「 [ALTER external Resource pool &#40;transact-sql&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) ステートメント」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可
 

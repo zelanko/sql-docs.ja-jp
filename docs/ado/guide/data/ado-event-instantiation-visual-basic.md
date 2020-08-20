@@ -1,4 +1,5 @@
 ---
+description: 'ADO イベントのインスタンス化: Visual Basic'
 title: 'ADO イベントのインスタンス化: Visual Basic |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,15 +13,15 @@ dev_langs:
 ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dba3be9c80160dca2773c63b2ed7f7c706678625
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1ea53b5d48c0eb72fe91ebeda2d2612437cf4c36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453794"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>ADO イベントのインスタンス化: Visual Basic
-Microsoft® Visual Basic®で ADO イベントを処理するには、 **WithEvents**キーワードを使用してモジュールレベルの変数を宣言する必要があります。 変数は、クラスモジュールの一部としてのみ宣言でき、モジュールレベルで宣言する必要があります。 ただし、Visual Basic**フォーム**オブジェクトもクラスであるため、このような制限はありません。 ADO イベントを処理する最も簡単な方法は、 **WithEvents**を使用して変数を宣言することです。 次の例では、**接続**オブジェクトの**connectcomplete**イベントを処理します。  
+Microsoft® Visual Basic®で ADO イベントを処理するには、 **WithEvents** キーワードを使用してモジュールレベルの変数を宣言する必要があります。 変数は、クラスモジュールの一部としてのみ宣言でき、モジュールレベルで宣言する必要があります。 ただし、Visual Basic **フォーム** オブジェクトもクラスであるため、このような制限はありません。 ADO イベントを処理する最も簡単な方法は、 **WithEvents**を使用して変数を宣言することです。 次の例では、**接続**オブジェクトの**connectcomplete**イベントを処理します。  
   
 ```  
 ' BeginEventExampleVB02  
@@ -65,4 +66,4 @@ End Sub
 ' EndEventExampleVB02  
 ```  
   
- イベント処理を有効にするには、 **WithEvents**キーワードを使用して、**接続**オブジェクトを**フォーム**レベルで宣言します。 Form_Load イベントハンドラーは、新しい**接続**オブジェクトを*connEvent*に割り当て、接続を開くことによって、実際にオブジェクトを作成します。 もちろん、実際のアプリケーションでは、ここで示したよりも Form_Load イベントハンドラーでの処理が多くなります。
+ イベント処理を有効にするには、 **WithEvents**キーワードを使用して、**接続**オブジェクトを**フォーム**レベルで宣言します。 Form_Load イベントハンドラーは、新しい **接続** オブジェクトを *connEvent* に割り当て、接続を開くことによって、実際にオブジェクトを作成します。 もちろん、実際のアプリケーションでは、ここで示したよりも Form_Load イベントハンドラーでの処理が多くなります。

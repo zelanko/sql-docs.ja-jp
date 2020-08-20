@@ -1,4 +1,5 @@
 ---
+description: dbo.sysジョブ (Transact-sql)
 title: dbo.sysジョブ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00bab120cd8d0e931f0aba77ce7aee694126339c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 71fc80a0c847957f52b85344139c75a397b8e6c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454744"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysジョブ (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによる実行が予定されているジョブに関する情報を格納します。 このテーブルは、 **msdb**データベースに格納されます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによる実行が予定されているジョブに関する情報を格納します。 このテーブルは、 **msdb** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|ジョブの一意の ID。|  
 |**originating_server_id**|**int**|ジョブの送信元のサーバーの ID。|  
 |**name**|**sysname**|ジョブの名前。|  
-|**enabled**|**tinyint**|ジョブの実行が有効かどうかを示します。|  
+|**有効**|**tinyint**|ジョブの実行が有効かどうかを示します。|  
 |**description**|**nvarchar(512)**|ジョブの説明。|  
 |**start_step_id**|**int**|実行を開始するジョブのステップの ID。|  
 |**category_id**|**int**|ジョブカテゴリの ID。|  

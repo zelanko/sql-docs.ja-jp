@@ -1,4 +1,5 @@
 ---
+description: managed_backup。 sp_backup_master_switch (Transact-sql)
 title: managed_backup。 sp_backup_master_switch (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb140e5ff831373d2725bca82c70655c5745a658
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 193125f68cb5282e2aece4b00a3d41e1d3690464
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454769"
 ---
 # <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup。 sp_backup_master_switch (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,14 +46,14 @@ EXEC managed_backup.sp_backup_master_switch
                      [@new_state = ] { 0 | 1}  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  @state  
  の状態を設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] します。 @stateパラメーターは**BIT**です。 値を0に設定すると、操作は一時停止されます。値を1に設定すると、操作が再開されます。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
  このステートメントに関連したセキュリティの問題について説明します。サブセクション (H3 見出し) として「権限」を含めます。 必要に応じて、組み合わせ所有権や監査に関する他のサブセクションを含めることを検討してください。  
   
 ### <a name="permissions"></a>アクセス許可  

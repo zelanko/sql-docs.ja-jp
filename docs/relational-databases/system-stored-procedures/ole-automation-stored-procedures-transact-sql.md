@@ -1,4 +1,5 @@
 ---
+description: OLE オートメーションストアドプロシージャ (Transact-sql)
 title: OLE オートメーションストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff16a833-01fe-4877-8aa6-55b72603ec2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c768306710201fb62be3d352cacf90bb1f1e0fe
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 820a100a4da0ed62fd22bb64b22bf83daacee490
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454760"
 ---
 # <a name="ole-automation-stored-procedures-transact-sql"></a>OLE オートメーションストアドプロシージャ (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: スクリプト言語で ADO を使用する
 title: スクリプト言語での ADO の使用 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71057caed6d28a2923e1c3735e10d20fccc9217d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6decee7fddc4748a7d0931ab671f66b11161cc9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453994"
 ---
 # <a name="using-ado-with-scripting-languages"></a>スクリプト言語で ADO を使用する
 スクリプト環境では、ADO を使用して、サーバー側のスクリプトによってデータを公開できます。 このシナリオでは、ADO、基になる OLE DB プロバイダー、および特定のデータストアを参照するために必要なその他のコンポーネントが、インターネットインフォメーションサービス (IIS) を実行しているサーバーにインストールされます。 ADO は、Active Server ページ (ASP) を使用して、HTML を生成できるスクリプトで参照されるコンポーネントです。たとえば、のようになります。 この HTML コンテンツは、HTTP 経由でクライアントの Web ブラウザーに渡すことができます。 スクリプトを使用すると、Web ページからサーバー側スクリプトにアクションを送信して、特定のデータを更新、スキャン、または表示できるようにすることができます。  
   
  Web ページで ActiveX オブジェクトを使用する前に、オブジェクトがスクリプトに対して安全かどうかを把握しておくことが重要です。 オブジェクトがスクリプトに対して安全であると見なされる場合は、コントロールがユーザーのコンピューターで有害な操作を実行できないため、ユーザーの承認を要求することなく実行できます。 次の表に、ADO オブジェクトの一覧と、それらがスクリプトに対して安全かどうかを示します。  
   
-|オブジェクト|スクリプトに対して安全ですか?|  
+|Object|スクリプトに対して安全ですか?|  
 |------------|-------------------------|  
 |ADO 接続|はい|  
 |ADO コマンド|いいえ|  
@@ -45,7 +46,7 @@ ms.locfileid: "82761570"
 |プロバイダー|スクリプトに対して安全ですか?|  
 |--------------|-------------------------|  
 |図形|はい|  
-|Persist|はい|  
+|保持|はい|  
 |Remote|はい|  
 |OLE DB Provider for SQL Server (SQLOLEDB)|いいえ|  
 |OLE DB Provider for ODBC (MSDASQL)|いいえ|  
@@ -65,7 +66,7 @@ ms.locfileid: "82761570"
   
 -   [JScript での ADO プログラミング](../../../ado/guide/appendixes/jscript-ado-programming.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft ActiveX データオブジェクト (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Microsoft Visual Basic での ADO の使用](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Microsoft Visual C++ での ADO の使用](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

@@ -1,4 +1,5 @@
 ---
+description: geometry インスタンスの作成、構築、およびクエリ
 title: geometry インスタンスの作成、構築、およびクエリ | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed268a5b8097b637c8a7e51eecf2e088aad58e04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d6a82ad07670a714cb701498224cb20d0207862
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751124"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455434"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>geometry インスタンスの作成、構築、およびクエリ
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  平面空間データ型の **geometry**は、ユークリッド (平面) 座標系のデータを表します。 この型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では共通言語ランタイム (CLR) のデータ型として実装されています。  
+   平面空間データ型の **geometry** は、ユークリッド (平面) 座標系のデータを表します。 この型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では共通言語ランタイム (CLR) のデータ型として実装されています。  
   
  **geometry** 型は、各データベースで使用できるように事前に定義されています。 **geometry** 型のテーブル列を作成し、他の CLR 型を使用するときと同じように **geometry** データを操作できます。  
   
@@ -379,7 +380,7 @@ SELECT @result = @geom1.STIntersection(@geom2);
 SELECT @result.STAsText();  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   
