@@ -1,4 +1,5 @@
 ---
+description: sp_help_maintenance_plan (Transact-sql)
 title: sp_help_maintenance_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a14767d15891ae970269feda6e712bf490ff5420
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85a2f93384dbca55e26a38933ab9afd730da9f76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481209"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @plan_id = ] 'plan\_id'`メンテナンスプランのプラン ID を指定します。 *plan_id*は**UNIQUEIDENTIFIER**です。 既定値は NULL です。  
+`[ @plan_id = ] 'plan\_id'` メンテナンスプランのプラン ID を指定します。 *plan_id* は **UNIQUEIDENTIFIER**です。 既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  None  
@@ -54,7 +55,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ### <a name="plan-table"></a>プランテーブル  
   
-|列名|データ型|Description|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|メンテナンスプラン ID。|  
 |**plan_name**|**sysname**|メンテナンスプランの名前。|  
@@ -78,10 +79,10 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 |列名|説明|  
 |-----------------|-----------------|  
-|**job_id**|メンテナンスプランに関連付けられているすべてのジョブの ID。 *job_id*は**uniqueidentifier**です。|  
+|**job_id**|メンテナンスプランに関連付けられているすべてのジョブの ID。 *job_id* は **uniqueidentifier**です。|  
   
-## <a name="remarks"></a>注釈  
- **sp_help_maintenance_plan**は**msdb**データベースにあります。  
+## <a name="remarks"></a>解説  
+ **sp_help_maintenance_plan** は **msdb** データベースにあります。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_help_maintenance_plan**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
@@ -94,7 +95,7 @@ EXECUTE   sp_help_maintenance_plan
    N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC';  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [データベースメンテナンスプランのストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   

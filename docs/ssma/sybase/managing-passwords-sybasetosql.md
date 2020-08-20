@@ -1,4 +1,5 @@
 ---
+description: パスワードの管理 (SybaseToSQL)
 title: パスワードの管理 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/07/2020
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2d32e4d6129aa566d34c566f11cb7dde735f3783
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 81a31e8aa6b7c395fc623357a2bc56ebb5a037da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480377"
 ---
 # <a name="managing-passwords-sybasetosql"></a>パスワードの管理 (SybaseToSQL)
 このセクションでは、データベースのパスワードをセキュリティで保護する方法と、サーバー間でインポートまたはエクスポートする手順について説明します。
@@ -30,7 +31,7 @@ SSMA を使用すると、データベースのパスワードをセキュリテ
   
 次の3つの方法のいずれかを使用して、有効なパスワードを指定します。  
   
-1.  **クリアテキスト:**[パスワード] ノードの値属性にデータベースパスワードを入力します。 これは、スクリプトファイルまたはサーバー接続ファイルのサーバーセクションの [サーバー定義] ノードの下にあります。  
+1.  **クリアテキスト:** [パスワード] ノードの値属性にデータベースパスワードを入力します。 これは、スクリプトファイルまたはサーバー接続ファイルのサーバーセクションの [サーバー定義] ノードの下にあります。  
   
     クリアテキストのパスワードはセキュリティで保護されていません。 このため、コンソールの出力には、 *"サーバー &lt; サーバー-id パスワードはセキュリティで保護されてい &gt; ないクリアテキスト形式で提供されます。 ssma コンソールアプリケーションは、暗号化によってパスワードを保護するオプションを提供します。詳細については、ssma ヘルプファイルの-securepassword オプションを参照してください。"*  
   

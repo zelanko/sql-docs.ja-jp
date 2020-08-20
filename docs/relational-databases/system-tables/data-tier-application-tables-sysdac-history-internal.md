@@ -1,4 +1,5 @@
 ---
+description: データ層アプリケーション テーブル - sysdac_history_internal
 title: sysdac_history_internal (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a5095dbc6dae56a8e8ebf534cdd196b3785b43bf
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: f77fee435a076b4d4f6b8a56dc028c55fd3a623f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123023"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480855"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>データ層アプリケーション テーブル - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "87123023"
 |**date_modified**|**datetime**|エントリが最後に変更された日付と時刻。|  
   
 ## <a name="remarks"></a>解説  
- Dac の配置や削除などの DAC 管理操作では、複数の手順が生成されます。 各アクションには、アクション識別子が割り当てられます。 各ステップには、シーケンス番号と**sysdac_history_internal**内の行が割り当てられます。この場合、ステップの状態が記録されます。 各行は、アクションステップの開始時に作成され、操作の状態を反映するために必要に応じて更新されます。 たとえば、[DAC の配置] アクションを 12 **action_id**割り当て、 **sysdac_history_internal**の4つの行を取得することができます。  
+ Dac の配置や削除などの DAC 管理操作では、複数の手順が生成されます。 各アクションには、アクション識別子が割り当てられます。 各ステップには、シーケンス番号と **sysdac_history_internal**内の行が割り当てられます。この場合、ステップの状態が記録されます。 各行は、アクションステップの開始時に作成され、操作の状態を反映するために必要に応じて更新されます。 たとえば、[DAC の配置] アクションを 12 **action_id** 割り当て、 **sysdac_history_internal**の4つの行を取得することができます。  
   
 | action_id | sequence_id | action_type_name | dac_object_type_name |
 | --------- | ----------- | ---------------- | -------------------- |
@@ -73,7 +74,7 @@ WHERE instance_id NOT IN
  アクティブな Dac の行を削除しても、DAC 操作には影響しません。唯一の影響は、DAC の完全な履歴を報告できないことです。  
   
 > [!NOTE]  
->  現時点では、 **sysdac_history_internal**行を削除するためのメカニズムはありません [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。  
+>  現時点では、 **sysdac_history_internal** 行を削除するためのメカニズムはありません [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。  
   
 ## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールのメンバーシップが必要です。 このビューへの読み取り専用アクセスは、master データベースに接続する権限を持つすべてのユーザーが使用できます。  

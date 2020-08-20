@@ -1,4 +1,5 @@
 ---
+description: sp_validatemergepublication (Transact-SQL)
 title: sp_validatemergepublication (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d2082ee586087458244ecd268b069804e4efc3ac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f5120e6976291f9d064346891334b2d23b15aec8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891242"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480994"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,21 +40,21 @@ sp_validatemergepublication [@publication=] 'publication'
   
 ## <a name="arguments"></a>引数  
  [** \@ publication =**] **'***パブリケーション***'**  
- パブリケーションの名前です。 *publication*は**sysname**,、既定値はありません。  
+ パブリケーションの名前です。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @level = ] level`実行する検証の種類を示します。 *レベル*は**tinyint**,、既定値はありません。 レベルには次のいずれかの値を指定できます。  
+`[ @level = ] level` 実行する検証の種類を示します。 *レベル* は **tinyint**,、既定値はありません。 レベルには次のいずれかの値を指定できます。  
   
 |レベルの値|説明|  
 |-----------------|-----------------|  
 |**1**|行数のみの検証。|  
-|**2**|行数とチェックサムの検証。 サブスクライバーの場合 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、これは自動的に**3**に設定されます。|  
+|**2**|行数とチェックサムの検証。 サブスクライバーの場合 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、これは自動的に **3**に設定されます。|  
 |**3**|これは推奨値です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_validatemergepublication**は、マージレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_validatemergepublication** は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_validatemergepublication**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  

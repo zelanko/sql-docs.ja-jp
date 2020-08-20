@@ -1,4 +1,5 @@
 ---
+description: sp_schemafilter (Transact-sql)
 title: sp_schemafilter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 116dde1f0fd62f96e31a164ff06472de5b527938
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ad023dd248b3849e4bb900e1891bd655087a51f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901346"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481098"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,16 +40,16 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`以外のパブリッシャーの名前を指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**で、既定値はありません。  
+`[ @publisher = ] 'publisher'` 以外のパブリッシャーの名前を指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher* は **sysname**で、既定値はありません。  
   
-`[ @schema = ] 'schema'`スキーマの名前を指定します。 *スキーマ*は**sysname**で、既定値は NULL です。  
+`[ @schema = ] 'schema'` スキーマの名前を指定します。 *スキーマ* は **sysname**で、既定値は NULL です。  
   
-`[ @operation = ] 'operation'`このスキーマに対して実行するアクションを指定します。 *操作*は**nvarchar (4)**,、値は次のいずれかを指定することができます。  
+`[ @operation = ] 'operation'` このスキーマに対して実行するアクションを指定します。 *操作* は **nvarchar (4)**,、値は次のいずれかを指定することができます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**add**|指定されたスキーマを、パブリケーションに適合しないスキーマの一覧に追加します。|  
-|**」**|指定されたスキーマを、パブリケーションに適合しないスキーマの一覧から削除します。|  
+|**drop**|指定されたスキーマを、パブリケーションに適合しないスキーマの一覧から削除します。|  
 |**help**|パブリケーションに適さないスキーマの一覧を返します。|  
   
 ## <a name="result-sets"></a>結果セット  
@@ -58,15 +59,15 @@ sp_schemafilter [ @publisher = ] 'publisher'
 |**schemaname**|**sysname**|パブリケーションに適合しないスキーマの名前を指定します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>注釈  
- **sp_schemafilter**は異種パブリッシャーにのみ使用してください。  
+## <a name="remarks"></a>解説  
+ **sp_schemafilter** は異種パブリッシャーにのみ使用してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_schemafilter**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: log_shipping_secondary (Transact-sql)
 title: log_shipping_secondary (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e3a7d488944905525e77d219c89916d4facdb27
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5a65cd7182bf43fd996732479377543b84a7e551
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890130"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480822"
 ---
 # <a name="log_shipping_secondary-transact-sql"></a>log_shipping_secondary (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  セカンダリ ID ごとに1つのレコードを格納します。 このテーブルは、 **msdb**データベースに格納されます。  
+  セカンダリ ID ごとに1つのレコードを格納します。 このテーブルは、 **msdb** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -44,8 +45,8 @@ ms.locfileid: "85890130"
 |**last_copied_file**|**nvarchar (500)**|セカンダリ サーバーにコピーされた最後のバックアップ ファイルの名前。|  
 |**last_copied_date**|**datetime**|セカンダリサーバーに最後にコピー操作を行った日時です。|  
   
-## <a name="remarks"></a>Remarks  
- 特定のプライマリデータベースに対する同じセカンダリサーバー上の複数のセカンダリデータベースは、 **log_shipping_secondary**テーブルの一部の設定を共有します。 いずれかのデータベースに対して共有設定が変更された場合、変更はすべてのデータベースに適用されます。  
+## <a name="remarks"></a>解説  
+ 特定のプライマリデータベースに対する同じセカンダリサーバー上の複数のセカンダリデータベースは、 **log_shipping_secondary** テーブルの一部の設定を共有します。 いずれかのデータベースに対して共有設定が変更された場合、変更はすべてのデータベースに適用されます。  
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

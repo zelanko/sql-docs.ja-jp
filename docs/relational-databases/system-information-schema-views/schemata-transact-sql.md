@@ -1,4 +1,5 @@
 ---
+description: スキーマ (Transact-sql)
 title: スキーマ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
@@ -19,16 +20,17 @@ ms.assetid: 69617642-0f54-4b25-b62f-5f39c8909601
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffd5ae7ae6ea4049c4b1d29ef5c0a9da63e175d1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c9ebda1788cf5a06b034a38734e7a8cb6bb4e262
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999020"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481737"
 ---
 # <a name="schemata-transact-sql"></a>スキーマ (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  現在のデータベースのスキーマごとに1行のデータを返します。 これらのビューから情報を取得するには、INFORMATION_SCHEMA の完全修飾名を指定し**ます。**_view_name_。 のインスタンス内のすべてのデータベースに関する情報を取得するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 [transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)カタログビューを &#40;て、データベースに対してクエリを実行します。  
+  現在のデータベースのスキーマごとに1行のデータを返します。 これらのビューから情報を取得するには、INFORMATION_SCHEMA の完全修飾名を指定し **ます。**_view_name_。 のインスタンス内のすべてのデータベースに関する情報を取得するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 [transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログビューを &#40;て、データベースに対してクエリを実行します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -49,7 +51,7 @@ SELECT * FROM master.INFORMATION_SCHEMA.SCHEMATA;
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [情報スキーマビュー &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [スキーマ &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
+ [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
  [sys.sys文字セット &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)  
   
   

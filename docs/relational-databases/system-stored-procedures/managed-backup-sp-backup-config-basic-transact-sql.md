@@ -1,4 +1,5 @@
 ---
+description: managed_backup.sp_backup_config_basic (TRANSACT-SQL)
 title: managed_backup。 sp_backup_config_basic (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67ed480e1d34e688413cd7242bd25501dcd3074a
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 90ca851e5056b5c592b5cab67fc695f598b67ed1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481676"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (TRANSACT-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -32,7 +34,7 @@ ms.locfileid: "86052938"
   特定の [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] データベースまたはのインスタンスの基本設定を構成し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 > [!NOTE]  
->  このプロシージャは、基本的なマネージバックアップ構成を作成するために独自に呼び出すことができます。 ただし、高度な機能またはカスタムスケジュールを追加する予定の場合は、まず managed_backup を使用してこれらの設定を構成します[。 sp_backup_config_advanced &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)および managed_backup sp_backup_config_schedule この手順でマネージバックアップを有効にする前に、transact-sql &#40;を&#41;[し](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)ます。  
+>  このプロシージャは、基本的なマネージバックアップ構成を作成するために独自に呼び出すことができます。 ただし、高度な機能またはカスタムスケジュールを追加する予定の場合は、まず managed_backup を使用してこれらの設定を構成します [。 sp_backup_config_advanced &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) および managed_backup sp_backup_config_schedule この手順でマネージバックアップを有効にする前に、transact-sql &#40;を&#41;[し ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) ます。  
    
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +46,7 @@ EXEC managed_backup.sp_backup_config_basic
     ,[@retention_days = ] 'retention_period_in_days'    ,[@credential_name = ] 'sql_credential_name'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  @enable_backup  
  指定したデータベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効または無効にします。 @enable_backupは**ビット**です。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の最初のインスタンスに対してを構成するときに必要なパラメーター [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 既存の構成を変更する場合 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 、このパラメーターは省略可能です。 この場合、指定されていない構成値は、既存の値を保持します。  
   
@@ -61,7 +63,7 @@ EXEC managed_backup.sp_backup_config_basic
  バックアップ ファイルの保有期間 (日数)。 @storage_urlは INT です。 これは、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] のインスタンスで初めてを構成するときに必要なパラメーターです [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 構成の変更中 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は、このパラメーターは省略可能です。 指定しない場合は、既存の構成値が保持されます。  
   
  @credential_name  
- Azure ストレージアカウントに対する認証に使用される SQL 資格情報の名前。 @credentail_nameは**SYSNAME**です。 指定した場合、バックアップはページ blob に格納されます。 このパラメーターが NULL の場合、バックアップはブロック blob として格納されます。 ページ blob へのバックアップは非推奨とされるため、新しいブロック blob バックアップ機能を使用することをお勧めします。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の構成を変更するために使用する場合、このパラメーターは省略可能です。 指定しない場合、既存の構成値が保持されます。  
+ Azure ストレージアカウントに対する認証に使用される SQL 資格情報の名前。 @credentail_name は **SYSNAME**です。 指定した場合、バックアップはページ blob に格納されます。 このパラメーターが NULL の場合、バックアップはブロック blob として格納されます。 ページ blob へのバックアップは非推奨とされるため、新しいブロック blob バックアップ機能を使用することをお勧めします。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の構成を変更するために使用する場合、このパラメーターは省略可能です。 指定しない場合、既存の構成値が保持されます。  
   
 > [!WARNING]
 >  ** \@ Credential_name**パラメーターは現時点ではサポートされていません。 ブロック blob へのバックアップのみがサポートされています。この場合、このパラメーターは NULL である必要があります。  

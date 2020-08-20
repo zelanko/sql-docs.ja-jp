@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_performance_counters (Transact-SQL)
 title: dm_os_performance_counters (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,12 +21,12 @@ ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d03cac764cb5668cd184b6798c0af618c3de2ec
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: effdee41362607269897e9574b3a0cb9666df702
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481909"
 ---
 # <a name="sysdm_os_performance_counters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,11 +39,11 @@ ms.locfileid: "87394395"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_name**|**nchar(128)**|このカウンターが属するカテゴリ。|  
-|**counter_name**|**nchar(128)**|カウンターの名前。 カウンターに関する詳細情報を取得するには、[[オブジェクト SQL Server 使用](../../relational-databases/performance-monitor/use-sql-server-objects.md)するカウンターの一覧から選択するトピックの名前を指定します。 |  
+|**counter_name**|**nchar(128)**|カウンターの名前。 カウンターに関する詳細情報を取得するには、[ [オブジェクト SQL Server 使用](../../relational-databases/performance-monitor/use-sql-server-objects.md)するカウンターの一覧から選択するトピックの名前を指定します。 |  
 |**instance_name**|**nchar(128)**|カウンターの特定のインスタンスの名前。 多くの場合、データベース名が含まれます。|  
 |**cntr_value**|**bigint**|カウンターの現在の値。<br /><br /> **注:** 秒単位のカウンターの場合、この値は累積されます。 レート値は、不連続の時間間隔で値をサンプリングすることによって計算する必要があります。 2つの連続するサンプル値の違いは、使用された時間間隔のレートと同じです。|  
-|**cntr_type**|**int**|Windows パフォーマンスアーキテクチャで定義されているカウンターの種類。 パフォーマンスカウンターの種類の詳細については、ドキュメントの「 [WMI パフォーマンスカウンターの種類](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types)」または Windows Server のドキュメントを参照してください。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**cntr_type**|**int**|Windows パフォーマンスアーキテクチャで定義されているカウンターの種類。 パフォーマンスカウンターの種類の詳細については、ドキュメントの「 [WMI パフォーマンスカウンターの種類](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types) 」または Windows Server のドキュメントを参照してください。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール インスタンスで Windows オペレーティング システムのパフォーマンス カウンターが表示されない場合は、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用して、パフォーマンス カウンターが無効になっていることを確認します。  
