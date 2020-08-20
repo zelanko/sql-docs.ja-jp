@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT STOPLIST (Transact-SQL)
 title: ALTER FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e22cb4fcd9d87c68b54d071d5877f564a2c72540
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 8a7105e0f5360144594d215063b6a2f91590e54c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479101"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,10 +66,10 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
  *language_term* には、次のように、言語のロケール識別子 (LCID) に対応する文字列、整数、または 16 進数の値を指定できます。  
   
-|Format|説明|  
+|形式|説明|  
 |------------|-----------------|  
 |String|*language_term* には、[sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 互換性ビューの **alias** 列の値と同じ値を指定します。 文字列は、 **'***language_term***'** のように引用符 (') で囲む必要があります。|  
-|整数|*language_term* には、言語の LCID を指定します。|  
+|Integer|*language_term* には、言語の LCID を指定します。|  
 |16 進数|*language_term* には、"0x" の後に LCID の 16 進数の値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。 値を 2 バイト文字セット (DBCS) の形式で指定すると、SQL Server で Unicode に変換されます。|  
   
  ADD **'***stopword***'** LANGUAGE *language_term*  

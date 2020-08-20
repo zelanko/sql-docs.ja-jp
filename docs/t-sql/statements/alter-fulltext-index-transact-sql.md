@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT INDEX (Transact-SQL)
 title: ALTER FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa8594033c004bed2f37204d9de96a75bcfb83f3
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 0f8b215f3e90822fe285b93274b7d93a7e1ee8b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479144"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +77,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  フルテキスト インデックスを無効にすると、変更の追跡が無効になりますが、フルテキスト インデックスは維持されます。ENABLE を使用することで、いつでもフルテキスト インデックスを有効に戻すことができます。 フルテキスト インデックスがオフになると、フルテキスト インデックス メタデータはシステム テーブル内に残ります。 フルテキスト インデックスがオフのときに CHANGE_TRACKING がオンの状態の場合 (自動または手動更新)、インデックスの状態が停止し、処理中のクロールが停止し、テーブル データへの新しい変更はインデックスに対して追跡または反映されません。  
   
- SET CHANGE_TRACKING {MANUAL | AUTO | OFF}  
+ SET CHANGE_TRACKING {MANUAL | AUTO | OFF}   
  フルテキスト インデックスの対象となるテーブル列の変更 (更新、削除、または挿入) が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってフルテキスト インデックスに反映されるかどうかを指定します。 WRITETEXT および UPDATETEXT によるデータの変更は、フルテキスト インデックスには反映されず、変更の監視でも取得されません。  
   
 > [!NOTE]  
@@ -102,9 +103,9 @@ ALTER FULLTEXT INDEX ON table_name
 >  列がフルテキスト インデックスに対して追加または削除された後、フルテキスト インデックスが作成されるかどうかは、変更の追跡が有効になっているかどうかと WITH NO POPULATION が指定されているかどうかによって決まります。 詳細については、「[変更の追跡と NO POPULATION パラメーターの相関関係](#change-tracking-no-population)」を参照してください。
   
  TYPE COLUMN *type_column_name*  
- **varbinary**、**varbinary(max)** 、**image** ドキュメントのドキュメント型を保持するために使用されているテーブル列 *type_column_name* の名前を指定します。 型列と呼ばれるこの列には、ユーザー指定のファイル拡張子 (.doc、.pdf、.xls など) が格納されます。 型列は、 **char**型、 **nchar**型、 **varchar**型、 **nvarchar**型にする必要があります。  
+ **varbinary**、**varbinary(max)**、**image** ドキュメントのドキュメント型を保持するために使用されているテーブル列 *type_column_name* の名前を指定します。 型列と呼ばれるこの列には、ユーザー指定のファイル拡張子 (.doc、.pdf、.xls など) が格納されます。 型列は、 **char**型、 **nchar**型、 **varchar**型、 **nvarchar**型にする必要があります。  
   
- TYPE COLUMN *type_column_name* を指定できるのは、*column_name* で、データがバイナリ データとして格納される **varbinary**、**varbinary(max)** 、**image** 列を指定した場合のみです。それ以外の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラーが返されます。  
+ TYPE COLUMN *type_column_name* を指定できるのは、*column_name* で、データがバイナリ データとして格納される **varbinary**、**varbinary(max)**、**image** 列を指定した場合のみです。それ以外の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラーが返されます。  
   
 > [!NOTE]  
 >  Full-Text Engine は、インデックスを作成する際に、各テーブル行の型列の省略形を使用して、*column_name* でドキュメントに使用するフルテキスト検索フィルターを特定します。 フィルターはドキュメントをバイナリ ストリームとして読み込み、書式設定情報を削除し、ドキュメントからワード ブレーカー コンポーネントへテキストを送信します。 詳細については、「 [検索用フィルターの構成と管理](../../relational-databases/search/configure-and-manage-filters-for-search.md)」を参照してください。  
@@ -159,7 +160,7 @@ ALTER FULLTEXT INDEX ON table_name
  UPDATE  
  変更の監視インデックスが最後に更新されてから行われた、すべての挿入、更新、削除の処理を指定します。 変更の監視の作成はテーブルで有効になっている必要がありますが、バックグラウンド更新インデックスまたは自動の変更の監視はオンにしないでください。  
   
- {STOP | PAUSE | RESUME } POPULATION  
+ {STOP | PAUSE | RESUME } POPULATION   
  進行中の作成を停止または一時停止します。あるいは、一時停止中の作成を停止または再開します。  
   
  STOP POPULATION によって、自動の変更の監視またはバックグラウンド更新インデックスは停止しません。 変更の監視を停止するには、SET CHANGE_TRACKING OFF を使用します。  

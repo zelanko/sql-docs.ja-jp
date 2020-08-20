@@ -1,4 +1,5 @@
 ---
+description: FLOOR (Transact-SQL)
 title: FLOOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ ms.assetid: 4f26c784-9240-491f-b854-754be3fccae4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3dbce5ca4606e44b3c6e548e82d3266890c7c449
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f429b2cf8b581cf005f1ff88b4fa329432040cee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479690"
 ---
 # <a name="floor-transact-sql"></a>FLOOR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,7 @@ FLOOR ( numeric_expression )
 
 ## <a name="arguments"></a>引数
  *numeric_expression*  
- **bit** データ型を除く、真数データ型または概数データ型の式です。  
+ bit データ型を除く、真数または概数データ型カテゴリの**式**です。  
   
 ## <a name="return-types"></a>戻り値の型  
  *numeric_expression*と同じ型を返します。  

@@ -1,4 +1,5 @@
 ---
+description: STDEVP (Transact-SQL)
 title: STDEVP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,17 +21,17 @@ ms.assetid: 29f2a906-d084-4464-abc3-4b275ed19442
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a005ad422bdcf41e5b8f9ba2d57fa90d2dc1739
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: fb6db4504d3861c036547778ce6c8c9e16995990
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112629"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479598"
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  指定された式のすべての値を母集団として標準偏差を返します。  
+  指定された式のすべての値を母集団として統計的標準偏差を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,7 +64,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="return-types"></a>戻り値の型  
  **float**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  SELECT ステートメントの中のすべての項目に対して STDEVP を使用すると、結果セット内のすべての値が計算に含まれます。 STDEVP は、数値型列に対して使用できます。 NULL 値は無視されます。  
   
  STDEVP は、OVER 句や ORDER BY 句なしで使用される場合は決定的関数です。 OVER 句や ORDER BY 句と共に使用される場合は、非決定的関数です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
@@ -71,7 +72,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-stdevp"></a>A: STDEVP を使用する  
- この例では、`SalesPerson` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブル内のすべてのボーナス額を母集団として標準偏差を返します。  
+ この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `SalesPerson` テーブル内のすべてのボーナス額を母集団として標準偏差を返します。  
   
 ```  
 SELECT STDEVP(Bonus)  
@@ -82,7 +83,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-stdevp"></a>B: STDEVP を使用する  
- 次の例は、テーブル `STDEVP` の販売ノルマの値の `dbo.FactSalesQuota` を返します。 最初の列にはすべての個別値の標準偏差が含まれ、2 番目の列には重複値を含むすべての値の標準偏差が含まれます。  
+ 次の例は、テーブル `dbo.FactSalesQuota` の販売ノルマの値の `STDEVP` を返します。 最初の列にはすべての個別値の標準偏差が含まれ、2 番目の列には重複値を含むすべての値の標準偏差が含まれます。  
   
 ```  
 -- Uses AdventureWorks  

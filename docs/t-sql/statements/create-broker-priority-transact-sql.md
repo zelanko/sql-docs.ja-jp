@@ -1,4 +1,5 @@
 ---
+description: CREATE BROKER PRIORITY (Transact-SQL)
 title: CREATE BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adcf67cf64888101f2a5a7d704cbe91785791133
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c753f9dc977f94064161ee340ebced685dd9f6c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478984"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ FOR CONVERSATION
 
 ## <a name="arguments"></a>引数
  *ConversationPriorityName*  
- メッセージ交換の優先度の名前を指定します。 名前は現在のデータベース内で一意であり、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
+ メッセージ交換の優先度の名前を指定します。 名前は現在のデータベース内で一意であり、 の[!INCLUDE[ssDE](../../includes/ssde-md.md)] [識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
  SET  
  指定したメッセージ交換の優先度をメッセージ交換に適用するかどうかを決定するための条件を指定します。 指定する場合、SET には、次の条件のうち、少なくとも 1 つを指定する必要があります: CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME、または PRIORITY_LEVEL。 SET を指定しない場合は、3 つの条件にはすべて既定値が設定されます。  
@@ -220,7 +221,7 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
 ```  
   
 ### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>D. サービスを使用して、1 つの発信先サービスに対して 3 つの優先順位を作成する  
- 次の 3 つのパフォーマンス レベルを備えたシステムをサポートします: ゴールド (高)、シルバー (中)、ブロンズ (低)。 コントラクトは 1 つですが、各レベルには個別の発信側サービスがあります。 すべての発信側サービスは、中心となる 1 つの発信先サービスと通信します。  
+ ゴールド (高)、シルバー (中)、ブロンズ (低) の 3 つのパフォーマンス レベルを備えたシステムをサポートします。 コントラクトは 1 つですが、各レベルには個別の発信側サービスがあります。 すべての発信側サービスは、中心となる 1 つの発信先サービスと通信します。  
   
 ```sql  
 CREATE BROKER PRIORITY GoldInitToTargetPriority  
@@ -262,7 +263,7 @@ CREATE BROKER PRIORITY BronzeTargetToInitPriority
 ```  
   
 ### <a name="e-creating-three-priority-levels-for-multiple-services-using-contracts"></a>E. コントラクトを使用して、複数のサービスに対して 3 つの優先順位を作成する  
- 次の 3 つのパフォーマンス レベルを備えたシステムをサポートします: ゴールド (高)、シルバー (中)、ブロンズ (低)。 各レベルには、個別のコントラクトがあります。 これらの優先度は、そのコントラクトを使用するメッセージ交換によって参照されるすべてのサービスに適用されます。  
+ ゴールド (高)、シルバー (中)、ブロンズ (低) の 3 つのパフォーマンス レベルを備えたシステムをサポートします。 各レベルには、個別のコントラクトがあります。 これらの優先度は、そのコントラクトを使用するメッセージ交換によって参照されるすべてのサービスに適用されます。  
   
 ```sql  
 CREATE BROKER PRIORITY GoldPriority  

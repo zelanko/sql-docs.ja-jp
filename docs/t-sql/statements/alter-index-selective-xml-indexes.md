@@ -1,4 +1,5 @@
 ---
+description: ALTER INDEX (選択的 XML インデックス)
 title: ALTER INDEX (選択的 XML インデックス) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ce6f6005e3e2b6966a4bc9e457b1ee552ea017f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11aa4f80e391644c796280e2d236c710e70bee2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85761870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479110"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (選択的 XML インデックス)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -137,7 +138,9 @@ identifier
  [WITH **(** \<index_options> **)** ]  
  \<index_options> は、ALTER INDEX を FOR 句なしで使用する場合にのみ、指定することができます。 ALTER INDEX を使用して、インデックスにパスを追加または削除する場合、インデックス オプションは有効な引数ではありません。 インデックス オプションについては、「[CREATE XML INDEX &#40;選択的 XML インデックス&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)」をご覧ください。  
   
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
   
 > [!IMPORTANT]  
 >  ALTER INDEX ステートメントを実行すると、選択的 XML インデックスが常に再構築されます。 サーバーのリソースに対するこの処理の影響を考慮してください。  
