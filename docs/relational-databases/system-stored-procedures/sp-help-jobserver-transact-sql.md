@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobserver (Transact-sql)
 title: sp_help_jobserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93511eedfe434419270cccf6c5b4c3c685a8eeef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f0093529c27d8dae022e005f92eeaf4f84e99b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474181"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,14 +43,14 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id`情報を返すジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
+`[ @job_id = ] job_id` 情報を返すジョブの識別番号を指定します。 *job_id* は **uniqueidentifier**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'`情報を返すジョブの名前を指定します。 *job_name*は**sysname**,、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` 情報を返すジョブの名前を指定します。 *job_name* は **sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
 >  *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @show_last_run_details = ] show_last_run_details`最後に実行された実行情報が結果セットに含まれるかどうかを示します。 *show_last_run_details*は**tinyint**,、既定値は**0**です。 **0**には最後の実行情報は含まれず、 **1**はです。  
+`[ @show_last_run_details = ] show_last_run_details` 最後に実行された実行情報が結果セットに含まれるかどうかを示します。 *show_last_run_details* は **tinyint**,、既定値は **0**です。 **0** には最後の実行情報は含まれず、 **1** はです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -74,7 +75,7 @@ sp_help_jobserver
 |**last_run_outcome**|**int**|このサーバーで最後に実行されたときのジョブの結果:<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **3** = キャンセル<br /><br /> **5** = 不明|  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   

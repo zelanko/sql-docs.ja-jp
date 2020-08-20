@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergefilter (Transact-SQL)
 title: sp_helpmergefilter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc32ca9d211ea818c8a0febdd5dda2e46b1b7fcf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7051213a6543a1dc964fe011f95f48d15cd788ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474016"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @article = ] 'article'`アーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値はです **%** 。これにより、すべてのアーティクルの名前が返されます。  
+`[ @article = ] 'article'` アーティクルの名前を指定します。 *アーティクル* は **sysname**で、既定値はです **%** 。これにより、すべてのアーティクルの名前が返されます。  
   
-`[ @filtername = ] 'filtername'`情報を返すフィルターの名前を指定します。 *filtername*のデータ型は**sysname**で、既定値はです **%** 。これは、アーティクルまたはパブリケーションで定義されているすべてのフィルターに関する情報を返します。  
+`[ @filtername = ] 'filtername'` 情報を返すフィルターの名前を指定します。 *filtername* のデータ型は **sysname**で、既定値はです **%** 。これは、アーティクルまたはパブリケーションで定義されているすべてのフィルターに関する情報を返します。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -62,15 +63,15 @@ sp_helpmergefilter [ @publication= ] 'publication'
 |**filter_type**|**tinyint**|マージフィルターの種類。次のいずれかを指定できます。<br /><br /> **1** = 結合フィルターのみ<br /><br /> **2** = 論理レコードリレーションシップ<br /><br /> **3** = 両方|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>注釈  
- **sp_helpmergefilter**は、マージレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_helpmergefilter** は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helpmergefilter**を実行できるのは、 **sysadmin**固定サーバーロールおよび**db_owner**固定データベースロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_addmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_changemergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   

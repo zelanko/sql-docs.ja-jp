@@ -1,4 +1,5 @@
 ---
+description: sp_helpdevice (Transact-SQL)
 title: sp_helpdevice (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cda03415378577a061bb308c0b19e7fcd0659d49
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0da4ef24647edd8de4bda1c412afb1410f9d3c14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474126"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @devname = ] 'name'`情報を報告するバックアップデバイスの名前を指定します。 *Name*の値は常に**sysname**です。  
+`[ @devname = ] 'name'` 情報を報告するバックアップデバイスの名前を指定します。 *Name*の値は常に**sysname**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -53,15 +54,15 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|論理デバイス名。|  
 |**physical_name**|**nvarchar(260)**|物理ファイル名。|  
-|**description**|**nvarchar(255)**|デバイスの説明|  
-|**status**|**int**|[**説明**列の状態の説明に対応する数値。|  
+|**description**|**nvarchar (255)**|デバイスの説明|  
+|**status**|**int**|[ **説明** 列の状態の説明に対応する数値。|  
 |**cntrltype**|**smallint**|デバイスのコントローラーの種類<br /><br /> 2 = ディスク デバイス<br /><br /> 5 = テープデバイス|  
 |**size**|**int**|デバイスサイズ (2 KB ページ単位)。|  
   
-## <a name="remarks"></a>Remarks  
- *名前*を指定した場合、 **sp_helpdevice**指定したダンプデバイスに関する情報が表示されます。 場合*名前*が指定されていない、 **sp_helpdevice** 、すべてのダンプデバイスに関する情報を表示、 **backup_devices**カタログビューです。  
+## <a name="remarks"></a>解説  
+ *名前*を指定した場合、 **sp_helpdevice**指定したダンプデバイスに関する情報が表示されます。 場合 *名前* が指定されていない、 **sp_helpdevice** 、すべてのダンプデバイスに関する情報を表示、 **backup_devices** カタログビューです。  
   
- ダンプデバイスは**sp_addumpdevice**を使用してシステムに追加されます。  
+ ダンプデバイスは **sp_addumpdevice**を使用してシステムに追加されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
@@ -73,10 +74,10 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 EXEC sp_helpdevice;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
