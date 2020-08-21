@@ -1,8 +1,8 @@
 ---
-description: SQLDriverConnect 関数
 title: SQLDriverConnect 関数 |Microsoft Docs
+description: SQLDriverConnect 関数は ODBC API 標準の一部です。このリファレンスドキュメントでは、その構文について説明しています。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,32 +20,20 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6abdafe0a01d5c8182c5427c45545930c84e08e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9ff73c570e607f687ff8293587b8dbcef551926
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476145"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745902"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 関数
 **互換性**  
  導入されたバージョン: ODBC 1.0 標準準拠: ODBC  
   
  **まとめ**  
- **SQLDriverConnect** は、 **SQLConnect**の代わりになります。 **SQLConnect**の3つの引数よりも多くの接続情報を必要とするデータソース、すべての接続情報をユーザーに求めるダイアログボックス、システム情報で定義されていないデータソースをサポートします。  
-  
- **SQLDriverConnect** には、次の接続属性が用意されています。  
-  
--   データソース名、1つ以上のユーザー Id、1つ以上のパスワード、およびデータソースに必要なその他の情報を含む接続文字列を使用して接続を確立します。  
-  
--   部分的な接続文字列を使用して接続を確立するか、追加情報を使用しません。この場合、ドライバーマネージャーとドライバーは、ユーザーに接続情報の入力を求めることができます。  
-  
--   システム情報で定義されていないデータソースへの接続を確立します。 アプリケーションが部分的な接続文字列を提供する場合、ドライバーはユーザーに接続情報の入力を求めることができます。  
-  
--   Dsn ファイル内の情報から構築された接続文字列を使用して、データソースへの接続を確立します。  
-  
- 接続が確立されると、 **SQLDriverConnect** は完了した接続文字列を返します。 アプリケーションは、後続の接続要求にこの文字列を使用できます。 詳細については、「 [SQLDriverConnect を使用した接続](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)」を参照してください。  
-  
+ **SQLDriverConnect** は、 **SQLConnect**の代わりになります。 **SQLConnect**の3つの引数よりも多くの接続情報を必要とするデータソース、すべての接続情報をユーザーに求めるダイアログボックス、システム情報で定義されていないデータソースをサポートします。 詳細については、「 [SQLDriverConnect を使用した接続](../develop-app/connecting-with-sqldriverconnect.md)」を参照してください。  
+
 ## <a name="syntax"></a>構文  
   
 ```cpp  
@@ -142,7 +130,7 @@ SQLRETURN SQLDriverConnect(
 |IM018|**Sqlcompleteasync** は、このハンドルで前の非同期操作を完了するために呼び出されていません。|ハンドルに対する前の関数呼び出しが SQL_STILL_EXECUTING を返し、通知モードが有効になっている場合は、処理を完了するために、ハンドルに対して **Sqlcompleteasync** を呼び出す必要があります。|  
 |S1118|ドライバーは非同期通知をサポートしていません|ドライバーが非同期通知をサポートしていない場合、SQL_ATTR_ASYNC_DBC_EVENT または SQL_ATTR_ASYNC_DBC_RETCODE_PTR を設定することはできません。|  
   
-## <a name="comments"></a>コメント  
+## <a name="comments"></a>説明  
  接続文字列の構文は次のとおりです。  
   
  *接続文字列* :: = *空文字列*[;] &#124; *属性*[;] &#124; *属性*; *接続文字列*  
