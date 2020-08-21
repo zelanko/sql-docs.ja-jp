@@ -175,11 +175,15 @@
         - name: 展開および使用するアプリ
           items:
             - name: azdata を使用した配置
-              href: big-data-cluster/big-data-cluster-create-apps.md
+              href: big-data-cluster/app-create.md
             - name: VS Code を使用した展開
               href: big-data-cluster/app-deployment-extension.md
             - name: アプリの利用
-              href: big-data-cluster/big-data-cluster-consume-apps.md
+              href: big-data-cluster/app-consume.md
+            - name: アプリの実行
+              href: big-data-cluster/app-run.md
+            - name: アプリの監視
+              href: big-data-cluster/app-monitor.md
         - name: ビッグ データ/Machine Learning
           items:
             - name: Machine Learning Services (Python、R) の使用
