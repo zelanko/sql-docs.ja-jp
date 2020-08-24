@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7aa335dc2aabdf05ab34a0245bb0aafc14b17cf1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 13fe25638b47221960f6f39c7e367321578ee1ff
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439984"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770381"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Groups および Users Append、ChangePassword メソッドの例 (VB)
-この例では、[グループ](../../../ado/reference/adox-api/groups-collection-adox.md)の[append](../../../ado/reference/adox-api/append-method-adox-groups.md)メソッドと、システムに新しい[グループ](../../../ado/reference/adox-api/group-object-adox.md)と新しい[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)を追加することによる[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)の[追加](../../../ado/reference/adox-api/append-method-adox-users.md)方法を示します。 新しい**グループ**は、新しい**ユーザー**の**Groups**コレクションに追加されます。 その結果、新しい **ユーザー** が **グループ**に追加されます。 また、 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) メソッドを使用して **ユーザー** パスワードを指定します。  
+この例では、[グループ](./groups-collection-adox.md)の[append](./append-method-adox-groups.md)メソッドと、システムに新しい[グループ](./group-object-adox.md)と新しい[ユーザー](./user-object-adox.md)を追加することによる[ユーザー](./users-collection-adox.md)の[追加](./append-method-adox-users.md)方法を示します。 新しい**グループ**は、新しい**ユーザー**の**Groups**コレクションに追加されます。 その結果、新しい **ユーザー** が **グループ**に追加されます。 また、 [ChangePassword](./changepassword-method-adox.md) メソッドを使用して **ユーザー** パスワードを指定します。  
   
 > [!NOTE]
 >  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes** または **INTEGRATED Security = SSPI** を指定する必要があります。  
@@ -124,11 +124,11 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Append メソッド (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append メソッド (ADOX Users)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [ChangePassword メソッド (ADOX)](../../../ado/reference/adox-api/changepassword-method-adox.md)   
- [Group オブジェクト (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)   
- [Groups コレクション (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
- [User オブジェクト (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
- [Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Append メソッド (ADOX Groups)](./append-method-adox-groups.md)   
+ [Append メソッド (ADOX Users)](./append-method-adox-users.md)   
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [ChangePassword メソッド (ADOX)](./changepassword-method-adox.md)   
+ [Group オブジェクト (ADOX)](./group-object-adox.md)   
+ [Groups コレクション (ADOX)](./groups-collection-adox.md)   
+ [User オブジェクト (ADOX)](./user-object-adox.md)   
+ [Users コレクション (ADOX)](./users-collection-adox.md)

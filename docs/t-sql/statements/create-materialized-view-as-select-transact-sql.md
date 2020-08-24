@@ -1,4 +1,5 @@
 ---
+description: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)
 title: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2020
@@ -37,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 221b26f59feb3c51ade10fd4923f30e1ade91fbf
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8d9dce220699fcdc2448ac19727d34ddd1bdad67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394642"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444846"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -106,9 +107,9 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 
 - 参照されるベース テーブルで UPDATE または DELETE が実行されると、具体化されたビューが無効になります。  この制限は、INSERT には適用されません。  具体化されたビューを再度有効にするには、REBUILD を指定して ALTER MATERIALIZED VIEW を実行します。
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-Azure データ ウェアハウスの具体化されたビューは、SQL Server のインデックス付きビューに似ています。  具体化されたビューで集計関数がサポートされる点を除き、インデックス付きビューとほぼ同じ制限が共有されています (詳細については、「[Create Indexed Views (インデックス付きビューを作成する)](/sql/relational-databases/views/create-indexed-views)」 を参照してください)。   
+Azure データ ウェアハウスの具体化されたビューは、SQL Server のインデックス付きビューに似ています。具体化されたビューで集計関数がサポートされる点を除き、インデックス付きビューとほぼ同じ制限が共有されています (詳細については、「[Create Indexed Views (インデックス付きビューを作成する)](/sql/relational-databases/views/create-indexed-views)」 を参照してください)。   
 
 具体化されたビューでは、CLUSTERED COLUMNSTORE INDEX のみがサポートされます。 
 
@@ -122,7 +123,7 @@ DDM 列が具体化されたビューの一部でない場合でも、動的デ�
  
 具体化されたビューで参照されるテーブル上では、ALTER TABLE SWITCH はサポートされません。 ALTER TABLE SWITCH を使用する前に、具体化されたビューを無効にするか、ドロップします。 以下のシナリオでは、具体化されたビューを作成する際、このビューに新しい列を追加する必要があります。
 
-|シナリオ|具体化されたビューに追加する新しい列|解説|  
+|シナリオ|具体化されたビューに追加する新しい列|コメント|  
 |-----------------|---------------|-----------------|
 |具体化されたビューの定義の SELECT リストに COUNT_BIG() が欠落しています| COUNT_BIG (*) |具体化されたビューを作成する際に自動的に追加されます。  ユーザーによる操作は不要です。|
 |具体化されたビューの定義の SELECT リストでユーザーが SUM(a) を指定しています。また、"a" は null 許容式です |COUNT_BIG (a) |ユーザーは、具体化されたビューの定義で式 "a" を手動で追加する必要があります。|
@@ -142,7 +143,8 @@ SQL Server Management Studio 内の説明プランとグラフィカルな推定
 
 ## <a name="permissions"></a>アクセス許可
 
-データベースの CREATE VIEW 権限と、ビューが作成されているスキーマの ALTER 権限が必要です。 
+ビューが作成されているスキーマに対する 1) REFERENCES と CREATE VIEW アクセス許可、または 2) CONTROL アクセス許可が必要です。 
+
   
 ## <a name="see-also"></a>関連項目
 

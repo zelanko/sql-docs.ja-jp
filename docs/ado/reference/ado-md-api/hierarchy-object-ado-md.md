@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 757de54d56b5220b2759e670584e432c595fc45f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fe14e37829bbeb501debcf1e8a27bd86d43712d3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440984"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778091"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy オブジェクト (ADO MD)
-[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)のメンバーを集計または "ロールアップ" できる1つの方法を表します。 ディメンションは、1つまたは複数の階層に沿って集計できます。  
+[ディメンション](./dimension-object-ado-md.md)のメンバーを集計または "ロールアップ" できる1つの方法を表します。 ディメンションは、1つまたは複数の階層に沿って集計できます。  
   
 ## <a name="remarks"></a>解説  
  **Hierarchy**オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  
   
--   [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)プロパティと[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)プロパティを使用して、**階層**を識別します。  
+-   [Name](./name-property-ado-md.md)プロパティと[UniqueName](./uniquename-property-ado-md.md)プロパティを使用して、**階層**を識別します。  
   
--   [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)プロパティを使用して**階層**を説明する意味のある文字列を返します。  
+-   [Description](./description-property-ado-md.md)プロパティを使用して**階層**を説明する意味のある文字列を返します。  
   
--   [レベルコレクションを](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)持つ**階層**を構成する[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクトを返します。  
+-   [レベルコレクションを](./levels-collection-ado-md.md)持つ**階層**を構成する[Level](./level-object-ado-md.md)オブジェクトを返します。  
   
--   標準の ADO [プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md) コレクションを使用して、 **Hierarchy** オブジェクトに関する追加情報を取得します。  
+-   標準の ADO [プロパティ](../ado-api/properties-collection-ado.md) コレクションを使用して、 **Hierarchy** オブジェクトに関する追加情報を取得します。  
   
  **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
@@ -57,11 +57,11 @@ ms.locfileid: "88440984"
   
  ここでは、次のトピックについて説明します。  
   
--   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/hierarchy-object-properties-methods-and-events.md)  
+-   [プロパティ、メソッド、およびイベント](./hierarchy-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
- [CubeDef の例 (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [Dimension オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
- [Hierarchy コレクション (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
- [Levels コレクション (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
- [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [CubeDef の例 (VBScript)](./cubedef-example-vbscript.md)   
+ [Dimension オブジェクト (ADO MD)](./dimension-object-ado-md.md)   
+ [Hierarchy コレクション (ADO MD)](./hierarchies-collection-ado-md.md)   
+ [Levels コレクション (ADO MD)](./levels-collection-ado-md.md)   
+ [Properties コレクション (ADO)](../ado-api/properties-collection-ado.md)

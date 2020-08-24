@@ -42,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dbd0d9088ea39d604c53c462448ae1c94b3a9052
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0376017e4ab74822a076379385b4b5ab457afca0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439784"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769961"
 ---
 # <a name="name-property-adox"></a>Name プロパティ (ADOX)
 オブジェクトの名前を示します。  
@@ -58,7 +58,7 @@ ms.locfileid: "88439784"
 ## <a name="remarks"></a>解説  
  名前はコレクション内で一意である必要はありません。  
   
- **Name**プロパティは、[列](../../../ado/reference/adox-api/column-object-adox.md)、[グループ](../../../ado/reference/adox-api/group-object-adox.md)、[キー](../../../ado/reference/adox-api/key-object-adox.md)、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)、[テーブル](../../../ado/reference/adox-api/table-object-adox.md)、および[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)オブジェクトに対して読み取り/書き込みが可能です。 **Name**プロパティは、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)、[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)、および[ビュー](../../../ado/reference/adox-api/view-object-adox.md)オブジェクトでは読み取り専用です。  
+ **Name**プロパティは、[列](./column-object-adox.md)、[グループ](./group-object-adox.md)、[キー](./key-object-adox.md)、[インデックス](./index-object-adox.md)、[テーブル](./table-object-adox.md)、および[ユーザー](./user-object-adox.md)オブジェクトに対して読み取り/書き込みが可能です。 **Name**プロパティは、[カタログ](./catalog-object-adox.md)、[プロシージャ](./procedure-object-adox.md)、および[ビュー](./view-object-adox.md)オブジェクトでは読み取り専用です。  
   
  読み取り/書き込みオブジェクト (**列**、 **グループ**、 **キー**、 **インデックス**、 **テーブル** 、 **ユーザー** オブジェクト) の場合、既定値は空の文字列 ("") になります。  
   
@@ -69,23 +69,23 @@ ms.locfileid: "88439784"
 
 :::row:::
     :::column:::
-        [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
-        [Group オブジェクト (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
-        [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+        [Column オブジェクト (ADOX)](./column-object-adox.md)  
+        [Group オブジェクト (ADOX)](./group-object-adox.md)  
+        [Index オブジェクト (ADOX)](./index-object-adox.md)  
     :::column-end:::
     :::column:::
-        [Key オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
-        [Procedure オブジェクト (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
-        [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Key オブジェクト (ADOX)](./key-object-adox.md)  
+        [Procedure オブジェクト (ADOX)](./procedure-object-adox.md)  
+        [Property オブジェクト (ADO)](../ado-api/property-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
-        [User オブジェクト (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
-        [View オブジェクト (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+        [Table オブジェクト (ADOX)](./table-object-adox.md)  
+        [User オブジェクト (ADOX)](./user-object-adox.md)  
+        [View オブジェクト (ADOX)](./view-object-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>参照  
- [Columns および Tables Append メソッド、Name プロパティの例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Keys Append メソッド、Key Type、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [ParentCatalog プロパティの例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
+ [Columns および Tables Append メソッド、Name プロパティの例 (VB)](./columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Keys Append メソッド、Key Type、UpdateRule プロパティの例 (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [ParentCatalog プロパティの例 (VB)](./parentcatalog-property-example-vb.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6263acd1a51aa73ab004103eb6a7315626335ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f8333c0fd8b4d290f2d76aa35ef8cfea73b35d
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452134"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759682"
 ---
 # <a name="rds-fundamentals"></a>RDS の基礎
 > [!IMPORTANT]
@@ -27,20 +27,18 @@ ms.locfileid: "88452134"
   
  次のトピックでは、RDS について説明します。  
   
--   [リモート データ アクセスのソリューション](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)  
+-   [リモート データ アクセスのソリューション](./solutions-for-remote-data-access.md)  
   
--   [RDS の基本プログラミング モデル](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)  
+-   [RDS の基本プログラミング モデル](./basic-rds-programming-model.md)  
   
--   [RDS のプログラミング モデルの詳細](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)  
+-   [RDS のプログラミング モデルの詳細](./rds-programming-model-in-detail.md)  
   
--   [RDS のプログラミング モデルとオブジェクト](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)  
+-   [RDS のプログラミング モデルとオブジェクト](./rds-programming-model-with-objects.md)  
   
--   [RDS オブジェクトモデルの概要](../../../ado/guide/remote-data-service/rds-object-model-summary.md)  
+-   [RDS オブジェクトモデルの概要](./rds-object-model-summary.md)  
   
-## <a name="see-also"></a>参照  
- [リモートデータアクセスのソリューション](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)   
- [RDS のシナリオ](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [RDS の使用方法とセキュリティ](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+## <a name="see-also"></a>関連項目  
+ [リモートデータアクセスのソリューション](./solutions-for-remote-data-access.md)   
+ [RDS のシナリオ](./rds-scenario.md)   
+ [RDS チュートリアル](./rds-tutorial.md)   
+ [RDS の使用方法とセキュリティ](./rds-usage-and-security.md)

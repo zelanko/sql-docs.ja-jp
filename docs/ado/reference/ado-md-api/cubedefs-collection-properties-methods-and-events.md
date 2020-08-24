@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: bf2d1108-ba3c-4830-9c49-78e833ff37b1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aaeeaaa3ad14f15429a31f7f6c009ae5c4a1d74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b43280068115f3c25da8215549a80c11ad65127
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441144"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778231"
 ---
 # <a name="cubedefs-collection-properties-methods-and-events"></a>CubeDefs コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>プロパティ  
- [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
+## <a name="properties"></a>Properties  
+ [Count プロパティ](../ado-api/count-property-ado.md)  
   
- [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item プロパティ](../ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>メソッド  
- [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh メソッド](../ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [CubeDefs コレクション (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)
+ [CubeDefs コレクション (ADO MD)](./cubedefs-collection-ado-md.md)

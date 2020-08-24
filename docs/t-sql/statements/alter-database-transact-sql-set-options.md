@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: ea604f3144f371047c00171947c0b7ceaeaa602f
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 528eedeb18de9b0d1a8558edecccf5470a374eda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479157"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -741,14 +741,14 @@ FORCED
 <a name="query-store"></a> **\<query_store_options> ::=**      
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
 
-ON | **OFF** | CLEAR [ ALL ]     
+ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
 このデータベースでクエリ ストアを有効にするかどうかを制御します。また、クエリ ストアの内容の削除も制御します。 詳細については、「[クエリ ストアの使用シナリオ](../../relational-databases/performance/query-store-usage-scenarios.md)」を参照してください。
 
 ON     
 クエリのストアを有効にします。
 
 OFF      
-クエリのストアを無効にします。 既定値は OFF です。 
+クエリのストアを無効にします。 既定値は OFF です。 FORCED は省略可能です。 FORCED は、実行中のすべてのクエリ ストア バックグラウンド タスクを中止し、クエリ ストアがオフになっている場合は同期フラッシュをスキップします。 クエリ ストアをできるだけ早くシャットダウンします。 実質的にクエリ ストアを直ちにオフにします。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 には FORCED が導入されています。
 
 > [!NOTE]  
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 単一データベースとエラスティック プールでは、クエリ ストアを無効にすることはできません。 `ALTER DATABASE [database] SET QUERY_STORE = OFF` を実行すると、警告 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.` が返されます。 
@@ -1868,10 +1868,13 @@ ON | OFF | CLEAR [ ALL ]
 このデータベースでクエリ ストアを有効にするかどうかを制御します。また、クエリ ストアの内容の削除も制御します。
 
 ON     
-クエリのストアを有効にします。
+クエリのストアを有効にします。 既定値は ON です。
 
 OFF     
-クエリのストアを無効にします。 これが既定値です。
+クエリのストアを無効にします。 
+
+> [!NOTE]  
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 単一データベースとエラスティック プールでは、クエリ ストアを無効にすることはできません。 `ALTER DATABASE [database] SET QUERY_STORE = OFF` を実行すると、警告 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.` が返されます。 
 
 CLEAR     
 クエリ ストアの内容を削除します。
@@ -3323,7 +3326,7 @@ OFF
 
 ### <a name="remarks"></a>解説
 
-このコマンドは、`master` データベースに接続しているときに実行する必要があります。 ユーザー データベースの READ_COMMITTED_SNAPSHOT のオン/オフを切り替えると、このデータベースにつながっている接続がすべて切断されます。 この変更はデータベースのメンテナンス期間中に行うか、ALTER DATABSE コマンドを実行している接続を除き、データベースへのアクティブな接続がなくなるまで待つことをお勧めします。  データベースをシングル ユーザー モードにする必要はありません。 セッションレベルで READ_COMMITTED_SNAPSHOT 設定を変更することはできません。  データベースのこの設定は、sys.databases の is_read_committed_snapshot_on 列で確認します。
+このコマンドは、`master` データベースに接続しているときに実行する必要があります。 ユーザー データベースの READ_COMMITTED_SNAPSHOT のオン/オフを切り替えると、このデータベースにつながっている接続がすべて切断されます。 この変更はデータベースのメンテナンス期間中に行うか、ALTER DATABASE コマンドを実行している接続を除き、データベースへのアクティブな接続がなくなるまで待つことをお勧めします。  データベースをシングル ユーザー モードにする必要はありません。 セッションレベルで READ_COMMITTED_SNAPSHOT 設定を変更することはできません。  データベースのこの設定は、sys.databases の is_read_committed_snapshot_on 列で確認します。
 
 データベースで READ_COMMITTED_SNAPSHOT が有効になっている場合、複数のデータ バージョンが存在するとき、各バージョンのスキャンのため、クエリのパフォーマンスが遅くなることがあります。 トランザクションが長時間になると、データベースが増大することもあります。 この問題は、バージョン クリーンアップをブロックするこのようなトランザクションでデータが変更される場合に発生します。  
 

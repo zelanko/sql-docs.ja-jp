@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 85b13a87e09d7c95ecad8b6ed283b8d8066b22f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8b9b58c50a1e3c77a6239c73222ea7a1656b882
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439634"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769641"
 ---
 # <a name="procedures-append-method-example-vb"></a>Procedures Append メソッドの例 (VB)
-次のコードは、 [Command](../../../ado/reference/ado-api/command-object-ado.md) オブジェクトと [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) メソッドを使用して、基になるデータソースに新しいプロシージャを作成する方法を示しています。  
+次のコードは、 [Command](../ado-api/command-object-ado.md) オブジェクトと [Procedures](./procedures-collection-adox.md) collection [Append](./append-method-adox-procedures.md) メソッドを使用して、基になるデータソースに新しいプロシージャを作成する方法を示しています。  
   
 ```  
 ' BeginCreateProcedureVB  
@@ -75,8 +75,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Append メソッド (ADOX Procedures)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [プロシージャオブジェクト (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures コレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [ActiveConnection プロパティ (ADOX)](./activeconnection-property-adox.md)   
+ [Append メソッド (ADOX Procedures)](./append-method-adox-procedures.md)   
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [プロシージャオブジェクト (ADOX)](./procedure-object-adox.md)   
+ [Procedures コレクション (ADOX)](./procedures-collection-adox.md)

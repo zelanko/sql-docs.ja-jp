@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00878f5caddcbd8060c9c85222bc061533542bf8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 446a220868a2cf0b0a518bde95897b9d1f41a3b3
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451624"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760277"
 ---
 # <a name="adcprop_asyncthreadpriority_enum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
-RDS [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトの場合は、データを取得する非同期スレッドの実行の優先度を指定します。  
+RDS [レコードセット](./recordset-object-ado.md) オブジェクトの場合は、データを取得する非同期スレッドの実行の優先度を指定します。  
   
- これらの定数は、 **レコードセット** の "**バックグラウンドスレッド優先順位**" 動的プロパティと共に使用します。これは、ADO から OLE DB の動的プロパティインデックスで参照され、 [OLE DB のドキュメントについては Microsoft Cursor Service](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) に記載されています。  
+ これらの定数は、 **レコードセット** の "**バックグラウンドスレッド優先順位**" 動的プロパティと共に使用します。これは、ADO から OLE DB の動的プロパティインデックスで参照され、 [OLE DB のドキュメントについては Microsoft Cursor Service](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) に記載されています。  
   
-|定数|値|説明|  
+|定数|値|[説明]|  
 |--------------|-----------|-----------------|  
 |**adPriorityAboveNormal**|4|通常と最高の間の優先順位を設定します。|  
 |**adPriorityBelowNormal**|2|最低と通常の優先順位を設定します。|  

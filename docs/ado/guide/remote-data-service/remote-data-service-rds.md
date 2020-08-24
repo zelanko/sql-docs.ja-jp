@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c367d9e8926d04852bde756a430116f25bfc3b31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f21ac9577b45bbeca2d57a3c54c40d542fe5220
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452034"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759422"
 ---
 # <a name="remote-data-service-rds"></a>リモート データ サービス (RDS)
 リモートデータサービス (RDS) は ADO の機能の1つです。この機能を使用すると、サーバーからクライアントアプリケーションまたは Web ページにデータを移動し、クライアント上のデータを操作して、1回のラウンドトリップでサーバーに更新を返すことができます。  
@@ -29,30 +29,8 @@ ms.locfileid: "88452034"
   
  RDS プログラマーズガイドには、次の章が含まれています。  
   
--   [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)  
+-   [RDS の基礎](./rds-fundamentals.md)  
   
--   [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)  
+-   [RDS チュートリアル](./rds-tutorial.md)  
   
--   [RDS の使用方法とセキュリティ](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-   [RDS の使用方法とセキュリティ](./rds-usage-and-security.md)

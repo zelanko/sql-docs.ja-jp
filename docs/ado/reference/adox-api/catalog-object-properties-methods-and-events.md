@@ -13,36 +13,36 @@ helpviewer_keywords:
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b1496230281d7199774475437c0d12be67e7cfe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b54985a01911e7e8fce9082c424c5da86340395b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440404"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771181"
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>Catalog オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
- [ActiveConnection プロパティ](../../../ado/reference/adox-api/activeconnection-property-adox.md)  
+ [ActiveConnection プロパティ](./activeconnection-property-adox.md)  
   
- [Groups コレクション](../../../ado/reference/adox-api/groups-collection-adox.md)  
+ [Groups コレクション](./groups-collection-adox.md)  
   
- [Procedures コレクション](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+ [Procedures コレクション](./procedures-collection-adox.md)  
   
- [Tables コレクション](../../../ado/reference/adox-api/tables-collection-adox.md)  
+ [Tables コレクション](./tables-collection-adox.md)  
   
- [Users コレクション](../../../ado/reference/adox-api/users-collection-adox.md)  
+ [Users コレクション](./users-collection-adox.md)  
   
- [Views コレクション](../../../ado/reference/adox-api/views-collection-adox.md)  
+ [Views コレクション](./views-collection-adox.md)  
   
 ## <a name="methods"></a>メソッド  
- [Create メソッド](../../../ado/reference/adox-api/create-method-adox.md)  
+ [Create メソッド](./create-method-adox.md)  
   
- [GetObjectOwner メソッド](../../../ado/reference/adox-api/getobjectowner-method-adox.md)  
+ [GetObjectOwner メソッド](./getobjectowner-method-adox.md)  
   
- [SetObjectOwner メソッド](../../../ado/reference/adox-api/setobjectowner-method.md)  
+ [SetObjectOwner メソッド](./setobjectowner-method.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)

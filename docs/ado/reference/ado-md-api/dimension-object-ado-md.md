@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc3661ef36c0b763ca6b0f04f52e4713d59b9a19
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73feb1e20320a418804666e11cb2410ab4451c52
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441114"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778201"
 ---
 # <a name="dimension-object-ado-md"></a>Dimension オブジェクト (ADO MD)
 メンバーの1つ以上の階層を含む多次元キューブのディメンションの1つを表します。  
@@ -29,13 +29,13 @@ ms.locfileid: "88441114"
 ## <a name="remarks"></a>解説  
  **ディメンション**オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  
   
--   [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)プロパティと[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)プロパティを使用して、**ディメンション**を識別します。  
+-   [Name](./name-property-ado-md.md)プロパティと[UniqueName](./uniquename-property-ado-md.md)プロパティを使用して、**ディメンション**を識別します。  
   
--   [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)プロパティを使用して、**ディメンション**を説明する意味のある文字列を返します。  
+-   [Description](./description-property-ado-md.md)プロパティを使用して、**ディメンション**を説明する意味のある文字列を返します。  
   
--   Hierarchy[コレクションを使用して](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)、**ディメンション**を構成する[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)オブジェクトを返します。  
+-   Hierarchy[コレクションを使用して](./hierarchies-collection-ado-md.md)、**ディメンション**を構成する[階層](./hierarchy-object-ado-md.md)オブジェクトを返します。  
   
--   標準の ADO [プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md) コレクションを使用して、 **ディメンション** オブジェクトに関する追加情報を取得します。  
+-   標準の ADO [プロパティ](../ado-api/properties-collection-ado.md) コレクションを使用して、 **ディメンション** オブジェクトに関する追加情報を取得します。  
   
  **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "88441114"
   
  ここでは、次のトピックについて説明します。  
   
--   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/dimension-object-properties-methods-and-events.md)  
+-   [プロパティ、メソッド、およびイベント](./dimension-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
- [CubeDef の例 (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [CubeDef オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
- [Dimensions コレクション (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
- [Hierarchy コレクション (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
- [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [CubeDef の例 (VBScript)](./cubedef-example-vbscript.md)   
+ [CubeDef オブジェクト (ADO MD)](./cubedef-object-ado-md.md)   
+ [Dimensions コレクション (ADO MD)](./dimensions-collection-ado-md.md)   
+ [Hierarchy コレクション (ADO MD)](./hierarchies-collection-ado-md.md)   
+ [Properties コレクション (ADO)](../ado-api/properties-collection-ado.md)

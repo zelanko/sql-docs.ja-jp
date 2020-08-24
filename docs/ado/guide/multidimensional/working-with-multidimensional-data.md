@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c37f18f8bcaa3d0c1f78b3ddb8d0c6413fe7277
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3804925eb893b656d555419ab81753ff464f41bd
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452394"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758772"
 ---
 # <a name="working-with-multidimensional-data"></a>多次元データの操作
 *セルセット*は、多次元データに対するクエリの結果です。 これは、軸のコレクションで構成されており、通常は4つの軸を超えていません。通常は2つまたは3つです。 *軸*は、1つまたは複数のディメンションのメンバーのコレクションであり、キューブ内の特定の値を検索またはフィルター処理するために使用されます。  
@@ -29,7 +29,7 @@ ms.locfileid: "88452394"
   
  *セル*は、軸の座標の交差部分に配置されるオブジェクトです。 各セルには、データ自体、書式設定された文字列 (表示可能な形式のセルデータ)、およびセルの序数値を含む、複数の情報が関連付けられています。 (各セルは、セルセット内の一意の序数値です。 セルセット内の最初のセルの序数値は0ですが、8つの列を持つセルセットの2番目の行の一番左のセルの序数値は8になります)。  
   
- たとえば、キューブには次の6つのディメンションがあります (このキューブスキーマは、 [「多次元スキーマとデータの概要](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)」で説明した例と若干異なることに注意してください)。  
+ たとえば、キューブには次の6つのディメンションがあります (このキューブスキーマは、 [「多次元スキーマとデータの概要](./overview-of-multidimensional-schemas-and-data.md)」で説明した例と若干異なることに注意してください)。  
   
 -   Salesperson  
   
@@ -76,11 +76,11 @@ ms.locfileid: "88452394"
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- セルセット、セル、軸、および位置はすべて、対応するオブジェクト (セルセット[、](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)、[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)、および[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)) によって ADO MD で表されます。  
+ セルセット、セル、軸、および位置はすべて、対応するオブジェクト (セルセット[、](../../reference/ado-md-api/cellset-object-ado-md.md)[セル](../../reference/ado-md-api/cell-object-ado-md.md)、[軸](../../reference/ado-md-api/axis-object-ado-md.md)、および[位置](../../reference/ado-md-api/position-object-ado-md.md)) によって ADO MD で表されます。  
   
-## <a name="see-also"></a>参照  
- [ADO MD オブジェクトモデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (多次元) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [多次元スキーマとデータの概要](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
- [ADO MD を使用したプログラミング](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [ADO MD と ADO の併用](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)
+## <a name="see-also"></a>関連項目  
+ [ADO MD オブジェクトモデル](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (多次元) (ADO MD)](./ado-multidimensional-ado-md.md)   
+ [多次元スキーマとデータの概要](./overview-of-multidimensional-schemas-and-data.md)   
+ [ADO MD を使用したプログラミング](./programming-with-ado-md.md)   
+ [ADO MD と ADO の併用](./using-ado-with-ado-md.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59c0f32f7e5ba467fd1b90a348a78432a16621ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 18c7d09707a69967560765f880a3c6563de1506e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451874"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759870"
 ---
 # <a name="understanding-the-customization-file"></a>カスタマイズ ファイルの概要
 カスタマイズファイルの各セクションヘッダーは、型とパラメーターを含む角かっこ (**[]**) で構成されています。 4つのセクションの種類は、 **接続**、 **sql**、 **userlist**、または **ログ**のリテラル文字列によって示されます。 パラメーターは、リテラル文字列、既定値、ユーザー指定の識別子、または nothing です。  
@@ -45,7 +45,7 @@ identifier
 |パーツ|説明|  
 |----------|-----------------|  
 |**connect**|接続文字列を変更するリテラル文字列。|  
-|**server**|コマンド文字列を変更するリテラル文字列。|  
+|**sql**|コマンド文字列を変更するリテラル文字列。|  
 |**userlist**|特定のユーザーのアクセス権を変更するリテラル文字列。|  
 |**logs**|操作エラーを記録するログファイルを指定するリテラル文字列。|  
 |**default**|識別子が指定されていない場合、または見つからない場合に使用されるリテラル文字列。|  
@@ -67,12 +67,11 @@ identifier
   
 -   **ログ**セクションは、 **DataFactory**が操作中のときに常に使用されます。  
   
-## <a name="see-also"></a>参照  
- [カスタマイズファイルの接続セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [カスタマイズファイルログセクション](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [カスタマイズファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [カスタマイズファイルの UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [必要なクライアント設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [独自のカスタム ハンドラーの記述](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+## <a name="see-also"></a>関連項目  
+ [カスタマイズファイルの接続セクション](./customization-file-connect-section.md)   
+ [カスタマイズファイルログセクション](./customization-file-logs-section.md)   
+ [カスタマイズファイル SQL セクション](./customization-file-sql-section.md)   
+ [カスタマイズファイルの UserList セクション](./customization-file-userlist-section.md)   
+ [DataFactory のカスタマイズ](./datafactory-customization.md)   
+ [必要なクライアント設定](./required-client-settings.md)   
+ [独自のカスタム ハンドラーの記述](./writing-your-own-customized-handler.md)

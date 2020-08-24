@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80db98699916cea22cd2815871f99159b1f1a7c4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3805ac88556b6d00aaf43bf5e1d28ece71c1c591
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451924"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759112"
 ---
 # <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>手順 4:サーバーがレコード セットを返す (RDS チュートリアル)
 > [!IMPORTANT]
@@ -38,6 +38,6 @@ Sub RDSTutorial4()
 ...  
 ```  
   
-## <a name="see-also"></a>参照  
- [手順 5: DataControl を使用できるようにする (RDS チュートリアル)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)   
- [RDS のチュートリアル (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+## <a name="see-also"></a>関連項目  
+ [手順 5: DataControl を使用できるようにする (RDS チュートリアル)](./step-5-datacontrol-is-made-usable-rds-tutorial.md)   
+ [RDS のチュートリアル (VBScript)](./rds-tutorial-vbscript.md)

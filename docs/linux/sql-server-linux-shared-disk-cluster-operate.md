@@ -1,6 +1,6 @@
 ---
 title: FCI の手動フェールオーバー - SQL Server on Linux
-description: SQL Server on Linux でフェールオーバー クラスター インスタンス (FCI) を手動でフェールオーバーさせる方法について説明します。
+description: SQL Server on Linux (具体的には、Red Hat Linux Enterprise、Ubuntu、Suse Linux Enterprise Server) 上のフェールオーバー クラスター インスタンス (FCI) を手動でフェールオーバーする方法について説明します。
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 58c30fc1e88ec3b7e90549f28b13f91e3330675d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2be454ad7d2ca85f1648ba7f98ea503627d6c437
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897248"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088755"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの操作 - SQL Server on Linux
 
@@ -47,7 +47,7 @@ Red Hat Enterprise Linux (RHEL) サーバーまたは Ubuntu サーバーで手�
 
    \<NewHostNode> は、FCI をホストするクラスター ノードの名前です。 
 
-   確認は表示されません。
+   受信確認は受け取りません。
 
 2.  手動フェールオーバーの間に、Pacemaker によって、手動で移動するように選択したリソースに対して場所の制約が作成されます。 この制約を見るには、`sudo pcs constraint` を実行します。
 

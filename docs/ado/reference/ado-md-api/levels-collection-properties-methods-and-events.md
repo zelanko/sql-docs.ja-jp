@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 7fba3296-5bd0-4f9e-8f63-9565fe1ee15f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fb8f1d2bfe324b4d4a10c120f39dbbeb474f563
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c995a67738b353e2d60128e8cb083ceb6a5e18a2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440884"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778061"
 ---
 # <a name="levels-collection-properties-methods-and-events"></a>Levels コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>プロパティ  
- [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
+## <a name="properties"></a>Properties  
+ [Count プロパティ](../ado-api/count-property-ado.md)  
   
- [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item プロパティ](../ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>メソッド  
- [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh メソッド](../ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [Levels コレクション (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)
+ [Levels コレクション (ADO MD)](./levels-collection-ado-md.md)

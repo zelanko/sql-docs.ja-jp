@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb766bddb637133dfb46af53187c8c34f99c2660
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d30b4fdcea6d8334e94d8b02ef8e060e5060d69
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441294"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778361"
 ---
 # <a name="caption-property-ado-md"></a>Caption プロパティ (ADO MD)
-[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)または[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)オブジェクトを表示するときに使用するテキストキャプションを示します。  
+[レベル](./level-object-ado-md.md)または[メンバー](./member-object-ado-md.md)オブジェクトを表示するときに使用するテキストキャプションを示します。  
   
 ## <a name="return-values"></a>戻り値  
  は **文字列** を返し、読み取り専用です。  
@@ -35,13 +35,13 @@ ms.locfileid: "88441294"
 
 :::row:::
     :::column:::
-        [Level オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
+        [Level オブジェクト (ADO MD)](./level-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Member オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+        [Member オブジェクト (ADO MD)](./member-object-ado-md.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>参照  
- [セルセットの例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Description プロパティ (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)
+ [セルセットの例 (VB)](./cellset-example-vb.md)   
+ [Description プロパティ (ADO MD)](./description-property-ado-md.md)

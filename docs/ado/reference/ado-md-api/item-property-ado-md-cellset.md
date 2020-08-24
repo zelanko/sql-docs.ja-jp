@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92f81199f52323e1e317c27b5206ebe69e674879
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12df2a7d592be4fa42d8cc0df779a375ab987cb2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440964"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778071"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item プロパティ (ADO MD セルセット)
-セルの座標を使用して、セル [セット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) からセルを取得します。  
+セルの座標を使用して、セル [セット](./cellset-object-ado-md.md) からセルを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +46,7 @@ Cell = Cellset.Item ( Positions)
 -   序数の位置  
   
 ## <a name="remarks"></a>解説  
- **アイテム**プロパティを使用して、[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)[セット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクト内の Cell オブジェクトを返します。 **Item**プロパティが*位置*引数に対応するセルを見つけることができない場合は、エラーが発生します。  
+ **アイテム**プロパティを使用して、[セル](./cell-object-ado-md.md)[セット](./cellset-object-ado-md.md)オブジェクト内の Cell オブジェクトを返します。 **Item**プロパティが*位置*引数に対応するセルを見つけることができない場合は、エラーが発生します。  
   
  **アイテム**プロパティは、**セルセット**オブジェクトの既定のプロパティです。 次の構文形式は置き換えることができます。  
   
@@ -66,8 +66,8 @@ Cellset.Item ( Positions )Cellset ( Positions )
 >  メンバー名でセルを取得することは、データプロバイダーでサポートされていない可能性があります。 詳細については、プロバイダーのドキュメントを参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
- [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+ [CellSet オブジェクト (ADO MD)](./cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>参照  
- [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)
+ [Cell オブジェクト (ADO MD)](./cell-object-ado-md.md)   
+ [CellSet オブジェクト (ADO MD)](./cellset-object-ado-md.md)

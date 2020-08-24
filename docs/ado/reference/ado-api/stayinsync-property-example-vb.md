@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13e1026b95386cb051aba0468d371937c4ed52d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7e96d32355fa31d79933b23620002f96d23eb7da
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441914"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777271"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync プロパティの例 (VB)
-この例では、 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) プロパティを使用して、階層 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の行へのアクセスを容易にする方法を示します。  
+この例では、 [StayInSync](./stayinsync-property.md) プロパティを使用して、階層 [レコードセット](./recordset-object-ado.md)内の行へのアクセスを容易にする方法を示します。  
   
- 外側のループでは、各作成者の姓、州、および id が表示されます。 各行の追加された**レコードセット**は、 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションから取得され、親**レコードセット**が新しい行に移動するたびに、 **StayInSync**プロパティによって自動的に**rstTitleAuthor**に割り当てられます。 内側のループでは、追加されたレコードセットの各行に4つのフィールドが表示されます。  
+ 外側のループでは、各作成者の姓、州、および id が表示されます。 各行の追加された**レコードセット**は、 [Fields](./fields-collection-ado.md)コレクションから取得され、親**レコードセット**が新しい行に移動するたびに、 **StayInSync**プロパティによって自動的に**rstTitleAuthor**に割り当てられます。 内側のループでは、追加されたレコードセットの各行に4つのフィールドが表示されます。  
   
 ```  
 'BeginStayInSyncVB  
@@ -91,6 +91,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [StayInSync プロパティ](../../../ado/reference/ado-api/stayinsync-property.md)
+ [Fields コレクション (ADO)](./fields-collection-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [StayInSync プロパティ](./stayinsync-property.md)

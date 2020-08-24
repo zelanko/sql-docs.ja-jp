@@ -1,6 +1,6 @@
 ---
 title: SQL Server on Linux のトラブルシューティング
-description: SQL Server on Linux の使用に関するトラブルシューティングのヒントについて説明します。
+description: Linux 上または Docker コンテナー内で実行される Microsoft SQL Server のトラブルシューティングを行います。 サポートされている機能と既知の制限事項に関する情報の入手先について説明します。
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 7c2c191fa05f1c584c9e45e88cd5bd5b0e3b7851
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99ac4b9fbd0ce616cebc707026eff1d5eb15895f
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897220"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088754"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux のトラブルシューティング
 
@@ -191,7 +191,7 @@ SQLCMD を使用してシングル ユーザー モードで SQL Server を起�
    sudo systemctl start mssql-server
    ```
 
-## <a name="improve-performance"></a>パフォーマンスを向上させる
+## <a name="improve-performance"></a>パフォーマンスの向上
 
 データベースの設計、ハードウェア、ワークロードの要求など、パフォーマンスに影響を与える要因は多数あります。 パフォーマンスを向上させる場合は、最初に記事「[パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン](sql-server-linux-performance-best-practices.md)」のベスト プラクティスを確認してください。 次に、パフォーマンスの問題のトラブルシューティングに使用できるツールを調べます。
 

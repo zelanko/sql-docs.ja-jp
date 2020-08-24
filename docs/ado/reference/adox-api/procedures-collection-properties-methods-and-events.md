@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 557890e5-9a45-405d-a8d3-4f7c2b899c08
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1a0558bf005ed06f508e7c5656a6a7aa51b79dc5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 478dd68affe54fe1dddb7ede744e07454e6bcff6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439594"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769591"
 ---
 # <a name="procedures-collection-properties-methods-and-events"></a>Procedures コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>プロパティ  
- [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
+## <a name="properties"></a>Properties  
+ [Count プロパティ](../ado-api/count-property-ado.md)  
   
- [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item プロパティ](../ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>メソッド  
- [Append メソッド (プロシージャ)](../../../ado/reference/adox-api/append-method-adox-procedures.md)  
+ [Append メソッド (プロシージャ)](./append-method-adox-procedures.md)  
   
- [Delete メソッド (コレクション)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
+ [Delete メソッド (コレクション)](./delete-method-adox-collections.md)  
   
- [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh メソッド](../ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [Procedures コレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [Procedures コレクション (ADOX)](./procedures-collection-adox.md)

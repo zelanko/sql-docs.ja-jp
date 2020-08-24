@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1c5aee050caf603c3e1512d9098b7684a5ff917
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03959b22d0b64f2932326c42f5bb0117441b9051
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452324"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758652"
 ---
 # <a name="address-book-navigation-buttons"></a>アドレス帳のナビゲーション ボタン
 アドレス帳アプリケーションでは、Web ページの下部にナビゲーションボタンが表示されます。 ナビゲーションボタンを使用すると、データの最初の行または最後の行、または現在の選択範囲に隣接する行を選択することにより、HTML グリッドの表示でデータを移動できます。  
@@ -30,7 +30,7 @@ ms.locfileid: "88452324"
 ## <a name="navigation-sub-procedures"></a>ナビゲーションサブプロシージャ  
  アドレス帳アプリケーションには、ユーザーが **最初**、 **次**、 **前**へ、および **最後** のボタンをクリックしてデータを移動できるようにするためのいくつかの手順が含まれています。  
   
- たとえば、 **最初** のボタンをクリックすると、VBScript の First_OnClick サブプロシージャがアクティブ化されます。 プロシージャは、 [MoveFirst](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) メソッドを実行します。これにより、データの最初の行が現在の選択範囲になります。 **最後**のボタンをクリックすると、Last_OnClick サブプロシージャがアクティブになります。これにより、 [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)メソッドが呼び出され、データの最後の行が現在の選択範囲になります。 残りのナビゲーションボタンは同様の方法で動作します。  
+ たとえば、 **最初** のボタンをクリックすると、VBScript の First_OnClick サブプロシージャがアクティブ化されます。 プロシージャは、 [MoveFirst](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) メソッドを実行します。これにより、データの最初の行が現在の選択範囲になります。 **最後**のボタンをクリックすると、Last_OnClick サブプロシージャがアクティブになります。これにより、 [MoveLast](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)メソッドが呼び出され、データの最後の行が現在の選択範囲になります。 残りのナビゲーションボタンは同様の方法で動作します。  
   
 ```vb
 ' Move to the first record in the bound Recordset.  
@@ -62,9 +62,6 @@ Sub Last_OnClick
 End Sub  
 ```  
   
-## <a name="see-also"></a>参照  
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
-
-
-
+## <a name="see-also"></a>関連項目  
+ [DataControl オブジェクト (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
+ [MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (RDS)](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

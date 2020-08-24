@@ -17,24 +17,24 @@ helpviewer_keywords:
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 144e230b10ac6a73f88be7ab85e779bcda5f2cd0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3856bb797417909b2491bf3d5adcd7c5f18bc203
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441184"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778281"
 ---
 # <a name="children-property-ado-md"></a>Children プロパティ (ADO MD)
-現在の[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)が階層内の親である[メンバー](../../../ado/reference/ado-md-api/members-collection-ado-md.md)コレクションを返します。  
+現在の[メンバー](./member-object-ado-md.md)が階層内の親である[メンバー](./members-collection-ado-md.md)コレクションを返します。  
   
 ## <a name="return-values"></a>戻り値  
  **メンバー**コレクションを返し、読み取り専用です。  
   
 ## <a name="remarks"></a>解説  
- **Children**プロパティには、現在の**メンバー**が階層構造の親である**Members**コレクションが含まれています。 リーフレベルの **メンバー** オブジェクトには、 **members** コレクションに子メンバーがありません。 このプロパティは、 [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクトに属している**メンバー**オブジェクトでのみサポートされます。 このプロパティが、 [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md)オブジェクトに属する**メンバー**オブジェクトから参照されている場合に、エラーが発生します。  
+ **Children**プロパティには、現在の**メンバー**が階層構造の親である**Members**コレクションが含まれています。 リーフレベルの **メンバー** オブジェクトには、 **members** コレクションに子メンバーがありません。 このプロパティは、 [Level](./level-object-ado-md.md)オブジェクトに属している**メンバー**オブジェクトでのみサポートされます。 このプロパティが、 [Position](./position-object-ado-md.md)オブジェクトに属する**メンバー**オブジェクトから参照されている場合に、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  
- [Member オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+ [Member オブジェクト (ADO MD)](./member-object-ado-md.md)  
   
 ## <a name="see-also"></a>参照  
- [ChildCount プロパティ (ADO MD)](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)
+ [ChildCount プロパティ (ADO MD)](./childcount-property-ado-md.md)

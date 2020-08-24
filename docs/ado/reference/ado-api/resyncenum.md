@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c379ca2a3f68b195c0020d0e89009d2715da5850
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: addaaa07b14b88ed7d72714ba8698da1f2ef2ac9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442254"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777641"
 ---
 # <a name="resyncenum"></a>ResyncEnum
-再 [同期](../../../ado/reference/ado-api/resync-method.md)の呼び出しによって基になる値を上書きするかどうかを指定します。  
+再 [同期](./resync-method.md)の呼び出しによって基になる値を上書きするかどうかを指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
@@ -40,4 +40,4 @@ ms.locfileid: "88442254"
 |AdoEnums. UNDERLYINGVALUES|  
   
 ## <a name="applies-to"></a>適用対象  
- [Resync メソッド](../../../ado/reference/ado-api/resync-method.md)
+ [Resync メソッド](./resync-method.md)

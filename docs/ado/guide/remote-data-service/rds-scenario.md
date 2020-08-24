@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5a1058b23c92160b039d2cb439d429b46bfcb98
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7baed4eff98c8286c1c84bd346826b4c49e4fa75
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452094"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759562"
 ---
 # <a name="rds-scenario"></a>RDS のシナリオ
 > [!IMPORTANT]
@@ -50,22 +50,20 @@ ms.locfileid: "88452094"
   
  このシナリオには、次のトピックが含まれています。  
   
--   [アドレス帳アプリケーションのシステム要件](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)  
+-   [アドレス帳アプリケーションのシステム要件](./system-requirements-for-the-address-book-application.md)  
   
--   [アドレス帳の SQL スクリプトの実行](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)  
+-   [アドレス帳の SQL スクリプトの実行](./running-the-address-book-sql-script.md)  
   
--   [アドレス帳のサンプル アプリケーションの実行](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)  
+-   [アドレス帳のサンプル アプリケーションの実行](./running-the-address-book-sample-application.md)  
   
--   [アドレス帳のデータ バインディング オブジェクト](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)  
+-   [アドレス帳のデータ バインディング オブジェクト](./address-book-data-binding-object.md)  
   
--   [アドレス帳のコマンド ボタン](../../../ado/guide/remote-data-service/address-book-command-buttons.md)  
+-   [アドレス帳のコマンド ボタン](./address-book-command-buttons.md)  
   
--   [アドレス帳のナビゲーション ボタン](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
+-   [アドレス帳のナビゲーション ボタン](./address-book-navigation-buttons.md)  
   
-## <a name="see-also"></a>参照  
- [アドレス帳アプリケーションのシステム要件](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
- [Microsoft ActiveX データオブジェクト (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
-
+## <a name="see-also"></a>関連項目  
+ [アドレス帳アプリケーションのシステム要件](./system-requirements-for-the-address-book-application.md)   
+ [Microsoft ActiveX データオブジェクト (ADO)](../../microsoft-activex-data-objects-ado.md)   
+ [RDS の基礎](./rds-fundamentals.md)   
+ [RDS チュートリアル](./rds-tutorial.md)

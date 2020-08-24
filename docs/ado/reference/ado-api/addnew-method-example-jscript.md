@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c1e4ca8f4019153620494a3b6d945d9fdb75338
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 100329a51cbf3cbde4de4f82bc033dcb583efe90
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451574"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760224"
 ---
 # <a name="addnew-method-example-jscript"></a>AddNew メソッドの例 (JScript)
-この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) メソッドを使用して、指定した名前の新しいレコードを作成します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Addnewjs. asp**として保存します。  
+この例では、 [AddNew](./addnew-method-ado.md) メソッドを使用して、指定した名前の新しいレコードを作成します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Addnewjs. asp**として保存します。  
   
 ```  
 <!-- BeginAddNewJS -->  
@@ -135,6 +135,6 @@ body {
 <!-- EndAddNewJS -->  
 ```  
   
-## <a name="see-also"></a>参照  
- [AddNew メソッド (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>関連項目  
+ [AddNew メソッド (ADO)](./addnew-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

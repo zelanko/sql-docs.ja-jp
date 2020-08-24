@@ -13,12 +13,12 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88fb60179a5503d3c41bbc253c1f7373c1d97184
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 074dc46c36f4b90bebc241840eb137549e3bbd4d
+ms.sourcegitcommit: 2b4baae583a5430f2e2ec76192ef1af3f55b25e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751224"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88251480"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL のフラット ファイルのインポート ウィザード
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,50 +45,70 @@ PROSE は、入力ファイルのデータ パターンを分析し、列の名�
 2. SQL Server Database Engine または localhost のインスタンスに接続します。
 3. **[データベース]** を展開し、データベース (下の例では test) を右クリックし、 **[タスク]** をポイントして、[データのインポート] の上の **[フラット ファイルのインポート]** をクリックします。
 
-![ウィザードのメニュー](media/import-flat-file-wizard/importffmenu.png)
+![ウィザードのメニュー](media/import-flat-file-wizard/import-flat-file-menu.png)
 
 ウィザードの各機能の詳細については、次のチュートリアルを参照してください。
 
 ## <a name="tutorial"></a>チュートリアル
 このチュートリアルには、任意のフラット ファイルを使うことができます。 自分のファイルを使わない場合は、このチュートリアルでは次の Excel の CSV 形式のファイルを使用します。自由にコピーしてください。 この CSV を使用する場合は、**example.csv** という名前を付けて、デスクトップなどの簡単な場所に csv ファイルとして保存してください。
 
-![Excel のウィザード](media/import-flat-file-wizard/importffexample.png)
+![Excel のウィザード](media/import-flat-file-wizard/import-flat-file-example.png)
 
 ### <a name="step-1-access-wizard-and-intro-page"></a>手順 1:ウィザードの [はじめに] ページにアクセスする
 [こちら](#started)の手順に従ってウィザードにアクセスします。
 
 ウィザードの最初のページは [ようこそ] ページです。 このページを再表示したくない場合は、 **[次回からこの開始ページを表示しない]** をクリックします。
 
-![ウィザードの [はじめに]](media/import-flat-file-wizard/importffintro.png)
+![ウィザードの [はじめに]](media/import-flat-file-wizard/import-flat-file-intro.png)
 
 ### <a name="step-2-specify-input-file"></a>手順 2:入力ファイルを指定する
 [参照] をクリックして入力ファイルを選択します。 ウィザードの既定で、.csv ファイルと .txt ファイルが検索されます。 
 
 新しいテーブル名は一意にする必要があります。一意ではない場合、ウィザードを次に進めることはできません。
 
-![ウィザードの指定](media/import-flat-file-wizard/importffspecify.png)
+![ウィザードの指定](media/import-flat-file-wizard/import-flat-file-specify.png)
 
 ### <a name="step-3-preview-data"></a>手順 3:データをプレビューする
 プレビューが生成され、最初の 50 行を確認できます。 問題がある場合は [キャンセル] をクリックします。ない場合は、次のページに進みます。
 
-![ウィザードのプレビュー](media/import-flat-file-wizard/importffpreview.png)
+![ウィザードのプレビュー](media/import-flat-file-wizard/import-flat-file-preview.png)
 
 ### <a name="step-4-modify-columns"></a>手順 4:列を変更する
 ウィザードでは、列名、データ型などについて正しいと思われるものを特定します。ここでは、フィールドが正しくない場合に編集できます (たとえば、データ型が int ではなく float など)。
 
 準備ができたら次に進みます。
 
-![ウィザードの変更](media/import-flat-file-wizard/importffmodify.png)
+![ウィザードの変更](media/import-flat-file-wizard/import-flat-file-modify.png)
 
 ### <a name="step-5-summary"></a>手順 5:まとめ
 これは、現在の構成が表示される概要ページです。 問題がある場合は、前のセクションに戻ることができます。 問題がない場合は、[完了] をクリックします。インポート プロセスが開始されます。
 
-![ウィザードの概要](media/import-flat-file-wizard/importffsummary.png)
+![ウィザードの概要](media/import-flat-file-wizard/import-flat-file-summary.png)
 
 ### <a name="step-6-results"></a>手順 6:結果
 このページには、インポートが成功したかどうかが表示されます。 緑のチェック マークが表示される場合は成功です。それ以外の場合は、構成や入力ファイルに誤りがないか確認する必要があります。
 
-![ウィザードの結果](media/import-flat-file-wizard/importffresults.png)
+![ウィザードの結果](media/import-flat-file-wizard/import-flat-file-results.png)
+
+## <a name="troubleshooting"></a>トラブルシューティング
+フラット ファイルのインポート ウィザードでは、最初の 200 行に基づいてデータ型が検出されます。  それ以降のフラット ファイルのデータが、自動検出されたデータ型に準拠していないシナリオでは、インポート中にエラーが発生します。 次のようなエラー メッセージが表示されます。
+```
+Error inserting data into table. (Microsoft.SqlServer.Prose.Import)
+The given value of type String from the data source cannot be converted to type nvarchar of the specified target column. (System.Data)
+String or binary data would be truncated. (System.Data)
+```
+このエラーを軽減する方法:
+- nvarchar 列の長さなど、「[列を変更する](#step-4-modify-columns)」ステップでデータ型のサイズを拡張すると、フラット ファイルの残りの部分でのデータの変化が補正される場合があります。
+- 「[列を変更する](#step-4-modify-columns)」ステップでエラーの報告を有効にすると (特に、小さな数値で)、フラット ファイル内のどの行に、選択したデータ型に適合しないデータが含まれているかがわかります。 たとえば、2 番目の行でエラーが発生したフラット ファイルでは、範囲を 1 にしたエラー報告でインポートを実行すると、具体的なエラー メッセージが表示されます。  その場所でファイルを直接調べると、識別された行のデータに基づいて、さらに対象を絞ってデータ型を変更できます。
+
+![エラー報告の結果](media/import-flat-file-wizard/import-flat-file-error.png)
+
+```
+Error inserting data into table occured while inserting rows 1 - 2. (Microsoft.SqlServer.Prose.Import)
+The given value of type String from the data source cannot be converted to type float of the specified target column. (System.Data)
+Failed to convert parameter value from a String to a Double. (System.Data)
+```
+
 
 ## <a name="learn-more"></a>詳細情報
 

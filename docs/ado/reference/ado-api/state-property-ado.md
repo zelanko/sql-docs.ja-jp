@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca8a2421f15e5999347b0b7879f3faf707598ba2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 14e9a083c9f80d2c6485a9444211a2796b7fabee
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441984"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777351"
 ---
 # <a name="state-property-ado"></a>State プロパティ (ADO)
 オブジェクトの状態が開いているか閉じられているかにかかわらず、適用可能なすべてのオブジェクトを示します。 オブジェクトが非同期メソッドを実行している場合は、オブジェクトの現在の状態が接続中、実行中、または取得中かどうかを示します。  
   
 ## <a name="return-value"></a>戻り値  
- [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md)値を指定できる**Long 型**の値を返します。 既定値は **adStateClosed**です。  
+ [ObjectStateEnum](./objectstateenum.md)値を指定できる**Long 型**の値を返します。 既定値は **adStateClosed**です。  
   
 ## <a name="remarks"></a>解説  
  **State**プロパティを使用して、特定のオブジェクトの現在の状態をいつでも確認できます。  
@@ -40,18 +40,18 @@ ms.locfileid: "88441984"
 
 :::row:::
     :::column:::
-        [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
-        [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Command オブジェクト (ADO)](./command-object-ado.md)  
+        [Connection オブジェクト (ADO)](./connection-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
-        [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Record オブジェクト (ADO)](./record-object-ado.md)  
+        [Recordset オブジェクト (ADO)](./recordset-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Stream オブジェクト (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>参照  
- [ConnectionString、ConnectionTimeout、State プロパティの例 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString、ConnectionTimeout、State プロパティの例 (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [ConnectionString、ConnectionTimeout、State プロパティの例 (VB)](./connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString、ConnectionTimeout、State プロパティの例 (VC + +)](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)

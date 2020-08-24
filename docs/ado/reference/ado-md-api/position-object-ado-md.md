@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61b30ea92756de6f2ff4c9cf3d0e0b56cdedf155
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f1d8dce821fe0b287477ca603b71e93f789f016
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440774"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777891"
 ---
 # <a name="position-object-ado-md"></a>Position オブジェクト (ADO MD)
 軸に沿って点を定義する、異なる次元の1つ以上のメンバーのセットを表します。  
@@ -29,17 +29,17 @@ ms.locfileid: "88440774"
 ## <a name="remarks"></a>解説  
  **Position**オブジェクトのプロパティとコレクションを使用すると、次の操作を実行できます。  
   
--   **序数**プロパティを使用して、[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)に沿った**位置**の位置を表す序数を返します。  
+-   **序数**プロパティを使用して、[軸](./axis-object-ado-md.md)に沿った**位置**の位置を表す序数を返します。  
   
--   [Members](../../../ado/reference/ado-md-api/members-collection-ado-md.md)コレクションを使用して、**軸**に沿って位置を構成するメンバーを返します。  
+-   [Members](./members-collection-ado-md.md)コレクションを使用して、**軸**に沿って位置を構成するメンバーを返します。  
   
  ここでは、次のトピックについて説明します。  
   
--   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/position-object-properties-methods-and-events.md)  
+-   [プロパティ、メソッド、およびイベント](./position-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
- [Axis の例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Axis オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Members コレクション (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
- [Positions コレクション (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)
+ [Axis の例 (VBScript)](./axis-example-vbscript.md)   
+ [Axis オブジェクト (ADO MD)](./axis-object-ado-md.md)   
+ [Cell オブジェクト (ADO MD)](./cell-object-ado-md.md)   
+ [Members コレクション (ADO MD)](./members-collection-ado-md.md)   
+ [Positions コレクション (ADO MD)](./positions-collection-ado-md.md)

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81d1ff4bf67f103b613cb925a590b4d00e54482a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b4097bcdeb5460776017ce7a120ff43aa7a4420f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451594"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760246"
 ---
 # <a name="adcprop_updateresync_enum"></a>ADCPROP_UPDATERESYNC_ENUM
-[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドの後に暗黙の再[同期](../../../ado/reference/ado-api/resync-method.md)メソッド操作が続くかどうかを指定します。それを行う場合は、その操作のスコープを指定します。  
+[UpdateBatch](./updatebatch-method.md)メソッドの後に暗黙の再[同期](./resync-method.md)メソッド操作が続くかどうかを指定します。それを行う場合は、その操作のスコープを指定します。  
   
-|定数|値|説明|  
+|定数|値|[説明]|  
 |--------------|-----------|-----------------|  
 |**adResyncAll**|15|他のすべての ADCPROP_UPDATERESYNC_ENUM メンバーの結合された値を使用して再 **同期** を呼び出します。|  
 |**adResyncAutoIncrement**|1|既定値。 データソースによって自動的にインクリメントまたは生成される列の新しい id 値の取得を試みます。これには、Microsoft Jet のオートナンバーフィールドや Microsoft SQL Server Id 列などがあります。|  
@@ -36,4 +36,4 @@ ms.locfileid: "88451594"
 |**adResyncUpdates**|4|正常に更新されたすべての行に対して再 **同期** を呼び出します。|  
   
 ## <a name="applies-to"></a>適用対象  
- [Update Resync プロパティ - 動的 (ADO)](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)
+ [Update Resync プロパティ - 動的 (ADO)](./update-resync-property-dynamic-ado.md)

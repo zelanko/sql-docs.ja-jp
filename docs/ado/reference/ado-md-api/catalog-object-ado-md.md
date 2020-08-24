@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fe8cb849b5b770f23fab92da84bc3bc58fdf55d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b198e9765a8d0e68e61ecd3f9ed334e34c714ea8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441274"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778341"
 ---
 # <a name="catalog-object-ado-md"></a>Catalog オブジェクト (ADO MD)
 多次元データプロバイダー (.MDP) に固有の多次元スキーマ情報 (つまり、キューブおよび基になるディメンション、階層、レベル、およびメンバー) が含まれています。  
@@ -29,17 +29,17 @@ ms.locfileid: "88441274"
 ## <a name="remarks"></a>解説  
  **カタログ**オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  
   
--   [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)プロパティを標準の ADO[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトまたは有効な接続文字列に設定して、カタログを開きます。  
+-   [ActiveConnection](./activeconnection-property-ado-md.md)プロパティを標準の ADO[接続](../ado-api/connection-object-ado.md)オブジェクトまたは有効な接続文字列に設定して、カタログを開きます。  
   
--   "[名前](../../../ado/reference/ado-md-api/name-property-ado-md.md)" プロパティを使用して**カタログ**を識別します。  
+-   "[名前](./name-property-ado-md.md)" プロパティを使用して**カタログ**を識別します。  
   
--   [Cubedefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)コレクションを使用して、カタログ内のキューブを反復処理します。  
+-   [Cubedefs](./cubedefs-collection-ado-md.md)コレクションを使用して、カタログ内のキューブを反復処理します。  
   
  ここでは、次のトピックについて説明します。  
   
--   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/catalog-object-properties-methods-and-events-ado-md.md)  
+-   [プロパティ、メソッド、およびイベント](./catalog-object-properties-methods-and-events-ado-md.md)  
   
 ## <a name="see-also"></a>参照  
- [カタログの例 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [CubeDefs コレクション (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)
+ [カタログの例 (VB)](./catalog-example-vb.md)   
+ [Connection オブジェクト (ADO)](../ado-api/connection-object-ado.md)   
+ [CubeDefs コレクション (ADO MD)](./cubedefs-collection-ado-md.md)

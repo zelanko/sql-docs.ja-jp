@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c3f5bdb8a52f686ae336aa51986591788669979
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2bd5979526e453e33674441ebd4e433f2a7ad6f3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441674"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777041"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>一意のテーブル、一意のスキーマ、一意のカタログのプロパティ-動的 (ADO)
-複数のベーステーブルに対する結合操作によって形成された [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) 内の特定のベーステーブルに対する変更を厳密に制御できます。  
+複数のベーステーブルに対する結合操作によって形成された [レコードセット](./recordset-object-ado.md) 内の特定のベーステーブルに対する変更を厳密に制御できます。  
   
 -   **一意のテーブル** 更新、挿入、および削除が許可されるベーステーブルの名前を指定します。  
   
@@ -40,16 +40,16 @@ ms.locfileid: "88441674"
   
  **一意のテーブル**の主キーは、**レコードセット**全体の主キーとして扱われます。 これは、主キーを必要とする任意のメソッドに使用されるキーです。  
   
- **一意のテーブル**が設定されている間、 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)メソッドは、指定されたテーブルのみに影響します。 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、 [Resync](../../../ado/reference/ado-api/resync-method.md)、 [Update](../../../ado/reference/ado-api/update-method.md)、および[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)の各メソッドは、**レコードセット**の基になるベーステーブルに影響します。  
+ **一意のテーブル**が設定されている間、 [Delete](./delete-method-ado-recordset.md)メソッドは、指定されたテーブルのみに影響します。 [AddNew](./addnew-method-ado.md)、 [Resync](./resync-method.md)、 [Update](./update-method.md)、および[UpdateBatch](./updatebatch-method.md)の各メソッドは、**レコードセット**の基になるベーステーブルに影響します。  
   
- カスタムの再同期を実行する前に、**一意のテーブル**を指定する必要があります。 **一意のテーブル**が指定されていない場合、再[同期コマンド](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)のプロパティは無効になります。  
+ カスタムの再同期を実行する前に、**一意のテーブル**を指定する必要があります。 **一意のテーブル**が指定されていない場合、再[同期コマンド](./resync-command-property-dynamic-ado.md)のプロパティは無効になります。  
   
  一意のベーステーブルが見つからない場合、実行時エラーが発生します。  
   
- [カーソル位置](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティが**adUseClient**に設定されている場合、これらの動的プロパティはすべて、**レコードセット**オブジェクトの[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションに追加されます。  
+ [カーソル位置](./cursorlocation-property-ado.md)プロパティが**adUseClient**に設定されている場合、これらの動的プロパティはすべて、**レコードセット**オブジェクトの[プロパティ](./properties-collection-ado.md)コレクションに追加されます。  
   
 ## <a name="applies-to"></a>適用対象  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

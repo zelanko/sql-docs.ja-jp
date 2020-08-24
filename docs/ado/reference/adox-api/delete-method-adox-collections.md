@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7345337ab35f4154fd9dc53f749e04dba96dad48
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f239978dc9d71af81c74de452fefe16efe95d1bf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440114"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770631"
 ---
 # <a name="delete-method-adox-collections"></a>Delete メソッド (ADOX Collections)
 オブジェクトをコレクションから削除します。  
@@ -55,27 +55,27 @@ Collection.Delete Name
 ## <a name="remarks"></a>解説  
  *名前*がコレクションに存在しない場合、エラーが発生します。  
   
- [テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)と[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)のコレクションでは、プロバイダーがテーブルまたはユーザーの削除をサポートしていない場合に、エラーが発生します。 [プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)および[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)コレクションでは、プロバイダーがコマンドの永続化をサポートしていない場合、 **Delete**は失敗します。  
+ [テーブル](./tables-collection-adox.md)と[ユーザー](./users-collection-adox.md)のコレクションでは、プロバイダーがテーブルまたはユーザーの削除をサポートしていない場合に、エラーが発生します。 [プロシージャ](./procedures-collection-adox.md)および[ビュー](./views-collection-adox.md)コレクションでは、プロバイダーがコマンドの永続化をサポートしていない場合、 **Delete**は失敗します。  
   
 ## <a name="applies-to"></a>適用対象  
 
 :::row:::
     :::column:::
-        [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
-        [Groups コレクション (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
-        [Indexes コレクション (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+        [Columns コレクション (ADOX)](./columns-collection-adox.md)  
+        [Groups コレクション (ADOX)](./groups-collection-adox.md)  
+        [Indexes コレクション (ADOX)](./indexes-collection-adox.md)  
     :::column-end:::
     :::column:::
-        [Keys コレクション (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
-        [Procedures コレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
-        [Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
+        [Keys コレクション (ADOX)](./keys-collection-adox.md)  
+        [Procedures コレクション (ADOX)](./procedures-collection-adox.md)  
+        [Tables コレクション (ADOX)](./tables-collection-adox.md)  
     :::column-end:::
     :::column:::
-        [Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
-        [Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+        [Users コレクション (ADOX)](./users-collection-adox.md)  
+        [Views コレクション (ADOX)](./views-collection-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>参照  
- [Procedures Delete メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Views Delete メソッドの例 (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)
+ [Procedures Delete メソッドの例 (VB)](./procedures-delete-method-example-vb.md)   
+ [Views Delete メソッドの例 (VB)](./views-delete-method-example-vb.md)

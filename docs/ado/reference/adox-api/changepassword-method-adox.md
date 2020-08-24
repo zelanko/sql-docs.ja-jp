@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d23920fff14bfa04020223ad0150f480f6073723
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 94ddd75bddf8845012fe0845826eea264718cc91
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440374"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771171"
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword メソッド (ADOX)
-[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)アカウントのパスワードを変更します。  
+[ユーザー](./user-object-adox.md)アカウントのパスワードを変更します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,7 +47,7 @@ User.ChangePassword OldPassword, NewPassword
  プロバイダーがトラスティのプロパティの管理をサポートしていない場合、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  
- [User オブジェクト (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+ [User オブジェクト (ADOX)](./user-object-adox.md)  
   
 ## <a name="see-also"></a>参照  
- [Groups および Users Append、ChangePassword メソッドの例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)
+ [Groups および Users Append、ChangePassword メソッドの例 (VB)](./groups-and-users-append-changepassword-methods-example-vb.md)

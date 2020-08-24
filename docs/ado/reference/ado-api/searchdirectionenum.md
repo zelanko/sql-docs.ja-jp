@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 918261998fec061f8f977a8a2dfc614166f564f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 13f8e73bc382493084c8d3712d4b7bda2ed35c13
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442164"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777531"
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
-レコード [セット](../../../ado/reference/ado-api/recordset-object-ado.md)内のレコード検索の方向を指定します。  
+レコード [セット](./recordset-object-ado.md)内のレコード検索の方向を指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
-|**adSearchBackward**|-1|後方に検索し、 **レコードセット**の先頭で停止します。 一致するものが見つからない場合、レコードポインターは [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に配置されます。|  
-|**adSearchForward**|1|**レコードセット**の末尾で停止します。 一致するものが見つからない場合、レコードポインターは [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に位置します。|  
+|**adSearchBackward**|-1|後方に検索し、 **レコードセット**の先頭で停止します。 一致するものが見つからない場合、レコードポインターは [BOF](./bof-eof-properties-ado.md)に配置されます。|  
+|**adSearchForward**|1|**レコードセット**の末尾で停止します。 一致するものが見つからない場合、レコードポインターは [EOF](./bof-eof-properties-ado.md)に位置します。|  
   
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
@@ -40,4 +40,4 @@ ms.locfileid: "88442164"
 |AdoEnums の順方向|  
   
 ## <a name="applies-to"></a>適用対象  
- [Find メソッド (ADO)](../../../ado/reference/ado-api/find-method-ado.md)
+ [Find メソッド (ADO)](./find-method-ado.md)

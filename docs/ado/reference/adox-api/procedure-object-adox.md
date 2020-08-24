@@ -16,34 +16,34 @@ helpviewer_keywords:
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ee804ac6f4668f28d5f13754109b0f038d7e1ec4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8932d2b71f631f24a9ce825804074b9094f932b9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439654"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769711"
 ---
 # <a name="procedure-object-adox"></a>Procedure オブジェクト (ADOX)
-ストアドプロシージャを表します。 ADO [コマンド](../../../ado/reference/ado-api/command-object-ado.md) オブジェクトと共に使用する場合、 **プロシージャ** オブジェクトを使用して、ストアドプロシージャの追加、削除、または変更を行うことができます。  
+ストアドプロシージャを表します。 ADO [コマンド](../ado-api/command-object-ado.md) オブジェクトと共に使用する場合、 **プロシージャ** オブジェクトを使用して、ストアドプロシージャの追加、削除、または変更を行うことができます。  
   
 ## <a name="remarks"></a>解説  
  **プロシージャ**オブジェクトを使用すると、プロバイダーの "create Procedure" 構文を知らない場合や使用しなくても、ストアドプロシージャを作成できます。  
   
  **プロシージャ**オブジェクトのプロパティを使用すると、次の操作を実行できます。  
   
--   [Name](../../../ado/reference/adox-api/name-property-adox.md)プロパティを使用してプロシージャを識別します。  
+-   [Name](./name-property-adox.md)プロパティを使用してプロシージャを識別します。  
   
--   [Command](../../../ado/reference/adox-api/command-property-adox.md)プロパティを使用してプロシージャを作成または実行するために使用できる ADO**コマンド**オブジェクトを指定します。  
+-   [Command](./command-property-adox.md)プロパティを使用してプロシージャを作成または実行するために使用できる ADO**コマンド**オブジェクトを指定します。  
   
--   [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)プロパティと[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)プロパティを使用して日付情報を返します。  
+-   [DateCreated](./datecreated-property-adox.md)プロパティと[DateModified](./datemodified-property-adox.md)プロパティを使用して日付情報を返します。  
   
  ここでは、次のトピックについて説明します。  
   
--   [Procedure オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/procedure-object-properties-methods-and-events.md)  
+-   [Procedure オブジェクトのプロパティ、メソッド、およびイベント](./procedure-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
- [Command プロパティと CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [Parameters コレクション、Command プロパティの例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [Procedures Append メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [Procedures Delete メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Procedures コレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [Command プロパティと CommandText プロパティの例 (VB)](./command-and-commandtext-properties-example-vb.md)   
+ [Parameters コレクション、Command プロパティの例 (VB)](./parameters-collection-command-property-example-vb.md)   
+ [Procedures Append メソッドの例 (VB)](./procedures-append-method-example-vb.md)   
+ [Procedures Delete メソッドの例 (VB)](./procedures-delete-method-example-vb.md)   
+ [Procedures コレクション (ADOX)](./procedures-collection-adox.md)
