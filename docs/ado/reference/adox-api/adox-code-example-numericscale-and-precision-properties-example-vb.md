@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 919ad2763a711382cc9f472f34c791807cdd29e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 71bd5eb4ba0768f91ccf145933067164e668c942
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440646"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777761"
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX のコード例: NumericScale および Precision プロパティの例 (VB)
-この例では、[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトの[Numericscale](../../../ado/reference/adox-api/numericscale-property-adox.md)プロパティと[Precision](../../../ado/reference/adox-api/precision-property-adox.md)プロパティを示します。 このコードでは、 *Northwind*データベースの**Order Details**テーブルの値が表示されます。  
+この例では、[列](./column-object-adox.md)オブジェクトの[Numericscale](./numericscale-property-adox.md)プロパティと[Precision](./precision-property-adox.md)プロパティを示します。 このコードでは、 *Northwind*データベースの**Order Details**テーブルの値が表示されます。  
   
 ```  
 ' BeginNumericScalePrecVB  
@@ -77,6 +77,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [NumericScale プロパティ (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md)   
- [Precision プロパティ (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md)
+ [Column オブジェクト (ADOX)](./column-object-adox.md)   
+ [NumericScale プロパティ (ADOX)](./numericscale-property-adox.md)   
+ [Precision プロパティ (ADOX)](./precision-property-adox.md)

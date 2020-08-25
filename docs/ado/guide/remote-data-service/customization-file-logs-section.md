@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 365b57f174f289317a7e8b3e09fe0c29b051ef64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f478a1e1c18e9182d2effe77d37c0c329ba22c54
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452254"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759836"
 ---
 # <a name="customization-file-logs-section"></a>カスタマイズ ファイルの Logs セクション
 **Logs**セクションには、 **DataFactory**の操作中にエラーを記録するファイルの名前を指定する、ログファイルのエントリが含まれています。  
@@ -46,13 +46,11 @@ FileName
   
  ログファイルには、各エラーのユーザー名、HRESULT、日付、時刻が含まれます。  
   
-## <a name="see-also"></a>参照  
- [カスタマイズファイルの接続セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [カスタマイズファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [カスタマイズファイルの UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [必要なクライアント設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [カスタマイズファイルについて](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [独自のカスタム ハンドラーの記述](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+## <a name="see-also"></a>関連項目  
+ [カスタマイズファイルの接続セクション](./customization-file-connect-section.md)   
+ [カスタマイズファイル SQL セクション](./customization-file-sql-section.md)   
+ [カスタマイズファイルの UserList セクション](./customization-file-userlist-section.md)   
+ [DataFactory のカスタマイズ](./datafactory-customization.md)   
+ [必要なクライアント設定](./required-client-settings.md)   
+ [カスタマイズファイルについて](./understanding-the-customization-file.md)   
+ [独自のカスタム ハンドラーの記述](./writing-your-own-customized-handler.md)

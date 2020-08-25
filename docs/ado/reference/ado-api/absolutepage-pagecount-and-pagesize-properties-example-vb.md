@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5aaada64-5115-4adc-8668-827348f32566
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6896f47b29b4ad65e63ba999d2699e7f92231500
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8adbe7524bbf7886744b9753eb8dfb5417a1898a
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451814"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760012"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vb"></a>AbsolutePage、PageCount、および PageSize プロパティの例 (VB)
 ```  
@@ -101,8 +101,8 @@ End Sub
 'EndAbsolutePageVB  
 ```  
   
-## <a name="see-also"></a>参照  
- [AbsolutePage プロパティ (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [PageCount プロパティ (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [PageSize プロパティ (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>関連項目  
+ [AbsolutePage プロパティ (ADO)](./absolutepage-property-ado.md)   
+ [PageCount プロパティ (ADO)](./pagecount-property-ado.md)   
+ [PageSize プロパティ (ADO)](./pagesize-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

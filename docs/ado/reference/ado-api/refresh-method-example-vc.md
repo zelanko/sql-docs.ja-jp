@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 521ed958411e2943d0f01d25cb417aee569f1912
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b99e08e689e9e37ae489f61c742819e9d8a8afca
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442334"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771961"
 ---
 # <a name="refresh-method-example-vc"></a>Refresh メソッドの例 (VC++)
-この例では、 [refresh](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、ストアドプロシージャ[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションを更新します。  
+この例では、 [refresh](./refresh-method-ado.md)メソッドを使用して、ストアドプロシージャ[コマンド](./command-object-ado.md)オブジェクトの[パラメーター](./parameters-collection-ado.md)コレクションを更新します。  
   
 ## <a name="example"></a>例  
   
@@ -235,6 +235,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>参照  
- [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
+ [Command オブジェクト (ADO)](./command-object-ado.md)   
+ [Parameters コレクション (ADO)](./parameters-collection-ado.md)   
+ [Refresh メソッド (ADO)](./refresh-method-ado.md)

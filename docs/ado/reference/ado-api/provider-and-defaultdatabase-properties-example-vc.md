@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5ad64de17b67acfba0948398fbec7ba5e853eec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 49d1e08e421c520238573cd802a592cc970b19da
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442614"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772801"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider および DefaultDatabase プロパティの例 (VC++)
-この例では、異なるプロバイダーを使用する3つの[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを開くことによって、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)プロパティを示します。 また、 [defaultdatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) プロパティを使用して、Microsoft ODBC プロバイダーの既定のデータベースを設定します。  
+この例では、異なるプロバイダーを使用する3つの[接続](./connection-object-ado.md)オブジェクトを開くことによって、[プロバイダー](./provider-property-ado.md)プロパティを示します。 また、 [defaultdatabase](./defaultdatabase-property.md) プロパティを使用して、Microsoft ODBC プロバイダーの既定のデータベースを設定します。  
   
 ```  
 // Provider_and_DefaultDatabase_Properties.cpp  
@@ -135,6 +135,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [DefaultDatabase プロパティ](../../../ado/reference/ado-api/defaultdatabase-property.md)   
- [Provider プロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)   
+ [DefaultDatabase プロパティ](./defaultdatabase-property.md)   
+ [Provider プロパティ (ADO)](./provider-property-ado.md)

@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7ec3707df187e09de92fa42d7ed2b1c1b8e1130
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c34ae14feda7c0a6847d638f35bf84c6b9cd0fd5
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452224"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759806"
 ---
 # <a name="datafactory-customization"></a>DataFactory のカスタマイズ
-リモートデータサービス (RDS) を使用すると、3層のクライアント/サーバーシステムで簡単にデータアクセスを実行できます。 クライアントデータコントロールは、リモートデータソースに対してクエリを実行するための接続とコマンド文字列パラメーター、または更新を実行するための接続文字列および [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトパラメーターを指定します。  
+リモートデータサービス (RDS) を使用すると、3層のクライアント/サーバーシステムで簡単にデータアクセスを実行できます。 クライアントデータコントロールは、リモートデータソースに対してクエリを実行するための接続とコマンド文字列パラメーター、または更新を実行するための接続文字列および [レコードセット](../../reference/ado-api/recordset-object-ado.md) オブジェクトパラメーターを指定します。  
   
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- パラメーターは、リモートデータソースに対するデータアクセス操作を実行するサーバープログラムに渡されます。 RDS には、 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) オブジェクトと呼ばれる既定のサーバープログラムが用意されています。 **DataFactory**オブジェクトは、クエリによって生成されたすべての**レコードセット**オブジェクトをクライアントに返します。  
+ パラメーターは、リモートデータソースに対するデータアクセス操作を実行するサーバープログラムに渡されます。 RDS には、 [DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) オブジェクトと呼ばれる既定のサーバープログラムが用意されています。 **DataFactory**オブジェクトは、クエリによって生成されたすべての**レコードセット**オブジェクトをクライアントに返します。  
   
  ただし、RDSServer はクエリと更新の実行に制限されてい**ます。** 接続またはコマンド文字列に対して検証や処理を実行することはできません。  
   
@@ -36,18 +36,16 @@ ms.locfileid: "88452224"
   
  次のトピックでは、 **DataFactory** オブジェクトのカスタマイズの詳細について説明します。  
   
--   [カスタマイズ ファイルの概要](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)  
+-   [カスタマイズ ファイルの概要](./understanding-the-customization-file.md)  
   
--   [カスタマイズ ファイルの Connect セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)  
+-   [カスタマイズ ファイルの Connect セクション](./customization-file-connect-section.md)  
   
--   [カスタマイズ ファイルの SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)  
+-   [カスタマイズ ファイルの SQL セクション](./customization-file-sql-section.md)  
   
--   [カスタマイズ ファイルの UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)  
+-   [カスタマイズ ファイルの UserList セクション](./customization-file-userlist-section.md)  
   
--   [カスタマイズ ファイルの Logs セクション](../../../ado/guide/remote-data-service/customization-file-logs-section.md)  
+-   [カスタマイズ ファイルの Logs セクション](./customization-file-logs-section.md)  
   
--   [必要なクライアントの設定](../../../ado/guide/remote-data-service/required-client-settings.md)  
+-   [必要なクライアントの設定](./required-client-settings.md)  
   
--   [独自のカスタム ハンドラーの記述](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+-   [独自のカスタム ハンドラーの記述](./writing-your-own-customized-handler.md)

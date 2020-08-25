@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55f0eb77a498eba9d6fe2565a8647dc11d77897b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c2cd1df656d07b274fe000c427dd3eae07da76b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451724"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759912"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand プロパティの例 (VB)
-この例では、 [activecommand](../../../ado/reference/ado-api/activecommand-property-ado.md) プロパティを示します。  
+この例では、 [activecommand](./activecommand-property-ado.md) プロパティを示します。  
   
- サブルーチンには、**レコードセット**を作成したコマンドテキストとパラメーターを表示するために**activecommand**プロパティを使用する[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトが指定されています。  
+ サブルーチンには、**レコードセット**を作成したコマンドテキストとパラメーターを表示するために**activecommand**プロパティを使用する[レコードセット](./recordset-object-ado.md)オブジェクトが指定されています。  
   
 ```  
 'BeginActiveCommandVB  
@@ -91,9 +91,9 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- **Activecommandxprint**ルーチンには**レコードセット**オブジェクトだけが指定されていますが、コマンドテキストと**レコードセット**を作成したパラメーターを出力する必要があります。 これを行うには、 **レコードセット** オブジェクトの **activecommand** プロパティに関連付けられた [Command](../../../ado/reference/ado-api/command-object-ado.md) オブジェクトが生成されます。  
+ **Activecommandxprint**ルーチンには**レコードセット**オブジェクトだけが指定されていますが、コマンドテキストと**レコードセット**を作成したパラメーターを出力する必要があります。 これを行うには、 **レコードセット** オブジェクトの **activecommand** プロパティに関連付けられた [Command](./command-object-ado.md) オブジェクトが生成されます。  
   
- **コマンド**オブジェクトの[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)プロパティによって、**レコードセット**を作成するパラメーター化コマンドが生成されます。 **コマンド**オブジェクトの[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションは、コマンドのパラメータープレースホルダー ("**?**") に置き換えられた値を生成します。  
+ **コマンド**オブジェクトの[CommandText](./commandtext-property-ado.md)プロパティによって、**レコードセット**を作成するパラメーター化コマンドが生成されます。 **コマンド**オブジェクトの[Parameters](./parameters-collection-ado.md)コレクションは、コマンドのパラメータープレースホルダー ("**?**") に置き換えられた値を生成します。  
   
  最後に、エラーメッセージまたは作成者の名前と ID が出力されます。  
   
@@ -121,7 +121,7 @@ End Sub
 'EndActiveCommandPrintVB  
 ```  
   
-## <a name="see-also"></a>参照  
- [ActiveCommand プロパティ (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>関連項目  
+ [ActiveCommand プロパティ (ADO)](./activecommand-property-ado.md)   
+ [Command オブジェクト (ADO)](./command-object-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

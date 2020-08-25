@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c586b4e7ce2e18411d147e8aafb4eb144e01e6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cdd0e393c7fc5214866142150c7ff497e48e7122
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442784"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773331"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
-[パラメーター](../../../ado/reference/ado-api/parameter-object.md)が入力パラメーター、出力パラメーター、入力パラメーターと出力パラメーターの両方、またはストアドプロシージャからの戻り値を表すかどうかを指定します。  
+[パラメーター](./parameter-object.md)が入力パラメーター、出力パラメーター、入力パラメーターと出力パラメーターの両方、またはストアドプロシージャからの戻り値を表すかどうかを指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
@@ -49,9 +49,9 @@ ms.locfileid: "88442784"
 
 :::row:::
     :::column:::
-        [CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+        [CreateParameter メソッド (ADO)](./createparameter-method-ado.md)  
     :::column-end:::
     :::column:::
-        [Direction プロパティ](../../../ado/reference/ado-api/direction-property.md)  
+        [Direction プロパティ](./direction-property.md)  
     :::column-end:::
 :::row-end:::

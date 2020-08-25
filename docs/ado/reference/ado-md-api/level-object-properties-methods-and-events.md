@@ -13,34 +13,34 @@ helpviewer_keywords:
 ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec04416433339fcec45da199fb3291154fce330a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db4847a6ada52d051a13068dcd2d50f9a7448504
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440934"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778041"
 ---
 # <a name="level-object-properties-methods-and-events"></a>Level オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
- [Caption プロパティ](../../../ado/reference/ado-md-api/caption-property-ado-md.md)  
+ [Caption プロパティ](./caption-property-ado-md.md)  
   
- [Depth プロパティ](../../../ado/reference/ado-md-api/depth-property-ado-md.md)  
+ [Depth プロパティ](./depth-property-ado-md.md)  
   
- [Description プロパティ](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
+ [Description プロパティ](./description-property-ado-md.md)  
   
- [Members コレクション](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+ [Members コレクション](./members-collection-ado-md.md)  
   
- [Name プロパティ](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Name プロパティ](./name-property-ado-md.md)  
   
- [プロパティのコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [プロパティのコレクション](../ado-api/properties-collection-ado.md)  
   
- [UniqueName プロパティ](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
+ [UniqueName プロパティ](./uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>メソッド  
  なし。  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [Level オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)
+ [Level オブジェクト (ADO MD)](./level-object-ado-md.md)

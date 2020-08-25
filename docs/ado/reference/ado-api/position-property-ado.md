@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3402ebd39375957a224a020d441abbdc3379d71
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: be31e95a3929243602baaa10c5a36a9348f812b8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442724"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773181"
 ---
 # <a name="position-property-ado"></a>Position プロパティ (ADO)
-[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト内の現在の位置を示します。  
+[ストリーム](./stream-object-ado.md)オブジェクト内の現在の位置を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  ストリームの先頭からの現在位置のオフセットをバイト数で指定する **Long 型** の値を設定または返します。 既定値は0で、ストリームの最初のバイトを表します。  
   
 ## <a name="remarks"></a>解説  
- 現在の位置は、ストリームの末尾の後の点に移動できます。 ストリームの末尾を越えて現在位置を指定すると、**ストリーム**オブジェクトの[サイズ](../../../ado/reference/ado-api/size-property-ado-stream.md)がそれに応じて大きくなります。 この方法で追加された新しいバイトは null になります。  
+ 現在の位置は、ストリームの末尾の後の点に移動できます。 ストリームの末尾を越えて現在位置を指定すると、**ストリーム**オブジェクトの[サイズ](./size-property-ado-stream.md)がそれに応じて大きくなります。 この方法で追加された新しいバイトは null になります。  
   
 > [!NOTE]
 >  **Position** は常にバイトを測定します。 マルチバイト文字セットを使用したテキストストリームの場合、文字数を決定するために文字サイズで位置を乗算します。 たとえば、2バイト文字セットの場合、最初の文字は0の位置、2番目の文字の位置は2、3番目の文字は4の位置になります。  
@@ -42,7 +42,7 @@ ms.locfileid: "88442724"
 >  読み取り専用の**ストリーム**オブジェクトの場合、**位置**が**ストリーム**の**サイズ**より大きい値に設定されていると、ADO はエラーを返しません。 **ストリーム**のサイズを変更したり、**ストリーム**の内容を変更したりすることはできません。 ただし、これは無意味な **位置**の値になるため、回避する必要があります。  
   
 ## <a name="applies-to"></a>適用対象  
- [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Stream オブジェクト (ADO)](./stream-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [Charset プロパティ (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)
+ [Charset プロパティ (ADO)](./charset-property-ado.md)

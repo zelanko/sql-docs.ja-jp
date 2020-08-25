@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13326277c0be8abbf7c2d7d623233b34ad2ed348
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ae0f13b2ece4ae21e8a8f8312a561bcfd0e6c88
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452484"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758962"
 ---
 # <a name="xslt-transformations"></a>XSLT 変換
 生成された XML に XSLT を適用して、別の形式に変換することができます。 ADO で XML 形式を理解することは、よりわかりやすい形式に変換できる XSLT テンプレートの開発に役立ちます。  
@@ -53,5 +53,5 @@ ms.locfileid: "88452484"
   
  XSLT は、ADO Save メソッドによって生成された XML ストリームを HTML テーブルに変換します。このテーブルでは、レコードセットの各フィールドがテーブル見出しと共に表示されます。 テーブルの見出しと行にも、異なるフォントと色が割り当てられます。  
   
-## <a name="see-also"></a>参照  
- [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)
+## <a name="see-also"></a>関連項目  
+ [レコードを XML 形式で保持する](./persisting-records-in-xml-format.md)

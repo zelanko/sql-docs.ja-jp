@@ -1,7 +1,8 @@
 ---
+description: CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 title: CREATE EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning-services
@@ -21,24 +22,24 @@ ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ffb59b95b555196aa72662dd2b7111eca488872
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 64294b819d05e46077fd6a94008d64fc60eb717f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426724"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-外部プロセス用のリソースの定義に使われる外部プールを作成します。 リソース プールは、データベース エンジン インスタンスの物理リソース (メモリと CPU) のサブセットを表します。 データベース管理者は、リソース ガバナーを使用することで、サーバー リソースを最大 64 個までのリソース プールに分散できます。
+外部プロセス用のリソースを定義するための外部プールを作成します。 リソース プールは、データベース エンジン インスタンスの物理リソース (メモリと CPU) のサブセットを表します。 Resource Governor を使用すると、サーバー リソースを最大 64 個のリソース プールに分散できます。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] の [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] の場合、外部プールは `rterm.exe`、`BxlServer.exe`、およびそれらにより生成された他のプロセスを管理します。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] の場合、外部プールは `rterm.exe`、`python.exe`、`BxlServer.exe`、およびそれらにより生成された他のプロセスを管理します。
 ::: moniker-end
   
@@ -68,25 +69,28 @@ CREATE EXTERNAL RESOURCE POOL pool_name
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
+> [!NOTE]
+> Linux 用の SQL Machine Learning Services 2019 では、CPU のアフィニティを設定する機能はサポートされていません。
+
 ## <a name="arguments"></a>引数
 
 *pool_name*  
 外部リソース プールのユーザー定義名を指定します。 *pool_name* には、最大 128 文字の英数字を指定できます。 この引数は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意であり、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。  
 
 MAX_CPU_PERCENT =*value*  
-CPU の競合がある場合に、この外部リソース プールのすべての要求が受け取ることのできる最大平均 CPU 帯域幅を指定します。 *value* は整数です。 *value* の許容範囲は 1 ～ 100 です。
+CPU の競合がある場合に、外部リソース プールのすべての要求が受け取ることのできる最大平均 CPU 帯域幅。 *value* は整数です。 *value* の許容範囲は 1 ～ 100 です。
 
-AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} では、外部リソース プールが特定の CPU にアタッチされます。
+AFFINITY {CPU = AUTO | ( <CPU_range_spec>) | NUMANODE = (\<NUMA_node_range_spec>)} では、外部リソース プールが特定の CPU にアタッチされます。
 
-AFFINITY CPU = **(** \<CPU_range_spec> **)** では、指定された CPU_ID によって識別される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU に外部リソース プールがマップされます。
+AFFINITY CPU = **(** <CPU_range_spec> **)** では、指定された CPU_ID によって識別される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU に外部リソース プールがマップされます。
 
-AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** を使うと、外部リソース プールは、指定した NUMA ノードまたはノードの範囲に対応する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物理 CPU にアフィニティ化されれます。 
+AFFINITY NUMANODE = **(\<NUMA_node_range_spec> **)** を使用すると、外部リソース プールは、指定した NUMA ノードまたはノードの範囲に対応する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物理 CPU にアフィニティ化されれます。 
 
 MAX_MEMORY_PERCENT =*value*  
 この外部リソース プールの要求で使用できる合計サーバー メモリを指定します。 *value* は整数です。 *value* の許容範囲は 1 ～ 100 です。
 
 MAX_PROCESSES =*value*  
-外部リソース プールに許されるプロセスの最大数を指定します。 0 を指定すると、プールのしきい値は無制限になり、その後はコンピューターのリソースによってのみ拘束されます。
+外部リソース プールに許されるプロセスの最大数。 0 を指定すると、プールのしきい値は無制限になり、その後はコンピューターのリソースによってのみ拘束されます。
 
 ## <a name="remarks"></a>解説
 
@@ -102,7 +106,7 @@ MAX_PROCESSES =*value*
 
 ## <a name="examples"></a>例
 
-次のステートメントは、CPU 使用率を 75% に制限する外部プールを定義します。 このステートメントは、最大メモリをコンピューターで使用可能なメモリの 30% にすることも定義します。
+外部プールでは CPU 使用率が 75% に制限されています。 最大メモリは、コンピューターで使用可能なメモリの 30% です。
 
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1

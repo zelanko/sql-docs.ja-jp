@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae25071d2740306c8ff6156a51cc380101046ba8
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3b2a5d4a4e88e1d0cb3a342395ebb3642d5d2dd8
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456942"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147743"
 ---
 # <a name="statistics"></a>統計
 
@@ -113,16 +113,25 @@ ORDER BY s.name;
     * 統計情報が評価された時点でテーブルのカーディナリティが 500 以下の場合、500 回変更されるたびに更新されます。
     * 統計情報が評価された時点でテーブルのカーディナリティが 500 よりも大きい場合、500 プラス 20% の数の変更があるたびに更新されます。
 
-* [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降で、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)が 130 未満の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル内の行数に基づいて調整された、より小さな値の動的な統計情報更新しきい値を使用します。 これは、1,000 と現在のテーブルのカーディナリティの積の平方根として計算されます。 たとえば、テーブルに 200 万行含まれている場合、計算は sqrt (1000 * 2000000) = 44721.359 となります。 この変更により、大規模なテーブルの統計がより頻繁に更新されます。 ただし、データベースの互換性レベルが 130 未満の場合、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のしきい値が適用されます。 ?
+* [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降で、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)が 130 未満の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル内の行数に基づいて調整された、より小さな値の動的な統計情報更新しきい値を使用します。 これは、1,000 と現在のテーブルのカーディナリティの積の平方根として計算されます。 たとえば、テーブルに 200 万行含まれている場合、計算は sqrt(1000 * 2000000) = 44721.359 となります。 この変更により、大規模なテーブルの統計がより頻繁に更新されます。 ただし、データベースの互換性レベルが 130 未満の場合、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のしきい値が適用されます。 ?
 
 > [!IMPORTANT]
-> [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降で、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)が 130 未満の場合、[トレース フラグ 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル内の行数に基づいて調整された、より小さな値の動的な統計情報更新しきい値を使用します。
+> [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降の[データベース互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 以下では、[トレース フラグ 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を有効にして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で低下した動的統計更新しきい値が使用されるようにします。
+
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前の環境でトレース フラグ 2371 を有効にするには、次のガイダンスを使用できます。
+
+ - 古い統計が原因でパフォーマンスの問題が発生していない場合は、このトレース フラグを有効にする必要はありません。
+ - SAP システムを使用している場合は、このトレース フラグを有効にします。  その他の情報については、こちらの[ブログ](https://docs.microsoft.com/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371)を参照してください。
+ - 現在の自動更新が十分頻繁にトリガーされないため、夜間ジョブを使用して統計を更新する必要がある場合は、トレース フラグ 2371 を有効にしてしきい値を小さくすることを検討します。
   
 クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリをコンパイルする前は、クエリ オプティマイザーで、クエリ述語内の列、テーブル、およびインデックス付きビューを使用して古くなっている可能性がある統計が判断されます。 キャッシュされたクエリ プランを実行する前は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。  
   
 AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成された統計オブジェクト、クエリ述語内の列に対して 1 列ずつ作成された統計オブジェクト、および [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) ステートメントを使用して作成された統計に適用されます。 また、フィルター選択された統計情報にも適用されます。  
  
-AUTO_UPDATE_STATISTICS の制御の詳細については、「[SQL Server 内の Autostat (AUTO_UPDATE_STATISTICS) の動作を制御します。](https://support.microsoft.com/help/2754171)」をご覧ください。
+[sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) を使用すると、テーブルで変更された行数を正確に追跡し、統計を手動で更新するかどうかを判断できます。
+
+
+
   
 #### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  統計の非同期更新オプション [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) によって、クエリ オプティマイザーで統計の同期更新と非同期更新のどちらを使用するかが決まります。 既定では、統計の非同期更新オプションはオフであり、クエリ オプティマイザーによる統計の更新は同期更新になります。 AUTO_UPDATE_STATISTICS_ASYNC オプションは、インデックスに対して作成された統計オブジェクト、クエリ述語内の列に対して 1 列ずつ作成された統計オブジェクト、および [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) ステートメントを使用して作成された統計に適用されます。  

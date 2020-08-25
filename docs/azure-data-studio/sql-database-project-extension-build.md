@@ -9,12 +9,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
-ms.openlocfilehash: 4348f117b57c9b13a70f4a6db39ab6710eafd0ef
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 191b10fd32d7c49c3f4a4e81c109e52fb2a1a81c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519191"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88171371"
 ---
 # <a name="build-and-publish-a-project"></a>プロジェクトをビルドして公開する
 
@@ -32,7 +32,6 @@ Azure Data Studio の SQL データベース プロジェクトの拡張機能�
 
  ``` ... exited with code: 0 ```
 
-
 ## <a name="publish-a-database-project"></a>データベース プロジェクトを公開する
 
 ビルド プロセスによってプロジェクトが正常にコンパイルされたら、データベースを SQL Server インスタンスに公開できます。 データベース プロジェクトを公開するには、 **[エクスプローラー]** の下の **[プロジェクト]** viewlet で、 *.sqlproj* ルート ノードを右クリックし、 **[公開]** を選択します。
@@ -42,6 +41,4 @@ Azure Data Studio の SQL データベース プロジェクトの拡張機能�
 ## <a name="next-steps"></a>次のステップ
 
 - [Azure Data Studio の SQL データベース プロジェクトの拡張機能](sql-database-project-extension.md)
-- [データ層アプリケーション](../relational-databases/data-tier-applications/data-tier-applications.md)
-
-
+- [コマンド ラインから SQL データベース プロジェクトをビルドする](sql-database-project-extension-build-from-command-line.md)

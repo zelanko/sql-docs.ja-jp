@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2230a4082f79ea386dd02c7530e3af29c57f1b69
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ce5e13641afa757f2c0ccea4ec760c4fa70b3ff
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452114"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759642"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS のプログラミング モデルとオブジェクト
 RDS の目標は、IIS などの中継局を介してデータソースにアクセスし、更新することです。 プログラミングモデルは、この目標を達成するために必要なアクティビティのシーケンスを指定します。 オブジェクトモデルは、メソッドとプロパティがプログラミングモデルに影響を与えるオブジェクトを指定します。  
@@ -29,11 +29,11 @@ RDS の目標は、IIS などの中継局を介してデータソースにアク
   
  RDS には、次の一連の操作を実行するための手段が用意されています。  
   
--   サーバーで呼び出されるプログラムを指定し、クライアント (RDS) から参照する方法 (プロキシ) を取得し[ます。領域スペース](../../../ado/reference/rds-api/dataspace-object-rds.md))。  
+-   サーバーで呼び出されるプログラムを指定し、クライアント (RDS) から参照する方法 (プロキシ) を取得し[ます。領域スペース](../../reference/rds-api/dataspace-object-rds.md))。  
   
--   サーバープログラムを起動します。 データソースを識別するパラメーターと、発行するコマンド (プロキシまたは RDS) をサーバープログラムに渡し [ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md))。  
+-   サーバープログラムを起動します。 データソースを識別するパラメーターと、発行するコマンド (プロキシまたは RDS) をサーバープログラムに渡し [ます。DataControl](../../reference/rds-api/datacontrol-object-rds.md))。  
   
--   サーバープログラムは、通常は ADO を使用して、データソースから [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトを取得します。 必要に応じて、 **レコードセット** オブジェクトがサーバー上で処理されます ([RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md))。  
+-   サーバープログラムは、通常は ADO を使用して、データソースから [レコードセット](../../reference/ado-api/recordset-object-ado.md) オブジェクトを取得します。 必要に応じて、 **レコードセット** オブジェクトがサーバー上で処理されます ([RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md))。  
   
 -   サーバープログラムは、最後の **レコードセット** オブジェクトをクライアントアプリケーション (プロキシ) に返します。  
   
@@ -41,14 +41,12 @@ RDS の目標は、IIS などの中継局を介してデータソースにアク
   
 -   **Recordset**オブジェクトへの変更は、サーバーに送り返され、データソースの更新に使用され**ます (RDS.DataControl**または**RDSServer**)。  
   
-## <a name="see-also"></a>参照  
- [RDS オブジェクトモデルの概要](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [領域スペースオブジェクト (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [RDS のシナリオ](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [RDS の使用方法とセキュリティ](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+## <a name="see-also"></a>関連項目  
+ [RDS オブジェクトモデルの概要](./rds-object-model-summary.md)   
+ [DataControl オブジェクト (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
+ [DataFactory オブジェクト (RDSServer)](../../reference/rds-api/datafactory-object-rdsserver.md)   
+ [領域スペースオブジェクト (RDS)](../../reference/rds-api/dataspace-object-rds.md)   
+ [RDS のシナリオ](./rds-scenario.md)   
+ [RDS チュートリアル](./rds-tutorial.md)   
+ [Recordset オブジェクト (ADO)](../../reference/ado-api/recordset-object-ado.md)   
+ [RDS の使用方法とセキュリティ](./rds-usage-and-security.md)

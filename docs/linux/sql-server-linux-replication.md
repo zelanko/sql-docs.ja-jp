@@ -1,6 +1,6 @@
 ---
 title: Linux 上の SQL Server レプリケーション
-description: この記事では、Linux 上の SQL Server レプリケーションについて説明します。
+description: SQL Server 2017 (14.x) (CU18) 以降では、SQL Server on Linux のインスタンス用の SQL Server レプリケーションがサポートされています。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: cdd37963a419b33bb84353dee98c928179473bcb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3e705c463977bf355554ed1d242232649702d276
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882654"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088837"
 ---
 # <a name="sql-server-replication-on-linux"></a>Linux 上の SQL Server レプリケーション
 

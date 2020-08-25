@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (プレビュー)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Azure SQL Data Warehouse で COPY ステートメントを使用して、外部ストレージ アカウントからの読み込みを行います。
-ms.date: 06/19/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9bbc4017411c457638ac93aac147ab63b44dbcab
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: 52096dc3c4996537b36082bb9bb215405e097a68
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807505"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091957"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (プレビュー)
 
@@ -102,7 +102,7 @@ WITH
 - ADLS Gen2 の *External location*: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> BLOB エンドポイントは ADLS Gen2 で使用できます。これは下位互換性のためにのみ用意されています。 最適なパフォーマンスを得るには、ADLS Gen2 に対して **dfs** エンドポイントを使用してください。
+> BLOB エンドポイントは、下位互換性のため ADLS Gen2 で使用できます。 最適なパフォーマンスを得るには、**BLOB** エンドポイントを使用します。
 
 - *Account* - ストレージ アカウント名
 
@@ -139,10 +139,12 @@ WITH
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* は、外部ストレージ アカウントにアクセスするための認証メカニズムを指定します。 認証方法を次に示します。
 
-|                          |                CSV                |              Parquet              |                ORC                |
-| :----------------------: | :-------------------------------: | :-------------------------------: | :-------------------------------: |
-|  **Azure Blob Storage**  | SAS/MSI/サービス プリンシパル/キー/AAD |              SAS/キー              |              SAS/キー              |
-| **Azure Data Lake Gen2** | SAS/MSI/サービス プリンシパル/キー/AAD | SAS/MSI/サービス プリンシパル/キー/AAD | SAS/MSI/サービス プリンシパル/キー/AAD |
+|                          |                CSV                |              Parquet               |                ORC                 |
+| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
+|  **Azure Blob Storage**  | SAS/MSI/サービス プリンシパル/キー/AAD |              SAS/キー               |              SAS/キー               |
+| **Azure Data Lake Gen2** | SAS/MSI/サービス プリンシパル/キー/AAD | SAS*/MSI/サービス プリンシパル/キー/AAD | SAS*/MSI/サービス プリンシパル/キー/AAD |
+
+\* BLOB エンドポイントでのみサポートされています
 
 AAD またはパブリック ストレージ アカウントを使用して認証する場合は、CREDENTIAL を指定する必要はありません。 
 
@@ -406,13 +408,13 @@ WITH (
 | :-----: | :--------: |
 |   100   |     60     |
 |   200   |     60     |
-|   該当なし   |     60     |
+|   300   |     60     |
 |   400   |     60     |
 |   500   |     60     |
 |  1,000  |    120     |
 |  1,500  |    180     |
 |  2,000  |    240     |
-|  2,500  |    該当なし     |
+|  2,500  |    300     |
 |  3,000  |    360     |
 |  5,000  |    600     |
 |  6,000  |    720     |
@@ -429,7 +431,7 @@ COPY コマンドによって自動的にファイルが分割されるため、
 COPY コマンドは、この暦年 (2020) の終わりまでに一般提供されます。 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>ファイルの数やサイズに制限はありますか?
-ファイルは 4MB 以上である必要があります。
+ファイルの数やサイズに制限はありません。ただし、最適なパフォーマンスを得るには、少なくとも 4 MB のファイルを使用することをお勧めします。
 
 
 フィードバックや問題は、配布リストの sqldwcopypreview@service.microsoft.com までお寄せください。

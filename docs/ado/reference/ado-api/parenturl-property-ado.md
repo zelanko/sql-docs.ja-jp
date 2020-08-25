@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e8e171362e66c9809e646eb33cecfbad91f30df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8254dd1e47d6f6d3042e88365bd3c6ad0ea4301f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442754"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773241"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL プロパティ (ADO)
-現在の**レコード**オブジェクトの親[レコード](../../../ado/reference/ado-api/record-object-ado.md)を指す絶対 URL 文字列を示します。  
+現在の**レコード**オブジェクトの親[レコード](./record-object-ado.md)を指す絶対 URL 文字列を示します。  
   
 ## <a name="return-value"></a>戻り値  
  親**レコード**の URL を示す**文字列**値を返します。  
   
 ## <a name="remarks"></a>解説  
- **Parenturl**プロパティは、 **Record**オブジェクトを開くために使用されるソースによって異なります。 たとえば、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティによって参照されるディレクトリの相対パス名を含むソースで**レコード**を開くことができます。  
+ **Parenturl**プロパティは、 **Record**オブジェクトを開くために使用されるソースによって異なります。 たとえば、 [ActiveConnection](./activeconnection-property-ado.md)プロパティによって参照されるディレクトリの相対パス名を含むソースで**レコード**を開くことができます。  
   
  "Second" が "first" の下に含まれるフォルダーであるとします。 次の構文を使用して、 **レコード** オブジェクトを開きます。  
   
@@ -52,13 +52,13 @@ record.Open "second"
  このプロパティは読み取り専用です。  
   
 > [!NOTE]
->  このプロパティは、 [Microsoft OLE DB Provider For Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)などのドキュメントソースプロバイダーによってのみサポートされます。 詳細については、「 [レコードとプロバイダーが指定](../../../ado/guide/data/records-and-provider-supplied-fields.md)したフィールド」を参照してください。  
+>  このプロパティは、 [Microsoft OLE DB Provider For Internet Publishing](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)などのドキュメントソースプロバイダーによってのみサポートされます。 詳細については、「 [レコードとプロバイダーが指定](../../guide/data/records-and-provider-supplied-fields.md)したフィールド」を参照してください。  
   
 > [!NOTE]
->  Http スキームを使用する Url は、 [インターネット公開のために Microsoft OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「 [絶対 url と相対 url](../../../ado/guide/data/absolute-and-relative-urls.md)」を参照してください。  
+>  Http スキームを使用する Url は、 [インターネット公開のために Microsoft OLE DB プロバイダー](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「 [絶対 url と相対 url](../../guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
 > [!NOTE]
 >  現在のレコードに ADO **レコードセット**のデータレコードが含まれている場合、 **parenturl** プロパティにアクセスすると、url が不可能であることを示す実行時エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  
- [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+ [Record オブジェクト (ADO)](./record-object-ado.md)

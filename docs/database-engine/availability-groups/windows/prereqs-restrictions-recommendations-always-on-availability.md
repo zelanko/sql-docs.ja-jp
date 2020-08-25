@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ffcf45a0126e3443b1a5b3ac43cf9a0bdf7d6a1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 8a2a54ac42cef552fa24af5d10171eda899163e5
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363005"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88092011"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性グループの前提条件、制限事項、推奨事項
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "87363005"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を配置する前に、このトピックのすべてのセクションを読むことを強くお勧めします。  
     
-##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> 可用性グループをサポートする .Net 修正プログラム  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で使用する [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]コンポーネントと機能によっては、次の表で指定されている追加の .Net 修正プログラムのインストールが必要になる場合があります。 これらの修正プログラムは任意の順序でインストールできます。  
+##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> 可用性グループをサポートする .NET 修正プログラム  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で使用する [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]コンポーネントと機能によっては、次の表で指定されている追加の .NET 修正プログラムのインストールが必要になる場合があります。 これらの修正プログラムは任意の順序でインストールできます。  
   
 |依存機能|修正プログラム|Link|  
 |-----------------------|------------|----------|  
-|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 の修正プログラムは、SQL クライアントに読み取り目的、読み取り専用、multisubnetfailover の Always On 機能のサポートを追加します。 修正プログラムは、各 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーにインストールする必要があります。|KB 2654347:[Always On 機能のサポートを追加する .Net 3.5 SP1 の修正プログラム](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.NET 3.5 SP1 の修正プログラムでは、SQL クライアントに読み取り目的、読み取り専用、multisubnetfailover の Always On 機能のサポートが追加されます。 修正プログラムは、各 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーにインストールする必要があります。|KB 2654347:[Always On 機能のサポートが追加される .NET 3.5 SP1 の修正プログラム](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="checklist-requirements-windows-system"></a><a name="SystemRequirements"></a> チェック リスト:要件 (Windows システム)  
@@ -162,7 +162,9 @@ ms.locfileid: "87363005"
   
     -   各プライマリ レプリカでは、プライマリ データベースごとにログ キャプチャ スレッドを 1 つ使用します。 また、セカンダリ データベースごとにログ送信スレッドを 1 つ使用します。 ログ送信スレッドは、非アクティブな状態のまま最大 15 秒経過すると解放されます。    
   
-    -   セカンダリ レプリカでのバックアップでは、バックアップ操作の間、プライマリ レプリカにスレッドが保持されます。  
+    -   セカンダリ レプリカでのバックアップでは、バックアップ操作の間、プライマリ レプリカにスレッドが保持されます。 
+
+-  SQL Server 2019 では、メモリ最適化可用性グループ データベースに対する並列再実行が導入されました。 SQL Server 2016 と 2017 では、可用性グループ内のデータベースがメモリ最適化もされている場合、ディスク ベースのテーブルで並列再実行は使用されません。 
   
  詳細については、「[Always On - HADRON 学習シリーズ: HADRON 対応データベースでのワーカー プールの使用](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)」 (CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エンジニア ブログ) を参照してください。  
   

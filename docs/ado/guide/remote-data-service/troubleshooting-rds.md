@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5674fc090a9803f6ce5249c48c65615edb2581bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67dd2ac9820167c92b16d11b056e02f796e56f5f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451884"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759890"
 ---
 # <a name="troubleshooting-rds"></a>RDS のトラブルシューティング
 > [!IMPORTANT]
@@ -26,19 +26,17 @@ ms.locfileid: "88451884"
   
  RDS の特定のエラーまたは問題の解決策については、このセクションを参照してください。 このセクションでは、次のトピックを扱います。  
   
--   [Windows 2000 での RDS の構成](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
+-   [Windows 2000 での RDS の構成](./configuring-rds-on-windows-2000.md)  
   
--   ["インターネットサーバーエラー: アクセスが拒否されました"](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
+-   ["インターネットサーバーエラー: アクセスが拒否されました"](./internet-server-error-access-denied.md)  
   
--   [RDS で「ストリームを読み取れません」エラーが返される](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
+-   [RDS で「ストリームを読み取れません」エラーが返される](./rds-returns-stream-not-read-error.md)  
   
--   [Repeatable 分離レベルの読み取りによるデッドロック](../../../ado/guide/remote-data-service/deadlocks-with-read-repeatable-isolation-level.md)  
+-   [Repeatable 分離レベルの読み取りによるデッドロック](./deadlocks-with-read-repeatable-isolation-level.md)  
   
--   [十分な TempDB 領域の確保](../../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)  
+-   [十分な TempDB 領域の確保](./ensuring-sufficient-tempdb-space.md)  
   
--   [ログ ファイルの使用領域の最小化](../../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)  
+-   [ログ ファイルの使用領域の最小化](./minimizing-log-file-space-usage.md)  
   
-## <a name="see-also"></a>参照  
- [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+## <a name="see-also"></a>関連項目  
+ [RDS の基礎](./rds-fundamentals.md)

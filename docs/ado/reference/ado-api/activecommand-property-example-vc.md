@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c36744944fb88be4da22642246b54908809145cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 09dabe4cdb4e897bd7b9d0916bbe1e057cbbd02f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451714"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759932"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand プロパティの例 (VC++)
-この例では、 [activecommand](../../../ado/reference/ado-api/activecommand-property-ado.md) プロパティを示します。  
+この例では、 [activecommand](./activecommand-property-ado.md) プロパティを示します。  
   
- サブルーチンには、**レコードセット**を作成したコマンドテキストとパラメーターを表示するために**activecommand**プロパティを使用する[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトが指定されています。  
+ サブルーチンには、**レコードセット**を作成したコマンドテキストとパラメーターを表示するために**activecommand**プロパティを使用する[レコードセット](./recordset-object-ado.md)オブジェクトが指定されています。  
   
 ## <a name="example"></a>例  
   
@@ -221,6 +221,6 @@ Parameter = 'Ringer'
 Name = 'Anne  Ringer'  
 ```  
   
-## <a name="see-also"></a>参照  
- [ActiveCommand プロパティ (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>関連項目  
+ [ActiveCommand プロパティ (ADO)](./activecommand-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

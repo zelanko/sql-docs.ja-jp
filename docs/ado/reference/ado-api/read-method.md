@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6600c02af5c24fc1ce27a04422678f8a3f40a179
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c2b2b1579beb967ec75b5a0b32532b846640b01
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442554"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772721"
 ---
 # <a name="read-method"></a>Read メソッド
-バイナリ [ストリーム](../../../ado/reference/ado-api/stream-object-ado.md) オブジェクトから、指定されたバイト数を読み取ります。  
+バイナリ [ストリーム](./stream-object-ado.md) オブジェクトから、指定されたバイト数を読み取ります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,7 +35,7 @@ Variant = Stream.Read ( NumBytes)
   
 #### <a name="parameters"></a>パラメーター  
  *NumBytes*  
- 任意。 ファイルから読み取るバイト数、または既定の[Streamreadenum](../../../ado/reference/ado-api/streamreadenum.md)値**adreadall**を指定する**Long**値です。  
+ 任意。 ファイルから読み取るバイト数、または既定の[Streamreadenum](./streamreadenum.md)値**adreadall**を指定する**Long**値です。  
   
 ## <a name="return-value"></a>戻り値  
  **Read**メソッドは、指定されたバイト数またはストリーム全体を**ストリーム**オブジェクトから読み取り、結果のデータを**バリアント**として返します。  
@@ -44,10 +44,10 @@ Variant = Stream.Read ( NumBytes)
  *Numbytes*が**ストリーム**の残りのバイト数よりも大きい場合は、残っているバイトだけが返されます。 読み取られたデータは、 *Numbytes*によって指定された長さと一致するように埋め込まれていません。 読み取るバイトが残っていない場合は、null 値を持つバリアントが返されます。 **Read** を使用して後方に読み取ることはできません。  
   
 > [!NOTE]
->  *Numbytes* は常にバイトを計測します。 テキスト **ストリーム** オブジェクト ([型](../../../ado/reference/ado-api/type-property-ado-stream.md) は **adTypeText**) の場合は、 [ReadText](../../../ado/reference/ado-api/readtext-method.md)を使用します。  
+>  *Numbytes* は常にバイトを計測します。 テキスト **ストリーム** オブジェクト ([型](./type-property-ado-stream.md) は **adTypeText**) の場合は、 [ReadText](./readtext-method.md)を使用します。  
   
 ## <a name="applies-to"></a>適用対象  
- [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Stream オブジェクト (ADO)](./stream-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [ReadText メソッド](../../../ado/reference/ado-api/readtext-method.md)
+ [ReadText メソッド](./readtext-method.md)

@@ -8,17 +8,31 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 07/17/2020
-ms.openlocfilehash: 4a8f50b7a6558974c79f01f3d157715890beeb82
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.date: 08/12/2020
+ms.openlocfilehash: e4a431e798069a639f72c3d4fa6761d3b18131f7
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988560"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147203"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新リリースのダウンロードとインストール](download.md)**
+
+## <a name="august-2020"></a>2020 年 8 月
+
+2020 年 8 月 12 日&nbsp; / &nbsp;バージョン: 1.21.0
+
+&nbsp;
+
+| Change | 詳細 |
+| :----- | :------ |
+| ノートブックの新機能 | &bull; &nbsp; セルの場所を移動する <br/> &bull; &nbsp; セルをテキスト セルまたはコード セルに変換する
+| Jupyter Book ピッカー | ユーザーは、GitHub リリースから Jupyter Book を選択し、Azure Data Studio でシームレスに開くことができるようになりました |
+| Notebooks Viewlet に追加された検索 | ユーザーは、ノートブックや Jupyter Book 全体でコンテンツを簡単に検索できます |
+| バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22August+2020+Release%22+is%3Aclosed)を参照してください。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="july-2020-hotfix"></a>2020 年 7 月 (修正プログラム)
 

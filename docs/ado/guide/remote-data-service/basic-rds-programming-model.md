@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c29bb00ed7cf8ff914373f026d252880d6bdbb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba02a22b987384e48a750705fa3c2baf6965f920
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452314"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758752"
 ---
 # <a name="basic-rds-programming-model"></a>RDS の基本プログラミング モデル
 > [!IMPORTANT]
@@ -30,7 +30,7 @@ ms.locfileid: "88452314"
   
 -   サーバープログラムを起動します。 データソースと発行するコマンドを識別するパラメーターをサーバープログラムに渡します。 (サーバープログラムは実際には ADO を使用してデータソースにアクセスします。 ADO は、指定されたパラメーターのいずれかと接続を確立し、もう一方のパラメーターで指定されたコマンドを発行します。  
   
--   サーバープログラムは、データソースから [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトを取得します。 必要に応じて、 **レコードセット** オブジェクトがサーバー上で処理されます。  
+-   サーバープログラムは、データソースから [レコードセット](../../reference/ado-api/recordset-object-ado.md) オブジェクトを取得します。 必要に応じて、 **レコードセット** オブジェクトがサーバー上で処理されます。  
   
 -   サーバープログラムによって、最終的な **レコードセット** オブジェクトがクライアントアプリケーションに返されます。  
   
@@ -44,11 +44,9 @@ ms.locfileid: "88452314"
   
  最後に、必要な場所がどこかにある場合、ADO では、既定のサーバープログラムの動作のカスタマイズがサポートされるようになりました。  
   
-## <a name="see-also"></a>参照  
- [RDS プログラミングモデルの詳細](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
- [RDS のシナリオ](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [RDS の使用方法とセキュリティ](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+## <a name="see-also"></a>関連項目  
+ [RDS プログラミングモデルの詳細](./rds-programming-model-in-detail.md)   
+ [RDS のシナリオ](./rds-scenario.md)   
+ [RDS チュートリアル](./rds-tutorial.md)   
+ [Recordset オブジェクト (ADO)](../../reference/ado-api/recordset-object-ado.md)   
+ [RDS の使用方法とセキュリティ](./rds-usage-and-security.md)

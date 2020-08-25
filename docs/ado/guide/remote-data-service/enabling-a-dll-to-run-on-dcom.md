@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d685e03834b1c8390ddd51a8e590f25cd6307efe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0c68a6e438f44bedae3134253c72fe49521b44e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452204"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759785"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>DCOM 上で実行するための DLL の有効化
 > [!IMPORTANT]
@@ -36,12 +36,10 @@ ms.locfileid: "88452204"
   
      - または -  
   
-     パッケージに [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) オブジェクトをインポートします。  
+     パッケージに [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) オブジェクトをインポートします。  
   
 3.  **作成者のプロセス**(ライブラリアプリケーション) で、パッケージの [アクティブ化] 属性をに設定します。  
   
      同じコンピューターで DCOM と IIS を使用して .dll にアクセスできるようにするには、コンポーネントサービス MMC スナップインでコンポーネントのアクティブ化属性を設定する必要があります。 **作成者のプロセスで**属性をに設定すると、コンポーネントサービスのサロゲート .dll を指す**Inproc**サーバーキーがレジストリに追加されていることがわかります。  
   
  コンポーネントサービス (または Microsoft トランザクションサービス) の詳細、およびこれらの手順の実行方法については、Microsoft トランザクションサーバーの Web サイトを参照してください。
-
-

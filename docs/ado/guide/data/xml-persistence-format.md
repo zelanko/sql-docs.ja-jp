@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a014addf2d3ff6c7b02ed9abc103cdbd7b2ecb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 081ba6f2b82e6369d2871a2c9c7352c7335bc0d4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452514"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758982"
 ---
 # <a name="xml-persistence-format"></a>XML 保存形式
 ADO は、永続化する XML ストリームに UTF-8 エンコードを使用します。  
@@ -71,5 +71,5 @@ xmlns:z="#RowsetSchema">
   
  データセクションには、運送会社に関する情報を含む3つの行があります。 空の行セットの場合、data セクションは空になることがありますが、 \<rs:data> タグが存在している必要があります。 データがない場合は、単にタグの短縮形を記述でき \<rs:data/> ます。 "Rs" で始まるすべてのタグは、urn: schema-microsoft-com: rowset によって定義された名前空間にあることを示します。  
   
-## <a name="see-also"></a>参照  
- [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)
+## <a name="see-also"></a>関連項目  
+ [レコードを XML 形式で保持する](./persisting-records-in-xml-format.md)

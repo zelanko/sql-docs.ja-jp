@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dbddab9f7536c311d55f83fc9c6ea443c3757fa3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25d3c1fce0fd227a609da49d54bd55762fa1c4a2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442454"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772311"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
-[レコード](../../../ado/reference/ado-api/record-object-ado.md)を開くためのオプションを指定します。 これらの値は、またはを使用して組み合わせることができます。  
+[レコード](./record-object-ado.md)を開くためのオプションを指定します。 これらの値は、またはを使用して組み合わせることができます。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
@@ -39,4 +39,4 @@ ms.locfileid: "88442454"
  これらの定数には、対応する ADO/WFC がありません。  
   
 ## <a name="applies-to"></a>適用対象  
- [Open メソッド (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)
+ [Open メソッド (ADO Record)](./open-method-ado-record.md)

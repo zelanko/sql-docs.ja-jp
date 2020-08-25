@@ -1,4 +1,5 @@
 ---
+description: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server
 title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -9,16 +10,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 67774a985646e9058bb5e2600f50c043498ea96d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a102301cfa1e168fff01473176e8b6787ade06dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479131"
 ---
 # <a name="alter-external-language-transact-sql"></a>ALTER EXTERNAL LANGUAGE (Transact-SQL)
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 データベース内の既存の外部言語拡張機能の内容を変更します。
 
@@ -105,6 +106,8 @@ ALTER EXTERNAL LANGUAGE language_name
 **platform**
 
 このパラメーターは、ハイブリッド OS のシナリオに必要です。 ハイブリッド アーキテクチャでは、プラットフォームごとに 1 回、言語を登録する必要があります。 プラットフォームと言語の名前は、外部言語ごとの一意のキーになります。 プラットフォームを指定しないと、現在の OS が想定されます。
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>解説
 

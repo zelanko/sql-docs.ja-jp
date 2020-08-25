@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 223822bf6921ce63eb0893fe9db3024c46dfb628
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23110157445da6c776de7582682992ab55a97ac8
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452284"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759880"
 ---
 # <a name="configuring-rds"></a>RDS の構成
 > [!IMPORTANT]
@@ -26,27 +26,25 @@ ms.locfileid: "88452284"
   
  RDS を効率的に実装するには、使用できるさまざまな構成について理解している必要があります。 ここでは、RDS の実装におけるセキュリティとスケーラビリティに関する重要な情報について説明します。 RDS を使用するようにコンピューターを構成する方法については、次のトピックを参照してください。  
   
--   [Web サーバー コンピューターへのゲスト特権の付与](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
+-   [Web サーバー コンピューターへのゲスト特権の付与](./granting-guest-privileges-to-a-web-server-computer.md)  
   
--   [カスタム ビジネス オブジェクトの登録](../../../ado/guide/remote-data-service/registering-a-custom-business-object.md)  
+-   [カスタム ビジネス オブジェクトの登録](./registering-a-custom-business-object.md)  
   
--   [スクリプト用にビジネス オブジェクトを安全とマークする](../../../ado/guide/remote-data-service/marking-business-objects-as-safe-for-scripting.md)  
+-   [スクリプト用にビジネス オブジェクトを安全とマークする](./marking-business-objects-as-safe-for-scripting.md)  
   
--   [DCOM で使用するためにクライアントにビジネス オブジェクトを登録する](../../../ado/guide/remote-data-service/registering-business-objects-on-the-client-for-use-with-dcom.md)  
+-   [DCOM で使用するためにクライアントにビジネス オブジェクトを登録する](./registering-business-objects-on-the-client-for-use-with-dcom.md)  
   
--   [DCOM のストリームのマーシャリング形式の設定](../../../ado/guide/remote-data-service/setting-dcom-stream-marshaling-format.md)  
+-   [DCOM のストリームのマーシャリング形式の設定](./setting-dcom-stream-marshaling-format.md)  
   
--   [DCOM 上で実行するための DLL の有効化](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)  
+-   [DCOM 上で実行するための DLL の有効化](./enabling-a-dll-to-run-on-dcom.md)  
   
--   [IIS での仮想サーバーの構成](../../../ado/guide/remote-data-service/configuring-virtual-servers-on-iis.md)  
+-   [IIS での仮想サーバーの構成](./configuring-virtual-servers-on-iis.md)  
   
--   [RDS アプリケーションの保護](../../../ado/guide/remote-data-service/securing-rds-applications.md)  
+-   [RDS アプリケーションの保護](./securing-rds-applications.md)  
   
--   [安全または無制限モード用の DataFactory の構成](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
+-   [安全または無制限モード用の DataFactory の構成](./configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
-## <a name="see-also"></a>参照  
- [RDS での関連テクノロジの使用](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
- [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [RDS のトラブルシューティング](../../../ado/guide/remote-data-service/troubleshooting-rds.md)
-
-
+## <a name="see-also"></a>関連項目  
+ [RDS での関連テクノロジの使用](./using-related-technologies-with-rds.md)   
+ [DataFactory のカスタマイズ](./datafactory-customization.md)   
+ [RDS のトラブルシューティング](./troubleshooting-rds.md)

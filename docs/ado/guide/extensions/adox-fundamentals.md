@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74b7f3a17bddb068d82f4e05b13a28abff219c2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa7a703f9790ef49961e3324b26c32d757682e4a
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452464"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758812"
 ---
 # <a name="adox-fundamentals"></a>ADOX の基礎
 Microsoft® ActiveX® Data Objects Extensions for Data Definition Language and Security (ADOX) は、ADO オブジェクトとプログラミングモデルの拡張機能です。 ADOX には、スキーマの作成と変更、およびセキュリティのためのオブジェクトが含まれています。 スキーマ操作に対するオブジェクトベースのアプローチであるため、ネイティブ構文の違いに関係なく、さまざまなデータソースに対して機能するコードを記述できます。  
@@ -29,28 +29,28 @@ Microsoft® ActiveX® Data Objects Extensions for Data Definition Language and S
   
  Microsoft Jet 用の Microsoft OLE DB プロバイダーデータベースエンジンは、ADOX を完全にサポートしています。 データプロバイダーによっては、ADOX の特定の機能がサポートされない場合があります。  
   
- このドキュメントでは、Microsoft® Visual Basic®プログラミング言語と ADO に関する一般的な知識に関する実用的な知識があることを前提としています。 ADO の詳細については、「 [Ado プログラマーズガイド](../../../ado/guide/ado-programmer-s-guide.md)」を参照してください。 ADOX の概要については、次のトピックを参照してください。  
+ このドキュメントでは、Microsoft® Visual Basic®プログラミング言語と ADO に関する一般的な知識に関する実用的な知識があることを前提としています。 ADO の詳細については、「 [Ado プログラマーズガイド](../ado-programmer-s-guide.md)」を参照してください。 ADOX の概要については、次のトピックを参照してください。  
   
--   [ADOX オブジェクト モデル](../../../ado/reference/adox-api/adox-object-model.md)  
+-   [ADOX オブジェクト モデル](../../reference/adox-api/adox-object-model.md)  
   
--   [ADOX オブジェクト](../../../ado/reference/adox-api/adox-objects.md)  
+-   [ADOX オブジェクト](../../reference/adox-api/adox-objects.md)  
   
--   [ADOX のコレクション](../../../ado/reference/adox-api/adox-collections.md)  
+-   [ADOX のコレクション](../../reference/adox-api/adox-collections.md)  
   
--   [ADOX のプロパティ](../../../ado/reference/adox-api/adox-properties.md)  
+-   [ADOX のプロパティ](../../reference/adox-api/adox-properties.md)  
   
--   [ADOX のメソッド](../../../ado/reference/adox-api/adox-methods.md)  
+-   [ADOX のメソッド](../../reference/adox-api/adox-methods.md)  
   
--   [ADOX の例](../../../ado/reference/adox-api/adox-code-examples.md)  
+-   [ADOX の例](../../reference/adox-api/adox-code-examples.md)  
   
-## <a name="see-also"></a>参照  
- [ADOX API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
- [ADOX のコード例](../../../ado/reference/adox-api/adox-code-examples.md)   
- [ADOX コレクション](../../../ado/reference/adox-api/adox-collections.md)   
- [ADOX 列挙型定数](../../../ado/reference/adox-api/adox-enumerated-constants.md)   
- [ADOX のメソッド](../../../ado/reference/adox-api/adox-methods.md)   
- [ADOX オブジェクトモデル](../../../ado/reference/adox-api/adox-object-model.md)   
- [ADOX オブジェクト](../../../ado/reference/adox-api/adox-objects.md)   
- [ADOX のプロパティ](../../../ado/reference/adox-api/adox-properties.md)   
- [ADO (多次元) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [ADO プログラマー ガイド](../../../ado/guide/ado-programmer-s-guide.md)
+## <a name="see-also"></a>関連項目  
+ [ADOX API リファレンス](../../reference/adox-api/adox-object-model.md?view=sql-server-ver15)   
+ [ADOX のコード例](../../reference/adox-api/adox-code-examples.md)   
+ [ADOX コレクション](../../reference/adox-api/adox-collections.md)   
+ [ADOX 列挙型定数](../../reference/adox-api/adox-enumerated-constants.md)   
+ [ADOX のメソッド](../../reference/adox-api/adox-methods.md)   
+ [ADOX オブジェクトモデル](../../reference/adox-api/adox-object-model.md)   
+ [ADOX オブジェクト](../../reference/adox-api/adox-objects.md)   
+ [ADOX のプロパティ](../../reference/adox-api/adox-properties.md)   
+ [ADO (多次元) (ADO MD)](../multidimensional/ado-multidimensional-ado-md.md)   
+ [ADO プログラマー ガイド](../ado-programmer-s-guide.md)

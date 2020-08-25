@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: afdd3560de5ca7e64d8a378f1eca04f875903a06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 14308aeda28311b73dc34a323a9a9bf662770e8b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452234"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759816"
 ---
 # <a name="customization-file-userlist-section"></a>カスタマイズ ファイルの UserList セクション
 **Userlist**セクションは、同じセクション*識別子*パラメーターを持つ**connect**セクションに関連しています。  
@@ -40,13 +40,11 @@ ms.locfileid: "88452234"
 |*userName*|この接続を採用している *ユーザーのユーザー名* 。 有効なユーザー名は、[IIS **Service Manager** ] ダイアログで確立されます。|  
 |**_accessRights_**|次のいずれかのアクセス権。<br /><br /> -   **NoAccess** -ユーザーはデータソースにアクセスできません。<br />-   **ReadOnly** -ユーザーはデータソースを読み取ることができます。<br />-   **ReadWrite** -ユーザーは、データソースに対して読み取りまたは書き込みを行うことができます。|  
   
-## <a name="see-also"></a>参照  
- [カスタマイズファイルの接続セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [カスタマイズファイルログセクション](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [カスタマイズファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [必要なクライアント設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [カスタマイズファイルについて](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [独自のカスタム ハンドラーの記述](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+## <a name="see-also"></a>関連項目  
+ [カスタマイズファイルの接続セクション](./customization-file-connect-section.md)   
+ [カスタマイズファイルログセクション](./customization-file-logs-section.md)   
+ [カスタマイズファイル SQL セクション](./customization-file-sql-section.md)   
+ [DataFactory のカスタマイズ](./datafactory-customization.md)   
+ [必要なクライアント設定](./required-client-settings.md)   
+ [カスタマイズファイルについて](./understanding-the-customization-file.md)   
+ [独自のカスタム ハンドラーの記述](./writing-your-own-customized-handler.md)

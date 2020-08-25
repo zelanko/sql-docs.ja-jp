@@ -14,34 +14,34 @@ helpviewer_keywords:
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d67a9d7fa099b0b716d0c2769a1af0cbf64abdb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ca5131235b4c34c05f4cc3b783087f25dc027e95
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440564"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771581"
 ---
 # <a name="adox-objects"></a>ADOX オブジェクト
 ## <a name="adox-object-summary"></a>ADOX オブジェクトの概要  
   
 |Object|説明|  
 |------------|-----------------|  
-|[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)|データソースのスキーマカタログを記述するコレクションが含まれます。|  
-|[列](../../../ado/reference/adox-api/column-object-adox.md)|テーブル、インデックス、またはキーからの列を表します。|  
-|[グループ](../../../ado/reference/adox-api/group-object-adox.md)|セキュリティで保護されたデータベース内でアクセス許可を持つグループアカウントを表します。|  
-|[Index](../../../ado/reference/adox-api/index-object-adox.md)|データベーステーブルのインデックスを表します。|  
-|[キー](../../../ado/reference/adox-api/key-object-adox.md)|データベーステーブルの主キー、外部キー、または一意キーフィールドを表します。|  
-|[手順](../../../ado/reference/adox-api/procedure-object-adox.md)|ストアドプロシージャを表します。|  
-|[Table](../../../ado/reference/adox-api/table-object-adox.md)|列、インデックス、およびキーを含むデータベーステーブルを表します。|  
-|[User](../../../ado/reference/adox-api/user-object-adox.md)|セキュリティで保護されたデータベース内でアクセス許可を持つユーザーアカウントを表します。|  
-|[表示](../../../ado/reference/adox-api/view-object-adox.md)|フィルター処理されたレコードセットまたは仮想テーブルを表します。|  
+|[カタログ](./catalog-object-adox.md)|データソースのスキーマカタログを記述するコレクションが含まれます。|  
+|[列](./column-object-adox.md)|テーブル、インデックス、またはキーからの列を表します。|  
+|[グループ](./group-object-adox.md)|セキュリティで保護されたデータベース内でアクセス許可を持つグループアカウントを表します。|  
+|[Index](./index-object-adox.md)|データベーステーブルのインデックスを表します。|  
+|[キー](./key-object-adox.md)|データベーステーブルの主キー、外部キー、または一意キーフィールドを表します。|  
+|[作業](./procedure-object-adox.md)|ストアドプロシージャを表します。|  
+|[Table](./table-object-adox.md)|列、インデックス、およびキーを含むデータベーステーブルを表します。|  
+|[ユーザー](./user-object-adox.md)|セキュリティで保護されたデータベース内でアクセス許可を持つユーザーアカウントを表します。|  
+|[表示](./view-object-adox.md)|フィルター処理されたレコードセットまたは仮想テーブルを表します。|  
   
- これらのオブジェクト間のリレーションシップは、 [ADOX オブジェクトモデル](../../../ado/reference/adox-api/adox-object-model.md)で示されています。  
+ これらのオブジェクト間のリレーションシップは、 [ADOX オブジェクトモデル](./adox-object-model.md)で示されています。  
   
- 各オブジェクトは、対応するコレクションに含めることができます。 たとえば、 **テーブル** オブジェクトを [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) コレクションに含めることができます。 詳細については、「 [ADOX Collections](../../../ado/reference/adox-api/adox-collections.md) 」または「特定のコレクション」を参照してください。  
+ 各オブジェクトは、対応するコレクションに含めることができます。 たとえば、 **テーブル** オブジェクトを [Tables](./tables-collection-adox.md) コレクションに含めることができます。 詳細については、「 [ADOX Collections](./adox-collections.md) 」または「特定のコレクション」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [ADOX API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
- [ADOX コレクション](../../../ado/reference/adox-api/adox-collections.md)   
- [ADOX オブジェクトモデル](../../../ado/reference/adox-api/adox-object-model.md)   
- [データ定義言語とセキュリティの ADO 拡張機能 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+ [ADOX API リファレンス](./adox-object-model.md?view=sql-server-ver15)   
+ [ADOX コレクション](./adox-collections.md)   
+ [ADOX オブジェクトモデル](./adox-object-model.md)   
+ [データ定義言語とセキュリティの ADO 拡張機能 (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

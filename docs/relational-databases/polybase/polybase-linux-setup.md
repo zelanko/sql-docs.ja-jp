@@ -1,7 +1,7 @@
 ---
 title: Linux への PolyBase のインストール
 titlesuffix: SQL Server
-description: この記事では、Linux に SQL Server PolyBase をインストールする方法について説明します。
+description: Linux に SQL Server PolyBase をインストールする方法について説明します。 PolyBase を使用すると、リモート データ ソースに対して外部クエリを実行することができます。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 7/22/2019
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: f72635a68b0b47a29151d45d2bf1e32e85c1f1bc
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: f886c1d1ae3b5054c6ca0f0159ca8202054ec375
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823577"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88087380"
 ---
 # <a name="install-polybase-on-linux"></a>Linux への PolyBase のインストール
 

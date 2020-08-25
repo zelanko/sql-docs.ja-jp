@@ -1,7 +1,7 @@
 ---
 title: クラウドで SQL Server (on Linux) を開始する
 titleSuffix: SQL Server
-description: このクイック スタートでは、任意のクラウドで SQL Server on Linux を実行する方法を示します。
+description: 任意のクラウドで Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、または Ubuntu に SQL Server をインストールする方法について説明します。
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: cb24499b411d288e1e79b49d202fba63b251a805
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d40072ea8b347001feba5d74e6e08c8c4c8ae340
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897544"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089032"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>クイック スタート:クラウドで SQL Server を実行する
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]

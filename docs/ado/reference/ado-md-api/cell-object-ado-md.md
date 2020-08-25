@@ -16,30 +16,30 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6cb4d32a4a527cce7bc69eb39f8829bbf5cf58a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28058d792b0525aafe8850158a71afcc4423b38f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441244"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778331"
 ---
 # <a name="cell-object-ado-md"></a>Cell オブジェクト (ADO MD)
 セルセットに含まれる軸の座標の交差部分にあるデータを表します。  
   
 ## <a name="remarks"></a>解説  
- セルオブジェクトは、**セル**[セット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクトの[Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)プロパティによって返されます。  
+ セルオブジェクトは、**セル**[セット](./cellset-object-ado-md.md)オブジェクトの[Item](./item-property-ado-md-cellset.md)プロパティによって返されます。  
   
  **Cell**オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  
   
--   [Value](../../../ado/reference/ado-md-api/value-property-ado-md.md)プロパティを持つ**セル**のデータを返します。  
+-   [Value](./value-property-ado-md.md)プロパティを持つ**セル**のデータを返します。  
   
--   [FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)プロパティを使用して、 **Value**プロパティの書式設定された表示を表す文字列を返します。  
+-   [FormattedValue](./formattedvalue-property-ado-md.md)プロパティを使用して、 **Value**プロパティの書式設定された表示を表す文字列を返します。  
   
--   [Ordinal](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)プロパティを持つセル**セット**内の**セル**の序数値を返します。  
+-   [Ordinal](./ordinal-property-ado-md-cell.md)プロパティを持つセル**セット**内の**セル**の序数値を返します。  
   
--   [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)内の**セル**の位置[を、position コレクションと](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)共に決定します。  
+-   [CubeDef](./cubedef-object-ado-md.md)内の**セル**の位置[を、position コレクションと](./positions-collection-ado-md.md)共に決定します。  
   
--   標準の ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを使用して、**セル**に関する他の情報を取得します。  
+-   標準の ADO[プロパティ](../ado-api/properties-collection-ado.md)コレクションを使用して、**セル**に関する他の情報を取得します。  
   
  **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
@@ -54,10 +54,10 @@ ms.locfileid: "88441244"
   
  ここでは、次のトピックについて説明します。  
   
--   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/cell-object-properties-methods-and-events.md)  
+-   [プロパティ、メソッド、およびイベント](./cell-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
- [Axis の例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Cellset オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
- [位置コレクション (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
- [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Axis の例 (VBScript)](./axis-example-vbscript.md)   
+ [Cellset オブジェクト (ADO MD)](./cellset-object-ado-md.md)   
+ [位置コレクション (ADO MD)](./positions-collection-ado-md.md)   
+ [Properties コレクション (ADO)](../ado-api/properties-collection-ado.md)
