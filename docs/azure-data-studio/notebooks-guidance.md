@@ -6,15 +6,15 @@ ms.author: alayu
 ms.reviewer: achatter, maghan, mikeray
 ms.topic: conceptual
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.custom: seo-lt-2019
 ms.date: 07/01/2020
-ms.openlocfilehash: 7e61b31a21a6a3a85a9830bc73a7d62777c78b9b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b7d6e2c33cfc76736c3678ff9c802e3059f53baa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920549"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767821"
 ---
 # <a name="use-jupyter-notebooks-in-azure-data-studio"></a>Azure Data Studio で Jupyter Notebook を使用する
 
@@ -22,7 +22,7 @@ ms.locfileid: "86920549"
 
 Jupyter Notebook はオープン ソースの Web アプリケーションであり、ライブ コード、数式、視覚化、説明テキストを含むドキュメントを作成して共有するために使用できます。 用途には、データのクリーニングと変換、数値シミュレーション、統計モデリング、データの視覚化、機械学習などが含まれています。
 
-この記事では、[**Azure Data Studio**](../azure-data-studio/download.md) の最新リリースで新しいノートブックを作成する方法と、異なるカーネルを使用して独自のノートブックの作成を開始する方法について説明します。
+この記事では、[**Azure Data Studio**](./download-azure-data-studio.md?view=sql-server-ver15) の最新リリースで新しいノートブックを作成する方法と、異なるカーネルを使用して独自のノートブックの作成を開始する方法について説明します。
 
 Azure Data Studio のノートブックの概要については、次の 5 分間の短いビデオをご覧ください。
 
@@ -51,7 +51,7 @@ Azure Data Studio のノートブックは、SQL Server、Python、PySpark な�
 **[アタッチ先]** には、カーネルのコンテキストを指定します。 たとえば、SQL カーネルを使用している場合は、任意の SQL Server インスタンスにアタッチすることができます。
 Python3 カーネルを使用している場合は、**localhost** にアタッチし、そのカーネルをローカルの Python 開発に使用することができます。
 
-また、SQL カーネルを使用して、PostgreSQL サーバー インスタンスに接続することもできます。 あなたが PostgreSQL 開発者であり、ノートブックを PostgreSQL サーバーに接続する場合は、Azure Data Studio 拡張機能 Marketplace で [**PostgreSQL 拡張機能**](../azure-data-studio/postgres-extension.md)をダウンロードし、PostgreSQL サーバーに接続します。
+また、SQL カーネルを使用して、PostgreSQL サーバー インスタンスに接続することもできます。 あなたが PostgreSQL 開発者であり、ノートブックを PostgreSQL サーバーに接続する場合は、Azure Data Studio 拡張機能 Marketplace で [**PostgreSQL 拡張機能**](./postgres-extension.md)をダウンロードし、PostgreSQL サーバーに接続します。
 
 SQL Server 2019 ビッグ データ クラスターに接続している場合、既定の **[アタッチ先]** はクラスターのエンド ポイントです。 クラスターの Spark コンピューティングを使用して、Python、Scala、および R コードを送信できます。
 

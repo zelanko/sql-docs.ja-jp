@@ -5,16 +5,16 @@ ms.custom: seodec18
 ms.date: 11/04/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: eeff69a65751097017383399784ea9a717f3b7e8
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 709e218727ad85fdf220033e3d8ea8741451fd9e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522476"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766011"
 ---
 # <a name="sql-server-dacpac-extension"></a>SQL Server dacpac の拡張機能
 
@@ -33,7 +33,7 @@ ms.locfileid: "87522476"
 
 ## <a name="why-would-i-use-the-data-tier-application-wizard"></a>データ層アプリケーション ウィザードを使用する理由
 
-このウィザードを使用すると、dacpac および bacpac ファイルを管理しやすくなり、お客様のアプリケーションをサポートするデータ層要素の開発と配置が簡単になります。 データ層アプリケーションの使用方法について詳しくは、[Microsoft のドキュメントを参照してください。](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)
+このウィザードを使用すると、dacpac および bacpac ファイルを管理しやすくなり、お客様のアプリケーションをサポートするデータ層要素の開発と配置が簡単になります。 データ層アプリケーションの使用方法について詳しくは、[Microsoft のドキュメントを参照してください。](../relational-databases/data-tier-applications/data-tier-applications.md?view=sql-server-2017)
 
 
 ## <a name="install-the-extension"></a>拡張機能をインストールする
@@ -56,5 +56,5 @@ ms.locfileid: "87522476"
 
 ## <a name="next-steps"></a>次のステップ
 
-dacpac について詳しくは、[Microsoft のドキュメントを参照してください。](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)
+dacpac について詳しくは、[Microsoft のドキュメントを参照してください。](../relational-databases/data-tier-applications/data-tier-applications.md?view=sql-server-2017)
 問題と機能に関する要望を[こちら](https://github.com/microsoft/azuredatastudio/issues)にご報告ください。

@@ -2,19 +2,19 @@
 title: Azure SQL データベースに対する接続およびクエリ
 description: クイックスタートで Azure Data Studio を使用して Azure SQL Database サーバーに接続し、データベースを作成してクエリを実行します。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: f7ceb73d25d69e1d8e8f33b2c6a23b0ff7bff636
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: fc3ff2a1edea509318040edd90e693b8eaf839df
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411298"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766441"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>クイック スタート:Azure Data Studio を使用して、Azure SQL Database に接続してクエリを実行する
 
@@ -24,13 +24,13 @@ ms.locfileid: "87411298"
 
 このクイック スタートを完了するには、Azure Data Studio と Azure SQL Database サーバーが必要です。
 
-- [Azure Data Studio をインストールする](download.md)
+- [Azure Data Studio をインストールする](./download-azure-data-studio.md?view=sql-server-ver15)
 
 Azure SQL サーバーがない場合は、次のいずれかの Azure SQL Database クイック スタートを完了します。 後の手順のために、完全修飾サーバー名とサインイン資格情報を覚えておいてください。
 
-- [DB の作成 - ポータル](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
-- [DB の作成 - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
-- [DB の作成 - PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
+- [DB の作成 - ポータル](/azure/sql-database/sql-database-get-started-portal)
+- [DB の作成 - CLI](/azure/sql-database/sql-database-get-started-cli)
+- [DB の作成 - PowerShell](/azure/sql-database/sql-database-get-started-powershell)
 
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>Azure SQL Database サーバーへの接続
@@ -57,7 +57,7 @@ Azure Data Studio を使用して、Azure SQL Database サーバーへの接続�
 
 3. **[接続]** を選択します。
 
-4. サーバーに Azure Data Studio の接続を許可するファイアウォール規則がない場合は、 **[新しいファイアウォール規則の作成]** フォームが開きます。 フォームに入力して、新しいファイアウォール規則を作成します。 詳細については、[ファイアウォール規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)に関するページを参照してください。
+4. サーバーに Azure Data Studio の接続を許可するファイアウォール規則がない場合は、 **[新しいファイアウォール規則の作成]** フォームが開きます。 フォームに入力して、新しいファイアウォール規則を作成します。 詳細については、[ファイアウォール規則](/azure/sql-database/sql-database-firewall-configure)に関するページを参照してください。
 
    ![新しいファイアウォール規則](media/quickstart-sql-database/firewall.png)  
 
@@ -150,7 +150,7 @@ Azure Data Studio を使用して、Azure SQL Database サーバーへの接続�
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップする
 
-この後のクイック スタートの記事は、ここで作成したリソースに基づいています。 これらの記事を使用する場合は、これらのリソースを削除しないようにしてください。 それ以外の場合は、Azure portal で、不要になったリソースを削除します。 詳細については、「[リソースのクリーンアップ](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)」を参照してください。
+この後のクイック スタートの記事は、ここで作成したリソースに基づいています。 これらの記事を使用する場合は、これらのリソースを削除しないようにしてください。 それ以外の場合は、Azure portal で、不要になったリソースを削除します。 詳細については、「[リソースのクリーンアップ](/azure/sql-database/sql-database-get-started-portal#clean-up-resources)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

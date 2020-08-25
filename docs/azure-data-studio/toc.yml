@@ -1,5 +1,5 @@
 - name: Azure Data Studio のドキュメント
-  href: ../azure-data-studio/index.yml
+  href: ./index.yml
 - name: Azure Data Studio のダウンロード
   href: download-azure-data-studio.md
 - name: リリース ノート
@@ -127,7 +127,7 @@
     - name: SQL ツール
       href: ../tools/overview-sql-tools.md
     - name: Azure 開発者ツール
-      href: 'https://docs.microsoft.com/azure/?product=developer-tools'
+      href: /azure/?product=developer-tools
 - name: リソース
   items:
     - name: よく寄せられる質問

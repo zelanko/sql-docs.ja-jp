@@ -2,19 +2,19 @@
 title: Azure SQL Data Warehouse への接続とクエリの実行
 description: このクイック スタートでは、Azure Data Studio を使用して Azure SQL Data Warehouse に接続し、クエリを実行する方法を示します
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: f9a8213dacb3a7f221d3a3c3e51f0ed94bb6990a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9c0ba08445eb1f9712b00b84cc07ac7eae310f1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728011"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766371"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>クイック スタート:Azure Data Studio を使用して、Azure SQL Data Warehouse のデータに接続してクエリを実行する
 
@@ -23,9 +23,9 @@ ms.locfileid: "85728011"
 ## <a name="prerequisites"></a>前提条件
 このクイック スタートを完了するには、Azure Data Studio と Azure SQL Data Warehouse が必要です。
 
-- [Azure Data Studio をインストールする](download.md)。
+- [Azure Data Studio をインストールする](./download-azure-data-studio.md?view=sql-server-ver15)。
 
-SQL Data Warehouse がまだない場合は、[SQL Data Warehouse の作成](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)に関するページを参照してください。
+SQL Data Warehouse がまだない場合は、[SQL Data Warehouse の作成](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)に関するページを参照してください。
 
 サーバー名とログイン資格情報を覚えておいてください。
 
@@ -52,7 +52,7 @@ Azure Data Studio を使用して、Azure SQL Data Warehouse サーバーへの�
 
    ![新しい接続アイコン](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. サーバーに Azure Data Studio の接続を許可するファイアウォール規則がない場合は、 **[新しいファイアウォール規則の作成]** フォームが開きます。 フォームに入力して、新しいファイアウォール規則を作成します。 詳細については、[ファイアウォール規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)に関するページを参照してください。
+3. サーバーに Azure Data Studio の接続を許可するファイアウォール規則がない場合は、 **[新しいファイアウォール規則の作成]** フォームが開きます。 フォームに入力して、新しいファイアウォール規則を作成します。 詳細については、[ファイアウォール規則](/azure/sql-database/sql-database-firewall-configure)に関するページを参照してください。
 
    ![新しいファイアウォール規則](media/quickstart-sql-dw/firewall.png)  
 
@@ -140,7 +140,7 @@ Azure Data Studio を使用して、Azure SQL Data Warehouse サーバーへの�
 ## <a name="clean-up-resources"></a>リソースをクリーンアップする
 
 このコレクションの他の記事は、このクイック スタートに基づいています。 後続のクイック スタートで作業を続ける場合は、このクイック スタートで作成したリソースをクリーンアップしないでください。 続行する予定がない場合は、次の手順を使用して、このクイック スタートで作成したリソースを Azure portal で削除します。
-不要になったリソース グループを削除することで、リソースをクリーンアップします。 詳細については、「[リソースのクリーンアップ](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)」を参照してください。
+不要になったリソース グループを削除することで、リソースをクリーンアップします。 詳細については、「[リソースのクリーンアップ](/azure/sql-database/sql-database-get-started-portal#clean-up-resources)」を参照してください。
 
 
 ## <a name="next-steps"></a>次のステップ

@@ -2,19 +2,19 @@
 title: 拡張機能の作成
 description: 拡張機能を利用して Azure Data Studio に機能を追加できます。 それを作成し、拡張機能ギャラリーに公開する方法について説明します。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 0473ac567f26748999e5718fe5f81660b0bfb7ba
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: bd2a20857c8f16ea2b2d71ebfcb620bcea3f0190
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411128"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778421"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Azure Data Studio 拡張機能を作成することで機能を拡張する
 
@@ -40,7 +40,7 @@ npm install -g yo generator-azuredatastudio # Install the generator
 yo azuredatastudio
 ```
 
-拡張機能テンプレートの使用を開始する方法に関する詳細なガイドについては、[拡張機能の作成](https://docs.microsoft.com/sql/azure-data-studio/tutorial-create-extension?view=sql-server-ver15)に関する記事を参照してください。この記事では、キーマップ拡張機能の作成について説明しています。
+拡張機能テンプレートの使用を開始する方法に関する詳細なガイドについては、[拡張機能の作成](./tutorial-create-extension.md?view=sql-server-ver15)に関する記事を参照してください。この記事では、キーマップ拡張機能の作成について説明しています。
 
 **機能拡張の参照**
 

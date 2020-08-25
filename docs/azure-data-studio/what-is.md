@@ -2,19 +2,19 @@
 title: Azure Data Studio とは
 description: Azure Data Studio は、SQL Server、Azure SQL Database、および Azure SQL Data Warehouse を管理するために、Windows、macOS、Linux で実行される無償の軽量ツールです。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: overview
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 01/15/2020
-ms.openlocfilehash: 05819f1bafef5095ac9d3534b0293817f3841f96
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b58a54e99c269db113bdd1e1821ba55ce3d83ff5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771927"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765511"
 ---
 # <a name="what-is-azure-data-studio"></a>Azure Data Studio とは
 
@@ -24,7 +24,7 @@ Azure Data Studio では、IntelliSense、コード スニペット、ソース�
 
 Azure Data Studio のソース コードとそのデータ プロバイダーは、ソース コード EULA の下の GitHub で利用できます。この EULA では、ソフトウェアを変更および使用する権利が提供されますが、ソフトウェアを再配布したりクラウドサービス内でホストしたりすることはできません。 詳細については、「[Azure Data Studio FAQ](faq.md)」(Azure Data Studio の FAQ) を参照してください。
 
-**[Azure Data Studio のダウンロードとインストール](download.md)**
+**[Azure Data Studio のダウンロードとインストール](./download-azure-data-studio.md?view=sql-server-ver15)**
 
 ## <a name="sql-code-editor-with-intellisense"></a>IntelliSense を使用した SQL コード エディター
 
@@ -165,7 +165,7 @@ Azure Data Studio 機能拡張の詳細については、[拡張機能](extensib
 
 ## <a name="next-steps"></a>次のステップ
 
-- [Azure Data Studio のダウンロードとインストール](download.md)
+- [Azure Data Studio のダウンロードとインストール](./download-azure-data-studio.md?view=sql-server-ver15)
 - [SQL Server に対する接続およびクエリ](quickstart-sql-server.md)
 - [Azure SQL Database に対する接続およびクエリ](quickstart-sql-database.md)
 

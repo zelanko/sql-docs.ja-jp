@@ -2,19 +2,19 @@
 title: 拡張機能の追加
 description: Microsoft やサードパーティが提供するものから拡張機能を選択し、インストールすることで Azure Data Studio に機能を追加する方法について説明します。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 10/03/2019
-ms.openlocfilehash: eb6578f69ab9c0ded637ef9762ea50cfd18a25bb
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 0df00fddf5bf3460ad88d0b780d25a2dcf0fb6b5
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411118"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746142"
 ---
 # <a name="extend-the-functionality-of-azure-data-studio"></a>Azure Data Studio の機能の拡張
 

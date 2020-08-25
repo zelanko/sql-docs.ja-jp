@@ -5,16 +5,16 @@ ms.custom: seodec18
 ms.date: 03/19/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: a273850f64168caeb48304606e50703ba8fc54f4
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: ac218ec447ef338b4df770e9251e6fdb37e5db5f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411328"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766641"
 ---
 # <a name="postgresql-extension-preview"></a>PostgreSQL の拡張機能 (プレビュー)
 
@@ -33,7 +33,7 @@ PostgreSQL で使用できる Azure Data Studio 機能には次のものがあ�
 
 ## <a name="install-the-postgresql-extension-preview"></a>PostgreSQL の拡張機能 (プレビュー) をインストールする
 
-Azure Data Studio がまだインストールされていない場合は、その[インストール手順](download.md)を参照してください。
+Azure Data Studio がまだインストールされていない場合は、その[インストール手順](./download-azure-data-studio.md?view=sql-server-ver15)を参照してください。
 
 1. Azure Data Studio のサイドバーから拡張機能アイコンを選択します。
    ![拡張機能アイコン](media/extensions/postgresql-extension/extensions-icon.png)
@@ -46,4 +46,3 @@ Azure Data Studio がまだインストールされていない場合は、そ�
 ## <a name="next-steps"></a>次のステップ
 
 [Azure Data Studio から Postgres に接続してクエリを実行する方法](quickstart-postgres.md)について説明します。
-

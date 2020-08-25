@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c60b0dbb40c41a7d41971bffc0f44b89ad77eaaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25b22aa23d773765f98cf3610d57bb041ba2205b
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882735"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746182"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Always On 可用性グループ リスナーに接続する 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -184,10 +184,10 @@ SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.c
 
 ドメイン管理者は、リスナーへのクライアント接続のために Kerberos を有効にするように、可用性グループリスナーごとに Active Directory のサービス プリンシパル名 (SPN) を構成する必要があります。 SPN が登録されている場合は、可用性レプリカをホストするサーバー インスタンスのサービス アカウントを使用する必要があります。 SPN がすべてのレプリカで機能するためには、可用性グループをホストする WSFC クラスター内のすべてのインスタンスで同じサービス アカウントを使用する必要があります。  
   
- SPN は、Windows コマンド ライン ツールの **setspn** を使用して構成します。  たとえば、 `AG1listener.Adventure-Works.com` というドメイン アカウントで実行されるように構成された、一連の SQL Server インスタンスでホストされている `corp/svclogin2`という名前の可用性グループの SPN を構成する場合は、次のようになります。  
+ SPN は、Windows コマンド ライン ツールの **setspn** を使用して構成します。  たとえば、 `AG1listener.Adventure-Works.com` というドメイン アカウントで実行されるように構成された、一連の SQL Server インスタンスでホストされている `corp\svclogin2`という名前の可用性グループの SPN を構成する場合は、次のようになります。  
   
 ```  
-setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
+setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2  
 ```  
   
  SQL Server の SPN の手動登録の詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)」を参照してください。  

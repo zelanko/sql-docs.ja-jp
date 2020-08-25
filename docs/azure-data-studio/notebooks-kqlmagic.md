@@ -6,19 +6,19 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.topic: tutorial
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: ef59ecb200b30af6c30a5ea602cd89bc2c951e24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0f05030869b66ca0d2f57000aa85f02c93079f08
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920470"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766831"
 ---
 # <a name="kqlmagic-extension-in-azure-data-studio"></a>Azure Data Studio の Kqlmagic 拡張機能
 
-**Kqlmagic** は、 **[Azure Data Studio ノートブック](notebooks-guidance.md)** で Python カーネルの機能を拡張するコマンドです。 Python と **[Kusto クエリ言語 (KQL)](https://docs.microsoft.com/azure/data-explorer/kusto/query)** を組み合わせて、`render` コマンドに統合された豊富な Plot.ly ライブラリを使用してデータのクエリと視覚化を実行できます。 Kqlmagic を使用すると、ノートブック、データ分析、Python の豊富な機能の利点がすべて同じ場所にもたらされます。 Kqlmagic でサポートされているデータ ソースには、 **[Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)** 、 **[Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)** 、 **[Azure Monitor ログ](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs)** があります。
+**Kqlmagic** は、 **[Azure Data Studio ノートブック](notebooks-guidance.md)** で Python カーネルの機能を拡張するコマンドです。 Python と **[Kusto クエリ言語 (KQL)](/azure/data-explorer/kusto/query)** を組み合わせて、`render` コマンドに統合された豊富な Plot.ly ライブラリを使用してデータのクエリと視覚化を実行できます。 Kqlmagic を使用すると、ノートブック、データ分析、Python の豊富な機能の利点がすべて同じ場所にもたらされます。 Kqlmagic でサポートされているデータ ソースには、 **[Azure Data Explorer](/azure/data-explorer/data-explorer-overview)** 、 **[Application Insights](/azure/azure-monitor/app/app-insights-overview)** 、 **[Azure Monitor ログ](/azure/azure-monitor/platform/data-platform-logs)** があります。
 
 この記事では、Kqlmagic 拡張機能を Azure Data Explorer クラスター、Application Insights ログ、および Azure Monitor ログに使用して、Azure Data Studio でノートブックを作成および実行する方法について説明します。
 
@@ -114,7 +114,7 @@ ms.locfileid: "86920470"
 
 ### <a name="query-and-visualize-for-azure-data-explorer"></a>Azure Data Explorer のクエリと視覚化
 
-[render 演算子](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator)を使用してデータのクエリを実行し、ploy.ly ライブラリを使用してデータを視覚化します。 このクエリと視覚化では、ネイティブの KQL を使用する統合されたエクスペリエンスが提供されます。
+[render 演算子](/azure/data-explorer/kusto/query/renderoperator)を使用してデータのクエリを実行し、ploy.ly ライブラリを使用してデータを視覚化します。 このクエリと視覚化では、ネイティブの KQL を使用する統合されたエクスペリエンスが提供されます。
 
 1. 状態と頻度別に上位 10 個のイベントを分析します。
 
@@ -179,7 +179,7 @@ ms.locfileid: "86920470"
 
 ### <a name="query-and-visualize-for-application-insights"></a>Application Insights のクエリと視覚化
 
-[render 演算子](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator)を使用してデータのクエリを実行し、ploy.ly ライブラリを使用してデータを視覚化します。 このクエリと視覚化では、ネイティブの KQL を使用する統合されたエクスペリエンスが提供されます。
+[render 演算子](/azure/data-explorer/kusto/query/renderoperator)を使用してデータのクエリを実行し、ploy.ly ライブラリを使用してデータを視覚化します。 このクエリと視覚化では、ネイティブの KQL を使用する統合されたエクスペリエンスが提供されます。
 
 1. ページ ビューの表示:
 
@@ -234,7 +234,7 @@ ms.locfileid: "86920470"
 
 ### <a name="query-and-visualize-for-azure-monitor-logs"></a>Azure Monitor ログのクエリと視覚化
 
-[render 演算子](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator)を使用してデータのクエリを実行し、ploy.ly ライブラリを使用してデータを視覚化します。 このクエリと視覚化では、ネイティブの KQL を使用する統合されたエクスペリエンスが提供されます。
+[render 演算子](/azure/data-explorer/kusto/query/renderoperator)を使用してデータのクエリを実行し、ploy.ly ライブラリを使用してデータを視覚化します。 このクエリと視覚化では、ネイティブの KQL を使用する統合されたエクスペリエンスが提供されます。
 
 1. タイムライン グラフの表示:
 
@@ -251,7 +251,7 @@ ms.locfileid: "86920470"
 
 ノートブックと Kqlmagic についてさらに学習します:
 
-- [Jupyter Notebook と Kqlmagic 拡張機能を使用して Azure Data Explorer 内のデータを分析する](https://docs.microsoft.com/azure/data-explorer/Kqlmagic)
+- [Jupyter Notebook と Kqlmagic 拡張機能を使用して Azure Data Explorer 内のデータを分析する](/azure/data-explorer/Kqlmagic)
 - [Kusto、Application Insights、および LogAnalytics のデータを使用してノートブック エクスペリエンスを実現する、Jupyter Notebook と Jupyter Lab への拡張 (マジック)](https://github.com/Microsoft/jupyter-Kqlmagic)
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)

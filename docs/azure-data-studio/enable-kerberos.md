@@ -2,19 +2,19 @@
 title: Windows 認証 (Kerberos) を使用して SQL Server に接続する
 description: Microsoft Kerberos 統合認証を使用して Azure Data Studio を SQL Server に接続する方法について説明します。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 325d066ec88045380c45dc2784e6766a4f549757
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 573f78b3edace44695f73d79fba9679ba5fd4e00
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411158"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778431"
 ---
 # <a name="connect-azure-data-studio-to-your-sql-server-using-windows-authentication---kerberos"></a>Windows 認証 (Kerberos) を使用して Azure Data Studio を SQL Server に接続する
 
@@ -25,7 +25,7 @@ macOS または Linux で統合認証 (Windows 認証) を使用するには、�
 ## <a name="prerequisites"></a>前提条件
 
 - Kerberos ドメイン コントローラーのクエリを実行するために、Windows ドメインに参加しているコンピューターへのアクセス権。
-- SQL Server は、Kerberos 認証を許可するように構成する必要があります。 UNIX で実行されているクライアント ドライバーでは、統合認証は Kerberos を使用した場合にのみサポートされます。 詳細については、「[Kerberos 統合認証による SQL Server への接続](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)」を参照してください。 接続しようとしている SQL Server の各インスタンスに対して、SPN が登録されている必要があります。 詳細については、「[サービス プリンシパル名の登録](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)」を参照してください。
+- SQL Server は、Kerberos 認証を許可するように構成する必要があります。 UNIX で実行されているクライアント ドライバーでは、統合認証は Kerberos を使用した場合にのみサポートされます。 詳細については、「[Kerberos 統合認証による SQL Server への接続](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)」を参照してください。 接続しようとしている SQL Server の各インスタンスに対して、SPN が登録されている必要があります。 詳細については、「[サービス プリンシパル名の登録](/previous-versions/sql/sql-server-2008-r2/ms191153(v=sql.105)#SPN%20Formats)」を参照してください。
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>SQL Server に Kerberos のセットアップがあるかどうかを確認する

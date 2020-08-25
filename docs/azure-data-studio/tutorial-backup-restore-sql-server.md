@@ -2,19 +2,19 @@
 title: データベースのバックアップと復元する
 description: このチュートリアルでは、Azure Data Studio を使用してデータベースをバックアップおよび復元する方法について説明します。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 5e276a830f5fa6abc9b1fcf70c540d4cb955d5af
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 8594178dc6817cc8b826268c3fd0aebce59af2ec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522426"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765801"
 ---
 # <a name="backup-and-restore-databases-using-azure-data-studio"></a>Azure Data Studio を使用したデータベースのバックアップと復元
 
@@ -32,7 +32,7 @@ ms.locfileid: "87522426"
 
 * [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して SQL Server に接続し、クエリを実行する](quickstart-sql-server.md)
 
-このチュートリアルでは、SQL Server データベースに接続する必要があります。 Azure SQL Database には自動バックアップがあるため、Azure Data Studio では Azure SQL Database のバックアップと復元が実行されません。 詳細は、[自動 SQL Database バックアップ](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups)に関するページを参照してください。
+このチュートリアルでは、SQL Server データベースに接続する必要があります。 Azure SQL Database には自動バックアップがあるため、Azure Data Studio では Azure SQL Database のバックアップと復元が実行されません。 詳細は、[自動 SQL Database バックアップ](/azure/sql-database/sql-database-automated-backups)に関するページを参照してください。
 
 ## <a name="back-up-a-database"></a>データベースをバックアップする
 

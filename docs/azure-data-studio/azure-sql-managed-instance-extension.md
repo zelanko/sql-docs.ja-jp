@@ -5,21 +5,21 @@ ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alanyu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: dd1b610c5c8e99fcda446688d0dbdffe0a9dc51e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988598"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778481"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Azure Data Studio 用の Azure SQL Managed Instance ダッシュボード (プレビュー)
 
-Azure SQL Managed Instance 拡張機能により、[Azure Data Studio](https://github.com/Microsoft/azuredatastudio) で [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) を操作するためのダッシュボードが提供されます。 この拡張機能には次の機能があります。
+Azure SQL Managed Instance 拡張機能により、[Azure Data Studio](https://github.com/Microsoft/azuredatastudio) で [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index) を操作するためのダッシュボードが提供されます。 この拡張機能には次の機能があります。
 
 - 仮想コアや使用済みストレージなど、SQL Managed Instance のプロパティを表示する
 - 過去 2 時間の CPU とストレージの利用状況を監視する
@@ -29,7 +29,7 @@ Azure SQL Managed Instance 拡張機能により、[Azure Data Studio](https://g
 
 ## <a name="install"></a>インストール
 
-この拡張機能の正式なリリースをインストールすることができます。 [Azure Data Studio のドキュメント](https://docs.microsoft.com/sql/azure-data-studio/extensions)の手順に従ってください。
+この拡張機能の正式なリリースをインストールすることができます。 [Azure Data Studio のドキュメント](./extensions.md)の手順に従ってください。
 **[拡張機能]** ウィンドウで「Managed Instance」を検索し、そこでインストールします。 インストールされた後は、拡張機能の更新があれば、自動的に通知されます。
 
 拡張機能をインストールすると、Azure Data Studio に **[Managed Instance]\(マネージド インスタンス\)** タブが表示されます。 ここでは、お使いのマネージド インスタンスに固有の情報を確認できます。
@@ -58,8 +58,8 @@ Azure SQL Managed Instance 拡張機能により、[Azure Data Studio](https://g
 - **ストレージ スペースの制限に到達**。 不要なデータを削除するか、インスタンスのストレージ サイズを増やします。 ストレージの上限に達したデータベースでは、読み取りクエリさえ処理できない場合があります。
 - **インスタンスのスループット制限に到達**。 サービス レベルの上限近くで読み取りが行われていることをユーザーに通知します: General Purpose では 22 MB/秒、Business Critical では 48 MB/秒。 バックアップを確実に実行できるように、マネージド インスタンスによって負荷が制限されることに注意してください。
 - **メモリ不足**。 ページの予測保持期間が低い場合、または `PAGEIOLATCH` 待機統計が高い場合は、インスタンスでページがメモリから削除され、定常的にディスクから多くのページの読み込みが試みられていることを示している可能性があります。
-- **ログ ファイルの制限**。 ログ ファイルが [General Purpose サービス レベルのファイル IO 制限](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)に近づいている場合、パフォーマンスを向上させるにはログ ファイル サイズを増やすことが必要な場合があります。
-- **データ ファイルの制限**。 データ ファイルが [General Purpose サービス レベルのファイル IO 制限](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)に近づいている場合、パフォーマンスを向上させるにはファイル サイズを増やすことが必要な場合があります。 この問題によって、メモリ不足が発生し、バックアップの速度が低下している可能性があります。
+- **ログ ファイルの制限**。 ログ ファイルが [General Purpose サービス レベルのファイル IO 制限](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)に近づいている場合、パフォーマンスを向上させるにはログ ファイル サイズを増やすことが必要な場合があります。
+- **データ ファイルの制限**。 データ ファイルが [General Purpose サービス レベルのファイル IO 制限](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)に近づいている場合、パフォーマンスを向上させるにはファイル サイズを増やすことが必要な場合があります。 この問題によって、メモリ不足が発生し、バックアップの速度が低下している可能性があります。
 - **可用性の問題**。 仮想ログ ファイルの数が多いと、パフォーマンスに影響することがあります。 ロセスで障害が発生した場合、そのような問題のため、General Purpose サービス レベルでのデータベース復旧に時間がかかる可能性があります。
 
 これらの推奨事項を定期的に確認し、根本原因を調査して、問題を修正するアクションを講じます。 SQL Managed Instance 拡張機能を使うと、報告された問題の一部を軽減するために実行できるスクリプトが提供されます。

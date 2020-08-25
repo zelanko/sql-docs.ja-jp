@@ -5,22 +5,22 @@ ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: cac73bebca185f40deb1b1bac4a77c6ceb20264e
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 9ecee71588cb54cb23c813cf5009b92159cf94d6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522456"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765921"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server インポートの拡張機能 (プレビュー)
 
 SQL Server インポートの拡張機能 (プレビュー) では、.txt ファイルと .csv ファイルが SQL テーブルに変換されます。 このウィザードでは、[Program Synthesis using Examples (PROSE)](https://microsoft.github.io/prose/) と呼ばれるマイクロソフト リサーチ フレームワークを利用して、最小のユーザー入力でファイルをインテリジェントに解析することができます。 これはデータ ラングリングのための強力なフレームワークであり、Microsoft Excel でフラッシュ フィルを強化するのと同じテクノロジです
 
-この機能の SSMS バージョンの詳細については、[こちら](https://docs.microsoft.com/sql/relational-databases/import-export/import-flat-file-wizard)の記事を参照してください。
+この機能の SSMS バージョンの詳細については、[こちら](../relational-databases/import-export/import-flat-file-wizard.md)の記事を参照してください。
 
 
 ## <a name="install-the-sql-server-import-extension"></a>SQL Server インポートの拡張機能をインストールする

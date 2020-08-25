@@ -27,15 +27,16 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 3e6b80b2737517e0d78a5ca4adbd1c66e619fc8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a92d256d376b9931924a7bf6672769bcd19917f4
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488067"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645956"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 データベースに列マスター キー メタデータ オブジェクトを作成します。 列マスター キー メタデータ エントリは、外部キー ストアに格納されたキーを表します。 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) または[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) を使用していると、そのキーによって列暗号化キーが保護 (暗号化) されます。 複数の列マスター キーを使用してキーのローテーションを定期的に行い、セキュリティを強化できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーまたは PowerShell を使用して、キー ストアに列マスター キーを作成し、データベースに関連するメタデータ オブジェクトを作成します。 詳しくは、「[Always Encrypted のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)」をご覧ください。  
   

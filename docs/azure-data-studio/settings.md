@@ -4,17 +4,17 @@ description: 設定を使用し、Azure Data Studio のエディター、ユー�
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 71f1f27bc58f64d3a1bcf8bcc3f8e96594e2e771
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 2196bd9c4445f700fd1a697db3edcb5879b1f44b
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411208"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746162"
 ---
 # <a name="modify-user-and-workspace-settings"></a>ユーザーとワークスペースの設定を変更する
 
