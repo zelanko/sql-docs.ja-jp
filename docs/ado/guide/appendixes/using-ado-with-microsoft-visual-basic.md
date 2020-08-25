@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4e8304204a6eaebf6b64d5cb9ad44e5fa1602da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: efb206f3c0fbbeb0fbc700f8e714ddd1d5ee5a8c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454014"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806513"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Microsoft Visual Basic および Visual Basic for Applications での ADO の使用
 Visual Basic と Visual Basic for Applications のどちらを使用する場合でも、ADO プロジェクトの設定と ADO コードの記述は似ています。 このトピックでは、Visual Basic と Visual Basic for Applications の両方で ADO を使用する方法について説明し、相違点について説明します。
@@ -110,10 +110,10 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
  **CreateObject**メソッドを使用したオブジェクトのインスタンス化は、通常、 **Dim**ステートメントを使用するよりも遅くなります。
 
 ## <a name="handling-events"></a>イベントの処理
- Microsoft Visual Basic で ADO イベントを処理するには、 **WithEvents** キーワードを使用してモジュールレベルの変数を宣言する必要があります。 変数は、クラスモジュールの一部としてのみ宣言でき、モジュールレベルで宣言する必要があります。 ADO イベントの処理の詳細については、「 [Ado イベントの処理](../../../ado/guide/data/handling-ado-events.md)」を参照してください。
+ Microsoft Visual Basic で ADO イベントを処理するには、 **WithEvents** キーワードを使用してモジュールレベルの変数を宣言する必要があります。 変数は、クラスモジュールの一部としてのみ宣言でき、モジュールレベルで宣言する必要があります。 ADO イベントの処理の詳細については、「 [Ado イベントの処理](../data/handling-ado-events.md)」を参照してください。
 
 ## <a name="visual-basic-examples"></a>Visual Basic の例
- ADO ドキュメントには、多くの Visual Basic の例が含まれています。 詳細については、「 [Microsoft Visual Basic の ADO コード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)」を参照してください。
+ ADO ドキュメントには、多くの Visual Basic の例が含まれています。 詳細については、「 [Microsoft Visual Basic の ADO コード例](../../reference/ado-api/ado-code-examples-in-visual-basic.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
- [Microsoft ActiveX データオブジェクト (ado)](../../../ado/microsoft-activex-data-objects-ado.md) [と](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)ado を使用して[スクリプト言語で ado を](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)使用する Microsoft Visual C++
+## <a name="see-also"></a>参照
+ [Microsoft ActiveX データオブジェクト (ado)](../../microsoft-activex-data-objects-ado.md) [と](./using-ado-with-microsoft-visual-c.md)ado を使用して[スクリプト言語で ado を](./using-ado-with-scripting-languages.md)使用する Microsoft Visual C++

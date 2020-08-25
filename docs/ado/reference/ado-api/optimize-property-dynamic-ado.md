@@ -14,27 +14,27 @@ helpviewer_keywords:
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ce2367d550cc8e420c4a1a9bf9fd10fff9e94e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91da30a49a0eff7d8b32274e8486002f78f2a05f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442914"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773641"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize プロパティ - 動的 (ADO)
-[フィールド](../../../ado/reference/ado-api/field-object.md)にインデックスを作成するかどうかを指定します。  
+[フィールド](./field-object.md)にインデックスを作成するかどうかを指定します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  インデックスを作成する必要があるかどうかを示す **ブール** 値を設定または返します。  
   
 ## <a name="remarks"></a>解説  
- インデックスを使用すると、 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の値を検索したり並べ替えたりする操作のパフォーマンスを向上させることができます。 インデックスは ADO の内部にあります。アプリケーションで明示的にアクセスしたり、使用したりすることはできません。  
+ インデックスを使用すると、 [レコードセット](./recordset-object-ado.md)内の値を検索したり並べ替えたりする操作のパフォーマンスを向上させることができます。 インデックスは ADO の内部にあります。アプリケーションで明示的にアクセスしたり、使用したりすることはできません。  
   
  フィールドにインデックスを作成するには、 **Optimize** プロパティを **True**に設定します。 インデックスを削除するには、このプロパティを **False**に設定します。  
   
- **[最適化**] は、[[カーソルの場所](../../../ado/reference/ado-api/cursorlocation-property-ado.md)] プロパティが**adUseClient**に設定されている場合に、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクションに追加される動的プロパティです。  
+ **[最適化**] は、[[カーソルの場所](./cursorlocation-property-ado.md)] プロパティが**adUseClient**に設定されている場合に、[フィールド](./field-object.md)オブジェクトの[プロパティ](./properties-collection-ado.md)のコレクションに追加される動的プロパティです。  
   
-## <a name="usage"></a>使用法  
+## <a name="usage"></a>使用  
   
 ```  
 Dim rs As New Recordset  
@@ -48,11 +48,11 @@ fld.Properties("Optimize") = False   'Delete an index
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)  
+ [Field オブジェクト](./field-object.md)  
   
 ## <a name="see-also"></a>参照  
- [Optimize プロパティの例 (VB)](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
- [Optimize プロパティの例 (VC + +)](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
- [Filter プロパティ](../../../ado/reference/ado-api/filter-property.md)   
- [Find メソッド (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [Sort プロパティ](../../../ado/reference/ado-api/sort-property.md)
+ [Optimize プロパティの例 (VB)](./optimize-property-example-vb.md)   
+ [Optimize プロパティの例 (VC + +)](./optimize-property-example-vc.md)   
+ [Filter プロパティ](./filter-property.md)   
+ [Find メソッド (ADO)](./find-method-ado.md)   
+ [Sort プロパティ](./sort-property.md)

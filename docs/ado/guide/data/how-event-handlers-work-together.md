@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a571c36a67a4d2c1c3b98c64c826af949b0e773
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39e50c060dc602cb2bdd3541a454624e41b4d5b3
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453254"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805982"
 ---
 # <a name="how-event-handlers-work-together"></a>複数のイベント ハンドラーの連携方法
-Visual Basic でプログラミングする場合を除き、すべてのイベントを実際に処理するかどうかに関係なく、 **接続** イベントと **レコードセット** イベントのすべてのイベントハンドラーを実装する必要があります。 実行する必要のある実装作業の量は、プログラミング言語によって異なります。 詳細については、「 [言語別の ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)」を参照してください。  
+Visual Basic でプログラミングする場合を除き、すべてのイベントを実際に処理するかどうかに関係なく、 **接続** イベントと **レコードセット** イベントのすべてのイベントハンドラーを実装する必要があります。 実行する必要のある実装作業の量は、プログラミング言語によって異なります。 詳細については、「 [言語別の ADO イベントのインスタンス化](./ado-event-instantiation-by-language.md)」を参照してください。  
   
 ## <a name="paired-event-handlers"></a>ペアのイベントハンドラー  
  各イベントハンドラーには、関連付けられた **完全な** イベントハンドラーがあります。 たとえば、アプリケーションでフィールドの値が変更された場合、 **「」というイベントハンドラー** が呼び出されます。 変更が許容される場合、アプリケーションは **Adstatus** パラメーターを変更せずにそのまま使用し、操作を実行します。 操作が完了すると、 **FieldChangeComplete** イベントによって、操作が完了したことがアプリケーションに通知されます。 正常に完了した場合、 **Adstatus** は **adstatusok**を含みます。それ以外の場合、 **Adstatus** に **Adstatuserrorの curred** が含まれています。エラーの原因を特定するには、 **error** オブジェクトを確認する必要があります。  
@@ -46,7 +46,7 @@ Visual Basic でプログラミングする場合を除き、すべてのイベ�
   
  単一の **完全な** イベントハンドラーは、非同期操作の管理に役立ちます。 各非同期操作には、適切な **完全** なイベントがあります。  
   
- たとえば、大きな [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトを設定するには、長い時間がかかることがあります。 アプリケーションが適切に記述されている場合は、操作を開始 `Recordset.Open(...,adAsyncExecute)` して他の処理を続行できます。 **レコードセット**に**ExecuteComplete**イベントが設定されると、最終的に通知が表示されます。  
+ たとえば、大きな [レコードセット](../../reference/ado-api/recordset-object-ado.md) オブジェクトを設定するには、長い時間がかかることがあります。 アプリケーションが適切に記述されている場合は、操作を開始 `Recordset.Open(...,adAsyncExecute)` して他の処理を続行できます。 **レコードセット**に**ExecuteComplete**イベントが設定されると、最終的に通知が表示されます。  
   
 ## <a name="single-event-handlers-and-multiple-objects"></a>単一のイベントハンドラーと複数のオブジェクト  
  Microsoft Visual C++®のようなプログラミング言語の柔軟性により、複数のオブジェクトのイベントを1つのイベントハンドラーで処理できます。 たとえば、1つの **Disconnect** イベントハンドラーで複数の **接続** オブジェクトからイベントを処理することができます。 接続のいずれかが終了した場合、 **切断** イベントハンドラーが呼び出されます。 イベントハンドラーオブジェクトのパラメーターが対応する **接続** オブジェクトに設定されるため、イベントが発生した接続を特定できます。  
@@ -55,7 +55,7 @@ Visual Basic でプログラミングする場合を除き、すべてのイベ�
 >  この言語では、1つのオブジェクトのみをイベントハンドラーに関連付けることができるため、この手法を Visual Basic で使用することはできません。  
   
 ## <a name="see-also"></a>参照  
- [ADO イベントハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
- [言語による ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [イベントパラメーター](../../../ado/guide/data/event-parameters.md)   
- [イベントの種類](../../../ado/guide/data/types-of-events.md)
+ [ADO イベントハンドラーの概要](./ado-event-handler-summary.md)   
+ [言語による ADO イベントのインスタンス化](./ado-event-instantiation-by-language.md)   
+ [イベントパラメーター](./event-parameters.md)   
+ [イベントの種類](./types-of-events.md)

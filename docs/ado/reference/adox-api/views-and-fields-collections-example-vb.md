@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 30be1e48aca9a942b0a98d0f119f1f8e8218144b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cbf00fc32364c1077be44ebb791708f361ec4da
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439334"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768981"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Views および Fields コレクションの例 (VB)
-次のコードは、 [コマンド](../../../ado/reference/adox-api/command-property-adox.md) プロパティと [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトを使用して、ビューのフィールド情報を取得する方法を示しています。  
+次のコードは、 [コマンド](./command-property-adox.md) プロパティと [レコードセット](../ado-api/recordset-object-ado.md) オブジェクトを使用して、ビューのフィールド情報を取得する方法を示しています。  
   
 ```  
 ' BeginViewFieldsVB  
@@ -79,8 +79,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Command プロパティ (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [View オブジェクト (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [ActiveConnection プロパティ (ADOX)](./activeconnection-property-adox.md)   
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [Command プロパティ (ADOX)](./command-property-adox.md)   
+ [View オブジェクト (ADOX)](./view-object-adox.md)   
+ [Views コレクション (ADOX)](./views-collection-adox.md)

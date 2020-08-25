@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f544805336fdea586fac5697b3abde009dc6f7ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6a682a706e18046bde0a6d117d1964262700c1c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453624"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806267"
 ---
 # <a name="creating-a-connection-string"></a>接続文字列の作成
 接続文字列は、セミコロンで区切られた引数と値のペアのリスト (パラメーター) で構成されます。 次に例を示します。  
@@ -42,7 +42,7 @@ ms.locfileid: "88453624"
   
  その他の引数は、ADO によって処理されることなく、 *provider* 引数でという名前のプロバイダーに渡されます。  
   
- HelloData の HelloData アプリケーション [: 単純な ADO アプリケーション](../../../ado/guide/data/hellodata-a-simple-ado-application.md) では、次の接続文字列が使用されていました。  
+ HelloData の HelloData アプリケーション [: 単純な ADO アプリケーション](./hellodata-a-simple-ado-application.md) では、次の接続文字列が使用されていました。  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  

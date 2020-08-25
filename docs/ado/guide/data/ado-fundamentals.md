@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02574be8fc8333e357e31fe1e1425d6e237871a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3f76cca88b2be94973b2271c81279b76b2706bc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453774"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806427"
 ---
 # <a name="ado-fundamentals"></a>ADO の基礎
 ADO を使用すると、開発者は、OLE DB システムインターフェイスを使用して、さまざまなデータソースからプログラムを使用してデータにアクセスしたり、編集したり、更新したりすることができます。 ADO の最も一般的な使用方法は、リレーショナルデータベース内の1つまたは複数のテーブルに対してクエリを実行し、その結果を取得してアプリケーションで表示し、ユーザーがデータの変更を行って保存できるようにすることです。 その他のタスクは次のとおりです。  
@@ -57,10 +57,10 @@ ADO を使用すると、開発者は、OLE DB システムインターフェイ
   
  ただし、これらの詳細について説明する前に、ADO オブジェクトモデルと単純な ADO アプリケーションの概要を説明します。このアプリケーションは、Microsoft® Visual Basic®で記述され、次の4つの主要な ADO 操作のそれぞれを実行します。  
   
--   [ADO オブジェクトとコレクション](../../../ado/guide/data/ado-objects-and-collections.md)  
+-   [ADO オブジェクトとコレクション](./ado-objects-and-collections.md)  
   
--   [HelloData: 単純な ADO アプリケーション](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData: 単純な ADO アプリケーション](./hellodata-a-simple-ado-application.md)  
   
--   [OLE DB プロバイダー](../../../ado/guide/data/ole-db-providers-ado.md)  
+-   [OLE DB プロバイダー](./ole-db-providers-ado.md)  
   
--   [エラー](../../../ado/guide/data/errors-ado.md)
+-   [エラー](./errors-ado.md)

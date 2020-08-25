@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a97db427db3c0dc42e004e1b0fcd0a889c9d6c5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e5927c2c3b32540ebfe54307203e0425600e2f2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443684"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775321"
 ---
 # <a name="filter-property"></a>Filter プロパティ
-[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内のデータのフィルターを示します。  
+[レコードセット](./recordset-object-ado.md)内のデータのフィルターを示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値
 
@@ -34,11 +34,11 @@ ms.locfileid: "88443684"
   
 -   **ブックマークの配列:** レコード **セット** オブジェクトのレコードを指す一意のブックマーク値の配列。  
   
--   [Filtergroupenum](../../../ado/reference/ado-api/filtergroupenum.md)値。  
+-   [Filtergroupenum](./filtergroupenum.md)値。  
   
 ## <a name="remarks"></a>解説
 
-**フィルター**プロパティを使用して、レコード**セット**オブジェクトのレコードを選択的に表示します。 フィルター選択された **レコードセット** が現在のカーソルになります。 現在の **カーソル** に基づいて値を返すその他のプロパティは、 [ABSOLUTEPOSITION property (ado)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)、 [AbsolutePage property (ado)](../../../ado/reference/ado-api/absolutepage-property-ado.md)、 [RecordCount Property (ADO](../../../ado/reference/ado-api/recordcount-property-ado.md))、および [PageCount property (ado)](../../../ado/reference/ado-api/pagecount-property-ado.md)などの影響を受けます。 **Filter**プロパティを特定の新しい値に設定すると、現在のレコードが、新しい値を満たす最初のレコードに移動します。
+**フィルター**プロパティを使用して、レコード**セット**オブジェクトのレコードを選択的に表示します。 フィルター選択された **レコードセット** が現在のカーソルになります。 現在の **カーソル** に基づいて値を返すその他のプロパティは、 [ABSOLUTEPOSITION property (ado)](./absoluteposition-property-ado.md)、 [AbsolutePage property (ado)](./absolutepage-property-ado.md)、 [RecordCount Property (ADO](./recordcount-property-ado.md))、および [PageCount property (ado)](./pagecount-property-ado.md)などの影響を受けます。 **Filter**プロパティを特定の新しい値に設定すると、現在のレコードが、新しい値を満たす最初のレコードに移動します。
   
 条件文字列は、 *FieldName-Operator-Value* という形式の句で構成されています (例: `"LastName = 'Smith'"` )。 複合句を作成するには、個別の句を **AND** (たとえば、 `"LastName = 'Smith' AND FirstName = 'John'"` ) また **は or** (など) と連結し `"LastName = 'Smith' OR LastName = 'Jones'"` ます。 条件文字列の場合は、次のガイドラインに従います。
 
@@ -57,11 +57,11 @@ ms.locfileid: "88443684"
 -   代わりに、次のようにこのフィルターを構築します。  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   **LIKE**句では、パターンの先頭と末尾にワイルドカードを使用できます。 たとえば、`LastName Like '*mit*'` を使用できます。 また、 **LIKE** では、パターンの最後でのみワイルドカードを使用できます。 たとえば、`LastName Like 'Smit*'` のようにします。  
+-   **LIKE**句では、パターンの先頭と末尾にワイルドカードを使用できます。 たとえば、`LastName Like '*mit*'` を使用できます。 また、 **LIKE** では、パターンの最後でのみワイルドカードを使用できます。 たとえば、「 `LastName Like 'Smit*'` 」のように入力します。  
   
- フィルター定数を使用すると、バッチ更新モード中に個々のレコードの競合を解決しやすくなります。たとえば、最後の [UpdateBatch メソッド](../../../ado/reference/ado-api/updatebatch-method.md) メソッド呼び出しの間に影響を受けたレコードだけを表示できます。  
+ フィルター定数を使用すると、バッチ更新モード中に個々のレコードの競合を解決しやすくなります。たとえば、最後の [UpdateBatch メソッド](./updatebatch-method.md) メソッド呼び出しの間に影響を受けたレコードだけを表示できます。  
   
-**フィルター**プロパティ自体の設定は、基になるデータとの競合によって失敗する可能性があります。 たとえば、このエラーは、レコードが別のユーザーによって既に削除されている場合に発生する可能性があります。 このような場合、プロバイダーは [エラーコレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md) コレクションに警告を返しますが、プログラムの実行を停止することはありません。 実行時のエラーは、要求されたすべてのレコードに競合がある場合にのみ発生します。 競合しているレコードを検索するには、 [Status プロパティ (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md) プロパティを使用します。  
+**フィルター**プロパティ自体の設定は、基になるデータとの競合によって失敗する可能性があります。 たとえば、このエラーは、レコードが別のユーザーによって既に削除されている場合に発生する可能性があります。 このような場合、プロバイダーは [エラーコレクション (ADO)](./errors-collection-ado.md) コレクションに警告を返しますが、プログラムの実行を停止することはありません。 実行時のエラーは、要求されたすべてのレコードに競合がある場合にのみ発生します。 競合しているレコードを検索するには、 [Status プロパティ (ADO Recordset)](./status-property-ado-recordset.md) プロパティを使用します。  
   
 **Filter**プロパティを長さ0の文字列 ("") に設定すると、 **adfilternone**定数を使用する場合と同じ効果があります。
   
@@ -74,7 +74,7 @@ ms.locfileid: "88443684"
 
 この構成では、実行時にエラーが生成されます。 ただし、 `rs.Filter = "C=2"` 同じフィールドに適用してもエラーは生成されません。 また、フィールドが現在のレコードセットから除外されます。
 
-[ブックマークの [プロパティ (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md) ] プロパティを参照してください。ブックマークの値によって、Filter プロパティで使用する配列を作成できます。
+[ブックマークの [プロパティ (ADO)](./bookmark-property-ado.md) ] プロパティを参照してください。ブックマークの値によって、Filter プロパティで使用する配列を作成できます。
 
 条件文字列の形式のフィルターのみが、永続化された **レコードセット**の内容に影響します。 条件文字列の例としては、が `OrderDate > '12/31/1999'` あります。 ブックマークの配列を使用して作成されたフィルター、または **Filtergroupenum**の値を使用して作成されたフィルターは、永続化された **レコードセット**の内容には影響しません。 これらのルールは、クライアント側カーソルまたはサーバー側カーソルを使用して作成されたレコードセットに適用されます。
   
@@ -94,17 +94,17 @@ ms.locfileid: "88443684"
 |組み合わせ|非キー|1つのキー|複数のキー|
 |-|--------------|----------------|-------------------|
 |**非キー**|+|+|+|
-|**1つのキー**|+|-|該当なし|
-|**複数のキー**|+|該当なし|+|
+|**1つのキー**|+|-|N/A|
+|**複数のキー**|+|N/A|+|
 |||||
   
 ## <a name="applies-to"></a>適用対象
 
-[Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+[Recordset オブジェクト (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照
 
-[Filter プロパティと RecordCount プロパティの例 (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md) 
-[Filter プロパティと RecordCount プロパティの例 (VC + +)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md) 
-[Clear メソッド (ADO)](../../../ado/reference/ado-api/clear-method-ado.md) 
-[Optimize プロパティ-動的 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+[Filter プロパティと RecordCount プロパティの例 (VB)](./filter-and-recordcount-properties-example-vb.md) 
+[Filter プロパティと RecordCount プロパティの例 (VC + +)](./filter-and-recordcount-properties-example-vc.md) 
+[Clear メソッド (ADO)](./clear-method-ado.md) 
+[Optimize プロパティ-動的 (ADO)](./optimize-property-dynamic-ado.md)

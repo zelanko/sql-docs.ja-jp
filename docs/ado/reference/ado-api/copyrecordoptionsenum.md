@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8cb5b72579313f538ca763079787f2aba640d692
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e38c2d3ffdf7ac088611f6a260224f46f80a7d7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444374"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775752"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
-[Copyrecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)メソッドの動作を指定します。  
+[Copyrecord](./copyrecord-method-ado.md)メソッドの動作を指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
@@ -37,4 +37,4 @@ ms.locfileid: "88444374"
  これらの定数には、対応する ADO/WFC がありません。  
   
 ## <a name="applies-to"></a>適用対象  
- [CopyRecord メソッド (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)
+ [CopyRecord メソッド (ADO)](./copyrecord-method-ado.md)

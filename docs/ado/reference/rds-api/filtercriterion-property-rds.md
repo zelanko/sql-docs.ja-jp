@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1e2c46549f680e248d5734efa58d949d83f3800
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1b13b3f3dcdaa2bdd45dabedd5310dc4cdd3db86
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438994"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768221"
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion プロパティ (RDS)
 フィルター値に使用する評価演算子を示します。  
@@ -36,26 +36,24 @@ DataControl.FilterCriterion = String
   
 #### <a name="parameters"></a>パラメーター  
  *DataControl*  
- RDS を表すオブジェクト変数です [。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) オブジェクト。  
+ RDS を表すオブジェクト変数です [。DataControl](./datacontrol-object-rds.md) オブジェクト。  
   
  *String*  
- レコードに対する[Filtervalue](../../../ado/reference/rds-api/filtervalue-property-rds.md)の評価演算子を示す**文字列**値です。 次のいずれかを指定できます: <、 \<=, > 、>=、=、または <>。  
+ レコードに対する[Filtervalue](./filtervalue-property-rds.md)の評価演算子を示す**文字列**値です。 次のいずれかを指定できます: <、 \<=, > 、>=、=、または <>。  
   
 ## <a name="remarks"></a>解説  
- [Sortcolumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)、 [sortcolumn](../../../ado/reference/rds-api/sortdirection-property-rds.md)、 [filtervalue](../../../ado/reference/rds-api/filtervalue-property-rds.md)、 **filterfilter、** および[filtervalue](../../../ado/reference/rds-api/filtercolumn-property-rds.md)プロパティは、クライアント側キャッシュでの並べ替えとフィルター処理の機能を提供します。 並べ替え機能は、1つの列の値でレコードを並べ替えます。 フィルター機能では、検索条件に基づいてレコードのサブセットが表示されますが、完全な [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) はキャッシュに保持されます。 [Reset](../../../ado/reference/rds-api/reset-method-rds.md)メソッドは、条件を実行し、現在の**レコードセット**を更新可能な**レコードセット**に置き換えます。  
+ [Sortcolumn](./sortcolumn-property-rds.md)、 [sortcolumn](./sortdirection-property-rds.md)、 [filtervalue](./filtervalue-property-rds.md)、 **filterfilter、** および[filtervalue](./filtercolumn-property-rds.md)プロパティは、クライアント側キャッシュでの並べ替えとフィルター処理の機能を提供します。 並べ替え機能は、1つの列の値でレコードを並べ替えます。 フィルター機能では、検索条件に基づいてレコードのサブセットが表示されますが、完全な [レコードセット](../ado-api/recordset-object-ado.md) はキャッシュに保持されます。 [Reset](./reset-method-rds.md)メソッドは、条件を実行し、現在の**レコードセット**を更新可能な**レコードセット**に置き換えます。  
   
  "! =" 演算子は **フィルター条件**に対して無効です。代わりに、"<>" を使用してください。  
   
  フィルターと並べ替えの両方のプロパティが設定されていて、 **Reset** メソッドを呼び出すと、行セットが最初にフィルター処理され、次に並べ替えられます。 昇順の並べ替えでは、null 値が一番上にあります。降順の並べ替えでは、null 値は下部にあります (昇順は既定の動作です)。  
   
 ## <a name="applies-to"></a>適用対象  
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>参照  
- [FilterColumn、Filtercolumn、Filtercolumn、SortColumn、および Sortcolumn プロパティと Reset メソッドの例 (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
- [FilterColumn プロパティ (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
- [FilterValue プロパティ (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
- [SortColumn プロパティ (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [SortDirection プロパティ (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-
-
+ [FilterColumn、Filtercolumn、Filtercolumn、SortColumn、および Sortcolumn プロパティと Reset メソッドの例 (VBScript)](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [FilterColumn プロパティ (RDS)](./filtercolumn-property-rds.md)   
+ [FilterValue プロパティ (RDS)](./filtervalue-property-rds.md)   
+ [SortColumn プロパティ (RDS)](./sortcolumn-property-rds.md)   
+ [SortDirection プロパティ (RDS)](./sortdirection-property-rds.md)

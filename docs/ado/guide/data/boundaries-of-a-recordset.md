@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d89f25dc6e37c0b5c569d5db7c4f8486115ce94a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aec0ad3065deb60f99f672712c085fe054885d27
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453714"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806374"
 ---
 # <a name="boundaries-of-a-recordset"></a>レコードセットの境界
 **レコードセット** では、データセットの先頭と末尾を区切るために、 **BOF** プロパティと **EOF** プロパティがサポートされています。 **BOF**と**EOF**は、**レコードセット**の先頭と末尾に配置される "ファントム" レコードと考えることができます。 **BOF**と**EOF**をカウントすると、サンプル**レコードセット**は次のようになります。  
@@ -70,4 +70,4 @@ else
   
  このスキームは、すべての種類のカーソルに対して機能し、基になるプロバイダーからは独立しています。 その**RecordCount**プロパティの値がゼロ (0) であるかどうかをチェックして、**レコードセット**オブジェクトの empを判別しようとする場合は、結果のレコード数の返却をサポートする適切なカーソルとプロバイダーを使用するための予防措置をとる必要があります。  
   
- **レコードセット**オブジェクト内の最後のレコードを削除すると、そのカーソルは不確定状態のままになります。 現在のレコードの位置を変更するには、プロバイダーに応じて、 **BOF** プロパティと **EOF** プロパティを **False** のままにします。 詳細については、「 [Delete メソッドを使用したレコードの削除](../../../ado/guide/data/deleting-records-using-the-delete-method.md)」を参照してください。
+ **レコードセット**オブジェクト内の最後のレコードを削除すると、そのカーソルは不確定状態のままになります。 現在のレコードの位置を変更するには、プロバイダーに応じて、 **BOF** プロパティと **EOF** プロパティを **False** のままにします。 詳細については、「 [Delete メソッドを使用したレコードの削除](./deleting-records-using-the-delete-method.md)」を参照してください。

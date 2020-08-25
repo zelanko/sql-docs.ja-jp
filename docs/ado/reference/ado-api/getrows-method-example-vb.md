@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d05785a005ea6f0bbeb000d8abb74609318b741
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4f57460813cc72e4d513b9954739bcc02a5e4b8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443524"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775021"
 ---
 # <a name="getrows-method-example-vb"></a>GetRows メソッドの例 (VB)
-この例では、 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) メソッドを使用して、 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) から指定された数の行を取得し、結果のデータを配列に格納します。 **Getrows**メソッドは、必要な数の行を返します。2つの場合は、 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に達した場合、または別のユーザーによって削除されたレコードを**getrows**が取得しようとした場合のいずれかです。 関数は、2番目のケースが発生した場合にのみ **False** を返します。 このプロシージャを実行するには、GetRowsOK 関数が必要です。  
+この例では、 [GetRows](./getrows-method-ado.md) メソッドを使用して、 [レコードセット](./recordset-object-ado.md) から指定された数の行を取得し、結果のデータを配列に格納します。 **Getrows**メソッドは、必要な数の行を返します。2つの場合は、 [EOF](./bof-eof-properties-ado.md)に達した場合、または別のユーザーによって削除されたレコードを**getrows**が取得しようとした場合のいずれかです。 関数は、2番目のケースが発生した場合にのみ **False** を返します。 このプロシージャを実行するには、GetRowsOK 関数が必要です。  
   
 ```  
 'BeginGetRowsVB  
@@ -114,5 +114,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [GetRows メソッド (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [GetRows メソッド (ADO)](./getrows-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

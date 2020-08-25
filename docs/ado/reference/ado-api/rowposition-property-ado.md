@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 330c090c9e4eedd6a083d58a55243d470514541f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0f5f78843e38c2a3ff6b21c90bc9ed7f2c573ee4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442464"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777611"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition プロパティ (ADO)
 **ADORecordsetConstruction**オブジェクトからの OLE DB **rowposition**オブジェクトを取得します。値の設定もできます。 **Put_RowPosition**を使用して**rowposition**オブジェクトを設定すると、結果として得られる**レコードセット**オブジェクトは**rowposition**オブジェクトを使用して現在の行を決定します。  
@@ -53,4 +53,4 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
  このプロパティが設定されている場合、 **Rowposition**オブジェクトの**Rowset**オブジェクトが**Recordset**オブジェクトの**rowset**オブジェクトと異なる場合、前者は後者よりも優先されます。 同じ動作が、 **Rowposition**の現在の**チャプター**にも適用されます。  
   
 ## <a name="applies-to"></a>適用対象  
- [ADORecordsetConstruction インターフェイス](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)
+ [ADORecordsetConstruction インターフェイス](./adorecordsetconstruction-interface.md)

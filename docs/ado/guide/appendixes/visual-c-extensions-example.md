@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06e7ca7204d673ac5888962f3d4f5095e9fe5a9d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae7eaab32f14ce653d766cfe38408118cc37b763
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453944"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806780"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ 拡張機能の例
 このプログラムは、フィールドから値を取得し、C/c + + 変数に変換する方法を示しています。  
@@ -111,5 +111,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Visual C++ 拡張機能の使用](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
- [Visual C++ Extensions のヘッダー](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ [Visual C++ 拡張機能の使用](./using-visual-c-extensions.md)   
+ [Visual C++ Extensions のヘッダー](./visual-c-extensions-header.md)

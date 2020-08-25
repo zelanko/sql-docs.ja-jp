@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6decee7fddc4748a7d0931ab671f66b11161cc9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8fd27476f577be4719489bc5ca2e1bfee95c5166
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453994"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806499"
 ---
 # <a name="using-ado-with-scripting-languages"></a>スクリプト言語で ADO を使用する
 スクリプト環境では、ADO を使用して、サーバー側のスクリプトによってデータを公開できます。 このシナリオでは、ADO、基になる OLE DB プロバイダー、および特定のデータストアを参照するために必要なその他のコンポーネントが、インターネットインフォメーションサービス (IIS) を実行しているサーバーにインストールされます。 ADO は、Active Server ページ (ASP) を使用して、HTML を生成できるスクリプトで参照されるコンポーネントです。たとえば、のようになります。 この HTML コンテンツは、HTTP 経由でクライアントの Web ブラウザーに渡すことができます。 スクリプトを使用すると、Web ページからサーバー側スクリプトにアクションを送信して、特定のデータを更新、スキャン、または表示できるようにすることができます。  
@@ -62,11 +62,11 @@ ms.locfileid: "88453994"
   
  次のトピックには、スクリプト言語での ADO の使用に関する具体的な情報が含まれています。  
   
--   [VBScript での ADO プログラミング](../../../ado/guide/appendixes/vbscript-ado-programming.md)  
+-   [VBScript での ADO プログラミング](./vbscript-ado-programming.md)  
   
--   [JScript での ADO プログラミング](../../../ado/guide/appendixes/jscript-ado-programming.md)  
+-   [JScript での ADO プログラミング](./jscript-ado-programming.md)  
   
-## <a name="see-also"></a>関連項目  
- [Microsoft ActiveX データオブジェクト (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Microsoft Visual Basic での ADO の使用](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [Microsoft Visual C++ での ADO の使用](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
+## <a name="see-also"></a>参照  
+ [Microsoft ActiveX データオブジェクト (ADO)](../../microsoft-activex-data-objects-ado.md)   
+ [Microsoft Visual Basic での ADO の使用](./using-ado-with-microsoft-visual-basic.md)   
+ [Microsoft Visual C++ での ADO の使用](./using-ado-with-microsoft-visual-c.md)

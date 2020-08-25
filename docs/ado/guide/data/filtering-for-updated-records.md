@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0c3a33b9c45afacfdb790606da22713a0a82478
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf6bae32e9ed966939d5589f779bdb1d4d6d6f4b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453384"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806834"
 ---
 # <a name="filtering-for-updated-records"></a>更新されたレコードのフィルター処理
 UpdateBatch を呼び出す前に、レコードセットフィルタープロパティを使用して、レコードセットが開かれた後、または UpdateBatch を最後に呼び出した後に変更されたレコードのみを表示することができます。 これを行うには、次のセクションのコード例に示すように、フィルターを adFilterPendingRecords に設定して、更新するレコードの数を決定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この例では、以前の UpdateBatch の例を拡張します。この例では、UpdateBatch を呼び出す直前にレコードセットをフィルター処理して、レコードが変更されるユーザーを表示し、ユーザーが更新をキャンセルできるようにします (CancelBatch メソッドを使用)。  
   
 ```  
@@ -56,4 +56,4 @@ UpdateBatch を呼び出す前に、レコードセットフィルタープロ�
 ```  
   
 ## <a name="see-also"></a>参照  
- [バッチ モード](../../../ado/guide/data/batch-mode.md)
+ [バッチ モード](./batch-mode.md)

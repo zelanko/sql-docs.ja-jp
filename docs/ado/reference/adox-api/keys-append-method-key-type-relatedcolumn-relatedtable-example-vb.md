@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab6a3130f0c1d2d87fa5f56f7096db4aaf943037
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a96894fc9842de991647e7d25b728c5f7a663566
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439834"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770091"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Keys Append メソッド、Key Type、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)
 次のコードは、 **Customers** と **Orders**という名前の2つの既存のテーブル間に新しい外部キーリレーションシップを作成する方法を示しています。  
@@ -74,17 +74,17 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Append メソッド (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append メソッド (ADOX Keys)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Key オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)   
- [Keys コレクション (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
- [Name プロパティ (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- ["関連性列" プロパティ (ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)   
- ["関連性テーブル" プロパティ (ADOX)](../../../ado/reference/adox-api/relatedtable-property-adox.md)   
- [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Type プロパティ (キー) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
- [UpdateRule プロパティ (ADOX)](../../../ado/reference/adox-api/updaterule-property-adox.md)
+ [Append メソッド (ADOX Columns)](./append-method-adox-columns.md)   
+ [Append メソッド (ADOX Keys)](./append-method-adox-keys.md)   
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [Column オブジェクト (ADOX)](./column-object-adox.md)   
+ [Columns コレクション (ADOX)](./columns-collection-adox.md)   
+ [Key オブジェクト (ADOX)](./key-object-adox.md)   
+ [Keys コレクション (ADOX)](./keys-collection-adox.md)   
+ [Name プロパティ (ADOX)](./name-property-adox.md)   
+ ["関連性列" プロパティ (ADOX)](./relatedcolumn-property-adox.md)   
+ ["関連性テーブル" プロパティ (ADOX)](./relatedtable-property-adox.md)   
+ [Table オブジェクト (ADOX)](./table-object-adox.md)   
+ [Tables コレクション (ADOX)](./tables-collection-adox.md)   
+ [Type プロパティ (キー) (ADOX)](./type-property-key-adox.md)   
+ [UpdateRule プロパティ (ADOX)](./updaterule-property-adox.md)

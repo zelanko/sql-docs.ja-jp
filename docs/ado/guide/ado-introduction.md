@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b702f96fab776c383e309a94eea9358ed95cab90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 861b170e55c37f333f09dc8168c35ad7088d17fa
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355438"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805494"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO の概要と利点
 ActiveX データオブジェクト (ADO) は、OLE DB するための高レベルで使いやすいインターフェイスです。 OLE DB は、さまざまなデータストアに対する低レベルの高パフォーマンスのインターフェイスです。 ADO と OLE DB はどちらも、リレーショナル (テーブル) データと非リレーショナルデータ (階層またはストリーム) で使用できます。
@@ -27,14 +27,14 @@ ActiveX データオブジェクト (ADO) は、OLE DB するための高レベ�
 
  このセクションでは、次のトピックを扱います。
 
--   [ADO 履歴](../../ado/guide/ado-history.md)
+-   [ADO 履歴](./ado-history.md)
 
--   [ADO のドキュメントを使用するための前提条件](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
+-   [ADO のドキュメントを使用するための前提条件](./prerequisites-for-using-the-ado-documentation.md)
 
--   [ADO ライブラリを参照する](../../ado/guide/referencing-the-ado-libraries.md)
+-   [ADO ライブラリを参照する](./referencing-the-ado-libraries.md)
 
--   [ADO タスク テーブル](../../ado/guide/ado-task-table.md)
+-   [ADO タスク テーブル](./ado-task-table.md)
 
--   [ADO テクノロジ テーブル](../../ado/guide/ado-technology-table.md)
+-   [ADO テクノロジ テーブル](./ado-technology-table.md)
 
--   [ADO セキュリティ デザイン機能に関する問題](../../ado/guide/ado-security-design-issues.md)
+-   [ADO セキュリティ デザイン機能に関する問題](./ado-security-design-issues.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e91e1c0801cb8062bca89968d0345f5bbcee1220
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4934fc5e5d0f7b5c65db6d36edf27282afb50c60
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444314"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775601"
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset メソッドの例 (VB)
-[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを作成し、列情報を指定できます。 その後、 **レコードセット** オブジェクトにデータを挿入できます。基になる行セットは、挿入をバッファーします。  
+[レコードセット](./recordset-object-ado.md)オブジェクトを作成し、列情報を指定できます。 その後、 **レコードセット** オブジェクトにデータを挿入できます。基になる行セットは、挿入をバッファーします。  
   
- 次のコード例は、 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトを使用して**レコードセット**を定義する方法を示しています。 これは、RDS でも行うことができ [ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) オブジェクト。  
+ 次のコード例は、 [DataFactory](../rds-api/datafactory-object-rdsserver.md)オブジェクトを使用して**レコードセット**を定義する方法を示しています。 これは、RDS でも行うことができ [ます。DataControl](../rds-api/datacontrol-object-rds.md) オブジェクト。  
   
 ```  
 'BeginRsDefineShapeVB  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a8d92abc3a1b0d7e6d39ac4149c186c5a2fc2eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75cfedbafa7bc0c1b954f8bbdea29ec92d45c07f
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453374"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806823"
 ---
 # <a name="formal-shape-grammar"></a>Shape の正式文法
 これは、任意のシェイプコマンドを作成するための正式な文法です。  
@@ -69,10 +69,10 @@ ms.locfileid: "88453374"
 |\<expression>|同じ行の他の非計算列であるオペランドを持つ Visual Basic for Applications 式。|  
   
 ## <a name="see-also"></a>参照  
- [階層レコードセット内の行へのアクセス](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [データシェイプの概要](../../../ado/guide/data/data-shaping-overview.md)   
- [データシェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Shape APPEND 句](../../../ado/guide/data/shape-append-clause.md)   
- [一般的なシェイプコマンド](../../../ado/guide/data/shape-commands-in-general.md)   
- [Shape COMPUTE 句](../../../ado/guide/data/shape-compute-clause.md)   
- [Visual Basic for Applications の関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [階層レコードセット内の行へのアクセス](./accessing-rows-in-a-hierarchical-recordset.md)   
+ [データシェイプの概要](./data-shaping-overview.md)   
+ [データシェイプに必要なプロバイダー](./required-providers-for-data-shaping.md)   
+ [Shape APPEND 句](./shape-append-clause.md)   
+ [一般的なシェイプコマンド](./shape-commands-in-general.md)   
+ [Shape COMPUTE 句](./shape-compute-clause.md)   
+ [Visual Basic for Applications の関数](./visual-basic-for-applications-functions.md)

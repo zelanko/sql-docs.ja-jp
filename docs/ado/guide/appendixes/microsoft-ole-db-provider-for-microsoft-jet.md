@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 822c9f6ef6aebe5e32bb37e4c89a9bb4e6d7db68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1747f01b554e8df45a7835e2cb2006adcdb3079a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454074"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806618"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Microsoft Jet の概要
 Microsoft Jet の OLE DB プロバイダーにより、ADO は Microsoft Jet データベースにアクセスできます。
 
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
- このプロバイダーに接続するには、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティの*provider*引数を次のように設定します。
+ このプロバイダーに接続するには、 [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)プロパティの*provider*引数を次のプロパティに設定します。
 
 ```vb
 Microsoft.Jet.OLEDB.4.0
 ```
 
- [プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)プロパティを読み取ると、この文字列も返されます。
+ [プロバイダー](../../reference/ado-api/provider-property-ado.md)プロパティを読み取ると、この文字列も返されます。
 
 ## <a name="typical-connection-string"></a>一般的な接続文字列
  このプロバイダーの一般的な接続文字列は次のとおりです。
@@ -43,7 +43,7 @@ Microsoft.Jet.OLEDB.4.0
 
  文字列は、次のキーワードで構成されています。
 
-|Keyword|説明|
+|キーワード|説明|
 |-------------|-----------------|
 |**プロバイダー**|Microsoft Jet の OLE DB プロバイダーを指定します。|
 |**データ ソース**|データベースパスとファイル名 (など) を指定し `c:\Northwind.mdb` ます。|
@@ -69,7 +69,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: Encrypt Database (DBPROP_JETOLEDB_ENCRYPTDATABASE)|圧縮されたデータベースを暗号化する必要があるかどうかを示します。 このプロパティが設定されていない場合、元のデータベースも暗号化されている場合は、圧縮されたデータベースが暗号化されます。|
 |Jet OLEDB: エンジンの種類 (DBPROP_JETOLEDB_ENGINE)|現在のデータストアにアクセスするために使用するストレージエンジンを示します。|
 |Jet OLEDB: 排他的な非同期遅延 (DBPROP_JETOLEDB_EXCLUSIVEASYNCDELAY)|データベースを排他的に開いたときに、Jet がディスクへの非同期書き込みを遅延する最大時間 (ミリ秒単位) を示します。<br /><br /> このプロパティは、 **JET OLEDB: Flush Transaction Timeout** が0に設定されている場合を除き、無視されます。|
-|Jet OLEDB: Flush Transaction Timeout (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|非同期書き込み用にキャッシュに格納されているデータが実際にディスクに書き込まれるまでの待機時間を示します。 この設定は、 **JET oledb: Shared Async delay** および **Jet Oledb: Exclusive async delay**の値よりも優先されます。|
+|Jet OLEDB: Flush Transaction Timeout (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|非同期書き込みのためにキャッシュに格納されたデータがディスクに書き込まれるまでの待機時間を示します。 この設定は、 **JET oledb: Shared Async delay** および **Jet Oledb: Exclusive async delay**の値よりも優先されます。|
 |Jet OLEDB: グローバル一括トランザクション (DBPROP_JETOLEDB_GLOBALBULKNOTRANSACTIONS)|SQL 一括トランザクションがトランザクション処理されるかどうかを示します。|
 |Jet OLEDB: グローバル部分一括操作 (DBPROP_JETOLEDB_GLOBALBULKPARTIAL)|データベースを開くために使用するパスワードを示します。|
 |Jet OLEDB: 暗黙のコミット同期 (DBPROP_JETOLEDB_IMPLICITCOMMITSYNC)|内部の暗黙のトランザクションで行われた変更が、同期モードと非同期モードのどちらで作成されたかを示します。|
@@ -106,16 +106,16 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: ストアドクエリ (DBPROP_JETOLEDB_STOREDQUERY)|コマンドテキストを SQL コマンドではなく、ストアドクエリとして解釈するかどうかを示します。|
 |Jet OLEDB: Set で規則を検証する (DBPROP_JETOLEDB_VALIDATEONSET)|列データが設定されたとき、または変更がデータベースにコミットされたときに、Jet 検証ルールを評価するかどうかを示します。|
 
- 既定では、microsoft Jet の OLE DB プロバイダーは、Microsoft Jet データベースを読み取り/書き込みモードで開きます。 データベースを読み取り専用モードで開くには、ADO**接続**オブジェクトの[Mode](../../../ado/reference/ado-api/mode-property-ado.md)プロパティを**adModeRead**に設定します。
+ 既定では、microsoft Jet の OLE DB プロバイダーは、Microsoft Jet データベースを読み取り/書き込みモードで開きます。 データベースを読み取り専用モードで開くには、ADO**接続**オブジェクトの[Mode](../../reference/ado-api/mode-property-ado.md)プロパティを**adModeRead**に設定します。
 
 ## <a name="command-object-usage"></a>コマンドオブジェクトの使用法
- [コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトのコマンドテキストは、MICROSOFT Jet SQL 言語を使用します。 コマンドテキストで、行を返すクエリ、アクションクエリ、およびテーブル名を指定できます。ただし、ストアドプロシージャはサポートされていないため、指定しないでください。
+ [コマンド](../../reference/ado-api/command-object-ado.md)オブジェクトのコマンドテキストは、MICROSOFT Jet SQL 言語を使用します。 コマンドテキストで、行を返すクエリ、アクションクエリ、およびテーブル名を指定できます。ただし、ストアドプロシージャはサポートされていないため、指定しないでください。
 
 ## <a name="recordset-behavior"></a>レコードセットの動作
- Microsoft Jet データベースエンジンでは、動的カーソルはサポートされていません。 そのため、Microsoft Jet の OLE DB プロバイダーは、 **Adlockdynamic** カーソルの種類をサポートしていません。 動的カーソルが要求されると、プロバイダーはキーセットカーソルを返し、 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) プロパティをリセットして、返された [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) の種類を示します。 さらに、更新可能な **レコードセット** が要求された場合 (**LockType** は **adlockoptimistic**、 **Adlockbatchオプティミスティック**、または **adlockoptimistic ペシミスティック**)、プロバイダーはキーセットカーソルも返し、 **CursorType** プロパティをリセットします。
+ Microsoft Jet データベースエンジンでは、動的カーソルはサポートされていません。 そのため、Microsoft Jet の OLE DB プロバイダーは、 **Adlockdynamic** カーソルの種類をサポートしていません。 動的カーソルが要求されると、プロバイダーはキーセットカーソルを返し、 [CursorType](../../reference/ado-api/cursortype-property-ado.md) プロパティをリセットして、返された [レコードセット](../../reference/ado-api/recordset-object-ado.md) の種類を示します。 さらに、更新可能な **レコードセット** が要求された場合 (**LockType** は **adlockoptimistic**、 **Adlockbatchオプティミスティック**、または **adlockoptimistic ペシミスティック**)、プロバイダーはキーセットカーソルも返し、 **CursorType** プロパティをリセットします。
 
 ## <a name="dynamic-properties"></a>動的プロパティ
- OLE DB Provider for Microsoft Jet は、開かれていない[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)、および[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの**properties**コレクションに動的なプロパティをいくつか挿入します。
+ OLE DB Provider for Microsoft Jet は、開かれていない[接続](../../reference/ado-api/connection-object-ado.md)、[レコードセット](../../reference/ado-api/recordset-object-ado.md)、および[コマンド](../../reference/ado-api/command-object-ado.md)オブジェクトの**properties**コレクションに動的なプロパティをいくつか挿入します。
 
  次の表は、各動的プロパティの ADO と OLE DB 名のクロスインデックスです。 OLE DB プログラマーリファレンスでは、ADO プロパティ名を "Description" という用語で参照しています。 これらのプロパティの詳細については、OLE DB プログラマーリファレンスを参照してください。
 
@@ -336,4 +336,4 @@ Microsoft.Jet.OLEDB.4.0
 |更新|DBPROP_UPDATABILITY|
 |ブックマークを使用する|DBPROP_BOOKMARKS|
 
- Microsoft Jet の OLE DB プロバイダーの具体的な実装の詳細と機能については、OLE DB のドキュメントの「 [Jet プロバイダー](https://msdn.microsoft.com/library/windows/desktop/ms722791.aspx) 」を参照してください。
+ Microsoft Jet の OLE DB プロバイダーの具体的な実装の詳細と機能については、OLE DB のドキュメントの「 [Jet プロバイダー](/previous-versions/windows/desktop/ms722791(v=vs.85)) 」を参照してください。

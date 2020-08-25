@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 847fe5406fcdcd75010a0f4836c6f35df4ab1da1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1895410181cea9a916589d766d2fa9254ca8642b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453164"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805818"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>レコードセット内を移動する他の方法
-次の4つの方法を使用して、 **レコードセット**、 [MoveFirst、MoveLast、MoveNext、および MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)を移動またはスクロールします。 (これらのメソッドの一部は、順方向専用カーソルでは使用できません)。  
+次の4つの方法を使用して、 **レコードセット**、 [MoveFirst、MoveLast、MoveNext、および MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)を移動またはスクロールします。 (これらのメソッドの一部は、順方向専用カーソルでは使用できません)。  
   
  **MoveFirst** は、現在のレコードの位置をレコード **セット**内の最初のレコードに変更します。 **MoveLast** は、現在のレコードの位置を **レコードセット**内の最後のレコードに変更します。 **MoveFirst**または**MoveLast**を使用するには、**レコードセット**オブジェクトがブックマークまたは後方カーソル移動をサポートしている必要があります。それ以外の場合、メソッドの呼び出しでエラーが発生します。  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: be000a8ff9154c79c2b98c9bc57f79f3537743c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 84c861c2a344276a80ea8e8fd98f84aeb2bb7cbc
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441534"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776901"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField および FieldChangeComplete イベント (ADO)
-イベントは、保留**中の操作**によって[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の1つまたは複数の[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの値が変更される前に呼び出されます。 **FieldChangeComplete**イベントは、1つまたは複数の**フィールド**オブジェクトの値が変更された後に呼び出されます。  
+イベントは、保留**中の操作**によって[レコードセット](./recordset-object-ado.md)内の1つまたは複数の[フィールド](./field-object.md)オブジェクトの値が変更される前に呼び出されます。 **FieldChangeComplete**イベントは、1つまたは複数の**フィールド**オブジェクトの値が変更された後に呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,10 +46,10 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  が**Changefield**の場合、 *Fields*パラメーターは、元の値を持つ**Field**オブジェクトを含む**variant**の配列です。 **FieldChangeComplete**の場合、 *Fields*パラメーターは、値が変更された**フィールド**オブジェクトを含む**variant**の配列です。  
   
  *pError*  
- [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトです。 *Adstatus*の値が**adstatuserrorて**いる場合に発生したエラーについて説明します。それ以外の場合は設定されません。  
+ [エラー](./error-object.md)オブジェクトです。 *Adstatus*の値が**adstatuserrorて**いる場合に発生したエラーについて説明します。それ以外の場合は設定されません。  
   
  *adStatus*  
- [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md)状態の値です。  
+ [Eventstatusenum](./eventstatusenum.md)状態の値です。  
   
  が **呼び出されたときに** 、イベントを発生させた操作が成功した場合、このパラメーターは **adstatusok** に設定されます。 このイベントが保留中の操作の取り消しを要求できない場合は、 **Adstatuscantdeny** に設定されます。  
   
@@ -63,8 +63,8 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  **レコードセット**オブジェクトです。 このイベントが発生した **レコードセット** 。  
   
 ## <a name="remarks"></a>解説  
- [Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティを設定し**FieldChangeComplete** 、フィールドと値の配列パラメーターを使用して[Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出す**と、が**発生する可能性があります。  
+ [Value](./value-property-ado.md)プロパティを設定し**FieldChangeComplete** 、フィールドと値の配列パラメーターを使用して[Update](./update-method.md)メソッドを呼び出す**と、が**発生する可能性があります。  
   
 ## <a name="see-also"></a>参照  
- [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)
+ [ADO Events モデルの例 (VC + +)](./ado-events-model-example-vc.md)   
+ [ADO イベント ハンドラーの概要](../../guide/data/ado-event-handler-summary.md)

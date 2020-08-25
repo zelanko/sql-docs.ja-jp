@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c82fc6388f1a7ad6582cc91ab2589afda2912f6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7bfbf83c3b10a97593810e5160f585f61e2fdec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439744"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769891"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Parameters コレクションおよび Command プロパティの例 (VB)
-次のコード [は、command プロパティを](../../../ado/reference/adox-api/command-property-adox.md) [command](../../../ado/reference/ado-api/command-object-ado.md) オブジェクトと共に使用して、プロシージャのパラメーター情報を取得する方法を示しています。  
+次のコード [は、command プロパティを](./command-property-adox.md) [command](../ado-api/command-object-ado.md) オブジェクトと共に使用して、プロシージャのパラメーター情報を取得する方法を示しています。  
   
 ```  
 ' BeginParametersVB  
@@ -77,8 +77,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Command プロパティ (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [プロシージャオブジェクト (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures コレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [ActiveConnection プロパティ (ADOX)](./activeconnection-property-adox.md)   
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [Command プロパティ (ADOX)](./command-property-adox.md)   
+ [プロシージャオブジェクト (ADOX)](./procedure-object-adox.md)   
+ [Procedures コレクション (ADOX)](./procedures-collection-adox.md)

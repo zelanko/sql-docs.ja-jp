@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43fc1a32428f54682b8fde5dea0f0140568c482e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 285fba254c025268abc9ea93f6d6e53e39a87aca
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453914"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806731"
 ---
 # <a name="absolute-and-relative-urls"></a>絶対 URL と相対 URL
 URL は、ローカルまたはネットワーク上のコンピューターに格納されているターゲットの場所を指定します。 ターゲットには、ファイル、ディレクトリ、HTML ページ、イメージ、プログラムなどがあります。  
@@ -46,22 +46,22 @@ URL は、ローカルまたはネットワーク上のコンピューターに�
  含まれている場合、 *リソース* はターゲットであり、通常はファイルの名前です。 これは、1つのバイナリストリーム (バイト) を含む *単純なファイル* であるか、または1つ以上のストレージとバイトのバイナリストリームを含む *構造化ドキュメント* である可能性があります。  
   
 ## <a name="url-scheme-registration"></a>URL スキームの登録  
- プロバイダーが Url をサポートしている場合は、プロバイダーによって1つ以上の URL スキームが登録されます。 登録とは、スキームを使用するすべての Url が、登録されているプロバイダーを自動的に呼び出すことを意味します。 たとえば、 *http* スキームは、 [インターネット発行用に Microsoft OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)に登録されています。 ADO では、"http" で始まるすべての Url が、インターネット発行プロバイダーで使用される Web フォルダーまたはファイルを表していると想定しています。 プロバイダーによって登録されたスキームの詳細については、プロバイダーのドキュメントを参照してください。  
+ プロバイダーが Url をサポートしている場合は、プロバイダーによって1つ以上の URL スキームが登録されます。 登録とは、スキームを使用するすべての Url が、登録されているプロバイダーを自動的に呼び出すことを意味します。 たとえば、 *http* スキームは、 [インターネット発行用に Microsoft OLE DB プロバイダー](../appendixes/microsoft-ole-db-provider-for-internet-publishing.md)に登録されています。 ADO では、"http" で始まるすべての Url が、インターネット発行プロバイダーで使用される Web フォルダーまたはファイルを表していると想定しています。 プロバイダーによって登録されたスキームの詳細については、プロバイダーのドキュメントを参照してください。  
   
 ## <a name="defining-context-with-a-url"></a>URL を使用してコンテキストを定義する  
- [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトによって表される開いている接続の機能の1つは、その接続で表されるデータソースに対する後続の操作を制限することです。 つまり、接続は後続の操作のコンテキストを定義します。  
+ [接続](../../reference/ado-api/connection-object-ado.md)オブジェクトによって表される開いている接続の機能の1つは、その接続で表されるデータソースに対する後続の操作を制限することです。 つまり、接続は後続の操作のコンテキストを定義します。  
   
- ADO 2.7 以降では、絶対 URL でコンテキストを定義することもできます。 たとえば、絶対 URL で [レコード](../../../ado/reference/ado-api/record-object-ado.md) オブジェクトを開くと、url で指定されたリソースを表す **接続** オブジェクトが暗黙的に作成されます。  
+ ADO 2.7 以降では、絶対 URL でコンテキストを定義することもできます。 たとえば、絶対 URL で [レコード](../../reference/ado-api/record-object-ado.md) オブジェクトを開くと、url で指定されたリソースを表す **接続** オブジェクトが暗黙的に作成されます。  
   
- コンテキストを定義する絶対 URL は、 **Record**オブジェクト[Open](../../../ado/reference/ado-api/open-method-ado-record.md)メソッドの*ActiveConnection*パラメーターで指定できます。 絶対 URL は、 **Connection** オブジェクト [open](../../../ado/reference/ado-api/open-method-ado-connection.md) method *ConnectionString* パラメーターの "URL =" キーワードの値として指定することもできます。また、 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクト [open](../../../ado/reference/ado-api/open-method-ado-recordset.md) method *ActiveConnection* parameter を指定することもできます。  
+ コンテキストを定義する絶対 URL は、 **Record**オブジェクト[Open](../../reference/ado-api/open-method-ado-record.md)メソッドの*ActiveConnection*パラメーターで指定できます。 絶対 URL は、 **Connection** オブジェクト [open](../../reference/ado-api/open-method-ado-connection.md) method *ConnectionString* パラメーターの "URL =" キーワードの値として指定することもできます。また、 [レコードセット](../../reference/ado-api/recordset-object-ado.md) オブジェクト [open](../../reference/ado-api/open-method-ado-recordset.md) method *ActiveConnection* parameter を指定することもできます。  
   
  また、ディレクトリを表す **レコード** または **レコードセット** オブジェクトを開くことによってコンテキストを定義することもできます。これらのオブジェクトには、コンテキストを指定する暗黙的または明示的に宣言された **接続** オブジェクトが既に存在しているためです。  
   
 ## <a name="scoped-operations"></a>スコープ指定操作  
- コンテキストでは、スコープ (つまり、後続の操作に参加できるディレクトリとそのサブディレクトリ) も定義されています。 **レコード**オブジェクトには、ディレクトリとそのすべてのサブディレクトリに対して操作を実行するスコープ付きメソッドがいくつかあります。 これらのメソッドには、 [Copyrecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)、 [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)、および [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)が含まれます。  
+ コンテキストでは、スコープ (つまり、後続の操作に参加できるディレクトリとそのサブディレクトリ) も定義されています。 **レコード**オブジェクトには、ディレクトリとそのすべてのサブディレクトリに対して操作を実行するスコープ付きメソッドがいくつかあります。 これらのメソッドには、 [Copyrecord](../../reference/ado-api/copyrecord-method-ado.md)、 [MoveRecord](../../reference/ado-api/moverecord-method-ado.md)、および [DeleteRecord](../../reference/ado-api/deleterecord-method-ado.md)が含まれます。  
   
 ## <a name="relative-urls-as-command-text"></a>コマンドテキストとしての相対 Url  
- **接続**オブジェクトの[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)メソッドの*CommandText*パラメーターに文字列を入力し、**レコードセット**オブジェクトの[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドの*source*パラメーターに文字列を入力することにより、データソースに対して実行するコマンドを指定できます。  
+ **接続**オブジェクトの[Execute](../../reference/ado-api/execute-method-ado-connection.md)メソッドの*CommandText*パラメーターに文字列を入力し、**レコードセット**オブジェクトの[Open](../../reference/ado-api/open-method-ado-recordset.md)メソッドの*source*パラメーターに文字列を入力することにより、データソースに対して実行するコマンドを指定できます。  
   
  相対 URL は、 *CommandText* または *Source* パラメーターで指定できます。 相対 URL は、実際には SQL コマンドなどのコマンドを表していません。パラメーターを指定するだけです。 アクティブな接続のコンテキストは絶対 URL である必要があり、 *オプション* パラメーターは **Adcmdtabledirect**に設定する必要があります。  
   
@@ -86,9 +86,9 @@ recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect
 ## <a name="ole-db-provider-supplied-url-schemes"></a>プロバイダーが指定した URL スキームの OLE DB  
  完全修飾 URL の先頭部分は、URL の残りの部分で識別されるリソースにアクセスするために使用される *スキーム* です。 例として、HTTP (ハイパーテキスト転送プロトコル) および FTP (ファイル転送プロトコル) があります。  
   
- ADO では、独自の URL スキームを認識する OLE DB プロバイダーがサポートされています。 たとえば、"公開済み" の Windows 2000*ファイルにアクセスする、* [インターネット公開用の Microsoft OLE DB Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)は、既存の HTTP スキームを認識します。  
+ ADO では、独自の URL スキームを認識する OLE DB プロバイダーがサポートされています。 たとえば、"公開済み" の Windows 2000*ファイルにアクセスする、* [インターネット公開用の Microsoft OLE DB Provider](../appendixes/microsoft-ole-db-provider-for-internet-publishing.md)は、既存の HTTP スキームを認識します。  
   
 ## <a name="see-also"></a>参照  
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Connection オブジェクト (ADO)](../../reference/ado-api/connection-object-ado.md)   
+ [Record オブジェクト (ADO)](../../reference/ado-api/record-object-ado.md)   
+ [Recordset オブジェクト (ADO)](../../reference/ado-api/recordset-object-ado.md)

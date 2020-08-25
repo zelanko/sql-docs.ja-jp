@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f6342de5be5b2c6ba6e1bf58408cfabc6e31088
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f966261864cb7717b31e4851062228c3e6d63e92
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442234"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777621"
 ---
 # <a name="rowset-property-ado"></a>Rowset プロパティ (ADO)
 **ADORecordsetConstruction**オブジェクトの/から OLE DB**行セット**オブジェクトを取得します。値の設定もできます。 Put_Rowset を使用すると、行セットは ADO **レコードセット** オブジェクトに変換されます。  
@@ -50,4 +50,4 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
  このプロパティメソッドは、S_OK および E_FAIL を含む標準の HRESULT 値を返します。  
   
 ## <a name="applies-to"></a>適用対象  
- [ADORecordsetConstruction インターフェイス](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)
+ [ADORecordsetConstruction インターフェイス](./adorecordsetconstruction-interface.md)

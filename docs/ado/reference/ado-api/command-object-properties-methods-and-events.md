@@ -13,48 +13,48 @@ helpviewer_keywords:
 ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ffdbe71126c4574da16b0e9244e2632efcf03f43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7840a0853dd3279f06971db098e50951ccc99d1b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450874"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776141"
 ---
 # <a name="command-object-properties-methods-and-events"></a>Command オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
- [ActiveConnection プロパティ](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
+ [ActiveConnection プロパティ](./activeconnection-property-ado.md)  
   
- [CommandStream プロパティ](../../../ado/reference/ado-api/commandstream-property-ado.md)  
+ [CommandStream プロパティ](./commandstream-property-ado.md)  
   
- [CommandText プロパティ](../../../ado/reference/ado-api/commandtext-property-ado.md)  
+ [CommandText プロパティ](./commandtext-property-ado.md)  
   
- [CommandTimeout プロパティ](../../../ado/reference/ado-api/commandtimeout-property-ado.md)  
+ [CommandTimeout プロパティ](./commandtimeout-property-ado.md)  
   
- [CommandType プロパティ](../../../ado/reference/ado-api/commandtype-property-ado.md)  
+ [CommandType プロパティ](./commandtype-property-ado.md)  
   
- [Dialect プロパティ](../../../ado/reference/ado-api/dialect-property.md)  
+ [Dialect プロパティ](./dialect-property.md)  
   
- [Name プロパティ](../../../ado/reference/ado-api/name-property-ado.md)  
+ [Name プロパティ](./name-property-ado.md)  
   
- [NamedParameters プロパティ](../../../ado/reference/ado-api/namedparameters-property-ado.md)  
+ [NamedParameters プロパティ](./namedparameters-property-ado.md)  
   
- [Parameters コレクション](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+ [Parameters コレクション](./parameters-collection-ado.md)  
   
- [準備されたプロパティ](../../../ado/reference/ado-api/prepared-property-ado.md)  
+ [準備されたプロパティ](./prepared-property-ado.md)  
   
- [プロパティのコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [プロパティのコレクション](./properties-collection-ado.md)  
   
- [State プロパティ](../../../ado/reference/ado-api/state-property-ado.md)  
+ [State プロパティ](./state-property-ado.md)  
   
 ## <a name="methods"></a>メソッド  
- [Cancel メソッド](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [Cancel メソッド](./cancel-method-ado.md)  
   
- [CreateParameter メソッド](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+ [CreateParameter メソッド](./createparameter-method-ado.md)  
   
- [Execute メソッド (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+ [Execute メソッド (ADO Command)](./execute-method-ado-command.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [Command オブジェクト (ADO)](./command-object-ado.md)

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4ab26dd8f767315a3392a2434689561fdb391d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4973bd2e822d3ec56b4e8cb4aa9b7a359e07b977
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453144"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805778"
 ---
 # <a name="namespaces"></a>名前空間
 ADO の XML 永続化形式では、次の4つの名前空間が使用されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ADO の XML 永続化形式では、次の4つの名前空間が使用されます。  
   
 |Prefix|説明|  
@@ -47,4 +47,4 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
  この名前が XML ドキュメント全体で一貫して使用されている限り、ユーザーはこれを任意の名前に定義できます。 ADO は常に "s"、"rs"、"dt"、"z" を書き込みますが、これらのプレフィックス名は読み込みコンポーネントにハードコードされません。  
   
 ## <a name="see-also"></a>参照  
- [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [レコードを XML 形式で保持する](./persisting-records-in-xml-format.md)

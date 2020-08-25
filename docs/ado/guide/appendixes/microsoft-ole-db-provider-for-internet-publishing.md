@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 051185b9b40b1f7d4472e957f3a09a8f6416c8b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3888cf881fd1b6cdb0ccc2c5985fe4a6e08ae581
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454094"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806584"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet Publishing の概要
 Microsoft OLE DB Provider for Internet Publishing を使用すると、ADO は Microsoft FrontPage または Microsoft インターネットインフォメーションサーバーによって提供されるリソースにアクセスできます。 リソースには、HTML ファイルや Windows 2000 web フォルダーなどの web ソースファイルが含まれます。
 
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
- このプロバイダーに接続するには、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティの*provider*引数を次のように設定します。
+ このプロバイダーに接続するには、 [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)プロパティの*provider*引数を次のように設定します。
 
 ```vb
 MSDAIPP.DSO
 ```
 
- この値は、 [プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md) プロパティを使用して設定または読み取ることもできます。
+ この値は、 [プロバイダー](../../reference/ado-api/provider-property-ado.md) プロパティを使用して設定または読み取ることもできます。
 
 ## <a name="typical-connection-string"></a>一般的な接続文字列
  このプロバイダーの一般的な接続文字列は次のとおりです。
@@ -49,7 +49,7 @@ MSDAIPP.DSO
 
  文字列は、次のキーワードで構成されています。
 
-|Keyword|説明|
+|キーワード|説明|
 |-------------|-----------------|
 |**プロバイダー**|インターネット発行用の OLE DB プロバイダーを指定します。|
 |**データソース** または- **URL**|Web フォルダーに発行されたファイルまたはディレクトリの URL を指定します。|
@@ -62,7 +62,7 @@ MSDAIPP.DSO
  接続文字列の "URL =" の *Resourceurl* 値を無効な値に設定した場合、既定では、インターネット公開プロバイダーによって、有効な値の入力を求めるダイアログボックスが表示されます。 これは、アプリケーションの中間層のコンポーネントに対して望ましくない動作です。これは、ダイアログボックスがクリアされ、コンポーネントからの応答を受信していないためにクライアントがフリーズしている場合に、プログラムの実行が中断されるためです。
 
 > [!NOTE]
->  MSDAIPP の場合。DSO はプロバイダーの値として明示的に指定されます *。プロバイダーの接続文字列* キーワードまたは **プロバイダー** プロパティを使用して、接続文字列で "URL =" を使用することはできません。 そうすると、エラーが発生します。 代わりに、「 [Internet Publishing の OLE DB プロバイダーで ADO を使用する](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)」のトピックで説明されているように、単に URL を指定します。
+>  MSDAIPP の場合。DSO はプロバイダーの値として明示的に指定されます *。プロバイダーの接続文字列* キーワードまたは **プロバイダー** プロパティを使用して、接続文字列で "URL =" を使用することはできません。 そうすると、エラーが発生します。 代わりに、「 [Internet Publishing の OLE DB プロバイダーで ADO を使用する](../data/the-ole-db-provider-for-internet-publishing.md)」のトピックで説明されているように、単に URL を指定します。
 
 ## <a name="see-also"></a>参照
- インターネット[公開シナリオ](../../../ado/guide/data/internet-publishing-scenario.md)[インターネット発行用の OLE DB プロバイダー](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)
+ インターネット[公開シナリオ](../data/internet-publishing-scenario.md)[インターネット発行用の OLE DB プロバイダー](../data/the-ole-db-provider-for-internet-publishing.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb26d148aff616f36f3244cbe65b315378573278
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf807a1883aaaa85b8485a9f58a1414248f02075
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451284"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776531"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Append および CreateParameter メソッドの例 (VB)
-この例では、 [Append](../../../ado/reference/ado-api/append-method-ado.md) および [createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md) メソッドを使用して、入力パラメーターを使用してストアドプロシージャを実行します。  
+この例では、 [Append](./append-method-ado.md) および [createparameter](./createparameter-method-ado.md) メソッドを使用して、入力パラメーターを使用してストアドプロシージャを実行します。  
   
 ```  
 'BeginAppendVB  
@@ -121,8 +121,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
- [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)
+ [Append メソッド (ADO)](./append-method-ado.md)   
+ [CreateParameter メソッド (ADO)](./createparameter-method-ado.md)   
+ [Field オブジェクト](./field-object.md)   
+ [Fields コレクション (ADO)](./fields-collection-ado.md)   
+ [Parameter オブジェクト](./parameter-object.md)

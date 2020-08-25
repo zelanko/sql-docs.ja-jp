@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7fc5d177b05447637d635a9f132c9f9da086ef2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 01f5f2010491e394addd37511ead8b7ea20136c1
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453464"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806874"
 ---
 # <a name="editing-data"></a>データの編集
 ADO を使用してデータソースに接続し、コマンドを実行して、 **レコードセット** オブジェクトの結果を取得し、 **レコードセット**内を移動する方法について説明しました。 このセクションでは、データの編集に関する次の基本的な ADO 操作について説明します。  
   
- このセクションでは、[データの検査](../../../ado/guide/data/examining-data.md)で導入されたサンプル**レコードセット**を使用します。重要な変更点が1つあります。 **レコードセット**を開くには、次のコードを使用します。  
+ このセクションでは、[データの検査](./examining-data.md)で導入されたサンプル**レコードセット**を使用します。重要な変更点が1つあります。 **レコードセット**を開くには、次のコードを使用します。  
   
 ```  
 'BeginEditIntro  
@@ -44,7 +44,7 @@ ADO を使用してデータソースに接続し、コマンドを実行して�
 'EndEditIntro  
 ```  
   
- このコードの重要な変更点は、 *Getnewconnection*関数の**AdUseClient**に等しい**接続**オブジェクトの**cursor location**プロパティを設定することです (次の例を参照)。これは、クライアントカーソルの使用を示します。 クライアント側とサーバー側のカーソルの相違点の詳細については、「 [カーソルとロック](../../../ado/guide/data/understanding-cursors-and-locks.md)について」を参照してください。  
+ このコードの重要な変更点は、 *Getnewconnection*関数の**AdUseClient**に等しい**接続**オブジェクトの**cursor location**プロパティを設定することです (次の例を参照)。これは、クライアントカーソルの使用を示します。 クライアント側とサーバー側のカーソルの相違点の詳細については、「 [カーソルとロック](./understanding-cursors-and-locks.md)について」を参照してください。  
   
  Cursor **location** プロパティの **adUseClient** 設定によって、カーソルの位置がデータソース (この場合は SQL Server) からクライアントコード (デスクトップワークステーション) の場所に移動します。 この設定では、カーソルを作成して管理するために、クライアント上の OLE DB のクライアントカーソルエンジンが ADO によって強制的に呼び出されます。  
   
@@ -84,12 +84,12 @@ End Function
   
  このセクションでは、次のトピックを扱います。  
   
--   [既存のレコードの編集](../../../ado/guide/data/editing-existing-records.md)  
+-   [既存のレコードの編集](./editing-existing-records.md)  
   
--   [レコードの追加](../../../ado/guide/data/adding-records.md)  
+-   [レコードの追加](./adding-records.md)  
   
--   [サポートされている機能を特定する](../../../ado/guide/data/determining-what-is-supported.md)  
+-   [サポートされている機能を特定する](./determining-what-is-supported.md)  
   
--   [Delete メソッドを使用してレコードを削除する](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
+-   [Delete メソッドを使用してレコードを削除する](./deleting-records-using-the-delete-method.md)  
   
--   [代替: SQL ステートメントの使用](../../../ado/guide/data/alternatives-using-sql-statements.md)
+-   [代替: SQL ステートメントの使用](./alternatives-using-sql-statements.md)

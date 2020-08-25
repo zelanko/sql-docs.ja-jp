@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb8c23168cb68438b2f8a74359f14b05795ad913
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c388b12b70213afb297508ccac91315d828c9d4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441584"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776941"
 ---
 # <a name="value-property-example-vb"></a>Value プロパティの例 (VB)
-この例では、 ***Employees***テーブルのフィールドとプロパティの値を表示することにより、 [Field](../../../ado/reference/ado-api/field-object.md)オブジェクトと[property](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトを含む[Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティを示します。  
+この例では、 ***Employees***テーブルのフィールドとプロパティの値を表示することにより、 [Field](./field-object.md)オブジェクトと[property](./property-object-ado.md)オブジェクトを含む[Value](./value-property-ado.md)プロパティを示します。  
   
 ```  
 'BeginValueVB  
@@ -102,6 +102,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
- [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Value プロパティ (ADO)](../../../ado/reference/ado-api/value-property-ado.md)
+ [Field オブジェクト](./field-object.md)   
+ [Property オブジェクト (ADO)](./property-object-ado.md)   
+ [Value プロパティ (ADO)](./value-property-ado.md)

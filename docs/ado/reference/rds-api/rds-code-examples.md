@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 612d7dfd7b274b69f6ceeb3801d1a85e454d6d5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66404237dbcb0a5cd74dd5eaf77d30f3af7e70a7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438814"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767811"
 ---
 # <a name="rds-code-examples"></a>RDS のコード例
 > [!IMPORTANT]
@@ -28,8 +28,8 @@ ms.locfileid: "88438814"
   
  **メモ** コード例全体をコードエディターに貼り付けます。 部分例が使用されている場合や段落の書式設定が失われた場合、この例は正常に実行されない可能性があります。  
   
--   [Microsoft Visual Basic の RDS のコード例](../../../ado/reference/rds-api/rds-code-examples-in-visual-basic.md)  
+-   [Microsoft Visual Basic の RDS のコード例](./rds-code-examples-in-visual-basic.md)  
   
--   [Microsoft Visual Basic Scripting Edition の RDS のコード例](../../../ado/reference/rds-api/rds-code-examples-in-vbscript.md)  
+-   [Microsoft Visual Basic Scripting Edition の RDS のコード例](./rds-code-examples-in-vbscript.md)  
   
--   [Microsoft Visual C++ での RDS のコード例](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  
+-   [Microsoft Visual C++ での RDS のコード例](./rds-code-examples-in-visual-c.md)

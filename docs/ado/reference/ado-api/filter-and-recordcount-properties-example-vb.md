@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f948d2f0ba3a70c1f9a7b3279b0eb9bf68b5b3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bf78308afe6a48a071daa8a68a0a3cfaecd907c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443694"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775301"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter および RecordCount プロパティの例 (VB)
-次の例では、 ***Pubs***データベースの Publishers テーブルで[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開きます。 次に、 [Filter](../../../ado/reference/ado-api/filter-property.md) プロパティを使用して、表示されるレコードの数を特定の国/地域の出版社に限定します。 **RecordCount**プロパティは、フィルター処理されたレコードセットとフィルター処理されていないレコードセットの違いを示すために使用されます。  
+次の例では、 ***Pubs***データベースの Publishers テーブルで[レコードセット](./recordset-object-ado.md)を開きます。 次に、 [Filter](./filter-property.md) プロパティを使用して、表示されるレコードの数を特定の国/地域の出版社に限定します。 **RecordCount**プロパティは、フィルター処理されたレコードセットとフィルター処理されていないレコードセットの違いを示すために使用されます。  
   
 ```  
 'BeginFilterVB  
@@ -116,6 +116,6 @@ Attribute VB_Name = "Filter"
 ```  
   
 ## <a name="see-also"></a>参照  
- [Filter プロパティ](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount プロパティ (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Filter プロパティ](./filter-property.md)   
+ [RecordCount プロパティ (ADO)](./recordcount-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

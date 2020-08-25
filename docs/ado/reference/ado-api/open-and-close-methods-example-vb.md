@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bbfd00f1cda9fcfc38a7b13b39e1f3e08a24b209
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 433854566bb329547e362e4e4d3ef4628e6069d3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443014"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773861"
 ---
 # <a name="open-and-close-methods-example-vb"></a>Open および Close メソッドの例 (VB)
-この例では、開いている[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)と[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方に対して、 **Open**メソッドと[Close](../../../ado/reference/ado-api/close-method-ado.md)メソッドを使用します。  
+この例では、開いている[レコードセット](./recordset-object-ado.md)と[接続](./connection-object-ado.md)オブジェクトの両方に対して、 **Open**メソッドと[Close](./close-method-ado.md)メソッドを使用します。  
   
 ```  
 'BeginOpenVB  
@@ -103,8 +103,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Close メソッド (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open メソッド (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Close メソッド (ADO)](./close-method-ado.md)   
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)   
+ [Open メソッド (ADO Connection)](./open-method-ado-connection.md)   
+ [Open メソッド (ADO Recordset)](./open-method-ado-recordset.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

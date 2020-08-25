@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 048fbb83c8a6b9de150642f6094a1f07e0c1e11e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34ad6214f36061ed12577f7ba843a69fc13b7d8a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442224"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777601"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save および Open メソッドの例 (VB)
-次の3つの例は、 [Save](../../../ado/reference/ado-api/save-method.md) メソッドと [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) メソッドを一緒に使用する方法を示しています。  
+次の3つの例は、 [Save](./save-method.md) メソッドと [Open](./open-method-ado-recordset.md) メソッドを一緒に使用する方法を示しています。  
   
- データベースからテーブルを使用して、事業旅行を行っているとします。 前に、データを [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) としてアクセスし、転送可能な形式で保存します。 宛先に到達すると、 **レコードセット** にローカルの切断された **レコードセット**としてアクセスします。 **レコードセット**に変更を加え、再度保存します。 最後に、home を返したときに、もう一度データベースに接続し、その時点で行った変更を反映して更新します。  
+ データベースからテーブルを使用して、事業旅行を行っているとします。 前に、データを [レコードセット](./recordset-object-ado.md) としてアクセスし、転送可能な形式で保存します。 宛先に到達すると、 **レコードセット** にローカルの切断された **レコードセット**としてアクセスします。 **レコードセット**に変更を加え、再度保存します。 最後に、home を返したときに、もう一度データベースに接続し、その時点で行った変更を反映して更新します。  
   
  まず、 ***Authors*** テーブルにアクセスして保存します。  
   
@@ -98,7 +98,7 @@ Attribute VB_Name = "Save"
 ```  
   
 ## <a name="see-also"></a>参照  
- [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [レコードセットの永続性の詳細](../../../ado/guide/data/more-about-recordset-persistence.md)   
- [Save メソッド](../../../ado/reference/ado-api/save-method.md)
+ [Open メソッド (ADO Recordset)](./open-method-ado-recordset.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [レコードセットの永続性の詳細](../../guide/data/more-about-recordset-persistence.md)   
+ [Save メソッド](./save-method.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 189ca54160090bde8b526b8feec481dc31104ccb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 74cb7f53f7fd55332469a74e77405aa3312aef7e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442874"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773611"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue プロパティと UnderlyingValue プロパティの例 (VB)
-この例では、レコードの基になるデータがレコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)のバッチ更新中に変更された場合にメッセージを表示することによって、 [Originalvalue](../../../ado/reference/ado-api/originalvalue-property-ado.md)プロパティと[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)プロパティを示します。  
+この例では、レコードの基になるデータがレコード[セット](./recordset-object-ado.md)のバッチ更新中に変更された場合にメッセージを表示することによって、 [Originalvalue](./originalvalue-property-ado.md)プロパティと[UnderlyingValue](./underlyingvalue-property.md)プロパティを示します。  
   
 ```  
 'BeginOriginalValueVB  
@@ -121,6 +121,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [OriginalValue プロパティ (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [UnderlyingValue プロパティ](../../../ado/reference/ado-api/underlyingvalue-property.md)
+ [OriginalValue プロパティ (ADO)](./originalvalue-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [UnderlyingValue プロパティ](./underlyingvalue-property.md)

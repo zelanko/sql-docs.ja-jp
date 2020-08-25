@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36934de15041ddec97b0cc266a980f4908518a24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e21089ed2fd513f4c82ba9c30478b51fee6c4ebe
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453104"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805639"
 ---
 # <a name="operation-of-parameterized-commands"></a>パラメーター化コマンドの操作
 大きな子 **レコードセット**で作業している場合は、特に親 **レコード**セットのサイズとは異なりますが、いくつかの子チャプターにのみアクセスする必要がある場合は、パラメーター化されたコマンドを使用する方が効率的です。  
@@ -39,7 +39,7 @@ SHAPE {SELECT * FROM customer}
  親テーブルと子テーブルには、共通の列名、 *cust_id*があります。 この *子コマンド* には、"?" というプレースホルダーがあります。ここで、関連句は "...パラメーター 0 ")。  
   
 > [!NOTE]
->  PARAMETER 句は、shape コマンドの構文にのみ関連します。 ADO [パラメーター](../../../ado/reference/ado-api/parameter-object.md) オブジェクトまたは [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) コレクションに関連付けられていません。  
+>  PARAMETER 句は、shape コマンドの構文にのみ関連します。 ADO [パラメーター](../../reference/ado-api/parameter-object.md) オブジェクトまたは [Parameters](../../reference/ado-api/parameters-collection-ado.md) コレクションに関連付けられていません。  
   
  パラメーター化された shape コマンドを実行すると、次の処理が行われます。  
   
@@ -49,7 +49,7 @@ SHAPE {SELECT * FROM customer}
   
 3.  親行のチャプター列にアクセスした場合、 *子コマンド* は、パラメーターの値として cust_id を使用して実行されます。  
   
-4.  手順3で作成したデータプロバイダー行セット内のすべての行を使用して、子 **レコードセット**を設定します。 この例では、Orders テーブルのすべての行で、cust_id が customer. cust_id の値と等しくなります。 既定では、親**レコードセット**へのすべての参照が解放されるまで、子**レコードセット**はクライアントにキャッシュされます。 この動作を変更するには、**レコードセット**の[動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-property-index.md)**キャッシュの子行**を**False**に設定します。  
+4.  手順3で作成したデータプロバイダー行セット内のすべての行を使用して、子 **レコードセット**を設定します。 この例では、Orders テーブルのすべての行で、cust_id が customer. cust_id の値と等しくなります。 既定では、親**レコードセット**へのすべての参照が解放されるまで、子**レコードセット**はクライアントにキャッシュされます。 この動作を変更するには、**レコードセット**の[動的プロパティ](../../reference/ado-api/ado-dynamic-property-index.md)**キャッシュの子行**を**False**に設定します。  
   
 5.  取得した子行への参照 (つまり、子 **レコードセット**のチャプター) は、親 **レコードセット**の現在の行のチャプター列に配置されます。  
   
@@ -90,6 +90,6 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 >  WHERE 句を使用する場合、text、ntext、および image の SQL データ型をパラメーターで使用することはできません。また、次のようなエラーが発生 `Invalid operator for data type` します。  
   
 ## <a name="see-also"></a>参照  
- [データシェイプの例](../../../ado/guide/data/data-shaping-example.md)   
- [仮形の文法](../../../ado/guide/data/formal-shape-grammar.md)   
- [一般的な Shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)
+ [データシェイプの例](./data-shaping-example.md)   
+ [仮形の文法](./formal-shape-grammar.md)   
+ [一般的な Shape コマンド](./shape-commands-in-general.md)

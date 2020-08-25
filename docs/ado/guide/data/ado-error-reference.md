@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec9df42f3aee56d06883478e365fffcb71790d00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a286804eb5ea575e259c3b54a106edea83f55f57
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453864"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806700"
 ---
 # <a name="ado-errors"></a>ADO エラー
-**Errorvalueenum**定数は、ADO エラー値を記述します。 これらの列挙定数 (値を含む) の完全な一覧については、「 [付録 B: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)」を参照してください。 このセクションでは、さらに興味深いエラーをいくつか確認し、それを引き起こす可能性のある特定の状況や、問題を解決するための解決策について説明します。 **Errorvalueenum**定数と short 正の10進数の両方が一覧表示されます。
+**Errorvalueenum**定数は、ADO エラー値を記述します。 これらの列挙定数 (値を含む) の完全な一覧については、「 [付録 B: ADO エラー](../appendixes/appendix-b-ado-errors.md)」を参照してください。 このセクションでは、さらに興味深いエラーをいくつか確認し、それを引き起こす可能性のある特定の状況や、問題を解決するための解決策について説明します。 **Errorvalueenum**定数と short 正の10進数の両方が一覧表示されます。
 
-|数値|ErrorValueEnum 定数|説明/考えられる原因|
+|Number|ErrorValueEnum 定数|説明/考えられる原因|
 |------------|-----------------------------|----------------------------------|
 |**3000**|**adErrProviderFailed**|プロバイダーが要求された操作を実行できませんでした。|
 |**3001**|**adErrInvalidArgument**|引数の型が正しくないか、許容範囲外であるか、または競合しています。 このエラーは、多くの場合、SQL SELECT ステートメントでのタイポグラフィエラーが原因で発生します。 たとえば、フィールド名またはテーブル名のスペルが間違っていると、このエラーが発生することがあります。 このエラーは、SELECT ステートメントでという名前のフィールドまたはテーブルがデータストアに存在しない場合にも発生する可能性があります。|
