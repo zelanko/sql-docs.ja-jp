@@ -1,4 +1,5 @@
 ---
+description: '- (減算) (Transact-SQL)'
 title: '- (減算) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f24d5937b7f573951051fa3e27aaf111bdacaa40
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8cfe1427b432645915c6becec53df5e879a2d9b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445424"
 ---
 # <a name="--subtraction-transact-sql"></a>- (減算) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -104,7 +105,7 @@ SELECT MAX(BaseRate) - MIN(BaseRate) AS BaseRateDifference
 FROM DimEmployee;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [-= &#40;減算&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
  [複合演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
  [算術演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   

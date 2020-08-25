@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 449bfe5056cdf96f86b5371731c2d1c0b00ba31e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c7fc8cd189534a217468f71188479a8df100fed6
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452424"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758362"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多次元スキーマとデータの概要
 ## <a name="understanding-multidimensional-schemas"></a>多次元スキーマについて  
@@ -32,7 +32,7 @@ ms.locfileid: "88452424"
   
  *メンバー*とは、ディメンション内のデータアイテムのことです。 通常は、キャプションを作成するか、メンバーを使用してデータベースのメジャーを記述します。  
   
- キューブは ADO MD の [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) オブジェクトによって表されます。 ディメンション、階層、レベル、およびメンバーも、対応する ADO MD オブジェクト ( [ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、 [階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、 [レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)、および [メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)) によって表されます。  
+ キューブは ADO MD の [CubeDef](../../reference/ado-md-api/cubedef-object-ado-md.md) オブジェクトによって表されます。 ディメンション、階層、レベル、およびメンバーも、対応する ADO MD オブジェクト ( [ディメンション](../../reference/ado-md-api/dimension-object-ado-md.md)、 [階層](../../reference/ado-md-api/hierarchy-object-ado-md.md)、 [レベル](../../reference/ado-md-api/level-object-ado-md.md)、および [メンバー](../../reference/ado-md-api/member-object-ado-md.md)) によって表されます。  
   
 ### <a name="dimensions"></a>Dimensions  
  キューブのディメンションは、ビジネスエンティティと、データベースでモデル化されるデータの種類によって異なります。 通常、各ディメンションは、データを選択するための独立したエントリポイントまたはメカニズムです。  
@@ -84,9 +84,9 @@ Hamburg, Munich, Stuttgart}
   
  この例では、もう1つの特性も示しています。週単位階層の週レベルの一部のメンバーは、Quarter 階層のどのレベルにも表示されません。 したがって、階層にはディメンションのすべてのメンバーを含める必要はありません。  
   
-## <a name="see-also"></a>参照  
- [ADO MD オブジェクトモデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (多次元) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [ADO MD を使用したプログラミング](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [ADO MD での ADO の使用](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
- [多次元データの操作](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+## <a name="see-also"></a>関連項目  
+ [ADO MD オブジェクトモデル](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (多次元) (ADO MD)](./ado-multidimensional-ado-md.md)   
+ [ADO MD を使用したプログラミング](./programming-with-ado-md.md)   
+ [ADO MD での ADO の使用](./using-ado-with-ado-md.md)   
+ [多次元データの操作](./working-with-multidimensional-data.md)

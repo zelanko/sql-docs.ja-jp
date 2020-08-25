@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bac29c74bf70e29828fe8ec238839cd64e78fd7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 823505aae912c64c2fd7d3375b3426cb6428bcdd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442564"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772871"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
-[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトの属性を指定します。  
+[プロパティ](./property-object-ado.md)オブジェクトの属性を指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
@@ -46,4 +46,4 @@ ms.locfileid: "88442564"
 |AdoEnums を作成します。|  
   
 ## <a name="applies-to"></a>適用対象  
- [Attributes プロパティ (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Attributes プロパティ (ADO)](./attributes-property-ado.md)

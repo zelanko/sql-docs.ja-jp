@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4627ac4b67e31861ff91cb516076a561a7a315e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b09994dba988d94c2e0f0f7cd9f68eef5790dde0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438564"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767321"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 メソッド (RDS)
 指定したレコードセットを、ADO 2.1 で使用する接続文字列で指定されたデータベースと同期します。  
@@ -62,9 +62,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *ハンドラー文字列*パラメーターには null を指定できます。 この場合の動作は、RDS サーバーがどのように構成されているかによって異なります。 "MSDFMAP. handler" のハンドラー文字列は、Microsoft 提供のハンドラー (Msdfmap.dll) を使用する必要があることを示します。 "sample.ini" のハンドラー文字列は、Msdfmap.dll ハンドラーを使用する必要があり、引数 "sample.ini" をハンドラーに渡す必要があることを示します。 Msdfmap.dll は、sample.ini を使用して接続とクエリ文字列を確認する方向として引数を解釈します。  
   
 > [!NOTE]
->  **Synchronize21**メソッドは、単に[同期メソッド (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)の1つのバージョンです。 **Synchronize**メソッドを使用して ADO 2.1 と通信する必要がある場合は、代わりに**Synchronize21**メソッドを呼び出すことができます。 ADO 2.5 以降の **Synchronize** メソッドの機能は、ado 2.1 で同じメソッドに対して提供される機能のスーパーセットです。  
+>  **Synchronize21**メソッドは、単に[同期メソッド (RDS)](./synchronize-method-rds.md)の1つのバージョンです。 **Synchronize**メソッドを使用して ADO 2.1 と通信する必要がある場合は、代わりに**Synchronize21**メソッドを呼び出すことができます。 ADO 2.5 以降の **Synchronize** メソッドの機能は、ado 2.1 で同じメソッドに対して提供される機能のスーパーセットです。  
   
 ## <a name="applies-to"></a>適用対象  
- [DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory オブジェクト (RDSServer)](./datafactory-object-rdsserver.md)

@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: e9566718-9122-490d-8a8e-da8f605246f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a83cd7b5cf9df56432bcaf6b484617b3692c35e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5fc0a406b2af481ba1932e5f4a161c854d4e653b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441264"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778351"
 ---
 # <a name="catalog-object-properties-methods-and-events-ado-md"></a>Catalog オブジェクトのプロパティ、メソッド、およびイベント (ADO MD)
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
- [ActiveConnection プロパティ](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)  
+ [ActiveConnection プロパティ](./activeconnection-property-ado-md.md)  
   
- [CubeDefs コレクション](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)  
+ [CubeDefs コレクション](./cubedefs-collection-ado-md.md)  
   
- [Name プロパティ](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Name プロパティ](./name-property-ado-md.md)  
   
 ## <a name="methods"></a>メソッド  
  なし。  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [Catalog オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)
+ [Catalog オブジェクト (ADO MD)](./catalog-object-ado-md.md)

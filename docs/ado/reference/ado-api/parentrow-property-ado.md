@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b81fc704c78b620c1319aa592336aba0489a3d37
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d7924a27a8b04e430eb1d9d68d5de6e4d19c51a8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442744"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773271"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow プロパティ (ADO)
 行の親が ADO **Record**オブジェクトに変換されるように、 **ADORecordConstruction**オブジェクトの OLE DB **row**オブジェクトのコンテナーを設定します。  
@@ -44,4 +44,4 @@ HRESULT put_ParentRow([in] IUnknown* pParent);
  このプロパティメソッドは、S_OK および E_FAIL を含む標準の HRESULT 値を返します。  
   
 ## <a name="applies-to"></a>適用対象  
- [ADORecordConstruction インターフェイス](../../../ado/reference/ado-api/adorecordconstruction-interface.md)
+ [ADORecordConstruction インターフェイス](./adorecordconstruction-interface.md)

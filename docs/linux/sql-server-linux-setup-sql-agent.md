@@ -1,6 +1,6 @@
 ---
 title: Linux 上での SQL Server エージェントのインストールを構成する
-description: この記事では、Linux 上での SQL Server エージェントの有効化またはインストールの方法について説明します。
+description: Linux 上での SQL Server エージェントの有効化またはインストールの方法について説明します。 SQL Server 2017 CU4 以降、SQL Server エージェントは mssql-server パッケージに含まれています。
 author: VanMSFT
 ms.author: vanto
 ms.date: 12/05/2019
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 85869c797e8f91ca28d468c6a4a52dd52ea45a92
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6554acf46da19a9833cf649bce34a455cbc92e5b
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882526"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088810"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux 上に SQL Server エージェントをインストールする
 

@@ -1,6 +1,6 @@
 ---
 title: レプリケーションの設定 (SSMS)
-description: この記事では、Linux 上で SQL Server レプリケーションを構成する方法について説明します。
+description: Linux 上で SQL Server レプリケーションを構成する方法について説明します。 SQL Server Management Studio (SSMS) または Transact-SQL ストアド プロシージャを使用して、レプリケーションを構成します。
 ms.custom: seo-dt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,12 +12,12 @@ ms.prod_service: database-engine
 ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f367f7d6c41600ddb26d12b28ae14d0fc1cdffc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 61943baf9083d3ca33bd37e0fe9759a4c530dfe2
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882686"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088860"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Linux 上で SQL Server レプリケーションを構成する
 
@@ -73,7 +73,7 @@ SQL Server Management Studio (SSMS) または Transact-SQL ストアド プロ�
 
 1. SSMS 上のオブジェクト エクスプローラーで SQL Server のインスタンスに接続します。
 
-1. **[レプリケーション]** を右クリックし、 **[ディストリビューションを構成する]** をクリックします。
+1. **[レプリケーション]** を右クリックし、**[ディストリビューションを構成する]** をクリックします。
 
 1. **ディストリビューションの構成ウィザード**で次の手順を行います。
 
@@ -93,7 +93,7 @@ SQL Server Management Studio (SSMS) または Transact-SQL ストアド プロ�
 
 レプリケーション モニターを使用して、レプリケーション ジョブを監視します。
 
-オブジェクト エクスプローラーで、 **[レプリケーション]** を右クリックし、 **[レプリケーション モニターの起動]** をクリックします。
+オブジェクト エクスプローラーで、**[レプリケーション]** を右クリックし、**[レプリケーション モニターの起動]** をクリックします。
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -1,6 +1,6 @@
 ---
 title: Windows 上と Linux 上で SQL Server の Always On 可用性グループを構成する
-description: Windows 上と Linux 上でレプリカを使用して SQL Server 可用性グループを構成します。
+description: Windows サーバー上の 1 つのレプリカと Linux サーバー上のもう 1 つのレプリカを使用して、SQL Server Always On 可用性グループ (AG) を作成する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2eec1f7f24f8465fb5d2bd4406de4c11aef8a518
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9d38aed51796609a9fb97c2f6d06a7383fba9dde
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773591"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088955"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Windows 上と Linux 上で SQL Server の Always On 可用性グループを構成する (クロスプラットフォーム)
 

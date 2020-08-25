@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bfddc290ee906402490743205ca939d82db2dad6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ae1e12bf05312f96e4647bb1185e3ac8359b0ed
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442684"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773101"
 ---
 # <a name="prepared-property-example-vb"></a>Prepared プロパティの例 (VB)
-次の例では、2つの[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトを開いて、準備さ[れたプロパティ](../../../ado/reference/ado-api/prepared-property-ado.md)を示しています。1つは準備されています。  
+次の例では、2つの[コマンド](./command-object-ado.md)オブジェクトを開いて、準備さ[れたプロパティ](./prepared-property-ado.md)を示しています。1つは準備されています。  
   
 ```  
 'BeginPreparedVB  
@@ -116,5 +116,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Prepared プロパティ (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
+ [Command オブジェクト (ADO)](./command-object-ado.md)   
+ [Prepared プロパティ (ADO)](./prepared-property-ado.md)

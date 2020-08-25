@@ -18,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70a3554ed1ef0c94965e340f303cc3208c1962fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06020bb66a8fd986d3fbf38bda59b98e29e66386
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442764"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773341"
 ---
 # <a name="parameters-collection-ado"></a>Parameters コレクション (ADO)
-[Command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトのすべての[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトを含みます。  
+[Command](./command-object-ado.md)オブジェクトのすべての[パラメーター](./parameter-object.md)オブジェクトを含みます。  
   
 ## <a name="remarks"></a>解説  
  **Command**オブジェクトには、 **Parameter**オブジェクトで構成される**Parameters**コレクションがあります。  
   
- **Command**オブジェクトの**Parameters**コレクションに対して[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用すると、 **command**オブジェクトで指定されたストアドプロシージャまたはパラメーター化クエリのプロバイダーパラメーター情報が取得されます。 一部のプロバイダーでは、ストアドプロシージャ呼び出しまたはパラメーター化クエリをサポートしていません。このようなプロバイダーを使用するときに**Parameters**コレクションの**Refresh**メソッドを呼び出すと、エラーが返されます。  
+ **Command**オブジェクトの**Parameters**コレクションに対して[Refresh](./refresh-method-ado.md)メソッドを使用すると、 **command**オブジェクトで指定されたストアドプロシージャまたはパラメーター化クエリのプロバイダーパラメーター情報が取得されます。 一部のプロバイダーでは、ストアドプロシージャ呼び出しまたはパラメーター化クエリをサポートしていません。このようなプロバイダーを使用するときに**Parameters**コレクションの**Refresh**メソッドを呼び出すと、エラーが返されます。  
   
  独自の**パラメーター**オブジェクトを定義しておらず、 **Refresh**メソッドを呼び出す前に**Parameters**コレクションにアクセスすると、ADO は自動的にメソッドを呼び出し、コレクションにデータを設定します。  
   
- 呼び出すストアドプロシージャやパラメーター化されたクエリに関連付けられているパラメーターのプロパティがわかっている場合は、プロバイダーへの呼び出しを最小化してパフォーマンスを向上させることができます。 [Createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md)メソッドを使用して、適切なプロパティ設定を持つ**パラメーター**オブジェクトを作成し、 [Append](../../../ado/reference/ado-api/append-method-ado.md)メソッドを使用して**Parameters**コレクションに追加します。 これにより、パラメーター情報のプロバイダーを呼び出さなくても、パラメーター値を設定して返すことができます。 パラメーター情報を提供しないプロバイダーに書き込む場合は、このメソッドを使用してパラメーター **コレクションを** 手動で設定し、パラメーターを使用できるようにする必要があります。 必要に応じて、 [Delete](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)メソッドを使用して**Parameters**コレクションから**パラメーター**オブジェクトを削除します。  
+ 呼び出すストアドプロシージャやパラメーター化されたクエリに関連付けられているパラメーターのプロパティがわかっている場合は、プロバイダーへの呼び出しを最小化してパフォーマンスを向上させることができます。 [Createparameter](./createparameter-method-ado.md)メソッドを使用して、適切なプロパティ設定を持つ**パラメーター**オブジェクトを作成し、 [Append](./append-method-ado.md)メソッドを使用して**Parameters**コレクションに追加します。 これにより、パラメーター情報のプロバイダーを呼び出さなくても、パラメーター値を設定して返すことができます。 パラメーター情報を提供しないプロバイダーに書き込む場合は、このメソッドを使用してパラメーター **コレクションを** 手動で設定し、パラメーターを使用できるようにする必要があります。 必要に応じて、 [Delete](./delete-method-ado-parameters-collection.md)メソッドを使用して**Parameters**コレクションから**パラメーター**オブジェクトを削除します。  
   
  レコード**セットの** **Parameters**コレクション内のオブジェクトは、**レコードセット**が閉じられたときにスコープから除外されます (したがって使用できなくなります)。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "88442764"
   
  ここでは、次のトピックについて説明します。  
   
--   [Parameters コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
+-   [Parameters コレクションのプロパティ、メソッド、およびイベント](./parameters-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
- [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)
+ [Append メソッド (ADO)](./append-method-ado.md)   
+ [CreateParameter メソッド (ADO)](./createparameter-method-ado.md)   
+ [Parameter オブジェクト](./parameter-object.md)

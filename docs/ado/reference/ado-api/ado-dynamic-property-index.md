@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fbd7933ac206f81460a7d0d50d0a7ac332cf154a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4777349384d372355a107cced1503d774ade4f7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451464"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771741"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO Dynamic プロパティ インデックス
-データプロバイダー、サービスプロバイダー、およびサービスコンポーネントは、開かれていない[接続](../../../ado/reference/ado-api/connection-object-ado.md)および[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの**プロパティ**コレクションに動的なプロパティを追加できます。 また、これらのオブジェクトを開いたときに、指定したプロバイダーによって追加のプロパティが挿入される場合もあります。 これらのプロパティの一部は、「 [ADO Dynamic properties](../../../ado/reference/ado-api/ado-dynamic-properties.md) 」セクションに一覧表示されています。 詳細については、 [「付録 a: providers](../../../ado/guide/appendixes/appendix-a-providers.md) 」セクションの特定のプロバイダーに記載されています。  
+データプロバイダー、サービスプロバイダー、およびサービスコンポーネントは、開かれていない[接続](./connection-object-ado.md)および[レコードセット](./recordset-object-ado.md)オブジェクトの**プロパティ**コレクションに動的なプロパティを追加できます。 また、これらのオブジェクトを開いたときに、指定したプロバイダーによって追加のプロパティが挿入される場合もあります。 これらのプロパティの一部は、「 [ADO Dynamic properties](./ado-dynamic-properties.md) 」セクションに一覧表示されています。 詳細については、 [「付録 a: providers](../../guide/appendixes/appendix-a-providers.md) 」セクションの特定のプロバイダーに記載されています。  
   
  次の表は、各標準 OLE DB プロバイダーの動的プロパティの ADO と OLE DB 名のクロスインデックスです。 プロバイダーは、ここに記載されているよりも多くのプロパティを追加できます。 プロバイダー固有の動的プロパティに関する具体的な情報については、プロバイダーのドキュメントを参照してください。  
   
- OLE DB プログラマーリファレンスでは、ADO プロパティ名を "Description" という用語で参照しています。 これらの標準プロパティの詳細については、 [OLE DB のドキュメント](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)で、OLE DB プロパティの名前でインデックスを検索または参照してください。  
+ OLE DB プログラマーリファレンスでは、ADO プロパティ名を "Description" という用語で参照しています。 これらの標準プロパティの詳細については、 [OLE DB のドキュメント](/previous-versions/windows/desktop/ms722784(v=vs.85))で、OLE DB プロパティの名前でインデックスを検索または参照してください。  
   
 ## <a name="connection-dynamic-properties"></a>接続の動的プロパティ  
   

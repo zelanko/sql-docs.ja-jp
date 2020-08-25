@@ -2,7 +2,7 @@
 title: シングル ユーザー モードでの SQL Server の起動 | Microsoft Docs
 description: SQL Server でのシングル ユーザー モードについて説明します。 これが便利なケースと、起動オプション "-m" を使用してこのモードで SQL Server のインスタンスを開始する方法を確認します。
 ms.custom: ''
-ms.date: 09/20/2017
+ms.date: 08/11/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 31b0075dfa6b3f4fa380e8b43054d0c98ebd8d81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8651bcaa4aebf69eae9622031b49fb562b7be9f6
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764005"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147303"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>シングル ユーザー モードでの SQL Server の起動
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,13 @@ ms.locfileid: "85764005"
   
 > [!IMPORTANT]  
 >  このオプションをセキュリティ機能として使用しないでください。 クライアント アプリケーションの名前はクライアント アプリケーションによって接続文字列の一部として指定されるため、本当の名前が指定されるとは限りません。  
-  
+
+次の例では、SQL Server インスタンスがシングル ユーザー モードで起動され、SQL Server Management Studio クエリ エディターからの接続のみが許可されます。
+
+```console
+net start "SQL Server (MSSQLSERVER)" -m"Microsoft SQL Server Management Studio - Query"
+```
+
 ## <a name="note-for-clustered-installations"></a>クラスター化インストールに関する注意  
  クラスター環境に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールした場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシングル ユーザー モードで起動すると、利用可能な接続がクラスター リソースの dll によって占有され、サーバーに対する他の接続がブロックされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がこの状態に陥ると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのリソースをオンラインに戻そうとしたときに、SQL のリソースが別のノードにフェールオーバーされる可能性があります (リソースがそのグループに影響するように構成されていた場合)。  
   

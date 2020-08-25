@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5633df4158aeafc2e650d5c89aa5d83b02fe8a11
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e050f73aaa2ceb174c115218796e166b72f39381
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441134"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778211"
 ---
 # <a name="depth-property-ado-md"></a>Depth プロパティ (ADO MD)
-階層の [レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md) とルートの間のレベル数を示します。  
+階層の [レベル](./level-object-ado-md.md) とルートの間のレベル数を示します。  
   
 ## <a name="return-values"></a>戻り値  
  は整数を返し、は読み取り専用です。  
@@ -34,7 +34,7 @@ ms.locfileid: "88441134"
  階層のルートにある **レベル** の **深さ** の値がゼロ (0) です。  
   
 ## <a name="applies-to"></a>適用対象  
- [Level オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
+ [Level オブジェクト (ADO MD)](./level-object-ado-md.md)  
   
 ## <a name="see-also"></a>参照  
- [LevelDepth プロパティ (ADO MD)](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)
+ [LevelDepth プロパティ (ADO MD)](./leveldepth-property-ado-md.md)

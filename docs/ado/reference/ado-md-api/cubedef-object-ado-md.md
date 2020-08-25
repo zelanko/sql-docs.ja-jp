@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cf8de68674ee1cc33f0ba16c9a0b3604418d0332
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f2a25f9a964e6a8e9644eb737897dd15e3948974
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441154"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778261"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef オブジェクト (ADO MD)
 多次元スキーマから、関連するディメンションのセットを含むキューブを表します。  
@@ -29,13 +29,13 @@ ms.locfileid: "88441154"
 ## <a name="remarks"></a>解説  
  **CubeDef**オブジェクトのコレクションとプロパティを使用して、次の操作を行うことができます。  
   
--   [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)プロパティを使用して**CubeDef**を識別します。  
+-   [Name](./name-property-ado-md.md)プロパティを使用して**CubeDef**を識別します。  
   
--   [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)プロパティを持つキューブを説明する文字列を返します。  
+-   [Description](./description-property-ado-md.md)プロパティを持つキューブを説明する文字列を返します。  
   
--   [ディメンション](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)コレクションを持つキューブを構成するディメンションを返します。  
+-   [ディメンション](./dimensions-collection-ado-md.md)コレクションを持つキューブを構成するディメンションを返します。  
   
--   標準の ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを使用して、 **CubeDef**に関する追加情報を取得します。  
+-   標準の ADO[プロパティ](../ado-api/properties-collection-ado.md)コレクションを使用して、 **CubeDef**に関する追加情報を取得します。  
   
  **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
@@ -54,11 +54,11 @@ ms.locfileid: "88441154"
   
  ここでは、次のトピックについて説明します。  
   
--   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/cubedef-object-properties-methods-and-events.md)  
+-   [プロパティ、メソッド、およびイベント](./cubedef-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
- [CubeDef の例 (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [Catalog オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
- [CubeDefs コレクション (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
- [Dimensions コレクション (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
- [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [CubeDef の例 (VBScript)](./cubedef-example-vbscript.md)   
+ [Catalog オブジェクト (ADO MD)](./catalog-object-ado-md.md)   
+ [CubeDefs コレクション (ADO MD)](./cubedefs-collection-ado-md.md)   
+ [Dimensions コレクション (ADO MD)](./dimensions-collection-ado-md.md)   
+ [Properties コレクション (ADO)](../ado-api/properties-collection-ado.md)

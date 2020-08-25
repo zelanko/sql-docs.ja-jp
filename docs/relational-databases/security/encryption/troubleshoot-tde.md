@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 16368fe948d2cefeb052d503385c99cedfb097ff
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: c37c2aa1f36fca57e544dc588d492be98c653fef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899005"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448079"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Azure Key Vault のカスタマー マネージド キーを使った透過的なデータ暗号化に関する一般的なエラー
 
@@ -165,7 +165,7 @@ TDE プロテクターが Key Vault に存在することを確認します。
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>アクティビティ ログから TDE の状態を取得する
 
-Azure Key Vault のキー アクセスの問題によるデータベースの状態を監視できるように、Azure Resource Manager の URL と Subscription+Resourcegroup+ServerName+DatabseName に基づいて、次のイベントがリソース ID の[アクティビティ ログ](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications)に記録されます。 
+Azure Key Vault のキー アクセスの問題によるデータベースの状態を監視できるように、Azure Resource Manager の URL と Subscription+Resourcegroup+ServerName+DatabaseName に基づいて、次のイベントがリソース ID の[アクティビティ ログ](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications)に記録されます。 
 
 **サービスが Azure Key Vault のキーにアクセスできなくなったときのイベント**
 

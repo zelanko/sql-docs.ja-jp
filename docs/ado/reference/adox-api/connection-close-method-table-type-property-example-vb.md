@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a77ff78be14566f472af277459b2bdaa52aad748
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b651389b4badd57e6a76b3b38c47c34cc814706
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440234"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770911"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Connection Close メソッド、Table Type プロパティの例 (VB)
-[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティを**Nothing**に設定する場合は、カタログへの接続を閉じる必要があります。 関連付けられたコレクションは空になります。 カタログ内のスキーマオブジェクトから作成されたオブジェクトは孤立します。 キャッシュされているオブジェクトのプロパティは引き続き利用できますが、プロバイダーの呼び出しを必要とするプロパティの読み取りは失敗します。  
+[ActiveConnection](./activeconnection-property-adox.md)プロパティを**Nothing**に設定する場合は、カタログへの接続を閉じる必要があります。 関連付けられたコレクションは空になります。 カタログ内のスキーマオブジェクトから作成されたオブジェクトは孤立します。 キャッシュされているオブジェクトのプロパティは引き続き利用できますが、プロバイダーの呼び出しを必要とするプロパティの読み取りは失敗します。  
   
 ```  
 ' BeginCloseConnectionVB  
@@ -67,17 +67,17 @@ End Sub
 ' EndCloseConnectionVB  
 ```  
   
- カタログを開くために使用された [接続](../../../ado/reference/ado-api/connection-object-ado.md) オブジェクトを閉じるには、 **ActiveConnection** プロパティを **Nothing**に設定するのと同じ効果が得られます。  
+ カタログを開くために使用された [接続](../ado-api/connection-object-ado.md) オブジェクトを閉じるには、 **ActiveConnection** プロパティを **Nothing**に設定するのと同じ効果が得られます。  
   
 ```  
 Attribute VB_Name = "Connection"  
 ```  
   
 ## <a name="see-also"></a>参照  
- [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Type プロパティ (テーブル) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+ [ActiveConnection プロパティ (ADOX)](./activeconnection-property-adox.md)   
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [Column オブジェクト (ADOX)](./column-object-adox.md)   
+ [Columns コレクション (ADOX)](./columns-collection-adox.md)   
+ [Table オブジェクト (ADOX)](./table-object-adox.md)   
+ [Tables コレクション (ADOX)](./tables-collection-adox.md)   
+ [Type プロパティ (テーブル) (ADOX)](./type-property-table-adox.md)

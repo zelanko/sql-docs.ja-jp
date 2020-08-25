@@ -18,25 +18,25 @@ helpviewer_keywords:
 ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 578e9a0d03382e5e0dc143e07351cfb8890f278d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c7cc82893ce5c20c27f44851b555850db4cd9cc8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442374"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772101"
 ---
 # <a name="recordtype-property-ado"></a>RecordType プロパティ (ADO)
-[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの種類を示します。  
+[レコード](./record-object-ado.md)オブジェクトの種類を示します。  
   
 ## <a name="return-value"></a>戻り値  
- [Recordtypeenum](../../../ado/reference/ado-api/recordtypeenum.md)値を返します。  
+ [Recordtypeenum](./recordtypeenum.md)値を返します。  
   
 ## <a name="remarks"></a>解説  
  **RecordType**プロパティは読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  
- [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Record オブジェクト (ADO)](./record-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [Type プロパティ (ADO)](../../../ado/reference/ado-api/type-property-ado.md)   
- [Type プロパティ (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)
+ [Type プロパティ (ADO)](./type-property-ado.md)   
+ [Type プロパティ (ADO Stream)](./type-property-ado-stream.md)

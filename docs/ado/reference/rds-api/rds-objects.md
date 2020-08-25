@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 477db26b27b0b6222da55585661db1dc37d64b82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 51f325977e068e89e540a798f9bccdfa2c784f8e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438784"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767731"
 ---
 # <a name="rds-objects"></a>RDS オブジェクト
 > [!IMPORTANT]
@@ -27,12 +27,10 @@ ms.locfileid: "88438784"
   
 |Object|説明|  
 |-|-|  
-|[DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|データクエリ **レコードセット** を1つ以上のコントロール (たとえば、テキストボックス、グリッドコントロール、またはコンボボックス) にバインドして、Web ページに **レコードセット** データを表示します。<br /><br /> **DataControl**オブジェクトは、スクリプト作成には安全です。|  
-|[DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|クライアント側アプリケーションの指定されたデータソースへの読み取り/書き込みデータアクセスを提供するメソッドを実装します。<br /><br /> **DataFactory**オブジェクトは、スクリプト作成には安全ではありません。|  
-|[領域スペース (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|は、中間層に配置されているカスタムビジネスオブジェクトに対してクライアント側プロキシを作成します。<br /><br /> オブジェクト **スペース** オブジェクトは、スクリプト作成には安全です。|  
-|[IRDSService インターフェイス (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)メソッドを公開します。これは、オブジェクトのサポートされているバージョンで、要求されたインターフェイスへのポインターを返すために使用されます。|  
+|[DataControl (RDS)](./datacontrol-object-rds.md)|データクエリ **レコードセット** を1つ以上のコントロール (たとえば、テキストボックス、グリッドコントロール、またはコンボボックス) にバインドして、Web ページに **レコードセット** データを表示します。<br /><br /> **DataControl**オブジェクトは、スクリプト作成には安全です。|  
+|[DataFactory (RDSServer)](./datafactory-object-rdsserver.md)|クライアント側アプリケーションの指定されたデータソースへの読み取り/書き込みデータアクセスを提供するメソッドを実装します。<br /><br /> **DataFactory**オブジェクトは、スクリプト作成には安全ではありません。|  
+|[領域スペース (RDS)](./dataspace-object-rds.md)|は、中間層に配置されているカスタムビジネスオブジェクトに対してクライアント側プロキシを作成します。<br /><br /> オブジェクト **スペース** オブジェクトは、スクリプト作成には安全です。|  
+|[IRDSService インターフェイス (RDS)](./irdsservice-interface-rds.md)|[InvokeService (RDS)](./invokeservice-rds.md)メソッドを公開します。これは、オブジェクトのサポートされているバージョンで、要求されたインターフェイスへのポインターを返すために使用されます。|  
   
 ## <a name="see-also"></a>参照  
- [RDS の API リファレンス](../../../ado/reference/rds-api/rds-api-reference.md)
-
-
+ [RDS の API リファレンス](./rds-api-reference.md)

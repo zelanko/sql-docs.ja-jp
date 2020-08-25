@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f9ab23767ccac617694468f5ff1502b8c60f14e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff4747f86f2bcca6acdfa0d472db3eb59506a14e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440314"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771041"
 ---
 # <a name="columnattributesenum"></a>ColumnAttributesEnum
-[列](../../../ado/reference/adox-api/column-object-adox.md)の特性を指定します。  
+[列](./column-object-adox.md)の特性を指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
@@ -32,4 +32,4 @@ ms.locfileid: "88440314"
 |**adColNullable**|2|列に null 値が含まれている可能性があります。|  
   
 ## <a name="applies-to"></a>適用対象  
- [Attributes プロパティ (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)
+ [Attributes プロパティ (ADOX)](./attributes-property-adox.md)

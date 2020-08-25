@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 168bdaa7736c5f9d3c974d0a5f6aa4fae2b323bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a019d0f4e260feb7e9e9034fc7b9cf63b623bedf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442344"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771971"
 ---
 # <a name="refresh-method-example-vb"></a>Refresh メソッドの例 (VB)
-この例では、 [refresh](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、ストアドプロシージャ[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションを更新します。  
+この例では、 [refresh](./refresh-method-ado.md)メソッドを使用して、ストアドプロシージャ[コマンド](./command-object-ado.md)オブジェクトの[パラメーター](./parameters-collection-ado.md)コレクションを更新します。  
   
 ```vb
 'BeginRefreshVB  
@@ -122,6 +122,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
+ [Command オブジェクト (ADO)](./command-object-ado.md)   
+ [Parameters コレクション (ADO)](./parameters-collection-ado.md)   
+ [Refresh メソッド (ADO)](./refresh-method-ado.md)

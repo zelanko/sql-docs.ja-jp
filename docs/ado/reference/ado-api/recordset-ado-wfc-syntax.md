@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1c116d2cece30da93cf167e7952096dbf019666
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd0989fcabdcb7ae017efb87a9c117b4ba037524
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442434"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772301"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>Recordset (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.. wfc. データ  
@@ -135,8 +135,8 @@ public com.ms.wfc.data.Fields getFields()
 public AdoProperties getProperties()  
 ```  
   
-### <a name="events"></a>events  
- ADO/WFC イベントの詳細については、「 [言語別の Ado イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)」を参照してください。  
+### <a name="events"></a>イベント  
+ ADO/WFC イベントの詳細については、「 [言語別の Ado イベントのインスタンス化](../../guide/data/ado-event-instantiation-by-language.md)」を参照してください。  
   
 ```  
 public void addOnEndOfRecordset(RecordsetEventHandler handler)  
@@ -164,4 +164,4 @@ public void removeOnWillMove(RecordsetEventHandler handler)
 ```  
   
 ## <a name="see-also"></a>参照  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

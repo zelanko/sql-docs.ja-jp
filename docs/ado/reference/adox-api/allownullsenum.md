@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6acf3689-1a7f-4379-9d7f-df452ccbac27
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 058df53811bfbb48005f1f9c6f08f38410bc54cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7eae546eebef72c7f006e46db8fbba56b4b8a7bc
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440504"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771531"
 ---
 # <a name="allownullsenum"></a>AllowNullsEnum
 Null 値を持つレコードのインデックスを作成するかどうかを指定します。  
@@ -34,4 +34,4 @@ Null 値を持つレコードのインデックスを作成するかどうかを
 |**adIndexNullsIgnoreAny**|4|インデックスでは、一部のキー列が null 値を持つエントリは挿入されません。 複数列のキーを持つインデックスの場合、ある列に null 値を入力すると、エントリは無視され、エラーは発生しません。|  
   
 ## <a name="applies-to"></a>適用対象  
- [IndexNulls プロパティ (ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)
+ [IndexNulls プロパティ (ADOX)](./indexnulls-property-adox.md)

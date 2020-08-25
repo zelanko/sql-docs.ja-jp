@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb7ebc994d252fc8806c133c61239cce67b693bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c7d2c095c9f10e95df54849ce729ffdcbbca135
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438654"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767521"
 ---
 # <a name="server-property-rds"></a>Server プロパティ (RDS)
 インターネットインフォメーションサービス (IIS) 名と通信プロトコルを示します。  
   
- RDS のオブジェクトタグで、 **サーバー** プロパティをデザイン時に設定でき[ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) オブジェクト、またはスクリプトコードの実行時に発生します。  
+ RDS のオブジェクトタグで、 **サーバー** プロパティをデザイン時に設定でき[ます。DataControl](./datacontrol-object-rds.md) オブジェクト、またはスクリプトコードの実行時に発生します。  
   
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
@@ -118,15 +118,13 @@ DataControl.Server=""
  RDS を表すオブジェクト変数です **。DataControl** オブジェクト。  
   
 ## <a name="remarks"></a>解説  
- サーバーは、RDS が配置されている場所です **。DataControl** 要求 (つまり、クエリまたは更新) が処理されます。 既定では、すべての要求は、 [RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) オブジェクトである Msdfmap によって処理され [ます。ハンドラー](../../../ado/guide/remote-data-service/datafactory-customization.md) コンポーネント、および指定されたサーバー上の [MSDFMAP.INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) ファイル。 古いファイルと新しい **MSDFMAP.INI** ファイルの設定を調整するようにサーバーを変更する場合は注意してください。 非互換性があると、あるサーバーで成功した要求が別のサーバーで失敗する可能性があります。 サーバープロパティが空の文字列 "" に設定されている場合、これらのオブジェクトはローカルコンピューターで使用されます。  
+ サーバーは、RDS が配置されている場所です **。DataControl** 要求 (つまり、クエリまたは更新) が処理されます。 既定では、すべての要求は、 [RDSServer DataFactory](./datafactory-object-rdsserver.md) オブジェクトである Msdfmap によって処理され [ます。ハンドラー](../../guide/remote-data-service/datafactory-customization.md) コンポーネント、および指定されたサーバー上の [MSDFMAP.INI](../../guide/remote-data-service/understanding-the-customization-file.md) ファイル。 古いファイルと新しい **MSDFMAP.INI** ファイルの設定を調整するようにサーバーを変更する場合は注意してください。 非互換性があると、あるサーバーで成功した要求が別のサーバーで失敗する可能性があります。 サーバープロパティが空の文字列 "" に設定されている場合、これらのオブジェクトはローカルコンピューターで使用されます。  
   
 ## <a name="applies-to"></a>適用対象  
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>参照  
- [Server プロパティの例 (VBScript)](../../../ado/reference/rds-api/server-property-example-vbscript.md)   
- [Connect プロパティ (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
- [SQL プロパティ](../../../ado/reference/rds-api/sql-property.md)   
- [SubmitChanges メソッド (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+ [Server プロパティの例 (VBScript)](./server-property-example-vbscript.md)   
+ [Connect プロパティ (RDS)](./connect-property-rds.md)   
+ [SQL プロパティ](./sql-property.md)   
+ [SubmitChanges メソッド (RDS)](./submitchanges-method-rds.md)

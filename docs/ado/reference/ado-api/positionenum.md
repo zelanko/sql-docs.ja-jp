@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 326fc4f1b9b77c8a4470fedc7d55f2d379aff6f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2d7b443e94f3bea5977aeaf953e84c66c826daeb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442714"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773171"
 ---
 # <a name="positionenum"></a>PositionEnum
-レコード [セット](../../../ado/reference/ado-api/recordset-object-ado.md)内のレコードポインターの現在位置を指定します。  
+レコード [セット](./recordset-object-ado.md)内のレコードポインターの現在位置を指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
-|**adPosBOF**|-2|現在のレコードポインターが BOF にある (つまり、 [bof](../../../ado/reference/ado-api/bof-eof-properties-ado.md) プロパティが **True**である) ことを示します。|  
-|**adPosEOF**|-3|現在のレコードポインターが EOF にあることを示します (つまり、 [eof](../../../ado/reference/ado-api/bof-eof-properties-ado.md) プロパティが **True**であることを示します)。|  
-|**adPosUnknown**|-1|**レコードセット**が空であるか、現在の位置が不明であるか、またはプロバイダーが[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)または[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティをサポートしていないことを示します。|  
+|**adPosBOF**|-2|現在のレコードポインターが BOF にある (つまり、 [bof](./bof-eof-properties-ado.md) プロパティが **True**である) ことを示します。|  
+|**adPosEOF**|-3|現在のレコードポインターが EOF にあることを示します (つまり、 [eof](./bof-eof-properties-ado.md) プロパティが **True**であることを示します)。|  
+|**adPosUnknown**|-1|**レコードセット**が空であるか、現在の位置が不明であるか、またはプロバイダーが[AbsolutePage](./absolutepage-property-ado.md)または[AbsolutePosition](./absoluteposition-property-ado.md)プロパティをサポートしていないことを示します。|  
   
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
@@ -45,9 +45,9 @@ ms.locfileid: "88442714"
 
 :::row:::
     :::column:::
-        [AbsolutePage プロパティ (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
+        [AbsolutePage プロパティ (ADO)](./absolutepage-property-ado.md)  
     :::column-end:::
     :::column:::
-        [AbsolutePosition プロパティ (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)  
+        [AbsolutePosition プロパティ (ADO)](./absoluteposition-property-ado.md)  
     :::column-end:::
 :::row-end:::

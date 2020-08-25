@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18365d26c9b46fb651d68291dc5fa026f23e3bfb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 616b82b397694e4db41f709080dc4beafd945878
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451914"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759022"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>手順 5:DataControl が使用可能になる (RDS チュートリアル)
 返された **レコードセット** オブジェクトを使用できます。 他の **レコードセット**と同じように、確認、移動、または編集を行うことができます。 **レコードセット**でできることは、環境によって異なります。 Visual Basic と Visual C++ には、データコントロールを有効にすることで、直接または間接的に **レコードセット** を使用できるビジュアルコントロールがあります。  
@@ -26,7 +26,7 @@ ms.locfileid: "88451914"
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- たとえば、Microsoft Internet Explorer で Web ページを表示している場合、 **レコードセット** オブジェクトのデータをビジュアルコントロールに表示することができます。 Web ページ上のビジュアルコントロールは、 **レコードセット** オブジェクトに直接アクセスできません。 ただし、これらのユーザーは、RDS を介して **レコードセット** オブジェクトにアクセスでき [ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)。 **RDS。DataControl**は、 [SourceRecordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)プロパティが**レコードセット**オブジェクトに設定されている場合に、ビジュアルコントロールによって使用できるようになります。  
+ たとえば、Microsoft Internet Explorer で Web ページを表示している場合、 **レコードセット** オブジェクトのデータをビジュアルコントロールに表示することができます。 Web ページ上のビジュアルコントロールは、 **レコードセット** オブジェクトに直接アクセスできません。 ただし、これらのユーザーは、RDS を介して **レコードセット** オブジェクトにアクセスでき [ます。DataControl](../../reference/rds-api/datacontrol-object-rds.md)。 **RDS。DataControl**は、 [SourceRecordset](../../reference/rds-api/recordset-sourcerecordset-properties-rds.md)プロパティが**レコードセット**オブジェクトに設定されている場合に、ビジュアルコントロールによって使用できるようになります。  
   
  ビジュアルコントロールオブジェクトは、 **DATASRC** パラメーターを RDS に設定する必要があり **ます。DataControl**とその **DATAFLD** プロパティは、 **レコードセット** オブジェクトフィールド (列) に設定されています。  
   
@@ -44,6 +44,6 @@ Sub RDSTutorial5()
 ...  
 ```  
   
-## <a name="see-also"></a>参照  
- [手順 6: 変更がサーバーに送信される (RDS チュートリアル)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
- [RDS のチュートリアル (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+## <a name="see-also"></a>関連項目  
+ [手順 6: 変更がサーバーに送信される (RDS チュートリアル)](./step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
+ [RDS のチュートリアル (VBScript)](./rds-tutorial-vbscript.md)

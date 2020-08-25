@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c21e12d3601f40b1749067f04ce3d655ea0c1109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5c87c5374a0e631b08d355e5f1fc0d7c0862d23
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438604"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767411"
 ---
 # <a name="sql-property"></a>SQL プロパティ
-[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を取得するために使用するクエリ文字列を示します。  
+[レコードセット](../ado-api/recordset-object-ado.md)を取得するために使用するクエリ文字列を示します。  
   
- RDS では、デザイン時に **SQL** プロパティを設定でき [ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) オブジェクトのオブジェクトタグ、またはスクリプトコードの実行時。  
+ RDS では、デザイン時に **SQL** プロパティを設定でき [ます。DataControl](./datacontrol-object-rds.md) オブジェクトのオブジェクトタグ、またはスクリプトコードの実行時。  
   
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
@@ -50,13 +50,11 @@ Run time: DataControl.SQL = "QueryString"
  カスタムのサーバー側ビジネスオブジェクトがクライアントのデータを取得する場合、 **SQL** プロパティは省略可能です。  
   
 ## <a name="applies-to"></a>適用対象  
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>参照  
- [SQL プロパティの例 (VBScript)](../../../ado/reference/rds-api/sql-property-example-vbscript.md)   
- [Connect プロパティ (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
- [Query メソッド (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
- [Refresh メソッド (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
- [SubmitChanges メソッド (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+ [SQL プロパティの例 (VBScript)](./sql-property-example-vbscript.md)   
+ [Connect プロパティ (RDS)](./connect-property-rds.md)   
+ [Query メソッド (RDS)](./query-method-rds.md)   
+ [Refresh メソッド (RDS)](./refresh-method-rds.md)   
+ [SubmitChanges メソッド (RDS)](./submitchanges-method-rds.md)

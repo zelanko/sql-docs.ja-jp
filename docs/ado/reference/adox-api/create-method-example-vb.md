@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40a50d983365285ccf0001f46450613bdf78bd87
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 462b701250f285b26e5b778897e221e97fc4c9c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440204"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770821"
 ---
 # <a name="create-method-example-vb"></a>Create メソッドの例 (VB)
-次のコードは、 [create](../../../ado/reference/adox-api/create-method-adox.md) メソッドを使用して新しい Microsoft Jet データベースを作成する方法を示しています。  
+次のコードは、 [create](./create-method-adox.md) メソッドを使用して新しい Microsoft Jet データベースを作成する方法を示しています。  
   
 ```  
 Attribute VB_Name = "Create"  
@@ -51,5 +51,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Create メソッド (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [Create メソッド (ADOX)](./create-method-adox.md)

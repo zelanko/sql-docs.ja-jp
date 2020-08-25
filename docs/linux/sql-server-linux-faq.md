@@ -1,18 +1,18 @@
 ---
 title: SQL Server on Linux に関する FAQ
-description: この記事では、Linux で実行されている SQL Server に関してよく寄せられる質問への回答を提供します。
+description: この記事では、Linux で実行されている SQL Server に関してよく寄せられる質問 (FAQ) への回答を提供します。
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a41223036980a77a45094f2a64c22b898902548c
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: fa7cd3bd09f71555c826622030e3183d269abb4a
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477354"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088903"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server on Linux に関してよく寄せられる質問 (FAQ)
 

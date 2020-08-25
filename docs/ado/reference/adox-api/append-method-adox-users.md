@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e774ab590e3f405cab157293405eba5e575ecb52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35583e55a15fcbf781bc156b9c9fe1f226279d51
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440464"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771341"
 ---
 # <a name="append-method-adox-users"></a>Append メソッド (ADOX Users)
-新しい [ユーザー](../../../ado/reference/adox-api/user-object-adox.md) オブジェクトを [Users](../../../ado/reference/adox-api/users-collection-adox.md) コレクションに追加します。  
+新しい [ユーザー](./user-object-adox.md) オブジェクトを [Users](./users-collection-adox.md) コレクションに追加します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,29 +35,29 @@ Users.Append User[,Password]
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *User*  
+ *ユーザー*  
  追加する**ユーザー**オブジェクトまたは作成して追加するユーザーの名前を含む**バリアント**値。  
   
  *パスワード*  
- 任意。 ユーザーのパスワードを含む **文字列** 値です。 *Password*パラメーターは、**ユーザー**オブジェクトの[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)メソッドによって指定された値に対応します。  
+ 任意。 ユーザーのパスワードを含む **文字列** 値です。 *Password*パラメーターは、**ユーザー**オブジェクトの[ChangePassword](./changepassword-method-adox.md)メソッドによって指定された値に対応します。  
   
 ## <a name="remarks"></a>解説  
- [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の**ユーザー**コレクションは、すべてのカタログのユーザーを表します。 [グループ](../../../ado/reference/adox-api/group-object-adox.md)の**ユーザー**コレクションは、特定のグループのメンバーシップを持つユーザーのみを表します。  
+ [カタログ](./catalog-object-adox.md)の**ユーザー**コレクションは、すべてのカタログのユーザーを表します。 [グループ](./group-object-adox.md)の**ユーザー**コレクションは、特定のグループのメンバーシップを持つユーザーのみを表します。  
   
  プロバイダーがユーザーの作成をサポートしていない場合、エラーが発生します。  
   
 > [!NOTE]
->  **ユーザー**オブジェクトを**グループ**オブジェクトの**users**コレクションに追加する前に、追加する**ユーザーオブジェクトが****カタログ**の**users**コレクションに既に存在[している](../../../ado/reference/adox-api/name-property-adox.md)必要があります。  
+>  **ユーザー**オブジェクトを**グループ**オブジェクトの**users**コレクションに追加する前に、追加する**ユーザーオブジェクトが****カタログ**の**users**コレクションに既に存在[している](./name-property-adox.md)必要があります。  
   
 ## <a name="applies-to"></a>適用対象  
- [Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
+ [Users コレクション (ADOX)](./users-collection-adox.md)  
   
 ## <a name="see-also"></a>参照  
- [Groups および Users Append、ChangePassword メソッドの例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
- [Append メソッド (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append メソッド (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append メソッド (ADOX Indexes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append メソッド (ADOX Keys)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append メソッド (ADOX Procedures)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append メソッド (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append メソッド (ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Groups および Users Append、ChangePassword メソッドの例 (VB)](./groups-and-users-append-changepassword-methods-example-vb.md)   
+ [Append メソッド (ADOX Columns)](./append-method-adox-columns.md)   
+ [Append メソッド (ADOX Groups)](./append-method-adox-groups.md)   
+ [Append メソッド (ADOX Indexes)](./append-method-adox-indexes.md)   
+ [Append メソッド (ADOX Keys)](./append-method-adox-keys.md)   
+ [Append メソッド (ADOX Procedures)](./append-method-adox-procedures.md)   
+ [Append メソッド (ADOX Tables)](./append-method-adox-tables.md)   
+ [Append メソッド (ADOX Views)](./append-method-adox-views.md)

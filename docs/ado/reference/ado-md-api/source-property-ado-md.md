@@ -17,23 +17,23 @@ helpviewer_keywords:
 ms.assetid: 875a99ea-7f1a-4570-87b1-5ecbebbcf845
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50a27857dc8ce5b2986d52a4285a81fff856243b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79e6014e3bccc8ced6c8637f8966181069a42dd5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440684"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777831"
 ---
 # <a name="source-property-ado-md"></a>Source プロパティ (ADO MD)
-[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)内のデータのソースを示します。  
+[セルセット](./cellset-object-ado-md.md)内のデータのソースを示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- **バリアント**を設定または返します。閉じられた[セル](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)セットオブジェクトの場合は読み取り/書き込み、開いている**セルセット**オブジェクトの場合は読み取り専用です。 **バリアント**には、MDX クエリなどの有効な**文字列**が含まれている必要があります。  
+ **バリアント**を設定または返します。閉じられた[セル](./cellset-object-ado-md.md)セットオブジェクトの場合は読み取り/書き込み、開いている**セルセット**オブジェクトの場合は読み取り専用です。 **バリアント**には、MDX クエリなどの有効な**文字列**が含まれている必要があります。  
   
 ## <a name="applies-to"></a>適用対象  
- [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+ [CellSet オブジェクト (ADO MD)](./cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>参照  
- [セルセットの例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [ActiveConnection プロパティ (ADO MD)](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)   
- [Open メソッド (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
+ [セルセットの例 (VB)](./cellset-example-vb.md)   
+ [ActiveConnection プロパティ (ADO MD)](./activeconnection-property-ado-md.md)   
+ [Open メソッド (ADO MD)](./open-method-ado-md.md)

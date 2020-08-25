@@ -1,4 +1,5 @@
 ---
+description: OLE DB 変換先
 title: OLE DB 変換先 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 046e23f3861af9e1a1b6877036d90f249bb04723
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 91f2323a61440792654b341364efb79506c5cdd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477794"
 ---
 # <a name="ole-db-destination"></a>OLE DB 変換先
 
@@ -129,6 +130,8 @@ ms.locfileid: "86908399"
   
 > [!NOTE]  
 >  OLE DB 変換先の **CommandTimeout** プロパティは、 **[OLE DB 変換先エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。 また、一部の高速読み込みオプションは **[詳細エディター]** でしか使用できません。 これらのプロパティの詳細については、「 [OLE DB カスタム プロパティ](../../integration-services/data-flow/ole-db-custom-properties.md)」の OLE DB 変換先に関するセクションを参照してください。  
+> 
+>  **CommandTimeout** プロパティは、データ アクセス モードが **SQL コマンド**の場合にのみ有効です。
   
 ### <a name="static-options"></a>静的オプション  
  **[キャッシュなし]**  

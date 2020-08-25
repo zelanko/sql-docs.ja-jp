@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9bdcecf462476b7f2fecfea48f174e0b4b2c499e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 686d3caeb7835d05a4e2eff0c588a4fb2ca18cf4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452064"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759492"
 ---
 # <a name="rds-usage-and-security"></a>RDS の使用方法とセキュリティ
 サーバーをセットアップし、RDS をすばやく使用するには、このセクションの情報を参照してください。 このセクションには、rds を実装するときに必要になる可能性がある特定の構成手順、RDS と他のテクノロジ間の重要な関係について説明し、RDS ソリューションの設定時に発生する可能性がある問題の解決策を特定するのに役立ちます。  
@@ -29,17 +29,15 @@ ms.locfileid: "88452064"
   
  このセクションでは、次のトピックを扱います。  
   
--   [RDS の構成](../../../ado/guide/remote-data-service/configuring-rds.md)  
+-   [RDS の構成](./configuring-rds.md)  
   
--   [RDS での関連テクノロジの使用](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)  
+-   [RDS での関連テクノロジの使用](./using-related-technologies-with-rds.md)  
   
--   [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)  
+-   [DataFactory のカスタマイズ](./datafactory-customization.md)  
   
--   [RDS のトラブルシューティング](../../../ado/guide/remote-data-service/troubleshooting-rds.md)  
+-   [RDS のトラブルシューティング](./troubleshooting-rds.md)  
   
-## <a name="see-also"></a>参照  
- [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [RDS のシナリオ](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
-
+## <a name="see-also"></a>関連項目  
+ [RDS の基礎](./rds-fundamentals.md)   
+ [RDS のシナリオ](./rds-scenario.md)   
+ [RDS チュートリアル](./rds-tutorial.md)
