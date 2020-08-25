@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b67f8f38a57d7918f2b6f79ed9a2a82dc00d4dee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 109fe50bfabc39abf60e5b06ac63be98affb02fd
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355458"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805558"
 ---
 # <a name="ado-glossary-terms"></a>ADO 用語集の用語
 このトピックでは、ADO に関連する用語を定義します。
@@ -133,7 +133,7 @@ ms.locfileid: "88355458"
 
  階層レコードセット別の**レコードセット**を含む**レコードセット**。 「データシェイプ、章」も参照してください。
 
- 詳細については、「 [階層レコードセット内の行へのアクセス](../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)」を参照してください。
+ 詳細については、「 [階層レコードセット内の行へのアクセス](./guide/data/accessing-rows-in-a-hierarchical-recordset.md)」を参照してください。
 
  階層一般に、階層とは、最上位レベルと下位レベルを持つランク付けされた構造のことです。 ADO では、階層レコード **セット** を使用して、レコードとチャプター間の親子リレーションシップを表します。 また、ADO では、 **レコード** および **ストリーム** オブジェクトを使用して、フォルダーやドキュメントなどの階層ツリー構造にアクセスできます。 ADO MD には、OLAP キューブ内のディメンションのレベル間のリレーションシップを表す **階層** オブジェクトも含まれます。 「階層レコードセット」、「親子リレーションシップ」、「章」、「ツリー」も参照してください。
 

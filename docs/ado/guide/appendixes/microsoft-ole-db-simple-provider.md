@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ed83809ec1bf3fd4ba55552f4ecac1d55cfb8d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81d60f33e0e9e055e086d990a681efb74cc943cc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454024"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806527"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB Simple Provider の概要
-Microsoft OLE DB Simple Provider (OSP) を使用すると、ADO は、 [OLE DB Simple provider (osp) Toolkit](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)を使用して、プロバイダーが記述されているすべてのデータにアクセスできます。 単純なプロバイダーは、メモリ内配列や XML ドキュメントなどの基本的な OLE DB サポートのみを必要とするデータソースにアクセスすることを目的としています。
+Microsoft OLE DB Simple Provider (OSP) を使用すると、ADO は、 [OLE DB Simple provider (osp) Toolkit](/previous-versions/windows/desktop/ms715822(v=vs.85))を使用して、プロバイダーが記述されているすべてのデータにアクセスできます。 単純なプロバイダーは、メモリ内配列や XML ドキュメントなどの基本的な OLE DB サポートのみを必要とするデータソースにアクセスすることを目的としています。
 
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
- OLE DB の単純なプロバイダー DLL に接続するには、 *provider* 引数を [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) プロパティに設定します。
+ OLE DB の単純なプロバイダー DLL に接続するには、 *provider* 引数を [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) プロパティに設定します。
 
 ```vb
 MSDAOSP
 ```
 
- この値は、 [プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md) プロパティを使用して設定または読み取ることもできます。
+ この値は、 [プロバイダー](../../reference/ado-api/provider-property-ado.md) プロパティを使用して設定または読み取ることもできます。
 
  プロバイダーのライターによって決定される登録済みプロバイダー名を使用して、完全な OLE DB プロバイダーとして登録されている単純なプロバイダーに接続できます。
 
@@ -45,7 +45,7 @@ MSDAOSP
 
  文字列は、次のキーワードで構成されています。
 
-|Keyword|説明|
+|キーワード|説明|
 |-------------|-----------------|
 |**プロバイダー**|SQL Server の OLE DB プロバイダーを指定します。|
 |**データ ソース**|サーバーの名前を指定します。|
@@ -137,7 +137,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
 -   XMLDSO は、階層内の各 **レコードセット** にデータの列 ($Text) を追加します。
 
- OLE DB 単純なプロバイダーの詳細については、「 [単純なプロバイダーの構築](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)」を参照してください。
+ OLE DB 単純なプロバイダーの詳細については、「 [単純なプロバイダーの構築](/previous-versions/windows/desktop/ms721067(v=vs.85))」を参照してください。
 
 ## <a name="code-example"></a>コード例
  次の Visual Basic コードは、任意の XML ファイルを開き、階層 **レコードセット**を構築し、各レコード **セット** の各レコードをデバッグウィンドウに再帰的に書き込む方法を示しています。

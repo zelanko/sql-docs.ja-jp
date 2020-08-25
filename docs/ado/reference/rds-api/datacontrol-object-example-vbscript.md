@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c237a4259838beca54f0016b8a34f191e169d0ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 181415874cfc6ede5f274fbdc5961b8275e13763
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439164"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768577"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>DataControl オブジェクトの例 (VBScript)
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- 次のコードは、RDS を設定する方法を示して [います。](../../../ado/reference/rds-api/datacontrol-object-rds.md) デザイン時にパラメーターを DataControl し、データを認識するコントロールにバインドします。 このコードを \<Body> 通常の HTML ドキュメントのタグとタグの間で切り取って貼り付け、 \</Body> **DataControlDesignVBS**という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
+ 次のコードは、RDS を設定する方法を示して [います。](./datacontrol-object-rds.md) デザイン時にパラメーターを DataControl し、データを認識するコントロールにバインドします。 このコードを \<Body> 通常の HTML ドキュメントのタグとタグの間で切り取って貼り付け、 \</Body> **DataControlDesignVBS**という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginDataControlDesignVBS -->  
@@ -184,6 +184,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
-
+ [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)

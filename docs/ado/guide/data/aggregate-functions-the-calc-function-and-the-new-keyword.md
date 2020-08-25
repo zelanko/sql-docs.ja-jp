@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad6bf4b041fbae0f30e327bd32dd067c1e9c429a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3ef1ae1b6b5d60774e220cc4594cd54eda291e7
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453754"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806957"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>集計関数、CALC 関数、NEW キーワード
 データシェイプは、次の関数をサポートしています。 操作対象の列を含むチャプターに割り当てられた名前は、 *チャプターエイリアス*です。  
@@ -40,7 +40,7 @@ ms.locfileid: "88453754"
   
 |計算式|説明|  
 |---------------------------|-----------------|  
-|CALC (*式*)|任意の式を計算しますが、CALC 関数を含む **レコードセット** の行のみを計算します。 これらの [Visual Basic for Applications (VBA) 関数](../../../ado/guide/data/visual-basic-for-applications-functions.md) を使用する式はすべて許可されます。|  
+|CALC (*式*)|任意の式を計算しますが、CALC 関数を含む **レコードセット** の行のみを計算します。 これらの [Visual Basic for Applications (VBA) 関数](./visual-basic-for-applications-functions.md) を使用する式はすべて許可されます。|  
   
 |NEW キーワード|説明|  
 |-----------------|-----------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "88453754"
   
  新しいフィールドの型が decimal (OLE DB、DBTYPE_DECIMAL、または ADO で adDecimal) の場合、有効桁数と小数点以下桁数の値を指定する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [データシェイプの例](../../../ado/guide/data/data-shaping-example.md)   
- [仮形の文法](../../../ado/guide/data/formal-shape-grammar.md)   
- [一般的な Shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)
+## <a name="see-also"></a>参照  
+ [データシェイプの例](./data-shaping-example.md)   
+ [仮形の文法](./formal-shape-grammar.md)   
+ [一般的な Shape コマンド](./shape-commands-in-general.md)

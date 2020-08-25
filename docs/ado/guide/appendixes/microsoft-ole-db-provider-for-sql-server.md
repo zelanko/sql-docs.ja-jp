@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a39166406be321d01ab6d0dc2acd2488d7b64da5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ffb627b0994afbe2b51f946e4ab7dca881e9a9a4
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454044"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806551"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server の概要
 Microsoft OLE DB Provider for SQL Server (SQLOLEDB) を使用すると、ADO は Microsoft SQL Server にアクセスできます。
@@ -29,13 +29,13 @@ Microsoft OLE DB Provider for SQL Server (SQLOLEDB) を使用すると、ADO は
 > Microsoft OLE DB Provider for SQL Server (SQLOLEDB) は非推奨とされます。新しい開発作業には使用しないことをお勧めします。 代わりに、新しい [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) を使用します。これは、最新のサーバー機能で更新されます。
 
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
- このプロバイダーに接続するには、 *provider* 引数を [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) プロパティに設定します。
+ このプロバイダーに接続するには、 *provider* 引数を [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) プロパティに設定します。
 
 ```vb
 SQLOLEDB
 ```
 
- この値は、 [プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md) プロパティを使用して設定または読み取ることもできます。
+ この値は、 [プロバイダー](../../reference/ado-api/provider-property-ado.md) プロパティを使用して設定または読み取ることもできます。
 
 ## <a name="typical-connection-string"></a>一般的な接続文字列
  このプロバイダーの一般的な接続文字列は次のとおりです。
@@ -48,7 +48,7 @@ User ID=MyUserID;Password=MyPassword;"
 
  文字列は、次のキーワードで構成されています。
 
-|Keyword|説明|
+|キーワード|説明|
 |-------------|-----------------|
 |**プロバイダー**|SQL Server の OLE DB プロバイダーを指定します。|
 |**データソース** または **サーバー**|サーバーの名前を指定します。|
@@ -60,11 +60,11 @@ User ID=MyUserID;Password=MyPassword;"
 >  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes** または **INTEGRATED Security = SSPI** を指定する必要があります。
 
 ## <a name="provider-specific-connection-parameters"></a>プロバイダー固有の接続パラメーター
- プロバイダーは、ADO によって定義されているものに加えて、いくつかのプロバイダー固有の接続パラメーターをサポートしています。 ADO の接続プロパティと同様に、これらのプロバイダー固有のプロパティは、[接続](../../../ado/reference/ado-api/connection-object-ado.md)の[properties](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを使用して設定することも、 **ConnectionString**の一部として設定することもできます。
+ プロバイダーは、ADO によって定義されているものに加えて、いくつかのプロバイダー固有の接続パラメーターをサポートしています。 ADO の接続プロパティと同様に、これらのプロバイダー固有のプロパティは、[接続](../../reference/ado-api/connection-object-ado.md)の[properties](../../reference/ado-api/properties-collection-ado.md)コレクションを使用して設定することも、 **ConnectionString**の一部として設定することもできます。
 
 |パラメーター|説明|
 |---------------|-----------------|
-|Trusted_Connection|ユーザー認証モードを示します。 これは、 **[はい]** または [ **いいえ**] に設定できます。 既定値は **No**です。 このプロパティが **[はい]** に設定されている場合、SQLOLEDB は MICROSOFT Windows NT 認証モードを使用して、 **Location** プロパティ値および [Datasource](../../../ado/reference/ado-api/datasource-property-ado.md) プロパティ値で指定された SQL Server データベースへのユーザーアクセスを承認します。 このプロパティが [ **いいえ**] に設定されている場合、SQLOLEDB は混合モードを使用して、SQL Server データベースへのユーザーアクセスを承認します。 SQL Server のログインとパスワードは、 **ユーザー Id** と **パスワード** のプロパティで指定します。|
+|Trusted_Connection|ユーザー認証モードを示します。 これは、 **[はい]** または [ **いいえ**] に設定できます。 既定値は **No**です。 このプロパティが **[はい]** に設定されている場合、SQLOLEDB は MICROSOFT Windows NT 認証モードを使用して、 **Location** プロパティ値および [Datasource](../../reference/ado-api/datasource-property-ado.md) プロパティ値で指定された SQL Server データベースへのユーザーアクセスを承認します。 このプロパティが [ **いいえ**] に設定されている場合、SQLOLEDB は混合モードを使用して、SQL Server データベースへのユーザーアクセスを承認します。 SQL Server のログインとパスワードは、 **ユーザー Id** と **パスワード** のプロパティで指定します。|
 |[現在の言語]|SQL Server 言語名を示します。 システム メッセージの選択や書式設定に使われる言語を示します。 この言語は SQL Server にインストールする必要があります。そうしないと、接続を開くことができません。|
 |[ネットワーク アドレス]|**Location**プロパティによって指定された SQL Server のネットワークアドレスを示します。|
 |Network Library|SQL Server との通信に使用されるネットワークライブラリ (DLL) の名前を示します。 この名前には、パスやファイル拡張子 (.dll) は含めません。 既定値は SQL Server クライアント構成によって提供されます。|
@@ -109,7 +109,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ```
 
 ## <a name="sql-server-features"></a>SQL Server 機能
- SQL Server を使用すると、ADO は **コマンド** 入力に xml を使用し、 **レコードセット** オブジェクトではなく xml ストリーム形式で結果を取得できます。 詳細については、「 [コマンド入力用のストリームの使用](../../../ado/guide/data/command-streams.md) 」および「 [結果セットのストリームへの取得](../../../ado/guide/data/retrieving-resultsets-into-streams.md)」を参照してください。
+ SQL Server を使用すると、ADO は **コマンド** 入力に xml を使用し、 **レコードセット** オブジェクトではなく xml ストリーム形式で結果を取得できます。 詳細については、「 [コマンド入力用のストリームの使用](../data/command-streams.md) 」および「 [結果セットのストリームへの取得](../data/retrieving-resultsets-into-streams.md)」を参照してください。
 
 ### <a name="accessing-sql_variant-data-using-mdac-27-mdac-28-or-windows-dac-60"></a>MDAC 2.7、MDAC 2.8、または Windows DAC 6.0 を使用した sql_variant データへのアクセス
  Microsoft SQL Server には **sql_variant**と呼ばれるデータ型があります。 OLE DB の **DBTYPE_VARIANT**と同様に、 **sql_variant** データ型には複数の異なる型のデータを格納できます。 ただし、 **DBTYPE_VARIANT** と **sql_variant**にはいくつかの重要な違いがあります。 また、ADO は、 **sql_variant** 値として格納されるデータを、他のデータ型を処理する方法とは異なる方法で処理します。 次の一覧では、 **sql_variant**型の列に格納されている SQL Server データにアクセスする際に考慮する必要がある問題について説明します。
@@ -134,9 +134,9 @@ EXECUTE SalesByCategory 'Produce', '1995'
  スクロール可能な SQLOLEDB レコードセットは SQL Server カーソルによってサポートされています。 SQL Server では、データベースの他のユーザーによって行われた変更によって影響を受けるカーソルに制限が課されます。 具体的には、一部のカーソル内の行を並べ替えることはできません。また、SQL ORDER BY 句を含むコマンドを使用してレコードセットを作成しようとすると失敗することがあります。
 
 ## <a name="dynamic-properties"></a>動的プロパティ
- Microsoft OLE DB Provider for SQL Server では、開かれていない[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)、および[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの**properties**コレクションに動的なプロパティがいくつか挿入されます。
+ Microsoft OLE DB Provider for SQL Server では、開かれていない[接続](../../reference/ado-api/connection-object-ado.md)、[レコードセット](../../reference/ado-api/recordset-object-ado.md)、および[コマンド](../../reference/ado-api/command-object-ado.md)オブジェクトの**properties**コレクションに動的なプロパティがいくつか挿入されます。
 
- 次の表は、各動的プロパティの ADO と OLE DB 名のクロスインデックスです。 OLE DB プログラマーリファレンスでは、ADO プロパティ名を "Description" という用語で参照しています。 これらのプロパティの詳細については、OLE DB プログラマーリファレンスを参照してください。 インデックスで OLE DB プロパティ名を検索するか、「 [付録 C: OLE DB のプロパティ](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)」を参照してください。
+ 次の表は、各動的プロパティの ADO と OLE DB 名のクロスインデックスです。 OLE DB プログラマーリファレンスでは、ADO プロパティ名を "Description" という用語で参照しています。 これらのプロパティの詳細については、OLE DB プログラマーリファレンスを参照してください。 インデックスで OLE DB プロパティ名を検索するか、「 [付録 C: OLE DB のプロパティ](/previous-versions/windows/desktop/ms723130(v=vs.85))」を参照してください。
 
 ## <a name="connection-dynamic-properties"></a>接続の動的プロパティ
  **接続**オブジェクトの**properties**コレクションには、次のプロパティが追加されます。
@@ -356,7 +356,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |XML ルート|SSPROP_STREAM_XMLROOT|
 |XSL (XSL)|SSPROP_STREAM_XSL|
 
- Microsoft SQL Server OLE DB プロバイダーの具体的な実装の詳細と機能については、 [SQL Server プロバイダー](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635)に関する説明を参照してください。
+ Microsoft SQL Server OLE DB プロバイダーの具体的な実装の詳細と機能については、 [SQL Server プロバイダー](/previous-versions/windows/desktop/ms720897(v=vs.85))に関する説明を参照してください。
 
-## <a name="see-also"></a>関連項目
- [ConnectionString プロパティ (ado)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [プロバイダープロパティ (ado](../../../ado/reference/ado-api/provider-property-ado.md) ) [レコードセットオブジェクト (ado)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>参照
+ [ConnectionString プロパティ (ado)](../../reference/ado-api/connectionstring-property-ado.md) [プロバイダープロパティ (ado](../../reference/ado-api/provider-property-ado.md) ) [レコードセットオブジェクト (ado)](../../reference/ado-api/recordset-object-ado.md)

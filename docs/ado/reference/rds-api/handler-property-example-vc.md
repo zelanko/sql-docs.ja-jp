@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a570727ef9bdee2ac1411a1594dae518dd4fe36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d57c984912b46e03f8e07c85d028680196cc67cb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438964"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768161"
 ---
 # <a name="handler-property-example-vc"></a>Handler プロパティの例 (VC++)
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- この例では、 [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) オブジェクト [ハンドラー](../../../ado/reference/rds-api/handler-property-rds.md) プロパティを示します。 (詳細については、「 [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md) 」を参照してください。)  
+ この例では、 [RDS DataControl](./datacontrol-object-rds.md) オブジェクト [ハンドラー](./handler-property-rds.md) プロパティを示します。 (詳細については、「 [DataFactory のカスタマイズ](../../guide/remote-data-service/datafactory-customization.md) 」を参照してください。)  
   
  サーバーに配置されているパラメーターファイル (Msdfmap.ini) で、次のセクションを想定します。  
   
@@ -38,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- コードは次のようになります。 [SQL](../../../ado/reference/rds-api/sql-property.md)プロパティに割り当てられたコマンドは***AuthorById***識別子と一致し、作成者の Michael O'Leary の行を取得します。 コードの [connect](../../../ado/reference/rds-api/connect-property-rds.md) プロパティに Northwind データソースが指定されていますが、そのデータソースは Msdfmap.ini *Connect* セクションで上書きされます。 **DataControl** object [recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)プロパティは、コードの便宜として、接続されていない[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトに割り当てられます。  
+ コードは次のようになります。 [SQL](./sql-property.md)プロパティに割り当てられたコマンドは***AuthorById***識別子と一致し、作成者の Michael O'Leary の行を取得します。 コードの [connect](./connect-property-rds.md) プロパティに Northwind データソースが指定されていますが、そのデータソースは Msdfmap.ini *Connect* セクションで上書きされます。 **DataControl** object [recordset](./recordset-sourcerecordset-properties-rds.md)プロパティは、コードの便宜として、接続されていない[レコードセット](../ado-api/recordset-object-ado.md)オブジェクトに割り当てられます。  
   
 ```  
 // BeginHandlerCpp.cpp  
@@ -130,27 +130,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Handler プロパティ (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)   
+ [Handler プロパティ (RDS)](./handler-property-rds.md)

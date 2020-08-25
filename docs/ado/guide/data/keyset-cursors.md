@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea25d5c85969b71836fec30085dd9a626a18d40a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26586cf6a01b51e01ca695252dcdbf6e197b77c9
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453174"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805852"
 ---
 # <a name="keyset-cursors"></a>Keyset カーソル
 キーセットカーソルは、静的カーソルと動的カーソルの間に、変更を検出する機能を提供します。 静的カーソルと同様に、結果セットのメンバーシップと順序に対する変更は常に検出されません。 動的カーソルと同様に、結果セット内の行の値に対する変更は検出されます。  
@@ -39,6 +39,6 @@ ms.locfileid: "88453174"
  データの変更に対する機密度は、前述のようにさまざまな状況によって異なるため、キーセットドリブンカーソルは正しく使用できません。 ただし、アプリケーションが同時更新を考慮しておらず、正しくないキーをプログラムで処理し、特定のキー付き行に直接アクセスする必要がある場合は、キーセットドリブンカーソルが機能する可能性があります。 **Adopenkeyset Cursor Typeenum**を使用して、ADO で keyset カーソルを使用することを指定します。  
   
 ## <a name="see-also"></a>参照  
- [順方向専用カーソル](../../../ado/guide/data/forward-only-cursors.md)   
- [静的カーソル](../../../ado/guide/data/static-cursors.md)   
- [動的カーソル](../../../ado/guide/data/dynamic-cursors.md)
+ [順方向専用カーソル](./forward-only-cursors.md)   
+ [静的カーソル](./static-cursors.md)   
+ [動的カーソル](./dynamic-cursors.md)

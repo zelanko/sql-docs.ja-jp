@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 057bd0f7a1023e32ef8bc9fd4da6aeca56e36a97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b145e538ea44d5f007f800f70df84b8eed0b116
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422196"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806659"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl オブジェクトのエラーコード
-次の表に、RDS の一覧を示し [ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) オブジェクトのエラーコード。 小さい2バイトの正の10進変換、完全なエラーコードの負の10進変換、および16進数の値が表示されます。
+次の表に、RDS の一覧を示し [ます。DataControl](../../reference/rds-api/datacontrol-object-rds.md) オブジェクトのエラーコード。 小さい2バイトの正の10進変換、完全なエラーコードの負の10進変換、および16進数の値が表示されます。
 
-|RDS.DataControl エラーコード|数値|説明|
+|RDS.DataControl エラーコード|Number|説明|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107-2146824175 0x800A1011|非同期操作が保留中であるため、操作を実行できません。|
 |**IDS_BadInlineTablegram**|4105-2146824183 0x800A1009|インライン tablegram が正しくありません。|
@@ -48,4 +48,4 @@ ms.locfileid: "88422196"
 |**IDS_URLMONNotFound**|4119-2146824169 0x800A1017|DataControl **URL** プロパティには Urlmon.dll システムファイルが必要ですが、見つかりません。|
 
 ## <a name="see-also"></a>参照
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
+ [DataControl オブジェクト (RDS)](../../reference/rds-api/datacontrol-object-rds.md)

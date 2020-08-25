@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d29e5897183cb10f33a322b75298d8adee08d0b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2da60e0d6ea0652d531b3e8c459617f1d52954b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453434"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806860"
 ---
 # <a name="event-parameters"></a>イベント パラメーター
-すべてのイベントハンドラーには、イベントハンドラーを制御する状態パラメーターがあります。 完全なイベントの場合、このパラメーターは、イベントを生成した操作の成功または失敗を示すためにも使用されます。 ほとんどの完全なイベントには、発生したエラーに関する情報や、操作の実行に使用される ADO オブジェクトを参照する1つ以上のオブジェクトパラメーターも含まれています。 たとえば、 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) イベントには、イベントに関連付けられている **コマンド**、 **レコードセット**、および **接続** オブジェクトのオブジェクトパラメーターが含まれます。 次の Microsoft® Visual Basic®例では、 **Execute**メソッドによって使用される**コマンド**、**レコードセット**、および**接続**オブジェクトを表す Pcommand、pcommand、および pcommand オブジェクトを確認できます。  
+すべてのイベントハンドラーには、イベントハンドラーを制御する状態パラメーターがあります。 完全なイベントの場合、このパラメーターは、イベントを生成した操作の成功または失敗を示すためにも使用されます。 ほとんどの完全なイベントには、発生したエラーに関する情報や、操作の実行に使用される ADO オブジェクトを参照する1つ以上のオブジェクトパラメーターも含まれています。 たとえば、 [ExecuteComplete](../../reference/ado-api/executecomplete-event-ado.md) イベントには、イベントに関連付けられている **コマンド**、 **レコードセット**、および **接続** オブジェクトのオブジェクトパラメーターが含まれます。 次の Microsoft® Visual Basic®例では、 **Execute**メソッドによって使用される**コマンド**、**レコードセット**、および**接続**オブジェクトを表す Pcommand、pcommand、および pcommand オブジェクトを確認できます。  
   
 ```  
 Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _  
@@ -60,7 +60,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 |**adStatusCancel**|発生しようとしている操作のキャンセルを要求します。|  
   
 ## <a name="error-parameter"></a>エラーパラメーター  
- *Error*パラメーターは ADO [error](../../../ado/reference/ado-api/error-object.md)オブジェクトへの参照です。 *Status*パラメーターを**Adstatuserrorの curred**に設定すると、**エラー**オブジェクトには、操作が失敗した理由の詳細が含まれます。 Complete イベントに関連付けられているイベントが、 *Status* パラメーターを **adstatuscancel**に設定して操作を取り消した場合、error オブジェクトは常に **adErrOperationCancelled**に設定されます。  
+ *Error*パラメーターは ADO [error](../../reference/ado-api/error-object.md)オブジェクトへの参照です。 *Status*パラメーターを**Adstatuserrorの curred**に設定すると、**エラー**オブジェクトには、操作が失敗した理由の詳細が含まれます。 Complete イベントに関連付けられているイベントが、 *Status* パラメーターを **adstatuscancel**に設定して操作を取り消した場合、error オブジェクトは常に **adErrOperationCancelled**に設定されます。  
   
 ## <a name="object-parameter"></a>オブジェクトパラメーター  
  各イベントは、操作に関係するオブジェクトを表す1つ以上のオブジェクトを受け取ります。 たとえば、 **ExecuteComplete** イベントは、 **コマンド** オブジェクト、 **レコードセット** オブジェクト、および **接続** オブジェクトを受け取ります。  
@@ -88,7 +88,7 @@ End Sub
  これに対して、 *Adstatus* を **adStatusUnwantedEvent** に1回だけ設定して、 **adReason** パラメーターを持たないイベントハンドラーがイベント通知の受信を停止するように要求する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [ADO イベントハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
- [言語による ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [イベントハンドラーの連携方法](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [イベントの種類](../../../ado/guide/data/types-of-events.md)
+ [ADO イベントハンドラーの概要](./ado-event-handler-summary.md)   
+ [言語による ADO イベントのインスタンス化](./ado-event-instantiation-by-language.md)   
+ [イベントハンドラーの連携方法](./how-event-handlers-work-together.md)   
+ [イベントの種類](./types-of-events.md)
