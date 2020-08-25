@@ -13,38 +13,38 @@ helpviewer_keywords:
 ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b614fc32325ef8a7b64b555f91c32966fdbb438c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c77279fa33781102234fc353aeaad88501e8ce7d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439464"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769291"
 ---
 # <a name="table-object-properties-methods-and-events"></a>Table オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
- [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
+ [Columns コレクション (ADOX)](./columns-collection-adox.md)  
   
- [DateCreated プロパティ (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)  
+ [DateCreated プロパティ (ADOX)](./datecreated-property-adox.md)  
   
- [DateModified プロパティ (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)  
+ [DateModified プロパティ (ADOX)](./datemodified-property-adox.md)  
   
- [Indexes コレクション (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+ [Indexes コレクション (ADOX)](./indexes-collection-adox.md)  
   
- [Keys コレクション (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
+ [Keys コレクション (ADOX)](./keys-collection-adox.md)  
   
- [Name プロパティ (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name プロパティ (ADOX)](./name-property-adox.md)  
   
- [ParentCatalog プロパティ (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
+ [ParentCatalog プロパティ (ADOX)](./parentcatalog-property-adox.md)  
   
- [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Properties コレクション (ADO)](../ado-api/properties-collection-ado.md)  
   
- [Type プロパティ (テーブル) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)  
+ [Type プロパティ (テーブル) (ADOX)](./type-property-table-adox.md)  
   
 ## <a name="methods"></a>メソッド  
  なし。  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Table オブジェクト (ADOX)](./table-object-adox.md)

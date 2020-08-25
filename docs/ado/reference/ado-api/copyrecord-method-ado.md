@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6519ba504056966b8e237f73209e96855dd6c11
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b72860215018a9a869aed8f0a06e280a601947e5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444384"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775781"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord メソッド (ADO)
-[レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるエンティティを別の場所にコピーします。  
+[レコード](./record-object-ado.md)によって表されるエンティティを別の場所にコピーします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +36,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>パラメーター  
  *ソース*  
- 任意。 コピーするエンティティ (ファイルやディレクトリなど) を指定する URL を含む **文字列** 値です。 *Source*を省略した場合、または空の文字列を指定した場合は、現在の[レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるファイルまたはディレクトリがコピーされます。  
+ 任意。 コピーするエンティティ (ファイルやディレクトリなど) を指定する URL を含む **文字列** 値です。 *Source*を省略した場合、または空の文字列を指定した場合は、現在の[レコード](./record-object-ado.md)によって表されるファイルまたはディレクトリがコピーされます。  
   
  *宛先*  
  任意。 *Source*をコピーする場所を指定する URL を含む**文字列**値です。  
@@ -47,8 +47,8 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *パスワード*  
  任意。 必要に応じて*ユーザー名*を確認するパスワードを含む**文字列**値です。  
   
- *[オプション]*  
- 任意。 **Adcopyunspecified**の既定値を持つ[CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)値。 このメソッドの動作を指定します。  
+ *Options*  
+ 任意。 **Adcopyunspecified**の既定値を持つ[CopyRecordOptionsEnum](./copyrecordoptionsenum.md)値。 このメソッドの動作を指定します。  
   
  *非同期*  
  任意。 **ブール**値。 **True**の場合、この操作は非同期であることを指定します。  
@@ -67,7 +67,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 >  **Adcopyoverwrite**オプションは慎重に使用してください。 たとえば、ディレクトリにファイルをコピーするときにこのオプションを指定すると、ディレクトリが *削除* され、ファイルに置き換えられます。  
   
 > [!NOTE]
->  Http スキームを使用する Url は、 [インターネット公開のために Microsoft OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「 [絶対 url と相対 url](../../../ado/guide/data/absolute-and-relative-urls.md)」を参照してください。  
+>  Http スキームを使用する Url は、 [インターネット公開のために Microsoft OLE DB プロバイダー](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「 [絶対 url と相対 url](../../guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
- [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+ [Record オブジェクト (ADO)](./record-object-ado.md)

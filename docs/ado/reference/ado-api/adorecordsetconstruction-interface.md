@@ -16,30 +16,30 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3dd1000dce8308ada4044eb9f043097f8767a9c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c17ccfe0a31714d5e2b3945960a4ff3d2ad55d1e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451324"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776641"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction インターフェイス
 **ADORecordsetConstruction**インターフェイスは、C/c + + アプリケーションの OLE DB**行**セットオブジェクトから ADO**レコードセット**オブジェクトを構築するために使用されます。  
   
  このインターフェイスは、次のプロパティをサポートしています。  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
   
 |プロパティ|説明|  
 |-|-|  
-|[章](../../../ado/reference/ado-api/chapter-property-ado.md)|読み取り/書き込み。<br />この ADO**レコードセット**オブジェクトから OLE DB**チャプター**オブジェクトを取得/設定します。|  
-|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|読み取り/書き込み。<br />この ADO**レコードセット**オブジェクトの/から OLE DB **rowposition**オブジェクトを取得/設定します。|  
-|[[行セット]](../../../ado/reference/ado-api/rowset-property-ado.md)|読み取り/書き込み。<br />この ADO**レコードセット**オブジェクトの/から OLE DB**行**セットオブジェクトを取得/設定します。|  
+|[章](./chapter-property-ado.md)|読み取り/書き込み。<br />この ADO**レコードセット**オブジェクトから OLE DB**チャプター**オブジェクトを取得/設定します。|  
+|[RowPosition](./rowposition-property-ado.md)|読み取り/書き込み。<br />この ADO**レコードセット**オブジェクトの/から OLE DB **rowposition**オブジェクトを取得/設定します。|  
+|[[行セット]](./rowset-property-ado.md)|読み取り/書き込み。<br />この ADO**レコードセット**オブジェクトの/から OLE DB**行**セットオブジェクトを取得/設定します。|  
   
 ## <a name="methods"></a>メソッド  
  なし。  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="remarks"></a>解説  
@@ -72,7 +72,7 @@ ms.locfileid: "88451324"
   
  また、OLE DB**チャプター**または**ROWPOSITION**オブジェクトから ADO**レコードセット**オブジェクトを構築することもできます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **バージョン:** ADO 2.0 以降  
   
  **ライブラリ:** msado15.dll  
@@ -80,5 +80,5 @@ ms.locfileid: "88451324"
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>参照  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Rowset プロパティ (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [Rowset プロパティ (ADO)](./rowset-property-ado.md)

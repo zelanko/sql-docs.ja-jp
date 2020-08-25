@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 270d93169c5c1d91c35a58a36be9a4577e25e7d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0aa5aebbd3a87ede7d73223ffa7684bff837a328
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443154"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774221"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord メソッド (ADO)
-[レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるエンティティを別の場所に移動します。  
+[レコード](./record-object-ado.md)によって表されるエンティティを別の場所に移動します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,8 +47,8 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *パスワード*  
  任意。 必要に応じて*ユーザー名*を確認するパスワードを含む**文字列**。  
   
- *[オプション]*  
- 任意。 既定値が**Admoveunspecified**である[MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)値。 このメソッドの動作を指定します。  
+ *Options*  
+ 任意。 既定値が**Admoveunspecified**である[MoveRecordOptionsEnum](./moverecordoptionsenum.md)値。 このメソッドの動作を指定します。  
   
  *非同期*  
  任意。 **ブール**値。 **True**の場合、この操作は非同期であることを指定します。  
@@ -64,17 +64,17 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 > [!NOTE]
 >  **Admoveoverwrite**オプションは慎重に使用してください。 たとえば、ディレクトリにファイルを移動するときにこのオプションを指定すると、ディレクトリが削除され、ファイルに置き換えられます。  
   
- [Parenturl](../../../ado/reference/ado-api/parenturl-property-ado.md)プロパティなど、**レコード**オブジェクトの特定の属性は、この操作の完了後に更新されません。 レコードを閉じて**レコードオブジェクトのプロパティを更新****し、ファイル**またはディレクトリが移動された場所の URL で再度開いてください。  
+ [Parenturl](./parenturl-property-ado.md)プロパティなど、**レコード**オブジェクトの特定の属性は、この操作の完了後に更新されません。 レコードを閉じて**レコードオブジェクトのプロパティを更新****し、ファイル**またはディレクトリが移動された場所の URL で再度開いてください。  
   
- この **レコード** が [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)から取得された場合、移動したファイルまたはディレクトリの新しい場所は、 **レコードセット**に直ちに反映されません。 レコードセットを閉じてから再度開いて、 **レコードセット** を更新します。  
+ この **レコード** が [レコードセット](./recordset-object-ado.md)から取得された場合、移動したファイルまたはディレクトリの新しい場所は、 **レコードセット**に直ちに反映されません。 レコードセットを閉じてから再度開いて、 **レコードセット** を更新します。  
   
 > [!NOTE]
->  Http スキームを使用する Url は、 [インターネット公開のために Microsoft OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「 [絶対 url と相対 url](../../../ado/guide/data/absolute-and-relative-urls.md)」を参照してください。  
+>  Http スキームを使用する Url は、 [インターネット公開のために Microsoft OLE DB プロバイダー](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「 [絶対 url と相対 url](../../guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
- [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Record オブジェクト (ADO)](./record-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [Move メソッド (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
+ [Move メソッド (ADO)](./move-method-ado.md)   
+ [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (ADO)](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (RDS)](../rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

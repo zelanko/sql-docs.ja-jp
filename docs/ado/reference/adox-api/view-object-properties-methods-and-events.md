@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 02b5ba88-cacd-4a68-881b-974824ea4a04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14aec18423dbeaf4136ac1d51a08a73ebcd0ba1c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 219d2b72ed41cd6fed29157bbe0fcfb33cc4000c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439344"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769011"
 ---
 # <a name="view-object-properties-methods-and-events"></a>View オブジェクトのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>プロパティ  
- [Command プロパティ](../../../ado/reference/adox-api/command-property-adox.md)  
+## <a name="properties"></a>Properties  
+ [Command プロパティ](./command-property-adox.md)  
   
- [DateCreated プロパティ](../../../ado/reference/adox-api/datecreated-property-adox.md)  
+ [DateCreated プロパティ](./datecreated-property-adox.md)  
   
- [DateModified プロパティ](../../../ado/reference/adox-api/datemodified-property-adox.md)  
+ [DateModified プロパティ](./datemodified-property-adox.md)  
   
- [Name プロパティ](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name プロパティ](./name-property-adox.md)  
   
 ## <a name="methods"></a>メソッド  
  なし。  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [View オブジェクト (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)
+ [View オブジェクト (ADOX)](./view-object-adox.md)

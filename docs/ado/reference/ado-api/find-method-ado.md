@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4c633cd1296c9433fbb7dfc185146c8b65e686b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0312fb8a8f91e8b56cb6c29a3a64b3a36bcec69d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443654"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775231"
 ---
 # <a name="find-method-ado"></a>Find メソッド (ADO)
-[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内で、指定した条件を満たす行を検索します。 必要に応じて、開始行からの検索、開始行、およびオフセットの方向を指定することもできます。 条件が満たされた場合は、見つかったレコードに現在の行の位置が設定されます。それ以外の場合、位置は **レコードセット**の末尾 (または先頭) に設定されます。  
+[レコードセット](./recordset-object-ado.md)内で、指定した条件を満たす行を検索します。 必要に応じて、開始行からの検索、開始行、およびオフセットの方向を指定することもできます。 条件が満たされた場合は、見つかったレコードに現在の行の位置が設定されます。それ以外の場合、位置は **レコードセット**の末尾 (または先頭) に設定されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,9 +42,9 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  任意。 現在の行または*開始*ブックマークからの行オフセットを指定する**Long**値。既定値は0です。 既定では、検索は現在の行で開始されます。  
   
  *SearchDirection*  
- 任意。 検索を現在の行で開始するか、検索の方向で次に使用可能な行で開始するかを指定する [Searchdirection 列挙](../../../ado/reference/ado-api/searchdirectionenum.md) 値。 値が**Adsearchforward**の場合、**レコードセット**の末尾で失敗した検索は停止します。 値が**Adsearchbackward**の場合、**レコードセット**の先頭で失敗した検索は停止します。  
+ 任意。 検索を現在の行で開始するか、検索の方向で次に使用可能な行で開始するかを指定する [Searchdirection 列挙](./searchdirectionenum.md) 値。 値が**Adsearchforward**の場合、**レコードセット**の末尾で失敗した検索は停止します。 値が**Adsearchbackward**の場合、**レコードセット**の先頭で失敗した検索は停止します。  
   
- *Start*  
+ *[開始]*  
  任意。 検索の開始位置として機能する **Variant** ブックマーク。  
   
 ## <a name="remarks"></a>解説  
@@ -59,16 +59,16 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  上に示すように、アスタリスクは、条件文字列の末尾、または条件文字列の先頭と末尾の両方で使用できます。 先頭のワイルドカードとしてアスタリスク (' * str ') を使用することはできません。また、埋め込みワイルドカード (r) として使用することもできません \* 。 これにより、エラーが発生します。  
   
 > [!NOTE]
->  **検索**を呼び出す前に現在の行の位置が設定されていない場合、エラーが発生します。 [**検索**] を呼び出す前に、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)などの行の位置を設定するメソッドを呼び出す必要があります。  
+>  **検索**を呼び出す前に現在の行の位置が設定されていない場合、エラーが発生します。 [**検索**] を呼び出す前に、 [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)などの行の位置を設定するメソッドを呼び出す必要があります。  
   
 > [!NOTE]
 >  レコードセットの **find** メソッドを呼び出し、レコードセットの現在位置が最後のレコードまたはファイルの末尾 (EOF) である場合、何も見つかりません。 **MoveFirst**メソッドを呼び出して、現在の位置/カーソルをレコードセットの先頭に設定する必要があります。  
   
 ## <a name="applies-to"></a>適用対象  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [Find メソッドの例 (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
- [Index プロパティ](../../../ado/reference/ado-api/index-property.md)   
- [Optimize プロパティ-動的 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [Seek メソッド](../../../ado/reference/ado-api/seek-method.md)
+ [Find メソッドの例 (VB)](./find-method-example-vb.md)   
+ [Index プロパティ](./index-property.md)   
+ [Optimize プロパティ-動的 (ADO)](./optimize-property-dynamic-ado.md)   
+ [Seek メソッド](./seek-method.md)

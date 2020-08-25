@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 455db4b01f6e25b6e280a6b33461ed6747cea284
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 89dc7e47bbd286d790086bde5da24e0a3316eef3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443434"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774761"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel と Mode プロパティの例 (VC + +)
-この例では、 [Mode](../../../ado/reference/ado-api/mode-property-ado.md) プロパティを使用して排他接続を開き、 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) プロパティを使用して、他のトランザクションと分離して実行されるトランザクションを開きます。  
+この例では、 [Mode](./mode-property-ado.md) プロパティを使用して排他接続を開き、 [IsolationLevel](./isolationlevel-property.md) プロパティを使用して、他のトランザクションと分離して実行されるトランザクションを開きます。  
   
 ## <a name="example"></a>例  
   
@@ -245,5 +245,5 @@ void PrintComError(_com_error &e) {
 **Buckingham Palace Kitchens-trad_cook の50年**  
 **すし、だれでも-trad_cook**   
 ## <a name="see-also"></a>参照  
- [IsolationLevel プロパティ](../../../ado/reference/ado-api/isolationlevel-property.md)   
- [Mode プロパティ (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
+ [IsolationLevel プロパティ](./isolationlevel-property.md)   
+ [Mode プロパティ (ADO)](./mode-property-ado.md)

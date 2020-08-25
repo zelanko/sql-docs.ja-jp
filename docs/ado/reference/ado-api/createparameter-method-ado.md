@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6bf45e2d458784972d7057e95878c9db3526ffac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1c3ed02109806232f8301b33e8b0387ea78b6ef4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444324"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775611"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter メソッド (ADO)
-指定したプロパティを使用して、新しい [Parameter](../../../ado/reference/ado-api/parameter-object.md) オブジェクトを作成します。  
+指定したプロパティを使用して、新しい [Parameter](./parameter-object.md) オブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,11 +41,11 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *名前*  
  任意。 **パラメーター**オブジェクトの名前を含む**文字列**値です。  
   
- *Type*  
- 任意。 **Parameter**オブジェクトのデータ型を示す[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)値です。  
+ *種類*  
+ 任意。 **Parameter**オブジェクトのデータ型を示す[DataTypeEnum](./datatypeenum.md)値です。  
   
  *方向*  
- 任意。 **パラメーター**オブジェクトの型を指定する[parameterdirection 列挙](../../../ado/reference/ado-api/parameterdirectionenum.md)値。  
+ 任意。 **パラメーター**オブジェクトの型を指定する[parameterdirection 列挙](./parameterdirectionenum.md)値。  
   
  *[サイズ]*  
  任意。 パラメーター値の最大長を文字数またはバイト数で指定する **Long 型** の値。  
@@ -56,18 +56,18 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
 ## <a name="remarks"></a>解説  
  **Createparameter**メソッドを使用して、指定した名前、型、方向、サイズ、および値を使用して新しい**パラメーター**オブジェクトを作成します。 引数で渡す値は、対応する **パラメーター** プロパティに書き込まれます。  
   
- このメソッドは、 **Parameter**オブジェクトを[Command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの**Parameters**コレクションに自動的に追加しません。 これにより、 **パラメーター** オブジェクトをコレクションに追加したときに ADO によって検証される値を持つ追加のプロパティを設定できます。  
+ このメソッドは、 **Parameter**オブジェクトを[Command](./command-object-ado.md)オブジェクトの**Parameters**コレクションに自動的に追加しません。 これにより、 **パラメーター** オブジェクトをコレクションに追加したときに ADO によって検証される値を持つ追加のプロパティを設定できます。  
   
- *型*引数に可変長データ型を指定する場合は、**パラメーター**コレクションに追加する前に、*サイズ*引数を渡すか、**パラメーター**オブジェクトの[size](../../../ado/reference/ado-api/size-property-ado-parameter.md)プロパティを設定する必要があります。それ以外の場合は、エラーが発生します。  
+ *型*引数に可変長データ型を指定する場合は、**パラメーター**コレクションに追加する前に、*サイズ*引数を渡すか、**パラメーター**オブジェクトの[size](./size-property-ado-parameter.md)プロパティを設定する必要があります。それ以外の場合は、エラーが発生します。  
   
- *型*引数に数値データ型 (**Adnumeric**または**adDecimal**) を指定する場合は、 [numericscale](../../../ado/reference/ado-api/numericscale-property-ado.md)プロパティと[Precision](../../../ado/reference/ado-api/precision-property-ado.md)プロパティも設定する必要があります。  
+ *型*引数に数値データ型 (**Adnumeric**または**adDecimal**) を指定する場合は、 [numericscale](./numericscale-property-ado.md)プロパティと[Precision](./precision-property-ado.md)プロパティも設定する必要があります。  
   
 ## <a name="applies-to"></a>適用対象  
- [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [Command オブジェクト (ADO)](./command-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [Append および CreateParameter メソッドの例 (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
- [Append および CreateParameter メソッドの例 (VC + +)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
- [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)   
- [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
+ [Append および CreateParameter メソッドの例 (VB)](./append-and-createparameter-methods-example-vb.md)   
+ [Append および CreateParameter メソッドの例 (VC + +)](./append-and-createparameter-methods-example-vc.md)   
+ [Append メソッド (ADO)](./append-method-ado.md)   
+ [Parameter オブジェクト](./parameter-object.md)   
+ [Parameters コレクション (ADO)](./parameters-collection-ado.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94eeb6eb22e72b6db45d178c9d19ced33009be8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79f72b8795fc060a44b83c3587f9243971b7c951
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441724"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777091"
 ---
 # <a name="type-property-example-field-vb"></a>Type プロパティの例 (Field) (VB)
-この例では、 ***Employees***テーブル内のすべての[Field](../../../ado/reference/ado-api/field-object.md)オブジェクトの[type](../../../ado/reference/ado-api/type-property-ado.md)プロパティの値に対応する定数の名前を表示することによって、 [type](../../../ado/reference/ado-api/type-property-ado.md)プロパティを示します。 このプロシージャを実行するには、FieldType 関数が必要です。  
+この例では、 ***Employees***テーブル内のすべての[Field](./field-object.md)オブジェクトの[type](./type-property-ado.md)プロパティの値に対応する定数の名前を表示することによって、 [type](./type-property-ado.md)プロパティを示します。 このプロシージャを実行するには、FieldType 関数が必要です。  
   
 ```  
 'BeginTypeFieldVB  
@@ -107,5 +107,5 @@ Attribute VB_Name = "TypeField"
 ```  
   
 ## <a name="see-also"></a>参照  
- [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
- [Type プロパティ (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Field オブジェクト](./field-object.md)   
+ [Type プロパティ (ADO)](./type-property-ado.md)

@@ -13,38 +13,38 @@ helpviewer_keywords:
 ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea57679036785923a906a848b7f523e13163499f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77e70f67c879b8aff1600a16367988254f96fc0d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442834"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773431"
 ---
 # <a name="parameter-object-properties-methods-and-events"></a>Parameter オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
- [Attributes プロパティ](../../../ado/reference/ado-api/attributes-property-ado.md)  
+ [Attributes プロパティ](./attributes-property-ado.md)  
   
- [Direction プロパティ](../../../ado/reference/ado-api/direction-property.md)  
+ [Direction プロパティ](./direction-property.md)  
   
- [Name プロパティ](../../../ado/reference/ado-api/name-property-ado.md)  
+ [Name プロパティ](./name-property-ado.md)  
   
- [NumericScale プロパティ](../../../ado/reference/ado-api/numericscale-property-ado.md)  
+ [NumericScale プロパティ](./numericscale-property-ado.md)  
   
- [Precision プロパティ](../../../ado/reference/ado-api/precision-property-ado.md)  
+ [Precision プロパティ](./precision-property-ado.md)  
   
- [プロパティのコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [プロパティのコレクション](./properties-collection-ado.md)  
   
- [Size プロパティ](../../../ado/reference/ado-api/size-property-ado-parameter.md)  
+ [Size プロパティ](./size-property-ado-parameter.md)  
   
- [Type プロパティ](../../../ado/reference/ado-api/type-property-ado.md)  
+ [Type プロパティ](./type-property-ado.md)  
   
- [Value プロパティ](../../../ado/reference/ado-api/value-property-ado.md)  
+ [Value プロパティ](./value-property-ado.md)  
   
 ## <a name="methods"></a>メソッド  
- [AppendChunk メソッド](../../../ado/reference/ado-api/appendchunk-method-ado.md)  
+ [AppendChunk メソッド](./appendchunk-method-ado.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter オブジェクト](./parameter-object.md)

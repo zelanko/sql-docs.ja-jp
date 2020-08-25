@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43037237ecba87b099c6e74b32f0a78c914a72f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 092164ac8df26ae79da94125d0071baccd89a3f5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443644"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775151"
 ---
 # <a name="find-method-example-vc"></a>Find メソッドの例 (VC++)
-この例では、 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトの [Find](../../../ado/reference/ado-api/find-method-ado.md) メソッドを使用して、 **Pubs** データベース内のビジネスタイトルの数を検索し、カウントします。 この例では、基になるプロバイダーが同様の機能をサポートしていないと想定しています。  
+この例では、 [レコードセット](./recordset-object-ado.md) オブジェクトの [Find](./find-method-ado.md) メソッドを使用して、 **Pubs** データベース内のビジネスタイトルの数を検索し、カウントします。 この例では、基になるプロバイダーが同様の機能をサポートしていないと想定しています。  
   
 ```  
 // BeginFindCpp.cpp  
@@ -156,5 +156,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Find メソッド (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Find メソッド (ADO)](./find-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

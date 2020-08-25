@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5375335fe0964107aed54de71d7e700b0588f209
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4a79dc76537bbcbabc8b8689638ff9c670413e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441994"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777361"
 ---
 # <a name="stat-method"></a>Stat メソッド
-[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトに関する情報を取得します。  
+[ストリーム](./stream-object-ado.md)オブジェクトに関する情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -71,4 +71,4 @@ Long stream.Stat(StatStg, StatFlag)
  StatFlag パラメーターに STATFLAG_NONAME が指定されておらず、現在のストリームに使用できる名前がない場合、この値は E_NOTIMPL になります。  
   
 ## <a name="applies-to"></a>適用対象  
- [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Stream オブジェクト (ADO)](./stream-object-ado.md)

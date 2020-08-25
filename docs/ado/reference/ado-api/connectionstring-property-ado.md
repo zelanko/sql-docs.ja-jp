@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 617ceace87a7f265d3d4db901b0a586481c19e32
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7adb671b42d17b4abe13733fd912234e79560e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444454"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775901"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString プロパティ (ADO)
 データソースへの接続を確立するために使用される情報を示します。  
@@ -42,9 +42,9 @@ ms.locfileid: "88444454"
 |*リモートサーバー =*|クライアント側接続を開くときに使用するサーバーのパス名を指定します。 (リモートデータサービスのみ)。|  
 |*URL =*|ファイルやディレクトリなど、リソースを識別する絶対 URL として接続文字列を指定します。|  
   
- **ConnectionString**プロパティを設定し、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを開くと、プロバイダーはプロパティの内容を変更する可能性があります。たとえば、ADO によって定義された引数名を特定のプロバイダーの同等の名前にマップします。  
+ **ConnectionString**プロパティを設定し、[接続](./connection-object-ado.md)オブジェクトを開くと、プロバイダーはプロパティの内容を変更する可能性があります。たとえば、ADO によって定義された引数名を特定のプロバイダーの同等の名前にマップします。  
   
- **Connectionstring**プロパティは、 [Open](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドの*connectionstring*引数に使用される値を自動的に継承するため、 **open**メソッド呼び出し中に current **connectionstring**プロパティをオーバーライドできます。  
+ **Connectionstring**プロパティは、 [Open](./open-method-ado-connection.md)メソッドの*connectionstring*引数に使用される値を自動的に継承するため、 **open**メソッド呼び出し中に current **connectionstring**プロパティをオーバーライドできます。  
   
  *ファイル名*引数によって ADO によって関連付けられたプロバイダーが読み込まれるため、*プロバイダー*と*ファイル名*の両方の引数を渡すことはできません。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "88444454"
 |既定値はありません。<br /><br /> ADO アプリケーションが次のオペレーティングシステムで実行され、プロバイダーが明示的に指定されていない場合、ADO は "ADODB" というエラーを返します。接続: プロバイダーが指定されていないため、指定された既定のプロバイダーがありません "|Windows 2000 (64 ビット)<br /><br /> Windows XP (64 ビット)<br /><br /> Windows 2003 Server (64 ビット)<br /><br /> Windows Vista (64 ビット)|  
   
 ## <a name="applies-to"></a>適用対象  
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [ConnectionString、ConnectionTimeout、State プロパティの例 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString、ConnectionTimeout、State プロパティの例 (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [ConnectionString、ConnectionTimeout、State プロパティの例 (VB)](./connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString、ConnectionTimeout、State プロパティの例 (VC + +)](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [付録 A: プロバイダー](../../guide/appendixes/appendix-a-providers.md)

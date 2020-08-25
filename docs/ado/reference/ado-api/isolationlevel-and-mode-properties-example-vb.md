@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acbf64eca7aa7b0ccbd943d261968f8a70c8f9e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d7a098c81362a74682bd889dbb245cb68d734810
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443444"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774781"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel と Mode プロパティの例 (VB)
-この例では、 [Mode](../../../ado/reference/ado-api/mode-property-ado.md) プロパティを使用して排他接続を開き、 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) プロパティを使用して、他のトランザクションと分離して実行されるトランザクションを開きます。  
+この例では、 [Mode](./mode-property-ado.md) プロパティを使用して排他接続を開き、 [IsolationLevel](./isolationlevel-property.md) プロパティを使用して、他のトランザクションと分離して実行されるトランザクションを開きます。  
   
 ```  
 'BeginIsolationLevelVB  
@@ -117,6 +117,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [IsolationLevel プロパティ](../../../ado/reference/ado-api/isolationlevel-property.md)   
- [Mode プロパティ (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)   
+ [IsolationLevel プロパティ](./isolationlevel-property.md)   
+ [Mode プロパティ (ADO)](./mode-property-ado.md)

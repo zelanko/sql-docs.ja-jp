@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 98101a52-53a6-4287-a8d9-2a7c76c3e0b9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9721573586e2c8e6b54670746573a54d5faa6124
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 43f1c04503af6a2f01c8265ee8014b8b7a84a530
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439454"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769241"
 ---
 # <a name="tables-collection-properties-methods-and-events"></a>Tables コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>プロパティ  
- [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
+## <a name="properties"></a>Properties  
+ [Count プロパティ](../ado-api/count-property-ado.md)  
   
- [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item プロパティ](../ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>メソッド  
- [Append メソッド (Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)  
+ [Append メソッド (Tables)](./append-method-adox-tables.md)  
   
- [Delete メソッド (コレクション)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
+ [Delete メソッド (コレクション)](./delete-method-adox-collections.md)  
   
- [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh メソッド](../ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
+ [Tables コレクション (ADOX)](./tables-collection-adox.md)

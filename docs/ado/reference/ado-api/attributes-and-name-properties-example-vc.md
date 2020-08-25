@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b482b59344f141b01979e850056fbb4da93bc3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb08bddc1e308859aa8460221136fb50fe5e6b86
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451214"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776471"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Attributes と Name プロパティの例 (VC + +)
-この例では、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[フィールド](../../../ado/reference/ado-api/field-object.md)、および[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトの[Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティの値を表示します。 [Name](../../../ado/reference/ado-api/name-property-ado.md)プロパティを使用して、各**フィールド**と**プロパティ**オブジェクトの名前を表示します。  
+この例では、[接続](./connection-object-ado.md)、[フィールド](./field-object.md)、および[プロパティ](./property-object-ado.md)オブジェクトの[Attributes](./attributes-property-ado.md)プロパティの値を表示します。 [Name](./name-property-ado.md)プロパティを使用して、各**フィールド**と**プロパティ**オブジェクトの名前を表示します。  
   
 ```  
 // BeginAttributesCpp.cpp  
@@ -182,8 +182,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Attributes プロパティ (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
- [Name プロパティ (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
- [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
+ [Attributes プロパティ (ADO)](./attributes-property-ado.md)   
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)   
+ [Field オブジェクト](./field-object.md)   
+ [Name プロパティ (ADO)](./name-property-ado.md)   
+ [Property オブジェクト (ADO)](./property-object-ado.md)

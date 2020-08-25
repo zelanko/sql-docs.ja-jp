@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 901fee0602957526cfa19d573161a4b9f2504900
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9de9c244d7faa115f03463a74a1dcaedb243b65
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443704"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775411"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>Filter プロパティと RecordCount プロパティの例 (JScript)
-この例では、Northwind データベースの企業テーブルで **レコードセット** を開き、 [フィルター](../../../ado/reference/ado-api/filter-property.md) プロパティを使用して、CompanyName フィールドが D 文字で始まるレコードだけを表示するように制限します。次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **filterjs**として保存します。  
+この例では、Northwind データベースの企業テーブルで **レコードセット** を開き、 [フィルター](./filter-property.md) プロパティを使用して、CompanyName フィールドが D 文字で始まるレコードだけを表示するように制限します。次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **filterjs**として保存します。  
   
 ```  
 <!-- BeginFilterJS -->  
@@ -150,6 +150,6 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Filter プロパティ](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount プロパティ (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Filter プロパティ](./filter-property.md)   
+ [RecordCount プロパティ (ADO)](./recordcount-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

@@ -41,18 +41,18 @@ helpviewer_keywords:
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 93d15cdac3d8f7a47c74a783d176d806271f68a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4087e3bf0ab7b9e65d616907b1f5db3c87a0f75e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439724"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769941"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog プロパティ (ADOX)
 プロバイダー固有のプロパティへのアクセスを提供する、テーブル、ユーザー、または列オブジェクトの親カタログを指定します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)オブジェクトを設定して返します。 **ParentCatalog**を開いている**カタログ**に設定すると、テーブルまたは列を**カタログ**コレクションに追加する前に、プロバイダー固有のプロパティにアクセスできます。  
+ [カタログ](./catalog-object-adox.md)オブジェクトを設定して返します。 **ParentCatalog**を開いている**カタログ**に設定すると、テーブルまたは列を**カタログ**コレクションに追加する前に、プロバイダー固有のプロパティにアクセスできます。  
   
 ## <a name="remarks"></a>解説  
  一部のデータプロバイダーでは、プロバイダー固有のプロパティ値を作成時にのみ書き込むことができます。つまり、テーブルまたは列がその **カタログ** コレクションに追加されたときです。 これらのオブジェクトを**カタログ**に追加する前にこれらのプロパティにアクセスするには、まず、 **ParentCatalog**プロパティで**カタログ**を指定します。  
@@ -63,15 +63,15 @@ ms.locfileid: "88439724"
 
 :::row:::
     :::column:::
-        [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+        [Column オブジェクト (ADOX)](./column-object-adox.md)  
     :::column-end:::
     :::column:::
-        [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+        [Table オブジェクト (ADOX)](./table-object-adox.md)  
     :::column-end:::
     :::column:::
-        [User オブジェクト (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+        [User オブジェクト (ADOX)](./user-object-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>参照  
- [ParentCatalog プロパティの例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
+ [ParentCatalog プロパティの例 (VB)](./parentcatalog-property-example-vb.md)

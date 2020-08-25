@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c34985cfbec4a146f0d171d361b9ffc54a28113d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 088132a44afe50218b824ecc25e2a55bda491c66
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444534"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776041"
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>Connection (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  
@@ -63,7 +63,7 @@ get_Version(BSTR *pbstr)
 get_Errors(ADOErrors **ppvObject)  
 ```  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
   
 ```  
 BeginTransComplete(LONG TransactionLevel, ADOError *pError, EventStatusEnum *adStatus, _ADOConnection *pConnection)  
@@ -78,4 +78,4 @@ WillExecute(BSTR *Source, CursorTypeEnum *CursorType, LockTypeEnum *LockType, lo
 ```  
   
 ## <a name="see-also"></a>参照  
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)

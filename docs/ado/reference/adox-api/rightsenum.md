@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ead66b4c3215ef0d7a42e8ec029e97502dac2f4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ddda86faaf032fbc981c159300ee4545643bb2e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439554"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769451"
 ---
 # <a name="rightsenum"></a>RightsEnum
 オブジェクトのグループまたはユーザーの権限または権限を指定します。  
@@ -37,7 +37,7 @@ ms.locfileid: "88439554"
 |**Adの右挿入**|32768 (&H8000)|このユーザーまたはグループには、オブジェクトを挿入する権限があります。 **テーブル**などのオブジェクトの場合、ユーザーにはテーブルにデータを挿入する権限があります。|  
 |**Adall Maximumallowed**|33554432 (&H2000000)|このユーザーまたはグループには、プロバイダーが許可するアクセス許可の最大数が設定されています。 特定の権限は、プロバイダに依存します。|  
 |**Adall なし**|0|このユーザーまたはグループには、オブジェクトに対する権限がありません。|  
-|**Adread-only の読み取り**|-2147483648 (&H80000000)|このユーザーまたはグループには、オブジェクトを読み取る権限があります。 [テーブル](../../../ado/reference/adox-api/table-object-adox.md)などのオブジェクトの場合、ユーザーはテーブル内のデータを読み取る権限を持っています。|  
+|**Adread-only の読み取り**|-2147483648 (&H80000000)|このユーザーまたはグループには、オブジェクトを読み取る権限があります。 [テーブル](./table-object-adox.md)などのオブジェクトの場合、ユーザーはテーブル内のデータを読み取る権限を持っています。|  
 |**adRightReadDesign**|1024 (&H400)|ユーザーまたはグループには、オブジェクトのデザインを読み取るためのアクセス許可があります。|  
 |**adRightReadPermissions**|131072 (&H20000)|ユーザーまたはグループは、カタログ内のオブジェクトに対する特定の権限を表示できますが、変更することはできません。|  
 |**Adall リファレンス**|8192 (&H2000)|このユーザーまたはグループには、オブジェクトを参照する権限があります。|  
@@ -51,9 +51,9 @@ ms.locfileid: "88439554"
 
 :::row:::
     :::column:::
-        [GetPermissions メソッド (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+        [GetPermissions メソッド (ADOX)](./getpermissions-method-adox.md)  
     :::column-end:::
     :::column:::
-        [SetPermissions メソッド (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+        [SetPermissions メソッド (ADOX)](./setpermissions-method-adox.md)  
     :::column-end:::
 :::row-end:::

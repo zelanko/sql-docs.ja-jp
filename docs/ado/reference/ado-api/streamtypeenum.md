@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: 220fe51d-4889-4020-a099-2ec9c7485503
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 47ebcacf2403717c12c19c33a26001e031557b7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 561095ea23fbf03cf104105c1230955baa029341
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441804"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777171"
 ---
 # <a name="streamtypeenum"></a>StreamTypeEnum
-[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトに格納されているデータの型を指定します。  
+[ストリーム](./stream-object-ado.md)オブジェクトに格納されているデータの型を指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adTypeBinary**|1|バイナリデータを示します。|  
-|**adTypeText**|2|既定値。 [Charset](../../../ado/reference/ado-api/charset-property-ado.md)によって指定された文字セットに含まれるテキストデータを示します。|  
+|**adTypeText**|2|既定値。 [Charset](./charset-property-ado.md)によって指定された文字セットに含まれるテキストデータを示します。|  
   
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  これらの定数には、対応する ADO/WFC がありません。  
   
 ## <a name="applies-to"></a>適用対象  
- [Type プロパティ (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)
+ [Type プロパティ (ADO Stream)](./type-property-ado-stream.md)

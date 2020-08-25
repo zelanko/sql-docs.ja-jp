@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68b6a8dd0b0cd75f511c042981672444d9b3bcb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ce6a6e3c2e665c57b9a82d968dac3cf3c74a731
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444514"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775961"
 ---
 # <a name="connection-object-ado"></a>Connection オブジェクト (ADO)
 データ ソースへの開いた接続を表します。  
@@ -31,30 +31,30 @@ ms.locfileid: "88444514"
   
  **接続**オブジェクトのコレクション、メソッド、およびプロパティを使用して、次の操作を実行できます。  
   
--   [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)、 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)、および[Mode](../../../ado/reference/ado-api/mode-property-ado.md)プロパティを使用して接続を開く前に、接続を構成します。 **ConnectionString** は、 **接続** オブジェクトの既定のプロパティです。  
+-   [ConnectionString](./connectionstring-property-ado.md)、 [ConnectionTimeout](./connectiontimeout-property-ado.md)、および[Mode](./mode-property-ado.md)プロパティを使用して接続を開く前に、接続を構成します。 **ConnectionString** は、 **接続** オブジェクトの既定のプロパティです。  
   
--   [Cursor location](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを client に設定して、バッチ更新をサポートする[OLE DB 用の Microsoft Cursor Service](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)を起動します。  
+-   [Cursor location](./cursorlocation-property-ado.md)プロパティを client に設定して、バッチ更新をサポートする[OLE DB 用の Microsoft Cursor Service](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)を起動します。  
   
--   [Defaultdatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)プロパティを使用して、接続の既定のデータベースを設定します。  
+-   [Defaultdatabase](./defaultdatabase-property.md)プロパティを使用して、接続の既定のデータベースを設定します。  
   
--   [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)プロパティを使用して、接続で開かれたトランザクションの分離レベルを設定します。  
+-   [IsolationLevel](./isolationlevel-property.md)プロパティを使用して、接続で開かれたトランザクションの分離レベルを設定します。  
   
--   [プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)プロパティを使用して OLE DB プロバイダーを指定してください。  
+-   [プロバイダー](./provider-property-ado.md)プロパティを使用して OLE DB プロバイダーを指定してください。  
   
--   [Open](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドと[Close](../../../ado/reference/ado-api/close-method-ado.md)メソッドを使用して、データソースへの物理接続を確立してから中断します。  
+-   [Open](./open-method-ado-connection.md)メソッドと[Close](./close-method-ado.md)メソッドを使用して、データソースへの物理接続を確立してから中断します。  
   
--   [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)メソッドを使用して接続に対してコマンドを実行し、 [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)プロパティを使用して実行を構成します。  
+-   [Execute](./execute-method-ado-connection.md)メソッドを使用して接続に対してコマンドを実行し、 [CommandTimeout](./commandtimeout-property-ado.md)プロパティを使用して実行を構成します。  
   
     > [!NOTE]
-    >  Command オブジェクトを使用せずにクエリを実行するには、**接続**オブジェクトの**execute**メソッドにクエリ文字列を渡します。 ただし、コマンドのテキストを永続化して再実行する場合、またはクエリパラメーターを使用する場合は、 [command](../../../ado/reference/ado-api/command-object-ado.md) オブジェクトが必要です。  
+    >  Command オブジェクトを使用せずにクエリを実行するには、**接続**オブジェクトの**execute**メソッドにクエリ文字列を渡します。 ただし、コマンドのテキストを永続化して再実行する場合、またはクエリパラメーターを使用する場合は、 [command](./command-object-ado.md) オブジェクトが必要です。  
   
--   入れ子になったトランザクションを含むオープン接続でトランザクションを管理します。これには、プロバイダーがサポートしている場合は、 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)、 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)、および [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) の各メソッドと [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) プロパティを使用します。  
+-   入れ子になったトランザクションを含むオープン接続でトランザクションを管理します。これには、プロバイダーがサポートしている場合は、 [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)、 [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)、および [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) の各メソッドと [Attributes](./attributes-property-ado.md) プロパティを使用します。  
   
--   データソースから返されたエラーを [エラー](../../../ado/reference/ado-api/errors-collection-ado.md) コレクションと共に調べます。  
+-   データソースから返されたエラーを [エラー](./errors-collection-ado.md) コレクションと共に調べます。  
   
--   [Version](../../../ado/reference/ado-api/version-property-ado.md)プロパティで使用されている ADO 実装からバージョンを読み取ります。  
+-   [Version](./version-property-ado.md)プロパティで使用されている ADO 実装からバージョンを読み取ります。  
   
--   [OpenSchema](../../../ado/reference/ado-api/openschema-method.md)メソッドを使用して、データベースに関するスキーマ情報を取得します。  
+-   [OpenSchema](./openschema-method.md)メソッドを使用して、データベースに関するスキーマ情報を取得します。  
   
  以前に定義された他のオブジェクトとは別に、 **接続** オブジェクトを作成できます。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "88444514"
 >  Microsoft® .NET Framework アプリケーションでは、この機能を使用しないでください (名前付きコマンドまたはストアドプロシージャを、 **接続** オブジェクトのネイティブメソッドとして呼び出す) ことはできません。これは、機能の基になる実装が、.NET FRAMEWORK が COM と相互運用する方法と競合するためです。  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>接続オブジェクトのネイティブメソッドとしてコマンドを実行する  
- コマンドを実行する**には、コマンドオブジェクト**[名](../../../ado/reference/ado-api/name-property-ado.md)プロパティを使用して、コマンドに名前を付けます。 **Command**オブジェクトの**ActiveConnection**プロパティを接続に設定します。 次に、コマンド名が **Connection** オブジェクトのメソッドであるかのように使用されているステートメントを実行し、任意のパラメーターを指定します。行が返された場合は、 **レコードセット** オブジェクトも指定します。 **レコード**セットのプロパティを設定して、結果の**レコードセット**をカスタマイズします。 次に例を示します。  
+ コマンドを実行する**には、コマンドオブジェクト**[名](./name-property-ado.md)プロパティを使用して、コマンドに名前を付けます。 **Command**オブジェクトの**ActiveConnection**プロパティを接続に設定します。 次に、コマンド名が **Connection** オブジェクトのメソッドであるかのように使用されているステートメントを実行し、任意のパラメーターを指定します。行が返された場合は、 **レコードセット** オブジェクトも指定します。 **レコード**セットのプロパティを設定して、結果の**レコードセット**をカスタマイズします。 次に例を示します。  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -93,11 +93,11 @@ cnn. "parameter"
   
  ここでは、次のトピックについて説明します。  
   
--   [Connection オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md)  
+-   [Connection オブジェクトのプロパティ、メソッド、およびイベント](./connection-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
- [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Errors コレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Command オブジェクト (ADO)](./command-object-ado.md)   
+ [Errors コレクション (ADO)](./errors-collection-ado.md)   
+ [Properties コレクション (ADO)](./properties-collection-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [付録 A: プロバイダー](../../guide/appendixes/appendix-a-providers.md)

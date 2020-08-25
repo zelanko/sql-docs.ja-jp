@@ -16,29 +16,29 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a52b8006ed97809690ec874c27e20ee8f1b05d0f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f93370ae23cd50e1fb494d484756505f69514df1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451334"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776602"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction インターフェイス
 **ADORecordConstruction**インターフェイスは、C/c + + アプリケーションの OLE DB **ROW**オブジェクトから ADO**レコード**オブジェクトを構築するために使用されます。  
   
  このインターフェイスは、次のプロパティをサポートしています。  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
   
 |プロパティ|説明|  
 |-|-|  
-|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|書き込み専用です。<br />この ADO **Record**オブジェクトの OLE DB **Row**オブジェクトのコンテナーを設定します。|  
-|[行](../../../ado/reference/ado-api/row-property-ado.md)|読み取り/書き込み。<br />この ADO **Record**オブジェクトから OLE DB **Row**オブジェクトを取得/設定します。|  
+|[ParentRow](./parentrow-property-ado.md)|書き込み専用です。<br />この ADO **Record**オブジェクトの OLE DB **Row**オブジェクトのコンテナーを設定します。|  
+|[行](./row-property-ado.md)|読み取り/書き込み。<br />この ADO **Record**オブジェクトから OLE DB **Row**オブジェクトを取得/設定します。|  
   
 ## <a name="methods"></a>メソッド  
  なし。  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="remarks"></a>解説  
@@ -71,7 +71,7 @@ ms.locfileid: "88451334"
   
  ADO **レコード** オブジェクトは、OLE DB **Row** オブジェクトのコンテナーから構築することもできます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **バージョン:** ADO 2.0 以降  
   
  **ライブラリ:** msado15.dll  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c528cf280e5bb011f558f72a74290ff7f690170
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7aca1d8a8f34bc4e3122c393727bf0728d0f881
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443164"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774211"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>MoveFirst、MoveLast、MoveNext、および MovePrevious メソッドの例 (VC + +)
-この例では、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、および [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) メソッドを使用して、指定されたコマンドに基づいてレコード [セット](../../../ado/reference/ado-api/recordset-object-ado.md) のレコードポインターを移動します。 この例を実行するには、MoveAny 関数が必要です。  
+この例では、 [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、および [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) メソッドを使用して、指定されたコマンドに基づいてレコード [セット](./recordset-object-ado.md) のレコードポインターを移動します。 この例を実行するには、MoveAny 関数が必要です。  
   
 ## <a name="example"></a>例  
   
@@ -209,5 +209,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (ADO)](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

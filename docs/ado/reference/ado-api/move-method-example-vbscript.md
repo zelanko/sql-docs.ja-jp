@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d16881ba6ee448ab8efda506e506b0a7f3bde02c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ff88ab9dc0c3f050be5ae8cfd593473ca2a7fa8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443224"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774301"
 ---
 # <a name="move-method-example-vbscript"></a>Move メソッドの例 (VBScript)
-この例では、 [Move](../../../ado/reference/ado-api/move-method-ado.md) メソッドを使用して、ユーザー入力に基づいてレコードポインターを配置します。  
+この例では、 [Move](./move-method-ado.md) メソッドを使用して、ユーザー入力に基づいてレコードポインターを配置します。  
   
  Active Server ページ (ASP) で次の例を使用します。 この完全に機能する例を表示するには、C:\Program た advworks-srv01 Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb にあるデータソース (SDK と共にインストールされます) があるか、このファイルの実際の場所を反映するようにコード例のパスを編集する必要があります。 これは、Microsoft Access データベースファイルです。  
   
@@ -184,5 +184,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Move メソッド (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Move メソッド (ADO)](./move-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

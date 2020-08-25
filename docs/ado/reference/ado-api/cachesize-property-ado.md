@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3cafee5dbcc5d6469df2d733f1898806069dd112
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6654adc5cbf5b01435dbc95a2f630cf980cc6d5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451104"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776361"
 ---
 # <a name="cachesize-property-ado"></a>CacheSize プロパティ (ADO)
-メモリ内にローカルにキャッシュされているレコード [セット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトのレコードの数を示します。  
+メモリ内にローカルにキャッシュされているレコード [セット](./recordset-object-ado.md) オブジェクトのレコードの数を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  0より大きくなければならない **Long 型** の値を設定または返します。 既定値は 1 です。  
@@ -41,14 +41,14 @@ ms.locfileid: "88451104"
   
  **CacheSize**設定0は許可されていないため、エラーが返されます。  
   
- キャッシュから取得されたレコードには、他のユーザーがソースデータに対して行った同時変更は反映されません。 キャッシュされたすべてのデータを強制的に更新するには、 [Resync](../../../ado/reference/ado-api/resync-method.md) メソッドを使用します。  
+ キャッシュから取得されたレコードには、他のユーザーがソースデータに対して行った同時変更は反映されません。 キャッシュされたすべてのデータを強制的に更新するには、 [Resync](./resync-method.md) メソッドを使用します。  
   
- **CacheSize**が1より大きい値に設定されている場合、ナビゲーションメソッド ([Move](../../../ado/reference/ado-api/move-method-ado.md)、 [MoveFirst、MoveLast、MoveNext、および MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) は、レコードの取得後に削除が発生すると、削除されたレコードに移動する可能性があります。 最初のフェッチの後、削除された行からデータ値にアクセスしようとするまで、その後の削除はデータキャッシュに反映されません。 ただし、 **CacheSize** を1に設定すると、削除された行をフェッチできないため、この問題は解消されます。  
+ **CacheSize**が1より大きい値に設定されている場合、ナビゲーションメソッド ([Move](./move-method-ado.md)、 [MoveFirst、MoveLast、MoveNext、および MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) は、レコードの取得後に削除が発生すると、削除されたレコードに移動する可能性があります。 最初のフェッチの後、削除された行からデータ値にアクセスしようとするまで、その後の削除はデータキャッシュに反映されません。 ただし、 **CacheSize** を1に設定すると、削除された行をフェッチできないため、この問題は解消されます。  
   
 ## <a name="applies-to"></a>適用対象  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [CacheSize プロパティの例 (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
- [CacheSize プロパティの例 (VC + +)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
- [CacheSize プロパティの例 (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)
+ [CacheSize プロパティの例 (VB)](./cachesize-property-example-vb.md)   
+ [CacheSize プロパティの例 (VC + +)](./cachesize-property-example-vc.md)   
+ [CacheSize プロパティの例 (JScript)](./cachesize-property-example-jscript.md)

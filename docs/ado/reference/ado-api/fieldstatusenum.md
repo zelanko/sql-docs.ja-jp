@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06044b54be7066deb5cf7510f060716106816805
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f3ebabab3096217348e2309070d81e90128b8e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443714"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775331"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
-[フィールドオブジェクト](../../../ado/reference/ado-api/field-object.md)の[状態](../../../ado/reference/ado-api/status-property-ado-field.md)を指定します。  
+[フィールドオブジェクト](./field-object.md)の[状態](./status-property-ado-field.md)を指定します。  
   
  **Adfieldpending \* **値は、状態が設定される原因となった操作を示し、他のステータス値と組み合わせることができます。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**Adfieldexists が既に存在します**|26|指定したフィールドが既に存在することを示します。|  
-|**Adの Dbadstatus**|12|無効な状態値が ADO から OLE DB プロバイダーに送信されたことを示します。 原因としては、1.0 または1.1 プロバイダーの OLE DB、または [値](../../../ado/reference/ado-api/value-property-ado.md) と [状態](../../../ado/reference/ado-api/status-property-ado-field.md)の不適切な組み合わせが考えられます。|  
-|**adFieldCannotComplete**|20|は、 [Source](../../../ado/reference/ado-api/source-property-ado-record.md) によって指定された URL のサーバーが操作を完了できなかったことを示します。|  
+|**Adの Dbadstatus**|12|無効な状態値が ADO から OLE DB プロバイダーに送信されたことを示します。 原因としては、1.0 または1.1 プロバイダーの OLE DB、または [値](./value-property-ado.md) と [状態](./status-property-ado-field.md)の不適切な組み合わせが考えられます。|  
+|**adFieldCannotComplete**|20|は、 [Source](./source-property-ado-record.md) によって指定された URL のサーバーが操作を完了できなかったことを示します。|  
 |**adFieldCannotDeleteSource**|23|移動操作中に、ツリーまたはサブツリーが新しい場所に移動されたが、ソースを削除できなかったことを示します。|  
 |**adFieldCantConvertValue**|2|データを失うことなく、フィールドを取得または保存できないことを示します。|  
 |**adFieldCantCreate**|7|プロバイダーが制限 (許容されるフィールド数など) を超えたため、フィールドを追加できなかったことを示します。|  
@@ -45,7 +45,7 @@ ms.locfileid: "88443714"
 |**Adの Disnull**|3|プロバイダーが VT_NULL 型のバリアント値を返し、フィールドが空でないことを示します。|  
 |**adFieldOK**|0|既定値。 フィールドが正常に追加または削除されたことを示します。|  
 |**adFieldOutOfSpace**|22|移動またはコピー操作を完了するのに十分な記憶域スペースをプロバイダーが取得できないことを示します。|  
-|**adFieldPendingChange**|0x40000|フィールドが削除された後、別のデータ型で再追加されたか、以前に **adFieldOK** の状態だったフィールドの値が変更されたことを示します。 フィールドの最終形式では、 [Update](../../../ado/reference/ado-api/update-method.md)メソッドが呼び出された後に[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションが変更されます。|  
+|**adFieldPendingChange**|0x40000|フィールドが削除された後、別のデータ型で再追加されたか、以前に **adFieldOK** の状態だったフィールドの値が変更されたことを示します。 フィールドの最終形式では、 [Update](./update-method.md)メソッドが呼び出された後に[フィールド](./fields-collection-ado.md)コレクションが変更されます。|  
 |**adFieldPendingDelete**|0x20000|**削除**操作によって状態が設定されたことを示します。 フィールドは、 **Update**メソッドが呼び出された後に、**フィールド**コレクションから削除するようにマークされています。|  
 |**adFieldPendingInsert**|0x10000|**追加**操作によって状態が設定されたことを示します。 **フィールド**は、 **Update**メソッドが呼び出された後に**フィールド**コレクションに追加されるようにマークされています。|  
 |**adFieldPendingUnknown**|0x80000|フィールドの状態を設定する原因となった操作をプロバイダーが判別できないことを示します。|  
@@ -65,4 +65,4 @@ ms.locfileid: "88443714"
  これらの定数には、対応する ADO/WFC がありません。  
   
 ## <a name="applies-to"></a>適用対象  
- [Status プロパティ (ADO Field)](../../../ado/reference/ado-api/status-property-ado-field.md)
+ [Status プロパティ (ADO Field)](./status-property-ado-field.md)

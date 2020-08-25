@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bcea6cd4ad8f786cf2e2a70b35f6f67dcae3127
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6cbe1d7738bd827a8f984e8b4f5e024e88457035
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441574"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776951"
 ---
 # <a name="value-property-example-vc"></a>Value プロパティの例 (VC++)
-この例では、 ***Employees***テーブルのフィールドとプロパティの値を表示することにより、 [Field](../../../ado/reference/ado-api/field-object.md)オブジェクトと[property](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトを含む[Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティを示します。  
+この例では、 ***Employees***テーブルのフィールドとプロパティの値を表示することにより、 [Field](./field-object.md)オブジェクトと[property](./property-object-ado.md)オブジェクトを含む[Value](./value-property-ado.md)プロパティを示します。  
   
 ```  
 // BeginValueCpp.cpp  
@@ -171,6 +171,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
- [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Value プロパティ (ADO)](../../../ado/reference/ado-api/value-property-ado.md)
+ [Field オブジェクト](./field-object.md)   
+ [Property オブジェクト (ADO)](./property-object-ado.md)   
+ [Value プロパティ (ADO)](./value-property-ado.md)

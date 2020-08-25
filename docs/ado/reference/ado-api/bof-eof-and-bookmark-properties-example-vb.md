@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d38d132e4e61f7b26d97450d41cc4f291789257
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b851fb2fc8624b8c2d7fb5e717552b97e80b756
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451154"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776411"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF、EOF、および Bookmark プロパティの例 (VB)
-この例では、ユーザーが[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の最初または最後のレコードを移動しようとしたときに、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)プロパティと[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)プロパティを使用してメッセージを表示します。 [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)プロパティを使用して、ユーザーがレコード**セット**内のレコードにフラグを付けることができ、後でそれに戻るようにします。  
+この例では、ユーザーが[レコードセット](./recordset-object-ado.md)の最初または最後のレコードを移動しようとしたときに、 [BOF](./bof-eof-properties-ado.md)プロパティと[EOF](./bof-eof-properties-ado.md)プロパティを使用してメッセージを表示します。 [Bookmark](./bookmark-property-ado.md)プロパティを使用して、ユーザーがレコード**セット**内のレコードにフラグを付けることができ、後でそれに戻るようにします。  
   
 ```  
 'BeginBOFVB  
@@ -130,13 +130,13 @@ End Sub
 'EndBOFVB  
 ```  
   
- この例では、 **ブックマーク** と [フィルター](../../../ado/reference/ado-api/filter-property.md) プロパティを使用して、 **レコードセット**の限られたビューを作成します。 ブックマークの配列によって参照されるレコードにのみアクセスできます。  
+ この例では、 **ブックマーク** と [フィルター](./filter-property.md) プロパティを使用して、 **レコードセット**の限られたビューを作成します。 ブックマークの配列によって参照されるレコードにのみアクセスできます。  
   
 ```  
 Attribute VB_Name = "BOF"  
 ```  
   
 ## <a name="see-also"></a>参照  
- [BOF、EOF プロパティ (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [Bookmark プロパティ (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [BOF、EOF プロパティ (ADO)](./bof-eof-properties-ado.md)   
+ [Bookmark プロパティ (ADO)](./bookmark-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

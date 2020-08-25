@@ -20,26 +20,26 @@ helpviewer_keywords:
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 855c7aabd3ac94fff5250f4a6c1fab3d02a7ec65
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70d8700f953a87fa3326f6a1c0985be1f6ca3dac
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439434"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769221"
 ---
 # <a name="type-property-column-adox"></a>Type プロパティ (列) (ADOX)
 列のデータ型を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)定数のいずれかを指定できる**Long 型**の値を設定または返します。 既定値は **adVarWChar**です。  
+ [DataTypeEnum](../ado-api/datatypeenum.md)定数のいずれかを指定できる**Long 型**の値を設定または返します。 既定値は **adVarWChar**です。  
   
 ## <a name="remarks"></a>解説  
- このプロパティは、 [列](../../../ado/reference/adox-api/column-object-adox.md) オブジェクトがコレクションまたは別のオブジェクトに追加されるまで、読み取り/書き込みが行われます。その後、読み取り専用になります。  
+ このプロパティは、 [列](./column-object-adox.md) オブジェクトがコレクションまたは別のオブジェクトに追加されるまで、読み取り/書き込みが行われます。その後、読み取り専用になります。  
   
 ## <a name="applies-to"></a>適用対象  
- [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [Column オブジェクト (ADOX)](./column-object-adox.md)  
   
 ## <a name="see-also"></a>参照  
- [ParentCatalog プロパティの例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Type プロパティ (キー) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
- [Type プロパティ (テーブル) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+ [ParentCatalog プロパティの例 (VB)](./parentcatalog-property-example-vb.md)   
+ [Type プロパティ (キー) (ADOX)](./type-property-key-adox.md)   
+ [Type プロパティ (テーブル) (ADOX)](./type-property-table-adox.md)

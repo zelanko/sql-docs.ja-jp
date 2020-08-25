@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60bf64f57c4373d814f2b207808aa2d7dbe7c497
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da88b8e5a98e7d3ae105cc6e826804158f4bf7c8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443134"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774171"
 ---
 # <a name="name-property-ado"></a>Name プロパティ (ADO)
 オブジェクトの名前を示します。  
@@ -35,9 +35,9 @@ ms.locfileid: "88443134"
   
  この値は、 **Command** オブジェクトでは読み取り/書き込みが可能で、 **プロパティ** オブジェクトでは読み取り専用です。  
   
- **Field**オブジェクトの場合、通常、**名前**は読み取り専用です。 ただし、[レコード](../../../ado/reference/ado-api/record-object-ado.md)の[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに追加された新しい**フィールド**オブジェクトの場合、 **Name**は、**フィールド**の[Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティが指定され、データプロバイダーが**フィールド**コレクションの[Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出すことによって新しい**フィールド**を正常に追加した後にのみ、読み取り/書き込みになります。  
+ **Field**オブジェクトの場合、通常、**名前**は読み取り専用です。 ただし、[レコード](./record-object-ado.md)の[フィールド](./fields-collection-ado.md)コレクションに追加された新しい**フィールド**オブジェクトの場合、 **Name**は、**フィールド**の[Value](./value-property-ado.md)プロパティが指定され、データプロバイダーが**フィールド**コレクションの[Update](./update-method.md)メソッドを呼び出すことによって新しい**フィールド**を正常に追加した後にのみ、読み取り/書き込みになります。  
   
- [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションにまだ追加されていない**パラメーター**オブジェクトの場合、 **Name**プロパティは読み取り/書き込み可能です。 追加された **パラメーター** オブジェクトおよびその他すべてのオブジェクトについては、 **Name** プロパティは読み取り専用です。 名前はコレクション内で一意である必要はありません。  
+ [Parameters](./parameters-collection-ado.md)コレクションにまだ追加されていない**パラメーター**オブジェクトの場合、 **Name**プロパティは読み取り/書き込み可能です。 追加された **パラメーター** オブジェクトおよびその他すべてのオブジェクトについては、 **Name** プロパティは読み取り専用です。 名前はコレクション内で一意である必要はありません。  
   
  オブジェクトの **name** プロパティは、序数参照によって取得できます。その後、オブジェクトを名前で直接参照できます。 たとえば、がを生成した場合、 `rstMain.Properties(20).Name` `Updatability` このプロパティをとして参照でき `rstMain.Properties("Updatability")` ます。  
   
@@ -45,15 +45,15 @@ ms.locfileid: "88443134"
 
 :::row:::
     :::column:::
-        [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
-        [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)  
+        [Command オブジェクト (ADO)](./command-object-ado.md)  
+        [Field オブジェクト](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)  
-        [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Parameter オブジェクト](./parameter-object.md)  
+        [Property オブジェクト (ADO)](./property-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>参照  
- [Attributes と Name プロパティの例 (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Attributes と Name プロパティの例 (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
+ [Attributes と Name プロパティの例 (VB)](./attributes-and-name-properties-example-vb.md)   
+ [Attributes と Name プロパティの例 (VC + +)](./attributes-and-name-properties-example-vc.md)

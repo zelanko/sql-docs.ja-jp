@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4ae79c8ee96d94d697ad78cf77f1d96b8c2e4a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 53c9d3161126a1728335c132fc7886b49297f2cb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439124"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768491"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory オブジェクト、Query メソッド、および CreateObject メソッドの例 (VBScript)
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- この例では、RDS の[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)メソッドを使用して、 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトを作成し[ます。領域スペース](../../../ado/reference/rds-api/dataspace-object-rds.md)オブジェクト。 この例をテストするには、 \<Body> \</Body> 通常の HTML ドキュメントのタグとタグの間でこのコードを**DataFactoryVBS.asp**切り取って貼り付け、DataFactoryVBS という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
+ この例では、RDS の[CreateObject](./createobject-method-rds.md)メソッドを使用して、 [DataFactory](./datafactory-object-rdsserver.md)オブジェクトを作成し[ます。領域スペース](./dataspace-object-rds.md)オブジェクト。 この例をテストするには、 \<Body> \</Body> 通常の HTML ドキュメントのタグとタグの間でこのコードを**DataFactoryVBS.asp**切り取って貼り付け、DataFactoryVBS という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginDataFactoryVBS -->  
@@ -138,9 +138,7 @@ to bring back a Recordset. </H4>
 ```  
   
 ## <a name="see-also"></a>参照  
- [CreateObject メソッド (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
- [DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [領域スペースオブジェクト (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [Query メソッド (RDS)](../../../ado/reference/rds-api/query-method-rds.md)
-
-
+ [CreateObject メソッド (RDS)](./createobject-method-rds.md)   
+ [DataFactory オブジェクト (RDSServer)](./datafactory-object-rdsserver.md)   
+ [領域スペースオブジェクト (RDS)](./dataspace-object-rds.md)   
+ [Query メソッド (RDS)](./query-method-rds.md)

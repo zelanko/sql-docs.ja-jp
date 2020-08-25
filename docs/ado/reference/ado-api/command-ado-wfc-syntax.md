@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcbe8174b2866f3edfd9676d7873216fd16f5751
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 09d880b305d5325120325407c5ec07e0a4e40c42
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450894"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776171"
 ---
 # <a name="command-ado---wfc-syntax"></a>Command (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.. wfc. データ  
@@ -47,7 +47,7 @@ public int executeUpdate()
   
  **Executeupdate**メソッドは、特定のパラメーターを使用して基になる ADO **execute**メソッドを呼び出す特殊なケースメソッドです。 **Executeupdate**メソッドでは、**レコードセット**オブジェクトの戻りがサポートされていないため、 **execute**メソッドの*options*パラメーターは**AdoEnums.Executeoptions**を使用して変更されます。 **Execute**メソッドが完了すると、更新された*RecordsAffected*パラメーターが**executeupdate**メソッドに戻されます。このメソッドは、最後に**int**として返されます。  
   
-### <a name="properties"></a>プロパティ  
+### <a name="properties"></a>Properties  
   
 ```  
 public com.ms.wfc.data.Connection getActiveConnection()  
@@ -71,4 +71,4 @@ public AdoProperties getProperties()
 ```  
   
 ## <a name="see-also"></a>参照  
- [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [Command オブジェクト (ADO)](./command-object-ado.md)

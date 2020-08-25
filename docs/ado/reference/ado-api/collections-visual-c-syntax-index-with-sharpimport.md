@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58f7761cc67cd1320594988ba50bfcc79bcfc0d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1e67827a5a496b6b9163d8fa8740cc620033efd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450914"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776191"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>コレクション (Visual C++ 構文インデックス #import)
 コレクションが特定の共通メソッドとプロパティを継承することを理解しておくと便利です。  
@@ -98,7 +98,7 @@ PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem
 ```  
   
 ## <a name="see-also"></a>参照  
- [Errors コレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Errors コレクション (ADO)](./errors-collection-ado.md)   
+ [Fields コレクション (ADO)](./fields-collection-ado.md)   
+ [Parameters コレクション (ADO)](./parameters-collection-ado.md)   
+ [Properties コレクション (ADO)](./properties-collection-ado.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a66fcb11780731424563526d30a4d544c60ea693
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 089c4e7f402e374ab4af43c683270ad488c0f8bb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439504"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769361"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder プロパティの例 (VB)
-この例では、インデックスの[Columns](../../../ado/reference/adox-api/columns-collection-adox.md)コレクションに追加された[列](../../../ado/reference/adox-api/column-object-adox.md)の[順序](../../../ado/reference/adox-api/sortorder-property-adox.md)[付け](../../../ado/reference/adox-api/index-object-adox.md)プロパティを示します。 このコードでは、 **Employees** テーブルの Country 列に昇順のインデックスが追加され、レコードが表示されます。 次に、このコードにより、 **Employees** テーブルの Country 列に降順のインデックスが追加され、レコードが再び表示されます。 昇順と降順のインデックスの違いを示します。  
+この例では、インデックスの[Columns](./columns-collection-adox.md)コレクションに追加された[列](./column-object-adox.md)の[順序](./sortorder-property-adox.md)[付け](./index-object-adox.md)プロパティを示します。 このコードでは、 **Employees** テーブルの Country 列に昇順のインデックスが追加され、レコードが表示されます。 次に、このコードにより、 **Employees** テーブルの Country 列に降順のインデックスが追加され、レコードが再び表示されます。 昇順と降順のインデックスの違いを示します。  
   
 ```  
 ' BeginSortOrderVB  
@@ -138,7 +138,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [SortOrder プロパティ (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)
+ [Column オブジェクト (ADOX)](./column-object-adox.md)   
+ [Columns コレクション (ADOX)](./columns-collection-adox.md)   
+ [Index オブジェクト (ADOX)](./index-object-adox.md)   
+ [SortOrder プロパティ (ADOX)](./sortorder-property-adox.md)

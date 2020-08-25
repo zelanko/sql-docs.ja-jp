@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 939de5306982ab2e369fce0648e477cac5f48cb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 343e5fd45a32e45cda342ab01feb64f379054486
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441794"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777161"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
-[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトに書き込まれる文字列に行の区切り記号を追加するかどうかを指定します。  
+[ストリーム](./stream-object-ado.md)オブジェクトに書き込まれる文字列に行の区切り記号を追加するかどうかを指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adWriteChar**|0|既定値。 指定された ( *データ* パラメーターによって指定された) テキスト文字列を **ストリーム** オブジェクトに書き込みます。|  
-|**adWriteLine**|1|**ストリーム**オブジェクトにテキスト文字列と行区切り記号を書き込みます。 [Lineseparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)プロパティが定義されていない場合は、実行時エラーが返されます。|  
+|**adWriteLine**|1|**ストリーム**オブジェクトにテキスト文字列と行区切り記号を書き込みます。 [Lineseparator](./lineseparator-property-ado.md)プロパティが定義されていない場合は、実行時エラーが返されます。|  
   
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  これらの定数には、対応する ADO/WFC がありません。  
   
 ## <a name="applies-to"></a>適用対象  
- [WriteText メソッド](../../../ado/reference/ado-api/writetext-method.md)
+ [WriteText メソッド](./writetext-method.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e56e93f851d2f5f0dac7df2339dec37c0b6a1ac2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c696fb6be361327944223bab19d1edb0cf35460
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450944"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776241"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone メソッドの例 (VBScript)
-この例では、 [Clone](../../../ado/reference/ado-api/clone-method-ado.md) メソッドを使用して [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) のコピーを作成し、ユーザーが各コピーのレコードポインターを個別に配置できるようにします。  
+この例では、 [Clone](./clone-method-ado.md) メソッドを使用して [レコードセット](./recordset-object-ado.md) のコピーを作成し、ユーザーが各コピーのレコードポインターを個別に配置できるようにします。  
   
  Active Server ページ (ASP) で次の例を使用します。 この例では、Microsoft Access と共に配布される **Northwind** データベースを使用します。 次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、CloneVBS として保存します。 結果は任意のクライアントブラウザーで表示できます。  
   
@@ -119,5 +119,5 @@ ms.locfileid: "88450944"
 ```  
   
 ## <a name="see-also"></a>参照  
- [Clone メソッド (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Clone メソッド (ADO)](./clone-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

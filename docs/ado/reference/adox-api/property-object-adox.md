@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a836b5b0778aea77732036d1951db81aa790198
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75a4722803e66527873f98fe469825d4af82ca33
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439604"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769541"
 ---
 # <a name="property-object-adox"></a>Property オブジェクト (ADOX)
 ADOX オブジェクトの特性を表します。  
@@ -27,7 +27,7 @@ ADOX オブジェクトの特性を表します。
 ## <a name="remarks"></a>解説  
  ADOX オブジェクトには、組み込みと動的の2種類のプロパティがあります。  
   
- 組み込みプロパティは、新しいオブジェクトですぐに使用できるプロパティで、MyObject 構文を使用します。 オブジェクトの [プロパティコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)にはプロパティオブジェクトとして表示されません。そのため、値を変更することはできますが、その特性を変更することはできません。  
+ 組み込みプロパティは、新しいオブジェクトですぐに使用できるプロパティで、MyObject 構文を使用します。 オブジェクトの [プロパティコレクション](../ado-api/properties-collection-ado.md)にはプロパティオブジェクトとして表示されません。そのため、値を変更することはできますが、その特性を変更することはできません。  
   
  動的プロパティは、基になるデータプロバイダーによって定義され、適切な ADOX オブジェクトの Properties コレクションに表示されます。  動的プロパティを参照できるのは、コレクションを介して、MyObject (0) または MyObject. Properties ("Name") 構文を使用する場合のみです。  
   
@@ -35,14 +35,14 @@ ADOX オブジェクトの特性を表します。
   
  動的プロパティオブジェクトには、次の4つの組み込みプロパティがあります。  
   
- [Name](../../../ado/reference/ado-api/name-property-ado.md)プロパティは、プロパティを識別する文字列です。  
+ [Name](../ado-api/name-property-ado.md)プロパティは、プロパティを識別する文字列です。  
   
- [Type](../../../ado/reference/ado-api/type-property-ado.md)プロパティは、プロパティのデータ型を指定する整数です。  
+ [Type](../ado-api/type-property-ado.md)プロパティは、プロパティのデータ型を指定する整数です。  
   
- [Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティは、プロパティ設定を含むバリアントです。 Value は、プロパティオブジェクトの既定のプロパティです。  
+ [Value](../ado-api/value-property-ado.md)プロパティは、プロパティ設定を含むバリアントです。 Value は、プロパティオブジェクトの既定のプロパティです。  
   
- [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティは、プロバイダー固有のプロパティの特性を示す long 型の値です。  
+ [Attributes](../ado-api/attributes-property-ado.md)プロパティは、プロバイダー固有のプロパティの特性を示す long 型の値です。  
   
  ここでは、次のトピックについて説明します。  
   
--   [ADOX Property オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/adox-property-object-properties-methods-and-events.md)
+-   [ADOX Property オブジェクトのプロパティ、メソッド、およびイベント](./adox-property-object-properties-methods-and-events.md)

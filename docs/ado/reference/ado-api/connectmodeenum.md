@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce1d75faaf4bbaeb941a0da87b68c09744c2a422
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10bc68683f337f5a0bdf6fc5679c4276925a4234
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444434"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775851"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
-[接続](../../../ado/reference/ado-api/connection-object-ado.md)のデータを変更したり、[レコード](../../../ado/reference/ado-api/record-object-ado.md)を開いたり、**レコード**および[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトの[Mode](../../../ado/reference/ado-api/mode-property-ado.md)プロパティの値を指定したりするために使用できるアクセス許可を指定します。  
+[接続](./connection-object-ado.md)のデータを変更したり、[レコード](./record-object-ado.md)を開いたり、**レコード**および[ストリーム](./stream-object-ado.md)オブジェクトの[Mode](./mode-property-ado.md)プロパティの値を指定したりするために使用できるアクセス許可を指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
@@ -57,11 +57,11 @@ ms.locfileid: "88444434"
 
 :::row:::
     :::column:::
-        [Mode プロパティ (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)  
-        [Open メソッド (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)  
+        [Mode プロパティ (ADO)](./mode-property-ado.md)  
+        [Open メソッド (ADO Record)](./open-method-ado-record.md)  
     :::column-end:::
     :::column:::
-        [Open メソッド (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
-        [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Open メソッド (ADO Stream)](./open-method-ado-stream.md)  
+        [Stream オブジェクト (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::

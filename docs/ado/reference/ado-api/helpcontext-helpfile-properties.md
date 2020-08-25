@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 628d3c0d01cc1b62304627fb310705b093976f8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4d4aacd44cc6dd245026f84b826d4c007f6b696
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443484"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774871"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext、HelpFile プロパティ
-[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトに関連付けられたヘルプファイルとトピックを示します。  
+[エラー](./error-object.md)オブジェクトに関連付けられたヘルプファイルとトピックを示します。  
   
 ## <a name="return-values"></a>戻り値  
   
@@ -42,11 +42,11 @@ ms.locfileid: "88443484"
  ヘルプファイルが **HelpFile** プロパティに指定されている場合、 **helpcontext** プロパティを使用して、識別するヘルプトピックが自動的に表示されます。 関連するヘルプトピックが使用できない場合、 **Helpcontext** プロパティは0を返し、 **HelpFile** プロパティは長さ0の文字列 ("") を返します。  
   
 ## <a name="applies-to"></a>適用対象  
- [Error オブジェクト](../../../ado/reference/ado-api/error-object.md)  
+ [Error オブジェクト](./error-object.md)  
   
 ## <a name="see-also"></a>参照  
- [Description、HelpContext、HelpFile、のエラー、Number、Source、および SQLState プロパティの例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Description、HelpContext、HelpFile、のエラー、Number、Source、および SQLState プロパティの例 (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [Description プロパティ](../../../ado/reference/ado-api/description-property.md)   
- [Number プロパティ (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
- [Source プロパティ (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)
+ [Description、HelpContext、HelpFile、のエラー、Number、Source、および SQLState プロパティの例 (VB)](./description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Description、HelpContext、HelpFile、のエラー、Number、Source、および SQLState プロパティの例 (VC + +)](./description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Description プロパティ](./description-property.md)   
+ [Number プロパティ (ADO)](./number-property-ado.md)   
+ [Source プロパティ (ADO Error)](./source-property-ado-error.md)
