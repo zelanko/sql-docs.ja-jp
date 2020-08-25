@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4325dfa9c16edba12c2bba694b47c1b0875c7c6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400312"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>Analytics Platform System のソフトウェアサービス
@@ -26,18 +26,18 @@ ms.locfileid: "74400312"
   
 **更新プログラムの適用範囲:** 分析プラットフォームシステムに修正プログラムまたは Service Pack を適用するには、アプライアンス全体をオフラインにする必要があります。  
   
-**SSIS 変換先アダプターおよびクライアントツール:** SSIS 変換先アダプターの MSI またはクライアントツールの MSI に加えられた変更を含む修正プログラムを適用すると、管理ノードの**C:\PDWINST\ClientTools**ディレクトリで msi ファイルが更新されます。 この修正プログラムでは、更新された MSI ファイルからコンポーネントが自動的にインストールされません。 これらのコンポーネントを更新するには、顧客が古いバージョンのコンポーネントをアンインストールし、更新された MSI ファイルから新しいバージョンをインストールする必要があります。 SSIS 変換先アダプターの MSI またはクライアントツールの MSI に加えられた変更を含む修正プログラムをアンインストールする場合、それらのコンポーネントの MSI ファイルは以前のバージョンに戻されます。 これらのコンポーネントを以前のバージョンに戻すには、顧客が既存の (新しい) バージョンのコンポーネントをアンインストールし、元に戻した MSI ファイルから古いバージョンを再インストールする必要があります。  
+**SSIS 変換先アダプターおよびクライアントツール:** SSIS 変換先アダプターの MSI またはクライアントツールの MSI に加えられた変更を含む修正プログラムを適用すると、管理ノードの **C:\PDWINST\ClientTools** ディレクトリで msi ファイルが更新されます。 この修正プログラムでは、更新された MSI ファイルからコンポーネントが自動的にインストールされません。 これらのコンポーネントを更新するには、顧客が古いバージョンのコンポーネントをアンインストールし、更新された MSI ファイルから新しいバージョンをインストールする必要があります。 SSIS 変換先アダプターの MSI またはクライアントツールの MSI に加えられた変更を含む修正プログラムをアンインストールする場合、それらのコンポーネントの MSI ファイルは以前のバージョンに戻されます。 これらのコンポーネントを以前のバージョンに戻すには、顧客が既存の (新しい) バージョンのコンポーネントをアンインストールし、元に戻した MSI ファイルから古いバージョンを再インストールする必要があります。  
   
 ## <a name="software-servicing-topics"></a>ソフトウェアサービスに関するトピック  
 次のトピックでは、アプライアンスでソフトウェアサービスを管理する方法について説明します。  
   
--   [Microsoft Update &#40;Analytics Platform System&#41;をダウンロードして適用します](download-and-apply-microsoft-updates.md)  
+-   [Microsoft Update &#40;Analytics Platform System&#41;をダウンロードして適用します ](download-and-apply-microsoft-updates.md)  
   
 -   [Microsoft 更新プログラムのアンインストール &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
   
--   [Analytics platform system の修正プログラム &#40;analytics Platform System&#41;を適用します](apply-analytics-platform-system-hotfixes.md)  
+-   [Analytics platform system の修正プログラム &#40;analytics Platform System&#41;を適用します ](apply-analytics-platform-system-hotfixes.md)  
   
--   [Analytics platform system の修正プログラム &#40;Analytics Platform System&#41;をアンインストールする](uninstall-analytics-platform-system-hotfixes.md)  
+-   [Analytics platform system の修正プログラム &#40;Analytics Platform System&#41;をアンインストールする ](uninstall-analytics-platform-system-hotfixes.md)  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

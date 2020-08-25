@@ -28,7 +28,7 @@ ms.locfileid: "88769041"
 # <a name="users-collection-adox"></a>Users コレクション (ADOX)
 [カタログ](./catalog-object-adox.md)または[グループ](./group-object-adox.md)の格納されているすべての[ユーザー](./user-object-adox.md)オブジェクトが含まれます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [カタログ](./catalog-object-adox.md)の**ユーザー**コレクションは、すべてのカタログのユーザーを表します。 [グループ](./group-object-adox.md)の**ユーザー**コレクションは、特定のグループのメンバーシップを持つユーザーのみを表します。  
   
  **ユーザー**コレクションの[Append](./append-method-adox-users.md)メソッドは、ADOX で一意です。 次のようにすることができます。  

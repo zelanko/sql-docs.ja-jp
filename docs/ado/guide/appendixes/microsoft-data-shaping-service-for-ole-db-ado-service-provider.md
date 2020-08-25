@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c61e40220b99bd68c92e2651d58ea13ee10be29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d0acedc118c2789945f3b02a438655176179ef0
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454104"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806642"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>OLE DB 用の Microsoft データ整形サービスの概要
 > [!IMPORTANT]
 >  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、アプリケーションは XML を使用する必要があります。
 
- OLE DB サービスプロバイダー用の Microsoft データ整形サービスは、データプロバイダーからの階層構造の (整形された) [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトの構築をサポートしています。
+ OLE DB サービスプロバイダー用の Microsoft データ整形サービスは、データプロバイダーからの階層構造の (整形された) [レコードセット](../../reference/ado-api/recordset-object-ado.md) オブジェクトの構築をサポートしています。
 
 ## <a name="provider-keyword"></a>Provider キーワード
  OLE DB のデータ整形サービスを呼び出すには、接続文字列に次のキーワードと値を指定します。
@@ -35,7 +35,7 @@ ms.locfileid: "88454104"
 ```
 
 ## <a name="dynamic-properties"></a>動的プロパティ
- このサービスプロバイダーが呼び出されると、次の動的プロパティが[Connection](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[properties](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションに追加されます。
+ このサービスプロバイダーが呼び出されると、次の動的プロパティが[Connection](../../reference/ado-api/connection-object-ado.md)オブジェクトの[properties](../../reference/ado-api/properties-collection-ado.md)コレクションに追加されます。
 
 |動的プロパティ名|説明|
 |---------------------------|-----------------|
@@ -49,7 +49,7 @@ Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
- また、プロパティの名前を [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) プロパティのインデックスとして指定することによって、動的プロパティを設定または取得することもできます。 たとえば、次のコード例では、 **Data Provider** 動的プロパティの現在の値を取得して出力し、cn の場合に新しい値を設定します。DataProvider が "MSDataShape" に設定されました (直接または間接的に接続文字列を介して)。接続が開かれていません。
+ また、プロパティの名前を [Properties](../../reference/ado-api/properties-collection-ado.md) プロパティのインデックスとして指定することによって、動的プロパティを設定または取得することもできます。 たとえば、次のコード例では、 **Data Provider** 動的プロパティの現在の値を取得して出力し、cn の場合に新しい値を設定します。DataProvider が "MSDataShape" に設定されました (直接または間接的に接続文字列を介して)。接続が開かれていません。
 
 ```vb
 Debug.Print cn.Properties("Data Provider")
@@ -59,7 +59,7 @@ cn.Properties("Data Provider") = "MSDASQL"
 > [!NOTE]
 >  動的プロパティの **Data Provider**は、開かれていない **接続** オブジェクトに対してのみ設定できます。 接続が開かれると、 **Data Provider** プロパティが読み取り専用になります。
 
- データシェイプの詳細については、「 [データシェイプ](../../../ado/guide/data/data-shaping-overview.md)」を参照してください。
+ データシェイプの詳細については、「 [データシェイプ](../data/data-shaping-overview.md)」を参照してください。
 
 ## <a name="see-also"></a>参照
- [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [付録 A: プロバイダー](./appendix-a-providers.md)

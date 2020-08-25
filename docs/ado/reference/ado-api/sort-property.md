@@ -22,21 +22,21 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8ec5c6812e2800825677cd844756d1dd9325729
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7cfeeb8d91420ec25cd6dd196b260ad8222c086
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442064"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777421"
 ---
 # <a name="sort-property"></a>Sort プロパティ
-[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)が並べ替えられる1つ以上のフィールド名と、各フィールドを昇順と降順のどちらで並べ替えるかを示します。  
+[レコードセット](./recordset-object-ado.md)が並べ替えられる1つ以上のフィールド名と、各フィールドを昇順と降順のどちらで並べ替えるかを示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  並べ替えの対象となる**レコードセット**内のフィールド名を示す**文字列**値を設定または返します。 各名前はコンマで区切られます。オプションで、空白とキーワード **ASC**を使用します。この場合、フィールドは昇順に並べ替えられ、 **DESC**はフィールドが降順に並べ替えられます。 既定では、キーワードが指定されていない場合、フィールドは昇順に並べ替えられます。  
   
 ## <a name="remarks"></a>解説  
- このプロパティでは、 [カーソル位置](../../../ado/reference/ado-api/cursorlocation-property-ado.md) プロパティを **adUseClient**に設定する必要があります。 インデックスがまだ存在しない場合は、 **Sort** プロパティで指定された各フィールドに対して一時インデックスが作成されます。  
+ このプロパティでは、 [カーソル位置](./cursorlocation-property-ado.md) プロパティを **adUseClient**に設定する必要があります。 インデックスがまだ存在しない場合は、 **Sort** プロパティで指定された各フィールドに対して一時インデックスが作成されます。  
   
  データは物理的には再配置されませんが、単純にインデックスで指定された順序でアクセスされるため、並べ替え操作は効率的です。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "88442064"
  "ASC" または "DESC" という名前のフィールドは使用できません。これらの名前は、キーワード **ASC** および **DESC**と競合しています。 **レコードセット**を返すクエリで AS キーワードを使用する**と**、競合する名前を持つフィールドの別名を作成できます。  
   
 ## <a name="applies-to"></a>適用対象  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [Sort プロパティの例 (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
- [Sort プロパティの例 (VC + +)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
- [Optimize プロパティ-動的 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [SortColumn プロパティ (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [SortDirection プロパティ (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
+ [Sort プロパティの例 (VB)](./sort-property-example-vb.md)   
+ [Sort プロパティの例 (VC + +)](./sort-property-example-vc.md)   
+ [Optimize プロパティ-動的 (ADO)](./optimize-property-dynamic-ado.md)   
+ [SortColumn プロパティ (RDS)](../rds-api/sortcolumn-property-rds.md)   
+ [SortDirection プロパティ (RDS)](../rds-api/sortdirection-property-rds.md)

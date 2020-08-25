@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 09b8ce2c2b8f6388e300a0034c0ea72b795bded1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05e65643884d57d991028394f9f5b1ba7b752533
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442214"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777581"
 ---
 # <a name="save-method"></a>Save メソッド
-ファイルまたは[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトに[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を保存します。  
+ファイルまたは[ストリーム](./stream-object-ado.md)オブジェクトに[レコードセット](./recordset-object-ado.md)を保存します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,12 +39,12 @@ recordset.Save Destination, PersistFormat
  任意。 **レコードセット**を保存するファイルの完全なパス名、または**ストリーム**オブジェクトへの参照を表す**バリアント**。  
   
  *PersistFormat*  
- 任意。 **レコードセット**を保存する形式を指定する[persistformatenum](../../../ado/reference/ado-api/persistformatenum.md)値 (XML または ADTG)。 既定値は **adPersistADTG**です。  
+ 任意。 **レコードセット**を保存する形式を指定する[persistformatenum](./persistformatenum.md)値 (XML または ADTG)。 既定値は **adPersistADTG**です。  
   
 ## <a name="remarks"></a>解説  
- [Save メソッド](../../../ado/reference/ado-api/save-method.md)メソッドは、開いている**レコードセット**でのみ呼び出すことができます。 [Open メソッド (ADO recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドを使用して、後で*変換先*から**レコードセット**を復元します。  
+ [Save メソッド]()メソッドは、開いている**レコードセット**でのみ呼び出すことができます。 [Open メソッド (ADO recordset)](./open-method-ado-recordset.md)メソッドを使用して、後で*変換先*から**レコードセット**を復元します。  
   
- [フィルタープロパティ](../../../ado/reference/ado-api/filter-property.md)プロパティが**レコードセット**に対して有効になっている場合は、フィルターでアクセスできる行だけが保存されます。 **レコードセット**が階層化されている場合、現在の子**レコードセット**とその子が保存されます (親**レコード**セットを含む)。 子 **レコードセット** の Save メソッドが呼び出されると、子とそのすべての子が保存されますが、親は保存されません。  
+ [フィルタープロパティ](./filter-property.md)プロパティが**レコードセット**に対して有効になっている場合は、フィルターでアクセスできる行だけが保存されます。 **レコードセット**が階層化されている場合、現在の子**レコードセット**とその子が保存されます (親**レコード**セットを含む)。 子 **レコードセット** の Save メソッドが呼び出されると、子とそのすべての子が保存されますが、親は保存されません。  
   
  **レコードセット**を初めて保存するときは、*変換先*を指定することはできません。 *Destination*を省略した場合は、**レコードセット**の Source プロパティの値に設定された名前で新しいファイルが作成されます。  
   
@@ -58,14 +58,14 @@ recordset.Save Destination, PersistFormat
   
  レコードは、レコード **セット**の最初の行から保存されます。 **Save**メソッドが終了すると、現在の行の位置が**レコードセット**の最初の行に移動します。  
   
- 最適な結果を得るには、[[カーソルの場所] プロパティ (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを**adUseClient**に設定し**ます。** プロバイダーが、 **レコードセット** オブジェクトを保存するために必要なすべての機能をサポートしていない場合は、カーソルサービスによってその機能が提供されます。  
+ 最適な結果を得るには、[[カーソルの場所] プロパティ (ADO)](./cursorlocation-property-ado.md)プロパティを**adUseClient**に設定し**ます。** プロバイダーが、 **レコードセット** オブジェクトを保存するために必要なすべての機能をサポートしていない場合は、カーソルサービスによってその機能が提供されます。  
   
- [**カーソルの場所**] プロパティを**aduseserver**に設定して**レコードセット**を永続化すると、**レコードセット**の更新機能が制限されます。 通常、単一テーブルの更新、挿入、削除のみが許可されます (プロバイダーの機能によって異なります)。 この構成では、再 [同期メソッド](../../../ado/reference/ado-api/resync-method.md) メソッドも使用できません。  
+ [**カーソルの場所**] プロパティを**aduseserver**に設定して**レコードセット**を永続化すると、**レコードセット**の更新機能が制限されます。 通常、単一テーブルの更新、挿入、削除のみが許可されます (プロバイダーの機能によって異なります)。 この構成では、再 [同期メソッド](./resync-method.md) メソッドも使用できません。  
   
 > [!NOTE]
 >  **Advariant****型、のフィールド、また**は "**不明**" 型の**フィールド**を含む**レコードセット**の保存は ADO ではサポートされていないため、予期しない結果が発生する可能性があります。  
   
- 条件文字列の形式のフィルター (OrderDate > ' 12/31/1999 ' など) だけが、永続化された **レコードセット**の内容に影響します。 **ブックマーク**の配列、または[filtergroupenum](../../../ado/reference/ado-api/filtergroupenum.md)の値を使用して作成されたフィルターは、永続化された**レコードセット**の内容には影響しません。 これらのルールは、クライアント側のカーソルまたはサーバー側のカーソルを使用して作成された **レコードセット**に適用されます。  
+ 条件文字列の形式のフィルター (OrderDate > ' 12/31/1999 ' など) だけが、永続化された **レコードセット**の内容に影響します。 **ブックマーク**の配列、または[filtergroupenum](./filtergroupenum.md)の値を使用して作成されたフィルターは、永続化された**レコードセット**の内容には影響しません。 これらのルールは、クライアント側のカーソルまたはサーバー側のカーソルを使用して作成された **レコードセット**に適用されます。  
   
  *Destination*パラメーターは OLE DB IStream インターフェイスをサポートする任意のオブジェクトを受け入れることができるため、**レコードセット**を ASP 応答オブジェクトに直接保存できます。 詳細については、「 **XML レコードセットの永続化シナリオ**」を参照してください。  
   
@@ -92,16 +92,16 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 
 :::row:::
     :::column:::
-        [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Recordset オブジェクト (ADO)](./recordset-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Stream オブジェクト (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>参照  
- [Save および Open メソッドの例 (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
- [Save および Open メソッドの例 (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
- [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Open メソッド (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [SaveToFile メソッド](../../../ado/reference/ado-api/savetofile-method.md)
+ [Save および Open メソッドの例 (VB)](./save-and-open-methods-example-vb.md)   
+ [Save および Open メソッドの例 (VC + +)](./save-and-open-methods-example-vc.md)   
+ [Open メソッド (ADO Recordset)](./open-method-ado-recordset.md)   
+ [Open メソッド (ADO Stream)](./open-method-ado-stream.md)   
+ [SaveToFile メソッド](./savetofile-method.md)

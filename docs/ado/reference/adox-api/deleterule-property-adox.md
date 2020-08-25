@@ -33,7 +33,7 @@ ms.locfileid: "88770591"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [Ruleenum](./ruleenum.md)定数のいずれかを指定できる**Long 型**の値を設定して返します。 既定値は **adRINone**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このプロパティは、既にコレクションに追加されている [キー](./key-object-adox.md) オブジェクトに対しては読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  

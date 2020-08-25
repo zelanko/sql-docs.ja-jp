@@ -41,7 +41,7 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  *DataControl*  
  RDS を表すオブジェクト変数です [。DataControl](./datacontrol-object-rds.md) オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  RDS で **Move** メソッドを使用でき **ます。DataControl** オブジェクトを使用して、Web ページ上のデータバインドコントロール内のデータレコード間を移動します。 たとえば、RDS にバインドすることによって、 **レコードセット** をグリッドに表示するとし **ます。DataControl** オブジェクト。 次に、ユーザーがクリックして、表示されている **レコードセット**内の最初、最後、次、または前のレコードに移動するためのボタンを追加できます。 これを行うには、RDS の **MoveFirst**、 **MoveLast**、 **MoveNext**、および **MovePrevious** の各メソッドを呼び出し **ます。** First、Last、Next、および Previous の各ボタンの onClick プロシージャ内の DataControl オブジェクト。 [アドレス帳の例](../../guide/remote-data-service/address-book-navigation-buttons.md)では、これを行う方法を示しています。  
   
 ## <a name="applies-to"></a>適用対象  

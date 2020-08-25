@@ -27,7 +27,7 @@ ms.locfileid: "88770271"
 # <a name="indexes-collection-adox"></a>Indexes コレクション (ADOX)
 テーブルのすべての [Index](./index-object-adox.md) オブジェクトを格納します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Indexes**コレクションの[Append](./append-method-adox-indexes.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
   
 -   **追加**メソッドを使用して、新しいインデックスをコレクションに追加します。  

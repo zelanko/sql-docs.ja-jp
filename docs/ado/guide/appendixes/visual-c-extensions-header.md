@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25a435b2fd4739710f208e50c1265db441d54f7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d3793049d9fa1f86dd9aa6f928ffe6003882a1e
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453924"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806735"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ Extensions のヘッダー
 次のヘッダー ( **icrsint .h**) では、クライアントが **レコードセット** からフィールドを取得して、 **CADORecordBinding**から派生したクラスで定義された変数に変換できるようにするインターフェイスについて詳しく説明しています。 アクセスするフィールドごとに ADO バインドマクロを指定する必要があります。  
@@ -209,5 +209,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>参照  
- [Visual C++ 拡張機能の例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
- [Visual C++ Extensions を使用する](../../../ado/guide/appendixes/using-visual-c-extensions.md)
+ [Visual C++ 拡張機能の例](./visual-c-extensions-example.md)   
+ [Visual C++ Extensions を使用する](./using-visual-c-extensions.md)

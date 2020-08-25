@@ -31,7 +31,7 @@ ADO のバージョン番号を示します。
 ## <a name="return-value"></a>戻り値  
  バージョンを示す **文字列** 値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Version**プロパティを使用して、ADO 実装のバージョン番号を返します。  
   
  プロバイダーのバージョンは、 [プロパティ](./properties-collection-ado.md) コレクションで動的プロパティとして使用できるようになります。  

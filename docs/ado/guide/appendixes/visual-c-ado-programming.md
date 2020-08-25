@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae93db522b465b85feefe85cd94df4be3d29f062
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66d06630a6bc39c49b9a3e55276bed574869d40d
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453954"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806763"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ での ADO プログラミング
 ADO API リファレンスでは、Microsoft Visual Basic と同様の構文を使用した ADO アプリケーションプログラミングインターフェイス (API) の機能について説明します。 すべてのユーザーが対象となりますが、ADO プログラマーは、Visual Basic、Visual C++ ( **#import** ディレクティブを含む)、および Visual J++ (ADO/WFC クラスパッケージを含む) などのさまざまな言語を採用しています。  
@@ -29,7 +29,7 @@ ADO API リファレンスでは、Microsoft Visual Basic と同様の構文を�
 > [!NOTE]
 > Microsoft は、2004での Visual J++ のサポートを終了しました。
 
- この多様性に対応するために、 [ADO for Visual C++ 構文のインデックス](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) は、API リファレンスにおける機能、パラメーター、例外的な動作などの一般的な説明へのリンクと共に、言語固有の構文 Visual C++ を提供します。  
+ この多様性に対応するために、 [ADO for Visual C++ 構文のインデックス](./using-ado-with-microsoft-visual-c.md) は、API リファレンスにおける機能、パラメーター、例外的な動作などの一般的な説明へのリンクと共に、言語固有の構文 Visual C++ を提供します。  
   
  ADO は、COM (コンポーネントオブジェクトモデル) インターフェイスを使用して実装されます。 ただし、プログラマは特定のプログラミング言語で COM を使用する方が簡単です。 たとえば、COM を使用する場合の詳細は、ほぼすべての場合に Visual Basic プログラマに対して暗黙的に処理されますが、Visual C++ プログラマはそれらの詳細に参加する必要があります。  
   
@@ -205,7 +205,7 @@ pRecordset->NextRecordset(NULL);
   
  これらは ADO エラーであり、ADO 操作が失敗した場合に発生します。 基になるプロバイダーによって返されたエラーは、**接続**オブジェクト**エラー**のコレクションに**エラー**オブジェクトとして表示されます。  
   
- **#Import**ディレクティブは、ADO .dll で宣言されたメソッドとプロパティのエラー処理ルーチンだけを作成します。 ただし、独自のエラーチェックマクロまたはインライン関数を記述することで、この同じエラー処理機構を利用できます。 例については、次のセクションの「 [Visual C++ の拡張機能](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)」または「コード」を参照してください。  
+ **#Import**ディレクティブは、ADO .dll で宣言されたメソッドとプロパティのエラー処理ルーチンだけを作成します。 ただし、独自のエラーチェックマクロまたはインライン関数を記述することで、この同じエラー処理機構を利用できます。 例については、次のセクションの「 [Visual C++ の拡張機能](./visual-c-extensions-for-ado.md)」または「コード」を参照してください。  
   
 ## <a name="visual-c-equivalents-of-visual-basic-conventions"></a>Visual Basic 規約の Visual C++  
  以下は、ADO ドキュメント内のいくつかの規則の概要であり、Visual Basic でコード化されています。また、Visual C++ でも同様です。  
@@ -327,7 +327,7 @@ End Sub
   
  次の Visual C++ 例は、 **_variant_t**で使用される**SafeArray**の使用方法を示しています。  
   
-#### <a name="notes"></a>ノート  
+#### <a name="notes"></a>メモ  
  次の注意事項は、コード例のコメント部分に対応しています。  
   
 1.  ここでも、既存のエラー処理メカニズムを利用するために、TESTHR () インライン関数が定義されています。  
@@ -436,7 +436,7 @@ End Sub
   
  この Visual C++ の例では、 **Get** / **Put** / **PutRef**_プロパティ_を示します。  
   
-#### <a name="notes"></a>ノート  
+#### <a name="notes"></a>メモ  
  次の注意事項は、コード例のコメント部分に対応しています。  
   
 1.  この例では、省略された文字列引数の2つの形式を使用します。明示的な定数、 **Strmissing**、およびコンパイラが**Open**メソッドのスコープに存在する一時 **_bstr_t**を作成するために使用する文字列です。  
@@ -555,7 +555,7 @@ void main() {
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>ADO オブジェクトポインターを (IDispatch *) でキャストする  
  次の Visual C++ 例では、(IDispatch *) を使用して ADO オブジェクトポインターをキャストする方法を示します。  
   
-#### <a name="notes"></a>ノート  
+#### <a name="notes"></a>メモ  
  次の注意事項は、コード例のコメント部分に対応しています。  
   
 1.  明示的にコード化された**バリアント**で開いている**接続**オブジェクトを指定します。 正しいコンストラクターが呼び出されるように、(IDispatch) を使用してキャスト \* します。 また、2番目の **_variant_t** パラメーターを明示的に **true**に設定して、 **Recordset:: Open** 操作が終了したときにオブジェクト参照カウントが正しくなるようにします。  

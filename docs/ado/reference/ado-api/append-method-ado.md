@@ -59,7 +59,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*  
  任意。 新しいフィールドの値を表す **バリアント** 。 指定しない場合、フィールドには null 値が付加されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="parameters-collection"></a>Parameters コレクション  
  [Parameters](./parameters-collection-ado.md)コレクションに追加する前に、 [Parameter](./parameter-object.md)オブジェクトの[Type](./type-property-ado.md)プロパティを設定する必要があります。 可変長データ型を選択する場合は、 [Size](./size-property-ado-parameter.md) プロパティも0より大きい値に設定する必要があります。  

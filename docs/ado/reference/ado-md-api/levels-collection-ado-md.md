@@ -27,7 +27,7 @@ ms.locfileid: "88778011"
 # <a name="levels-collection-ado-md"></a>Levels コレクション (ADO MD)
 階層を構成する [レベル](./level-object-ado-md.md) オブジェクトを格納します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **レベル** は、標準の ADO コレクションです。 コレクションのプロパティとメソッドを使用すると、次の操作を実行できます。  
   
 -   [Count](../ado-api/count-property-ado.md)プロパティを使用して、コレクション内のオブジェクトの数を取得します。  

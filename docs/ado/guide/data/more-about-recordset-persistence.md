@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ceeb9abb3b14441e6f0e8194d07836cf5d482492
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dbdc0b724d96cf541eedb7e26f8b652a280e829a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453184"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805835"
 ---
 # <a name="more-about-recordset-persistence"></a>レコードセットの保持に関する詳細情報
-ADO レコードセットオブジェクトは、 [Save](../../../ado/reference/ado-api/save-method.md)メソッドを使用して、**レコードセット**オブジェクトの内容をファイルに格納することをサポートしています。 永続的に格納されたファイルは、ローカルドライブ、サーバー、または Web サイト上の URL として存在する場合があります。 その後、**レコードセット**オブジェクトの[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドまたは[Connection](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)メソッドのいずれかを使用して、ファイルを復元できます。  
+ADO レコードセットオブジェクトは、 [Save](../../reference/ado-api/save-method.md)メソッドを使用して、**レコードセット**オブジェクトの内容をファイルに格納することをサポートしています。 永続的に格納されたファイルは、ローカルドライブ、サーバー、または Web サイト上の URL として存在する場合があります。 その後、**レコードセット**オブジェクトの[Open](../../reference/ado-api/open-method-ado-recordset.md)メソッドまたは[Connection](../../reference/ado-api/connection-object-ado.md)オブジェクトの[Execute](../../reference/ado-api/execute-method-ado-connection.md)メソッドのいずれかを使用して、ファイルを復元できます。  
   
- さらに、 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) メソッドは、 **レコードセット** オブジェクトを、指定した文字で区切られた列と行を含む形式に変換します。  
+ さらに、 [GetString](../../reference/ado-api/getstring-method-ado.md) メソッドは、 **レコードセット** オブジェクトを、指定した文字で区切られた列と行を含む形式に変換します。  
   
- **レコードセット**を永続化するには、まず、ファイルに格納できる形式に変換します。 **レコードセット** オブジェクトは、独自の高度なデータ tablegram (ADTG) 形式または open 拡張マークアップ言語 (XML) 形式で格納できます。 ADTG の例については、次のセクションで説明します。 XML 永続化の詳細については、「 [xml 形式でのレコードの永続](../../../ado/guide/data/persisting-records-in-xml-format.md)化」を参照してください。  
+ **レコードセット**を永続化するには、まず、ファイルに格納できる形式に変換します。 **レコードセット** オブジェクトは、独自の高度なデータ tablegram (ADTG) 形式または open 拡張マークアップ言語 (XML) 形式で格納できます。 ADTG の例については、次のセクションで説明します。 XML 永続化の詳細については、「 [xml 形式でのレコードの永続](./persisting-records-in-xml-format.md)化」を参照してください。  
   
  保留中の変更を保存ファイルに保存します。 これにより、 **レコード** セットオブジェクトを返すクエリの実行、 **レコードセット**の編集、および保留中の変更の保存を行うことができます。後で **レコードセット**を復元し、保存されている保留中の変更を使用してデータソースを更新します。  
   
- **ストリーム**オブジェクトを永続的に格納する方法の詳細については、「[ストリームと永続](../../../ado/guide/data/streams-and-persistence.md)化」を参照してください。  
+ **ストリーム**オブジェクトを永続的に格納する方法の詳細については、「[ストリームと永続](./streams-and-persistence.md)化」を参照してください。  
   
  **レコードセット**の永続化の例については、「XML レコードセットの永続化シナリオ」を参照してください。  
   
@@ -79,7 +79,7 @@ dc.Refresh
 ```  
   
 ## <a name="see-also"></a>参照  
- [GetString メソッド (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [Microsoft OLE DB 永続化プロバイダー (ADO サービスプロバイダー)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [ストリームと永続性](../../../ado/guide/data/streams-and-persistence.md)
+ [GetString メソッド (ADO)](../../reference/ado-api/getstring-method-ado.md)   
+ [Microsoft OLE DB 永続化プロバイダー (ADO サービスプロバイダー)](../appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
+ [Recordset オブジェクト (ADO)](../../reference/ado-api/recordset-object-ado.md)   
+ [ストリームと永続性](./streams-and-persistence.md)

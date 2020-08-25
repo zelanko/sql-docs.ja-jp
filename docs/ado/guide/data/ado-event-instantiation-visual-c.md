@@ -13,15 +13,15 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 118b3515665da6a5f03e6001d9b4a1b7d1822ab5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25271ea1cf080f8f2bb599681a54af967a2d4ad2
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453784"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806441"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO イベントのインスタンス化: Visual C++
-ここでは、Microsoft® Visual C++®で ADO イベントをインスタンス化する方法について説明します。 詳細については、「 [ADO Events Model example (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) 」を参照してください。  
+ここでは、Microsoft® Visual C++®で ADO イベントをインスタンス化する方法について説明します。 詳細については、「 [ADO Events Model example (VC + +)](../../reference/ado-api/ado-events-model-example-vc.md) 」を参照してください。  
   
  Adoint ファイルにある **Connectioneventsvt** インターフェイスと **RecordsetEventsVt** インターフェイスから派生したクラスを作成します。  
   
@@ -68,7 +68,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
   
  イベントクラスは **IUnknown**から継承するため、 **QueryInterface**、 **AddRef**、および **Release** メソッドも実装する必要があります。 また、クラスコンストラクターとデストラクターも実装します。 タスクのこの部分を簡略化するために最も使いやすい Visual C++ ツールを選択します。  
   
- **IConnectionPointContainer**インターフェイスと**IConnectionPoint**インターフェイスの[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトに対して**QueryInterface**を発行して、イベントハンドラーが使用できることを認識していることを確認します。 次に、各クラスに対して **IConnectionPoint:: Advise** を発行します。  
+ **IConnectionPointContainer**インターフェイスと**IConnectionPoint**インターフェイスの[レコードセット](../../reference/ado-api/recordset-object-ado.md)オブジェクトと[接続](../../reference/ado-api/connection-object-ado.md)オブジェクトに対して**QueryInterface**を発行して、イベントハンドラーが使用できることを認識していることを確認します。 次に、各クラスに対して **IConnectionPoint:: Advise** を発行します。  
   
  たとえば、イベントハンドラーが使用可能であることを**レコードセット**オブジェクトに正常に通知する場合に**True**を返すブール関数を使用しているとします。  
   

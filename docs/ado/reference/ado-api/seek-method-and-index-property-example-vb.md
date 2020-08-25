@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88121d2f736d76eec80146c49c727cd0d27399b7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6e2fe55a8aa34c6249edd2eee9666e9558a52027
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442144"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777571"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Seek メソッドと Index プロパティの例 (VB)
-この例では、 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトの [Seek](../../../ado/reference/ado-api/seek-method.md) メソッドと [Index](../../../ado/reference/ado-api/index-property.md) プロパティを指定された ***従業員 ID***と共に使用して、Nwind データベースの ***Employees*** テーブルで従業員の名前を検索します。  
+この例では、 [レコードセット](./recordset-object-ado.md) オブジェクトの [Seek](./seek-method.md) メソッドと [Index](./index-property.md) プロパティを指定された ***従業員 ID***と共に使用して、Nwind データベースの ***Employees*** テーブルで従業員の名前を検索します。  
   
 ```  
 'BeginSeekVB  
@@ -117,6 +117,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Index プロパティ](../../../ado/reference/ado-api/index-property.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Seek メソッド](../../../ado/reference/ado-api/seek-method.md)
+ [Index プロパティ](./index-property.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [Seek メソッド](./seek-method.md)

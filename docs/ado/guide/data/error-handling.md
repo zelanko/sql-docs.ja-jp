@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d26cbadd4f9c6a33c6dc43a6dcc88e0a92f23d65
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 092f1a767e614b3426db63c95ca8bf4e14954dd0
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453444"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806869"
 ---
 # <a name="error-handling-in-ado"></a>ADO でのエラー処理
 ADO では、いくつかの異なるメソッドを使用して、発生したエラーをアプリケーションに通知します。 このセクションでは、ADO を使用しているときに発生する可能性があるエラーの種類と、アプリケーションに通知する方法について説明します。 最後に、これらのエラーを処理する方法についての提案を行います。  
@@ -34,7 +34,7 @@ ADO では、いくつかの異なるメソッドを使用して、発生した�
   
 -   エラーがデータプロバイダーに固有のものである場合は、エラーが発生したときにデータストアにアクセスするために使用された**接続**オブジェクトの**エラー**コレクションに、1つまたは複数の**エラー**オブジェクトが配置されます。  
   
--   イベントを発生させたプロセスでもエラーが発生した場合、エラー情報は **エラー** オブジェクトに配置され、パラメーターとしてイベントに渡されます。 イベントの詳細については、「 [ADO イベントの処理](../../../ado/guide/data/handling-ado-events.md) 」を参照してください。  
+-   イベントを発生させたプロセスでもエラーが発生した場合、エラー情報は **エラー** オブジェクトに配置され、パラメーターとしてイベントに渡されます。 イベントの詳細については、「 [ADO イベントの処理](./handling-ado-events.md) 」を参照してください。  
   
 -   バッチ更新や**レコードセット**に関連するその他の一括操作を処理するときに発生する問題は、**レコードセット**の**Status**プロパティで示すことができます。 たとえば、スキーマ制約の違反や、 **Recordstatusenum** の値で指定できる権限が不十分です。  
   
@@ -42,14 +42,14 @@ ADO では、いくつかの異なるメソッドを使用して、発生した�
   
  このセクションでは、次のトピックを扱います。  
   
--   [ADO エラー](../../../ado/guide/data/ado-errors.md)  
+-   [ADO エラー](./ado-errors.md)  
   
--   [プロバイダー エラー](../../../ado/guide/data/provider-errors.md)  
+-   [プロバイダー エラー](./provider-errors.md)  
   
--   [フィールドに関連するエラー情報](../../../ado/guide/data/field-related-error-information.md)  
+-   [フィールドに関連するエラー情報](./field-related-error-information.md)  
   
--   [レコードセット関連のエラー情報](../../../ado/guide/data/recordset-related-error-information.md)  
+-   [レコードセット関連のエラー情報](./recordset-related-error-information.md)  
   
--   [他の言語でエラーを処理する](../../../ado/guide/data/handling-errors-in-other-languages.md)  
+-   [他の言語でエラーを処理する](./handling-errors-in-other-languages.md)  
   
--   [エラーの予測](../../../ado/guide/data/anticipating-errors.md)
+-   [エラーの予測](./anticipating-errors.md)

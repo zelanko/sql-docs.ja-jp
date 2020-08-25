@@ -63,7 +63,7 @@ RollbackTransComplete pError, adStatus, pConnection
  *pConnection*  
  このイベントが発生した **接続** オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  Visual C++ では、複数の **接続** で同じイベント処理方法を共有できます。 メソッドは、返された **接続** オブジェクトを使用して、イベントの原因となったオブジェクトを特定します。  
   
  [Attributes](./attributes-property-ado.md)プロパティが**AdXactCommitRetaining**または**Adxactabortretaining 保持**するように設定されている場合、トランザクションをコミットまたはロールバックした後に新しいトランザクションが開始されます。 **Begintranscomplete**イベントを使用すると、最初のトランザクション開始イベント以外はすべて無視されます。  

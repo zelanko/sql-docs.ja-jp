@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a1211a84bf42afdb406c085e57f5bb36f48a168
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7010c2dc4be6207397ee5e57fc999c3cacbba0b7
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454114"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806607"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 永続化プロバイダーの概要
-Microsoft OLE DB 永続化プロバイダーを使用すると、 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトをファイルに保存し、後でその **レコードセット** オブジェクトをファイルから復元できます。 スキーマ情報、データ、および保留中の変更は保持されます。
+Microsoft OLE DB 永続化プロバイダーを使用すると、 [レコードセット](../../reference/ado-api/recordset-object-ado.md) オブジェクトをファイルに保存し、後でその **レコードセット** オブジェクトをファイルから復元できます。 スキーマ情報、データ、および保留中の変更は保持されます。
 
  この **レコードセット** は、独自の高度なデータテーブルグラム (ADTG) 形式または open 拡張マークアップ言語 (XML) 形式のいずれかで保存できます。
 
@@ -42,14 +42,14 @@ Microsoft OLE DB 永続化プロバイダーを使用すると、 [レコード�
 |E_BADSTREAM|開かれたファイルの形式が有効ではありません (つまり、形式が ADTG または XML ではありません)。|
 |E_CANTPERSISTROWSET|保存された **レコードセット** オブジェクトには、保存されないようにする特性があります。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
  Microsoft OLE DB 永続化プロバイダーは動的プロパティを公開しません。
 
  現時点では、パラメーター化された階層的な **レコードセット** オブジェクトのみを保存することはできません。
 
- **レコードセット**オブジェクトを永続的に格納する方法の詳細については、「[レコードセット永続](../../../ado/guide/data/more-about-recordset-persistence.md)化」を参照してください。
+ **レコードセット**オブジェクトを永続的に格納する方法の詳細については、「[レコードセット永続](../data/more-about-recordset-persistence.md)化」を参照してください。
 
  ストリームを使用して**レコードセット**を開くときに、 **Open**メソッドの*Source*パラメーター以外にパラメーターを指定しないようにする必要があります。
 
 ## <a name="see-also"></a>参照
-[Microsoft OLE DB 永続化プロバイダー (ADO サービスプロバイダー)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
+[Microsoft OLE DB 永続化プロバイダー (ADO サービスプロバイダー)]()

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6119433c1a5c52e07035d97878155123d787e26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 302cca77222454ac6fa73c69683c641e841acdda
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453974"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806488"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Microsoft SDK for Java を使用する
 
@@ -32,7 +32,7 @@ Microsoft SDK for Java は、Microsoft Internet Explorer 環境の developer kit
   
  この機構は、ADO タイプライブラリを読み取り、アプリケーション内でインスタンス化できるクラスを生成します。 これらのクラスは、 \\<windows directory \Java\trustlib\msado15. に生成されます。 \>  
   
- Microsoft SDK for Java を使用して Java で ADO アプリケーションを作成することは、ソースコードの観点から Java タイプライブラリウィザードを使用することと基本的に同じです。 サンプルコードについては、「 [ADO Java クラスラッパー](../../../ado/guide/appendixes/ado-java-class-wrappers.md)」を参照してください。 実際の違いは、次の手順に示すように、最初にラッパークラスを生成する方法です。  
+ Microsoft SDK for Java を使用して Java で ADO アプリケーションを作成することは、ソースコードの観点から Java タイプライブラリウィザードを使用することと基本的に同じです。 サンプルコードについては、「 [ADO Java クラスラッパー](./ado-java-class-wrappers.md)」を参照してください。 実際の違いは、次の手順に示すように、最初にラッパークラスを生成する方法です。  
   
 ### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>Microsoft SDK for Java を使用して ADO プロジェクトを作成するには  
   
@@ -50,5 +50,5 @@ Microsoft SDK for Java は、Microsoft Internet Explorer 環境の developer kit
   
 3.  これらのファイルを使用するには、Visual J++ でプロジェクトを開きます。 [ **プロジェクト** ] メニューの [ **プロジェクトに追加**] をクリックします。 [ **ファイル**] を選択し、すべてのを追加します。Trustlib\msado15 ディレクトリに生成された JAVA ファイルをプロジェクトに出力します。  
   
-## <a name="see-also"></a>関連項目  
- [ADO Java クラス ラッパー](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   
+## <a name="see-also"></a>参照  
+ [ADO Java クラス ラッパー](./ado-java-class-wrappers.md)

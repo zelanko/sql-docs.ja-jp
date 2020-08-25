@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2ac1d2ed987b1385c581f147431eaa208b035fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d8f8dac5e6a38e1a394c4646849ddd6a5021131
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453284"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806032"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: 単純な ADO アプリケーション
 この単純なアプリケーションでは、データの取得、検査、編集、および更新の4つの主要な ADO 操作を実行します。 これらの操作は、Microsoft® SQL Server に含まれる Northwind サンプルデータベースに対して実行されます。 ADO の基礎に注目し、コードが乱雑にならないようにするために、この例のエラー処理は最小限に抑えられています。  
   
 ### <a name="to-run-hellodata"></a>HelloData を実行するには  
   
-1.  ADO ライブラリを参照する新しい標準 EXE Visual Basic プロジェクトを作成します。 詳細については、「 [ADO ライブラリの参照](../../../ado/guide/referencing-the-ado-libraries.md)」を参照してください。  
+1.  ADO ライブラリを参照する新しい標準 EXE Visual Basic プロジェクトを作成します。 詳細については、「 [ADO ライブラリの参照](../referencing-the-ado-libraries.md)」を参照してください。  
   
 2.  フォームの上部に4つのコマンドボタンを作成し、このトピックの最後にある表に示すように、 **Name** プロパティと **Caption** プロパティに値を設定します。  
   
@@ -34,12 +34,12 @@ ms.locfileid: "88453284"
   
 4.  次の表に示すように、グリッドの下のフォームに **テキストボックス** を作成し、そのプロパティを設定します。 完了すると、フォームは次の図のようになります。  
   
-5.  最後に、 [HelloData コード](../../../ado/guide/data/hellodata-code.md)に一覧表示されているコードをコピーし、フォームのコードエディターウィンドウに貼り付けます。 **F5**キーを押してコードを実行します。  
+5.  最後に、 [HelloData コード](./hellodata-code.md)に一覧表示されているコードをコピーし、フォームのコードエディターウィンドウに貼り付けます。 **F5**キーを押してコードを実行します。  
   
 > [!NOTE]
 >  次の例では、ガイド全体を通して、ユーザー id "MyId" とパスワード "123aBc" を使用してサーバーに対する認証を行います。 これらの値は、サーバーの有効なログオン資格情報に置き換える必要があります。 また、"MySQLServer" の値をサーバーの名前に置き換えます。  
   
- コードの詳細については、 [HelloData に関するコメント](../../../ado/guide/data/comments-on-hellodata.md)を参照してください。  
+ コードの詳細については、 [HelloData に関するコメント](./comments-on-hellodata.md)を参照してください。  
   
  ![HelloData VB アプリケーションの Form1](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   

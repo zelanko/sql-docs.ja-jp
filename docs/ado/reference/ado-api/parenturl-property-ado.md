@@ -29,7 +29,7 @@ ms.locfileid: "88773241"
 ## <a name="return-value"></a>戻り値  
  親**レコード**の URL を示す**文字列**値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Parenturl**プロパティは、 **Record**オブジェクトを開くために使用されるソースによって異なります。 たとえば、 [ActiveConnection](./activeconnection-property-ado.md)プロパティによって参照されるディレクトリの相対パス名を含むソースで**レコード**を開くことができます。  
   
  "Second" が "first" の下に含まれるフォルダーであるとします。 次の構文を使用して、 **レコード** オブジェクトを開きます。  

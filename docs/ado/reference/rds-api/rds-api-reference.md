@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca9fa99e-1a9f-4deb-80d4-6942555fb22a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d531744fd5803181997a58c0e9a6d586a9af6a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0379d8409d73a483ef3362f1ae0ba88b9ba4192c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438854"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767891"
 ---
 # <a name="rds-api-reference"></a>RDS の API リファレンス
 > [!IMPORTANT]
@@ -26,14 +26,12 @@ ms.locfileid: "88438854"
   
  ADO ドキュメントのこのセクションには、rds のオブジェクト、プロパティ、メソッド、およびイベントのリファレンストピックと、RDS のコードサンプルが含まれています。  
   
--   [RDS オブジェクト](../../../ado/reference/rds-api/rds-objects.md)  
+-   [RDS オブジェクト](./rds-objects.md)  
   
--   [RDS プロパティ](../../../ado/reference/rds-api/rds-properties.md)  
+-   [RDS プロパティ](./rds-properties.md)  
   
--   [RDS メソッド](../../../ado/reference/rds-api/rds-methods.md)  
+-   [RDS メソッド](./rds-methods.md)  
   
--   [RDS イベント](../../../ado/reference/rds-api/rds-events.md)  
+-   [RDS イベント](./rds-events.md)  
   
--   [RDS のコード例](../../../ado/reference/rds-api/rds-code-examples.md)
-
-
+-   [RDS のコード例](./rds-code-examples.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4162d35f-2ce1-4218-80a5-b6933348837e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1ea79e0246585898f068dfb55fa2a120ea2e6b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7215846215db30d31d9a7b54f8e3a3aa2a955a43
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453344"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806796"
 ---
 # <a name="grandchild-aggregates"></a>孫の集計
 Shape コマンドの句で作成されたチャプター列には、 *章エイリアス名* (通常は AS キーワードを使用) が指定されている場合があります。 列を含む子を識別する完全修飾名を使用して、整形された **レコードセット** の任意のチャプター内の任意の列を識別できます。 たとえば、親章 chap1 に、amount 列を含む chap2 という子のチャプターが含まれている場合、修飾名は chap1 になります。修飾名は、集計関数 (SUM、AVG、MAX、MIN、COUNT、STDEV、ANY) のいずれかの引数として使用できます。  
   
 ## <a name="see-also"></a>参照  
- [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)
+ [データ シェイプの例](./data-shaping-example.md)

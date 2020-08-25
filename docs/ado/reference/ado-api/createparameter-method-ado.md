@@ -53,7 +53,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Value*  
  任意。 **Parameter**オブジェクトの値を指定する**バリアント**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Createparameter**メソッドを使用して、指定した名前、型、方向、サイズ、および値を使用して新しい**パラメーター**オブジェクトを作成します。 引数で渡す値は、対応する **パラメーター** プロパティに書き込まれます。  
   
  このメソッドは、 **Parameter**オブジェクトを[Command](./command-object-ado.md)オブジェクトの**Parameters**コレクションに自動的に追加しません。 これにより、 **パラメーター** オブジェクトをコレクションに追加したときに ADO によって検証される値を持つ追加のプロパティを設定できます。  

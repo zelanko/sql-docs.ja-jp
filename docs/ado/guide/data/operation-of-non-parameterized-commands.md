@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec2dbf3dfb24fc484368f3fa2e2c2e950dbd20ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b0f425deb87e831547d24a4b81f7d1a601e344a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453114"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805664"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>非パラメーター化コマンドの操作
 パラメーター化されていないコマンドの場合は、すべてのプロバイダーコマンドが実行され、コマンドの実行時に **レコードセット** が作成されます。 コマンドを同期的に実行すると、すべての **レコードセット** が完全に設定されます。 非同期作成モードを選択した場合、 **レコードセット** の設定された状態は、作成モードと **レコードセット**のサイズによって異なります。  
@@ -38,11 +38,11 @@ SHAPE {SELECT * FROM Customers}
   
  チャプター列の参照にアクセスすると、その参照によって表される **レコードセット** が ADO によって自動的に取得されます。 パラメーター化されていないコマンドでは、子 **レコードセット** 全体が取得されていますが、この章では行のサブセットのみを提示していることに注意してください。  
   
- 付加列に *chapter エイリアス*がない場合は、自動的に名前が生成されます。 列の [フィールド](../../../ado/reference/ado-api/field-object.md) オブジェクトが **レコードセット** オブジェクトの [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) コレクションに追加され、そのデータ型は **adchapter**になります。  
+ 付加列に *chapter エイリアス*がない場合は、自動的に名前が生成されます。 列の [フィールド](../../reference/ado-api/field-object.md) オブジェクトが **レコードセット** オブジェクトの [Fields](../../reference/ado-api/fields-collection-ado.md) コレクションに追加され、そのデータ型は **adchapter**になります。  
   
- 階層 **レコードセット**の移動の詳細については、「 [階層レコードセット内の行へのアクセス](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)」を参照してください。  
+ 階層 **レコードセット**の移動の詳細については、「 [階層レコードセット内の行へのアクセス](./accessing-rows-in-a-hierarchical-recordset.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データシェイプの例](../../../ado/guide/data/data-shaping-example.md)   
- [仮形の文法](../../../ado/guide/data/formal-shape-grammar.md)   
- [一般的な Shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)
+ [データシェイプの例](./data-shaping-example.md)   
+ [仮形の文法](./formal-shape-grammar.md)   
+ [一般的な Shape コマンド](./shape-commands-in-general.md)

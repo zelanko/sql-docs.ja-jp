@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e006add96d3bcb21c652ce33f7aab749b2bc8d54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98719e10e837b83ac522743e120f037b1fedbd99
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453834"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806443"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO イベントのインスタンス化: ADO と WFC
 Windows Foundation クラス用の ADO (ADO/WFC) は ADO イベントモデルに基づいて構築されており、簡略化されたアプリケーションプログラミングインターフェイスを提供します。 一般に、ADO/WFC は ADO イベントをインターセプトし、イベントパラメーターを1つのイベントクラスに統合してから、イベントハンドラーを呼び出します。  
@@ -53,7 +53,7 @@ Windows Foundation クラス用の ADO (ADO/WFC) は ADO イベントモデル�
     public void onConnectComplete(Object sender,ConnectionEvent e)  
     ```  
   
-     最初の引数は、イベント ([接続](../../../ado/reference/ado-api/connection-object-ado.md) または [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)) を送信したオブジェクトの種類です。2番目の引数は、ADO/WFC イベントオブジェクト (**connectionevent** または **RecordsetEvent**) です。  
+     最初の引数は、イベント ([接続](../../reference/ado-api/connection-object-ado.md) または [レコードセット](../../reference/ado-api/recordset-object-ado.md)) を送信したオブジェクトの種類です。2番目の引数は、ADO/WFC イベントオブジェクト (**connectionevent** または **RecordsetEvent**) です。  
   
      イベントハンドラーのシグネチャは、ADO イベントよりも簡単です。 ただし、イベントに適用されるパラメーターと応答方法を把握するには、ADO イベントモデルを理解している必要があります。  
   
@@ -61,9 +61,9 @@ Windows Foundation クラス用の ADO (ADO/WFC) は ADO イベントモデル�
   
 7.  処理が完了したら、ADO/WFC イベントハンドラーの一覧からハンドラーを削除します。 メソッドに **Removeon**_EventName_(*handler*) などの名前を指定します。  
   
-## <a name="see-also"></a>関連項目  
- [ADO イベントハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO-WFC 構文のインデックス](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
- [イベントパラメーター](../../../ado/guide/data/event-parameters.md)   
- [イベントハンドラーの連携方法](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [イベントの種類](../../../ado/guide/data/types-of-events.md)
+## <a name="see-also"></a>参照  
+ [ADO イベントハンドラーの概要](./ado-event-handler-summary.md)   
+ [ADO-WFC 構文のインデックス](../../reference/ado-api/ado-wfc-syntax-index.md)   
+ [イベントパラメーター](./event-parameters.md)   
+ [イベントハンドラーの連携方法](./how-event-handlers-work-together.md)   
+ [イベントの種類](./types-of-events.md)
