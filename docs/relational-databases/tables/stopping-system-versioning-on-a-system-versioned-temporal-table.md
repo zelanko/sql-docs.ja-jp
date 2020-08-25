@@ -12,16 +12,18 @@ ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce74abdc24fceff522fe65353b62295f6de5dc66
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bfcd77b23a34fb7f892b99fb84ccedcc01b3abc6
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463852"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646559"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルでシステム バージョン管理を停止する
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 一時的または永続的に、テンポラル テーブルでバージョン管理を停止する場合があります。 その場合は、 **SYSTEM_VERSIONING** 句を **OFF**に設定します。
 

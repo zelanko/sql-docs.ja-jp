@@ -12,16 +12,18 @@ ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 654648ba7206c3d5ce01a715a0ee24eae2d3212b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79ae1efd305215d0e64287e6c0a7ad7aa9a70a36
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419006"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646449"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>システム バージョン管理のテンポラル テーブルのデータの変更
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 システム バージョン管理のテンポラル テーブル内のデータは、通常の DML ステートメントを使用して変更しますが、1 つの重要な違いがあり、期間の列のデータは直接変更できません。 データが更新されると、バージョンが更新されて、更新された各行の以前のバージョンが、履歴テーブルに挿入されます。 データが削除された場合、削除は論理的で、行が現在のテーブルから履歴テーブルに移動され、完全に削除されるわけではありません。
 

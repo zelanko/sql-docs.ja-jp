@@ -12,16 +12,18 @@ ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8eac6400caf5a1d94e3b23aee4f59db252619eab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c5fb93aa131d856f0a1aeaad3f6da1265b649357
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473027"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646002"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>テンポラル テーブルのシステム一貫性のチェック
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 テンポラル テーブルを使用する際、システムでは、スキーマがテンポラルの要件に準拠しているか、またそのデータに一貫性がありそれが維持されるかを確認する、さまざまな一貫性チェックが実行されます。 また、 **DBCC CHECKCONSTRAINTS** ステートメントにもテンポラル チェックが追加されています。
 

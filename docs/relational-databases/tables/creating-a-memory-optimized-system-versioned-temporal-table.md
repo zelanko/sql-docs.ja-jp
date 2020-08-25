@@ -12,16 +12,18 @@ ms.assetid: 1c1fc682-bf5b-4096-a0ff-3235d71c205a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 432c61f69e8d03126d78113989c83172b8ac2e3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83a7cdd151b958a7840696c09af12dcf2b64d319
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473066"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645853"
 ---
 # <a name="creating-a-memory-optimized-system-versioned-temporal-table"></a>メモリ最適化のためのシステム バージョン管理されたテンポラル テーブルを作成する
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 ディスク ベースの履歴テーブルの作成と同様、メモリ最適化されたテンポラル テーブルはさまざまな方法で作成できます。
 

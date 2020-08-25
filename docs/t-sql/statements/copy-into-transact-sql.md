@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 52096dc3c4996537b36082bb9bb215405e097a68
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+ms.openlocfilehash: 54216c027c01855ba5f140e1ad17accba3f9e7f9
+ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88091957"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88602207"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (プレビュー)
 
@@ -142,9 +142,8 @@ WITH
 |                          |                CSV                |              Parquet               |                ORC                 |
 | :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
 |  **Azure Blob Storage**  | SAS/MSI/サービス プリンシパル/キー/AAD |              SAS/キー               |              SAS/キー               |
-| **Azure Data Lake Gen2** | SAS/MSI/サービス プリンシパル/キー/AAD | SAS*/MSI/サービス プリンシパル/キー/AAD | SAS*/MSI/サービス プリンシパル/キー/AAD |
+| **Azure Data Lake Gen2** | SAS/MSI/サービス プリンシパル/キー/AAD | SAS (BLOB エンドポイント)/MSI (dfs エンドポイント)/サービス プリンシパル/キー/AAD | SAS (BLOB エンドポイント)/MSI (dfs エンドポイント)/サービス プリンシパル/キー/AAD |
 
-\* BLOB エンドポイントでのみサポートされています
 
 AAD またはパブリック ストレージ アカウントを使用して認証する場合は、CREDENTIAL を指定する必要はありません。 
 

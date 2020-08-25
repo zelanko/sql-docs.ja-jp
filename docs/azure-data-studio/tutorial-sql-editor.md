@@ -2,19 +2,19 @@
 title: Transact-SQL エディターを使用し、データベース オブジェクトを作成する
 description: このチュートリアルでは、Transact-SQL エディターを使用して、データベース オブジェクトの作成と検索などの主要なデータベース タスクを実行する方法について説明します。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 172eee223f04ee37cc7b530cdb4db891afad36d8
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: bd604ea3ad643aa7f70d0be2a1ee7727810b6705
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522416"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745712"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>チュートリアル:Transact-SQL エディターを使用してデータベース オブジェクトを作成する - Azure Data Studio
 

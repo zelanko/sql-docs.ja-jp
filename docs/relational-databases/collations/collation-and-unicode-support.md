@@ -33,12 +33,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f9d8025daba4b4006b0d87422cffe8ea73f82c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39803c2063bf6afbae9bc6797d85499fc91a10bd
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466204"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564672"
 ---
 # <a name="collation-and-unicode-support"></a>照合順序と Unicode のサポート
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -372,9 +372,6 @@ Windows 照合順序では、関連する Windows システム ロケールに�
 |ヨルバ語 (ナイジェリア)|0x046a|0x0409|Latin1_General_CI_AS|
 |ズールー語 (南アフリカ)|0x0435|0x0409|Latin1_General_CI_AS|
 
-> [!NOTE]
-> Unicode 専用の照合順序はサーバーレベルの照合順序としてサポートされないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時に選択することはできません。    
-    
 サーバーに照合順序を割り当てた後は、照合順序を簡単には変更できません。変更するには、すべてのデータベース オブジェクトとデータをエクスポートし、*master* データベースを再構築してから、すべてのデータベース オブジェクトとデータをインポートする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの既定の照合順序を変更する代わりに、新しいデータベースまたはデータベース列の作成時に、目的の照合順序を指定することができます。    
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのサーバー照合順序を問い合わせるには、`SERVERPROPERTY` 関数を使用します。
