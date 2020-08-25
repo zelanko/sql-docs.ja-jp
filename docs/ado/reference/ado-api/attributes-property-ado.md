@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43f374429d38cb4d3cb4516d640b6d05ef8e3efb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99c4e9be5c998b8abc1a5b609bbdeb249fa6c7b8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451204"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776451"
 ---
 # <a name="attributes-property-ado"></a>Attributes プロパティ (ADO)
 オブジェクトの1つまたは複数の特性を示します。  
@@ -31,13 +31,13 @@ ms.locfileid: "88451204"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **Long 型**の値を設定または返します。  
   
- [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの場合、 **Attributes**プロパティは読み取り/書き込み可能であり、その値は1つ以上の[XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md)値の合計になります。 既定値は 0 です。  
+ [接続](./connection-object-ado.md)オブジェクトの場合、 **Attributes**プロパティは読み取り/書き込み可能であり、その値は1つ以上の[XactAttributeEnum](./xactattributeenum.md)値の合計になります。 既定値は 0 です。  
   
- [Parameter](../../../ado/reference/ado-api/parameter-object.md)オブジェクトの場合、 **Attributes**プロパティは読み取り/書き込み可能であり、その値は1つ以上の[parameterattributes 列挙](../../../ado/reference/ado-api/parameterattributesenum.md)値の合計になります。 既定値は **Adparamsigned**です。  
+ [Parameter](./parameter-object.md)オブジェクトの場合、 **Attributes**プロパティは読み取り/書き込み可能であり、その値は1つ以上の[parameterattributes 列挙](./parameterattributesenum.md)値の合計になります。 既定値は **Adparamsigned**です。  
   
- [Field](../../../ado/reference/ado-api/field-object.md)オブジェクトの場合、 **Attributes**プロパティには1つ以上の[FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md)値の合計を指定できます。 通常は読み取り専用です。 ただし、[レコード](../../../ado/reference/ado-api/record-object-ado.md)の[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに追加された新しい**フィールド**オブジェクトの場合、**属性**は、**フィールド**の[Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティが指定されていて、**フィールドコレクションの** [Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出すことによって新しい**フィールド**が正常にデータプロバイダーによって追加された後にのみ、読み取り/書き込みになります。  
+ [Field](./field-object.md)オブジェクトの場合、 **Attributes**プロパティには1つ以上の[FieldAttributeEnum](./fieldattributeenum.md)値の合計を指定できます。 通常は読み取り専用です。 ただし、[レコード](./record-object-ado.md)の[フィールド](./fields-collection-ado.md)コレクションに追加された新しい**フィールド**オブジェクトの場合、**属性**は、**フィールド**の[Value](./value-property-ado.md)プロパティが指定されていて、**フィールドコレクションの** [Update](./update-method.md)メソッドを呼び出すことによって新しい**フィールド**が正常にデータプロバイダーによって追加された後にのみ、読み取り/書き込みになります。  
   
- [プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトの場合、 **Attributes**プロパティは読み取り専用であり、その値は1つ以上の[propertyattributes 列挙](../../../ado/reference/ado-api/propertyattributesenum.md)値の合計になります。  
+ [プロパティ](./property-object-ado.md)オブジェクトの場合、 **Attributes**プロパティは読み取り専用であり、その値は1つ以上の[propertyattributes 列挙](./propertyattributesenum.md)値の合計になります。  
   
 ## <a name="remarks"></a>解説  
  **接続**オブジェクト、**パラメーター**オブジェクト、**フィールド**オブジェクト、または**プロパティ**オブジェクトの特性を設定または取得するには、 **Attributes**プロパティを使用します。  
@@ -51,18 +51,18 @@ ms.locfileid: "88451204"
 
 :::row:::
     :::column:::
-        [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
-        [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)  
+        [Connection オブジェクト (ADO)](./connection-object-ado.md)  
+        [Field オブジェクト](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)  
-        [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Parameter オブジェクト](./parameter-object.md)  
+        [Property オブジェクト (ADO)](./property-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>参照  
- [Attributes と Name プロパティの例 (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Attributes と Name プロパティの例 (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
- [AppendChunk メソッド (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [BeginTrans、CommitTrans、および RollbackTrans メソッド (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [GetChunk メソッド (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)
+ [Attributes と Name プロパティの例 (VB)](./attributes-and-name-properties-example-vb.md)   
+ [Attributes と Name プロパティの例 (VC + +)](./attributes-and-name-properties-example-vc.md)   
+ [AppendChunk メソッド (ADO)](./appendchunk-method-ado.md)   
+ [BeginTrans、CommitTrans、および RollbackTrans メソッド (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [GetChunk メソッド (ADO)](./getchunk-method-ado.md)

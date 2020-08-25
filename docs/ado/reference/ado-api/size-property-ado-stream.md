@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92b546b95c1033b6222a0acc99355c5e0906de21
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cde1911a2e8bf318af14fab9cf45c1d12c72b904
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442134"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777461"
 ---
 # <a name="size-property-ado-stream"></a>Size プロパティ (ADO Stream)
 ストリームのサイズをバイト数で示します。  
@@ -30,13 +30,13 @@ ms.locfileid: "88442134"
  ストリームのサイズをバイト数で指定する **Long 型** の値を返します。 既定値はストリームのサイズです。ストリームのサイズが不明な場合は-1 です。  
   
 ## <a name="remarks"></a>解説  
- **Size** は、開いている [ストリーム](../../../ado/reference/ado-api/stream-object-ado.md) オブジェクトでのみ使用できます。  
+ **Size** は、開いている [ストリーム](./stream-object-ado.md) オブジェクトでのみ使用できます。  
   
 > [!NOTE]
 >  **ストリーム**オブジェクトには任意の数のビットを格納でき、システムリソースによってのみ制限されます。 **ストリーム**に**Long 型**の値で表すことができるビットよりも多くのビットが含まれている場合、**サイズ**が切り捨てられるため、**ストリーム**の長さを正確に表すことはできません。  
   
 ## <a name="applies-to"></a>適用対象  
- [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Stream オブジェクト (ADO)](./stream-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [Size プロパティ (ADO Parameter)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
+ [Size プロパティ (ADO Parameter)](./size-property-ado-parameter.md)

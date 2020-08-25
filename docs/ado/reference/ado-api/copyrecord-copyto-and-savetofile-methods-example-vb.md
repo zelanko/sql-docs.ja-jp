@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d19c7a994cd4db7d65a285e523726c0bdd88f582
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cef4b99210f4b9e066753a3a81ed0153f2c2392
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444394"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775732"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord、CopyTo、および SaveToFile メソッドの例 (VB)
-この例では、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) オブジェクトまたは [Record](../../../ado/reference/ado-api/record-object-ado.md) オブジェクトを使用して、ファイルのコピーを作成する方法を示します。 インターネット発行用の Web フォルダーに対して1つのコピーが作成されます。 表示されるその他のプロパティとメソッドには、 [Stream Type](../../../ado/reference/ado-api/type-property-ado-stream.md)、 **open**、 [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)、 [Record Open](../../../ado/reference/ado-api/open-method-ado-record.md)があります。  
+この例では、 [Stream](./stream-object-ado.md) オブジェクトまたは [Record](./record-object-ado.md) オブジェクトを使用して、ファイルのコピーを作成する方法を示します。 インターネット発行用の Web フォルダーに対して1つのコピーが作成されます。 表示されるその他のプロパティとメソッドには、 [Stream Type](./type-property-ado-stream.md)、 **open**、 [LoadFromFile](./loadfromfile-method-ado.md)、 [Record Open](./open-method-ado-record.md)があります。  
   
 ```  
 'BeginCopyRecordVB  
@@ -126,12 +126,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [CopyRecord メソッド (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
- [CopyTo メソッド (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
- [LoadFromFile メソッド (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
- [Open メソッド (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Open メソッド (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [SaveToFile メソッド](../../../ado/reference/ado-api/savetofile-method.md)   
- [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
- [Type プロパティ (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)
+ [CopyRecord メソッド (ADO)](./copyrecord-method-ado.md)   
+ [CopyTo メソッド (ADO)](./copyto-method-ado.md)   
+ [LoadFromFile メソッド (ADO)](./loadfromfile-method-ado.md)   
+ [Open メソッド (ADO Record)](./open-method-ado-record.md)   
+ [Open メソッド (ADO Stream)](./open-method-ado-stream.md)   
+ [Record オブジェクト (ADO)](./record-object-ado.md)   
+ [SaveToFile メソッド](./savetofile-method.md)   
+ [Stream オブジェクト (ADO)](./stream-object-ado.md)   
+ [Type プロパティ (ADO Stream)](./type-property-ado-stream.md)

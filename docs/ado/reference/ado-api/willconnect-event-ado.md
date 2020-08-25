@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7c9bc68b33e9a8ed8878e153b5fb2eb11d27ba2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4a63bf9d324fc9c2e0363576814e1c97c9ad6aeb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441484"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776861"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect イベント (ADO)
 接続が開始 **される前に、イベントが** 呼び出されます。  
   
- **適用対象:** [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ **適用対象:** [接続オブジェクト (ADO)](./connection-object-ado.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,18 +46,18 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *パスワード*  
  保留中の接続のパスワードを含む **文字列** 。  
   
- *[オプション]*  
+ *Options*  
  プロバイダーが*ConnectionString*を評価する方法を示す**Long 型**の値。 唯一のオプションは **adAsyncOpen**です。  
   
  *adStatus*  
- [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md)状態の値です。  
+ [Eventstatusenum](./eventstatusenum.md)状態の値です。  
   
  このイベントが呼び出されると、このパラメーターは既定で **Adstatusok** に設定されます。 イベントが保留中の操作の取り消しを要求できない場合は、 **Adstatuscantdeny** に設定されます。  
   
  このイベントが返される前に、このパラメーターを **adStatusUnwantedEvent** に設定して、後続の通知が行われないようにします。 このパラメーターを **Adstatuscancel** に設定して、この通知の取り消しの原因となった接続操作を要求します。  
   
  *pConnection*  
- このイベント通知を適用する [接続](../../../ado/reference/ado-api/connection-object-ado.md) オブジェクト。 に**よって接続の**パラメーターを**変更して****も、接続**に影響はありません。  
+ このイベント通知を適用する [接続](./connection-object-ado.md) オブジェクト。 に**よって接続の**パラメーターを**変更して****も、接続**に影響はありません。  
   
 ## <a name="remarks"></a>解説  
  を **呼び出すと、** *ConnectionString*、 *UserID*、 *Password*、および *Options* の各パラメーターは、このイベントの原因となった操作によって確立された値 (保留中の接続) に設定され、イベントが返される前に変更できます。 **接続** によって、保留中の接続が取り消されたという要求が返される場合があります。  
@@ -65,5 +65,5 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  このイベントがキャンセルされると、 **Connectcomplete** が呼び出され、 *Adstatus* パラメーターが **Adstatuserrorの curred**に設定されます。  
   
 ## <a name="see-also"></a>参照  
- [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)
+ [ADO Events モデルの例 (VC + +)](./ado-events-model-example-vc.md)   
+ [ADO イベント ハンドラーの概要](../../guide/data/ado-event-handler-summary.md)

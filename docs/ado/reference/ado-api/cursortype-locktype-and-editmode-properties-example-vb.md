@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d9b0ae19ce5fbac150a86fc7db3d08b16840fbd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 859fca56653250ee1070981db048aafeb2e4011a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444284"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775511"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType、LockType、および EditMode プロパティの例 (VB)
-この例では、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開く前に、 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)プロパティと[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)プロパティを設定します。 また、さまざまな条件下での [EditMode](../../../ado/reference/ado-api/editmode-property.md) プロパティの値も表示されます。 このプロシージャを実行するには、EditModeOutput 関数が必要です。  
+この例では、[レコードセット](./recordset-object-ado.md)を開く前に、 [CursorType](./cursortype-property-ado.md)プロパティと[LockType](./locktype-property-ado.md)プロパティを設定します。 また、さまざまな条件下での [EditMode](./editmode-property.md) プロパティの値も表示されます。 このプロシージャを実行するには、EditModeOutput 関数が必要です。  
   
 ```  
 'BeginEditModeVB  
@@ -124,10 +124,10 @@ End Function
 ```  
   
 ## <a name="see-also"></a>参照  
- [CursorType プロパティ (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
- [カーソルの Typeenum](../../../ado/reference/ado-api/cursortypeenum.md)   
- [EditMode プロパティ](../../../ado/reference/ado-api/editmode-property.md)   
- [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)   
- [LockType プロパティ (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CursorType プロパティ (ADO)](./cursortype-property-ado.md)   
+ [カーソルの Typeenum](./cursortypeenum.md)   
+ [EditMode プロパティ](./editmode-property.md)   
+ [EditModeEnum](./editmodeenum.md)   
+ [LockType プロパティ (ADO)](./locktype-property-ado.md)   
+ [LockTypeEnum](./locktypeenum.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

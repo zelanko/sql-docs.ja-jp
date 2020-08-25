@@ -14,42 +14,42 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bb02d47575eaaa2e1eee4a443f86a7d103dabca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aae7fdebfa01972709cd8e84c9e92a59f24acff1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440554"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771631"
 ---
 # <a name="adox-properties"></a>ADOX のプロパティ
 
 |プロパティ|説明|  
 |-|-|  
-|[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|カタログが属する ADO **接続** オブジェクトを示します。|  
-|[属性](../../../ado/reference/adox-api/attributes-property-adox.md)|列の特性について説明します。|  
-|[クラスター化インデックス](../../../ado/reference/adox-api/clustered-property-adox.md)|インデックスがクラスター化されているかどうかを示します。|  
-|[コマンド](../../../ado/reference/adox-api/command-property-adox.md)|プロシージャを作成または実行するために使用できる ADO **コマンド** オブジェクトを指定します。|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
-|[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|オブジェクトが作成された日付を示します。|  
-|[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|オブジェクトが最後に変更された日付を示します。|  
-|[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|列の最大サイズを示します。|  
-|[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|主キーが削除されたときに実行されるアクションを示します。|  
-|[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|インデックスフィールドに null 値を持つレコードのインデックスエントリがあるかどうかを示します。|  
-|[Item](../../../ado/reference/ado-api/item-property-ado.md)|名前または序数を指定して、コレクションの特定のメンバーを示します。|  
-|[名前](../../../ado/reference/adox-api/name-property-adox.md)|オブジェクトの名前を示します。|  
-|[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|列の数値の小数点以下桁数を示します。|  
-|[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|プロバイダー固有のプロパティへのアクセスを提供する、テーブルまたは列の親カタログを指定します。|  
-|[[精度]](../../../ado/reference/adox-api/precision-property-adox.md)|列のデータ値の最大有効桁数を示します。|  
-|[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|インデックスがテーブルの主キーを表すかどうかを示します。|  
-|[RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|関連するテーブル内の関連する列の名前を示します (キー列のみ)。|  
-|[RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md)|関連テーブルの名前を示します。|  
-|[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)|列の並べ替え順序を示します (インデックス列のみ)。|  
-|[型 (列)](../../../ado/reference/adox-api/type-property-column-adox.md)|列のデータ型を示します。|  
-|[型 (キー)](../../../ado/reference/adox-api/type-property-key-adox.md)|キーのデータ型を示します。|  
-|[型 (テーブル)](../../../ado/reference/adox-api/type-property-table-adox.md)|テーブルの種類を示します。|  
-|[[一意]](../../../ado/reference/adox-api/unique-property-adox.md)|インデックスキーが一意である必要があるかどうかを示します。|  
-|[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|主キーが更新されたときに実行されるアクションを示します。|  
+|[ActiveConnection](./activeconnection-property-adox.md)|カタログが属する ADO **接続** オブジェクトを示します。|  
+|[属性](./attributes-property-adox.md)|列の特性について説明します。|  
+|[クラスター化インデックス](./clustered-property-adox.md)|インデックスがクラスター化されているかどうかを示します。|  
+|[コマンド](./command-property-adox.md)|プロシージャを作成または実行するために使用できる ADO **コマンド** オブジェクトを指定します。|  
+|[Count](../ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
+|[DateCreated](./datecreated-property-adox.md)|オブジェクトが作成された日付を示します。|  
+|[DateModified](./datemodified-property-adox.md)|オブジェクトが最後に変更された日付を示します。|  
+|[DefinedSize](./definedsize-property-adox.md)|列の最大サイズを示します。|  
+|[DeleteRule](./deleterule-property-adox.md)|主キーが削除されたときに実行されるアクションを示します。|  
+|[IndexNulls](./indexnulls-property-adox.md)|インデックスフィールドに null 値を持つレコードのインデックスエントリがあるかどうかを示します。|  
+|[Item](../ado-api/item-property-ado.md)|名前または序数を指定して、コレクションの特定のメンバーを示します。|  
+|[名前](./name-property-adox.md)|オブジェクトの名前を示します。|  
+|[NumericScale](./numericscale-property-adox.md)|列の数値の小数点以下桁数を示します。|  
+|[ParentCatalog](./parentcatalog-property-adox.md)|プロバイダー固有のプロパティへのアクセスを提供する、テーブルまたは列の親カタログを指定します。|  
+|[[精度]](./precision-property-adox.md)|列のデータ値の最大有効桁数を示します。|  
+|[PrimaryKey](./primarykey-property-adox.md)|インデックスがテーブルの主キーを表すかどうかを示します。|  
+|[RelatedColumn](./relatedcolumn-property-adox.md)|関連するテーブル内の関連する列の名前を示します (キー列のみ)。|  
+|[RelatedTable](./relatedtable-property-adox.md)|関連テーブルの名前を示します。|  
+|[SortOrder](./sortorder-property-adox.md)|列の並べ替え順序を示します (インデックス列のみ)。|  
+|[型 (列)](./type-property-column-adox.md)|列のデータ型を示します。|  
+|[型 (キー)](./type-property-key-adox.md)|キーのデータ型を示します。|  
+|[型 (テーブル)](./type-property-table-adox.md)|テーブルの種類を示します。|  
+|[[一意]](./unique-property-adox.md)|インデックスキーが一意である必要があるかどうかを示します。|  
+|[UpdateRule](./updaterule-property-adox.md)|主キーが更新されたときに実行されるアクションを示します。|  
   
 ## <a name="see-also"></a>参照  
- [ADOX API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
- [データ定義言語とセキュリティの ADO 拡張機能 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+ [ADOX API リファレンス](./adox-object-model.md?view=sql-server-ver15)   
+ [データ定義言語とセキュリティの ADO 拡張機能 (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

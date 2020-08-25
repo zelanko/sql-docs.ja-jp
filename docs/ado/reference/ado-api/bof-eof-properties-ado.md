@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a10ef4731db0e469743d09d9e3b35463d03e7020
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f6d27831c9215a66580cce32baa0d6d602d2813
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451132"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776401"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF プロパティ (ADO)
--   **BOF** 現在のレコード位置が、 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトの最初のレコードの前にあることを示します。  
+-   **BOF** 現在のレコード位置が、 [レコードセット](./recordset-object-ado.md) オブジェクトの最初のレコードの前にあることを示します。  
   
 -   **EOF** 現在のレコード位置が、 **レコードセット** オブジェクトの最後のレコードの後であることを示します。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88451132"
   
  **BOF**プロパティまたは**EOF**プロパティのいずれかが**True**の場合、現在のレコードは存在しません。  
   
- レコードを含まない**レコードセット**オブジェクトを開くと、 **BOF**プロパティと**EOF**プロパティが**True**に設定されます (**レコードセット**のこの状態の詳細については、「 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) 」プロパティを参照してください)。 少なくとも1つのレコードを含むレコード **セット** オブジェクトを開くと、最初のレコードが現在のレコードになり、 **BOF** プロパティと **EOF** プロパティは **False**になります。  
+ レコードを含まない**レコードセット**オブジェクトを開くと、 **BOF**プロパティと**EOF**プロパティが**True**に設定されます (**レコードセット**のこの状態の詳細については、「 [RecordCount](./recordcount-property-ado.md) 」プロパティを参照してください)。 少なくとも1つのレコードを含むレコード **セット** オブジェクトを開くと、最初のレコードが現在のレコードになり、 **BOF** プロパティと **EOF** プロパティは **False**になります。  
   
  **Recordset**オブジェクト内の最後のレコードを削除すると、現在のレコードの位置を変更しようとしたときに、 **BOF**プロパティと**EOF**プロパティが**False**のままになる場合があります。  
   
@@ -67,8 +67,8 @@ ms.locfileid: "88451132"
 |**MoveNext**、 **移動** > 0|変更なし|**True**に設定|  
   
 ## <a name="applies-to"></a>適用対象  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [BOF、EOF、および Bookmark プロパティの例 (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [BOF、EOF、および Bookmark プロパティの例 (VC + +)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
+ [BOF、EOF、および Bookmark プロパティの例 (VB)](./bof-eof-and-bookmark-properties-example-vb.md)   
+ [BOF、EOF、および Bookmark プロパティの例 (VC + +)](./bof-eof-and-bookmark-properties-example-vc.md)

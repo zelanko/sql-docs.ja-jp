@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71dd02544e80d24e96d9cc64fa1e5947f38c685a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cefa913c42440d69345bfa9c8d4b8826a0bc3d84
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451194"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776571"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans、CommitTrans、および RollbackTrans メソッド (ADO)
-これらのトランザクションメソッドは、 [接続](../../../ado/reference/ado-api/connection-object-ado.md) オブジェクト内のトランザクション処理を次のように管理します。  
+これらのトランザクションメソッドは、 [接続](./connection-object-ado.md) オブジェクト内のトランザクション処理を次のように管理します。  
   
 -   **BeginTrans** 新しいトランザクションを開始します。  
   
@@ -56,11 +56,11 @@ object.RollbackTrans
  *object*  
  **接続**オブジェクトです。  
   
-## <a name="connection"></a>Connection  
+## <a name="connection"></a>接続  
  ソースデータに対して行われた一連の変更を1つの単位として保存またはキャンセルする場合は、これらのメソッドを **接続** オブジェクトと共に使用します。 たとえば、勘定科目間で通貨を転送する場合は、1つから金額を減算し、同じ金額をもう一方に追加します。 どちらかの更新が失敗した場合、アカウントの残高はなくなります。 開いているトランザクション内でこれらの変更を行うことによって、すべての変更が行われないようにすることができます。  
   
 > [!NOTE]
->  すべてのプロバイダーがトランザクションをサポートするわけではありません。 プロバイダーがトランザクションをサポートしていることを示す、プロバイダー定義プロパティ "**TRANSACTION DDL**" が **接続** オブジェクトの [プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md) コレクションに表示されていることを確認します。 プロバイダーがトランザクションをサポートしていない場合、これらのメソッドのいずれかを呼び出すと、エラーが返されます。  
+>  すべてのプロバイダーがトランザクションをサポートするわけではありません。 プロバイダーがトランザクションをサポートしていることを示す、プロバイダー定義プロパティ "**TRANSACTION DDL**" が **接続** オブジェクトの [プロパティ](./properties-collection-ado.md) コレクションに表示されていることを確認します。 プロバイダーがトランザクションをサポートしていない場合、これらのメソッドのいずれかを呼び出すと、エラーが返されます。  
   
  **BeginTrans**メソッドを呼び出した後、このプロバイダーは、 **CommitTrans**または**RollbackTrans**を呼び出してトランザクションを終了するまで、加えた変更を即座にコミットしなくなります。  
   
@@ -68,15 +68,15 @@ object.RollbackTrans
   
  **CommitTrans**メソッドを呼び出すと、接続時に開いているトランザクション内で行われた変更が保存され、トランザクションが終了します。 **RollbackTrans**メソッドを呼び出すと、開いているトランザクション内で行われたすべての変更が元に戻され、トランザクションが終了します。 開いているトランザクションが存在しないときにいずれかのメソッドを呼び出すと、エラーが生成されます。  
   
- **接続**オブジェクトの[Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティによっては、 **CommitTrans**メソッドまたは**RollbackTrans**メソッドを呼び出すと、新しいトランザクションが自動的に開始される場合があります。 **Attributes**プロパティが**adXactCommitRetaining**に設定されている場合、プロバイダーは、 **CommitTrans**呼び出しの後に新しいトランザクションを自動的に開始します。 **Attributes**プロパティが**Adxactabortretaining**に設定されている場合、プロバイダーは、呼び出しの後**RollbackTrans**に新しいトランザクションを自動的に開始します。  
+ **接続**オブジェクトの[Attributes](./attributes-property-ado.md)プロパティによっては、 **CommitTrans**メソッドまたは**RollbackTrans**メソッドを呼び出すと、新しいトランザクションが自動的に開始される場合があります。 **Attributes**プロパティが**adXactCommitRetaining**に設定されている場合、プロバイダーは、 **CommitTrans**呼び出しの後に新しいトランザクションを自動的に開始します。 **Attributes**プロパティが**Adxactabortretaining**に設定されている場合、プロバイダーは、呼び出しの後**RollbackTrans**に新しいトランザクションを自動的に開始します。  
   
 ## <a name="remote-data-service"></a>Remote Data Service  
  クライアント側の**接続**オブジェクトでは、 **BeginTrans**、 **CommitTrans**、および**RollbackTrans**の各メソッドは使用できません。  
   
 ## <a name="applies-to"></a>適用対象  
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
- [BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VC + +)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
- [Attributes プロパティ (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VB)](./begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
+ [BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VC + +)](./begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
+ [Attributes プロパティ (ADO)](./attributes-property-ado.md)

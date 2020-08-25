@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 463de3740ce29b859732c5ddb7ba69d58069f93f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0897d90ffeccabbce57525f268214577a523d92
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442101"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777471"
 ---
 # <a name="skipline-method"></a>SkipLine メソッド
-テキスト [ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)を読み取るときに、1行全体をスキップします。  
+テキスト [ストリーム](./stream-object-ado.md)を読み取るときに、1行全体をスキップします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,9 +35,9 @@ Stream.SkipLine
 ```  
   
 ## <a name="remarks"></a>解説  
- 次の行区切り記号までのすべての文字がスキップされます。 既定では、 [Lineseparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) は **adcrlf**です。 以前の [eos](../../../ado/reference/ado-api/eos-property.md)をスキップしようとすると、現在の位置は **eos**のままになります。  
+ 次の行区切り記号までのすべての文字がスキップされます。 既定では、 [Lineseparator](./lineseparator-property-ado.md) は **adcrlf**です。 以前の [eos](./eos-property.md)をスキップしようとすると、現在の位置は **eos**のままになります。  
   
- **SkipLine**メソッドは、テキストストリームと共に使用されます ([型](../../../ado/reference/ado-api/type-property-ado-stream.md)は**adTypeText**)。  
+ **SkipLine**メソッドは、テキストストリームと共に使用されます ([型](./type-property-ado-stream.md)は**adTypeText**)。  
   
 ## <a name="applies-to"></a>適用対象  
- [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Stream オブジェクト (ADO)](./stream-object-ado.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 861abb0066f4b9f32ff8f9071c1520a1dec73016
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 994fe5eb0cf10189477e11154b8814f5e73c9194
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450824"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776081"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 コマンド引数をどのように解釈するかを指定します。  
@@ -31,12 +31,12 @@ ms.locfileid: "88450824"
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|は、コマンドの型引数を指定していません。|  
-|**Adodb.commandtypeenum.adcmdtext**|1|[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)をコマンドまたはストアドプロシージャの呼び出しのテキスト定義として評価します。|  
+|**Adodb.commandtypeenum.adcmdtext**|1|[CommandText](./commandtext-property-ado.md)をコマンドまたはストアドプロシージャの呼び出しのテキスト定義として評価します。|  
 |**adCmdTable**|2|**CommandText**を、内部で生成された SQL クエリによって返される列を持つテーブル名として評価します。|  
 |**adCmdStoredProc**|4|**CommandText**をストアドプロシージャ名として評価します。|  
 |**adCmdUnknown**|8|既定値。 **CommandText**プロパティ内のコマンドの型が不明であることを示します。<br /><br /> コマンドの種類が不明な場合、ADO は **CommandText**をいくつかの方法で解釈しようとします。<br /><br /> -   **CommandText** は、コマンドまたはストアドプロシージャの呼び出しのテキスト定義として解釈されます。 これは、 **Adcmdtext**と同じ動作です。<br />-   **CommandText** は、ストアドプロシージャの名前を指定します。 これは **adCmdStoredProc**と同じ動作です。<br />-   **CommandText** は、テーブルの名前として解釈されます。 すべての列は、内部で生成された SQL クエリによって返されます。 これは、 **Adcmdtable**と同じ動作です。|  
-|**adCmdFile**|256|は、永続的に格納された[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のファイル名として**CommandText**を評価します。 レコードセットで使用され **ます。**[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) または [Requery](../../../ado/reference/ado-api/requery-method.md) のみ。|  
-|**adCmdTableDirect**|512|すべての列が返されたテーブル名として **CommandText** を評価します。 レコードセットで使用され **ます。 Open** または **Requery** のみです。 [Seek](../../../ado/reference/ado-api/seek-method.md)メソッドを使用するには、**レコードセット**を**adcmdtabledirect**で開く必要があります。<br /><br /> この値を [Executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md) 値 **adasyncexecute**と組み合わせることはできません。|  
+|**adCmdFile**|256|は、永続的に格納された[レコードセット](./recordset-object-ado.md)のファイル名として**CommandText**を評価します。 レコードセットで使用され **ます。**[Open](./open-method-ado-recordset.md) または [Requery](./requery-method.md) のみ。|  
+|**adCmdTableDirect**|512|すべての列が返されたテーブル名として **CommandText** を評価します。 レコードセットで使用され **ます。 Open** または **Requery** のみです。 [Seek](./seek-method.md)メソッドを使用するには、**レコードセット**を**adcmdtabledirect**で開く必要があります。<br /><br /> この値を [Executeoptionenum](./executeoptionenum.md) 値 **adasyncexecute**と組み合わせることはできません。|  
   
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
@@ -55,14 +55,14 @@ ms.locfileid: "88450824"
 
 :::row:::
     :::column:::
-        [CommandType プロパティ (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)  
-        [Execute メソッド (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+        [CommandType プロパティ (ADO)](./commandtype-property-ado.md)  
+        [Execute メソッド (ADO Command)](./execute-method-ado-command.md)  
     :::column-end:::
     :::column:::
-        [Execute メソッド (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
-        [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [Execute メソッド (ADO Connection)](./execute-method-ado-connection.md)  
+        [Open メソッド (ADO Recordset)](./open-method-ado-recordset.md)  
     :::column-end:::
     :::column:::
-        [Requery メソッド](../../../ado/reference/ado-api/requery-method.md)  
+        [Requery メソッド](./requery-method.md)  
     :::column-end:::
 :::row-end:::

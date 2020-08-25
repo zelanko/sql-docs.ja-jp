@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ec3bb3a6c5f7e4f6d6654ca059e7ace7d97d9da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 018de245b6d809b094a88d3a1f455bce0166a466
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443094"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774051"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset メソッド (ADO)
-一連のコマンドを進めて、現在の [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトをクリアし、次の **レコードセット** を返します。  
+一連のコマンドを進めて、現在の [レコードセット](./recordset-object-ado.md) オブジェクトをクリアし、次の **レコードセット** を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,23 +46,23 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 >  このパラメーターは、操作によって影響を受けたレコードの数のみを返します。レコード **セット**の生成に使用される select ステートメントからは、レコードの数は返されません。  
   
 ## <a name="remarks"></a>解説  
- **NextRecordset**メソッドを使用して、複合コマンドステートメントまたは複数の結果を返すストアドプロシージャで、次のコマンドの結果を返します。 複合コマンドステートメントに基づいて**レコードセット**オブジェクトを開く場合 (例: "SELECT \* FROM table1;"SELECT \* FROM table2 ")[コマンド](../../../ado/reference/ado-api/command-object-ado.md)の[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッド、または**レコードセット**の[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドを使用して、ADO は最初のコマンドのみを実行し、結果を*レコードセット*に返します。 ステートメント内の後続のコマンドの結果にアクセスするには、 **NextRecordset** メソッドを呼び出します。  
+ **NextRecordset**メソッドを使用して、複合コマンドステートメントまたは複数の結果を返すストアドプロシージャで、次のコマンドの結果を返します。 複合コマンドステートメントに基づいて**レコードセット**オブジェクトを開く場合 (例: "SELECT \* FROM table1;"SELECT \* FROM table2 ")[コマンド](./command-object-ado.md)の[Execute](./execute-method-ado-command.md)メソッド、または**レコードセット**の[Open](./open-method-ado-recordset.md)メソッドを使用して、ADO は最初のコマンドのみを実行し、結果を*レコードセット*に返します。 ステートメント内の後続のコマンドの結果にアクセスするには、 **NextRecordset** メソッドを呼び出します。  
   
- 追加の結果が存在し、複合ステートメントを含む **レコードセット** がプロセスの境界を越えて切断またはマーシャリングされていない限り、 **NextRecordset** メソッドは **レコードセット** オブジェクトを返し続けます。 行を返すコマンドが正常に実行されても、レコードが返されない場合、返された **レコードセット** オブジェクトは開かれますが、空になります。 このケースをテストするには、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) プロパティと [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) プロパティが両方とも **True**であることを確認します。 行を返さないコマンドが正常に実行されると、返された**レコードセット**オブジェクトは閉じられます。このオブジェクトは、**レコードセット**の[State](../../../ado/reference/ado-api/state-property-ado.md)プロパティをテストすることで確認できます。 これ以上結果がない場合、 *レコードセット* は *Nothing*に設定されます。  
+ 追加の結果が存在し、複合ステートメントを含む **レコードセット** がプロセスの境界を越えて切断またはマーシャリングされていない限り、 **NextRecordset** メソッドは **レコードセット** オブジェクトを返し続けます。 行を返すコマンドが正常に実行されても、レコードが返されない場合、返された **レコードセット** オブジェクトは開かれますが、空になります。 このケースをテストするには、 [BOF](./bof-eof-properties-ado.md) プロパティと [EOF](./bof-eof-properties-ado.md) プロパティが両方とも **True**であることを確認します。 行を返さないコマンドが正常に実行されると、返された**レコードセット**オブジェクトは閉じられます。このオブジェクトは、**レコードセット**の[State](./state-property-ado.md)プロパティをテストすることで確認できます。 これ以上結果がない場合、 *レコードセット* は *Nothing*に設定されます。  
   
- **NextRecordset**メソッドは、接続されていない**レコードセット**オブジェクトでは使用できません。この場合、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)は**NOTHING** (Microsoft Visual Basic) または NULL (他の言語) に設定されています。  
+ **NextRecordset**メソッドは、接続されていない**レコードセット**オブジェクトでは使用できません。この場合、 [ActiveConnection](./activeconnection-property-ado.md)は**NOTHING** (Microsoft Visual Basic) または NULL (他の言語) に設定されています。  
   
- 即時更新モードで編集が進行中の場合、 **NextRecordset** メソッドを呼び出すとエラーが発生します。 [Update](../../../ado/reference/ado-api/update-method.md) または [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) メソッドを最初に呼び出します。  
+ 即時更新モードで編集が進行中の場合、 **NextRecordset** メソッドを呼び出すとエラーが発生します。 [Update](./update-method.md) または [CancelUpdate](./cancelupdate-method-ado.md) メソッドを最初に呼び出します。  
   
- [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションに入力するか、元の**Open**または**Execute**呼び出しを使用して配列を渡すことによって、複合ステートメント内の複数のコマンドのパラメーターを渡すには、コマンドシリーズの各コマンドと同じ順序で、コレクションまたは配列内のパラメーターを指定する必要があります。 出力パラメーターの値を読み取る前に、すべての結果の読み取りを完了する必要があります。  
+ [Parameters](./parameters-collection-ado.md)コレクションに入力するか、元の**Open**または**Execute**呼び出しを使用して配列を渡すことによって、複合ステートメント内の複数のコマンドのパラメーターを渡すには、コマンドシリーズの各コマンドと同じ順序で、コレクションまたは配列内のパラメーターを指定する必要があります。 出力パラメーターの値を読み取る前に、すべての結果の読み取りを完了する必要があります。  
   
- OLE DB プロバイダーは、複合ステートメント内の各コマンドが実行されるタイミングを決定します。 たとえば、 [SQL Server の Microsoft OLE DB Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)は、複合ステートメントの受信時にバッチ内のすべてのコマンドを実行します。 **NextRecordset**を呼び出すと、結果として得られる**レコードセット**が返されます。  
+ OLE DB プロバイダーは、複合ステートメント内の各コマンドが実行されるタイミングを決定します。 たとえば、 [SQL Server の Microsoft OLE DB Provider](../../guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)は、複合ステートメントの受信時にバッチ内のすべてのコマンドを実行します。 **NextRecordset**を呼び出すと、結果として得られる**レコードセット**が返されます。  
   
  ただし、他のプロバイダーは、NextRecordset が呼び出された後にのみ、ステートメント内で次のコマンドを実行できます。 これらのプロバイダーでは、コマンドステートメント全体をステップ実行する前に **レコードセット** オブジェクトを明示的に閉じても、残りのコマンドは実行されません。  
   
 ## <a name="applies-to"></a>適用対象  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [NextRecordset メソッドの例 (VB)](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)   
- [NextRecordset メソッドの例 (VC++)](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   
+ [NextRecordset メソッドの例 (VB)](./nextrecordset-method-example-vb.md)   
+ [NextRecordset メソッドの例 (VC++)](./nextrecordset-method-example-vc.md)

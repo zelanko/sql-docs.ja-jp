@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f07bd7bc6b04dac8c5b352cc6281ce4eb851d3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0da662437c19f9c5105b7602035c5bcc519ea2d0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443354"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774601"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile メソッド (ADO)
-既存のファイルの内容を [ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)に読み込みます。  
+既存のファイルの内容を [ストリーム](./stream-object-ado.md)に読み込みます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,11 +42,11 @@ Stream.LoadFromFileFileName
   
  **LoadFromFile**を呼び出す前に、**ストリーム**オブジェクトが既に開かれている必要があります。 このメソッドは、**ストリーム**オブジェクトのバインディングを変更しません。それでも、**ストリーム**が最初に開かれた URL または**レコード**で指定されたオブジェクトにバインドされます。  
   
- **LoadFromFile** は、ファイルから読み取ったデータを使用して、 **ストリーム** オブジェクトの現在の内容を上書きします。 **ストリーム**内の既存のバイトは、ファイルの内容によって上書きされます。 **LoadFromFile**によって作成された[EOS](../../../ado/reference/ado-api/eos-property.md)の後にある既存のバイトと残りのバイトは、切り捨てられます。  
+ **LoadFromFile** は、ファイルから読み取ったデータを使用して、 **ストリーム** オブジェクトの現在の内容を上書きします。 **ストリーム**内の既存のバイトは、ファイルの内容によって上書きされます。 **LoadFromFile**によって作成された[EOS](./eos-property.md)の後にある既存のバイトと残りのバイトは、切り捨てられます。  
   
- **LoadFromFile**の呼び出しの後、現在の位置は**ストリーム**の先頭に設定されます ([position](../../../ado/reference/ado-api/position-property-ado.md)は 0)。  
+ **LoadFromFile**の呼び出しの後、現在の位置は**ストリーム**の先頭に設定されます ([position](./position-property-ado.md)は 0)。  
   
  エンコードのためにストリームの先頭に2バイトが追加される可能性があるため、ストリームのサイズが、読み込み元のファイルのサイズと完全に一致しない場合があります。  
   
 ## <a name="applies-to"></a>適用対象  
- [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Stream オブジェクト (ADO)](./stream-object-ado.md)

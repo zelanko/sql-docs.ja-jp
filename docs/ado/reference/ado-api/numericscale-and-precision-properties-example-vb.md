@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fdeaafe1a6f4362eb6a4bc912ce9267d179fe9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f4e5407d013e567c09dbb659f5b5e6617e0042c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443064"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773991"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale および Precision プロパティの例 (VB)
-この例では、 [numericscale](../../../ado/reference/ado-api/numericscale-property-ado.md)プロパティと[precision](../../../ado/reference/ado-api/precision-property-ado.md)プロパティを使用して、 ***Pubs***データベースの***割引***テーブルのフィールドの数値の小数点以下桁数と有効桁数を表示します。  
+この例では、 [numericscale](./numericscale-property-ado.md)プロパティと[precision](./precision-property-ado.md)プロパティを使用して、 ***Pubs***データベースの***割引***テーブルのフィールドの数値の小数点以下桁数と有効桁数を表示します。  
   
 ```  
 'BeginNumericScaleVB  
@@ -75,7 +75,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
- [NumericScale プロパティ (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
- [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)   
- [Precision プロパティ (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
+ [Field オブジェクト](./field-object.md)   
+ [NumericScale プロパティ (ADO)](./numericscale-property-ado.md)   
+ [Parameter オブジェクト](./parameter-object.md)   
+ [Precision プロパティ (ADO)](./precision-property-ado.md)

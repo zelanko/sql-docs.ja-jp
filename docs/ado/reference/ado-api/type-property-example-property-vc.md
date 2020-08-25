@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00c0121f7418fa63280950191c445ff499dcb133
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10da6786a5a41e6329b8af6c7a745a00fa0a4cbe
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441684"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777061"
 ---
 # <a name="type-property-example-property-vc"></a>Type プロパティの例 (プロパティ) (VC++)
-この例では、 [Type](../../../ado/reference/ado-api/type-property-ado.md) プロパティを示します。 これは、 [プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)、 [フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)などのコレクションの名前と種類を一覧表示するためのユーティリティのモデルです。  
+この例では、 [Type](./type-property-ado.md) プロパティを示します。 これは、 [プロパティ](./properties-collection-ado.md)、 [フィールド](./fields-collection-ado.md)などのコレクションの名前と種類を一覧表示するためのユーティリティのモデルです。  
   
- **プロパティ**コレクションにアクセスするために[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開く必要はありません。これらは、**レコードセット**オブジェクトがインスタンス化されるときに存在します。 ただし、[ [カーソルの場所](../../../ado/reference/ado-api/cursorlocation-property-ado.md) ] プロパティを **adUseClient** に設定すると、 **レコードセット** オブジェクトの **properties** コレクションに動的なプロパティがいくつか追加されるため、この例はもう少し興味深いものになります。 具体的には、 [Item](../../../ado/reference/ado-api/item-property-ado.md) プロパティを使用して各 [プロパティ](../../../ado/reference/ado-api/property-object-ado.md) オブジェクトにアクセスします。  
+ **プロパティ**コレクションにアクセスするために[レコードセット](./recordset-object-ado.md)を開く必要はありません。これらは、**レコードセット**オブジェクトがインスタンス化されるときに存在します。 ただし、[ [カーソルの場所](./cursorlocation-property-ado.md) ] プロパティを **adUseClient** に設定すると、 **レコードセット** オブジェクトの **properties** コレクションに動的なプロパティがいくつか追加されるため、この例はもう少し興味深いものになります。 具体的には、 [Item](./item-property-ado.md) プロパティを使用して各 [プロパティ](./property-object-ado.md) オブジェクトにアクセスします。  
   
 ```  
 // BeginTypePropertyCpp.cpp  
@@ -217,5 +217,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Type プロパティ (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Property オブジェクト (ADO)](./property-object-ado.md)   
+ [Type プロパティ (ADO)](./type-property-ado.md)

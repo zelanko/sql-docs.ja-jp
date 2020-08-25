@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3ab83bb44bca7598074eb81d832ca9ed9b954d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2966868bc8f2cf9d706b4c9f2352c4f8ac5ef583
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451114"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776391"
 ---
 # <a name="bookmark-property-ado"></a>Bookmark プロパティ (ADO)
-[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト内の現在のレコードを一意に識別するブックマークを示します。または、**レコードセット**オブジェクトの現在のレコードを、有効なブックマークによって識別されるレコードに設定します。  
+[レコードセット](./recordset-object-ado.md)オブジェクト内の現在のレコードを一意に識別するブックマークを示します。または、**レコードセット**オブジェクトの現在のレコードを、有効なブックマークによって識別されるレコードに設定します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  有効なブックマークに評価される **バリアント** 式を設定または返します。  
@@ -36,15 +36,15 @@ ms.locfileid: "88451114"
   
  ユーザーはブックマークの値を表示できない可能性があります。 また、同じレコードを参照する2つのブックマークの値が異なる可能性があるため、ブックマークを直接比較することはできません。  
   
- [Clone](../../../ado/reference/ado-api/clone-method-ado.md)メソッドを使用して**レコードセット**オブジェクトのコピーを作成する場合、元のレコードセットオブジェクトと重複した**レコードセット**オブジェクトの**Bookmark**プロパティ設定は同じであり、同じように使用できます。 ただし、同じソースまたはコマンドから作成された場合でも、異なる **レコードセット** オブジェクトのブックマークを同じように使用することはできません。  
+ [Clone](./clone-method-ado.md)メソッドを使用して**レコードセット**オブジェクトのコピーを作成する場合、元のレコードセットオブジェクトと重複した**レコードセット**オブジェクトの**Bookmark**プロパティ設定は同じであり、同じように使用できます。 ただし、同じソースまたはコマンドから作成された場合でも、異なる **レコードセット** オブジェクトのブックマークを同じように使用することはできません。  
   
 > [!NOTE]
 >  **リモートデータサービスの使用状況** クライアント側の **レコードセット** オブジェクトで使用する場合、 **Bookmark** プロパティは常に使用できます。  
   
 ## <a name="applies-to"></a>適用対象  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [BOF、EOF、および Bookmark プロパティの例 (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [BOF、EOF、および Bookmark プロパティの例 (VC + +)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
- [Supports メソッド](../../../ado/reference/ado-api/supports-method.md)
+ [BOF、EOF、および Bookmark プロパティの例 (VB)](./bof-eof-and-bookmark-properties-example-vb.md)   
+ [BOF、EOF、および Bookmark プロパティの例 (VC + +)](./bof-eof-and-bookmark-properties-example-vc.md)   
+ [Supports メソッド](./supports-method.md)

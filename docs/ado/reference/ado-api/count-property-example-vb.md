@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2503065a7a8fceb590e0ad28e57f7ed0ae172589
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 665ad3516143696c7b286b90e70b42ce1c7b5dd6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444344"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775661"
 ---
 # <a name="count-property-example-vb"></a>Count プロパティの例 (VB)
-この例では、 ***Employee***データベースに2つのコレクションがある[Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを示します。 プロパティは、各コレクション内のオブジェクトの数を取得し、これらのコレクションを列挙するループの上限を設定します。 **Count**プロパティを使用せずにこれらのコレクションを列挙するもう1つの方法は、ステートメントを使用すること `For Each...Next` です。  
+この例では、 ***Employee***データベースに2つのコレクションがある[Count](./count-property-ado.md)プロパティを示します。 プロパティは、各コレクション内のオブジェクトの数を取得し、これらのコレクションを列挙するループの上限を設定します。 **Count**プロパティを使用せずにこれらのコレクションを列挙するもう1つの方法は、ステートメントを使用すること `For Each...Next` です。  
   
 ```  
 'BeginCountVB  
@@ -98,4 +98,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)
+ [Count プロパティ (ADO)](./count-property-ado.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd33dc71c9adcbe8e6ed25f965b227fbc76d96fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d17c6823acc945f50e5d8d0543448c997dadc5fe
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440524"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771521"
 ---
 # <a name="append-method-adox-columns"></a>Append メソッド (ADOX Columns)
-[Columns](../../../ado/reference/adox-api/columns-collection-adox.md)コレクションに新しい[Column](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトを追加します。  
+[Columns](./columns-collection-adox.md)コレクションに新しい[Column](./column-object-adox.md)オブジェクトを追加します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,26 +38,26 @@ Columns.Append Column [,Type] [,DefinedSize]
  *列*  
  追加する **列** オブジェクト、または作成して追加する列の名前。  
   
- *Type*  
- 任意。 列のデータ型を指定する **Long** 型の値です。 *Type*パラメーターは、 **Column**オブジェクトの[type](../../../ado/reference/adox-api/type-property-column-adox.md)プロパティに対応しています。  
+ *種類*  
+ 任意。 列のデータ型を指定する **Long** 型の値です。 *Type*パラメーターは、 **Column**オブジェクトの[type](./type-property-column-adox.md)プロパティに対応しています。  
   
  *DefinedSize*  
- 任意。 列のサイズを指定する **Long 型** の値です。 指定された*サイズ*のパラメーターは、 **Column**オブジェクトの "指定された[サイズ](../../../ado/reference/adox-api/definedsize-property-adox.md)" プロパティに対応します。  
+ 任意。 列のサイズを指定する **Long 型** の値です。 指定された*サイズ*のパラメーターは、 **Column**オブジェクトの "指定された[サイズ](./definedsize-property-adox.md)" プロパティに対応します。  
   
 > [!NOTE]
->  [テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)コレクションに既に追加されている[テーブル](../../../ado/reference/adox-api/table-object-adox.md)**に列が**存在しない場合、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)の**Columns**コレクションに**列**を追加すると、エラーが発生します。  
+>  [テーブル](./tables-collection-adox.md)コレクションに既に追加されている[テーブル](./table-object-adox.md)**に列が**存在しない場合、[インデックス](./index-object-adox.md)の**Columns**コレクションに**列**を追加すると、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  
- [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
+ [Columns コレクション (ADOX)](./columns-collection-adox.md)  
   
 ## <a name="see-also"></a>参照  
- [Columns および Tables Append メソッド、Name プロパティの例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Keys Append メソッド、Key Type、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [ParentCatalog プロパティの例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Append メソッド (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append メソッド (ADOX Indexes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append メソッド (ADOX Keys)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append メソッド (ADOX Procedures)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append メソッド (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append メソッド (ADOX Users)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append メソッド (ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Columns および Tables Append メソッド、Name プロパティの例 (VB)](./columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Keys Append メソッド、Key Type、UpdateRule プロパティの例 (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [ParentCatalog プロパティの例 (VB)](./parentcatalog-property-example-vb.md)   
+ [Append メソッド (ADOX Groups)](./append-method-adox-groups.md)   
+ [Append メソッド (ADOX Indexes)](./append-method-adox-indexes.md)   
+ [Append メソッド (ADOX Keys)](./append-method-adox-keys.md)   
+ [Append メソッド (ADOX Procedures)](./append-method-adox-procedures.md)   
+ [Append メソッド (ADOX Tables)](./append-method-adox-tables.md)   
+ [Append メソッド (ADOX Users)](./append-method-adox-users.md)   
+ [Append メソッド (ADOX Views)](./append-method-adox-views.md)

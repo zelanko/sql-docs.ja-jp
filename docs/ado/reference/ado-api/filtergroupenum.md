@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8d3c510cfd9fa6c4a28f78005021465b9b0917b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7552eb4b069b2cd2adc33e0bff25f23d918468c2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443664"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775291"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
-レコード [セット](../../../ado/reference/ado-api/recordset-object-ado.md)からフィルター選択するレコードのグループを指定します。  
+レコード [セット](./recordset-object-ado.md)からフィルター選択するレコードのグループを指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
-|**adFilterAffectedRecords**|2|最後の [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)、 [Resync](../../../ado/reference/ado-api/resync-method.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)、または [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 呼び出しの影響を受けたレコードのみを表示するためのフィルター。|  
+|**adFilterAffectedRecords**|2|最後の [Delete](./delete-method-ado-recordset.md)、 [Resync](./resync-method.md)、 [UpdateBatch](./updatebatch-method.md)、または [CancelBatch](./cancelbatch-method-ado.md) 呼び出しの影響を受けたレコードのみを表示するためのフィルター。|  
 |**Adfilter衝突レコード**|5|前回のバッチ更新に失敗したレコードを表示するためのフィルター。|  
 |**adFilterFetchedRecords**|3|現在のキャッシュ内のレコードを表示するためのフィルター。つまり、データベースからレコードを取得するための最後の呼び出しの結果です。|  
 |**adFilterNone**|0|現在のフィルターを削除し、表示するすべてのレコードを復元します。|  
@@ -46,4 +46,4 @@ ms.locfileid: "88443664"
 |AdoEnums のフィルター|  
   
 ## <a name="applies-to"></a>適用対象  
- [Filter プロパティ](../../../ado/reference/ado-api/filter-property.md)
+ [Filter プロパティ](./filter-property.md)

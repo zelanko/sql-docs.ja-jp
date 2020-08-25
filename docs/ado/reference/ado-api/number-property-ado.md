@@ -18,30 +18,30 @@ helpviewer_keywords:
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 448842387c524326e51b104a0850f9ff503d35e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fe4984a9bdbeff69f7c2beba4d91833cdca85f50
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443074"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774101"
 ---
 # <a name="number-property-ado"></a>Number プロパティ (ADO)
-[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトを一意に識別する番号を示します。  
+[エラー](./error-object.md)オブジェクトを一意に識別する番号を示します。  
   
 ## <a name="return-value"></a>戻り値  
- [Errorvalueenum](../../../ado/reference/ado-api/errorvalueenum.md)定数のいずれかに対応できる**Long 型**の値を返します。  
+ [Errorvalueenum](./errorvalueenum.md)定数のいずれかに対応できる**Long 型**の値を返します。  
   
 ## <a name="remarks"></a>解説  
  **Number**プロパティを使用して、発生したエラーを特定します。 プロパティの値は、エラー状態に対応する一意の番号です。  
   
- [Errors](../../../ado/reference/ado-api/errors-collection-ado.md)コレクションは、16進数形式 (0x80004005 など) または long 値 (たとえば、2147467259) のいずれかで HRESULT を返します。 これらの Hresult は、OLE DB や OLE 自体など、基になるコンポーネントによって発生する可能性があります。 これらの数値の詳細については、 [OLE DB プログラマーリファレンス](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)の「[エラー (OLE DB)](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) 」を参照してください *。*  
+ [Errors](./errors-collection-ado.md)コレクションは、16進数形式 (0x80004005 など) または long 値 (たとえば、2147467259) のいずれかで HRESULT を返します。 これらの Hresult は、OLE DB や OLE 自体など、基になるコンポーネントによって発生する可能性があります。 これらの数値の詳細については、 [OLE DB プログラマーリファレンス](/previous-versions/windows/desktop/ms713643(v=vs.85))の「[エラー (OLE DB)](/previous-versions/windows/desktop/ms724533(v=vs.85)) 」を参照してください *。*  
   
 ## <a name="applies-to"></a>適用対象  
- [Error オブジェクト](../../../ado/reference/ado-api/error-object.md)  
+ [Error オブジェクト](./error-object.md)  
   
 ## <a name="see-also"></a>参照  
- [Description、HelpContext、HelpFile、のエラー、Number、Source、および SQLState プロパティの例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Description、HelpContext、HelpFile、のエラー、Number、Source、および SQLState プロパティの例 (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [Description プロパティ](../../../ado/reference/ado-api/description-property.md)   
- [HelpContext、HelpFile プロパティ](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
- [Source プロパティ (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)
+ [Description、HelpContext、HelpFile、のエラー、Number、Source、および SQLState プロパティの例 (VB)](./description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Description、HelpContext、HelpFile、のエラー、Number、Source、および SQLState プロパティの例 (VC + +)](./description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Description プロパティ](./description-property.md)   
+ [HelpContext、HelpFile プロパティ](./helpcontext-helpfile-properties.md)   
+ [Source プロパティ (ADO Error)](./source-property-ado-error.md)

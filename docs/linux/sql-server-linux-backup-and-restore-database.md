@@ -1,6 +1,6 @@
 ---
 title: Linux での SQL Server データベースのバックアップと復元
-description: Linux で SQL Server データベースをバックアップおよび復元する方法について説明します。
+description: Linux で SQL Server データベースをバックアップおよび復元する方法について説明します。 また、SQL Server Management Studio (SSMS) を使用してバックアップと復元を行う方法についても説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f90d612eb9064025db8b9ac942dd7f664cedb67e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882343"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088970"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux での SQL Server データベースのバックアップと復元
 
@@ -87,9 +87,9 @@ Windows コンピューターの SSMS を使用して、Linux データベース
 
 1. SSMS を起動し、SQL Server 2017 on Linux 内のサーバーに接続します。
 
-1. オブジェクト エクスプローラーで、データベースを右クリックし、 **[タスク]** 、 **[バックアップ...]** の順にクリックします。
+1. オブジェクト エクスプローラーで、データベースを右クリックし、**[タスク]**、**[バックアップ...]** の順にクリックします。
 
-1. **[Backup Up Database]\(データベースのバックアップ\)** ダイアログで、パラメーターとオプションを確認し、 **[OK]** をクリックします。
+1. **[Backup Up Database]\(データベースのバックアップ\)** ダイアログで、パラメーターとオプションを確認し、**[OK]** をクリックします。
  
 SQL Server によってデータベースのバックアップが完了されます。
 
@@ -97,17 +97,17 @@ SQL Server によってデータベースのバックアップが完了されま
 
 次の手順では、SSMS を使用してデータベースを復元する方法について説明します。
 
-1. SSMS で **[データベース]** を右クリックし、 **[データベースの復元...]** をクリックします。 
+1. SSMS で **[データベース]** を右クリックし、**[データベースの復元...]** をクリックします。 
 
 1. **[ソース]** の下の **[デバイス:]** をクリックし、省略記号 (...) をクリックします。
 
-1. データベース バックアップ ファイルを見つけたら、 **[OK]** をクリックします。 
+1. データベース バックアップ ファイルを見つけたら、**[OK]** をクリックします。 
 
 1. **[復元プラン]** の下で、バックアップ ファイルと設定を確認します。 **[OK]** をクリックします。 
 
 1. SQL Server によってデータベースが復元されます。 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 * [データベースの完全バックアップの作成 (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 * [トランザクション ログのバックアップ (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)

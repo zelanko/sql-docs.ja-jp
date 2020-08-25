@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d48e9538fb8ec4f0dac8c3a17457b04b0ace963
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57edf327f2ba4661ba47f43cf8b2f128b9fe92ab
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442391"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772131"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
-バッチ更新やその他の一括操作に関して、レコードの [状態](../../../ado/reference/ado-api/status-property-ado-recordset.md) を指定します。  
+バッチ更新やその他の一括操作に関して、レコードの [状態](./status-property-ado-recordset.md) を指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
@@ -74,4 +74,4 @@ ms.locfileid: "88442391"
 |AdoEnums.RecordStatus.UNMODIFIED|  
   
 ## <a name="applies-to"></a>適用対象  
- [Status プロパティ (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Status プロパティ (ADO Recordset)](./status-property-ado-recordset.md)
