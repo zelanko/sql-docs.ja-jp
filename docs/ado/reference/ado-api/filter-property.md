@@ -36,7 +36,7 @@ ms.locfileid: "88775321"
   
 -   [Filtergroupenum](./filtergroupenum.md)値。  
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 **フィルター**プロパティを使用して、レコード**セット**オブジェクトのレコードを選択的に表示します。 フィルター選択された **レコードセット** が現在のカーソルになります。 現在の **カーソル** に基づいて値を返すその他のプロパティは、 [ABSOLUTEPOSITION property (ado)](./absoluteposition-property-ado.md)、 [AbsolutePage property (ado)](./absolutepage-property-ado.md)、 [RecordCount Property (ADO](./recordcount-property-ado.md))、および [PageCount property (ado)](./pagecount-property-ado.md)などの影響を受けます。 **Filter**プロパティを特定の新しい値に設定すると、現在のレコードが、新しい値を満たす最初のレコードに移動します。
   

@@ -29,7 +29,7 @@ ms.locfileid: "88774501"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [Marshaloptionsenum](./marshaloptionsenum.md)値を設定または返します。 既定値は **Admarshalall**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  クライアント側の [レコードセット](./recordset-object-ado.md)を使用すると、クライアントで変更されたレコードが、スレッドまたはプロセスの境界を越えてパッケージ化および送信するプロセスであるマーシャリングと呼ばれる手法によって、中間層または Web サーバーに書き戻されます。 変更したリモートデータを中間層または Web サーバーに戻すためにマーシャリングする場合、 **Marshaloptions** プロパティを設定するとパフォーマンスが向上します。  
   
 > [!NOTE]

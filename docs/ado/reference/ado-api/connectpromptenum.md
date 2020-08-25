@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ad8fe77bb3472931d3b16d5849b047001922c96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48d5cdb61cee2051d3469b7cfeee85629521d71e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444414"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775801"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 データソースへの接続を開くときにダイアログボックスを表示して、不足しているパラメーターを確認するかどうかを指定します。  
@@ -44,4 +44,4 @@ ms.locfileid: "88444414"
 |AdoEnums。 NEVER|  
   
 ## <a name="applies-to"></a>適用対象  
- [Prompt プロパティ - 動的 (ADO)](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)
+ [Prompt プロパティ - 動的 (ADO)](./prompt-property-dynamic-ado.md)

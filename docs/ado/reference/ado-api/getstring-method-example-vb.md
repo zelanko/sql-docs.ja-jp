@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6b680c3a386629721c7e3256a69ec305d98af5d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8d5baaab530a1d693a5f31f998e6aa6893b6cdfa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443504"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774901"
 ---
 # <a name="getstring-method-example-vb"></a>GetString メソッドの例 (VB)
-この例では、 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) メソッドを示します。  
+この例では、 [GetString](./getstring-method-ado.md) メソッドを示します。  
   
- データアクセスの問題をデバッグしているときに、小さな [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の現在の内容をすばやく簡単に印刷できるようにすることを想定しています。  
+ データアクセスの問題をデバッグしているときに、小さな [レコードセット](./recordset-object-ado.md)の現在の内容をすばやく簡単に印刷できるようにすることを想定しています。  
   
 ```  
 'BeginGetStringVB  
@@ -103,5 +103,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [GetString メソッド (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [GetString メソッド (ADO)](./getstring-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

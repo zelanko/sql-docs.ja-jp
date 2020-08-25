@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb2ad6e448f215c29c278ba3f767ad995e713d26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50b8465e5f7f816007526b66d8cc0696e0c47fca
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441714"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777071"
 ---
 # <a name="type-property-example-field-vc"></a>Type プロパティの例 (Field) (VC++)
-この例では、 ***Employees***テーブル内のすべての[Field](../../../ado/reference/ado-api/field-object.md)オブジェクトの**type**プロパティの値に対応する定数の名前を表示することによって、 [type](../../../ado/reference/ado-api/type-property-ado.md)プロパティを示します。 このプロシージャを実行するには、FieldType 関数が必要です。  
+この例では、 ***Employees***テーブル内のすべての[Field](./field-object.md)オブジェクトの**type**プロパティの値に対応する定数の名前を表示することによって、 [type](./type-property-ado.md)プロパティを示します。 このプロシージャを実行するには、FieldType 関数が必要です。  
   
 ## <a name="example"></a>例  
   
@@ -172,5 +172,5 @@ void PrintComError(_com_error &e) {
  **名前: hire_date**  
  **種類: adDBTimeStamp**   
 ## <a name="see-also"></a>参照  
- [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
- [Type プロパティ (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Field オブジェクト](./field-object.md)   
+ [Type プロパティ (ADO)](./type-property-ado.md)

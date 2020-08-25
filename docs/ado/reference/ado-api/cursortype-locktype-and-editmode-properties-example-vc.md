@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 081fafdbc0f12014daf21507184e04375ddd0b38
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 034e7ef1bd472c8ebcc6749797decd8176455801
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444264"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775491"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType、LockType、および EditMode プロパティの例 (VC + +)
-この例では、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開く前に、 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)プロパティと[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)プロパティを設定します。 また、さまざまな条件下での [EditMode](../../../ado/reference/ado-api/editmode-property.md) プロパティの値も表示されます。 このプロシージャを実行するには、EditModeOutput 関数が必要です。  
+この例では、[レコードセット](./recordset-object-ado.md)を開く前に、 [CursorType](./cursortype-property-ado.md)プロパティと[LockType](./locktype-property-ado.md)プロパティを設定します。 また、さまざまな条件下での [EditMode](./editmode-property.md) プロパティの値も表示されます。 このプロシージャを実行するには、EditModeOutput 関数が必要です。  
   
 ## <a name="example"></a>例  
   
@@ -163,7 +163,7 @@ void PrintComError(_com_error &e) {
 **編集後:**   
  **EditMode = adEditInProgress**   
 ## <a name="see-also"></a>参照  
- [CursorType プロパティ (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
- [EditMode プロパティ](../../../ado/reference/ado-api/editmode-property.md)   
- [LockType プロパティ (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CursorType プロパティ (ADO)](./cursortype-property-ado.md)   
+ [EditMode プロパティ](./editmode-property.md)   
+ [LockType プロパティ (ADO)](./locktype-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

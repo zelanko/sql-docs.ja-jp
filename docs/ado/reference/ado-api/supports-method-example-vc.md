@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03f01a5b8e9779687effd7fad1f3f96cd6cdcfd4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66592f099b5d125acb92cbcb85bf7e8964aeda8a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441764"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777131"
 ---
 # <a name="supports-method-example-vc"></a>Supports メソッドの例 (VC++)
-この例では、 [サポート](../../../ado/reference/ado-api/supports-method.md) メソッドを使用して、さまざまな種類のカーソルで開かれたレコードセットでサポートされているオプションを表示します。 この例を実行するには DisplaySupport 関数が必要です。  
+この例では、 [サポート](./supports-method.md) メソッドを使用して、さまざまな種類のカーソルで開かれたレコードセットでサポートされているオプションを表示します。 この例を実行するには DisplaySupport 関数が必要です。  
   
 ```  
 // SupportsMethodExample.cpp  
@@ -227,5 +227,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Supports メソッド](../../../ado/reference/ado-api/supports-method.md)
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [Supports メソッド](./supports-method.md)

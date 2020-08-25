@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dacac570cac3525593f281e52742f4efeb8cba4b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 042a69dd679cf84e2ab26da77cda3c06d2abd94e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439034"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768311"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions プロパティ (RDS)
 非同期実行が有効かどうかを示します。  
@@ -32,24 +32,22 @@ ms.locfileid: "88439034"
   
 |定数|説明|  
 |--------------|-----------------|  
-|**adcExecSync**|[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の次の更新を同期的に実行します。|  
+|**adcExecSync**|[レコードセット](../ado-api/recordset-object-ado.md)の次の更新を同期的に実行します。|  
 |**adcExecAsync**|既定値。 **レコードセット**の次の更新を非同期的に実行します。|  
   
 > [!NOTE]
 >  これらの定数を使用する実行可能ファイルはそれぞれ、それぞれの宣言を提供する必要があります。 RDS ライブラリの既定のインストールフォルダーにある Adcvbs. inc. ファイルから、必要な定数宣言を切り取って貼り付けることができます。  
   
 ## <a name="remarks"></a>解説  
- **Executeoptions**が**Adcexecasync**に設定されている場合、RDS で次の**更新**呼び出しが非同期に実行され[ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトの**レコードセット**。  
+ **Executeoptions**が**Adcexecasync**に設定されている場合、RDS で次の**更新**呼び出しが非同期に実行され[ます。DataControl](./datacontrol-object-rds.md)オブジェクトの**レコードセット**。  
   
- RDS を変更する可能性のある別の非同期操作中に [Reset](../../../ado/reference/rds-api/reset-method-rds.md)、 [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md)、 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)、または [レコードセット](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) を呼び出そうとした場合 [。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) オブジェクトの **レコードセット** が実行中であるため、エラーが発生します。  
+ RDS を変更する可能性のある別の非同期操作中に [Reset](./reset-method-rds.md)、 [Refresh](./refresh-method-rds.md)、 [SubmitChanges](./submitchanges-method-rds.md)、 [CancelUpdate](../ado-api/cancelupdate-method-ado.md)、または [レコードセット](./recordset-sourcerecordset-properties-rds.md) を呼び出そうとした場合 [。DataControl](./datacontrol-object-rds.md) オブジェクトの **レコードセット** が実行中であるため、エラーが発生します。  
   
- 非同期操作中にエラーが発生した場合は、 **RDS.DataControl** オブジェクトの [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 値が **Adcreadystateloaded** から **adcReadyStateComplete**に変更されましたが、 **レコードセット** プロパティの値は *何も*保持されません。  
+ 非同期操作中にエラーが発生した場合は、 **RDS.DataControl** オブジェクトの [ReadyState](./readystate-property-rds.md) 値が **Adcreadystateloaded** から **adcReadyStateComplete**に変更されましたが、 **レコードセット** プロパティの値は *何も*保持されません。  
   
 ## <a name="applies-to"></a>適用対象  
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>参照  
- [ExecuteOptions および FetchOptions プロパティの例 (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
- [Cancel メソッド (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
-
-
+ [ExecuteOptions および FetchOptions プロパティの例 (VBScript)](./executeoptions-and-fetchoptions-properties-example-vbscript.md)   
+ [Cancel メソッド (RDS)](./cancel-method-rds.md)

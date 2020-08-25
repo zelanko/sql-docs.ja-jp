@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c328a3efe858c7abd9872eef0fcd28dfa1ccb36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2a37d907547359fd1366bc5b756fbcbb65b4ed20
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443634"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775221"
 ---
 # <a name="find-method-example-jscript"></a>Find メソッドの例 (JScript)
-この例では、 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトの [Find](../../../ado/reference/ado-api/find-method-ado.md) メソッドを使用して、名前が G で始まる ***Northwind*** データベース内の会社を検索して表示します。次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **findjs**として保存します。  
+この例では、 [レコードセット](./recordset-object-ado.md) オブジェクトの [Find](./find-method-ado.md) メソッドを使用して、名前が G で始まる ***Northwind*** データベース内の会社を検索して表示します。次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **findjs**として保存します。  
   
 ```  
 <!-- BeginFindJS -->  
@@ -154,5 +154,5 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Find メソッド (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Find メソッド (ADO)](./find-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

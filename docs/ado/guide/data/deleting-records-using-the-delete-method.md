@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d8a29f2e1f35ddddc28e4aa3fb3c52c649e3056
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f2f6f3fa47c53a5a6873024284e58604a8e8a2c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453534"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806921"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Delete メソッドを使用してレコードを削除する
-**Delete**メソッドを使用すると、**レコードセット**オブジェクト内の現在のレコードまたはレコードのグループが削除対象としてマークされます。 レコード **セット** オブジェクトでレコードの削除が許可されていない場合、エラーが発生します。 即時更新モードの場合、削除はすぐにデータベースで発生します。 たとえば、データベースの整合性違反が原因でレコードを正常に削除できない場合、レコードは更新の呼び出し後も編集モードのままになり **ます。** これは、現在のレコードから移動する前に、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) を使用して更新を取り消す必要があることを意味します (たとえば、 [Close](../../../ado/reference/ado-api/close-method-ado.md)、 [Move](../../../ado/reference/ado-api/move-method-ado.md)、または [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)を使用します)。  
+**Delete**メソッドを使用すると、**レコードセット**オブジェクト内の現在のレコードまたはレコードのグループが削除対象としてマークされます。 レコード **セット** オブジェクトでレコードの削除が許可されていない場合、エラーが発生します。 即時更新モードの場合、削除はすぐにデータベースで発生します。 たとえば、データベースの整合性違反が原因でレコードを正常に削除できない場合、レコードは更新の呼び出し後も編集モードのままになり **ます。** これは、現在のレコードから移動する前に、 [CancelUpdate](../../reference/ado-api/cancelupdate-method-ado.md) を使用して更新を取り消す必要があることを意味します (たとえば、 [Close](../../reference/ado-api/close-method-ado.md)、 [Move](../../reference/ado-api/move-method-ado.md)、または [NextRecordset](../../reference/ado-api/nextrecordset-method-ado.md)を使用します)。  
   
  バッチ更新モードの場合、レコードはキャッシュから削除対象としてマークされ、実際の削除は、 **UpdateBatch** メソッドを呼び出したときに行われます。 (削除されたレコードを表示するには、 **Delete**が呼び出された後に、 **Filter**プロパティを**adFilterAffectedRecords**に設定します)。  
   

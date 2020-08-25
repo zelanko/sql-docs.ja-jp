@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49c6ae45be2f1d0979f8af827a85080edd919400
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba3d23cf360285f87b0034e5b73162e7b2408da0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438844"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767911"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>VBScript での RDS のコード例
 > [!IMPORTANT]
@@ -34,48 +34,46 @@ ms.locfileid: "88438844"
   
 ## <a name="objects"></a>オブジェクト  
   
--   [DataControl オブジェクトの例](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)  
+-   [DataControl オブジェクトの例](./datacontrol-object-example-vbscript.md)  
   
--   [領域スペースオブジェクトの例](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)  
+-   [領域スペースオブジェクトの例](./dataspace-object-and-createobject-method-example-vbscript.md)  
   
--   [DataFactory オブジェクトの例](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
+-   [DataFactory オブジェクトの例](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
   
 ## <a name="methods"></a>メソッド  
   
--   [Cancel メソッドの例](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)  
+-   [Cancel メソッドの例](./cancel-method-example-vbscript.md)  
   
--   [CancelUpdate メソッドの例](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)  
+-   [CancelUpdate メソッドの例](./cancelupdate-method-example-vbscript.md)  
   
--   [ConvertToString メソッドの例](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)  
+-   [ConvertToString メソッドの例](./converttostring-method-example-vbscript.md)  
   
--   [CreateObject メソッド](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)  
+-   [CreateObject メソッド](./dataspace-object-and-createobject-method-example-vbscript.md)  
   
--   [CreateRecordset メソッドの例](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)  
+-   [CreateRecordset メソッドの例](./createrecordset-method-example-vbscript.md)  
   
--   [クエリメソッドの例](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
+-   [クエリメソッドの例](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
   
--   [Refresh メソッドの例](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)  
+-   [Refresh メソッドの例](./refresh-method-example-vbscript.md)  
   
--   [Reset メソッドの例](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
+-   [Reset メソッドの例](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
   
--   [SubmitChanges メソッドの例](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)  
+-   [SubmitChanges メソッドの例](./submitchanges-method-example-vbscript.md)  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
   
--   [接続プロパティの例](../../../ado/reference/rds-api/connect-property-example-vbscript.md)  
+-   [接続プロパティの例](./connect-property-example-vbscript.md)  
   
--   [ExecuteOptions および FetchOptions プロパティの例](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)  
+-   [ExecuteOptions および FetchOptions プロパティの例](./executeoptions-and-fetchoptions-properties-example-vbscript.md)  
   
--   [FilterColumn、Filterfiltervalue、SortColumn、および Sortcolumn プロパティの例](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
+-   [FilterColumn、Filterfiltervalue、SortColumn、および Sortcolumn プロパティの例](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
   
--   [ReadyState プロパティの例](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)  
+-   [ReadyState プロパティの例](./readystate-property-example-vbscript.md)  
   
--   [Recordset および SourceRecordset プロパティの例](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)  
+-   [Recordset および SourceRecordset プロパティの例](./recordset-and-sourcerecordset-properties-example-vbscript.md)  
   
--   [サーバープロパティの例](../../../ado/reference/rds-api/server-property-example-vbscript.md)  
+-   [サーバープロパティの例](./server-property-example-vbscript.md)  
   
--   [SQL プロパティの例](../../../ado/reference/rds-api/sql-property-example-vbscript.md)  
+-   [SQL プロパティの例](./sql-property-example-vbscript.md)  
   
--   [URL プロパティの例](../../../ado/reference/rds-api/url-property-example-vbscript.md)
-
-
+-   [URL プロパティの例](./url-property-example-vbscript.md)

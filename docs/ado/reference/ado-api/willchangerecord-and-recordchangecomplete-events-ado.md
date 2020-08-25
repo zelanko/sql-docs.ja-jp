@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a6cb124e51c232b0a3a26e9eb84316e3bde7ecd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f69b16392204722e4efd3dc91602a920316919d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441524"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776881"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord および RecordChangeComplete イベント (ADO)
-この **イベントは、** [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) の1つ以上のレコード (行) が変更される前に呼び出されます。 **RecordChangeComplete**イベントは、1つ以上のレコードが変更された後に呼び出されます。  
+この **イベントは、** [レコードセット](./recordset-object-ado.md) の1つ以上のレコード (行) が変更される前に呼び出されます。 **RecordChangeComplete**イベントは、1つ以上のレコードが変更された後に呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,16 +39,16 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>パラメーター  
  *adReason*  
- このイベントの理由を指定する [Eventreason 列挙](../../../ado/reference/ado-api/eventreasonenum.md) 値。 この値には、 **Adrsnaddnew**、 **adrsnaddnew**、 **adrsnaddnew**、 **adRsnUndoUpdate**、 **AdRsnUndoAddNew**、 **adRsnUndoDelete**、または **adrsnfirstchange**を指定できます。  
+ このイベントの理由を指定する [Eventreason 列挙](./eventreasonenum.md) 値。 この値には、 **Adrsnaddnew**、 **adrsnaddnew**、 **adrsnaddnew**、 **adRsnUndoUpdate**、 **AdRsnUndoAddNew**、 **adRsnUndoDelete**、または **adrsnfirstchange**を指定できます。  
   
  *cRecords*  
  変更されるレコードの数を示す **Long** 値 (影響を受けます)。  
   
  *pError*  
- [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトです。 *Adstatus*の値が**adstatuserrorて**いる場合に発生したエラーについて説明します。それ以外の場合は設定されません。  
+ [エラー](./error-object.md)オブジェクトです。 *Adstatus*の値が**adstatuserrorて**いる場合に発生したエラーについて説明します。それ以外の場合は設定されません。  
   
  *adStatus*  
- [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md)状態の値です。  
+ [Eventstatusenum](./eventstatusenum.md)状態の値です。  
   
  が **呼び出されたときに** 、イベントを発生させた操作が成功した場合、このパラメーターは **adstatusok** に設定されます。 このイベントが保留中の操作の取り消しを要求できない場合は、 **Adstatuscantdeny** に設定されます。  
   
@@ -62,12 +62,12 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  **レコードセット**オブジェクトです。 このイベントが発生した **レコードセット** 。  
   
 ## <a name="remarks"></a>解説  
- [Update](../../../ado/reference/ado-api/update-method.md)、 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)、および[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)の各**レコードセット**操作により、行の最初に変更されたフィールドに対して、 **RecordChangeComplete**イベントが**発生する可能性**があります。 **レコードセット** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)の値によって、イベントを発生させる操作が決定されます。  
+ [Update](./update-method.md)、 [Delete](./delete-method-ado-recordset.md)、 [CancelUpdate](./cancelupdate-method-ado.md)、 [AddNew](./addnew-method-ado.md)、 [UpdateBatch](./updatebatch-method.md)、および[CancelBatch](./cancelbatch-method-ado.md)の各**レコードセット**操作により、行の最初に変更されたフィールドに対して、 **RecordChangeComplete**イベントが**発生する可能性**があります。 **レコードセット** [CursorType](./cursortype-property-ado.md)の値によって、イベントを発生させる操作が決定されます。  
   
- このイベントでは、**レコードセット**[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティが**adFilterAffectedRecords**に設定さ**れてい**ます。 イベントの処理中にこのプロパティを変更することはできません。  
+ このイベントでは、**レコードセット**[フィルター](./filter-property.md)プロパティが**adFilterAffectedRecords**に設定さ**れてい**ます。 イベントの処理中にこのプロパティを変更することはできません。  
   
  **AdReason**パラメーターを含むイベントのイベント通知を完全に停止するには、使用可能な**adReason**値ごとに**adstatus**パラメーターを**adStatusUnwantedEvent**に設定する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)
+ [ADO Events モデルの例 (VC + +)](./ado-events-model-example-vc.md)   
+ [ADO イベント ハンドラーの概要](../../guide/data/ado-event-handler-summary.md)

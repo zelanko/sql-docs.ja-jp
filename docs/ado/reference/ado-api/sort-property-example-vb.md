@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7821e971d32f855fc219a2883f4190b9434d998
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 49964c5dc3f9f6402c853f4adddabd798db4b2f0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442084"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777451"
 ---
 # <a name="sort-property-example-vb"></a>Sort プロパティの例 (VB)
-この例では、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[Sort](../../../ado/reference/ado-api/sort-property.md)プロパティを使用して、 ***Pubs***データベースの***Authors***テーブルから派生した**レコードセット**の行を並べ替えます。 セカンダリユーティリティルーチンによって各行が出力されます。  
+この例では、[レコードセット](./recordset-object-ado.md)オブジェクトの[Sort](./sort-property.md)プロパティを使用して、 ***Pubs***データベースの***Authors***テーブルから派生した**レコードセット**の行を並べ替えます。 セカンダリユーティリティルーチンによって各行が出力されます。  
   
 ```  
 'BeginSortVB  
@@ -111,5 +111,5 @@ Attribute VB_Name = "Sort"
 ```  
   
 ## <a name="see-also"></a>参照  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Sort プロパティ](../../../ado/reference/ado-api/sort-property.md)
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [Sort プロパティ](./sort-property.md)

@@ -20,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8fba97eb12a79c20322f53dbd8574165dc3dee1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88223eae0a6a6709dc5c45d2ed0da5e17f3e7c17
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439404"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769121"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule プロパティ (ADOX)
-主 [キー](../../../ado/reference/adox-api/key-object-adox.md) が更新されたときに実行されるアクションを示します。  
+主 [キー](./key-object-adox.md) が更新されたときに実行されるアクションを示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- [Ruleenum](../../../ado/reference/adox-api/ruleenum.md)定数のいずれかを指定できる**Long 型**の値を設定して返します。 既定値は **adRINone**です。  
+ [Ruleenum](./ruleenum.md)定数のいずれかを指定できる**Long 型**の値を設定して返します。 既定値は **adRINone**です。  
   
-## <a name="remarks"></a>解説  
- このプロパティは、既にコレクションに追加されている [キー](../../../ado/reference/adox-api/key-object-adox.md) オブジェクトに対しては読み取り専用です。  
+## <a name="remarks"></a>コメント  
+ このプロパティは、既にコレクションに追加されている [キー](./key-object-adox.md) オブジェクトに対しては読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  
- [Key オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [Key オブジェクト (ADOX)](./key-object-adox.md)  
   
 ## <a name="see-also"></a>参照  
- [Keys Append メソッド、Key Type、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)
+ [Keys Append メソッド、Key Type、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

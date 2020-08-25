@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6fc5226da0ceeefc6ae961b2a3d358d1dc1955b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 09d345a0f08d9fa2e9e3696941aba1ef49443efd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442824"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773471"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.. wfc. データ  
@@ -66,7 +66,7 @@ public AdoProperties getProperties()
 ```  
   
 ## <a name="parameter-accessor-methods"></a>パラメーターアクセサーメソッド  
- [Parameter](../../../ado/reference/ado-api/parameter-object.md)オブジェクトの[Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティは、そのオブジェクトのコンテンツを取得または設定します。 コンテンツは、値と複数のデータ型のいずれかを割り当てることができる、バリアント型のオブジェクトで表されます。  
+ [Parameter](./parameter-object.md)オブジェクトの[Value](./value-property-ado.md)プロパティは、そのオブジェクトのコンテンツを取得または設定します。 コンテンツは、値と複数のデータ型のいずれかを割り当てることができる、バリアント型のオブジェクトで表されます。  
   
  ADO/WFC は、VARIANT オブジェクトを返す**getValue**メソッドを使用して**Value**プロパティを実装します。また、 **setValue**を引数として受け取る setValue メソッドもあります。 バリアントは、Microsoft Visual Basic などの特定の言語では非常に効率的です。  
   
@@ -96,4 +96,4 @@ public void setNull()
 ```  
   
 ## <a name="see-also"></a>参照  
- [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter オブジェクト](./parameter-object.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b14c4f2b97f3002291f5be765b1b0dfe6cf4f1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9367a8766b0a26a4f83869aad1d11a417a03d9c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438914"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768051"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 サポートされているオブジェクトのバージョンで、要求されたインターフェイスへのポインターを返します。  
@@ -54,9 +54,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
  RDS カーソルエンジンの **InvokeService** の実装では、入力行セット (または複数の結果オブジェクト) を取得し、入力行セットからカーソルエンジンを設定してから、ポインターをそれ自体に返します。  
   
 ## <a name="applies-to"></a>適用対象  
- [IRDSService インターフェイス (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
+ [IRDSService インターフェイス (RDS)](./irdsservice-interface-rds.md)  
   
 ## <a name="see-also"></a>参照  
- [RDS メソッド](../../../ado/reference/rds-api/rds-methods.md)
-
-
+ [RDS メソッド](./rds-methods.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d1da11bab0ba3858eac13f8a1e32259d376f672
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fc8619fd7c803fdbf417368ef8e7e896e1947ab2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444484"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775921"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString、ConnectionTimeout、State プロパティの例 (VB)
-この例では、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) プロパティを使用して [接続](../../../ado/reference/ado-api/connection-object-ado.md) オブジェクトを開くさまざまな方法を示します。 また、 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) プロパティを使用して接続タイムアウト期間を設定し、 [state](../../../ado/reference/ado-api/state-property-ado.md) プロパティを使用して接続の状態を確認します。 このプロシージャを実行するには、GetState 関数が必要です。  
+この例では、 [ConnectionString](./connectionstring-property-ado.md) プロパティを使用して [接続](./connection-object-ado.md) オブジェクトを開くさまざまな方法を示します。 また、 [ConnectionTimeout](./connectiontimeout-property-ado.md) プロパティを使用して接続タイムアウト期間を設定し、 [state](./state-property-ado.md) プロパティを使用して接続の状態を確認します。 このプロシージャを実行するには、GetState 関数が必要です。  
   
 > [!NOTE]
 >  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes** または **INTEGRATED Security = SSPI** を指定する必要があります。  
@@ -128,7 +128,7 @@ End Function
 ```  
   
 ## <a name="see-also"></a>参照  
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [ConnectionString プロパティ (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [ConnectionTimeout プロパティ (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
- [State プロパティ (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)   
+ [ConnectionString プロパティ (ADO)](./connectionstring-property-ado.md)   
+ [ConnectionTimeout プロパティ (ADO)](./connectiontimeout-property-ado.md)   
+ [State プロパティ (ADO)](./state-property-ado.md)

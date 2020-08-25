@@ -17,41 +17,41 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d959578d647e74248fdb58b8c27269c0454c304
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 001472bd748d0821beae62801b889024cb699022
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439474"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769261"
 ---
 # <a name="tables-collection-adox"></a>Tables コレクション (ADOX)
-カタログのすべての [テーブル](../../../ado/reference/adox-api/table-object-adox.md) オブジェクトが含まれます。  
+カタログのすべての [テーブル](./table-object-adox.md) オブジェクトが含まれます。  
   
 ## <a name="remarks"></a>解説  
- **Tables**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-tables.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
+ **Tables**コレクションの[Append](./append-method-adox-tables.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
   
 -   **追加**メソッドを使用して、新しいテーブルをコレクションに追加します。  
   
  その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
   
--   [Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクション内のテーブルにアクセスします。  
+-   [Item](../ado-api/item-property-ado.md)プロパティを使用して、コレクション内のテーブルにアクセスします。  
   
--   [Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを使用して、コレクションに含まれるテーブルの数を返します。  
+-   [Count](../ado-api/count-property-ado.md)プロパティを使用して、コレクションに含まれるテーブルの数を返します。  
   
--   [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)メソッドを使用して、テーブルをコレクションから削除します。  
+-   [Delete](./delete-method-adox-collections.md)メソッドを使用して、テーブルをコレクションから削除します。  
   
--   [更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、現在のデータベーススキーマを反映するように、コレクション内のオブジェクトを更新します。  
+-   [更新](../ado-api/refresh-method-ado.md)メソッドを使用して、現在のデータベーススキーマを反映するように、コレクション内のオブジェクトを更新します。  
   
  プロバイダーによっては、 **Tables** コレクション内の他のスキーマオブジェクト (ビューなど) が返される場合があります。 そのため、一部の ADOX コレクションには、同じオブジェクトへの複数の参照を含めることができます。 オブジェクトを1つのコレクションから削除すると、その変更は、コレクションで **Refresh** メソッドが呼び出されるまで、削除されたオブジェクトを参照する別のコレクションに表示されません。 たとえば、Microsoft Jet の OLE DB Provider を使用すると、 **Tables** コレクションと共にビューが返されます。 ビューを削除する場合は、コレクションに変更が反映される前に、 **Tables** コレクションを更新する必要があります。  
   
  ここでは、次のトピックについて説明します。  
   
--   [Tables コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
+-   [Tables コレクションのプロパティ、メソッド、およびイベント](./tables-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
- [Catalog ActiveConnection プロパティの例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Columns および Tables Append メソッド、Name プロパティの例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Connection Close メソッド、Table Type プロパティの例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Keys Append メソッド、Key Type、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Catalog ActiveConnection プロパティの例 (VB)](./catalog-activeconnection-property-example-vb.md)   
+ [Columns および Tables Append メソッド、Name プロパティの例 (VB)](./columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Connection Close メソッド、Table Type プロパティの例 (VB)](./connection-close-method-table-type-property-example-vb.md)   
+ [Keys Append メソッド、Key Type、UpdateRule プロパティの例 (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [Table オブジェクト (ADOX)](./table-object-adox.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: beb6afdd93d69ea920acee3840dc6c0bc44d181e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e0d37d5aad3f27a61cf3ae7c8dad9b27149e09b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444244"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775471"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
-[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトで使用されるカーソルの種類を指定します。  
+[レコードセット](./recordset-object-ado.md)オブジェクトで使用されるカーソルの種類を指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
@@ -46,4 +46,4 @@ ms.locfileid: "88444244"
 |AdoEnums. CursorType|  
   
 ## <a name="applies-to"></a>適用対象  
- [CursorType プロパティ (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)
+ [CursorType プロパティ (ADO)](./cursortype-property-ado.md)

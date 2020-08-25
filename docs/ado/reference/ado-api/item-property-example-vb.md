@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ff98b6c2fe1dbb6da0131bf1a1d539fdfb74649
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c85e34201cb37745ef9f09b337b8d1f71dd508af
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443394"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774651"
 ---
 # <a name="item-property-example-vb"></a>Item プロパティの例 (VB)
-この例では、 [Item](../../../ado/reference/ado-api/item-property-ado.md) プロパティがコレクションのメンバーにアクセスする方法を示します。 この例では、パラメーター化されたコマンドを使用して、 ***Pubs***データベースの***Authors***テーブルを開きます。  
+この例では、 [Item](./item-property-ado.md) プロパティがコレクションのメンバーにアクセスする方法を示します。 この例では、パラメーター化されたコマンドを使用して、 ***Pubs***データベースの***Authors***テーブルを開きます。  
   
- データベースに対して発行されたコマンドのパラメーターは、 [コマンド](../../../ado/reference/ado-api/command-object-ado.md) オブジェクトの [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) コレクションからインデックスと名前によってアクセスされます。 返された [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) のフィールドは、そのオブジェクトの [fields](../../../ado/reference/ado-api/fields-collection-ado.md) コレクションからインデックスと名前によってアクセスされます。  
+ データベースに対して発行されたコマンドのパラメーターは、 [コマンド](./command-object-ado.md) オブジェクトの [Parameters](./parameters-collection-ado.md) コレクションからインデックスと名前によってアクセスされます。 返された [レコードセット](./recordset-object-ado.md) のフィールドは、そのオブジェクトの [fields](./fields-collection-ado.md) コレクションからインデックスと名前によってアクセスされます。  
   
 ```  
 'BeginItemVB  
@@ -136,8 +136,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Item プロパティ (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
- [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Command オブジェクト (ADO)](./command-object-ado.md)   
+ [Fields コレクション (ADO)](./fields-collection-ado.md)   
+ [Item プロパティ (ADO)](./item-property-ado.md)   
+ [Parameters コレクション (ADO)](./parameters-collection-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

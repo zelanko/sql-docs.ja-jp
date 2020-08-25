@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b0c05118b0f4b8f952b933bc2474bd1f0879865
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea56dc34cc2c69c7bb9ef30433a6c7c75f26c552
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441754"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777121"
 ---
 # <a name="supports-method"></a>Supports メソッド
-指定した [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトが特定の種類の機能をサポートするかどうかを判断します。  
+指定した [レコードセット](./recordset-object-ado.md) オブジェクトが特定の種類の機能をサポートするかどうかを判断します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ boolean = recordset.Supports(CursorOptions )
   
 #### <a name="parameters"></a>パラメーター  
  *CursorOptions*  
- 1つ以上の[カーソルオプションの列挙](../../../ado/reference/ado-api/cursoroptionenum.md)値で構成される**Long**式です。  
+ 1つ以上の[カーソルオプションの列挙](./cursoroptionenum.md)値で構成される**Long**式です。  
   
 ## <a name="remarks"></a>解説  
  **サポート**メソッドを使用して、**レコードセット**オブジェクトがサポートする機能の種類を決定します。 対応する定数が*カーソルオプション*に含まれる機能を**レコードセット**オブジェクトがサポートしている場合、 **supports**メソッドは**True**を返します。 それ以外の場合は **False**を返します。  
@@ -48,9 +48,9 @@ boolean = recordset.Supports(CursorOptions )
 >  **サポート**メソッドは特定の機能に対して**True**を返す場合がありますが、プロバイダーがすべての状況でこの機能を使用できるようにすることは保証されません。 **サポート**メソッドは、特定の条件が満たされていることを前提として、プロバイダーが指定された機能をサポートできるかどうかを単純に返します。 たとえば、 **サポート** されているメソッドは、カーソルが複数のテーブルの結合に基づいている場合でも、 **レコードセット** オブジェクトが更新をサポートしていることを示している可能性があります。この場合、更新できない列もあります。  
   
 ## <a name="applies-to"></a>適用対象  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [Supports メソッドの例 (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
- [Supports メソッドの例 (VC + +)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
- [CursorType プロパティ (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)
+ [Supports メソッドの例 (VB)](./supports-method-example-vb.md)   
+ [Supports メソッドの例 (VC + +)](./supports-method-example-vc.md)   
+ [CursorType プロパティ (ADO)](./cursortype-property-ado.md)

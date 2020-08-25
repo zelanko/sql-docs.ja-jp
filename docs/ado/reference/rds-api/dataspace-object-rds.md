@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb24cdf6acbe58891177dfc84d6c1e341699b129
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 092af21c57b733e12c233cb201304cbc27930c80
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439064"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768381"
 ---
 # <a name="dataspace-object-rds"></a>DataSpace オブジェクト (RDS)
 > [!IMPORTANT]
@@ -27,9 +27,9 @@ ms.locfileid: "88439064"
   
  は、中間層に配置されているカスタムビジネスオブジェクトに対してクライアント側プロキシを作成します。  
   
- リモートデータサービスでは、クライアント側コンポーネントが中間層に配置されているビジネスオブジェクトと通信できるように、ビジネスオブジェクトプロキシが必要です。 プロキシは、プロセスまたはコンピューターの境界を越えて、アプリケーションの [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) データのパッケージ化、unpackaging、および転送 (マーシャリング) を容易にします。  
+ リモートデータサービスでは、クライアント側コンポーネントが中間層に配置されているビジネスオブジェクトと通信できるように、ビジネスオブジェクトプロキシが必要です。 プロキシは、プロセスまたはコンピューターの境界を越えて、アプリケーションの [レコードセット](../ado-api/recordset-object-ado.md) データのパッケージ化、unpackaging、および転送 (マーシャリング) を容易にします。  
   
- リモートデータサービスは RDS を使用 **します。** ビジネスオブジェクトプロキシを作成するための、領域スペースオブジェクトの [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) メソッド。 ビジネスオブジェクトプロキシは、対応する中間層ビジネスオブジェクトのインスタンスが作成されるたびに動的に作成されます。 リモートデータサービスは、HTTP、HTTPS (HTTP Secure Sockets)、DCOM、およびインプロセス (クライアントコンポーネントとビジネスオブジェクトが同じコンピューターに存在する) のプロトコルをサポートしています。  
+ リモートデータサービスは RDS を使用 **します。** ビジネスオブジェクトプロキシを作成するための、領域スペースオブジェクトの [CreateObject](./createobject-method-rds.md) メソッド。 ビジネスオブジェクトプロキシは、対応する中間層ビジネスオブジェクトのインスタンスが作成されるたびに動的に作成されます。 リモートデータサービスは、HTTP、HTTPS (HTTP Secure Sockets)、DCOM、およびインプロセス (クライアントコンポーネントとビジネスオブジェクトが同じコンピューターに存在する) のプロトコルをサポートしています。  
   
 > [!NOTE]
 >  Rds は、Rds が "ステートレス" な方法で動作 **します。領域間オブジェクトは** 、HTTP または HTTPS プロトコルを使用します。 つまり、サーバーが応答を返すと、クライアント要求に関する内部情報は破棄されます。  
@@ -46,9 +46,7 @@ ms.locfileid: "88439064"
   
  ここでは、次のトピックについて説明します。  
   
--   [DataSpace オブジェクト (RDS) のプロパティ、メソッド、およびイベント](../../../ado/reference/rds-api/dataspace-object-rds-properties-methods-and-events.md)  
+-   [DataSpace オブジェクト (RDS) のプロパティ、メソッド、およびイベント](./dataspace-object-rds-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
- [DataSpace オブジェクトおよび CreateObject メソッドの例 (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)
-
-
+ [DataSpace オブジェクトおよび CreateObject メソッドの例 (VBScript)](./dataspace-object-and-createobject-method-example-vbscript.md)

@@ -26,7 +26,7 @@ ms.locfileid: "88778001"
 # <a name="member-object-ado-md"></a>Member オブジェクト (ADO MD)
 キューブ内のレベルのメンバー、レベルのメンバーの子、またはセルセットの軸に沿った位置のメンバーを表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  メンバーのプロパティは、 **メンバー** が使用されているコンテキストによって異なります。 [CubeDef](./cubedef-object-ado-md.md)の[レベル](./level-object-ado-md.md)の**メンバー**には、現在の**メンバー**から階層内の次の下位レベルにある**メンバー**を返す[Children](./children-property-ado-md.md)プロパティがあります。 [位置](./position-object-ado-md.md)の**メンバー**の場合、**子**コレクションは常に空です。 また、 [Type](./type-property-ado-md.md)プロパティは、**レベル**の**メンバー**にのみ適用されます。  
   
  **Position**の**メンバー**には、[セルセット](./cellset-object-ado-md.md)を表示するときに便利な2つのプロパティがあります。 [Drilleddown](./drilleddown-property-ado-md.md)および[parentsameasprev](./parentsameasprev-property-ado-md.md)。 **レベル**の**メンバー**でこれらのプロパティにアクセスすると、エラーが発生します。  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12d4b9803682e94326636dd27bbc3f134eea23d8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bf1757eac1d3c94c0d26439c3519060def03e27
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453604"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806208"
 ---
 # <a name="current-record-and-size-of-recordset"></a>レコードセットの現在のレコードとサイズ
-ここでは、JScript コード例のサンプル **レコード** セット内のカーソルの現在位置を検索して、 [レコードセットを返す](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)方法について説明します。  
+ここでは、JScript コード例のサンプル **レコード** セット内のカーソルの現在位置を検索して、 [レコードセットを返す](./jscript-code-example-to-return-a-recordset.md)方法について説明します。  
   
 ## <a name="current-record"></a>現在のレコード  
  データセット内の現在のレコードは、 **レコードセット** オブジェクトのカーソル位置が指すものに対応します。 **レコードセットを呼び出した**結果として、レコード**セット**オブジェクトがデータソースから返されたときに、**かわいらしいCommand.Exe**、または**Connection.Exeかわいらしい**(**接続. namedcommand**と**StoredProcedure**を含む) を指定すると、カーソルは最初のレコードをポイントするように設定されます。 サンプルデータセットでは、最初の現在のレコードは "あなた Bob's 有機理屈 Pears" 項目です。  
@@ -38,14 +38,14 @@ ms.locfileid: "88453604"
   
  場合によっては、最初にデータソースからすべてのレコードをフェッチせずに、プロバイダーまたはカーソルが **RecordCount** 値を特定できないことがあります。 正確なカウントを確認するには、**レコードセット**を呼び出します。**レコードセットを**呼び出す前に、 **MoveLast**メソッド。  
   
- [JScript コード例](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)を使用して取得したサンプルの**レコードセット**オブジェクトは、順方向専用カーソルを使用するため、このオブジェクトで**RecordCount**を呼び出すと、常に-1 になります。 **レコードセット**を呼び出すコード行を変更する場合は、次の例に示すように、メソッドを**開き**ます。 **RecordCount**プロパティは、フェッチされた実際のレコード数を返します。  
+ [JScript コード例](./jscript-code-example-to-return-a-recordset.md)を使用して取得したサンプルの**レコードセット**オブジェクトは、順方向専用カーソルを使用するため、このオブジェクトで**RecordCount**を呼び出すと、常に-1 になります。 **レコードセット**を呼び出すコード行を変更する場合は、次の例に示すように、メソッドを**開き**ます。 **RecordCount**プロパティは、フェッチされた実際のレコード数を返します。  
   
 ```  
 oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText   
 ```  
   
- これは、 [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) を使用した静的カーソルが **RecordCount**をサポートするためです。 この例では5つのレコードがあるため、 **RecordCount** は5の値を生成する必要があります。  
+ これは、 [Microsoft OLE DB Provider for SQL Server](../appendixes/microsoft-ole-db-provider-for-sql-server.md) を使用した静的カーソルが **RecordCount**をサポートするためです。 この例では5つのレコードがあるため、 **RecordCount** は5の値を生成する必要があります。  
   
  ここでは、次のトピックについて説明します。  
   
- [レコードセットの境界](../../../ado/guide/data/boundaries-of-a-recordset.md)
+ [レコードセットの境界](./boundaries-of-a-recordset.md)

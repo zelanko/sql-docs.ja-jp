@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 430031bab7e644278693aa26095aaa1724b715ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fbc77fd5107e5642ba4fabe2f331c803ffde392
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439204"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768641"
 ---
 # <a name="createobject-method-rds"></a>CreateObject メソッド (RDS)
 対象のビジネスオブジェクトのプロキシを作成し、そのオブジェクトへのポインターを返します。 プロキシは、ビジネスオブジェクトとの通信のためにデータをパッケージ化してサーバー側スタブにマーシャリングし、インターネット経由で要求とデータを送信します。 インプロセスコンポーネントオブジェクトの場合、プロキシは使用されません。オブジェクトへのポインターだけが使用されます。  
@@ -30,7 +30,7 @@ ms.locfileid: "88439204"
 ## <a name="syntax"></a>構文  
  リモートデータサービスは、HTTP、HTTPS (Secure Socket Layer 経由の HTTP)、DCOM、およびインプロセスの各プロトコルをサポートしています。  
   
-|Protocol|構文|  
+|プロトコル|構文|  
 |--------------|------------|  
 |HTTP|Set object = の場合は、CreateObject. CreateObject ("ProgId", "https/ \: websrvr")|  
 |HTTPS|Set object = の場合は、CreateObject. CreateObject ("ProgId", "https/ \: websrvr")|  
@@ -42,7 +42,7 @@ ms.locfileid: "88439204"
  *ProgID*で指定された型のオブジェクトに評価されるオブジェクト変数。  
   
  *DataSpace*  
- RDS を表すオブジェクト変数です [。新しいオブジェクトの](../../../ado/reference/rds-api/dataspace-object-rds.md) インスタンスを作成するために使用される、領域内のオブジェクト。  
+ RDS を表すオブジェクト変数です [。新しいオブジェクトの](./dataspace-object-rds.md) インスタンスを作成するために使用される、領域内のオブジェクト。  
   
  *ProgID*  
  アプリケーションのビジネスルールを実装するサーバー側ビジネスオブジェクトを指定するプログラム識別子を含む **文字列** 値です。  
@@ -54,11 +54,9 @@ ms.locfileid: "88439204"
  *HTTP プロトコル*は標準の Web プロトコルです。*HTTPS*はセキュリティで保護された Web プロトコルです。 HTTP を使用せずにローカルエリアネットワークを実行する場合は、 *DCOM プロトコル* を使用します。 *インプロセス*プロトコルは、ローカルダイナミックリンクライブラリ (DLL) です。ネットワークを使用しません。  
   
 ## <a name="applies-to"></a>適用対象  
- [DataSpace オブジェクト (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+ [DataSpace オブジェクト (RDS)](./dataspace-object-rds.md)  
   
 ## <a name="see-also"></a>参照  
- [DataFactory Object、Query メソッド、および CreateObject メソッドの例 (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
- [領域スペースオブジェクトと CreateObject メソッドの例 (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
- [CreateRecordset メソッド (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)
-
-
+ [DataFactory Object、Query メソッド、および CreateObject メソッドの例 (VBScript)](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
+ [領域スペースオブジェクトと CreateObject メソッドの例 (VBScript)](./dataspace-object-and-createobject-method-example-vbscript.md)   
+ [CreateRecordset メソッド (RDS)](./createrecordset-method-rds.md)

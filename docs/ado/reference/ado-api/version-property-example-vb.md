@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 839137cb2787ec35f8a49d6f66a8577e4d9d959a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f1f7441fe32e361d15f80a6368065548e7fe39ae
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441554"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776921"
 ---
 # <a name="version-property-example-vb"></a>Version プロパティの例 (VB)
-この例では、 [Connection](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[version](../../../ado/reference/ado-api/version-property-ado.md)プロパティを使用して、現在の ADO バージョンを表示します。 また、いくつかの動的プロパティを使用して表示します。  
+この例では、 [Connection](./connection-object-ado.md)オブジェクトの[version](./version-property-ado.md)プロパティを使用して、現在の ADO バージョンを表示します。 また、いくつかの動的プロパティを使用して表示します。  
   
 -   現在の DBMS の名前とバージョン。  
   
@@ -79,5 +79,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Version プロパティ (ADO)](../../../ado/reference/ado-api/version-property-ado.md)
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)   
+ [Version プロパティ (ADO)](./version-property-ado.md)
