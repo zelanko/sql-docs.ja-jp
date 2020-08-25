@@ -1,5 +1,6 @@
 ---
-title: '@@CPU_BUSY (Transact-SQL) | Microsoft Docs'
+description: '&#x40;&#x40;CPU_BUSY (Transact-SQL)'
+title: CPU_BUSY (Transact-SQL)
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -23,14 +24,15 @@ helpviewer_keywords:
 ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f763ac74b32fd641791a45d1805b95a99230fbb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ec94c40f39d2fe0dedfeef6d0b1edd37f40af5c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366478"
 ---
 # <a name="x40x40cpu_busy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この関数は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最後の起動以降にアクティブな操作に使用した時間を返します。 `@@CPU_BUSY` は、CPU 時間の増分 (つまり "ティック") 単位の結果を返します。 この値はすべての CPU 時間を累積したものなので、実際の経過時間を超える場合があります。 マイクロ秒に変換するには、[@@TIMETICKS](./timeticks-transact-sql.md) を乗算します。
@@ -42,14 +44,17 @@ ms.locfileid: "85895812"
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 @@CPU_BUSY  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+
 ## <a name="return-types"></a>戻り値の型
 **integer**
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 CPU アクティビティなどの複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 統計情報を含むレポートを表示するには、[sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md) を実行します。
   
 ## <a name="examples"></a>例  
@@ -68,7 +73,7 @@ CPU microseconds As of
 18406250         2006-12-05 17:00:50.600
 ```
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)  
 [@@IDLE &#40;Transact-SQL&#41;](../../t-sql/functions/idle-transact-sql.md)  
 [@@IO_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/io-busy-transact-sql.md)  

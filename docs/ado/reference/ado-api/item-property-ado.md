@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2581d0834325d56daa8ea1043ac3915942961eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6bea35ef148aa2f5646420a1c2b46197ce66f0d6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443404"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774681"
 ---
 # <a name="item-property-ado"></a>Item プロパティ (ADO)
 名前または序数を指定して、コレクションの特定のメンバーを示します。  
@@ -83,32 +83,32 @@ collection (Index)
 
 :::row:::
     :::column:::
-        [Axes コレクション (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
-        [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
-        [CubeDefs コレクション (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)  
-        [Dimensions コレクション (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)  
-        [Errors コレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)  
-        [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
-        [Groups コレクション (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
+        [Axes コレクション (ADO MD)](../ado-md-api/axes-collection-ado-md.md)  
+        [Columns コレクション (ADOX)](../adox-api/columns-collection-adox.md)  
+        [CubeDefs コレクション (ADO MD)](../ado-md-api/cubedefs-collection-ado-md.md)  
+        [Dimensions コレクション (ADO MD)](../ado-md-api/dimensions-collection-ado-md.md)  
+        [Errors コレクション (ADO)](./errors-collection-ado.md)  
+        [Fields コレクション (ADO)](./fields-collection-ado.md)  
+        [Groups コレクション (ADOX)](../adox-api/groups-collection-adox.md)  
     :::column-end:::
     :::column:::
-        [Hierarchies コレクション (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
-        [Indexes コレクション (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
-        [Keys コレクション (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
-        [Levels コレクション (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
-        [Members コレクション (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
-        [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+        [Hierarchies コレクション (ADO MD)](../ado-md-api/hierarchies-collection-ado-md.md)  
+        [Indexes コレクション (ADOX)](../adox-api/indexes-collection-adox.md)  
+        [Keys コレクション (ADOX)](../adox-api/keys-collection-adox.md)  
+        [Levels コレクション (ADO MD)](../ado-md-api/levels-collection-ado-md.md)  
+        [Members コレクション (ADO MD)](../ado-md-api/members-collection-ado-md.md)  
+        [Parameters コレクション (ADO)](./parameters-collection-ado.md)  
     :::column-end:::
     :::column:::
-        [Positions コレクション (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
-        [Procedures コレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
-        [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)  
-        [Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
-        [Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
-        [Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+        [Positions コレクション (ADO MD)](../ado-md-api/positions-collection-ado-md.md)  
+        [Procedures コレクション (ADOX)](../adox-api/procedures-collection-adox.md)  
+        [Properties コレクション (ADO)](./properties-collection-ado.md)  
+        [Tables コレクション (ADOX)](../adox-api/tables-collection-adox.md)  
+        [Users コレクション (ADOX)](../adox-api/users-collection-adox.md)  
+        [Views コレクション (ADOX)](../adox-api/views-collection-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>参照  
- [Item プロパティの例 (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
- [Item プロパティの例 (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   
+ [Item プロパティの例 (VB)](./item-property-example-vb.md)   
+ [Item プロパティの例 (VC++)](./item-property-example-vc.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87460f060af7f3367147dd56f6bb599d260d09be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da49bbacf8ba59ba12f59fb072e9b5ec8c2ec2ea
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439544"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769461"
 ---
 # <a name="ruleenum"></a>RuleEnum
-[キー](../../../ado/reference/adox-api/key-object-adox.md)が削除されたときに従うルールを指定します。  
+[キー](./key-object-adox.md)が削除されたときに従うルールを指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
@@ -34,4 +34,4 @@ ms.locfileid: "88439544"
 |**adRISetNull**|2|外部キーの値が null に設定されています。|  
   
 ## <a name="applies-to"></a>適用対象  
- [DeleteRule プロパティ (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)
+ [DeleteRule プロパティ (ADOX)](./deleterule-property-adox.md)

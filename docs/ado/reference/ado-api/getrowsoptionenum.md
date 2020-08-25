@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 76926e0190ad8cfe1d7451d89182a365a6c59993
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c071ba19a974f1ac63a31c8d01a4ed42f56804a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443544"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774941"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
-レコード [セット](../../../ado/reference/ado-api/recordset-object-ado.md)から取得するレコードの数を指定します。  
+レコード [セット](./recordset-object-ado.md)から取得するレコードの数を指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
-|**adGetRowsRest**|-1|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)メソッドの*Start*パラメーターによって指定された現在の位置またはブックマークから、**レコードセット**内の残りのレコードを取得します。|  
+|**adGetRowsRest**|-1|[GetRows](./getrows-method-ado.md)メソッドの*Start*パラメーターによって指定された現在の位置またはブックマークから、**レコードセット**内の残りのレコードを取得します。|  
   
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
@@ -38,4 +38,4 @@ ms.locfileid: "88443544"
 |AdoEnums. GetRowsOption|  
   
 ## <a name="applies-to"></a>適用対象  
- [GetRows メソッド (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)
+ [GetRows メソッド (ADO)](./getrows-method-ado.md)

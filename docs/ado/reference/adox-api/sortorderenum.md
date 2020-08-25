@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd844ce2a7443180e9a16f3d3e7a392c09b7b8f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5de15074d8fc9a5005e20a36ce4f2a0b3771aa5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439494"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769311"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
 インデックス付き列の並べ替え順序を指定します。  
@@ -32,4 +32,4 @@ ms.locfileid: "88439494"
 |**adSortDescending**|2|列の並べ替え順序は降順です。|  
   
 ## <a name="applies-to"></a>適用対象  
- [SortOrder プロパティ (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)
+ [SortOrder プロパティ (ADOX)](./sortorder-property-adox.md)

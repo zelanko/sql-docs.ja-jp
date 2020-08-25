@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6643fe176ef6281afa39845310812f5f6981d16b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3b31721320c380606c3271b52ae2ad61c808379
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439144"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768501"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl オブジェクト (RDS)
-データクエリ [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) を1つ以上のコントロール (たとえば、テキストボックス、グリッドコントロール、またはコンボボックス) にバインドして、Web ページに **レコードセット** データを表示します。  
+データクエリ [レコードセット](../ado-api/recordset-object-ado.md) を1つ以上のコントロール (たとえば、テキストボックス、グリッドコントロール、またはコンボボックス) にバインドして、Web ページに **レコードセット** データを表示します。  
   
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
@@ -45,14 +45,14 @@ ms.locfileid: "88439144"
  RDS のクラス ID **。DataControl** オブジェクトは BD96C556-65A3-11D0-983A-00C04FC29E33 です。  
   
 > [!NOTE]
->  RDS というエラーが表示される場合 [。領域スペース](../../../ado/reference/rds-api/dataspace-object-rds.md) または **RDS。DataControl** オブジェクトが読み込まれません。正しいクラス ID を使用していることを確認してください。 これらのオブジェクトのクラス Id は、バージョン1.0 および1.1 から変更されています。 また、 **RDS DataControl** オブジェクトを使用する場合は、null 値を許容する列も設定する必要があることに注意してください。  
+>  RDS というエラーが表示される場合 [。領域スペース](./dataspace-object-rds.md) または **RDS。DataControl** オブジェクトが読み込まれません。正しいクラス ID を使用していることを確認してください。 これらのオブジェクトのクラス Id は、バージョン1.0 および1.1 から変更されています。 また、 **RDS DataControl** オブジェクトを使用する場合は、null 値を許容する列も設定する必要があることに注意してください。  
   
- 基本的なシナリオでは、RDS の **SQL**、 **Connect**、および **Server** プロパティのみを設定する必要があり **ます。DataControl** オブジェクトは、既定のビジネスオブジェクト [RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)を自動的に呼び出します。  
+ 基本的なシナリオでは、RDS の **SQL**、 **Connect**、および **Server** プロパティのみを設定する必要があり **ます。DataControl** オブジェクトは、既定のビジネスオブジェクト [RDSServer DataFactory](./datafactory-object-rdsserver.md)を自動的に呼び出します。  
   
  RDS のすべてのプロパティ **。** カスタムビジネスオブジェクトはその機能を置き換えることができるため、DataControl は省略可能です。  
   
 > [!NOTE]
->  複数の結果を照会する場合は、最初の [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) だけが返されます。 複数の結果セットが必要な場合は、それぞれを独自の **DataControl**に割り当てます。 複数の結果を得るためのクエリの例を次に示します。 `"Select * from Authors, Select * from Topics"`  
+>  複数の結果を照会する場合は、最初の [レコードセット](../ado-api/recordset-object-ado.md) だけが返されます。 複数の結果セットが必要な場合は、それぞれを独自の **DataControl**に割り当てます。 複数の結果を得るためのクエリの例を次に示します。 `"Select * from Authors, Select * from Topics"`  
   
  RDS を使用する場合は、接続文字列に "DFMode = 20;" を追加し **ます。DataControl** オブジェクトを使用すると、データを更新するときにサーバーのパフォーマンスを向上させることができます。 この設定では、サーバー上の **DataFactory** オブジェクトは、より少ないリソースを消費するモードを使用します。 ただし、次の機能はこの構成では使用できません。  
   
@@ -64,15 +64,15 @@ ms.locfileid: "88439144"
   
 -   行の状態を取得しています。  
   
--   再 [同期](../../../ado/reference/ado-api/resync-method.md) メソッドを呼び出しています。  
+-   再 [同期](../ado-api/resync-method.md) メソッドを呼び出しています。  
   
--   更新の再 [同期](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) プロパティを使用して (明示的または自動で) 更新します。  
+-   更新の再 [同期](../ado-api/update-resync-property-dynamic-ado.md) プロパティを使用して (明示的または自動で) 更新します。  
   
--   **コマンド**または[レコードセット](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)のプロパティを設定します。  
+-   **コマンド**または[レコードセット](./recordset-sourcerecordset-properties-rds.md)のプロパティを設定します。  
   
 -   **Adcmdtabledirect**を使用します。  
   
- **RDS。DataControl**オブジェクトは、既定では非同期モードで実行されます。 アプリケーションの同期実行が必要な場合は、次の例に示すように、 [Executeoptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) パラメーターを **Adcexecsync** に、 [Fetchoptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) パラメーターを **adcexecsync**と同じに設定します。  
+ **RDS。DataControl**オブジェクトは、既定では非同期モードで実行されます。 アプリケーションの同期実行が必要な場合は、次の例に示すように、 [Executeoptions](./executeoptions-property-rds.md) パラメーターを **Adcexecsync** に、 [Fetchoptions](./fetchoptions-property-rds.md) パラメーターを **adcexecsync**と同じに設定します。  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"   
@@ -107,29 +107,7 @@ ms.locfileid: "88439144"
   
  ここでは、次のトピックについて説明します。  
   
--   [DataControl オブジェクト (RDS) のプロパティ、メソッド、およびイベント](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
+-   [DataControl オブジェクト (RDS) のプロパティ、メソッド、およびイベント](./datacontrol-object-rds-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
- [DataControl オブジェクトの例 (VBScript)](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [DataControl オブジェクトの例 (VBScript)](./datacontrol-object-example-vbscript.md)

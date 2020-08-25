@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 04e119a4-39e1-45fe-8e39-c9b9afbfeb27
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56e08a600fbd49c42b0e615580ce6880ab134555
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 626ef175ec313a42a502a7a156f08bf5ee73b3cc
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439304"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768881"
 ---
 # <a name="views-collection-properties-methods-and-events"></a>Views コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>プロパティ  
- [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
+## <a name="properties"></a>Properties  
+ [Count プロパティ](../ado-api/count-property-ado.md)  
   
- [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item プロパティ](../ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>メソッド  
- [Append メソッド (Views)](../../../ado/reference/adox-api/append-method-adox-views.md)  
+ [Append メソッド (Views)](./append-method-adox-views.md)  
   
- [Delete メソッド (コレクション)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
+ [Delete メソッド (コレクション)](./delete-method-adox-collections.md)  
   
- [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh メソッド](../ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Views コレクション (ADOX)](./views-collection-adox.md)

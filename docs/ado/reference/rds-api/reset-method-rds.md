@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d0174e4d40aba55e012b333045bcedfb4fea460
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c28555be7737129553c01ca4fd863505e2090b0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438704"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767541"
 ---
 # <a name="reset-method-rds"></a>Reset メソッド (RDS)
 指定された並べ替えとフィルターのプロパティに基づいて、クライアント側の **レコードセット** に対して並べ替えまたはフィルター処理を実行します。  
@@ -36,15 +36,15 @@ DataControl.Reset(value)
   
 #### <a name="parameters"></a>パラメーター  
  *DataControl*  
- RDS を表すオブジェクト変数です [。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) オブジェクト。  
+ RDS を表すオブジェクト変数です [。DataControl](./datacontrol-object-rds.md) オブジェクト。  
   
  *value*  
  任意。 現在の "フィルター処理された" 行セットをフィルター処理する場合は**True** (**既定値)** です。 **False** は、前のフィルターオプションを削除して、元の行セットに対してフィルター処理を行うことを示します。  
   
 ## <a name="remarks"></a>解説  
- [Sortcolumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)、 [sortcolumn](../../../ado/reference/rds-api/sortdirection-property-rds.md)、 [filtervalue](../../../ado/reference/rds-api/filtervalue-property-rds.md)、 [filterfilter、](../../../ado/reference/rds-api/filtercriterion-property-rds.md)および[filtervalue](../../../ado/reference/rds-api/filtercolumn-property-rds.md)プロパティは、クライアント側キャッシュでの並べ替えとフィルター処理の機能を提供します。 並べ替え機能は、1つの列の値でレコードを並べ替えます。 フィルター機能では、検索条件に基づいてレコードのサブセットが表示されますが、完全な [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) はキャッシュ内に保持されます。 **Reset**メソッドは、条件を実行し、現在の**レコードセット**を更新可能な**レコードセット**に置き換えます。  
+ [Sortcolumn](./sortcolumn-property-rds.md)、 [sortcolumn](./sortdirection-property-rds.md)、 [filtervalue](./filtervalue-property-rds.md)、 [filterfilter、](./filtercriterion-property-rds.md)および[filtervalue](./filtercolumn-property-rds.md)プロパティは、クライアント側キャッシュでの並べ替えとフィルター処理の機能を提供します。 並べ替え機能は、1つの列の値でレコードを並べ替えます。 フィルター機能では、検索条件に基づいてレコードのサブセットが表示されますが、完全な [レコードセット](../ado-api/recordset-object-ado.md) はキャッシュ内に保持されます。 **Reset**メソッドは、条件を実行し、現在の**レコードセット**を更新可能な**レコードセット**に置き換えます。  
   
- 送信されていない元のデータに変更があった場合、 **Reset** メソッドは失敗します。 まず、 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) メソッドを使用して、読み取り/書き込み **レコードセット**への変更を保存した後、 **Reset** メソッドを使用してレコードの並べ替えまたはフィルター処理を行います。  
+ 送信されていない元のデータに変更があった場合、 **Reset** メソッドは失敗します。 まず、 [SubmitChanges](./submitchanges-method-rds.md) メソッドを使用して、読み取り/書き込み **レコードセット**への変更を保存した後、 **Reset** メソッドを使用してレコードの並べ替えまたはフィルター処理を行います。  
   
  行セットに対して複数のフィルターを実行する場合は、 **Reset**メソッドで省略可能な*ブール型*の引数を使用できます。 以下の例は、その方法を示しています。  
   
@@ -72,11 +72,8 @@ ADC.Reset(FALSE)   ' Rowset now has all Last Names > "T".
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>参照  
- [FilterColumn、Filtercolumn、Filtercolumn、SortColumn、および Sortcolumn プロパティと Reset メソッドの例 (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
- [SubmitChanges メソッド (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
-
+ [FilterColumn、Filtercolumn、Filtercolumn、SortColumn、および Sortcolumn プロパティと Reset メソッドの例 (VBScript)](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [SubmitChanges メソッド (RDS)](./submitchanges-method-rds.md)

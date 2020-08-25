@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 440a1947d5424840ec99f9e4da7ae03266c7ac04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 074226de92d5ea02a3eb507013c862e0ca493455
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451864"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760042"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>RDS での ODBC 接続プールの使用
 ODBC データソースを使用している場合は、インターネットインフォメーションサービス (IIS) の [接続プール] オプションを使用して、クライアント負荷の高パフォーマンス処理を実現できます。 接続プールは接続のためのリソースマネージャーで、頻繁に使用される接続のオープン状態を維持します。  
@@ -124,27 +124,5 @@ ODBC データソースを使用している場合は、インターネットイ
   
 5.  [OK] をクリックし、もう一度 [OK] をクリックしてユーティリティを終了します。  
   
-## <a name="see-also"></a>参照  
- [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## <a name="see-also"></a>関連項目  
+ [RDS の基礎](./rds-fundamentals.md)

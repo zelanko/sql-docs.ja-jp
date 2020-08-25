@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e40d5739de285c0655e9ab45f14ba3f342a420f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aff7a1a180e29adf457feab1d0c7f57f4629cfea
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451974"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759282"
 ---
 # <a name="securing-rds-applications"></a>RDS アプリケーションの保護
 このトピックでは、RDS のセキュリティ情報について説明します。  
@@ -30,18 +30,16 @@ ms.locfileid: "88451974"
  Microsoft Internet Explorer に新しいセキュリティ拡張機能が追加されたため、一部の ADO オブジェクトおよび RDS オブジェクトは、"安全な" モード環境でのみ実行されるように制限されています。 これには、さまざまなゾーン、セキュリティレベル、制限動作、安全でない操作、カスタマイズされたセキュリティ設定など、これらの問題を認識している必要があります。  
   
 ## <a name="security-and-your-web-server"></a>セキュリティと Web サーバー  
- インターネット Web サーバーで [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) オブジェクトを使用する場合は、これによってセキュリティ上のリスクが生じる可能性があることに注意してください。 有効なデータソース名 (DSN)、ユーザー ID、およびパスワード情報を取得する外部ユーザーは、そのデータソースにクエリを送信するためのページを書き込むことができます。 データソースへのアクセスをさらに制限する場合は、 **RDSServer** オブジェクト (msadcf.dll) の登録を解除して削除し、代わりに、ハードコーディングされたクエリでカスタムビジネスオブジェクトを使用する方法があります。  
+ インターネット Web サーバーで [RDSServer](../../reference/rds-api/datafactory-object-rdsserver.md) オブジェクトを使用する場合は、これによってセキュリティ上のリスクが生じる可能性があることに注意してください。 有効なデータソース名 (DSN)、ユーザー ID、およびパスワード情報を取得する外部ユーザーは、そのデータソースにクエリを送信するためのページを書き込むことができます。 データソースへのアクセスをさらに制限する場合は、 **RDSServer** オブジェクト (msadcf.dll) の登録を解除して削除し、代わりに、ハードコーディングされたクエリでカスタムビジネスオブジェクトを使用する方法があります。  
   
  DataFactory オブジェクトを使用した場合のセキュリティへの影響の詳細については、Microsoft セキュリティ Web サイトの「Microsoft セキュリティ情報 MS99-025」を参照してください。  
   
 ## <a name="client-impersonation-and-security"></a>クライアントの偽装とセキュリティ  
  IIS Web サーバーの **パスワード認証** プロパティが Windows nt チャレンジ/レスポンス認証 (windows nt 4.0 の場合) または統合 Windows 認証 (windows 2000 の場合) に設定されている場合、ビジネスオブジェクトはクライアントのセキュリティコンテキストで呼び出されます。 これは、HTTP 経由のクライアント偽装を可能にする RDS 1.5 の新機能です。 このモードで作業している場合、Web サーバー (IIS) へのログオンは匿名ではなく、クライアントコンピューターが実行されているユーザー ID とパスワードを使用します。 ODBC Dsn が信頼関係接続を使用するように設定されている場合、SQL Server などのデータベースへのアクセスも、クライアントのセキュリティコンテキストで発生します。 ただし、これは、データベースが IIS と同じコンピューター上にある場合にのみ機能します。クライアントの資格情報を他のコンピューターに引き継ぐことはできません。  
   
- たとえば、userid = "JohnD" および password = "secret" を含むクライアント John Doe がクライアントコンピューターにログオンしているとします。 IIS を実行している "MyServer" コンピューターで SQL クエリを実行することで、 **DataFactory** オブジェクトにアクセスして [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) を作成する必要があるブラウザーベースのアプリケーションを実行します。 Windows NT Server 4.0 を実行しているシステムである MyServer は、Windows NT チャレンジ/レスポンス認証を使用するように設定されています。 ODBC DSN では、[信頼できる接続を使用する] が選択されています。また、サーバーにも SQL Server データソースが含まれています。 Web サーバーで要求が受信されると、クライアントにユーザー ID とパスワードの入力が求められます。 このため、要求は、IUSER_MyServer ではなく "JohnD"/"Secret" (匿名パスワード認証がオンになっている場合の既定値) として MyServer に記録されます。 同様に、SQL Server にログオンすると、"JohnD"/"Secret" が使用されます。  
+ たとえば、userid = "JohnD" および password = "secret" を含むクライアント John Doe がクライアントコンピューターにログオンしているとします。 IIS を実行している "MyServer" コンピューターで SQL クエリを実行することで、 **DataFactory** オブジェクトにアクセスして [レコードセット](../../reference/ado-api/recordset-object-ado.md) を作成する必要があるブラウザーベースのアプリケーションを実行します。 Windows NT Server 4.0 を実行しているシステムである MyServer は、Windows NT チャレンジ/レスポンス認証を使用するように設定されています。 ODBC DSN では、[信頼できる接続を使用する] が選択されています。また、サーバーにも SQL Server データソースが含まれています。 Web サーバーで要求が受信されると、クライアントにユーザー ID とパスワードの入力が求められます。 このため、要求は、IUSER_MyServer ではなく "JohnD"/"Secret" (匿名パスワード認証がオンになっている場合の既定値) として MyServer に記録されます。 同様に、SQL Server にログオンすると、"JohnD"/"Secret" が使用されます。  
   
  このため、IIS の Windows NT チャレンジ/レスポンス認証モードでは、ユーザーがデータベースにログオンするために必要なユーザー ID とパスワードの情報を明示的に要求しなくても、HTML ページを作成できます。 IIS の基本認証が使用されている場合は、これも必要になります。  
   
 ## <a name="password-authentication"></a>パスワード認証  
  RDS は、匿名、基本、または NT チャレンジ/レスポンス認証 (Windows 2000 では統合 Windows 認証と呼ばれます) の3つのパスワード認証モードのいずれかで実行されている IIS Web サーバーと通信できます。 これらの設定は、Web サーバーがアクセスを制御する方法を定義します。たとえば、クライアントコンピューターに NT Web サーバー上での明示的なアクセス特権が必要になります。
-
-

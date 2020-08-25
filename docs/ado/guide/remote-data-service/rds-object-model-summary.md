@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7488811326dda4228ef2f458b70d5575b33b122
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50776f67f09fabbba2282867e09db1e94a49772b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452144"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759692"
 ---
 # <a name="rds-object-model-summary"></a>RDS オブジェクト モデルの概要
 > [!IMPORTANT]
@@ -27,14 +27,12 @@ ms.locfileid: "88452144"
   
 |Object|説明|  
 |------------|-----------------|  
-|[RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)|このオブジェクトには、サーバープロキシを取得するメソッドが含まれています。 既定のプロキシまたはカスタムサーバープログラム (ビジネスオブジェクト) を指定できます。 サーバープログラムは、インターネット、イントラネット、ローカルエリアネットワーク、またはローカルダイナミックリンクライブラリで呼び出すことができます。<br /><br /> オブジェクト **スペース** オブジェクトは、スクリプト作成には安全です。|  
-|[RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|このオブジェクトは、既定のサーバープログラムを表します。 RDS のデータの取得と更新の既定の動作を実行します。<br /><br /> **DataFactory**オブジェクトは、スクリプト作成には安全ではありません。|  
-|[RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|このオブジェクトは、RDS を自動的に呼び出すことができ **ます。RDSServer オブジェクトと** **DataFactory** オブジェクト。<br /><br /> このオブジェクトを使用して、RDS データの既定の取得または更新動作を呼び出します。<br /><br /> このオブジェクトには、返された **レコードセット** オブジェクトにアクセスするためのビジュアルコントロールの手段も用意されています。<br /><br /> **DataControl**オブジェクトは、スクリプト作成には安全です。|  
+|[RDS.DataSpace](../../reference/rds-api/dataspace-object-rds.md)|このオブジェクトには、サーバープロキシを取得するメソッドが含まれています。 既定のプロキシまたはカスタムサーバープログラム (ビジネスオブジェクト) を指定できます。 サーバープログラムは、インターネット、イントラネット、ローカルエリアネットワーク、またはローカルダイナミックリンクライブラリで呼び出すことができます。<br /><br /> オブジェクト **スペース** オブジェクトは、スクリプト作成には安全です。|  
+|[RDSServer DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)|このオブジェクトは、既定のサーバープログラムを表します。 RDS のデータの取得と更新の既定の動作を実行します。<br /><br /> **DataFactory**オブジェクトは、スクリプト作成には安全ではありません。|  
+|[RDS.DataControl](../../reference/rds-api/datacontrol-object-rds.md)|このオブジェクトは、RDS を自動的に呼び出すことができ **ます。RDSServer オブジェクトと** **DataFactory** オブジェクト。<br /><br /> このオブジェクトを使用して、RDS データの既定の取得または更新動作を呼び出します。<br /><br /> このオブジェクトには、返された **レコードセット** オブジェクトにアクセスするためのビジュアルコントロールの手段も用意されています。<br /><br /> **DataControl**オブジェクトは、スクリプト作成には安全です。|  
   
-## <a name="see-also"></a>参照  
- [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [RDS のシナリオ](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [RDS の使用方法とセキュリティ](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+## <a name="see-also"></a>関連項目  
+ [RDS の基礎](./rds-fundamentals.md)   
+ [RDS のシナリオ](./rds-scenario.md)   
+ [RDS チュートリアル](./rds-tutorial.md)   
+ [RDS の使用方法とセキュリティ](./rds-usage-and-security.md)

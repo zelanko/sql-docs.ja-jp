@@ -11,12 +11,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ff25352a7aefe716c66cb01a4abafcfb9742e6ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 98a7fefe85c953cfb186951ff69e287288fa0ac0
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883508"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091987"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>SMB ファイル共有ストレージを使用して SQL Server をインストールする
 
@@ -111,7 +111,7 @@ ms.locfileid: "85883508"
   
 ## <a name="known-issues"></a>既知の問題  
   
--   ネットワークにアタッチされたストレージ上に存在する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースをデタッチした後で、その [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを再アタッチしようとすると、データベース権限の問題が発生する場合があります。 この問題は、[こちらのサポート技術情報の記事](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321) で定義されています。 この問題を回避するには、このサポート技術情報の「 **詳細** 」を参照してください。  
+-   ネットワークにアタッチされたストレージ上に存在する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースをデタッチした後で、その [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを再アタッチしようとすると、データベース権限の問題が発生する場合があります。 詳細については、[エラー 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md) を参照してください。
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のクラスター化されたインスタンスのストレージ オプションとして SMB ファイル共有が使用されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource DLL にはこのファイル共有に対する読み取り/書き込み権限がないため、既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター診断ログをファイル共有に書き込むことができません。 この問題を解決するには、次のいずれかの方法を試してください。  
   

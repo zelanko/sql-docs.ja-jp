@@ -1,4 +1,5 @@
 ---
+description: CREATE EXTERNAL TABLE (Transact-SQL)
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/27/2020
@@ -21,12 +22,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29c625eb5b169e1811f880416a027eb3ac32c027
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: db302d75d691a584c3179881450f7dd271eb3ae6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88305136"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -911,18 +912,20 @@ SCHEMARESOLUTION オブジェクトに対する共有ロック。
 
 ## <a name="examples"></a>例
 
-### <a name="a-importing-data-from-adls-into-azure-ssdw"></a>A. ADLS から Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)] にデータをインポートする
+### <a name="a-importing-data-from-adls-gen-2-into-azure-ssdw"></a>A. ADLS Gen 2 から Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)] にデータをインポートする。 
+
+ADLS Gen 1 の例については、「[CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md)」を参照してください。
 
 ```sql
 
--- These values come from your Azure Active Directory Application used to authenticate to ADLS
+-- These values come from your Azure Active Directory Application used to authenticate to ADLS Gen 2. 
 CREATE DATABASE SCOPED CREDENTIAL ADLUser
 WITH IDENTITY = '<clientID>@\<OAuth2.0TokenEndPoint>',
 SECRET = '<KEY>' ;
 
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH (TYPE = HADOOP,
-      LOCATION = 'adl://pbasetr.azuredatalakestore.net'
+      LOCATION = 'abfss://data@pbasetr.azuredatalakestore.net'
 )
 
 CREATE EXTERNAL FILE FORMAT TextFileFormat

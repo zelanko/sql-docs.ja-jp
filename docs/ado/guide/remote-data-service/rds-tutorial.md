@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aedb4037d4f6c37ad70086a4e2a51a6210c219c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8200b9bd42d06a52e5786b839a55cce175bb0b2
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452074"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759522"
 ---
 # <a name="rds-tutorial"></a>RDS チュートリアル
 このチュートリアルでは、RDS プログラミングモデルを使用してデータソースを照会および更新する方法について説明します。 まず、このタスクを実行するために必要な手順について説明します。 このチュートリアルは、Microsoft® Visual Basic Scripting Edition (Windows Foundation クラス (ADO/WFC) 用の ADO を使用) で繰り返されています。  
@@ -45,7 +45,7 @@ ms.locfileid: "88452074"
   
 -   サーバープログラムを起動します。 データソースと発行するコマンドを識別するパラメーターをサーバープログラムに渡します。  
   
--   サーバープログラムは、通常は ADO を使用して、データソースから [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトを取得します。 必要に応じて、 **レコードセット** オブジェクトがサーバー上で処理されます。  
+-   サーバープログラムは、通常は ADO を使用して、データソースから [レコードセット](../../reference/ado-api/recordset-object-ado.md) オブジェクトを取得します。 必要に応じて、 **レコードセット** オブジェクトがサーバー上で処理されます。  
   
 -   サーバープログラムによって、最終的な **レコードセット** オブジェクトがクライアントアプリケーションに返されます。  
   
@@ -55,20 +55,20 @@ ms.locfileid: "88452074"
   
  このチュートリアルには、次のトピックが含まれています。  
   
--   [手順 1:サーバー プログラムを指定する (RDS チュートリアル)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
+-   [手順 1:サーバー プログラムを指定する (RDS チュートリアル)](./step-1-specify-a-server-program-rds-tutorial.md)  
   
--   [手順 2:サーバー プログラムを呼び出す (RDS チュートリアル)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
+-   [手順 2:サーバー プログラムを呼び出す (RDS チュートリアル)](./step-2-invoke-the-server-program-rds-tutorial.md)  
   
--   [手順 3:サーバーがレコード セットを取得する (RDS チュートリアル)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
+-   [手順 3:サーバーがレコード セットを取得する (RDS チュートリアル)](./step-3-server-obtains-a-recordset-rds-tutorial.md)  
   
--   [手順 4:サーバーがレコード セットを返す (RDS チュートリアル)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
+-   [手順 4:サーバーがレコード セットを返す (RDS チュートリアル)](./step-4-server-returns-the-recordset-rds-tutorial.md)  
   
--   [手順 5:DataControl が使用可能になる (RDS チュートリアル)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
+-   [手順 5:DataControl が使用可能になる (RDS チュートリアル)](./step-5-datacontrol-is-made-usable-rds-tutorial.md)  
   
--   [手順 6:変更がサーバーに送信される (RDS チュートリアル)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
+-   [手順 6:変更がサーバーに送信される (RDS チュートリアル)](./step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
   
--   [RDS のチュートリアル (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
+-   [RDS のチュートリアル (VBScript)](./rds-tutorial-vbscript.md)  
   
-## <a name="see-also"></a>参照  
- [手順 1: サーバープログラムを指定する (RDS チュートリアル)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
- [RDS のチュートリアル (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+## <a name="see-also"></a>関連項目  
+ [手順 1: サーバープログラムを指定する (RDS チュートリアル)](./step-1-specify-a-server-program-rds-tutorial.md)   
+ [RDS のチュートリアル (VBScript)](./rds-tutorial-vbscript.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3957c6cf6843ba27c54fb5a979901bd4a656c2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4cab5acb3ccedb9a1e42426da3701bc015f0ec2d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443454"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774831"
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage イベント (ADO)
 **Connectionevent**操作中に警告が発生するたびに、 **infomessage**イベントが呼び出されます。  
@@ -36,17 +36,17 @@ InfoMessage pError, adStatus, pConnection
   
 #### <a name="parameters"></a>パラメーター  
  *pError*  
- [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトです。 このパラメーターには、返されたすべてのエラーが含まれます。 複数のエラーが返された場合は、 **エラー** コレクションを列挙して検出します。  
+ [エラー](./error-object.md)オブジェクトです。 このパラメーターには、返されたすべてのエラーが含まれます。 複数のエラーが返された場合は、 **エラー** コレクションを列挙して検出します。  
   
  *adStatus*  
- [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md)状態の値です。 警告が発生した場合、 *adstatus* は **adstatusok** に設定 *され、* エラーメッセージには警告が含まれます。  
+ [Eventstatusenum](./eventstatusenum.md)状態の値です。 警告が発生した場合、 *adstatus* は **adstatusok** に設定 *され、* エラーメッセージには警告が含まれます。  
   
  このイベントが返される前に、このパラメーターを **adStatusUnwantedEvent** に設定して、後続の通知が行われないようにします。  
   
  *pConnection*  
- [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトです。 警告が発生した接続。 たとえば、接続オブジェクトを開いたり、**接続**で[コマンド](../../../ado/reference/ado-api/command-object-ado.md)を**実行したり**すると、警告が発生することがあります。  
+ [接続](./connection-object-ado.md)オブジェクトです。 警告が発生した接続。 たとえば、接続オブジェクトを開いたり、**接続**で[コマンド](./command-object-ado.md)を**実行したり**すると、警告が発生することがあります。  
   
 ## <a name="see-also"></a>参照  
- [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO イベントハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [ADO Events モデルの例 (VC + +)](./ado-events-model-example-vc.md)   
+ [ADO イベントハンドラーの概要](../../guide/data/ado-event-handler-summary.md)   
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c04f910aa169d346868b3fec2f1eccb2e381176e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f1c68dc55a4ae57283ce4ca7e6d357fd47030e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439084"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768441"
 ---
 # <a name="execute-method-rds"></a>Execute メソッド (RDS)
 要求を実行し、ado 2.5 以降で使用する ADO レコードセットを作成します。  
@@ -49,7 +49,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *lFetchOptions*  
  非同期フェッチの種類を示します。  
   
- 詳細については、「 [Fetchoptions プロパティ (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)」を参照してください。  
+ 詳細については、「 [Fetchoptions プロパティ (RDS)](./fetchoptions-property-rds.md)」を参照してください。  
   
  *TableID*  
  VT_EMPTY または VT_BSTR 型の **バリアント** 。 この値が VT_EMPTY 型の場合、この値は無視されます。 VT_BSTR 型の場合、レコードセットは **Adcmdtabledirect** を使用して作成され、ここで指定された値と *QueryString* パラメーターは無視されます。  
@@ -82,6 +82,4 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *ハンドラー文字列*パラメーターは null にすることができます。 この場合の動作は、RDS サーバーがどのように構成されているかによって異なります。 "MSDFMAP. handler" のハンドラー文字列は、Microsoft 提供のハンドラー (Msdfmap.dll) を使用する必要があることを示します。 "sample.ini" のハンドラー文字列は、Msdfmap.dll ハンドラーを使用する必要があり、引数 "sample.ini" をハンドラーに渡す必要があることを示します。 MSDFMAP.dll は、sample.ini を使用して接続とクエリ文字列を確認する方向として引数を解釈します。  
   
 ## <a name="applies-to"></a>適用対象  
- [DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory オブジェクト (RDSServer)](./datafactory-object-rdsserver.md)

@@ -14,32 +14,32 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fb960d7539dd2d47be6eb2aad424808d44db10d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: adaf8b1b14fbc6813096e8ba8fcbf3943e8a2179
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451474"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760122"
 ---
 # <a name="ado-collections"></a>ADO のコレクション
-これらのコレクションと ADO オブジェクトの間のリレーションシップは、 [Ado オブジェクトモデル](../../../ado/reference/ado-api/ado-object-model.md)で表現されます。  
+これらのコレクションと ADO オブジェクトの間のリレーションシップは、 [Ado オブジェクトモデル](./ado-object-model.md)で表現されます。  
   
- 各コレクションには、対応するオブジェクトを含めることができます。 たとえば、 [エラー](../../../ado/reference/ado-api/error-object.md) オブジェクトを [エラー](../../../ado/reference/ado-api/errors-collection-ado.md) コレクションに含めることができます。 オブジェクトの詳細については、「 [ADO オブジェクト](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) 」または「特定のオブジェクト」を参照してください。  
+ 各コレクションには、対応するオブジェクトを含めることができます。 たとえば、 [エラー](./error-object.md) オブジェクトを [エラー](./errors-collection-ado.md) コレクションに含めることができます。 オブジェクトの詳細については、「 [ADO オブジェクト](./ado-objects-and-interfaces.md) 」または「特定のオブジェクト」を参照してください。  
   
-|コレクション|説明|  
+|コレクション|[説明]|  
 |-|-|  
-|[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)|プロバイダーに関連する単一のエラーへの応答として作成されたすべての **エラー** オブジェクトが含まれます。|  
-|[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)|**レコードセット**オブジェクトのすべての**Field**オブジェクトを格納します。|  
-|[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)|**Command**オブジェクトのすべての**パラメーター**オブジェクトを含みます。|  
-|[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)|オブジェクトの特定のインスタンスのすべての **プロパティ** オブジェクトを含みます。|  
+|[エラー](./errors-collection-ado.md)|プロバイダーに関連する単一のエラーへの応答として作成されたすべての **エラー** オブジェクトが含まれます。|  
+|[フィールド](./fields-collection-ado.md)|**レコードセット**オブジェクトのすべての**Field**オブジェクトを格納します。|  
+|[パラメーター](./parameters-collection-ado.md)|**Command**オブジェクトのすべての**パラメーター**オブジェクトを含みます。|  
+|[Properties](./properties-collection-ado.md)|オブジェクトの特定のインスタンスのすべての **プロパティ** オブジェクトを含みます。|  
   
-## <a name="see-also"></a>参照  
- [ADO API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   
- [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
- [ADO 列挙定数](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [付録 B: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
- [ADO イベント](../../../ado/reference/ado-api/ado-events.md)   
- [ADO メソッド](../../../ado/reference/ado-api/ado-methods.md)   
- [ADO オブジェクトモデル](../../../ado/reference/ado-api/ado-object-model.md)   
- [ADO オブジェクトとインターフェイス](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
- [ADO のプロパティ](../../../ado/reference/ado-api/ado-properties.md)
+## <a name="see-also"></a>関連項目  
+ [ADO API リファレンス](./ado-api-reference.md)   
+ [ADO の動的プロパティ](./ado-dynamic-properties.md)   
+ [ADO 列挙定数](./ado-enumerated-constants.md)   
+ [付録 B: ADO エラー](../../guide/appendixes/appendix-b-ado-errors.md)   
+ [ADO イベント](./ado-events.md)   
+ [ADO メソッド](./ado-methods.md)   
+ [ADO オブジェクトモデル](./ado-object-model.md)   
+ [ADO オブジェクトとインターフェイス](./ado-objects-and-interfaces.md)   
+ [ADO のプロパティ](./ado-properties.md)

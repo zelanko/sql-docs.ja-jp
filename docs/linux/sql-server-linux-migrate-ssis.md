@@ -1,6 +1,6 @@
 ---
 title: SSIS で Linux 上のデータの抽出、変換、読み込みを行う
-description: この記事では、Linux コンピューターの SQL Server Integration Services (SSIS) について説明します。
+description: Linux で SQL Server Integration Services (SSIS) パッケージを実行する方法について説明します。 また、SSIS の機能に関する詳細情報の入手先についても説明します。
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 72ad1ca9c97834ad38b579b904f29db71cf0686d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a459924450582e57ff17af2cc8f48c9156ab8bb2
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882717"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088872"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>SSIS で Linux 上のデータの抽出、変換、読み込みを行う
 
@@ -113,5 +113,5 @@ SSIS の詳細については、次の記事を参照してください。
 ## <a name="related-content-about-ssis-on-linux"></a>Linux 上の SSIS の関連コンテンツ
 -   [SQL Server Integration Services (SSIS) on Linux をインストールする](sql-server-linux-setup-ssis.md)
 -   [ssis-conf を使用して SQL Server Integration Services on Linux を構成する](sql-server-linux-configure-ssis.md)
--   [SSIS on Linux の制限事項と既知の問題](sql-server-linux-ssis-known-issues.md)
+-   [Linux での SSIS に関する制限事項と既知の問題](sql-server-linux-ssis-known-issues.md)
 -   [cron を使用して Linux 上で SQL Server Integration Services パッケージの実行スケジュールを設定する](sql-server-linux-schedule-ssis-packages.md)

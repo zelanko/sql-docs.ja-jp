@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02377ff40a56c8169576a5653ac21953946aaa1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8c712efc368d9b84158697d3b7e6eedfb4224ff
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452264"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759848"
 ---
 # <a name="customization-file-connect-section"></a>カスタマイズ ファイルの Connect セクション
 ハンドラーの既定の動作では、すべての接続が拒否されます。 **Connect**セクションでは、その動作に対する例外を指定します。 たとえば、すべての **接続** セクションが存在しないか空の場合、既定では接続を確立できませんでした。  
@@ -57,20 +57,17 @@ connectionString
 |パーツ|説明|  
 |----------|-----------------|  
 |**のインスタンスに接続するときには、**|これが接続文字列エントリであることを示すリテラル文字列。|  
-|**_connectionString_**|クライアント接続文字列全体を置き換える文字列。|  
+|**_文字列_**|クライアント接続文字列全体を置き換える文字列。|  
 |**Access (アクセス)**|これがアクセスエントリであることを示すリテラル文字列。|  
 |**_accessRight_**|次のいずれかのアクセス権。<br /><br /> -   **NoAccess** -ユーザーはデータソースにアクセスできません。<br />-   **ReadOnly** -ユーザーはデータソースを読み取ることができます。<br />-   **ReadWrite** -ユーザーは、データソースに対して読み取りまたは書き込みを行うことができます。|  
   
  任意の接続を許可する (実質的に既定のハンドラー動作を無効にする) 場合は、[ **既定の接続** ] セクションのアクセスエントリをに設定 `Access=ReadWrite` し、他の [ **接続** _id_ ] セクションを削除またはコメントアウトします。  
   
-## <a name="see-also"></a>参照  
- [カスタマイズファイルログセクション](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [カスタマイズファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [カスタマイズファイルの UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [必要なクライアント設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [カスタマイズファイルについて](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [独自のカスタム ハンドラーの記述](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
-
+## <a name="see-also"></a>関連項目  
+ [カスタマイズファイルログセクション](./customization-file-logs-section.md)   
+ [カスタマイズファイル SQL セクション](./customization-file-sql-section.md)   
+ [カスタマイズファイルの UserList セクション](./customization-file-userlist-section.md)   
+ [DataFactory のカスタマイズ](./datafactory-customization.md)   
+ [必要なクライアント設定](./required-client-settings.md)   
+ [カスタマイズファイルについて](./understanding-the-customization-file.md)   
+ [独自のカスタム ハンドラーの記述](./writing-your-own-customized-handler.md)

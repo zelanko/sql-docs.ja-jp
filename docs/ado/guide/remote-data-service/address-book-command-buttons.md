@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c2c3b0880a940b0f3388aced46c0cd9c888b786
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0abdb36a7ff51bdf0b01e21957c10ca8b9f995e4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452334"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758612"
 ---
 # <a name="address-book-command-buttons"></a>アドレス帳のコマンド ボタン
 アドレス帳アプリケーションには、次のコマンドボタンが含まれています。  
@@ -52,7 +52,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
  クエリが成功した場合、"Berger" などのテキストを含む姓を持つすべての人と、"プログラムマネージャー" (プログラムマネージャー、高度なテクノロジなど) という語を含むタイトルが HTML データグリッドに表示されます。  
   
 ## <a name="preparing-and-sending-the-query"></a>クエリの準備と送信  
- Find_OnClick サブプロシージャの最後の部分は、2つのステートメントで構成されます。 最初のステートメントは、RDS の [SQL](../../../ado/reference/rds-api/sql-property.md) プロパティを割り当て [ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) オブジェクトは、動的に構築された SQL クエリと同じです。 2番目のステートメントは、RDS を発生させ **ます。DataControl** object ( `DC1` ) を実行してデータベースを照会し、グリッドにクエリの新しい結果を表示します。  
+ Find_OnClick サブプロシージャの最後の部分は、2つのステートメントで構成されます。 最初のステートメントは、RDS の [SQL](../../reference/rds-api/sql-property.md) プロパティを割り当て [ます。DataControl](../../reference/rds-api/datacontrol-object-rds.md) オブジェクトは、動的に構築された SQL クエリと同じです。 2番目のステートメントは、RDS を発生させ **ます。DataControl** object ( `DC1` ) を実行してデータベースを照会し、グリッドにクエリの新しい結果を表示します。  
   
 ```vb
 Sub Find_OnClick  
@@ -63,7 +63,7 @@ End Sub
 ```  
   
 ## <a name="update-profile-button"></a>[プロファイルの更新] ボタン  
- [ **プロファイルの更新** ] ボタンをクリックすると、VBScript Update_OnClick サブプロシージャがアクティブ化され、RDS が実行さ [れます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) オブジェクトの ( `DC1` ) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) メソッドと [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) メソッド。  
+ [ **プロファイルの更新** ] ボタンをクリックすると、VBScript Update_OnClick サブプロシージャがアクティブ化され、RDS が実行さ [れます。DataControl](../../reference/rds-api/datacontrol-object-rds.md) オブジェクトの ( `DC1` ) [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md) メソッドと [Refresh](../../reference/rds-api/refresh-method-rds.md) メソッド。  
   
 ```vb
 Sub Update_OnClick  
@@ -75,7 +75,7 @@ End Sub
  が実行されると、 `DC1.SubmitChanges` リモートデータサービスはすべての更新情報をパッケージ化し、HTTP 経由でサーバーに送信します。 更新プログラムがすべて-または何もありません。更新プログラムの一部が正常に実行されなかった場合、変更は一切行われず、ステータスメッセージが返されます。 `DC1.Refresh` リモートデータサービスと **SubmitChanges** した後には必要ありませんが、最新のデータが確保されます。  
   
 ## <a name="cancel-changes-button"></a>[変更の取り消し] ボタン  
- **[変更のキャンセル]** をクリックすると、RDS を実行する VBScript Cancel_OnClick サブプロシージャがアクティブ化され[ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトの ( `DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md)メソッド)。  
+ **[変更のキャンセル]** をクリックすると、RDS を実行する VBScript Cancel_OnClick サブプロシージャがアクティブ化され[ます。DataControl](../../reference/rds-api/datacontrol-object-rds.md)オブジェクトの ( `DC1)` [CancelUpdate](../../reference/rds-api/cancelupdate-method-rds.md)メソッド)。  
   
 ```vb
 Sub Cancel_OnClick  
@@ -85,8 +85,6 @@ End Sub
   
  `DC1.CancelUpdate`を実行すると、前回のクエリまたは更新以降にユーザーがデータグリッドの employee レコードに対して行ったすべての編集が破棄されます。 元の値を復元します。  
   
-## <a name="see-also"></a>参照  
- [アドレス帳のナビゲーションボタン](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
-
+## <a name="see-also"></a>関連項目  
+ [アドレス帳のナビゲーションボタン](./address-book-navigation-buttons.md)   
+ [DataControl オブジェクト (RDS)](../../reference/rds-api/datacontrol-object-rds.md)

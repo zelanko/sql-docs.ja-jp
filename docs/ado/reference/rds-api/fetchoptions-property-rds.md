@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d00dd737f6b775d9d46bfb6af96a5ce76aa3a8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ce3ed45c6ed45f0fdd4ac6f84db9895faec6d21
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439024"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768281"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions プロパティ (RDS)
 非同期フェッチの種類を示します。  
@@ -32,9 +32,9 @@ ms.locfileid: "88439024"
   
 |定数|説明|  
 |--------------|-----------------|  
-|**adcFetchUpFront**|[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のすべてのレコードは、コントロールがアプリケーションに返される前にフェッチされます。 完全な **レコードセット** がフェッチされてから、アプリケーションで何かを実行できるようになります。|  
+|**adcFetchUpFront**|[レコードセット](../ado-api/recordset-object-ado.md)のすべてのレコードは、コントロールがアプリケーションに返される前にフェッチされます。 完全な **レコードセット** がフェッチされてから、アプリケーションで何かを実行できるようになります。|  
 |**adcFetchBackground**|コントロールは、レコードの最初のバッチがフェッチされるとすぐにアプリケーションに戻ることができます。 最初のバッチでフェッチされていないレコードにアクセスしようとするレコード **セット** の後続の読み取りは、探索されたレコードが実際にフェッチされるまで遅延され、その時点で制御がアプリケーションに戻ります。|  
-|**adcFetchAsync**|既定値。 レコードがバックグラウンドでフェッチされている間、コントロールは直ちにアプリケーションに戻ります。 まだフェッチされていないレコードをアプリケーションが読み取ろうとすると、探索されたレコードに最も近いレコードが読み取られ、制御が直ちに返されます。これは、 **レコードセット** の現在の末尾に達したことを示します。 たとえば、 [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) を呼び出すと、現在のレコードの位置が、実際にフェッチされた最後のレコードに移動します。ただし、レコード **セット**には、それ以上のレコードが設定されます。|  
+|**adcFetchAsync**|既定値。 レコードがバックグラウンドでフェッチされている間、コントロールは直ちにアプリケーションに戻ります。 まだフェッチされていないレコードをアプリケーションが読み取ろうとすると、探索されたレコードに最も近いレコードが読み取られ、制御が直ちに返されます。これは、 **レコードセット** の現在の末尾に達したことを示します。 たとえば、 [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-rds.md) を呼び出すと、現在のレコードの位置が、実際にフェッチされた最後のレコードに移動します。ただし、レコード **セット**には、それ以上のレコードが設定されます。|  
   
 > [!NOTE]
 >  これらの定数を使用するクライアント側の実行可能ファイルは、それぞれの宣言を提供する必要があります。 RDS ライブラリの既定のインストールフォルダーにある Adcvbs. inc. ファイルから、必要な定数宣言を切り取って貼り付けることができます。  
@@ -43,10 +43,8 @@ ms.locfileid: "88439024"
  Web アプリケーションでは、通常、 **Adcfetchasync** (既定値) を使用することをお勧めします。これは、パフォーマンスが向上するためです。 コンパイルされたクライアントアプリケーションでは、通常、 **Adcfetchbackground**を使用します。  
   
 ## <a name="applies-to"></a>適用対象  
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>参照  
- [ExecuteOptions および FetchOptions プロパティの例 (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
- [Cancel メソッド (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
-
-
+ [ExecuteOptions および FetchOptions プロパティの例 (VBScript)](./executeoptions-and-fetchoptions-properties-example-vbscript.md)   
+ [Cancel メソッド (RDS)](./cancel-method-rds.md)

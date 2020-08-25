@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d21cf3f08b284ed2642f9567ae86909fb35579b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5263da344d39b828b431efd99a4171f74d2552db
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452024"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759382"
 ---
 # <a name="required-client-settings"></a>必要なクライアントの設定
 > [!IMPORTANT]
@@ -26,11 +26,11 @@ ms.locfileid: "88452024"
   
  カスタム **DataFactory** ハンドラーを使用するには、次の設定を指定します。  
   
--   [接続オブジェクト (ado)](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト[プロバイダープロパティ (ado)](../../../ado/reference/ado-api/provider-property-ado.md)プロパティまたは**接続**オブジェクト接続文字列 "**Provider**=" キーワードで、"provider = MS Remote" を指定します。  
+-   [接続オブジェクト (ado)](../../reference/ado-api/connection-object-ado.md)オブジェクト[プロバイダープロパティ (ado)](../../reference/ado-api/provider-property-ado.md)プロパティまたは**接続**オブジェクト接続文字列 "**Provider**=" キーワードで、"provider = MS Remote" を指定します。  
   
--   [ [カーソルの場所] プロパティ (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) プロパティを **adUseClient**に設定します。  
+-   [ [カーソルの場所] プロパティ (ADO)](../../reference/ado-api/cursorlocation-property-ado.md) プロパティを **adUseClient**に設定します。  
   
--   [DataControl object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトの**ハンドラー**プロパティ、または[レコードセットオブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの接続文字列 "**handler**=" キーワードで使用するハンドラーの名前を指定します。 ( **接続** オブジェクトの接続文字列でハンドラーを設定することはできません)。  
+-   [DataControl object (RDS)](../../reference/rds-api/datacontrol-object-rds.md)オブジェクトの**ハンドラー**プロパティ、または[レコードセットオブジェクト (ADO)](../../reference/ado-api/recordset-object-ado.md)オブジェクトの接続文字列 "**handler**=" キーワードで使用するハンドラーの名前を指定します。 ( **接続** オブジェクトの接続文字列でハンドラーを設定することはできません)。  
   
  RDS では、Msdfmap という名前のサーバーに既定のハンドラーが用意されて **います。ハンドラー**。 (既定のカスタマイズファイルには MSDFMAP.INI という名前が付けられています)。  
   
@@ -67,7 +67,7 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- [ハンドラプロパティ (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)プロパティまたはキーワードを指定します。[Provider プロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)プロパティまたはキーワードおよび*CustomerById*と*顧客のデータベース*識別子。 次に、 **レコードセット** オブジェクトを開きます。  
+ [ハンドラプロパティ (RDS)](../../reference/rds-api/handler-property-rds.md)プロパティまたはキーワードを指定します。[Provider プロパティ (ADO)](../../reference/ado-api/provider-property-ado.md)プロパティまたはキーワードおよび*CustomerById*と*顧客のデータベース*識別子。 次に、 **レコードセット** オブジェクトを開きます。  
   
  cmr."CustomerById (4)", "Handler = MSDFMAP" を開きます。ハンドラ; "& _  
   
@@ -76,12 +76,11 @@ rs.CursorLocation = adUseClient
 "Remote Server=https://yourServer"  
 ```  
   
-## <a name="see-also"></a>参照  
- [カスタマイズファイルの接続セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [カスタマイズファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [カスタマイズファイルの UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [必要なクライアント設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [カスタマイズファイルについて](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [独自のカスタム ハンドラーの記述](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+## <a name="see-also"></a>関連項目  
+ [カスタマイズファイルの接続セクション](./customization-file-connect-section.md)   
+ [カスタマイズファイル SQL セクション](./customization-file-sql-section.md)   
+ [カスタマイズファイルの UserList セクション](./customization-file-userlist-section.md)   
+ [DataFactory のカスタマイズ](./datafactory-customization.md)   
+ [必要なクライアント設定]()   
+ [カスタマイズファイルについて](./understanding-the-customization-file.md)   
+ [独自のカスタム ハンドラーの記述](./writing-your-own-customized-handler.md)

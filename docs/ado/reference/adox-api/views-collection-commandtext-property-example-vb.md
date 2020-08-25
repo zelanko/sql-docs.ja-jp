@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 492c385252085b440c536081e569a4a732f10c32
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 645dd3602c97f8ca4bb4fd7df832352bb4cdded0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439294"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768911"
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>Views コレクションおよび CommandText プロパティの例 (VB)
-次のコードは、 [Command](../../../ado/reference/adox-api/command-property-adox.md) プロパティを使用してビューのテキストを更新する方法を示しています。  
+次のコードは、 [Command](./command-property-adox.md) プロパティを使用してビューのテキストを更新する方法を示しています。  
   
 ```  
 ' BeginViewsCollectionVB  
@@ -78,8 +78,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Command プロパティ (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [View オブジェクト (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [ActiveConnection プロパティ (ADOX)](./activeconnection-property-adox.md)   
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [Command プロパティ (ADOX)](./command-property-adox.md)   
+ [View オブジェクト (ADOX)](./view-object-adox.md)   
+ [Views コレクション (ADOX)](./views-collection-adox.md)

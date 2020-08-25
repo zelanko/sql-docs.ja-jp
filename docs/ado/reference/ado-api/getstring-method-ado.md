@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef3d32e1caae337ecb2a03bba6af8c7b4cd858de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8a972edd11c419c1990c78635d42c44d8c06db2c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443514"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774911"
 ---
 # <a name="getstring-method-ado"></a>GetString メソッド (ADO)
-[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を文字列として返します。  
+[レコードセット](./recordset-object-ado.md)を文字列として返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
   
 #### <a name="parameters"></a>パラメーター  
  *StringFormat*  
- **レコードセット**を文字列に変換する方法を指定する[stringformatenum](../../../ado/reference/ado-api/stringformatenum.md)値。 *Rowdelimiter*、 *Columndelimiter*、 *nullexpr*の各パラメーターは、 **adclipstring**の*StringFormat*でのみ使用されます。  
+ **レコードセット**を文字列に変換する方法を指定する[stringformatenum](./stringformatenum.md)値。 *Rowdelimiter*、 *Columndelimiter*、 *nullexpr*の各パラメーターは、 **adclipstring**の*StringFormat*でのみ使用されます。  
   
  *NumRows*  
  任意。 **レコードセット**内で変換される行の数。 *Numrows*が指定されていない場合、または**レコードセット**内の行の合計数よりも大きい場合は、**レコードセット**内のすべての行が変換されます。  
@@ -59,7 +59,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  このメソッドは、RDO **Getclipstring** メソッドに相当します。  
   
 ## <a name="applies-to"></a>適用対象  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [GetString メソッドの例 (VB)](../../../ado/reference/ado-api/getstring-method-example-vb.md)
+ [GetString メソッドの例 (VB)](./getstring-method-example-vb.md)

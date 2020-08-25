@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68a7e5139be0cc317341bda05a171e0969411540
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9f4e902888285f758975ffce0381a08b813152ba
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439254"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768811"
 ---
 # <a name="cancel-method-rds"></a>Cancel メソッド (RDS)
 保留中の非同期メソッド呼び出しの実行を取り消します。  
@@ -35,17 +35,15 @@ RDS.DataControl.Cancel
 ```  
   
 ## <a name="remarks"></a>解説  
- **Cancel**を呼び出すと、 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)が自動的に**Adcreadystateloaded**に設定され、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)は空になります。  
+ **Cancel**を呼び出すと、 [ReadyState](./readystate-property-rds.md)が自動的に**Adcreadystateloaded**に設定され、[レコードセット](../ado-api/recordset-object-ado.md)は空になります。  
   
 ## <a name="applies-to"></a>適用対象  
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>参照  
- [Cancel メソッドの例 (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
- [Cancel メソッド (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [CancelBatch メソッド (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [CancelUpdate メソッド (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [CancelUpdate メソッド (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [ExecuteOptions プロパティ (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)
-
-
+ [Cancel メソッドの例 (VBScript)](./cancel-method-example-vbscript.md)   
+ [Cancel メソッド (ADO)](../ado-api/cancel-method-ado.md)   
+ [CancelBatch メソッド (ADO)](../ado-api/cancelbatch-method-ado.md)   
+ [CancelUpdate メソッド (ADO)](../ado-api/cancelupdate-method-ado.md)   
+ [CancelUpdate メソッド (RDS)](./cancelupdate-method-rds.md)   
+ [ExecuteOptions プロパティ (RDS)](./executeoptions-property-rds.md)

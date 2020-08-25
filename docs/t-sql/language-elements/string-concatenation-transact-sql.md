@@ -1,4 +1,5 @@
 ---
+description: + (文字列連結) (Transact-SQL)
 title: + (文字列連結) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/06/2016
@@ -21,12 +22,12 @@ ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a3124a8e66e8ac60acc78381431181ff224d00e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa1c1cb27204fc6da21fa3841a2a32ba530c808c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422466"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (文字列連結) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +71,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
  優先順位が最も高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
 ## <a name="remarks"></a>解説  
- \+ (文字列連結) 演算子は、長さがゼロの空の文字列に対して使用するときと、NULL、または不明な値に対して使用するときでは、動作が異なります。 長さがゼロの文字列は、間に文字を挟まない 2 つの単一引用符で指定できます。 長さがゼロのバイナリ文字列は、16 進定数で指定したバイト値を持たない 0x で指定できます。 長さがゼロの文字列の連結では、常に 2 つの指定された文字列を連結します。 NULL 値の文字列を操作した場合、連結の結果はセッションの設定によって決まります。 NULL 値に対して実行される算術演算の場合、既知の値に NULL 値を追加すると、結果は通常、不明な値になります。同様に、NULL 値に対して実行される文字列連結演算でも、NULL の結果を生成する必要があります。 ただし、現在のセッションの `CONCAT_NULL_YIELDS_NULL` の設定を変更することにより、この動作を変更できます。 詳細については、「[SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)」をご覧ください。  
+ + (文字列連結) 演算子は、長さがゼロの空の文字列に対して使用するときと、NULL、または不明な値に対して使用するときでは、動作が異なります。 長さがゼロの文字列は、間に文字を挟まない 2 つの単一引用符で指定できます。 長さがゼロのバイナリ文字列は、16 進定数で指定したバイト値を持たない 0x で指定できます。 長さがゼロの文字列の連結では、常に 2 つの指定された文字列を連結します。 NULL 値の文字列を操作した場合、連結の結果はセッションの設定によって決まります。 NULL 値に対して実行される算術演算の場合、既知の値に NULL 値を追加すると、結果は通常、不明な値になります。同様に、NULL 値に対して実行される文字列連結演算でも、NULL の結果を生成する必要があります。 ただし、現在のセッションの `CONCAT_NULL_YIELDS_NULL` の設定を変更することにより、この動作を変更できます。 詳細については、「[SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)」をご覧ください。  
   
  文字列の連結の結果が 8,000 バイトを超える場合、結果は切り捨てられます。 ただし、連結する文字列の少なくとも一方が大きな値の型の場合、切り捨ては行われません。  
   

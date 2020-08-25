@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce6c0042c92611c65bf243da7bbbf59bbeb748be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 80c5d3666c4b3b60aa622874dfec2388fa008898
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451804"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760002"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage、PageCount、および PageSize プロパティの例 (VC + +)
-この例では、 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)、 [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)、および [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) プロパティを使用して、 ***Employee*** テーブルからの名前と入社日を一度に5つずつ表示します。  
+この例では、 [AbsolutePage](./absolutepage-property-ado.md)、 [PageCount](./pagecount-property-ado.md)、および [PageSize](./pagesize-property-ado.md) プロパティを使用して、 ***Employee*** テーブルからの名前と入社日を一度に5つずつ表示します。  
   
 ```  
 // BeginAbsolutePageCpp.cpp  
@@ -179,8 +179,8 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
- [AbsolutePage プロパティ (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [PageCount プロパティ (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [PageSize プロパティ (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>関連項目  
+ [AbsolutePage プロパティ (ADO)](./absolutepage-property-ado.md)   
+ [PageCount プロパティ (ADO)](./pagecount-property-ado.md)   
+ [PageSize プロパティ (ADO)](./pagesize-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

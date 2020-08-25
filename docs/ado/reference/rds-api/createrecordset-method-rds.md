@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9e993d547e6f28c9fc17e074d005af67f6d7a4a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 872b8d44a371e8cdce6c25b571d229bb60f0039f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439154"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768621"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset メソッド (RDS)
-空の非接続 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を作成します。  
+空の非接続 [レコードセット](../ado-api/recordset-object-ado.md)を作成します。  
   
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
@@ -42,7 +42,7 @@ object.CreateRecordset(ColumnInfos)
   
 #### <a name="parameters"></a>パラメーター  
  *Object*  
- [RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)または RDS を表すオブジェクト変数です[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
+ [RDSServer DataFactory](./datafactory-object-rdsserver.md)または RDS を表すオブジェクト変数です[。DataControl](./datacontrol-object-rds.md)オブジェクト。  
   
  *ColumnsInfos*  
  作成された**レコードセット**内の各列を定義する属性の**Variant**配列。 各列定義には、4つの必須属性と1つの省略可能な属性の配列が含まれています。  
@@ -60,13 +60,13 @@ object.CreateRecordset(ColumnInfos)
 ## <a name="remarks"></a>解説  
  サーバー側ビジネスオブジェクトは、結果の **レコードセット** に、株価を含むオペレーティングシステムファイルなど、OLE DB 以外のデータプロバイダーからのデータを設定できます。  
   
- 次の表に、 **CreateRecordset**メソッドでサポートされる[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)の値を示します。 表示される数値は、フィールドを定義するために使用される参照番号です。  
+ 次の表に、 **CreateRecordset**メソッドでサポートされる[DataTypeEnum](../ado-api/datatypeenum.md)の値を示します。 表示される数値は、フィールドを定義するために使用される参照番号です。  
   
  各データ型の長さは固定長または可変長です。 サイズが事前に定義されていて、サイズ定義が必要であるため、固定長型は-1 のサイズで定義する必要があります。 可変長データ型では、1 ~ 32767 のサイズを使用できます。  
   
  変数のデータ型によっては、代入列に示されている型に型を強制的に変換することができます。 **レコードセット**が作成され、いっぱいになるまで、置換は表示されません。 その後、必要に応じて、実際のデータ型を確認できます。  
   
-|長さ|定数|数値|代入|  
+|長さ|定数|Number|代入|  
 |------------|--------------|------------|------------------|  
 |固定|**adTinyInt**|16||  
 |固定|**adSmallInt**|2||  
@@ -103,17 +103,14 @@ object.CreateRecordset(ColumnInfos)
 
 :::row:::
     :::column:::
-        [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+        [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)  
     :::column-end:::
     :::column:::
-        [DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+        [DataFactory オブジェクト (RDSServer)](./datafactory-object-rdsserver.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>参照  
- [CreateRecordset メソッドの例 (VB)](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
- [CreateRecordset メソッドの例 (VBScript)](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   
- [CreateObject メソッド (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)
-
-
-
+ [CreateRecordset メソッドの例 (VB)](../ado-api/createrecordset-method-example-vb.md)   
+ [CreateRecordset メソッドの例 (VBScript)](./createrecordset-method-example-vbscript.md)   
+ [CreateObject メソッド (RDS)](./createobject-method-rds.md)

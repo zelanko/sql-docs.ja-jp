@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3bd2f05a90acbbade46e6897cabdee49246a68c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9915f76e336f7c8814428440460d1b0bfd7b9288
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438754"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767661"
 ---
 # <a name="readystate-property-rds"></a>ReadyState プロパティ (RDS)
-[DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトが[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトにデータを取得する際の進行状況を示します。  
+[DataControl](./datacontrol-object-rds.md)オブジェクトが[レコードセット](../ado-api/recordset-object-ado.md)オブジェクトにデータを取得する際の進行状況を示します。  
   
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
@@ -40,16 +40,14 @@ ms.locfileid: "88438754"
 >  これらの定数を使用するクライアント側の実行可能ファイルは、それぞれの宣言を提供する必要があります。 RDS ライブラリの既定のインストールフォルダーにある Adcvbs. inc. ファイルから、必要な定数宣言を切り取って貼り付けることができます。  
   
 ## <a name="remarks"></a>解説  
- 非同期クエリ操作中に**ReadyState**プロパティの変更を監視するには、 [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)イベントを使用します。 これは、プロパティの値を定期的にチェックするよりも効率的です。  
+ 非同期クエリ操作中に**ReadyState**プロパティの変更を監視するには、 [onReadyStateChange](./onreadystatechange-event-rds.md)イベントを使用します。 これは、プロパティの値を定期的にチェックするよりも効率的です。  
   
- 非同期操作中にエラーが発生した場合、 **ReadyState** プロパティは **adcReadyStateComplete**に変更され、 [State](../../../ado/reference/ado-api/state-property-ado.md) プロパティは **adstateexecuting** から **adStateClosed**に変更され、 **レコードセット** オブジェクトの [値](../../../ado/reference/ado-api/value-property-ado.md) プロパティは *何も*保持されません。  
+ 非同期操作中にエラーが発生した場合、 **ReadyState** プロパティは **adcReadyStateComplete**に変更され、 [State](../ado-api/state-property-ado.md) プロパティは **adstateexecuting** から **adStateClosed**に変更され、 **レコードセット** オブジェクトの [値](../ado-api/value-property-ado.md) プロパティは *何も*保持されません。  
   
 ## <a name="applies-to"></a>適用対象  
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>参照  
- [ReadyState プロパティの例 (VBScript)](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)   
- [Cancel メソッド (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
- [ExecuteOptions プロパティ (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)
-
-
+ [ReadyState プロパティの例 (VBScript)](./readystate-property-example-vbscript.md)   
+ [Cancel メソッド (RDS)](./cancel-method-rds.md)   
+ [ExecuteOptions プロパティ (RDS)](./executeoptions-property-rds.md)

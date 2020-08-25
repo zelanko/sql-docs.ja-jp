@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 63307b7b0074cca482befd0dfa689684504f26f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f170bbc7144e624ea6788c844fb817014e178d0
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451834"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760032"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
@@ -50,21 +50,19 @@ ActiveX データオブジェクトは、特定のバックエンドエンジン
  ADOX は、中核となる ADO オブジェクトに関連するライブラリです。 テーブルやプロシージャなどのスキーマオブジェクトを作成、変更、および削除するための追加のオブジェクトを公開します。 また、ユーザーとグループを管理したり、オブジェクトに対する権限を許可および取り消すためのセキュリティオブジェクトも含まれます。  
   
 ## <a name="documentation"></a>ドキュメント  
- [ADO セキュリティ デザイン機能に関する問題](../ado/guide/ado-security-design-issues.md)  
+ [ADO セキュリティ デザイン機能に関する問題](./guide/ado-security-design-issues.md)  
   
- [ADO プログラマー ガイド](../ado/guide/ado-programmer-s-guide.md)  
+ [ADO プログラマー ガイド](./guide/ado-programmer-s-guide.md)  
   
  ADO、RDS、ADO MD、および ADOX の使用方法について説明します。  
   
- [ADO プログラマー リファレンス](../ado/reference/ado-programmer-s-reference.md)  
+ [ADO プログラマー リファレンス](./reference/ado-programmer-s-reference.md)  
   
  ADO ドキュメントのこのセクションには、各 ADO、RDS、ADO MD、ADOX オブジェクト、コレクション、プロパティ、動的プロパティ、メソッド、イベント、および列挙に関するトピックが含まれています。  
   
- [ADO の用語集](../ado/ado-glossary.md)  
+ [ADO の用語集](./ado-glossary.md)  
   
 ## <a name="support"></a>サポート  
  ADO の問題に関する無料ヘルプを表示するには、ADO パブリックニュースグループに投稿してください。 このニュースグループは、ADO をカバーする Microsoft 製品サポートサービス (PSS) サポート担当者と、その他の経験豊富な ADO 開発者によって監視されています。  
   
  サポートオプションの詳細については、Microsoft ヘルプとサポートの Web サイトを参照してください。
-
-

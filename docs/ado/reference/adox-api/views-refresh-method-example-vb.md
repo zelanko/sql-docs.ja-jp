@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3112670df34b0e74e359ef0e514d9acdc8620788
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03e46b4f449f0a937c21c436049692f0c95695cc
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439274"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768841"
 ---
 # <a name="views-refresh-method-example-vb"></a>Views Refresh メソッドの例 (VB)
-次のコードは、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の[Views](../../../ado/reference/adox-api/views-collection-adox.md)コレクションを更新する方法を示しています。 これは、**カタログ**からの[View](../../../ado/reference/adox-api/view-object-adox.md)オブジェクトにアクセスするために必要です。  
+次のコードは、[カタログ](./catalog-object-adox.md)の[Views](./views-collection-adox.md)コレクションを更新する方法を示しています。 これは、**カタログ**からの[View](./view-object-adox.md)オブジェクトにアクセスするために必要です。  
   
 ```  
 ' BeginViewsRefreshVB  
@@ -57,5 +57,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
- [Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Refresh メソッド (ADO)](../ado-api/refresh-method-ado.md)   
+ [Views コレクション (ADOX)](./views-collection-adox.md)

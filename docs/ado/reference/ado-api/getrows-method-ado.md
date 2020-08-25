@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a197cf085c4c1d741c19a55524313edbd4c5906
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f91e83f1b4da0623b9903a5016701fc6557e1d5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443564"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775051"
 ---
 # <a name="getrows-method-ado"></a>GetRows メソッド (ADO)
-[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの複数のレコードを配列に取得します。  
+[レコードセット](./recordset-object-ado.md)オブジェクトの複数のレコードを配列に取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,10 +39,10 @@ array = recordset.GetRows(Rows, Start, Fields )
   
 #### <a name="parameters"></a>パラメーター  
  *行数*  
- 任意。 取得するレコードの数を示す [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) 値です。 既定値は **adGetRowsRest**です。  
+ 任意。 取得するレコードの数を示す [GetRowsOptionEnum](./getrowsoptionenum.md) 値です。 既定値は **adGetRowsRest**です。  
   
- *Start*  
- 任意。 **GetRows**操作の開始位置となるレコードのブックマークに評価される**文字列**値または**バリアント**。 [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)値を使用することもできます。  
+ *[開始]*  
+ 任意。 **GetRows**操作の開始位置となるレコードのブックマークに評価される**文字列**値または**バリアント**。 [BookmarkEnum](./bookmarkenum.md)値を使用することもできます。  
   
  *フィールド*  
  任意。 1つのフィールド名または序数位置、またはフィールド名または序数位置の配列を表す **バリアント** 。 ADO は、これらのフィールド内のデータのみを返します。  
@@ -52,15 +52,15 @@ array = recordset.GetRows(Rows, Start, Fields )
   
  *Rows*引数の値を指定しない場合、 **GetRows**メソッドは**Recordset**オブジェクト内のすべてのレコードを自動的に取得します。 使用可能な数より多くのレコードを要求した場合、 **GetRows** は使用できるレコードの数のみを返します。  
   
- レコード**セット**オブジェクトがブックマークをサポートしている場合は、 **GetRows**メソッドが*開始*引数でそのレコードの[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)プロパティの値を渡すことによって、データの取得を開始するレコードを指定できます。  
+ レコード**セット**オブジェクトがブックマークをサポートしている場合は、 **GetRows**メソッドが*開始*引数でそのレコードの[Bookmark](./bookmark-property-ado.md)プロパティの値を渡すことによって、データの取得を開始するレコードを指定できます。  
   
  **GetRows**呼び出しによって返されるフィールドを制限する場合*は、フィールド引数に*1 つのフィールド名と数値、またはフィールド名/数値の配列を渡すことができます。  
   
- **GetRows**を呼び出した後、次に未読のレコードが現在のレコードになります。レコードがなくなった場合は、 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)プロパティが**True**に設定されます。  
+ **GetRows**を呼び出した後、次に未読のレコードが現在のレコードになります。レコードがなくなった場合は、 [EOF](./bof-eof-properties-ado.md)プロパティが**True**に設定されます。  
   
 ## <a name="applies-to"></a>適用対象  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [GetRows メソッドの例 (VB)](../../../ado/reference/ado-api/getrows-method-example-vb.md)   
- [GetRows メソッドの例 (VC++)](../../../ado/reference/ado-api/getrows-method-example-vc.md)   
+ [GetRows メソッドの例 (VB)](./getrows-method-example-vb.md)   
+ [GetRows メソッドの例 (VC++)](./getrows-method-example-vc.md)

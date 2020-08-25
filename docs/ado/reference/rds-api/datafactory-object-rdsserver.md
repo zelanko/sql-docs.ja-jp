@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a27d7911b00e5172941245ef5dcd587345aa1fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 066add7729712c6c8c40951a3139dcba00ed5a70
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439104"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768461"
 ---
 # <a name="datafactory-object-rdsserver"></a>DataFactory オブジェクト (RDSServer)
 > [!IMPORTANT]
@@ -29,11 +29,11 @@ ms.locfileid: "88439104"
   
  RDSServer オブジェクトは、クライアント要求を受け取るサーバー側オートメーションオブジェクトとして設計されてい **ます** 。 インターネット実装では、Web サーバー上に存在し、ADISAPI コンポーネントによってインスタンス化されます。 **RDSServer**オブジェクトは、指定されたデータソースへの読み取りおよび書き込みアクセスを提供しますが、検証やビジネスルールのロジックは含まれません。  
   
- **RDSServer DataFactory**と RDS の両方で使用できるメソッドを使用する場合[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトでは、リモートデータサービスは RDS を使用し**ます。** 既定で DataControl バージョン。 既定では、基本的なプログラミングシナリオが想定されています。ここでは、 **RDSServer** が汎用的なサーバー側ビジネスオブジェクトとして機能します。  
+ **RDSServer DataFactory**と RDS の両方で使用できるメソッドを使用する場合[。DataControl](./datacontrol-object-rds.md)オブジェクトでは、リモートデータサービスは RDS を使用し**ます。** 既定で DataControl バージョン。 既定では、基本的なプログラミングシナリオが想定されています。ここでは、 **RDSServer** が汎用的なサーバー側ビジネスオブジェクトとして機能します。  
   
  Web アプリケーションでタスク固有のサーバー側の処理を処理する場合は、 **RDSServer DataFactory** をカスタムビジネスオブジェクトに置き換えることができます。  
   
- [クエリ](../../../ado/reference/rds-api/query-method-rds.md)や[CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)などの**DataFactory**メソッドを呼び出すサーバー側ビジネスオブジェクトを作成できます。 これは、ビジネスオブジェクトに機能を追加するが、既存のリモートデータサービステクノロジを利用する場合に便利です。  
+ [クエリ](./query-method-rds.md)や[CreateRecordset](./createrecordset-method-rds.md)などの**DataFactory**メソッドを呼び出すサーバー側ビジネスオブジェクトを作成できます。 これは、ビジネスオブジェクトに機能を追加するが、既存のリモートデータサービステクノロジを利用する場合に便利です。  
   
  **DataFactory**オブジェクトは、クライアント側で実行されるスクリプトに対して安全ではありません。  
   
@@ -41,9 +41,7 @@ ms.locfileid: "88439104"
   
  ここでは、次のトピックについて説明します。  
   
--   [DataFactory オブジェクト (RDSServer) のプロパティ、メソッド、およびイベント](../../../ado/reference/rds-api/datafactory-object-rdsserver-properties-methods-and-events.md)  
+-   [DataFactory オブジェクト (RDSServer) のプロパティ、メソッド、およびイベント](./datafactory-object-rdsserver-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
- [DataFactory オブジェクト、Query メソッド、および CreateObject メソッドの例 (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
-
-
+ [DataFactory オブジェクト、Query メソッド、および CreateObject メソッドの例 (VBScript)](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)
