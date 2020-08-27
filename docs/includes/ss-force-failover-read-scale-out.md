@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 0933f493ee71fe589842f8636e7364f79a432de0
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+ms.openlocfilehash: aa0b00ec24c96aea37901cc03aac2dda9b20bed2
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88122424"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88655169"
 ---
 各可用性グループにはプライマリ レプリカが 1 つだけあります。 プライマリ レプリカは読み書きができます。 プライマリになっているレプリカの変更は、フェールオーバーで行うことができます。 高可用性の可用性グループでは、クラスター マネージャーによってフェールオーバー プロセスが自動化されます。 クラスターの種類が NONE の可用性グループでは、フェールオーバー プロセスは手動です。 
 
@@ -43,7 +43,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
 データ損失のない手動フェールオーバーを行うには:
 
-1. ターゲット セカンダリ レプリカを `SYNCHRONOUS_COMMIT` にします。
+1. 現在のプライマリおよびターゲット セカンダリ レプリカを `SYNCHRONOUS_COMMIT` とします。
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -90,7 +90,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ``` 
 
-1. 以前のプライマリのロールを `SECONDARY` に更新し、プライマリ レプリカをホストする SQL Server インスタンスで次のコマンドを実行します。
+1. 以前のプライマリのロールを `SECONDARY` に更新し、以前のプライマリ レプリカをホストする SQL Server インスタンスで次のコマンドを実行します。
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -106,3 +106,5 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ALTER DATABASE [db1]
         SET HADR RESUME
    ```
+
+1. 読み取りスケールの目的で作成した、クラスター マネージャーでは管理されないリスナーをすべて再作成します。 元のリスナーが以前のプライマリを指している場合、それを削除して、新しいプライマリを指すように再作成します。

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67e1fe125172b6f273b27d6fcb2cac3d18d0bb2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73181df45ee72cc29bc73b73b40940ce7bb15b15
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357808"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778561"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -56,7 +56,7 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
     [ INTO ] <target_table> [ WITH ( <merge_hint> ) ] [ [ AS ] table_alias ]  
-    USING <table_source>
+    USING <table_source> [ [ AS ] table_alias ]
     ON <merge_search_condition>  
     [ WHEN MATCHED [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]  
@@ -125,12 +125,15 @@ MERGE ステートメントはソース テーブルと対象テーブルの両�
 *target_table* にリモート テーブルを指定することはできません。 *target_table* に対してルールを定義することはできません。  
   
 [ AS ] *table_alias*  
-テーブルを参照するための代替名です。  
+*target_table* のテーブルを参照するための代替名です。  
   
 USING \<table_source>  
 \<merge_search condition> に基づいて *target_table* 内のデータ行と照合するデータ ソースを指定します。 この照合結果によって、MERGE ステートメントの WHEN 句で実行される操作が決まります。 \<table_source> には、リモート テーブルを指定することも、リモート テーブルにアクセスする派生テーブルを指定することもできます。
   
 \<table_source> には派生テーブルを指定できます。このテーブルでは、複数の行を指定してテーブルを作成する [!INCLUDE[tsql](../../includes/tsql-md.md)] [テーブル値コンストラクター](../../t-sql/queries/table-value-constructor-transact-sql.md)を使用します。  
+  
+ [ AS ] *table_alias*  
+table_source のテーブルを参照するための代替名です。   
   
 この句の構文および引数の詳細については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
   

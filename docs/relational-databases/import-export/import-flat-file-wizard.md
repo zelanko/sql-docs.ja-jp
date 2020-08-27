@@ -13,18 +13,18 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 074dc46c36f4b90bebc241840eb137549e3bbd4d
-ms.sourcegitcommit: 2b4baae583a5430f2e2ec76192ef1af3f55b25e8
+ms.openlocfilehash: c083045beaae0d9cbdc6c815723a60093a97431a
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251480"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646051"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL のフラット ファイルのインポート ウィザード
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 > インポートおよびエクスポート ウィザードに関連するコンテンツについては、「[SQL Server Import and Export Wizard](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)」(SQL Server インポートおよびエクスポート ウィザード) を参照してください。
 
-フラット ファイルのインポート ウィザードを使用すると、フラット ファイル (.csv、.txt) からデータベース内の新しいテーブルにデータを簡単にコピーできます。 この概要では、このウィザードを使用する理由、このウィザードを見つける方法、実行が簡単な例について説明します。
+フラット ファイルのインポート ウィザードを使用すると、フラット ファイル (.csv、.txt) からデータベース内の新しいテーブルにデータを簡単にコピーできます。  フラット ファイルのインポート ウィザードでは、コンマ区切りと固定幅形式のファイルの両方がサポートされています。 この概要では、このウィザードを使用する理由、このウィザードを見つける方法、実行が簡単な例について説明します。
 
 ## <a name="why-would-i-use-this-wizard"></a>このウィザードを使用する理由
 このウィザードは、Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)) と呼ばれるインテリジェント フレームワークを利用して現在のインポート操作を改善するために作成されました。 特殊なドメインの知識を持っていないユーザーの場合、データのインポートは複雑で、間違いやすく、面倒な作業になりがちです。 このウィザードでは、インポート プロセスが入力ファイルと一意のテーブル名を選択するだけの簡単な操作に整理され、後の処理は PROSE フレームワークが行います。
@@ -36,7 +36,7 @@ PROSE は、入力ファイルのデータ パターンを分析し、列の名�
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>前提条件
-この機能は、SQL Server Management Studio (SSMS) v17.3 以降でのみ使用できます。 最新バージョンを使用していることを確認してください。 最新バージョンは[こちら](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)で入手できます。
+この機能は、SQL Server Management Studio (SSMS) バージョン 17.3 以降で使用できます。 最新バージョンを使用していることを確認してください。 最新バージョンは[こちら](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)で入手できます。
  
 ## <a name="getting-started"></a><a id="started"></a>はじめに
 フラット ファイルのインポート ウィザードにアクセスするには、次の手順を実行します。
@@ -54,6 +54,14 @@ PROSE は、入力ファイルのデータ パターンを分析し、列の名�
 
 ![Excel のウィザード](media/import-flat-file-wizard/import-flat-file-example.png)
 
+概要:
+1. [ウィザードにアクセスする](#step-1-access-wizard-and-intro-page)
+2. [入力ファイルを指定する](#step-2-specify-input-file)
+3. [データをプレビューする](#step-3-preview-data)
+4. [列を変更する](#step-4-modify-columns)
+5. [まとめ](#step-5-summary)
+6. [結果](#step-6-results)
+
 ### <a name="step-1-access-wizard-and-intro-page"></a>手順 1:ウィザードの [はじめに] ページにアクセスする
 [こちら](#started)の手順に従ってウィザードにアクセスします。
 
@@ -62,7 +70,7 @@ PROSE は、入力ファイルのデータ パターンを分析し、列の名�
 ![ウィザードの [はじめに]](media/import-flat-file-wizard/import-flat-file-intro.png)
 
 ### <a name="step-2-specify-input-file"></a>手順 2:入力ファイルを指定する
-[参照] をクリックして入力ファイルを選択します。 ウィザードの既定で、.csv ファイルと .txt ファイルが検索されます。 
+[参照] をクリックして入力ファイルを選択します。 ウィザードの既定で、.csv ファイルと .txt ファイルが検索されます。 PROSE によって、ファイル拡張子に関係なく、ファイルがコンマ区切りまたは固定幅形式であるかが検出されます。
 
 新しいテーブル名は一意にする必要があります。一意ではない場合、ウィザードを次に進めることはできません。
 
@@ -75,6 +83,8 @@ PROSE は、入力ファイルのデータ パターンを分析し、列の名�
 
 ### <a name="step-4-modify-columns"></a>手順 4:列を変更する
 ウィザードでは、列名、データ型などについて正しいと思われるものを特定します。ここでは、フィールドが正しくない場合に編集できます (たとえば、データ型が int ではなく float など)。
+
+空の値が検出された列では、[Null を許容] がチェックされています。 ただし、null が想定される列で [Null を許容] がチェックされていない場合は、ここで 1 つまたはすべての列で null を許容するようにテーブル定義を更新できます。
 
 準備ができたら次に進みます。
 

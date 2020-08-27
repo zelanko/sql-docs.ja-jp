@@ -2,23 +2,23 @@
 title: リリース ノート
 description: この記事では、2017 年 11 月から現在までの Azure Data Studio リリースのリリース ノートを取り上げています。 まとめられている問題の多くについては、追加詳細のリンクがあります。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 08/12/2020
-ms.openlocfilehash: e4a431e798069a639f72c3d4fa6761d3b18131f7
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 39deeb94ffa5fb3292f3402c836ec55eb826ebd3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147203"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766191"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
-**[最新リリースのダウンロードとインストール](download.md)**
+**[最新リリースのダウンロードとインストール](./download-azure-data-studio.md?view=sql-server-ver15)**
 
 ## <a name="august-2020"></a>2020 年 8 月
 
@@ -76,7 +76,7 @@ ms.locfileid: "88147203"
 | :----- | :------ |
 | Azure portal 統合に Azure Data Studio が追加されました | ユーザーは Azure SQL Database 接続、Azure Postgres などから、Azure portal を直接起動できるようになりました。 |
 | ノートブックの新機能 | &bull; &nbsp; 新しいノートブック ツール バー <br/> &bull; &nbsp; 新しい [セルの編集] ツールバー <br/> &bull; &nbsp; Python 依存関係ウィザード UX の更新 <br/> &bull; &nbsp; ノートブック間のスペースの向上 |
-| SQL Assessment API 拡張機能の発表 | この拡張機能は、ADS における SQL Server ベスト プラクティス評価を追加します。 以前は PowerShell SqlServer モジュールおよび SMO でしか使用できなかった SQL Assessment API が公開されています。これにより SQL Server インスタンスを評価したり、SQL Server チームによるそれらの推奨事項を受け取ったりすることができるようになります。 [こちらの記事](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15)で、SQL Assessment API の詳細と、この拡張機能でできることについて説明します。 |
+| SQL Assessment API 拡張機能の発表 | この拡張機能は、ADS における SQL Server ベスト プラクティス評価を追加します。 以前は PowerShell SqlServer モジュールおよび SMO でしか使用できなかった SQL Assessment API が公開されています。これにより SQL Server インスタンスを評価したり、SQL Server チームによるそれらの推奨事項を受け取ったりすることができるようになります。 [こちらの記事](../tools/sql-assessment-api/sql-assessment-api-overview.md?view=sql-server-ver15)で、SQL Assessment API の詳細と、この拡張機能でできることについて説明します。 |
 | [Machine Learning 拡張機能の改善点](https://go.microsoft.com/fwlink/?linkid=2129918) | Azure SQL Managed Instance がサポートされるようになりました。 |
 | データ仮想化拡張機能の改善点 | MongoDB と Teradata がサポートされるようになりました |
 | Postgres 拡張機能のバグの修正 | Azure MFA が修正されました |
@@ -149,7 +149,7 @@ ms.locfileid: "88147203"
 | :----- | :------ |
 | SQL Notebook でのグラフ作成サポートの追加 | コード セルで SQL クエリを実行しているときに、ユーザーがグラフを作成して保存できるようになりました。 |
 | Jupyter Book の作成エクスペリエンスの追加 | ユーザーはノートブックを使用して独自の Jupyter Book を作成できるようになりました。 |
-| Postgres 拡張機能の AAD サポートの追加 | |
+| Postgres 拡張機能の Azure AD サポートの追加 | |
 | アクセシビリティに関する多くのバグを修正 | [アクセシビリティに関するバグのリスト](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22S360+-+Accessibility%22+label%3AA11y_AzureDataStudio) |
 | 1\.42 への VS Code のマージ | このリリースには、以前の 3 つの VS Code リリースからの VS Code の更新プログラムが含まれています。 詳細については、[それらのリリース ノートをお読みください](https://code.visualstudio.com/updates/v1_42)。 |
 | バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22March+2020%22+is%3Aclosed)を参照してください。 |
@@ -314,7 +314,7 @@ ms.locfileid: "88147203"
 | SandDance 1.3.1 拡張機能のリリース | &bull; &nbsp; スマート グラフ検出 <br/>&bull; &nbsp; 3D 視覚化 <br/> &bull; &nbsp; データ フィルタリング |
 | ノートブックの機能強化 | &bull; &nbsp; コードまたはテキスト セルのインラインでの追加 <br/>&bull; &nbsp; SQL 結果グリッドを右クリックして結果を CSV、JSON などとして保存する機能を追加しました <br/> &bull; &nbsp; JSON をより高速に読み込むためのノートブック読み込みのパフォーマンスの向上 <br/> &bull; &nbsp; 機能強化の完全な一覧については、[こちら](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed)を参照してください |
 | SQL Server 2019 のサポート |  このリリースには、次のような追加の SQL Server 2019 ビッグ データ クラスター機能のサポートが含まれています。 <br/> &bull; &nbsp; オブジェクト マッピング ページ上でテーブルと列の情報の読み込みにかかる時間が短縮されました。 <br/> &bull; &nbsp; 接続の詳細ページ上で、既存のデータベース スコープの資格情報の読み込みに関するバグを修正しました。 <br/> &bull; &nbsp; PROSE の解析に使用される既定のサンプル サイズが増加しました。 | 
-| Dacpac 拡張機能での AAD のサポート | 
+| Dacpac 拡張機能での Azure AD のサポート | 
 | Visual Studio Code July Release Merge 1.37 | 最新の機能強化については、[こちら](https://code.visualstudio.com/updates/v1_37)を参照してください。 |
 | バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1)を参照してください。 |
 | &nbsp; | &nbsp; |
@@ -345,7 +345,7 @@ ms.locfileid: "88147203"
 
 | Change | 詳細 |
 | :----- | :------ |
-| 中央管理サーバー (CMS) 拡張機能のリリース | 中央管理サーバーには、1 つ以上の中央管理サーバー グループに編成される SQL Server インスタンスの一覧が格納されます。 ユーザーは、自分の既存の CMS サーバーに接続し、サーバーの追加や削除を行って、サーバーを管理できます。 詳細については、[こちら](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers)を参照してください |
+| 中央管理サーバー (CMS) 拡張機能のリリース | 中央管理サーバーには、1 つ以上の中央管理サーバー グループに編成される SQL Server インスタンスの一覧が格納されます。 ユーザーは、自分の既存の CMS サーバーに接続し、サーバーの追加や削除を行って、サーバーを管理できます。 詳細については、[こちら](../relational-databases/administer-multiple-servers-using-central-management-servers.md)を参照してください |
 | Database Administration Tool Extensions for Windows 拡張機能のリリース | この拡張機能では、Azure Data Studio の SQL Server Management Studio で最も使用されている、2 つのエクスペリエンスが提供されます。 ユーザーは、さまざまなオブジェクト (データベース、テーブル、列、ビューなど) を右クリックし、[プロパティ] を選択して、そのオブジェクトの SSMS プロパティ ダイアログを表示することができます。 また、データベースを右クリックして [スクリプトの生成] を選択し、なじみ深い SSMS スクリプト生成ウィザードを起動することもできます。 
 | スキーマ比較の機能強化 | &bull; &nbsp; [除外]/[含める] オプションが追加されました <br/>&bull; &nbsp; [スクリプトの生成] で、生成後にスクリプトが開くようになりました <br/>&bull; &nbsp; 二重のスクロール バーが削除されました  <br/>&bull; &nbsp; 書式設定とレイアウトの機能強化 <br/>&bull; &nbsp; 詳細な変更内容については、[こちら](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)を参照してください|
 | [メッセージ] セクションが独自のタブに移動されました | 以前は、ユーザーが SQL クエリを実行すると、結果とメッセージがスタック パネルに表示されていました。 これからは、SSMS のように、1 つのパネル内で個別のタブに表示されます。 |
@@ -361,7 +361,7 @@ ms.locfileid: "88147203"
     - Azure サーバーのプロパティを起動できない
     - 必ずしもすべてのオブジェクトにプロパティ ダイアログがない
     - ダイアログの起動に時間がかかる
-    - 一部の種類の接続 (AAD など) を使用してサーバーを起動するときにエラーが発生する
+    - 一部の種類の接続 (Azure AD など) を使用してサーバーを起動するときにエラーが発生する
 - ノートブック
     - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) ユーザーがノートブック用にシステム Python を使用できるようにする
 - スキーマ比較
@@ -446,7 +446,7 @@ ms.locfileid: "88147203"
 
 | Change | 詳細 |
 | :----- | :------ |
-| 拡張パック **Admin pack for SQL Server** が追加されました。 | これにより、SQL Server の管理に関連する拡張機能がインストールしやすくなります。 これには次のものが含まれます<br/>&bull; &nbsp; [SQL Server エージェント](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server プロファイラー](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server インポート](sql-server-import-extension.md?view=sql-server-2017) |
+| 拡張パック **Admin pack for SQL Server** が追加されました。 | これにより、SQL Server の管理に関連する拡張機能がインストールしやすくなります。 これには次のものが含まれます<br/>&bull; &nbsp; [SQL Server エージェント](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server プロファイラー](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server インポート](sql-server-import-extension.md?view=sql-server-2017) |
 | プロファイラー拡張機能に、拡張イベントのフィルター処理のサポートが追加されました。 | &nbsp; |
 | T-SQL の結果を XML として保存できる "XML として保存" 機能が追加されました。 | &nbsp; |
 | データ層アプリケーション ウィザードの機能強化が追加されました。 | &bull; &nbsp; [スクリプトの生成] ボタンが追加されました<br/>&bull; &nbsp; デプロイ中にデータ損失の可能性があることを警告するためのビューが追加されました。 |
@@ -498,7 +498,7 @@ ms.locfileid: "88147203"
 | High Color クエリ拡張機能の導入 (SSMS エディター テーマを含む)。 | &nbsp; |
 | SQL Server エージェント、プロファイラー、およびインポート拡張機能の修正。 | &nbsp; |
 | macOS で非アクティブな接続が削除される原因となった、.NET Core Socket KeepAlive の問題の修正。 | &nbsp; |
-| SQL Tools Service を .NET Core 2.2 Preview 3 (最終的な AAD サポート用) にアップグレード。 | &nbsp; |
+| SQL Tools Service を .NET Core 2.2 Preview 3 (最終的な Azure AD サポート用) にアップグレード。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-november-2018"></a>バグの修正、2018 年 11 月

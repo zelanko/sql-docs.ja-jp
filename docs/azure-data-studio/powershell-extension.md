@@ -5,17 +5,17 @@ ms.custom: seodec18
 ms.date: 04/19/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: a0c6a37af62422f65329ef1bbe2e66efbdc5eeb0
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: c3edd5b618a6119021a69f90f4e90341ae6360bb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411318"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766541"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>PowerShell エディターによる Azure Data Studio のサポート
 
@@ -39,7 +39,7 @@ Azure Data Studio が提供する、優れた IDE に似たインターフェイ
 
 ## <a name="installing-the-extension"></a>拡張機能のインストール
 
-PowerShell の拡張機能の公式リリースをインストールするには、[Azure Data Studio のドキュメント](https://docs.microsoft.com/sql/azure-data-studio/extensions)の手順に従います。
+PowerShell の拡張機能の公式リリースをインストールするには、[Azure Data Studio のドキュメント](./extensions.md)の手順に従います。
 [機能拡張] ウィンドウで「PowerShell」の拡張機能を検索し、そこでインストールします。  今後、拡張機能の更新があれば、自動的に通知されます。
 
 [リリース ページ](https://github.com/PowerShell/vscode-powershell/releases)から VSIX パッケージをインストールし、コマンド ラインからインストールすることもできます。
@@ -63,8 +63,8 @@ macOS または Linux 上で Azure Data Studio を実行している場合は、
 PowerShell Core は [GitHub](https://github.com/powershell/powershell) のオープン ソース プロジェクトです。
 PowerShell Core を macOS または Linux プラットフォームにインストールする方法の詳細については、次の記事を参照してください。
 
-- [Linux に PowerShell Core をインストールする](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [macOS に PowerShell Core をインストールする](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+- [Linux に PowerShell Core をインストールする](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
+- [macOS に PowerShell Core をインストールする](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
 
 ## <a name="example-scripts"></a>スクリプトの例
 

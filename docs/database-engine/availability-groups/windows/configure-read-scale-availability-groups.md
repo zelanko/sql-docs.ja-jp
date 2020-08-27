@@ -9,12 +9,12 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 89dee4f1fbce612ec3200bf700302f98bd4f9f36
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 5681516c193a45fb3cee540d21bbc3e88a917d31
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565310"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564526"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Always On 可用性グループの読み取りスケールを構成する
 
@@ -79,7 +79,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 読み取り専用セカンダリ レプリカには、次の 2 つの方法で接続できます。
 * アプリケーションは、セカンダリ レプリカをホストする SQL Server インスタンスに直接接続し、データベースにクエリを実行できます。 詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (Always On 可用性グループ)](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。
-* アプリケーションでは、リスナーを要求する読み取り専用ルーティングも利用できます。 詳細については、「[リスナーを使用した読み取り専用セカンダリ レプリカ (読み取り専用ルーティング) への接続](listeners-client-connectivity-application-failover.md#ConnectToSecondary)」を参照してください。
+* アプリケーションでは、リスナーを要求する読み取り専用ルーティングも利用できます。 クラスター マネージャーを使用せずに読み取りスケールのシナリオをデプロイする場合でも、SQL Server がリッスンするものとは異なる現在のプライマリ レプリカとポートの IP アドレスを指すリスナーを作成することができます。 フェールオーバー後に新しいプライマリ IP アドレスを指すようにリスナーを再作成する必要があります。 詳細については、「[リスナーを使用した読み取り専用セカンダリ レプリカ (読み取り専用ルーティング) への接続](listeners-client-connectivity-application-failover.md#ConnectToSecondary)」を参照してください。
 
 ## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>読み取りスケール可用性グループのプライマリ レプリカをフェールオーバーする
 

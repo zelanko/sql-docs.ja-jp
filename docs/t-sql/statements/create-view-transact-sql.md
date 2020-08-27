@@ -38,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23a71a0ffe8cfa34ee61b5396146d46f8f174bc6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b1545d389f19aeee3c1cefa2e17bcc8c60bcd495
+ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444845"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88602197"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 
@@ -143,8 +143,8 @@ OR ALTER
  CHECK OPTION  
  ビューに対して実行されるすべてのデータ変更ステートメントについて、*select_statement* 内で設定される条件に従うよう強制します。 ビューを介して行を変更する場合は、WITH CHECK OPTION を使用すると、変更がコミットされた後もビューを介して確実にデータを表示できます。  
   
-> [!NOTE]  
->  ビューの基になるテーブルに対して直接更新が実行された場合は、CHECK OPTION を指定してもビューに対する確認は行われません。  
+> [!NOTE]
+>  CHECK OPTION は、ビューを介して行われた更新にのみ適用されます。 ビューの基になるテーブルに対して直接実行された更新には適用されません。  
   
  ENCRYPTION  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  

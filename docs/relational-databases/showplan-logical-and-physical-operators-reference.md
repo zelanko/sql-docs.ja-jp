@@ -138,12 +138,12 @@ ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93640502582b244c4b6e36473a087d84f53423c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 001b08d1a2556e325fd3923928705e2a0df9aeb8
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455497"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760292"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>プラン表示の論理操作と物理操作のリファレンス
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -259,7 +259,7 @@ ms.locfileid: "88455497"
 |![Population Query カーソル操作アイコン](../relational-databases/media/poulation-query-32x.gif "Population Query カーソル操作アイコン")|**Population Query**|**Population Query** 操作によって、カーソルが開かれたときにカーソルの作業テーブルを作成します。| 
 |![Refresh Query カーソル操作アイコン](../relational-databases/media/refresh-query-32x.gif "Refresh Query カーソル操作アイコン")|**Refresh Query**|**Refresh Query** 操作は、フェッチ バッファーから行の現在のデータをフェッチします。| 
 |![Remote Delete 操作アイコン](../relational-databases/media/remote-delete-32x.gif "Remote Delete 操作アイコン")|**Remote Delete**|**Remote Delete** 操作は、リモート オブジェクトから入力行を削除します。 **Remote Delete** は論理操作でもあり、物理操作でもあります。| 
-|![Remote Index Seek プラン表示操作アイコン](../relational-databases/media/remote-index-scan-32x.gif "Remote Index Seek プラン表示操作アイコン")|**Remote Index Scan**|**Remote Index Scan** 操作は、Argument 列に指定されたリモート インデックスをスキャンします。 **Remote Index Scan** は論理操作でもあり、物理操作でもあります。| 
+|![Remote Index Scan プラン表示操作](../relational-databases/media/remote-index-scan-32x.gif "Remote Index Scan プラン表示操作")|**Remote Index Scan**|**Remote Index Scan** 操作は、Argument 列に指定されたリモート インデックスをスキャンします。 **Remote Index Scan** は論理操作でもあり、物理操作でもあります。| 
 |![Remote Index Seek プラン表示操作アイコン](../relational-databases/media/remote-index-seek-32x.gif "Remote Index Seek プラン表示操作アイコン")|**Remote Index Seek**|**Remote Index Seek** 操作は、リモート インデックス オブジェクトのシーク機能を使用して行を取得します。 **Argument** 列には、使用されているリモート インデックスの名前と SEEK:() 述語が含まれます。 **Remote Index Seek** は論理操作でもあり、物理操作でもあります。| 
 |![Remote Insert 操作アイコン](../relational-databases/media/remote-insert-32x.gif "Remote Insert 操作アイコン")|**Remote Insert**|**Remote Insert** 操作では、入力行がリモート オブジェクトに挿入されます。 **Remote Insert** は論理操作でもあり、物理操作でもあります。| 
 |![Remote Query 操作アイコン](../relational-databases/media/remote-query-32x.gif "Remote Query 操作アイコン")|**Remote Query**|**Remote Query** 操作では、リモート ソースにクエリを送信します。 リモート サーバーに送信されるクエリのテキストは **Argument** 列にあります。 **Remote Query** は論理操作でもあり、物理操作でもあります。| 
