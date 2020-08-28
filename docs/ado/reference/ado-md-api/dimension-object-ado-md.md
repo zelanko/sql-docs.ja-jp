@@ -3,7 +3,7 @@ description: Dimension オブジェクト (ADO MD)
 title: Dimension オブジェクト (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73feb1e20320a418804666e11cb2410ab4451c52
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f034dd2bea6b7b37f69dcff58013263ec9ba5187
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778201"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986883"
 ---
 # <a name="dimension-object-ado-md"></a>Dimension オブジェクト (ADO MD)
 メンバーの1つ以上の階層を含む多次元キューブのディメンションの1つを表します。  
@@ -39,7 +39,7 @@ ms.locfileid: "88778201"
   
  **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|名前|説明|  
+|Name|説明|  
 |----------|-----------------|  
 |CatalogName|このキューブが所属するカタログの名前。|  
 |CubeName|キューブの名前。|  

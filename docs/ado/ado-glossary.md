@@ -3,7 +3,7 @@ description: ADO 用語集の用語
 title: ADO 用語集の用語 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 109fe50bfabc39abf60e5b06ac63be98affb02fd
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dd781612557faebd4b6eefb710ffad2379928aee
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805558"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980853"
 ---
 # <a name="ado-glossary-terms"></a>ADO 用語集の用語
 このトピックでは、ADO に関連する用語を定義します。
@@ -138,7 +138,7 @@ ms.locfileid: "88805558"
  階層一般に、階層とは、最上位レベルと下位レベルを持つランク付けされた構造のことです。 ADO では、階層レコード **セット** を使用して、レコードとチャプター間の親子リレーションシップを表します。 また、ADO では、 **レコード** および **ストリーム** オブジェクトを使用して、フォルダーやドキュメントなどの階層ツリー構造にアクセスできます。 ADO MD には、OLAP キューブ内のディメンションのレベル間のリレーションシップを表す **階層** オブジェクトも含まれます。 「階層レコードセット」、「親子リレーションシップ」、「章」、「ツリー」も参照してください。
 
 ## <a name="i-l"></a>I-L
- ISAPI (インターネットサーバーアプリケーションプログラミングインターフェイス) インターネットサーバー用の一連の関数 (Microsoft®インターネットインフォメーションサービス (IIS) を実行する Windows NT® Server/Windows 2000 サーバーなど)。
+ ISAPI (インターネットサーバーアプリケーションプログラミングインターフェイス) インターネットサーバー用の一連の関数 &reg; &reg; (Microsoft インターネットインフォメーションサービス (IIS) を実行する windows NT Server/Windows 2000 サーバーなど)。
 
  行を一意に識別するテーブル内の1つまたは複数の列。多くの場合、テーブルのインデックス作成に使用されます。
 

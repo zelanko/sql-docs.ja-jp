@@ -3,7 +3,7 @@ description: Hierarchy オブジェクト (ADO MD)
 title: Hierarchy オブジェクト (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe14e37829bbeb501debcf1e8a27bd86d43712d3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 60d779ec3ed3393417725c9f574a798e5efc0efd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778091"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986653"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy オブジェクト (ADO MD)
 [ディメンション](./dimension-object-ado-md.md)のメンバーを集計または "ロールアップ" できる1つの方法を表します。 ディメンションは、1つまたは複数の階層に沿って集計できます。  
@@ -39,7 +39,7 @@ ms.locfileid: "88778091"
   
  **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|名前|説明|  
+|Name|説明|  
 |----------|-----------------|  
 |AllMember|階層内のロールアップの最上位レベルにあるメンバー。|  
 |CatalogName|このキューブが所属するカタログの名前。|  

@@ -3,7 +3,7 @@ description: CopyTo メソッド (ADO)
 title: CopyTo メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59894d6632cd5dae3887099db2d6e71b1174af43
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7bbb394810ebbfe8d8c0e1d598641a1e77e7d204
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775711"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974553"
 ---
 # <a name="copyto-method-ado"></a>CopyTo メソッド (ADO)
 [ストリーム](./stream-object-ado.md)内の指定した文字数またはバイト数 ([型](./type-property-ado-stream.md)によって異なる) を別の**ストリーム**オブジェクトにコピーします。  
@@ -42,7 +42,7 @@ Stream.CopyTo DestStream, NumChars
 >  *Deststream*パラメーターを**ストリーム**オブジェクトのプロキシにすることはできません。これは、クライアントにリモート接続できない**ストリーム**オブジェクトのプライベートインターフェイスにアクセスする必要があるためです。  
   
  *NumChars*  
- 任意。 ソース**ストリーム**内の現在位置からコピー先の**ストリーム**にコピーするバイト数または文字数を指定する**整数**値。 既定値は-1 です。これは、すべての文字またはバイトが現在の位置から [EOS](./eos-property.md)にコピーされることを指定します。  
+ 省略可能。 ソース**ストリーム**内の現在位置からコピー先の**ストリーム**にコピーするバイト数または文字数を指定する**整数**値。 既定値は-1 です。これは、すべての文字またはバイトが現在の位置から [EOS](./eos-property.md)にコピーされることを指定します。  
   
 ## <a name="remarks"></a>解説  
  このメソッドは、 [position](./position-property-ado.md) プロパティによって指定された現在位置を起点として、指定された文字数またはバイト数をコピーします。 指定された数が **eos**までの使用可能なバイト数を超えている場合は、現在の位置から **eos** までの文字またはバイトだけがコピーされます。 *Numchars*の値が-1 であるか省略されている場合は、現在の位置から始まるすべての文字またはバイトがコピーされます。  
