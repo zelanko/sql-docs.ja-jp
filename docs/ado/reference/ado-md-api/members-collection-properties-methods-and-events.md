@@ -3,7 +3,7 @@ description: Members コレクションのプロパティ、メソッド、お�
 title: Members コレクションのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: da2c0761-fe23-421b-acbf-d97dfa02d2b9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4d6f4bffb95b7a0571920b9a63a703ef3f52916
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2b01dd1ad39030304c873e2de45ec68e0cf1b121
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777981"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986373"
 ---
 # <a name="members-collection-properties-methods-and-events"></a>Members コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  [Count プロパティ](../ado-api/count-property-ado.md)  
   
  [Item プロパティ](../ado-api/item-property-ado.md)  

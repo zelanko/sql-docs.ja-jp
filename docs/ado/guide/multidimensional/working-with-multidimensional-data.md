@@ -3,7 +3,7 @@ description: 多次元データの操作
 title: 多次元データの操作 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3804925eb893b656d555419ab81753ff464f41bd
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 0589b1fe5ca6da29f088e26b2236cfc5205bfe0c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758772"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978573"
 ---
 # <a name="working-with-multidimensional-data"></a>多次元データの操作
 *セルセット*は、多次元データに対するクエリの結果です。 これは、軸のコレクションで構成されており、通常は4つの軸を超えていません。通常は2つまたは3つです。 *軸*は、1つまたは複数のディメンションのメンバーのコレクションであり、キューブ内の特定の値を検索またはフィルター処理するために使用されます。  
@@ -78,7 +78,7 @@ Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec
   
  セルセット、セル、軸、および位置はすべて、対応するオブジェクト (セルセット[、](../../reference/ado-md-api/cellset-object-ado-md.md)[セル](../../reference/ado-md-api/cell-object-ado-md.md)、[軸](../../reference/ado-md-api/axis-object-ado-md.md)、および[位置](../../reference/ado-md-api/position-object-ado-md.md)) によって ADO MD で表されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ADO MD オブジェクトモデル](../../reference/ado-md-api/ado-md-object-model.md)   
  [ADO (多次元) (ADO MD)](./ado-multidimensional-ado-md.md)   
  [多次元スキーマとデータの概要](./overview-of-multidimensional-schemas-and-data.md)   

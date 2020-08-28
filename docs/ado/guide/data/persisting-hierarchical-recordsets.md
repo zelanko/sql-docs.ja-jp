@@ -3,7 +3,7 @@ description: 階層レコードセットの保持
 title: 階層レコードセットの保持 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4bfcb79e532609ad9b3eeb14fb07dec4fd1239f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9fef0aad67d6d6cd68f50cc8940e2ddf3c53a206
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453054"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980073"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>階層レコードセットの保持
 ADTG 形式または XML 形式のファイルに階層 **レコードセット** を保存するには、 [save](../../../ado/reference/ado-api/save-method.md) メソッドを呼び出します。 ただし、階層 **レコード**セットを xml 形式で保存する場合は、2つの制限があります。階層 **レコードセット** に保留中の更新が含まれている場合は xml で保存できません。また、パラメーター化された階層 **レコードセット**を保存することもできません。  

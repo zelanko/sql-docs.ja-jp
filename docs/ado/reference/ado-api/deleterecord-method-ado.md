@@ -3,7 +3,7 @@ description: DeleteRecord メソッド (ADO)
 title: DeleteRecord メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94423c36dd89d6ea14ea39b7546ef1a5bef7c620
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 634e28fb1bcc6d246de72164f33d3d252f63505a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444104"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974003"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord メソッド (ADO)
 [レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるエンティティを削除します。  
@@ -36,10 +36,10 @@ Record.DeleteRecord Source, Async
   
 #### <a name="parameters"></a>パラメーター  
  *ソース*  
- 任意。 削除するエンティティ (ファイルやディレクトリなど) を識別する URL を含む **文字列** 値です。 *Source*を省略した場合、または空の文字列を指定した場合は、現在の[レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるエンティティが削除されます。 レコードがコレクションレコード (ディレクトリなどの**Adcollectionrecord**の[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) ) である場合は、すべての子 (サブディレクトリなど) も削除されます。  
+ 省略可能。 削除するエンティティ (ファイルやディレクトリなど) を識別する URL を含む **文字列** 値です。 *Source*を省略した場合、または空の文字列を指定した場合は、現在の[レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるエンティティが削除されます。 レコードがコレクションレコード (ディレクトリなどの**Adcollectionrecord**の[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) ) である場合は、すべての子 (サブディレクトリなど) も削除されます。  
   
  *非同期*  
- 任意。 **ブール**値。 **True**の場合、削除操作が非同期であることを指定します。  
+ 省略可能。 **ブール**値。 **True**の場合、削除操作が非同期であることを指定します。  
   
 ## <a name="remarks"></a>解説  
  このメソッドの完了後に、この **レコード** によって表されるオブジェクトに対する操作が失敗する可能性があります。 **DeleteRecord**を呼び出した後は、レコードがデータソースで**レコード**を更新するタイミングによってはレコードの動作が予測不能に**なる可能性が**あるため、**レコード**を閉じる必要があります。  

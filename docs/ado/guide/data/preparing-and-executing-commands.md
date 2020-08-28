@@ -3,7 +3,7 @@ description: 準備とコマンドの実行
 title: コマンドの準備と実行 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19539844381f38de4700925a0ecdbc0f8e74fb0d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8a4265124c2f86870d84ee703d228d5a760c4735
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453034"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979993"
 ---
 # <a name="preparing-and-executing-commands"></a>準備とコマンドの実行
 コマンドは、基になるデータソースに対して何らかの操作を実行するためにプロバイダーに発行される命令です。 たとえば、SQL ステートメントは Microsoft SQL Data Provider のコマンドです。 ADO では、コマンドは通常、 **コマンド** オブジェクトによって表されますが、 **接続** または **レコードセット** オブジェクトを使用して簡単なコマンドを発行することもできます。  

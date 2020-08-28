@@ -3,7 +3,7 @@ description: WriteText メソッド
 title: WriteText メソッド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a4e42733013a7ea756924199d05a93ae08e0c08
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d38d493fb57e8147f882056d07514ba9f405ecf9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776831"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987723"
 ---
 # <a name="writetext-method"></a>WriteText メソッド
 指定したテキスト文字列を [ストリーム](./stream-object-ado.md) オブジェクトに書き込みます。  
@@ -39,7 +39,7 @@ Stream.WriteText Data, Options
  書き込む文字のテキストを含む **文字列** 値。  
   
  *Options*  
- 任意。 指定した文字列の末尾に行区切り記号を書き込む必要があるかどうかを指定する [Streamwriteenum](./streamwriteenum.md) 値。  
+ 省略可能。 指定した文字列の末尾に行区切り記号を書き込む必要があるかどうかを指定する [Streamwriteenum](./streamwriteenum.md) 値。  
   
 ## <a name="remarks"></a>解説  
  指定された文字列は、 **ストリーム** オブジェクトに書き込まれます。文字列の間にスペースや文字は含まれません。  

@@ -3,7 +3,7 @@ description: レコードセット内を移動する他の方法
 title: レコードセット内の他の移動方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1895410181cea9a916589d766d2fa9254ca8642b
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: e8c668bc24b388d0367429086416cd67b5355550
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805818"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980293"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>レコードセット内を移動する他の方法
 次の4つの方法を使用して、 **レコードセット**、 [MoveFirst、MoveLast、MoveNext、および MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)を移動またはスクロールします。 (これらのメソッドの一部は、順方向専用カーソルでは使用できません)。  

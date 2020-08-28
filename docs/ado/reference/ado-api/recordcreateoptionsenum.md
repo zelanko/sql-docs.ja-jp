@@ -3,7 +3,7 @@ description: RecordCreateOptionsEnum
 title: RecordCreateOptionsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2fba315867e49935557d7bd6b3abe04c942e5a0a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4393196078b7800e1f1ec324c612918d7b8380e9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772451"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989823"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 既存の**レコード**を開くか、 [Record](./record-object-ado.md)オブジェクトの[Open](./open-method-ado-record.md)メソッド用に新しい**レコード**を作成するかを指定します。 値は AND 演算子と組み合わせることができます。  

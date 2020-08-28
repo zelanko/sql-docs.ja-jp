@@ -3,7 +3,7 @@ description: Refresh メソッド (ADO)
 title: Refresh メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b172179adefc880034443b29ed36bb309215ec5a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 66324860f931a919cccc36d3de9464d2ad2e48d0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771981"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989613"
 ---
 # <a name="refresh-method-ado"></a>Refresh メソッド (ADO)
 プロバイダーによって使用可能なオブジェクトを反映するように、コレクション内のオブジェクトを更新します。  
@@ -51,7 +51,7 @@ collection.Refresh
 ### <a name="fields"></a>フィールド  
  [フィールド](./fields-collection-ado.md)コレクションに対して**Refresh**メソッドを使用しても、可視効果はありません。 基になるデータベース構造から変更を取得するには、 [Requery](./requery-method.md) メソッドを使用するか、 [レコードセット](./recordset-object-ado.md) オブジェクトでブックマークがサポートされていない場合は [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) メソッドを使用する必要があります。  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
  一部のオブジェクトの**プロパティ**コレクションで**Refresh**メソッドを使用すると、プロバイダーが公開する動的プロパティがコレクションに設定されます。 これらのプロパティは、ADO によってサポートされる組み込みプロパティ以外の、プロバイダー固有の機能に関する情報を提供します。  
   
 ## <a name="applies-to"></a>適用対象  

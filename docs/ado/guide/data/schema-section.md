@@ -3,7 +3,7 @@ description: スキーマ セクション
 title: スキーマセクション |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b7d3a82231e31771a6f01dc558feebdc98dcbe1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a1f294e9c0258f1cc9d108d1eb9a47087b456ca8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452894"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979723"
 ---
 # <a name="schema-section"></a>スキーマ セクション
 スキーマセクションが必要です。 前の例で示したように、ADO では、各列に関する詳細なメタデータを書き込み、データ値のセマンティクスを更新可能な限り保持します。 ただし、XML に読み込むために必要なのは、列の名前と、それらが属する行セットだけです。 最小スキーマの例を次に示します。  
@@ -175,5 +175,5 @@ ms.locfileid: "88452894"
   
  OLE DB の XML ドキュメントのスキーマ内で使用できる OLE DB コンストラクトの詳細については、「urn: schema-microsoft-com: rowset」と『 OLE DB プログラマーズガイド』の定義を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

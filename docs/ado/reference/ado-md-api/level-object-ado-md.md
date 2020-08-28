@@ -3,7 +3,7 @@ description: Level オブジェクト (ADO MD)
 title: Level オブジェクト (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b77a0fad1b2ebe0f03855d9ff6c0ff689599774
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 34dc7bc7eb6d80b3ec50cb1838cda0d0e419053b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778051"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986513"
 ---
 # <a name="level-object-ado-md"></a>Level オブジェクト (ADO MD)
 にはメンバーのセットが含まれており、各メンバーは階層内で同じランクを持ちます。  
@@ -43,7 +43,7 @@ ms.locfileid: "88778051"
   
  **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|名前|説明|  
+|Name|説明|  
 |----------|-----------------|  
 |CatalogName|このキューブが所属するカタログの名前。|  
 |CubeName|キューブの名前。|  
