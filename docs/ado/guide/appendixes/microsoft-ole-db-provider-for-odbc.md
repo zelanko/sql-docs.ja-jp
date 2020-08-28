@@ -3,7 +3,7 @@ description: Microsoft OLE DB Provider for ODBC の概要
 title: Microsoft OLE DB Provider for ODBC |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2dcd280098a5ca4075f424f12b0abdfede6b7653
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1bce53fd000baace86d32542d9b9cc843ee68296
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806647"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991023"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC の概要
 ADO または RDS プログラマーにとって理想的な世界は、ADO がデータソースを直接呼び出すことができるように、すべてのデータソースが OLE DB インターフェイスを公開することです。 OLE DB インターフェイスを実装しているデータベースベンダーはますます増えていますが、一部のデータソースはまだこのように公開されていません。 ただし、現在使用されている DBMS システムのほとんどは、ODBC を使用してアクセスできます。
@@ -81,7 +81,7 @@ MSDASQL
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
  **DSN**または**FileDSN**を使用する場合は、Windows のコントロールパネルで ODBC データソースアドミニストレーターを使用して定義する必要があります。 Microsoft Windows 2000 では、ODBC 管理者は [管理ツール] の下にあります。 以前のバージョンの Windows では、ODBC 管理者アイコンには、 **32 ビット odbc** または **odbc**のみという名前が付けられていました。
 
  **DSN**を設定する代わりに、ODBC ドライバー (**driver =**) を指定することもできます。たとえば、"SQL Server;" のようにサーバー名 (**server =**) を指定できます。データベース名 (**データベース =**) を指定します。
@@ -199,7 +199,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  標準の ADO **レコードセット** メソッドの可用性:
 
-|Method|ForwardOnly|動的|Keyset|静的|
+|方法|ForwardOnly|動的|Keyset|静的|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../reference/ado-api/addnew-method-ado.md)|はい|はい|はい|はい|
 |[キャンセル](../../reference/ado-api/cancel-method-ado.md)|はい|はい|はい|はい|

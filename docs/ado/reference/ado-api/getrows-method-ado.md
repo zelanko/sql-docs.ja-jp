@@ -3,7 +3,7 @@ description: GetRows メソッド (ADO)
 title: GetRows メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f91e83f1b4da0623b9903a5016701fc6557e1d5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 666eabf1a375c6a86826bc94600846bd10a0ecfe
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775051"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990913"
 ---
 # <a name="getrows-method-ado"></a>GetRows メソッド (ADO)
 [レコードセット](./recordset-object-ado.md)オブジェクトの複数のレコードを配列に取得します。  
@@ -39,13 +39,13 @@ array = recordset.GetRows(Rows, Start, Fields )
   
 #### <a name="parameters"></a>パラメーター  
  *行数*  
- 任意。 取得するレコードの数を示す [GetRowsOptionEnum](./getrowsoptionenum.md) 値です。 既定値は **adGetRowsRest**です。  
+ 省略可能。 取得するレコードの数を示す [GetRowsOptionEnum](./getrowsoptionenum.md) 値です。 既定値は **adGetRowsRest**です。  
   
- *[開始]*  
- 任意。 **GetRows**操作の開始位置となるレコードのブックマークに評価される**文字列**値または**バリアント**。 [BookmarkEnum](./bookmarkenum.md)値を使用することもできます。  
+ *Start*  
+ 省略可能。 **GetRows**操作の開始位置となるレコードのブックマークに評価される**文字列**値または**バリアント**。 [BookmarkEnum](./bookmarkenum.md)値を使用することもできます。  
   
  *フィールド*  
- 任意。 1つのフィールド名または序数位置、またはフィールド名または序数位置の配列を表す **バリアント** 。 ADO は、これらのフィールド内のデータのみを返します。  
+ 省略可能。 1つのフィールド名または序数位置、またはフィールド名または序数位置の配列を表す **バリアント** 。 ADO は、これらのフィールド内のデータのみを返します。  
   
 ## <a name="remarks"></a>解説  
  **GetRows**メソッドを使用して、レコード**セット**から2次元配列にレコードをコピーします。 最初の添字はフィールドを識別し、2番目のインデックスはレコード番号を識別します。 **GetRows**メソッドがデータを返すと、*配列*変数は自動的に正しいサイズに設定されます。  

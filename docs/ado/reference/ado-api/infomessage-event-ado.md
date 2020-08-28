@@ -3,7 +3,7 @@ description: InfoMessage イベント (ADO)
 title: InfoMessage イベント (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4cab5acb3ccedb9a1e42426da3701bc015f0ec2d
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8695dc364a649dff204fcd689ab4722f19e125b9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774831"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990803"
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage イベント (ADO)
 **Connectionevent**操作中に警告が発生するたびに、 **infomessage**イベントが呼び出されます。  

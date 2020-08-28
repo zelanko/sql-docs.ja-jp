@@ -3,7 +3,7 @@ description: データ シェイプの概要
 title: データシェイプの概要 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9dfaba8c2ae2511de9a07aa800abc08f76ec885
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 45538bd81be1e4a64c41479ab6c4fb2165b26b78
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806944"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991433"
 ---
 # <a name="data-shaping-overview"></a>データ シェイプの概要
 *データシェイプ* とは、クエリ内の2つ以上の論理エンティティ間の階層リレーションシップを構築することを意味します。 階層は、1つのレコード [セット](../../reference/ado-api/recordset-object-ado.md)のレコードと、別のレコード **セット**の1つまたは複数のレコード (チャプターとも呼ばれます) の間の親子関係に表示できます。 親子リレーションシップでは、親 **レコードセット** に子 **レコードセット**が含まれています。 このような階層関係の例として、顧客と注文があります。 データベース内のすべての顧客に対して、0個以上の注文を行うことができます。 階層リレーションシップは再帰的にすることができます。つまり、孫レコードを子レコードに入れ子にすることができます。 原則として、階層レコードは任意の深さに入れ子にすることができます。 実際には、ADO は再帰を最大512の **レコードセット**s に制限します。  

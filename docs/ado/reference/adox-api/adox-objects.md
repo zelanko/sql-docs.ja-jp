@@ -3,7 +3,7 @@ description: ADOX オブジェクト
 title: ADOX Objects |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca5131235b4c34c05f4cc3b783087f25dc027e95
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c38b184164109ee3e6fed18a439cd904119a3ec6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771581"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985663"
 ---
 # <a name="adox-objects"></a>ADOX オブジェクト
 ## <a name="adox-object-summary"></a>ADOX オブジェクトの概要  
@@ -31,7 +31,7 @@ ms.locfileid: "88771581"
 |[グループ](./group-object-adox.md)|セキュリティで保護されたデータベース内でアクセス許可を持つグループアカウントを表します。|  
 |[Index](./index-object-adox.md)|データベーステーブルのインデックスを表します。|  
 |[キー](./key-object-adox.md)|データベーステーブルの主キー、外部キー、または一意キーフィールドを表します。|  
-|[作業](./procedure-object-adox.md)|ストアドプロシージャを表します。|  
+|[手順](./procedure-object-adox.md)|ストアドプロシージャを表します。|  
 |[Table](./table-object-adox.md)|列、インデックス、およびキーを含むデータベーステーブルを表します。|  
 |[ユーザー](./user-object-adox.md)|セキュリティで保護されたデータベース内でアクセス許可を持つユーザーアカウントを表します。|  
 |[表示](./view-object-adox.md)|フィルター処理されたレコードセットまたは仮想テーブルを表します。|  

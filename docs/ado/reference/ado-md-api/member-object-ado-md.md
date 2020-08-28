@@ -3,7 +3,7 @@ description: Member オブジェクト (ADO MD)
 title: Member オブジェクト (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c53b22dc0b5129fc822c4a012eefcf99041f5b45
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 784dd3e842547c97f26107beaec67767363ce4ea
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778001"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986463"
 ---
 # <a name="member-object-ado-md"></a>Member オブジェクト (ADO MD)
 キューブ内のレベルのメンバー、レベルのメンバーの子、またはセルセットの軸に沿った位置のメンバーを表します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  メンバーのプロパティは、 **メンバー** が使用されているコンテキストによって異なります。 [CubeDef](./cubedef-object-ado-md.md)の[レベル](./level-object-ado-md.md)の**メンバー**には、現在の**メンバー**から階層内の次の下位レベルにある**メンバー**を返す[Children](./children-property-ado-md.md)プロパティがあります。 [位置](./position-object-ado-md.md)の**メンバー**の場合、**子**コレクションは常に空です。 また、 [Type](./type-property-ado-md.md)プロパティは、**レベル**の**メンバー**にのみ適用されます。  
   
  **Position**の**メンバー**には、[セルセット](./cellset-object-ado-md.md)を表示するときに便利な2つのプロパティがあります。 [Drilleddown](./drilleddown-property-ado-md.md)および[parentsameasprev](./parentsameasprev-property-ado-md.md)。 **レベル**の**メンバー**でこれらのプロパティにアクセスすると、エラーが発生します。  
@@ -69,7 +69,7 @@ ms.locfileid: "88778001"
   
  **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|名前|説明|  
+|Name|説明|  
 |----------|-----------------|  
 |CatalogName|このキューブが所属するカタログの名前。|  
 |ChildrenCardinality|メンバーが持つ子の数。|  

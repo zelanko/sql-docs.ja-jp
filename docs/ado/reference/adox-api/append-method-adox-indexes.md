@@ -3,7 +3,7 @@ description: Append メソッド (ADOX Indexes)
 title: Append メソッド (ADOX Indexes) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28e396e85dc68a3d622a173dad440c5dff68dea1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 00b37055efe15f204049d02c337b54c228468419
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771461"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985513"
 ---
 # <a name="append-method-adox-indexes"></a>Append メソッド (ADOX Indexes)
 新しい [Index](./index-object-adox.md) オブジェクトを [Indexes](./indexes-collection-adox.md) コレクションに追加します。  
@@ -38,7 +38,7 @@ Indexes.Append Index [,Columns]
  追加する **インデックス** オブジェクト、または作成および追加するインデックスの名前。  
   
  *[列]*  
- 任意。 インデックスを作成する列の名前を指定する **バリアント** 値です (複数可)。 *Columns*パラメーターは、[列](./column-object-adox.md)オブジェクトまたはオブジェクトの[Name](./name-property-adox.md)プロパティの値に対応します。  
+ 省略可能。 インデックスを作成する列の名前を指定する **バリアント** 値です (複数可)。 *Columns*パラメーターは、[列](./column-object-adox.md)オブジェクトまたはオブジェクトの[Name](./name-property-adox.md)プロパティの値に対応します。  
   
 ## <a name="remarks"></a>解説  
  *Columns*パラメーターには、列名または列名の配列のいずれかを指定できます。  

@@ -3,7 +3,7 @@ description: Positions コレクションのプロパティ、メソッド、お
 title: コレクションのプロパティ、メソッド、およびイベントを配置します。Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 56091fcb-71e1-463a-b8ae-c09108eece2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f06465799d861c8c4680244fd99c0fab15ba135
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f62d8d22c52652d1389e1985177375506faedb19
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777841"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986023"
 ---
 # <a name="positions-collection-properties-methods-and-events"></a>Positions コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  [Count プロパティ](../ado-api/count-property-ado.md)  
   
  [Item プロパティ](../ado-api/item-property-ado.md)  

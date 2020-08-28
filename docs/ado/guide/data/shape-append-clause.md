@@ -3,7 +3,7 @@ description: Shape の APPEND 句
 title: Shape APPEND 句 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f2a04e532256de30295f2179f7b15386bceaa8b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 11d2c02d24753460f90452ddd6cc6b1e1589b80b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452864"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979623"
 ---
 # <a name="shape-append-clause"></a>Shape の APPEND 句
 Shape コマンド APPEND 句は、1つまたは複数の列を **レコードセット**に追加します。 多くの場合、これらの列は、子 **レコードセット**を参照するチャプター列です。  
@@ -96,8 +96,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  APPEND キーワードの後の句は実際にはリストです。各句はコンマで区切り、親に追加する別の列を定義します。  
   
-## <a name="remarks"></a>解説  
- SHAPE コマンドの一部としてユーザー入力からプロバイダーコマンドを構築すると、SHAPE はユーザーが指定したプロバイダーコマンドを不透明な文字列として扱い、そのコマンドをプロバイダーに忠実に渡します。 たとえば、次の SHAPE コマンドでは、  
+SHAPE コマンドの一部としてユーザー入力からプロバイダーコマンドを構築すると、SHAPE はユーザーが指定したプロバイダーコマンドを不透明な文字列として扱い、そのコマンドをプロバイダーに忠実に渡します。 たとえば、次の SHAPE コマンドでは、  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  

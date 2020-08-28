@@ -3,7 +3,7 @@ description: スクリプト言語で ADO を使用する
 title: スクリプト言語での ADO の使用 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8fd27476f577be4719489bc5ca2e1bfee95c5166
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 868731f7f7c88a2f6a26b5fab1670de8de96b1b3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806499"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990953"
 ---
 # <a name="using-ado-with-scripting-languages"></a>スクリプト言語で ADO を使用する
 スクリプト環境では、ADO を使用して、サーバー側のスクリプトによってデータを公開できます。 このシナリオでは、ADO、基になる OLE DB プロバイダー、および特定のデータストアを参照するために必要なその他のコンポーネントが、インターネットインフォメーションサービス (IIS) を実行しているサーバーにインストールされます。 ADO は、Active Server ページ (ASP) を使用して、HTML を生成できるスクリプトで参照されるコンポーネントです。たとえば、のようになります。 この HTML コンテンツは、HTTP 経由でクライアントの Web ブラウザーに渡すことができます。 スクリプトを使用すると、Web ページからサーバー側スクリプトにアクションを送信して、特定のデータを更新、スキャン、または表示できるようにすることができます。  

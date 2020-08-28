@@ -3,7 +3,7 @@ description: Execute メソッド (ADO Connection)
 title: Execute メソッド (ADO Connection) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1acbdc4966f46d5e155dab3fac059568699d4727
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8d5f0c63773a0eb07233ffff0eb74f39e45baf33
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443914"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973553"
 ---
 # <a name="execute-method-ado-connection"></a>Execute メソッド (ADO Connection)
 指定されたクエリ、SQL ステートメント、ストアドプロシージャ、またはプロバイダー固有のテキストを実行します。  
@@ -43,10 +43,10 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  実行する SQL ステートメント、ストアドプロシージャ、URL、またはプロバイダー固有のテキストを含む **文字列** 値です。 **必要に応じ**て、プロバイダーが SQL 対応である場合にのみ、テーブル名を使用できます。 たとえば、"Customers" という名前のテーブルが使用されている場合、ADO は自動的に標準の SQL Select 構文を先頭に付加し、"SELECT * FROM Customers" をステートメントとして [!INCLUDE[tsql](../../../includes/tsql-md.md)] プロバイダーに渡します。  
   
  *RecordsAffected*  
- 任意。 操作によって影響を受けたレコードの数をプロバイダーが返す **長い** 変数。  
+ 省略可能。 操作によって影響を受けたレコードの数をプロバイダーが返す **長い** 変数。  
   
- *[オプション]*  
- 任意。 プロバイダーが CommandText 引数を評価する方法を示す **Long** 値。 1つ以上の [Commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md) 値または [executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md) 値のビットマスクを指定できます。  
+ *Options*  
+ 省略可能。 プロバイダーが CommandText 引数を評価する方法を示す **Long** 値。 1つ以上の [Commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md) 値または [executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md) 値のビットマスクを指定できます。  
   
  **メモ****Executeoptionenum**値**adExecuteNoRecords**を使用すると、内部処理を最小限に抑え、Visual Basic 6.0 から移植するアプリケーションに対して、パフォーマンスを向上させることができます。  
   

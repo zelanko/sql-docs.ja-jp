@@ -3,7 +3,7 @@ description: FetchComplete イベント (ADO)
 title: FetchComplete イベント (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4fd58f7783b8fdf2b98d8e295bbf96137cfa5ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ef8df9f6d4ea113d5cca9ad9ffba9c4888776d8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443824"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973353"
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete イベント (ADO)
 **Fetchcomplete**イベントは、長い非同期操作内のすべてのレコードが[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)に取得された後に呼び出されます。  

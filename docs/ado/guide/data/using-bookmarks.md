@@ -3,7 +3,7 @@ description: ブックマークを使用する
 title: ブックマークを使用する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 98c8f08d6d60a47da2cdf4de6459e90cee4d716e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34fc17275609dbf08ffa02a1bc89902c904cac85
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452594"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979042"
 ---
 # <a name="using-bookmarks"></a>ブックマークを使用する
 場合によっては、レコード **セット** 内を移動した後に特定のレコードに直接戻ると、すべてのレコードをスクロールして値を比較する必要がなくなります。 たとえば、 **Find** メソッドを使用してレコードを検索しようとしても、レコードが返されない場合は、レコード **セット**の両端に自動的に配置されます。 プロバイダーでサポートされている場合は、 **検索** メソッドを使用する前にブックマークを使用して、場所に戻ることができます。 ブックマークは、レコード**セット**オブジェクト内のレコードを一意に識別する**バリアント**型の値です。  

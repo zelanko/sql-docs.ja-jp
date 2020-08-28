@@ -3,7 +3,7 @@ description: Microsoft Visual C++ での ADOX のコード例
 title: Microsoft Visual C++ | の ADOX のコード例Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 85c363b9b5daadb2e223a04b0d4f09356adf6e10
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 56ae031998f32a11cf6b8d752b75bb13169274d6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777741"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985773"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C++ での ADOX のコード例
 これらのトピックでは、ADOX の使用方法を理解するのに役立つサンプルコードを提供しています。 すべてのコード例は Microsoft Visual C++ を使用して記述されます。  
@@ -46,7 +46,7 @@ ms.locfileid: "88777741"
   
 -   [Keys Append メソッド、Key Type、UpdateRule 列、関連性テーブル、およびプロパティの例 (VC + +)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 -   [Attributes プロパティの例 (VC++)](./attributes-property-example-vc.md)  
   

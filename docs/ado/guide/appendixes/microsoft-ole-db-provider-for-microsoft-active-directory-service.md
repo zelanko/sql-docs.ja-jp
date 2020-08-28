@@ -3,7 +3,7 @@ description: Microsoft OLE DB Provider for Microsoft Active Directory サービ�
 title: Microsoft OLE DB Provider for Microsoft Active Directory Service |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c196b790299c4c241e5c8eda762b43115b71a038
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 08d945b101ac91300793920e3e01ea0a9619b372
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806579"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991053"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory サービス
 Active Directory サービスインターフェイス (ADSI) プロバイダーにより、ADO は、ADSI を介して異種のディレクトリサービスに接続できます。 これにより、ADO アプリケーションは、LDAP に準拠しているディレクトリサービスと Novell ディレクトリサービスに加えて、Microsoft Windows NT 4.0 および Microsoft Windows 2000 ディレクトリサービスへの読み取り専用アクセスを提供します。 ADSI 自体はプロバイダーモデルに基づいているため、別のディレクトリへのアクセスを提供する新しいプロバイダーがあると、ADO アプリケーションはシームレスにアクセスできるようになります。 ADSI プロバイダーは、フリースレッドで、Unicode が有効になっています。  
@@ -60,12 +60,12 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*ルート*|検索を開始する **ADsPath** オブジェクト (つまり、検索のルート) を示します。|  
 |*Assert*|RFC 1960 形式の検索フィルターを示します。|  
 |*属性*|返される属性のコンマ区切りのリストを示します。|  
-|*スコープ*|任意。 検索のスコープを指定する **文字列** 。 以下のいずれかを指定できます。<br /><br /> -Base-ベースオブジェクト (検索のルート) のみを検索します。<br />-OneLevel-1 つのレベルのみを検索します。<br />-Subtree-サブツリー全体を検索します。|  
+|*スコープ*|省略可能。 検索のスコープを指定する **文字列** 。 以下のいずれかを指定できます。<br /><br /> -Base-ベースオブジェクト (検索のルート) のみを検索します。<br />-OneLevel-1 つのレベルのみを検索します。<br />-Subtree-サブツリー全体を検索します。|  
   
  次に例を示します。  
   
@@ -115,7 +115,7 @@ objectClass='user' AND objectCategory='Person'"
   
  **標準の ADO レコードセットメソッドの可用性:**  
   
-|Method|利用可能か|  
+|方法|利用可能か|  
 |------------|----------------|  
 |[AddNew](../../reference/ado-api/addnew-method-ado.md)|いいえ|  
 |[キャンセル](../../reference/ado-api/cancel-method-ado.md)|いいえ|  
