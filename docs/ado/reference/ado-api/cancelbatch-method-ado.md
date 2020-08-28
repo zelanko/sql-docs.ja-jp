@@ -3,7 +3,7 @@ description: CancelBatch メソッド (ADO)
 title: CancelBatch メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db1ae959094c07ea44e7e236e540070bea7814e5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0baf8d291bbb45961163dfc80106724c48d71613
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776311"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975583"
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch メソッド (ADO)
 保留中のバッチ更新をキャンセルします。  
@@ -36,7 +36,7 @@ recordset.CancelBatchAffectRecords
   
 #### <a name="parameters"></a>パラメーター  
  *AffectRecords*  
- 任意。 **CancelBatch**メソッドが影響するレコードの数を示す[AffectEnum](./affectenum.md)値。  
+ 省略可能。 **CancelBatch**メソッドが影響するレコードの数を示す[AffectEnum](./affectenum.md)値。  
   
 ## <a name="remarks"></a>解説  
  バッチ更新モードで[レコードセット](./recordset-object-ado.md)内の保留中の更新を取り消すには、 **CancelBatch**メソッドを使用します。 **レコードセット**が即時更新モードである場合、 **AdCancelBatch**が**current**を指定せずにを呼び出すと、エラーが生成されます。  

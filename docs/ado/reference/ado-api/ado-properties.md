@@ -3,7 +3,7 @@ description: ADO のプロパティ
 title: ADO のプロパティ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7f6ddee8a1d7629da95e233d02512e8e5cd3f35
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a8a53f4b901209a1ef59be6ca2eb8b531bc52d7c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776581"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976283"
 ---
 # <a name="ado-properties"></a>ADO のプロパティ
 
@@ -91,11 +91,11 @@ ms.locfileid: "88776581"
 |[状態 (ADO レコードセット)](./status-property-ado-recordset.md)|バッチ更新やその他の一括操作に関する現在のレコードの状態を示します。|  
 |[StayInSync](./stayinsync-property.md)|親の行位置が変更されたときに、基になる子レコード (つまり、*チャプター*) への参照が変更されるかどうかを階層**レコードセット**オブジェクトで示します。|  
 |[Stream プロパティ](./stream-property.md)|**ADOStreamConstruction**オブジェクトからの OLE DB**ストリーム**オブジェクトを取得します。値の設定もできます。|  
-|[種類](./type-property-ado.md)|**パラメーター**、**フィールド**、または**プロパティ**オブジェクトの操作の種類またはデータ型を示します。|  
+|[Type](./type-property-ado.md)|**パラメーター**、**フィールド**、または**プロパティ**オブジェクトの操作の種類またはデータ型を示します。|  
 |[型 (ADO ストリーム)](./type-property-ado-stream.md)|**ストリーム**に格納されているデータの型 (バイナリまたはテキスト) を示します。|  
 |[UnderlyingValue](./underlyingvalue-property.md)|**Field**オブジェクトのデータベースの現在の値を示します。|  
-|[Value](./value-property-ado.md)|**フィールド**、**パラメーター**、または**プロパティ**オブジェクトに割り当てられた値を示します。|  
-|[バージョン](./version-property-ado.md)|ADO のバージョン番号を示します。|  
+|[値](./value-property-ado.md)|**フィールド**、**パラメーター**、または**プロパティ**オブジェクトに割り当てられた値を示します。|  
+|[Version](./version-property-ado.md)|ADO のバージョン番号を示します。|  
   
 ## <a name="see-also"></a>参照  
  [ADO API リファレンス](./ado-api-reference.md)   

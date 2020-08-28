@@ -3,7 +3,7 @@ description: Charset プロパティ (ADO)
 title: Charset プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 898f0bdb7571d31d1d7e943bae0937ce198433ce
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 52daa13826bbe372b141501a0c99ac281d3118dc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776281"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975503"
 ---
 # <a name="charset-property-ado"></a>Charset プロパティ (ADO)
 **ストリーム**オブジェクトの内部バッファーに格納するテキスト[ストリーム](./stream-object-ado.md)の内容を変換する文字セットを示します。  

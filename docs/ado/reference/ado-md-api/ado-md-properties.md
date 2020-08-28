@@ -3,7 +3,7 @@ description: ADO MD のプロパティ
 title: ADO MD のプロパティ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f6628f0f172e81a490d0abd6a8cb2ae2a73679e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e94cb9bbd873c32e17f25c00da719c11c3260162
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776671"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987423"
 ---
 # <a name="ado-md-properties"></a>ADO MD のプロパティ
 
@@ -47,9 +47,9 @@ ms.locfileid: "88776671"
 |[ParentSameAsPrev](./parentsameasprev-property-ado-md.md)|この位置メンバーの親が、直前のメンバーの親と同じであるかどうかを示します。|  
 |[ソース](./source-property-ado-md.md)|セルセット内のデータのソースを示します。|  
 |[State](./state-property-ado-md.md)|セルセットの現在の状態を示します。|  
-|[種類](./type-property-ado-md.md)|現在のメンバーの型を示します。|  
+|[Type](./type-property-ado-md.md)|現在のメンバーの型を示します。|  
 |[UniqueName](./uniquename-property-ado-md.md)|現在のオブジェクトの明確な名前を示します。|  
-|[Value](./value-property-ado-md.md)|現在のセルの値を示します。|  
+|[値](./value-property-ado-md.md)|現在のセルの値を示します。|  
   
 ## <a name="see-also"></a>参照  
  [ADO MD API リファレンス](./ado-md-object-model.md?view=sql-server-ver15)   

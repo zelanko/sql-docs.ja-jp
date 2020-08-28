@@ -3,7 +3,7 @@ description: Error オブジェクトのプロパティ、メソッド、およ�
 title: Error オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b180faf68842f3492b9cbc1178863231ba02260
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1a37fb2ed117a5d5db71061d323bb16c590984e7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443984"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973695"
 ---
 # <a name="error-object-properties-methods-and-events"></a>Error オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="properties"></a>プロパティ  
@@ -37,7 +37,7 @@ ms.locfileid: "88443984"
 ## <a name="methods"></a>メソッド  
  なし。  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

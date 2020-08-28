@@ -3,7 +3,7 @@ description: CreateObject メソッド (RDS)
 title: CreateObject メソッド (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fbc77fd5107e5642ba4fabe2f331c803ffde392
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0fd3e6c7ad67b058920963c7e2dc92f60a2a84d6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768641"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982613"
 ---
 # <a name="createobject-method-rds"></a>CreateObject メソッド (RDS)
 対象のビジネスオブジェクトのプロキシを作成し、そのオブジェクトへのポインターを返します。 プロキシは、ビジネスオブジェクトとの通信のためにデータをパッケージ化してサーバー側スタブにマーシャリングし、インターネット経由で要求とデータを送信します。 インプロセスコンポーネントオブジェクトの場合、プロキシは使用されません。オブジェクトへのポインターだけが使用されます。  
@@ -30,7 +30,7 @@ ms.locfileid: "88768641"
 ## <a name="syntax"></a>構文  
  リモートデータサービスは、HTTP、HTTPS (Secure Socket Layer 経由の HTTP)、DCOM、およびインプロセスの各プロトコルをサポートしています。  
   
-|プロトコル|構文|  
+|Protocol|構文|  
 |--------------|------------|  
 |HTTP|Set object = の場合は、CreateObject. CreateObject ("ProgId", "https/ \: websrvr")|  
 |HTTPS|Set object = の場合は、CreateObject. CreateObject ("ProgId", "https/ \: websrvr")|  

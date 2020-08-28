@@ -3,7 +3,7 @@ description: Execute メソッド (ADO Command)
 title: Execute メソッド (ADO コマンド) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b33ada4ce6ac53c1caafbec80c19d1fd31deb6ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5bd7e8d98f7d7ccecfce2ce66852f92efa1dae77
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443894"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973513"
 ---
 # <a name="execute-method-ado-command"></a>Execute メソッド (ADO Command)
 [Command オブジェクト](../../../ado/reference/ado-api/command-object-ado.md)の[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)または[commandstream](../../../ado/reference/ado-api/commandstream-property-ado.md)プロパティで指定されたクエリ、SQL ステートメント、またはストアドプロシージャを実行します。  
@@ -39,13 +39,13 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
 #### <a name="parameters"></a>パラメーター  
  *RecordsAffected*  
- 任意。 操作によって影響を受けたレコードの数をプロバイダーが返す **長い** 変数。 *RecordsAffected*パラメーターは、アクションクエリまたはストアドプロシージャに対してのみ適用されます。 *RecordsAffected* は、結果を返すクエリまたはストアドプロシージャによって返されたレコードの数を返しません。 この情報を取得するには、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) プロパティを使用します。 **Execute**メソッドは、コマンドが非同期に実行されるときに、影響を受けたレコードの数がメソッドから返された時点でまだ知られていない可能性があるため、 **adasyncexecute**と共に使用しても正しい情報を返しません。  
+ 省略可能。 操作によって影響を受けたレコードの数をプロバイダーが返す **長い** 変数。 *RecordsAffected*パラメーターは、アクションクエリまたはストアドプロシージャに対してのみ適用されます。 *RecordsAffected* は、結果を返すクエリまたはストアドプロシージャによって返されたレコードの数を返しません。 この情報を取得するには、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) プロパティを使用します。 **Execute**メソッドは、コマンドが非同期に実行されるときに、影響を受けたレコードの数がメソッドから返された時点でまだ知られていない可能性があるため、 **adasyncexecute**と共に使用しても正しい情報を返しません。  
   
  *パラメーター*  
- 任意。 **CommandText**または**commandstream**で指定された入力文字列またはストリームと組み合わせて使用されるパラメーター値の**Variant**配列。 (この引数で渡された場合、出力パラメーターは正しい値を返しません)。  
+ 省略可能。 **CommandText**または**commandstream**で指定された入力文字列またはストリームと組み合わせて使用されるパラメーター値の**Variant**配列。 (この引数で渡された場合、出力パラメーターは正しい値を返しません)。  
   
- *[オプション]*  
- 任意。 プロバイダーが[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)または[commandstream](../../../ado/reference/ado-api/commandstream-property-ado.md)プロパティをどのように評価するかを示す**Long**値。 [Commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md)値または[executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md)値を使用して作成されたビットマスク値を指定できます。 たとえば、 **Adcmdtext** と **adExecuteNoRecords** を組み合わせて使用すると、 **ado.net プロパティの** 値をテキストとして評価し、コマンドテキストの実行時に生成される可能性のあるレコードがコマンドによって破棄され、返されないようにすることができます。  
+ *Options*  
+ 省略可能。 プロバイダーが[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)または[commandstream](../../../ado/reference/ado-api/commandstream-property-ado.md)プロパティをどのように評価するかを示す**Long**値。 [Commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md)値または[executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md)値を使用して作成されたビットマスク値を指定できます。 たとえば、 **Adcmdtext** と **adExecuteNoRecords** を組み合わせて使用すると、 **ado.net プロパティの** 値をテキストとして評価し、コマンドテキストの実行時に生成される可能性のあるレコードがコマンドによって破棄され、返されないようにすることができます。  
   
 > [!NOTE]
 >  **Executeoptionenum**値**adExecuteNoRecords**を使用すると、内部処理を最小限に抑えてパフォーマンスを向上させることができます。 **AdExecuteStream**を指定した場合、 **adasyncfetch**と**adAsynchFetchNonBlocking**オプションは無視されます。 **Execute**を使用して**adcmdfile**または**Adcmdtabledirect**の**commandtypeenum**値を使用しないでください。 これらの値は、**レコードセット**の[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドおよび[Requery](../../../ado/reference/ado-api/requery-method.md)メソッドでオプションとしてのみ使用できます。  

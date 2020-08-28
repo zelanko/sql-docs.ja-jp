@@ -3,7 +3,7 @@ description: BeginTransComplete、CommitTransComplete、および RollbackTransC
 title: BeginTrans、CommitTrans、RollbackTrans イベント (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 47f559f839c4dcb6b73b273cd09a0289468f9046
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 91f5d573d62ef5000cdd6ed85a52866a0ee7f544
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776421"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975873"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete、CommitTransComplete、および RollbackTransComplete イベント (ADO)
 これらのイベントは、 [接続](./connection-object-ado.md) オブジェクトの関連付けられた操作の実行が終了した後に呼び出されます。  
@@ -63,7 +63,7 @@ RollbackTransComplete pError, adStatus, pConnection
  *pConnection*  
  このイベントが発生した **接続** オブジェクト。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  Visual C++ では、複数の **接続** で同じイベント処理方法を共有できます。 メソッドは、返された **接続** オブジェクトを使用して、イベントの原因となったオブジェクトを特定します。  
   
  [Attributes](./attributes-property-ado.md)プロパティが**AdXactCommitRetaining**または**Adxactabortretaining 保持**するように設定されている場合、トランザクションをコミットまたはロールバックした後に新しいトランザクションが開始されます。 **Begintranscomplete**イベントを使用すると、最初のトランザクション開始イベント以外はすべて無視されます。  

@@ -3,7 +3,7 @@ description: Update メソッド
 title: Update メソッド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 819e6ebaa3932f19a693cb3d50651f7c451200e6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bb673de86d48143a8869460eeab3377f3c0ec0d2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777001"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988103"
 ---
 # <a name="update-method"></a>Update メソッド
 レコード[セット](./recordset-object-ado.md)オブジェクトの現在の行、または[レコード](./record-object-ado.md)オブジェクトの[Fields](./fields-collection-ado.md)コレクションに対して行ったすべての変更を保存します。  
@@ -36,10 +36,10 @@ record.Fields.Update
   
 #### <a name="parameters"></a>パラメーター  
  *フィールド*  
- 任意。 1つの名前、または変更するフィールドの名前または序数を表す**バリアント**配列を**表すバリアント配列**。  
+ 省略可能。 1つの名前、または変更するフィールドの名前または序数を表す**バリアント**配列を**表すバリアント配列**。  
   
  *値*  
- 任意。 単一の値を表す **バリアント** 、または新しいレコードのフィールドの値を表す **バリアント** 配列。  
+ 省略可能。 単一の値を表す **バリアント** 、または新しいレコードのフィールドの値を表す **バリアント** 配列。  
   
 ## <a name="remarks"></a>解説  
   

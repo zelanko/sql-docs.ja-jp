@@ -1,7 +1,7 @@
 ---
 description: ReadyState プロパティ (RDS)
 title: ReadyState プロパティ (RDS) |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9915f76e336f7c8814428440460d1b0bfd7b9288
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5a7e27abfa2464f84e130d789db93a3d7606df21
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767661"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981483"
 ---
 # <a name="readystate-property-rds"></a>ReadyState プロパティ (RDS)
 [DataControl](./datacontrol-object-rds.md)オブジェクトが[レコードセット](../ado-api/recordset-object-ado.md)オブジェクトにデータを取得する際の進行状況を示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "88767661"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  次のいずれかの値を設定または返します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|現在のクエリは実行中で、行はフェッチされていません。 **DataControl**オブジェクトの**レコードセット**は使用できません。|  
 |**adcReadyStateInteractive**|現在のクエリによって取得された行の初期セットは、 **DataControl** オブジェクトの **レコードセット** に格納されており、使用することができます。 残りの行はまだフェッチされています。|  

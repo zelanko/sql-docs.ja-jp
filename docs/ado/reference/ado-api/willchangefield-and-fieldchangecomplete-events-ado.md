@@ -3,7 +3,7 @@ description: WillChangeField および FieldChangeComplete イベント (ADO)
 title: Changefield および FieldChangeComplete イベント (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84c861c2a344276a80ea8e8fd98f84aeb2bb7cbc
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 836228d0741cdf4fd75db5d9c9e0c3d523848b50
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776901"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987883"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField および FieldChangeComplete イベント (ADO)
 イベントは、保留**中の操作**によって[レコードセット](./recordset-object-ado.md)内の1つまたは複数の[フィールド](./field-object.md)オブジェクトの値が変更される前に呼び出されます。 **FieldChangeComplete**イベントは、1つまたは複数の**フィールド**オブジェクトの値が変更された後に呼び出されます。  

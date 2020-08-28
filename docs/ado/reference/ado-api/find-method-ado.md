@@ -3,7 +3,7 @@ description: Find メソッド (ADO)
 title: Find メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0312fb8a8f91e8b56cb6c29a3a64b3a36bcec69d
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 18b4dc88dfedbb5a9a06968ebb5b02300439ed1b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775231"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972953"
 ---
 # <a name="find-method-ado"></a>Find メソッド (ADO)
 [レコードセット](./recordset-object-ado.md)内で、指定した条件を満たす行を検索します。 必要に応じて、開始行からの検索、開始行、およびオフセットの方向を指定することもできます。 条件が満たされた場合は、見つかったレコードに現在の行の位置が設定されます。それ以外の場合、位置は **レコードセット**の末尾 (または先頭) に設定されます。  
@@ -39,13 +39,13 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  検索で使用する列名、比較演算子、および値を指定するステートメントを含む **文字列** 値です。  
   
  *SkipRows*  
- 任意。 現在の行または*開始*ブックマークからの行オフセットを指定する**Long**値。既定値は0です。 既定では、検索は現在の行で開始されます。  
+ 省略可能。 現在の行または*開始*ブックマークからの行オフセットを指定する**Long**値。既定値は0です。 既定では、検索は現在の行で開始されます。  
   
  *SearchDirection*  
- 任意。 検索を現在の行で開始するか、検索の方向で次に使用可能な行で開始するかを指定する [Searchdirection 列挙](./searchdirectionenum.md) 値。 値が**Adsearchforward**の場合、**レコードセット**の末尾で失敗した検索は停止します。 値が**Adsearchbackward**の場合、**レコードセット**の先頭で失敗した検索は停止します。  
+ 省略可能。 検索を現在の行で開始するか、検索の方向で次に使用可能な行で開始するかを指定する [Searchdirection 列挙](./searchdirectionenum.md) 値。 値が**Adsearchforward**の場合、**レコードセット**の末尾で失敗した検索は停止します。 値が**Adsearchbackward**の場合、**レコードセット**の先頭で失敗した検索は停止します。  
   
- *[開始]*  
- 任意。 検索の開始位置として機能する **Variant** ブックマーク。  
+ *Start*  
+ 省略可能。 検索の開始位置として機能する **Variant** ブックマーク。  
   
 ## <a name="remarks"></a>解説  
  *条件*には、単一列の名前のみを指定できます。 このメソッドは、複数列の検索をサポートしていません。  
