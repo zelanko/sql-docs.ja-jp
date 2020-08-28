@@ -3,7 +3,7 @@ description: アドレス帳のサンプル アプリケーションの実行
 title: アドレス帳サンプルアプリケーションを実行する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b0c28fdc0487fc7f14982588eefc8a7011f33b7
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 9c616d23d1491876425089877bf5242d34549ed5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759352"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977693"
 ---
 # <a name="running-the-address-book-sample-application"></a>アドレス帳のサンプル アプリケーションの実行
 > [!IMPORTANT]
@@ -42,5 +42,5 @@ ms.locfileid: "88759352"
   
 3.  その後、アドレス帳のサンプルアプリケーションでさまざまなシナリオを試すことができます。たとえば、電子メール名に基づいて個人を検索したり、"プログラムマネージャー" というタイトルのすべてのユーザーを一覧表示したり、既存のレコードを編集したりします。 [ **検索** ] をクリックすると、使用可能なすべての名前がデータグリッドに表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アドレス帳のデータ バインディング オブジェクト](./address-book-data-binding-object.md)

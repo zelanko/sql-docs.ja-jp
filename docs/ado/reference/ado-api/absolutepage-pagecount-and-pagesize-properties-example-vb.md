@@ -3,7 +3,7 @@ description: AbsolutePage、PageCount、および PageSize プロパティの例
 title: AbsolutePage、PageCount、および PageSize プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5aaada64-5115-4adc-8668-827348f32566
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8adbe7524bbf7886744b9753eb8dfb5417a1898a
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 757d12da47a89d1b37b2218bc7ad720c9062d03e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760012"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977293"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vb"></a>AbsolutePage、PageCount、および PageSize プロパティの例 (VB)
 ```  
@@ -101,7 +101,7 @@ End Sub
 'EndAbsolutePageVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [AbsolutePage プロパティ (ADO)](./absolutepage-property-ado.md)   
  [PageCount プロパティ (ADO)](./pagecount-property-ado.md)   
  [PageSize プロパティ (ADO)](./pagesize-property-ado.md)   

@@ -3,7 +3,7 @@ description: RDS での関連テクノロジの使用
 title: RDS を使用した関連テクノロジの使用 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 744bb7a701207ef92bc23fa2d9728c0b86092fd0
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: f137abb4d65a523b1926dc6455b7e68c1e39043c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760082"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977363"
 ---
 # <a name="using-related-technologies-with-rds"></a>RDS での関連テクノロジの使用
 このセクションでは、次のトピックを扱います。  
@@ -44,5 +44,5 @@ ms.locfileid: "88760082"
   
  **Microsoft WINDOWS NT server/windows 2000 server** Microsoft Windows NT Server または Windows 2000 Server のセキュリティの詳細については、Microsoft Windows Web サイトを参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RDS の基礎](./rds-fundamentals.md)

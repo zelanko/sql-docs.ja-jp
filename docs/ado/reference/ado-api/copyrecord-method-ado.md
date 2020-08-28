@@ -3,7 +3,7 @@ description: CopyRecord メソッド (ADO)
 title: CopyRecord メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b72860215018a9a869aed8f0a06e280a601947e5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0056d33f1ad07ed48002bb7638acd84a963fb566
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775781"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974583"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord メソッド (ADO)
 [レコード](./record-object-ado.md)によって表されるエンティティを別の場所にコピーします。  
@@ -36,22 +36,22 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>パラメーター  
  *ソース*  
- 任意。 コピーするエンティティ (ファイルやディレクトリなど) を指定する URL を含む **文字列** 値です。 *Source*を省略した場合、または空の文字列を指定した場合は、現在の[レコード](./record-object-ado.md)によって表されるファイルまたはディレクトリがコピーされます。  
+ 省略可能。 コピーするエンティティ (ファイルやディレクトリなど) を指定する URL を含む **文字列** 値です。 *Source*を省略した場合、または空の文字列を指定した場合は、現在の[レコード](./record-object-ado.md)によって表されるファイルまたはディレクトリがコピーされます。  
   
  *宛先*  
- 任意。 *Source*をコピーする場所を指定する URL を含む**文字列**値です。  
+ 省略可能。 *Source*をコピーする場所を指定する URL を含む**文字列**値です。  
   
  *UserName*  
- 任意。 必要に応じて、*宛先*へのアクセスを承認するユーザー ID を表す**文字列**値です。  
+ 省略可能。 必要に応じて、*宛先*へのアクセスを承認するユーザー ID を表す**文字列**値です。  
   
  *パスワード*  
- 任意。 必要に応じて*ユーザー名*を確認するパスワードを含む**文字列**値です。  
+ 省略可能。 必要に応じて*ユーザー名*を確認するパスワードを含む**文字列**値です。  
   
  *Options*  
- 任意。 **Adcopyunspecified**の既定値を持つ[CopyRecordOptionsEnum](./copyrecordoptionsenum.md)値。 このメソッドの動作を指定します。  
+ 省略可能。 **Adcopyunspecified**の既定値を持つ[CopyRecordOptionsEnum](./copyrecordoptionsenum.md)値。 このメソッドの動作を指定します。  
   
  *非同期*  
- 任意。 **ブール**値。 **True**の場合、この操作は非同期であることを指定します。  
+ 省略可能。 **ブール**値。 **True**の場合、この操作は非同期であることを指定します。  
   
 ## <a name="return-value"></a>戻り値  
  通常、*変換先*の値を返す**文字列**値。 ただし、返される正確な値はプロバイダーに依存します。  

@@ -3,7 +3,7 @@ description: カスタマイズ ファイルの概要
 title: カスタマイズファイルを理解する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18c7d09707a69967560765f880a3c6563de1506e
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 9b097d54015d9f48140aafb6feb360b8013edeaf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759870"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977393"
 ---
 # <a name="understanding-the-customization-file"></a>カスタマイズ ファイルの概要
 カスタマイズファイルの各セクションヘッダーは、型とパラメーターを含む角かっこ (**[]**) で構成されています。 4つのセクションの種類は、 **接続**、 **sql**、 **userlist**、または **ログ**のリテラル文字列によって示されます。 パラメーターは、リテラル文字列、既定値、ユーザー指定の識別子、または nothing です。  
@@ -45,7 +45,7 @@ identifier
 |パーツ|説明|  
 |----------|-----------------|  
 |**connect**|接続文字列を変更するリテラル文字列。|  
-|**sql**|コマンド文字列を変更するリテラル文字列。|  
+|**server**|コマンド文字列を変更するリテラル文字列。|  
 |**userlist**|特定のユーザーのアクセス権を変更するリテラル文字列。|  
 |**logs**|操作エラーを記録するログファイルを指定するリテラル文字列。|  
 |**default**|識別子が指定されていない場合、または見つからない場合に使用されるリテラル文字列。|  
@@ -67,7 +67,7 @@ identifier
   
 -   **ログ**セクションは、 **DataFactory**が操作中のときに常に使用されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カスタマイズファイルの接続セクション](./customization-file-connect-section.md)   
  [カスタマイズファイルログセクション](./customization-file-logs-section.md)   
  [カスタマイズファイル SQL セクション](./customization-file-sql-section.md)   

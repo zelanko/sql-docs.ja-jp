@@ -3,7 +3,7 @@ description: 手順 6:変更がサーバーに送信される (RDS チュート�
 title: '手順 6: 変更がサーバーに送信される (RDS チュートリアル) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0056f965e36fb1fadd3d7f8c08c2514ee2593d46
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 33a80f1cf59ff314236e69085c7625521d6f721f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759002"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977473"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>手順 6:変更がサーバーに送信される (RDS チュートリアル)
 **Recordset**オブジェクトが編集されている場合は、変更 (追加、変更、または削除された行) をサーバーに送り返すことができます。  
@@ -75,7 +75,7 @@ End Sub
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Microsoft OLE DB リモート処理プロバイダー (ADO サービスプロバイダー)](../appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
  [RDS チュートリアル](./rds-tutorial.md)   
  [RDS のチュートリアル (VBScript)](./rds-tutorial-vbscript.md)

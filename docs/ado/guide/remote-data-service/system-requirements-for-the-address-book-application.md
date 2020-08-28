@@ -3,7 +3,7 @@ description: アドレス帳アプリケーションのシステム要件
 title: アドレス帳アプリケーションのシステム要件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59913c457702e39b9009cd2a8a138b2dbc5f9032
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 2e8555a61639ed7019c9972debe916f9f1a64934
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759902"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977463"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>アドレス帳アプリケーションのシステム要件
 アドレス帳のサンプルアプリケーションを設定するには、次のソフトウェアとデータベースの要件を満たしている必要があります。  
@@ -51,7 +51,7 @@ ms.locfileid: "88759902"
   
  権限を持っていない場合は、データベース管理者がシステムをセットアップし、データベースへのアクセス許可を付与するか、データベースをセットアップする必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アドレス帳 SQL スクリプトの実行](./running-the-address-book-sql-script.md)   
  [DataControl オブジェクト (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
  [アドレス帳のサンプル アプリケーションの実行](./running-the-address-book-sample-application.md)

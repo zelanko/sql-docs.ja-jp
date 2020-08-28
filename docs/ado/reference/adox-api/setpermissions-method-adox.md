@@ -3,7 +3,7 @@ description: SetPermissions メソッド (ADOX)
 title: SetPermissions メソッド (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a13e1dc23556888c2d4ee5c013472614b764d57
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1333fc42f98ba787cfcc139b40932038307e5592
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769401"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983293"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions メソッド (ADOX)
 オブジェクトの [グループ](./group-object-adox.md) または [ユーザー](./user-object-adox.md) に対する権限を指定します。  
@@ -50,10 +50,10 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  設定する権限を示す1つ以上の[右 Senum](./rightsenum.md)定数のビットマスクとして使用できる**Long 型**の値。  
   
  *識別子*  
- 任意。 オブジェクトがこれらのアクセス許可を継承する方法を指定する、 [Inherittypeenum](./inherittypeenum.md)定数の1つである**Long**値。 既定値は **Adinheritnone**です。  
+ 省略可能。 オブジェクトがこれらのアクセス許可を継承する方法を指定する、 [Inherittypeenum](./inherittypeenum.md)定数の1つである**Long**値。 既定値は **Adinheritnone**です。  
   
  *ObjectTypeId*  
- 任意。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す **バリアント** 値です。 *ObjectType*が**Adpermobjproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
+ 省略可能。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す **バリアント** 値です。 *ObjectType*が**Adpermobjproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
   
 ## <a name="remarks"></a>解説  
  プロバイダーがグループまたはユーザーのアクセス権の設定をサポートしていない場合、エラーが発生します。  

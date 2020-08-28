@@ -3,7 +3,7 @@ description: Requery メソッド
 title: Requery メソッド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8b9a5d3ab52fdbd3e219104ce3553cd69753a40
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 12f60b295d569119a356631dc445bd034916665a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777691"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989553"
 ---
 # <a name="requery-method"></a>Requery メソッド
 オブジェクトの基になっているクエリを再実行することによって、 [レコードセット](./recordset-object-ado.md) オブジェクトのデータを更新します。  
@@ -36,7 +36,7 @@ recordset.Requery Options
   
 #### <a name="parameters"></a>パラメーター  
  *Options*  
- 任意。 この操作に影響を与える [Executeoptionenum](./executeoptionenum.md) 値および [commandtypeenum](./commandtypeenum.md) 値を含むビットマスク。  
+ 省略可能。 この操作に影響を与える [Executeoptionenum](./executeoptionenum.md) 値および [commandtypeenum](./commandtypeenum.md) 値を含むビットマスク。  
   
 > [!NOTE]
 >  *オプション*が**adasyncexecute**に設定されている場合、この操作は非同期に実行され、終了時に[RecordsetChangeComplete](./willchangerecordset-and-recordsetchangecomplete-events-ado.md)イベントが発行されます。 **AdExecuteNoRecords**または**AdExecuteStream**の**executeopenenum**値は、 **Requery**と共に使用することはできません。  

@@ -3,7 +3,7 @@ description: 手順 5:DataControl が使用可能になる (RDS チュートリ�
 title: '手順 5: DataControl を使用できるようになりました (RDS チュートリアル) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 616b82b397694e4db41f709080dc4beafd945878
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 8aa0697e7f4acbae9fbc25ba3e14bccb4a468499
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759022"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977513"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>手順 5:DataControl が使用可能になる (RDS チュートリアル)
 返された **レコードセット** オブジェクトを使用できます。 他の **レコードセット**と同じように、確認、移動、または編集を行うことができます。 **レコードセット**でできることは、環境によって異なります。 Visual Basic と Visual C++ には、データコントロールを有効にすることで、直接または間接的に **レコードセット** を使用できるビジュアルコントロールがあります。  
@@ -44,6 +44,6 @@ Sub RDSTutorial5()
 ...  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [手順 6: 変更がサーバーに送信される (RDS チュートリアル)](./step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
  [RDS のチュートリアル (VBScript)](./rds-tutorial-vbscript.md)

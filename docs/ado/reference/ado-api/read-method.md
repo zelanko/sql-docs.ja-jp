@@ -2,7 +2,7 @@
 description: Read メソッド
 title: Read メソッド |Microsoft Docs
 ms.prod: sql
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c2b2b1579beb967ec75b5a0b32532b846640b01
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6d4b0ab7c3cc77c1f83eac4c3a30e9f637d950ba
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772721"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989903"
 ---
 # <a name="read-method"></a>Read メソッド
 バイナリ [ストリーム](./stream-object-ado.md) オブジェクトから、指定されたバイト数を読み取ります。  
@@ -35,7 +35,7 @@ Variant = Stream.Read ( NumBytes)
   
 #### <a name="parameters"></a>パラメーター  
  *NumBytes*  
- 任意。 ファイルから読み取るバイト数、または既定の[Streamreadenum](./streamreadenum.md)値**adreadall**を指定する**Long**値です。  
+ 省略可能。 ファイルから読み取るバイト数、または既定の[Streamreadenum](./streamreadenum.md)値**adreadall**を指定する**Long**値です。  
   
 ## <a name="return-value"></a>戻り値  
  **Read**メソッドは、指定されたバイト数またはストリーム全体を**ストリーム**オブジェクトから読み取り、結果のデータを**バリアント**として返します。  

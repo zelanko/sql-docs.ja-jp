@@ -3,7 +3,7 @@ description: AbsolutePage、PageCount、および PageSize プロパティの例
 title: AbsolutePage、PageCount、および PageSize プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80c5d3666c4b3b60aa622874dfec2388fa008898
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 4f72e6427ce1906166374485c1041752de99e878
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760002"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977273"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage、PageCount、および PageSize プロパティの例 (VC + +)
 この例では、 [AbsolutePage](./absolutepage-property-ado.md)、 [PageCount](./pagecount-property-ado.md)、および [PageSize](./pagesize-property-ado.md) プロパティを使用して、 ***Employee*** テーブルからの名前と入社日を一度に5つずつ表示します。  
@@ -179,7 +179,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [AbsolutePage プロパティ (ADO)](./absolutepage-property-ado.md)   
  [PageCount プロパティ (ADO)](./pagecount-property-ado.md)   
  [PageSize プロパティ (ADO)](./pagesize-property-ado.md)   

@@ -3,7 +3,7 @@ description: Precision プロパティ (ADO)
 title: Precision プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59a42a7f577ae8f4712e679853d53939fd6f6ed1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e7a166077bd0237ff822193297d57dc364d17bef
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773141"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990053"
 ---
 # <a name="precision-property-ado"></a>Precision プロパティ (ADO)
 [パラメーター](./parameter-object.md)オブジェクトまたは数値[フィールド](./field-object.md)オブジェクトの数値の有効桁数を示します。  

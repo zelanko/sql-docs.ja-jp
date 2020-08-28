@@ -3,7 +3,7 @@ description: RDS の使用方法とセキュリティ
 title: RDS の使用とセキュリティ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 686d3caeb7835d05a4e2eff0c588a4fb2ca18cf4
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 7f357ec4390c6006ba4b522404dc7f15cc4f627f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759492"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977813"
 ---
 # <a name="rds-usage-and-security"></a>RDS の使用方法とセキュリティ
 サーバーをセットアップし、RDS をすばやく使用するには、このセクションの情報を参照してください。 このセクションには、rds を実装するときに必要になる可能性がある特定の構成手順、RDS と他のテクノロジ間の重要な関係について説明し、RDS ソリューションの設定時に発生する可能性がある問題の解決策を特定するのに役立ちます。  
@@ -37,7 +37,7 @@ ms.locfileid: "88759492"
   
 -   [RDS のトラブルシューティング](./troubleshooting-rds.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RDS の基礎](./rds-fundamentals.md)   
  [RDS のシナリオ](./rds-scenario.md)   
  [RDS チュートリアル](./rds-tutorial.md)

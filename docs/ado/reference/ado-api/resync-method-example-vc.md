@@ -3,7 +3,7 @@ description: Resync メソッドの例 (VC++)
 title: Resync メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac58bd295975864b0fa92cbcec99285562fd0251
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ace4d981f4b777f9d495c8f257df6473b5636cdd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777661"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989473"
 ---
 # <a name="resync-method-example-vc"></a>Resync メソッドの例 (VC++)
 この例では、再 [同期](./resync-method.md) メソッドを使用して、静的レコードセット内のデータを更新する方法を示します。  

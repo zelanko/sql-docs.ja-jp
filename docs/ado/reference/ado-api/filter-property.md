@@ -3,7 +3,7 @@ description: Filter プロパティ
 title: Filter プロパティ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e5927c2c3b32540ebfe54307203e0425600e2f2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2519fdf691cc0f982f16a3aa77fdb66036bd86e8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775321"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973003"
 ---
 # <a name="filter-property"></a>Filter プロパティ
 [レコードセット](./recordset-object-ado.md)内のデータのフィルターを示します。  
@@ -36,7 +36,7 @@ ms.locfileid: "88775321"
   
 -   [Filtergroupenum](./filtergroupenum.md)値。  
   
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 **フィルター**プロパティを使用して、レコード**セット**オブジェクトのレコードを選択的に表示します。 フィルター選択された **レコードセット** が現在のカーソルになります。 現在の **カーソル** に基づいて値を返すその他のプロパティは、 [ABSOLUTEPOSITION property (ado)](./absoluteposition-property-ado.md)、 [AbsolutePage property (ado)](./absolutepage-property-ado.md)、 [RecordCount Property (ADO](./recordcount-property-ado.md))、および [PageCount property (ado)](./pagecount-property-ado.md)などの影響を受けます。 **Filter**プロパティを特定の新しい値に設定すると、現在のレコードが、新しい値を満たす最初のレコードに移動します。
   
@@ -94,8 +94,8 @@ ms.locfileid: "88775321"
 |組み合わせ|非キー|1つのキー|複数のキー|
 |-|--------------|----------------|-------------------|
 |**非キー**|+|+|+|
-|**1つのキー**|+|-|N/A|
-|**複数のキー**|+|N/A|+|
+|**1つのキー**|+|-|該当なし|
+|**複数のキー**|+|該当なし|+|
 |||||
   
 ## <a name="applies-to"></a>適用対象
