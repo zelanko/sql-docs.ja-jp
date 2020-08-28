@@ -3,7 +3,7 @@ description: Open メソッド (ADO Connection)
 title: Open メソッド (ADO Connection) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b16abd21f49f9c3dc7e317e5b7079e9b124f5e12
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c3691f6b7b86d7f48ea570a542f85af75c53d017
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773841"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990333"
 ---
 # <a name="open-method-ado-connection"></a>Open メソッド (ADO Connection)
 データソースへの接続を開きます。  
@@ -37,16 +37,16 @@ connection.Open ConnectionString, UserID, Password, Options
   
 #### <a name="parameters"></a>パラメーター  
  *文字列*  
- 任意。 接続情報を含む **文字列** 値です。 有効な設定の詳細については、 [ConnectionString](./connectionstring-property-ado.md) プロパティを参照してください。  
+ 省略可能。 接続情報を含む **文字列** 値です。 有効な設定の詳細については、 [ConnectionString](./connectionstring-property-ado.md) プロパティを参照してください。  
   
  *UserID*  
- 任意。 接続を確立するときに使用するユーザー名を含む **文字列** 値です。  
+ 省略可能。 接続を確立するときに使用するユーザー名を含む **文字列** 値です。  
   
  *パスワード*  
- 任意。 接続を確立するときに使用するパスワードを含む **文字列** 値です。  
+ 省略可能。 接続を確立するときに使用するパスワードを含む **文字列** 値です。  
   
  *Options*  
- 任意。 このメソッドが (同期的に) 後に返すか、または (非同期に) 接続を確立するかを決定する [ConnectOptionEnum](./connectoptionenum.md) 値。  
+ 省略可能。 このメソッドが (同期的に) 後に返すか、または (非同期に) 接続を確立するかを決定する [ConnectOptionEnum](./connectoptionenum.md) 値。  
   
 ## <a name="remarks"></a>解説  
  [Connection](./connection-object-ado.md)オブジェクトで**Open**メソッドを使用すると、データソースへの物理的な接続が確立されます。 このメソッドが正常に完了すると、接続が有効になり、その接続に対してコマンドを発行して結果を処理できるようになります。  

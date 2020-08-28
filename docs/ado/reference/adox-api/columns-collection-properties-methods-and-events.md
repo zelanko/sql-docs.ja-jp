@@ -3,7 +3,7 @@ description: Columns コレクションのプロパティ、メソッド、お�
 title: Columns コレクションのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3d9ec89a-cc85-4091-b6f0-2bb6a6826d5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3afb4aea6ac939b2581b3c2a59250062932ffb97
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 27dd7a1ca57bd438e03d4277b204a43458e63957
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770971"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984983"
 ---
 # <a name="columns-collection-properties-methods-and-events"></a>Columns コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  [Count プロパティ](../ado-api/count-property-ado.md)  
   
  [Item プロパティ](../ado-api/item-property-ado.md)  

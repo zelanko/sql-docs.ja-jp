@@ -3,7 +3,7 @@ description: 多次元スキーマとデータの概要
 title: 多次元スキーマとデータの概要 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c7fc8cd189534a217468f71188479a8df100fed6
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 431ff25d49c4a45055d796aba98f229564872a4e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758362"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978643"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多次元スキーマとデータの概要
 ## <a name="understanding-multidimensional-schemas"></a>多次元スキーマについて  
@@ -84,7 +84,7 @@ Hamburg, Munich, Stuttgart}
   
  この例では、もう1つの特性も示しています。週単位階層の週レベルの一部のメンバーは、Quarter 階層のどのレベルにも表示されません。 したがって、階層にはディメンションのすべてのメンバーを含める必要はありません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ADO MD オブジェクトモデル](../../reference/ado-md-api/ado-md-object-model.md)   
  [ADO (多次元) (ADO MD)](./ado-multidimensional-ado-md.md)   
  [ADO MD を使用したプログラミング](./programming-with-ado-md.md)   

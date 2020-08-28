@@ -3,7 +3,7 @@ description: RDS チュートリアル
 title: RDS チュートリアル |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c8200b9bd42d06a52e5786b839a55cce175bb0b2
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 0781d75d20254582a3a887cf92a54c8e32848289
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759522"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977833"
 ---
 # <a name="rds-tutorial"></a>RDS チュートリアル
 このチュートリアルでは、RDS プログラミングモデルを使用してデータソースを照会および更新する方法について説明します。 まず、このタスクを実行するために必要な手順について説明します。 このチュートリアルは、Microsoft® Visual Basic Scripting Edition (Windows Foundation クラス (ADO/WFC) 用の ADO を使用) で繰り返されています。  
@@ -69,6 +69,6 @@ ms.locfileid: "88759522"
   
 -   [RDS のチュートリアル (VBScript)](./rds-tutorial-vbscript.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [手順 1: サーバープログラムを指定する (RDS チュートリアル)](./step-1-specify-a-server-program-rds-tutorial.md)   
  [RDS のチュートリアル (VBScript)](./rds-tutorial-vbscript.md)

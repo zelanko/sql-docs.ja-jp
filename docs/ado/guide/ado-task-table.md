@@ -6,7 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [ADO]
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29aaeac82cc4853e0cd89d0179c988db9748e44e
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 59cb4cceb81861460fbcf7f079801b08319c76d9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805427"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991203"
 ---
 # <a name="ado-programming-task-table"></a>ADO プログラミングタスクテーブル
 次の表に、 *ADO プログラマーズガイド* に含まれるプログラミングタスクと、各タスクのリファレンスを示します。 これらの参照には、テキストの説明、またはタスクを実行する ADO 機能に関する情報が記載されているコード例を使用できます。
 
-|ADO タスク|関連項目|
+|ADO タスク|参照|
 |--------------|----------------|
 |データプロバイダーへの接続|[データソースへの接続](./data/connecting-to-data-sources.md)|
 |コマンドの実行またはストアドプロシージャの呼び出し|[コマンドの準備と実行](./data/preparing-and-executing-commands.md)|

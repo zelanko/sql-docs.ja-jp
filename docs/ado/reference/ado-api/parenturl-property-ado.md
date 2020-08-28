@@ -3,7 +3,7 @@ description: ParentURL プロパティ (ADO)
 title: ParentURL プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8254dd1e47d6f6d3042e88365bd3c6ad0ea4301f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e3a8323223f97034750c7e6bf7927ac87aefd3bd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773241"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990113"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL プロパティ (ADO)
 現在の**レコード**オブジェクトの親[レコード](./record-object-ado.md)を指す絶対 URL 文字列を示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "88773241"
 ## <a name="return-value"></a>戻り値  
  親**レコード**の URL を示す**文字列**値を返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Parenturl**プロパティは、 **Record**オブジェクトを開くために使用されるソースによって異なります。 たとえば、 [ActiveConnection](./activeconnection-property-ado.md)プロパティによって参照されるディレクトリの相対パス名を含むソースで**レコード**を開くことができます。  
   
  "Second" が "first" の下に含まれるフォルダーであるとします。 次の構文を使用して、 **レコード** オブジェクトを開きます。  

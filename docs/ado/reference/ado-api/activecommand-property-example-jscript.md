@@ -3,7 +3,7 @@ description: ActiveCommand プロパティの例 (JScript)
 title: ActiveCommand プロパティの例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8b36a7fe46e975d27d4b255d3bb5928916faac7
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 06e66ac4671c9841498ae68fe568035633674ea2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759922"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977143"
 ---
 # <a name="activecommand-property-example-jscript"></a>ActiveCommand プロパティの例 (JScript)
 この例では、 [activecommand](./activecommand-property-ado.md) プロパティを示します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **ActiveCommandJS**として保存します。  
@@ -126,7 +126,7 @@ if (strName.length > 0)
 <!-- EndActiveCommandJS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ActiveCommand プロパティ (ADO)](./activecommand-property-ado.md)   
  [Command オブジェクト (ADO)](./command-object-ado.md)   
  [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

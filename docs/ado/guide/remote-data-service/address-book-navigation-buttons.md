@@ -3,7 +3,7 @@ description: アドレス帳のナビゲーション ボタン
 title: アドレス帳のナビゲーションボタン |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03959b22d0b64f2932326c42f5bb0117441b9051
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 3e78ab8a8a652f07d93f98b144a5a9ba09f5419b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758652"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978413"
 ---
 # <a name="address-book-navigation-buttons"></a>アドレス帳のナビゲーション ボタン
 アドレス帳アプリケーションでは、Web ページの下部にナビゲーションボタンが表示されます。 ナビゲーションボタンを使用すると、データの最初の行または最後の行、または現在の選択範囲に隣接する行を選択することにより、HTML グリッドの表示でデータを移動できます。  
@@ -62,6 +62,6 @@ Sub Last_OnClick
 End Sub  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DataControl オブジェクト (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
  [MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (RDS)](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

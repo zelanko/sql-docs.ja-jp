@@ -3,7 +3,7 @@ description: IsolationLevel プロパティ
 title: IsolationLevel Property |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f46199512521e6fe6fda6dc40fe894ba113c0229
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 91945d36801005fb7f7c4dbcc9df5a464c6e4fa4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774721"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990773"
 ---
 # <a name="isolationlevel-property"></a>IsolationLevel プロパティ
 [接続](./connection-object-ado.md)オブジェクトの分離レベルを示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "88774721"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [IsolationLevelEnum](./isolationlevelenum.md)値を設定または返します。 既定値は **adXactReadCommitted**です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **接続**オブジェクトの分離レベルを設定するには、 **IsolationLevel**プロパティを使用します。 この設定は、次に [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) メソッドを呼び出したときまで有効になりません。 要求した分離レベルが使用できない場合、プロバイダーは、 **IsolationLevel** プロパティを更新せずに、次に高い分離レベルを返すことができます。  
   
  **IsolationLevel**プロパティは読み取り/書き込み可能です。  

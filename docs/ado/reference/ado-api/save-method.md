@@ -3,7 +3,7 @@ description: Save メソッド
 title: Save メソッド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05e65643884d57d991028394f9f5b1ba7b752533
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4ffd13c07fad10d4b0386d342a6ddcbec37256da
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777581"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989333"
 ---
 # <a name="save-method"></a>Save メソッド
 ファイルまたは[ストリーム](./stream-object-ado.md)オブジェクトに[レコードセット](./recordset-object-ado.md)を保存します。  
@@ -36,10 +36,10 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>パラメーター  
  *宛先*  
- 任意。 **レコードセット**を保存するファイルの完全なパス名、または**ストリーム**オブジェクトへの参照を表す**バリアント**。  
+ 省略可能。 **レコードセット**を保存するファイルの完全なパス名、または**ストリーム**オブジェクトへの参照を表す**バリアント**。  
   
  *PersistFormat*  
- 任意。 **レコードセット**を保存する形式を指定する[persistformatenum](./persistformatenum.md)値 (XML または ADTG)。 既定値は **adPersistADTG**です。  
+ 省略可能。 **レコードセット**を保存する形式を指定する[persistformatenum](./persistformatenum.md)値 (XML または ADTG)。 既定値は **adPersistADTG**です。  
   
 ## <a name="remarks"></a>解説  
  [Save メソッド]()メソッドは、開いている**レコードセット**でのみ呼び出すことができます。 [Open メソッド (ADO recordset)](./open-method-ado-recordset.md)メソッドを使用して、後で*変換先*から**レコードセット**を復元します。  

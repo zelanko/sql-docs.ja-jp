@@ -3,7 +3,7 @@ description: HelloData に関するコメント
 title: HelloData | に関するコメントMicrosoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0593c95944c7109acb1d30f675a2375a5e20a668
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 139c788c81a5055d5d567625d314ad14c657e3e7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806325"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991533"
 ---
 # <a name="comments-on-hellodata"></a>HelloData に関するコメント
 HelloData アプリケーションでは、一般的な ADO アプリケーションの基本的な操作 (データの取得、調査、編集、更新) を実行します。 アプリケーションを起動するときに、最初のボタン [ **データの取得**] をクリックします。 これにより、 **GetData** サブルーチンが実行されます。  

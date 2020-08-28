@@ -3,7 +3,7 @@ description: Microsoft OLE DB Simple Provider の概要
 title: Microsoft OLE DB Simple Provider |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81d60f33e0e9e055e086d990a681efb74cc943cc
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 4eb4635aafa67d2b6c96f88580811c204ff73423
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806527"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990983"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB Simple Provider の概要
 Microsoft OLE DB Simple Provider (OSP) を使用すると、ADO は、 [OLE DB Simple provider (osp) Toolkit](/previous-versions/windows/desktop/ms715822(v=vs.85))を使用して、プロバイダーが記述されているすべてのデータにアクセスできます。 単純なプロバイダーは、メモリ内配列や XML ドキュメントなどの基本的な OLE DB サポートのみを必要とするデータソースにアクセスすることを目的としています。

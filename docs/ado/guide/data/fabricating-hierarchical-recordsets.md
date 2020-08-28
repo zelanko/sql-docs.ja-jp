@@ -3,7 +3,7 @@ description: 階層レコードセットの作成
 title: 造詣階層レコードセット |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e1bf51c8d7d6db2ac898787c3a649a0ecb0610cb
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 24941f8fbf2aedb5fb61cea176ef26d3172012cc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806852"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991283"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>階層レコードセットの作成
 次の例では、データシェイプの文法を使用して、親、子、および孫 **レコードセット**の列を定義することで、基になるデータソースのない階層レコードセットを作成する方法を示します。  

@@ -3,7 +3,7 @@ description: Save および Open メソッドの例 (VB)
 title: Save および Open メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 34ad6214f36061ed12577f7ba843a69fc13b7d8a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 14668aba6cbc6817b951820bbdee4d5c69a51bc5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777601"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989363"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save および Open メソッドの例 (VB)
 次の3つの例は、 [Save](./save-method.md) メソッドと [Open](./open-method-ado-recordset.md) メソッドを一緒に使用する方法を示しています。  

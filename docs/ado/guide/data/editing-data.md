@@ -3,7 +3,7 @@ description: データの編集
 title: データの編集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 01f5f2010491e394addd37511ead8b7ea20136c1
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: b39e62f1d7fc55c2d58b382677efa41e4df784a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806874"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991343"
 ---
 # <a name="editing-data"></a>データの編集
 ADO を使用してデータソースに接続し、コマンドを実行して、 **レコードセット** オブジェクトの結果を取得し、 **レコードセット**内を移動する方法について説明しました。 このセクションでは、データの編集に関する次の基本的な ADO 操作について説明します。  

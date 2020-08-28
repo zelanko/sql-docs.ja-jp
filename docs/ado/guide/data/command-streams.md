@@ -3,7 +3,7 @@ description: コマンド ストリーム
 title: コマンドストリーム |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2db139f3f5ae4ff701e36179a9df7ce30eecd94e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ae54835836fecdfbf3b026fe9e6a701a5602d3d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453664"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991543"
 ---
 # <a name="command-streams"></a>コマンド ストリーム
 ADO では、常に **CommandText** プロパティによって指定された文字列形式のコマンド入力がサポートされていました。 また、ADO 2.7 以降では、コマンド入力に情報ストリームを使用することもできます。これを行うには、ストリームを **commandstream** プロパティに割り当てます。 ADO **ストリーム** オブジェクト、または COM **IStream** インターフェイスをサポートする任意のオブジェクトを割り当てることができます。  

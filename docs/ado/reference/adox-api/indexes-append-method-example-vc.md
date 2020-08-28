@@ -3,7 +3,7 @@ description: Indexes Append メソッドの例 (VC++)
 title: Indexes Append メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b70e539902fb2a3b43c732f7c8ead6b047818ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0434184d77b8b9bb64ab3e87eafaed66b0acf424
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439924"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984223"
 ---
 # <a name="indexes-append-method-example-vc"></a>Indexes Append メソッドの例 (VC++)
 次のコードは、新しいインデックスを作成する方法を示しています。 インデックスは、テーブル内の2つの列にあります。  

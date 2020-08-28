@@ -3,7 +3,7 @@ description: Parameter (Visual C++ 構文用の ADO)
 title: Parameter (Visual C++ 構文用の ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c225103bb02debecfbcc81776f056ff76672f9b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b2d502f6071375f7d5a482b2db9753caa15fb086
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773491"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990223"
 ---
 # <a name="parameter-ado-for-visual-c-syntax"></a>Parameter (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  

@@ -3,7 +3,7 @@ description: AbsolutePosition プロパティ (ADO)
 title: AbsolutePosition プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8660c2b5fecaeb99c0e0f3b4bcc57b1b2fc222a
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 0ecb3290d73032568af7e0a92baf0c9d1b2628f4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759972"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977161"
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition プロパティ (ADO)
 [レコードセット](./recordset-object-ado.md)オブジェクトの現在のレコードの位置を表す序数を示します。  
@@ -48,7 +48,7 @@ ms.locfileid: "88759972"
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [AbsolutePosition およびカーソルのプロパティの例 (VB)](./absoluteposition-and-cursorlocation-properties-example-vb.md)   
  [AbsolutePosition およびカーソルのプロパティの例 (VC + +)](./absoluteposition-and-cursorlocation-properties-example-vc.md)   
  [AbsolutePage プロパティ (ADO)](./absolutepage-property-ado.md)   
