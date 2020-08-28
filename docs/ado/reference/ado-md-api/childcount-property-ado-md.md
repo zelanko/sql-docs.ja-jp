@@ -3,7 +3,7 @@ description: ChildCount プロパティ (ADO MD)
 title: ChildCount プロパティ (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 049e6e9326fecc9835c0ac6e5d01b150403a9d12
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a5c3668a115de8137cd96f489f3e11483cb50045
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778291"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987133"
 ---
 # <a name="childcount-property-ado-md"></a>ChildCount プロパティ (ADO MD)
 現在の [メンバー](./member-object-ado-md.md) オブジェクトが階層内の親であるメンバーの数を示します。  

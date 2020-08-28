@@ -3,7 +3,7 @@ description: RDS オブジェクト モデルの概要
 title: RDS オブジェクトモデルの概要 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50776f67f09fabbba2282867e09db1e94a49772b
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: e2650f9a80c56856133d1e694a5ea0eb807251f0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759692"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977983"
 ---
 # <a name="rds-object-model-summary"></a>RDS オブジェクト モデルの概要
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "88759692"
 |[RDSServer DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)|このオブジェクトは、既定のサーバープログラムを表します。 RDS のデータの取得と更新の既定の動作を実行します。<br /><br /> **DataFactory**オブジェクトは、スクリプト作成には安全ではありません。|  
 |[RDS.DataControl](../../reference/rds-api/datacontrol-object-rds.md)|このオブジェクトは、RDS を自動的に呼び出すことができ **ます。RDSServer オブジェクトと** **DataFactory** オブジェクト。<br /><br /> このオブジェクトを使用して、RDS データの既定の取得または更新動作を呼び出します。<br /><br /> このオブジェクトには、返された **レコードセット** オブジェクトにアクセスするためのビジュアルコントロールの手段も用意されています。<br /><br /> **DataControl**オブジェクトは、スクリプト作成には安全です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RDS の基礎](./rds-fundamentals.md)   
  [RDS のシナリオ](./rds-scenario.md)   
  [RDS チュートリアル](./rds-tutorial.md)   

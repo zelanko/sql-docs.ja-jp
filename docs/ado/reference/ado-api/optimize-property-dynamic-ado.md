@@ -3,7 +3,7 @@ description: Optimize プロパティ - 動的 (ADO)
 title: Optimize プロパティ-動的 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91da30a49a0eff7d8b32274e8486002f78f2a05f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3393bbfbfbaeb50c6a608db92dae42bb29fb3b1d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773641"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990263"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize プロパティ - 動的 (ADO)
 [フィールド](./field-object.md)にインデックスを作成するかどうかを指定します。  
@@ -34,7 +34,7 @@ ms.locfileid: "88773641"
   
  **[最適化**] は、[[カーソルの場所](./cursorlocation-property-ado.md)] プロパティが**adUseClient**に設定されている場合に、[フィールド](./field-object.md)オブジェクトの[プロパティ](./properties-collection-ado.md)のコレクションに追加される動的プロパティです。  
   
-## <a name="usage"></a>使用  
+## <a name="usage"></a>使用法  
   
 ```  
 Dim rs As New Recordset  

@@ -3,7 +3,7 @@ description: Column オブジェクトの NumericScale および Precision プ�
 title: 列の NumericScale および Precision プロパティ (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e25052d71b0eebc9d142dd7fd61f5ee5b8ac3ea0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9b7ca5a849dafe9768a422a942f5c2c1816f77b1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769931"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983903"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Column オブジェクトの NumericScale および Precision プロパティの例 (VC++)
 この例では、[列](./column-object-adox.md)オブジェクトの[Numericscale](./numericscale-property-adox.md)プロパティと[Precision](./precision-property-adox.md)プロパティを示します。 このコードでは、 *Northwind*データベースの**Order Details**テーブルの値が表示されます。  

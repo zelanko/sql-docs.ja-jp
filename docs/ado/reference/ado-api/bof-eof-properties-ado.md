@@ -3,7 +3,7 @@ description: BOF、EOF プロパティ (ADO)
 title: BOF、EOF プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4f6d27831c9215a66580cce32baa0d6d602d2813
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 710a116e28a102eeac8a7a062a9f66cd8dcbe79c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776401"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975783"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF プロパティ (ADO)
 -   **BOF** 現在のレコード位置が、 [レコードセット](./recordset-object-ado.md) オブジェクトの最初のレコードの前にあることを示します。  
@@ -33,7 +33,7 @@ ms.locfileid: "88776401"
 ## <a name="return-value"></a>戻り値  
  **BOF**プロパティと**EOF**プロパティは、**ブール**値を返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Recordset**オブジェクトにレコードが含まれているかどうか、またはレコード間の移動時にレコード**セット**オブジェクトの制限を超えていないかどうかを判断するには、 **BOF**プロパティと**EOF**プロパティを使用します。  
   
  **BOF**プロパティは、現在のレコード位置が最初のレコードの前にある場合は**True** (-1) を返し、現在のレコード位置が最初のレコードの前後にある場合は**False** (0) を返します。  

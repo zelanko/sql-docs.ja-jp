@@ -3,7 +3,7 @@ description: VBScript での ADO のコード例
 title: ADO コード例 VBScript |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 78bb9a95-7ac4-44b6-818b-d1787f952ed7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65629afe45d9906a423582cd904ade17726bf504
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: a3ef129dc3f6c17bb2d5e4b9da63f22f3c798cb7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760142"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976613"
 ---
 # <a name="ado-code-examples-vbscript"></a>VBScript での ADO のコード例
 Microsoft® Visual Basic® Scripting Edition (VBScript) で記述するときに ADO メソッドを使用する方法の詳細については、次のコード例を参照してください。  
@@ -45,7 +45,7 @@ Microsoft® Visual Basic® Scripting Edition (VBScript) で記述するときに
   
 -   [Open および Close メソッドの例](./open-and-close-methods-example-vbscript.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Basic の ADO コード例](./ado-code-examples-in-visual-basic.md)   
  [Visual C++ の ADO コード例](./ado-code-examples-in-visual-c.md)   
  [付録 D: ADO のサンプル](../../guide/appendixes/appendix-d-ado-samples.md)

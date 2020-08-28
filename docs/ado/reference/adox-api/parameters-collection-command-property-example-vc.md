@@ -3,7 +3,7 @@ description: Parameters コレクションおよび Command プロパティの�
 title: Parameters Collection、Command プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5467a8f940e6b9472012fb3bfdc83ffb225864f4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 015179970822398d1c3a08735ff9d68af138b7fa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769881"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983793"
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>Parameters コレクションおよび Command プロパティの例 (VC++)
 次のコード [は、command プロパティを](./command-property-adox.md) [command](../ado-api/command-object-ado.md) オブジェクトと共に使用して、プロシージャのパラメーター情報を取得する方法を示しています。  

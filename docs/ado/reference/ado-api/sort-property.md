@@ -3,7 +3,7 @@ description: Sort プロパティ
 title: Sort プロパティ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a7cfeeb8d91420ec25cd6dd196b260ad8222c086
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9397d99d2d020fcf2c703bd96420ee4af4b1a610
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777421"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988993"
 ---
 # <a name="sort-property"></a>Sort プロパティ
 [レコードセット](./recordset-object-ado.md)が並べ替えられる1つ以上のフィールド名と、各フィールドを昇順と降順のどちらで並べ替えるかを示します。  

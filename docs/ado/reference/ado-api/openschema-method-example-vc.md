@@ -3,7 +3,7 @@ description: OpenSchema メソッドの例 (VC++)
 title: OpenSchema メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25f4cea4278421ee79c65c3784f74d36cc35e3c6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4cb98b791f35a122643402344b6195246c19226f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773721"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990293"
 ---
 # <a name="openschema-method-example-vc"></a>OpenSchema メソッドの例 (VC++)
 この例では、 [OpenSchema](./openschema-method.md) メソッドを使用して、 ***Pubs*** データベース内の各テーブルの名前と種類を表示します。  

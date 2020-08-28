@@ -3,7 +3,7 @@ description: DefinedSize プロパティの例 (VB)
 title: "\"持つサイズ\" プロパティの例 (VB) |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a1cfa4cae20e2f43ae666e7bb99ae5b65b92a74
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e5c3010ce4e320ef0fd8a8bb1fbe09a5ebafad6b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770731"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984653"
 ---
 # <a name="definedsize-property-example-vb"></a>DefinedSize プロパティの例 (VB)
 この例では、[列](./column-object-adox.md)の "値の[サイズ](./definedsize-property-adox.md)" プロパティを示します。 コードによって、 *Northwind*データベースの**Employees**テーブルの FirstName 列のサイズが再定義されます。 次に、 **Employees**テーブルに基づいて[レコードセット](../ado-api/recordset-object-ado.md)の FirstName[フィールド](../ado-api/field-object.md)の値が変更されます。 既定では、"定義された **サイズ** " プロパティを再定義した後、[FirstName] フィールドに空白が埋め込まれていることに注意してください。  

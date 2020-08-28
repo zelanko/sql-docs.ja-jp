@@ -3,7 +3,7 @@ description: Resync メソッド
 title: Resync メソッド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e64c2f297e4628f04f99a7e97a6b9df00f6efa1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 79a43a36fb68063c2f0c880f0d8d086714dcfffe
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777651"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989483"
 ---
 # <a name="resync-method"></a>Resync メソッド
 基になるデータベースから、現在の[レコードセット](./recordset-object-ado.md)オブジェクトまたは[レコード](./record-object-ado.md)オブジェクトの[Fields](./fields-collection-ado.md)コレクションのデータを更新します。  
@@ -38,10 +38,10 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>パラメーター  
  *AffectRecords*  
- 任意。 再**同期**メソッドによって影響を受けるレコードの数を決定する[AffectEnum](./affectenum.md)値。 既定値は **adAffectAll**です。 この値は、**レコード**オブジェクトの**Fields**コレクションの**Resync**メソッドでは使用できません。  
+ 省略可能。 再**同期**メソッドによって影響を受けるレコードの数を決定する[AffectEnum](./affectenum.md)値。 既定値は **adAffectAll**です。 この値は、**レコード**オブジェクトの**Fields**コレクションの**Resync**メソッドでは使用できません。  
   
  *ResyncValues*  
- 任意。 基になる値が上書きされるかどうかを指定する [ResyncEnum](./resyncenum.md) 値です。 既定値は **adResyncAllValues**です。  
+ 省略可能。 基になる値が上書きされるかどうかを指定する [ResyncEnum](./resyncenum.md) 値です。 既定値は **adResyncAllValues**です。  
   
 ## <a name="remarks"></a>解説  
   

@@ -3,7 +3,7 @@ description: Attributes プロパティの例 (VC++)
 title: Attributes プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b850e6b64c5acc8a504c5d684e4472a05f4eeef
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c0c7f2a8fef9d392497744e92b3a2120d742bc9f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771321"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985283"
 ---
 # <a name="attributes-property-example-vc"></a>Attributes プロパティの例 (VC++)
 この例では、[列](./column-object-adox.md)の[Attributes](./attributes-property-adox.md)プロパティを示します。 **Adcolnullable**に設定すると、ユーザーは[レコードセット](../ado-api/recordset-object-ado.md)[フィールド](../ado-api/field-object.md)の値を空の文字列に設定できます。 この場合、ユーザーは、データが不明なレコードと、データが適用されないレコードを区別できます。  

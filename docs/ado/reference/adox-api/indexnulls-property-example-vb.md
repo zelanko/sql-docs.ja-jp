@@ -3,7 +3,7 @@ description: IndexNulls プロパティの例 (VB)
 title: IndexNulls プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aba3aed53a3640ff76b2d46b221265d1505e020a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 27cb2f163f1c6732715f2e199a66ac95a39f11e8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770151"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984073"
 ---
 # <a name="indexnulls-property-example-vb"></a>IndexNulls プロパティの例 (VB)
 この例では、[インデックス](./index-object-adox.md)の[IndexNulls](./indexnulls-property-adox.md)プロパティを示します。 このコードは、新しいインデックスを作成し、ユーザー入力に基づいて **IndexNulls** の値を設定します (List1 という名前のリストボックスから)。 次に、 *Northwind* [カタログ](./catalog-object-adox.md)の**Employees** [テーブル](./table-object-adox.md)に**インデックス**が追加されます。 **Employees**テーブルに基づいて[レコードセット](../ado-api/recordset-object-ado.md)に新しい**インデックス**が適用され、**レコードセット**が開かれます。 **Employees**テーブルに新しいレコードが追加され、インデックス付きフィールドに**Null**値が設定されます。 この新しいレコードが表示されるかどうかは、 **IndexNulls** プロパティの設定によって異なります。  

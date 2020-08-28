@@ -3,7 +3,7 @@ description: コンポーネント サービスでのビジネス オブジェ�
 title: コンポーネントサービスでのビジネスオブジェクトの実行 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6732724e842d4183aa7e663994df34c57f366933
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 4343d8e1bd04d7e8044fa7f3f1b5de6184466d3f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759362"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977723"
 ---
 # <a name="running-business-objects-in-component-services"></a>コンポーネント サービスでのビジネス オブジェクトの実行
 > [!IMPORTANT]
@@ -33,5 +33,5 @@ ms.locfileid: "88759362"
 > [!NOTE]
 >  中間層のビジネスオブジェクトが **Getobjectcontext**、 **SetComplete**、および **SetAbort**を使用してコンポーネントサービスコンポーネントとして実装されている場合、ビジネスオブジェクトはコンポーネントサービス (Windows NT を使用している場合は MTS) を使用して、複数のクライアント呼び出しで状態を維持することができます。 このシナリオは、通常、信頼されたクライアントとイントラネット内のサーバーの間で実装される DCOM で実現できます。 この例では、 [RDS です。](../../reference/rds-api/dataspace-object-rds.md) クライアント側の領域スペースオブジェクトと [CreateObject](../../reference/rds-api/createobject-method-rds.md) メソッドは、トランザクションコンテキストオブジェクトと **CreateInstance** メソッドに置き換えられます。このメソッドは、 **ITransactionContext** インターフェイスによって提供され、コンポーネントサービスによって実装されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RDS の基礎](./rds-fundamentals.md)

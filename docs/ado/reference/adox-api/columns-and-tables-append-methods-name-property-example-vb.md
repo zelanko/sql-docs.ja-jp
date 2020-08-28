@@ -3,7 +3,7 @@ description: Columns および Tables Append メソッド、Name プロパティ
 title: Columns および Tables Append メソッド、Name プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a62e610ae47243e8200a9422639569e91ce2c4c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ef7ac3ff021f31123c1ecaf550f174f69af4b0b7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771051"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985043"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Columns および Tables Append メソッド、Name プロパティの例 (VB)
 次のコードは、新しいテーブルを作成する方法を示しています。  
