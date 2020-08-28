@@ -3,7 +3,7 @@ description: レコードへのジャンプ
 title: レコードへのジャンプ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcbdf68a7d79b64e25dcb700b989628a6a72b8e2
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 96987a5c51d7a888672609aa28f3fd223ccfffa1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805858"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980403"
 ---
 # <a name="jumping-to-a-record"></a>レコードへのジャンプ
 [Move](../../reference/ado-api/move-method-ado.md)メソッドを使用すると、次の構文を使用して、**レコードセット**内で指定した数のレコードを前方または後方に移動できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "88805858"
 oRs.Move NumRecords, Start  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Move**メソッドは、すべての**レコードセット**オブジェクトでサポートされています。  
   
  *NumRecords*引数が0より大きい場合、現在のレコードの位置は (**レコードセット**の末尾に向かって) 前方に移動します。 *NumRecords*が0未満の場合、現在のレコードの位置は後方 (**レコードセット**の先頭に向かって) に移動します。  

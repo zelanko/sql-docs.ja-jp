@@ -3,7 +3,7 @@ description: OpenSchema メソッド
 title: OpenSchema メソッド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cade08630577b32d81643cb30b6a1e20656d95bf
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ce524119367b53cac86c4bd29e3dc6927671c871
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773681"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990283"
 ---
 # <a name="openschema-method"></a>OpenSchema メソッド
 プロバイダーからデータベーススキーマ情報を取得します。  
@@ -42,7 +42,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  実行するスキーマクエリの種類を表す [Schemaenum](./schemaenum.md) 値。  
   
  *条件*  
- 任意。 [Schemaenum](./schemaenum.md)に記載されているように、各*QueryType*オプションのクエリ制約の配列。  
+ 省略可能。 [Schemaenum](./schemaenum.md)に記載されているように、各*QueryType*オプションのクエリ制約の配列。  
   
  *SchemaID*  
  OLE DB 仕様で定義されていないプロバイダースキーマクエリの GUID。 *QueryType*が**Adschemaproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  

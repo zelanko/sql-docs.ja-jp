@@ -3,7 +3,7 @@ description: Move メソッド (ADO)
 title: Move メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 57a5b882148c899136ff92315ff109b68868aa66
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6b394d64a9d1b1f403137e9875db83fdd82c2ac1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774411"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990593"
 ---
 # <a name="move-method-ado"></a>Move メソッド (ADO)
 [レコードセット](./recordset-object-ado.md)オブジェクト内の現在のレコードの位置を移動します。  
@@ -38,10 +38,10 @@ recordset.Move NumRecords, Start
  *NumRecords*  
  現在のレコード位置が移動するレコードの数を指定する、符号付き **Long** 式。  
   
- *[開始]*  
- 任意。 ブックマークに評価される **文字列** 値または **バリアント** 。 [BookmarkEnum](./bookmarkenum.md)値を使用することもできます。  
+ *Start*  
+ 省略可能。 ブックマークに評価される **文字列** 値または **バリアント** 。 [BookmarkEnum](./bookmarkenum.md)値を使用することもできます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Move**メソッドは、すべての**レコードセット**オブジェクトでサポートされています。  
   
  *NumRecords*引数が0より大きい場合、現在のレコードの位置は (**レコードセット**の末尾に向かって) 前方に移動します。 *NumRecords*が0未満の場合、現在のレコードの位置は後方 (**レコードセット**の先頭に向かって) に移動します。  

@@ -3,7 +3,7 @@ description: アドレス帳のコマンド ボタン
 title: アドレス帳のコマンドボタン |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0abdb36a7ff51bdf0b01e21957c10ca8b9f995e4
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d80417306c4fe466003a48739b65c337424487a6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758612"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978473"
 ---
 # <a name="address-book-command-buttons"></a>アドレス帳のコマンド ボタン
 アドレス帳アプリケーションには、次のコマンドボタンが含まれています。  
@@ -85,6 +85,6 @@ End Sub
   
  `DC1.CancelUpdate`を実行すると、前回のクエリまたは更新以降にユーザーがデータグリッドの employee レコードに対して行ったすべての編集が破棄されます。 元の値を復元します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アドレス帳のナビゲーションボタン](./address-book-navigation-buttons.md)   
  [DataControl オブジェクト (RDS)](../../reference/rds-api/datacontrol-object-rds.md)

@@ -3,7 +3,7 @@ description: CacheSize を使用する
 title: CacheSize | を使用するMicrosoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5514f7b3a08d212e435a40341fc32033ec226c78
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97f6dba7bf01b3236d6b8b00e6338185cf6a8d41
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452584"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979003"
 ---
 # <a name="using-cachesize"></a>CacheSize を使用する
 プロバイダーからローカルメモリに一度に取得するレコードの数を制御するには、 **CacheSize** プロパティを使用します。 たとえば、 **CacheSize** が10の場合、最初に **レコードセット** オブジェクトを開いた後、プロバイダーは最初の10個のレコードをローカルメモリに取得します。 **レコードセット**オブジェクト内を移動すると、プロバイダーはローカルメモリバッファーからデータを返します。 キャッシュ内の最後のレコードを越えて移動すると、プロバイダーは、次の10個のレコードをデータソースからキャッシュに取得します。  

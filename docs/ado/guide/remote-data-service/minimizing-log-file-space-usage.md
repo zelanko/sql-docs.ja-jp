@@ -3,7 +3,7 @@ description: ログ ファイルの使用領域の最小化
 title: ログファイルの使用領域を最小限に抑える |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b839f5f31671d7364eeec022da1b25bdf584a3a
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d6eeb933553d37df7db377d56ff0ff2e713ffef9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759722"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978013"
 ---
 # <a name="minimizing-log-file-space-usage"></a>ログ ファイルの使用領域の最小化
 SQL Server データベースに大量のアクティビティがある場合は、ログファイルがすぐにいっぱいになる (サーバーが停止する) ことがあります。 ログファイルを **チェックポイントで切り捨てる** ように設定すると、データベースのログファイルの有効期間を大幅に延長できます。  
@@ -46,5 +46,5 @@ SQL Server データベースに大量のアクティビティがある場合は
   
  **チェックポイントの切り捨て**機能の詳細については、Microsoft SQL Server のドキュメントを参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RDS の基礎](./rds-fundamentals.md)

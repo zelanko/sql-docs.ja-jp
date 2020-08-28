@@ -3,7 +3,7 @@ description: Seek メソッドと Index プロパティの例 (VB)
 title: Seek メソッドと Index プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e2fe55a8aa34c6249edd2eee9666e9558a52027
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9eb5e6136be37e120ae9570db661ff75f02d05c5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777571"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989203"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Seek メソッドと Index プロパティの例 (VB)
 この例では、 [レコードセット](./recordset-object-ado.md) オブジェクトの [Seek](./seek-method.md) メソッドと [Index](./index-property.md) プロパティを指定された ***従業員 ID***と共に使用して、Nwind データベースの ***Employees*** テーブルで従業員の名前を検索します。  

@@ -3,7 +3,7 @@ description: 複数のイベント ハンドラーの連携方法
 title: イベントハンドラーの連携方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39e50c060dc602cb2bdd3541a454624e41b4d5b3
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 37e1c5d081ccbcacaf50aa385a87afa9555ad2ca
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805982"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980523"
 ---
 # <a name="how-event-handlers-work-together"></a>複数のイベント ハンドラーの連携方法
 Visual Basic でプログラミングする場合を除き、すべてのイベントを実際に処理するかどうかに関係なく、 **接続** イベントと **レコードセット** イベントのすべてのイベントハンドラーを実装する必要があります。 実行する必要のある実装作業の量は、プログラミング言語によって異なります。 詳細については、「 [言語別の ADO イベントのインスタンス化](./ado-event-instantiation-by-language.md)」を参照してください。  

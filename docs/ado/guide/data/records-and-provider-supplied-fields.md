@@ -3,7 +3,7 @@ description: レコードとプロバイダーが指定したフィールド
 title: レコードとプロバイダーが指定したフィールド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cd737ce36a53643503a5c76dfaafe2127c93f9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7cc7b8c4fb0116f96a2470a7161f9fbd30c7efb9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453004"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979953"
 ---
 # <a name="records-and-provider-supplied-fields"></a>レコードとプロバイダーが指定したフィールド
 [Record](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトが開かれている場合、そのソースは、開いている[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の現在の行、絶対 url、または開いている[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトと組み合わせた相対 url にすることができます。  
@@ -58,24 +58,24 @@ ms.locfileid: "88453004"
   
 |列名|Type|説明|  
 |-----------------|----------|-----------------|  
-|RESOURCE_PARSENAME|AdVarWChar|読み取り専用です。 リソースの URL を示します。|  
-|RESOURCE_PARENTNAME|AdVarWChar|読み取り専用です。 親レコードの絶対 URL を示します。|  
-|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|読み取り専用です。 PARENTNAME と PARSENAME の連結であるリソースの絶対 URL を示します。|  
+|RESOURCE_PARSENAME|AdVarWChar|読み取り専用。 リソースの URL を示します。|  
+|RESOURCE_PARENTNAME|AdVarWChar|読み取り専用。 親レコードの絶対 URL を示します。|  
+|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|読み取り専用。 PARENTNAME と PARSENAME の連結であるリソースの絶対 URL を示します。|  
 |RESOURCE_ISHIDDEN|AdBoolean|リソースが非表示の場合は True。 行が返されるのは、行セットを作成するコマンドが RESOURCE_ISHIDDEN が True の行を明示的に選択した場合だけです。|  
 |RESOURCE_ISREADONLY|AdBoolean|リソースが読み取り専用の場合は True。 DBBINDFLAG_WRITE を使用してこのリソースを開こうとすると、DB_E_READONLY で失敗します。 このプロパティは、リソースが読み取り用に開かれている場合でも編集できます。|  
 |RESOURCE_CONTENTTYPE|AdVarWChar|ドキュメントが使用されている可能性があることを示します。たとえば、弁護士の brief などです。 これは、ドキュメントの作成に使用された Office テンプレートに対応する場合があります。|  
 |RESOURCE_CONTENTCLASS|AdVarWChar|ドキュメントの MIME の種類を示します。 "" などの形式を示し `text/html` ます。|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|コンテンツが格納される言語を示します。|  
-|RESOURCE_CREATIONTIME|adFileTime|読み取り専用です。 リソースが作成された時刻を含む FILETIME 構造体を示します。 時刻は協定世界時 (UTC) 形式で報告されます。|  
-|RESOURCE_LASTACCESSTIME|AdFileTime|読み取り専用です。 リソースが最後にアクセスされた時刻を含む FILETIME 構造体を示します。 時刻は UTC 形式です。 プロバイダーがこの時間メンバーをサポートしていない場合、FILETIME メンバーは0になります。|  
-|RESOURCE_LASTWRITETIME|AdFileTime|読み取り専用です。 リソースが最後に書き込まれた時刻を含む FILETIME 構造体を示します。 時刻は UTC 形式です。 プロバイダーがこの時間メンバーをサポートしていない場合、FILETIME メンバーは0になります。|  
-|RESOURCE_STREAMSIZE|asUnsignedBigInt|読み取り専用です。 リソースの既定のストリームのサイズ (バイト単位) を示します。|  
-|RESOURCE_ISCOLLECTION|AdBoolean|読み取り専用です。 リソースがディレクトリなどのコレクションである場合は True。 リソースが単純なファイルの場合は False。|  
+|RESOURCE_CREATIONTIME|adFileTime|読み取り専用。 リソースが作成された時刻を含む FILETIME 構造体を示します。 時刻は協定世界時 (UTC) 形式で報告されます。|  
+|RESOURCE_LASTACCESSTIME|AdFileTime|読み取り専用。 リソースが最後にアクセスされた時刻を含む FILETIME 構造体を示します。 時刻は UTC 形式です。 プロバイダーがこの時間メンバーをサポートしていない場合、FILETIME メンバーは0になります。|  
+|RESOURCE_LASTWRITETIME|AdFileTime|読み取り専用。 リソースが最後に書き込まれた時刻を含む FILETIME 構造体を示します。 時刻は UTC 形式です。 プロバイダーがこの時間メンバーをサポートしていない場合、FILETIME メンバーは0になります。|  
+|RESOURCE_STREAMSIZE|asUnsignedBigInt|読み取り専用。 リソースの既定のストリームのサイズ (バイト単位) を示します。|  
+|RESOURCE_ISCOLLECTION|AdBoolean|読み取り専用。 リソースがディレクトリなどのコレクションである場合は True。 リソースが単純なファイルの場合は False。|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|リソースが構造化ドキュメントである場合は True。 リソースが構造化ドキュメントでない場合は False。 コレクションまたは単純なファイルを指定できます。|  
-|DEFAULT_DOCUMENT|AdVarWChar|読み取り専用です。 このリソースに、フォルダーまたは構造化ドキュメントの既定の単純ドキュメントへの URL が含まれていることを示します。 リソースから既定のストリームが要求されるときに使用されます。 単純なファイルの場合、このプロパティは空白になります。|  
-|CHAPTERED_CHILDREN|AdChapter|読み取り専用です。 任意。 リソースの子を含む行セットのチャプターを示します。 ( *インターネット発行用の OLE DB プロバイダー* では、この列は使用されません)。|  
-|RESOURCE_DISPLAYNAME|AdVarWChar|読み取り専用です。 リソースの表示名を示します。|  
-|RESOURCE_ISROOT|AdBoolean|読み取り専用です。 リソースがコレクションまたは構造化ドキュメントのルートである場合は True。|  
+|DEFAULT_DOCUMENT|AdVarWChar|読み取り専用。 このリソースに、フォルダーまたは構造化ドキュメントの既定の単純ドキュメントへの URL が含まれていることを示します。 リソースから既定のストリームが要求されるときに使用されます。 単純なファイルの場合、このプロパティは空白になります。|  
+|CHAPTERED_CHILDREN|AdChapter|読み取り専用。 省略可能。 リソースの子を含む行セットのチャプターを示します。 ( *インターネット発行用の OLE DB プロバイダー* では、この列は使用されません)。|  
+|RESOURCE_DISPLAYNAME|AdVarWChar|読み取り専用。 リソースの表示名を示します。|  
+|RESOURCE_ISROOT|AdBoolean|読み取り専用。 リソースがコレクションまたは構造化ドキュメントのルートである場合は True。|  
   
 ## <a name="see-also"></a>参照  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   

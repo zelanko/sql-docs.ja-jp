@@ -3,7 +3,7 @@ description: レコードセットの保持に関する詳細情報
 title: レコードセット永続化の詳細 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dbdc0b724d96cf541eedb7e26f8b652a280e829a
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1dca646b07c441a4fccd617723aba98536f1a7e1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805835"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980333"
 ---
 # <a name="more-about-recordset-persistence"></a>レコードセットの保持に関する詳細情報
 ADO レコードセットオブジェクトは、 [Save](../../reference/ado-api/save-method.md)メソッドを使用して、**レコードセット**オブジェクトの内容をファイルに格納することをサポートしています。 永続的に格納されたファイルは、ローカルドライブ、サーバー、または Web サイト上の URL として存在する場合があります。 その後、**レコードセット**オブジェクトの[Open](../../reference/ado-api/open-method-ado-recordset.md)メソッドまたは[Connection](../../reference/ado-api/connection-object-ado.md)オブジェクトの[Execute](../../reference/ado-api/execute-method-ado-connection.md)メソッドのいずれかを使用して、ファイルを復元できます。  

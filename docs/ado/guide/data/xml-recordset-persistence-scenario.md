@@ -3,7 +3,7 @@ description: XML レコードセットの保持シナリオ
 title: XML レコードセット永続化シナリオ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 42fbc8670320761697caf4c956c1f9b64bda5c24
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 91066d8dd42d1bcd4a11aab093661a9061a7d7d1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758422"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978823"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML レコードセットの保持シナリオ
 このシナリオでは、レコードセットオブジェクトの内容を ASP 応答オブジェクトに直接保存する Active Server Pages (ASP) アプリケーションを作成します。  
@@ -113,6 +113,6 @@ ms.locfileid: "88758422"
   
  default.htm ファイルを閉じ、XMLResponse .asp を保存したフォルダーに保存します。 Internet Explorer 4.0 以降を使用して、https://*sqlserver*/xmlpersist/default.htm URL を開き、結果を確認します。 データは、バインドされた DHTML テーブルに表示されます。 ここで、https:// *sqlserver* /XMLPersist/XMLResponse.asp という URL を開き、結果を確認します。 XML が表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Save メソッド](../../reference/ado-api/save-method.md)   
  [レコードを XML 形式で保持する](./persisting-records-in-xml-format.md)

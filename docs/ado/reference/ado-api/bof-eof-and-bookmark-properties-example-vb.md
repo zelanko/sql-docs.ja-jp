@@ -3,7 +3,7 @@ description: BOF、EOF、および Bookmark プロパティの例 (VB)
 title: BOF、EOF、および Bookmark プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b851fb2fc8624b8c2d7fb5e717552b97e80b756
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6cd6742bea404f3ed1ec6515d3579260701dbee7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776411"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975853"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF、EOF、および Bookmark プロパティの例 (VB)
 この例では、ユーザーが[レコードセット](./recordset-object-ado.md)の最初または最後のレコードを移動しようとしたときに、 [BOF](./bof-eof-properties-ado.md)プロパティと[EOF](./bof-eof-properties-ado.md)プロパティを使用してメッセージを表示します。 [Bookmark](./bookmark-property-ado.md)プロパティを使用して、ユーザーがレコード**セット**内のレコードにフラグを付けることができ、後でそれに戻るようにします。  

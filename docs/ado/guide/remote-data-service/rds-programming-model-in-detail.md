@@ -3,7 +3,7 @@ description: RDS のプログラミング モデルの詳細
 title: RDS プログラミングモデルの詳細 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 310bcdad8358120a47cf01ec6734325ca5fa425d
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: af1b575f642159cad84d0ce833bb783cf2363701
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759662"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977973"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS のプログラミング モデルの詳細
 RDS プログラミングモデルの主な要素は次のとおりです。  
@@ -65,13 +65,13 @@ RDS プログラミングモデルの主な要素は次のとおりです。
   
  **RDS。DataControl**オブジェクトには、関連付けられた**レコードセット**オブジェクトの行を移動、並べ替え、およびフィルター処理するための独自のメソッドもあります。 これらのメソッドは似ていますが、ADO **レコードセット** オブジェクトのメソッドと同じではありません。  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  RDS は、ADO イベントモデルに依存しない独自のイベントを2つサポートしています。 [OnReadyStateChange](../../reference/rds-api/onreadystatechange-event-rds.md)イベントは、RDS が呼び出されるたびに呼び出され**ます。DataControl** [ReadyState](../../reference/rds-api/readystate-property-rds.md)プロパティが変更され、非同期操作が正常に完了したか、終了したか、またはエラーが発生したときに通知されます。 [OnError](../../reference/rds-api/onerror-event-rds.md)イベントは、非同期操作中にエラーが発生した場合でも、エラーが発生するたびに呼び出されます。  
   
 > [!NOTE]
 >  Microsoft Internet Explorer では、RDS に2つの追加イベントを提供しています。 **Ondatasetchanged**。これは、 **レコードセット** が機能していても行を取得し、 **Ondatasetchanged**で、 **レコードセット** が行の取得を完了したことを示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [オブジェクトを使用した RDS プログラミングモデル](./rds-programming-model-with-objects.md)   
  [DataControl オブジェクト (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory オブジェクト (RDSServer)](../../reference/rds-api/datafactory-object-rdsserver.md)   

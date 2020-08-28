@@ -3,7 +3,7 @@ description: ストリーム形式で結果セットを取得する
 title: 結果セットをストリームに取得する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/20/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53dcb66eb2abb311b1114928a8696c6502454770
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 13aeddcf9a826cff5caa33172f785f2e42747a3f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452924"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979753"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>ストリーム形式で結果セットを取得する
 ADO では、従来の **Recordset** オブジェクトの結果を受け取る代わりに、クエリの結果をストリームに取得できます。 ADO**ストリーム**オブジェクト (または、ASP**要求**オブジェクトや**応答**オブジェクトなど、COM **IStream**インターフェイスをサポートするその他のオブジェクト) は、これらの結果を格納するために使用できます。 この機能の使用方法の1つは、結果を XML 形式で取得することです。 たとえば、SQL Server では、XML の結果を複数の方法で返すことができます。たとえば、SQL SELECT クエリで FOR XML 句を使用する場合や、XPath クエリを使用する場合などです。  

@@ -3,7 +3,7 @@ description: Shape COMPUTE 句
 title: Shape COMPUTE 句 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9513666eca4d9e191b74b8a1a25dd8a9da051ee8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67411cf8d9be50571a515b5e7cf906fd19a650ec
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452844"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979603"
 ---
 # <a name="shape-compute-clause"></a>Shape COMPUTE 句
 Shape COMPUTE 句は、子**レコード**セットへの参照で構成される親**レコードセット**を生成します。チャプター、新しい、または計算列、または子**レコード**セットまたは以前にデザインされた**レコードセット**に対して集計関数を実行した結果の内容を含む、省略可能な列。また、オプションの BY 句に示されている子**レコードセット**のすべての列が表示されます。  
@@ -77,7 +77,7 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
  たとえば、"人口統計" という名前のテーブルがあるとします。これは、州、市区町村、および人口の各フィールドで構成されます。 (テーブル内の母集団の数値は例としてのみ提供されています)。  
   
-|州|City|[母集団]|  
+|State|City|[母集団]|  
 |-----------|----------|----------------|  
 |WA|Seattle|70万|  
 |OR|Medford|200,000|  
@@ -105,7 +105,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ### <a name="parent"></a>Parent  
   
-|SUM (rs.作成|rs|州|  
+|SUM (rs.作成|rs|State|  
 |---------------------------|--------|-----------|  
 |130万|Child1 への参照|CA|  
 |120万|Child2 への参照|WA|  
@@ -113,27 +113,27 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ## <a name="child1"></a>Child1  
   
-|州|City|[母集団]|  
+|State|City|[母集団]|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|80万|  
 |CA|San Diego|60万|  
   
 ## <a name="child2"></a>Child2  
   
-|州|City|[母集団]|  
+|State|City|[母集団]|  
 |-----------|----------|----------------|  
 |WA|Seattle|70万|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|州|City|[母集団]|  
+|State|City|[母集団]|  
 |-----------|----------|----------------|  
 |OR|Medford|200,000|  
 |OR|Portland|400,000|  
 |OR|Corvallis|300,000|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [階層レコードセット内の行へのアクセス](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [データシェイプの概要](../../../ado/guide/data/data-shaping-overview.md)   
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   

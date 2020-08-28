@@ -3,7 +3,7 @@ description: ADO イベントの処理
 title: ADO イベントの処理 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efe8c82021c647b622792e8413527589435d4086
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ff36542abb462ffc63e8704a5c6c3cdd6670d280
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806788"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980703"
 ---
 # <a name="handling-ado-events"></a>ADO イベントの処理
 ADO イベントモデルでは、操作の開始前または完了後に *イベント*(通知) を発行する、特定の同期および非同期の ado 操作がサポートされています。 イベントは実際には、アプリケーションで定義するイベントハンドラールーチンの呼び出しです。  

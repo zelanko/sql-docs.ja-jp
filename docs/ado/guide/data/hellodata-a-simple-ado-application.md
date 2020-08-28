@@ -3,7 +3,7 @@ description: 'HelloData: 単純な ADO アプリケーション'
 title: 'HelloData: 単純な ADO アプリケーション |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d8f8dac5e6a38e1a394c4646849ddd6a5021131
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: bec2b55f7daee865489c3f32e1ee70e53b9102a6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806032"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980633"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: 単純な ADO アプリケーション
 この単純なアプリケーションでは、データの取得、検査、編集、および更新の4つの主要な ADO 操作を実行します。 これらの操作は、Microsoft® SQL Server に含まれる Northwind サンプルデータベースに対して実行されます。 ADO の基礎に注目し、コードが乱雑にならないようにするために、この例のエラー処理は最小限に抑えられています。  
@@ -43,19 +43,19 @@ ms.locfileid: "88806032"
   
  ![HelloData VB アプリケーションの Form1](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|コントロール型|プロパティ|値|  
+|コントロール型|プロパティ|[値]|  
 |------------------|--------------|-----------|  
-|フォーム|名前|Form1|  
+|フォーム|Name|Form1|  
 ||[高さ]|6500|  
 ||幅|6500|  
-|MS DataGrid|名前|grdDisplay1|  
-|TextBox|名前|txtDisplay1|  
+|MS DataGrid|Name|grdDisplay1|  
+|TextBox|Name|txtDisplay1|  
 ||Multiline|true|  
-|コマンドボタン|名前|cmdGetData|  
+|コマンドボタン|Name|cmdGetData|  
 ||Caption|Get Data|  
-|コマンドボタン|名前|cmdExamineData|  
+|コマンドボタン|Name|cmdExamineData|  
 ||Caption|データの調査|  
-|コマンドボタン|名前|cmdEditData|  
+|コマンドボタン|Name|cmdEditData|  
 ||Caption| データの編集|  
-|コマンドボタン|名前|cmdUpdateData|  
+|コマンドボタン|Name|cmdUpdateData|  
 ||Caption|更新データ|
