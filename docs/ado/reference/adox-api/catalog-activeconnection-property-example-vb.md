@@ -3,7 +3,7 @@ description: カタログ ActiveConnection プロパティの例 (VB)
 title: Catalog ActiveConnection プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ee63f567e3bb9c1f389ada4bf2e76ed6f3b39929
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 582c558222bec95914e73902b69fe9c7ce46161e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771251"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985242"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>カタログ ActiveConnection プロパティの例 (VB)
 [ActiveConnection](./activeconnection-property-adox.md)プロパティを有効な開いている接続に設定すると、カタログが開きます。 開いているカタログから、そのカタログ内に含まれているスキーマオブジェクトにアクセスできます。  

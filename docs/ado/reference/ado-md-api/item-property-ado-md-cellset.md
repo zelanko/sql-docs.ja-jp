@@ -3,7 +3,7 @@ description: Item プロパティ (ADO MD セルセット)
 title: Item プロパティ (ADO MD セルセット) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12df2a7d592be4fa42d8cc0df779a375ab987cb2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 997777e853a54ae56175b4b5795087e67079813b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778071"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986603"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item プロパティ (ADO MD セルセット)
 セルの座標を使用して、セル [セット](./cellset-object-ado-md.md) からセルを取得します。  
@@ -55,7 +55,6 @@ Cell = Cellset.Item ( Positions)
 Cellset.Item ( Positions )Cellset ( Positions )  
 ```  
   
-## <a name="remarks"></a>解説  
  *位置*引数は、返すセルを指定します。 セルは、序数位置または各軸に沿った位置によって指定できます。 各軸に沿って位置によってセルを指定する場合は、位置の数値または各位置のメンバーの名前を指定できます。  
   
  序数位置は、セル **セット**内の1つのセルを一意に識別する数値です。 概念的には、セルセット内のセルには、セル**セット**が*p*次元配列であるか**のように番号が付けら**れます。ここで、 *p*は軸の数です。 セルは、行優先順で指定されます。 セルの序数を計算するための式を次に示します。  

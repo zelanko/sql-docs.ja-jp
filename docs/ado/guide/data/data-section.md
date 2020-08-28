@@ -3,7 +3,7 @@ description: データ セクション
 title: Data Section |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8cd34a76e2de6a37ee7fe3c647e845c0fbf3fac
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ac4febc789aca18401380ee8ada7b2ab7f9d30a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806199"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991453"
 ---
 # <a name="data-section"></a>データ セクション
 データセクションでは、保留中の更新、挿入、または削除と共に、行セットのデータを定義します。 Data セクションには、0個以上の行を含めることができます。 行がスキーマによって定義されている場合にのみ、1つの行セットからデータを格納できます。 また、前述のように、データのない列は省略できます。 Data セクションで属性またはサブ要素が使用されていて、そのコンストラクトが schema セクションで定義されていない場合、そのコンストラクトは警告なしで無視されます。  
   
-## <a name="string"></a>文字列  
+## <a name="string"></a>文字列型  
  テキストデータ内の予約済み XML 文字は、適切な文字エンティティに置き換える必要があります。 たとえば、"Joe's ガレージ" という会社名では、単一引用符をエンティティに置き換える必要があります。 実際の行は次のようになります。  
   
 ```  

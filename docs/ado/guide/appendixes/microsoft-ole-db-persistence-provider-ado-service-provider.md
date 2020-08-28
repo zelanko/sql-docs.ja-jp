@@ -3,7 +3,7 @@ description: Microsoft OLE DB 永続化プロバイダー (ADO サービスプ�
 title: Microsoft OLE DB 永続化プロバイダー (ADO サービスプロバイダー) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7010c2dc4be6207397ee5e57fc999c3cacbba0b7
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 8b9cfce1762ef678e544a2148df4a4d79074e152
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806607"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991073"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 永続化プロバイダーの概要
 Microsoft OLE DB 永続化プロバイダーを使用すると、 [レコードセット](../../reference/ado-api/recordset-object-ado.md) オブジェクトをファイルに保存し、後でその **レコードセット** オブジェクトをファイルから復元できます。 スキーマ情報、データ、および保留中の変更は保持されます。
@@ -42,7 +42,7 @@ Microsoft OLE DB 永続化プロバイダーを使用すると、 [レコード�
 |E_BADSTREAM|開かれたファイルの形式が有効ではありません (つまり、形式が ADTG または XML ではありません)。|
 |E_CANTPERSISTROWSET|保存された **レコードセット** オブジェクトには、保存されないようにする特性があります。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
  Microsoft OLE DB 永続化プロバイダーは動的プロパティを公開しません。
 
  現時点では、パラメーター化された階層的な **レコードセット** オブジェクトのみを保存することはできません。

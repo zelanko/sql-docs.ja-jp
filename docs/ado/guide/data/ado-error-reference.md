@@ -3,7 +3,7 @@ description: ADO エラー リファレンス
 title: ADO エラー参照 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a286804eb5ea575e259c3b54a106edea83f55f57
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 83f3d5e9408180c4ff513f1457a2972a676fa726
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806700"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991743"
 ---
 # <a name="ado-errors"></a>ADO エラー
 **Errorvalueenum**定数は、ADO エラー値を記述します。 これらの列挙定数 (値を含む) の完全な一覧については、「 [付録 B: ADO エラー](../appendixes/appendix-b-ado-errors.md)」を参照してください。 このセクションでは、さらに興味深いエラーをいくつか確認し、それを引き起こす可能性のある特定の状況や、問題を解決するための解決策について説明します。 **Errorvalueenum**定数と short 正の10進数の両方が一覧表示されます。
