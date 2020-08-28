@@ -3,7 +3,7 @@ description: StayInSync プロパティ
 title: StayInSync Property |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8da28769a68cf95e727e61114235e76218f1bae
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9677a776273e83ad31fecde3a7ea436138d3784e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777251"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988623"
 ---
 # <a name="stayinsync-property"></a>StayInSync プロパティ
 親の行位置が変更されたときに、基になる子レコード (つまり、*チャプター*) への参照が変更されるかどうかを階層[レコードセット](./recordset-object-ado.md)オブジェクトで示します。  

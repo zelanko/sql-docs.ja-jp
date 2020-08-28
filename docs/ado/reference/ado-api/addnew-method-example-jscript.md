@@ -3,7 +3,7 @@ description: AddNew メソッドの例 (JScript)
 title: AddNew メソッドの例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 100329a51cbf3cbde4de4f82bc033dcb583efe90
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 0fddb6ba43923692fd8811d2648460a243dc8354
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760224"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976733"
 ---
 # <a name="addnew-method-example-jscript"></a>AddNew メソッドの例 (JScript)
 この例では、 [AddNew](./addnew-method-ado.md) メソッドを使用して、指定した名前の新しいレコードを作成します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Addnewjs. asp**として保存します。  
@@ -135,6 +135,6 @@ body {
 <!-- EndAddNewJS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [AddNew メソッド (ADO)](./addnew-method-ado.md)   
  [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

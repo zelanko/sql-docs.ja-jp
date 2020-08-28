@@ -3,7 +3,7 @@ description: Visual Basic Scripting Edition での ADO MD コード例
 title: ADO MD のコード例 Visual Basic, Scripting Edition |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2fb2d57-6884-42ef-a18c-2673ba9b85c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5fa92dcb045515825878034eedda3c4e5eeef31
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 220fd291c8846a53342229dd6769fe913ff56a2d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776790"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987603"
 ---
 # <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>Visual Basic Scripting Edition での ADO MD コード例
 次の例では、microsoft インターネットインフォメーションサーバー4.0 用の Microsoft Active Server Pages (ASP) が必要です。  

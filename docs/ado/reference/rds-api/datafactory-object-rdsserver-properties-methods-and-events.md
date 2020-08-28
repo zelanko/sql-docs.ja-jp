@@ -3,7 +3,7 @@ description: DataFactory オブジェクト (RDSServer) のプロパティ、メ
 title: DataFactory オブジェクト (RDSServer) のプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: afc3b34dec0360930acdd333a97a62577ce334c8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a731825daac113b6301b770e83f68d86238bb8cd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768471"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982453"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>DataFactory オブジェクト (RDSServer) のプロパティ、メソッド、およびイベント
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  [なし] :  
   
 ## <a name="methods"></a>メソッド  

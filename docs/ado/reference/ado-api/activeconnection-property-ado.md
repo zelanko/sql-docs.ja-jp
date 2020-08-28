@@ -3,7 +3,7 @@ description: ActiveConnection プロパティ (ADO)
 title: ActiveConnection プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 344e712551e46d1ec28f75864dacbdfc39989248
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: bc1a54d70639e4e3ff78748b4e04483fcfefafdb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760102"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976963"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection プロパティ (ADO)
 指定した[コマンド](./command-object-ado.md)、[レコードセット](./recordset-object-ado.md)、または[レコード](./record-object-ado.md)オブジェクトが現在どの[接続](./connection-object-ado.md)オブジェクトに属しているかを示します。  
@@ -41,7 +41,7 @@ ms.locfileid: "88760102"
   
  **接続**オブジェクトが**ActiveConnection**プロパティに割り当てられている場合は、オブジェクトを開く必要があります。 閉じた接続オブジェクトを割り当てると、エラーが発生します。  
   
-### <a name="note"></a>メモ  
+### <a name="note"></a>注意  
  **Microsoft Visual Basic****ActiveConnection**プロパティを*Nothing*に設定すると、現在の**接続**から**コマンド**オブジェクトの関連付けが解除され、プロバイダーによって、データソースに関連付けられているすべてのリソースが解放されます。 その後、 **コマンド** オブジェクトを同じまたは別の **接続** オブジェクトに関連付けることができます。 プロバイダーによっては、プロパティを最初に*Nothing*に設定しなくても、プロパティ設定をある接続から別の**接続**に変更することができます。  
   
  **コマンド**オブジェクトの[parameters](./parameters-collection-ado.md)コレクションにプロバイダーによって提供されるパラメーターが含まれている場合、 **ActiveConnection**プロパティを*Nothing*または別の**接続**オブジェクトに設定すると、コレクションはクリアされます。 [パラメーター](./parameter-object.md)オブジェクトを手動で作成し、それを使用して**Command**オブジェクトの**Parameters**コレクションを設定する場合は、 **ActiveConnection**プロパティを*Nothing*または別の**接続**オブジェクトに設定しても、**パラメーター**コレクションはそのまま残ります。  
@@ -82,7 +82,7 @@ ms.locfileid: "88760102"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (VB)](./activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (VC + +)](./activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (JScript)](./activeconnection-commandtext-timeout-type-size-example-jscript.md)   

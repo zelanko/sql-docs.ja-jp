@@ -3,7 +3,7 @@ description: WillMove および MoveComplete イベント (ADO)
 title: 移動イベントと MoveComplete イベント (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9dbc74fbca54ab1bdafb3c0f2ba941aee49f2213
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 27d86dc84960399be6b5738f72c69430c6834c7e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776851"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987763"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove および MoveComplete イベント (ADO)
 "イベントの **移動** " は、保留中の操作が [レコードセット](./recordset-object-ado.md)内の現在の位置を変更する前に呼び出されます。 **MoveComplete**イベントは、**レコードセット**内の現在の位置が変更された後に呼び出されます。  

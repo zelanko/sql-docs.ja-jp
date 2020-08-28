@@ -3,7 +3,7 @@ description: Cell オブジェクト (ADO MD)
 title: Cell オブジェクト (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28058d792b0525aafe8850158a71afcc4423b38f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b6fceeea4ebe6728ae4adf9bce52cb6b642a926d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778331"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987212"
 ---
 # <a name="cell-object-ado-md"></a>Cell オブジェクト (ADO MD)
 セルセットに含まれる軸の座標の交差部分にあるデータを表します。  
@@ -43,7 +43,7 @@ ms.locfileid: "88778331"
   
  **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|名前|説明|  
+|Name|説明|  
 |----------|-----------------|  
 |BackColor|セルを表示するときに使用する背景色。|  
 |FontFlags|フォントに対する影響の詳細を示すビットマスク。|  

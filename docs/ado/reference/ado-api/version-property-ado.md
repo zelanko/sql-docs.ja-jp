@@ -3,7 +3,7 @@ description: Version プロパティ (ADO)
 title: Version プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6740e999ddcfac16c874bae4e5933f27fa318f38
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f3fa292fbc10ea57dbca6e4aa958ad0e625298d5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776931"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987953"
 ---
 # <a name="version-property-ado"></a>Version プロパティ (ADO)
 ADO のバージョン番号を示します。  
@@ -31,7 +31,7 @@ ADO のバージョン番号を示します。
 ## <a name="return-value"></a>戻り値  
  バージョンを示す **文字列** 値を返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Version**プロパティを使用して、ADO 実装のバージョン番号を返します。  
   
  プロバイダーのバージョンは、 [プロパティ](./properties-collection-ado.md) コレクションで動的プロパティとして使用できるようになります。  

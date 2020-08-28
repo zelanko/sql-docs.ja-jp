@@ -2,7 +2,7 @@
 description: ADO の動的プロパティ
 title: ADO 動的プロパティ |Microsoft Docs
 ms.prod: sql
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83ab2320d3400c5be066af246b50daccaf468462
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9dd0186fba696d2fe3528f113bd0e07aeadd801f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771761"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976513"
 ---
 # <a name="ado-dynamic-properties"></a>ADO の動的プロパティ
 動的プロパティは、[接続](./connection-object-ado.md)、[コマンド](./command-object-ado.md)、または[レコードセット](./recordset-object-ado.md)オブジェクトの[properties](./properties-collection-ado.md)コレクションに追加できます。 これらのプロパティのソースは、データプロバイダー ( [SQL Server の OLE DB プロバイダー](../../guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)、 [OLE DB 用の Microsoft Cursor service](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)などのサービスプロバイダー) のいずれかです。 特定の動的プロパティの詳細については、適切なデータプロバイダーまたはサービスプロバイダーのドキュメントを参照してください。  

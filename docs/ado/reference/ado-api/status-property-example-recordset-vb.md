@@ -3,7 +3,7 @@ description: Status プロパティの例 (Recordset) (VB)
 title: Status プロパティの例 (レコードセット) (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: da0a6641ff98848e3cfd2173ecd19711bf41fa4e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0c8e417b86578500529820905beb3b16b0dc3a0f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777311"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988702"
 ---
 # <a name="status-property-example-recordset-vb"></a>Status プロパティの例 (Recordset) (VB)
 この例では、 [Status](./status-property-ado-recordset.md) プロパティを使用して、バッチ更新が行われる前にバッチ操作で変更されたレコードを表示します。  

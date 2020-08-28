@@ -3,7 +3,7 @@ description: Connection オブジェクトのプロパティ、メソッド、�
 title: Connection オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 67113c23a84ceaa3ed261efdd98b643d1408228a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e6650847d3db9d07b7c09d41af7895f604ab105d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775951"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974893"
 ---
 # <a name="connection-object-properties-methods-and-events"></a>Connection オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  

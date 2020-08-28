@@ -3,7 +3,7 @@ description: CellSet オブジェクト (ADO MD)
 title: Cellset オブジェクト (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65e5e28443fd4656aa2b953f18b07c952bcbb66a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 411ed21d5fecf5c9791a5d96aac60724e7446958
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778311"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987153"
 ---
 # <a name="cellset-object-ado-md"></a>CellSet オブジェクト (ADO MD)
 多次元クエリの結果を表します。 これは、キューブまたは他のセルセットから選択されたセルのコレクションです。  
@@ -33,7 +33,6 @@ ms.locfileid: "88778311"
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>解説  
  セルセット内には、現在のセルの概念はありません。 代わりに、 [Item](./item-property-ado-md-cellset.md) プロパティは、セルセットから特定の [セル](./cell-object-ado-md.md) オブジェクトを取得します。 **項目**プロパティの引数によって、取得するセルが決まります。 セルの一意の序数値を指定できます。 セルは、セルセットの各軸に沿った位置番号を使用して取得することもできます。 セルの取得の詳細については、 [Item](./item-property-ado-md-cellset.md) プロパティを参照してください。  
   
  **Cellset**オブジェクトのコレクション、メソッド、およびプロパティを使用して、次の操作を実行できます。  

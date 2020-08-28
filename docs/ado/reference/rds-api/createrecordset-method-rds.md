@@ -3,7 +3,7 @@ description: CreateRecordset メソッド (RDS)
 title: CreateRecordset メソッド (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 872b8d44a371e8cdce6c25b571d229bb60f0039f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a459ddea3716bb918ed18a49d632e20a9e4557fd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768621"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982523"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset メソッド (RDS)
 空の非接続 [レコードセット](../ado-api/recordset-object-ado.md)を作成します。  
@@ -49,7 +49,7 @@ object.CreateRecordset(ColumnInfos)
   
 |属性|説明|  
 |---------------|-----------------|  
-|名前|列ヘッダーの名前。|  
+|Name|列ヘッダーの名前。|  
 |Type|データ型の整数。|  
 |サイズ|データ型に関係なく、文字単位の幅の整数。|  
 |NULL 値の許容|ブール値。|  

@@ -1,7 +1,7 @@
 ---
 description: Reset メソッド (RDS)
 title: Reset メソッド (RDS) |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c28555be7737129553c01ca4fd863505e2090b0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: fb8d10d857e164832b852a78a4f8b2082b304990
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767541"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981313"
 ---
 # <a name="reset-method-rds"></a>Reset メソッド (RDS)
 指定された並べ替えとフィルターのプロパティに基づいて、クライアント側の **レコードセット** に対して並べ替えまたはフィルター処理を実行します。  
@@ -39,7 +39,7 @@ DataControl.Reset(value)
  RDS を表すオブジェクト変数です [。DataControl](./datacontrol-object-rds.md) オブジェクト。  
   
  *value*  
- 任意。 現在の "フィルター処理された" 行セットをフィルター処理する場合は**True** (**既定値)** です。 **False** は、前のフィルターオプションを削除して、元の行セットに対してフィルター処理を行うことを示します。  
+ 省略可能。 現在の "フィルター処理された" 行セットをフィルター処理する場合は**True** (**既定値)** です。 **False** は、前のフィルターオプションを削除して、元の行セットに対してフィルター処理を行うことを示します。  
   
 ## <a name="remarks"></a>解説  
  [Sortcolumn](./sortcolumn-property-rds.md)、 [sortcolumn](./sortdirection-property-rds.md)、 [filtervalue](./filtervalue-property-rds.md)、 [filterfilter、](./filtercriterion-property-rds.md)および[filtervalue](./filtercolumn-property-rds.md)プロパティは、クライアント側キャッシュでの並べ替えとフィルター処理の機能を提供します。 並べ替え機能は、1つの列の値でレコードを並べ替えます。 フィルター機能では、検索条件に基づいてレコードのサブセットが表示されますが、完全な [レコードセット](../ado-api/recordset-object-ado.md) はキャッシュ内に保持されます。 **Reset**メソッドは、条件を実行し、現在の**レコードセット**を更新可能な**レコードセット**に置き換えます。  

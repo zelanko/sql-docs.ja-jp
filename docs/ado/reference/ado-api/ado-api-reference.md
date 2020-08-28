@@ -3,7 +3,7 @@ description: ADO の API リファレンス
 title: ADO API リファレンス |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 521d22dc7b61e6f7b807a959af567655f39e61be
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 12bc8aa9075ad92d7ee9fe84a62b735b29fa0ee3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760193"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976683"
 ---
 # <a name="ado-api-reference"></a>ADO の API リファレンス
 ADO ドキュメントのこのセクションには、各 ADO オブジェクト、コレクション、プロパティ、動的プロパティ、メソッド、イベント、および列挙に関するトピックが含まれています。 また、Microsoft Visual C++ および Windows Foundation Classes (WFC) で使用される ADO 構文インデックスの一覧も含まれています。  
@@ -45,7 +45,7 @@ ADO ドキュメントのこのセクションには、各 ADO オブジェク�
   
 -   [ADO のコード例](./ado-code-examples.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [付録 D: ADO のサンプル](../../guide/appendixes/appendix-d-ado-samples.md)   
  [Microsoft ActiveX データオブジェクト (ADO)](../../microsoft-activex-data-objects-ado.md)   
  [付録 C: ADO を使用したプログラミング](../../guide/appendixes/appendix-c-programming-with-ado.md)   

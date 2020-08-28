@@ -3,7 +3,7 @@ description: Append メソッド (ADO)
 title: Append メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87c4c1b9842dbd104a69ff4ba6a90eae2d7b1369
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 84969b95751726579bdc7d4a61aee311b95b6108
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776511"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976083"
 ---
 # <a name="append-method-ado"></a>Append メソッド (ADO)
 オブジェクトをコレクションに追加します。 コレクションが [フィールド](./fields-collection-ado.md)の場合は、コレクションに追加する前に新しい [Field](./field-object.md) オブジェクトを作成できます。  
@@ -47,19 +47,19 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *名前*  
  新しい**フィールド**オブジェクトの名前を含む**文字列**値。*フィールド*内の他のオブジェクトと同じ名前にすることはできません。  
   
- *種類*  
+ *Type*  
  新しいフィールドのデータ型を指定する [DataTypeEnum](./datatypeenum.md) 値 (既定値は **adEmpty**)。 次のデータ型は ADO ではサポートされていません。また、[レコードセットオブジェクト (ADO)](./recordset-object-ado.md)に新しいフィールドを追加するときには使用しないでください。この**ようなデータ**型は、実行**ディスパッチ**、指定されていない、 **advariant**です。  
   
  *DefinedSize*  
- 任意。 新しいフィールドの定義されたサイズ (文字数またはバイト数) を表す **Long 型** の値。 このパラメーターの既定値は、 *型*から派生します。 255 *バイトを超える値が* 設定されているフィールドは、可変長列として扱われます。 既定値は、 *指定されてい* ません。  
+ 省略可能。 新しいフィールドの定義されたサイズ (文字数またはバイト数) を表す **Long 型** の値。 このパラメーターの既定値は、 *型*から派生します。 255 *バイトを超える値が* 設定されているフィールドは、可変長列として扱われます。 既定値は、 *指定されてい* ません。  
   
  *Attrib*  
- 任意。 新しいフィールドの属性を指定する [FieldAttributeEnum](./fieldattributeenum.md) 値 (既定値は **Adflddefault**)。 この値が指定されていない場合、フィールドには *型*から派生した属性が格納されます。  
+ 省略可能。 新しいフィールドの属性を指定する [FieldAttributeEnum](./fieldattributeenum.md) 値 (既定値は **Adflddefault**)。 この値が指定されていない場合、フィールドには *型*から派生した属性が格納されます。  
   
  *FieldValue*  
- 任意。 新しいフィールドの値を表す **バリアント** 。 指定しない場合、フィールドには null 値が付加されます。  
+ 省略可能。 新しいフィールドの値を表す **バリアント** 。 指定しない場合、フィールドには null 値が付加されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="parameters-collection"></a>Parameters コレクション  
  [Parameters](./parameters-collection-ado.md)コレクションに追加する前に、 [Parameter](./parameter-object.md)オブジェクトの[Type](./type-property-ado.md)プロパティを設定する必要があります。 可変長データ型を選択する場合は、 [Size](./size-property-ado-parameter.md) プロパティも0より大きい値に設定する必要があります。  
