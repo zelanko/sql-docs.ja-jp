@@ -3,7 +3,7 @@ description: Status プロパティの例 (VC++)
 title: Status プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a060f6fb7ac635368e92651d2e286d68c0f299eb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8d7d1c5cf75df09caeb78e8e643c538e19310e97
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777281"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988673"
 ---
 # <a name="status-property-example-vc"></a>Status プロパティの例 (VC++)
 この例では、 [Status](./status-property-ado-recordset.md) プロパティを使用して、バッチ更新が行われる前にバッチ操作で変更されたレコードを表示します。  

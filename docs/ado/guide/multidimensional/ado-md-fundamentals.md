@@ -3,7 +3,7 @@ description: ADO MD の基礎
 title: ADO MD の基礎 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb14a1b97ba6670b2170021bc354890b41fa01ca
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: b8f213968a55d32cb306891362d6bad9f2fd12cf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758792"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978663"
 ---
 # <a name="ado-md-fundamentals"></a>ADO MD の基礎
 Microsoft® ActiveX®データオブジェクト (多次元) (ADO MD) を使用すると、Microsoft Visual Basic®、Microsoft Visual C++®などの言語から多次元データに簡単にアクセスできます。 ADO MD により、Microsoft ActiveX® Data Objects (ADO) が拡張され、 [CubeDef](../../reference/ado-md-api/cubedef-object-ado-md.md) オブジェクトや [Cellset](../../reference/ado-md-api/cellset-object-ado-md.md) オブジェクトなどの多次元データに固有のオブジェクトが含まれるようになります。 ADO MD を使用すると、多次元スキーマの参照、キューブのクエリ、および結果の取得を行うことができます。  
@@ -37,7 +37,7 @@ Microsoft® ActiveX®データオブジェクト (多次元) (ADO MD) を使用�
   
 -   [ADO MD を使用したプログラミング](./programming-with-ado-md.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ADO MD オブジェクトモデル](../../reference/ado-md-api/ado-md-object-model.md)   
  [ADO プログラマーズガイド](../ado-programmer-s-guide.md)   
  [データ定義言語およびセキュリティ用の ADO 拡張機能 (ADOX)](../extensions/ado-extensions-for-data-definition-language-and-security-adox.md)   

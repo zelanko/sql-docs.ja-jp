@@ -3,7 +3,7 @@ description: '付録 C: 開発環境での ADO を使用したプログラミン
 title: '付録 C: ADO を使用したプログラミング |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43763af1f0a4e48adfd41c0e6d42bf3cbb4f5879
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 63240be1e7e0b9c439f39ee93f09552d4d708caa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806667"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991153"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>付録 C: 開発環境での ADO を使用したプログラミング
 ADO は、Microsoft Visual Basic、VBScript、JScript、Visual C++ など、多くのプログラミング言語で使用できる COM オートメーションインターフェイスコンポーネントです。 ADO のバージョンは、これらの各ツールと、Microsoft Office や Microsoft SQL Server などの他のアプリケーションと共にインストールされます。

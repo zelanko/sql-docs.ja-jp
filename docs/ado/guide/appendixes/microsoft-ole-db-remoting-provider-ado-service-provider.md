@@ -3,7 +3,7 @@ description: Microsoft OLE DB リモート処理プロバイダー (ADO サー�
 title: Microsoft OLE DB リモート処理プロバイダー (ADO サービスプロバイダー) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e8520dc35b7a6d913736637cabaf34a2bd60651
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 860d151bb0071db6086629c8893795cadd47b821
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806538"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990993"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB リモート処理プロバイダーの概要
 Microsoft OLE DB リモート処理プロバイダーを使用すると、クライアントコンピューターのローカルユーザーは、リモートコンピューター上のデータプロバイダーを呼び出すことができます。 リモートコンピューターのローカルユーザーの場合と同様に、リモートコンピューターのデータプロバイダーパラメーターを指定します。 次に、リモートコンピューターにアクセスするためにリモート処理プロバイダーによって使用されるパラメーターを指定します。 これにより、ローカルユーザーと同じようにリモートコンピューターにアクセスできます。
@@ -70,7 +70,7 @@ Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
  ADO 2.0 では、OLE DB リモート処理プロバイダーは、 [Recordset](../../reference/ado-api/recordset-object-ado.md)オブジェクト**Open**メソッドの*ActiveConnection*パラメーターでのみ指定できました。 ADO 2.1 以降では、[接続](../../reference/ado-api/connection-object-ado.md)オブジェクト**Open**メソッドの*ConnectionString*パラメーターでプロバイダーを指定することもできます。
 
  RDS に相当する **。DataControl** Object [SQL](../../reference/rds-api/sql-property.md) プロパティは使用できません。 代わりに、 [レコードセット](../../reference/ado-api/recordset-object-ado.md) オブジェクト **Open** method *Source* 引数が使用されます。

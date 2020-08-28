@@ -3,7 +3,7 @@ description: Open メソッド (ADO Stream)
 title: Open メソッド (ADO Stream) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 333d20ee58123e9f1120e22d1770bd2a74ad97ae
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ef760da2bad97cec017c7a58735200be1a14f85d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773781"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990323"
 ---
 # <a name="open-method-ado-stream"></a>Open メソッド (ADO Stream)
 [ストリーム](./stream-object-ado.md)オブジェクトを開き、バイナリデータまたはテキストデータのストリームを操作します。  
@@ -36,19 +36,19 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
   
 #### <a name="parameters"></a>パラメーター  
  *ソース*  
- 任意。 **ストリーム**のデータソースを指定する**バリアント**値。 *ソース* には、電子メールやファイルシステムなど、よく知られているツリー構造内の既存のノードを指す絶対 URL 文字列を含めることができます。 Url は、url キーワード ("url =*scheme*://*server* / *フォルダー*") を使用して指定する必要があります。 または、 *ソース* に既に開いている [レコード](./record-object-ado.md) オブジェクトへの参照が含まれている場合もあります。これにより、 **レコード**に関連付けられている既定のストリームが開きます。 *Source*が指定されていない場合、既定では、基になるソースが関連付けられていない**ストリーム**がインスタンス化され、開かれます。 URL スキームとそれに関連付けられているプロバイダーの詳細については、「 [絶対 url と相対 url](../../guide/data/absolute-and-relative-urls.md)」を参照してください。  
+ 省略可能。 **ストリーム**のデータソースを指定する**バリアント**値。 *ソース* には、電子メールやファイルシステムなど、よく知られているツリー構造内の既存のノードを指す絶対 URL 文字列を含めることができます。 Url は、url キーワード ("url =*scheme*://*server* / *フォルダー*") を使用して指定する必要があります。 または、 *ソース* に既に開いている [レコード](./record-object-ado.md) オブジェクトへの参照が含まれている場合もあります。これにより、 **レコード**に関連付けられている既定のストリームが開きます。 *Source*が指定されていない場合、既定では、基になるソースが関連付けられていない**ストリーム**がインスタンス化され、開かれます。 URL スキームとそれに関連付けられているプロバイダーの詳細については、「 [絶対 url と相対 url](../../guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
  *モード*  
- 任意。 結果の**ストリーム**のアクセスモード (たとえば、読み取り/書き込みまたは読み取り専用) を指定する[connectmodeenum](./connectmodeenum.md)値。 既定値は **Admodeunknown**です。 アクセスモードの詳細については、 [Mode](./mode-property-ado.md) プロパティを参照してください。 *Mode*が指定されていない場合は、ソースオブジェクトによって継承されます。 たとえば、ソース **レコード** が読み取り専用モードで開かれている場合、 **ストリーム** も既定で読み取り専用モードで開かれます。  
+ 省略可能。 結果の**ストリーム**のアクセスモード (たとえば、読み取り/書き込みまたは読み取り専用) を指定する[connectmodeenum](./connectmodeenum.md)値。 既定値は **Admodeunknown**です。 アクセスモードの詳細については、 [Mode](./mode-property-ado.md) プロパティを参照してください。 *Mode*が指定されていない場合は、ソースオブジェクトによって継承されます。 たとえば、ソース **レコード** が読み取り専用モードで開かれている場合、 **ストリーム** も既定で読み取り専用モードで開かれます。  
   
  *OpenOptions*  
- 任意。 [Streamopenoptionsenum](./streamopenoptionsenum.md)値。 既定値は **Adopenstreamunspecified**です。  
+ 省略可能。 [Streamopenoptionsenum](./streamopenoptionsenum.md)値。 既定値は **Adopenstreamunspecified**です。  
   
  *UserName*  
- 任意。 必要に応じて**ストリーム**オブジェクトにアクセスするユーザー id を表す**文字列**値です。  
+ 省略可能。 必要に応じて**ストリーム**オブジェクトにアクセスするユーザー id を表す**文字列**値です。  
   
  *パスワード*  
- 任意。 必要に応じて**ストリーム**オブジェクトにアクセスするパスワードを含む**文字列**値です。  
+ 省略可能。 必要に応じて**ストリーム**オブジェクトにアクセスするパスワードを含む**文字列**値です。  
   
 ## <a name="remarks"></a>解説  
  **Record**オブジェクトが source パラメーターとして渡された場合、**レコード**オブジェクトへのアクセスは既に使用可能であるため、 *UserID*パラメーターと*Password*パラメーターは使用されません。 同様に、 **record**オブジェクトの[モード](./mode-property-ado.md)が**ストリーム**オブジェクトに転送されます。 *Source*が指定されていない場合、開いている**ストリーム**にはデータが含まれず、[サイズ](./size-property-ado-stream.md)はゼロ (0) になります。 **ストリーム**が閉じられ**たときにストリームに**書き込まれるデータが失われないようにするには、 [CopyTo](./copyto-method-ado.md)メソッドまたは[SaveToFile](./savetofile-method.md)メソッドを使用して**ストリーム**を保存するか、別のメモリ位置に保存します。  

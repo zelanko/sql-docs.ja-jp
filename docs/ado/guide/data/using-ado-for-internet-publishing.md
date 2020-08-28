@@ -3,7 +3,7 @@ description: インターネットへの発行に ADO を使用する
 title: インターネット発行に ADO を使用する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f08edfbd56b900759c004cbf0fca8a634ab1010
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 774ff9b0728d362822c72047b573ab9def944d18
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452604"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979037"
 ---
 # <a name="using-ado-for-internet-publishing"></a>インターネットへの発行に ADO を使用する
 [インターネット発行用の OLE DB プロバイダーは、](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) ADO を使用して異種データにアクセスする具体的な例を示しています。 このセクションの例は、インターネット公開プロバイダーの使用に固有のものですが、他のプロバイダーで ADO を電子メールストアのプロバイダーなどの異種データに対して使用する場合は、このような原則が似ています。  

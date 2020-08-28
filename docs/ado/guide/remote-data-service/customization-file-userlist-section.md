@@ -3,7 +3,7 @@ description: カスタマイズ ファイルの UserList セクション
 title: カスタマイズファイル UserList Section |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14308aeda28311b73dc34a323a9a9bf662770e8b
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 38eb55c77f98711910e303bf6f511df26f7cecf7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759816"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978213"
 ---
 # <a name="customization-file-userlist-section"></a>カスタマイズ ファイルの UserList セクション
 **Userlist**セクションは、同じセクション*識別子*パラメーターを持つ**connect**セクションに関連しています。  
@@ -40,7 +40,7 @@ ms.locfileid: "88759816"
 |*userName*|この接続を採用している *ユーザーのユーザー名* 。 有効なユーザー名は、[IIS **Service Manager** ] ダイアログで確立されます。|  
 |**_accessRights_**|次のいずれかのアクセス権。<br /><br /> -   **NoAccess** -ユーザーはデータソースにアクセスできません。<br />-   **ReadOnly** -ユーザーはデータソースを読み取ることができます。<br />-   **ReadWrite** -ユーザーは、データソースに対して読み取りまたは書き込みを行うことができます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カスタマイズファイルの接続セクション](./customization-file-connect-section.md)   
  [カスタマイズファイルログセクション](./customization-file-logs-section.md)   
  [カスタマイズファイル SQL セクション](./customization-file-sql-section.md)   

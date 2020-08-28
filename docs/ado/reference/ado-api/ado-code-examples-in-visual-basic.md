@@ -3,7 +3,7 @@ description: Visual Basic での ADO のコード例
 title: Visual Basic | の ADO コード例Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 614ecee91aadd5ee81d9aa8032f75884ceec9b5d
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 4d369d45657c189d8f6d6439cbbf3cbfa6fc4586
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760162"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976633"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Visual Basic での ADO のコード例
 次のコード例を使用して、Visual Basic に書き込むときに ADO のメソッド、プロパティ、およびイベントを使用する方法を学習します。  
@@ -90,7 +90,7 @@ ms.locfileid: "88760162"
   
 -   [UpdateBatch および CancelBatch メソッドの例](./updatebatch-and-cancelbatch-methods-example-vb.md)  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 -   [AbsolutePage、PageCount、および PageSize プロパティの例](./absolutepage-pagecount-and-pagesize-properties-example-vb.md)  
   
@@ -156,7 +156,7 @@ ms.locfileid: "88760162"
   
 -   [Version プロパティの例](./version-property-example-vb.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ADO コード例 VBScript](./ado-code-examples-vbscript.md)   
  [Visual C++ の ADO コード例](./ado-code-examples-in-visual-c.md)   
  [付録 D: ADO のサンプル](../../guide/appendixes/appendix-d-ado-samples.md)

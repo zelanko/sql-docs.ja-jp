@@ -3,7 +3,7 @@ description: Source プロパティの例 (VB)
 title: Source プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1771eb7d0c6ed2609b5dea506e71aa4180e2370
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b39c80d1cb61a4b99d6d909dae47b4a922af834e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777391"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988883"
 ---
 # <a name="source-property-example-vb"></a>Source プロパティの例 (VB)
 この例では、さまざまなデータソースに基づいて3つの[レコードセット](./recordset-object-ado.md)オブジェクトを開くことによって、 [Source](./source-property-ado-recordset.md)プロパティを示します。  

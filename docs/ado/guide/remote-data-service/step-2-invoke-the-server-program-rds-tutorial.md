@@ -3,7 +3,7 @@ description: 手順 2:サーバー プログラムを呼び出す (RDS チュー
 title: '手順 2: サーバープログラムを起動する (RDS チュートリアル) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19f16da3e3501a179bfb28529a9b1a14486aad20
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 4771957c1895f6ac861d04f63a43e32a77e3d931
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759152"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977593"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>手順 2:サーバー プログラムを呼び出す (RDS チュートリアル)
 クライアント *プロキシ*でメソッドを呼び出すと、サーバー上の実際のプログラムによってメソッドが実行されます。 この手順では、サーバーでクエリを実行します。  
@@ -64,6 +64,6 @@ Sub RDSTutorial2B()
 ...  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [手順 3: サーバーがレコードセットを取得する (RDS チュートリアル)](./step-3-server-obtains-a-recordset-rds-tutorial.md)   
  [RDS のチュートリアル (VBScript)](./rds-tutorial-vbscript.md)

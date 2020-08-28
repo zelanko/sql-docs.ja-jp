@@ -6,19 +6,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0adcc74321fa5e1d03ea305799ae8aaf654e26e9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0a9f2795906dce8c6a43b66397eefc1679ea22d6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776801"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987663"
 ---
 # <a name="ado-glossary"></a>ADO の用語集
 このトピックでは、ADO に関連する用語を定義します。  
@@ -187,7 +187,7 @@ ms.locfileid: "88776801"
  ISAPI (インターネットサーバーアプリケーションプログラミングインターフェイス)  
  Microsoft®インターネットインフォメーションサービス (IIS) を実行している Windows NT® Server/Windows 2000 サーバーなど、インターネットサーバー用の一連の関数。  
   
- キー  
+ Key  
  行を一意に識別する、テーブル内の1つ以上の列。多くの場合、テーブルのインデックス作成に使用されます。  
   
 ## <a name="m"></a>M  

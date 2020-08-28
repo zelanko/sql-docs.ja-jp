@@ -3,7 +3,7 @@ description: カスタマイズ ファイルの Connect セクション
 title: カスタマイズファイルの接続セクション |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8c712efc368d9b84158697d3b7e6eedfb4224ff
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 19dfe6f81293234d3615d0c3acaae83c50febc1d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759848"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978273"
 ---
 # <a name="customization-file-connect-section"></a>カスタマイズ ファイルの Connect セクション
 ハンドラーの既定の動作では、すべての接続が拒否されます。 **Connect**セクションでは、その動作に対する例外を指定します。 たとえば、すべての **接続** セクションが存在しないか空の場合、既定では接続を確立できませんでした。  
@@ -57,13 +57,13 @@ connectionString
 |パーツ|説明|  
 |----------|-----------------|  
 |**のインスタンスに接続するときには、**|これが接続文字列エントリであることを示すリテラル文字列。|  
-|**_文字列_**|クライアント接続文字列全体を置き換える文字列。|  
+|**_connectionString_**|クライアント接続文字列全体を置き換える文字列。|  
 |**Access (アクセス)**|これがアクセスエントリであることを示すリテラル文字列。|  
 |**_accessRight_**|次のいずれかのアクセス権。<br /><br /> -   **NoAccess** -ユーザーはデータソースにアクセスできません。<br />-   **ReadOnly** -ユーザーはデータソースを読み取ることができます。<br />-   **ReadWrite** -ユーザーは、データソースに対して読み取りまたは書き込みを行うことができます。|  
   
  任意の接続を許可する (実質的に既定のハンドラー動作を無効にする) 場合は、[ **既定の接続** ] セクションのアクセスエントリをに設定 `Access=ReadWrite` し、他の [ **接続** _id_ ] セクションを削除またはコメントアウトします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カスタマイズファイルログセクション](./customization-file-logs-section.md)   
  [カスタマイズファイル SQL セクション](./customization-file-sql-section.md)   
  [カスタマイズファイルの UserList セクション](./customization-file-userlist-section.md)   

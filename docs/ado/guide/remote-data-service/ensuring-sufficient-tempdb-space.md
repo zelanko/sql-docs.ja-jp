@@ -3,7 +3,7 @@ description: 十分な TempDB 領域の確保
 title: 十分な TempDB 領域を確保する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0554bb48a7995e00f0a5c138cc4409ad4d0fd71
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d6b93097b3a21e3858139146b50f15ddc79c6569
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759775"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978133"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>十分な TempDB 領域の確保
 Microsoft SQL Server 6.5 の処理領域を必要とする [レコードセット](../../reference/ado-api/recordset-object-ado.md) オブジェクトの処理中にエラーが発生した場合は、TempDB のサイズを大きくすることが必要になることがあります。 (クエリによっては、一時的な処理領域が必要になる場合があります。たとえば、ORDER BY 句を使用するクエリには、いくつかの一時領域を必要とする **レコードセット**の並べ替えが必要です)。  
@@ -56,5 +56,5 @@ Microsoft SQL Server 6.5 の処理領域を必要とする [レコードセッ�
   
  このトピックの詳細については、Microsoft SQL Server Enterprise Manager のヘルプファイルで [データベースの展開] ダイアログボックスを検索してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RDS の基礎](./rds-fundamentals.md)

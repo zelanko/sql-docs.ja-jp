@@ -3,7 +3,7 @@ description: カーソルの種類 (ADO)
 title: カーソルの種類 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea996827565f0cc6d593078e7772c336699260bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: adeaef5251ef5e9ebbc1e6b792f2647d3fcea250
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452714"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979313"
 ---
 # <a name="types-of-cursors-ado"></a>カーソルの種類 (ADO)
 一般的な規則として、アプリケーションでは、必要なデータアクセスを提供する最も単純なカーソルを使用する必要があります。 基本を超える各カーソル特性 (順方向専用、読み取り専用、静的、スクロール、バッファーなし) には、クライアントメモリ、ネットワーク負荷、またはパフォーマンスの価格があります。 多くの場合、既定のカーソルオプションでは、アプリケーションで実際に必要とされるよりも複雑なカーソルが生成されます。  

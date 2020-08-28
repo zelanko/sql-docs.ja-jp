@@ -3,7 +3,7 @@ description: カスタマイズ ファイルの SQL セクション
 title: カスタマイズファイル SQL Section |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7be4aaa2a92de4f778ee69422b97ceb169411c10
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 210363a1a852aa3c059c7929af1c07a9fe32c6ae
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759826"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978233"
 ---
 # <a name="customization-file-sql-section"></a>カスタマイズ ファイルの SQL セクション
 **Sql**セクションには、クライアントのコマンド文字列を置き換える新しい sql 文字列を含めることができます。 セクションに SQL 文字列がない場合、セクションは無視されます。  
@@ -51,7 +51,7 @@ SQL = " "
 |**SQL**|これが SQL セクションエントリであることを示すリテラル文字列。|  
 |***sqlString***|クライアント文字列を置き換える SQL 文字列。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カスタマイズファイルの接続セクション](./customization-file-connect-section.md)   
  [カスタマイズファイルログセクション](./customization-file-logs-section.md)   
  [カスタマイズファイルの UserList セクション](./customization-file-userlist-section.md)   

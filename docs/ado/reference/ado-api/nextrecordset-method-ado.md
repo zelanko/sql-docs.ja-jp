@@ -3,7 +3,7 @@ description: NextRecordset メソッド (ADO)
 title: NextRecordset メソッド (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 018de245b6d809b094a88d3a1f455bce0166a466
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b73779dbca82df1d672a57aae667bc5a666a4945
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774051"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990463"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset メソッド (ADO)
 一連のコマンドを進めて、現在の [レコードセット](./recordset-object-ado.md) オブジェクトをクリアし、次の **レコードセット** を返します。  
@@ -40,7 +40,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
 #### <a name="parameters"></a>パラメーター  
  *RecordsAffected*  
- 任意。 プロバイダーが、現在の操作によって影響を受けたレコードの数を返す **Long 型** の変数。  
+ 省略可能。 プロバイダーが、現在の操作によって影響を受けたレコードの数を返す **Long 型** の変数。  
   
 > [!NOTE]
 >  このパラメーターは、操作によって影響を受けたレコードの数のみを返します。レコード **セット**の生成に使用される select ステートメントからは、レコードの数は返されません。  

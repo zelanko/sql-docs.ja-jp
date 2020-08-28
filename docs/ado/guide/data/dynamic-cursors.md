@@ -3,7 +3,7 @@ description: 動的カーソル
 title: 動的カーソル |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f646a608c8cbc25e16c5200f8271c133a62d3457
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: e8ce85233cec96af3d804652225b4d14698287db
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806154"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991353"
 ---
 # <a name="dynamic-cursors"></a>動的カーソル
 動的カーソルは、結果セット内の行に対して行われたすべての変更を検出します。変更がカーソルの内部から行われるか、カーソル外の他のユーザーによって行われるかは関係ありません。 すべてのユーザーによって行われたすべての insert、update、および delete ステートメントは、カーソルを通じて表示されます。 動的カーソルは、カーソルを開いた後に、結果セットの行、順序、および値に対して行われたすべての変更を検出できます。 カーソルの外部で行われた更新は、コミットされるまで表示されません (カーソルトランザクション分離レベルが "未コミット" に設定されている場合を除く)。  

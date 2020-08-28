@@ -3,7 +3,7 @@ description: Optimize プロパティの例 (VB)
 title: Optimize プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ee1d8d211c0ceeed02408f559c63b5942aafe05
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: eeb075e3ad722fa7d449833a6be9b1acaa481eab
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773631"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990273"
 ---
 # <a name="optimize-property-example-vb"></a>Optimize プロパティの例 (VB)
 この例では、 [フィールド](./field-object.md) オブジェクトの動的 **Optimize** プロパティを示します。 ***Pubs***データベースの Authors テーブルの***zip***フィールドにはインデックスが***作成***されません。 ***Zip***フィールドの[Optimize](./optimize-property-dynamic-ado.md)プロパティを**True**に設定すると、ADO によって、 [Find](./find-method-ado.md)メソッドのパフォーマンスを向上させるインデックスが作成されます。  

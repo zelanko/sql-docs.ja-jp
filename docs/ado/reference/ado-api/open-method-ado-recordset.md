@@ -3,7 +3,7 @@ description: Open メソッド (ADO Recordset)
 title: Open メソッド (ADO Recordset) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fdece8acce83c9e87a84dbeffe7ebc486287fcc
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 879456c30c3b34773d6f6b1395a88e04f5faaf9e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773771"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990313"
 ---
 # <a name="open-method-ado-recordset"></a>Open メソッド (ADO Recordset)
 [レコードセット](./recordset-object-ado.md)オブジェクトのカーソルを開きます。  
@@ -36,19 +36,19 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>パラメーター  
  *ソース*  
- 任意。 有効な[コマンド](./command-object-ado.md)オブジェクト、SQL ステートメント、テーブル名、ストアドプロシージャ呼び出し、URL、または永続的に格納された[レコードセット](./recordset-object-ado.md)を含むファイルまたは[ストリーム](./stream-object-ado.md)オブジェクトの名前に評価される**バリアント**。  
+ 省略可能。 有効な[コマンド](./command-object-ado.md)オブジェクト、SQL ステートメント、テーブル名、ストアドプロシージャ呼び出し、URL、または永続的に格納された[レコードセット](./recordset-object-ado.md)を含むファイルまたは[ストリーム](./stream-object-ado.md)オブジェクトの名前に評価される**バリアント**。  
   
  *ActiveConnection*  
- 任意。 有効な[接続](./connection-object-ado.md)オブジェクト変数名に評価される**Variant** 、または[ConnectionString](./connectionstring-property-ado.md)パラメーターを含む**文字列**。  
+ 省略可能。 有効な[接続](./connection-object-ado.md)オブジェクト変数名に評価される**Variant** 、または[ConnectionString](./connectionstring-property-ado.md)パラメーターを含む**文字列**。  
   
  *CursorType*  
- 任意。 **レコードセット**を開くときにプロバイダーが使用する必要があるカーソルの種類を決定する[cursor typeenum](./cursortypeenum.md)値。 既定値は **adOpenForwardOnly**です。  
+ 省略可能。 **レコードセット**を開くときにプロバイダーが使用する必要があるカーソルの種類を決定する[cursor typeenum](./cursortypeenum.md)値。 既定値は **adOpenForwardOnly**です。  
   
  *LockType*  
- 任意。 **レコードセット**を開くときにプロバイダーが使用するロックの種類 (同時実行) を決定する[locktypeenum](./locktypeenum.md)値。 既定値は **Adlockreadonly**です。  
+ 省略可能。 **レコードセット**を開くときにプロバイダーが使用するロックの種類 (同時実行) を決定する[locktypeenum](./locktypeenum.md)値。 既定値は **Adlockreadonly**です。  
   
  *Options*  
- 任意。 プロバイダーが**Command**オブジェクト以外の値を表す場合に*ソース*引数を評価する方法、または**レコードセット**を以前に保存したファイルから復元する必要があるかどうかを示す**Long**値。 1つ以上の [Commandtypeenum](./commandtypeenum.md) 値または [executeoptionenum](./executeoptionenum.md) 値を指定できます。この値は、ビットごとの or 演算子と組み合わせることができます。  
+ 省略可能。 プロバイダーが**Command**オブジェクト以外の値を表す場合に*ソース*引数を評価する方法、または**レコードセット**を以前に保存したファイルから復元する必要があるかどうかを示す**Long**値。 1つ以上の [Commandtypeenum](./commandtypeenum.md) 値または [executeoptionenum](./executeoptionenum.md) 値を指定できます。この値は、ビットごとの or 演算子と組み合わせることができます。  
   
 > [!NOTE]
 >  永続化された**レコードセット**を含む**ストリーム**から**レコードセット**を開いた場合、 [executeoptionenum](./executeoptionenum.md)値**adasyncfetchunusing**を使用しても効果はありません。フェッチは同期およびブロックされます。  
