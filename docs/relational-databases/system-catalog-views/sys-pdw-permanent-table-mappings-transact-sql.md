@@ -11,20 +11,20 @@ dev_langs:
 author: mstehrani
 ms.author: emtehran
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 12261e8e38e75edf7dd596ca2b3499100cfff5ad
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: c48cb981549d47b24152772cef9278de6557612f
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646842"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062261"
 ---
 # <a name="syspdw_permanent_table_mappings-transact-sql"></a>pdw_permanent_table_mappings (Transact-sql)
 [!INCLUDE [applies-to-version/asa](../../includes/applies-to-version/asa.md)]
 
-  **Object_id**によって、永続的なユーザーテーブルを内部オブジェクト名に結び付けます。 **Pdw_table_mappings**よりも優れたパフォーマンスを得られるようにすることをお勧めします。  
+  **Object_id**によって、永続的なユーザーテーブルを内部オブジェクト名に結び付けます。  
   
 > [!NOTE]
-> **pdw_permanent_table_mappings** は、永続的なテーブルへのマッピングを保持します。一時テーブルマッピングは含まれません。
+> **pdw_permanent_table_mappings** は、永続的なテーブルへのマッピングを保持し、一時テーブルまたは外部テーブルマッピングを含みません。
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

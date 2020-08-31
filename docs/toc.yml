@@ -61,19 +61,19 @@
             - name: azdata をインストールする
               items:
                 - name: インストール
-                  href: big-data-cluster/deploy-install-azdata.md
+                  href: azdata/install/deploy-install-azdata.md
                 - name: macOS
-                  href: big-data-cluster/deploy-install-azdata-macos.md
+                  href: azdata/install/deploy-install-azdata-macos.md
                 - name: Windows
-                  href: big-data-cluster/deploy-install-azdata-installer.md
+                  href: azdata/install/deploy-install-azdata-installer.md
                 - name: Linux (apt を使用)
-                  href: big-data-cluster/deploy-install-azdata-linux-package.md
+                  href: azdata/install/deploy-install-azdata-linux-package.md
                 - name: Linux (yum を使用)
-                  href: big-data-cluster/deploy-install-azdata-yum.md
+                  href: azdata/install/deploy-install-azdata-yum.md
                 - name: Linux (zypper を使用)
-                  href: big-data-cluster/deploy-install-azdata-zypper.md
+                  href: azdata/install/deploy-install-azdata-zypper.md
                 - name: pip を使う
-                  href: big-data-cluster/deploy-install-azdata-pip.md
+                  href: azdata/install/deploy-install-azdata-pip.md
         - name: 配置
           items:
             - name: 展開のガイダンス
@@ -381,59 +381,59 @@
             - name: azdata
               items:
                 - name: azdata
-                  href: big-data-cluster/reference-azdata.md
+                  href: azdata/reference/reference-azdata.md
                 - name: ノートブック
-                  href: big-data-cluster/reference-azdata-notebook.md
+                  href: azdata/reference/reference-azdata-notebook.md
                 - name: sql
-                  href: big-data-cluster/reference-azdata-sql.md
+                  href: azdata/reference/reference-azdata-sql.md
             - name: アプリ配置
               items:
                 - name: app
-                  href: big-data-cluster/reference-azdata-app.md
+                  href: azdata/reference/reference-azdata-app.md
                 - name: アプリ テンプレート
-                  href: big-data-cluster/reference-azdata-app-template.md
+                  href: azdata/reference/reference-azdata-app-template.md
             - name: クラスター
               items:
                 - name: bdc
-                  href: big-data-cluster/reference-azdata-bdc.md
+                  href: azdata/reference/reference-azdata-bdc.md
                 - name: bdc app
-                  href: big-data-cluster/reference-azdata-bdc-app.md
+                  href: azdata/reference/reference-azdata-bdc-app.md
                 - name: bdc app status
-                  href: big-data-cluster/reference-azdata-bdc-app-status.md
+                  href: azdata/reference/reference-azdata-bdc-app-status.md
                 - name: bdc の構成
-                  href: big-data-cluster/reference-azdata-bdc-config.md
+                  href: azdata/reference/reference-azdata-bdc-config.md
                 - name: bdc コントロール
-                  href: big-data-cluster/reference-azdata-bdc-control.md
+                  href: azdata/reference/reference-azdata-bdc-control.md
                 - name: bdc コントロールの状態
-                  href: big-data-cluster/reference-azdata-bdc-control-status.md
+                  href: azdata/reference/reference-azdata-bdc-control-status.md
                 - name: bdc のデバッグ
-                  href: big-data-cluster/reference-azdata-bdc-debug.md
+                  href: azdata/reference/reference-azdata-bdc-debug.md
                 - name: bdc エンドポイント
-                  href: big-data-cluster/reference-azdata-bdc-endpoint.md
+                  href: azdata/reference/reference-azdata-bdc-endpoint.md
                 - name: bdc gateway
-                  href: big-data-cluster/reference-azdata-bdc-gateway.md
+                  href: azdata/reference/reference-azdata-bdc-gateway.md
                 - name: bdc gateway status
-                  href: big-data-cluster/reference-azdata-bdc-gateway-status.md
+                  href: azdata/reference/reference-azdata-bdc-gateway-status.md
                 - name: bdc hdfs
-                  href: big-data-cluster/reference-azdata-bdc-hdfs.md
+                  href: azdata/reference/reference-azdata-bdc-hdfs.md
                 - name: bdc hdfs のマウント
-                  href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
+                  href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
                 - name: bdc hdfs status
-                  href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
+                  href: azdata/reference/reference-azdata-bdc-hdfs-status.md
                 - name: bdc spark
-                  href: big-data-cluster/reference-azdata-bdc-spark.md
+                  href: azdata/reference/reference-azdata-bdc-spark.md
                 - name: bdc spark バッチ
-                  href: big-data-cluster/reference-azdata-bdc-spark-batch.md
+                  href: azdata/reference/reference-azdata-bdc-spark-batch.md
                 - name: bdc spark セッション
-                  href: big-data-cluster/reference-azdata-bdc-spark-session.md
+                  href: azdata/reference/reference-azdata-bdc-spark-session.md
                 - name: bdc spark ステートメント
-                  href: big-data-cluster/reference-azdata-bdc-spark-statement.md
+                  href: azdata/reference/reference-azdata-bdc-spark-statement.md
                 - name: bdc spark status
-                  href: big-data-cluster/reference-azdata-bdc-spark-status.md
+                  href: azdata/reference/reference-azdata-bdc-spark-status.md
                 - name: bdc sql
-                  href: big-data-cluster/reference-azdata-bdc-sql.md
+                  href: azdata/reference/reference-azdata-bdc-sql.md
                 - name: bdc の状態
-                  href: big-data-cluster/reference-azdata-bdc-status.md
+                  href: azdata/reference/reference-azdata-bdc-status.md
 - name: ビジネス継続性
   items:
     - name: 概要
