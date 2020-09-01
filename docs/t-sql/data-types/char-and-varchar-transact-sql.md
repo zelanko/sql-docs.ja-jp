@@ -25,12 +25,12 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc348a82811998366494fd2f9464209f44d12204
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dd9c5fc213462de6c1d4f7ddae0b3948957ffa0e
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422926"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042545"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char および varchar (Transact-SQL)
 
@@ -177,11 +177,18 @@ String                                       TruncatedValue
 
 ## <a name="see-also"></a>関連項目
 
-[nchar および nvarchar (Transact-SQL)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)
-[CAST および CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)
-[COLLATE (Transact-SQL)](../../t-sql/statements/collations.md)
-[データ型の変換 (データベース エンジン)](../../t-sql/data-types/data-type-conversion-database-engine.md)
-[データ型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+[nchar および nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)
+
+[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+
+[COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md)
+
+[データ型の変換&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)
+
+[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
+
 [データベース サイズの見積もり](../../relational-databases/databases/estimate-the-size-of-a-database.md)
+
 [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)
+
 [1 バイト文字セットとマルチバイト文字セット](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)

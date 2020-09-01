@@ -18,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 2f91b160ed5fc6dbab1c9d7ec225b479dc6b82d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dcfdfec2bb179d6182df1306ffc5b46dbd86bf59
+ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445668"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88942315"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -231,7 +231,7 @@ OPENJSON 関数によって返される列は、WITH オプションによって
         |------------------------------|--------------------|  
         |0|null|  
         |1|string|  
-        |2|INT|  
+        |2|number|  
         |3|true/false|  
         |4|array|  
         |5|object|  
