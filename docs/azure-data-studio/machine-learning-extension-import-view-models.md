@@ -5,17 +5,17 @@ description: Azure Data Studio の Machine Learning 拡張機能を使用して�
 ms.date: 06/09/2020
 ms.reviewer: sstein
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
+ms.technology: machine-learning
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 586136dde0c514523c96cb69aaa422fd739cf1f7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3c5faa821ecd9adcfcea426f88a388a6f7d10f27
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778391"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901047"
 ---
 # <a name="import-or-view-models-with-machine-learning-extension-preview-for-azure-data-studio"></a>Azure Data Studio の Machine Learning 拡張機能 (プレビュー) を使用してモデルをインポートまたは表示する
 
