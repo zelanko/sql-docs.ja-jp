@@ -130,6 +130,14 @@
           href: big-data-cluster/concept-compute-pool.md
         - name: Security
           href: big-data-cluster/concept-security.md
+        - name: プライベート クラスター
+          items:
+            - name: デプロイ
+              href: big-data-cluster/private-deploy.md
+            - name: 管理する
+              href: big-data-cluster/private-manage.md
+            - name: トラフィックを制限する
+              href: big-data-cluster/private-restrict-egress-traffic.md
     - name: 操作方法ガイド
       items:
         - name: 構成
