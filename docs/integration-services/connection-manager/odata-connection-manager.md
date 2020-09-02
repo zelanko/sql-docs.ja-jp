@@ -77,7 +77,7 @@ Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続�
  接続マネージャーの名前です。  
   
  **サービス ドキュメントの場所**  
- OData サービスに対応する URL。 (例: https://services.odata.org/V3/Northwind/Northwind.svc/)。  
+ OData サービスに対応する URL。 たとえば、 https://services.odata.org/V3/Northwind/Northwind.svc/と指定します。  
   
  **認証**  
 以下のオプションの 1 つを選択します。
