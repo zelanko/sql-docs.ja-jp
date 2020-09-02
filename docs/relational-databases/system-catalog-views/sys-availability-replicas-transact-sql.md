@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1ed78e1cce742ce508237b7e04187927cf931cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 01a82400b668243b48047e7118f7b7b0c4095a60
+ms.sourcegitcommit: d7accd198ee94e9d87eca8ed86fdb70bc60819e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486501"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89385973"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ WSFC フェールオーバー クラスター内の AlwaysOn 可用性グルー�
 |**group_id**|**uniqueidentifier**|レプリカが属する可用性グループの一意の ID。|  
 |**replica_metadata_id**|**int**|データベースエンジン内の可用性レプリカのローカルメタデータオブジェクトの ID。|  
 |**replica_server_name**|**nvarchar (256)**|このレプリカをホストし、既定ではないインスタンスの場合はレプリカのインスタンス名もホストしている、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのサーバー名。|  
-|**owner_sid**|**varbinary (85)**|このサーバー インスタンスに登録されている、この可用性レプリカの外部所有者のセキュリティ ID (SID)。<br /><br /> 非ローカル可用性レプリカの場合は NULL です。|  
+|**owner_sid**|**varbinary(85)**|このサーバー インスタンスに登録されている、この可用性レプリカの外部所有者のセキュリティ ID (SID)。<br /><br /> 非ローカル可用性レプリカの場合は NULL です。|  
 |**endpoint_url**|**nvarchar(128)**|データ同期のためにプライマリとセカンダリのレプリカの間の接続で使用される、ユーザー指定のデータベース ミラーリング エンドポイントの文字列表現。 エンドポイント URL の構文の詳細については、「[可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)」を参照してください。<br /><br /> NULL = WSFC フェールオーバー クラスターと通信できません。<br /><br /> このエンドポイントを変更するには、 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)ステートメントの ENDPOINT_URL オプションを使用し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。|  
 |**availability_mode**|**tinyint**|レプリカの可用性モード。次のいずれかです。<br /><br /> 0 &#124; 非同期コミット。 プライマリ レプリカは、セカンダリがログをディスクに書き込むのを待機することなくトランザクションをコミットできます。<br /><br /> 1 &#124; 同期コミットです。 プライマリ レプリカは、セカンダリ レプリカがトランザクションをディスクに書き込むまで、特定のトランザクションのコミットを待機します。<br /><br />4 &#124; 構成のみ。 プライマリレプリカは、可用性グループの構成メタデータを同期的にレプリカに送信します。 ユーザーデータがレプリカに送信されることはありません。 SQL Server 2017 CU1 以降で使用できます。<br /><br /> 詳細については、「[可用性モード &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)」を参照してください。|  
 |**availability_mode_desc**|**nvarchar(60)**|**可用性 \_ モード**の説明。次のいずれかになります。<br /><br /> 非同期 \_ コミット<br /><br /> 同期 \_ コミット<br /><br /> 構成 \_ のみ<br /><br /> 可用性レプリカの可用性モードを変更するには、 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)ステートメントの AVAILABILITY_MODE オプションを使用し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。<br/><br>レプリカの可用性モードを構成のみに変更することはできません \_ 。 構成のみのレプリカを \_ セカンダリレプリカまたはプライマリレプリカに変更することはできません。 |  
@@ -57,8 +57,10 @@ WSFC フェールオーバー クラスター内の AlwaysOn 可用性グルー�
 |**modify_date**|**datetime**|レプリカが最後に変更された日付。<br /><br /> NULL = このサーバーインスタンスにレプリカがありません。|  
 |**backup_priority**|**int**|同じ可用性グループ内の他のレプリカと比較して、このレプリカでバックアップを実行する優先順位を表す、ユーザー指定の値。 値は 0 ～ 100 の範囲の整数です。<br /><br /> 詳細については、「[アクティブなセカンダリ:セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。|  
 |**read_only_routing_url**|**nvarchar (256)**|読み取り専用可用性レプリカの接続エンドポイント (URL) です。 詳細については、このトピックの後の「 [可用性グループの読み取り専用ルーティングの構成 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)など) を含め、セカンダリ レプリカをホストするサーバー インスタンス上の読み書き可能なデータベースには書き込むことができます。|  
+|**seeding_mode**|**tinyint**|つぎのいずれかです。 </br></br> 0: 手動 </br></br> 1: 自動|
+|**seeding_mode_desc**|**nvarchar(60)**|シード処理モードについて説明します。 </br></br> MANUAL </br></br> AUTOMATIC|
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  サーバー インスタンスに対する VIEW ANY DEFINITION 権限が必要です。  
