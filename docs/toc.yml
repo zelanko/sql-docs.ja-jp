@@ -6222,6 +6222,8 @@
               items:
                 - name: 非対称キー暗号化の強度
                   href: relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md
+                - name: データベース ファイルとは別のデバイス上のバックアップ ファイル
+                  href: relational-databases/policy-based-management/backup-files-on-separate-devices-from-database-files.md
                 - name: ディスク I/O サブシステムの IO 遅延問題の確認
                   href: relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md
                 - name: ディスク I/O サブシステムの読み取り再試行の問題の確認
@@ -6230,6 +6232,8 @@
                   href: relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md
                 - name: affinity mask と affinity I/O mask の重複の修正
                   href: relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+                - name: データベース復旧モデル
+                  href: relational-databases/policy-based-management/database-recovery-model.md
                 - name: 既定のトレース ログ ファイルの無効化
                   href: relational-databases/policy-based-management/default-trace-log-files-disabled.md
                 - name: I/O 要求失敗の検出
@@ -6264,6 +6268,8 @@
                   href: relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md
                 - name: AUTO_SHRINK データベース オプションを OFF に設定
                   href: relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md
+                - name: ユーザー データベースの照合順序を master および model データベースと一致するように設定する
+                  href: relational-databases/policy-based-management/set-collation-of-user-defined-databases-to-match-master-model-databases.md
                 - name: 最適なパフォーマンスを実現するための max degree of parallelism オプションの設定
                   href: relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md
                 - name: PAGE_VERIFY データベース オプションを CHECKSUM に設定

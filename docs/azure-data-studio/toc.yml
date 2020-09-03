@@ -84,10 +84,18 @@
           href: extensibility.md
         - name: 拡張機能のオーサリング
           href: extension-authoring.md
-        - name: 拡張機能を作成する
-          href: tutorial-create-extension.md
-        - name: 拡張性 API
+        - name: 拡張 API
           href: extensibility-apis.md
+        - name: キーマップ拡張機能
+          href: extensions/keymap-extension.md
+        - name: ダッシュボード拡張機能
+          href: extensions/dashboard-extension.md
+        - name: Notebook 拡張機能
+          href: extensions/notebook-extension.md
+        - name: Jupyter Book 拡張機能
+          href: extensions/jupyter-book-extension.md
+        - name: ウィザード拡張機能
+          href: extensions/wizard-extension.md
     - name: 統合ターミナル (PowerShell、Bash)
       href: integrated-terminal.md
     - name: キーボード ショートカット

@@ -5787,6 +5787,10 @@
       href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
     - name: '手順 3:Ruby を使用した SQL への接続を概念実証する'
       href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
+- name: Spark
+  items:
+    - name: SQL Server のコネクタ
+      href: ../connect/spark/connector.md
 - name: ADO (ADO)
   items:
     - name: Microsoft ActiveX Data Objects (ADO)
