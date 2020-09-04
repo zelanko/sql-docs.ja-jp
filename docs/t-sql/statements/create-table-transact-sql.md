@@ -47,12 +47,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0330b644851a40c7485a05939407d482657e7d5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 380d8d9dcd7d2812251203a91caaa2b9d056d616
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88358928"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862451"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -921,7 +921,7 @@ Test1Col
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-database"></a>Azure SQL Database のグローバル一時テーブルのトラブルシューティング
 
-tempdb のトラブルシューティングについては、「[tempdb の使用状況を監視する方法](../../relational-databases/databases/tempdb-database.md#how-to-monitor-tempdb-use)」を参照してください。
+tempdb のトラブルシューティングについては、「[tempdb の使用状況を監視する方法](../../relational-databases/databases/tempdb-database.md#monitoring-tempdb-use)」を参照してください。
 
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の DMV のトラブルシューティングにアクセスできるのは、サーバー管理者のみです。

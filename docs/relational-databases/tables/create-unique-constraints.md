@@ -18,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c641b2562fa15f17bcb6ce235529916ca70a2a52
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 5a9be69bad3b4cad8265065d393bea75e107492f
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646322"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195098"
 ---
 # <a name="create-unique-constraints"></a>UNIQUE 制約の作成
 
@@ -63,9 +63,9 @@ ms.locfileid: "88646322"
   
 3.  **[インデックス/キー]** ダイアログ ボックスで、 **[追加]** をクリックします。  
   
-4.  **[全般]** の下のグリッドで、 **[型]** をクリックし、プロパティの右にあるドロップダウン リスト ボックスの **[一意キー]** をクリックします。  
+4.  **[全般]** の下のグリッドで、 **[型]** をクリックし、プロパティの右にあるドロップダウン リスト ボックスの **[一意キー]** をクリックし、 **[閉じる]** をクリックします。  
   
-5.  **[ファイル]** メニューの **[_<テーブル名>_ を保存]** をクリックします。  
+5.  **[ファイル]** メニューの **[** _<テーブル名>_ を保存] をクリックします。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -106,7 +106,7 @@ ms.locfileid: "88646322"
   
     ```  
   
-#### <a name="to-create-a-unique-constraint-in-an-new-table"></a>新しいテーブルに UNIQUE 制約を作成するには  
+#### <a name="to-create-a-unique-constraint-on-a-new-table"></a>新しいテーブルに UNIQUE 制約を作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

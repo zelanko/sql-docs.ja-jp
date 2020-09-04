@@ -2,7 +2,7 @@
 description: ALTER DATABASE (Transact-SQL)
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
 ms.custom: ''
-ms.date: 07/21/2020
+ms.date: 08/27/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 553d84c62dfb9de6bc1bd18cde7b09965bfdf0d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1feac396ec7a51a82f9070890fc17adf4cdecb57
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467334"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042385"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -450,9 +450,9 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) データベー
 |250 GB|該当なし|√ (D)|√ (D)|√|√|
 |300 GB|該当なし|√|√|√|√|
 |400 GB|該当なし|√|√|√|√|
-|500 GB|該当なし|√|√ (D)|√ (D)|√|
+|500 GB|該当なし|√|√|√ (D)|√|
 |750 GB|該当なし|√|√|√|√|
-|1024 GB|該当なし|√|√|√ (D)|√ (D)|
+|1024 GB|該当なし|√|√|√|√ (D)|
 |1024 GB から 4096 GB (256 GB ずつ増分)*|N/A|N/A|該当なし|該当なし|√|
 
 \* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。 P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、US Gov バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 DTU モデルのリソースの制限事項に関する詳細については、[DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。
@@ -602,7 +602,7 @@ SERVICE_OBJECTIVE が指定されていない場合、セカンダリ データ�
 ELASTIC_POOL (name = \<elastic_pool_name>): ELASTIC_POOL が指定されていない場合、セカンダリ データベースはエラスティック プールに作成されません。 ELASTIC_POOL が指定されている場合、セカンダリ データベースが指定されたプールに作成されます。
 
 > [!IMPORTANT]
-> ADD SECONDARY コマンドを実行するユーザーは、プライマリ サーバー上で DBManager であること、ローカル データベース内で db_owner メンバーシップを持っていること、およびセカンダリ サーバー上で DBManager であることが必要です。
+> ADD SECONDARY コマンドを実行するユーザーは、プライマリ サーバー上で DBManager であること、ローカル データベース内で db_owner メンバーシップを持っていること、およびセカンダリ サーバー上で DBManager であることが必要です。 プライマリ サーバーとセカンダリ サーバーの両方のファイアウォール規則で、クライアント IP アドレスを許可リストに追加する必要があります。 クライアント IP アドレスが異なる場合は、プライマリ サーバーに追加されたものとまったく同じクライアント IP アドレスをセカンダリにも追加する必要があります。 geo レプリケーションを開始するには、ADD SECONDARY コマンドを実行する前に、この手順を実行する必要があります。
 
 REMOVE SECONDARY ON SERVER \<partner_server_name>: 指定されたサーバー上にある、指定された geo レプリケートされたセカンダリ データベースを削除します。 このコマンドは、プライマリ データベースをホストしているサーバー上の master データベース上で実行されます。
 

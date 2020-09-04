@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 54216c027c01855ba5f140e1ad17accba3f9e7f9
-ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
+ms.openlocfilehash: e2f225a66be811b3cafe13c0ccf89eb81700a1aa
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88602207"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901571"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (プレビュー)
 
@@ -432,6 +432,15 @@ COPY コマンドは、この暦年 (2020) の終わりまでに一般提供さ�
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>ファイルの数やサイズに制限はありますか?
 ファイルの数やサイズに制限はありません。ただし、最適なパフォーマンスを得るには、少なくとも 4 MB のファイルを使用することをお勧めします。
 
+### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>Synapse ワークスペース (プレビュー) を使用した場合、COPY には何か制限がありますか?
+
+マネージド ID (MSI) を使用する認証は、COPY ステートメントまたは PolyBase (パイプラインで使用する場合を含む) ではサポートされていません。 次のようなエラー メッセージが表示されることがあります。
+
+*com.microsoft.sqlserver.jdbc.SQLServerException: マネージド サービス ID はこのサーバーでは有効にされていません。マネージド サービス ID を有効にして、もう一度お試しください。*
+
+ストレージ アカウントが VNet に関連付けられている場合、MSI 認証が必要です。 ストレージ アカウントが VNet に関連付けられている場合は、COPY または PolyBase ではなく、BCP の一括挿入を使用してデータを読み込む必要があります。
+
+この制限は、Synapse ワークスペース (プレビュー) に属する SQL プールにのみ適用されます。 今後のリリースでは、Synapse ワークスペースで MSI がサポートされるようになります。 
 
 フィードバックや問題は、配布リストの sqldwcopypreview@service.microsoft.com までお寄せください。
 

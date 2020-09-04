@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7338ef58a86667b829fc1554660b316690de451a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9848ba94687f6f4555492de868f32431b3e1de84
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425264"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042408"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Azure Blob Storage に接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -52,7 +52,7 @@ Azure ストレージ アカウントのキーを入力します。
  ストレージ アカウントへの接続に HTTP または HTTPS のどちらを使用するかを指定します。  
   
  **ローカル開発者アカウントの使用**  
- ローカル コンピューター上のストレージ エミュレーターを使用するかどうかを指定します。  
+ ローカル コンピューター上の Azure Storage エミュレーターを使用するかどうかを指定します。  
   
  **BLOB コンテナーの名前**  
  指定されたストレージ アカウントで利用できるストレージ コンテナーの一覧から選択します。  
