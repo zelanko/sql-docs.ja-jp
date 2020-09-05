@@ -14,12 +14,12 @@ ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53c818a6d5146d8fffec64c4cbe97b54672f9ba6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f87d123e9400d068b31ad45d193c17d8df2c526
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498888"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480334"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>SQL Server Native Client に関する詳細情報
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88498888"
  [データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink?linkid=4173)  
  このサイトには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client とその他のデータ アクセス テクノロジに関する技術資料、サンプル コード、およびその他のリソースが用意されています。  
   
- [Data Access Blog](https://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Data Access Blog](https://docs.microsoft.com/archive/blogs/dataaccess/quick-update-re-data-access-blog)  
  このブログ サイトでは、データ アクセス テクノロジについて説明されており、製品チームのメンバーと直接対話する機会が提供されます。  
   
  [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  
@@ -38,7 +38,7 @@ ms.locfileid: "88498888"
  Window DAC SDK には、ADO (ActiveX Data Objects)、OLE DB、および ODBC (Open Database Connectivity) のドキュメントが含まれています。  
   
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client プログラミング](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   
