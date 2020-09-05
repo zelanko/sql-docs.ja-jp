@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3911b44ee31c0bb4cd4e8b829bf3d8e2c70e9913
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32b74832ff779ed01cb6821512187cd79d7af896
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88344098"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480664"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層メンバーの権限 (マスター データ サービス)
 
@@ -64,9 +64,9 @@ ms.locfileid: "88344098"
 -   ある階層ノードに**Create**Read Update Delete 権限の任意の組み合わせが割り当てられ / **Read** / **Update** / **Delete**ていて、別のノードに**拒否**権限が割り当てられている場合、ノード内のメンバーへのアクセスは拒否されます。  
   
 ## <a name="external-resources"></a>外部リソース  
- msdn.com のブログ投稿「 [Security Improvements (セキュリティの向上)](https://go.microsoft.com/fwlink/p/?LinkId=615376)」をご覧ください。  
+ msdn.com のブログ投稿「 [Security Improvements (セキュリティの向上)](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層メンバーの権限を割り当てる &#40;マスターデータサービス&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [アクセス許可の決定方法 &#40;マスターデータサービス&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [メンバー &#40;マスターデータサービス&#41;](../master-data-services/members-master-data-services.md)   
