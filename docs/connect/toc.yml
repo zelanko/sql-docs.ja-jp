@@ -14,31 +14,31 @@
   items:
     - name: Microsoft ADO.NET for SQL Server
       href: ../connect/ado-net/microsoft-ado-net-sql-server.md
-    - name: SqlClient ドライバーの使用を開始する
+    - name: 作業の開始
       href: ../connect/ado-net/get-started-sqlclient-driver.md
       items:
-        - name: '手順 1:ADO.NET 開発用に開発環境を構成する'
+        - name: '手順 1:開発環境の設定'
           href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
-        - name: '手順 2:ADO.NET 開発用の SQL データベースを作成する'
+        - name: '手順 2: SQL Database を作成する'
           href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
-        - name: '手順 3:ADO.NET を使用した SQL への接続を概念実証する'
+        - name: '手順 3:SQL への接続を概念実証する'
           href: ../connect/ado-net/step-3-connect-sql-ado-net.md
-        - name: '手順 4:ADO.NET で SQL に弾性的に接続する'
+        - name: '手順 4:SQL に弾性的に接続する'
           href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
-    - name: SqlClient ドライバーの概要
+    - name: 概要
       href: ../connect/ado-net/overview-sqlclient-driver.md
       items:
-        - name: Microsoft.Data.SqlClient 名前空間の概要
+        - name: Microsoft.Data.SqlClient 名前空間
           href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
-        - name: Microsoft SqlClient Data Provider for SQL Server をダウンロードする
+        - name: ダウンロード
           href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
-        - name: SqlClient でのイベントのトレースの有効化
-          href: ../connect/ado-net/enable-eventsource-tracing.md
-        - name: SqlClient の AppContext スイッチ
-          href: ../connect/ado-net/appcontext-switches.md
-        - name: SqlClient ドライバーのサポート ライフサイクル
+        - name: サポート ライフサイクル
           href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
-        - name: 追加の SqlClient ドライバー情報の検索
+        - name: イベントのトレースを有効にする
+          href: ../connect/ado-net/enable-eventsource-tracing.md
+        - name: AppContext スイッチ
+          href: ../connect/ado-net/appcontext-switches.md
+        - name: 追加情報の検索
           href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
     - name: SQL Server と ADO.NET
       href: ../connect/ado-net/sql/index.md
@@ -163,7 +163,43 @@
   items:
     - name: SQL Server 用 Microsoft JDBC ドライバー
       href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md
-    - name: JDBC Driver API リファレンス
+    - name: 作業の開始
+      href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
+      items:
+        - name: '手順 1:開発環境の設定'
+          href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
+        - name: '手順 2: SQL Database を作成する'
+          href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
+        - name: '手順 3:SQL への接続を概念実証する'
+          href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
+    - name: 概要
+      href: ../connect/jdbc/overview-of-the-jdbc-driver.md
+      items:
+        - name: ダウンロード
+          href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
+        - name: リリース ノート
+          href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
+        - name: システム要件
+          href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
+        - name: サポート マトリックス
+          href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md
+        - name: ドライバーの使用
+          href: ../connect/jdbc/using-the-jdbc-driver.md
+        - name: 解析結果
+          href: ../connect/jdbc/parsing-the-results.md
+        - name: useFMTOnly の使用
+          href: ../connect/jdbc/using-usefmtonly.md
+        - name: Java EE のサポートについて
+          href: ../connect/jdbc/understanding-java-ee-support.md
+        - name: ドライバーの展開
+          href: ../connect/jdbc/deploying-the-jdbc-driver.md
+        - name: 追加情報の検索
+          href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
+        - name: よく寄せられる質問 (FAQ)
+          href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md
+        - name: 機能の依存関係
+          href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
+    - name: API リファレンス
       href: ../connect/jdbc/reference/jdbc-driver-api-reference.md
       items:
         - name: ISQLServerCallableStatement インターフェイス
@@ -2498,43 +2534,7 @@
               items:
                 - name: SSTRANSTIGHTLYCPLD フィールド (SQLServerXAResource)
                   href: ../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md
-    - name: JDBC ドライバーの概要
-      href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
-      items:
-        - name: '手順 1: Java 開発用に開発環境を構成する'
-          href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
-        - name: '手順 2: Java 開発用に SQL データベースを作成する'
-          href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
-        - name: '手順 3: Java を使用した SQL への接続を概念実証する'
-          href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
-    - name: JDBC ドライバーの概要
-      href: ../connect/jdbc/overview-of-the-jdbc-driver.md
-      items:
-        - name: Microsoft SQL Server 用 JDBC Driver のダウンロード
-          href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
-        - name: 結果の解析
-          href: ../connect/jdbc/parsing-the-results.md
-        - name: JDBC Driver のリリース ノート
-          href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
-        - name: JDBC Driver のシステム要件
-          href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
-        - name: JDBC ドライバーの使用
-          href: ../connect/jdbc/using-the-jdbc-driver.md
-        - name: useFMTOnly の使用
-          href: ../connect/jdbc/using-usefmtonly.md
-        - name: Java EE のサポートについて
-          href: ../connect/jdbc/understanding-java-ee-support.md
-        - name: JDBC Driver の展開
-          href: ../connect/jdbc/deploying-the-jdbc-driver.md
-        - name: JDBC ドライバーの追加情報の検索
-          href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
-        - name: Microsoft SQL Server 用 JDBC Driver のサポート表
-          href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md
-        - name: JDBC Driver のよくあるご質問 (FAQ)
-          href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md
-        - name: Microsoft JDBC Driver for SQL Server の機能依存関係
-          href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
-    - name: JDBC ドライバー アプリケーションのセキュリティ保護
+    - name: アプリケーションの保護
       href: ../connect/jdbc/securing-jdbc-driver-applications.md
       items:
         - name: 接続文字列のセキュリティ保護
@@ -2554,7 +2554,7 @@
               href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
         - name: FIPS モード
           href: ../connect/jdbc/fips-mode.md
-    - name: JDBC ドライバーによるパフォーマンスと信頼性の強化
+    - name: パフォーマンスと信頼性の向上
       href: ../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md
       items:
         - name: 使用されていないオブジェクトを閉じる
@@ -2569,7 +2569,7 @@
           href: ../connect/jdbc/sparse-columns.md
         - name: JDBC Driver の準備されたステートメント メタデータ キャッシュ
           href: ../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md
-    - name: JDBC ドライバーで発生した問題の診断
+    - name: 問題の診断
       href: ../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md
       items:
         - name: エラーの処理
@@ -2582,7 +2582,7 @@
           href: ../connect/jdbc/troubleshooting-connectivity.md
         - name: 拡張イベント ログの診断情報へのアクセス
           href: ../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md
-    - name: JDBC Driver アプリケーション コード サンプル
+    - name: アプリケーション コードのサンプル
       href: ../connect/jdbc/sample-jdbc-driver-applications.md
       items:
         - name: 接続およびデータの取得
@@ -2621,7 +2621,7 @@
               href: ../connect/jdbc/updating-large-data-sample.md
         - name: データの検出と分類のサンプル
           href: ../connect/jdbc/data-discovery-classification-sample.md
-    - name: JDBC SQL ドライバーの準拠
+    - name: コンプライアンスと法的情報
       href: ../connect/jdbc/compliance-and-legal-for-the-jdbc-sql-driver.md
       items:
         - name: JDBC Driver の JDBC 4.1 への準拠
@@ -2630,25 +2630,25 @@
           href: ../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md
         - name: JDBC Driver の JDBC 4.3 への準拠
           href: ../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md
-    - name: JDBC SQL ドライバーのプログラミング ガイド
+    - name: プログラミング ガイド
       href: ../connect/jdbc/programming-guide-for-jdbc-sql-driver.md
       items:
-        - name: JDBC ドライバーによる SQL Server への接続
+        - name: SQL への接続
           href: ../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md
-        - name: JDBC ドライバーのデータ型について
+        - name: JDBC データ型について
           href: ../connect/jdbc/understanding-the-jdbc-driver-data-types.md
-        - name: JDBC ドライバーでのステートメントの使用
+        - name: ステートメントの使用
           href: ../connect/jdbc/using-statements-with-the-jdbc-driver.md
-        - name: JDBC ドライバーによる結果セットの管理
+        - name: 結果セットの管理
           href: ../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md
-        - name: JDBC ドライバーを使用したトランザクションの実行
+        - name: トランザクションの実行
           href: ../connect/jdbc/performing-transactions-with-the-jdbc-driver.md
-        - name: JDBC ドライバーによるメタデータの処理
+        - name: メタデータの処理
           href: ../connect/jdbc/handling-metadata-with-the-jdbc-driver.md
-        - name: JDBC ドライバーで Always Encrypted を使用する
+        - name: Always Encrypted の使用
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
           items:
-            - name: JDBC Driver でのセキュリティで保護されたエンクレーブが設定された Always Encrypted の使用
+            - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted の使用
               href: ../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
         - name: ガイド記事
           items:
@@ -2777,17 +2777,19 @@
   items:
     - name: Node.js Driver for SQL Server
       href: ../connect/node-js/node-js-driver-for-sql-server.md
-    - name: '手順 1:Node.js 開発用に開発環境を構成する'
+    - name: '手順 1:開発環境の設定'
       href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
-    - name: '手順 2:Node.js 開発用の SQL データベースを作成する'
+    - name: '手順 2: SQL Database を作成する'
       href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
-    - name: '手順 3:Node.js を使用した SQL への接続を概念実証する'
+    - name: '手順 3:SQL への接続を概念実証する'
       href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
 - name: ODBC
   items:
     - name: Microsoft SQL Server 用 ODBC Driver
       href: ../connect/odbc/microsoft-odbc-driver-for-sql-server.md
-    - name: Linux と Mac
+    - name: ダウンロード
+      href: ../connect/odbc/download-odbc-driver-for-sql-server.md
+    - name: Linux と macOS
       items:
         - name: システム要件
           href: ../connect/odbc/linux-mac/system-requirements.md
@@ -2821,23 +2823,23 @@
           href: ../connect/odbc/linux-mac/release-notes-tools.md
         - name: 既知の問題
           href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
-        - name: ODBC Linux と macOS のよく寄せられる質問 (FAQ)
+        - name: よく寄せられる質問 (FAQ)
           href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md
     - name: Windows
       items:
         - name: Microsoft ODBC Driver for SQL Server on Windows
           href: ../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md
-        - name: Microsoft ODBC Driver for SQL Server on Windows の機能
+        - name: 機能
           href: ../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md
         - name: リリース ノート
           href: ../connect/odbc/windows/release-notes-odbc-sql-server-windows.md
-        - name: インストール、ドライバー ファイルの基本的なシステム要件
+        - name: システム必要条件、インストール、およびドライバー ファイル
           href: ../connect/odbc/windows/system-requirements-installation-and-driver-files.md
         - name: 機能ガイド
           items:
-            - name: Windows ODBC ドライバーの接続レジリエンシー
+            - name: 接続の回復性
               href: ../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md
-            - name: OLE DB Provider for SQL Server のドライバー対応接続プール
+            - name: ドライバー対応接続プール
               href: ../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md
         - name: 非同期実行 (通知方法) の例
           href: ../connect/odbc/windows/asynchronous-execution-notification-method-sample.md
@@ -2871,9 +2873,7 @@
           href: ../connect/odbc/use-xa-with-dtc.md
         - name: バグの修正
           href: ../connect/odbc/bug-fixes.md
-    - name: ODBC Driver for SQL Server のダウンロード
-      href: ../connect/odbc/download-odbc-driver-for-sql-server.md
-    - name: ODBC を使用しての C++ サンプル アプリケーション
+    - name: C++ サンプル アプリケーション
       href: ../connect/odbc/cpp-code-example-app-connect-access-sql-db.md
     - name: ODBC 詳細設定
       items:
@@ -5083,15 +5083,15 @@
   items:
     - name: Microsoft OLE DB Driver for SQL Server
       href: ../connect/oledb/oledb-driver-for-sql-server.md
+    - name: ダウンロード
+      href: ../connect/oledb/download-oledb-driver-for-sql-server.md
     - name: リリース ノート
       href: ../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md
-    - name: Microsoft OLE DB Driver for SQL Server のダウンロード
-      href: ../connect/oledb/download-oledb-driver-for-sql-server.md
     - name: システム要件
       href: ../connect/oledb/system-requirements-for-oledb-driver-for-sql-server.md
-    - name: OLE DB Driver for SQL Server をいつ使用するか
+    - name: OLE DB ドライバーを使用する場合
       href: ../connect/oledb/when-to-use-oledb-driver-for-sql-server.md
-    - name: OLE DB Driver for SQL Server の詳細情報の検索
+    - name: 詳細情報
       href: ../connect/oledb/finding-more-oledb-driver-for-sql-server-information.md
     - name: 特徴
       href: ../connect/oledb/features/oledb-driver-for-sql-server-features.md
@@ -5478,35 +5478,35 @@
     - name: 作業の開始
       href: ../connect/php/getting-started-with-the-php-sql-driver.md
       items:
-        - name: '手順 1:PHP 開発用に開発環境を構成する'
+        - name: '手順 1:開発環境の設定'
           href: ../connect/php/step-1-configure-development-environment-for-php-development.md
-        - name: '手順 2:PHP 開発用の SQL データベースを作成する'
+        - name: '手順 2: SQL Database を作成する'
           href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
-        - name: '手順 3:PHP を使用した SQL Server への接続を概念実証する'
+        - name: '手順 3:SQL への接続を概念実証する'
           href: ../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md
-        - name: '手順 4:PHP で SQL Server に弾性的に接続する'
+        - name: '手順 4:SQL に弾性的に接続する'
           href: ../connect/php/step-4-connect-resiliently-to-sql-with-php.md
     - name: 概要
       href: ../connect/php/overview-of-the-php-sql-driver.md
       items:
+        - name: ダウンロード
+          href: ../connect/php/download-drivers-php-sql-server.md
+        - name: Linux および macOS へのインストール
+          href: ../connect/php/installation-tutorial-linux-mac.md
+        - name: リリース ノート
+          href: ../connect/php/release-notes-php-sql-driver.md
         - name: システム要件
           href: ../connect/php/system-requirements-for-the-php-sql-driver.md
-        - name: SQL Server 用 Drivers for PHP のダウンロード
-          href: ../connect/php/download-drivers-php-sql-server.md
+        - name: サポート マトリックス
+          href: ../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md
         - name: ドライバーを読み込む
           href: ../connect/php/loading-the-php-sql-driver.md
         - name: IIS の構成
           href: ../connect/php/configuring-iis-for-php-sql-driver.md
-        - name: PHP Linux と Mac ドライバーのインストールのチュートリアル
-          href: ../connect/php/installation-tutorial-linux-mac.md
-        - name: リリース ノート
-          href: ../connect/php/release-notes-php-sql-driver.md
         - name: サポート リソース
           href: ../connect/php/support-resources-for-the-php-sql-driver.md
         - name: コード サンプルについて
           href: ../connect/php/about-code-examples-in-the-documentation.md
-        - name: SQL Server 用 Microsoft Drivers for PHP のサポートのマトリックス
-          href: ../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md
     - name: プログラミング ガイド
       href: ../connect/php/programming-guide-for-php-sql-driver.md
       items:
@@ -5751,9 +5751,9 @@
     - name: コード サンプル
       href: ../connect/php/code-samples-for-php-sql-driver.md
       items:
-        - name: サンプル アプリケーション (PDO_SQLSRV ドライバー)
+        - name: アプリケーションの例 (PDO_SQLSRV)
           href: ../connect/php/example-application-pdo-sqlsrv-driver.md
-        - name: サンプル アプリケーション (SQLSRV ドライバー)
+        - name: アプリケーションの例 (SQLSRV)
           href: ../connect/php/example-application-sqlsrv-driver.md
 - name: Python
   items:
@@ -5762,30 +5762,30 @@
     - name: Python SQL ドライバー - pyodbc
       href: ../connect/python/pyodbc/python-sql-driver-pyodbc.md
       items:
-        - name: '手順 1:pyodbc Python 開発用に開発環境を構成する'
+        - name: '手順 1:開発環境の設定'
           href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
-        - name: '手順 2:pyodbc Python 開発用の SQL データベースを作成する'
+        - name: '手順 2: SQL Database を作成する'
           href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
-        - name: '手順 3:pyodbc を使用した SQL への接続を概念実証する'
+        - name: '手順 3:SQL への接続を概念実証する'
           href: ../connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md
     - name: Python SQL ドライバー - pymssql
       href: ../connect/python/pymssql/python-sql-driver-pymssql.md
       items:
-        - name: '手順 1:pymssql Python 開発用に開発環境を構成する'
+        - name: '手順 1:開発環境の設定'
           href: ../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md
-        - name: '手順 2:pymssql Python 開発用の SQL データベースを作成する'
+        - name: '手順 2: SQL Database を作成する'
           href: ../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md
-        - name: '手順 3:pymssql を使用した SQL への接続を概念実証する'
+        - name: '手順 3:SQL への接続を概念実証する'
           href: ../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
 - name: Ruby
   items:
     - name: Ruby Driver for SQL Server
       href: ../connect/ruby/ruby-driver-for-sql-server.md
-    - name: '手順 1:Ruby 開発用に開発環境を構成する'
+    - name: '手順 1:開発環境の設定'
       href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md
-    - name: '手順 2:Ruby 開発用の SQL データベースを作成する'
+    - name: '手順 2: SQL Database を作成する'
       href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
-    - name: '手順 3:Ruby を使用した SQL への接続を概念実証する'
+    - name: '手順 3:SQL への接続を概念実証する'
       href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
 - name: Spark
   items:
