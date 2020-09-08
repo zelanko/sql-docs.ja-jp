@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpublications system table
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 99cf9a95cb61cc0efcd40c29019c038248b6102d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0d11bb73f18dc750f32c6f7ba2ee02487324e946
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419136"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89524433"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88419136"
 |**allow_anonymous**|**bit**|指定されたパブリケーションに対して匿名サブスクリプションを作成できるかどうかを示します。|  
 |**description**|**nvarchar (255)**|パブリケーションの説明です。|  
 |**vendor_name**|**nvarchar (100)**|パブリッシャーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のデータベースの場合の製造元の名前です。|  
-|**保持**|**int**|パブリケーションの保有期間 (時間) です。|  
+|**保有**|**int**|パブリケーションの保有期間 (時間) です。|  
 |**sync_method**|**int**|同期方法:<br /><br /> **0** = native (すべてのテーブルのネイティブモードの一括コピー出力を生成します)。<br /><br /> **1** = 文字 (すべてのテーブルのキャラクターモードの一括コピー出力を生成します)。<br /><br /> **3** = 同時実行 (すべてのテーブルのネイティブモードの一括コピー出力を作成しますが、スナップショット時にテーブルをロックしません)。<br /><br /> **4** = Concurrent_c (すべてのテーブルのキャラクターモードの一括コピー出力を生成しますが、スナップショット時にテーブルをロックしません)<br /><br /> 値 **3** および **4** は、トランザクションレプリケーションとマージレプリケーションで使用できますが、スナップショットレプリケーションでは使用できません。|  
 |**allow_subscription_copy**|**bit**|このパブリケーションをサブスクライブするサブスクリプションデータベースをコピーする機能を有効または無効にします。 **0** は、コピーが無効であることを示します。 **1** は、コピーが有効になっていることを示します。|  
 |**thirdparty_options**|**int**|のレプリケーションフォルダー内のパブリケーションの表示を抑制するかどうかを指定し [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。<br /><br /> **0** = のレプリケーションフォルダーに異種パブリケーションを表示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] します。<br /><br /> **1** = のレプリケーションフォルダーに異種パブリケーションを表示しないように [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] します。|  

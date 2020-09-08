@@ -17,14 +17,14 @@ helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4a4caafa49aca29e1093ffb6304b292bcd5c7735
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e59789c2d4de9174a43b34881e7b45a914cfd2c3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492821"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525555"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88492821"
 |**page_size**|**int**|ページのサイズ (バイト単位)。|  
 |**file_number**|**numeric (10, 0)**|データベース内で一意なファイル識別番号 ( **database_files**に対応し**ます。file_id**)。|  
 |**backed_up_page_count**|**numeric (10, 0)**|バックアップされたページ数。 NULL にすることができます。|  
-|**file_type**|**char (1)**|バックアップされたファイル。次のいずれかです。<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイル<br /><br /> L = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログファイル。<br /><br /> F = フルテキスト カタログ<br /><br /> NULL にすることができます。|  
+|**file_type**|**char(1)**|バックアップされたファイル。次のいずれかです。<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイル<br /><br /> L = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログファイル。<br /><br /> F = フルテキスト カタログ<br /><br /> NULL にすることができます。|  
 |**source_file_block_size**|**numeric (10, 0)**|バックアップ時に元のデータファイルまたはログファイルが格納されていたデバイス。 NULL にすることができます。|  
 |**file_size**|**numeric(20,0)**|バックアップされたファイルの長さ (バイト単位)。 NULL にすることができます。|  
 |**logical_name**|**nvarchar(128)**|バックアップされたファイルの論理名。 NULL にすることができます。|  
