@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SqlErrorLogEvent class
 - SqlErrorLogFile class
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 133eb91aed4cff032afd1b83637d3e4d4efa2635
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ff086556b507c0d09750b7ab27671a7b1cfaf496
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460070"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89522233"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent クラス
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -86,7 +86,7 @@ Next
 "SELECT * FROM SqlErrorLogEvent"  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  WMI を使用してログファイルに接続するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ローカルコンピューターとリモートコンピューターの両方に対して次のアクセス許可を持っている必要があります。  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement10** WMI 名前空間への読み取りアクセス。 既定では、すべてのユーザーがアカウントの有効化権限による読み取りアクセスを持ちます。  
