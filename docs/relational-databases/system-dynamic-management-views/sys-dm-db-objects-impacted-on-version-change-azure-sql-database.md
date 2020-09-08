@@ -17,16 +17,16 @@ helpviewer_keywords:
 - dm_db_objects_impacted_on_version_change
 - sys.dm_db_objects_impacted_on_version_change
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 804b9828ae2a1359075cce2db4077918b0294b59
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c316d1f87b76387ebf382754970a6b9dc1ab609f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498335"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89517772"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL データベース)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88498335"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |class|**int** NULL 以外|影響を受けるオブジェクトのクラス。<br /><br /> **1** = 制約<br /><br /> **7** = インデックスとヒープ|  
-|class_desc|**nvarchar (60)** NULL 以外|クラスの説明:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **化**|  
+|class_desc|**nvarchar (60)** NULL 以外|クラスの説明:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**int** NULL 以外|制約のオブジェクト ID、あるいはインデックスまたはヒープを含んでいるテーブルのオブジェクト ID。|  
 |minor_id|**int** 空白|制約の場合は **NULL**<br /><br /> インデックスおよびヒープの場合は Index_id|  
 |dependency|**nvarchar (60)** NULL 以外|制約またはインデックスが影響を受ける原因となっている依存関係の説明。 アップグレード中に生成される警告にも同じ値が使用されます。<br /><br /> 次に例を示します。<br /><br /> **space** (組み込み用)<br /><br /> **geometry** (システム UDT 用)<br /><br /> **geography::Parse** (システム UDT メソッド用)|  
