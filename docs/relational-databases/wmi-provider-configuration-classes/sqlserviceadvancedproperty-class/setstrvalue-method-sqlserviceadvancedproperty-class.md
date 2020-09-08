@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetStrValue method
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 86a0a552b8d6544a5ea42c175e04396d3dcc48a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: edadbdf316eaa20a2a701621b82afa609607f721
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427124"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89520396"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>SetStrValue メソッド (SqlServiceAdvancedProperty クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ object.SetStrValue(StrValue)
 ## <a name="remarks"></a>解説  
  プロパティを文字列値に設定するには、プロパティ値の型が *string* である必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   
