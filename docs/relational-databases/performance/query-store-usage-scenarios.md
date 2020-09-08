@@ -14,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d1da7312c338a866b4fb22df94175a7500d8f7c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 8801e4727beba94c95408716606208c122e96204
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457644"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480356"
 ---
 # <a name="query-store-usage-scenarios"></a>クエリ ストアの使用シナリオ
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "86457644"
   
 -   高コストのクエリによって参照されているテーブルでの欠落したインデックスの作成。  
   
--   行レベルのセキュリティのためのセキュリティ ポリシーの適用。 詳細については、「[Optimizing Row Level Security with Query Store](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx)」(クエリ ストアによる行レベルのセキュリティの最適化) を参照してください。  
+-   行レベルのセキュリティのためのセキュリティ ポリシーの適用。 詳細については、「[Optimizing Row Level Security with Query Store](https://docs.microsoft.com/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store)」(クエリ ストアによる行レベルのセキュリティの最適化) を参照してください。  
   
 -   OLTP アプリケーションによって頻繁に更新されるテーブルへの一時的なシステム バージョン管理の追加。  
   

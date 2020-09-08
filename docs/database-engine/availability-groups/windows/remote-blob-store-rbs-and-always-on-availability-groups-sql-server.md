@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 43ed11aebf0114334ce57ed251187912bd43c18c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 06ab28f03fb3852aa732c48aebc8c28ba6abbb41
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888081"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480735"
 ---
 # <a name="use-remote-blob-store-rbs-with-always-on-availability-groups"></a>Always On 可用性グループでのリモート BLOB ストア (RBS) の使用
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "85888081"
   
 -   [リモート BLOB ストアのメンテナンス](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) ( [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] オンライン ブック)  
   
--   [RBS Maintainer の実行](https://blogs.msdn.com/b/sqlrbs/archive/2010/03/19/running-rbs-maintainer.aspx) (ブログ)  
+-   [RBS Maintainer の実行](https://docs.microsoft.com/archive/blogs/sqlrbs/running-rbs-maintainer) (ブログ)  
   
--   [FILESTREAM プロバイダーでのリモート BLOB ストレージ (RBS) の構成 (SharePoint 2010)](https://blogs.msdn.com/b/mvpawardprogram/archive/2012/04/02/configure-remote-blob-storage-rbs-with-the-filestream-provider-sharepoint-2010.aspx) (ブログ)  
+-   [FILESTREAM プロバイダーでのリモート BLOB ストレージ (RBS) の構成 (SharePoint 2010)](https://docs.microsoft.com/archive/blogs/mvpawardprogram/configure-remote-blob-storage-rbs-with-the-filestream-provider-sharepoint-2010) (ブログ)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn クライアントの接続 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)   

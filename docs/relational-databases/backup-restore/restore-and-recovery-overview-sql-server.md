@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: bde7cdd19ac66d30ceee0e73d6ea74ff5a66b2a8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e62b9f4c4de0db24294640cd2013f0fc4b0d6c7b
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717970"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480415"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>復元と復旧の概要 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -174,7 +174,7 @@ ms.locfileid: "85717970"
   
 データベース復旧アドバイザーの詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manageability の次のブログを参照してください。  
   
--   [復旧アドバイザー: 概要](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [復旧アドバイザー: 概要](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction)  
   
 -   [復旧アドバイザー: SSMS を使用して分割バックアップを作成/復元する](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 

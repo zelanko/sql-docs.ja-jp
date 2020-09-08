@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 92b7abe9bee2ac7d8d7058f2fcc03a551b64e200
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd8b8d0ecf3e7be9a8a68710c32e15b65497e173
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765484"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480972"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>リモート BLOB ストア (RBS) [SQL Server]
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "85765484"
  RBS には、RBS を使用して BLOB を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで格納できる FILESTREAM プロバイダーが含まれています。 RBS を使用して BLOB を別のストレージ ソリューションに格納する場合は、そのストレージ ソリューション用に開発されたサード パーティの RBS プロバイダーを使用するか、RBS API を使用してカスタム RBS プロバイダーを開発する必要があります。 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)には、NTFS ファイル システムに BLOB を格納するサンプル プロバイダーが学習用リソースとして用意されています。  
   
 ## <a name="rbs-security"></a>RBS セキュリティ  
- SQL リモート BLOB ストレージ チームのブログはこの機能に関する適切な情報源です。 「 [RBS Security Model (RBS セキュリティ モデル)](https://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx)」で、RBS セキュリティ モデルに関する投稿を参照してください。  
+ SQL リモート BLOB ストレージ チームのブログはこの機能に関する適切な情報源です。 「 [RBS Security Model (RBS セキュリティ モデル)](https://docs.microsoft.com/archive/blogs/sqlrbs/rbs-security-model)」で、RBS セキュリティ モデルに関する投稿を参照してください。  
   
 ### <a name="custom-providers"></a>カスタム プロバイダー  
  カスタム プロバイダーを使用して BLOB を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の外部に格納する場合は、カスタム プロバイダーが使用するストレージ メディアに適した権限と暗号化オプションで格納された BLOB が保護されていることを確認してください。  
@@ -89,7 +89,7 @@ ms.locfileid: "85765484"
  [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) で入手できる RBS サンプルでは、RBS アプリケーションの開発方法とカスタム RBS プロバイダーの開発およびインストール方法を示します。  
   
  **RBS ブログ**  
- [RBS ブログ](https://go.microsoft.com/fwlink/?LinkId=210315) には、RBS の理解、配置、および維持に役立つ追加情報が含まれています。  
+ [RBS ブログ](https://docs.microsoft.com/archive/blogs/sqlrbs/) には、RBS の理解、配置、および維持に役立つ追加情報が含まれています。  
   
 ##  <a name="key-rotation-script"></a><a name="Key_rotation"></a> キー ローテーションのスクリプト  
  この例では、 `sp_rotate_rbs_symmetric_credential_key` というストアド プロシージャを作成し、現在使用している RBS 資格情報ストアの対称キーを、  

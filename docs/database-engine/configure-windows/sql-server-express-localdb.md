@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2bc9a5c4ca7481d9d3d1039e0e467e35d5c2631b
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 0073698d4cc7ce29912be8bbce3badf3eeea6742
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363051"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288334"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -93,7 +93,7 @@ LocalDB では、2 種類のインスタンス、自動インスタンスと名�
 
 ### <a name="connect-to-the-automatic-instance"></a>自動インスタンスへの接続
 
-LocalDB を使用する最も簡単な方法は、接続文字列 `Server=(localdb)\MSSQLLocalDB;Integrated Security=true` を使用して、現在のユーザーが所有する自動インスタンスに接続することです。 ファイル名を使用して特定のデータベースに接続するには、`Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf` のような接続文字列を使用して接続します。
+LocalDB を使用する最も簡単な方法は、接続文字列 `Server=(localdb)\MSSQLLocalDB;Integrated Security=true` を使用して、現在のユーザーが所有する自動インスタンスに接続することです。 ファイル名を使用して特定のデータベースに接続するには、`Server=(LocalDB)\MSSQLLocalDB;Integrated Security=true;AttachDbFileName=D:\Data\MyDB1.mdf` のような接続文字列を使用して接続します。
 
 LocalDB 形式の名前付け規則と接続文字列は、SQL Server 2014 で変更されました。 以前のインスタンス名は、単一の文字 v の後に LocalDB とバージョン番号を付けたものでした。 SQL Server 2014 以降では、このインスタンス名の形式はサポートされなくなり、前に説明した接続文字列を代わりに使用する必要があります。  
 

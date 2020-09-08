@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 386e58e63ee0f629baf5c9ad3009c678a1a966d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 16844bfb5c173fdb6527777950a8d80f1b177994
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456874"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480831"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 の Integration Services の新機能
 
@@ -363,7 +363,7 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
  Dimension Processing Destination は、SQL 2016 互換レベルの表形式モデルでは機能しません。  表形式処理で必要なのは、Analysis Services 処理タスクと Partition Processing Destination だけです。 
 
 ####  <a name="support-for-built-in-r-services"></a><a name="builtinR"></a> 組み込み R Services のサポート  
- SSIS は、組み込み R services を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で既にサポートしています。 SSIS を使用して、データの抽出と分析の出力の読み込みだけではなく、R モデルの構築、実行、定期的な保持も実行できます。 詳細については、次のログの投稿を参照してください。 [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx)(SQL Server 2016 SSIS と R Services を使用した機械学習を運用可能にする)。 
+ SSIS は、組み込み R services を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で既にサポートしています。 SSIS を使用して、データの抽出と分析の出力の読み込みだけではなく、R モデルの構築、実行、定期的な保持も実行できます。 詳細については、次のログの投稿を参照してください。 [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](https://techcommunity.microsoft.com/t5/sql-server-integration-services/operationalize-your-machine-learning-project-using-sql-server/ba-p/388296)(SQL Server 2016 SSIS と R Services を使用した機械学習を運用可能にする)。 
 
 ####  <a name="rich-xml-validation-output-in-the-xml-task"></a><a name="ValidateXML"></a> XML タスクでの XML 検証の詳細な出力  
  XML タスクの **ValidationDetails** プロパティを有効にして、XML ドキュメントを検証し、詳細なエラー出力を取得します。 **ValidationDetails** プロパティが利用できるようになる前は、XML タスクによる XML 検証では、true や false のみの結果が返され、エラーやその場所に関する情報は返されませんでした。 現在は、 **ValidationDetails** を true に設定すると、出力ファイルに各エラーの行番号と位置を含む詳しい情報が出力されます。 この情報を使って、XML ドキュメントのエラーを把握、特定、修正できます。 詳細については、「 [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md)」を参照してください。  

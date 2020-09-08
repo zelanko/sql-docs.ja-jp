@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af11c20870da67f9b6004c4a277c17e277c1ffed
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 096e416b5abaf7e6c148cba469cd4f7453be092e
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922436"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480487"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>可用性グループの監視とトラブルシューティング
  このガイドは、Always On 可用性グループの監視と可用性グループのいくつかの一般的な問題のトラブルシューティング作業を開始するために役立ちます。 オリジナルのコンテンツに加えて、他の場所で公開されている役に立つ情報のランディング ページを提供します。 このガイドでは、可用性グループの大きな領域で発生する可能性があるすべての問題を完全に説明することはできませんが、根本原因の分析と問題の解決に関して正しい方向を示すことができます。 
@@ -73,6 +73,6 @@ ms.locfileid: "82922436"
 
 ## <a name="next-steps"></a>次のステップ  
  [SQL Server AlwaysOn チーム ブログ](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
- [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
+ [CSS SQL Server エンジニアのブログ](https://docs.microsoft.com/archive/blogs/psssql/)  
   
   

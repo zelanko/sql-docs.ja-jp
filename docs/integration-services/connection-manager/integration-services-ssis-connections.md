@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 07b2ffa19412e46b555c9ef8b77372f1b401ea57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c80f16b6698b3190b3a32ebd48738a0be3eed6f
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477946"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480936"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) の接続
 
@@ -342,7 +342,7 @@ ms.locfileid: "88477946"
   
 -   social.technet.microsoft.com の Wiki の記事「 [SSIS の接続性](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)」  
   
--   blogs.msdn.com のブログ「 [SSIS から MySQL への接続](https://go.microsoft.com/fwlink/?LinkId=217669)」  
+-   blogs.msdn.com のブログ「 [SSIS から MySQL への接続](https://techcommunity.microsoft.com/t5/sql-server-integration-services/connecting-to-mysql-from-ssis/ba-p/387400)」  
   
 -   msdn.microsoft.com の技術記事「 [SQL Server Integration Services での SharePoint データの抽出と読み込み](https://go.microsoft.com/fwlink/?LinkId=247826)」  
   

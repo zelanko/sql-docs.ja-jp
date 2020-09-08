@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 99ea39318e06ba7fbaa6cf3e1147382bb1184a83
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2124351357d52e3389d0db1e58874ffcb46275d6
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351848"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480699"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) サーバーとカタログ
 
@@ -39,7 +39,7 @@ ms.locfileid: "88351848"
 ## <a name="high-availability"></a>高可用性  
  他のユーザー データベースと同様に、**SSISDB** データベースはデータベース ミラーリングとレプリケーションをサポートします。 ミラーリングとレプリケーションの詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
- SSIS と Always On 可用性グループを利用して SSISDB とそのコンテンツの高可用性を実現することもできます。 詳しくは、「[Always On for SSIS Catalog (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)」をご覧ください。 また、Matt Masson による blogs.msdn.com のブログ記事「[SSIS with Always On](https://go.microsoft.com/fwlink/?LinkId=255873)」(SSIS と Always On) もご覧ください。  
+ SSIS と Always On 可用性グループを利用して SSISDB とそのコンテンツの高可用性を実現することもできます。 詳しくは、「[Always On for SSIS Catalog (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)」をご覧ください。 また、Matt Masson による blogs.msdn.com のブログ記事「[SSIS with Always On](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091)」(SSIS と Always On) もご覧ください。  
   
 ##  <a name="integration-services-server-in-sql-server-management-studio"></a><a name="ssms"></a> SQL Server Management Studio の Integration Services サーバー  
  **SSISDB** データベースをホストする [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続している場合、オブジェクト エクスプローラーに、次のオブジェクトが表示されます。  
@@ -61,6 +61,6 @@ ms.locfileid: "88351848"
 -   [Integration Services (SSIS) パッケージの実行](../../integration-services/packages/run-integration-services-ssis-packages.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- blogs.msdn.com のブログ エントリ「[SSIS with Always On](https://go.microsoft.com/fwlink/?LinkId=255873)」 (SSIS と Always On)。  
+ blogs.msdn.com のブログ エントリ「[SSIS with Always On](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091)」 (SSIS と Always On)。  
   
   
