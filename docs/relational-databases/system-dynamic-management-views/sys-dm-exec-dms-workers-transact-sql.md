@@ -20,15 +20,15 @@ helpviewer_keywords:
 - dm_exec_dms_workers management view
 - sys.dm_exec_dms_workers management view
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a47f820de618400e3772f3816ebe245682120a0f
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: c14c26591e16c423564acafd9aeb33be6940002f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283658"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548552"
 ---
 # <a name="sysdm_exec_dms_workers-transact-sql"></a>dm_exec_dms_workers (Transact-sql)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "89283658"
 |dms_step_index|`int`|このワーカーが実行されている DMS プランのステップ。|「 [Dm_exec_dms_workers (transact-sql)」を](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)参照してください。|  
 |compute_node_id|`int`|ワーカーが実行されているノード。|「 [Sys. dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)」を参照してください。|  
 |distribution_id|`int`|||  
-|type|`nvarcha(32)`|||  
+|型|`nvarcha(32)`|||  
 |status|`nvarchar(32)`|この手順の状態|' Pending '、' Running '、' Complete '、' Failed '、' UndoFailed '、' PendingCancel '、' 取り消し済み '、' 元に戻す '、' Aborted '|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  
@@ -60,7 +60,7 @@ ms.locfileid: "89283658"
 |error_id|`nvarchar(36)`|||  
 |source_info|`nvarchar(4000)`|||  
 |destination_info|`nvarchar(4000)`|||  
-|command|`nvarchar(4000)`|||
+|コマンドを使用します|`nvarchar(4000)`|||
 |compute_pool_id|`int`|プールの一意の識別子。|
 
 ## <a name="see-also"></a>参照  

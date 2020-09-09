@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexes
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6129240ab59b3629704a4d67fb80b4306d6bb621
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 133a7fb36ff65444853c1bdeb44fdefabe4aab4f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446970"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547898"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @is_unique =] '*is_unique*'  
  情報を返す対象のインデックスの種類を指定します。 *is_unique* の部分は **bit**で、既定値は NULL です。次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |1|一意のインデックスに関する情報を返します。|  
 |0|一意ではないインデックスに関する情報を返します。|  

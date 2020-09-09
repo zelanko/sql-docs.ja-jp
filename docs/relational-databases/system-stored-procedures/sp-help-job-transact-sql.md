@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5dcf8a6fa773497e119b73a9b623d414a1ad4d2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5c0b2f0845c98f4b5fa403bd98b87718afd0fb26
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486015"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549703"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'` 表示するジョブ属性。 *job_aspect* は **varchar (9)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**ALL**|ジョブのすべての属性情報|  
 |**補足**|ジョブ情報|  
@@ -82,7 +82,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @execution_status = ] status` ジョブの実行状態です。 *状態* は **int**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|アイドルまたは中断されていないジョブのみを返します。|  
 |**1**|実行.|  

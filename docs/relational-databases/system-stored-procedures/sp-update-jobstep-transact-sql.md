@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_jobstep
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0a7161fd475b1fdac439e1c14e59034de2d7bbfe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 52b17f706b53c05074fdcb21bf5e566df3d1d165
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473534"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549504"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +80,7 @@ sp_update_jobstep
   
 `[ @on_success_action = ] success_action` ステップが成功した場合に実行するアクション。*success_action* は **tinyint**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明 (アクション)|  
+|[値]|説明 (アクション)|  
 |-----------|----------------------------|  
 |**1**|正常に終了します。|  
 |**2**|失敗した状態で終了|  
@@ -91,7 +91,7 @@ sp_update_jobstep
   
 `[ @on_fail_action = ] fail_action` ステップが失敗した場合に実行するアクション。 *fail_action* は **tinyint**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明 (アクション)|  
+|[値]|説明 (アクション)|  
 |-----------|----------------------------|  
 |**1**|正常に終了します。|  
 |**2**|失敗した状態で終了|  
@@ -120,7 +120,7 @@ sp_update_jobstep
   
 `[ @flags = ] flags` 動作を制御するオプション。 *フラグ* は **int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|出力ファイルを上書きします。|  
 |**2**|出力ファイルに追加|  

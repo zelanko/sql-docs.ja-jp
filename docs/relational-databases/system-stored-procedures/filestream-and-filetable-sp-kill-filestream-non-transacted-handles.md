@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_kill_filestream_non_transacted_handles
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3413aa4b4601701241aeae9474d92964cd21238c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ba045dc68e5e032478d26caaa7790ed357f4e087
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427704"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550090"
 ---
 # <a name="sp_kill_filestream_non_transacted_handles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,10 +60,10 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
   
  詳細については、「 [FileTable の管理](../../relational-databases/blob/manage-filetables.md)」を参照してください。  
   
-## <a name="metadata"></a>メタデータ  
+## <a name="metadata"></a>Metadata  
  開いている非トランザクションファイルハンドルの詳細については、動的管理ビューの [dm_filestream_non_transacted_handles &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)を参照してください。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  **Dm_FILESTREAM_non_transacted_handles**動的管理ビューからファイルハンドルを取得し、 **sp_kill_filestream_non_transacted_handles**を実行するには、 **VIEW DATABASE STATE**権限が必要です。  

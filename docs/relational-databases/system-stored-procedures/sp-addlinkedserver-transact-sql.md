@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlinkedserver
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5bb18a45998661d3252c41da4222dfd24a585237
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 81cc7901dd6e9bfab24e0fb3d926173353978f40
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474559"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548372"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-sql)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -90,13 +90,13 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  Native Client OLE DB プロバイダー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (既定値)||||||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  Native Client OLE DB プロバイダー||**SQLNCLI**|のネットワーク名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (既定のインスタンスの場合)|||データベース名 (省略可能)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  Native Client OLE DB プロバイダー||**SQLNCLI**|*servername* \\*instancename* (特定のインスタンス用)|||データベース名 (省略可能)|  
-|Oracle、バージョン 8 以降|Oracle Provider for OLE DB|どれでも可|**OraOLEDB.Oracle**|Oracle データベースに対する別名||||  
-|Access/Jet|Microsoft OLE DB Provider for Jet|どれでも可|**Microsoft.Jet.OLEDB.4.0**|Jet データベースファイルの完全なパス||||  
-|ODBC データ ソース (ODBC data source)|Microsoft OLE DB Provider for ODBC|どれでも可|**MSDASQL**|ODBC データソースのシステム DSN||||  
-|ODBC データ ソース (ODBC data source)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC|どれでも可|**MSDASQL**|||ODBC 接続文字列||  
-|ファイル システム|[!INCLUDE[msCoName](../../includes/msconame-md.md)] インデックスサービスの OLE DB プロバイダー|どれでも可|**MSIDXS**|インデックスサービスのカタログ名||||  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ワークシート|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|どれでも可|**Microsoft.Jet.OLEDB.4.0**|Excel ファイルのフル パス||Excel 5.0||  
-|IBM DB2 データベース|[!INCLUDE[msCoName](../../includes/msconame-md.md)] DB2 の OLE DB Provider|どれでも可|**DB2OLEDB**|||[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Provider FOR DB2 のドキュメントを参照してください。|DB2 データベースのカタログ名|  
+|Oracle、バージョン 8 以降|Oracle Provider for OLE DB|Any|**OraOLEDB.Oracle**|Oracle データベースに対する別名||||  
+|Access/Jet|Microsoft OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Jet データベースファイルの完全なパス||||  
+|ODBC データ ソース (ODBC data source)|Microsoft OLE DB Provider for ODBC|Any|**MSDASQL**|ODBC データソースのシステム DSN||||  
+|ODBC データ ソース (ODBC data source)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC|Any|**MSDASQL**|||ODBC 接続文字列||  
+|ファイル システム|[!INCLUDE[msCoName](../../includes/msconame-md.md)] インデックスサービスの OLE DB プロバイダー|Any|**MSIDXS**|インデックスサービスのカタログ名||||  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ワークシート|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Excel ファイルのフル パス||Excel 5.0||  
+|IBM DB2 データベース|[!INCLUDE[msCoName](../../includes/msconame-md.md)] DB2 の OLE DB Provider|Any|**DB2OLEDB**|||[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Provider FOR DB2 のドキュメントを参照してください。|DB2 データベースのカタログ名|  
   
  <sup>1</sup> リンクサーバーを設定するこの方法では、リンクサーバーの名前がのリモートインスタンスのネットワーク名と同じになり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *Data_source*を使用してサーバーを指定します。  
   
@@ -330,9 +330,9 @@ SELECT * FROM myLinkedServer.myDatabase.dbo.myTable
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_serveroption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [sp_setnetname &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [システム テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_faileditems database mail view
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 60e6e4b4411c55467aab30359ae25f07237ceb12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6c86c282b80c346c4d9378c9488e0503bbb85212
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427894"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548917"
 ---
 # <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "88427894"
 |**attach_query_result_as_file**|**bit**|値が0の場合、クエリ結果は、本文の内容の後に電子メールメッセージの本文に含まれていました。 値が 1 の場合、結果が添付ファイルとして返されたことを示します。|  
 |**query_result_header**|**bit**|値が1の場合、クエリ結果には列ヘッダーが含まれます。 値が 0 の場合、クエリの結果に列のヘッダーが含まれていないことを示します。|  
 |**query_result_width**|**int**|メッセージの **query_result_width** パラメーター。|  
-|**query_result_separator**|**char (1)**|クエリの出力で列の区切りに使用された文字。|  
+|**query_result_separator**|**char(1)**|クエリの出力で列の区切りに使用された文字。|  
 |**exclude_query_output**|**bit**|メッセージの **exclude_query_output** パラメーター。 詳細については、「 [sp_send_dbmail &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)」を参照してください。|  
 |**append_query_error**|**bit**|メッセージの **append_query_error** パラメーター。 0 は、クエリにエラーがあった場合、データベース メールで電子メール メッセージが送信されないことを示します。|  
 |**send_request_date**|**datetime**|メッセージがメールキューに置かれた日付と時刻。|  

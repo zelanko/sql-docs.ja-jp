@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_hosts dynamic management view
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8e740acbef6a2980c0fed6c27b4d7c892883803b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 482ce9c2e7e29aa0b1f137e3941136b6552d305b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489816"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548496"
 ---
 # <a name="sysdm_os_hosts-transact-sql"></a>dm_os_hosts (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88489816"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**host_address**|**varbinary (8)**|ホスト オブジェクトの内部メモリ アドレス。|  
-|**type**|**nvarchar(60)**|ホストされるコンポーネントの種類。 たとえば、次のように入力します。<br /><br /> SOSHOST_CLIENTID_SERVERSNI = SQL Server ネイティブインターフェイス<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB プロバイダー<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft データアクセスの実行時|  
+|**type**|**nvarchar(60)**|ホストされるコンポーネントの種類。 たとえば、オブジェクトに適用された<br /><br /> SOSHOST_CLIENTID_SERVERSNI = SQL Server ネイティブインターフェイス<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB プロバイダー<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft データアクセスの実行時|  
 |**name**|**nvarchar(32)**|ホストの名前。|  
 |**enqueued_tasks_count**|**int**|ホストによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のキューに挿入されたタスクの合計数。|  
 |**active_tasks_count**|**int**|このホストがキューに配置した現在実行中のタスクの数。|  
@@ -57,7 +57,7 @@ ms.locfileid: "88489816"
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|ソース|終了|リレーションシップ|  
+|From|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |sys.dm_os_hosts. default_memory_clerk_address|dm_os_memory_clerks。 memory_clerk_address|1対1|  
 |sys.dm_os_hosts. host_address|dm_os_memory_clerks。 host_address|1対1|  

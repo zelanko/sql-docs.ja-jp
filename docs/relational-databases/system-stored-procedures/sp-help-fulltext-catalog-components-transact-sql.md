@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 008c9b4f6cd0478e960d77ff6c39b45d9a34fbe2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2884cda986a99f23c88c71c8960d25a467de0663
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489373"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548038"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_help_fulltext_catalog_components
 |-----------------|---------------|-----------------|  
 |**フルテキストカタログ名**|**int**|フルテキストカタログの名前。|  
 |**フルテキストカタログ id**|**sysname**|フルテキストカタログの ID。|  
-|**componenttype**|**sysname**|コンポーネントの種類。 次のいずれかになります。<br /><br /> Assert<br /><br /> プロトコルハンドラー<br /><br /> 単語|  
+|**componenttype**|**sysname**|コンポーネントの種類。 次のいずれか:<br /><br /> Assert<br /><br /> プロトコルハンドラー<br /><br /> 単語|  
 |**componentname**|**sysname**|コンポーネント名。|  
 |**clsid**|**uniqueidentifier**|コンポーネントのクラス ID。|  
 |**fullpath**|**nvarchar (256)**|コンポーネントの場所へのパス。<br /><br /> NULL = 呼び出し元は、 **serveradmin** 固定サーバーロールのメンバーではありません。|  
@@ -60,7 +60,7 @@ sp_help_fulltext_catalog_components
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索ストアドプロシージャ ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
- [fulltext_catalogs &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_system_components &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)  
   

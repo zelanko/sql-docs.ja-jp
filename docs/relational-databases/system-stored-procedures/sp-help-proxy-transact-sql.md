@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ab6a1a976dd70e991b36f51429a96d0be425b152
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f0125bee2811495eefc015e6be65d30b398edeaf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481186"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549688"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,14 +52,14 @@ sp_help_proxy
   
  次の表に、各サブシステムの値を示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |ActiveScripting| ActiveX スクリプト|  
 |CmdExec|オペレーティング システム (CmdExec)|  
 |スナップショット|レプリケーション スナップショット エージェント|  
 |LogReader|レプリケーション ログ リーダー エージェント|  
-|Distribution|レプリケーションディストリビューションエージェント|  
-|Merge|Replication Merge Agent|  
+|配布|レプリケーションディストリビューションエージェント|  
+|マージする|Replication Merge Agent|  
 |QueueReader|Replication Queue Reader Agent|  
 |ANALYSISQUERY|Analysis Services コマンド|  
 |ANALYSISCOMMAND|Analysis Services クエリ|  
@@ -80,7 +80,7 @@ sp_help_proxy
 |**credential_identity**|**sysname**|プロキシに関連付けられている資格情報の Microsoft Windows ドメイン名とユーザー名。|  
 |**有効**|**tinyint**|プロキシが有効かどうか  { **0** = 無効、 **1** = 有効}|  
 |**description**|**nvarchar(1024)**|このプロキシの説明。|  
-|**user_sid**|**varbinary (85)**|プロキシに関する Windows ユーザーの Windows セキュリティ ID|  
+|**user_sid**|**varbinary(85)**|プロキシに関する Windows ユーザーの Windows セキュリティ ID|  
 |**credential_id**|**int**|このプロキシに関連付けられている資格情報の識別子。|  
 |**credential_identity_exists**|**int**|credential_identity が存在するかどうか  {0 = 存在しない、1 = 存在する}|  
   

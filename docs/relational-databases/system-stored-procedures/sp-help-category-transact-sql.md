@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0db25b095536c06e03c87b3bc21dacc5f8c7d0f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d500bad167bda9085d4caf40bdaa9e442cb26efb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481281"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549708"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>引数  
 `[ @class = ] 'class'` 要求する情報に関するクラス。 *クラス* は **varchar (8)**,、既定値は **JOB**です。 *クラス* には、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**補足**|ジョブカテゴリに関する情報を提供します。|  
 |**アラート**|アラートカテゴリに関する情報を提供します。|  
@@ -53,9 +53,9 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'` 情報を要求するカテゴリの種類。 *型* は **varchar (12)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**地元の**|ローカルジョブカテゴリ。|  
+|**LOCAL**|ローカルジョブカテゴリ。|  
 |**MULTI -SERVER**|マルチサーバージョブカテゴリ。|  
 |**NONE**|**JOB**以外のクラスのカテゴリ。|  
   

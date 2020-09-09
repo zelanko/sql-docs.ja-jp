@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobschedule
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 57037217d1c50de3b37618da856288ed85adaa40
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 46f76ceeba699f614e19b494785c42591ab5299a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481655"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549986"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -69,19 +69,19 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_type = ] frequency_type` ジョブがいつ実行されるかを示す値。 *frequency_type* は **int**,、既定値は **0**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**4**|毎日|  
 |**8**|週次|  
-|**16**|月 1 回|  
+|**16**|月単位|  
 |**32**|毎月、frequency_interval を基準と *します。*|  
 |**64**|エージェントサービスが開始されたときに実行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。|  
 |**128**|コンピューターがアイドル状態のときに実行します。|  
   
 `[ @freq_interval = ] frequency_interval` ジョブが実行された日。 *frequency_interval* は **int**で、既定値は0です。次の表に示すように、 *frequency_type* の値に依存します。  
   
-|値|結果|  
+|[値]|効果|  
 |-----------|------------|  
 |**1** (1 回)|*frequency_interval* は使用されていません。|  
 |**4** (毎日)|*Frequency_interval*日ごと。|  
@@ -93,7 +93,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_subday_type = ] frequency_subday_type`*Frequency_subday_interval*の単位を指定します。 *frequency_subday_type* は **int**,、既定値はありませんは、次のいずれかの値を指定します。  
   
-|値|説明 (単位)|  
+|[値]|説明 (単位)|  
 |-----------|--------------------------|  
 |**0x1**|指定された時間|  
 |**0x4**|分|  
@@ -105,10 +105,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* は **int**,、既定値はありませんは、次のいずれかの値を指定します。  
   
-|値|説明 (単位)|  
+|[値]|説明 (単位)|  
 |-----------|--------------------------|  
 |**1**|First|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|Third|  
 |**8**|4 番目|  
 |**16**|Last (最後へ)|  

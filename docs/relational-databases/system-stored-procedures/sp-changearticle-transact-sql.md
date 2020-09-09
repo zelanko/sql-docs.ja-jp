@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46afab7da64374922f20e5736c2a3d31217056b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2eb11859c0d0e4552324b0a3d7d5e005f9bd89b7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464481"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548239"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -69,7 +69,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**ins_cmd**||実行する INSERT ステートメントです。それ以外の場合は、ログから作成されます。|  
 |**pre_creation_cmd**||同期が適用される前に、レプリケーション先のテーブルを削除したり、切り捨てたりできる作成準備コマンドです。|  
 ||"**なし**"|コマンドを使用しません。|  
-||**drop**|変換先テーブルを削除します。|  
+||**」**|変換先テーブルを削除します。|  
 ||**delete**|変換先テーブルを削除します。|  
 ||**truncate**|変換先テーブルを切り捨てます。|  
 |**pub_identity_range**||サブスクライバーで割り当てられた、割り当て済みの ID 範囲のサイズを管理します。 ピア ツー ピア レプリケーションではサポートされません。|  
@@ -211,7 +211,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="valid-schema-options"></a>有効なスキーマ オプション  
  次の表では、レプリケーションの種類 (上部に表示) とアーティクルの種類 (最初の列に表示されます) に基づいて *schema_option* の許容値について説明します。  
   
-| アーティクルの種類 | レプリケーションの種類-トランザクション | レプリケーションの種類-スナップショット |
+| 記事の種類 | レプリケーションの種類-トランザクション | レプリケーションの種類-スナップショット |
 | ------------ | -------------------------------- | --------------------------- |
 |**logbased**|すべてのオプション|すべてのオプション ( **0x02** )|  
 |**logbased manualfilter**|すべてのオプション|すべてのオプション ( **0x02** )|  
@@ -236,12 +236,12 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changearticle**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アーティクルのプロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articlecolumn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   

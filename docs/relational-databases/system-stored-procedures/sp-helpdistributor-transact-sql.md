@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributor
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: eac0d50069eb6148efedecaa8f2359f4a56eed2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f2c7f0778ced979765e046634d0bb39adc01578d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469304"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549648"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -91,7 +91,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |**ディストリビューション クリーンアップ エージェント (distribution cleanup agent)**|**nvarchar (100)**|ディストリビューションクリーンアップエージェントの名前。|  
 |**rpc server name**|**sysname**|リモートディストリビューターまたはローカルディストリビューターの名前。|  
 |**rpc ログイン名**|**sysname**|リモート ディストリビューターに対するリモート プロシージャ呼び出しで使用するログインです。|  
-|**パブリッシャーの種類**|**sysname**|パブリッシャーの種類です。次のいずれかを指定できます。<br /><br /> **MS**<br /><br /> **ORACLE11I**<br /><br /> **ORACLE GATEWAY **|  
+|**パブリッシャーの種類**|**sysname**|パブリッシャーの種類です。次のいずれかを指定できます。<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE11I**<br /><br /> **ORACLE GATEWAY **|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  

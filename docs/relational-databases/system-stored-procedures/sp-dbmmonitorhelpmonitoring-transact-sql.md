@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sp_dbmmonitorhelpmonitoring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a085cf87-269f-454a-a146-21f80a113b72
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f6c01cf610764cc02f77ac1f035319fb1598687b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dd82681731ab29068c2a951850da9f2ad225742b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493368"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548165"
 ---
 # <a name="sp_dbmmonitorhelpmonitoring-transact-sql"></a>sp_dbmmonitorhelpmonitoring (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,10 +41,10 @@ sp_dbmmonitorhelpmonitoring
 ```  
   
 ## <a name="arguments"></a>引数  
- None  
+ なし  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
  現在の更新間隔、つまりデータベース ミラーリングの状態テーブルを更新する間隔 (分単位) を返します。 値の範囲は 1 ～ 120 分です。  
