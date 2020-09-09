@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_cluster_nodes dynamic management view
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c5ee6538ed70c73177f5cd23b14739df48fd2af8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b3569d4ad119341d6e7ce520f203ac96f2ee8cd0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481916"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539354"
 ---
 # <a name="sysdm_os_cluster_nodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88481916"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**NodeName**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェールオーバークラスターインスタンス (仮想サーバー) 構成のノードの名前。|  
+|**ノード**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェールオーバークラスターインスタンス (仮想サーバー) 構成のノードの名前。|  
 |status|**int**|フェールオーバークラスターインスタンス内のノードの状態 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : 0、1、2、3、-1。 詳細については、「 [Getclusternodestate 関数](https://go.microsoft.com/fwlink/?LinkId=204794)」を参照してください。|  
 |status_description|**nvarchar (20)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター ノードの状態の説明。<br /><br /> 0 = up<br /><br /> 1 = ダウン<br /><br /> 2 = 一時停止<br /><br /> 3 = 結合<br /><br /> -1 = 不明|  
 |is_current_owner|bit|1は、このノードがフェールオーバークラスターリソースの現在の所有者であることを示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  

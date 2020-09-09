@@ -20,14 +20,14 @@ helpviewer_keywords:
 - sys.availability_groups_cluster catalog view
 - Availability Groups [SQL Server], WSFC clusters
 ms.assetid: d0f4683f-cdf0-4227-8b68-720ffe58f158
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8cdbb0b871da55eddaaf2a9266679de4a9c8ee19
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 26a33fd75d392ea847fd2e27aa8dde6166e10bca
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490407"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537508"
 ---
 # <a name="sysavailability_groups_cluster-transact-sql"></a>sys.availability_groups_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88490407"
 |**automated_backup_preference**|**tinyint**|この可用性グループの可用性データベースでバックアップを実行するための推奨される場所です。 次のいずれかの値です。<br /><br /> 0: プライマリ。 バックアップは常にプライマリレプリカで実行する必要があります。<br />1: セカンダリのみ。 セカンダリレプリカでバックアップを実行することをお勧めします。<br />2: セカンダリを優先します。 セカンダリレプリカでバックアップを実行することをお勧めしますが、バックアップ操作に使用できるセカンダリレプリカがない場合は、プライマリレプリカでバックアップを実行できます。 これは既定の動作です。<br />3: 任意のレプリカ。 バックアップをプライマリレプリカとセカンダリレプリカのどちらで実行するかについては、優先順位はありません。<br /><br /> 詳細については、「[アクティブなセカンダリ:セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。|  
 |**automated_backup_preference_desc**|**nvarchar(60)**|**Automated_backup_preference**の説明。次のいずれかになります。<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> NONE|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  サーバー インスタンスに対する VIEW ANY DEFINITION 権限が必要です。  

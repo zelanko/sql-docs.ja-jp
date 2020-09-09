@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_exec_session_wait_stats
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1a856f10e59fa41bc9cd6d27c9c88097aa90c9c4
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6668ab7b975c7325ab4b5d03ca2f30856b2ffbd0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646372"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537009"
 ---
 # <a name="sysdm_exec_session_wait_stats-transact-sql"></a>dm_exec_session_wait_stats (Transact-sql)
 
@@ -41,7 +41,7 @@ ms.locfileid: "88646372"
 |max_wait_time_ms|**bigint**|この待機の種類における最大待機時間。|  
 |signal_wait_time_ms|**bigint**|待機スレッドがシグナルを受け取ってから実行を開始するまでの時間。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  この DMV は、セッションが開かれたとき、またはセッションがリセットされたとき (接続プールがある場合) に、セッションの情報をリセットします。  
   
  待機の種類の詳細については、「 [sys. dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。  

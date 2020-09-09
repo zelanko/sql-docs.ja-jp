@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_allitems database mail view
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0c5a41e6f0c150638eeed8e1c7cdd4fbb3c6bf2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9eb8d8b48203b047df830670eb88b0956d04c4dc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419916"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537961"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-sql)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,13 +51,13 @@ ms.locfileid: "88419916"
 |**attach_query_result_as_file**|**bit**|値が0の場合、クエリ結果は、本文の内容の後に電子メールメッセージの本文に含まれていました。 値が 1 の場合、結果が添付ファイルとして返されたことを示します。|  
 |**query_result_header**|**bit**|値が1の場合、クエリ結果には列ヘッダーが含まれます。 値が 0 の場合、クエリの結果に列のヘッダーが含まれていないことを示します。|  
 |**query_result_width**|**int**|メッセージの **query_result_width** パラメーター。|  
-|**query_result_separator**|**char (1)**|クエリの出力で列の区切りに使用された文字。|  
+|**query_result_separator**|**char(1)**|クエリの出力で列の区切りに使用された文字。|  
 |**exclude_query_output**|**bit**|メッセージの **exclude_query_output** パラメーター。 詳細については、「 [sp_send_dbmail &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)」を参照してください。|  
 |**append_query_error**|**bit**|メッセージの **append_query_error** パラメーター。 0 は、クエリにエラーがあった場合、データベース メールで電子メール メッセージが送信されないことを示します。|  
 |**send_request_date**|**datetime**|メッセージがメールキューに置かれた日付と時刻。|  
 |**send_request_user**|**sysname**|メッセージを送信したユーザー。 これは、メッセージの From: フィールドではなく、データベースメールプロシージャのユーザーコンテキストです。|  
 |**sent_account_id**|**int**|メッセージの送信に使用されるデータベースメールアカウントの識別子。|  
-|**sent_status**|**varchar (8)**|メールの状態。 次のいずれかの値になります。<br /><br /> **送信** 済み-メールが送信されました。<br /><br /> **未送信** -データベースメールはまだメッセージの送信を試みています。<br /><br /> データベースメール**再試行**しています。メッセージを送信できませんでしたが、もう一度送信しようとしています。<br /><br /> **失敗しました** -データベースメールはメッセージを送信できませんでした。|  
+|**sent_status**|**varchar (8)**|メールの状態。 設定可能な値は、次のとおりです。<br /><br /> **送信** 済み-メールが送信されました。<br /><br /> **未送信** -データベースメールはまだメッセージの送信を試みています。<br /><br /> データベースメール**再試行**しています。メッセージを送信できませんでしたが、もう一度送信しようとしています。<br /><br /> **失敗しました** -データベースメールはメッセージを送信できませんでした。|  
 |**sent_date**|**datetime**|メッセージが送信された日時。|  
 |**last_mod_date**|**datetime**|行が最後に変更された日付と時刻。|  
 |**last_mod_user**|**sysname**|行を最後に変更したユーザー。|  

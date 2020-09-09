@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 75a3d3f6c38b6d63ad8127966cba118f4c3455dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d087a160324ec84cbb94a73cba3ab45f36dfc29e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481378"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536678"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,10 +51,10 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  カーソルが実行する操作を指定する必須のパラメーターです。 *optype* には、次のいずれかの **int** 入力値が必要です。  
   
-|値|名前|説明|  
+|[値]|名前|説明|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|は、フェッチバッファー内の1つ以上の行を更新するために使用されます。  *Rownum*で指定した行には、再度アクセスして更新します。|  
-|0x0002|Del|は、フェッチバッファー内の1つ以上の行を削除するために使用されます。 *Rownum*で指定した行には、再度アクセスして削除します。|  
+|0x0002|DELETE|は、フェッチバッファー内の1つ以上の行を削除するために使用されます。 *Rownum*で指定した行には、再度アクセスして削除します。|  
 |0X0004|INSERT|SQL の **insert** ステートメントを作成せずにデータを挿入します。|  
 |0X0008|REFRESH|は、基になるテーブルからバッファーを補充するために使用されます。オプティミスティック同時実行制御によって、または更新後に更新または削除が失敗した場合に、行を更新するために使用できます。|  
 |0X10|LOCK|指定された行を含むページで SQL Server U ロックを取得します。 このロックは、S ロックと互換性がありますが、X ロックやその他の U ロックとは互換性がありません。 短期間のロックを実装する場合に使用できます。|  

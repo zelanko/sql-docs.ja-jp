@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_threads dynamic management view
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80986f9bce91034d8950915f5048e3f4ee895f57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: adb5a15510d5139481d05e2d9673817c265d2cc9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474835"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539311"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>dm_os_threads (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "88474835"
 |stack_bytes_committed|**int**|スタックでコミットされたバイト数。|  
 |stack_bytes_used|**int**|スレッドでアクティブに使用されているバイト数。|  
 |affinity|**bigint**|このスレッドが実行されている CPU マスク。 これは、 **ALTER SERVER CONFIGURATION SET PROCESS AFFINITY** ステートメントで構成された値によって異なります。 ソフト アフィニティの場合は、スケジューラと異なることがあります。|  
-|Priority|**int**|このスレッドの優先度の値。|  
+|優先度|**int**|このスレッドの優先度の値。|  
 |Locale|**int**|スレッドのキャッシュされたロケール LCID。|  
 |トークン|**varbinary (8)**|スレッドのキャッシュされた偽装トークンハンドル。|  
 |is_impersonating|**int**|スレッドで Win32 権限借用が使用されているかどうかを示します。<br /><br /> 1 = スレッドではプロセスの既定値と異なるセキュリティ資格情報が使用されています。 これは、スレッドが、プロセスを作成したエンティティ以外のエンティティを偽装していることを示します。|  

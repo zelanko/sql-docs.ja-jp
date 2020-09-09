@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_sys_memory dynamic management view
 ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78f02c014874bdce9cf6d1f6e2c27ad0b3fad24d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 490a70abe37841cd5d0a6f7f34a1a58a8fd794a8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493663"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539289"
 ---
 # <a name="sysdm_os_sys_memory-transact-sql"></a>dm_os_sys_memory (Transact-sql)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88493663"
 |**system_memory_state_desc**|**nvarchar (256)**|メモリ状態の説明。 次の表を参照してください。|  
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
-|条件|値|  
+|条件|[値]|  
 |---------------|-----------|  
 |system_high_memory_signal_state = 1<br /><br /> および<br /><br /> system_low_memory_signal_state = 0|使用可能な物理メモリが十分に存在します。|  
 |system_high_memory_signal_state = 0<br /><br /> および<br /><br /> system_low_memory_signal_state = 1|使用可能な物理メモリが不足しています。|  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - system catalogs [SQL Server], example queries
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 17b7367ddcd8795eef64181934c8d44bb648c6e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 346ae709b81c1d5f3892a7e7b5acfd98c3ff7d3b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486602"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539787"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>SQL Server システム カタログに対するクエリに関してよく寄せられる質問
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88486602"
 ##  <a name="frequently-asked-questions"></a><a name="_TOP"></a> よく寄せられる質問  
  以下のセクションでは、よく寄せられる質問をカテゴリ別に示します。  
   
-### <a name="data-types"></a>データ型  
+### <a name="data-types"></a>データの種類  
   
 -   [指定されたテーブルの列のデータ型を検索操作方法には、](#_FAQ7)  
   

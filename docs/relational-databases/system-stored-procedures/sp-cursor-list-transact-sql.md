@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7f033c24d2cfd84c26c9008e3f73adf5152715c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dca9473813bf8e4324f1b7de6fb1a30c38a21148
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481381"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536651"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,14 +48,14 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_scope =] *cursor_scope*  
  レポートするカーソルのレベルを指定します。 *cursor_scope* は **int**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |1|すべてのローカル カーソルをレポートします。|  
 |2|すべてのグローバル カーソルをレポートします。|  
 |3|ローカル カーソルとグローバル カーソルの両方をレポートします。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="cursors-returned"></a>返されるカーソル  
  sp_cursor_list は、結果セットとしてではなく、[!INCLUDE[tsql](../../includes/tsql-md.md)] カーソル出力パラメーターとしてレポートを返します。 これにより、 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ、ストアドプロシージャ、およびトリガーは、一度に1行ずつ出力を処理できます。 また、データベース API 関数からプロシージャを直接呼び出すことができなくなります。 Cursor 出力パラメーターはプログラム変数にバインドする必要がありますが、データベース Api では、カーソルパラメーターまたは変数のバインドがサポートされていません。  
@@ -68,7 +68,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |cursor_name|**sysname**|DECLARE CURSOR ステートメントに指定されたカーソルの名前です。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、カーソル変数をカーソルに設定することによってカーソルが作成された場合、 **cursor_name** はカーソル変数の名前を返します。  以前のリリースでは、この出力列にはシステムによって生成された名前が返されていました。|  
 |cursor_scope|**smallint**|1 = ローカル<br /><br /> 2 = GLOBAL|  
 |status|**smallint**|CURSOR_STATUS システム関数によって報告されたものと同じ値です。<br /><br /> 1 = カーソル名または変数によって参照されているカーソルが開いています。 カーソルが状態非依存、静的、キーセットのいずれかの場合には、結果セットに少なくとも 1 行が含まれます。 カーソルが動的な場合、結果セットには0個以上の行が含まれます。<br /><br /> 0 = カーソル名または変数によって参照されるカーソルが開かれていますが、行がありません。 動的カーソルがこの値を返すことはありません。<br /><br /> -1 = カーソル名または変数によって参照されたカーソルは閉じています。<br /><br /> -2 = カーソル変数にのみ適用されます。 変数に割り当てられたカーソルがありません。 おそらく、OUTPUT パラメーターによってカーソルを変数に割り当てましたが、戻る前にストアド プロシージャがカーソルを閉じました。<br /><br /> -3 = 指定された名前のカーソルまたはカーソル変数が存在しないか、またはカーソル変数にカーソルが割り当てられていません。|  
-|model|**smallint**|1 = 非依存 (または静的)<br /><br /> 2 = キーセット<br /><br /> 3 = 動的<br /><br /> 4 = 高速順方向|  
+|対象となるのは、モデル|**smallint**|1 = 非依存 (または静的)<br /><br /> 2 = キーセット<br /><br /> 3 = 動的<br /><br /> 4 = 高速順方向|  
 |concurrency|**smallint**|1 = 読み取り専用<br /><br /> 2 = スクロール ロック<br /><br /> 3 = オプティミスティック|  
 |scrollable|**smallint**|0 = 順方向専用<br /><br /> 1 = スクロール可能|  
 |open_status|**smallint**|0 = 終了<br /><br /> 1 = 開く|  
