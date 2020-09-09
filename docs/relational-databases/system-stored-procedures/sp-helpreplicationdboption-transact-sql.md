@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationdboption
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8a09f31e6dca74e00248cb13801d9c5acec11bb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6733b1f473c91094bd8af177bce4b13f3cf1b03e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493150"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89527053"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,7 +44,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 `[ @type = ] 'type'` 指定されたレプリケーションオプションの *種類* の値が有効になっているデータベースのみが含まれるように結果セットを制限します。 *種類* は **sysname**で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**投稿**|トランザクションレプリケーションを許可します。|  
 |**merge publish**|マージレプリケーションが許可されています。|  

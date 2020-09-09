@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_maintenance_plan
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 85a2f93384dbca55e26a38933ab9afd730da9f76
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 99fe08406840229ded741160f855ed60f11e977a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481209"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89527696"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 `[ @plan_id = ] 'plan\_id'` メンテナンスプランのプラン ID を指定します。 *plan_id* は **UNIQUEIDENTIFIER**です。 既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
  *Plan_id*が指定されている場合、 **sp_help_maintenance_plan**は Plan、Database、Job という3つのテーブルを返します。  
