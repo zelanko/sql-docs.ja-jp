@@ -9958,10 +9958,16 @@
               href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
         - name: Containers
           items:
-            - name: Docker コンテナーの構成
-              href: linux/sql-server-linux-configure-docker.md
+            - name: コンテナーにデプロイして接続する
+              href: linux/sql-server-linux-docker-container-deployment.md
+            - name: コンテナーを構成してカスタマイズする
+              href: linux/sql-server-linux-docker-container-configure.md
+            - name: コンテナーのセキュリティ
+              href: linux/sql-server-linux-docker-container-security.md
             - name: MSDTC 用の Docker の構成
               href: linux/sql-server-linux-configure-msdtc-docker.md
+            - name: Docker コンテナーのトラブルシューティング
+              href: linux/sql-server-linux-docker-container-troubleshooting.md
         - name: 開発
           href: linux/sql-server-linux-develop-overview.md
           items:

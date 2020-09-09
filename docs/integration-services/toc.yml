@@ -28,7 +28,7 @@
           href: ../integration-services/ssis-quickstart-deploy-cmdline.md
         - name: PowerShell でデプロイする
           href: ../integration-services/ssis-quickstart-deploy-powershell.md
-        - name: 'C# を使用した配置'
+        - name: C# を使用した配置
           href: ../integration-services/ssis-quickstart-deploy-dotnet.md
     - name: ラン
       items:
@@ -42,7 +42,7 @@
           href: ../integration-services/ssis-quickstart-run-cmdline.md
         - name: PowerShell を使用しての実行
           href: ../integration-services/ssis-quickstart-run-powershell.md
-        - name: 'C# を使用しての実行'
+        - name: C# を使用しての実行
           href: ../integration-services/ssis-quickstart-run-dotnet.md
 - name: Azure でのパッケージの配置と実行
   href: ../integration-services/lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md
@@ -811,7 +811,7 @@
           href: ../integration-services/expressions/bitwise-and-ssis-expression.md
         - name: ~ (ビット演算 Not) (SSIS 式)
           href: ../integration-services/expressions/bitwise-not-ssis-expression.md
-        - name: == (等しい) (SSIS 式)
+        - name: '== (等しい) (SSIS 式)'
           href: ../integration-services/expressions/equal-ssis-expression.md
         - name: '!= (等しくない) (SSIS 式)'
           href: ../integration-services/expressions/unequal-ssis-expression.md
@@ -1843,7 +1843,7 @@
 - name: リソース
   items:
     - name: SSIS フォーラム >>
-      href: 'https://social.msdn.microsoft.com/Forums/en-US/home'
+      href: 'https://docs.microsoft.com/answers/topics/sql-server-integration-services.html'
     - name: スタック オーバーフロー >>
       href: 'https://stackoverflow.com/questions/tagged/ssis'
     - name: SSIS ブログ >>
