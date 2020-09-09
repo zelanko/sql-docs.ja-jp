@@ -36,7 +36,7 @@ ms.locfileid: "88498598"
 > [!IMPORTANT]  
 >  対象の列では、フルテキスト インデックスとセマンティック インデックスが有効になっている必要があります。  
   
-###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
+###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a> 例: 他のドキュメントとの類似性が高い上位のドキュメントを見つける  
  次の例では、AdventureWorks2012 サンプル データベースの HumanResources.JobCandidate テーブルから、 *\@CandidateID* で指定した候補に類似する上位 10 件の候補を取得します。  
   
 ```scr  
