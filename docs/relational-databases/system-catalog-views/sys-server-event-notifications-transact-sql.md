@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_event_notifications catalog view
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6e6a8decda6dd98ad4c6bda353c70884d0f0c84c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c9d10906885eefeb6be66d8f353fd7a553c57288
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377218"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551429"
 ---
 # <a name="sysserver_event_notifications-transact-sql"></a>server_event_notifications (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88377218"
 |**modify_date**|**datetime**|オブジェクトが ALTER ステートメントを使用して最後に変更された日付です。|  
 |**service_name**|**nvarchar (256)**|通知の送信先のサービスの名前です。|  
 |**broker_instance**|**nvarchar(128)**|指定された通知先サービスが定義されている Service Broker です。|  
-|**creator_sid**|**varbinary (85)**|イベント通知を作成するステートメントを実行するログインの SID。 WITH FAN_IN がイベント通知定義に指定されていない場合は NULL になります。|  
+|**creator_sid**|**varbinary(85)**|イベント通知を作成するステートメントを実行するログインの SID。 WITH FAN_IN がイベント通知定義に指定されていない場合は NULL になります。|  
 |**principal_id**|**int**|これを所有しているサーバー プリンシパルの ID です。|  
   
 ## <a name="permissions"></a>アクセス許可  

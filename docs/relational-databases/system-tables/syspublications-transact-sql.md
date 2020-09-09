@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - syspublications system table
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 17791f5ee8039dc082a9de22a8dc963bda2df2ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 20b5615cc4f0b11b05eb69f4233e20f7a7379378
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427554"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550977"
 ---
 # <a name="syspublications-transact-sql"></a>syspublications (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "88427554"
 |**immediate_sync_ready**|**bit**|スナップショットがスナップショット エージェントによって生成されたかどうか、および新しいサブスクリプションで使用できるかどうかを示します。 即時更新パブリケーションでのみ意味を持ちます。 **1** は、スナップショットの準備ができていることを示します。|  
 |**allow_sync_tran**|**bit**|パブリケーションで即時更新サブスクリプションを許可するかどうかを指定します。 **1** は、即時更新サブスクリプションが許可されることを示します。|  
 |**autogen_sync_procs**|**bit**|即時更新サブスクリプションの同期ストアドプロシージャがパブリッシャーで生成されるかどうかを指定します。 **1** は、パブリッシャーで生成されることを意味します。|  
-|**保持**|**int**|指定されたパブリケーションに対して保存する変更の量 (時間単位)。|  
+|**保有**|**int**|指定されたパブリケーションに対して保存する変更の量 (時間単位)。|  
 |**allowed_queued_tran**|**bit**|変更をパブリッシャーで適用できるようになるまで、サブスクライバーで変更をキューに保持するかどうかを示します。 **1**の場合、サブスクライバーでの変更はキューに登録されます。|  
 |**snapshot_in_defaultfolder**|**bit**|スナップショットファイルを既定のフォルダーに格納するかどうかを指定します。<br /><br /> **0** = スナップショットファイルは、 *alternate_snapshot_folder*によって指定された別の場所に格納されています。<br /><br /> **1** = スナップショットファイルは既定のフォルダーにあります。|  
 |**alt_snapshot_folder**|**nvarchar (255)**|スナップショットの代替フォルダーの場所を指定します。|  
@@ -78,7 +78,7 @@ ms.locfileid: "88427554"
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addpublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_changepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
   
   

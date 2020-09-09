@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.assembly_modules catalog view
 ms.assetid: 5f9e644e-8065-49a2-b53d-db7df98f70d8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8d04bb98a27ea81f2624c5d9e822b254eee9503
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 33599443948e52ca21eba59afd86eb6a67c58fae
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464838"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551551"
 ---
 # <a name="sysassembly_modules-transact-sql"></a>assembly_modules (Transact-sql)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88464838"
 |**assembly_class**|**sysname**|このモジュールを定義するアセンブリ内のクラスの名前。|  
 |**assembly_method**|**sysname**|このモジュールを定義する **assembly_class** 内のメソッドの名前。<br /><br /> 集計関数 (AF) の場合は NULL です。|  
 |**null_on_null_input**|**bit**|モジュールは、任意の NULL 入力に対して NULL 出力を生成するように宣言されています。|  
-|**execute_as_principal_id**|**int**|CLR 関数、ストアドプロシージャ、またはトリガーの EXECUTE AS 句で指定されているように、コンテキストの実行が発生するデータベースプリンシパルの ID。<br /><br /> NULL = EXECUTE AS CALLER。 これは既定値です。<br /><br /> 指定されたデータベースプリンシパルの ID = EXECUTE AS SELF、EXECUTE AS *user_name*、または execute as *login_name*です。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**execute_as_principal_id**|**int**|CLR 関数、ストアドプロシージャ、またはトリガーの EXECUTE AS 句で指定されているように、コンテキストの実行が発生するデータベースプリンシパルの ID。<br /><br /> NULL = EXECUTE AS CALLER。 これは既定です。<br /><br /> 指定されたデータベースプリンシパルの ID = EXECUTE AS SELF、EXECUTE AS *user_name*、または execute as *login_name*です。<br /><br /> -2 = EXECUTE AS OWNER。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

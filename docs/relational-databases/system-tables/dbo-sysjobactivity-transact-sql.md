@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobactivity system table
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 75a517f8a55eabbda1c9d50d37c6254079cc33b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dd0fb9ae28d2101b02feb17bc5b2eacbfcb476a7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446653"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551123"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88446653"
 |**session_id**|**int**|**Msdb**データベースの**syssessions**テーブルに格納されているセッションの ID。|  
 |**job_id**|**uniqueidentifier**|ジョブの ID。|  
 |**run_requested_date**|**datetime**|ジョブの実行が要求された日付と時刻。|  
-|**run_requested_source**|**sysname (nvarchar (128))**|ジョブの実行要求の発生元。<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
+|**run_requested_source**|**sysname(nvarchar(128))**|ジョブの実行要求の発生元。<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
 |**queued_date**|**datetime**|ジョブがキューに格納された日時。 ジョブが直接実行された場合、この列は NULL になります。|  
 |**start_execution_date**|**datetime**|ジョブの実行がスケジュールされている日付と時刻。|  
 |**last_executed_step_id**|**int**|実行された最後のジョブ ステップの ID。|  

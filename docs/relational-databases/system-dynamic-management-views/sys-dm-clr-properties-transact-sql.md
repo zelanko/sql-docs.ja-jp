@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7db1f2a88248f01929326f02cf19cd42ac5a5e6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7f966cbb5570eb1efb2068d7796ccecb4463750
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498417"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551302"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88498417"
 |**name**|**nvarchar(128)**|プロパティの名前。|  
 |**value**|**nvarchar(128)**|プロパティの値。|  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
  **ディレクトリ**プロパティは、.NET Framework がサーバーにインストールされたディレクトリを示します。 サーバーコンピューターに複数の .NET Framework がインストールされている可能性があります。このプロパティの値によって、どのインストール [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用されているかが識別されます。  
   
  **Version**プロパティは、サーバー上の .NET Framework およびホストされている CLR のバージョンを示します。  
@@ -85,7 +85,7 @@ SELECT name, value
 FROM sys.dm_clr_properties;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;共通言語ランタイム関連の動的管理ビュー ](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
