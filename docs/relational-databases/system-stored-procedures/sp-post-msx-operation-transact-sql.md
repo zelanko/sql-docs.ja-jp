@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_post_msx_operation
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: da3d1e8bd762f31a7592d90957c3a8680c29dbfb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 304eef1c0e707ecb77fb8d13d5e2b524eb9e9e00
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489206"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546003"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,9 +48,9 @@ sp_post_msx_operation
 ## <a name="arguments"></a>引数  
 `[ @operation = ] 'operation'` ポストされた操作の操作の種類。 *操作*は **varchar (64)**,、既定値はありません。 有効な操作は *object_type*によって異なります。  
   
-|オブジェクトの種類|操作|  
+|オブジェクトの種類|Operation|  
 |-----------------|---------------|  
-|**補足**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
+|**補足**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> スタート<br /><br /> STOP|  
 |**SERVER**|再参加<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**予定**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   

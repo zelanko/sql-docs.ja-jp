@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergeschemaarticles system table
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c4357681a782b878b9cc9bfe4df002d706e1d1f0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 690ffd7f583c008ff68138211f3181b607a1687b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473137"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547065"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88473137"
 |**destination_object**|**sysname**|サブスクリプションデータベース内の対象オブジェクトの名前。 この値は、ストアドプロシージャ、ビュー、Udf など、スキーマのみのアーティクルに適用されます。|  
 |**destination_owner**|**sysname**|サブスクリプションデータベース内のオブジェクトの所有者 ( **dbo**ではない場合)。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - firewall_rules
 - sys.firewall_rules
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 71ce10d470e552041dc2282aa27c8af404302df1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3fbe5a555ffde0a06d43c737fbc424ed9648cfef
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469922"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546809"
 ---
 # <a name="sysfirewall_rules-azure-sql-database"></a>sys.firewall_rules (Azure SQL データベース)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88469922"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|id|**通り**|サーバー レベルのファイアウォール設定の識別子。|  
+|id|**INT**|サーバー レベルのファイアウォール設定の識別子。|  
 |name|**NVARCHAR (128)**|サーバーレベルのファイアウォール設定を説明し、区別するための名前です。|  
 |start_ip_address|**VARCHAR (45)**|サーバーレベルのファイアウォール設定の範囲の最下位の IP アドレスです。 この IP アドレス以上の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーへの接続を試行できます。 設定できる最下位の IP アドレスは `0.0.0.0` です。|  
 |end_ip_address|**VARCHAR (45)**|サーバーレベルのファイアウォール設定の範囲の最上位の IP アドレスです。 これ以下の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーへの接続を試みることができます。 設定できる最上位の IP アドレスは `255.255.255.255` です。<br /><br /> 注: このフィールドと **start_ip_address** フィールドの両方がと等しい場合は、Azure の接続試行が許可され `0.0.0.0` ます。|  

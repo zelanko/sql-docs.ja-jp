@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 32d347fe40af8f2617f47291d749ef039b0838b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 88ee13025153fff3018fadfa8d64becf7a534303
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446734"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545933"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-sql)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @full_or_fast = ] full_or_fast` 行数を計算するために使用されるメソッドです。 *full_or_fast* は **tinyint**,、既定値は **2**,、これらの値のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|COUNT(*) を使用してフル カウントします。|  
 |**1**|Sysindexes から高速にカウントさ **れ**ます。 **Sysindexes**での行のカウントは、実際のテーブルの行をカウントするよりもはるかに高速です。 ただし、 **sysindexes** は遅延更新されるため、行数が正確でない場合があります。|  
@@ -93,7 +93,7 @@ sp_table_validation [ @table = ] 'table'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_table_validation**を実行するには、検証対象のテーブルに対する SELECT 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チェックサム &#40;Transact-sql&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
  [sp_article_validation &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   

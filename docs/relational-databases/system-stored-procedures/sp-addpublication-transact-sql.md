@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f03bffcfefbe20386885523aaf75419e56c87dd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 02b97900b86eac3c4fb5ffc61b7cf6922d4800e2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464634"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546334"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -92,10 +92,10 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@sync_method = ] _'sync_method'` は同期モードです。 *sync_method* は **nvarchar (13)** で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**native**|すべてのテーブルのネイティブモードの一括コピープログラム出力を生成します。 *Oracle パブリッシャーではサポートされていません*。|  
-|**記号**|すべてのテーブルのキャラクターモードの一括コピープログラム出力を生成します。 _Oracle パブリッシャーの場合、_ **文字**_はスナップショットレプリケーションでのみ有効_です。|  
+|**character**|すべてのテーブルのキャラクターモードの一括コピープログラム出力を生成します。 _Oracle パブリッシャーの場合、_ **文字**_はスナップショットレプリケーションでのみ有効_です。|  
 |**同時**|すべてのテーブルのネイティブモードの一括コピープログラム出力を生成しますが、スナップショット中はテーブルをロックしません。 トランザクションパブリケーションでのみサポートされます。 *Oracle パブリッシャーではサポートされていません*。|  
 |**concurrent_c**|すべてのテーブルのキャラクターモードの一括コピープログラム出力を生成しますが、スナップショット中はテーブルをロックしません。 トランザクションパブリケーションでのみサポートされます。|  
 |**データベーススナップショット**|データベース スナップショットから、すべてのテーブルのネイティブ モードの一括コピー プログラム出力を作成します。 データベーススナップショットは、のすべてのエディションで使用できるわけではありません [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。|  
@@ -104,7 +104,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@repl_freq = ] 'repl_freq'` レプリケーションの頻度の種類を指定します。 *repl_freq* は **nvarchar (10)** で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**continuous** (既定値)|すべてのログベースのトランザクションの出力をパブリッシュする。 以外のパブリッシャーの場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 *sync_method* を **concurrent_c**に設定する必要があります。|  
 |**ショット**|スケジュールされた同期イベントのみをパブリッシュする。 以外のパブリッシャーの場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 *sync_method* を **character**に設定する必要があります。|  
@@ -113,7 +113,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@status = ] 'status'` パブリケーションデータを使用できるかどうかを指定します。 *状態* は **nvarchar (8)**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**active**|サブスクライバーでパブリケーション データを直ちに使用できる。|  
 |**非アクティブ** (既定)|パブリケーションが最初に作成されたときは、パブリケーションデータを使用できません (サブスクライブすることはできますが、サブスクリプションは処理されません)。|  
@@ -136,7 +136,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@autogen_sync_procs = ] 'autogen_sync_procs'` 更新サブスクリプションの同期ストアドプロシージャがパブリッシャーで生成されるかどうかを指定します。 *autogen_sync_procs* は **nvarchar (5)** で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**true**|更新サブスクリプションが有効になっている場合に自動的に設定します。|  
 |**false**|更新サブスクリプションが無効の場合、または Oracle パブリッシャーの場合、自動的に生成される。|  
@@ -177,7 +177,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@conflict_policy = ] 'conflict_policy'` キュー更新サブスクライバーオプションを使用する場合の競合解決ポリシーを指定します。 *conflict_policy* は **nvarchar (100)** で、既定値は NULL です。次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**pub wins**|パブリッシャーを優先。|  
 |**サブ reinit**|サブスクライバーを再初期化。|  
@@ -192,7 +192,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@queue_type = ] 'queue_type'` 使用するキューの種類を指定します。 *queue_type* は **nvarchar (10)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**server**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクションを格納するために使用します。|  
 |NULL (既定値)|既定値は **sql**です。これは、を使用してトランザクションを格納することを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
@@ -215,7 +215,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'` サブスクライバーが、初期スナップショットではなくバックアップから、このパブリケーションに対するサブスクリプションを初期化できるかどうかを示します。 *allow_initialize_from_backup* は **nvarchar (5)** で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**true**|バックアップからの初期化を有効にする。|  
 |**false**|バックアップからの初期化を無効にします。|  
@@ -330,10 +330,10 @@ sp_addpublication [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_addpublication**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。 Windows 認証ログインを行うには、Windows ユーザー アカウントを表すユーザー アカウントがデータベースに必要です。 Windows グループを表すユーザーアカウントでは不十分です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_addlogreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
  [sp_addpublication_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
- [sp_changepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_droppublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [sp_replicationdboption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   

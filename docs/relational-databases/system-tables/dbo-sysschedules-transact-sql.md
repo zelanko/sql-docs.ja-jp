@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysschedules system table
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 16e51513c6d2b678798d0f4bde3b5a9cb1de69a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9c0bb164d77ba4c505207e56897ecc17f8644821
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488886"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545813"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88488886"
 |**schedule_uid**|**uniqueidentifier**|ジョブスケジュールの一意識別子。 この値は、分散ジョブのスケジュールを識別するために使用されます。|  
 |**originating_server_id**|**int**|ジョブ スケジュールを取得したマスター サーバーの ID。|  
 |**name**|**sysname (nvarchar (128))**|ジョブスケジュールのユーザー定義名。 この名前は、ジョブ内で一意である必要があります。|  
-|**owner_sid**|**varbinary (85)**|Microsoft Windows *security_identifier* 、ジョブスケジュールを所有するユーザーまたはグループのものです。|  
+|**owner_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* 、ジョブスケジュールを所有するユーザーまたはグループのものです。|  
 |**有効**|**int**|ジョブスケジュールの状態:<br /><br /> **0** = 有効ではありません。<br /><br /> **1** = 有効。<br /><br /> スケジュールが有効になっていない場合、スケジュールに基づいてジョブは実行されません。|  
 |**freq_type**|**int**|このスケジュールでジョブを実行する頻度。<br /><br /> **1** = 1 回のみ<br /><br /> **4** = 日単位<br /><br /> **8** = 週単位<br /><br /> **16** = 月単位<br /><br /> **32** = 毎月、 **freq_interval**に対して相対的<br /><br /> **64** = SQL Server エージェントサービスの開始時に実行されます<br /><br /> **128** = コンピューターがアイドル状態のときに実行|  
 |**freq_interval**|**int**|ジョブが実行された日。 **Freq_type**の値によって異なります。 既定値は **0**で、 **freq_interval** が使用されていないことを示します。 有効な値とその影響については、次の表を参照してください。|  

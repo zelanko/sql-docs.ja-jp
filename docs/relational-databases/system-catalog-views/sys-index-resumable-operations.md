@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sys.indexes
 - sys.index_resumable_operations
 ms.assetid: ''
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa2ae5221dbd360c5bad7279d27dbaedc7ae7f16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6878ccf5d267c265ca7bd90120c1bfc227f16ed
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490312"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546770"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>index_resumable_operations (Transact-sql)
 
@@ -65,7 +65,7 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
-- [カタログ ビュー](catalog-views-transact-sql.md)
+- [カタログビュー](catalog-views-transact-sql.md)
 - [オブジェクトカタログビュー](object-catalog-views-transact-sql.md)
 - [sys.indexes](sys-xml-indexes-transact-sql.md)
 - [sys.index_columns](sys-index-columns-transact-sql.md)

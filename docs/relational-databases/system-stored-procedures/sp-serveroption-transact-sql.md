@@ -17,14 +17,14 @@ helpviewer_keywords:
 - 7343 (Database Engine error)
 - sp_serveroption
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c9235c9307c679d80aa869990c6f43ca5ef301dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ba6045caf5d95aed6d11c0844c16afd93365368f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481044"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547393"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_serveroption [@server = ] 'server'
   
 `[ @optname = ] 'option_name'` 指定されたサーバーに設定するオプションです。 *option_name* は **varchar (** 35 **)**,、既定値はありません。 *option_name* は、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**照合順序互換**|リンク サーバーに対する分散クエリの実行に影響を与えます。 このオプションが **true**に設定されている場合、では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文字セットと照合順序 (並べ替え順序) に関して、リンクサーバーのすべての文字がローカルサーバーと互換性があると見なされます。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からプロバイダーに文字を含む列の比較を送信できるようになります。 このオプションが設定されていない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では文字列を含む列の比較の評価は常にローカルで行われます。<br /><br /> このオプションは、リンク サーバーに対応するデータ ソースがローカル サーバーと同じ文字セットと並べ替え順を持っていることが確認できている場合のみ設定します。|  
 |**照合順序名**|[ **リモート照合順序を使用する** ] が **true** で、データソースがデータソースでない場合に、リモートデータソースによって使用される照合順序の名前を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がサポートしている照合順序名のいずれかを指定する必要があります。<br /><br /> このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外の OLE DB データ ソースにアクセスし、その照合順序が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序のいずれかと一致する場合に使用します。<br /><br /> リンク サーバーは、そのサーバー内のすべての列で使用される単一の照合順序をサポートしている必要があります。 リンク サーバーが、単一のデータ ソース内で複数の照合順序をサポートしている、またはリンク サーバーの照合順序が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序のいずれかと一致するかどうかが判断できない場合は、このオプションを設定しないでください。|  

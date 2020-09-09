@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobs system table
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 71fc80a0c847957f52b85344139c75a397b8e6c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fb1e7125dd953fe4904c963f888ae9c11c400df9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454744"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545806"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysジョブ (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88454744"
 |**description**|**nvarchar(512)**|ジョブの説明。|  
 |**start_step_id**|**int**|実行を開始するジョブのステップの ID。|  
 |**category_id**|**int**|ジョブカテゴリの ID。|  
-|**owner_sid**|**varbinary (85)**|ジョブ所有者のセキュリティ識別番号 (SID)。|  
+|**owner_sid**|**varbinary(85)**|ジョブ所有者のセキュリティ識別番号 (SID)。|  
 |**notify_level_eventlog**|**int**|どのような場合に通知イベントを Microsoft Windows アプリケーションログに記録するかを示す**ビットマスク**。<br /><br /> **0** = なし<br /><br /> **1** = ジョブが成功したとき<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = ジョブが完了するたびに (ジョブの結果に関係なく)|  
 |**notify_level_email**|**int**|どのような場合に、ジョブの完了時に通知電子メールを送信するかを示すビットマスク。<br /><br /> **0** = なし<br /><br /> **1** = ジョブが成功したとき<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = ジョブが完了するたびに (ジョブの結果に関係なく)|  
 |**notify_level_netsend**|**int**|どのような場合に、ジョブの完了時にネットワークメッセージを送信するかを示すビットマスク。<br /><br /> **0** = なし<br /><br /> **1** = ジョブが成功したとき<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = ジョブが完了するたびに (ジョブの結果に関係なく)|  

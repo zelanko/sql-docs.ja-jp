@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_info
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 09a7f0e7b0496d3f38ca31bc4a1df369133bb548
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5936e83d902926ad1cab22c7046693aab47cd97e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489146"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547492"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-sql)
 
@@ -44,7 +44,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 `[ @attribute_id = ] 'attribute_id'` 属性の整数 ID を示します。 *attribute_id* は **int**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -62,7 +62,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x.y*|  
 |"**10**"|OWNER_TERM|owner|  
 |**11**|TABLE_TERM|table|  
-|"**12**"|MAX_OWNER_NAME_LENGTH|128|  
+|**12**|MAX_OWNER_NAME_LENGTH|128|  
 |**13**|TABLE_LENGTH<br /><br /> テーブル名の最大文字数です。|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> テーブル修飾子の名前 (3 つの要素から成る名前の最初の部分) の最大の長さです。|128|  
 |**15**|COLUMN_LENGTH<br /><br /> 列名の最大文字数です。|128|  
@@ -94,7 +94,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のカタログストアドプロシージャ ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 26c34a2af11f50ed8d9a22bada95525cfdca6499
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4dbc3c382ecd1c58e9bd76624700a1c62804a82c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473554"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545906"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -90,7 +90,7 @@ sp_update_operator
  [ @pager_days =] *pager_days*  
  オペレーターがページの受信に使用できる曜日を指定します (指定した開始/終了時刻に従います)。 *pager_days*は **tinyint**,、既定値は NULL の場合、 **0** ~ **127**の値である必要があります。 *pager_days* は、必要な日数の個々の値を加算することによって計算されます。 たとえば、月曜日から金曜日の場合は、 **2** + **4** + **8** + **16** + **32**  =  **64**になります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|土曜日|  
 |**2**|月曜日|  

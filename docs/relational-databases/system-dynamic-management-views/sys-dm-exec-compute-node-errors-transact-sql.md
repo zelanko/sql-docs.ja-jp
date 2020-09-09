@@ -20,15 +20,15 @@ helpviewer_keywords:
 - dm_exec_compute_node_errors
 - sys.dm_exec_compute_node_errors management view
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b12f7bc4dc5cf9328d26c0f81a827731d28c234
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: a7e65469192e14c7a2cb9d3facf3be3730a08428
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283833"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546619"
 ---
 # <a name="sysdm_exec_compute_node_errors-transact-sql"></a>dm_exec_compute_node_errors (Transact-sql)
 
@@ -39,12 +39,12 @@ ms.locfileid: "89283833"
 |列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|エラーに関連付けられている一意の数値 id。|システム内のすべてのクエリエラー間で一意|  
-|source|`nvarchar(255)`|ソーススレッドまたはプロセスの説明||  
-|type|`nvarchar(255)`|エラーの種類。||  
+|ソース|`nvarchar(255)`|ソーススレッドまたはプロセスの説明||  
+|型|`nvarchar(255)`|エラーの種類。||  
 |create_time|`datetime`|エラーが発生した時刻||  
 |compute_node_id|`int`|特定の計算ノードの識別子|[Dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)の compute_node_id を参照してください。|  
 |rexecution_id|`nvarchar(36)`|PolyBase クエリの識別子 (存在する場合)。||  
-|調べる|`int`|SQL Server セッションの識別子||  
+|spid|`int`|SQL Server セッションの識別子||  
 |thread_id|`int`|エラーが発生したスレッドの数値識別子。||  
 |details|nvarchar(4000)|エラーの詳細の詳細な説明。||
 |compute_pool_id|`int`|プールの一意の識別子。|

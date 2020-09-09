@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergearticle
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ef60a3770d579358d561d98648d4bc7a54309555
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 40c50362e8976552f80bf7a023a49f05a5bb5043
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489705"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546302"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -82,7 +82,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'` アーティクルの種類を示します。 *種類* は **sysname**で、既定値は **table**です。次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**テーブル** (既定値)|スキーマとデータを含むテーブル。 レプリケーションはテーブルを監視して、レプリケートするデータを特定します。|  
 |**func スキーマのみ**|スキーマのみを使用する関数。|  
@@ -102,7 +102,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'` スナップショットを適用するときに、サブスクライバーにテーブルが存在する場合にシステムが実行する処理を指定します。 *pre_creation_cmd* は **nvarchar (10)** で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |"**なし**"|テーブルがサブスクライバーに既に存在する場合、アクションは実行されません。|  
 |**delete**|サブセットフィルターの WHERE 句に基づいて削除を発行します。|  
@@ -116,7 +116,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @schema_option = ] schema_option` 指定されたアーティクルのスキーマ生成オプションのビットマップです。 *schema_option* は **binary (8)** で、| を指定できます。 [(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) これらの値の1つ以上の積。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0x00**|スナップショットエージェントによるスクリプト作成を無効にし、 *creation_script*で定義されているスキーマ作成前スクリプトを使用します。|  
 |**0x01**|オブジェクトの作成 (CREATE TABLE、CREATE PROCEDURE など) を生成します。 これは、ストアドプロシージャアーティクルの既定値です。|  
@@ -213,7 +213,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @check_permissions = ] check_permissions` マージエージェントがパブリッシャーに変更を適用するときに検証されるテーブルレベルの権限のビットマップです。 マージ処理が使用するパブリッシャーのログインまたはユーザー アカウントが正しいテーブル権限を持っていない場合、無効な変更は競合としてログに記録されます。 *check_permissions* は **int**で、| を指定できます。 [(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) 次の1つ以上の値の積。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0x00** (既定値)|権限は確認されません。|  
 |**0x10**|サブスクライバーで実行される挿入操作をアップロードする前に、パブリッシャー側で権限をチェックします。|  
@@ -254,7 +254,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @partition_options = ] partition_options` アーティクル内のデータをパーティション分割する方法を定義します。これにより、すべての行が1つのパーティションまたは1つのサブスクリプションのみに属している場合に、パフォーマンスを最適化できます。 *partition_options* は **tinyint**で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|アーティクルのフィルター選択は、静的であるか、パーティションごとに一意のデータのサブセットを生成しません。つまり、"重複する" パーティションになります。|  
 |**1**|パーティションは重複しており、サブスクライバーで行われたデータ操作言語 (DML) の更新では、行が属するパーティションを変更することはできません。|  
@@ -268,7 +268,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @subscriber_upload_options = ] subscriber_upload_options` クライアントサブスクリプションを使用して、サブスクライバーで行われた更新に対する制限を定義します。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。 *subscriber_upload_options* は **tinyint**で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|制限はありません。 サブスクライバー側で行われた変更は、パブリッシャーにアップロードされます。|  
 |**1**|サブスクライバーでの変更は許可されますが、パブリッシャーにはアップロードされません。|  
@@ -281,7 +281,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption` アーティクルに対する id 範囲管理の処理方法を指定します。 *identityrangemanagementoption* は **nvarchar (10)**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |"**なし**"|Id 範囲の管理を無効にします。|  
 |**手動**|NOT FOR REPLICATION を使用して id 列をマークし、手動による id 範囲処理を有効にします。|  
@@ -330,7 +330,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## <a name="default-schema-option-table"></a>既定のスキーマオプションテーブル  
  次の表では、アーティクルの種類に依存する *schema_option*に NULL 値が指定されている場合に、ストアドプロシージャによって設定される既定値について説明します。  
   
-|アーティクルの種類|スキーマ オプションの値|  
+|記事の種類|スキーマ オプションの値|  
 |------------------|-------------------------|  
 |**func スキーマのみ**|**0x01**|  
 |**インデックス付きビュースキーマのみ**|**0x01**|  
@@ -344,7 +344,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## <a name="valid-schema-option-table"></a>有効なスキーマオプションテーブル  
  次の表では、アーティクルの種類に応じて *schema_option* 許可される値について説明します。  
   
-|アーティクルの種類|スキーマオプションの値|  
+|記事の種類|スキーマオプションの値|  
 |------------------|--------------------------|  
 |**func スキーマのみ**|**0x01** と **0x2000**|  
 |**インデックス付きビュースキーマのみ**|**0x01**、 **0x040,**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**、および **0x200000**|  
@@ -362,8 +362,8 @@ sp_addmergearticle [ @publication = ] 'publication'
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)   
- [sp_changemergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [sp_dropmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
+ [sp_changemergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [sp_dropmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
