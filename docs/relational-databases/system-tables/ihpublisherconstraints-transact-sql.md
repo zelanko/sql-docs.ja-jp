@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublisherconstraints system table
 ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a99a457051126a9eccddf8f40d011415824e01ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 24ab58c617748d52c8c7463454b4d701bf826c42
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488839"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545763"
 ---
 # <a name="ihpublisherconstraints-transact-sql"></a>IHpublisherconstraints (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "88488839"
 |**publisherconstraint_id**|**int**|パブリッシュされた制約を識別します。|  
 |**table_id**|**int**|制約が属している [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) からテーブルを識別します。|  
 |**publisher_id**|**smallint**|列がパブリッシュされる SQL Server 以外のパブリッシャーを指定します。|  
-|**名前**|**Sysname**|パブリッシュされた制約の名前です。|  
-|**Type**|**nvarchar (255)**|[IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md)システムテーブルからサポートされている制約の種類。|  
+|**Name**|**Sysname**|パブリッシュされた制約の名前です。|  
+|**型**|**nvarchar (255)**|[IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md)システムテーブルからサポートされている制約の種類。|  
   
 ## <a name="see-also"></a>参照  
  [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

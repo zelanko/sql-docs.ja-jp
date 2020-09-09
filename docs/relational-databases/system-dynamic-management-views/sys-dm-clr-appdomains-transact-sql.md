@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_appdomains dynamic management dynamic management view
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2002b70dc0b949e3628f49e6b6bb9fa1fccbefb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ac0a451dd88d79ab1847d4c5414fadeb01724e3d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490045"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545346"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>dm_clr_appdomains (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,13 +59,13 @@ ms.locfileid: "88490045"
   
 ## <a name="appdomain-initialization"></a>AppDomain の初期化  
   
-|州|説明|  
+|State|説明|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|**AppDomain**を作成しています。|  
   
 ## <a name="appdomain-usage"></a>AppDomain の使用状況  
   
-|州|説明|  
+|State|説明|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|ランタイム **AppDomain** は、複数のユーザーが使用できる状態になっています。|  
 |E_APPDOMAIN_SINGLEUSER|DDL 操作で **AppDomain** を使用する準備ができました。 これらは E_APPDOMAIN_SHARED とは異なり、CLR 統合の実行に DDL 操作ではなく共有 AppDomain が使用されます。 このような AppDomains は、他の同時実行操作から分離されています。|  
@@ -73,7 +73,7 @@ ms.locfileid: "88490045"
   
 ## <a name="appdomain-cleanup"></a>AppDomain のクリーンアップ  
   
-|州|説明|  
+|State|説明|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR が **AppDomain**をアンロードするように要求しました。通常は、マネージデータベースオブジェクトを含むアセンブリが変更または削除されたことが原因です。|  
 |E_APPDOMAIN_UNLOADED|CLR によって **AppDomain**がアンロードされました。 これは、通常、 **Threadabort**、 **OutOfMemory**、またはユーザーコードでのハンドルされない例外によるエスカレーション手順の結果です。|  
@@ -109,7 +109,7 @@ from sys.dm_clr_appdomains
 where appdomain_id = 15);  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [dm_clr_loaded_assemblies &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [Transact-sql&#41;&#40;共通言語ランタイム関連の動的管理ビュー ](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   

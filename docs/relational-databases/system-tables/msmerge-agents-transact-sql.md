@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_agents system table
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: adf07725fb2d2403d8b07c4f41f865e70ebc611f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0dd3ef69b380122d173436e19ae42ed3227b30e5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454643"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545696"
 ---
 # <a name="msmerge_agents-transact-sql"></a>MSmerge_agents (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88454643"
 |**creation_date**|**datetime**|分布またはマージエージェントが作成された日付と時刻。|  
 |**offload_enabled**|**bit**|エージェントをリモートでアクティブ化できることを指定します。<br /><br /> **0** を指定すると、エージェントをリモートでアクティブにすることはできません。<br /><br /> **1** は、エージェントをリモートでアクティブにし、offload_server プロパティで指定されたリモートコンピューターでアクティブにすることを指定します。|  
 |**offload_server**|**sysname**|リモートエージェントのアクティブ化に使用するサーバーのネットワーク名を指定します。|  
-|**sid**|**varbinary (85)**|最初の実行時の、ディストリビューション エージェントまたはマージ エージェントのセキュリティ識別番号 (SID) です。|  
+|**sid**|**varbinary(85)**|最初の実行時の、ディストリビューション エージェントまたはマージ エージェントのセキュリティ識別番号 (SID) です。|  
 |**subscriber_security_mode**|**smallint**|サブスクライバーへの接続時にエージェントによって使用されるセキュリティモード。次のいずれかになります。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。|  
 |**subscriber_login**|**sysname**|サブスクライバーへの接続時に使用されるログインです。|  
 |**subscriber_password**|**nvarchar (524)**|サブスクライバーへの接続時に使用されるパスワードの暗号化された値です。|  
