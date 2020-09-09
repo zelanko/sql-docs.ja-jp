@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_primarykeys
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 35d9639416ffa551997f5c658148f19682bb3b8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c5b967d8ac3d30147e583ffa6268cdd8d2a8d282
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485851"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534999"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 `[ @table_catalog = ] 'table_catalog'` 指定した *table_name* が存在するカタログの名前を指定します。 環境では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、これはデータベース名に対応しています。 *table_catalog* は **sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
   

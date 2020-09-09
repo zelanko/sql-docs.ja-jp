@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 02409799b4fe597eb784ffe9d94d645c92cddcd0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dccdb0f168b7b1e113a38c64a111e35e5bf62d77
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485849"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535002"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @rowcount_only = ] 'rowcount_only'` テーブルの行数のみを返すかどうかを指定します。 *rowcount_only* は **smallint** であり、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|互換性の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ある7.0 のチェックサムを実行します。<br /><br /> 注: アーティクルが行方向にフィルター選択されている場合、チェックサム操作ではなく rowcount 操作が実行されます。|  
 |**1** (既定値)|行数チェックのみを実行します。|  
@@ -54,7 +54,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @full_or_fast = ] 'full_or_fast'` 行数を計算するために使用されるメソッドです。 *full_or_fast* は **tinyint** で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|COUNT(*) を使用してフル カウントします。|  
 |**1**|Sysindexes から高速にカウントさ **れ**ます。 [sys.sysインデックス](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)の行のカウントは、実際のテーブルの行をカウントするよりもはるかに高速です。 ただし、 [sys.sysインデックス](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) は遅延更新されるため、行数が正確でない場合があります。|  
