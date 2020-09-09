@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepublication
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 346b335063238d118412e8a2951ced67ed685756
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4c3b3b78cc80f441ed340c4732e9b5d43a8af10e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489641"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89530125"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -87,10 +87,10 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @sync_mode = ] 'sync_mode'` パブリケーションに対するサブスクライバーの初期同期モードを示します。 *sync_mode* は **nvarchar (10)** で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**native** (既定値)|すべてのテーブルのネイティブモードの一括コピープログラム出力を生成します。|  
-|**記号**|すべてのテーブルのキャラクターモードの一括コピープログラム出力を生成します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] および以外のサブスクライバーをサポートするために必要です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**character**|すべてのテーブルのキャラクターモードの一括コピープログラム出力を生成します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] および以外のサブスクライバーをサポートするために必要です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
   
 `[ @allow_push = ] 'allow_push'` 指定されたパブリケーションに対してプッシュサブスクリプションを作成できるかどうかを指定します。 *allow_push* は **nvarchar (5)**,、既定値は TRUE の場合、パブリケーションに対してプッシュサブスクリプションを許可します。  
   
@@ -163,7 +163,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @use_partition_groups = ] 'use_partition_groups'` 同期プロセスを最適化するために事前計算済みパーティションを使用する必要があることを指定します。 *use_partition_groups* は **nvarchar (5)** で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**true**|パブリケーションは事前計算済みパーティションを使用します。|  
 |**false**|パブリケーションは事前計算済みパーティションを使用しません。|  
@@ -173,7 +173,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @publication_compatibility_level = ] backward_comp_level` パブリケーションの旧バージョンとの互換性を示します。 *backward_comp_level* は **nvarchar (6)** で、次のいずれかの値を指定できます。  
   
-|値|Version|  
+|[値]|Version|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -201,7 +201,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @retention_period_unit = ] 'retention_period_unit'`*保有*期間によって設定された保有期間の単位を指定します。 *retention_period_unit* は **nvarchar (10)** で、次のいずれかの値を指定できます。  
   
-|値|Version|  
+|[値]|Version|  
 |-----------|-------------|  
 |**day** (既定値)|保有期間は日数で指定します。|  
 |**week**|保有期間は週単位で指定します。|  
@@ -217,7 +217,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @conflict_logging = ] 'conflict_logging'` 競合レコードを格納する場所を指定します。 *conflict_logging* は **nvarchar (15)** で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**publisher**|競合レコードはパブリッシャーに格納されます。|  
 |**サブスクライバ**|競合レコードは、競合の原因となったサブスクライバーに保存されます。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] サブスクライバーではサポートされません。|  
@@ -247,7 +247,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="see-also"></a>参照  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [sp_changemergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_dropmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
