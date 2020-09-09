@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b07a4f8ece975662127797f6f25ecd19ecc759c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eb32803d759ff89a7c41addde56d9fa5dd76644
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473807"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540496"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *Mode*引数には、次の値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |ALL|ローカル部分とリモート部分の両方を含む、オブジェクトまたはデータベースのストレージの統計を返します。|  
 |LOCAL_ONLY|オブジェクトまたはデータベースのローカル部分のみのストレージ統計情報を返します。 オブジェクトまたはデータベースで Stretch が有効になっていない場合、は = ALL と同じ統計を返し @mode ます。|  
@@ -71,7 +71,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 `[ @oneresultset = ] oneresultset` 1つの結果セットを返すかどうかを示します。 *Oneresultset*引数には、次の値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0|* \@ Objname*が null またはが指定されていない場合、2つの結果セットが返されます。 2つの結果セットが既定の動作です。|  
 |1|* \@ Objname* = null またはが指定されていない場合、1つの結果セットが返されます。|  
@@ -119,7 +119,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|領域の使用情報を要求したオブジェクトの名前。<br /><br /> オブジェクトのスキーマ名は返されません。 スキーマ名が必要な場合は、 [dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) または [sys dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 動的管理ビューを使用して、同等のサイズ情報を取得します。|  
-|**レコード**|**char (20)**|テーブルに含まれる行数。 指定されたオブジェクトが [!INCLUDE[ssSB](../../includes/sssb-md.md)] キューの場合、この列はキュー内のメッセージの数を示します。|  
+|**rows**|**char (20)**|テーブルに含まれる行数。 指定されたオブジェクトが [!INCLUDE[ssSB](../../includes/sssb-md.md)] キューの場合、この列はキュー内のメッセージの数を示します。|  
 |**確保**|**varchar (18)**|*Objname*の予約済み領域の合計サイズ。|  
 |**data**|**varchar (18)**|*Objname*のデータによって使用されている領域の合計サイズ。|  
 |**index_size**|**varchar (18)**|*Objname*のインデックスによって使用されている領域の合計サイズ。|  
@@ -253,8 +253,8 @@ GO
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [SQL&#41;&#40;Transact-sql のパーティション分割 ](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

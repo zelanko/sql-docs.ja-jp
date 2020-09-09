@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepublications system table
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 51a23c71b99ff57cb9dda76dd65cfc25fcf4a097
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4f079b7ea36d55f978db4c802efb3c8c4283eab3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473214"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540231"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88473214"
 |**publisher_db**|**sysname**|既定のパブリッシャーデータベースの名前。|  
 |**name**|**sysname**|パブリケーションの名前を指定します。|  
 |**description**|**nvarchar (255)**|パブリケーションの簡単な説明。|  
-|**保持**|**int**|パブリケーションセット全体の保有期間。単位は **retention_period_unit** 列の値によって示されます。|  
+|**保有**|**int**|パブリケーションセット全体の保有期間。単位は **retention_period_unit** 列の値によって示されます。|  
 |**publication_type**|**tinyint**|パブリケーションがフィルター選択されていることを示します。<br /><br /> **0** = フィルター処理されていません。<br /><br /> **1** = フィルター処理済み。|  
 |**pubid**|**uniqueidentifier**|このパブリケーションの一意な識別番号です。 パブリケーションが追加されたときに生成されます。|  
 |**designmasterid**|**uniqueidentifier**|将来使用するために予約されています。|  
@@ -87,11 +87,11 @@ ms.locfileid: "88473214"
 |**generation_leveling_threshold**|**int**|ジェネレーションに含まれる変更の数を指定します。 生成とは、パブリッシャーまたはサブスクライバーに配信される変更のコレクションです。|  
 |**automatic_reinitialization_policy**|**bit**|自動再初期化を実行する前に、サブスクライバーから変更をアップロードするかどうかを示します。<br /><br /> **1** = 自動再初期化が行われる前に、サブスクライバーから変更がアップロードされます。<br /><br /> **0** = 自動再初期化の前に変更がアップロードされることはありません。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_changemergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
   
   
