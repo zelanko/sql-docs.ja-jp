@@ -14,14 +14,14 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f33e9f820eebd80680b4c2c631f30d74ca0f79da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5afa31d7b4b3cb814fee3df4154e713f30f7079
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475870"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544060"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 関数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -127,7 +127,7 @@ HRESULT LocalDBGetInstanceInfo(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="details"></a>説明  
+## <a name="details"></a>詳細  
  **構造体**のサイズ引数 (*Lpinstanceinfosize*) の導入の背後にある論理的な理由は、API が異なるバージョンの**localdbinstanceinfostruct**を返すことができるようにすることです。これにより、上位互換性と下位互換性が効果的に有効になります。  
   
  **構造体**のサイズ引数 (*Lpinstanceinfosize*) が既知のバージョンの**localdbinstanceinfostruct**のサイズと一致する場合、その**構造体**のバージョンが返されます。 それ以外の場合、LOCALDB_ERROR_INVALID_PARAMETER が返されます。  

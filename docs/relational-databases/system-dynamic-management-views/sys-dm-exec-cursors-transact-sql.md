@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4243bd6395095a586ceffab1c4b00f8cf99a220b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 351f97ed08d1a6a79f8611d19842dc93138277ce
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493716"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543941"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>dm_exec_cursors (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -82,7 +82,7 @@ dm_exec_cursors (session_id | 0 )
   
  次の表は、カーソルの種類に関する説明と、プロパティ列に返される値です。  
   
-|Type|説明|  
+|種類|説明|  
 |----------|-----------------|  
 |Keyset|カーソルはキーセットとして宣言されています。|  
 |動的|カーソルは動的として宣言されました。|  
@@ -99,7 +99,7 @@ dm_exec_cursors (session_id | 0 )
   
  次の表に、カーソルのスコープについて説明し、[プロパティ] 列に使用できる値を示します。  
   
-|スコープ|説明|  
+|Scope|説明|  
 |-----------|-----------------|  
 |ローカル|カーソルのスコープは、カーソルが作成されたバッチ、ストアド プロシージャ、またはトリガーに対してローカルです。|  
 |グローバル|カーソルのスコープは、接続に対してグローバルです。|  
@@ -117,7 +117,7 @@ WHERE DATEDIFF(hh, c.creation_time, GETDATE()) > 36;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  

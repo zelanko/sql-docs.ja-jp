@@ -14,14 +14,14 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cf46ccf1e972dc34b4f0500fdf654a76aa32f086
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 723f63b2b41b04b76c62f8cb3bc58ae917519b72
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494226"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544024"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 関数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -105,7 +105,7 @@ HRESULT LocalDBStartInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="details"></a>説明  
+## <a name="details"></a>詳細  
  接続バッファー引数 (*wszSqlConnection*) と接続バッファーサイズ引数 (*lpcchSqlConnection*) はどちらも省略可能です。 次の表は、これらの引数を使用するためのオプションとその結果を示しています。  
   
 |バッファー|バッファーサイズ|理由|アクション|  

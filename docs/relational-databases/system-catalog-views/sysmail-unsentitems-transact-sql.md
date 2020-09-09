@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_unsentitems database mail view
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0f17a4cc00724bab836c74ed1622d383d3969b16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7ef61a0c08d1ddc2e3a268571521b4da47cee90f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419866"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543986"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "88419866"
 |**attach_query_result_as_file**|**bit**|値が0の場合、クエリ結果は、本文の内容の後に電子メールメッセージの本文に含まれていました。 値が 1 の場合、結果が添付ファイルとして返されたことを示します。|  
 |**query_result_header**|**bit**|値が1の場合、クエリ結果には列ヘッダーが含まれます。 値が 0 の場合、クエリの結果に列のヘッダーが含まれていないことを示します。|  
 |**query_result_width**|**int**|メッセージの **query_result_width** パラメーター。|  
-|**query_result_separator**|**char (1)**|クエリの出力で列の区切りに使用された文字。|  
+|**query_result_separator**|**char(1)**|クエリの出力で列の区切りに使用された文字。|  
 |**exclude_query_output**|**bit**|メッセージの **exclude_query_output** パラメーター。 詳細については、「 [sp_send_dbmail &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)」を参照してください。|  
 |**append_query_error**|**bit**|メッセージの **append_query_error** パラメーター。 0 は、クエリにエラーがあった場合、データベース メールで電子メール メッセージが送信されないことを示します。|  
 |**send_request_date**|**datetime**|メッセージがメールキューに置かれた日付と時刻。|  

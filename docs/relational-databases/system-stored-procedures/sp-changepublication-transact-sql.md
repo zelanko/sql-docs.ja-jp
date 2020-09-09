@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3bf49c2e7b09e7c0ac3bcaaaf7692889f684875b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 86a86eec0b939a579d01c36d8c9739f8d9251636
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481521"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543726"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  次の表に、変更可能なパブリケーションのプロパティと、プロパティの値に関する制限を示します。  
   
-|プロパティ|値|説明|  
+|プロパティ|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|指定されたパブリケーションに対して匿名サブスクリプションを作成できます。また、 *immediate_sync* も **true**である必要があります。 ピアツーピアパブリケーションの場合は変更できません。|  
 ||**false**|指定されたパブリケーションに対して匿名サブスクリプションを作成することはできません。 ピアツーピアパブリケーションの場合は変更できません。|  
@@ -102,13 +102,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**0**|DDL ステートメントはレプリケートされません。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 スキーマ変更のレプリケーションは、ピア ツー ピア レプリケーションを使用する場合は無効にできません。|  
 |**replicate_partition_switch**|**true**|テーブルの変更...パブリッシュされたデータベースに対して実行される SWITCH ステートメントは、サブスクライバーにレプリケートする必要があります。 このオプションは、 *allow_partition_switch* が TRUE に設定されている場合にのみ有効です。 詳細については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。|  
 ||**false**|テーブルの変更...SWITCH ステートメントをサブスクライバーにレプリケートすることはできません。|  
-|**保持**||サブスクリプションアクティビティの保有期間を時間単位で表す**int**です。 保有期間内にサブスクリプションがアクティブでない場合は、削除されます。|  
+|**保有**||サブスクリプションアクティビティの保有期間を時間単位で表す**int**です。 保有期間内にサブスクリプションがアクティブでない場合は、削除されます。|  
 |**snapshot_in_defaultfolder**|**true**|スナップショットファイルは、既定のスナップショットフォルダーに格納されます。 *Alt_snapshot_folder*も指定されている場合、スナップショットファイルは既定の場所と代替の場所の両方に格納されます。|  
 ||**false**|スナップショットファイルは、 *alt_snapshot_folder*によって指定された別の場所に格納されます。|  
 |**status**|**active**|パブリケーション データはパブリケーションが作成された直後にサブスクライバーで使用できます。 Oracle パブリッシャーではサポートされていません。|  
 ||**inactive**|パブリケーションデータは、パブリケーションの作成時にサブスクライバーで使用することはできません。 Oracle パブリッシャーではサポートされていません。|  
 |**sync_method**|**native**|サブスクリプションの同期時に、すべてのテーブルのネイティブ モード一括コピー出力を使用します。|  
-||**記号**|サブスクリプションを同期するときに、すべてのテーブルのキャラクターモードの一括コピー出力を使用します。|  
+||**character**|サブスクリプションを同期するときに、すべてのテーブルのキャラクターモードの一括コピー出力を使用します。|  
 ||**同時**|すべてのテーブルについてネイティブ モード BCP 出力を使用しますが、スナップショット生成処理中にテーブルをロックしません。 スナップショットレプリケーションでは無効です。|  
 ||**concurrent_c**|すべてのテーブルについてキャラクター モード BCP 出力を使用しますが、スナップショット生成処理中にテーブルをロックしません。 スナップショットレプリケーションでは無効です。|  
 |**taskid**||このプロパティは非推奨とされており、サポートされなくなりました。|  

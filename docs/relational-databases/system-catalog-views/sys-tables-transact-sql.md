@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.tables catalog view
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83362a976690875df7d45a8ba6a186441bd10283
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d87bd3ec1361cbe3c038ff57bdde31c5593a4dbb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460585"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544013"
 ---
 # <a name="systables-transact-sql"></a>sys. tables (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "88460585"
 |is_external|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、、 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] 。<br /><br /> テーブルが外部テーブルであることを示します。<br /><br /> 0 = テーブルは、外部テーブルではありません。<br /><br /> 1 = テーブルは外部テーブルです。| 
 |history_retention_period|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>History_retention_period_unit で指定された単位で表した、テンポラル履歴の保有期間を表す数値。 |  
 |history_retention_period_unit|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴の保有期間の単位の種類を表す数値。 <br /><br />-1: 無制限 <br /><br />3: 日 <br /><br />4: 週 <br /><br />5: 月 <br /><br />6: 年 |  
-|history_retention_period_unit_desc|**nvarchar (10)**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴保有期間の単位の種類の説明テキスト。 <br /><br />容量 <br /><br />DAY <br /><br />[WEEK] <br /><br />MONTH <br /><br />YEAR |  
+|history_retention_period_unit_desc|**nvarchar (10)**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴保有期間の単位の種類の説明テキスト。 <br /><br />INFINITE <br /><br />DAY <br /><br />[WEEK] <br /><br />MONTH <br /><br />YEAR |  
 |is_node|**bit**|**適用対象**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = これはグラフノードテーブルです。 <br /><br />0 = これはグラフノードテーブルではありません。 |  
 |is_edge|**bit**|**適用対象**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = これはグラフのエッジテーブルです。 <br /><br />0 = これは、グラフのエッジテーブルではありません。 |  
 

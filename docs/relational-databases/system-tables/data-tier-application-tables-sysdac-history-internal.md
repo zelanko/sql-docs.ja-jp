@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f77fee435a076b4d4f6b8a56dc028c55fd3a623f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7f89db526d638a6e934e8db7ac791875b467e487
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480855"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544647"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>データ層アプリケーション テーブル - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88480855"
 |**dac_object_type**|**tinyint**|アクションの影響を受けるオブジェクトの種類の識別子。<br /><br /> **0** = dacpac<br /><br /> **1** = ログイン<br /><br /> **2** = データベース|  
 |**dac_object_type_name**|**varchar (8)**|アクションによって影響を受けるオブジェクトの種類の名前。<br /><br /> **dacpac** = DAC インスタンス<br /><br /> **ログイン**<br /><br /> **database**|  
 |**action_status**|**tinyint**|アクションの現在のステータスを識別するコード。<br /><br /> **0** = 保留中<br /><br /> **1** = 成功<br /><br /> **2** = 失敗|  
-|**action_status_name**|**varchar (11)**|アクションの現在のステータス。<br /><br /> **行わ**<br /><br /> **ブランド**<br /><br /> **オーバー**|  
+|**action_status_name**|**varchar (11)**|アクションの現在のステータス。<br /><br /> **pending**<br /><br /> **ブランド**<br /><br /> **オーバー**|  
 |**必須**|**bit**|DAC 操作をロールバックするときに、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって使用されます。|  
 |**dac_object_name_pretran**|**sysname**|アクションを含むトランザクションがコミットされる前のオブジェクトの名前。 データベースおよびログインにのみ使用されます。|  
 |**dac_object_name_posttran**|**sysname**|アクションを含んでいるトランザクションをコミットした後のオブジェクトの名前。 データベースおよびログインにのみ使用されます。|  

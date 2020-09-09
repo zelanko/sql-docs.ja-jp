@@ -19,14 +19,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_database_replica_cluster_states dynamic management view
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6e12ac1d979d1acfab0614bad27ae2f937245870
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 11f2e6ddb0a51170ebf9da0ed4f5f9d673359e03
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489846"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543874"
 ---
 # <a name="sysdm_hadr_database_replica_cluster_states-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88489846"
 |**recovery_lsn**|**numeric(25,0)**|プライマリレプリカでは、復旧またはフェールオーバー後、レプリカが新しいログレコードを書き込む前のトランザクションログの末尾。 プライマリ レプリカでは、特定のセカンダリ データベースの行の値が、プライマリ レプリカによって要求されるセカンダリ レプリカの同期先 (つまり、復元先および再初期化先) の値になります。<br /><br /> セカンダリレプリカでは、この値は NULL です。 各セカンダリレプリカには、プライマリレプリカがセカンダリレプリカに返すように指定した最大値または小さい値が含まれていることに注意してください。|  
 |**truncation_lsn**|**numeric(25,0)**|ローカル ログの切り捨てが (バックアップ操作などにより) ブロックされている場合にローカル切り捨て LSN を超える可能性のある [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ログ切り捨て値。|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  

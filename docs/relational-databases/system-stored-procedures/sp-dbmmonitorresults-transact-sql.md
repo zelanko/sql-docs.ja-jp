@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d302c6c592dda3dc4612310a3af8cabc0113aef6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f623f377bf850f5c247c770f7cc38358cf4dabb2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474426"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543566"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ sp_dbmmonitorresults database_name
  1 = 結果を計算する前に **sp_dbmmonitorupdate** を呼び出すことによって、データベースの状態を更新します。 ただし、状態テーブルが過去15秒以内に更新された場合、またはユーザーが **sysadmin** 固定サーバーロールのメンバーでない場合、 **sp_dbmmonitorresults** は状態を更新せずに実行します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
  指定されたデータベースについて、要求された履歴の状態の行数を返します。 各行には、次の情報が含まれています。  

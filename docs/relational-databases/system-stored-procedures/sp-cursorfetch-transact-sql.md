@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7d68223e7ed12477b446934f01b600b840b6651a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 45621f2b99616085a2543972df7109b2f2fe8e3c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447359"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543595"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_cursorfetch cursor
  *fetchtype*  
  フェッチするカーソル バッファーを指定します。 *fetchtype* は省略可能なパラメーターで、次のいずれかの整数入力値を必要とします。  
   
-|値|名前|説明|  
+|[値]|名前|説明|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|*Nrows* rows の最初のバッファーをフェッチします。 *Nrows*が0の場合、カーソルは結果セットの前に配置され、行は返されません。|  
 |0x0002|NEXT|*Nrows* rows の次のバッファーをフェッチします。|  
@@ -134,7 +134,7 @@ sp_cursorfetch cursor
   
  RPC 状態パラメーターは、次の表に示すいずれかの値に設定されています。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0|プロシージャが正常に実行されました。|  
 |0x0001|プロシージャが失敗しました。|  
@@ -143,7 +143,7 @@ sp_cursorfetch cursor
   
  行は、通常の結果セットとして返されます。つまり、列形式 (0x2a)、rows (0xd1)、done (0xfd) の順に続きます。 メタデータトークンは sp_cursoropen に対して指定されたものと同じ形式で送信されます。これは、SQL Server 7.0 ユーザーの場合は0x81、0xa5、および0xa5 です。 行の状態インジケーターは、ブラウズ モードのように、各行の末尾の非表示の列として送信されます (列名は rowstat、データ型は INT4)。 この rowstat 列には、次のいずれかの値が含まれます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

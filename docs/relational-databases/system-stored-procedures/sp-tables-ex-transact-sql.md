@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables_ex
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c195e3fa5e932bd1eb844ca5231d67747bc67486
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0156f75940cf5e0d2186625d148850dcfb181ad0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480987"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544736"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,21 +55,21 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'` 返されるテーブルの型を示します。 *table_type* は **sysname**で、既定値は NULL です。次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**エイリアス**|エイリアスの名前。|  
 |**GLOBAL TEMPORARY**|システム全体で使用可能な一時テーブルの名前。|  
 |**LOCAL TEMPORARY**|現在のジョブでのみ使用可能な一時テーブルの名前。|  
-|**同義語**|シノニムの名前。|  
+|**SYNONYM**|シノニムの名前。|  
 |**システムテーブル**|システム テーブルの名前です。|  
 |**システムビュー**|システムビューの名前。|  
-|**一覧**|ユーザーテーブルの名前。|  
-|**モード**|ビューの名前。|  
+|**TABLE**|ユーザーテーブルの名前。|  
+|**VIEW**|ビューの名前。|  
   
 `[ @fUsePattern = ] 'fUsePattern'`**_**、 **%** 、 **[**、および **]** 文字をワイルドカード文字として解釈するかどうかを決定します。 有効な値は 0 (パターン一致がオフ) および 1 (パターン一致がオン) です。 *Fusepattern* は **ビット**,、既定値は1です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
   

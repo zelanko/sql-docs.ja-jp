@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b6bef227f94188afe6f1eade92c54ff119982902
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 97a6b25d2a0a4d927f060fe8d693cb478b7b2977
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447095"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543362"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -114,7 +114,7 @@ SELECT @my_parameters;
 >  sp_get_query_template の出力内のパラメーターの順序と名前は、Quick Fix Engineering、Service Pack、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンのアップグレードによって変化する可能性があります。 また、アップグレードによって、同じクエリに対して異なる定数リテラルのセットがパラメーター化され、両方の出力パラメーターの結果に適用される間隔が異なる場合もあります。  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [プラン ガイドを使用したクエリのパラメーター化動作の指定](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   

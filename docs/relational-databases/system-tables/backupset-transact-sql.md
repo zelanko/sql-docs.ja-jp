@@ -18,15 +18,15 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5bea32ebd5269ae57d7b754cf20d12a0d695109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 783452973a10a8f692b7fe3a3406665a2ed0eb86
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492856"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544683"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-sql)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88492856"
 |**last_media_number**|**smallint**|バックアップ セットの最終メディアのメディア番号。 NULL にすることができます。|  
 |**catalog_family_number**|**tinyint**|バックアップ セット ディレクトリの先頭を含むメディアのファミリ番号。 NULL にすることができます。|  
 |**catalog_media_number**|**smallint**|バックアップ セット ディレクトリの先頭を含むメディアのメディア番号。 NULL にすることができます。|  
-|**移動**|**int**|適切なバックアップセットとファイルを検索するために復元操作で使用されるバックアップセットの位置。 NULL にすることができます。 詳細については、「FILE in [BACKUP &#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)」を参照してください。|  
+|**position**|**int**|適切なバックアップセットとファイルを検索するために復元操作で使用されるバックアップセットの位置。 NULL にすることができます。 詳細については、「FILE in [BACKUP &#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)」を参照してください。|  
 |**expiration_date**|**datetime**|バックアップ セットの期限が切れる日付と時刻。 NULL にすることができます。|  
 |**software_vendor_id**|**int**|バックアップ メディア ヘッダーを記述するソフトウェア ベンダーの識別番号。 NULL にすることができます。|  
 |**name**|**nvarchar(128)**|バックアップ セットの名前。 NULL にすることができます。|  
@@ -65,7 +65,7 @@ ms.locfileid: "88492856"
 |**database_creation_date**|**datetime**|データベースが最初に作成された日付と時刻。 NULL にすることができます。|  
 |**backup_start_date**|**datetime**|バックアップ操作が開始された日付と時刻。 NULL にすることができます。|  
 |**backup_finish_date**|**datetime**|バックアップ操作が終了した日付と時刻。 NULL にすることができます。|  
-|**type**|**char (1)**|バックアップの種類。 次の値をとります。<br /><br /> D = データベース<br /><br /> I = データベースの差分<br /><br /> L = ログ<br /><br /> F = ファイルまたはファイル グループ<br /><br /> G = ファイルの差分<br /><br /> P = 部分的<br /><br /> Q = 部分的な差分<br /><br /> NULL にすることができます。|  
+|**type**|**char(1)**|バックアップの種類。 次の値をとります。<br /><br /> D = データベース<br /><br /> I = データベースの差分<br /><br /> L = ログ<br /><br /> F = ファイルまたはファイル グループ<br /><br /> G = ファイルの差分<br /><br /> P = 部分的<br /><br /> Q = 部分的な差分<br /><br /> NULL にすることができます。|  
 |**sort_order**|**smallint**|バックアップ操作を実行するサーバーの並べ替え順。 NULL にすることができます。 並べ替え順序と照合順序の詳細については、「 [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。|  
 |**code_page**|**smallint**|バックアップ操作を実行するサーバーのコードページです。 NULL にすることができます。 コードページの詳細については、「 [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。|  
 |**compatibility_level**|**tinyint**|データベースの互換性レベルの設定。 次の値をとります。<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> NULL にすることができます。<br /><br /> 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。|  

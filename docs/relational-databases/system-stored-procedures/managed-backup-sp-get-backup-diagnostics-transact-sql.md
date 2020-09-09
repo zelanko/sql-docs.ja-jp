@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sp_get_backup_diagnostics
 - smart_admin.sp_get_backup_diagnostics
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 54e81df3d503b5c520ed812fefec8601d4979cd2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: efd884b6e757ab81cf01eda00b0322ef3ec5c701
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481614"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543701"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup。 sp_get_backup_diagnostics (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -61,10 +61,10 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 | 列名 | データ型 | 説明 |  
 | ----------- | --------- | ----------- |
 |event_type|NVARCHAR (512)|拡張イベントの種類。|  
-|Event|NVARCHAR (512)|イベント ログの概要|  
+|イベント|NVARCHAR (512)|イベント ログの概要|  
 |Timestamp|timestamp|イベントの発生時刻を示す、イベントのタイムスタンプ|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  ストアドプロシージャに対する **EXECUTE** 権限が必要です。 また、この権限を必要とする他のシステムオブジェクトを内部で呼び出すため、 **VIEW SERVER STATE** 権限も必要です。  

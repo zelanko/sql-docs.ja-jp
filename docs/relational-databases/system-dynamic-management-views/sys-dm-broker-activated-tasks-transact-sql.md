@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_activated_tasks dynamic management view
 ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3a09275a9b000ab673e187fdb2e1a47d35c1e548
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e89f0caf5eb3181a59e653ca1a64f4a68ec3fbc5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498395"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544789"
 ---
 # <a name="sysdm_broker_activated_tasks-transact-sql"></a>sys.dm_broker_activated_tasks (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "88498395"
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|ソース|終了|リレーションシップ|  
+|From|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |dm_broker_activated_tasks。|dm_exec_sessions。 session_id|一対一|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Service Broker 関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   

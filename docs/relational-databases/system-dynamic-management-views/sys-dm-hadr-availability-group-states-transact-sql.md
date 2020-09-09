@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_group_states dynamic management view
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a1cf7c527751cd4f88e81d2bf28eb34772ae935e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0ca065be60cbe6514d1da606501ff90f72ac1c69
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474874"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543907"
 ---
 # <a name="sysdm_hadr_availability_group_states-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88474874"
 |**synchronization_health**|**tinyint**|可用性グループ内のすべての可用性レプリカの **synchronization_health** のロールアップを反映します。 使用可能な値とその説明を次に示します。<br /><br /> 0: 異常です。 正常な **synchronization_health** (2 = 正常) の可用性レプリカはありません。<br /><br /> 1: 部分的に正常です。 一部の可用性レプリカの同期状態は正常です。<br /><br /> 2: 正常。 すべての可用性レプリカの同期状態は正常です。<br /><br /> レプリカの同期の正常性の詳細については、「 [transact-sql&#41;&#40;dm_hadr_availability_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)の**synchronization_health**列を参照してください。|  
 |**synchronization_health_desc**|**nvarchar(60)**|**Synchronization_health**の説明。次のいずれかになります。<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> 戻ら|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  

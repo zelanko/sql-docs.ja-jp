@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_help_jobs
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 884d9f9b6e0cf60268d0d980f1141fee627e5a19
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6a051301d812b06ab2170519cb54ea6f528490b7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485535"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544716"
 ---
 # <a name="syssp_cdc_help_jobs-transact-sql"></a>sp_cdc_help_jobs (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ sys.sp_cdc_help_jobs
 |**maxscans**|**int**|ログからすべての行を抽出するために実行する最大スキャン サイクル数。<br /><br /> **maxscans** は、キャプチャジョブに対してのみ有効です。|  
 |**連続**|**bit**|キャプチャ ジョブを連続的に実行するか (1)、1 回だけ実行するか (0) を示すフラグ。 詳細については、「 [sys. sp_cdc_add_job &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)」を参照してください。<br /><br /> **continuous** は、キャプチャジョブに対してのみ有効です。|  
 |**pollinginterval**|**bigint**|ログ スキャン サイクル間の秒数。<br /><br /> **pollinginterval** はキャプチャジョブに対してのみ有効です。|  
-|**保持**|**bigint**|変更行が変更テーブルに保持される時間 (分単位)。<br /><br /> **リテンション期間** はクリーンアップジョブに対してのみ有効です。|  
+|**保有**|**bigint**|変更行が変更テーブルに保持される時間 (分単位)。<br /><br /> **リテンション期間** はクリーンアップジョブに対してのみ有効です。|  
 |**threshold**|**bigint**|クリーンアップ時に1つのステートメントを使用して削除できる削除エントリの最大数。|  
   
 ## <a name="permissions"></a>アクセス許可  

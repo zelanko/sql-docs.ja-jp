@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_catalog
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 892b0e24bb76625b5d245a7314d368c0e0dc0cf2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb810e5130f04a7f55ac0e262ecfe6f11b784a98
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469543"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543422"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 > [!NOTE]  
 >  必要に応じて、フルテキストカタログの作成、削除、変更を行うことができます。 複数のカタログで同時にスキーマを変更することは避けてください。 これらのアクションは、 **sp_fulltext_table** ストアドプロシージャを使用して実行できます。この方法をお勧めします。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**作成**|ファイルシステムに空の新しいフルテキストカタログを作成し、 *fulltext_catalog_name*と*root_directory*(存在する場合) を使用して、関連付けられた行を**sysfulltextcatalogs**に追加します。 *fulltext_catalog_name* は、データベース内で一意である必要があります。|  
 |**」**|*Fulltext_catalog_name*を削除するには、ファイルシステムから削除し、関連付けられている行を**sysfulltextcatalogs**で削除します。 このカタログに1つ以上のテーブルのインデックスが含まれている場合、このアクションは失敗します。 **sp_fulltext_table** カタログからテーブルを削除するには、'*table_name*'、' drop ' を実行する必要があります。<br /><br /> カタログが存在しない場合、エラーが表示されます。|  
@@ -134,12 +134,12 @@ EXEC sp_fulltext_catalog 'Cat_Desc', 'drop';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [FULLTEXTCATALOGPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
  [sp_fulltext_database &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
  [sp_help_fulltext_catalogs &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_catalogs_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)  
   
   

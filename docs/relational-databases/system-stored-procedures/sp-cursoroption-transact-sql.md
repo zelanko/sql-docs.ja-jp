@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoroption
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1deb0895de1b0a3694465ccb0f9e95228fbedd0b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bb85ff45fcb9ebe35920ca858cc9dc6336475cb8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489484"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543569"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_cursoroption cursor, code, value
  *code*  
  カーソル戻り値のさまざまな要因を指定するために使用されます。 *コード* には、次のいずれかの **int** 入力値が必要です。  
   
-|値|名前|説明|  
+|[値]|名前|説明|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|指定された特定の text 列または image 列の実際のデータではなくテキスト ポインターを返します。<br /><br /> TEXTPTR_ONLY を使用すると、テキストポインターを blob オブジェクトへの *ハンドル* として使用できるようになり [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。このオブジェクトは、後でまたは dbwritetext など機能 (READTEXT やなど) を使用して選択的に取得または更新することができ [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。<br /><br /> 値 0 が割り当てられている場合は、選択リスト内のすべての text 列および image 列がデータではなくテキスト ポインターを返します。|  
 |0x0002|CURSOR_NAME|*Value*で指定された名前をカーソルに割り当てます。 これにより、ODBC では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_cursoropen によって開かれたカーソルに対して位置指定更新/削除ステートメントを使用できます。<br /><br /> 文字列は任意の文字または Unicode データ型として指定できます。<br /><br /> 配置された [!INCLUDE[tsql](../../includes/tsql-md.md)] update/delete ステートメントは、既定では fat カーソルの最初の行で動作するため、位置指定の update/delete ステートメントを実行する前に、SP_CURSOR SETPOSITION を使用してカーソルを配置する必要があります。|  
@@ -88,7 +88,7 @@ sp_cursoroption cursor, code, value
 |0x0004 または0x0008|OPTIMISTIC|  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
  [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
   

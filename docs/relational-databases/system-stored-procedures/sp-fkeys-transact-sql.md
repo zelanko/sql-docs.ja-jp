@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fkeys
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dce5453de0dc41f00e1b6c622397972e635df97e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3349a8ca26003ed5949a4df22c8404532c5b039c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447231"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543516"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +68,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  (外部キーが指定された) テーブル修飾子の名前を指定します。 *fktable_qualifier* は **sysname**,、既定値は NULL です。 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 修飾子はデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -123,7 +123,7 @@ EXEC sp_fkeys @pktable_name = N'DimDate;
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のカタログストアドプロシージャ ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_pkeys &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
   
   

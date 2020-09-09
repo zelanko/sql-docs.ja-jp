@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_audit_class_type_map dynamic management view
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ed8b45fcd8650d47c2acbce23a5e9033b65d58e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9ec65fe175cf3723bcab9e00811915f15c4075c2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460519"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544836"
 ---
 # <a name="sysdm_audit_class_type_map-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "88460519"
 ## <a name="permissions"></a>アクセス許可  
  プリンシパルには **SELECT** 権限が必要です。 既定では、これは Public に与えられます。  
   
-## <a name="see-also"></a>参照  
- [CREATE SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - xp_msver
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 93223f6d7c63402161e48b0359bf735b14593c9d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a736447de4215d7f9c630036ae13872ff9d58bff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419226"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544713"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ xp_msver [ optname ]
   
 |オプション/列名|説明|  
 |-------------------------|-----------------|  
-|**同様**|製品名;たとえば、のように [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] なります。|  
+|**ProductName**|製品名;たとえば、のように [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] なります。|  
 |**ProductVersion**|製品のバージョン。|  
 |**Language**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語バージョン。|  
 |**プラットフォーム**|を実行しているコンピューターのオペレーティングシステム名、製造元名、およびチップファミリ名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
@@ -77,7 +77,7 @@ xp_msver [ optname ]
   
 ## <a name="see-also"></a>参照  
  [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;の一般的な拡張ストアドプロシージャ ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [@@VERSION &#40;Transact-SQL&#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)  
   

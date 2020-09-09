@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6722a59873dcf672fe2c1b953931f44da4515a8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f214abb7b20c42ec62f1bc35d85222e0033798d1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446991"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544757"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_monitor
 |-----------------|-----------------|  
 |**last_run**|**Sp_monitor**前回の実行時刻。|  
 |**current_run**|**Sp_monitor**の実行時間。|  
-|**待ち時間**|**Sp_monitor**が実行されてから経過した秒数。|  
+|**seconds**|**Sp_monitor**が実行されてから経過した秒数。|  
 |**cpu_busy**|サーバーコンピューターの CPU が処理している秒数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**io_busy**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が入出力操作に費やした秒数|  
 |**退席**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がアイドル状態だった秒数|  
@@ -97,7 +97,7 @@ total_read     total_write   total_errors    connections
 ```
   
 ## <a name="see-also"></a>参照  
- [sp_who &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

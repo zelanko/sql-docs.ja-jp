@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_link_publication
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c1df8b2f62ce305b89b061526415c73e07a18511
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b80c28d86ae4d7022ad8784adfa7ab9023e3ebd0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446956"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543237"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 `[ @security_mode = ] security_mode` サブスクライバーが即時更新のためにリモートパブリッシャーに接続するために使用するセキュリティモードを示します。 *security_mode* は **int**,、これらの値のいずれかを指定できます。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 *ログイン* と *パスワード*として、このストアドプロシージャで指定されたログインで認証を使用します。<br /><br /> 注: 以前のバージョンのでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、このオプションを使用して動的リモートプロシージャ呼び出し (RPC) を指定していました。|  
 |**1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーで変更を行うユーザーのセキュリティコンテキスト (認証または Windows 認証) を使用します。<br /><br /> 注: このアカウントは、十分な特権を持つパブリッシャーにも存在する必要があります。 Windows 認証を使用する場合は、セキュリティアカウントの委任がサポートされている必要があります。|  

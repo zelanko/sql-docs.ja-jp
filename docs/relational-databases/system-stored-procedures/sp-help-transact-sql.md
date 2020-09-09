@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85fd7be3a9f82b43c19e344602a85e1adf06c68a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21116db0cc5faa63a54ffda5740f1c93df27c676
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486060"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543353"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +55,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     |列名|データ型|説明|  
     |-----------------|---------------|-----------------|  
-    |**名前**|**nvarchar (** 128 **)**|オブジェクト名|  
+    |**Name**|**nvarchar (** 128 **)**|オブジェクト名|  
     |**所有者**|**nvarchar (** 128 **)**|オブジェクトの所有者 (これは、オブジェクトを所有するデータベースプリンシパルです。 既定値は、オブジェクトを含むスキーマの所有者です)。|  
     |**Object_type**|**nvarchar (** 31 **)**|オブジェクトの種類|  
   
@@ -65,7 +65,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**Type_name**|**nvarchar (** 128 **)**|データ型の名前。|  
     |**Storage_type**|**nvarchar (** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型名。|  
-    |**[データ型]**|**smallint**|データ型の物理的な長さ (バイト単位)。|  
+    |**長さ**|**smallint**|データ型の物理的な長さ (バイト単位)。|  
     |**Prec**|**int**|有効桁数 (桁数の合計数)。|  
     |**スケール**|**int**|小数点の右側の桁数。|  
     |**NULL 値の使用**|**varchar (** 35 **)**|NULL 値が許可されるかどうかを示します。 Yes または No。|  
@@ -77,9 +77,9 @@ sp_help [ [ @objname = ] 'name' ]
 
     |列名|データ型|説明|  
     |-----------------|---------------|-----------------|  
-    |**名前**|**nvarchar (** 128 **)**|テーブル名|  
+    |**Name**|**nvarchar (** 128 **)**|テーブル名|  
     |**所有者**|**nvarchar (** 128 **)**|テーブルの所有者|  
-    |**Type**|**nvarchar (** 31 **)**|テーブルの種類です。|  
+    |**型**|**nvarchar (** 31 **)**|テーブルの種類です。|  
     |**Created_datetime**|**datetime**|作成された日付テーブル|  
   
      指定されたデータベースオブジェクトによっては、 **sp_help** によって追加の結果セットが返されます。  
@@ -91,9 +91,9 @@ sp_help [ [ @objname = ] 'name' ]
         |列名|データ型|説明|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar (** 128 **)**|列名。|  
-        |**Type**|**nvarchar (** 128 **)**|列のデータ型。|  
+        |**型**|**nvarchar (** 128 **)**|列のデータ型。|  
         |**L8**|**varchar (** 35 **)**|列の値が計算されるかどうかを示します。 Yes または No。|  
-        |**[データ型]**|**int**|列の長さ (バイト単位)。<br /><br /> 注: 列のデータ型が大きな値の型 (**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または **xml**) の場合、値は-1 と表示されます。|  
+        |**長さ**|**int**|列の長さ (バイト単位)。<br /><br /> 注: 列のデータ型が大きな値の型 (**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または **xml**) の場合、値は-1 と表示されます。|  
         |**Prec**|**char (** 5 **)**|列の有効桁数。|  
         |**スケール**|**char (** 5 **)**|列の小数点以下桁数です。|  
         |**NULL 値の使用**|**varchar (** 35 **)**|列で NULL 値を使用できるかどうかを示します。 Yes または No。|  
@@ -106,9 +106,9 @@ sp_help [ [ @objname = ] 'name' ]
         |列名|データ型|説明|  
         |-----------------|---------------|-----------------|  
         |**ID**|**nvarchar (** 128 **)**|データ型が id として宣言されている列の名前。|  
-        |**シード**|**numeric**|Id 列の開始値。|  
+        |**Seed**|**numeric**|Id 列の開始値。|  
         |**Increment**|**numeric**|この列の値に使用する増分です。|  
-        |**レプリケーション用ではない**|**int**|**Sqlrepl**などのレプリケーションログインでテーブルにデータを挿入するときに、IDENTITY プロパティは適用されません。<br /><br /> 1 = True<br /><br /> 0 = False|  
+        |**[レプリケーションでは使用しない]**|**int**|**Sqlrepl**などのレプリケーションログインでテーブルにデータを挿入するときに、IDENTITY プロパティは適用されません。<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   列に対して次の結果セットが返されます。  
   
@@ -153,8 +153,8 @@ sp_help [ [ @objname = ] 'name' ]
         |列名|データ型|説明|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar (** 128 **)**|ストアドプロシージャのパラメーター名。|  
-        |**Type**|**nvarchar (** 128 **)**|ストアドプロシージャパラメーターのデータ型。|  
-        |**[データ型]**|**smallint**|物理ストレージの最大長 (バイト単位)。|  
+        |**型**|**nvarchar (** 128 **)**|ストアドプロシージャパラメーターのデータ型。|  
+        |**長さ**|**smallint**|物理ストレージの最大長 (バイト単位)。|  
         |**Prec**|**int**|桁数または合計桁数。|  
         |**スケール**|**int**|小数点の右側の桁数。|  
         |**Param_order**|**smallint**|パラメーターの順番です。|  
@@ -198,7 +198,7 @@ GO
  [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sysオブジェクト &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

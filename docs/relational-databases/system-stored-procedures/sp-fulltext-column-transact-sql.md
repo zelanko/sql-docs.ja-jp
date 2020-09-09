@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 544854219f8fbc26a06b80280c6f36f64fe726c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55f25dad90002ea50ba797a7960f22cfee5055c8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481243"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543374"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -57,10 +57,10 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 `[ @action = ] 'action'` 実行するアクションを指定します。 *アクション* は **varchar (20)**,、既定値はありません、次の値のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**add**|テーブルの非アクティブなフルテキストインデックスに*qualified_table_name*の*column_name*を追加します。 この操作により、列でフルテキストインデックスを作成できるようになります。|  
-|**drop**|テーブルの非アクティブなフルテキストインデックスから*qualified_table_name*の*column_name*を削除します。|  
+|**」**|テーブルの非アクティブなフルテキストインデックスから*qualified_table_name*の*column_name*を削除します。|  
   
 `[ @language = ] 'language_term'` 列に格納されているデータの言語を示します。 に含まれる言語の一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [Fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)」を参照してください。  
   
@@ -119,7 +119,7 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
  [sp_help_fulltext_columns_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
  [sp_help_fulltext_tables &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [sp_help_fulltext_tables_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索ストアドプロシージャ ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

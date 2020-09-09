@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 54e0462bc447ce1e2125ed13fbb09f64f48f5d14
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 96cce9a9d9a0b9bf74a1ac3b67d3089f4fcd23ed
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469752"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543694"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -73,13 +73,13 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @frequency_type = ] frequency_type` ディストリビューションタスクをスケジュールする頻度を指定します。 *frequency_type* は **int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 回|  
 |**2**|オン デマンド|  
 |**4**|毎日|  
 |**8**|週次|  
-|**16**|月 1 回|  
+|**16**|月単位|  
 |**32**|月単位の相対|  
 |**64**|自動開始|  
 |**128**|繰り返し|  
@@ -88,10 +88,10 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` ディストリビューションタスクの日付を指定します。 このパラメーターは、 *frequency_type* が **32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval* は **int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|Third|  
 |**8**|4 番目|  
 |**16**|Last (最後へ)|  
@@ -100,10 +100,10 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @frequency_subday = ] frequency_subday` 定義した期間中に再スケジュールする頻度を指定します。 *frequency_subday* は **int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|分|  
 |**8**|時間|  
   
@@ -121,7 +121,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @security_mode = ] security_mode` 実装されているセキュリティモードです。 *security_mode* は **int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [認証]|  
 |**1**|Windows 認証|  
@@ -140,7 +140,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changesubscriber**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_addsubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [sp_dropsubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   

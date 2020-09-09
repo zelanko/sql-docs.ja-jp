@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_migrate_user_to_contained
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 95bd2aa7491b15b2e16172b0761c6dccc8eb5818
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: edabb8a59a672c3ebfe04a799df7901b402fb5b3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446935"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543196"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 -   **sp_migrate_user_to_contained** をシステムデータベースで使用することはできません。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  ユーザーを移行する場合は、のインスタンスからすべての管理者ログインを無効にしたり削除したりしないように注意して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ください。 すべてのログインが削除された場合は、「 [システム管理者がロックアウトされた場合の SQL Server への接続](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)」を参照してください。  
   
  **BUILTIN\Administrators**ログインが存在する場合、管理者は [**管理者として実行**] オプションを使用してアプリケーションを起動して接続できます。  
