@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription_agent
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9869bd76cbec34653bb9d59a7f00968d59c41a31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7ad9425df176a7f822b18ab793d0eada4362c551
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489677"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89530243"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -150,13 +150,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_type = ] frequency_type` マージエージェントをスケジュールする頻度を指定します。 *frequency_type* は **int**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 回|  
 |**2**|オン デマンド|  
 |**4**|毎日|  
 |**8**|週次|  
-|**16**|月 1 回|  
+|**16**|月単位|  
 |**32**|月単位の相対|  
 |**64**|自動開始|  
 |**128**|繰り返し|  
@@ -167,7 +167,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_interval = ] frequency_interval` マージエージェントが実行される日または日。 *frequency_interval* は **int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|土曜日|  
 |**2**|月曜日|  
@@ -176,17 +176,17 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**5**|Thursday|  
 |**6**|金曜日|  
 |**7**|土曜日|  
-|**8**|日|  
+|**8**|日間|  
 |**9**|平日|  
 |"**10**"|週末|  
 |NULL (既定値)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` マージエージェントの日付を指定します。 このパラメーターは、 *frequency_type* が **32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval* は **int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|Third|  
 |**8**|4 番目|  
 |**16**|Last (最後へ)|  
@@ -196,10 +196,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_subday = ] frequency_subday` 定義した期間中に再スケジュールする頻度を指定します。 *frequency_subday* は **int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
-|**2**|Second|  
+|**2**|秒|  
 |**4**|分|  
 |**8**|時間|  
 |NULL (既定値)||  
@@ -267,7 +267,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @internet_security_mode = ] internet_security_mode` は、HTTPS を使用した Web 同期時に Web サーバーに接続するときにマージエージェントによって使用される認証方法です。 *internet_security_mode* は **int** で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|基本認証が使用されます。|  
 |**1** (既定値)|Windows 統合認証を使用|  
