@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergearticle
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8775928ede4fd92072bd91e39bc9652bb7db53a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 994efc8752017757bbced6df16fed2b6a4955eb1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469738"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541908"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -84,7 +84,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**3**|アーティクルのフィルター選択により、各サブスクリプションに一意の重複しないパーティションが生成されます。<br /><br /> 注: **partition_options**に**3**を指定した場合、そのアーティクル内のデータの各パーティションに対して1つのサブスクリプションのみを使用できます。 第 2 のサブスクリプションを作成し、その新しいサブスクリプションのフィルター選択条件が既存のサブスクリプションと同じパーティションとして判別される場合、既存のサブスクリプションは削除されます。|  
 |**pre_creation_command**|"**なし**"|テーブルがサブスクライバーに既に存在する場合、アクションは実行されません。|  
 ||**delete**|サブセットフィルターの WHERE 句に基づいて削除を発行します。|  
-||**drop**|テーブルを再作成する前に削除します。|  
+||**」**|テーブルを再作成する前に削除します。|  
 ||**truncate**|変換先テーブルを切り捨てます。|  
 |**processing_order**||マージパブリケーション内のアーティクルの処理順序を示す**int**です。|  
 |**pub_identity_range**||アーティクルの**identityrangemanagementoption**が**auto**に設定されている場合、または**auto_identity_range**が**true**に設定されている場合に、サーバーサブスクリプションを使用してサブスクライバーに割り当てられた範囲のサイズを指定する**bigint**です。 この ID 範囲は、再パブリッシュ元のサブスクライバーが自らのサブスクライバーに割り当てるために予約されています。 テーブルアーティクルにのみ適用されます。 詳細については、「 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」の「マージレプリケーション」セクションを参照してください。|  
@@ -223,7 +223,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="valid-schema-option-table"></a>有効なスキーマオプションテーブル  
  次の表では、アーティクルの種類に応じて許可される *schema_option*値について説明します。  
   
-|アーティクルの種類|スキーマオプションの値|  
+|記事の種類|スキーマオプションの値|  
 |------------------|--------------------------|  
 |**func スキーマのみ**|**0x01** と **0x2000**|  
 |**インデックス付きビュースキーマのみ**|**0x01**、 **0x040,**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**、および **0x200000**|  
@@ -237,11 +237,11 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changemergearticle**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アーティクルのプロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_dropmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
+ [sp_dropmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_loaded_modules dynamic management view
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d5678c74d6fbbb703e6f6fd0a93b205bc2903059
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: af93d167af59eb95b4a1edd83109eebbd12782c7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419686"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542172"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88419686"
 |**private_build**|**bit**|1 = モジュールは読み込まれたモジュールの個人用ビルドです。|  
 |**special_build**|**bit**|1 = モジュールは、読み込まれたモジュールの特別なビルドです。|  
 |**language**|**int**|モジュールのバージョン情報の言語。|  
-|**company**|**nvarchar (256)**|モジュールを作成した会社の名前。|  
+|**全社**|**nvarchar (256)**|モジュールを作成した会社の名前。|  
 |**description**|**nvarchar (256)**|モジュールの説明。|  
 |**name**|**nvarchar (255)**|モジュールの名前。 モジュールの完全パスが含まれます。|  
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  

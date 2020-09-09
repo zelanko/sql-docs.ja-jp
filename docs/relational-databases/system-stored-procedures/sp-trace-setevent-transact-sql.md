@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9f176957bb975ee08ac6ef508a187b189a6123b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f678427f05b5c3b136a7dfe18e1f51eb91773b91
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480962"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542997"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -255,14 +255,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |10|**ApplicationName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|  
 |11|**LoginName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのログイン名。|  
 |12|**SPID**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントに関連付けられているプロセスにによって割り当てられたサーバープロセス ID。|  
-|13|**Duration**|イベントにかかった経過時間 (マイクロ秒)。 このデータ列は、Hash Warning イベントによって設定されません。|  
+|13|**期間**|イベントにかかった経過時間 (マイクロ秒)。 このデータ列は、Hash Warning イベントによって設定されません。|  
 |14|**StartTime**|イベントの開始時刻 (取得できた場合)。|  
 |15|**EndTime**|イベントの終了時刻。 **SQL:BatchStarting** や **SP:Starting**などの開始イベント クラスについては、この列に値が格納されません。 また、 **Hash Warning** イベントによって設定されることもありません。|  
 |16|**Reads**|イベントの代わりにサーバーによって実行される、論理ディスク読み取り回数。 この列は、 **Lock: Released** イベントによって設定されません。|  
 |17|**Writes**|イベントの代わりにサーバーによって実行される、物理ディスクの書き込み回数。|  
 |18|**CPU**|イベントに使用された CPU 時間 (ミリ秒単位)。|  
 |19|**アクセス許可**|アクセス許可のビットマップを表します。セキュリティ監査によって使用されます。|  
-|20|**Severity**|例外の重大度レベル。|  
+|20|**重大度**|例外の重大度レベル。|  
 |21|**EventSubClass**|イベント サブクラスの種類。 すべてのイベント クラスに対して、このデータ列が作成されるわけではありません。|  
 |22|**Exchange Spill**|システムによって割り当てられたオブジェクト ID。|  
 |23|**Success**|アクセス許可の使用が成功しました。監査に使用されます。<br /><br /> **1** = 成功**0** = 失敗|  
@@ -275,7 +275,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |30|**State**|サーバーの状態 (エラーが発生した場合)。|  
 |31|**Error**|エラー番号。|  
 |32|**モード**|取得したロックのロックモード。 この列は、 **Lock: Released** イベントによって設定されません。|  
-|33|**扱え**|イベントで参照されているオブジェクトのハンドル。|  
+|33|**Handle**|イベントで参照されているオブジェクトのハンドル。|  
 |34|**ObjectName**|アクセスされるオブジェクトの名前。|  
 |35|**DatabaseName**|USE *database* ステートメントで指定されたデータベースの名前。|  
 |36|**FileName**|変更されたファイル名の論理名。|  
@@ -299,13 +299,13 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|トレースでキャプチャされたイベント クラスに依存する GUID 値。|  
 |55|**IntegerData2**|トレースでキャプチャされたイベントクラスに依存する整数値。|  
 |56|**ObjectID2**|関連するオブジェクトまたはエンティティの ID (使用可能な場合)。|  
-|57|**Type**|トレースでキャプチャされたイベントクラスに依存する整数値。|  
+|57|**型**|トレースでキャプチャされたイベントクラスに依存する整数値。|  
 |58|**OwnerID**|ロックを所有するオブジェクトの種類。 ロック イベントの場合にのみ該当します。|  
 |59|**ParentName**|オブジェクトが存在するスキーマの名前。|  
 |60|**IsSystem**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> **1** = システム<br /><br /> **0** = ユーザー。|  
 |61|**Offset**|ストアド プロシージャ内またはバッチ内のステートメントの開始オフセット。|  
 |62|**SourceDatabaseID**|オブジェクトのソースが存在するデータベースの ID。|  
-|63|**SqlHandle**|64 ビット ハッシュ。アドホック クエリやデータベースのテキスト、および SQL オブジェクトのオブジェクト ID に基づいています。 この値は、 **dm_exec_sql_text ()** に渡すことによって、関連付けられている sql テキストを取得できます。|  
+|63|**SqlHandle**|64 ビット ハッシュ。アドホック クエリやデータベースのテキスト、および SQL オブジェクトのオブジェクト ID に基づいています。 この値を **sys.dm_exec_sql_text()** に渡して、関連付けられている SQL テキストを取得できます。|  
 |64|**SessionLoginName**|セッションを開始したユーザーのログイン名。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に **Login1** を使用して接続し、 **Login2**としてステートメントを実行した場合、 **SessionLoginName** には **Login1**が表示され、 **LoginName** には **Login2**が表示されます。 このデータ列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|  
   
  **[ @on =]** *on*  
@@ -336,7 +336,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |4|指定した列は無効です。|  
 |9|指定されたトレースハンドルは無効です。|  
 |11|指定された列は内部で使用されているため、削除できません。|  
-|13|メモリ不足。 指定されたアクションを実行するのに十分なメモリがない場合に返されます。|  
+|13|メモリが不足しています。 指定されたアクションを実行するのに十分なメモリがない場合に返されます。|  
 |16|関数は、このトレースに対して無効です。|  
   
 ## <a name="remarks"></a>解説  

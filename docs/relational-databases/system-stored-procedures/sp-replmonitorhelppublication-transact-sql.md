@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelppublication
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6ab914a76ba3aa4a5205631727242d3983cef68d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 964f32d4158e8159a65a79eac35415c34c35289c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481132"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543139"
 ---
 # <a name="sp_replmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type` パブリケーションの種類。 *publication_type* は **int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|トランザクションパブリケーション。|  
 |**1**|スナップショットパブリケーション。|  
@@ -72,7 +72,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**best_latency**|**int**|トランザクションパブリケーションのログリーダーまたはディストリビューションエージェントによって反映されたデータ変更の最小待機時間 (秒単位)。|  
 |**average_latency**|**int**|トランザクションパブリケーションのログリーダーまたはディストリビューションエージェントによって反映されたデータ変更の平均待機時間 (秒単位)。|  
 |**last_distsync**|**datetime**|ディストリビューション エージェントが最後に実行された日時です。|  
-|**保持**|**int**|パブリケーションの保有期間を示します。|  
+|**保有**|**int**|パブリケーションの保有期間を示します。|  
 |**latencythreshold**|**int**|トランザクションパブリケーションに設定されている待機時間のしきい値です。|  
 |**expirationthreshold**|**int**|パブリケーションがマージパブリケーションである場合に、パブリケーションに設定されている有効期限のしきい値です。|  
 |**agentnotrunningthreshold**|**int**|エージェントが実行されないようにするための最長時間を設定するしきい値です。|  

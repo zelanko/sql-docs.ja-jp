@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cached_plans dynamic management view
 ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 378d6c50e6842c2bd954427a2583b2c016393231
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02e10051c13f55b703e0f45ab2b657d7f0d66230
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454961"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542204"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>dm_exec_cached_plans (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88454961"
 |memory_object_address|**varbinary (8)**|キャッシュ エントリのメモリ アドレス。 この値は、[sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) と併用してキャッシュされたプランのメモリ内訳を取得したり、[sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md) と併用してエントリをキャッシュするコストを取得したりできます。|  
 |cacheobjtype|**nvarchar (34)**|キャッシュ内のオブジェクトの種類。 値は次のいずれかになります。<br /><br /> Compiled Plan<br /><br /> Compiled Plan Stub<br /><br /> Parse Tree<br /><br /> Extended Proc<br /><br /> CLR Compiled Func<br /><br /> CLR Compiled Proc|  
 |objtype|**nvarchar (16)**|オブジェクトの種類。 有効な値とそれに対応する説明を次に示します。<br /><br /> Proc: ストアドプロシージャ<br />準備完了: 準備されたステートメント<br />アドホック: アドホッククエリ。 [!INCLUDE[tsql](../../includes/tsql-md.md)]リモートプロシージャ呼び出しとしてではなく**osql**または**sqlcmd**を使用して、言語イベントとして送信されたを示します。<br />ReplProc: レプリケーション-フィルター-プロシージャ<br />トリガー: トリガー<br />ビュー: 表示<br />既定値: 既定<br />UsrTab: User テーブル<br />SysTab: システムテーブル<br />Check: CHECK 制約<br />ルール: ルール|  
-|plan_handle|**varbinary(64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値は、次の動的管理関数で使用できます。<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
+|plan_handle|**varbinary(64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値は、次の動的管理関数で使用できます。<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|このプランのメモリ使用量の大部分を占めるリソース プールの ID。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   

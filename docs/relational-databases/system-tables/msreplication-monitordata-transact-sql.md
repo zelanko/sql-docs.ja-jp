@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_monitordata system table
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 544a21ee17d30eff7d249c7597b2b579a894194e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dde16569f96619778a3a3cd6a246f58482b9947d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492741"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540891"
 ---
 # <a name="msreplication_monitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "88492741"
 |**last_distsync**|**datetime**|ディストリビューションエージェント実行された最後の日付と時刻。|  
 |**agentstoptime**|**datetime**|エージェントが停止された日時です。|  
 |**distdb**|**sysname**|サブスクリプションのディストリビューションデータベースの名前。|  
-|**保持**|**int**|パブリケーションの保有期間です。|  
+|**保有**|**int**|パブリケーションの保有期間です。|  
 |**time_stamp**|**datetime**|内部使用のみ。|  
 |**worst_latency**|**int**|トランザクションパブリケーションのログリーダーまたはディストリビューションエージェントによって反映されたデータ変更の待機時間の最大値 (秒単位)。|  
 |**best_latency**|**int**|トランザクションパブリケーションのログリーダーまたはディストリビューションエージェントによって反映されたデータ変更の最小待機時間 (秒単位)。|  

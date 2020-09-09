@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - restorehistory system table
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 26b3d319738ce827d482aafcfb76f91cc2ab53ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 03b5887ee905d5a39bce5ef9e73e78e27b581972
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460294"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540842"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88460294"
 |**destination_database_name**|**nvarchar(128)**|復元操作の対象となるデータベースの名前。 NULL にすることができます。|  
 |**user_name**|**nvarchar(128)**|復元操作を実行したユーザーの名前。 NULL にすることができます。|  
 |**backup_set_id**|**int**|復元されるバックアップ セットを識別する一意な識別番号。 **Backupset (backup_set_id)** を参照します。|  
-|**restore_type**|**char (1)**|復元操作の種類。<br /><br /> D = データベース<br /><br /> F = ファイル<br /><br /> G = ファイル グループ<br /><br /> I = 差分<br /><br /> L = ログ<br /><br /> V = Verifyonly<br /><br /> NULL にすることができます。|  
+|**restore_type**|**char(1)**|復元操作の種類。<br /><br /> D = データベース<br /><br /> F = ファイル<br /><br /> G = ファイル グループ<br /><br /> I = 差分<br /><br /> L = ログ<br /><br /> V = Verifyonly<br /><br /> NULL にすることができます。|  
 |**replace**|**bit**|復元操作に REPLACE オプションが指定されているかどうかを示します。<br /><br /> 1 = 指定<br /><br /> 0 = 指定なし<br /><br /> NULL にすることができます。<br /><br /> データベースをデータベーススナップショットに戻す場合、唯一のオプションは0です。|  
 |**復旧 (recovery)**|**bit**|復元操作に RECOVERY または NORECOVERY オプションが指定されたかどうか。<br /><br /> 1 = 回復<br /><br /> NULL にすることができます。<br /><br /> データベースをデータベーススナップショットに戻す場合、唯一のオプションは1です。<br /><br /> 0 = NORECOVERY|  
 |**restart**|**bit**|復元操作に RESTART オプションが指定されているかどうかを示します。<br /><br /> 1 = 指定<br /><br /> 0 = 指定なし<br /><br /> NULL にすることができます。<br /><br /> データベースをデータベーススナップショットに戻す場合、唯一のオプションは0です。|  

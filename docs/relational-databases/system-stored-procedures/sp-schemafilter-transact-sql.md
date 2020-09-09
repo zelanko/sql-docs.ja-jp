@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_schemafilter
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ad023dd248b3849e4bb900e1891bd655087a51f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 51edefb63c7ec075e89e9239636207625c4ba1dc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481098"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541523"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,10 +46,10 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 `[ @operation = ] 'operation'` このスキーマに対して実行するアクションを指定します。 *操作* は **nvarchar (4)**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**add**|指定されたスキーマを、パブリケーションに適合しないスキーマの一覧に追加します。|  
-|**drop**|指定されたスキーマを、パブリケーションに適合しないスキーマの一覧から削除します。|  
+|**」**|指定されたスキーマを、パブリケーションに適合しないスキーマの一覧から削除します。|  
 |**help**|パブリケーションに適さないスキーマの一覧を返します。|  
   
 ## <a name="result-sets"></a>結果セット  

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_hash_index_stats (dynamic management view)
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 219fc6e3624e3a305481d661748a0f1a5ff87d6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5e8b28d292de4d860a8e46f7a679e42d99ac8c88
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475037"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542262"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>dm_db_xtp_hash_index_stats (Transact-sql)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88475037"
   
 詳細については、「 [メモリ最適化テーブルのハッシュインデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)」を参照してください。  
   
-|列名|Type|説明|  
+|列名|種類|説明|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|親テーブルのオブジェクト ID。|  
 |xtp_object_id|**bigint**|メモリ最適化テーブルの ID。|  

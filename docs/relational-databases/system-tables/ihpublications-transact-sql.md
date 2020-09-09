@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublications system table
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0192dc6d2d01900b58a8dcb5fde34d46384adc50
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 61a1845ac54b42148b468462835cf041844007bc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446613"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540957"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "88446613"
 |**immediate_sync**|**bit**|スナップショットエージェントを実行するたびに同期ファイルを作成または再作成するかどうかを示します。 **1** は、エージェントを実行するたびに同期ファイルが作成されることを意味します。|  
 |**allow_push**|**bit**|パブリケーションでプッシュサブスクリプションが許可されているかどうかを示します。 **1** は、このパブリケーションが許可されていることを示します。|  
 |**allow_pull**|**bit**|パブリケーションでプルサブスクリプションが許可されているかどうかを示します。 **1** は、このパブリケーションが許可されていることを示します。|  
-|**保持**|**int**|指定されたパブリケーションに対して保存する変更の量 (時間単位)。|  
+|**保有**|**int**|指定されたパブリケーションに対して保存する変更の量 (時間単位)。|  
 |**allow_subscription_copy**|**bit**|このパブリケーションをサブスクライブするサブスクリプションデータベースをコピーする機能が有効になっているかどうかを指定します。 **1** は、コピーが許可されることを意味します。|  
 |**allow_initialize_from_backup**|**bit**|サブスクライバーでは、最初のスナップショットではなくバックアップから、このパブリケーションへのサブスクリプションを初期化できるかどうかを示します。 **1** は、サブスクリプションをバックアップから初期化できることを意味します。 **0** は、サブスクリプションが使用できないことを意味します。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。 *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
 |**min_autonosync_lsn**|**バイナリ (1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -77,7 +77,7 @@ ms.locfileid: "88446613"
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addpublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_changepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [syspublications &#40;システムビュー&#41; &#40;Transact-sql&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)   
  [syspublications &#40;Transact-sql&#41;](../../relational-databases/system-tables/syspublications-transact-sql.md)  

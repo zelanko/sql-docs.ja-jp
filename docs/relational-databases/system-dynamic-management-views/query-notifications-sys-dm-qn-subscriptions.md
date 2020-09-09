@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2d19178ff8e4b684fbc32fb80d23ee057fb55db7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 47bc6dae0c1164fefbffd0a799b5dbfcf7137bb6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455112"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542391"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>クエリ通知-sys. dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88455112"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|サブスクリプションの ID。|  
 |**database_id**|**int**|通知クエリが実行されたデータベースの ID。 このデータベースには、このサブスクリプションに関連する情報が格納されます。|  
-|**sid**|**varbinary (85)**|このサブスクリプションを作成して所有しているサーバー プリンシパルのセキュリティ ID。|  
+|**sid**|**varbinary(85)**|このサブスクリプションを作成して所有しているサーバー プリンシパルのセキュリティ ID。|  
 |**object_id**|**int**|サブスクリプションパラメーターに関する情報を格納する内部テーブルの ID。|  
 |**created**|**datetime**|サブスクリプションが作成された日付と時刻。|  
 |**timeout**|**int**|サブスクリプションのタイムアウト (秒単位)。 この時間が経過すると、通知のフラグが設定されます。<br /><br /> 注: 実際の起動時間は、指定されたタイムアウトよりも長くなる場合があります。ただし、サブスクリプションを無効にする変更が、指定されたタイムアウトの後、サブスクリプションが開始される前に発生した場合、は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変更が行われた時点で発生していることを確認します。|  
@@ -43,7 +43,7 @@ ms.locfileid: "88455112"
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|ソース|終了|オン|Type|  
+|From|終了|オン|種類|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多対一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|多対一|  
@@ -58,7 +58,7 @@ ms.locfileid: "88455112"
 |65798|データが変更されたため、サブスクリプションが起動しました|挿入によってトリガーされたサブスクリプション|  
 |65799|データが変更されたため、サブスクリプションが起動しました|削除|  
 |65800|データが変更されたため、サブスクリプションが起動しました|更新|  
-|65801|データが変更されたため、サブスクリプションが起動しました|Merge|  
+|65801|データが変更されたため、サブスクリプションが起動しました|マージする|  
 |65802|データが変更されたため、サブスクリプションが起動しました|テーブルを切り捨てる|  
 |66048|タイムアウトが発生したため、サブスクリプションが起動しました|未定義の情報モード|  
 |66315|オブジェクトが変更されたため、サブスクリプションが起動しました|オブジェクトまたはユーザーが削除されました|  

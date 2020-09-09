@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_category
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f4eaf2fe7fd4b1ee613bec30dbf6967eaeab8b51
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 117f146c4ceea988d5817785494bf2af4dc11814
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485587"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543001"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_update_category
 ## <a name="arguments"></a>引数  
 `[ @class = ] 'class'` 更新するカテゴリのクラス。 *クラス*は **varchar (8)**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**アラート**|アラートカテゴリを更新します。|  
 |**補足**|ジョブ カテゴリを更新します。|  
@@ -78,7 +78,7 @@ EXEC dbo.sp_update_category
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_add_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_delete_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   

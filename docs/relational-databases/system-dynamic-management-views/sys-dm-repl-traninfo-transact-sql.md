@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 13688621c4547f5bc49be2d2385d20973b85f7e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ccac1a54db0fb5395f76205713fe65c9cba3f8e1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419596"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542107"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88419596"
 |**begin_lsn**|**nvarchar (64)**|トランザクションの開始ログレコードのログシーケンス番号 (LSN)。|  
 |**commit_lsn**|**nvarchar (64)**|トランザクションのコミットログレコードの LSN。|  
 |**dbid**|**smallint**|データベース ID。|  
-|**レコード**|**int**|トランザクション内のレプリケートされたコマンドの ID。|  
+|**rows**|**int**|トランザクション内のレプリケートされたコマンドの ID。|  
 |**が属する xdesid**|**nvarchar (64)**|トランザクション ID。|  
 |**artcache_table_address**|**varbinary (8)**|このトランザクションに最後に使用された、キャッシュされたアーティクルテーブル構造のメモリ内アドレス。|  
 |**server**|**nvarchar (514)**|サーバー名。|  
