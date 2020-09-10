@@ -7094,8 +7094,8 @@
               href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
             - name: スタック オーバーフロー >>
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: MSDN フォーラム >>
-              href: 'https://social.msdn.microsoft.com/Forums/home?category=sqlserver'
+            - name: Microsoft Q & A >>
+              href: 'https://https://docs.microsoft.com/answers/products/sql-server'
             - name: フィードバックの送信 >>
               href: 'https://feedback.azure.com/forums/908035-sql-server'
             - name: Reddit >>
@@ -10110,8 +10110,8 @@
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: スタック オーバーフロー >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN フォーラム >>
-          href: 'https://social.msdn.microsoft.com/Forums/home'
+        - name: Microsoft Q & A >>
+          href: 'https://docs.microsoft.com/answers/products/sql-server'
         - name: フィードバックの送信 >>
           href: 'https://feedback.azure.com/forums/908035-sql-server'
         - name: Reddit >>
@@ -10140,16 +10140,16 @@
       items:
         - name: ヘルプの参照
           href: sql-server/sql-server-get-help.md
-        - name: SQL ドキュメントのバージョン管理
-          href: sql-server/versioning-system-monikers-ui-sql-server.md
+        - name: Microsoft Q & A >>
+          href: 'https://docs.microsoft.com/answers/products/sql-server'
         - name: DBA Stack Exchange >>
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: スタック オーバーフロー >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN フォーラム >>
-          href: 'https://social.msdn.microsoft.com/Forums/home'
         - name: Reddit >>
           href: 'https://www.reddit.com/r/SQLServer'
+        - name: ドキュメントのナビゲーションに関するヒント
+          href: sql-server/sql-docs-navigation-guide.md
     - name: ブログ
       items:
         - name: SQL Server >>
