@@ -48,7 +48,7 @@ ms.locfileid: "88445095"
   
  CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  コレクションの場合、このアルゴリズムは個別に各 **geometry** インスタンスに含まれています。  
   
  このアルゴリズムによって、**Point** インスタンスが変更されることはありません。  
@@ -113,6 +113,6 @@ SELECT @g.STIsValid() AS Valid
 SELECT @g.ToString() AS Original, @h.ToString() AS Reduced;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張された静的なジオメトリ メソッド](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   

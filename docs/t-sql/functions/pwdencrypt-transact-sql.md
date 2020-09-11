@@ -53,7 +53,7 @@ PWDENCRYPT ( 'password' )
 ## <a name="permissions"></a>アクセス許可  
  PWDENCRYPT はパブリックに使用できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セキュリティ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
  [PWDCOMPARE &#40;Transact-SQL&#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
   

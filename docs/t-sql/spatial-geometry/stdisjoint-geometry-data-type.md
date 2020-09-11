@@ -48,7 +48,7 @@ ms.locfileid: "88416898"
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  地点のセットの交点が空である場合、2 つの **geography** インスタンスは連結されていません。  
   
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  

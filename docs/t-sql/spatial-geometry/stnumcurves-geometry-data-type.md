@@ -41,7 +41,7 @@ ms.locfileid: "88444966"
   
  CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  空の 1 次元 **geometry** インスタンスは 0 を返します。 **geometry** インスタンスが 1 次元のインスタンスではない場合や初期化されていない場合は、**NULL** が返されます。  
   
 ## <a name="examples"></a>例  

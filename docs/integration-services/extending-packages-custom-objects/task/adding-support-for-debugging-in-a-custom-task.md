@@ -345,7 +345,7 @@ Public Sub Suspend()
 End Sub  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [制御フローのデバッグ](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   

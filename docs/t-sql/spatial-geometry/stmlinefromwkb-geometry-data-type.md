@@ -53,7 +53,7 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
   
  OGC の型: **MultiLineString**  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  
   
 ## <a name="examples"></a>例  

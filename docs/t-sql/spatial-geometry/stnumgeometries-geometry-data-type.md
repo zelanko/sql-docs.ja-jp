@@ -44,7 +44,7 @@ ms.locfileid: "88444948"
   
  CLR の戻り値の型: **SqlInt32**  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  このメソッドは、**geometry** インスタンスが **MultiPoint**、**MultiLineString**、**MultiPolygon**、**GeometryCollection** インスタンスではない場合に 1 を返し、**geometry** インスタンスが空の場合に 0 を返します。  
   
 > [!NOTE]  

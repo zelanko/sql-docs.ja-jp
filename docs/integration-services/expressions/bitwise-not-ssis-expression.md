@@ -43,7 +43,7 @@ ms.locfileid: "88430614"
 ## <a name="result-types"></a>戻り値の型  
  データ型を返す *integer_expression*です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  なし  
   
 ## <a name="expression-examples"></a>式の例  
