@@ -42,7 +42,7 @@ ms.locfileid: "88497053"
   
  CLR の型: **SqlBoolean**  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  `IsNull` を使用して、**geometry** インスタンスが NULL かどうかをテストできます。 `IsNull` は、インスタンスが NULL でない場合は 0 を返しますが、NULL の場合は NULL を返します。  
   
  このメソッドは、主に SQL Server インフラストラクチャによって使用されます。インスタンスが NULL かどうかをテストするために `IsNull` を使用することはお勧めしません。  

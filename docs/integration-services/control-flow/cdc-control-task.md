@@ -99,7 +99,7 @@ ms.locfileid: "88496055"
   
 2.  **[制御フロー]** タブで、CDC 制御タスクをダブルクリックします。  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>オプション  
  **[SQL Server CDC データベースの ADO.NET 接続マネージャー]**  
  既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。 選択した変更テーブルが存在する、CDC に対応した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの接続である必要があります。  
   

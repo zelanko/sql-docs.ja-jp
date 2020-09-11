@@ -41,7 +41,7 @@ ms.locfileid: "88497043"
   
  CLR 戻り値の型: **string**  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  次の表に、返される可能性のある戻り値を示します。  
   
 |戻り値|説明|  

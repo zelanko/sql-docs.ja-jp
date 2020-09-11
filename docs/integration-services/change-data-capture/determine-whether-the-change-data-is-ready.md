@@ -192,7 +192,7 @@ ms.locfileid: "88496238"
         System.Threading.Thread.Sleep((int)Dts.Variables["DelaySeconds"].Value * 1000);  
         ```  
   
-         \- - または -  
+         \- または  
   
     -   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]でプログラミングしている場合は、次のコード行を入力します。  
   
