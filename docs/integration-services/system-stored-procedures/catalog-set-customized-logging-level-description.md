@@ -42,7 +42,7 @@ catalog.set_customized_logging_level_description [ @level_name = ] level_name
   
  *level_description* は **nvarchar (1024)** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 ## <a name="return-codes"></a>リターン コード  
  成功した場合は 0 を返します。  

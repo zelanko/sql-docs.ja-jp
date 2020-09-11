@@ -46,7 +46,7 @@ ms.locfileid: "88359448"
   
  CLR 戻り値の型: **SqlBytes**  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  **geography** インスタンスの OGC 型は、[STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) を呼び出すことによって判別できます。  
   
 ## <a name="examples"></a>例  
@@ -58,7 +58,7 @@ SET @g = geography::STGeomFromText('LINESTRING( -122.360 47.656, -122.343 47.656
 SELECT @g.STAsBinary();  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [geography インスタンスの OGC メソッド](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+## <a name="see-also"></a>参照  
+ [Geography インスタンスの OGC メソッド](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

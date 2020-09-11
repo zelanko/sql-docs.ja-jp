@@ -46,7 +46,7 @@ ConvexHullAggregate ( geography_operand )
 ## <a name="exception"></a>例外  
  入力値が無効である場合は、`FormatException` をスローします。 「[STIsValid &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)」を参照してください。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  入力が空である場合または入力の SRID が異なる場合は、**null** が返されます。 「[SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
  メソッドでは、**null** 入力は無視されます。  

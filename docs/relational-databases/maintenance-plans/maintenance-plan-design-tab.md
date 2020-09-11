@@ -26,7 +26,7 @@ ms.locfileid: "88420876"
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[メンテナンス プラン] \([デザイン] タブ)** では、メンテナンス プランとそのサブプランのプロパティを指定します。 ツールボックスのタスクをプラン デザイナーにドラッグします。 タスクのグループを右クリックし、分岐する実行パスを作成します。 メンテナンス プランは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エージェント ジョブで実行される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージとして保存されます。  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>オプション  
  **[サブプランの追加]**  
  構成できるサブプランを追加します。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88420876"
  **[編集]**  
  タスクの [プロパティ] ダイアログ ボックスを開きます。  
   
- **Disable**  
+ **無効化**  
  タスクが一時的に使用できなくなります。  
   
  **有効化**  

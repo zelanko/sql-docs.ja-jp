@@ -80,6 +80,6 @@ SELECT @g.STDifference(@h).ToString();
  ```  
   
 ## <a name="see-also"></a>参照  
- [geography インスタンスの OGC メソッド](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography インスタンスの OGC メソッド](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

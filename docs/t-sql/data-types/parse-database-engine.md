@@ -58,7 +58,7 @@ CLR : 評価される String 値。
   
 **CLR 戻り値の型:SqlHierarchyId**
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 場合 解析 の有効な文字列表記ではない値を受け取る、 **hierarchyid**, 、例外が発生します。 たとえば場合、 **cha**r データ型には、末尾のスペースが含まれている、例外が発生します。
   
 ## <a name="examples"></a>例  

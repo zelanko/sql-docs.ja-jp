@@ -58,7 +58,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     - *table_name* - 分類される列が属するテーブルの名前です。
     - *column_name* - 分類を削除する列の名前です。
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
 - 1 つの "DROP SENSITIVITY CLASSIFICATION" ステートメントを使用して複数のオブジェクトの分類を削除できます。
 
@@ -88,7 +88,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     dbo.sales.price, dbo.sales.discount, SalesLT.Customer.Phone  
 ```
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 
 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 

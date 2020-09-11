@@ -44,7 +44,7 @@ ms.locfileid: "88422326"
   
  CLR の戻り値の型: **SqlInt32**  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  このメソッドは、対象となるインスタンスが **Polygon** インスタンスではない場合に NULL を返し、空のインスタンスの場合に 0 を返します。 このメソッドは正確です。  
   
 ## <a name="examples"></a>例  
