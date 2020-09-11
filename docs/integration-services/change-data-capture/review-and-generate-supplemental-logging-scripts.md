@@ -58,7 +58,7 @@ ms.locfileid: "88457686"
   
 2.  ファイルに名前を付け、 **[保存]** をクリックしてファイルを保存します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CDC インスタンスのプロパティを編集する方法](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   

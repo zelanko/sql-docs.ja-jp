@@ -50,7 +50,7 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 ## <a name="return-types"></a>戻り値の型
 `TERTIARY_WEIGHTS` は、*non_Unicode_character_string_expression* が **char** または **varchar** であるときに **varbinary** を返し、*non_Unicode_character_string_expression* に **varchar(max)** データ型が含まれるときには **varbinary(max)** を返します。
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 第 3 の SQL 照合順序で *non_Unicode_character_string_expression* が定義されていない場合、`TERTIARY_WEIGHTS` は NULL を返します。 次の表に、第 3 の SQL 照合順序を示します。
   
 |並べ替え順 ID|SQL 照合順序|  

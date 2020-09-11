@@ -51,7 +51,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
  CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  `STGeomCollFromText()` によって返された **geometry** インスタンスの OGC 型は、対応する WKT 入力に設定されます。  
   
  この入力が無効な場合、このメソッドは例外をスローします。  

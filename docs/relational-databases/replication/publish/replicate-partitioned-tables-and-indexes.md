@@ -79,7 +79,7 @@ ms.locfileid: "88448186"
   
  これらのプロパティは、パブリケーションの作成時に [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) を使用するか、パブリケーションの作成後に [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を使用することによって設定できます。 既に述べたとおり、マージ レプリケーションではパーティション切り替えがサポートされません。 マージ レプリケーションが有効になっているテーブルで SWITCH PARTITION を実行するには、パブリケーションからテーブルを削除します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データとデータベース オブジェクトのパブリッシュ](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

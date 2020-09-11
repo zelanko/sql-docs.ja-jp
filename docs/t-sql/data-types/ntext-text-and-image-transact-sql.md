@@ -49,7 +49,7 @@ ms.locfileid: "88459964"
 ## <a name="remarks"></a>解説  
 次の関数とステートメントで使用できる **ntext**, 、**テキスト**, 、または **イメージ** データ。
   
-|関数|ステートメント|  
+|機能|ステートメント|  
 |---|---|
 |[DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)|[READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)|  
 |[PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)|[SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)|  

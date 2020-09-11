@@ -24,7 +24,7 @@ ms.locfileid: "88428024"
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスを使用すると、この対象に対して有効なポリシーを表示できます。 このダイアログ ボックスには、関連するポリシー、それらのポリシー カテゴリ、およびポリシーに関する情報が表示されます。  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>オプション  
  **[ポリシー正常性状態]**  
  この対象に対するポリシーの状態を示します。 状態が不明な場合は空白になります。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "88428024"
  **[最終実行]**  
  ポリシーが最後に実行された日時。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

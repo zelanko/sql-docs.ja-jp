@@ -50,7 +50,7 @@ static SqlHierarchyId GetRoot ( )
   
 **CLR 戻り値の型:SqlHierarchyId**
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 階層ツリー内のルート ノードを決定するために使用されます。
   
 ## <a name="examples"></a>例  

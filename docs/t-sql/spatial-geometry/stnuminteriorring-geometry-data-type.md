@@ -44,7 +44,7 @@ ms.locfileid: "88444942"
   
  CLR の戻り値の型: **SqlInt32**  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  **geometry** インスタンスが多角形ではない場合、このメソッドは NULL を返します。  
   
 ## <a name="examples"></a>例  
@@ -56,7 +56,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STNumInteriorRing();  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Geometry インスタンスの OGC メソッド](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

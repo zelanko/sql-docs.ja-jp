@@ -61,7 +61,7 @@ FOR SERVER AUDIT audit_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  監査による、この監査仕様についてのレコードの収集を有効または無効にします。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  サーバー監査仕様を作成するには、対象の監査が事前に存在している必要があります。 サーバー監査仕様は作成されたとき無効な状態です。  
   
 ## <a name="permissions"></a>アクセス許可  
