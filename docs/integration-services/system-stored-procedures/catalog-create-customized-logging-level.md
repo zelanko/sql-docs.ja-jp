@@ -76,7 +76,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
  *level_id* は **bigint** です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  Transact-SQL で *profile_value* または *events_value* 引数の複数の値を結合するには、この例に従います。 OnError (8) と DiagnosticEx (15) イベントをキャプチャする場合、*event_value* を計算する式は `2^8 + 2^15 = 33024` です。  
   
 ## <a name="return-codes"></a>リターン コード  

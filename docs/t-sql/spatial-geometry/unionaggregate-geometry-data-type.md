@@ -46,7 +46,7 @@ UnionAggregate ( geometry_operand )
 ## <a name="exceptions"></a>例外  
  入力値が無効である場合は、`FormatException` をスローします。 「[STIsValid &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)」を参照してください。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  入力が空である場合または入力の SRID が異なる場合は、**null** が返されます。 「[SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
  メソッドでは、**null** 入力は無視されます。  

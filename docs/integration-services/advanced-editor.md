@@ -1,5 +1,5 @@
 ---
-description: '[詳細エディター]'
+description: 詳細エディター
 title: '[詳細エディター] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/17/2020
 ms.locfileid: "88478075"
 ---
-# <a name="advanced-editor"></a>[詳細エディター]
+# <a name="advanced-editor"></a>詳細エディター
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 

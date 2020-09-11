@@ -75,7 +75,7 @@ SELECT @g.STUnion(@h).ToString();
   
  `STUnion()` を呼び出したインスタンスは円弧セグメントを含んでいるため、`STUnion()` は円弧セグメントを含む結果を返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Geometry インスタンスの OGC メソッド](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -48,7 +48,7 @@ ms.locfileid: "88458941"
   
  CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。   結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
   
 ## <a name="examples"></a>例  
