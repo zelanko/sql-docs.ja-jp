@@ -41,7 +41,7 @@ ms.locfileid: "88427054"
   
  CLR の戻り値の型: **int**  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  `MinDbCompatibilityLevel()` を使用すると、データベースで互換性レベルを変更する前に、空間オブジェクトの互換性をテストできます。  
   
 ## <a name="examples"></a>例  

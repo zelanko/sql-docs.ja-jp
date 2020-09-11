@@ -44,7 +44,7 @@ ms.locfileid: "88427084"
   
  CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  このメソッドにより、**geometry** インスタンスの型が変更されるだけでなく、**geometry** インスタンスの地点がわずかに移動する場合があります。  
   
 ## <a name="examples"></a>例  

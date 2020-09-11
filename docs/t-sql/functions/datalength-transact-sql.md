@@ -55,7 +55,7 @@ DATALENGTH ( expression )
 ## <a name="return-types"></a>戻り値の型
 *expression* が **varchar(max)**、**nvarchar(max)**、**varbinary(max)** データ型の場合は **bigint**、それ以外の場合は **int**。
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 次のような可変長データを格納できるデータ型で使用すると、`DATALENGTH` は非常に便利です。
 - **image**
 - **ntext**

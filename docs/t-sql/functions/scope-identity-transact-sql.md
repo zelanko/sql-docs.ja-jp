@@ -46,7 +46,7 @@ SCOPE_IDENTITY()
 ## <a name="return-types"></a>戻り値の型
  **numeric(38,0)**  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  SCOPE_IDENTITY、IDENT_CURRENT、および @@IDENTITY は、ID 列に挿入された値を返すという点で似ています。  
   
  IDENT_CURRENT はスコープとセッションには限定されませんが、特定のテーブルに限定されます。 IDENT_CURRENT では、任意のセッションとスコープ内の特定のテーブルに対して生成された値が返されます。 詳しくは、「[IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)」をご覧ください。  
@@ -178,7 +178,7 @@ GO
  89
  ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)  
   
   

@@ -54,7 +54,7 @@ ms.locfileid: "88404828"
 
 グループのマネージド サービス アカウント (gMSA) の使用のサポートは、SQL Server 2014 で導入されました。 詳細については、ブログ「[Replication and group Managed Service Accounts](https://repltalk.com/2019/03/26/replication-and-group-managed-service-accounts/)」 (レプリケーションとグループのマネージド サービス アカウント) を参照してください。
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [脅威と脆弱性の対策 &#40;レプリケーション&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md) [レプリケーション エージェントのセキュリティ モデル](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [レプリケーション セキュリティの推奨事項](../../../relational-databases/replication/security/replication-security-best-practices.md)   
 

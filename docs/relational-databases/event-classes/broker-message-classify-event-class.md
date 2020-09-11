@@ -47,7 +47,7 @@ ms.locfileid: "88331078"
 |**RoleName**|**nvarchar**|メッセージをネットワークから受信したか、またはこの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスから発信したかを示します。|38|いいえ|  
 |**ServerName**|**nvarchar**|トレースされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**SPID**|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
-|**Start Time**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
+|**開始時刻**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |**TargetUserName**|**nvarchar**|次のホップ ブローカーのネットワーク アドレス。|39|いいえ|  
 |**TransactionID**|**bigint**|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
   

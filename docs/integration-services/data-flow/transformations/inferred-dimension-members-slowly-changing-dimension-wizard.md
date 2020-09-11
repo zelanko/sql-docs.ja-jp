@@ -29,7 +29,7 @@ ms.locfileid: "88425774"
   
  このウィザードの詳細については、「 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[推定メンバー サポートを有効にする]**  
  推定メンバーを有効にすることを選択した場合は、次のどちらかのオプションを選択する必要があります。  
   

@@ -46,7 +46,7 @@ ms.locfileid: "88390748"
 3.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** をクリックします。  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 2: SSIS での配置バンドルの作成](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+[レッスン 2:SSIS での配置バンドルの作成](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
   
   
   

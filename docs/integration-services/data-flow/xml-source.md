@@ -126,11 +126,11 @@ ms.locfileid: "88425614"
  **[開く]** ダイアログ ボックスを使用して、XML データ ファイルを指定します。  
   
 #### <a name="data-access-mode--xml-file-from-variable"></a>[データ アクセス モード] が [変数からの XML ファイル] の場合  
- **変数名**  
+ **[変数名]**  
  XML ファイルのパスとファイル名を含む変数を選択します。  
   
 #### <a name="data-access-mode--xml-data-from-variable"></a>[データ アクセス モード] が [変数からの XML データ] の場合  
- **変数名**  
+ **[変数名]**  
  XML データを含む変数を選択します。  
   
 ## <a name="xml-source-editor-columns-page"></a>[XML ソース エディター] ([列] ページ)

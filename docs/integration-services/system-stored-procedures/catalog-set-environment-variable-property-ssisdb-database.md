@@ -81,7 +81,7 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
   
 -   ユーザーに適切な権限がない  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  このリリースで設定できるのは `Description` プロパティだけです。 `Description` プロパティのプロパティ値は 4,000 文字を超えることはできません。  
   
   

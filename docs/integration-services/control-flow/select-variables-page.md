@@ -36,13 +36,13 @@ ms.locfileid: "88349308"
  選択ボックス  
  特定の変数またはすべての変数を選択したり、すべての変数の選択を解除したりします。  
   
- **名前**  
+ **Name**  
  変数の名前を指定します。  
   
- **Type**  
+ **型**  
  変数のデータ型を指定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[スクリプト タスク エディター] ([スクリプト] ページ)](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
   

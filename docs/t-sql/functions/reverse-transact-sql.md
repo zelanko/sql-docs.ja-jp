@@ -50,7 +50,7 @@ REVERSE ( string_expression )
 ## <a name="return-types"></a>戻り値の型  
  **varchar** または **nvarchar**  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  *string_expression* に暗黙的に変換できるデータ型である必要があります **varchar** です。 それ以外の場合、使用して [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) に明示的に変換する *string_expression* です。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  

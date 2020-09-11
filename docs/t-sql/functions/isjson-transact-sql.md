@@ -39,14 +39,14 @@ ISJSON ( expression )
   
 ## <a name="arguments"></a>引数
  *式 (expression)*  
- テストする文字列です。  
+ テストする文字列。  
   
 ## <a name="return-value"></a>戻り値  
  文字列に有効な JSON が含まれている場合は 1 を、それ以外の場合は 0 を返します。 *式* が null の場合は null を返します。  
   
  エラーは返されません。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  **ISJSON** は、同じレベルのキーの一意性をチェックしません。  
   
 ## <a name="examples"></a>例  

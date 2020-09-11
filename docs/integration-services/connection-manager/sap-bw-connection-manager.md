@@ -73,7 +73,7 @@ ms.locfileid: "88426004"
   
     -   [SAP BW 接続マネージャー] をダブルクリックします。  
   
-         - または -  
+         \- または -  
   
     -   [SAP BW 接続マネージャー] を右クリックし、 **[編集]** を選択します。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "88426004"
  **[接続テスト]**  
  指定した値を使用して接続をテストします。 **[接続テスト]** をクリックすると、接続が成功または失敗したかを示すメッセージ ボックスが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft Connector for SAP BW のコンポーネント](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

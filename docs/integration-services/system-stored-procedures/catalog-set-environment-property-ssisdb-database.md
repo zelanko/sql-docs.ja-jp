@@ -73,7 +73,7 @@ catalog.set_environment_property [ @folder_name = ] folder_name
   
 -   環境名が無効  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  このリリースで設定できるのは `Description` プロパティだけです。 `Description` プロパティのプロパティ値は 4,000 文字を超えることはできません。  
   
   

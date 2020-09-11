@@ -53,7 +53,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
   
  OGC の型: **MultiPolygon**  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  
   
 ## <a name="examples"></a>例  

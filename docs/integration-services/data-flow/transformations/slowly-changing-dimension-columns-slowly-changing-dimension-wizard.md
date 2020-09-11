@@ -29,7 +29,7 @@ ms.locfileid: "88425724"
   
  このウィザードの詳細については、「 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[ディメンション列]**  
  ディメンション列を一覧から選択します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "88425724"
  **Remove**  
  ディメンション列を選択し、 **[削除]** をクリックして、マップされた列の一覧から削除します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [緩やかに変化するディメンション ウィザードを使用して出力を構成する](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   
