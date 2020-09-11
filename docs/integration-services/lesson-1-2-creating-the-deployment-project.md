@@ -46,7 +46,7 @@ ms.locfileid: "88449694"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [手順 3:パッケージとその他のファイルの追加](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [Integration Services (SSIS) プロジェクト](~/integration-services/integration-services-ssis-projects-and-solutions.md)  
   
   

@@ -47,7 +47,7 @@ ms.locfileid: "88456020"
 |**NTDomainName**|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
 |**ObjectName**|**nvarchar**|メッセージ交換の相手側のサービス名、およびこのデータベースに接続するためにリモート データベースで使用される接続文字列。|34|いいえ|  
-|**RoleName**|**nvarchar**|このメッセージを受信するエンドポイントのロール。 次の値のうちの 1 つです。<br /><br /> **イニシエーター**: 受信エンドポイントはメッセージ交換の発信側です。<br /><br /> **ターゲット**:                 受信エンドポイントはメッセージ交換の対象側です。|38|いいえ|  
+|**RoleName**|**nvarchar**|このメッセージを受信するエンドポイントのロール。 次のいずれかの値です。<br /><br /> **イニシエーター**: 受信エンドポイントはメッセージ交換の発信側です。<br /><br /> **ターゲット**:                 受信エンドポイントはメッセージ交換の対象側です。|38|いいえ|  
 |**ServerName**|**nvarchar**|トレースされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**Severity**|**int**|エラーが原因で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でメッセージが削除される場合の、エラーの重要度。|29|いいえ|  
 |**SPID**|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  

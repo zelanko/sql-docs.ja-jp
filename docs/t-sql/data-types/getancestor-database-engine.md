@@ -53,7 +53,7 @@ n、 **int**, を階層を上がるレベル数を表します。
   
 **CLR 戻り値の型:SqlHierarchyId**
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 出力の各ノードにとって、現在のノードが指定したレベルの先祖であるかどうかをテストするときに使用します。
   
 [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md) より大きい数値が渡されると、NULL が返されます。
@@ -119,7 +119,7 @@ SELECT @TargetEmployee.ToString(), @TargetEmployee ;
 this.GetAncestor(1)  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [IsDescendantOf &#40;データベース エンジン&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [階層データ (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  

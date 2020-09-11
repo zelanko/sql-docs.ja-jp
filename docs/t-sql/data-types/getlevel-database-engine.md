@@ -50,7 +50,7 @@ SqlInt16 GetLevel ( )
   
 **CLR の戻り値の型: SqlInt16**
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 1 つ以上のノードのレベルを決定したり、指定したレベルのメンバーにノードをフィルタリングしたりするために使用します。 階層のルートはレベル 0 です。
   
 GetLevel は、幅優先の検索のインデックスに便利です。 詳しくは、「[階層データ &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)」をご覧ください。
