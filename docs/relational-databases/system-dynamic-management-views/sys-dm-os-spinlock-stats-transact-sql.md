@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: df183fe9b6ee5365f623e59dd1c94738afe5df8d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 053dc2ccc68a7e0479ad1e37a181a25b0cefcc53
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447594"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042753"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>dm_os_spinlock_stats (Transact-sql)
 
@@ -51,7 +51,7 @@ ms.locfileid: "88447594"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。    
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  
  スピンロックの競合の原因を特定するには、dm_os_spinlock_stats を使用できます。 場合によっては、スピンロックの競合を解決または減少させることができます。 ただし、場合によっては、カスタマーサポートサービスに問い合わせる必要があり [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。  
   
@@ -413,7 +413,6 @@ GO
 
  [スピンロックが SQL Server の CPU 使用率の重要なドライバーです。](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
- [SQL Server でのスピンロックの競合の診断と解決](https://www.microsoft.com/download/details.aspx?id=26666)
   
   
 
