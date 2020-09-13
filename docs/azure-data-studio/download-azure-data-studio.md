@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 8/12/2020
-ms.openlocfilehash: bacfbe7df36b9222a4297ced95a0ffed2733fed6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2e4906ebe22b28a15eb20a182198e6c74853eb18
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778461"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042733"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio のダウンロードとインストール
 
@@ -142,7 +142,7 @@ Azure Data Studio は、Windows、macOS、および Linux 上で実行されま�
 - Windows 10 (64 ビット)
 - Windows 8.1 (64 ビット)
 - Windows 8 (64 ビット)
-- Windows 7 (SP1) (64 ビット) - [KB2533623](https://www.microsoft.com/download/details.aspx?id=26767) が必要です
+- Windows 7 (SP1)
 - Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2 (64 ビット)
