@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e9fedafebab6b5353ddb6f2f51bd0c8662377e1
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: 9263d11f271249d7fa31b1a3f3af83a21c04c793
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406285"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173296"
 ---
 # <a name="python-language-extension-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の Python 言語拡張機能
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 この記事では、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) で外部 Python スクリプトを実行するための Python 拡張機能について説明します。 拡張機能により、次のものが追加されます。
 

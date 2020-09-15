@@ -1,6 +1,6 @@
 ---
 title: revoscalepy Python パッケージ
-description: revoscalepy は Microsoft が提供する Python パッケージであり、分散コンピューティング、リモート計算コンテキスト、ハイパフォーマンス データ サイエンス アルゴリズムをサポートしています。 このパッケージは、SQL Server Machine Learning Services に含まれています。
+description: revoscalepy は Microsoft が提供する Python パッケージであり、分散コンピューティング、リモート計算コンテキスト、ハイパフォーマンス データ サイエンス アルゴリズムをサポートしています。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ae5d05658d94f6967049d9b6857d407286661f3f
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: c5932a335dc1789256932f327ba9dab58c6afaf7
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406185"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178619"
 ---
 # <a name="revoscalepy-python-package-in-sql-server-machine-learning-services"></a>revoscalepy (SQL Server Machine Learning Services の Python パッケージ)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 **revoscalepy** は Microsoft が提供する Python パッケージであり、分散コンピューティング、リモート計算コンテキスト、ハイパフォーマンス データ サイエンス アルゴリズムをサポートしています。 このパッケージは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) に含まれています。
 
@@ -105,7 +105,7 @@ SQL Server と Python では、場合によっては異なるデータ型が使�
 
 Python スクリプトをストアド プロシージャ [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 内にカプセル化する準備ができたら、入力と出力が明確に定義された 1 つの関数としてコードを書き直すことをお勧めします。 
 
-入力と出力は **pandas** データ フレームにする必要があります。 これが完了したら、T-SQL 対応のあらゆるクライアントからストアド プロシージャを呼び出し、入力として SQL クエリを簡単に渡し、結果を SQL テーブルに保存できます。 例については、[SQL 開発者向けのデータベース内 Python 分析の学習](../tutorials/sqldev-in-database-python-for-sql-developers.md)ページを参照してください。
+入力と出力は **pandas** データ フレームにする必要があります。 これが完了したら、T-SQL 対応のあらゆるクライアントからストアド プロシージャを呼び出し、入力として SQL クエリを簡単に渡し、結果を SQL テーブルに保存できます。 例については、[SQL 開発者向けのデータベース内 Python 分析の学習](../tutorials/python-taxi-classification-introduction.md)ページを参照してください。
 
 ### <a name="using-revoscalepy-with-microsoftml"></a>microsoftml で revoscalepy を使用する
 

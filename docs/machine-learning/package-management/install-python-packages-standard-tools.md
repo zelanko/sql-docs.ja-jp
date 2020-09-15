@@ -9,15 +9,15 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 2ed46c4c4fc79d47bf2ca60b16f7d5563fd15d05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bee37788001edabd454891d8e9081814f198490
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723983"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179231"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>Python ツールを使用して SQL Server 上にパッケージをインストールする
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
 この記事では、標準の Python ツールを使用して、新しい Python パッケージを SQL Server Machine Learning Services のインスタンスにインストールする方法について説明します。 一般に、新しいパッケージをインストールするプロセスは、標準の Python 環境のプロセスと似ています。 ただし、サーバーからインターネットに接続できない場合は、いくつかの追加の手順が必要です。
 

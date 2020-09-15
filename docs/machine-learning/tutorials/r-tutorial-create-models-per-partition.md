@@ -9,15 +9,15 @@ ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf294501b1cb613bf97b581a30a193469c78b9f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 85ab092eb606fcc6896fa6a084a2cef0e5f018df
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756393"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179730"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>チュートリアル:SQL Server 上の R でパーティション ベースのモデルを作成する
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 SQL Server 2019 でのパーティション ベースのモデリングは、パーティション分割されたデータでモデルを作成してトレーニングする機能です。 地理的地域、日付と時刻、年齢、性別など、特定の分類体系に自然に分割される層化データの場合、モデル化、トレーニング、スコアリングのすべてでそのまま残るパーティションにこれらの操作を行う機能を使用して、データ セット全体に対してスクリプトを実行できます。 
 

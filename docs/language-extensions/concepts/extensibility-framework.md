@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e52727922f03a6ae078477b8af6cf0171acd053
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 44f32695e91c3c273b024b9f8d7259c59b43014d
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722557"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180309"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 言語拡張の機能拡張アーキテクチャ
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 SQL Server 言語拡張機能に使用される機能拡張アーキテクチャについて説明します。これにより、SQL Server で外部コードを実行できるようになります。 SQL Server 2019 では、Java がサポートされています。 このコードは、言語ランタイム環境でコア データベース エンジンの拡張機能として実行されます。
 
-## <a name="background"></a>バックグラウンド
+## <a name="background"></a>背景
 
 機能拡張フレームワークの目的は、SQL Server と Java などの外部言語の間にインターフェイスを提供することです。 SQL Server によって管理される安全なフレームワーク内で信頼できる言語を実行することで、データベース管理者は、データ科学者による企業データへのアクセスを許可しながら、セキュリティを維持することができます。
 

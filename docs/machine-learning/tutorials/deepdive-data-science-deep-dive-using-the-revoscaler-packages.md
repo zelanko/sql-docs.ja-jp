@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 77cbd38bf873761496800cc4ad78d74eee414cf1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad18fc08a06a647c626972cf3b3141d9d9861c87
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728566"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178799"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>チュートリアル:SQL Server データでの RevoScaleR R 関数の使用
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 このマルチパート チュートリアル シリーズでは、データ サイエンスに関連するタスク用のさまざまな **RevoScaleR** 関数について紹介します。 プロセスでは、リモートのコンピューティング コンテキストを作成する方法、ローカルとリモートのコンピューティング コンテキスト間でデータを移動する方法、およびリモート SQL サーバー上で R コードを実行する方法について説明します。 また、ローカルとリモート サーバー上の両方でデータを分析してプロットする方法と、モデルを作成して配置する方法についても説明します。
 

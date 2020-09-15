@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a42d3203455d4273410b9b216c19e7a9d1da4e3a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 95390a1eb5418a43883a9605c7498e6a86876e7e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896385"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178899"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server で R 開発用のデータ サイエンス クライアントをセットアップする
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) または [SQL Server Machine Learning Services (データベース内)](../install/sql-machine-learning-services-windows-install.md) のインストール時に R 言語オプションを含めた場合、SQL Server 2016 以降で R 統合を使用できます。 
 
@@ -38,7 +38,7 @@ SQL を初めて使用する R 開発者、または R とデータベース内�
 
 単純な R 開発シナリオでは、RGUI 実行可能ファイルを使用できます。これは、MRO および SQL Server の R 基本ディストリビューションにバンドルされています。 この記事では、ローカルとリモートの R セッションの両方で RGUI を使用する方法について説明します。 生産性を向上させるには、[RStudio や Visual Studio](#install-ide) などの完全な機能を備えた IDE を使用する必要があります。
 
-SSMS は個別にダウンロードします。これは、R コードが含まれているものを含め、SQL Server でストアド プロシージャを作成および実行する場合に便利です。 開発環境で記述する R コードは、ほとんどすべてストアド プロシージャに埋め込むことができます。 他のチュートリアルでは、[SSMS と埋め込み R](../tutorials/sqldev-in-database-r-for-sql-developers.md) について学習できます。
+SSMS は個別にダウンロードします。これは、R コードが含まれているものを含め、SQL Server でストアド プロシージャを作成および実行する場合に便利です。 開発環境で記述する R コードは、ほとんどすべてストアド プロシージャに埋め込むことができます。 他のチュートリアルでは、[SSMS と埋め込み R](../tutorials/r-taxi-classification-introduction.md) について学習できます。
 
 ## <a name="1---install-r-packages"></a>1 - R パッケージをインストールする
 

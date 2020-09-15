@@ -8,16 +8,16 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2288c1898d9299fb346a80e2cd0a53104e308724
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: ab427983bdd327775ab817d6b56f496afe733127
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406155"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179975"
 ---
 # <a name="revoscaler-r-package-in-sql-server-machine-learning-services"></a>RevoScaleR (SQL Server Machine Learning Services の R パッケージ)
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 **RevoScaleR** は Microsoft が提供する R パッケージであり、分散コンピューティング、リモート計算コンテキスト、ハイパフォーマンス データ サイエンス アルゴリズムをサポートしています。 また、データ インポート、データ変換、概要作成、視覚化、分析もサポートしています。 このパッケージは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) と [SQL Server 2016 R Services](sql-server-r-services.md) に含まれています。
 
@@ -151,6 +151,6 @@ R スクリプトをストアド プロシージャ [sp_execute_external_script]
 
 + [R のチュートリアル](../tutorials/sql-server-r-tutorials.md)
 + [計算コンテキストの使用方法](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-+ [SQL 開発者向け R:モデルのトレーニングと運用化](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [SQL 開発者向け R:モデルのトレーニングと運用化](../tutorials/r-taxi-classification-introduction.md)
 + [GitHub 上の Microsoft 製品サンプル](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
 + [R リファレンス (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 

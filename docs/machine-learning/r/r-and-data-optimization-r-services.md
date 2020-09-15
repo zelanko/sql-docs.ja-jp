@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a2438ff265c788753a42bc01119f954359c799ec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95600d85c02d120f1bb4df2e7a73411a9965550a
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753407"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179997"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services のパフォーマンス - データの最適化
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 これは、2 つのケース スタディに基づいて R Services のパフォーマンスの最適化について説明するシリーズの 3 番目の記事です。 この記事では、SQL Server で実行される R または Python スクリプトのパフォーマンスの最適化について説明します。 また、R コードの更新に使用できるメソッドについても説明します。これにより、パフォーマンスを向上させながら、既知の問題を回避することができます。
 

@@ -1,6 +1,6 @@
 ---
 title: Microsoft 拡張機能 SDK for Java
-description: Microsoft Extensibility SDK for Java を使用して、SQL Server 用の Java プログラムを実装する方法について説明します。 この SDK は、SQL Server とデータを交換し、SQL Server から Java コードを実行するために使用される Java 言語拡張のインターフェイスです。
+description: Microsoft Extensibility SDK for Java を使用して、SQL Server 用の Java プログラムを実装する方法について説明します。
 ms.prod: sql
 ms.technology: language-extensions
 ms.date: 11/05/2019
@@ -9,15 +9,15 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 67e54169dab869751a0e63e9e1e4a2d62a23d34c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 175c96e19c0a15cd2e995c527f869a6f8a2ca7ab
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722571"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173575"
 ---
 # <a name="microsoft-extensibility-sdk-for-java-for-sql-server"></a>SQL Server 用の Microsoft Extensibility SDK for Java
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Microsoft Extensibility SDK for Java を使用して、SQL Server 用の Java プログラムを実装する方法について説明します。 この SDK は、SQL Server とデータを交換し、SQL Server から Java コードを実行するために使用される Java 言語拡張のインターフェイスです。
 
