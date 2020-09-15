@@ -1,18 +1,19 @@
 ---
+description: SQL ドキュメントのバージョン管理システム
 title: SQL ドキュメントのバージョン管理システム
-ms.date: 07/22/2020
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7ca82e29d32bfe2721baa619ec37d4c7576a0533
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: e4bdddf08a1d9b276b4e4714d75a0a231560ef19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373168"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL ドキュメントのバージョン管理システム
 
@@ -164,7 +165,7 @@ Web アドレスが `https://docs.microsoft.com/sql/` で始まっている記�
     - [SQL Server 2014 オフライン ドキュメント](/sql/sql-server/sql-server-offline-documentation)
 
 - _2016 以降:_ &nbsp; バージョン管理システムは、SQL Server バージョン 2016 以降のバージョンでは完全に実装されています。
-    - [SQL Server 2016 以降のドキュメントへようこそ](/sql/sql-server/?view=sql-server-2016)
+    - [SQL Server 2016 以降のドキュメントへようこそ](/sql/sql-server/?view=sql-server-2016&preserve-view=true)
     - [SQL Server 2016 オフライン ドキュメント](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>関連項目
