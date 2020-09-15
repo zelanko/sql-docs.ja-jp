@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9aec87c4b57016f862b671734a871f77bd84da15
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 769000368599b2dc4e39b851d3d0def2f8b40a38
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395057"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424432"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>フェールオーバーとフェールオーバー モード (AlwaysOn 可用性グループ)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "87395057"
   一般的に、可用性グループのコンテキスト内で、可用性レプリカのプライマリ ロールとセカンダリ ロールが *フェールオーバー*と呼ばれるプロセスで交換されることがあります。 フェールオーバーには、自動フェールオーバー (データ損失なし)、計画的な手動フェールオーバー (データ損失なし)、および " *強制フェールオーバー*" と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) の 3 つの形式があります。 自動フェールオーバーと計画的な手動フェールオーバーでは、すべてのデータが保持されます。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 つまり、可用性グループはセカンダリ レプリカのいずれか (現在の " *フェールオーバー ターゲット*") にフェールオーバーされます。  
   
 > [!NOTE]  
->  データベース レベルの問題 (データ ファイルの損失、データベースの削除、トランザクション ログの破損による障害が疑われる場合など) が発生しても、可用性グループのフェールオーバーは行われません。  
+>   [データベース レベルの正常性検出](../../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)を構成していない限り、データベース レベルの問題 (データ ファイルの損失、データベースの削除、トランザクション ログの破損による障害が疑われる場合など) が発生しても、可用性グループのフェールオーバーは行われません。  
   
  フェールオーバーによってフェールオーバー ターゲットがプライマリ ロールを引き継ぎ、そのデータベースを復旧し、新しいプライマリ データベースとしてオンラインにします。 元のプライマリ レプリカは使用可能になるとセカンダリ ロールに切り替わり、そのデータベースがセカンダリ データベースになります。 場合によっては、複数のエラーに対する対応として、または管理目的のために、これらのロールを何度も交代できます (または、別のフェールオーバー ターゲットに切り替えることができます)。  
   

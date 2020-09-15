@@ -6,17 +6,17 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 8594178dc6817cc8b826268c3fd0aebce59af2ec
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a7d3ca36634e449dd26dfdb0df75f09608d25f51
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765801"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283693"
 ---
-# <a name="backup-and-restore-databases-using-azure-data-studio"></a>Azure Data Studio を使用したデータベースのバックアップと復元
+# <a name="tutorial-backup-and-restore-databases-using-azure-data-studio"></a>チュートリアル:Azure Data Studio を使用したデータベースのバックアップと復元
 
 このチュートリアルでは、次の目的で Azure Data Studio を使用する方法について説明します。
 > [!div class="checklist"]
@@ -36,16 +36,16 @@ ms.locfileid: "88765801"
 
 ## <a name="back-up-a-database"></a>データベースをバックアップする
 
-1. TutorialDB データベースダッシュボードを開きます ( **[サーバー]** サイドバーを開き (**Ctrl + G**)、 **[データベース]** を展開し、 **[TutorialDB]** を右クリック、 **[管理]** を選択します)。
+1. TutorialDB データベースダッシュボードを開きます ( **[サーバー]** サイドバーを開き (**Ctrl + G**)、 **[データベース]** を展開し、 **[TutorialDB]** を右クリックし、 **[管理]** を選択します)。
 
-2. **[データベースのバックアップ]** ダイアログを開きます ( **[タスク]** ウィジェットで **[バックアップ]** をクリックします)。
+2. **[データベースのバックアップ]** ダイアログを開きます ( **[タスク]** ウィジェットで **[バックアップ]** を選択します)。
 
    ![タスク ウィジェット](./media/tutorial-backup-restore-sql-server/tasks.png)
 
-3. このチュートリアルでは、既定のバックアップ オプションが使用されています。そのため、 **[バックアップ]** をクリックします。
+3. このチュートリアルでは、既定のバックアップ オプションが使用されています。そのため、 **[バックアップ]** を選択します。
    ![バックアップ ダイアログ](./media/tutorial-backup-restore-sql-server/backup-dialog.png)
 
-**[バックアップ]** をクリックすると、 **[データベースのバックアップ]** ダイアログボックスが消え、バックアップ プロセスが開始されます。
+**[バックアップ]** を選択すると、 **[データベースのバックアップ]** ダイアログボックスが消え、バックアップ プロセスが開始されます。
 
 ## <a name="view-the-backup-status-and-view-the-backup-script"></a>バックアップの状態を表示し、バックアップ スクリプトを表示する
 
@@ -61,18 +61,18 @@ ms.locfileid: "88765801"
 
 1. **[サーバー]** サイドバーを開き (**Ctrl + G**)、サーバーを右クリックし、 **[管理]** を選択します。
 
-2. **[データベースの復元]** ダイアログを開きます ( **[タスク]** ウィジェットで **[復元]** をクリックします)。
+2. **[データベースの復元]** ダイアログを開きます ( **[タスク]** ウィジェットで **[復元]** を選択します)。
 
-   ![復元タスク](media/tutorial-backup-restore-sql-server/tasks-restore.png)
+   ![タスク復元](media/tutorial-backup-restore-sql-server/tasks-restore.png)
 
 3. **[復元元]** フィールドで **[バックアップ ファイル]** を選択します。
 
-4. **[バックアップ ファイル パス]** フィールドの省略記号 (...) をクリックし、*TutorialDB* の最新バックアップ ファイルを選択します。
+4. **[バックアップ ファイル パス]** フィールドの省略記号 (...) を選択し、*TutorialDB* の最新バックアップ ファイルを選択します。
 
 5. **[Destination]\(復元先\)** セクションの **[Target database]\(復元先データベース\)** フィールドに「**TutorialDB_Restored**」と入力すると、バックアップ ファイルが新しいデータベースに復元されます。 次に、 **[復元]** を選択します。
 
-   ![復元](./media/tutorial-backup-restore-sql-server/restore.png)
+   ![バックアップの復元](./media/tutorial-backup-restore-sql-server/restore.png)
 
 6. 復元操作の状態を表示するには、**Ctrl + T** キーを押して **[タスク履歴]** を開きます。
 
-   ![復元](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
+   ![履歴タスク復元](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
