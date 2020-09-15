@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019, contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: da601b8c83e6e226da0329ec8d8c732d9877656a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5c961c2c4df15fdff7b1e2f3d5b1815c50d69771
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775359"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180404"
 ---
 # <a name="grant-users-permission-to-execute-python-and-r-scripts-with-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services で Python スクリプトと R スクリプトを実行する権限をユーザーに許可する
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) で外部の Python スクリプトおよび R スクリプトを実行する権限をユーザーに許可する方法とデータベースに対する読み取り、書き込み、またはデータ定義言語 (DDL) の権限を許可する方法について説明します。
 
