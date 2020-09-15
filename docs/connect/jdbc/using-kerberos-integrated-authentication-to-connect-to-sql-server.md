@@ -1,4 +1,5 @@
 ---
+description: Kerberos 統合認証による SQL Server への接続
 title: Kerberos 統合認証による SQL Server への接続 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/29/2020
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8eaa889f12adb2470040cab4c0fba5df295a1cb2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1ecbffed0e29bc3a36a1129dbade504c9b03484c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916238"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414598"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Kerberos 統合認証による SQL Server への接続
 
