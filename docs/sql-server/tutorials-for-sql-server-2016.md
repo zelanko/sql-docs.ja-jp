@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d86c5a3662417c1af39f12fc3d32167a73912c3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: df4709bbbfa17cdf33cfd13a20486a213fcc5a05
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913954"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934241"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server チュートリアル
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "86913954"
 |--------------|---------------|  
 |[Analysis Services チュートリアル (SSAS)](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] テーブルまたは多次元モデルを開発および配置する方法について説明します。 また、PowerPivot などのツールを使用して、モデル内のデータを分析する方法についても説明します。|  
 |[データベース エンジンのチュートリアル](../relational-databases/database-engine-tutorials.md)|データベース エンジンのインスタンスに接続してから、Transact-SQL ステートメントを構築および実行する方法について説明します。|  
-|[Enterprise Information Management のチュートリアル](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Microsoft EIM テクノロジを使用して企業の情報を管理する方法について説明します。|  
+|[Enterprise Information Management のチュートリアル](https://wiki.scn.sap.com/wiki/display/EIM/EIM+Tutorials)|Microsoft EIM テクノロジを使用して企業の情報を管理する方法について説明します。|  
 |[Integration Services のチュートリアル](../integration-services/integration-services-tutorials.md)|[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージの作成と配置の方法を学習します。|  
 |[レプリケーションのチュートリアル](../relational-databases/replication/replication-tutorials.md)|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用してレプリケーション トポロジをセットアップして実行する方法について説明します。|  
 |[Reporting Services チュートリアル &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|基本的なレポートとサブスクリプションを作成する方法について説明します。|  
@@ -38,7 +38,7 @@ ms.locfileid: "86913954"
   
  ## <a name="previously-published-tutorials"></a>以前に公開されたチュートリアル 
   
- - [SQL Server 2014 チュートリアル](https://msdn.microsoft.com/library/hh231699(v=sql.120).aspx)  
+ - [SQL Server 2014 チュートリアル](https://www.quackit.com/sql_server/sql_server_2014/tutorial/)  
   
  - [SQL Server 2012 チュートリアル](https://msdn.microsoft.com/library/hh231699(v=sql.110).aspx)  
   
