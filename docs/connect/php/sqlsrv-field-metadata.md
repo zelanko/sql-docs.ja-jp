@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_field_metadata
 title: sqlsrv_field_metadata | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2020
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_field_metadata
 - sqlsrv_field_metadata
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ef4bd58d352216cd4c64fe6c18a9ffd6dd3b13a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fd0c925808fda11127d1632e62c296f8cce30272
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76939574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449968"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,22 +44,22 @@ sqlsrv_field_metadata( resource $stmt)
   
 |Key|説明|  
 |-------|---------------|  
-|Name|フィールドが対応する列の名前。|  
+|名前|フィールドが対応する列の名前。|  
 |種類|SQL 型に対応する数値。|  
-|Size|文字型 (char(n)、varchar(n)、nchar(n)、nvarchar(n)、XML) のフィールドの文字数。 バイナリ型 (binary(n)、varbinary(n)、UDT) のフィールドのバイト数。 他の SQL Server データ型の場合は**NULL** 。|  
-|Precision|可変精度の型 (real、numeric、decimal、datetime2、datetimeoffset、time) の有効桁数。 他の SQL Server データ型の場合は**NULL** 。|  
+|サイズ|文字型 (char(n)、varchar(n)、nchar(n)、nvarchar(n)、XML) のフィールドの文字数。 バイナリ型 (binary(n)、varbinary(n)、UDT) のフィールドのバイト数。 他の SQL Server データ型の場合は**NULL** 。|  
+|有効桁数|可変精度の型 (real、numeric、decimal、datetime2、datetimeoffset、time) の有効桁数。 他の SQL Server データ型の場合は**NULL** 。|  
 |スケール|可変スケールの型 (numeric、decimal、datetime2、datetimeoffset、time) のスケール。 他の SQL Server データ型の場合は**NULL** 。|  
 |Nullable|列が null 値許容か (**SQLSRV_NULLABLE_YES**)、null 値許容ではないか (**SQLSRV_NULLABLE_NO**)、または null 値許容かどうかわからないか (**SQLSRV_NULLABLE_UNKNOWN**) を示す列挙値。|  
   
 次の表では、各サブ配列のキーについての詳細を示します (これらの型の詳細については、SQL Server のマニュアルを参照してください)。  
   
-|SQL Server 2008 のデータ型|種類|最小/最大有効桁数|最小/最大スケール|Size|  
+|SQL Server 2008 のデータ型|種類|最小/最大有効桁数|最小/最大スケール|サイズ|  
 |-----------------------------|--------|----------------------|------------------|--------|  
 |bigint|SQL_BIGINT (-5)|||8|  
 |binary|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
 |bit|SQL_BIT (-7)||||  
 |char|SQL_CHAR (1)|||0 < *n* < 8000 <sup>1</sup>|  
-|date|SQL_TYPE_DATE (91)|10/10|0/0||  
+|日付|SQL_TYPE_DATE (91)|10/10|0/0||  
 |DATETIME|SQL_TYPE_TIMESTAMP (93)|23/23|3/3||  
 |datetime2|SQL_TYPE_TIMESTAMP (93)|19/27|0/7||  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET (-155)|26/34|0/7||  
@@ -75,12 +76,12 @@ sqlsrv_field_metadata( resource $stmt)
 |smalldatetime|SQL_TYPE_TIMESTAMP (93)|16/16|0/0||  
 |smallint|SQL_SMALLINT (5)|||2 バイト|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
-|sql_variant|SQL_SS_VARIANT (-150)|||可変|  
+|sql_variant|SQL_SS_VARIANT (-150)|||変数|  
 |text|SQL_LONGVARCHAR (-1)|||2 GB|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
 |timestamp|SQL_BINARY (-2)|||8 バイト|  
 |tinyint|SQL_TINYINT (-6)|||1 バイト|  
-|udt|SQL_SS_UDT (-151)|||可変|  
+|udt|SQL_SS_UDT (-151)|||変数|  
 |UNIQUEIDENTIFIER|SQL_GUID (-11)|||16|  
 |varbinary|SQL_VARBINARY (-3)|||0 < *n* < 8000 <sup>1</sup>|  
 |varchar|SQL_VARCHAR (12)|||0 < *n* < 8000 <sup>1</sup>|  

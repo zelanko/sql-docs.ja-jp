@@ -1,4 +1,5 @@
 ---
+description: UseFmtOnly を使用した ParameterMetaData の取得
 title: UseFmtOnly を使用した ParameterMetaData の取得 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -14,12 +15,12 @@ caps.latest.revision: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: 6877a6421622ab52a92b89502c68f47c4c315d93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: da61e1881d4c7df01cdc92ad41f6a78c95dda8b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69025503"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450042"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>UseFmtOnly を使用した ParameterMetaData の取得
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -53,7 +54,7 @@ SET FMTONLY OFF;
 ```
  
 ## <a name="turning-the-feature-onoff"></a>機能のオン/オフの切り替え 
- **useFmtOnly** 機能は既定ではオフになっています。 ユーザーは、`useFmtOnly=true` を指定すると、接続文字列を使用してこの機能を有効にできます (例: `jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;`)。
+ **useFmtOnly** 機能は既定ではオフになっています。 ユーザーは、`useFmtOnly=true` を指定すると、接続文字列を使用してこの機能を有効にできます  (例: `jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;`)。
  
  または、`SQLServerDataSource` から機能を使用することができます。
  ```java
@@ -138,7 +139,7 @@ UPDATE Foo SET c1 = (SELECT c1 FROM Foo) WHERE c1 = ?; --Incorrect syntax near '
 UPDATE Foo SET c1 = (SELECT c1 FROM Foo HAVING (HASH JOIN)) WHERE c1 = ?;
 ```
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)  
   
   

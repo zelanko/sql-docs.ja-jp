@@ -1,4 +1,5 @@
 ---
+description: java.sql.Time の値をサーバーに送信する方法の構成
 title: java.sql.Time の値をサーバーに送信する方法の構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,19 +9,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8fe6969d51834d0798a530b9cc9926af1b27fec2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a360def7656fb270267372d5b226b68d30aeaf57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028235"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438474"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>java.sql.Time の値をサーバーに送信する方法の構成
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  パラメーターを設定するために java.sql.Time オブジェクトまたは java.sql.Types.TIME JDBC 型を使用する場合、サーバーに java.sql.Time 値をどのように ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **time** 型として、または **datetime** 型として) 送信するかを構成することができます。  
+  パラメーターを設定するために java.sql.Time オブジェクトまたは java.sql.Types.TIME JDBC 型を使用する場合、サーバーに java.sql.Time 値をどのように ( の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **time** 型として、または **datetime** 型として) 送信するかを構成することができます。  
   
  次のいずれかのメソッドを使用するケースが、このシナリオに該当します。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "69028235"
   
  **sendTimeAsDatetime** 接続プロパティの値は、[SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) を使用してプログラムから変更できます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] では、**time** データ型がサポートされていないため、java.sql.Time を使用するアプリケーションでは通常、java.sql.Time 値が **datetime** または **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型として格納されます。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] より前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**time** データ型がサポートされていないため、java.sql.Time を使用するアプリケーションでは通常、java.sql.Time 値が **datetime** または **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型として格納されます。  
   
  **Smalldatetime** 値を使用するときに**datetime**データ型と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型を使用する場合は、 **sendTimeAsDatetime**接続プロパティを**true**に設定する必要があります。 java.sql.Time 値を操作するときに **time** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を使用する場合は、**sendTimeAsDatetime** 接続プロパティを **false** に設定する必要があります。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "69028235"
   public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 ```
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

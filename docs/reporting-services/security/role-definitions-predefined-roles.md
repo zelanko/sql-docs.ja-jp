@@ -1,4 +1,5 @@
 ---
+description: ロールの定義 - 定義済みロール
 title: ロールの定義 - 定義済みロール | Microsoft Docs
 ms.date: 06/10/2020
 ms.prod: reporting-services
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c792804d9e7daae9209bcbafb8bae95fffb3492
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: cb514f5580545c43752911257546d97bc67426d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454524"
 ---
 # <a name="role-definitions---predefined-roles"></a>ロールの定義 - 定義済みロール
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、定義済みのロールと共にインストールされます。このロールを使用すると、レポート サーバーの操作へのアクセスを許可することができます。 定義済みの各ロールは、関連するタスクのコレクションを示しています。 定義済みのロールにグループやユーザー アカウントを割り当てることで、レポート サーバーの操作にすぐにアクセスできます。  

@@ -1,4 +1,5 @@
 ---
+description: レポート サーバーの複数インスタンス配置における URL 予約
 title: レポート サーバーの複数インスタンス配置における URL 予約 | Microsoft Docs
 ms.date: 05/18/2016
 ms.prod: reporting-services
@@ -9,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0a09d7c391af0d8800f5d9c66d40ab7ba0c2cbf4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 661dc1ee0e259cc2f1457e555ca685e8e581dc0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62513284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445964"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>レポート サーバーの複数インスタンス配置における URL 予約
   同じコンピューターに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の複数のインスタンスをインストールする場合は、インスタンスごとに URL 予約を定義する方法を検討する必要があります。 各インスタンス内のレポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] には、それぞれ 1 つ以上の URL 予約が必要です。 予約はすべて、HTTP.SYS 内で一意にする必要があります。  

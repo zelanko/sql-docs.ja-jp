@@ -1,4 +1,5 @@
 ---
+description: JDBC ドライバーの国際化機能
 title: JDBC ドライバーの国際化機能 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 64c046ade18bfdf8789ce9fec221f3d33517fcbb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 960f689f39007b4fbe4d7aa01d935ef1aaf640cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438404"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC ドライバーの国際化機能
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "69028000"
 > [!NOTE]  
 >  Windows プラットフォーム以外のために記述されたリゾルバー ソフトウェアの大半はインターネット DSN 標準に基づき、多くの場合、IDN に Punycode 形式を使用します。一方で、プライベート ネットワークの Windows ベースのDNS サーバーはサーバーごとに UTF-8 文字を使用できるように構成できます。  詳細については、「[Unicode 文字サポート](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

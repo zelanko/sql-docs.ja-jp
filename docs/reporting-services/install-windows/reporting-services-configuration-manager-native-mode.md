@@ -1,4 +1,5 @@
 ---
+description: Reporting Services 構成マネージャー (ネイティブ モード)
 title: Reporting Services 構成マネージャー (ネイティブ モード) | Microsoft Docs
 ms.date: 09/20/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03df504d7ffc4c104db9673995fa58e455961ef5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454575"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 構成マネージャー (ネイティブ モード)
 
@@ -70,7 +71,7 @@ Reporting Services 構成マネージャーは、SQL Server Reporting Services �
 
     - Windows のスタート画面から「 **Reporting** 」と入力し、検索結果から " **Reporting Services 構成マネージャー** " を選択します。
 
-    - **[スタート]** を選択し、 **[すべてのプログラム]** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **[構成ツール]** の順にポイントします。
+    - **[スタート]** を選択し、 **[すべてのプログラム]**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **[構成ツール]** の順にポイントします。
 
          以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からレポート サーバー インスタンスを構成する場合は、そのバージョンのプログラム フォルダーを開きます。 たとえば、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] サーバー コンポーネントの構成ツールを開くには、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ] ではなく [ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ] をポイントします。
 
