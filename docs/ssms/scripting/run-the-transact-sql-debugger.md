@@ -2,7 +2,7 @@
 title: Transact-SQL デバッガーの実行
 description: Transact-SQL デバッガーのカスタマイズ方法と、それを使用して Transact-SQL コードをデバッグする方法について説明します。 デバッガーは、別のコンピューター上にあるデータベース エンジンのインスタンスで実行できます。
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, sysadmin requirement
@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24fc9e6fd00aa0586630e611ef09568b7bf61cba
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d30830fae390788d81fc655e4c31dcbe3eea79b5
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122832"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901956"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Transact-SQL デバッガーの実行
 

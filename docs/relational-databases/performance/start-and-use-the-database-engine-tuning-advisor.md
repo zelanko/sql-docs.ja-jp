@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c8636dad789915289ef0f08c7355c5f443a7a87a
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 1f13fc030209957910284132b42c89a52b01ff31
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480508"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042827"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "89480508"
   
 ###  <a name="to-create-transact-sql-script-workloads"></a><a name="SSMS"></a> Transact-SQL スクリプトのワークロードを作成するには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でクエリ エディターを起動します。 詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)」を参照してください。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でクエリ エディターを起動します。 詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)」を参照してください。  
   
 2.  クエリ エディターに [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを入力します。 このスクリプトには、チューニングする 1 つ以上のデータベースに対して実行する一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが含まれている必要があります。  
   
