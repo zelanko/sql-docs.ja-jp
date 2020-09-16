@@ -75,7 +75,7 @@
         - name: PowerShell の拡張機能
           href: powershell-extension.md
         - name: Managed Instance の拡張機能
-          href: azure-sql-managed-instance-extension.md
+          href: extensions/azure-sql-managed-instance-extension.md
         - name: SandDance の拡張機能
           href: sanddance-extension.md
     - name: 拡張機能のオーサリング
