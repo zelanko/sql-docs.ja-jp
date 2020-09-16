@@ -10,12 +10,12 @@ reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 8be8ec4b61c42c0a25c01a6511b5bf69da6a47fd
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: f35d9ad1cf571708e547924d75efc9522db21cc1
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519132"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480846"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) での Azure Active Directory のサポート
 
@@ -89,6 +89,6 @@ MFA の実施は、Azure AD によって、この追加の MFA ポップアッ�
 [多要素認証](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
 [SQL Database での Azure Active Directory 認証](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
 [SSDT MSDN フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[SSDT チーム ブログ](https://blogs.msdn.com/b/ssdt/)  
+[SSDT チーム ブログ](https://docs.microsoft.com/archive/blogs/ssdt/)  
 [DACFx API リファレンス](https://msdn.microsoft.com/library/dn645454.aspx)  
 [SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)  

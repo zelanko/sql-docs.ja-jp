@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a8ed0a9892110f4469a9adeb4d586c8eec7f081c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a54c7de35f9707701213488a4f51d23d5e314417
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111016"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570311"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "87111016"
 ## <a name="20-before-you-install"></a>2.0 インストールの準備  
 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] の更新プログラムのインストール方法については、 [SQL Server 2008 R2 サービスのドキュメント](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx)を参照してください。  
   
-SQL Server 2008 R2 のインストール方法の一般的な情報については、SQL Server 2008 R2 の Readme を参照してください。 この Readme ドキュメントは、インストール メディアにあります。 [SQL Server フォーラム](https://social.msdn.microsoft.com/Forums/category/sqlserver/)でも、詳細な情報を参照することができます。
+SQL Server 2008 R2 のインストール方法の一般的な情報については、SQL Server 2008 R2 の Readme を参照してください。 この Readme ドキュメントは、インストール メディアにあります。
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 ダウンロードとインストールに使用する正しいファイルの選択  
 ダウンロードとインストールに使用するファイルを確認するには、次の表を参照してください。 サービス パックをインストールする前に、システム要件を正しく満たしていることを確認します。 システム要件は、この表にあるリンクされたダウンロード ページに記載されています。  

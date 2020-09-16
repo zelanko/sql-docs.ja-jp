@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Data Transformation Services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4a512b91bbac1a84004643de2738468f21ee984
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ab2ad7c0e824332d59f0c724c835b1f5fedfeb97
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248670"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570301"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -46,7 +46,7 @@ SQL Server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、エ�
 SQL Server での SQL Server Integration Services のインストール、および必要な他のダウンロードについては、「[Integration Services のインストール](install-windows/install-integration-services.md)」をご覧ください。
 
 ##  <a name="info_tip-resources"></a>![info_tip](../sql-server/media/info-tip.png) リソース
--   [SSIS フォーラムのヘルプの表示](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
+-   [SSIS フォーラムのヘルプの表示](https://docs.microsoft.com/answers/topics/sql-server-integration-services.html)
 -   [Stack Overflow のヘルプの表示](https://stackoverflow.com/questions/tagged/ssis)  
 -   [SSIS チーム ブログのフォロー](https://blogs.msdn.microsoft.com/ssis/)
 -   [問題と要求の報告機能](https://feedback.azure.com/forums/908035-sql-server)

@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42305b48b6446788e3e8ffbb11f13ea1a64346cc
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 59c89e2923d9f8b4e67da94a8455cc8a441de61a
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122993"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480201"
 ---
 # <a name="database-engine-scripting"></a>データベース エンジン スクリプト
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "87122993"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] スクリプトを対話形式で開発、デバッグ、および実行するために、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のコード エディターとテキスト エディターを使用する方法について説明します。|[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
+|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] スクリプトを対話形式で開発、デバッグ、および実行するために、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のコード エディターとテキスト エディターを使用する方法について説明します。|[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)|  
 |対話形式でスクリプトを開発する機能も含めて、コマンド プロンプトから **スクリプトを実行するために、** sqlcmd [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーティリティを使用する方法について説明します。|[sqlcmd 操作方法のトピック](https://msdn.microsoft.com/library/dd7a2d2b-6327-4d77-ac5a-580d36073ad4)|  
 |Windows PowerShell 環境に SQL Server コンポーネントを統合し、SQL Server インスタンスおよびオブジェクトを管理するための PowerShell スクリプトを作成する方法について説明します。|[SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)|  
 |データベースの 1 つまたは複数のオブジェクトを再作成する **スクリプトを作成するために、** スクリプトの生成とパブリッシュ [!INCLUDE[tsql](../../includes/tsql-md.md)] ウィザードを使用する方法について説明します。|[スクリプトの生成 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)|  

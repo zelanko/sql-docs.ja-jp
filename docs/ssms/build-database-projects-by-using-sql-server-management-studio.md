@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio によるデータベース プロジェクトのビルド
 title: データベース プロジェクトをビルドする
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: f31fd59b604ad082143dc5189434cc24c660861f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dffd92620f8975b41f8ea8c13a956c3984e56ea3
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000189"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480060"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>SQL Server Management Studio によるデータベース プロジェクトのビルド
 
@@ -68,6 +69,5 @@ ms.locfileid: "86000189"
   
 ## <a name="see-also"></a>参照  
 [SQL Server Management Studio の使用 [SQL Server]](../ssms/use-sql-server-management-studio.md)  
-[SQL Server Management Studio によるクエリの作成、分析、編集](https://msdn.microsoft.com/062051e4-4b77-4969-98ae-d2547c24ce3e)  
 [ソリューション (SQL Server Management Studio)](../ssms/solution/solutions-sql-server-management-studio.md)  
   
