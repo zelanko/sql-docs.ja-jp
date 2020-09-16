@@ -20,14 +20,14 @@ helpviewer_keywords:
 - routes [Service Broker], removing
 - removing routes
 ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 20c273f77bdf3cb86a19ab154b6a8805b31ed6e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c85a6b4629e7cf6e6738a2a8313395c511e11818
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426614"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540650"
 ---
 # <a name="drop-route-transact-sql"></a>DROP ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ DROP ROUTE route_name
  *route_name*  
  削除するルートの名前を指定します。 サーバー名、データベース名、スキーマ名は指定できません。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  ルートを格納するルーティング テーブルは、カタログ ビュー **sys.routes** を介して読み取ることができるメタデータ テーブルです。 このルーティング テーブルは、CREATE ROUTE、ALTER ROUTE、DROP ROUTE ステートメントでのみ更新できます。  
   
  メッセージ交換でルートが使用されているかどうかに関係なく、ルートを削除することができますが、 しかし、リモート サービスへのルートが他に存在しない場合は、リモート サービスへのルートが作成されるか、メッセージ交換がタイムアウトになるまで、メッセージ交換のメッセージは転送キューに残ります。  

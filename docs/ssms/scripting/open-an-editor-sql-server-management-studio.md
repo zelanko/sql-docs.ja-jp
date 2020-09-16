@@ -1,26 +1,28 @@
 ---
 title: エディターの表示 (SQL Server Management Studio)
 description: SQL Server Management Studio でデータベース エンジン クエリ、MDX、DMX、および XML/A エディターを開く方法について説明します。
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab96c21c9ac7d6e8b90564d6759c85744adc27f8
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122573"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093487"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>エディターの表示 (SQL Server Management Studio)
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター、MDX エディター、DMX エディター、または XML/A エディターを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で開く方法について説明します。 エディターを開くと、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の中央のペインに、それぞれのエディター ウィンドウがタブとして表示されます。  
+
+このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター、MDX エディター、DMX エディター、または XML/A エディターを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で開く方法について説明します。 エディターを開くと、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の中央のペインに、それぞれのエディター ウィンドウがタブとして表示されます。  
   
 ## <a name="before-you-begin"></a>はじめに  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] は、4 つのエディターをサポートしています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] スクリプトを編集するための [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディター、これらの言語を使用してスクリプトを編集するための DMX エディターと MDX エディター、そして、XML/A スクリプトまたは XML ファイルを編集するための XML/A エディターです。 テキスト ファイルの編集は、すべてのエディターで行うことができます。  
@@ -81,6 +83,4 @@ ms.locfileid: "87122573"
   
 -   右ペインに **[テンプレート ブラウザー]** ウィンドウが表示されます。  
   
--   テンプレートをダブルクリックして、データベース エンジン クエリ ウィンドウを開きます。このウィンドウには、テンプレートのテキストが表示されます。 たとえば、CREATE DATABASE テンプレートを開くには、 **[SQL Server テンプレート]** フォルダー、 **[Database]** フォルダーの順に開き、 **[create database]** をダブルクリックします。  
-  
-  
+-   テンプレートをダブルクリックして、データベース エンジン クエリ ウィンドウを開きます。このウィンドウには、テンプレートのテキストが表示されます。 たとえば、CREATE DATABASE テンプレートを開くには、 **[SQL Server テンプレート]** フォルダー、 **[Database]** フォルダーの順に開き、 **[create database]** をダブルクリックします。

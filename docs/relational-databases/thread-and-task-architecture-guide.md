@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485580"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076807"
 ---
 # <a name="thread-and-task-architecture-guide"></a>スレッドおよびタスクのアーキテクチャ ガイド
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -177,9 +177,13 @@ Microsoft Windows では、1 から 31 までの優先度の数値に基づい�
 
 既定では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各インスタンスの優先度は 7 です。優先度が 7 のスレッドは、優先度が通常のスレッドと見なされます。 この既定値により、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] スレッドには、他のアプリケーションに悪影響を及ぼさずに十分な CPU リソースを得られるだけの高い優先度が与えられます。 
 
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)]  
+
 [priority boost](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) 構成オプションを使用すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスのスレッドの優先度を 13 まで上げることができます。 優先度が 13 のスレッドは、優先度が高いスレッドと見なされます。 この設定により、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] スレッドには、他の多数のアプリケーションよりも高い優先度が与えられます。 したがって、通常、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] スレッドは、実行可能な状態になると先に実行され、他のアプリケーションのスレッドからの割り込みを受けることはありません。 サーバーで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスだけが実行されていて他のアプリケーションが実行されていない場合は、この方法でパフォーマンスを向上させることができます。 ただし、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でメモリを集中的に消費する操作が発生した場合は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] スレッドに割り込みをかけるのに十分な優先度が他のアプリケーションに与えられない可能性が高くなります。 
 
 コンピューターで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の複数のインスタンスを実行していて、一部のインスタンスのみに対して priority boost を有効にしている場合、通常の優先度で実行されているすべてのインスタンスのパフォーマンスに悪影響を及ぼすことがあります。 また、priority boost が有効になっていると、サーバー上の他のアプリケーションやコンポーネントのパフォーマンスが低下することがあります。 したがって、このオプションは厳密に管理された条件下でのみ使用することをお勧めします。
+
 
 ## <a name="hot-add-cpu"></a>ホット アド CPU
 ホット アド CPU とは、実行中のシステムに CPU を動的に追加する機能です。 CPU の追加は、物理的には新しいハードウェアの追加、論理的にはオンライン ハードウェア パーティション分割、仮想的には仮想化レイヤーの利用によって行われます。 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 以降の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、ホット アド CPU をサポートしています。

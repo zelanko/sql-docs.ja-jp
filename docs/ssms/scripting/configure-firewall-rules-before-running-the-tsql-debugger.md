@@ -4,7 +4,7 @@ description: SQL Server Management Studio の SQL Server に接続されてい�
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.sqlde_accessdenied
@@ -23,12 +23,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.date: 10/20/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d48e64edfaaa1c3f5506f8c2c674101616254000
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 09732c9089781026239c300dd53f51108d3e149a
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718425"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901979"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>TSQL デバッガーを実行する前にファイアウォール規則を構成します。
 
