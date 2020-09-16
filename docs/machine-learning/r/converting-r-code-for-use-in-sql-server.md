@@ -3,21 +3,21 @@ title: SQL 用の R コードを変換する
 description: SQL Server 上でのソリューションの配置とリレーショナル データへのデータ アクセスのために、R コードを SQL Server ストアド プロシージャに移行します。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/15/2018
+ms.date: 08/28/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 47a96a6bf233a1d8f7fe70df6ab537a31fd2e896
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 009ce927481a455478e170cbe075e920d72571f3
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723878"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288304"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>SQL Server (データベース内) のインスタンスで実行するために R コードを変換する
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 この記事では、SQL Server で動作するように R コードを変更する方法の概要について説明します。 
 
@@ -121,7 +121,6 @@ R コードを R Studio または別の環境から SQL Server に移動する�
 
 + データベース開発者と相談して、[メモリ最適化テーブル](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)などの SQL Server 機能 (または、Enterprise Edition を使用している場合は [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)) を使用してパフォーマンスを向上させる方法を決定します。
 
-    詳細については、「[Analytics Services のための SQL Server 最適化のヒントとテクニック](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)」を参照してください
 
 ### <a name="step-3-prepare-for-deployment"></a>手順 3. 展開を準備する
 
@@ -135,7 +134,7 @@ R コードを R Studio または別の環境から SQL Server に移動する�
 
 + コードが比較的単純な場合は、このサンプルで説明されているように、変更なしで T-SQL ユーザー定義関数に埋め込むことができます。
 
-    + [T-SQL と R を使用した特徴エンジニアリング](../tutorials/sqldev-create-data-features-using-t-sql.md)
+    + [T-SQL と R を使用した特徴エンジニアリング](../tutorials/r-taxi-classification-create-features.md)
 
 + コードがより複雑な場合は、R パッケージ **sqlrutils** を使用してコードを変換します。 このパッケージは、経験豊富な R ユーザーが適切なストアド プロシージャ コードを記述できるように設計されています。 
 
@@ -165,6 +164,6 @@ SQL Server への R ソリューションの展開方法の例については、
 
 + [R と SQL Server を使用してスキー レンタル事業用の予測モデルを作成する](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/)
 
-+ [SQL 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md): R コードをストアド プロシージャにラップすることでモジュール性を高める方法が示されています
++ [SQL 開発者向けのデータベース内分析](../tutorials/r-taxi-classification-introduction.md): R コードをストアド プロシージャにラップすることでモジュール性を高める方法が示されています
 
 + [エンドツーエンドのデータ サイエンス ソリューション](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md): R と T-SQL での特徴エンジニアリングの比較が含まれています

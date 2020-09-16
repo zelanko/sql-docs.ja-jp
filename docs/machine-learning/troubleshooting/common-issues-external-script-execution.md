@@ -9,19 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 597b656c3f235ae59a22f7e85bf54dcc25fb1873
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e814e135c7e7054231aea3988a30afe755e1fc9d
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253683"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570293"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>SQL Server での Launchpad サービスと外部スクリプト実行に関する問題のトラブルシューティング
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 この記事では、SQL Server Trusted Launchpad サービスに関連する問題のトラブルシューティング ガイダンスを提供します。 Launchpad サービスでは、R および Python の外部スクリプト実行がサポートされています。 構成の問題または変更や、不足するネットワーク プロトコルなどの複数の問題により、Launchpad が起動しないことがあります。  
-
-ここに記載されていない問題が発生した場合は、[Machine Learning Server フォーラム](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR)に質問を投稿できます。
 
 ## <a name="determine-whether-launchpad-is-running"></a>Launchpad が実行されているかどうかを判断する
 
@@ -240,6 +238,6 @@ R をインストールするボリュームが短いファイル名に対応し
 
 [機械学習のトラブルシューティングのためのデータ収集](data-collection-ml-troubleshooting-process.md)
 
-[アップグレードとインストールに関してよく寄せられる質問](upgrade-and-installation-faq-sql-server-r-services.md)
+[SQL Server Machine Learning Services のインストール](../install/sql-machine-learning-services-windows-install.md)
 
 [データベース エンジンの接続のトラブルシューティング](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)

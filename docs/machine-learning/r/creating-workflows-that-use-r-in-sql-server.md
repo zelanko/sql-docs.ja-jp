@@ -3,20 +3,20 @@ title: R での SSIS と SSRS のワークフローを作成する
 description: SQL Server Machine Learning Services と R Services、Reporting Services (SSRS)、および SQL Server Integration Services (SSIS) を組み合わせた統合シナリオ。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 03/17/2019
+ms.date: 08/28/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 45443daacecb5423a8c5969b619391fea774bcd6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b907f4837810a2fdfabfbbfabbecc965627b86e9
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680365"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288290"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>SQL Server で R を使用して SSIS および SSRS ワークフローを作成する
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 この記事では、次に示す 2 つの重要な SQL Server 機能を備えた SQL Server Machine Learning Services の言語およびデータ サイエンス能力を使用して、埋め込み R と Python スクリプトを使用する方法について説明します。その機能とは、SQL Server Integration Services (SSIS) および SQL Server Reporting Services SSRS です。 SQL Server の R および Python ライブラリには、統計関数と予測関数が用意されています。 SSIS と SSRS は、それぞれ連携した ETL 変換と視覚化を提供します。 この記事では、これらのすべての機能をこのワークフロー パターンにまとめる方法について説明します。
 
@@ -192,19 +192,6 @@ SSIS デザイナーで、F5 キーを押してパッケージを実行します
 R ではチャートや注意を引く視覚エフェクトを作成できますが、外部データ ソースと十分に統合されません。つまり、各チャートまたはグラフを個別に生成する必要があります。 共有も困難な可能性があります。
 
 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] を使用すれば、[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを介することで複雑な操作を R で実行できます。このストアド プロシージャは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] や Power BI などのさまざまなエンタープライズ レポート ツールで簡単に使用できます。
-
-### <a name="ssrs-example"></a>SSRS の例
-
-[R Graphics Device for Microsoft Reporting Services (SSRS)](https://rgraphicsdevice.codeplex.com/) (Microsoft Reporting Services (SSRS) 用の R グラフィックス デバイス)
-
-この CodePlex プロジェクトが提供するコードを使用すると、R のグラフィックス出力を [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートで使用できるイメージとしてレンダリングする、カスタム レポート アイテムの作成に役立ちます。  カスタム レポート アイテムを使用すると、次の操作を実行できます。
-
-+ R グラフィックス デバイスを使用して作成したグラフとプロットを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ダッシュボードに公開する
-
-+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] パラメーターを R プロットに渡す
-
-> [!NOTE]
-> このサンプルでは、Reporting Services 用の R グラフィックス デバイスをサポートするコードが、Reporting Services サーバー、および Visual Studio にインストールされている必要があります。 手動によるコンパイルと構成も必要です。
 
 ## <a name="next-steps"></a>次のステップ
 

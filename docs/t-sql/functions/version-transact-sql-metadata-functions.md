@@ -14,12 +14,12 @@ ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 82ae0f0b2ef46cf1082d5d0fe7fc064e3c538ee8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7c153456f92783b26bda05a99e848b48909ced8
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361588"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076707"
 ---
 # <a name="version---transact-sql-metadata-functions"></a>Version - Transact SQL メタデータ関数
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88361588"
 ## <a name="syntax"></a>構文  
   
 ```  
--- Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Azure Synapse Analytics and Parallel Data Warehouse  
 VERSION ( )  
 ```  
   
@@ -47,8 +47,8 @@ VERSION ( )
 SELECT VERSION();  
 ```  
   
-## <a name="see-also"></a>関連項目 
-[SESSION_ID &#40;Transact-SQL&#41;](../../t-sql/functions/session-id-transact-sql.md)  
+## <a name="see-also"></a>参照 
+[SESSION_ID (Transact-SQL)](../../t-sql/functions/session-id-transact-sql.md)  
 [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
   
   
