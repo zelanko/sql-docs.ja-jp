@@ -1,11 +1,8 @@
 ---
 title: エディターと表示モードの管理
 description: SQL Server Management Studio の 2 つの表示モードのいずれかを選択する方法について説明します。タブ付きドキュメント モードと複数のドキュメント インターフェイス モード。 分割ビュー、右端での折り返し、仮想空間モード、行番号の表示、全画面表示モード、および [すべて自動的に隠す] についても説明します。
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing window behavior
@@ -20,20 +17,26 @@ helpviewer_keywords:
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b3017d75cd7222948c63b4883b7935c551f3144
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122589"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093435"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>エディターと表示モードの管理
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  エディターには、コードの表示を制御するさまざまな方法が用意されています。  
-  
+
+エディターには、コードの表示を制御するさまざまな方法が用意されています。  
+
 ## <a name="changing-the-view-mode"></a>表示モードの変更  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 **タブ付きドキュメント**という表示モードが用意されています。タブ付きドキュメントにより、複数のエディターやドキュメントを同時に開くことができ、エディター上部のタブを利用してこれらにアクセスできます。 また、マルチドキュメント インターフェイス (MDI) モードで [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開くこともできます。この場合は、タブなしでウィンドウが統合され、各ウィンドウを並べて表示したり、最小化したりすることが可能になります。  
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 **タブ付きドキュメント**という表示モードが用意されています。タブ付きドキュメントにより、複数のエディターやドキュメントを同時に開くことができ、エディター上部のタブを利用してこれらにアクセスできます。 また、マルチドキュメント インターフェイス (MDI) モードで [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開くこともできます。この場合は、タブなしでウィンドウが統合され、各ウィンドウを並べて表示したり、最小化したりすることが可能になります。  
   
 #### <a name="to-switch-between-view-modes"></a>表示モードを切り替えるには  
   

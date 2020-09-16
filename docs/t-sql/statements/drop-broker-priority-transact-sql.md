@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - DROP BROKER PRIORITY statement
 ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1159080251f5f3706f83d6351525c93db892e3d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef86c39af2116d06fab2f56f1ca049342981e63d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496764"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544211"
 ---
 # <a name="drop-broker-priority-transact-sql"></a>DROP BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ DROP BROKER PRIORITY ConversationPriorityName
  *ConversationPriorityName*  
  削除するメッセージ交換の優先度の名前を指定します。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  メッセージ交換の優先度を削除した場合、既存のメッセージ交換では、そのメッセージ交換の優先度から割り当てられた優先順位で操作が続行されます。  
   
 ## <a name="permissions"></a>アクセス許可  
