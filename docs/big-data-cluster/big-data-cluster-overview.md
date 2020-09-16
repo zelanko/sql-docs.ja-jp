@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc83184b6cac6ab574090f8059e2a79fa9ca69ca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942786"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765741"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]とは
 
@@ -26,14 +26,14 @@ ms.locfileid: "86942786"
 
 SQL Server ビッグ データ クラスターを使用して次のことを行います。
 
-- Kubernetes で実行している SQL Server、Spark、HDFS コンテナーの[スケーラブルなクラスターを配置します](../big-data-cluster/deploy-get-started.md)。 
+- Kubernetes で実行している SQL Server、Spark、HDFS コンテナーの[スケーラブルなクラスターを配置します](./deploy-get-started.md)。 
 - Transact-SQL または Spark からビッグ データの読み取り、書き込み、処理を行います。
 - 大量のビッグ データを使用して、価値の高いリレーショナル データを簡単に組み合わせて分析します。
 - 外部データ ソースを照会します。
 - SQL Server によって管理される HDFS にビッグ データを格納します。
 - クラスターを介して複数の外部データ ソースからデータを照会します。
 - AI、機械学習、その他の分析タスクにデータを使用します。
-- [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] に[アプリケーションを展開して実行](../big-data-cluster/concept-application-deployment.md)します。
+- [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] に[アプリケーションを展開して実行](./concept-application-deployment.md)します。
 - [PolyBase](../relational-databases/polybase/polybase-guide.md) を使用してデータを仮想化します。 外部テーブルを使用して、外部の SQL Server、Oracle、Teradata、MongoDB、ODBC データ ソースからデータを照会します。
 - Always On 可用性グループ テクノロジを使用して、SQL Server マスター インスタンスとすべてのデータベースの高可用性を実現します。
 

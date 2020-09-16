@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 347e6e386c0e634ce94b3341334d1463fd5e729d
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: a29748dc5c62d3102dc964871b416e175dbd725a
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487870"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746072"
 ---
 # <a name="python-sql-driver"></a>Python SQL ドライバー
 
@@ -37,7 +37,7 @@ Python 用の SQL ドライバーはいくつかあります。 ただし、Micr
 * [python.org コミュニティ](https://www.python.org/community/)  
   
 ## <a name="more-samples"></a>その他のサンプル  
-* [Azure Web サイトで DJango と SQL Database を使用して Python Web アプリを作成する](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)
+* [Azure App Service on Linux で Python アプリを作成する](https://docs.microsoft.com/azure/app-service/containers/quickstart-python?tabs=bash)
 * [Windows での Python の概要](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
 * [macOS での Python の概要](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)
 * [Ubuntu での Python の概要](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)
