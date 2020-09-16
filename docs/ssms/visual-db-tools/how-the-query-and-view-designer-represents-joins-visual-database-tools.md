@@ -1,4 +1,5 @@
 ---
+description: クエリおよびビュー デザイナーでの結合の表示方法 (Visual Database Tools)
 title: クエリおよびビュー デザイナーでの結合の表示方法
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,16 +15,16 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51c94c3d0cd6f5e86d8d6ed35e0ebf81606ecfdd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 51728a73872bed843c8ea34190be21a19906cd1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462801"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>クエリおよびビュー デザイナーでの結合の表示方法 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-テーブルを結合すると、 [クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) は、 [ダイアグラム ペイン](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) にその結合をグラフィカル表示します。また、SQL 構文を使用して [SQL ペイン](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)にも表示します。  
+ テーブルを結合すると、[クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)は、[ダイアグラム ペイン](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)にその結合をグラフィカル表示します。また、SQL 構文を使用して [SQL ペイン](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)にも表示します。  
   
 ## <a name="diagram-pane"></a>ダイアグラム ペイン  
 ダイアグラム ペインでは、結合に関係するデータ列の間に結合線が引かれます。 結合条件ごとに 1 本の結合線が表示されます。 たとえば、次の図には結合された 2 つのテーブル間の結合線が示されています。  
@@ -32,7 +33,7 @@ ms.locfileid: "86011753"
   
 複数の結合条件を使用してテーブルが結合されている場合は、次の図に示すように、複数の結合線が表示されます。  
   
-![複数の結合条件で結合されたテーブル](../../ssms/visual-db-tools/media/dv3w9n1.gif "複数の結合条件を使用して結合されたテーブル")  
+![複数の結合条件を使用して結合されたテーブル](../../ssms/visual-db-tools/media/dv3w9n1.gif "複数の結合条件を使用して結合されたテーブル")  
   
 結合されたデータ列が表示されていない場合 (テーブルまたはテーブル構造オブジェクトを表す四角形が最小化されている場合や、結合に式が含まれる場合など)、クエリおよびビュー デザイナーは、テーブルまたはテーブル構造オブジェクトを表す四角形のタイトル バーに結合線を表示します。  
   

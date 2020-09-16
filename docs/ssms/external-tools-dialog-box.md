@@ -1,4 +1,5 @@
 ---
+description: '[外部ツール] ダイアログ ボックス'
 title: '[外部ツール] ダイアログ ボックス'
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d0b59445399a161e12bfdfeb5fad79f11f1bced9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8b0bb11779dc90e17f0646bfe747550df62e94ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000140"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463012"
 ---
 # <a name="external-tools-dialog-box"></a>[外部ツール] ダイアログ ボックス
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,8 +42,8 @@ ms.locfileid: "86000140"
 **削除**  
 **[メニューの内容]** の一覧および **[ツール]** メニューから、ツールまたはコマンドを削除します。  
   
-**Title**  
-**[ツール]** メニューの **[外部メニュー]** サブメニューに表示されるツールまたはコマンドの名前を入力します。 ツール名の 1 文字の前にアンパサンド (&) を付けて、その文字をキーボード ショートカットとして指定します。 たとえば、"&SQLCMD" と指定した場合は、 **[ツール]** メニューに &SQLCMD が表示されます。  
+**タイトル**  
+**[ツール]** メニューの **[外部メニュー]** サブメニューに表示されるツールまたはコマンドの名前を入力します。 ツール名の 1 文字の前にアンパサンド (&) を付けて、その文字をキーボード ショートカットとして指定します。 たとえば、"&SQLCMD" と指定した場合は、**[ツール]** メニューに &SQLCMD が表示されます。  
   
 **コマンド**  
 起動するファイルへのパスを指定します。  
@@ -70,9 +71,9 @@ ms.locfileid: "86000140"
   
 |ボックス|値|  
 |-------|---------|  
-|**Title**|DAC (DAC)|  
+|**タイトル**|DAC (DAC)|  
 |**コマンド**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
-|**引数**|-A|  
+|**引数**|。|  
   
 ## <a name="see-also"></a>参照  
 [外部ツールの引数](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
