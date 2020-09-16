@@ -1,4 +1,5 @@
 ---
+description: オプション (SQL Server オブジェクト エクスプローラー - [スクリプト作成] ページ)
 title: オプション (SQL Server オブジェクト エクスプローラー - [スクリプト作成] ページ)
 ms.custom: seo-lt-2019
 ms.date: 08/01/2017
@@ -13,16 +14,16 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6d1a775e42f37b5b224a2608c9055581376b0985
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f89d245bddec039846aed82168fbe8c687d73e2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491866"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>オプション (SQL Server オブジェクト エクスプローラー - [スクリプト作成] ページ)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-このページを使用すると、 **オブジェクト エクスプローラー**内にあるオブジェクトのコンテキスト メニューの次の各コマンドに適用されるスクリプト オプションを設定できます。  
+ このページを使用すると、**オブジェクト エクスプローラー**内にあるオブジェクトのコンテキスト メニューの次の各コマンドに適用されるスクリプト オプションを設定できます。  
   
 -   ユーザー テーブルおよびビューに対する **[編集]** コマンド。  
   
@@ -39,11 +40,11 @@ ms.locfileid: "86001878"
 スクリプト オプションを指定するには、各オプションの右にあるリストから、いずれかの設定を選択します。
 
 > [!NOTE]
-> 一覧表示される既定の設定は、 **[データベース全体とすべてのデータベース オブジェクトのスクリプトを作成]** オプションにのみ適用されます。 **[特定のデータベース オブジェクトの選択]** オプションを使用すると、異なる場合があります。
+> 一覧表示される既定の設定は、**[データベース全体とすべてのデータベース オブジェクトのスクリプトを作成]** オプションにのみ適用されます。**[特定のデータベース オブジェクトの選択]** オプションを使用すると、異なる場合があります。
   
 ### <a name="general-scripting-options"></a>全般スクリプト作成オプション  
 **[各ステートメントを区切る]**  
-バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを区切ります。 **クエリ エディター**の既定のバッチ区切り記号を変更するには、 **[ツール]** / **[オプション]** / **[クエリ実行]** / **[SQL Server]** / **[全般]** / **[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、「 [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738)」を参照してください。  
+バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを区切ります。 **クエリ エディター**の既定のバッチ区切り記号を変更するには、 **[ツール]**/**[オプション]**/**[クエリ実行]**/**[SQL Server]**/**[全般]**/**[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、「 [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738)」を参照してください。  
   
 **[説明用ヘッダーを含める]**  
 スクリプトをオブジェクトごとのセクションに分割し、説明用のコメントを追加します。 既定値は True です。 詳細については、「 [/ *...* / (コメント) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c)」を参照してください。  
@@ -152,6 +153,6 @@ FOREIGN KEY 制約のテーブル参照にスキーマ名を追加します。 �
 **[サーバーのバージョン互換のスクリプト]**  
 生成されたスクリプトは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の指定したバージョンのターゲットになります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の新機能のスクリプトを以前のバージョン用に生成することはできません。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 用に作成したスクリプトには、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で動作しているサーバーや、以前の [データベース互換性レベルの設定](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)が適用されているデータベースに対して実行できないものもあります。  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [スクリプトの生成 (SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  
   

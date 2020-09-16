@@ -1,4 +1,5 @@
 ---
+description: SQL 機械学習が含まれる Python および R チュートリアル用のアヤメのデモ データ
 title: チュートリアル用のアヤメのデモ データ セット
 titleSuffix: SQL machine learning
 Description: アヤメのデータセットと予測モデルを格納するためのデータベースを作成します。 このデータセットは、SQL 機械学習が含まれる R および Python チュートリアルで使用されます。
@@ -10,15 +11,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a5b7cc5c89874bddfda0ac978bce5899b1cd64b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e5a1f9c36b6dc59988951a693be05b4e10e580f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495005"
 ---
 # <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>SQL 機械学習が含まれる Python および R チュートリアル用のアヤメのデモ データ
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 この演習では、[アヤメの花のデータセット](https://en.wikipedia.org/wiki/Iris_flower_data_set)と同じデータに基づくモデルからのデータを格納するデータベースを作成します。 アヤメ データは R と Python の両方のディストリビューションに含まれており、SQL 機械学習のチュートリアルで使用されます。
 

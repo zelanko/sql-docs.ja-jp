@@ -1,4 +1,5 @@
 ---
+description: SQL Server 2019 のプライバシーの補足情報
 title: SQL Server 2019 のプライバシーの補足情報 | Microsoft Docs
 ms.date: 09/20/2019
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords: ''
 author: MsSQLGirl
 ms.author: jukoesma
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 393656057ae547c770f37e1e7db4c5b5373ac1bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c365f3e9aa5221e29d875d05ba3daf4337ca44cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480690"
 ---
 # <a name="sql-server-2019-privacy-supplement"></a>SQL Server 2019 のプライバシーの補足情報
 
@@ -28,7 +29,7 @@ ms.locfileid: "86914678"
 - [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
-- Database Migration Assistant
+- Data Migration Assistant
 - SQL Server Migration Assistant
 - MS-SQL の拡張機能
 
@@ -48,8 +49,8 @@ SQL Server のインストール内のログイン、ユーザー、またはア
 |シナリオ |アクセスの制限 |リテンション期間の要件 |
 |---------|---------|---------|
 |使用状況と診断データを通じて、これらの資格情報がユーザー マシンの外に出ることはありません。 |- |- |
-|クラッシュ ダンプにはアクセス制御データが含まれている可能性があります。 |- |クラッシュ ダンプ:最大 30 日。 |
-|顧客が手動で挿入する場合を除き、ユーザー フィードバックを通じて、これらの資格情報がユーザー コンピューターの外に出ることはありません |サードパーティによるアクセスなしの Microsoft の内部使用に制限されます。 |ユーザー フィードバック:最大 1 年|
+|クラッシュ ダンプにはアクセス制御データが含まれている可能性があります。 |- |クラッシュ ダンプ: 最大 30 日。 |
+|顧客が手動で挿入する場合を除き、ユーザー フィードバックを通じて、これらの資格情報がユーザー コンピューターの外に出ることはありません |サードパーティによるアクセスなしの Microsoft の内部使用に制限されます。 |ユーザー フィードバック: 最大 1 年|
 |&nbsp;|&nbsp;|&nbsp;|
 
 ## <a name="customer-content"></a>顧客のコンテンツ
@@ -67,8 +68,8 @@ SQL Server のインストール内のログイン、ユーザー、またはア
 |シナリオ  |アクセスの制限  |リテンション期間の要件 |
 |---------|---------|---------|
 |使用状況と診断データを通じて、このデータがユーザー マシンの外に出ることはありません。 |- |- |
-|クラッシュ ダンプには顧客のコンテンツが含まれ、Microsoft に送信される場合があります。 |- |クラッシュ ダンプ:最大 30 日。 |
-|同意した顧客は、顧客のコンテンツを含むユーザー フィードバックを Microsoft に送信できます。 |サードパーティによるアクセスなしの Microsoft の内部使用に制限されます。 Microsoft は元の顧客にデータを公開できます。 |ユーザー フィードバック:最大 1 年 |
+|クラッシュ ダンプには顧客のコンテンツが含まれ、Microsoft に送信される場合があります。 |- |クラッシュ ダンプ: 最大 30 日。 |
+|同意した顧客は、顧客のコンテンツを含むユーザー フィードバックを Microsoft に送信できます。 |サードパーティによるアクセスなしの Microsoft の内部使用に制限されます。 Microsoft は元の顧客にデータを公開できます。 |ユーザー フィードバック: 最大 1 年 |
 
 ## <a name="end-user-identifiable-information-euii"></a>エンド ユーザーを特定できる情報 (EUII)
 
@@ -90,9 +91,9 @@ SQL Server のインストール内のログイン、ユーザー、またはア
 |シナリオ  |アクセスの制限  |リテンション期間の要件|
 |---------|---------|---------|
 |使用状況と診断データを通じて、このデータがユーザー マシンの外に出ることはありません。 |- |- |
-|クラッシュ ダンプには EUII が含まれ、Microsoft に送信される場合があります。 |- |クラッシュ ダンプ:最大 30 日 |
+|クラッシュ ダンプには EUII が含まれ、Microsoft に送信される場合があります。 |- |クラッシュ ダンプ: 最大 30 日 |
 |顧客の識別 ID は、ユーザーがサブスクライブしている新しいハイブリッドおよびクラウド機能を提供するために Microsoft に送信される可能性があります。 |- |現在、このようなハイブリッドまたはクラウド機能は存在しません。|
-|同意した顧客は、顧客のコンテンツを含むユーザー フィードバックを Microsoft に送信できます。|サードパーティによるアクセスなしの Microsoft の内部使用に制限されます。 Microsoft は元の顧客にデータを公開できます。 |ユーザー フィードバック:最大 1 年 |
+|同意した顧客は、顧客のコンテンツを含むユーザー フィードバックを Microsoft に送信できます。|サードパーティによるアクセスなしの Microsoft の内部使用に制限されます。 Microsoft は元の顧客にデータを公開できます。 |ユーザー フィードバック: 最大 1 年 |
 
 ## <a name="internet-based-services-data"></a>インターネット ベースのサービス データ
 
@@ -155,10 +156,10 @@ Microsoft は SQL Server を使用するその他のプログラムで設定さ�
 |シナリオ  |アクセス制限  |リテンション期間の要件|
 |---------|---------|---------|
 |機能の改善および/または現在の機能のバグの修正のために Microsoft で使用される可能性があります。|サードパーティによるアクセスなしの Microsoft の内部使用に制限されます。 |最短 90 日から最長 3 年 |
-|顧客への提案の際に使用される可能性があります。  たとえば、"製品の使用状況に基づいて、パフォーマンスの向上のため、機能 *X* の使用を検討してください" というように提案されます。 |Microsoft は、ダッシュボードなどを通じて、元の顧客にデータを公開できます。 |顧客データのセキュリティ ログ:最短 3 年から最長 6 年 |
+|顧客への提案の際に使用される可能性があります。  たとえば、"製品の使用状況に基づいて、パフォーマンスの向上のため、機能 *X* の使用を検討してください" というように提案されます。 |Microsoft は、ダッシュボードなどを通じて、元の顧客にデータを公開できます。 |顧客データのセキュリティ ログ: 最短 3 年から最長 6 年 |
 |将来の製品計画のために Microsoft で使用される可能性があります。 |Microsoft はこの情報を他のハードウェアおよびソフトウェア ベンダーと共有し、Microsoft ソフトウェアでの製品の実行方法を改善する場合があります。 |最短 90 日から最長 3 年|
 |出力される使用状況と診断データに基づいてクラウド ベース サービスを提供するために、Microsoft で使用される可能性があります。 たとえば、組織内のすべての SQL Server インストールでの機能の使用状況を示す顧客のダッシュボードなどです。 |Microsoft は、ダッシュボードなどを通じて、元の顧客にデータを公開できます。 |最短 90 日から最長 3 年 |
-|同意した顧客は、顧客のコンテンツを含むユーザー フィードバックを Microsoft に送信できます。 |サードパーティによるアクセスなしの Microsoft の内部使用に制限されます。 Microsoft は元の顧客にデータを公開できます。 |ユーザー フィードバック:最大 1 年 |
+|同意した顧客は、顧客のコンテンツを含むユーザー フィードバックを Microsoft に送信できます。 |サードパーティによるアクセスなしの Microsoft の内部使用に制限されます。 Microsoft は元の顧客にデータを公開できます。 |ユーザー フィードバック: 最大 1 年 |
 |たとえば、Microsoft やその他の会社から提供されたソフトウェアを実行しているデータベースやアプリケーションを、データベース名やアプリケーション名で既知のカテゴリに分類することができます。|サードパーティによるアクセスなしの Microsoft の内部使用に制限されます。|最短 90 日から最長 3 年 |
 
 ## <a name="object-metadata"></a>オブジェクト メタデータ
@@ -183,6 +184,6 @@ Microsoft は SQL Server を使用するその他のプログラムで設定さ�
 
 ## <a name="telemetry-controls"></a>テレメトリのコントロール
 
-製品のテレメトリのオン/オフを切り替える方法については、 https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft を参照してください。
+製品のテレメトリのオン/オフを切り替える方法については、https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft を参照してください。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

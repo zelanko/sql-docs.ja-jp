@@ -1,4 +1,5 @@
 ---
+description: 登録済みサーバーまたは登録済みサーバー グループの名前の変更
 title: 登録済みサーバーまたはサーバー グループの名前の変更
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +11,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/02/2016
-ms.openlocfilehash: 32f59e2db98280a7d096e0f1f7d1a90895db010b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 28ed9e04486fe587ea3bd25d6659283846a6fa8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001785"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491813"
 ---
 # <a name="change-the-name-of-registered-server-or-registered-server-group"></a>登録済みサーバーまたは登録済みサーバー グループの名前の変更
 
@@ -25,7 +26,7 @@ ms.locfileid: "86001785"
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用
 
-メニューから **[表示]\\[登録済みサーバー]** を選択し、 **[登録済みサーバー]** ペインを開きます。
+メニューから **[表示]\\[登録済みサーバー]** を選択し、**[登録済みサーバー]** ペインを開きます。
 
 ### <a name="to-change-the-name-of-a-server"></a>サーバーの名前を変更するには
 

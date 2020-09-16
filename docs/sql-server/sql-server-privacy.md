@@ -1,4 +1,5 @@
 ---
+description: SQL Server のプライバシーの補足情報
 title: SQL Server のプライバシーの補足情報 | Microsoft Docs
 ms.date: 01/19/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 9362402d6c02fe7ff140f4105c6f011441c457ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0a4675d04349da1a8b1e92ce62b8dde3cbabb542
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480691"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server のプライバシーの補足情報
 
@@ -27,7 +28,7 @@ ms.locfileid: "86916909"
 - [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
-- Database Migration Assistant
+- Data Migration Assistant
 - SQL Server Migration Assistant
 - MS-SQL の拡張機能
 
@@ -168,6 +169,6 @@ Microsoft は SQL Server を使用するその他のプログラムで設定さ�
 
 ## <a name="telemetry-controls"></a>テレメトリのコントロール
 
-製品のテレメトリのオン/オフを切り替える方法については、 https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft を参照してください。
+製品のテレメトリのオン/オフを切り替える方法については、https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft を参照してください。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

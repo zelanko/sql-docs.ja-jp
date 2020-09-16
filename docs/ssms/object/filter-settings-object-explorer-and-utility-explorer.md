@@ -1,4 +1,5 @@
 ---
+description: '[フィルターの設定] (オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)'
 title: '[フィルターの設定] (オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)'
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 66ae081ad6fcfb5b5d361201430ea9fb4d8dcd6c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d4595be9c345b32c20bf028cc384a2e61766295d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480184"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>[フィルターの設定] (オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

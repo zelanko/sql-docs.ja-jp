@@ -1,4 +1,5 @@
 ---
+description: エンコーディングによるファイルの管理
 title: エンコーディングによるファイルの管理
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3737a87e4b4efebc738d8f506fda3aaeeec3ca15
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 887ed2fd171dc6164a9af45cfc4af3e0992c166f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497320"
 ---
 # <a name="manage-files-with-encoding"></a>エンコーディングによるファイルの管理
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
