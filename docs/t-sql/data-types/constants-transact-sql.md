@@ -2,7 +2,7 @@
 description: Constants (Transact-SQL)
 title: Constants (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 09/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -33,12 +33,12 @@ ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd464b8b08948d913dc003df0b488fd85f5bdda7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b8b68b99fa522b69401eab47d54e40cdf8621c2
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422936"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027283"
 ---
 # <a name="constants-transact-sql"></a>Constants (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,9 +46,12 @@ ms.locfileid: "88422936"
 リテラル値またはスカラー値としても知られる定数は、特定のデータ値を表す記号です。 定数の形式は、その定数が表す値のデータ型に依存します。
   
 ## <a name="character-string-constants"></a>文字列定数
-文字列定数では、英数字 (a ～ z、A ～ Z、および 0 ～ 9)、感嘆符 (!)、アット マーク (@)、および番号記号 (#) などの特殊文字を単一引用符で囲みます。 COLLATE 句で照合順序を指定しない限り、文字列定数には現在のデータベースの既定の照合順序が割り当てられます。 ユーザーが入力する文字列は、コンピューターのコード ページから評価され、必要に応じてデータベースの既定のコード ページに変換されます。
+文字列定数では、英数字 (a ～ z、A ～ Z、および 0 ～ 9)、感嘆符 (!)、アット マーク (@)、および番号記号 (#) などの特殊文字を単一引用符で囲みます。 文字列定数には、現在のデータベースの既定の照合順序が指定されます。 COLLATE 句が使用されている場合、COLLATE 句によって指定された照合順序への変換の前に、データベースの既定のコード ページへの変換が引き続き行われます。 ユーザーが入力する文字列は、コンピューターのコード ページから評価され、必要に応じてデータベースの既定のコード ページに変換されます。
+
+> [!NOTE]
+> COLLATE 句を使用して [UTF8 対応照合順序](../../relational-databases/collations/collation-and-unicode-support.md#utf8)を指定した場合、COLLATE 句によって指定された照合順序への変換の前に、データベースの既定のコード ページへの変換が引き続き行われます。 指定された Unicode 対応の照合順序に直接変換することはできません。 詳細については、「[Unicode 文字列](#unicode-strings)」をご覧ください。
   
-接続に対して QUOTED_IDENTIFIER オプションが OFF に設定されている場合は、文字列を二重引用符で囲むこともできます。ただし、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Provider と ODBC ドライバーでは、自動的に SET QUOTED_IDENTIFIER ON が使用されます。 単一引用符を使用することをお勧めします。
+接続に対して QUOTED_IDENTIFIER オプションが OFF に設定されている場合は、文字列を二重引用符で囲むこともできます。ただし、Microsoft [OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) および [ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) では、自動的に `SET QUOTED_IDENTIFIER ON` が使用されます。 単一引用符を使用することをお勧めします。
   
 単一引用符で囲まれた文字列に単一引用符を埋め込む場合は、単一引用符を 2 つ続けて並べることで 1 つの単一引用符を表します。 これは、二重引用符で囲む文字列では必要ありません。
   
@@ -64,18 +67,23 @@ ms.locfileid: "88422936"
   
 空文字列は、2 つの単一引用符の間に何も挿入しないで表します。 6.x 互換性モードでは、空文字列は 1 つのスペースと見なされます。
   
-文字列は、拡張照合順序をサポートします。
+文字列は、拡張[照合順序](../../relational-databases/collations/collation-and-unicode-support.md)をサポートします。
   
 > [!NOTE]  
->  8,000 バイト以上の文字列定数は **varchar(max)** データ型に分類されます。  
+> 8,000 バイト以上の文字列定数は **varchar(max)** データ型に分類されます。  
   
 ## <a name="unicode-strings"></a>Unicode 文字列
-Unicode 文字列の形式は文字列に似ていますが、先頭に N 識別子が付きます (N は、SQL-92 標準で National Language を表します)。 プレフィックス N は大文字にする必要があります。 たとえば、'Michél' は文字定数であり、N'Michél' は Unicode 定数です。 Unicode 定数は Unicode データとして解釈され、コード ページを使用して評価されることはありません。 Unicode 定数は照合順序を持ちます。 この照合順序では主に比較と大文字小文字の区別が制御されます。 COLLATE 句で照合順序を指定しない限り、Unicode 定数には現在のデータベースの既定の照合順序が割り当てられます。 Unicode データは、文字データに対して、1 文字あたり 1 バイトではなく、1 文字あたり 2 バイトを使用して格納されます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。
+Unicode 文字列の形式は文字列に似ていますが、先頭に N 識別子が付きます (N は、SQL-92 標準で National Language を表します)。 
+
+> [!IMPORTANT]  
+> プレフィックス N は大文字にする必要があります。 
+
+たとえば、`'Michél'` は文字定数であり、`N'Michél'` は Unicode 定数です。 Unicode 定数は Unicode データとして解釈され、コード ページを使用して評価されることはありません。 Unicode 定数は照合順序を持ちます。 この照合順序では主に比較と大文字小文字の区別が制御されます。 Unicode 定数には、現在のデータベースの既定の照合順序が指定されます。 COLLATE 句が使用されている場合、COLLATE 句によって指定された照合順序への変換の前に、データベースの既定の照合順序への変換が引き続き行われます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)」を参照してください。
   
 Unicode 文字列定数は、拡張照合順序をサポートします。
   
 > [!NOTE]  
->  8,000 バイト以上の Unicode 文字列定数は **nvarchar(max)** データ型に分類されます。  
+> 8,000 バイト以上の Unicode 文字列定数は **nvarchar(max)** データ型に分類されます。  
   
 ## <a name="binary-constants"></a>バイナリ定数
 binary 型定数は 16 進数の文字列であり、`0x` というプレフィックスが付きます。 引用符では囲みません。
@@ -200,11 +208,12 @@ $542023.14
 ```
   
 ## <a name="enhanced-collations"></a>拡張照合順序  
-SQL Server は、拡張照合順序をサポートする文字および Unicode 文字列定数をサポートしています。 詳細については、[[COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) 句をご確認ください。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、拡張照合順序をサポートする文字および Unicode 文字列定数をサポートしています。 詳細については、[[COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md) 句をご確認ください。
   
 ## <a name="see-also"></a>関連項目
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
-  
+[照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)  
+[照合順序の優先順位](../../t-sql/statements/collation-precedence-transact-sql.md)    
   

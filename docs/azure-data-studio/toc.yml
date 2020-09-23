@@ -34,8 +34,14 @@
   items:
     - name: 拡張機能
       items:
-        - name: 拡張機能
+        - name: 拡張機能の概要
           href: extensions.md
+        - name: Azure Arc 拡張機能
+          href: extensions/azure-arc-extension.md
+        - name: データの仮想化の拡張機能
+          href: data-virtualization-extension.md
+        - name: Kusto 拡張機能
+          href: extensions/kusto-extension.md
         - name: Machine Learning 拡張機能
           items:
             - name: Machine Learning 拡張機能の概要
@@ -46,10 +52,16 @@
               href: machine-learning-extension-predictions.md
             - name: モデルのインポートと表示
               href: machine-learning-extension-import-view-models.md
+        - name: Managed Instance の拡張機能
+          href: extensions/azure-sql-managed-instance-extension.md
         - name: PostgreSQL の拡張機能
           href: postgres-extension.md
-        - name: データの仮想化の拡張機能
-          href: data-virtualization-extension.md
+        - name: PowerShell の拡張機能
+          href: powershell-extension.md
+        - name: SandDance の拡張機能
+          href: sanddance-extension.md
+        - name: スキーマ比較の拡張機能
+          href: schema-compare-extension.md
         - name: SQL Database プロジェクトの拡張機能
           items:
             - name: SQL Database プロジェクトの拡張機能の概要
@@ -70,14 +82,6 @@
           href: sql-server-import-extension.md
         - name: SQL Server プロファイラー
           href: sql-server-profiler-extension.md
-        - name: スキーマ比較の拡張機能
-          href: schema-compare-extension.md
-        - name: PowerShell の拡張機能
-          href: powershell-extension.md
-        - name: Managed Instance の拡張機能
-          href: extensions/azure-sql-managed-instance-extension.md
-        - name: SandDance の拡張機能
-          href: sanddance-extension.md
     - name: 拡張機能のオーサリング
       items:
         - name: 拡張性の概要
@@ -114,8 +118,14 @@
           href: notebooks-tutorial-sql-kernel.md
         - name: Python カーネルを使用する
           href: notebooks-tutorial-python-kernel.md
+        - name: Kusto カーネルを使用する
+          href: notebooks/notebooks-kusto-kernel.md
         - name: Kqlmagic 拡張機能
           href: notebooks-kqlmagic.md
+    - name: デプロイ
+      items:
+        - name: Azure SQL Edge のデプロイ
+          href: deploy-azure-sql-edge.md
     - name: ダッシュボードおよび分析情報のウィジェット
       href: insight-widgets.md
     - name: コード スニペット

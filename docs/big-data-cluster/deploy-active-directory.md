@@ -5,16 +5,16 @@ description: Active Directory ドメインで SQL Server ビッグ データ ク
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 037c8bd26249ab3dc2cb3d0d8f4adf718f56000e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 345002bdf21ee13fc6d33c9cbc1e9938a8b58377
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243073"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076657"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する
 
@@ -31,9 +31,16 @@ Active Directory (AD) 認証を有効にするために、BDC では、クラス
 
 Active Directory で必須のオブジェクトをすべて自動作成するには、展開中、BDC に AD アカウントが必要になります。 このアカウントには、指定の OU 内でユーザー、グループ、コンピューター アカウントを作成する権限を与える必要があります。
 
-次の手順では、Active Directory ドメイン コントローラーを既に用意していることを前提としています。 ドメイン コントローラーがない場合、[こちら](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx)のガイドに含まれる手順が参考になります。
+>[!IMPORTANT]
+>ドメイン コントローラーで設定されているパスワードの有効期限ポリシーによっては、これらのアカウントのパスワードの有効期限が切れることがあります。 既定の有効期限ポリシーは 42 日です。 BDC 内のすべてのアカウントの資格情報をローテーションするメカニズムはないため、有効期限が切れるとクラスターは動作しなくなります。 この問題を回避するには、ドメイン コントローラーで、BDC サービス アカウントの有効期限ポリシーを "パスワードを無期限にする" に更新します。 この操作は、有効期限の前または後に行うことができます。 後者の場合、Active Directory によって、期限切れのパスワードが再アクティブ化されます。
+>
+>次の図は、[Active Directory ユーザーとコンピューター] でこのプロパティを設定する場所を示しています。
+>
+>:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="パスワードの有効期限のポリシーの設定":::
 
 AD アカウントとグループの一覧については、「[Active Directory オブジェクトの自動生成](active-directory-objects.md)」を参照してください。
+
+次の手順では、Active Directory ドメイン コントローラーを既に用意していることを前提としています。 ドメイン コントローラーがない場合、[こちら](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx)のガイドに含まれる手順が参考になります。
 
 ## <a name="create-ad-objects"></a>AD オブジェクトの作成
 
@@ -180,6 +187,9 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
 
 - `security.activeDirectory.realm` **省略可能なパラメーター**: ほとんどの場合、領域はドメイン名と同じです。 同じでない場合、このパラメーターを使用し、領域の名前を定義します (例: `CONTOSO.LOCAL`)。 このパラメーターに指定する値は、完全修飾されている必要があります。
 
+  > [!IMPORTANT]
+  > 現時点では、BDC では、Active Directory ドメイン名が Active Directory ドメインの **NETBIOS** 名と異なる構成はサポートされていません。
+
 - `security.activeDirectory.domainDnsName`:クラスターに使用される DNS ドメインの名前 (例: `contoso.local`)。
 
 - `security.activeDirectory.clusterAdmins`:このパラメーターは、1 つの AD グループを受け取ります。 AD グループのスコープは、ユニバーサルまたはグローバルである必要があります。 このグループのメンバーには、クラスターの管理者アクセス許可を付与する *bdcAdmin* クラスター ロールが割り当てられます。 これは、[SQL Server で `sysadmin` アクセス許可](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles)、[HDFS で `superuser` アクセス許可](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User)、コントローラー エンドポイントに接続したときに管理者アクセス許可が与えられることを意味します。
@@ -192,6 +202,9 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
 この一覧の AD グループは、*bdcUser* ビッグデータ クラスター ロールにマップされており、SQL Server ([SQL Server アクセス許可](../relational-databases/security/permissions-hierarchy-database-engine.md)を参照) または HDFS ([HDFS アクセス許可ガイド](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20)を参照) へのアクセスが許可される必要があります。 コントローラー エンドポイントに接続されている場合、これらのユーザーは *azdata bdc endpoint list* コマンドを使用して、クラスターで使用可能なエンドポイントのみを一覧表示できます。
 
 この設定の AD グループを更新する方法の詳細については、「[Active Directory モードでビッグ データ クラスター アクセスを管理する](manage-user-access.md)」を参照してください。
+
+  >[!TIP]
+  >HDFS に接続するために必要な Knox ゲートウェイ エンドポイントを取得するために、Azure Data Studio では *sys.dm_cluster_endpoints* DMV を使用しています。そのため、Azure Data Studio で SQL Server マスターに接続したときの HDFS ブラウジング エクスペリエンスを有効にするには、bdcUser ロールを持つユーザーに VIEW SERVER STATE 権限を付与する必要があります。
 
   >[!IMPORTANT]
   >展開を開始する前に、これらのグループを AD 内に作成します。 これらの AD グループのいずれかのスコープがドメイン ローカルの場合、展開は失敗します。
@@ -261,9 +274,9 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
 - `security.activeDirectory.accountPrefix`:**省略可能なパラメーター** このパラメーターは、同じドメインに対する複数のビッグ データ クラスターのデプロイをサポートするために SQL Server 2019 CU5 リリースで導入されました。 この設定により、さまざまなビッグ データ クラスター サービスに対してアカウント名の一意性が保証されます。それは 2 つのクラスター間で異なる必要があります。 アカウント プレフィックス名のカスタマイズは省略可能で、既定では、サブドメイン名がアカウント プレフィックスとして使用されます。 サブドメイン名が 12 文字より長い場合、サブドメイン名の最初の 12 文字がアカウント プレフィックスとして使用されます。  
 
   >[!NOTE]
-  >Active Directory では、アカウント名を 20 文字までに制限する必要があります。 BDC クラスターでは、ポッドと StatefulSet を区別するために、8 文字を使用する必要があります。 これにより、アカウント プレフィックスの制限として 12 文字が残されます
+  >Active Directory では、アカウント名を 20 文字までに制限する必要があります。 ポッドと StatefulSet を区別するために、BDC クラスターでは 8 文字を使用する必要があります。 これにより、アカウント プレフィックスの制限として 12 文字が残されます
 
-[AD グループのスコープを確認](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)し、DomainLocal であるかどうかを確認します。
+[AD グループのスコープを確認](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)し、DomainLocal であるかどうかを確認します。
 
 展開構成ファイルをまだ初期化していない場合、このコマンドを実行して構成のコピーを取得できます。 次の例では、`kubeadm-prod` プロファイルを使用します。これは `openshift-prod` にも当てはまります。
 
@@ -422,7 +435,7 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - SQL Server 2019 CU5 リリースより前は、ドメイン (Active Directory) につき BDC が 1 つしか許可されません。 CU5 リリース以降では、ドメインごとに複数の BDC を有効にすることができます。
 
-- セキュリティ構成で指定されているどの AD グループも、DomainLocal にスコープ指定できません。 AD グループのスコープは、[この手順](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)に従って確認できます。
+- セキュリティ構成で指定されているどの AD グループも、DomainLocal にスコープ指定できません。 AD グループのスコープは、[この手順](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)に従って確認できます。
 
 - BDC へのログインに使用できる AD アカウントは、BDC 用に構成されたのと同じドメインから許可されます。 その他の信頼される側のドメインからのログインを有効にすることはサポートされていません。
 

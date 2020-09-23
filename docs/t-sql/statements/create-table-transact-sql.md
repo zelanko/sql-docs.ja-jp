@@ -46,14 +46,14 @@ helpviewer_keywords:
 - maximum number of bytes per row
 - data retention policy
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 96dcd0aff5874db3f025496b1067d5d3d111b3a9
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6b55f70cd23047de6fa1b344cbe1c9c89ab3a94c
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511265"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027313"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -239,11 +239,13 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         | OFF ( MIGRATION_STATE = PAUSED )
       }
     ]   
-    [ DATA_DELETION = ON ( FILTER_COLUMN = column_name
-        , RETENTION_PERIOD = {
-                              INFINITE | number {DAY | DAYS | WEEK | WEEKS
-                  | MONTH | MONTHS | YEAR | YEARS }
-                          }) ]
+    [ DATA_DELETION =  {OFF | ON }  
+          [(    
+              [ FILTER_COLUMN = column_name ],   
+              [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                      | MONTH | MONTHS | YEAR | YEARS }}]    
+          )]
+     ]
 }
   
 <table_stretch_options> ::=
@@ -801,8 +803,12 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **適用対象**: [!INCLUDE[ss
 
 - データの移行を一時停止または延期するには `PAUSED` を指定します。 詳細については、[データ移行の一時停止と再開 - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md) に関するページをご覧ください。
 
-DATA_DELETION = { ON ( FILTER_COLUMN = column_name,   
-            RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } }    
+[ DATA_DELETION =  {OFF | ON }  
+          [(  
+              [ FILTER_COLUMN = column_name ],   
+              [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}]    
+          )]  
+     ]  
 **適用対象:** Azure SQL Edge "*のみ*"
 
 データベース内のテーブルの古いデータまたは期限切れのデータに対し、アイテム保持ポリシーを使用したクリーンアップを有効にします。 詳細については、[データ保持の有効化と無効化](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable)に関するページを参照してください。 データ保持を有効にするには、次のパラメーターを指定します。 

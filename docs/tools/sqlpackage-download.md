@@ -10,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
 ms.date: 06/20/2018
-ms.openlocfilehash: 67fdb2d5d78f5068f8379d046221ceb9c564a176
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 93979ba5b0bf7ffb26726db86dbc5d6ee548df15
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85352429"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283683"
 ---
 # <a name="download-and-install-sqlpackage"></a>sqlpackage をダウンロードしてインストールする
 
@@ -63,6 +63,19 @@ sqlpackage は Windows、macOS、Linux 上で実行されます。
    $ echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
    $ source ~/.bash_profile
    $ sqlpackage
+   ```
+
+   > [!NOTE]
+   > macOS で sqlpackage を実行するには、セキュリティ設定の変更が必要になる場合があります。 コマンド ラインから Gatekeeper を操作するために次のコマンドを実行してください。
+
+   **sqlpackage の実行前:**
+   ```bash
+   $ sudo spctl --master-disable
+   ```
+
+   **sqlpackage の実行後:**
+   ```bash
+   $ sudo spctl --master-enable
    ```
 
 ## <a name="get-sqlpackage-net-core-for-linux"></a>Linux 用の sqlpackage .NET Core を取得する
@@ -123,9 +136,11 @@ sqlpackage は、Windows、macOS、および Linux 上で実行されます。�
 - Windows 10
 - Windows 8.1
 - Windows 7 SP1
+- Windows サーバー コア
 - Windows Server 2008 R2
 - Windows Server 2012 R2
 - Windows Server 2016
+- Windows Server 2019
 
 ### <a name="macos"></a>macOS
 

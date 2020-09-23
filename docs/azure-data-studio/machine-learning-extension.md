@@ -5,17 +5,17 @@ description: Azure Data Studio の Machine Learning 拡張機能を使用する�
 ms.date: 05/19/2020
 ms.reviewer: sstein
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
+ms.technology: machine-learning
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 5b54ec71ec3debaf39b0788cac0c1534300a4a72
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: a6a86baeb3c206c722aa91eae386ca80c287644c
+ms.sourcegitcommit: b9871e6cffb4c2c65d1f27f797630c43fc02cfb0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745552"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90101122"
 ---
 # <a name="machine-learning-extension-preview-for-azure-data-studio"></a>Azure Data Studio の Machine Learning 拡張機能 (プレビュー)
 
@@ -101,7 +101,7 @@ Machine Learning 拡張機能の設定を変更するには、次の手順に従
 
 Azure Data Studio で Machine Learning 拡張機能を使用するには、次の手順に従います。
 
-1. Azure Data Studio で接続を開きます。
+1. Azure Data Studio で **[接続]** ビューレットを開きます。
 
 1. ご使用のサーバーを右クリックし、 **[管理]** を選択します。
 

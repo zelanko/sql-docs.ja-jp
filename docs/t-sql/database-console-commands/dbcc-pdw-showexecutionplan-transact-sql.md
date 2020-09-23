@@ -13,12 +13,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a221857278cdd2e8b88d8f6f13084b4def9d3c88
-ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
+ms.openlocfilehash: 52fdb12c425f8d6e3faf9fb0f0ee3ce1a1c76195
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942305"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076817"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 
@@ -31,17 +31,18 @@ ms.locfileid: "88942305"
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
-Azure SQL Data Warehouse の構文:
+[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] の構文:
 
 ```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id, spid )  
-[;]  
+[ ; ]  
 ```  
-Azure 並列データ ウェアハウスの構文:
+
+[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の構文:
   
 ```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
-[;]  
+[ ; ]  
 ```  
 
 ## <a name="arguments"></a>引数  

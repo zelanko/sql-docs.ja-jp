@@ -29,12 +29,12 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 48181379c0ad20f5e9d8dc1ac8a9dd304fbc5e81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57cab52a5edfde4e7469243d7d57ede2e22c0161
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479815"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076612"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -75,14 +75,14 @@ _target\_percent_
 データベースを圧縮した後、データベース ファイル内に残す空き領域のパーセンテージを指定します。  
   
 NOTRUNCATE  
-ファイル末尾の割り当て済みページをファイル先頭の未割り当てページに移動します。 この操作により、ファイル内のデータが圧縮されます。 _target\_percent_ は省略可能です。 Azure SQL Data Warehouse では、このオプションはサポートされていません。 
+ファイル末尾の割り当て済みページをファイル先頭の未割り当てページに移動します。 この操作により、ファイル内のデータが圧縮されます。 _target\_percent_ は省略可能です。 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] では、このオプションはサポートされません。 
   
 ファイル末尾の空き領域はオペレーティング システムに返されず、ファイルの物理サイズは変わりません。 そのため、NOTRUNCATE を指定した場合、データベースが圧縮されていないように見えます。  
   
 NOTRUNCATE はデータ ファイルにのみ適用され、 NOTRUNCATE はログ ファイルには影響しません。  
   
 TRUNCATEONLY  
-ファイル末尾のすべての空き領域をオペレーティング システムに解放します。 ファイル内でのページの移動は行いません。 データ ファイルは、最後に割り当てられたエクステントを限度として圧縮されます。 _target\_percent_ が TRUNCATEONLY と共に指定された場合は、無視します。 Azure SQL Data Warehouse では、このオプションはサポートされていません。
+ファイル末尾のすべての空き領域をオペレーティング システムに解放します。 ファイル内でのページの移動は行いません。 データ ファイルは、最後に割り当てられたエクステントを限度として圧縮されます。 _target\_percent_ が TRUNCATEONLY と共に指定された場合は、無視します。 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] では、このオプションはサポートされません。
   
 TRUNCATEONLY はログ ファイルに影響します。 データ ファイルのみを切り捨てるには、DBCC SHRINKFILE を使用します。  
   
