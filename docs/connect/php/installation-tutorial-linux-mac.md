@@ -7,26 +7,26 @@ ms.prod_service: connectivity
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: ulvii
-ms.author: v-ulibra
+author: David-Engel
+ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 3fc2747f21ff50af6206e59da594c0a06b2bb909
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ee4938e8a0d226f668fabf3aaf4db1359ab6bf61
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886279"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807017"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server の Linux および macOS インストール チュートリアル
-次の手順では、クリーンな環境を想定し、PHP 7.x、Microsoft ODBC ドライバー、Apache Web サーバー、Microsoft Drivers for PHP for SQL Server を、Ubuntu 16.04、18.04、および 19.10、RedHat 7 および 8、Debian 8、9、および 10、Suse 12 および 15、Alpine 3.11、macOS 10.13、10.14、および 10.15 にインストールする方法を説明します。 これらの手順では、PECL を使用してドライバーをインストールすることをお勧めしていますが、[Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub プロジェクト ページから事前構築済みバイナリをダウンロードし、「[Microsoft Drivers for PHP for SQL Server の読み込み](../../connect/php/loading-the-php-sql-driver.md)」の手順に従ってそれらをインストールすることもできます。 拡張機能の読み込みおよび php.ini に拡張機能を追加しない理由の説明については、[ドライバーの読み込み](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup)に関するセクションを参照してください。
+次の手順では、クリーンな環境を想定し、PHP 7.x、Microsoft ODBC ドライバー、Apache Web サーバー、Microsoft Drivers for PHP for SQL Server を、Ubuntu 16.04、18.04、および 20.04、RedHat 7 および 8、Debian 8、9、および 10、Suse 12 および 15、Alpine 3.11、macOS 10.13、10.14、および 10.15 にインストールする方法を説明します。 これらの手順では、PECL を使用してドライバーをインストールすることをお勧めしていますが、[Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub プロジェクト ページから事前構築済みバイナリをダウンロードし、「[Microsoft Drivers for PHP for SQL Server の読み込み](../../connect/php/loading-the-php-sql-driver.md)」の手順に従ってそれらをインストールすることもできます。 拡張機能の読み込みおよび php.ini に拡張機能を追加しない理由の説明については、[ドライバーの読み込み](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup)に関するセクションを参照してください。
 
 これらの手順では、`pecl install` を使用して既定で PHP 7.4 がインストールされます。 最初に `pecl channel-update pecl.php.net` を実行することが必要な場合があります。 サポートされている一部の Linux ディストリビューションでは、既定で PHP 7.1 が設定されますが、これは最新バージョンの SQL Server 用 PHP ドライバーではサポートされないことに注意してください。各セクションの先頭にある注記を参照して、代わりに PHP 7.2 または 7.3 をインストールしてください。
 
 Ubuntu に PHP FastCGI Process Manager (PHP FPM) をインストールする手順も記載されています。 Apache ではなく nginx web サーバーを使用する場合は、これが必要です。
 
-## <a name="contents-of-this-page"></a>このページの内容:
+## <a name="contents-of-this-page"></a>このページの内容
 
-- [Ubuntu 16.04、18.04、および 19.10 へのドライバーのインストール](#installing-the-drivers-on-ubuntu-1604-1804-and-1910)
+- [Ubuntu 16.04、18.04、および 20.04 へのドライバーのインストール](#installing-the-drivers-on-ubuntu-1604-1804-and-2004)
 - [Ubuntu での PHP/FPM を使用したドライバーのインストール](#installing-the-drivers-with-php-fpm-on-ubuntu)
 - [Red Hat 7 および 8 へのドライバーのインストール](#installing-the-drivers-on-red-hat-7-and-8)
 - [Debian 8、9、および 10 へのドライバーのインストール](#installing-the-drivers-on-debian-8-9-and-10)
@@ -34,7 +34,7 @@ Ubuntu に PHP FastCGI Process Manager (PHP FPM) をインストールする手�
 - [Alpine 3.11 へのドライバーのインストール](#installing-the-drivers-on-alpine-311)
 - [macOS High Sierra、Mojave、および Catalina へのドライバーのインストール](#installing-the-drivers-on-macos-high-sierra-mojave-and-catalina)
 
-## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-1910"></a>Ubuntu 16.04、18.04、および 19.10 へのドライバーのインストール
+## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-2004"></a>Ubuntu 16.04、18.04、および 20.04 へのドライバーのインストール
 
 > [!NOTE]
 > PHP 7.2 または 7.3 をインストールするには、次のコマンドの 7.4 を 7.2 または 7.3 に置き換えます。

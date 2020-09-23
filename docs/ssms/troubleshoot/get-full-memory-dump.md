@@ -1,6 +1,7 @@
 ---
+description: 完全メモリ ダンプの取得
 title: SSMS のトラブルシューティングを行うために完全メモリ ダンプを取得する
-Description: 完全メモリ ダンプを収集して SSMS の応答停止やクラッシュの問題のトラブルシューティングを行う
+Description: クラッシュやシステムが応答しない問題を解決できるように、SQL Server Management Studio (SSMS) から診断情報を取得します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -11,12 +12,12 @@ ms.author: maghan
 ms.reviewer: dineth, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: 7b55e8e68076ad14f874306ffdb578f619af1cf0
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 749562d3a4326c8db2d38e06dcc265b08b7cea68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091260"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314459"
 ---
 # <a name="get-full-memory-dump"></a>完全メモリ ダンプの取得
 
