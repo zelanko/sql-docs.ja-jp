@@ -33,12 +33,12 @@ ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b8b68b99fa522b69401eab47d54e40cdf8621c2
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: 0a715f64c0d6c1adf8ec3bc55b851848dfd1ae2e
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027283"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115371"
 ---
 # <a name="constants-transact-sql"></a>Constants (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "90027283"
   
 文字列の例は次のとおりです。
   
-```sql
+```
 'Cincinnati'  
 'O''Brien'  
 'Process X is 50% complete.'  
@@ -90,7 +90,7 @@ binary 型定数は 16 進数の文字列であり、`0x` というプレフィ�
   
 バイナリ文字列の例は次のとおりです。
   
-```sql
+```
 0xAE  
 0x12Ef  
 0x69048AEFDD010E  
@@ -108,7 +108,7 @@ binary 型定数は 16 進数の文字列であり、`0x` というプレフィ�
   
 例を次に **datetime** 定数。
   
-```sql
+```
 'December 5, 1985'  
 '5 December, 1985'  
 '851205'  
@@ -117,7 +117,7 @@ binary 型定数は 16 進数の文字列であり、`0x` というプレフィ�
   
 次に datetime 型定数の例を示します。
   
-```sql
+```
 '14:30:24'  
 '04:24 PM'  
 ```  
@@ -127,7 +127,7 @@ binary 型定数は 16 進数の文字列であり、`0x` というプレフィ�
   
 例を次に **integer** 定数。
   
-```sql
+```
 1894  
 2  
 ```  
@@ -137,7 +137,7 @@ binary 型定数は 16 進数の文字列であり、`0x` というプレフィ�
   
 例を次に **decimal **定数。
   
-```sql
+```
 1894.1204  
 2.0  
 ```  
@@ -147,7 +147,7 @@ binary 型定数は 16 進数の文字列であり、`0x` というプレフィ�
   
 次に **float** または **real** 値の例を示します。
   
-```sql
+```
 101.5E5  
 0.5E-2  
 ```  
@@ -162,7 +162,7 @@ binary 型定数は 16 進数の文字列であり、`0x` というプレフィ�
   
 例を次に **money** 定数。
   
-```sql
+```
 $12  
 $542023.14  
 ```  
@@ -172,7 +172,7 @@ $542023.14
   
 次の例は、両方とも同じ GUID を指定しています。
   
-```sql
+```
 '6F9619FF-8B86-D011-B42D-00C04FC964FF'  
 0xff19966f868b11d0b42d00c04fc964ff  
 ```  
@@ -182,27 +182,27 @@ $542023.14
   
 署名 **integer** 式。  
   
-```sql
+```
 +145345234
 -2147483648
 ```
 署名 **decimal** 式。  
   
-```sql
+```
 +145345234.2234
 -2147483648.10
 ```
   
 署名 **float** 式。  
   
-```sql
+```
 +123E-3
 -12E5
 ```
   
 署名 **money** 式。  
   
-```sql
+```
 -$45.56
 +$423456.99
 ```

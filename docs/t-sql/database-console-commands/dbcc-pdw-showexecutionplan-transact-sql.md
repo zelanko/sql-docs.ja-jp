@@ -13,12 +13,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 52fdb12c425f8d6e3faf9fb0f0ee3ce1a1c76195
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 63a08f85aab7a92699564486d3d31103118fc01c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076817"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114995"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 
@@ -89,7 +89,7 @@ SELECT [sql_spid], [pdw_node_id], [request_id], [dms_step_index], [type], [start
 FROM sys.dm_pdw_dms_workers   
 WHERE [status] <> 'StepComplete' and [status] <> 'StepError'  
 AND pdw_node_id = 201001   
-order by request_id, [dms_step_index], [distribution_id];  
+ORDER BY request_id, [dms_step_index], [distribution_id];  
 ```  
   
 上記のクエリの結果に基づき、DBCC PDW_SHOWEXECUTIONPLAN へのパラメーターとして、sql_spid と pdw_node_id を使用します。 たとえば、次のコマンドでは、pdw_node_id 201001 と sql_spid 375 の実行プランが表示されます。
