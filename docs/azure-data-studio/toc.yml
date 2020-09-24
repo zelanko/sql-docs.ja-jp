@@ -45,13 +45,13 @@
         - name: Machine Learning 拡張機能
           items:
             - name: Machine Learning 拡張機能の概要
-              href: machine-learning-extension.md
+              href: extensions/machine-learning-extension.md
             - name: データベースでのパッケージの管理
-              href: machine-learning-extension-manage-packages.md
+              href: extensions/machine-learning-extension-manage-packages.md
             - name: 予測を作成します
-              href: machine-learning-extension-predictions.md
+              href: extensions/machine-learning-extension-predictions.md
             - name: モデルのインポートと表示
-              href: machine-learning-extension-import-view-models.md
+              href: extensions/machine-learning-extension-import-view-models.md
         - name: Managed Instance の拡張機能
           href: extensions/azure-sql-managed-instance-extension.md
         - name: PostgreSQL の拡張機能
@@ -113,15 +113,15 @@
     - name: ノートブック
       items:
         - name: Notebooks の概要
-          href: notebooks-guidance.md
+          href: notebooks/notebooks-guidance.md
         - name: SQL カーネルを使用する
-          href: notebooks-tutorial-sql-kernel.md
+          href: notebooks/notebooks-sql-kernel.md
         - name: Python カーネルを使用する
-          href: notebooks-tutorial-python-kernel.md
+          href: notebooks/notebooks-python-kernel.md
         - name: Kusto カーネルを使用する
           href: notebooks/notebooks-kusto-kernel.md
-        - name: Kqlmagic 拡張機能
-          href: notebooks-kqlmagic.md
+        - name: Kqlmagic を使用する
+          href: notebooks/notebooks-kqlmagic.md
     - name: デプロイ
       items:
         - name: Azure SQL Edge のデプロイ
