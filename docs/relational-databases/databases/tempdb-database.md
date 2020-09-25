@@ -2,7 +2,7 @@
 title: tempdb データベース | Microsoft Docs
 description: このトピックでは、SQL Server と Azure SQL Database で tempdb データベースを構成し、使用する方法について説明します。
 ms.custom: P360
-ms.date: 04/17/2020
+ms.date: 09/16/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5090a021f1402c88abf84d502ae3538eeced5bd1
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 30e481590a41e5c5670360bac265a0d7656fff9f
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076827"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024344"
 ---
 # <a name="tempdb-database"></a>tempdb データベース
 
@@ -115,6 +115,8 @@ ms.locfileid: "90076827"
 
 ### <a name="tempdb-sizes-for-dtu-based-service-tiers"></a>DTU に基づくサービス層の tempdb のサイズ
 
+<!-- tempdb being larger for Basic and 50 eDTU pools than for 100-400 eDTU pools reflects actual config (historical reasons) --> 
+
 |サービス レベルの目標|`tempdb` の最大データ ファイル サイズ (GB)|`tempdb` のデータ ファイルの数|`tempdb` の最大データ サイズ (GB)|
 |---|---:|---:|---:|
 |Basic|13.9|1|13.9|
@@ -133,10 +135,16 @@ ms.locfileid: "90076827"
 |P6|13.9|12|166.7|
 |P11|13.9|12|166.7|
 |P15|13.9|12|166.7|
-|Premium エラスティック データベース プール数 (すべて DTU 構成)|13.9|12|166.7|
-|Standard エラスティック データベース プール数 (S0 - S2)|13.9|12|166.7|
-|Standard エラスティック データベース プール数 (S3 以上) |32|12|384|
-|Basic エラスティック データベース プール数 (すべて DTU 構成)|13.9|12|166.7|
+|Basic エラスティック プール (すべての DTU 構成)|13.9|12|166.7|
+|Standard エラスティック プール (50 eDTU)|13.9|12|166.7|
+|Standard エラスティック プール (100 eDTU)|32|1|32|
+|Standard エラスティック プール (200 eDTU)|32|2|64|
+|Standard エラスティック プール (300 eDTU)|32|3|96|
+|Standard エラスティック プール (400 eDTU)|32|3|96|
+|Standard エラスティック プール (800 eDTU)|32|6|192|
+|Standard エラスティック プール (1200 eDTU)|32|10|320|
+|Standard エラスティック プール (1600-3000 eDTU)|32|12|384|
+|Premium エラスティック プール (すべての DTU 構成)|13.9|12|166.7|
 ||||
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>vCore に基づくサービス層の tempdb のサイズ

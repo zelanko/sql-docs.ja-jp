@@ -30,12 +30,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0f7889af18a605ae5c6b02c8eaaac573fec1abc
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: df52bae9824dabc0a3c40ac9f301f2429c54e930
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688838"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990219"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -145,7 +145,7 @@ CREATE USER user_name
 > 作成後の Azure SQL Managed Instance 機能の Azure AD 管理者が変更されました。 詳しくは、「[マネージド インスタンス用の新しい Azure AD 管理機能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)」をご覧ください。
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse  
+-- Syntax for Azure Synapse Analytics  
   
 CREATE USER user_name   
     [ { { FOR | FROM } { LOGIN login_name }   
@@ -344,7 +344,7 @@ SQL Managed Instance データベースでユーザーを作成するとき、lo
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で包含データベース ユーザーを使用する場合、サーバー レベルのファイアウォール ルールではなく、データベース レベルのファイアウォール ルールを使用してアクセスを構成します。 詳細については、「[sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)」を参照してください。
  
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] の包含データベースのユーザーについては、SSMS で多要素認証がサポートされます。 詳細については、「 [SQL Database と SQL Data Warehouse での Azure AD MFA のための SSMS のサポート](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)」をご覧ください。  
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] の包含データベースのユーザーについては、SSMS で多要素認証がサポートされます。 詳細については、[SQL Database と [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] での Azure AD MFA のための SSMS のサポート](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)に関するページを参照してください。  
   
 ### <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER ANY USER 権限が必要です。  

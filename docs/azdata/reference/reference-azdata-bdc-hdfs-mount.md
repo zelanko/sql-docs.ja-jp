@@ -1,29 +1,30 @@
 ---
 title: azdata bdc hdfs mount リファレンス
 titleSuffix: SQL Server big data clusters
-description: このリファレンス記事では、azdata ツールの SQL コマンド、特に bdc hdfs mount コマンドについて説明します。
+description: azdata bdc hdfs mount コマンドのリファレンス記事です。
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bf0742083b458fb0d8280199a0afaeb44a05958a
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: acee94a5b2826b0386f22480901101688a220a16
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733761"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914835"
 ---
 # <a name="azdata-bdc-hdfs-mount"></a>azdata bdc hdfs mount
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+`azdata` への適用
 
-以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。
+以下の記事では、**azdata** ツールの **sql** コマンドに関するリファレンスを提供します。 他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。
 
 ## <a name="commands"></a>コマンド
-| command | 説明 |
+
+|command|説明|
 | --- | --- |
 [azdata bdc hdfs mount create](#azdata-bdc-hdfs-mount-create) | HDFS 内にリモート ストアのマウントを作成します。
 [azdata bdc hdfs mount delete](#azdata-bdc-hdfs-mount-delete) | HDFS 内のリモート ストアのマウントを削除します。
@@ -144,4 +145,7 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 
 ## <a name="next-steps"></a>次のステップ
 
-`azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](../install/deploy-install-azdata.md)に関するページを参照してください。
+他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 
+
+**azdata** ツールをインストールする方法の詳細については、「[azdata のインストール](..\install\deploy-install-azdata.md)」を参照してください。
+

@@ -1,31 +1,31 @@
 ---
 title: azdata bdc hdfs リファレンス
 titleSuffix: SQL Server big data clusters
-description: このリファレンス記事では、azdata ツールの SQL コマンド、特に bdc hdfs コマンドについて説明します。
+description: azdata bdc hdfs コマンドの参照記事。
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17cac3a31309402d01442b598785908cbf345bba
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 4cc99df7ada4ff4e0aced35c4cbcf4c39e8ca5c5
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733766"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914817"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+`azdata` への適用
 
-以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。
+以下の記事では、**azdata** ツールの **sql** コマンドに関するリファレンスを提供します。 他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。
 
 ## <a name="commands"></a>コマンド
-| command | 説明 |
+
+|command|説明|
 | --- | --- |
-[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | HDFS サービスの状態コマンド。
 [azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | HDFS シェルは、HDFS ファイル システムのための単純な対話型のコマンド シェルです。
 [azdata bdc hdfs ls](#azdata-bdc-hdfs-ls) | 指定されたファイルまたはディレクトリの状態を一覧表示します。
 [azdata bdc hdfs exists](#azdata-bdc-hdfs-exists) | ファイルまたはディレクトリが存在するかどうかを判定します。  存在する場合は True を、それ以外の場合は False を返します。
@@ -39,6 +39,7 @@ ms.locfileid: "89733766"
 [azdata bdc hdfs chown](#azdata-bdc-hdfs-chown) | 指定されたファイルの所有者またはグループを変更します。
 [azdata bdc hdfs cp](#azdata-bdc-hdfs-cp) | ローカル コンピューターと HDFS の間でファイルまたはディレクトリをコピーします。
 [azdata bdc hdfs mount](reference-azdata-bdc-hdfs-mount.md) | HDFS 内のリモート ストアのマウントを管理します。
+[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | HDFS サービスの状態コマンド。
 ## <a name="azdata-bdc-hdfs-shell"></a>azdata bdc hdfs shell
 HDFS シェルは、HDFS ファイル システムのための単純な対話型のコマンド シェルです。
 ```bash
@@ -69,7 +70,7 @@ azdata bdc hdfs ls --path -p
 ### <a name="examples"></a>例
 状態を一覧表示します。
 ```bash
-azdata bdc hdfs ls --path tmp/
+azdata bdc hdfs ls --path "tmp/"
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
 #### `--path -p`
@@ -94,7 +95,7 @@ azdata bdc hdfs exists --path -p
 ### <a name="examples"></a>例
 ファイルまたはディレクトリの存在を確認します。
 ```bash
-azdata bdc hdfs exists --path tmp/
+azdata bdc hdfs exists --path "tmp/"
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
 #### `--path -p`
@@ -119,7 +120,7 @@ azdata bdc hdfs mkdir --path -p
 ### <a name="examples"></a>例
 ディレクトリを作成します。
 ```bash
-azdata bdc hdfs mkdir --path tmp/
+azdata bdc hdfs mkdir --path "tmp/"
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
 #### `--path -p`
@@ -144,7 +145,7 @@ azdata bdc hdfs mv --source-path -s
 ### <a name="examples"></a>例
 ファイルまたはディレクトリを移動します。
 ```bash
-azdata bdc hdfs mv --source-path tmp/ --target-path "dest/"
+azdata bdc hdfs mv --source-path "tmp/" --target-path "dest/"
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
 #### `--source-path -s`
@@ -229,7 +230,7 @@ azdata bdc hdfs rm --path -p
 ### <a name="examples"></a>例
 ファイルまたはディレクトリを削除します。
 ```bash
-azdata bdc hdfs rm --path tmp/
+azdata bdc hdfs rm --path "tmp/"
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
 #### `--path -p`
@@ -254,7 +255,7 @@ azdata bdc hdfs rmr --path -p
 ### <a name="examples"></a>例
 ディレクトリを再帰的に削除します。
 ```bash
-azdata bdc hdfs rmr --path tmp/
+azdata bdc hdfs rmr --path "tmp/"
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
 #### `--path -p`
@@ -358,4 +359,7 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 
 ## <a name="next-steps"></a>次のステップ
 
-`azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](../install/deploy-install-azdata.md)に関するページを参照してください。
+他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 
+
+**azdata** ツールをインストールする方法の詳細については、「[azdata のインストール](..\install\deploy-install-azdata.md)」を参照してください。
+

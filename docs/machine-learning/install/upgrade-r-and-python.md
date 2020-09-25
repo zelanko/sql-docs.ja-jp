@@ -3,31 +3,29 @@ title: Upgrade Python および R ランタイムをアップグレードする 
 description: SQL Server Machine Learning Services または SQL Server R Services で、sqlbindr.exe を使用した Machine Learning Server へのバインドにより、Python および R ランタイムをアップグレードします。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/17/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 63bd14d9229d276966a3e118d097316a3ab58a4f
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: f6b7d5b0dbff20961b6f719e0e0f3360433712f8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009378"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990116"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services でバインドを使用して Python および R ランタイムをアップグレードする
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-この記事では**バインド**と呼ばれるインストール プロセスを使用して、[SQL Server 2016 R Services](../r/sql-server-r-services.md) または [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md) で R または Python ランタイムをアップグレードする方法について説明します。
+この記事では**バインド**と呼ばれるインストール プロセスを使用して、[SQL Server 2016 R Services](../r/sql-server-r-services.md) または [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md) で R または Python ランタイムをアップグレードする方法について説明します。 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server) に "*バインドする*" ことで、[より新しいバージョンの Python および R](#version-map) を入手できます。
 
 > [!IMPORTANT]
 > この記事では、*バインド*と呼ばれる、R および Python ランタイムをアップグレードする古い方法について説明します。 **SQL Server 2016 Services Pack (SP) 2 の累積的な更新プログラム (CU) 14 以降**または **SQL Server 2017 の累積的更新プログラム (CU) 22 以降**をインストールしている場合は、代わりに[既定の R または Python 言語ランタイムを新しいバージョンに変更する](change-default-language-runtime-version.md)方法をご覧ください。
 
-Microsoft Machine Learning Server に*バインドする*ことで、[より新しいバージョンの Python および R](#version-map) を入手できます。 このバージョンは、SQL Server Machine Learning Services (データベース内) と SQL Server R Services (データベース内) の両方に適用されます。
-
 ## <a name="what-is-binding"></a>バインドとは
 
-バインドは、**R_SERVICES** と **PYTHON_SERVICES** のフォルダーの内容を、[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index) の新しい実行可能ファイル、ライブラリ、およびツールを使用して交換するインストール プロセスです。
+バインドは、**R_SERVICES** と **PYTHON_SERVICES** のフォルダーの内容を、[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server) の新しい実行可能ファイル、ライブラリ、およびツールを使用して交換するインストール プロセスです。
 
 サービス モデルに付属するアップロード済みのコンポーネントが変更されました。 サービスの更新は、[モダン ライフサイクル](https://support.microsoft.com/help/30881/modern-lifecycle-policy)の [Microsoft R Server および Machine Learning Server のサポート タイムライン](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)と一致します。
 

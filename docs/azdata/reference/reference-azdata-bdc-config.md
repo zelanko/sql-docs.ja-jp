@@ -1,29 +1,30 @@
 ---
 title: azdata bdc config リファレンス
 titleSuffix: SQL Server big data clusters
-description: このリファレンス記事では、azdata ツールの SQL コマンド、特に bdc config コマンドについて説明します。
+description: azdata bdc config コマンドのリファレンス記事です。
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 59ed511415e331529a1378d0db426de71ab6c667
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: a823daa4864bf2b730a8746f46f0120a8f063564
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733827"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914642"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+`azdata` への適用
 
-以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。
+以下の記事では、**azdata** ツールの **sql** コマンドに関するリファレンスを提供します。 他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。
 
 ## <a name="commands"></a>コマンド
-| command | 説明 |
+
+|command|説明|
 | --- | --- |
 [azdata bdc config init](#azdata-bdc-config-init) | bdc 作成で使用できるビッグ データ クラスター構成プロファイルを初期化します。
 [azdata bdc config list](#azdata-bdc-config-list) | 使用可能な構成プロファイルの選択肢を一覧表示します。
@@ -32,12 +33,10 @@ ms.locfileid: "89733827"
 [azdata bdc config remove](#azdata-bdc-config-remove) | 構成ファイル内の json パスの値を削除します。
 [azdata bdc config replace](#azdata-bdc-config-replace) | 構成ファイル内の json パスの値を置き換えます。
 [azdata bdc config patch](#azdata-bdc-config-patch) | json 修正プログラム ファイルに基づいて、構成ファイルに修正プログラムを適用します。
-[azdata bdc config set](#azdata-bdc-config-set) | これは継続的な作業であり、ビッグ データ クラスターの構成が設定されます。
-[azdata bdc config upgrade](#azdata-bdc-config-upgrade) | これは継続的な作業であり、ビッグ データ クラスターの構成がアップグレードされます。
 ## <a name="azdata-bdc-config-init"></a>azdata bdc config init
 bdc 作成で使用できるビッグ データ クラスター構成プロファイルを初期化します。 構成プロファイルの特定のソースを引数で指定できます。
 ```bash
-azdata bdc config init [--target -t] 
+azdata bdc config init [--path -p] 
                        [--source -s]  
                        
 [--force -f]  
@@ -54,10 +53,10 @@ azdata bdc config init
 azdata bdc config init --source aks-dev-test --target custom
 ```
 ### <a name="optional-parameters"></a>省略可能なパラメーター
-#### `--target -t`
+#### `--path -p`
 構成プロファイルが配置される場所のファイル パス。既定値は <cwd>/custom です。
 #### `--source -s`
-構成プロファイルのソース: ['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
+構成プロファイルのソース: ['openshift-prod', 'aks-dev-test-ha', 'aro-dev-test-ha', 'aks-dev-test', 'kubeadm-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test']
 #### `--force -f`
 ターゲット ファイルを強制的に上書きします。
 #### `--accept-eula -a`
@@ -92,7 +91,7 @@ azdata bdc config list --config-profile aks-dev-test
 ```
 ### <a name="optional-parameters"></a>省略可能なパラメーター
 #### `--config-profile -c`
-既定の構成プロファイル: ['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
+既定の構成プロファイル: ['openshift-prod', 'aks-dev-test-ha', 'aro-dev-test-ha', 'aks-dev-test', 'kubeadm-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test']
 #### `--type -t`
 表示する構成の種類。
 #### `--accept-eula -a`
@@ -154,16 +153,16 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 ## <a name="azdata-bdc-config-add"></a>azdata bdc config add
 構成ファイル内の json パスの値を追加します。  以下の例はすべて Bash で指定されています。  別のコマンド ラインを使用している場合は、引用符の適切なエスケープが必要になる場合があることに注意してください。  あるいは、修正プログラム ファイルの機能を使用することもできます。
 ```bash
-azdata bdc config add --config-file -c 
+azdata bdc config add --path -p 
                       --json-values -j
 ```
 ### <a name="examples"></a>例
 例 1 - コントロール プレーン ストレージを追加します。
 ```bash
-azdata bdc config add --config-file custom/control.json --json-values "spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}"
+azdata bdc config add --path custom/control.json --json-values "spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}"
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
-#### `--config-file -c`
+#### `--path -p`
 設定する構成のビッグ データ クラスター構成ファイルのパス (custom/bdc.json など)
 #### `--json-values -j`
 値への json パスのキー値ペア リスト: key1.subkey1=value1,key2.subkey2=value2。 次のようなインライン json 値を指定できます。key='{"kind":"cluster","name":"test-cluster"}' or provide a file path, such as key=./values.json。 追加では条件文はサポートされません。  指定するインライン値が、"=" および "," を使用するキーと値のペア自体である場合は、それらの文字をエスケープしてください。  たとえば、key1="key2\=val2\,key3\=val3" のようになります。 パスの例については、 http://jsonpatch.com/ を参照してください。  配列にアクセスする場合は、インデックス (key.0=value など) を指定する必要があります。
@@ -181,16 +180,16 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 ## <a name="azdata-bdc-config-remove"></a>azdata bdc config remove
 構成ファイル内の json パスの値を削除します。  以下の例はすべて Bash で指定されています。  別のコマンド ラインを使用している場合は、引用符の適切なエスケープが必要になる場合があることに注意してください。  あるいは、修正プログラム ファイルの機能を使用することもできます。
 ```bash
-azdata bdc config remove --config-file -c 
+azdata bdc config remove --path -p 
                          --json-path -j
 ```
 ### <a name="examples"></a>例
 例 1 - コントロール プレーン ストレージを削除します。
 ```bash
-azdata bdc config remove --config-file custom/control.json --json-path ".spec.storage"
+azdata bdc config remove --path custom/control.json --json-path ".spec.storage"
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
-#### `--config-file -c`
+#### `--path -p`
 設定する構成のビッグ データ クラスター構成ファイルのパス (custom/bdc.json など)
 #### `--json-path -j`
 どの値を削除するかを示す jsonpatch ライブラリに基づいた json パスのリスト (key1.subkey1,key2.subkey2 など)。 削除では条件文はサポートされません。 パスの例については、 http://jsonpatch.com/ を参照してください。  配列にアクセスする場合は、インデックス (key.0=value など) を指定する必要があります。
@@ -208,24 +207,24 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 ## <a name="azdata-bdc-config-replace"></a>azdata bdc config replace
 構成ファイル内の json パスの値を置き換えます。  以下の例はすべて Bash で指定されています。  別のコマンド ラインを使用している場合は、引用符の適切なエスケープが必要になる場合があることに注意してください。  あるいは、修正プログラム ファイルの機能を使用することもできます。
 ```bash
-azdata bdc config replace --config-file -c 
+azdata bdc config replace --path -p 
                           --json-values -j
 ```
 ### <a name="examples"></a>例
 例 1 - 1 つのエンドポイント (コントローラー エンドポイント) のポートを置き換えます。
 ```bash
-azdata bdc config replace --config-file custom/control.json --json-values "$.spec.endpoints[?(@.name=="Controller")].port=30080"
+azdata bdc config replace --path custom/control.json --json-values "$.spec.endpoints[?(@.name=="Controller")].port=30080"
 ```
 例 2 - コントロール プレーン ストレージを置き換えます。
 ```bash
-azdata bdc config replace --config-file custom/control.json --json-values "spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}"
+azdata bdc config replace --path custom/control.json --json-values "spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}"
 ```
 例 3 - storage-0 リソース仕様を置き換えます (レプリカを含む)。
 ```bash
-azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}"
+azdata bdc config replace --path custom/bdc.json --json-values "$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}"
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
-#### `--config-file -c`
+#### `--path -p`
 設定する構成のビッグ データ クラスター構成ファイルのパス (custom/bdc.json など)
 #### `--json-values -j`
 値への json パスのキー値ペア リスト: key1.subkey1=value1,key2.subkey2=value2。 次のようなインライン json 値を指定できます。key='{"kind":"cluster","name":"test-cluster"}' or provide a file path, such as key=./values.json。 置き換えでは jsonpath ライブラリによる条件文がサポートされます。  これを使用するには、パスを $ で始めます。 これにより、条件文 (-j $.key1.key2[?(@.key3=='someValue'].key4=value など) を実行できます。 指定するインライン値が、"=" および "," を使用するキーと値のペア自体である場合は、それらの文字をエスケープしてください。  たとえば、key1="key2\=val2\,key3\=val3" のようになります。 以下の例を参照できます。 追加のヘルプについては、 https://jsonpath.com/ を参照してください。
@@ -243,33 +242,33 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 ## <a name="azdata-bdc-config-patch"></a>azdata bdc config patch
 指定された修正プログラム ファイルに従って、構成ファイルに修正プログラムを適用します。 パスを構成する方法の詳細については、 http://jsonpatch.com/ を参照してください。 置き換え操作では、jsonpath ライブラリ https://jsonpath.com/ に従って、そのパス内で条件文を使用できます。 すべての修正プログラム json ファイルは、対応する操作 (add、replace、remove)、パス、および値で構成される修正プログラムの配列を含む "patch" のキーで始まる必要があります。 "remove" 操作には値は必要なく、パスだけが必要です。 以下の例を参照してください。
 ```bash
-azdata bdc config patch --config-file -c 
+azdata bdc config patch --path 
                         --patch-file -p
 ```
 ### <a name="examples"></a>例
 例 1 - 修正プログラム ファイルを使用して、1 つのエンドポイント (コントローラー エンドポイント) を置き換えます。
 ```bash
-azdata bdc config patch --config-file custom/control.json --patch ./patch.json
+azdata bdc config patch --path custom/control.json --patch ./patch.json
 
     Patch File Example (patch.json):
         {"patch":[{"op":"replace","path":"$.spec.endpoints[?(@.name=="Controller")].port","value":30080}]}
 ```
 例 2 - 修正プログラム ファイルを使用して、コントロール プレーン ストレージを置き換えます。
 ```bash
-azdata bdc config patch --config-file custom/control.json --patch ./patch.json
+azdata bdc config patch --path custom/control.json --patch ./patch.json
 
     Patch File Example (patch.json):
         {"patch":[{"op":"replace","path":".spec.storage","value":{"accessMode":"ReadWriteMany","className":"managed-premium","size":"10Gi"}}]}
 ```
 例 3 - 修正プログラム ファイルを使用して、レプリカ (記憶域プール) を含むプール ストレージを置き換えます。
 ```bash
-azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
+azdata bdc config patch --path custom/bdc.json --patch ./patch.json
 
     Patch File Example (patch.json):
         {"patch":[{"op":"replace","path":"$.spec.resources.storage-0.spec","value":{"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}}]}
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
-#### `--config-file -c`
+#### `--path`
 設定する構成のビッグ データ クラスター構成ファイルのパス (custom/bdc.json など)
 #### `--patch-file -p`
 jsonpatch ライブラリに基づいた修正プログラム json ファイルへのパス (http://jsonpatch.com/ )。 修正プログラム json ファイルは、実行する修正プログラム適用操作の配列である値を持つ "patch" という名前のキーで始める必要があります。 修正プログラム適用操作のパスの場合は、ドット表記 (ほとんどの操作での key1.key2 など) を使用できます。 置き換え操作を実行するときに、条件文を必要とする配列内の値を置き換えている場合は、パスを $ で始めて jsonpath 表記を使用してください。 これにより、条件文 ($.key1.key2[?(@.key3=='someValue'].key4 など) を実行できます。 以下の例を参照してください。 条件文に関する追加のヘルプについては、 https://jsonpath.com/ を参照してください。
@@ -284,57 +283,10 @@ jsonpatch ライブラリに基づいた修正プログラム json ファイル�
 JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
-## <a name="azdata-bdc-config-set"></a>azdata bdc config set
-これは継続的な作業であり、ビッグ データ クラスターの構成が設定されます。
-```bash
-azdata bdc config set --name -n 
-                      
-```
-### <a name="examples"></a>例
-ビッグ データ クラスター テスト用の構成が設定されます。
-```bash
-azdata config set --name test
-```
-### <a name="required-parameters"></a>必須のパラメーター
-#### `--name -n`
-ビッグ データ クラスターの名前。kubernetes 名前空間に使用されます。
-### <a name="global-arguments"></a>グローバル引数
-#### `--debug`
-すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
-#### `--help -h`
-このヘルプ メッセージを表示して終了します。
-#### `--output -o`
-出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
-#### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org) を参照してください。
-#### `--verbose`
-ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
-## <a name="azdata-bdc-config-upgrade"></a>azdata bdc config upgrade
-これは継続的な作業であり、ビッグ データ クラスターの構成がアップグレードされます。
-```bash
-azdata bdc config upgrade --name -n 
-                          
-```
-### <a name="examples"></a>例
-ビッグ データ クラスター テスト用の構成のアップグレード。
-```bash
-azdata config upgrade --name test
-```
-### <a name="required-parameters"></a>必須のパラメーター
-#### `--name -n`
-ビッグ データ クラスターの名前。kubernetes 名前空間に使用されます。
-### <a name="global-arguments"></a>グローバル引数
-#### `--debug`
-すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
-#### `--help -h`
-このヘルプ メッセージを表示して終了します。
-#### `--output -o`
-出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
-#### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org) を参照してください。
-#### `--verbose`
-ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
 ## <a name="next-steps"></a>次のステップ
 
-`azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](../install/deploy-install-azdata.md)に関するページを参照してください。
+他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 
+
+**azdata** ツールをインストールする方法の詳細については、「[azdata のインストール](..\install\deploy-install-azdata.md)」を参照してください。
+

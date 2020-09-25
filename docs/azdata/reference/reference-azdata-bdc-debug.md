@@ -1,36 +1,37 @@
 ---
 title: azdata bdc debug リファレンス
 titleSuffix: SQL Server big data clusters
-description: このリファレンス記事では、azdata ツールの SQL コマンド、特に bdc debug コマンドについて説明します。
+description: azdata bdc debug コマンドのリファレンス記事です。
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e9d1f561666bf6aefdef6abf4b1daf568a5a89d8
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: fe9f79373bd26ab4b010c63487ffa38de44dae3b
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733815"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914576"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+`azdata` への適用
 
-以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。
+以下の記事では、**azdata** ツールの **sql** コマンドに関するリファレンスを提供します。 他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。
 
 ## <a name="commands"></a>コマンド
-| command | 説明 |
+
+|command|説明|
 | --- | --- |
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | ログをコピーします。
 [azdata bdc debug dump](#azdata-bdc-debug-dump) | メモリ ダンプをトリガーします。
 ## <a name="azdata-bdc-debug-copy-logs"></a>azdata bdc debug copy-logs
 ビッグ データ クラスターからデバッグ ログをコピーします。システム上に Kubernetes の構成が必要です。
 ```bash
-azdata bdc debug copy-logs --namespace -n 
+azdata bdc debug copy-logs --namespace -ns 
                            [--container -c]  
                            
 [--target-folder -d]  
@@ -44,7 +45,7 @@ azdata bdc debug copy-logs --namespace -n
 [--exclude-dumps -ed]
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
-#### `--namespace -n`
+#### `--namespace -ns`
 ビッグ データ クラスターの名前。kubernetes 名前空間に使用されます。
 ### <a name="optional-parameters"></a>省略可能なパラメーター
 #### `--container -c`
@@ -73,13 +74,13 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 ## <a name="azdata-bdc-debug-dump"></a>azdata bdc debug dump
 メモリ ダンプをトリガーし、それをコンテナーからコピーします。システム上に Kubernetes の構成が必要です。
 ```bash
-azdata bdc debug dump --namespace -n 
+azdata bdc debug dump --namespace -ns 
                       [--container -c]  
                       
 [--target-folder -d]
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
-#### `--namespace -n`
+#### `--namespace -ns`
 ビッグ データ クラスターの名前。kubernetes 名前空間に使用されます。
 ### <a name="optional-parameters"></a>省略可能なパラメーター
 #### `--container -c`
@@ -100,4 +101,7 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 
 ## <a name="next-steps"></a>次のステップ
 
-`azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](../install/deploy-install-azdata.md)に関するページを参照してください。
+他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 
+
+**azdata** ツールをインストールする方法の詳細については、「[azdata のインストール](..\install\deploy-install-azdata.md)」を参照してください。
+

@@ -1,31 +1,33 @@
 ---
 title: azdata bdc リファレンス
 titleSuffix: SQL Server big data clusters
-description: このリファレンス記事では、azdata ツールの SQL コマンド、特に多くの bdc コマンドについて説明します。
+description: azdata bdc コマンドのリファレンス記事です。
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dee94bc76f1a59940a753eec6944ccdab8bfc943
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: f3b7d4bd76e1b988fa9481fad18c4573c5b6a13b
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733713"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914730"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+`azdata` への適用
 
-以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。
+以下の記事では、**azdata** ツールの **sql** コマンドに関するリファレンスを提供します。 他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。
 
 ## <a name="commands"></a>コマンド
-| command | 説明 |
+
+|command|説明|
 | --- | --- |
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Spark コマンドを使用してセッション、ステートメント、およびバッチを作成および管理することで、ユーザーは Spark システムと対話できます。
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | HDFS モジュールには、HDFS ファイル システムにアクセスするコマンドが用意されています。
 [azdata bdc create](#azdata-bdc-create) | ビッグ データ クラスターを作成します。
 [azdata bdc delete](#azdata-bdc-delete) | ビッグ データ クラスターを削除します。
 [azdata bdc upgrade](#azdata-bdc-upgrade) | SQL Server ビッグ データ クラスターの各コンテナーにデプロイされているイメージを更新します。
@@ -39,7 +41,6 @@ ms.locfileid: "89733713"
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Spark サービス コマンド。
 [azdata bdc gateway](reference-azdata-bdc-gateway.md) | ゲートウェイ サービス コマンド。
 [azdata bdc app](reference-azdata-bdc-app.md) | アプリ サービス コマンド。
-[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | HDFS モジュールには、HDFS ファイル システムにアクセスするコマンドが用意されています。
 ## <a name="azdata-bdc-create"></a>azdata bdc create
 SQL Server ビッグ データ クラスターを作成します。Kubernetes の構成と環境変数 ['AZDATA_USERNAME', 'AZDATA_PASSWORD'] がシステムに必要です。
 ```bash
@@ -73,7 +74,7 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 ビッグ データ クラスターの名前。kubernetes 名前空間に使用されます。
 #### `--config-profile -c`
-クラスターの展開に使用されるビッグ データ クラスター構成プロファイル: ['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
+クラスターの展開に使用されるビッグ データ クラスター構成プロファイル: ['openshift-prod', 'aks-dev-test-ha', 'aro-dev-test-ha', 'aks-dev-test', 'kubeadm-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test']
 #### `--accept-eula -a`
 Do you accept the license terms? (ライセンス条項に同意しますか?) [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 azdata のライセンス条項については、 https://aka.ms/eula-azdata-en を参照してください。
 #### `--node-label -l`
@@ -174,4 +175,7 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 
 ## <a name="next-steps"></a>次のステップ
 
-`azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](../install/deploy-install-azdata.md)に関するページを参照してください。
+他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 
+
+**azdata** ツールをインストールする方法の詳細については、「[azdata のインストール](..\install\deploy-install-azdata.md)」を参照してください。
+

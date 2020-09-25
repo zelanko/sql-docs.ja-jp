@@ -2,7 +2,7 @@
 title: Azure Active Directory 認証を利用した接続
 description: Microsoft JDBC Driver for SQL Server で Azure Active Directory 認証機能を使用する Java アプリケーションを開発する方法について説明します。
 ms.custom: ''
-ms.date: 06/17/2020
+ms.date: 09/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae19b292788af43226de12a342e870768ad2ac26
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 04e52a1a84bb37fccd90f9ff32e0fdadde8fb2af
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899012"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117131"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 認証を利用した接続
 
@@ -33,7 +33,7 @@ Microsoft JDBC Driver for SQL Server で Azure Active Directory 認証をサポ�
     * **ActiveDirectoryIntegrated**
         * ドライバー バージョン **v6.0** 以降でサポートされています。`authentication=ActiveDirectoryIntegrated` を使用し、統合認証を使って Azure SQL Database および Data Warehouse に接続することができます。 この認証モードを使用するには、オンプレミスの Active Directory フェデレーション サービス (ADFS) をクラウドの Azure Active Directory とフェデレーションする必要があります。 これが設定されたら、Windows OS のアプリケーション クラス パスにネイティブ ライブラリ 'mssql-jdbc_auth-\<version>-\<arch>.dll' を追加するか、クロスプラットフォーム認証されるよう Kerberos チケットを設定します。 ドメインに参加しているマシンにログインしているときに資格情報の入力を求められることなく、Azure SQL Database と SQL Data Warehouse にアクセスできるようになります。
     * **ActiveDirectoryPassword**
-        * ドライバー バージョン **v6.0** 以降でサポートされています。`authentication=ActiveDirectoryPassword` を使用し、Azure AD プリンシパル名とパスワードを使って Azure SQL Database および Data Warehouse に接続することができます。
+        * ドライバー バージョン **v6.0** 以降でサポートされています。`authentication=ActiveDirectoryPassword` を使用し、Azure AD ユーザー名とパスワードを使って Azure SQL Database および Data Warehouse に接続することができます。
     * **SqlPassword**
         * `authentication=SqlPassword` を使用し、userName または user および password プロパティを使って SQL Server に接続します。
     * **NotSpecified**
@@ -113,7 +113,7 @@ You have successfully logged on as: <your Managed Identity username>
 > [!NOTE]
 >  古いバージョンのドライバーを使う場合は、こちらの[リンク](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)で、この認証モードを使用するために必要な該当する依存関係を確認してください。 
 
-次の例では、`authentication=ActiveDirectoryIntegrated` モードの使用方法を示します。 Azure Active Directory とフェデレーションされているドメインに参加しているコンピューターで、この例を実行します。 Azure AD プリンシパルを表す包含データベース ユーザー、または属しているグループの 1 つがデータベースに存在している必要があり、CONNECT 権限を持っている必要があります。 
+次の例では、`authentication=ActiveDirectoryIntegrated` モードの使用方法を示します。 Azure Active Directory とフェデレーションされているドメインに参加しているコンピューターで、この例を実行します。 Azure AD ユーザーを表す包含データベース ユーザー、または属しているグループの 1 つがデータベースに存在している必要があり、CONNECT 権限を持っている必要があります。 
 
 例をビルドして実行する前に、(例を実行する) クライアント コンピューターに、[azure-activedirectory-library-for-java ライブラリ](https://github.com/AzureAD/azure-activedirectory-library-for-java) とその依存関係をダウンロードし、それらを Java ビルド パスに含めます
 
