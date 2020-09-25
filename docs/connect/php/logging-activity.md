@@ -2,7 +2,7 @@
 title: アクティビティのログ記録
 description: Microsoft Drivers for PHP for SQL Server を使用する場合にログ オプションのさまざまな組み合わせを構成する方法について説明します
 ms.custom: ''
-ms.date: 08/10/2020
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6301b429191b0f563a5f1dea08bd6e8d92a0c46a
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 0d5da2aa33741e0c93b067bd942958ca70137d0b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680547"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024510"
 ---
 # <a name="logging-activity"></a>アクティビティのログ記録
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-既定では、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] で生成されるエラーと警告はログ記録されません。 このトピックでは、アクティビティのログ記録を構成する方法について説明します。  
+既定では、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] によって生成されるエラーと警告は PHP システム ログに記録されません。 このトピックでは、ドライバーによるアクティビティのログ記録を構成する方法について説明します。 ドライバー固有ではない PHP エラー処理設定を構成する方法の詳細については、[PHP のドキュメント](https://www.php.net/manual/en/errorfunc.configuration.php)を参照してください。  
   
 ## <a name="logging-activity-using-the-pdo_sqlsrv-driver"></a>PDO_SQLSRV ドライバーを使用したアクティビティのログ記録  
-PDO_SQLSRV ドライバーで利用可能な構成は、php.ini ファイル内の pdo_sqlsrv.log_severity エントリのみです。  
+PDO_SQLSRV ドライバーに固有の使用可能なログ構成は、php.ini ファイル内の pdo_sqlsrv.log_severity エントリのみです。  
   
 php.ini ファイルの最後に、次を追加します。  
   
@@ -37,7 +37,7 @@ pdo_sqlsrv.log_severity = <number>
   
 **log_severity** は次のいずれかの値をとります。場所は次の値のいずれかです。  
   
-|[値]|説明|  
+|値|説明|  
 |---------|---------------|  
 |0|ログ記録は無効です (何も定義されていない場合は、これが既定です)。|  
 |-1|エラー、警告、および通知をログ記録することを指定します。|  
@@ -53,7 +53,7 @@ PHP では、初期化時に構成ファイルを読み取り、データをキ�
 ログ記録をオンにするには、[sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 関数を使用するか、php.ini ファイルを変更することができます。 初期化、接続、ステートメント、またはエラー関数のアクティビティをログ記録できます。 また、エラー、警告、通知、または 3 つすべてをログ記録するかどうかも指定できます。  
   
 > [!NOTE]  
-> ログ ファイルの場所は php.ini ファイルで構成できます。  
+> ログ ファイルの場所は php.ini ファイルで構成できます。 詳細については、[PHP のドキュメント](https://www.php.net/manual/en/errorfunc.configuration.php)を参照してください。  
   
 ### <a name="turning-logging-on"></a>ログ記録をオンにする  
 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 関数を使用して、**LogSubsystems** 設定の値を指定し、ログ記録をオンにすることができます。 たとえば、次のコードの行は、接続時のアクティビティをログ記録するようにドライバーを構成します。  
@@ -65,7 +65,7 @@ PHP では、初期化時に構成ファイルを読み取り、データをキ�
 |値 (かっこ内と同等の整数)|説明|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|すべてのサブシステムのログ記録をオンにします。|  
-|SQLSRV_LOG_SYSTEM_OFF (0)|ログ記録をオフにします。 これは既定値です。|  
+|SQLSRV_LOG_SYSTEM_OFF (0)|ログ記録をオフにします。 既定値です。|  
 |SQLSRV_LOG_SYSTEM_INIT (1)|初期化アクティビティのログ記録をオンにします。|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|接続アクティビティのログ記録をオンにします。|  
 |SQLSRV_LOG_SYSTEM_STMT (4)|ステートメント アクティビティのログ記録をオンにします。|  
@@ -96,7 +96,7 @@ PHP では、初期化時に構成ファイルを読み取り、データをキ�
 |値 (かっこ内と同等の整数)|説明|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|エラー、警告、および通知をログ記録することを指定します。|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|エラーをログに記録することを指定します。 これは既定値です。|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|エラーをログに記録することを指定します。 既定値です。|  
 |SQLSRV_LOG_SEVERITY_WARNING (2)|警告をログに記録することを指定します。|  
 |SQLSRV_LOG_SEVERITY_NOTICE (4)|通知をログに記録することを指定します。|  
   

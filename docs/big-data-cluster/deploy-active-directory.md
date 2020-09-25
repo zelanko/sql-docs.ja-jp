@@ -5,16 +5,16 @@ description: Active Directory ドメインで SQL Server ビッグ データ ク
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 09/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 345002bdf21ee13fc6d33c9cbc1e9938a8b58377
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 92c170e16a05d67f21931479f82f5edb1856b12f
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076657"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90687788"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する
 
@@ -24,12 +24,31 @@ ms.locfileid: "90076657"
 
 >[!Note]
 >SQL Server 2019 CU5 リリースの前は、ビッグ データ クラスターに制限があるため、Active Directory ドメインに対してデプロイできるクラスターは 1 つだけでした。 この制限は、CU5 リリースで削除されています。新しい機能の詳細については、[概念: Active Directory モードで](active-directory-deployment-background.md) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] をデプロイする方法に関するページを参照してください。 この記事の例は、デプロイの両方のユース ケースに対応するように調整されています。
+>
 
 ## <a name="background"></a>バックグラウンド
 
-Active Directory (AD) 認証を有効にするために、BDC では、クラスター内のさまざまなサービスで必要となるユーザー、グループ、コンピューター アカウント、サービス プリンシパル名 (SPN) が自動的に作成されます。 このようなアカウントを一部含め、スコーピングを許可するため、BDC 関連のあらゆる AD オブジェクトが作成されるデプロイ中に組織単位 (OU) を選択します。 クラスター展開前にこの OU を作成します。
+Active Directory (AD) 認証を有効にするために、BDC では、クラスター内のさまざまなサービスで必要となるユーザー、グループ、コンピューター アカウント、サービス プリンシパル名 (SPN) が自動的に作成されます。 このようなアカウントを一部含め、スコーピングを許可するために、クラスター デプロイの前に組織単位 (OU) を作成することをお勧めします。 すべての BDC 関連の AD オブジェクトは、デプロイ中に作成されます。 
 
-Active Directory で必須のオブジェクトをすべて自動作成するには、展開中、BDC に AD アカウントが必要になります。 このアカウントには、指定の OU 内でユーザー、グループ、コンピューター アカウントを作成する権限を与える必要があります。
+## <a name="pre-requisites"></a>前提条件
+
+### <a name="organizational-unit-ou"></a>組織単位 (OU)
+組織単位 (OU) は、ユーザー、グループ、およびその他の組織単位を配置する、Active Directory 内の区分です。 全体像としては、組織単位を使用して組織の機能やビジネスの構造を反映することができます。 この記事では、例として `bdc` という名前の OU を作成します。 
+
+>[!NOTE]
+>組織単位 (OU) は管理上の境界を表し、お客様がデータ管理者の権限の範囲を制御できるようになります。 
+
+
+[OU の設計原則](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts)に従って、組織内で OU を使用する際の最適な構造を決定することができます。 
+
+### <a name="ad-account-for-bdc-domain-service-account"></a>BDC ドメイン サービス アカウントの AD アカウント
+
+BDC には、Active Directory で必要なすべてのオブジェクトを自動的に作成できるようにするために、指定した組織単位 (OU) 内にユーザー、グループ、およびコンピューター アカウントを作成するための特定のアクセス許可を持つ AD アカウントが必要です。 この記事では、この AD アカウントのアクセス許可を構成する方法について説明します。 この記事では、例として `bdcDSA` という AD アカウントを使用します。
+
+### <a name="auto-generated-active-directory-objects"></a>自動的に生成される Active Directory のオブジェクト
+BDC をデプロイすると、アカウントとグループ名が自動的に生成されます。 各アカウントは BDC 内の 1 つのサービスを表し、BDC クラスターが使用されている全有効期間にわたり BDC によって管理されます。 これらのアカウントにより、各サービスに必要なサービス プリンシパル名 (SPN) が所有されます。  AD の自動生成されるアカウント、グループ、およびそれらによって管理されるサービスの完全な一覧については、「[自動的に生成される Active Directory のオブジェクト](active-directory-objects.md)」をご覧ください。
+
+
 
 >[!IMPORTANT]
 >ドメイン コントローラーで設定されているパスワードの有効期限ポリシーによっては、これらのアカウントのパスワードの有効期限が切れることがあります。 既定の有効期限ポリシーは 42 日です。 BDC 内のすべてのアカウントの資格情報をローテーションするメカニズムはないため、有効期限が切れるとクラスターは動作しなくなります。 この問題を回避するには、ドメイン コントローラーで、BDC サービス アカウントの有効期限ポリシーを "パスワードを無期限にする" に更新します。 この操作は、有効期限の前または後に行うことができます。 後者の場合、Active Directory によって、期限切れのパスワードが再アクティブ化されます。
@@ -38,16 +57,16 @@ Active Directory で必須のオブジェクトをすべて自動作成するに
 >
 >:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="パスワードの有効期限のポリシーの設定":::
 
-AD アカウントとグループの一覧については、「[Active Directory オブジェクトの自動生成](active-directory-objects.md)」を参照してください。
 
 次の手順では、Active Directory ドメイン コントローラーを既に用意していることを前提としています。 ドメイン コントローラーがない場合、[こちら](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx)のガイドに含まれる手順が参考になります。
+
 
 ## <a name="create-ad-objects"></a>AD オブジェクトの作成
 
 AD 統合で BDC を展開する前に次の操作を行います。
 
-1. すべての BDC AD オブジェクトを格納する組織単位 (OU) を作成します。 または、デプロイ時に、既存の OU を選択することもできます。
-1. BDC の AD アカウントを作成するか、既存のアカウントを使用し、この BDC AD アカウントに正しい権限を付与します。
+1. すべての BDC 関連の AD オブジェクトを格納する組織単位 (OU) を作成します。 または、デプロイ時に、既存の OU を選択することもできます。
+1. BDC 用の AD アカウントを作成するか、既存のアカウントを使用し、この BDC の AD アカウントに指定した組織単位 (OU) の適切なアクセス許可を付与します。
 
 ### <a name="create-a-user-in-ad-for-bdc-domain-service-account"></a>BDC ドメイン サービス アカウントの AD でユーザーを作成する
 

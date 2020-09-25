@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e3ca3a5640a6de6f985cb90449a1f3ba22a42ddd
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: d5e7210ca7ae9e4777c11b7c774b90572d2832b0
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076686"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570648"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の累積的な更新プログラムの CAB ダウンロード
 
@@ -91,7 +91,12 @@ CAB ファイルは、新しい順で一覧表示されます。 CAB ファイ�
 
 |Release  |コンポーネント | ダウンロード リンク  | 対処された問題 | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU19](https://support.microsoft.com/help/4535007/)-[CU20](https://support.microsoft.com/en-us/help/4541283/)** |  |  |  |
+|**[SQL Server 2017 CU22](https://support.microsoft.com/help/4577467/)** |  |  |  |
+| | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
+| | R Server              | [SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)  |  |
+| | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
+| | Python サーバー         | [SPS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136731)  |  |
+|**[SQL Server 2017 CU19](https://support.microsoft.com/help/4535007/)-[CU20](https://support.microsoft.com/help/4541283/)** |  |  |  |
 | | Microsoft R Open | [SRO_3.3.3.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106367&clcid=1033) | `sp_execute_external_script` で R スクリプトを実行すると警告メッセージが表示されるバグを修正しました。 |
 | | R Server| [SRS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106460&clcid=1033) | 以前のバージョンからの変更はありません。 |
 | | Microsoft Python Open | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033) | 以前のバージョンからの変更はありません。 |

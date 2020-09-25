@@ -10,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: drswkier; sstein
 ms.date: 07/06/2020
-ms.openlocfilehash: 3d162630d029fcde31275ce4d09cfe05bdf78c36
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: dbf4c4de7e8bdcb945f2c11c0b63f7cf75ce318b
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714250"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989445"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -69,6 +69,13 @@ sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
  ```
 
+sqlpackage のバージョンを表示します。
+
+```
+sqlpackage.exe /Version
+ ```
+
+
 ## <a name="extract-parameters-and-properties"></a>抽出パラメーターとプロパティ
 SqlPackage.exe の Extract 操作を実行すると、SQL Server または Azure SQL Database から DACPAC パッケージ (.dacpac ファイル) へのライブ データベースのスキーマが作成されます。 既定では、データは .dacpac ファイルに含まれません。 データを含めるには、[Export アクション](#export-parameters-and-properties)を使用します。 
 
@@ -98,7 +105,7 @@ SqlPackage.exe の Extract 操作を実行すると、SQL Server または Azure
 
 ### <a name="properties-specific-to-the-extract-action"></a>抽出アクションに固有のプロパティ
 
-|プロパティ|[値]|説明|
+|プロパティ|値|説明|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
 |**/p:**|DacApplicationDescription=(STRING)|DACPAC メタデータに格納されるアプリケーションの説明を定義します。|
@@ -164,7 +171,7 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 
 ### <a name="properties-specific-to-the-publish-action"></a>公開アクションに固有のプロパティ
 
-|プロパティ|[値]|説明|
+|プロパティ|値|説明|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|配置コントリビューターに追加の配置コントリビューター引数を指定します。 複数の値を指定する場合は、セミコロンで区切ります。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|dacpac を配置するときに実行する必要がある、追加の配置コントリビューターを指定します。 このとき、セミコロン区切りで、完全修飾ビルド コントリビューター名または ID を指定する必要があります。|
@@ -297,7 +304,7 @@ SqlPackage.exe の Export 操作を実行すると、SQL Server または Azure 
 
 ### <a name="properties-specific-to-the-export-action"></a>エクスポート アクションに固有のプロパティ
 
-|プロパティ|[値]|説明|
+|プロパティ|値|説明|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| SQLServer に対してクエリを実行するときのデータベース ロックのタイムアウトを秒単位で指定します。 無期限に待機するには、-1 を使用します。|
@@ -337,7 +344,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 
 インポート アクションに固有のプロパティ:
 
-|プロパティ|[値]|説明|
+|プロパティ|値|説明|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Azure SQL Database のエディションを定義します。|
@@ -392,7 +399,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 
 ## <a name="properties-specific-to-the-deployreport-action"></a>DeployReport アクションに固有のプロパティ
 
-|プロパティ|[値]|説明|
+|プロパティ|値|説明|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|配置コントリビューターに追加の配置コントリビューター引数を指定します。 複数の値を指定する場合は、セミコロンで区切ります。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|dacpac を配置するときに実行する必要がある、追加の配置コントリビューターを指定します。 このとき、セミコロン区切りで、完全修飾ビルド コントリビューター名または ID を指定する必要があります。|
@@ -557,7 +564,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 
 ### <a name="properties-specific-to-the-script-action"></a>スクリプト アクションに固有のプロパティ
 
-|プロパティ|[値]|説明|
+|プロパティ|値|説明|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|配置コントリビューターに追加の配置コントリビューター引数を指定します。 複数の値を指定する場合は、セミコロンで区切ります。
 |**/p:**|AdditionalDeploymentContributors=(STRING)|dacpac を配置するときに実行する必要がある、追加の配置コントリビューターを指定します。 このとき、セミコロン区切りで、完全修飾ビルド コントリビューター名または ID を指定する必要があります。
