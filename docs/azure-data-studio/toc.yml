@@ -102,8 +102,6 @@
           href: extensions/wizard-extension.md
     - name: 統合ターミナル (PowerShell、Bash)
       href: integrated-terminal.md
-    - name: キーボード ショートカット
-      href: keyboard-shortcuts.md
     - name: サーバー グループ
       href: server-groups.md
     - name: ソース管理
@@ -132,14 +130,14 @@
       href: code-snippets.md
     - name: エクスプローラーの Azure SQL リソース
       href: azure-resource-explorer.md
+    - name: キーボード ショートカット
+      href: keyboard-shortcuts.md
     - name: 使用状況データ収集
       href: usage-data-collection.md
-    - name: ワークスペースとユーザー設定
-      href: settings.md
     - name: Windows 認証 (Kerberos)
       href: enable-kerberos.md
-    - name: 使用状況データ収集
-      href: usage-data-collection.md
+    - name: ワークスペースとユーザー設定
+      href: settings.md
 - name: References
   items:
     - name: SQL ツール

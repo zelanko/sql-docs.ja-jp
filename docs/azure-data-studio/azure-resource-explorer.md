@@ -1,20 +1,20 @@
 ---
 title: Azure Resource Explorer を使用して Azure SQL リソースを調べる
 description: Azure Resource Explorer を使用して、Azure SQL Server、Azure SQL Database、Azure SQL Managed Instance を調査し、管理する方法について学習します。
-ms.custom: seodec18
+ms.prod: azure-data-studio
+ms.technology: azure-data-studio
+ms.topic: how-to
 author: yanancai
 ms.author: yanacai
 ms.reviewer: alayu, maghan, sstein
-ms.topic: quickstart
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
+ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dab8425871d32641e696cc3fee2d92a45b7bdf3b
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 5b4081d98a30daa61a1e10ecf4faa6000a0fe11c
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746102"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364162"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Azure Resource Explorer を使用して Azure SQL リソースを調査および管理する
 
