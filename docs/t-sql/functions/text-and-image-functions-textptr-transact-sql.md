@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 510f2e6f0097b79cd458907a73ae094ff5cc637d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83e8edcea68c22bdd14154203c9bf13b84b42156
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422596"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380507"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>テキスト関数とイメージ関数 - TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88422596"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 TEXTPTR ( column )  
 ```  
   
@@ -78,10 +77,10 @@ TEXTPTR ( column )
 ### <a name="a-using-textptr"></a>A. TEXTPTR を使用する  
  次の例では、`TEXTPTR` 関数を使用して、`pubs` データベースの `pub_info` テーブル内の `New Moon Books` に関連付けられている **image** 列 `logo` を検索します。 テキスト ポインターは、ローカル変数 `@ptrval.` に格納されます。  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @ptrval varbinary(16);  
+DECLARE @ptrval VARBINARY(16);  
 SELECT @ptrval = TEXTPTR(logo)  
 FROM pub_info pr, publishers p  
 WHERE p.pub_id = pr.pub_id   
@@ -92,8 +91,8 @@ GO
 ### <a name="b-using-textptr-with-in-row-text"></a>B. TEXTPTR を行内テキストと使用する  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、行内テキスト ポインターは、次の例に示すように、トランザクション内で使用する必要があります。  
   
-```  
-CREATE TABLE t1 (c1 int, c2 text);  
+```sql
+CREATE TABLE t1 (c1 INT, c2 TEXT);  
 EXEC sp_tableoption 't1', 'text in row', 'on';  
 INSERT t1 VALUES ('1', 'This is text.');  
 GO  
@@ -109,7 +108,7 @@ COMMIT;
 ### <a name="c-returning-text-data"></a>C. テキスト データを返す  
  次の例では、`pub_info` テーブルから `pub_id` 列、および `pr_info` 列の 16 バイトのテキスト ポインターを選択します。  
   
-```  
+```sql
 USE pubs;  
 GO  
 SELECT pub_id, TEXTPTR(pr_info)  
@@ -137,7 +136,7 @@ pub_id
   
  次の例では、TEXTPTR を使用せずにテキストの最初の `8000` バイトを返す方法を示します。  
   
-```  
+```sql
 USE pubs;  
 GO  
 SET TEXTSIZE 8000;  
@@ -168,10 +167,10 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ### <a name="d-returning-specific-text-data"></a>D. 特定のテキスト データを返す  
  次の例では、`pubs` データベースの `pub_info` テーブル内の `pub_id``0736` に関連付けられた `text` 列 (`pr_info`) を検索します。 まず、ローカル変数 `@val` が宣言されます。 次に、テキスト ポインター (長いバイナリ文字列) が `@val` に挿入され、`READTEXT` ステートメントにパラメーターとして指定されます。 これによって、5 番目のバイト (オフセットは 4) から開始して、10 バイトのデータが返されます。  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @val varbinary(16);  
+DECLARE @val VARBINARY(16);  
 SELECT @val = TEXTPTR(pr_info)   
 FROM pub_info  
 WHERE pub_id = '0736';  
