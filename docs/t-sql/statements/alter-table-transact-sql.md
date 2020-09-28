@@ -61,12 +61,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35c55f7a989899e46c1189909fd4d90041ac8165
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: df75737944bb7d21bf4a3f8884688915eca52827
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024449"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227414"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -1110,7 +1110,7 @@ ALTER TABLE 権限は、ALTER TABLE SWITCH ステートメントに含まれる�
 
 ALTER TABLE ステートメント内の任意の列を、共通言語ランタイム (CLR) ユーザー定義型または別名データ型として定義している場合は、その型に対する REFERENCES 権限が必要です。
 
-テーブルの行を更新する列を追加するには、テーブルの **UPDATE** 権限が必要です。 たとえば、既定値を持つ **NOT NULL** 列を追加する場合や、テーブルが空でないときに ID 列を追加する場合です。
+テーブルの行を更新する列を追加または変更するには、テーブルの **UPDATE** 権限が必要です。 たとえば、既定値を持つ **NOT NULL** 列を追加する場合や、テーブルが空でないときに ID 列を追加する場合です。
 
 ## <a name="examples"></a><a name="Example_Top"></a> 使用例
 

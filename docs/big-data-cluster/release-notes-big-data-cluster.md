@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9c08893006e0b2edf093477259ebed788d49097
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 75af471239529587cf51b151c04a541a612949c0
+ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989995"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91145391"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 ビッグ データ クラスターのリリース ノート
 
@@ -62,7 +62,7 @@ ms.locfileid: "90989995"
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] のリリース履歴の一覧を次の表に示します。
 
-| リリース <sup>1</sup> | BDC のバージョン  | `azdata` バージョン <sup>2</sup> | リリース日 |
+| Release | BDC のバージョン  | `azdata` バージョン <sup>1</sup> | リリース日 |
 |----------------------|--------------|-------------------------------|--------------|
 | [CU6](#cu6)          | 15.0.4053.23 | 20.0.1                        | 2020-08-04   |
 | [CU5](#cu5)          | 15.0.4043.16 | 20.0.0                        | 2020-06-22   |
@@ -72,9 +72,7 @@ ms.locfileid: "90989995"
 | [CU1](#cu1)          | 15.0.4003.23 | 15.0.4003                     | 2020-01-07   |
 | [GDR1](#rtm)         | 15.0.2070.34 | 15.0.2070                     | 2019-11-04   |
 
-<sup>1</sup> CU7 の SQL Server 2019 ビッグ データ クラスター更新プログラムはありません。
-
-<sup>2</sup> `azdata` バージョンは、CU リリース時のツールのバージョンを反映しています。 `azdata` はサーバー リリースとは無関係でリリースされることもあります。そのため、最新のパッケージをインストールするとき、新しいバージョンが取得されることがあります。 新しいバージョンは、前にリリースされた CU との間に互換性があります。
+<sup>1</sup> `azdata` バージョンは、CU リリース時のツールのバージョンを反映しています。 `azdata` はサーバー リリースとは無関係でリリースされることもあります。そのため、最新のパッケージをインストールするとき、新しいバージョンが取得されることがあります。 新しいバージョンは、前にリリースされた CU との間に互換性があります。
 
 ## <a name="how-to-install-updates"></a>更新プログラムのインストール方法
 
@@ -177,7 +175,7 @@ SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-cluster
 
 - **回避策**:BDC をアップグレードする前に、アクティブな Livy セッションまたはバッチ ジョブがないことを確認してください。 これを回避するには、「[サポートされているリリースからのアップグレード](deployment-upgrade.md#upgrade-from-supported-release)」の手順に従ってください。 
 
-   アップグレード処理中に Livy から 404 エラーが返された場合は、両方の sparkhead ノードで Livy サーバーを再起動します。 次に例を示します。
+   アップグレード処理中に Livy から 404 エラーが返された場合は、両方の sparkhead ノードで Livy サーバーを再起動します。 たとえば、次のように入力します。
 
    ```console
    kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy

@@ -8,12 +8,13 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 59cbdd31d32014d54240b4c20937918aaa2c0770
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.custom: references_regions
+ms.openlocfilehash: 8312ab1f13d5a85c6dfb43cd29d0ba734846a512
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90943015"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210583"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>Azure Arc 対応 SQL Server (プレビュー)
 
@@ -25,7 +26,7 @@ SQL Server は、Connected Machine エージェントを介して Azure Arc に�
 
 Azure Arc 対応 SQL Server のパブリック プレビューでは、Microsoft Monitoring Agent (MMA) サーバーの拡張機能をインストールし、データ収集とレポートのために Azure Log Analytics ワークスペースに接続する必要がある一連のソリューションをサポートしています。 これらのソリューションには、Azure Security Center と Azure Sentinel を使用した高度なデータ セキュリティと、オンデマンド SQL Assessment 機能を使用した SQL 環境の正常性チェックが含まれます。
 
-次の図は、仮想環境を使用した Azure Arc 対応 SQL Server のアーキテクチャを示しています。
+次の図は、Azure Arc 対応 SQL Server のアーキテクチャを示しています。
 
 ![パブリック プレビューのアーキテクチャ](media/overview/pubic-preview-architecture.png)
 
@@ -71,7 +72,7 @@ Connected Machine エージェントに必要な[ネットワーク構成、ト�
 - 西ヨーロッパ
 - 英国南部
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 - [SQL Server を Azure Arc に接続する](connect.md)
 - [オンデマンド SQL 評価を使用して、環境の正常性チェックを定期的に行うように SQL Server インスタンスを構成する](assess.md)

@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 59a6ff65e25878aefe08cfd87bf1f9e36da7366b
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: f3d2051e7003407a4ba7cbb3fb2ff8682ec6ee8f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90943046"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227325"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>Azure Arc 対応 SQL Server インスタンスのオンデマンド SQL 評価を構成する
 
@@ -37,7 +37,7 @@ ms.locfileid: "90943046"
 
    ![SQL Assessment の選択](media/assess/sql-assessment-heading-sql-server-arc.png)
 
-1. データ コレクション マシンで作業ディレクトリを指定します。 収集および分析時、データは一時的にそのフォルダーに格納されます。 フォルダーが存在しない場合は、自動的に作成されます。
+1. データ コレクション マシンで作業ディレクトリを指定します。 既定では `C:\sql_assessment\work_dir` が使用されます。 収集および分析時、データは一時的にそのフォルダーに格納されます。 フォルダーが存在しない場合は、自動的に作成されます。
 
 1. __[構成スクリプトのダウンロード]__ をクリックし、ダウンロードしたスクリプトをターゲット マシンにコピーします。
 
@@ -73,6 +73,8 @@ Microsoft Monitoring Agent を使用すると、15 分ごとに作業フォル�
 
 ![処理されたデータ ファイル](media/assess/sql-assessment-data-files-processed.png)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 詳細については、「[サービス ハブのオンデマンド評価の前提条件](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)」の SQL Server ドキュメントを参照してください。
+
+オンデマンド SQL Assessment の包括的なサポートを受けるには、Premier または統合サポート サブスクリプションが必要です。 詳細については、[Azure Premier サポート](https://azure.microsoft.com/support/plans/premier)に関するページをご覧ください。

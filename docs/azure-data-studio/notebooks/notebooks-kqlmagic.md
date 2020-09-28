@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: f927f2259c96b0b42e184d0f4b0ee7e49cd5df01
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 61b87d2dae44f30f84b513f6809ba8597de7712f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136857"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226972"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Azure Data Studio の Kqlmagic
 
@@ -107,6 +107,10 @@ ms.locfileid: "91136857"
    ```python
    %kql azureDataExplorer://code;cluster='help';database='Samples'
    ```
+
+    > [!Note]
+    > 独自の ADX クラスターを使用している場合は、次のように、接続文字列にリージョンを含める必要があります。   
+    ```%kql azuredataexplorer://code;cluster='mycluster.westus';database='mykustodb'```
 
    デバイスのログインを使用して認証します。 出力からコードをコピーし、**認証**を選択します。これにより、コードを貼り付ける必要があるブラウザーが開きます。 正常に認証されたら、Azure Data Studio に戻って、スクリプトの残りの部分を続行できます。
 
@@ -210,7 +214,7 @@ ms.locfileid: "91136857"
 
 1. **[カーネル]** が *[Python 3]* に設定されていることを確認します。
 
-   ![変更](media/notebooks-kqlmagic/change-kernel.png)
+   ![Change](media/notebooks-kqlmagic/change-kernel.png)
 
 2. Kqlmagic を読み込みます。
 

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 6533133aaac7f2479bb9eea27ef3f6c47e019938
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 3df020725458318aa1c3936b2b4430582ace8997
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942766"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226827"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Azure Data Studio 用の Kusto (KQL) 拡張機能 (プレビュー)
 
@@ -126,7 +126,13 @@ Azure Data Studio で [SandDance 拡張機能](https://docs.microsoft.com/sql/az
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance 視覚化":::
 
-## <a name="next-steps"></a>次のステップ
+## <a name="limitations-and-considerations"></a>制限事項と考慮事項
+
+- Kusto クエリを実行する前に、Azure Data Explorer クラスター用のデータベースを選択する必要があります。
+- Azure Data Explorer クラスターをあまり長い時間アイドル状態にしておくと、接続が切断される可能性があります。
+    - 対処法:クラスターから切断して再接続します。
+
+## <a name="next-steps"></a>次の手順
 
 - [Kusto ノートブックの作成と実行](../notebooks/notebooks-kusto-kernel.md)
 - [Azure Data Studio の Kqlmagic ノートブック](../notebooks-kqlmagic.md)

@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a147dc29131e8764b723bc981567faae9593f369
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 8d9ba741433cf5e010861dd3096ac9bf8b4f1707
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136985"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227163"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>SQL Server 用の R カスタム ランタイムをインストールする
 
@@ -164,7 +164,7 @@ net start MSSQLLAUNCHPAD$MSSQLSERVER
 
 ## <a name="download-r-language-extension"></a>R 言語拡張機能をダウンロードする
 
-R 言語拡張機能 [R-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143953) が含まれる zip ファイルをダウンロードします。
+[Windows 用 R 言語拡張機能が含まれている zip ファイル](https://github.com/microsoft/sql-server-language-extensions/releases)をダウンロードします。 運用環境ではリリース バージョンを使用することをお勧めします。 開発またはテストではデバッグ バージョンを使用します。エラーを調査するための詳細なログ情報が提供されるためです。
 
 ## <a name="register-external-language"></a>外部言語を登録する
 
@@ -343,7 +343,7 @@ sudo systemctl restart mssql-launchpadd
 
 ## <a name="download-r-language-extension"></a>R 言語拡張機能をダウンロードする
 
-R 言語拡張機能 [R-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143954) が含まれる zip ファイルをダウンロードします。
+[Linux 用 R 言語拡張機能が含まれている zip ファイル](https://github.com/microsoft/sql-server-language-extensions/releases)をダウンロードします。 運用環境ではリリース バージョンを使用することをお勧めします。 開発またはテストではデバッグ バージョンを使用します。エラーを調査するための詳細なログ情報が提供されるためです。
 
 ## <a name="register-external-language"></a>外部言語を登録する
 
