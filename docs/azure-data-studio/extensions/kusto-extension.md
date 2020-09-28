@@ -1,26 +1,28 @@
 ---
 title: Azure Data Studio 用の Kusto (KQL) 拡張機能
 description: この記事では、Azure Data Studio を使用して Azure Data Explorer クラスターに接続し、クエリを実行する方法について説明します。
-ms.topic: conceptual
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 3df020725458318aa1c3936b2b4430582ace8997
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: fe620c08da690a61d41a0fef5f18132c246ef739
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226827"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379617"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Azure Data Studio 用の Kusto (KQL) 拡張機能 (プレビュー)
 
 [Azure Data Studio](../what-is.md) 用の Kusto (KQL) 拡張機能を使用すると、[Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview) クラスターに接続してクエリを実行できます。
 
-ユーザーは、Azure Data Explorer クラスターに接続して参照したり、KQL クエリを記述して実行したり、IntelliSense を備えた Kusto カーネルを使ってたノートブックを作成したりできるようになりました。 Azure Data Studio でネイティブ Kusto (KQL) エクスペリエンスを有効にすることにより、データ エンジニア、データ科学者、およびデータ アナリストは、Azure Data Explorer に格納されている大量のデータに対して傾向や異常をすばやく観察できます。
+ユーザーは、KQL クエリを記述して実行したり、IntelliSense を備えた [Kusto カーネル](../notebooks/notebooks-kusto-kernel.md)を使ってたノートブックを作成したりできるようになりました。
+
+Azure Data Studio でネイティブ Kusto (KQL) エクスペリエンスを有効にすることにより、データ エンジニア、データ科学者、およびデータ アナリストは、Azure Data Explorer に格納されている大量のデータに対して傾向や異常をすばやく観察できます。
 
 この拡張機能は、現在プレビューの段階にあります。
 
@@ -126,16 +128,23 @@ Azure Data Studio で [SandDance 拡張機能](https://docs.microsoft.com/sql/az
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance 視覚化":::
 
-## <a name="limitations-and-considerations"></a>制限事項と考慮事項
+## <a name="known-issues"></a>既知の問題
 
-- Kusto クエリを実行する前に、Azure Data Explorer クラスター用のデータベースを選択する必要があります。
-- Azure Data Explorer クラスターをあまり長い時間アイドル状態にしておくと、接続が切断される可能性があります。
-    - 対処法:クラスターから切断して再接続します。
+| 詳細 | 回避策 |
+|---------|------------|
+| [再読み込みが動作しない場合の Kusto 接続ビューレット](https://github.com/microsoft/azuredatastudio/issues/12475)。 | 該当なし |
+| [自動的に再接続できません](https://github.com/microsoft/azuredatastudio/issues/11830)。 | Azure Data Explorer クラスターを切断し、再接続します。 |
+| [Kusto クラスターの更新は、正しく再接続されていないようです](https://github.com/microsoft/azuredatastudio/issues/11824)。 | Azure Data Explorer クラスターを切断し、再接続します。 |
+| [クラスターに接続するには、データベースではなくクラスター ダッシュボードを起動する必要があります](https://github.com/microsoft/azuredatastudio/issues/12549) | 該当なし |
+| Azure Data クラスター データベース内の各テーブルには、**10 を受け取る**ではなく、**上位 1000 を選択する**オプションしかありません。 | 該当なし |
 
-## <a name="next-steps"></a>次の手順
+製品チームにフィードバックを提供するために、[機能の要求](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=)を提出できます。  
+製品チームにフィードバックを提供するために、[バグ](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=)を提出できます。
+
+## <a name="next-steps"></a>次のステップ
 
 - [Kusto ノートブックの作成と実行](../notebooks/notebooks-kusto-kernel.md)
-- [Azure Data Studio の Kqlmagic ノートブック](../notebooks-kqlmagic.md)
+- [Azure Data Studio の Kqlmagic ノートブック](../notebooks/notebooks-kqlmagic.md)
 - [SQL から Kusto のチート シート](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
 - [Azure Data Explorerとは](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)
 - [SandDance 視覚化の使用](https://sanddance.js.org/)

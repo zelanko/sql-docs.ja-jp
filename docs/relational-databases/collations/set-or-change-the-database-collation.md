@@ -14,19 +14,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22c6da8545c07424f95b83a56d406fceffeb6d1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e2103871e039484a12234a7e26a2783125e9ffae
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465566"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364229"
 ---
 # <a name="set-or-change-the-database-collation"></a>データベースの照合順序の設定または変更
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でデータベースの照合順序を設定および変更する方法を説明します。 照合順序を指定しない場合、サーバーの照合順序が使用されます。  
+  このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、データベースの照合順序を設定および変更する方法を説明します。 照合順序を指定しない場合、サーバーの照合順序が使用されます。  
   
 > [!IMPORTANT]
-> Azure SQL Database では、データベース照合順序の変更は明示的に禁止されていません。 ただし、データベースの照合順序の変更には、データベースおよびその他のユーザーに対する排他ロックが必要です。そうしないと、バックグラウンド プロセス (バックアップを実行しているバックグラウンドなど) でデータベースがロックされたままになり、照合順序が変更されない可能性があります。 Azure SQL Database に対する `ALTER DATABASE COLLATE` ステートメントはサポートされていません。
+> Azure SQL Database に対する `ALTER DATABASE COLLATE` ステートメントはサポートされていません。
 
  **このトピックの内容**  
   

@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (プレビュー)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Azure Synapse Analytics で COPY ステートメントを使用して、外部ストレージ アカウントからの読み込みを行います。
-ms.date: 08/05/2020
+ms.date: 09/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 68c4e1d526a1385dee1a5868bbf382b25e21d797
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 28711d123d4084c973d301f7fa93c9f5d598986f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024561"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380837"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -136,13 +136,19 @@ WITH
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* は、外部ストレージ アカウントにアクセスするための認証メカニズムを指定します。 認証方法を次に示します。
 
-|                          |                CSV                |              Parquet               |                ORC                 |
-| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
-|  **Azure Blob Storage**  | SAS/MSI/サービス プリンシパル/キー/AAD |              SAS/キー               |              SAS/キー               |
-| **Azure Data Lake Gen2** | SAS/MSI/サービス プリンシパル/キー/AAD | SAS (BLOB エンドポイント)/MSI (dfs エンドポイント)/サービス プリンシパル/キー/AAD | SAS (BLOB エンドポイント)/MSI (dfs エンドポイント)/サービス プリンシパル/キー/AAD |
+|                          |                CSV                |                      Parquet                       |                        ORC                         |
+| :----------------------: | :-------------------------------: | :------------------------------------------------: | :------------------------------------------------: |
+|  **Azure Blob Storage**  | SAS/MSI/サービス プリンシパル/キー/AAD |                      SAS/キー                       |                      SAS/キー                       |
+| **Azure Data Lake Gen2** | SAS/MSI/サービス プリンシパル/キー/AAD | SAS (BLOB<sup>1</sup>)/MSI (dfs<sup>2</sup>)/サービス プリンシパル/キー/AAD | SAS (BLOB<sup>1</sup>)/MSI (dfs<sup>2</sup>)/サービス プリンシパル/キー/AAD |
 
+1:外部のロケーション パスでは、BLOB エンドポイント ( **.blob**.core.windows.net) を使用する必要があります。
 
-AAD またはパブリック ストレージ アカウントを使用して認証する場合は、CREDENTIAL を指定する必要はありません。 
+2:外部のロケーション パスでは、dfs エンドポイント ( **.dfs**.core.windows.net) を使用する必要があります。
+
+> [!NOTE]  
+>
+> - AAD またはパブリック ストレージ アカウントを使用して認証する場合は、CREDENTIAL を指定する必要はありません。 
+>  - ストレージ アカウントが VNet に関連付けられている場合は、MSI (マネージド ID) を使用して認証する必要があります。
 
 - Shared Access Signatures (SAS) を使用した認証
   

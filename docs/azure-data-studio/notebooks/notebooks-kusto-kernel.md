@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: efcea597a431d33cfbd2978e36f3b95d27986772
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 416fd5aabb07db3deed1d4d78769249a99113216
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226962"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379597"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Kusto (KQL) ノートブックの作成と実行 (プレビュー)
 
-この記事では、Azure Data Explorer クラスターに接続する [Kusto (KQL) 拡張機能](../extensions/kusto-extension.md)を使用して、[Azure Data Studio ノートブック](../notebooks-guidance.md)を作成して実行する方法について説明します。
+この記事では、Azure Data Explorer クラスターに接続する [Kusto (KQL) 拡張機能](../extensions/kusto-extension.md)を使用して、[Azure Data Studio ノートブック](./notebooks-guidance.md)を作成して実行する方法について説明します。
 
 Kusto (KQL) 拡張機能を使用すると、カーネル オプションを **Kusto** に変更できます。
 
@@ -104,11 +104,14 @@ Azure サブスクリプションをお持ちでない場合は、開始する�
 
 :::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="結果を保存する":::
 
-## <a name="limitations-and-considerations"></a>制限事項と考慮事項
+## <a name="known-issues"></a>既知の問題
 
-- Kusto クエリを実行する前に、Azure Data Explorer クラスター用のデータベースを選択する必要があります。
-- Azure Data Explorer クラスターをあまり長い時間アイドル状態にしておくと、接続が切断される可能性があります。
-    - 対処法:クラスターから切断して再接続します。
+| 詳細 | 回避策 |
+|---------|------------|
+| [クエリ結果には、列ヘッダーのみが表示されます](https://github.com/microsoft/azuredatastudio/issues/12565)。 | 該当なし |
+
+製品チームにフィードバックを提供するために、[機能の要求](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=)を提出できます。  
+製品チームにフィードバックを提供するために、[バグ](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=)を提出できます。
 
 ## <a name="next-steps"></a>次のステップ
 
