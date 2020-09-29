@@ -4,22 +4,33 @@ description: 各リリースの Sybase (SybaseToSQL) の SQL Server Migration As
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 8391c9642bb7ee0849ea4627b42ac580c4d44d20
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: fdbe37ddb915e64c5f947a64078e574a8eed8bbd
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864709"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497796"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE の新機能 (SybaseToSQL)
 
 この記事では、各リリースでの SAP ASE (旧称 SSMA for Sybase) の変更 (SSMA) の SQL Server Migration Assistant を示します。
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+障碍のある方にとってのアクセシビリティを向上させるために、いくつかの改善点に加えて、SSMA for SAP ASE のバージョン8.14 のリリースでは、プロジェクトのアップグレードが必要になりました。これにより、プロジェクトのメタデータには、完全なソース/対象サーバーのバージョンが格納されます。
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+SSMA for SAP ASE の v 8.13 リリースには、次の変更が含まれています。
+
+* プロシージャと関数の呼び出しを変換するときに、暗黙的な型キャストを検討します。
+* 接続の問題のトラブルシューティングに役立つソース接続文字列のログ記録の向上
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -56,7 +67,7 @@ SSMA for SAP ASE のバージョン8.8 には次のものが含まれます。
 SSMA for SAP ASE のバージョン8.7 リリースでは、グラフィカルユーザーインターフェイスの若干の修正とパフォーマンスの向上が図られています。
 
 > [!IMPORTANT]
-> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
+> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、 [ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v86"></a>SSMA v 8.6
 
@@ -67,7 +78,7 @@ Ssma for SAP ASE でこの設定を利用するには、[**ツール**] [プロ�
 ![拡張プロパティの設定を省略する](../sybase/media/ssma-omit-extended-properties.png)
 
 > [!IMPORTANT]
-> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
+> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、 [ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v85"></a>SSMA v1.0
 
@@ -76,7 +87,7 @@ SSMA for SAP ASE の v1.0 リリースは、SQL server での JSON 機能の Azu
 さらに、SSMA for SAP ASE では、システムテーブルとビューを非表示にする (変換から除外する) ことができます。
 
 > [!IMPORTANT]
-> SSMA v1.0 では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
+> SSMA v1.0 では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、 [ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v84"></a>SSMA v 8.4
 
@@ -114,11 +125,11 @@ SSMA for SAP ASE の v2.0 リリースは、品質と変換のメトリックを
 
 SSMA for SAP ASE の v2.0 リリースは、品質と変換メトリックの向上を目的とした修正を対象として強化されています。 また、このリリースでは、次の新機能が提供されています。
 
-* ターゲットとしての**AZURE SQL Managed Instance**のサポート。 Azure SQL Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
+* ターゲットとしての **AZURE SQL Managed Instance** のサポート。 Azure SQL Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
 
   ![SQL Database MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
 
-* 変換後の**修正アドバイザー**。 詳細について[は、こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)を参照してください。
+* 変換後の **修正アドバイザー**。 詳細について [は、こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)を参照してください。
 
 * データベース/スキーマの事前選択。
 
@@ -143,7 +154,7 @@ SSMA for SAP ASE の v1.0 リリースには、次の変更が含まれていま
 
 SSMA for SAP ASE の v1.0 リリースには、次の変更が含まれています。
 
-* [**プロジェクトの設定**] で強調表示されている型マッピングを変更します。
+* [ **プロジェクトの設定**] で強調表示されている型マッピングを変更します。
 * ユーザーがテレメトリを無効にする機能。
 
 ## <a name="ssma-v77"></a>SSMA v 7.7
@@ -171,7 +182,7 @@ SSMA for SAP ASE のバージョン7.5 リリース (以前の SSMA for Sybase) 
 
 SSMA for Sybase の v2.0 リリースには、次の変更が含まれています。
 
-* [**クエリタイムアウト**] オプションは、ソースおよびターゲットでのスキーマオブジェクトの検出中に使用できるようになりました。
+* [ **クエリタイムアウト** ] オプションは、ソースおよびターゲットでのスキーマオブジェクトの検出中に使用できるようになりました。
 
   ![クエリタイムアウトオプション](../media/query-timeout_red.png)
 * お客様からのフィードバックに基づいて、品質と換算のメトリックが修正されました。
@@ -192,7 +203,7 @@ SSMA for Sybase の version 7.3 リリースには、次の変更が含まれて
   * カスタム変換を実行するために SSMA で使用できるライブラリ。
     * SSMA によって以前に処理されなかったカスタム構文変換と変換を処理できるコードを作成できるようになりました。
       * カスタムコンバーターを構築する方法については、このブログの投稿を参照してください。 [SQL Server Migration Assistant の変換機能が拡張](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)されます。
-      * この[ブログの投稿](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)から、変換用のサンプルプロジェクトをダウンロードします。
+      * この [ブログの投稿](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)から、変換用のサンプルプロジェクトをダウンロードします。
 
 ## <a name="ssma-v72"></a>SSMA v 7.2
 
@@ -328,7 +339,7 @@ SSMA for Sybase の2006年11月のリリースには、次の変更が含まれ�
   * 等値式で null 値をチェックします。
   * プロキシテーブル。
   * のユーザーメッセージエラー番号 `RAISERROR` 。
-  * `UPDATE`未解決の識別子を含むステートメント。
+  * `UPDATE` 未解決の識別子を含むステートメント。
 * 新しい移行オプションが追加されました。このオプションを使用すると、SSMA が日付範囲外の日付をどのように処理するかを指定でき [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ます。
 * [ **Sql** ] タブに、書式設定された**sql**設定が追加されました。これにより、コードの読みやすさが向上します。
 * バグの修正 (次を含む):

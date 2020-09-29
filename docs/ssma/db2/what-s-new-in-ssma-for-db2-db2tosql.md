@@ -4,22 +4,34 @@ description: 各リリースの SQL Server Migration Assistant (SSMA) for DB2 (D
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: 9706f1f2313594ded00cc0fa7e1335bb194b8313
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 8f84892230de6e7070933657cd25636a2fc697d8
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862479"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498224"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 の新機能 (DB2ToSQL)
 
 この記事では、各リリースでの DB2 変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+障碍のある方にとってアクセシビリティを向上させるために、いくつかの機能強化に加えて、SSMA for DB2 のリリースでは、プロジェクトのメタデータに完全なソース/ターゲットサーバーバージョンが格納されるため、プロジェクトのアップグレードが必要になりました。
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+SSMA for DB2 の v 8.13 リリースには、次の変更が含まれています。
+
+* フィルター選択された一意のインデックスのサポート
+* プロシージャと関数の呼び出しを変換するときに、暗黙的な型キャストを検討します。
+* 接続の問題のトラブルシューティングに役立つソース接続文字列のログ記録の向上
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -76,7 +88,7 @@ SSMA for DB2 のバージョン8.7 リリースには、新しい DB2 構文パ�
 * ステートメントの解析サポート `ASSOCIATE RESULT SET` 。
 
 > [!IMPORTANT]
-> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
+> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、 [ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v86"></a>SSMA v 8.6
 
@@ -93,7 +105,7 @@ Ssma for DB2 でこの設定を利用するには、[**ツール**] [プロジ�
 * ステートメントを変換する権限 `LEAVE` です。
 
 > [!IMPORTANT]
-> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
+> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、 [ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v85"></a>SSMA v1.0
 
@@ -105,7 +117,7 @@ SSMA for DB2 の v2.0 リリースは、SQL server での JSON 機能の Azure A
 * オブジェクト名の先頭のスペースに関連するバグの修正が適用されていません。
 
 > [!IMPORTANT]
-> SSMA v1.0 では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
+> SSMA v1.0 では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、 [ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v84"></a>SSMA v 8.4
 
@@ -152,11 +164,11 @@ SSMA for DB2 の v2.0 リリースが拡張され、品質と変換メトリッ�
 
 SSMA for DB2 の v2.0 リリースが拡張され、品質と変換メトリックの向上を目的とした修正プログラムが提供されるようになりました。 このリリースには、次の新機能も用意されています。
 
-* ターゲットとしての**AZURE SQL Managed Instance**のサポート。 Azure SQL Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
+* ターゲットとしての **AZURE SQL Managed Instance** のサポート。 Azure SQL Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
 
   ![SQL MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
 
-* 変換後の**修正アドバイザー**。 詳細について[は、こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)を参照してください。
+* 変換後の **修正アドバイザー**。 詳細について [は、こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)を参照してください。
 
 * データベース/スキーマの事前選択。
 
@@ -184,7 +196,7 @@ SSMA for DB2 のバージョン7.9 には、次の変更が含まれています
 
 SSMA for DB2 の v1.0 リリースには、次の変更が含まれています。
 
-* [*プロジェクトの設定*] で強調表示されている型マッピングを変更します。
+* [ *プロジェクトの設定*] で強調表示されている型マッピングを変更します。
 * ユーザーがテレメトリを無効にする機能。
 
 ## <a name="ssma-v77"></a>SSMA v 7.7
@@ -206,7 +218,7 @@ SSMA for DB2 のバージョン7.5 リリースは、障碍のある方にとっ
 
 SSMA for DB2 のバージョン7.4 リリースには、次の変更が含まれています。
 
-* [**クエリタイムアウト**] オプションは、ソースおよびターゲットでのスキーマオブジェクトの検出中に使用できるようになりました。
+* [ **クエリタイムアウト** ] オプションは、ソースおよびターゲットでのスキーマオブジェクトの検出中に使用できるようになりました。
 
   ![クエリタイムアウトオプション](../media/query-timeout_red.png)
 
@@ -228,7 +240,7 @@ SSMA for DB2 の version 7.3 リリースには、次の変更が含まれてい
   * カスタム変換を実行するために SSMA で使用できるライブラリ。
     * SSMA によって以前に処理されなかったカスタム構文変換と変換を処理できるコードを作成できるようになりました。
       * カスタムコンバーターを構築する方法については、このブログの投稿を参照してください。 [SQL Server Migration Assistant の変換機能が拡張](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)されます。
-      * この[ブログの投稿](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)から、変換用のサンプルプロジェクトをダウンロードします。
+      * この [ブログの投稿](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)から、変換用のサンプルプロジェクトをダウンロードします。
 
 ## <a name="ssma-v72"></a>SSMA v 7.2
 
