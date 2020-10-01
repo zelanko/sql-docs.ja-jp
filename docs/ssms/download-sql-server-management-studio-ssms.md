@@ -24,13 +24,13 @@ ms.author: drskwier
 manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
-ms.openlocfilehash: 2d1eb8e37de9956352dad852d74760fecdc8086b
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.date: 09/28/2020
+ms.openlocfilehash: 502e9674d97addf23c89f4e24eb676c36f1d36fd
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943084"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497738"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 
@@ -82,6 +82,9 @@ SQL Server Management Studio 18.6:
 ## <a name="previous-versions"></a>以前のバージョン
 
 この記事は、最新バージョンの SSMS のみを対象としています。 以前のバージョンの SSMS をダウンロードするには、「[Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases)」 (以前の SSMS リリース) を参照してください。
+
+> [!NOTE]
+> 2021 年 12 月、18.6 より前の SSMS のリリースでは、MFA を使用した Azure Active Directory による認証が行われなくなりました。 MFA で Azure Active Directory 認証を引き続き利用するには、SSMS 18.6 以降をインストールまたは更新してください。
 
 ## <a name="unattended-install"></a>無人インストール
 
@@ -145,12 +148,12 @@ SSMS の今回のリリースでは、最新の Service Pack を使用した次�
 
 サポートされているハードウェア:
 
-- 1.8 GHz 以上のプロセッサ。 デュアル コア以上を推奨
+- 1.8 GHz 以上の x86 (Intel、AMD) プロセッサ。 デュアル コア以上を推奨
 - 2 GB の RAM (4 GB の RAM を推奨) (仮想マシン上で実行される場合は最小 2.5 GB)
 - ハードディスク領域: 最低でも 2 GB、最大 10 GB の使用可能な領域
 
 > [!NOTE]
-> SSMS は Windows (AMD または Intel) 上でのみ動作します。 Windows 以外のプラットフォーム上で実行されるツールが必要な場合は、Azure Data Studio をご覧ください。 Azure Data Studio は、macOS、Linux、さらに Windows 上で実行される新しいクロスプラットフォーム ツールです。 詳しくは、[Azure Data Studio](../azure-data-studio/what-is.md) に関する記事をご覧ください。
+> SSMS は Windows 上でのみ実行されます。 Windows 以外のオペレーティング システムで実行するツールが必要な場合は、Azure Data Studio をお勧めします。 Azure Data Studio は、macOS、Linux、さらに Windows 上で実行されるクロスプラットフォーム ツールです。 詳しくは、[Azure Data Studio](../azure-data-studio/what-is.md) に関する記事をご覧ください。
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
