@@ -4378,11 +4378,7 @@
         - name: 使用状況と診断データの収集
           items:
             - name: SQL Server のプライバシーの補足情報
-              items:
-                - name: SQL Server 2017 以前
-                  href: sql-server/sql-server-privacy.md
-                - name: SQL Server 2019
-                  href: sql-server/sql-server-privacy-ver15.md
+              href: sql-server/sql-server-privacy.md
             - name: SQL Server の使用状況と診断データを構成する
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
             - name: ツールの使用状況と診断データを構成する

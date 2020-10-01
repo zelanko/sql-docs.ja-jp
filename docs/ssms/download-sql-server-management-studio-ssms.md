@@ -25,12 +25,12 @@ manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: 502e9674d97addf23c89f4e24eb676c36f1d36fd
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 23137d46453189bb5a04c2860ab79c0c66e8d78f
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497738"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603460"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 
@@ -83,8 +83,7 @@ SQL Server Management Studio 18.6:
 
 この記事は、最新バージョンの SSMS のみを対象としています。 以前のバージョンの SSMS をダウンロードするには、「[Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases)」 (以前の SSMS リリース) を参照してください。
 
-> [!NOTE]
-> 2021 年 12 月、18.6 より前の SSMS のリリースでは、MFA を使用した Azure Active Directory による認証が行われなくなりました。 MFA で Azure Active Directory 認証を引き続き利用するには、SSMS 18.6 以降をインストールまたは更新してください。
+[!INCLUDE[ssms-connect-azure-ad](../includes/ssms-connect-azure-ad.md)]
 
 ## <a name="unattended-install"></a>無人インストール
 
