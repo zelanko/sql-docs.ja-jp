@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d14e41c0650043febdddb904813d76be4d7c714
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dac452cc825cef7099cd2f0f27c7d2045f6811ff
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894503"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727936"
 ---
 # <a name="distributed-availability-groups"></a>分散型可用性グループ
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-分散型可用性グループは、SQL Server 2016 で導入された新しい機能であり、既存の AlwaysOn 可用性グループ機能のバリエーションです。 この記事では、分散型可用性グループのいくつかの側面を明らかにし、既存の [SQL Server ドキュメント](https://docs.microsoft.com/sql/sql-server/)を補完します。
+分散型可用性グループは、SQL Server 2016 で導入された新しい機能であり、既存の AlwaysOn 可用性グループ機能のバリエーションです。 この記事では、分散型可用性グループのいくつかの側面を明らかにし、既存の [SQL Server ドキュメント](../../../sql-server/index.yml)を補完します。
 
 > [!NOTE]
 > "DAG" は、Exchange のデータベース可用性グループ機能で既に使われているため、"*分散型可用性グループ*" の正式な省略形ではありません。 Exchange のこの機能は、SQL Server の可用性グループまたは分散型可用性グループとは関係がありません。
@@ -89,7 +89,7 @@ SQL Server 2012 または 2014 には分散型可用性グループ機能が存�
 
 両方の WSFC クラスターが同じドメイン (信頼されていないドメイン) に参加している場合、分散型可用性グループを作成するときに特別なことを行う必要ありません。 可用性グループと WSFC クラスターが同じドメインに参加していない場合は、ドメインに依存しない可用性グループを作成する場合と同じように、証明書を使って分散型可用性グループを動作させる必要があります。 分散型可用性グループ用に証明書を構成する方法については、「[Create a domain-independent availability group](domain-independent-availability-groups.md)」(ドメインに依存しない可用性グループを作成する) のステップ 3 ～ 13 に従ってください。
 
-分散型可用性グループでは、基になる各可用性グループのプライマリ レプリカが相互の証明書を持っている必要があります。 証明書を使わないエンドポイントが既にある場合は、[ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql) を使って証明書を使うようにエンドポイントを再構成します。
+分散型可用性グループでは、基になる各可用性グループのプライマリ レプリカが相互の証明書を持っている必要があります。 証明書を使わないエンドポイントが既にある場合は、[ALTER ENDPOINT](../../../t-sql/statements/alter-endpoint-transact-sql.md) を使って証明書を使うようにエンドポイントを再構成します。
 
 ## <a name="distributed-availability-group-usage-scenarios"></a>分散型可用性グループの使用シナリオ
 
@@ -156,7 +156,7 @@ SQL Server 2012 または 2014 には分散型可用性グループ機能が存�
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>分散型可用性グループのセカンダリ可用性グループを初期化する
 
-分散型可用性グループは、第 2 の可用性グループのプライマリ レプリカを初期化するための主要な方法として[自動シード処理](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)を使うように設計されています。 第 2 の可用性グループのプライマリ レプリカでの完全なデータベース復元は、次のようにすることで可能です。
+分散型可用性グループは、第 2 の可用性グループのプライマリ レプリカを初期化するための主要な方法として[自動シード処理](./automatically-initialize-always-on-availability-group.md)を使うように設計されています。 第 2 の可用性グループのプライマリ レプリカでの完全なデータベース復元は、次のようにすることで可能です。
 
 1. WITH NORECOVERY を指定してデータベース バックアップを復元します。
 2. 必要な場合は、適切なトランザクション ログ バックアップを WITH NORECOVERY で復元します。
@@ -167,7 +167,7 @@ SQL Server 2012 または 2014 には分散型可用性グループ機能が存�
 
 * 第 2 の可用性グループのプライマリ レプリカの `sys.dm_hadr_automatic_seeding` で示される出力では、`current_state` が FAILED、理由が "Seeding Check Message Timeout" と表示されます。
 
-* 第 2 の可用性グループのプライマリ レプリカの現在の SQL Server ログでは、シード処理が行われて、[LSN](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) が同期されたと表示されます。
+* 第 2 の可用性グループのプライマリ レプリカの現在の SQL Server ログでは、シード処理が行われて、[LSN](../../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md) が同期されたと表示されます。
 
 * 第 1 の可用性グループのプライマリ レプリカの `sys.dm_hadr_automatic_seeding` で示される出力では、current_state が COMPLETED と表示されます。 
 

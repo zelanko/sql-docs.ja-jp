@@ -9,12 +9,12 @@ ms.author: jovanpop
 ms.reviewer: alanyu, maghan, sstein
 ms.custom: ''
 ms.date: 10/07/2019
-ms.openlocfilehash: e31895f09b06e51f76c745a9b00a1dfe7c41d759
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: bc4a01ce30d05853c08b59b720452a3e09cb6417
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111751"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725203"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Azure Data Studio 用の Azure SQL Managed Instance ダッシュボード (プレビュー)
 
@@ -28,7 +28,7 @@ Azure SQL Managed Instance 拡張機能により、[Azure Data Studio](https://g
 
 ## <a name="install"></a>インストール
 
-この拡張機能の正式なリリースをインストールすることができます。 [Azure Data Studio のドキュメント](../extensions.md)の手順に従ってください。
+この拡張機能の正式なリリースをインストールすることができます。 [Azure Data Studio のドキュメント](./add-extensions.md)の手順に従ってください。
 **[拡張機能]** ウィンドウで「Managed Instance」を検索し、そこでインストールします。 インストールされた後は、拡張機能の更新があれば、自動的に通知されます。
 
 拡張機能をインストールすると、Azure Data Studio に **[Managed Instance]\(マネージド インスタンス\)** タブが表示されます。 ここでは、お使いのマネージド インスタンスに固有の情報を確認できます。
@@ -37,12 +37,12 @@ Azure SQL Managed Instance 拡張機能により、[Azure Data Studio](https://g
 
 拡張機能により、お使いのマネージド インスタンスの技術的特性といくつかのリソース使用量が表示されます。
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-5.png" alt-text="Managed Instance のプロパティ":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-5.png" alt-text="Managed Instance のプロパティ&quot;:::
 
 上部のウィンドウには、次の詳細が表示されます。
 
 - **[プロパティ]** 。 使用可能な仮想コア数、メモリ、ストレージなど、お使いのマネージド インスタンスに関する基本的な情報を取得します。 また、現在のサービス レベル、ハードウェアの世代、および IO 特性 (インスタンス ログ書き込みスループットやファイル I/O スループット特性など) も検出されます。
-- **[Local SSD storage]\(ローカル SSD ストレージ\)** 。 General Purpose サービス レベルでは、**TempDB** ファイルはローカル環境に格納されます。 Business Critical サービス レベルでは、"_すべての_" データベース ファイルがローカル SSD ストレージに配置されます。 このセクションでは、お使いのマネージド インスタンスによって使用されているローカル ストレージの容量を確認できます。
+- **[Local SSD storage]\(ローカル SSD ストレージ\)** 。 General Purpose サービス レベルでは、**TempDB** ファイルはローカル環境に格納されます。 Business Critical サービス レベルでは、&quot;_すべての_" データベース ファイルがローカル SSD ストレージに配置されます。 このセクションでは、お使いのマネージド インスタンスによって使用されているローカル ストレージの容量を確認できます。
 - **[Azure Premium Disk Storage]** 。 General Purpose サービス レベルをお使いの場合、ユーザーとシステム両方のデータベース ファイルが、Azure Premium Storage に配置されます。 このセクションでは、使用済みデータ量、ファイルの数、および使用可能なストレージを確認できます。 Business Critical サービス レベルでは、このセクションには何も表示されません。
 - **[Resource usage]\(リソース使用状況\)** 。 お使いのマネージド インスタンスによって過去 2 時間に使用されたストレージと CPU の割合が表示されます。 これにより、限界に近づいている場合はインスタンス サイズを増やすことができます。
 
@@ -50,7 +50,12 @@ Azure SQL Managed Instance 拡張機能により、[Azure Data Studio](https://g
 
 **[Managed Instance]\(マネージド インスタンス\)** タブで 2 番目のウィンドウを選択すると、マネージド インスタンスの最適化に役立つ推奨事項とアラートが表示されます。
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Managed Instance の推奨事項":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Managed Instance のプロパティ&quot;:::
+
+上部のウィンドウには、次の詳細が表示されます。
+
+- **[プロパティ]** 。 使用可能な仮想コア数、メモリ、ストレージなど、お使いのマネージド インスタンスに関する基本的な情報を取得します。 また、現在のサービス レベル、ハードウェアの世代、および IO 特性 (インスタンス ログ書き込みスループットやファイル I/O スループット特性など) も検出されます。
+- **[Local SSD storage]\(ローカル SSD ストレージ\)** 。 General Purpose サービス レベルでは、**TempDB** ファイルはローカル環境に格納されます。 Business Critical サービス レベルでは、&quot;_すべての_":::
 
 次の推奨事項のいくつかが表示される場合があります。
 
@@ -67,7 +72,12 @@ Azure SQL Managed Instance 拡張機能により、[Azure Data Studio](https://g
 
 **[Managed Instance]\(マネージド インスタンス\)** タブの 3 番目のウィンドウには、お使いのマネージド インスタンス内のデータベース レプリカの状態が表示されます。
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Managed Instance のレプリカ":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Managed Instance のプロパティ&quot;:::
+
+上部のウィンドウには、次の詳細が表示されます。
+
+- **[プロパティ]** 。 使用可能な仮想コア数、メモリ、ストレージなど、お使いのマネージド インスタンスに関する基本的な情報を取得します。 また、現在のサービス レベル、ハードウェアの世代、および IO 特性 (インスタンス ログ書き込みスループットやファイル I/O スループット特性など) も検出されます。
+- **[Local SSD storage]\(ローカル SSD ストレージ\)** 。 General Purpose サービス レベルでは、**TempDB** ファイルはローカル環境に格納されます。 Business Critical サービス レベルでは、&quot;_すべての_":::
 
 General Purpose サービス レベルでは、すべてのデータベースに 1 つの (プライマリ) レプリカがあります。 Business Critical レベルのインスタンスでは、すべてのデータベースに 1 つのプライマリ レプリカと 3 つのセカンダリ レプリカがあり、そのうち 1 つは読み取り専用ワークロードに使用されます。 **[Replicas]\(レプリカ\)** ウィンドウでは、同期プロセスを監視し、すべてのセカンダリ レプリカがプライマリ レプリカと同期されていることを確認できます。
 
@@ -75,7 +85,12 @@ General Purpose サービス レベルでは、すべてのデータベースに
 
 **[Managed Instance]\(マネージド インスタンス\)** の 4 番目のウィンドウには、最新の関連する SQL エラー ログ エントリが表示されます。
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Managed Instance のログ エントリ":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Managed Instance のプロパティ&quot;:::
+
+上部のウィンドウには、次の詳細が表示されます。
+
+- **[プロパティ]** 。 使用可能な仮想コア数、メモリ、ストレージなど、お使いのマネージド インスタンスに関する基本的な情報を取得します。 また、現在のサービス レベル、ハードウェアの世代、および IO 特性 (インスタンス ログ書き込みスループットやファイル I/O スループット特性など) も検出されます。
+- **[Local SSD storage]\(ローカル SSD ストレージ\)** 。 General Purpose サービス レベルでは、**TempDB** ファイルはローカル環境に格納されます。 Business Critical サービス レベルでは、&quot;_すべての_":::
 
 マネージド インスタンスでによって大量のログ エントリが生成されますが、そのほとんどは内部/システムの情報です。 また、一部のログ エントリでは、実際の論理データベース名ではなく、物理データベース名 (`GUID` の値) が示されます。
 

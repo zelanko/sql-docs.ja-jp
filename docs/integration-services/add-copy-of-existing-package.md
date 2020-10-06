@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c76e0178aa21a91cbbbb479aaf46e901fdd11992
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e24122bddbbc2c00d3437481d07194621b94b5bf
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478154"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724433"
 ---
 # <a name="add-copy-of-existing-package"></a>[既存のパッケージのコピーを追加]
 
@@ -49,8 +49,7 @@ ms.locfileid: "88478154"
  パッケージのパスを入力するか、**[...]** をクリックしてコピーするパッケージを指定します。  
   
 ## <a name="see-also"></a>参照  
- [[パッケージのコピーの保存]](https://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
+ [[パッケージのコピーの保存]](./save-packages.md)   
  [パッケージを保存する](../integration-services/save-packages.md)   
  [Integration Services サービス (SSIS サービス)](../integration-services/service/integration-services-service-ssis-service.md)
-  
   

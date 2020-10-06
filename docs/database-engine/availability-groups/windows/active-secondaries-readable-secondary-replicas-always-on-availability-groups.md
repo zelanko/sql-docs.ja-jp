@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 006a18f65350cd94e0070834e21b1ee846883770
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3208f04a990bc7cc07cfc8b1672e7534074bec70
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883003"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724603"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Always On 可用性グループのセカンダリ レプリカに読み取り専用の負荷を移す
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "85883003"
   
 -   ディスク ベース テーブルに対する読み取り専用ワークロードは、行のバージョン管理を使用してセカンダリ データベースでのブロック競合を除去します。 他のトランザクション分離レベルが明示的に設定されていても、セカンダリ データベースに対して実行されるすべてのクエリは、スナップショット分離トランザクション レベルに自動的にマップされます。 また、すべてのロック ヒントが無視されます。 これにより、リーダー/ライターの競合が解消されます。  
   
--   持続性のあるメモリ最適化テーブルに対する読み取り専用ワークロードは、同じトランザクション分離レベル制限 (「 [データベース エンジンにおける分離レベル](https://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)」を参照) でネイティブ ストアド プロシージャまたは SQL 相互運用性を使用して、プライマリ データベースでのアクセスとまったく同じ方法でデータにアクセスします。 プライマリ レプリカで実行されるレポート ワークロードまたは読み取り専用クエリは、セカンダリ レプリカでも変更せずに実行できます。 同様に、セカンダリ レプリカで実行されるレポート ワークロードまたは読み取り専用クエリは、プライマリ レプリカでも変更せずに実行できます。  他のトランザクション分離レベルが明示的に設定されていても、セカンダリ データベースに対して実行されるすべてのクエリは、ディスク ベース テーブルと同様に、スナップショット分離トランザクション レベルに自動的にマップされます。  
+-   持続性のあるメモリ最適化テーブルに対する読み取り専用ワークロードは、同じトランザクション分離レベル制限 (「 [データベース エンジンにおける分離レベル](/previous-versions/sql/sql-server-2008-r2/ms189122(v=sql.105))」を参照) でネイティブ ストアド プロシージャまたは SQL 相互運用性を使用して、プライマリ データベースでのアクセスとまったく同じ方法でデータにアクセスします。 プライマリ レプリカで実行されるレポート ワークロードまたは読み取り専用クエリは、セカンダリ レプリカでも変更せずに実行できます。 同様に、セカンダリ レプリカで実行されるレポート ワークロードまたは読み取り専用クエリは、プライマリ レプリカでも変更せずに実行できます。  他のトランザクション分離レベルが明示的に設定されていても、セカンダリ データベースに対して実行されるすべてのクエリは、ディスク ベース テーブルと同様に、スナップショット分離トランザクション レベルに自動的にマップされます。  
   
 -   セカンダリ レプリカ上では、ディスク ベースおよびメモリ最適化テーブル型の両方について、テーブル変数に対する DML 操作が許可されます。  
   
@@ -240,12 +240,11 @@ GO
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
--   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [統計](../../../relational-databases/statistics/statistics.md)  
-  
   

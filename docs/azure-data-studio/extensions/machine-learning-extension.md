@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: bc3039207e083d2afc8f0850a6328facd1f1916f
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 77cb3141a27fa8e68f8cdfb556784cc63fd07543
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137017"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725147"
 ---
 # <a name="machine-learning-extension-for-azure-data-studio-preview"></a>Azure Data Studio の Machine Learning 拡張機能 (プレビュー)
 
@@ -24,7 +24,7 @@ ms.locfileid: "91137017"
 
 Azure Data Studio を実行するコンピューターには、次の前提条件をインストールする必要があります。
 
-- [Python 3](https://www.python.org/downloads/)。 Python をインストールしたら、[[拡張機能の設定]](#settings) で、Python インストールへのローカル パスを指定する必要があります。 Azure Data Studio で [Python カーネル ノートブック](../notebooks-tutorial-python-kernel.md)を使用したことがある場合は、拡張機能ではノートブックからのパスが既定で使用されます。
+- [Python 3](https://www.python.org/downloads/)。 Python をインストールしたら、[[拡張機能の設定]](#settings) で、Python インストールへのローカル パスを指定する必要があります。 Azure Data Studio で [Python カーネル ノートブック](../notebooks/notebooks-python-kernel.md)を使用したことがある場合は、拡張機能ではノートブックからのパスが既定で使用されます。
 
 - Windows、macOS、または Linux 用の [Microsoft ODBC driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)。
 
@@ -87,7 +87,7 @@ Machine Learning 拡張機能の設定を変更するには、次の手順に従
 
 1. **[Machine Learning: Python の有効化]** が有効になっていることを確認します。 既定では、この設定は有効になっています。
 
-1. 既存の Python インストールへのパスを **[Machine Learning: Python パス]** で指定します。 これには Python の実行可能ファイルまたは実行可能ファイルが格納されているフォルダーへの完全なパスを指定できます。 Azure Data Studio で [Python カーネル ノートブック](../notebooks-tutorial-python-kernel.md)を使用したことがある場合は、拡張機能ではノートブックからのパスが既定で使用されます。
+1. 既存の Python インストールへのパスを **[Machine Learning: Python パス]** で指定します。 これには Python の実行可能ファイルまたは実行可能ファイルが格納されているフォルダーへの完全なパスを指定できます。 Azure Data Studio で [Python カーネル ノートブック](../notebooks/notebooks-python-kernel.md)を使用したことがある場合は、拡張機能ではノートブックからのパスが既定で使用されます。
 
 ### <a name="enable-r"></a>R の有効化
 
@@ -114,6 +114,6 @@ Machine Learning 拡張機能を使用して、パッケージを管理し、予
 - [データベースでのパッケージの管理](machine-learning-extension-manage-packages.md)
 - [予測を行う](machine-learning-extension-predictions.md)
 - [モデルのインポートまたは表示](machine-learning-extension-import-view-models.md)
-- [Azure Data Studio のノートブック](../notebooks-guidance.md)
+- [Azure Data Studio のノートブック](../notebooks/notebooks-guidance.md)
 - [SQL の機械学習のドキュメント](../../machine-learning/index.yml)
 - [SQL Edge での ONNX を使用した機械学習と AI (プレビュー)](/azure/azure-sql-edge/onnx-overview)

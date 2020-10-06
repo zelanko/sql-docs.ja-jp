@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f24efc5f72b0be5b362e3af12ce8b7f21fd7d51b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 41bb72eefbfac24da8c390cea2bb9fa741e7255f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480257"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727834"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>Always On 可用性グループとは
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "89480257"
   
     -   **自動フェールオーバー** (データ損失なし)  
   
-         エラーが発生すると、自動フェールオーバーが開始されて、同期されたセカンダリ レプリカがプライマリ ロールに移行します (データ保護が保証されます)。 元のプライマリ レプリカは、使用可能になるとセカンダリ ロールに移行します。 自動フェールオーバーでは、プライマリ レプリカと対象のセカンダリ レプリカの両方が同期コミット モードで実行されていることが必要です。また、フェールオーバー モードが "自動" に設定されている必要があります。 さらに、セカンダリ レプリカが既に同期され、WSFC クォーラムを持ち、可用性グループの [柔軟なフェールオーバー ポリシー](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)で指定された条件を満たしている必要があります。  
+         エラーが発生すると、自動フェールオーバーが開始されて、同期されたセカンダリ レプリカがプライマリ ロールに移行します (データ保護が保証されます)。 元のプライマリ レプリカは、使用可能になるとセカンダリ ロールに移行します。 自動フェールオーバーでは、プライマリ レプリカと対象のセカンダリ レプリカの両方が同期コミット モードで実行されていることが必要です。また、フェールオーバー モードが "自動" に設定されている必要があります。 さらに、セカンダリ レプリカが既に同期され、WSFC クォーラムを持ち、可用性グループの [柔軟なフェールオーバー ポリシー](./configure-flexible-automatic-failover-policy.md)で指定された条件を満たしている必要があります。  
   
         > [!IMPORTANT]  
         >  SQL Server フェールオーバー クラスター インスタンス (FCI) は可用性グループによる自動フェールオーバーをサポートしないため、FCI によってホストされる可用性レプリカは手動フェールオーバー用にのみ構成できます。  
@@ -156,11 +156,11 @@ ms.locfileid: "89480257"
   
 -   **ブログ:**  
   
-     [Always On - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](https://docs.microsoft.com/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
+     [Always On - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
-     [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server エンジニアのブログ](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [CSS SQL Server エンジニアのブログ](/archive/blogs/psssql/)  
   
 -   **ビデオ:**  
   
@@ -170,9 +170,9 @@ ms.locfileid: "89480257"
   
 -   **ホワイト ペーパー:**  
   
-     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
-     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [SQL Server ユーザー諮問チームのホワイト ペーパー](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
@@ -188,4 +188,3 @@ ms.locfileid: "89480257"
  [アクティブなセカンダリ:セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
-   

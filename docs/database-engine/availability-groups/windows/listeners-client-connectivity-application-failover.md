@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ff79d4838b5982edf658dbb35cc40fa3d29e803
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 36828d66fb91f60bf920c18324c7e7ace479452b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116942"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727868"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Always On 可用性グループ リスナーに接続する 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ SELECT @@SERVERNAME
  
 -   少なくとも 1 つのセカンダリ レプリカが読み取り専用アクセスに設定され、各読み取り専用セカンダリ レプリカとプライマリ レプリカが[読み取り専用ルーティングをサポートするように構成されている](configure-read-only-routing-for-an-availability-group-sql-server.md)。 
 
--   接続文字列は、可用性グループに含まれるデータベースを参照します。 これに代わる方法は、接続に使うログインで、データベースを既定のデータベースとして構成することです。 詳しくは、[読み取り専用ルーティングでのアルゴリズムの動作に関するこちらの記事](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)をご覧ください。
+-   接続文字列は、可用性グループに含まれるデータベースを参照します。 これに代わる方法は、接続に使うログインで、データベースを既定のデータベースとして構成することです。 詳しくは、[読み取り専用ルーティングでのアルゴリズムの動作に関するこちらの記事](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)をご覧ください。
 
 -   接続文字列は可用性グループ リスナーを参照し、着信接続のアプリケーションの目的が読み取り専用に設定されている (たとえば、ODBC または OLEDB の接続文字列、接続属性、またはプロパティで **Application Intent=ReadOnly** キーワードを使用している)。 
 
@@ -198,4 +198,4 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2
 
 リスナーに正常に接続したら、パフォーマンスを向上させるために、[読み取り専用ワークロード](overview-of-always-on-availability-groups-sql-server.md)と[バックアップ](configure-backup-on-availability-replicas-sql-server.md)をセカンダリ レプリカにオフロードすることを検討してください。 また、可用性グループの正常性を確保するために、さまざまな[可用性グループの監視戦略](monitoring-of-availability-groups-sql-server.md)を確認することもできます。 
 
-可用性グループの詳細については、「[Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。 
+可用性グループの詳細については、「[Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc573bfaf7f68102631e4e65c607e76062c147ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41a59d34bd6b84388f9fc32443b703bdf94f3239
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350068"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728103"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>制御フローのタスクまたはコンテナーを追加または削除する
 
@@ -100,9 +100,9 @@ ms.locfileid: "88350068"
   
 4.  **[制御フロー]** タブのデザイン画面でタスクまたはコンテナーを右クリックし、ショートカット メニューの **[編集]** をクリックして、対応するタスク エディターまたはコンテナー エディターを開きます。  
   
-     For ループ コンテナーの構成方法については、「 [Configure a For Loop Container](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)」(For ループ コンテナーを構成する) を参照してください。  
+     For ループ コンテナーの構成方法については、「 [Configure a For Loop Container](./for-loop-container.md)」(For ループ コンテナーを構成する) を参照してください。  
   
-     Foreach ループ コンテナーの構成方法については、「 [Foreach ループ コンテナーを構成する](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
+     Foreach ループ コンテナーの構成方法については、「 [Foreach ループ コンテナーを構成する](./foreach-loop-container.md)」を参照してください。  
   
     > [!NOTE]  
     >  シーケンス コンテナーには、カスタム エディターはありません。  
@@ -119,5 +119,4 @@ ms.locfileid: "88350068"
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services コンテナー](../../integration-services/control-flow/integration-services-containers.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
-  
   
