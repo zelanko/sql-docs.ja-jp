@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 ms.reviewer: drswkier; sstein
-ms.date: 07/06/2020
-ms.openlocfilehash: dbf4c4de7e8bdcb945f2c11c0b63f7cf75ce318b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.date: 09/29/2020
+ms.openlocfilehash: 52a67ff5c77bebb1fb122af29759b9a440ef6931
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989445"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498218"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -136,7 +136,7 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 |---|---|---|---|
 |**/Action:**|**/a**|発行|実行する操作を指定します。 |
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
-|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Azure Key Vault にアクセスするためにどの認証方法を使用するかを指定します |
+|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|公開操作に暗号化されているテーブルや列の変更が含まれている場合、Azure Key Vault にアクセスするためにどの認証方法を使用するかを指定します。 |
 |**/ClientId:**|**/cid**|{string}|必要な場合、Azure Key Vault に対する認証に使用されるクライアント ID を指定します |
 |**/DeployScriptPath:**|**/dsp**|{string}|配置スクリプトを出力する省略可能なファイル パスを指定します。 Azure の配置では、master データベースを作成または変更するための TSQL コマンドがある場合、スクリプトは同じパスに書き込まれますが、出力ファイル名として "Filename_Master.sql" が使用されます。 |
 |**/DeployReportPath:**|**/drp**|{string}|配置レポートの xml ファイルを出力する省略可能なファイル パスを指定します。 |

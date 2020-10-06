@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d5e7210ca7ae9e4777c11b7c774b90572d2832b0
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+ms.openlocfilehash: c7af170b3e64e60c886dd1cab2a02cba06e318e2
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90570648"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498279"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の累積的な更新プログラムの CAB ダウンロード
 
@@ -164,7 +164,7 @@ SQL Server 2016 R Services では、ベースライン リリースは RTM バ�
 
 |Release  |ダウンロード リンク  |
 |---------|---------------|
-|**SQL Server 2016 SP2 CU14**     |
+|**SQL Server 2016 SP2 CU14-CU15**     |
 |Microsoft R Open      |[SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)|
 |Microsoft R Server    |[SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)|
 |**SQL Server 2016 SP2 CU6-CU13**     |

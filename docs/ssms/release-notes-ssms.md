@@ -10,13 +10,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
-ms.openlocfilehash: 7df66b1102a315dc80eac9ac989f3cb8067e3a27
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.date: 09/28/2020
+ms.openlocfilehash: 46a8b73155fea5c22ef7d94acc3f128f42138410
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180049"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603445"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のリリース ノート
 
@@ -105,10 +105,11 @@ SSMS 18.6 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | Integration Services | Integration Services でパッケージをインポートまたはエクスポートするとき、または Azure-SSIS Integration Runtime でパッケージをエクスポートするときに、スクリプト タスク/コンポーネントを含むパッケージのスクリプトが失われます。 対処法:フォルダー "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild" を削除します。 | 該当なし|
 | Integration Services | Integration Services へのリモート接続が新しいオペレーティング システムで、"The specified service does not exist as an installed service." (指定されたサービスはインストールされたサービスとして存在しません。) で 失敗する場合があります。 対処法:Integration Services に関連するレジストリの場所を Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID の下とこれらのハイブ内で特定し、接続しようとしている Integration Services の特定のバージョンについて 'LocalService' という名前のレジストリ キーの名前を 'LocalService_A' に変更します。 | 該当なし|
 
-
 他の既知の問題について、および製品チームにフィードバックを提供するには、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035-sql-server)を参照できます。
 
 ## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
+
+[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
 
 以前のバージョンの SSMS をダウンロードするには、関連セクションでダウンロード リンクを選択します。
 
@@ -147,7 +148,6 @@ SSMS 18.6 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 
 | 新しい項目 | 詳細 | 回避策 | |----------|---------||-----------| | SSMS 全般 | ダイアグラム デザインに既存のダイアグラムを破損させる既知のバグがあります。 たとえば、SSMS 17.9.1 でダイアグラム デザインを作成してから、SSMS 18.x でそれを更新/保存し、さらに後で 17.9.1 でそれを開こうとします。 詳細については、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/37992649)を参照してください。 | N/A | | SSMS 全般 | 新しい [サーバー監査の仕様] ダイアログにより、SSMS がアクセス違反エラーでクラッシュする場合があります。 | N/A || | SMO/スクリプト | SMO を使用した SSMS 拡張機能は、新しい SMO v160 を対象として再コンパイルする必要があります。 | N/A | | Integration Services | Integration Services でパッケージをインポートまたはエクスポートするとき、または Azure-SSIS Integration Runtime でパッケージをエクスポートするときに、スクリプト タスク/コンポーネントを含むパッケージに対するスクリプトが失われます。 回避策: | フォルダー"C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild" を削除します。 |
 
-
 ### <a name="185"></a>18.5
 
 ![ダウンロード](media/download-icon.png) [SSMS 18.5 をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2125901)
@@ -175,8 +175,8 @@ SSMS 18.6 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | SMO/スクリプト作成 | "*機能制限*" のサポートが削除されました (このプレビュー機能は SQL Azure と SQL オンプレミスから削除されています)。 |
 | SMO/スクリプト作成 | スクリプト生成ウィザードの保存先として *Notebook* が追加されました。 |
 | SMO/スクリプト作成 | *SQL On Demand* のサポートが追加されました。 |
-| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Platform、Name、および engineEdition フィールドに、通常のコンマで区切られた一覧を含めることができるようになりました (*platform*:\[*Windows*, *Linux*\])。正規表現も使用できます (*platform*: *\/Windows\|Linux\/* )
-| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - 13 個の評価規則が追加されました。 詳細については、[GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api) にアクセスしてください。 |
+| SMO/スクリプト作成 | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Platform、Name、および engineEdition フィールドに、通常のコンマで区切られた一覧を含めることができるようになりました (*platform*:\[*Windows*, *Linux*\])。正規表現も使用できます (*platform*: *\/Windows\|Linux\/* )
+| SMO/スクリプト作成 | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 13 個の評価規則が追加されました。 詳細については、[GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api) にアクセスしてください。 |
 
 ### <a name="bug-fixes-in-185"></a>18.5 でのバグの修正
 
@@ -184,7 +184,7 @@ SSMS 18.6 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 |----------|---------|
 | アクセシビリティ | SSIS ADF / 新しいスケジュール: *[新しいスケジュール]* ウィザードにおいて、ナレーターのスキャン モードのフォーカスの順序が論理的ではない問題を修正しました。 |
 | アクセシビリティ | Stretch Database ウィザード: テーブルに関する情報を指定するときに、スクリーン リーダーによってクエリ テーブルの名前が伝えられない問題を修正しました。 |
-| Analysis Services | AS で AAD 接続を使用してスクリプトを作成する場合のキャッシュされた接続を修正します。 |
+| Analysis Services | AS で Azure AD 接続を使用してスクリプトを作成する場合のキャッシュされた接続を修正します。 |
 | 常時接続 | Always On AG に追加された最初のデータベースが正しく参加しない問題を修正しました。
 | 常時接続 | ビッグ データ クラスターのエンドポイントに接続しているときに、ダッシュボードを表示しようとするとエラーが表示された問題を修正しました。 |
 | 監査 | ストレージ アカウントのルート フォルダーに空の名前のフォルダーがある場合に、監査ログのマージ ウィンドウがクラッシュする問題を修正しました。 |
@@ -231,7 +231,7 @@ SSMS 18.6 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | SMO/スクリプト作成 | SQL Azure のインデックスに対する FILLFACTOR がスキップされた問題を修正しました。 |
 | SMO/スクリプト作成 | 外部オブジェクトのスクリプト作成に関連する問題を修正した。 |
 | SMO/スクリプト作成 | *[スクリプトの生成]* で、SQL Database に対して拡張プロパティのスクリプト作成オプションを選択することが許可されていなかった問題を修正しました。 また、このような拡張プロパティのスクリプト作成を修正しました。 |
-| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - XTPHashAvgChainBuckets ルールの間違ったヘルプ リンク。 |
+| SMO/スクリプト作成 | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - XTPHashAvgChainBuckets ルールの間違ったヘルプ リンク。 |
 | XEvent の UI | グリッド内の項目がホバー時に選択される問題を修正しました。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/38262124)と [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921)を参照してください。 |
 
 ### <a name="known-issues-185"></a>既知の問題 (18.5)
@@ -264,13 +264,13 @@ SSMS 18.6 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | クエリ ストア | **[クエリ ストア]** の **[データベースのプロパティ]** オプションに **[Wait Statistics Capture Mode]\(待機統計取り込みモード\)** を追加しました。 |
 | SMO/スクリプト作成 | SQL DW で具体化されたビューのスクリプトをサポートします。 |
 | SMO/スクリプト作成 | *SQL On Demand* のサポートが追加されました。 |
-| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - 50 個の評価規則が追加されました (GitHub の詳細を参照)。 |
-| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - ルールの条件に基になる計算式と比較が追加されました。 |
-| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - RegisteredServer オブジェクトのサポートが追加されました。 |
-| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - JSON 形式での規則の格納方法が更新され、オーバーライド/カスタマイズを適用するメカニズムも更新されました。 |
-| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Linux で SQL をサポートするための規則が更新されました。 |
-| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - 規則セットの JSON 形式が更新され、SCHEMA バージョンが追加されました。 |
-| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - 推奨事項の読みやすさが向上するように、コマンドレットの出力が更新されました。 |
+| SMO/スクリプト作成 | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 50 個の評価規則が追加されました (GitHub の詳細を参照)。 |
+| SMO/スクリプト作成 | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - ルールの条件に基になる計算式と比較が追加されました。 |
+| SMO/スクリプト作成 | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - RegisteredServer オブジェクトのサポートが追加されました。 |
+| SMO/スクリプト作成 | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - JSON 形式での規則の格納方法が更新され、オーバーライド/カスタマイズを適用するメカニズムも更新されました。 |
+| SMO/スクリプト作成 | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Linux で SQL をサポートするための規則が更新されました。 |
+| SMO/スクリプト作成 | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 規則セットの JSON 形式が更新され、SCHEMA バージョンが追加されました。 |
+| SMO/スクリプト作成 | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 推奨事項の読みやすさが向上するように、コマンドレットの出力が更新されました。 |
 | XEvent プロファイラー | XEvent プロファイラー セッションに *error_reported* イベントが追加されました。 |
 
 #### <a name="bug-fixes-in-184"></a>18.4 でのバグの修正
@@ -320,10 +320,10 @@ SSMS 18.6 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | Integration Services | 新しい選択メニュー項目 `Tools > Migrate to Azure > Configure Azure-enabled DTExec` が追加されます。これにより、Azure-SSIS Integration Runtime 上で、SSIS パッケージ実行が、ADF パイプラインでの SSIS パッケージの実行アクティビティとして呼び出されます。 |
 | SMO/スクリプト作成 | Azure SQL DW 固有の制約のスクリプト作成サポートに対するサポートを追加しました。 |
 | SMO/スクリプト作成 | データ分類 </br> - SQL バージョン 10 (SQL 2008) 以降のサポートを追加しました。 </br> - SQL バージョン 15 (SQL 2019) 以降および Azure SQL Database に新しい機密属性 'rank' を追加しました。 |
-| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - ルールセットの形式にバージョン管理を追加しました。 |
-| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - 新しいチェックを追加しました。 |
-| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Azure SQL Managed Instance のサポートを追加しました。 |
-| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - 結果を表で表示するようコマンドレットの既定のビューを更新しました。 |
+| SMO/スクリプト作成 | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - ルールセットの形式にバージョン管理を追加しました。 |
+| SMO/スクリプト作成 | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 新しいチェックを追加しました。 |
+| SMO/スクリプト作成 | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Azure SQL Managed Instance のサポートを追加しました。 |
+| SMO/スクリプト作成 | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 結果を表で表示するようコマンドレットの既定のビューを更新しました。 |
 
 #### <a name="bug-fixes-in-1831"></a>18.3.1 でのバグの修正
 
@@ -547,7 +547,7 @@ SSMS 18.6 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 |Azure Data Studio との統合|OE でデータベース ノードを右クリックすると、Azure Data Studio でクエリを実行するか新しいノートブックを作成するためのコンテキスト メニューがユーザーに表示されます。|
 |Azure SQL サポート| SLO/Edition/MaxSize データベース プロパティにカスタム名を使用できるようになり、今後の Azure SQL Database のエディションのサポートが簡単になりました。|
 |Azure SQL サポート| 最近追加された仮想コア SKU (General Purpose および Business Critical) のサポートの追加:Gen4_24 およびすべての Gen5|
-|Azure SQL Managed Instance|SMO と SSMS で、Azure SQL Managed Instance に接続した場合の新しいログインの種類として、新しい "AAD ログイン" が追加されました。|
+|Azure SQL Managed Instance|SMO と SSMS で、Azure SQL Managed Instance に接続した場合の新しいログインの種類として、新しい "Azure AD ログイン" が追加されました。|
 |常時接続|SSMS の Always on ダッシュボードで RTO (推定復旧時間) と RPO (推定データ損失) を再ハッシュします。 [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md) の更新されたドキュメントを参照してください。|
 |Always Encrypted| [サーバーに接続] ダイアログの新しい [Always Encrypted] タブにある [Always Encrypted を有効にする] チェックボックスで、データベース接続での Always Encrypted の有効化/無効化を簡単に切り替えられるようになりました。|
 |セキュア エンクレーブを使用する Always Encrypted| SQL Server 2019 では、セキュリティで保護されたエンクレーブが設定された Always Encrypted をサポートするためにいくつかの機能強化が加えられました。[サーバーに接続] ダイアログ (新しい [Always Encrypted] タブ) にエンクレーブの構成証明の URL を指定するテキスト フィールド。  [新しい列マスター キー] ダイアログに、新しい列マスターキーでエンクレーブ計算を許可するかどうかを制御する新しいチェックボックスが追加されました。  他の Always Encrypted キー管理ダイアログに、エンクレーブ計算を許可する列マスター キーの情報が表示されるようになりました。|
@@ -632,7 +632,7 @@ SSMS 18.6 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 |Azure SQL Managed Instance のサポート|[データベースの作成] ウィザードで CREATE DATABASE ステートメントが正しくスクリプト化されない。|
 |Azure SQL Managed Instance のサポート|マネージド インスタンスに接続しているときの SSMS 内の SSIS パッケージの特殊処理。|
 |Azure SQL Managed Instance のサポート|マネージド インスタンスに接続するときに "利用状況モニター" を使用しようとしたときにエラーが表示される問題を修正しました。|
-|Azure SQL Managed Instance のサポート|(SSMS エクスプローラーでの) AAD ログインのサポートの強化。|
+|Azure SQL Managed Instance のサポート|(SSMS エクスプローラーでの) Azure AD ログインのサポートの強化。|
 |Azure SQL Managed Instance のサポート|SMO ファイル グループ オブジェクトのスクリプト作成の改善。|
 |Azure SQL Managed Instance のサポート|資格情報のための UI が改善されました。|
 |Azure SQL Managed Instance のサポート|論理レプリケーションのサポートが追加されました。|
@@ -648,7 +648,7 @@ SSMS 18.6 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 |データベース コピー ウィザード|SQL Server 2017 および SQL Server 2019 のデータベース転送タスク/データベース コピー ウィザードは壊れています。|""
 |データベース コピー ウィザード|スクリプトの生成/転送/データベース コピー ウィザードでは、関連付けられている外部データ ソースが作成される前に、テーブルの作成がスクリプト化されます。|
 |接続ダイアログ|Del キーを押して、以前のユーザー名リストからユーザー名を削除できるようになりました。 詳細については、「[Allow deletion of users from SSMS login window](https://feedback.azure.com/forums/908035/suggestions/32897632)」 (SSMS ログイン ウィンドウからのユーザーの削除を許可する) を参照してください。|
-|DAC インポート ウィザード|AAD を使用して接続すると、DAC インポート ウィザードが動作しない問題を修正しました。|
+|DAC インポート ウィザード|Azure Active Directory (Azure AD) を使用して接続すると、DAC インポート ウィザードが動作しない問題を修正しました。|
 |データ分類|データ分類ウィンドウで分類を保存するときに、他のデータベースで別のデータ分類ウィンドウが開いている問題が修正されました。|
 |データ層アプリケーションのウィザード|サーバーへのアクセス制限のために、ユーザーがデータ層アプリケーション (.dacpac) をインポートできない問題を修正しました (たとえば、同じサーバーにおいてすべてのデータベースへのアクセスがないなど)。|
 |データ層アプリケーションのウィザード|多数のデータベースが同じ Azure の SQL server にホストされている場合に、インポートが非常に遅くなる問題を修正しました。|
@@ -691,7 +691,7 @@ SSMS 18.6 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 |オブジェクト スクリプト作成|オブジェクトのスクリプト作成時に、既定値がある DB のスコープ設定の構成は省略されています。|
 |オブジェクト スクリプト作成|スクリプト作成時に動的 T-SQL を生成しないでください。 詳細については、[https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391) を参照してください。 |
 |オブジェクト スクリプト作成|SQL Server 2016 以前のテーブルをスクリプト化するときに、"エッジとして" および "ノードとして" のグラフ構文を省略します。|
-|オブジェクト スクリプト作成|MFA で AAD を使用して Azure SQL Database に接続している場合、データベース オブジェクトのスクリプト作成が失敗する問題が修正されました。|
+|オブジェクト スクリプト作成|MFA で Azure AD を使用して Azure SQL Database に接続している場合、データベース オブジェクトのスクリプト作成が失敗する問題が修正されました。|
 |オブジェクト スクリプト作成|Azure SQL Database で GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID を使用して、空間インデックスのスクリプトを作成しようとするとエラーがスローされていた問題が修正されました。|
 |オブジェクト スクリプト作成|"オブジェクト エクスプローラー" のスクリプト設定がソースと一致するように設定されている場合でも、(Azure SQL Database の) データベース スクリプトが常にオンプレミスの SQL をターゲットとする問題を修正しました。|
 |オブジェクト スクリプト作成|不適切な T-SQL ステートメントを生成する、クラスター化されたインデックスおよびクラスター化されていないインデックスを含む SQL DW データベース内にテーブルをスクリプト作成しようとする問題を修正しました。|
@@ -717,7 +717,7 @@ SSMS 18.6 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 |SMO|名前に中かっこが入っているデータベースを復元しようとすると、StringBuilder.FormatError を引き起こしていた問題を修正しました。|
 |SMO|SMO の Azure データベースが、文字列のすべての比較で、データベースに指定された照合順序を使用する代わりに、大文字と小文字が区別される照合順序を既定としていた問題を修正しました。|
 |SSMS エディター|"SQL システム テーブル" の問題を修正しました。この問題で、既定の色を復元すると、既定の緑色ではなく、ライム グリーン色に変わり、白い背景では読みにくくなります。 詳細については、「[Restoring wrong default color for SQL System Table](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906)」 (SQL システム テーブルの不適切な既定の色を復元する) を参照してください。 この問題は、英語以外のバージョンの SSMS では引き続き発生します。|
-|SSMS エディター|AAD 認証を使用して Azure SQLDW に接続したときに IntelliSense が動作しない問題を修正しました。|
+|SSMS エディター|Azure Active Directory (Azure AD) 認証を使用して Azure SQLDW に接続したときに IntelliSense が動作しない問題を修正しました。|
 |SSMS エディター|ユーザーが**マスター** データベースへのアクセス権を持たない場合の Azure の IntelliSense が修正されました。|
 |SSMS エディター|ターゲット データベースの照合順序で大文字と小文字が区別されているときに破損した "テンポラル テーブル" が作成されるコード スニペットを修正しました。|
 |SSMS エディター|新しい TRANSLATE 関数が、Intellisense によって認識されるようになりました。 詳細については、[https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430) を参照してください。 |

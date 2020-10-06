@@ -1,7 +1,7 @@
 ---
 title: Microsoft.Data.SqlClient 名前空間の概要
-description: Microsoft.Data.SqlClient 名前空間の概要ページ。
-ms.date: 06/23/2019
+description: Microsoft.Data.SqlClient 名前空間と .NET アプリケーション向け SQL に接続する方法としてそれが推奨される理由について説明します。
+ms.date: 09/29/2020
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3a4f0611d3708aba9557deb81ab702f29e7a7462
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.openlocfilehash: c3af23cb3816ad45fa75516633749d1f011c930d
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334583"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529353"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Microsoft.Data.SqlClient 名前空間の概要
 
@@ -206,7 +206,7 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### <a name="utf-8-support"></a>UTF-8 のサポート
 
-UTF-8 のサポートでは、アプリケーション コードを変更する必要はありません。 これらの SqlClient の変更によって、サーバーで UTF-8 がサポートされ、基になる列の照合順序が UTF-8 である場合に、クライアントとサーバーの間の通信が最適化されます。 [SQL Server 2019 プレビューの新機能](../../sql-server/what-s-new-in-sql-server-ver15.md)の UTF-8 のセクションを参照してください。
+UTF-8 のサポートで、アプリケーション コードを変更する必要はありません。 これらの SqlClient の変更によって、サーバーで UTF-8 がサポートされ、基になる列の照合順序が UTF-8 である場合に、クライアントとサーバーの間の通信が最適化されます。 [SQL Server 2019 の新機能](../../sql-server/what-s-new-in-sql-server-ver15.md)の UTF-8 のセクションを参照してください。
 
 ### <a name="always-encrypted-with-enclaves"></a>エンクレーブを使用する Always Encrypted
 

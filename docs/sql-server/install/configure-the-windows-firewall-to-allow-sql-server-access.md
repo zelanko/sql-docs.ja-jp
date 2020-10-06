@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dce5cf7e83be47bda2bcfef17b4602eb5f2fb49e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d6a8f6d48800dfd47454d92a7dca0a5a0b58b80f
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238482"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497730"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -127,20 +127,20 @@ ms.locfileid: "87238482"
   
  固定ポートでリッスンするように名前付きインスタンスを構成する代わりに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlservr.exe **(** ) などの [!INCLUDE[ssDE](../../includes/ssde-md.md)]プログラムを対象としてファイアウォールで例外を作成することもできます。 この方法が有効な場合もありますが、セキュリティが強化された Windows ファイアウォールの MMC スナップインを使用しているときは、 **[受信の規則]** ページの **[ローカル ポート]** 列にポート番号が表示されません。 そのため、どのポートが開いているかを調べるのが難しくなる可能性があります。 もう 1 つの注意事項は、Service Pack または累積された更新によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行可能ファイルへのパスが変更され、ファイアウォールのルールが無効になる可能性があるということです。  
   
-##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>セキュリティが強化された Windows ファイアウォールを使用して、ファイアウォールにプログラムの例外を追加するには
+##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-defender-firewall-with-advanced-security"></a>セキュリティが強化された Windows Defender ファイアウォールを使用して、ファイアウォールにプログラムの例外を追加するには
   
-1. [スタート] メニューから「*wf.msc*」と入力します。 **[セキュリティが強化された Windows ファイアウォール]** を選択します。
+1. [スタート] メニューから「*wf.msc*」と入力します。 Enter キーを押すか、検索結果の wf .msc を選択し、**セキュリティが強化された Windows Defender ファイアウォール**を開きます。
 1. 左側のウィンドウで、 **[受信の規則]** を選択します。
 1. 右側のウィンドウで、 **[アクション]** の **[新しい規則]** を選択します。**新規の受信の規則ウィザード**が開きます。
 1. **[規則の種類]** で  **[プログラム]** を選択します。 **[次へ]** を選択します。
 1. **[プログラム]** で **[このプログラムのパス]** を選択します。 **[参照]** を選択して SQL Server のインスタンスを検索します。 sqlservr.exe というプログラムです。 通常は以下の場所にあります。
 
-   `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
+   `C:\Program Files\Microsoft SQL Server\MSSQL15.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
    **[次へ]** を選択します。
 
-1. **[操作]** で、 **[接続を許可する]** をクリックします。  
-1. [プロファイル] に 3 つのプロフィールすべてを含めます。 **[次へ]** を選択します。
+1. **[操作]** で、 **[接続を許可する]** を選択します。 **[次へ]** を選択します。
+1. **[プロファイル]** で 3 つのプロフィールすべてを含めます。 **[次へ]** を選択します。
 1. **[名前]** に規則の名前を入力します。 **[完了]** を選択します。
 
 エンドポイントの詳細については、「[複数の TCP ポートでリッスンするデータベース エンジンの構成](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)」と「[エンドポイントのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)」を参照してください。 

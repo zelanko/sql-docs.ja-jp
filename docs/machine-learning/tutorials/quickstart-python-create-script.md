@@ -4,19 +4,19 @@ titleSuffix: SQL machine learning
 description: SQL Server、ビッグ データ クラスター、Azure SQL Managed Instances 上の SQL Server Machine Learning Services を使用して、一連の単純な Python スクリプトを実行します。 ストアド プロシージャ sp_execute_external_script を使用して、スクリプトを実行する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/23/2020
+ms.date: 09/28/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperfq1
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2a21e17e5732b8819a955692f2c3721736a533cf
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: a2db492306aff5b4980bb97a6f65b93515dbfe1b
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136380"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497820"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>クイック スタート:SQL 機械学習を使用して単純な Python スクリプトを実行する
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]

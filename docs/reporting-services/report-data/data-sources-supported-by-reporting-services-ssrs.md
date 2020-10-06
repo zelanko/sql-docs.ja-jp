@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4eea801493f87b2c6e11cdca0d42143d54f08bff
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 88c6ae8820997bf1544ac497df6cb251c215a1ac
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988431"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603495"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services でサポートされるデータ ソース (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でレポート データをデータ ソースから取得する処理は、データ処理拡張機能を使用するモジュール式の拡張可能なデータ レイヤーを通して行われます。 レポート データをデータ ソースから取得するには、対象となるデータ ソースの種類 (データ ソースで動作しているバージョンのソフトウェア) およびデータ ソース プラットフォーム (32 ビットまたは 64 ビット [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) がサポートされているデータ処理拡張機能を選択する必要があります。  
@@ -100,22 +100,22 @@ ms.locfileid: "87988431"
   
 |レポート データの<br /><br /> ソース|Reporting Services データ ソースの種類|データ処理拡張機能/データ プロバイダーの名前|基になるデータ プロバイダーのバージョン<br /><br /> (省略可能)|Data<br /><br /> source<br /><br /> プラットフォーム x86|Data<br /><br /> source<br /><br /> プラットフォーム x64|データ ソースのバージョン|RS<br /><br /> プラットフォーム x86|RS<br /><br /> プラットフォーム x64|  
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース|[Microsoft SQL Server](#MicrosoftSQLServer)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|System.Data.SqlClient を拡張|Y|Y|SQL Server 2008 以降。|Y|Y|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース|OLEDB|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|System.Data.OledbClient を拡張|Y|Y|SQL Server 2008 以降。|Y|Y|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース|[ODBC](#ODBC)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|System.Data.OdbcClient を拡張|Y|○|SQL Server 2008 以降。|Y|○|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース|[Microsoft SQL Server](#MicrosoftSQLServer)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|System.Data.SqlClient を拡張|Y|Y|SQL Server 2012 以降。|Y|Y|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース|OLEDB|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|System.Data.OledbClient を拡張|Y|Y|SQL Server 2012 以降。|Y|Y|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース|[ODBC](#ODBC)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|System.Data.OdbcClient を拡張|Y|○|SQL Server 2012 以降。|Y|○|  
 |[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Microsoft Azure SQL Database](#Azure)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|System.Data.SqlClient を拡張|該当なし|なし|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Y|○|
 |SQL Data Warehouse|[Microsoft Azure SQL Database](#Azure)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|System.Data.SqlClient を拡張|該当なし|なし|SQL Data Warehouse|Y|○| 
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] アプライアンス|[Microsoft 並列データ ウェアハウス](#PWD)|非推奨とされている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|該当なし|該当なし|なし|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|×|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多次元データベースまたはテーブル データベース|[Microsoft SQL Server Analysis Services](#AnalysisServices)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|ADOMD.NET を使用|Y|○|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以降|Y|○|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多次元データベースまたはテーブル データベース|[Microsoft SQL Server Analysis Services](#AnalysisServices)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|ADOMD.NET を使用|Y|○|SQL Server 2012 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以降|Y|○|  
 |Power BI Premium データセット (Reporting Services 2019 および Power BI Report Server (2020 年 1 月) 以降) |[Microsoft SQL Server Analysis Services](#AnalysisServices)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|ADOMD.NET を使用|Y|○|SQL Server 2019 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以降|Y|○|
 |Azure Analysis Services |[Microsoft SQL Server Analysis Services](#AnalysisServices)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|ADOMD.NET を使用|Y|○|SQL Server 2017 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以降|Y|○| 
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多次元データベース|OLEDB|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|System.Data.OledbClient を拡張<br /><br /> バージョン 10.0|Y|○|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Y|○|
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多次元データベース|OLEDB|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|System.Data.OledbClient を拡張<br /><br /> バージョン 10.0|Y|○|SQL Server 2012 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Y|○|
 |SharePoint リスト|[Microsoft SharePoint リスト](#SharePointList)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|Lists.asmx または SharePoint オブジェクト モデル API インターフェイスからデータを取得。<br /><br /> 詳細については、「 [注意](#SharePointList)」を参照してください。|N|Y|SharePoint 2013 製品以降|Y|○|   
 |XML|[XML](#XML)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|XML データ ソースにはプラットフォーム依存関係がありません。|該当なし|なし|[!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)] またはドキュメント|Y|○|  
 |レポート サーバー モデル|レポート モデル|パブリッシュされた SMDL ファイル用の、非推奨とされている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|モデルのデータ ソースには組み込みのデータ処理拡張機能が使用されます。<br /><br /> Oracle ベースのモデルには、Oracle クライアント コンポーネントが必要です。<br /><br /> Teradata ベースのモデルには、Teradata からの .NET Data Provider for Teradata が必要です。<br /><br /> プラットフォームのサポートについては、Teradata のマニュアルを参照してください。|該当なし|なし|モデルの作成は次から可能です。[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Oracle 9.2.0.3 以降<br /><br /> Teradata V14、v13、v12、および v6.2|N|N|  
 |SAP 多次元データベース|SAP BW|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|プラットフォームのサポートについては、SAP のマニュアルを参照してください。|該当なし|なし|SAP BW 7.0 - 7.5|Y|該当なし|  
 |[!INCLUDE[extEssbase](../../includes/extessbase-md.md)]|[Hyperion Essbase](#Hyperion)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|プラットフォームのサポートについては、Hyperion のマニュアルを参照してください。|Y|該当なし|[!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 9.3.1|Y|該当なし|  
-|Oracle リレーショナル データベース|[Oracle](#OracleClient)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|Oracle クライアント コンポーネント 12c 以降が必要です。|Y|該当なし|Oracle 11g、11g R2、12c|Y|○|  
+|Oracle リレーショナル データベース|[Oracle](#OracleClient)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|Oracle クライアント コンポーネント 12c 以降が必要です。|Y|該当なし|Oracle 11g、11g R2、12c、18c、19c|Y|○|  
 |Teradata |[Teradata](#Teradata)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|Teradata からの .NET Data Provider for Teradata を拡張<br /><br /> Teradata からの .NET Data Provider for Teradata が必要です。<br /><br /> プラットフォームのサポートについては、Teradata のマニュアルを参照してください。|Y|該当なし|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|○|N|  
 |DB2 リレーショナル データベース|登録済みのカスタマイズされたデータ拡張機能名||2004 Host Integration (HI) Server<br /><br /> |Y|該当なし|なし|○|N|  
 |汎用 OLE DB データ ソース|OLEDB|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|OLE DB をサポートする任意のデータ ソース。<br /><br /> プラットフォームのサポートについては、データ ソースのマニュアルを参照してください。|Y|該当なし|OLE DB をサポートする任意のデータ ソース。 詳細については、「 [注意](#OLEDBStandard)」を参照してください。|Y|該当なし|  

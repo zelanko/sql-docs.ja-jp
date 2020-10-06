@@ -18,12 +18,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: d46002843574b54c803ed0da33c02f1d795494ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2298bc5ad9a6be79d8ab48a42c579c2114bc1656
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88317928"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412963"
 ---
 # <a name="connect-to-server-database-engine"></a>[サーバーへの接続] (データベース エンジン)
 
@@ -65,10 +65,10 @@ SSMS の現在のバージョンでは、[!INCLUDE[ssDE](../../includes/ssde_md.
 > [Active Directory - MFA で汎用] は、Azure Multi-Factor Authentication (MFA) をサポートする対話型ワークフローです。 Azure MFA を使えば、簡単なサインイン プロセスというユーザーの要求を満たしながら、データとアプリケーションへのアクセスを保護できます。 電話、テキスト メッセージ、スマート カードと PIN、モバイル アプリ通知などの簡単な検証オプションで強力な認証を提供し、ユーザーが好みの方法を選択できるようにします。 ユーザー アカウントが MFA 用に構成されている場合の対話型認証ワークフローでは、ポップアップ ダイアログ ボックスやスマート カードなどを使用する追加のユーザー対話が必要です。ユーザー アカウントが MFA 用に構成されている場合、ユーザーは Azure ユニバーサル認証を選択して接続する必要があります。 ユーザー アカウントに MFA が必要ない場合は、ユーザーは他の 2 つの Azure Active Directory 認証オプションを使用できます。 詳細については、「 [SQL Database と SQL Data Warehouse での Azure AD MFA のための SSMS のサポート](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)」をご覧ください。 必要に応じて、ログインを認証するドメインを変更することができます。そのためには、 **[オプション]** をクリックし、 **[接続プロパティ]** タブを選択し、 **[AD ドメイン名またはテナント ID]** ボックス に入力します。  
 > 
 > **Azure Active Directory - パスワード**  
-> Azure Active Directory 認証は、Azure Active Directory (Azure AD) の ID を使用して [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に接続するメカニズムです。  Azure とフェデレーションされていないドメインから資格情報を使用して Windows にログインしている場合、あるいは初期ドメインまたはクライアント ドメインに基づく Azure AD を使用する Azure AD 認証を使用している場合は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] への接続にこの方法を使用します。 詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)に関するページを参照してください。  
+> Azure Active Directory 認証は、Azure Active Directory (Azure AD) の ID を使用して [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に接続するメカニズムです。  Azure とフェデレーションされていないドメインから資格情報を使用して Windows にログインしている場合、あるいは初期ドメインまたはクライアント ドメインに基づく Azure AD を使用する Azure AD 認証を使用している場合は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] への接続にこの方法を使用します。 詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)に関するページを参照してください。  
 > 
 > **Active Directory - 統合**  
-> Azure Active Directory 認証は、Azure Active Directory (Azure AD) の ID を使用して [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に接続するメカニズムです。 フェデレーション ドメインから Azure Active Directory の資格情報を使用して Windows にログインしている場合は、この方法を使用して [!INCLUDE[ssSDS](../../includes/sssds-md.md)] に接続します。 詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)に関するページを参照してください。  
+> Azure Active Directory 認証は、Azure Active Directory (Azure AD) の ID を使用して [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に接続するメカニズムです。 フェデレーション ドメインから Azure Active Directory の資格情報を使用して Windows にログインしている場合は、この方法を使用して [!INCLUDE[ssSDS](../../includes/sssds-md.md)] に接続します。 詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)に関するページを参照してください。  
   
 **ユーザー名**  
 接続に使用する Windows ユーザー名です。 このオプションは、**Azure Active Directory - パスワード**認証を使用した接続が指定されている場合にのみ使用できます。 **Windows 認証**または **Azure Active Directory - 統合**認証を選択した場合は、読み取り専用となります。  

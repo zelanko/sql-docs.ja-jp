@@ -9,12 +9,12 @@ ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: 8312ab1f13d5a85c6dfb43cd29d0ba734846a512
-ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
+ms.openlocfilehash: c647a1cdf767b7dacef5b7e376d6e787af688469
+ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91210583"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589301"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>Azure Arc 対応 SQL Server (プレビュー)
 
@@ -38,7 +38,7 @@ Azure Arc 対応 SQL Server は、Windows または Linux オペレーティン�
 
 - Windows Server 2012 R2 以降
 - Ubuntu 16.04 および 18.04 (x64)
-- CentOS Linux 7 (x64)
+- Red Hat Enterprise Linux (RHEL) 7 (x64) 
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
 
 ### <a name="required-permissions"></a>必要なアクセス許可

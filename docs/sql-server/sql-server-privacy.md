@@ -1,7 +1,7 @@
 ---
 description: SQL Server のプライバシーの補足情報
 title: SQL Server のプライバシーの補足情報 | Microsoft Docs
-ms.date: 01/19/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: mikeray
@@ -11,21 +11,23 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 0a4675d04349da1a8b1e92ce62b8dde3cbabb542
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9e2619cf1bfc8994481c6f310977c77a7292911
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480691"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603411"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server のプライバシーの補足情報
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-この記事では、機能使用状況および診断データを匿名で収集して Microsoft に送信する、インターネット対応機能の概要を説明します。 SQL Server では、標準的なコンピューター情報、および使用とパフォーマンスに関するデータが収集される場合があります。これらの情報は Microsoft に送信され、製品の品質、セキュリティ、および信頼性を向上させる目的で分析されます。 Microsoft Azure サービスの仮想マシンに SQL Server をインストールすると、環境情報が Microsoft に送信され、Microsoft が Azure サブスクリプション内のリソース プロバイダーに SQL Server 仮想マシン リソースを登録できるようになります。詳細については、[こちら](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider)を参照してください。 SQL Server 仮想マシン リソースの登録の一環として、SQL Server IaaS Agent 拡張機能が仮想マシンにインストールされる場合があります。詳細については、[こちら](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension)を参照してください。 この記事は、[Microsoft のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=521839)全体の内容を補うものです。 この記事のデータ分類は、SQL Server オンプレミス製品のバージョンにのみ適用されます。 次のアイテムには適用されません。
+この記事では、機能使用状況および診断データを匿名で収集して Microsoft に送信する、インターネット対応機能の概要を説明します。 SQL Server では、標準的なコンピューター情報、および使用とパフォーマンスに関するデータが収集される場合があります。これらの情報は Microsoft に送信され、製品の品質、セキュリティ、および信頼性を向上させる目的で分析されます。
+
+この記事は、[Microsoft のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=521839)全体の内容を補うものです。 この記事のデータ分類は、SQL Server オンプレミス製品のバージョンにのみ適用されます。 次のアイテムには適用されません。
 
 - Azure SQL データベース
-- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
+- [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-telemetry-ssms.md)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
 - Data Migration Assistant
@@ -115,6 +117,20 @@ SQL Server の使用許諾契約ごとに、インターネット ベースの�
 |同意した顧客は、顧客のコンテンツを含むユーザー フィードバックを Microsoft に送信できます。 |サードパーティによるアクセスなしの Microsoft の内部使用に制限されます。 |同意した顧客は、顧客のコンテンツを含むユーザー フィードバックを Microsoft に送信できます。 |
 |Power View および SQL Reporting Services マップ アイテムの場合、Bing Maps を使用するためにデータが送信される可能性があります。 |セッション データに制限されます。 |- |
 
+## <a name="organization-identifiable-information-oii"></a>組織を特定できる情報 (OII)
+
+組織から受信したデータ、または製品の使用時に生成されたデータ。
+-   組織にリンク可能。
+-   コンテンツを含まない。
+
+### <a name="examples-of-organization-identifiable-information"></a>組織を特定できる情報の例
+-   組織名 (例:Microsoft Corp.)
+
+### <a name="permitted-usage-scenarios"></a>許可される使用シナリオ
+|シナリオ  |アクセス制限  |リテンション期間の要件|
+|---------|---------|---------|
+| Microsoft では、Azure Virtual Machines 内で SQL Server を使用するために Azure 内でお客様にオプションの特典を与える目的のためだけに、Azure Virtual Machines で実行されている SQL Server インスタンスの一般的使用状況データを収集することがあります。 | Microsoft は、Azure Virtual Machines で SQL Server を実行しているお客様が Azure で SQL Server を実行する場合にのみ与えられる特典にアクセスできるよう、Azure portal などを経由してお客様にデータを公開できます。 </br></br>Microsoft は、お客様の事前の同意なく、ライセンスの監査にこのデータを使用することはありません。 | 最短 90 日から最長 3 年 |
+
 ## <a name="system-metadata"></a>システム メタデータ
 
 サーバーの実行中に生成されるデータです。  このデータには顧客のコンテンツは含まれません。
@@ -134,7 +150,7 @@ SQL Server の使用許諾契約ごとに、インターネット ベースの�
 - イベント名とエラー コード
 - ハードウェア設定と、OEM 製造元などの識別
 
-Microsoft は SQL Server を使用するその他のプログラムで設定されたアプリケーション名の値を調べます (例: SharePoint またはサードパーティでパッケージ化されたプログラム。この情報は使用状況データが有効になっている場合に Microsoft に送信されるシステム メタデータに含まれます)。 顧客は、システム メタデータ フィールドのエンド ユーザーを特定できる情報などの個人データを配置したり、これらのフィールドに個人データを格納したりするように設計されたアプリケーションを作成することはできません。 
+Microsoft は SQL Server を使用するその他のプログラムで設定されたアプリケーション名の値を調べます (例:SharePoint またはサードパーティでパッケージ化されたプログラム。この情報は使用状況データが有効になっている場合に Microsoft に送信されるシステム メタデータに含まれます)。 顧客は、システム メタデータ フィールドのエンド ユーザーを特定できる情報などの個人データを配置したり、これらのフィールドに個人データを格納したりするように設計されたアプリケーションを作成することはできません。 
 
 ### <a name="permitted-usage-scenarios"></a>許可される使用シナリオ
 
