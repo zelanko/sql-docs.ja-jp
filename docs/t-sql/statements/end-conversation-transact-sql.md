@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6eafb66e4cc5f14803027d26f88dbf4baafbcd0c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 94fcbdfe06b99e0fb66cb6d462512c7d2a283914
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540636"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497931"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,6 @@ ms.locfileid: "89540636"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 END CONVERSATION conversation_handle  
    [   [ WITH ERROR = failure_code DESCRIPTION = 'failure_text' ]  
      | [ WITH CLEANUP ]  
@@ -96,14 +95,14 @@ END CONVERSATION conversation_handle
 ### <a name="a-ending-a-conversation"></a>A. メッセージ交換を終了する  
  次の例では、`@dialog_handle` で指定したダイアログを終了します。  
   
-```  
+```sql 
 END CONVERSATION @dialog_handle ;  
 ```  
   
 ### <a name="b-ending-a-conversation-with-an-error"></a>B. メッセージ交換を終了し、エラーを返す  
  次の例では、処理中のステートメントでエラーがレポートされた場合に、`@dialog_handle` で指定したダイアログを終了し、エラーを返します。 これは簡単なエラー処理であり、アプリケーションによってはこの方法が適切でない場合があります。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
         @ErrorSave INT,  
         @ErrorDesc NVARCHAR(100) ;  
@@ -128,7 +127,7 @@ COMMIT TRANSACTION ;
 ### <a name="c-cleaning-up-a-conversation-that-cannot-complete-normally"></a>C. 正常に完了しなかったメッセージ交換をクリーンアップする  
  次の例では、`@dialog_handle` で指定したダイアログを終了します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではサービス キューと転送キューからすべてのメッセージが直ちに削除され、リモート サービスに通知は送信されません。 このようにクリーンアップと共にダイアログを終了すると、リモート サービスに通知が送信されません。この方法は、リモート サービスで **EndDialog** または **Error** メッセージを受信できない場合にのみ使用してください。  
   
-```  
+```sql  
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   

@@ -15,12 +15,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7704b286c89942ccb7b6345789514b11a9ec3765
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 113b8dfd288eccff391f9c72df3647955770b916
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227161"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498060"
 ---
 # <a name="permissions-grant-deny-revoke-azure-synapse-analytics-parallel-data-warehouse"></a>権限:GRANT、DENY、REVOKE (Azure Synapse Analytics、Parallel Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -269,55 +269,55 @@ REVOKE
 ### <a name="a-granting-a-server-level-permission-to-a-login"></a>A. ログインに、サーバー レベル権限を許可する  
  次の 2 つのステートメントでは、ログインに、サーバー レベルの権限を付与します。  
   
-```  
+```sql  
 GRANT CONTROL SERVER TO [Ted];  
 ```  
   
-```  
+```sql  
 GRANT ALTER ANY DATABASE TO Mary;  
 ```  
   
 ### <a name="b-granting-a-server-level-permission-to-a-login"></a>B. ログインに、サーバー レベル権限を許可する  
  次の例では、サーバー プリンシパル (別のログイン) に対して、ログインに、サーバー レベルの権限を付与します。  
   
-```  
+```sql  
 GRANT  VIEW DEFINITION ON LOGIN::Ted TO Mary;  
 ```  
   
 ### <a name="c-granting-a-database-level-permission-to-a-user"></a>C. ユーザーに、データベース レベル権限を許可する  
  次の例では、データベース プリンシパル (別のユーザー) に対して、ユーザーに、データベース レベルのアクセス許可を付与します。  
   
-```  
+```sql  
 GRANT VIEW DEFINITION ON USER::[Ted] TO Mary;  
 ```  
   
 ### <a name="d-granting-denying-and-revoking-a-schema-permission"></a>D. スキーマの権限を許可、拒否、および取り消す  
  次の **GRANT** ステートメントは、dbo スキーマの任意のテーブルまたはビューからデータを選択する権限を Yuen に付与します。  
   
-```  
+```sql  
 GRANT SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
  次の **DENY** ステートメントでは、Yuen が dbo スキーマのどのテーブルまたはビューからもデータを選択できないようにします。 Yuen がロールのメンバーシップを通してなど、その他の何らかの方法で権限を持っている場合でも、データを読み取ることはできません。  
   
-```  
+```sql  
 DENY SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
  次の **REVOKE** ステートメントは **DENY** 権利を削除します。 Yuen の明示的なアクセス許可は、ニュートラルになりました。 Yuen は、ロールのメンバーシップなどその他のいくつかの暗黙的な権限を任意のテーブルからデータを選択できる場合があります。  
   
-```  
+```sql  
 REVOKE SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
 ### <a name="e-demonstrating-the-optional-object-clause"></a>E. 省略可能な OBJECT:: 句を示す  
  OBJECT は、権限ステートメントの既定のクラスであるために、次の 2 つのステートメントは同じです。 **OBJECT::** 句は省略可能です。  
   
-```  
+```sql  
 GRANT UPDATE ON OBJECT::dbo.StatusTable TO [Ted];  
 ```  
   
-```  
+```sql  
 GRANT UPDATE ON dbo.StatusTable TO [Ted];  
 ```  
   

@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1f3c3e7cf586cfe70fc1e8d4198a6708c36d68b
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: ae54518c8ff2d7a7ad4b6f55dd3b16ce9d0528eb
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024394"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529453"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -215,7 +215,6 @@ ALTER AUTHORIZATION ON
 -   Azure AD 内に存在するフェデレーション ユーザー (グループではなく)。  
 -   Azure AD 内に存在するマネージド ユーザー (グループではなく) またはアプリケーション。    
 
-> [!NOTE]  
 > 新しい所有者が Azure Active Directory ユーザーの場合は、新しい所有者が新しい DBO になるデータベース内にユーザーとして存在することはできません。 このような Azure AD ユーザーは、ALTER AUTHORIZATION ステートメントを実行して新しいユーザーにデータベース所有権を変更する前にまず、データベースから削除する必要があります。 SQL Database での Azure Active Directory ユーザーの構成について詳しくは、[Azure Active Directory 認証を使用して SQL Database または [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)方法に関するページをご覧ください。   
   
 **ALTER AUTHORIZATION ステートメントを実行するユーザーの要件:**  
