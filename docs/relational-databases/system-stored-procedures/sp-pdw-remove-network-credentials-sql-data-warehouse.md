@@ -15,19 +15,19 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f6ff98a4f17aa39f1b7b85959a68c0f54973a41e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2e05c41cfa226fc2cdc6d2050657b607430f4ef7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473903"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723969"
 ---
 # <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   ネットワークファイル共有にアクセスするために、に格納されているネットワーク資格情報 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] を削除します。 たとえば、このストアドプロシージャを使用して、 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 独自のネットワーク内に存在するサーバーでバックアップ操作と復元操作を実行するための権限を削除します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,7 +35,9 @@ ms.locfileid: "88473903"
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_remove_network_credentials 'target_server_name'  
-```  
+```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>引数  
  '*target_server_name*'  
@@ -55,8 +57,8 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ## <a name="general-remarks"></a>全般的な解説  
  このストアドプロシージャは、の NetworkService アカウントからネットワーク資格情報を削除 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] します。 NetworkService アカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 制御ノードとコンピューティングノードで SMP の各インスタンスを実行します。 たとえば、バックアップ操作を実行すると、制御ノードと各コンピューティングノードは、NetworkService アカウントの資格情報を使用して対象サーバーにアクセスします。  
   
-## <a name="metadata"></a>メタデータ  
- すべての資格情報を一覧表示し、資格情報が削除されたことを確認するには、 [dm_pdw_network_credentials &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)を使用します。  
+## <a name="metadata"></a>Metadata  
+ すべての資格情報を一覧表示し、資格情報が削除されたことを確認するには、 [sys.dm_pdw_network_credentials &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)を使用します。  
   
  資格情報を追加するには、 [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)を使用します。  
   

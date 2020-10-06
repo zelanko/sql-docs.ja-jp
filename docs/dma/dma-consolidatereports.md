@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b16ed1f153259f1301f78d82291c677337677643
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: e989e524a35763927ac949a88592b38c28a18dc5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624799"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727803"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>DMA で企業を評価し評価レポートを統合する
 
@@ -32,9 +32,9 @@ ms.locfileid: "91624799"
   - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) v 3.6 以降。
   - [PowerShell](https://aka.ms/wmf5download) v1.0 以降。
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) version 4.5 以降。
-  - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 以降。
+  - [SSMS](../ssms/download-sql-server-management-studio-ssms.md) 17.0 以降。
   - [Power BI デスクトップ](/power-bi/fundamentals/desktop-get-the-desktop)。
-  - [Azure PowerShell モジュール](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Azure PowerShell モジュール](/powershell/azure/install-az-ps?view=azps-1.0.0)
 - ダウンロードと抽出:
   - [DMA は Power BI テンプレートを報告](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip)します。
   - [Loadwarehouse スクリプト](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip)。

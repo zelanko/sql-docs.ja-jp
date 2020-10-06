@@ -14,19 +14,19 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 002524d834b8036c353b096b0a4fa1fa37875b4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7089187cc0eaa6c0cc3667d8bbf34aeca93bc3f2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473805"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725043"
 ---
 # <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   テーブル内の行を一意に識別する、最適な列のセットを返します。 では、トランザクションによって行の値が更新されると、自動的に更新される列も返されます。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +41,9 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
      [ , [ @nullable = ] 'nullable' ]   
      [ , [ @ODBCVer = ] 'ODBCVer' ]   
 [ ; ]  
-```  
+```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>引数  
  [ @table_name =] '*table_name*'  
@@ -68,7 +70,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
  使用する ODBC のバージョンを指定します。 *Odbcver* は **int (** 4 **)**,、既定値は2です。 既定値は ODBC Version 2.0 を示します。 Odbc バージョン2.0 と ODBC バージョン3.0 の相違点の詳細については、odbc version 3.0 の ODBC Sqlsee Columns の仕様を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
   

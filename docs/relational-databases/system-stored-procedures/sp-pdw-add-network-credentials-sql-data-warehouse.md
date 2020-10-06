@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 47782250a0acf14ce0e8b63a2b631acfce9b3583
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4fea3d262eea3e4e329809137720e94a7af5d93
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473997"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724093"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   これにより、にネットワーク資格情報が格納さ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] れ、サーバーに関連付けられます。 たとえば、このストアドプロシージャを使用して、 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 対象サーバーでデータベースのバックアップと復元操作を実行したり、TDE に使用する証明書のバックアップを作成したりするための適切な読み取り/書き込み権限を付与します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,7 +34,9 @@ ms.locfileid: "88473997"
   
 sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpasswordꞌ  
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## <a name="arguments"></a>引数  
  '*target_server_name*'  
  対象サーバーのホスト名または IP アドレスを指定します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は、このストアドプロシージャに渡されたユーザー名とパスワードの資格情報を使用して、このサーバーにアクセスします。  
