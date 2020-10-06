@@ -13,12 +13,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 79356d7b1a193b57625ceae1f545442b4ac80f23
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8638c87129cfcc567296c0cf20b6b4a9f2f2b08a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883246"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670458"
 ---
 # <a name="install-sql-server-database-engine"></a>SQL Server データベース エンジンのインストール
 
@@ -73,13 +73,12 @@ ms.locfileid: "85883246"
   
 
 > [!NOTE]  
->  既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にサンプル データベースとサンプル コードはインストールされません。 サンプル データベースとサンプルをインストールする場合は、「[Microsoft SQL Server のサンプル](../../sample/microsoft-sql-server-samples.md)」を参照してください。 [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843) で古いサンプルを参照してください。  
+>  既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にサンプル データベースとサンプル コードはインストールされません。 サンプル データベースとサンプルをインストールする場合は、「[Microsoft SQL Server のサンプル](../../samples/sql-samples-where-are.md)」を参照してください。 [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843) で古いサンプルを参照してください。  
 
   
 ## <a name="see-also"></a>関連項目  
  [エディションと SQL Server 2017 のサポートされる機能](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)   
- [高可用性ソリューション &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
+ [高可用性ソリューション &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md)   
  [インストール ウィザードを使用した SQL Server のアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
-  
   

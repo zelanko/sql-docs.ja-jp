@@ -16,12 +16,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f3f80b726b155f94851326660d47da5cbac1018
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 784e005a9a7851c6e088255d8ff8b9e671796367
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900284"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671002"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2016"></a>サポートされているバージョンとエディションのアップグレード (SQL Server 2016)
 
@@ -47,7 +47,7 @@ ms.locfileid: "85900284"
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] は、64 ビット プラットフォームでのみ利用できます。 クロスプラットフォームのアップグレードはサポートされていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 32 ビット インスタンスをネイティブ 64 ビットにアップグレードすることはできません。 ただし、データベースがレプリケーションでパブリッシュされていない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の 32 ビット インスタンスのデータベースをバックアップまたはデタッチしてから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンス (64 ビット) に復元またはアタッチすることができます。 master、msdb、および model の各システム データベースにある、すべてのログインとその他のユーザー オブジェクトを再作成する必要があります。  
   
--   既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのアップグレード中は、新しい機能を追加できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] にアップグレードした後、[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] のセットアップを使用して機能を追加できます。 詳細については、「[SQL Server 2016 のインスタンスへの機能の追加 &#40;セットアップ&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)」を参照してください。  
+-   既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのアップグレード中は、新しい機能を追加できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] にアップグレードした後、[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] のセットアップを使用して機能を追加できます。 詳細については、「[SQL Server 2016 のインスタンスへの機能の追加 &#40;セットアップ&#41;](./add-features-to-an-instance-of-sql-server-setup.md)」を参照してください。  
  
 -   フェールオーバー クラスターは、WOW モードでサポートされていません。  
   
@@ -174,8 +174,7 @@ SQL Server 2016 では、次のバージョンの SQL Server からのアップ�
   
 ## <a name="see-also"></a>参照  
 
-[SQL Server 2016 のエディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)     
+[SQL Server 2016 のエディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2016.md)     
 [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)     
 [SQL Server 2016 へのアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)    
-  
   

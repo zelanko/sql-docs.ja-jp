@@ -17,12 +17,12 @@ ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e5635065e77921b661d5b60e5ebcd0aad850295b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 199230f8438a93db64fd5e32ded526699c447a7b
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883491"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670945"
 ---
 # <a name="install-sql-server-replication"></a>SQL Server レプリケーションのインストール
 
@@ -43,11 +43,10 @@ ms.locfileid: "85883491"
 ## <a name="installing-replication-from-the-command-prompt"></a>コマンド プロンプトによるレプリケーションのインストール  
  **の新しいインスタンスをインストールするときにレプリケーションをインストールするには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
-- 「[コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」を参照してください。  
+- 「[コマンド プロンプトからの SQL Server のインストール](./install-sql-server-from-the-command-prompt.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [SQL Server のインストール](../../database-engine/install-windows/install-sql-server.md)   
- [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [コマンド プロンプトからの SQL Server のインストール](./install-sql-server-from-the-command-prompt.md)   
  [SQL Server の各エディションでサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2017.md)  
-  
   

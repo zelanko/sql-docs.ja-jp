@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 848ac8820ec5150c8c3fc058f77ffa4261ed8aa2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6b63ae0e77cc521d6d882eab340cbfa3b761e41d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902366"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670385"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 可用性グループ ダッシュボードの使用 (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -331,7 +331,7 @@ ms.locfileid: "85902366"
 
 SQL エージェントではデータ収集を行います。プライマリ レプリカと、1 つ以上のセカンダリ レプリカの両方で SQL エージェントを有効にする必要があります。 SQL Server Management Studio の**オブジェクト エクスプローラー**で、可用性グループを右クリックし、[レポート]、[標準レポート] の順に選択してレポートを表示します。  
 
-詳細については、[Always On 可用性グループの待機時間レポート](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/)に関するページを参照してください。
+詳細については、[Always On 可用性グループの待機時間レポート](/archive/blogs/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports)に関するページを参照してください。
 
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -340,5 +340,4 @@ SQL エージェントではデータ収集を行います。プライマリ レ
 ## <a name="see-also"></a>参照  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [可用性グループの監視 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

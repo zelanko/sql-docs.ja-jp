@@ -16,12 +16,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: ec6c743ea40da4d7ee6846c3a1373d3912ec0dc9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 687f314e776dcc049f03cb4c8a164fb5fa84073e
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900305"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670203"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2019"></a>サポートされているバージョンとエディションのアップグレード (SQL Server 2019)
 
@@ -44,7 +44,7 @@ ms.locfileid: "85900305"
   
 - [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] は、64 ビット プラットフォームでのみ利用できます。 クロスプラットフォームのアップグレードはサポートされていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 32 ビット インスタンスをネイティブ 64 ビットにアップグレードすることはできません。 ただし、データベースがレプリケーションでパブリッシュされていない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の 32 ビット インスタンスのデータベースをバックアップまたはデタッチしてから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンス (64 ビット) に復元またはアタッチすることができます。 master、msdb、および model の各システム データベースにある、すべてのログインとその他のユーザー オブジェクトを再作成する必要があります。  
   
-- 既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのアップグレード中は、新しい機能を追加できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] にアップグレードした後、[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] のセットアップを使用して機能を追加できます。 詳細については、「[SQL Server のインスタンスへの機能の追加 &#40;セットアップ&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)」を参照してください。  
+- 既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのアップグレード中は、新しい機能を追加できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] にアップグレードした後、[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] のセットアップを使用して機能を追加できます。 詳細については、「[SQL Server のインスタンスへの機能の追加 &#40;セットアップ&#41;](./add-features-to-an-instance-of-sql-server-setup.md)」を参照してください。  
  
 ## <a name="upgrades-from-earlier-versions-to-sssqlv15-md"></a>以前のバージョンから [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]  
  
@@ -100,7 +100,7 @@ ms.locfileid: "85900305"
 
 次のヒントとツールは、移行の計画と実装に役立ちます。
 
-- 移行ツール:移行は [Data Migration Assistant (DMA)](https://aka.ms/dma) を通じてサポートされます。
+- 移行ツール:移行は [Data Migration Assistant (DMA)](../../dma/dma-overview.md) を通じてサポートされます。
 - バックアップと復元:SQL Server 2008 または SQL Server 2008 R2 で作成されたバックアップは、SQL Server 2019 に復元できます。
 - ログ配布:ログ配布は、プライマリが SQL Server 2008 SP3 以降、または SQL Server 2008 R2 SP2 以降を実行していて、セカンダリが SQL Server 2019 で実行されている場合にサポートされます。 
 
@@ -149,4 +149,4 @@ ms.locfileid: "85900305"
 
  [SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 
- [SQL Server のアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [SQL Server のアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)
