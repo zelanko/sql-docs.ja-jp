@@ -6030,8 +6030,6 @@
       items:
         - name: 新機能
           href: dma/dma-whatsnew.md
-        - name: SQL Database の評価
-          href: dma/dma-assesssqlonprem.md
         - name: SQL Server Integration Services (SSIS) の評価
           href: dma/dma-assess-ssis.md
         - name: 評価の保存と読み込み
@@ -6044,8 +6042,6 @@
           href: dma/dma-migrateonpremsqltosqldb.md
         - name: SQL Server ログインの移行
           href: dma/dma-migrateserverlogins.md
-        - name: Azure SQL Database の準備のための SQL Server データ資産の評価
-          href: dma/dma-assess-sql-data-estate-to-sqldb.md
         - name: ベスト プラクティス
           href: dma/dma-bestpractices.md
         - name: 評価レポートの統合
@@ -6056,6 +6052,14 @@
           href: dma/dma-commandline.md
         - name: 設定の構成
           href: dma/dma-configurationsettings.md
+        - name: Azure SQL DB の準備状態の評価
+          items:
+            - name: 評価を作成する
+              href: dma/dma-assesssqlonprem.md
+            - name: DMA GUI を使用する
+              href: dma/dma-assess-sql-data-estate-to-sqldb.md
+            - name: DMA コマンドラインを使用する
+              href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
     - name: SQL Server Migration Assistant (SSMA)
       href: ssma/toc.yml
 - name: 管理、監視、チューニング
