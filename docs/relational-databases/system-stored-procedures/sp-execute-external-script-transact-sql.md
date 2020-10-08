@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b820003b3039a8561dd299a7fb85c1d52b043bda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447200"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810195"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` 外部スクリプトによって使用される入力パラメーターの値の一覧です。  
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 > [!IMPORTANT]
 > クエリツリーは SQL machine learning によって制御され、ユーザーはクエリに対して任意の操作を実行できません。
@@ -165,14 +165,14 @@ sp_execute_external_script
 
 ### <a name="monitor-script-execution"></a>スクリプトの実行の監視
 
-[Dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)と[sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)を使用してスクリプトの実行を監視します。
+[Sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)と[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)を使用してスクリプトの実行を監視します。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ### <a name="parameters-for-partition-modeling"></a>パーティションモデリングのパラメーター
 
 パーティション分割されたデータでのモデリングを可能にする2つの追加パラメーターを設定できます。この場合、パーティションは、指定した1つ以上の列に基づいて作成され、スクリプトの実行中にのみ使用される論理パーティションにデータセットを分割します。 年齢、性別、地域、日付、または時刻の繰り返し値を含む列は、パーティション分割されたデータセットに適したいくつかの例です。
 
-2つのパラメーター **input_data_1_partition_by_columns** と **input_data_1_order_by_columns**で、2番目のパラメーターを使用して結果セットを並べ替えます。 パラメーターは、 `sp_execute_external_script` すべてのパーティションに対して1回実行される外部スクリプトを使用して、入力として渡されます。 詳細と例については、「 [チュートリアル: パーティションベースのモデルを作成する](https://docs.microsoft.com/sql/machine-learning/tutorials/r-tutorial-create-models-per-partition)」を参照してください。
+2つのパラメーター **input_data_1_partition_by_columns** と **input_data_1_order_by_columns**で、2番目のパラメーターを使用して結果セットを並べ替えます。 パラメーターは、 `sp_execute_external_script` すべてのパーティションに対して1回実行される外部スクリプトを使用して、入力として渡されます。 詳細と例については、「 [チュートリアル: パーティションベースのモデルを作成する](../../machine-learning/tutorials/r-tutorial-create-models-per-partition.md)」を参照してください。
 
 を指定することにより、スクリプトを並列で実行でき `@parallel=1` ます。 入力クエリを並列化できる場合は、 `@parallel=1` 引数の一部としてをに設定する必要があり `sp_execute_external_script` ます。 既定では、クエリオプティマイザーは `@parallel=1` 256 行を超えるテーブルで動作しますが、これを明示的に処理する場合、このスクリプトにはパラメーターがデモンストレーションとして含まれます。
 
@@ -322,7 +322,7 @@ Python を使って似たモデルを生成するには、言語識別子を `@l
 
 スコアリングには、ネイティブな [PREDICT](../../t-sql/queries/predict-transact-sql.md) 関数を使うこともできます。通常、これは Python や R のランタイムを呼び出さないので高速です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 + [SQL 機械学習](../../machine-learning/index.yml)
 + [SQL Server 言語拡張機能](../../language-extensions/language-extensions-overview.md)。 
@@ -334,4 +334,4 @@ Python を使って似たモデルを生成するには、言語識別子を `@l
 + [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
 + [SQL Server のExternal Scripts オブジェクト](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 + [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
-+ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 
++ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)

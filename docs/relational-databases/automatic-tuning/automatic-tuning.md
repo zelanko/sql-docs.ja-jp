@@ -18,12 +18,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f59aee58735b3b38cf8de3a47461cad1c59f6b81
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 65fc7918a3e8064310757a2875e62d6e001f750c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497954"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91808518"
 ---
 # <a name="automatic-tuning"></a>自動チューニング
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -99,9 +99,9 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリストアのパフォーマンスを監視し、問題を修正するために必要なすべてのビューと手順について説明します。
 
-では [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 、クエリストアシステムビューを使用して、プラン選択の回帰を見つけることができます。 以降では、によって、 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] プランの選択の回帰の可能性が検出され、 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] [dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV で適用される推奨の操作が示されます。 DMV には、問題に関する情報、問題の重要度、および特定されたクエリ、低下したプランの ID、比較の基準として使用されたプランの ID、および [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 問題を解決するために実行できるステートメントなどの詳細が表示されます。
+では [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 、クエリストアシステムビューを使用して、プラン選択の回帰を見つけることができます。 以降では、によって、 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] [!INCLUDE[ssde_md](../../includes/ssde_md.md)] プランの選択の回帰の可能性が検出され、 [sys.dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV で適用される推奨の操作が示されます。 DMV には、問題に関する情報、問題の重要度、および特定されたクエリ、低下したプランの ID、比較の基準として使用されたプランの ID、および [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 問題を解決するために実行できるステートメントなどの詳細が表示されます。
 
-| 型 | description | DATETIME | score | details | ... |
+| type | description | DATETIME | score | details | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | CPU 時間が4ミリ秒から14ミリ秒に変更されました | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | CPU 時間が37ミリ秒から84ミリ秒に変更されました | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -111,7 +111,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
  - [!INCLUDE[ssde_md](../../includes/ssde_md.md)]このプランが変更されたと考えられる場合のパフォーマンスの向上に関する情報が含まれている説明。
  - 可能性のある回帰が検出された日時。
  - この推奨事項のスコア。
- - 検出されたプランの ID、低下したプランの id、問題を修正するために必要なプランの ID、 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 問題を修正するために適用される可能性のあるスクリプトなどの問題について詳しく説明します。詳細は [JSON 形式](../../relational-databases/json/index.md)で格納されます。
+ - 検出されたプランの ID、低下したプランの id、問題を修正するために必要なプランの ID、 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 問題を修正するために適用される可能性のあるスクリプトなどの問題について詳しく説明します。詳細は [JSON 形式](../json/json-data-sql-server.md)で格納されます。
 
 次のクエリを使用して、問題を修正するスクリプトと、推定されるゲインに関する追加情報を取得します。
 
@@ -178,19 +178,19 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
 
 ### <a name="alternative---manual-index-management"></a>代替-手動によるインデックス管理
 
-自動インデックス管理を使用しない場合、ユーザーまたは DBA は手動で [dm_db_missing_index_details &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) ビューにクエリを実行するか、のパフォーマンスダッシュボードレポートを使用し [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] て、パフォーマンスを向上させる可能性のあるインデックスを検索し、このビューに示された詳細を使用してインデックスを作成し、クエリのパフォーマンスを手動で監視する必要があります。 削除する必要があるインデックスを見つけるために、ユーザーはインデックスの操作の使用状況の統計を監視して、使用頻度の低いインデックスを検索する必要があります。
+自動インデックス管理を使用しない場合、ユーザーまたは DBA は、 [transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) ビューに手動で &#40;sys.dm_db_missing_index_details クエリを実行するか、のパフォーマンスダッシュボードレポートを使用し [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] て、パフォーマンスを向上させる可能性のあるインデックスを検索し、このビューに示された詳細を使用してインデックスを作成し、クエリのパフォーマンスを手動で監視する必要があります。 削除する必要があるインデックスを見つけるために、ユーザーはインデックスの操作の使用状況の統計を監視して、使用頻度の低いインデックスを検索する必要があります。
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] このプロセスを簡略化します。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] ワークロードを分析し、新しいインデックスを使用してより高速に実行できるクエリを識別し、未使用または重複したインデックスを識別します。 変更する必要があるインデックスの識別の詳細については、「[Azure Portal を使用した SQL Database Advisor](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal)」参照してください。
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] このプロセスを簡略化します。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] ワークロードを分析し、新しいインデックスを使用してより高速に実行できるクエリを識別し、未使用または重複したインデックスを識別します。 変更する必要があるインデックスの識別の詳細については、「[Azure Portal を使用した SQL Database Advisor](/azure/sql-database/sql-database-advisor-portal)」参照してください。
 
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [database_automatic_tuning_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
- [dm_db_tuning_recommendations &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
- [dm_db_missing_index_details &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.database_automatic_tuning_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
+ [sys.dm_db_tuning_recommendations &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [sys.dm_db_missing_index_details &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sp_query_store_force_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
  [sp_query_store_unforce_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
- [database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [JSON 関数](../../relational-databases/json/index.md)    
+ [sys.database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [JSON 関数](../json/json-data-sql-server.md)    
  [実行プラン](../../relational-databases/performance/execution-plans.md)    
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [パフォーマンス監視およびチューニング ツール](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     

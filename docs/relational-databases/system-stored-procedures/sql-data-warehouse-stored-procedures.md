@@ -13,12 +13,12 @@ ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d4fa27efd21d091726fa55d069706252e6f049e1
-ms.sourcegitcommit: b9871e6cffb4c2c65d1f27f797630c43fc02cfb0
+ms.openlocfilehash: 75186b766ae144719838db981ea9b857876bce23
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90101132"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809446"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>ストアドプロシージャの SQL Data Warehouse
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -40,10 +40,9 @@ ms.locfileid: "90101132"
  [sp_special_columns_100 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
->  いくつかの追加のシステムストアドプロシージャは、のインスタンス内 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはクライアント api を使用してのみ使用され、一般的な顧客使用を目的としていません。 これらの手順については、 [「システムストアドプロシージャ (transact-sql)](https://msdn.microsoft.com/library/ms187961.aspx)」をご覧ください。 これらの手順は変更される可能性があり、互換性は保証されません。 この一覧に記載されているすべてのプロシージャは、では使用できません [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。  
+>  いくつかの追加のシステムストアドプロシージャは、のインスタンス内 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはクライアント api を使用してのみ使用され、一般的な顧客使用を目的としていません。 これらの手順については、 [「システムストアドプロシージャ (transact-sql)](./system-stored-procedures-transact-sql.md)」をご覧ください。 これらの手順は変更される可能性があり、互換性は保証されません。 この一覧に記載されているすべてのプロシージャは、では使用できません [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。  
   
 ## <a name="see-also"></a>参照  
  [システムストアド関数 &#40;Transact-sql&#41;](~/relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-  
   

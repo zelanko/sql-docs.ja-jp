@@ -19,12 +19,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06182bbd036fd746920f6e164b73321a170acc4f
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: fd7e49443d6166b8a7da809b0b2e96fd2ddb927f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670105"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810756"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,7 +95,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  ハッシュ化インデックス型は、完全一致検索または範囲検索を受け付けますが、パターン照合検索ではインデックスは使用されません。  
   
- **sp_statistics** は、ODBC の **sqlstatistics** に相当します。 返される結果は、 **NON_UNIQUE**、 **種類**、 **INDEX_QUALIFIER**、 **INDEX_NAME**、および **SEQ_IN_INDEX**順に並べ替えられます。 詳細については、 [ODBC API リファレンス](https://go.microsoft.com/fwlink/?LinkId=68323)を参照してください。  
+ **sp_statistics** は、ODBC の **sqlstatistics** に相当します。 返される結果は、 **NON_UNIQUE**、 **種類**、 **INDEX_QUALIFIER**、 **INDEX_NAME**、および **SEQ_IN_INDEX**順に並べ替えられます。 詳細については、 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-reference.md)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
@@ -109,9 +109,7 @@ sp_statistics [ @table_name = ] 'table_name'
 EXEC sp_statistics DimEmployee;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のカタログストアドプロシージャ ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
-  
-
