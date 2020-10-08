@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10c3e83451efd0f7ac5868fd25d540191821b72c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0564d83508dafa650735981537599c7b0068da67
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765771"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725873"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Kubernetes 上に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法
 
@@ -80,7 +80,7 @@ SQL Server 2019 ビッグ データ クラスターを展開する前に、ま�
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- Azure Data Studio 用の[データ仮想化の拡張機能](../azure-data-studio/data-virtualization-extension.md)
+- Azure Data Studio 用の[データ仮想化の拡張機能](../azure-data-studio/extensions/data-virtualization-extension.md)
 
 
 ## <a name="deployment-overview"></a><a id="deploy"></a> 展開の概要
@@ -255,7 +255,7 @@ Cluster deployed successfully.
    > [!TIP]
    > 展開中に既定の名前を変更しなかった場合、前のコマンドにある `-n mssql-cluster` を使用します。 `mssql-cluster` は、ビッグ データ クラスターの既定の名前です。
 
-1. [azdata login](reference-azdata.md) を使用して、ビッグ データ クラスターにログインします。 `--endpoint` パラメーターをコントローラー エンドポイントの外部 IP アドレスに設定します。
+1. [azdata login](../azdata/reference/reference-azdata.md) を使用して、ビッグ データ クラスターにログインします。 `--endpoint` パラメーターをコントローラー エンドポイントの外部 IP アドレスに設定します。
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -266,7 +266,7 @@ Cluster deployed successfully.
    > [!TIP]
    > Kubernetes クラスター管理者であり、クラスター構成ファイル (Kube 構成ファイル) にアクセスできる場合は、対象の Kubernetes クラスターを指すように現在のコンテキストを構成できます。 この場合は、`azdata login -n <namespaceName>` を使用してログインできます。ここで、`namespace` はビッグ データ クラスター名です。 ログイン コマンド内で指定されていない場合は、資格情報の入力を求められます。
    
-1. [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) を実行して、各エンドポイントの説明とそれに対応する IP アドレスおよびポート値を示した一覧を取得します。 
+1. [azdata bdc endpoint list](../azdata/reference/reference-azdata-bdc-endpoint.md) を実行して、各エンドポイントの説明とそれに対応する IP アドレスおよびポート値を示した一覧を取得します。 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -298,7 +298,7 @@ kubectl get svc -n <your-big-data-cluster-name>
 
 ## <a name="verify-the-cluster-status"></a><a id="status"></a> クラスターの状態を確認する
 
-展開後に、[azdata bdc status show](reference-azdata-bdc-status.md) コマンドを使用して、クラスターの状態を確認できます。
+展開後に、[azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md) コマンドを使用して、クラスターの状態を確認できます。
 
 ```bash
 azdata bdc status show
@@ -381,7 +381,7 @@ Bdc: ready                                                                      
 
 次のコマンドを使用してさらに詳しい状態を取得することもできます。
 
-- [azdata bdc control status show](reference-azdata-bdc-control-status.md) では、コントロール管理サービスに関連付けられているすべてのコンポーネントの正常性状態が返されます
+- [azdata bdc control status show](../azdata/reference/reference-azdata-bdc-control-status.md) では、コントロール管理サービスに関連付けられているすべてのコンポーネントの正常性状態が返されます
 ```
 azdata bdc control status show
 ```

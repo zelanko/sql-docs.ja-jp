@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: be42913b07f037b002123bedb6d285f41b52c9a3
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 0f4ccc330491ba5699ed10de48a883792d896447
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393170"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725641"
 ---
 # <a name="handling-null-values"></a>null 値の処理
 
@@ -26,7 +26,7 @@ ms.locfileid: "86393170"
 列の値が不明、または欠落している場合は、リレーショナル データベース内の null 値が使用されます。 null は、空の文字列 (文字型または 日時データ型の場合) でも、0 値 (数値データ型の場合) でもありません。 ANSI SQL-92 の規格では、すべての null が一貫して処理されるように、すべてのデータ型で同じである必要があると規定されています。 <xref:System.Data.SqlTypes> 名前空間では、<xref:System.Data.SqlTypes.INullable> インターフェイスを実装することによって null セマンティクスが提供されます。 <xref:System.Data.SqlTypes> の各データ型には、そのデータ型のインスタンスに割り当てることができる独自の `IsNull` プロパティと `Null` 値があります。  
   
 > [!NOTE]
->  .NET Framework バージョン 2.0 と .NET Core バージョン 1.0 では、null 許容型のサポートが導入され、プログラマが値の型を拡張し、基になる型のすべての値を表すことができるようになりました。 これらの CLR null 許容型は、<xref:System.Nullable> 構造体のインスタンスを表します。 この機能は、値の型がボックス化およびボックス化解除されている場合に特に有効であり、オブジェクトの型との互換性が強化されます。 ANSI SQL null は `null` 参照 (または Visual Basic の `Nothing`) と同じようには動作しないため、CLR null 許容型はデータベース null の格納を目的としたものではありません。 データベースの ANSI SQL null 値を操作するには、<xref:System.Data.SqlTypes> ではなく <xref:System.Nullable> null を使用します。 C# での CLR null 許容型の操作の詳細については [null 許容型](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/)に関するページを、C# については [null 許容型の使用](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/)に関するページを参照してください。  
+>  .NET Framework バージョン 2.0 と .NET Core バージョン 1.0 では、null 許容型のサポートが導入され、プログラマが値の型を拡張し、基になる型のすべての値を表すことができるようになりました。 これらの CLR null 許容型は、<xref:System.Nullable> 構造体のインスタンスを表します。 この機能は、値の型がボックス化およびボックス化解除されている場合に特に有効であり、オブジェクトの型との互換性が強化されます。 ANSI SQL null は `null` 参照 (または Visual Basic の `Nothing`) と同じようには動作しないため、CLR null 許容型はデータベース null の格納を目的としたものではありません。 データベースの ANSI SQL null 値を操作するには、<xref:System.Data.SqlTypes> ではなく <xref:System.Nullable> null を使用します。 C# での CLR null 許容型の操作の詳細については [null 許容型](/dotnet/csharp/programming-guide/nullable-types/)に関するページを、C# については [null 許容型の使用](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/)に関するページを参照してください。  
   
 ## <a name="nulls-and-three-valued-logic"></a>null および 3 値ロジック  
 列定義で null 値を許可すると、アプリケーションに 3 値ロジックが導入されます。 比較では、次の 3 つの状態のいずれかに評価されます。  

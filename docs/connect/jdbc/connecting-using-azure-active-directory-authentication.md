@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 04e52a1a84bb37fccd90f9ff32e0fdadde8fb2af
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 94950f346ddaf4264926438ca107c49350577b27
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117131"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725473"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 認証を利用した接続
 
@@ -24,7 +24,7 @@ ms.locfileid: "91117131"
 
 この記事には、Microsoft JDBC Driver for SQL Server で Azure Active Directory 認証機能を使用する Java アプリケーションの開発方法に関する情報が記載されています。
 
-Azure Active Directory の ID を使用して Azure SQL Database v12 に接続するメカニズムである、Azure Active Directory (Azure AD) 認証を使用できます。 Azure Active Directory 認証は、データベース ユーザーの ID を一元管理するという目的で使用でき、SQL Server 認証に代わる方法となります。 JDBC Driver では、Azure Active Directory の資格情報を JDBC 接続文字列に指定して、Azure SQL Database に接続することができます。 Azure Active Directory 認証を構成する方法については、[Azure Active Directory 認証を使用した SQL Database への接続](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)に関するページを参照してください。 
+Azure Active Directory の ID を使用して Azure SQL Database v12 に接続するメカニズムである、Azure Active Directory (Azure AD) 認証を使用できます。 Azure Active Directory 認証は、データベース ユーザーの ID を一元管理するという目的で使用でき、SQL Server 認証に代わる方法となります。 JDBC Driver では、Azure Active Directory の資格情報を JDBC 接続文字列に指定して、Azure SQL Database に接続することができます。 Azure Active Directory 認証を構成する方法については、[Azure Active Directory 認証を使用した SQL Database への接続](/azure/azure-sql/database/authentication-aad-overview)に関するページを参照してください。 
 
 Microsoft JDBC Driver for SQL Server で Azure Active Directory 認証をサポートする接続プロパティは次のとおりです。
 *   **authentication**:このプロパティを使用して、接続に使用する SQL 認証方法を指定します。 次のいずれかの値になります。 
@@ -287,7 +287,7 @@ You have successfully logged on as: <your user name>
     12. 左側のパネルで、[Azure Active Directory] をクリックします。 [アプリの登録] で、[エンド ポイント] タブを見つけます。[OATH 2.0 TOKEN ENDPOINT]\(OATH 2.0 トークン エンドポイント\) の下の URL をコピーします。これが STS URL です。
     
     ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
-2. Azure SQL Server のユーザー データベースに Azure Active Directory 管理者としてサインインし、T-SQL コマンドを使用して、アプリケーション プリンシパルの包含データベース ユーザーをプロビジョニングします。 Azure Active Directory 管理者と包含データベース ユーザーの作成方法の詳細については、[Azure Active Directory 認証を使用した SQL Database または SQL Data Warehouse への接続](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)に関するページを参照してください。
+2. Azure SQL Server のユーザー データベースに Azure Active Directory 管理者としてサインインし、T-SQL コマンドを使用して、アプリケーション プリンシパルの包含データベース ユーザーをプロビジョニングします。 Azure Active Directory 管理者と包含データベース ユーザーの作成方法の詳細については、[Azure Active Directory 認証を使用した SQL Database または SQL Data Warehouse への接続](/azure/azure-sql/database/authentication-aad-overview)に関するページを参照してください。
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
@@ -351,4 +351,4 @@ public class AADTokenBased {
 ```bash
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>    
-``` 
+```

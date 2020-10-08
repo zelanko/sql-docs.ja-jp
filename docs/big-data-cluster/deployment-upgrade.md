@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 009853cd960a49ec559edd1d8a619e458102364d
-ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
+ms.openlocfilehash: 6aa01e932003fb1ca650e4b7bf135ff8266b6457
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89392178"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725853"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をアップグレードする方法
 
@@ -60,10 +60,10 @@ ms.locfileid: "89392178"
 1. `azdata` を更新します。
 
    `azdata` のインストール手順に従います。 
-   - [Windows インストーラー](deploy-install-azdata-installer.md)
-   - [Linux (apt を使用)](deploy-install-azdata-linux-package.md)
-   - [Linux (yum を使用)](deploy-install-azdata-yum.md)
-   - [Linux (zypper を使用)](deploy-install-azdata-zypper.md)
+   - [Windows インストーラー](../azdata/install/deploy-install-azdata-installer.md)
+   - [Linux (apt を使用)](../azdata/install/deploy-install-azdata-linux-package.md)
+   - [Linux (yum を使用)](../azdata/install/deploy-install-azdata-yum.md)
+   - [Linux (zypper を使用)](../azdata/install/deploy-install-azdata-zypper.md)
 
    >[!NOTE]
    >`azdata` が `pip` と共にインストールされている場合は、Windows インストーラーまたは Linux パッケージ マネージャーを使ってインストールする前に、手動で削除する必要があります。

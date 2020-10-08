@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: 548db45e97fed2a5d955eef947c6d21004d439d2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9768c406ca94cd16e8e9075bd5247434b8359d5c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243443"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725763"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>PROSE コード アクセラレータを使用したデータ ラングリング
 
@@ -37,7 +37,7 @@ import prose.codeaccelerator as cx
 - データフレームでデータ型を修正する。
 - 文字列のリストでパターンを表す正規表現を見つける。
 
-コード アクセラレータ メソッドの概要については、[このドキュメント](https://aka.ms/prose-codeaccelerator-overview)を参照してください。
+コード アクセラレータ メソッドの概要については、[このドキュメント](/python/api/overview/azure/prose/intro)を参照してください。
 
 ## <a name="reading-data-from-a-file-to-a-dataframe"></a>ファイルからデータフレームへのデータの読み取り
 
@@ -86,7 +86,7 @@ def read_file(file):
     return df
  ```
 
-コード アクセラレータでは、区切られたファイル、JSON ファイル、および固定幅のファイルをデータフレームに読み込むコードを生成できます。 固定幅のファイルを読み取る場合、`ReadFwfBuilder` では必要に応じて、列の位置を取得するために解析できる、人間が判読できるスキーマ ファイルを受け取ります。 詳細については、[このドキュメント](https://aka.ms/prose-codeaccelerator-docs)を参照してください。
+コード アクセラレータでは、区切られたファイル、JSON ファイル、および固定幅のファイルをデータフレームに読み込むコードを生成できます。 固定幅のファイルを読み取る場合、`ReadFwfBuilder` では必要に応じて、列の位置を取得するために解析できる、人間が判読できるスキーマ ファイルを受け取ります。 詳細については、[このドキュメント](/python/api/overview/azure/prose/intro)を参照してください。
 
 ## <a name="fixing-data-types-in-a-dataframe"></a>データフレームでのデータ型の修正
 
@@ -106,7 +106,7 @@ builder = cx.DetectTypesBuilder(df)
 builder.learn().code()
 ```
 
-詳細については、[このドキュメント](https://aka.ms/prose-codeaccelerator-fixtypes)を参照してください。
+詳細については、[このドキュメント](/python/api/overview/azure/prose/fixdatatypes)を参照してください。
 
 ## <a name="identifying-patterns-in-strings"></a>文字列でのパターンの識別
 
@@ -143,4 +143,4 @@ builder.learn().regexes
 ^Unknown$
 ```
 
-正規表現の生成とは別に、`FindPatternsBuilder` では、生成される正規表現に基づいて値をクラスター化するためのコードを生成することもできます。 また、列のすべての値が、生成される正規表現に準拠していることをアサートすることもできます。 その他の役立つシナリオの詳細については、[このドキュメント](https://aka.ms/prose-codeaccelerator-findpatterns)を参照してください。
+正規表現の生成とは別に、`FindPatternsBuilder` では、生成される正規表現に基づいて値をクラスター化するためのコードを生成することもできます。 また、列のすべての値が、生成される正規表現に準拠していることをアサートすることもできます。 その他の役立つシナリオの詳細については、[このドキュメント](/python/api/overview/azure/prose/findpatterns)を参照してください。

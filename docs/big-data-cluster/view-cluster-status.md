@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5e3c7f2f34f949f16821ad7c1dd6a3c3b0d4681e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7f5b3b210cb4e20bdf9585a7efdfd0f10aa19f29
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772825"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725791"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>ビッグ データ クラスターの状態を表示する方法 
 
@@ -24,7 +24,7 @@ ms.locfileid: "85772825"
 
 ## <a name="use-azure-data-studio"></a><a id="datastudio"></a> Azure Data Studio を使用する
 
-[Azure Data Studio](https://aka.ms/getazuredatastudio) の最新の **Insider ビルド**をダウンロードしたら、SQL Server ビッグ データ クラスター ダッシュボードを使用して、サービス エンドポイントとビッグ データ クラスターの状態を表示できます。 以下の機能の一部については、最初は Azure Data Studio の Insider ビルドでのみ使用可能となります。
+[Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) の最新の **Insider ビルド**をダウンロードしたら、SQL Server ビッグ データ クラスター ダッシュボードを使用して、サービス エンドポイントとビッグ データ クラスターの状態を表示できます。 以下の機能の一部については、最初は Azure Data Studio の Insider ビルドでのみ使用可能となります。
 
 1. まず、Azure Data Studio でご利用のビッグ データ クラスターへの接続を作成します。 詳細については、「[Azure Data Studio を使用して SQL Server ビッグ データ クラスターに接続する](connect-to-big-data-cluster.md)」を参照してください。
 
@@ -83,11 +83,11 @@ ms.locfileid: "85772825"
 
 ## <a name="use-azdata"></a>azdata を使用する
 
-[azdata](deploy-install-azdata.md) コマンドを使用して、エンドポイントとクラスターの状態の両方を表示することもできます。
+[azdata](../azdata/install/deploy-install-azdata.md) コマンドを使用して、エンドポイントとクラスターの状態の両方を表示することもできます。
 
 ### <a name="service-endpoints"></a>サービス エンドポイント
 
-1. [azdata login](reference-azdata.md) を使用して、ビッグ データ クラスターにログインします。 **--controller-endpoint** パラメーターをコントローラー エンドポイントの外部 IP アドレスに設定します。
+1. [azdata login](../azdata/reference/reference-azdata.md) を使用して、ビッグ データ クラスターにログインします。 **--controller-endpoint** パラメーターをコントローラー エンドポイントの外部 IP アドレスに設定します。
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -100,7 +100,7 @@ ms.locfileid: "85772825"
    azdata login --endpoint https://<control_domain_name>:30080 --auth ad
    ```
 
-1. [`azdata bdc endpoint list`](reference-azdata-bdc-endpoint.md) を実行して、各エンドポイントの説明と、それに対応する IP アドレスとポート値を示した一覧を取得します。 
+1. [`azdata bdc endpoint list`](../azdata/reference/reference-azdata-bdc-endpoint.md) を実行して、各エンドポイントの説明と、それに対応する IP アドレスとポート値を示した一覧を取得します。 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -126,7 +126,7 @@ ms.locfileid: "85772825"
 
 ### <a name="view-cluster-status"></a>クラスターの状態を表示する
 
-[`azdata bdc status show`](reference-azdata-bdc-status.md) コマンドを使用して、クラスターの状態を表示できます。
+[`azdata bdc status show`](../azdata/reference/reference-azdata-bdc-status.md) コマンドを使用して、クラスターの状態を表示できます。
 
 ```bash
 azdata bdc status show
@@ -211,7 +211,7 @@ azdata bdc status show
 
 ### <a name="view-specific-resource-status"></a>特定のリソースの状態を表示する
 
-[azdata bdc status show](reference-azdata-bdc-status.md) コマンドを使用して、クラスター内の特定のリソースの状態を表示できます。 このコマンドを使用すると、`--resource` パラメーターを使用してフィルター処理できます。 `--resource` パラメーターの入力の例を次にいくつか示します。
+[azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md) コマンドを使用して、クラスター内の特定のリソースの状態を表示できます。 このコマンドを使用すると、`--resource` パラメーターを使用してフィルター処理できます。 `--resource` パラメーターの入力の例を次にいくつか示します。
 
 - master
 - control
@@ -316,7 +316,7 @@ azdata bdc status show --all --resource storage-0
 
 ### <a name="view-controller-status"></a>コントローラーの状態を表示する
 
-[`azdata bdc control status show`](reference-azdata-bdc-control-status.md) コマンドを使用して、コントローラーの状態を表示できます。 ビッグ データ クラスターのコントローラー コンポーネントに関連する監視ダッシュボードへの同様のリンクが表示されます。
+[`azdata bdc control status show`](../azdata/reference/reference-azdata-bdc-control-status.md) コマンドを使用して、コントローラーの状態を表示できます。 ビッグ データ クラスターのコントローラー コンポーネントに関連する監視ダッシュボードへの同様のリンクが表示されます。
 
 ## <a name="next-steps"></a>次のステップ
 

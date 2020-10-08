@@ -9,12 +9,12 @@ ms.date: 03/30/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7f42b454ebfc1b9b4ea8e841cba6fe2a4b209ebc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32cdcca2e4052374e7f26d59a3caf35f200cd47d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85660376"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725809"
 ---
 # <a name="run-a-sample-notebook-using-spark"></a>Spark を使用したサンプル ノートブックの実行
 
@@ -69,11 +69,11 @@ ms.locfileid: "85660376"
 
 サンプル ノートブック内の各セルを続けて実行します。 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] でノートブックを使用する方法の詳細については、次のリソースを参照してください。
 
-- [ノートブックの使用方法](../azure-data-studio/notebooks-guidance.md)
+- [ノートブックの使用方法](../azure-data-studio/notebooks/notebooks-guidance.md)
 - [Azure Data Studio でノートブックを管理する方法](notebooks-manage-bdc.md)
 
 ## <a name="next-steps"></a>次のステップ
 
 ノートブックについてさらに学習します:
 > [!div class="nextstepaction"]
-> [ノートブックの使用方法](../azure-data-studio/notebooks-guidance.md)
+> [ノートブックの使用方法](../azure-data-studio/notebooks/notebooks-guidance.md)

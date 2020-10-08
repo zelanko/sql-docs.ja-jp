@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c8dad935a404d682cf5c627a09795bf257efc209
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9d12d25873d7963a29afd66802f40e3074150e77
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86553027"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725883"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>オンプレミスの OpenShift および Azure Red Hat OpenShift に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をデプロイする
 
@@ -88,7 +88,7 @@ SQL Server 2019 CU5 では、OpenShift での SQL Server ビッグ データ ク
 
 ## <a name="deploy-big-data-cluster"></a>ビッグ データ クラスターをデプロイする
 
-1. 最新の [azdata](deploy-install-azdata.md) をインストールします。
+1. 最新の [azdata](../azdata/install/deploy-install-azdata.md) をインストールします。
 
 1. ターゲット環境 (オンプレミスの OpenShift または ARO) とデプロイ シナリオに応じて、OpenShift 用の組み込み構成ファイルの 1 つを複製します。 組み込みの構成ファイルで OpenShift に固有の設定については、後の「*デプロイ構成ファイルでの OpenShift 固有の設定*」セクションを参照してください。 使用可能な構成ファイルの詳細については、[展開のガイダンス](deployment-guidance.md)に関するページを参照してください。
 

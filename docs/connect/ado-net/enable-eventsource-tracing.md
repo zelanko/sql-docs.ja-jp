@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
 ms.reviewer: ''
-ms.openlocfilehash: 17e947c108d14accb880dbd6673231e82b0b133c
-ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
+ms.openlocfilehash: 4eac1ab519549ccace092cfc175c735dd4537269
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85110165"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725743"
 ---
 # <a name="enabling-event-tracing-in-sqlclient"></a>SqlClient でイベント トレースを有効化する
 
@@ -24,7 +24,7 @@ ms.locfileid: "85110165"
 
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-[Windows イベント トレーシング (ETW)](https://docs.microsoft.com/windows/win32/etw/event-tracing-portal) は、効率的なカーネル レベルのトレース機能で、デバッグとテストの目的でドライバー定義イベントをログに記録することができます。 SqlClient では、さまざまな情報レベルでの ETW イベントのキャプチャがサポートされています。 イベント トレースのキャプチャを開始するには、クライアント アプリケーションで SqlClient の EventSource 実装からのイベントをリッスンする必要があります。
+[Windows イベント トレーシング (ETW)](/windows/win32/etw/event-tracing-portal) は、効率的なカーネル レベルのトレース機能で、デバッグとテストの目的でドライバー定義イベントをログに記録することができます。 SqlClient では、さまざまな情報レベルでの ETW イベントのキャプチャがサポートされています。 イベント トレースのキャプチャを開始するには、クライアント アプリケーションで SqlClient の EventSource 実装からのイベントをリッスンする必要があります。
 
 ```
 Microsoft.Data.SqlClient.EventSource
@@ -59,5 +59,5 @@ Microsoft.Data.SqlClient.EventSource
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[EventSource クラス](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)|ETW イベントを作成する機能を提供します。| 
-|[EventListener クラス](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventlistener)|イベント ソースからのイベントを有効または無効にするメソッドを提供します。| 
+|[EventSource クラス](/dotnet/api/system.diagnostics.tracing.eventsource)|ETW イベントを作成する機能を提供します。| 
+|[EventListener クラス](/dotnet/api/system.diagnostics.tracing.eventlistener)|イベント ソースからのイベントを有効または無効にするメソッドを提供します。|

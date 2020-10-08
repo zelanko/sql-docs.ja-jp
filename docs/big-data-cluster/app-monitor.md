@@ -10,12 +10,12 @@ ms.date: 08/16/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1cb2262d5e12c9b898abee0b928b1c63307fb065
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: fa5ae6a8834659f7a1098cd9d8fbaee6beef359e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88681043"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725036"
 ---
 # <a name="monitor-applications-with-azdata-and-grafana-dashboard"></a>azdata と Grafana ダッシュボードでアプリケーションを監視する
 
@@ -26,7 +26,7 @@ Grafana は最良のクラウドネイティブ仮想化ツールの 1 つで、
 ## <a name="prerequisites"></a>前提条件
 
 - [SQL Server 2019 ビッグ データ クラスター](deployment-guidance.md)
-- [azdata コマンドライン ユーティリティ](deploy-install-azdata.md)
+- [azdata コマンドライン ユーティリティ](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>機能
 

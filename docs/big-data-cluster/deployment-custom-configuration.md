@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: db42b544127041a0d06cce8ff5f94466198bfa9f
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 48a2c99a029517ebbab24b017bbaeba906b1c6cb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860568"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725865"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>クラスター リソースとサービスの展開設定を構成する
 
@@ -171,7 +171,7 @@ ms.locfileid: "88860568"
 
 ## <a name="prerequisites"></a>前提条件
 
-- [azdata をインストールします](deploy-install-azdata.md)。
+- [azdata をインストールします](../azdata/install/deploy-install-azdata.md)。
 
 - このセクションの各例では、標準構成のいずれかのコピーを作成済みであることを前提としています。 詳細については、[カスタム構成の作成](deployment-guidance.md#customconfig)に関する記事を参照してください。 たとえば、次のコマンドでは、既定値の `aks-dev-test` 構成に基づいて、2 つの JSON 展開構成ファイル (`bdc.json` と `control.json`) を含む `custom-bdc` というディレクトリが作成されます。
 
