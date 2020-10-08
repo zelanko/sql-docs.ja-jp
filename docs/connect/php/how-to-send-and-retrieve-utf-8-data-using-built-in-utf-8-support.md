@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf7ec186a6a233d12034114f88b98efea50e72f9
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: d62ab2a7715360b8cceeecccada01717d87471c0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381015"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726817"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>方法:組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -126,7 +126,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Unicode データを格納する方法の詳細については、「[Unicode データを使用した作業](https://msdn.microsoft.com/library/ms175180.aspx)」を参照してください。  
+Unicode データを格納する方法の詳細については、「[Unicode データを使用した作業](/previous-versions/sql/sql-server-2008-r2/ms175180(v=sql.105))」を参照してください。  
   
 ## <a name="example"></a>例  
 次の例は最初のサンプルと似ていますが、このサンプルでは接続で UTF-8 文字セットを指定する代わりに、列に UTF-8 文字セットを指定する方法を示します。  
@@ -231,4 +231,3 @@ sqlsrv_close( $conn);
 [定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [サンプル アプリケーション &#40;SQLSRV ドライバー&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-  

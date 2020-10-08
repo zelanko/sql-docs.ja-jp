@@ -9,12 +9,12 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a0eb128a4b1c299d8a2d939582312cdc22ae4d40
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5a918ca8acb263e843915c48fc16e563433d32c2
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180501"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765767"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>SQL Server 用の機能拡張フレームワーク API
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -541,7 +541,7 @@ SQLRETURN GetTelemetryResults(
 
 ## <a name="installexternallibrary"></a>InstallExternalLibrary
 
-ライブラリをインストールします。 この関数はオプションであり、実装する必要はありません。 既定の実装では、ライブラリの内容を適切な場所のファイルにコピーします ([CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) を参照)。 ファイル名はライブラリ名です。
+ライブラリをインストールします。 この関数はオプションであり、実装する必要はありません。 既定の実装では、ライブラリの内容を適切な場所のファイルにコピーします ([CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) を参照)。 ファイル名はライブラリ名です。
 
 ### <a name="syntax"></a>構文
 
@@ -571,7 +571,7 @@ SQLRETURN InstallExternalLibrary(
 \[入力\] ライブラリ名の長さ。
 
 *LibraryFile*  
-\[入力\] [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) によって指定されたるイナリの内容を含む、ライブラリ ファイルのパス (文字列)。
+\[入力\] [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) によって指定されたるイナリの内容を含む、ライブラリ ファイルのパス (文字列)。
 
 *LibraryFileLength*  
 \[入力\] LibraryFile 文字列の長さ。
@@ -637,4 +637,4 @@ SQLRETURN UninstallExternalLibrary(
 
 ## <a name="next-steps"></a>次のステップ
 
-- [SQL Server 用の Microsoft Extensibility SDK for Java](../how-to/extensibility-sdk-java-sql-server.md) 
+- [SQL Server 用の Microsoft Extensibility SDK for Java](../how-to/extensibility-sdk-java-sql-server.md)

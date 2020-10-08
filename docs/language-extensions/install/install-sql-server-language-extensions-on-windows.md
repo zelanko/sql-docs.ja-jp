@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 41f0e9f1c4040e9d26432d8635667f045694e314
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: fd04b92aaffab70835ce2affb56ece70cdb393b3
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989861"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765783"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>SQL Server の言語拡張を Windows にインストールする
 
@@ -23,7 +23,7 @@ ms.locfileid: "90989861"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ ウィザードを実行することにより SQL Server に言語拡張コンポーネントをインストールする方法について説明します。
 
 > [!NOTE]
-> この記事は、Windows への SQL Server 言語拡張のインストールに関するものです。 Linux については、「[SQL Server 2019 の言語拡張 (Java) を Linux 上にインストールする](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions)」をご覧ください
+> この記事は、Windows への SQL Server 言語拡張のインストールに関するものです。 Linux については、「[SQL Server 2019 の言語拡張 (Java) を Linux 上にインストールする](../..//linux/sql-server-linux-setup-language-extensions.md)」をご覧ください
 
 <a name="prerequisites"></a> 
 
@@ -33,7 +33,7 @@ ms.locfileid: "90989861"
 
 + データベース エンジンのインスタンスが必要です。 言語拡張機能だけをインストールすることはできませんが、既存のインスタンスにそれらを段階的に追加することはできます。
 
-+ ビジネス継続性のために、言語拡張では [Always On 可用性グループ](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)がサポートされています。 各ノードに言語拡張をインストールし、パッケージを構成する必要があります。
++ ビジネス継続性のために、言語拡張では [Always On 可用性グループ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)がサポートされています。 各ノードに言語拡張をインストールし、パッケージを構成する必要があります。
 
 + 言語拡張のインストールは、SQL Server 2019 のフェールオーバー クラスターでサポートされています。
 
@@ -87,7 +87,7 @@ SQL Server 2019 Release Candidate 1 に Java をインストールして使用�
 
         - 独自の Java ランタイムを使用する場合は、 **[Machine Learning Services および言語の拡張]** を選択します。 [Java] は選択しないでください。
 
-        R および Python を使用する場合は、[Windows への SQL Server Machine Learning Services のインストール](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)に関する記事をご覧ください。
+        R および Python を使用する場合は、[Windows への SQL Server Machine Learning Services のインストール](../../machine-learning/install/sql-machine-learning-services-windows-install.md)に関する記事をご覧ください。
 
     ![言語拡張の機能オプション](../media/sql-install-feature-selection.png)
 
@@ -107,7 +107,7 @@ SQL Server 2019 Release Candidate 1 に Java をインストールして使用�
 
     構成ファイルが格納されている `..\Setup Bootstrap\Log` パスの下にあるフォルダーの場所をメモしておきます。 セットアップが完了したら、インストールされたコンポーネントを概要ファイルで確認できます。
 
-6. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)」を参照してください。
+6. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。
 
 ## <a name="add-the-jre_home-variable"></a>JRE_HOME 変数を追加する
 
@@ -161,7 +161,7 @@ SQL Server に付属する既定の Zulu Open JRE も、プログラム ファ�
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を開きます。 
 
     > [!TIP]
-    > 次のページから適切なバージョンをダウンロードしてインストールできます。[SQL Server Management Studio (SSMS) をダウンロードしてください](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+    > 次のページから適切なバージョンをダウンロードしてインストールできます。[SQL Server Management Studio (SSMS) をダウンロードしてください](../../ssms/download-sql-server-management-studio-ssms.md)。
     > 
     > SQL Server に対する管理タスクとクエリをサポートする [Azure Data Studio](../../azure-data-studio/what-is.md) を使用することもできます。
   
@@ -194,7 +194,7 @@ SQL Server に付属する既定の Zulu Open JRE も、プログラム ファ�
 
 ## <a name="register-external-language"></a>外部言語を登録する
 
-言語拡張を利用する各データベースには、[CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql) を使って外部言語を登録する必要があります。
+言語拡張を利用する各データベースには、[CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) を使って外部言語を登録する必要があります。
 
 次の例では、Windows 上の SQL Server のデータベースに、Java という名前の外部言語を追加します。
 
@@ -204,7 +204,7 @@ FROM (CONTENT = N'<path-to-zip>', FILE_NAME = 'javaextension.dll');
 GO
 ```
 
-詳しくは、「[CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)」をご覧ください。
+詳しくは、「[CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md)」をご覧ください。
 
 ## <a name="verify-installation"></a>インストールの確認
 
@@ -241,7 +241,7 @@ GO
 データベースでは、次の構成の更新が必要になる場合があります。
 
 * [SQL Server Machine Learning Services にユーザー アクセス許可を付与する](../../machine-learning/security/user-permission.md)
-* [特定の言語を実行するためのアクセス許可をユーザーに付与する](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql#permissions)
+* [特定の言語を実行するためのアクセス許可をユーザーに付与する](../../t-sql/statements/create-external-language-transact-sql.md#permissions)
 
 > [!NOTE]
 > 追加の構成が必要かどうかは、SQL Server をインストールしたセキュリティ スキーマと、ユーザーをどのようにデータベースに接続して外部スクリプトを実行させるかによって異なります。

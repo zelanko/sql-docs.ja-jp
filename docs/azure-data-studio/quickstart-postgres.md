@@ -7,14 +7,14 @@ ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
-author: rachel-msft
-ms.author: raagyema
-ms.openlocfilehash: 5a66f349658c8470a3e4408953cc6121ffff74b4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: sunilagarwal
+ms.author: sunila
+ms.openlocfilehash: fddbceec338a05d693fd9d1e039d08e271bbc01f
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725116"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785005"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>クイック スタート:Azure Data Studio を使用して、PostgreSQL に接続してクエリを実行する
 

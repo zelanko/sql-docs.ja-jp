@@ -10,12 +10,12 @@ helpviewer_keywords:
 - known issues
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1057252f896b62a5659b53aa53eb2f5c6d9b17ea
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: e6729d46fe498c6efe8e49f941c0ef1b007870b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288069"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727403"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Linux および macOS での ODBC ドライバーに関する既知の問題
 
@@ -76,7 +76,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
   
 接続エラーの解決の詳細については、以下を参照してください。  
 
-- [SQL の接続問題のトラブルシューティングの手順](https://docs.microsoft.com/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
+- [SQL の接続問題のトラブルシューティングの手順](/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
   
 - [SQL Server 2005 Connectivity Issue Troubleshoot - Part I (SQL Server 2005 の接続に関する問題のトラブルシューティング - パート 1)](https://techcommunity.microsoft.com/t5/sql-server/sql-server-2005-connectivity-issue-troubleshoot-part-i/ba-p/383034)  
   
@@ -91,4 +91,4 @@ ODBC ドライバーのインストール手順については、次の記事を
 - [Linux に Microsoft ODBC Driver for SQL Server をインストールする](installing-the-microsoft-odbc-driver-for-sql-server.md)
 - [macOS に Microsoft ODBC Driver for SQL Server をインストールする](install-microsoft-odbc-driver-sql-server-macos.md)
 
-詳細については、「[プログラミング ガイドライン](programming-guidelines.md)」と[リリースノート](release-notes-odbc-sql-server-linux-mac.md)に関するページを参照してください。  
+詳細については、「[プログラミング ガイドライン](programming-guidelines.md)」と[リリースノート](release-notes-odbc-sql-server-linux-mac.md)に関するページを参照してください。

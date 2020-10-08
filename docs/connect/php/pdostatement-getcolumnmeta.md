@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e29418276e6209f669ae57160809120d61e19a05
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 58b6882fe4f0fce4ddf948121cb6ad35e5828fd7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645080"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726743"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -72,7 +72,7 @@ print $metadata['name'];
   
 ## <a name="sensitivity-data-classification-metadata"></a>秘密度データ分類のメタデータ
 
-バージョン5.8.0 以降では、Microsoft SQL Server 2019 上で `PDOStatement::getColumnMeta` を使用して、ユーザーが[秘密度データ分類のメタデータ](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)にアクセスするために、新しいステートメント属性 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` を利用できます。Microsoft ODBC Driver 17.4.2 以降が必要になります。
+バージョン5.8.0 以降では、Microsoft SQL Server 2019 上で `PDOStatement::getColumnMeta` を使用して、ユーザーが[秘密度データ分類のメタデータ](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql&view=sql-server-ver15#subheading-4)にアクセスするために、新しいステートメント属性 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` を利用できます。Microsoft ODBC Driver 17.4.2 以降が必要になります。
 
 属性 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` は既定で `false` になっていますが、`true` に設定されると、秘密度データ分類のメタデータがある場合には、前述の配列フィールド `flags` にはそのデータが入力されます。 
 
@@ -136,4 +136,3 @@ for ($i = 0; $i < $numCol; $i++) {
 [PDOStatement クラス](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

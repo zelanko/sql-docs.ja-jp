@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dab5079ab3c0447b0895bbc3642f23884317f3c4
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9de0a8e595cca3009be4a44b63ce268d673b6dff
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180505"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765740"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>チュートリアル:Java での正規表現 (regex) を使用した文字列の検索
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -26,7 +26,7 @@ Java クラスに送信されるテキスト列内の指定のテキストが、
 
 ## <a name="prerequisites"></a>前提条件
 
-+ [Windows](../install/install-sql-server-language-extensions-on-windows.md) または [Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-language-extensions) 用の SQL Server 2019 データベース エンジン インスタンスと拡張機能、および Java プログラミングの拡張機能。 詳細については、[SQL Server 2019 での言語拡張](../language-extensions-overview.md)に関する記事を参照してください。 コードの要件については、[SQL Server での Java の呼び出し方法](../how-to/call-java-from-sql.md)に関する記事を参照してください。
++ [Windows](../install/install-sql-server-language-extensions-on-windows.md) または [Linux](../../linux/sql-server-linux-setup-language-extensions.md) 用の SQL Server 2019 データベース エンジン インスタンスと拡張機能、および Java プログラミングの拡張機能。 詳細については、[SQL Server 2019 での言語拡張](../language-extensions-overview.md)に関する記事を参照してください。 コードの要件については、[SQL Server での Java の呼び出し方法](../how-to/call-java-from-sql.md)に関する記事を参照してください。
 
 + T-SQL 実行用の SQL Server Management Studio または Azure Data Studio。
 
@@ -216,11 +216,11 @@ GO
 
 Java コードを実行するユーザーには、その特定の言語を外部スクリプトから実行する許可を付与する必要があります。
 
-詳しくは、「[CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)」をご覧ください。
+詳しくは、「[CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md)」をご覧ください。
 
 ## <a name="create-external-libraries"></a>外部ライブラリの作成
 
-お使いの `.jar` ファイル用の外部ライブラリを作成するには、[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) を使用します。 SQL Server は `.jar` ファイルにアクセスできるため、**classpath** に特別なアクセス許可を設定する必要はありません。
+お使いの `.jar` ファイル用の外部ライブラリを作成するには、[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) を使用します。 SQL Server は `.jar` ファイルにアクセスできるため、**classpath** に特別なアクセス許可を設定する必要はありません。
 
 このサンプルでは、2 つの外部ライブラリを作成します。 1 つは SDK 用で、もう 1 つは RegEx Java コード用です。
 

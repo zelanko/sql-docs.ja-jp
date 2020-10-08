@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04e883861bfd14d5a5b69a080e1ed41bfeccd147
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 901410fb36080d39436a3a908a0ffd9260c5b513
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180297"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765803"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>SQL Server 言語拡張で Java ランタイムを呼び出す方法
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-[SQL Server 言語拡張](../language-extensions-overview.md)には、Java ランタイムを呼び出すインターフェイスとして [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) システム ストアド プロシージャが使用されます。 
+[SQL Server 言語拡張](../language-extensions-overview.md)には、Java ランタイムを呼び出すインターフェイスとして [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) システム ストアド プロシージャが使用されます。 
 
 このハウツー記事では、SQL Server 上で実行される Java クラスとメソッドの実装について詳しく説明します。
 
@@ -56,7 +56,7 @@ SQL Server で Java を実行する場合の基本的な原則を次に示しま
 
 ### <a name="call-java-class"></a>Java クラスを呼び出す
 
-[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) システム ストアド プロシージャは、Java ランタイムの呼び出しに使用されるインターフェイスです。 Java 拡張を使用する `sp_execute_external_script` と、パス、スクリプト、およびカスタム コードを指定するパラメーターの例を次に示します。
+[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) システム ストアド プロシージャは、Java ランタイムの呼び出しに使用されるインターフェイスです。 Java 拡張を使用する `sp_execute_external_script` と、パス、スクリプト、およびカスタム コードを指定するパラメーターの例を次に示します。
 
 > [!NOTE]
 > 呼び出すメソッドを定義する必要がないことに注意してください。 既定では、**execute** というメソッドが呼び出されます。 つまり、[SQL Server の拡張機能 SDK for Java](extensibility-sdk-java-sql-server.md) に従い、Java クラスに execute メソッドを実装する必要があります。
@@ -90,7 +90,7 @@ EXEC sp_execute_external_script
 
 ## <a name="use-external-library"></a>外部ライブラリを使用する
 
-SQL Server 2019 リリース候補 1 では、Windows および Linux 上で Java 言語用の外部ライブラリを使用できます。 クラスを .jar ファイルにコンパイルし、[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL を使用して .jar ファイルとその他の依存関係をデータベースにアップロードできます。
+SQL Server 2019 リリース候補 1 では、Windows および Linux 上で Java 言語用の外部ライブラリを使用できます。 クラスを .jar ファイルにコンパイルし、[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) DDL を使用して .jar ファイルとその他の依存関係をデータベースにアップロードできます。
 
 外部ライブラリを使用して .jar ファイルをアップロードする方法の例:
 
@@ -113,7 +113,7 @@ EXEC sp_execute_external_script
 with result sets ((column1 int))
 ```
 
-詳細については、「[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)」を参照してください。
+詳細については、「[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)」を参照してください。
 
 ## <a name="loopback-connection-to-sql-server"></a>SQL Server への Loopback 接続
 

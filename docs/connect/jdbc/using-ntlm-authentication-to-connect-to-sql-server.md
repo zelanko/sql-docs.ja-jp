@@ -13,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 93b4956b70e6e81e215da4fcde61a3a3287b50ec
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: a9d16c785696a18262b818668af9d65c55f37616
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393150"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727496"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>NTLM 認証を使用して SQL Server に接続する
 
@@ -35,11 +35,11 @@ NTLM 認証には、次のプロパティも使用されます。
 
 **domain** 以外のプロパティは必須です。**NTLM** authenticationScheme プロパティが使用されている場合、どれかが不足していると、ドライバーによってエラーがスローされます。 
 
-接続プロパティの詳細については、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。 Microsoft NTLM 認証プロトコルの詳細については、[Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm) に関するページを参照してください。
+接続プロパティの詳細については、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。 Microsoft NTLM 認証プロトコルの詳細については、[Microsoft NTLM](/windows/desktop/SecAuthN/microsoft-ntlm) に関するページを参照してください。
 
 ## <a name="remarks"></a>解説
 
-NTLM 認証の動作を制御する、SQL Server 設定の詳細については、[ネットワーク セキュリティ:LAN Manager 認証レベル](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level)に関するページを参照してください。 
+NTLM 認証の動作を制御する、SQL Server 設定の詳細については、[ネットワーク セキュリティ:LAN Manager 認証レベル](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level)に関するページを参照してください。 
 
 ## <a name="logging"></a>ログ記録
 
@@ -79,7 +79,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 サービス プリンシパル名 (SPN) の詳細については、以下を参照してください。
 
-- [クライアント接続でのサービス プリンシパル名 (SPN) のサポート](https://docs.microsoft.com/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections?view=sql-server-2017)
+- [クライアント接続でのサービス プリンシパル名 (SPN) のサポート](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md?view=sql-server-2017)
 
 > [!NOTE]  
 > serverSpn 接続属性は、Microsoft JDBC Driver 4.2 以降でのみサポートされています。
