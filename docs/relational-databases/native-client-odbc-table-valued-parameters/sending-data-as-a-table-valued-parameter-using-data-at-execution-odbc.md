@@ -1,6 +1,6 @@
 ---
 description: 実行時データを使用したテーブル値パラメーターとしてのデータの送信 (ODBC)
-title: テーブル値パラメーター、実行時データ (ODBC)
+title: Table-Valued パラメーター、実行時データ (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72fc2ad3db6c6eddde0124fc2144fa6faca6f058
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48823426052fec8f16989facc77a676ed8d3e2c6
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499138"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868218"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>実行時データを使用したテーブル値パラメーターとしてのデータの送信 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   これは、「 [すべてのメモリ内」](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) の手順に似ていますが、テーブル値パラメーターの実行時データを使用します。  
   
- テーブル値パラメーターを示す別のサンプルについては、「 [テーブル値パラメーターの使用 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)」を参照してください。  
+ テーブル値パラメーターを示す別のサンプルについては、「 [ODBC&#41;&#40;の Table-Valued パラメーターの使用 ](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)」を参照してください。  
   
  この例では、SQLExecute または SQLExecDirect が呼び出されると、ドライバーは SQL_NEED_DATA を返します。 次に、アプリケーションは、ドライバーが SQL_NEED_DATA 以外の値を返すまで SQLParamData を繰り返し呼び出します。 ドライバーは、 *Parametervalueptr* を返して、データを要求しているパラメーターをアプリケーションに通知します。 アプリケーションは SQLPutData を呼び出して、Sqlputdata の次の呼び出しの前にパラメーターデータを指定します。 テーブル値パラメーターの場合、SQLPutData の呼び出しは、ドライバーに対して準備された行数を示します (この例では、常に 1)。 テーブル値のすべての行がドライバーに渡されると、SQLPutData が呼び出され、0行が使用可能であることが示されます。  
   
@@ -582,6 +582,5 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>参照  
- [ODBC テーブル値パラメーターのプログラミング例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
-  
+ [ODBC テーブル値パラメーターのプログラミング例](./table-valued-parameters-odbc.md)  
   

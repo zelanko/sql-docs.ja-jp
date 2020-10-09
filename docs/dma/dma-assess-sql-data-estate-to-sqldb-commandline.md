@@ -15,14 +15,14 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: a631ed40344fc8661cef23b9758aa35feb041c45
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f81cddcb5f1279bd444799884b150294a037b3e1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91729255"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867698"
 ---
-# <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database"></a>DMACMD: Azure SQL Database に移行する SQL Server データ資産の準備状態の評価 
+# <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>DMACMD: SQL Server のデータ資産の準備状態を評価して Azure SQL に移行する 
 
 多くの組織が Azure に移行しようとしている場合は、既存のオンプレミスの SQL Server インスタンスを評価し、適切な Azure SQL ターゲット Azure SQL Database、Azure SQL Managed Instance、または Azure Vm での SQL Server を特定することが重要です。 
 
@@ -134,7 +134,7 @@ DMACMD を使用する場合は、次のベストプラクティスについて�
 - 評価を実行する時間は、データベースオブジェクトの数によって異なります。 可能であれば、実稼働システムでの評価の実行と、仮想マシンまたはステージングサーバーへのオフロードを避けてください。特に、多数のオブジェクトがあるデータベースの場合に使用します。 
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 * [Data Migration Assistant: 構成設定](../dma/dma-configurationsettings.md)

@@ -4330,6 +4330,10 @@
       href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
     - name: メモリ管理アーキテクチャ
       href: relational-databases/memory-management-architecture-guide.md
+    - name: ラッチの競合の診断
+      href: relational-databases/diagnose-resolve-latch-contention.md
+    - name: スピンロックの競合の診断
+      href: relational-databases/diagnose-resolve-spinlock-contention.md
 - name: インストール
   items:
     - name: 概要
