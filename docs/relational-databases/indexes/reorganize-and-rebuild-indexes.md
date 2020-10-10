@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cdc5c87275af6056e9044ed534d6e916772a3dc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7c29522d20a3d263c602884daa0277a8e1a2095
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537068"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753534"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>インデックスを再構成または再構築することでインデックス断片化を解決する
 
@@ -86,7 +86,7 @@ ms.locfileid: "89537068"
 
 <sup>2</sup> インデックスの再構築はオンラインでもオフラインでも実行できます。 インデックスの再構成は、常にオンラインで実行されます。 再構成オプションと同様の可用性を実現するには、インデックスをオンラインで再構築してください。 詳しくは、[インデックス](#rebuild-an-index)に関するページと「[オンラインでのインデックス操作の実行](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。
 
-断片化が 5% 未満のインデックスはデフラグする必要がありません。インデックスの再構成や再構築には、ほとんどの場合、そのようなわずかな断片化を解消するには見合わない CPU コストがかかります。 また、小さな行ストア インデックスを再構築または再構成しても、一般的に、断片化が実際に解消することはありません。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]までは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では、混合エクステントを使用して領域が割り当てられます。 このため、小さいインデックスのページは、混合エクステントに格納される場合があります。 混合エクステントは最大 8 つのオブジェクトで共有されるため、小さなインデックスを再構成または再構築しても、その断片化は解消されない場合があります。 「[行ストア インデックスの再構築に固有の注意点](#considerations-specific-to-rebuilding-rowstore-indexes)」を参照してください。 エクステントの詳細については、「[ページとエクステントのアーキテクチャ ガイド](../../relational-databases/pages-and-extents-architecture-guide.md#extents)」を参照してください。
+インデックスの断片化が 5% 未満の場合は、デフラグする必要はありません。これは、インデックスの再構成または再構築で、このような少量の断片化を解消するのに見合わない CPU コストが通常かかるからです。 また、少量の行ストア インデックスを再構築または再構成しても、一般的に実際断片化は解消されません。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]までは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では、混合エクステントを使用して領域が割り当てられます。 このため、小さいインデックスのページは、混合エクステントに格納される場合があります。 混合エクステントは最大 8 つのオブジェクトで共有されるため、小さなインデックスを再構成または再構築しても、その断片化は解消されない場合があります。 「[行ストア インデックスの再構築に固有の注意点](#considerations-specific-to-rebuilding-rowstore-indexes)」を参照してください。 エクステントの詳細については、「[ページとエクステントのアーキテクチャ ガイド](../../relational-databases/pages-and-extents-architecture-guide.md#extents)」を参照してください。
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>列ストア インデックスの断片化を検出する
 

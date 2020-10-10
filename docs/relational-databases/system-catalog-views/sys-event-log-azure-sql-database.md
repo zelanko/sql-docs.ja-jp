@@ -21,16 +21,16 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d75c8cb02c64b5965fd5a6fe084b065c3dc8ba65
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 67c111b15728f92e3a6f0ac8dac830fe32f2f8da
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809848"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892402"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL データベース)
 
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   成功した [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] データベース接続、接続エラー、およびデッドロックを返します。 この情報を使用して、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] でのデータベースの利用状況の追跡またはトラブルシューティングを行うことができます。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "91809848"
 
  **Master**データベースへのアクセス権限を持つユーザーには、このビューに対する読み取り専用アクセス権があります。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 ### <a name="event-aggregation"></a>イベント集計
 
@@ -172,7 +172,7 @@ WHERE event_type = 'throttling'
     AND end_time <= '2011-09-25 11:00:00';  
 ```
 
-### <a name="db-scoped-extended-event"></a>DB スコープの拡張イベント
+### <a name="db-scoped-extended-event"></a>DB-Scoped 拡張イベント
 
  次のサンプルコードを使用して、データベーススコープの拡張イベント (XEvent) セッションを設定します。  
 

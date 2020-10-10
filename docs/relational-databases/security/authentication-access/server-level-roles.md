@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e955b167d1ce496ca14585d16c470502e9bffbe
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.openlocfilehash: b911a1c651716dd53eacda67ee41cdfc6d7a9262
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334025"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636142"
 ---
 # <a name="server-level-roles"></a>サーバー レベルのロール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -58,6 +58,9 @@ ms.locfileid: "85334025"
 |**diskadmin**|**diskadmin** 固定サーバー ロールは、ディスク ファイルを管理するために使用します。|  
 |**dbcreator**|**dbcreator** 固定サーバー ロールのメンバーは、任意のデータベースを作成、変更、削除、および復元できます。|  
 |**public**|すべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインは、**public** サーバー ロールに属しています。 サーバー プリンシパルにセキュリティ保護可能なオブジェクトに対する特定の権限が与えられていないか権限が拒否されている場合、そのユーザーは、そのオブジェクトに対して public に付与されている権限を継承します。 すべてのユーザーがオブジェクトを使用できるようにする場合は、対象のオブジェクトに public 権限のみを割り当てます。 public のメンバーシップを変更することはできません。<br /><br /> **注:** **public** は他のロールと実装方法が異なり、public 固定サーバー ロールからはアクセス許可を付与、拒否、または取り消すことができます。|  
+  
+> [!IMPORTANT] 
+> **processadmin**、**serveradmin**、**setupadmin**、**diskadmin** のサーバー ロールで得られるアクセス許可の大部分は、Synapse SQL には該当しません。
   
 ## <a name="permissions-of-fixed-server-roles"></a>固定サーバー ロールの権限  
  各固定サーバー ロールには、特定の権限が割り当てられます。 次の図は、サーバー ロールに割り当てられている権限を示しています。   

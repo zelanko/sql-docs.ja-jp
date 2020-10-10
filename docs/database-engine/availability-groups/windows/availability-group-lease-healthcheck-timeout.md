@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc9b71fc08356731cdc3e536cea9c6ad17b651fe
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 074a66a094b08f843eed67cfb0276f8c9e635a63
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116983"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753751"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 可用性グループのリース、クラスター、正常性チェック タイムアウトのしくみとガイドライン。 
 
@@ -157,7 +157,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
  | リースのタイムアウト </br> **既定値: 20000** | スプリット ブレインを防ぐ | プライマリからクラスター </br> (HADR) | [Windows イベント オブジェクト](/windows/desktop/Sync/event-objects)| 両方で使用される | OS の応答停止、仮想メモリの不足、ワーキング セット ページング、ダンプの生成、固定された CPU、WSFC ダウン (クォーラムの損失) | AG リソースのオフライン - オンライン、フェールオーバー |  
  | セッション タイムアウト </br> **既定値: 10000** | プライマリとセカンダリの間の通信の問題を通知する | セカンダリからプライマリ </br> (HADR) | [TCP ソケット (DBM エンドポイント経由で送信されるメッセージ)](/windows/desktop/WinSock/windows-sockets-start-page-2) | 両方で使用されない | ネットワーク通信、 </br> セカンダリでの問題 - ダウン、OS の応答停止、リソースの競合 | セカンダリ - 切断 | 
- |正常性チェック タイムアウト  </br> **既定値: 30000** | プライマリ レプリカの正常性を判断しようとしている間のタイムアウトを示す | クラスターからプライマリ </br> (FCI、HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | 両方で使用される | エラー条件が満たされる、OS の応答停止、仮想メモリの不足、ワーキング セットのトリミング、ダンプの生成、WSFC (クォーラムの損失)、スケジューラの問題 (デッド ロックしたスケジューラ)| AG リソース オフライン - オンラインまたはフェールオーバー、FCI 再起動/フェールオーバー |  
+ |正常性チェック タイムアウト  </br> **既定値: 30000** | プライマリ レプリカの正常性を判断しようとしている間のタイムアウトを示す | クラスターからプライマリ </br> (FCI、HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | 両方で使用される | エラー条件が満たされる、OS の応答停止、仮想メモリの不足、ワーキング セットのトリミング、ダンプの生成、WSFC (クォーラムの損失)、スケジューラの問題 (デッド ロックしたスケジューラ)| AG リソース オフライン - オンラインまたはフェールオーバー、FCI 再起動またはフェールオーバー |  
   | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>参照    

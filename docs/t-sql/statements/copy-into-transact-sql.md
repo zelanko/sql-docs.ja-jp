@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 28711d123d4084c973d301f7fa93c9f5d598986f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: b0acdd99ed178329210bdab83e4492b7a4bfc2a7
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380837"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624819"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -99,7 +99,7 @@ WITH
 - ADLS Gen2 の *External location*: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> BLOB エンドポイントは、下位互換性のため ADLS Gen2 で使用できます。 最適なパフォーマンスを得るには、**BLOB** エンドポイントを使用します。
+> .blob エンドポイントは ADLS Gen2 にも使用でき、現在最高のパフォーマンスを実現しています。 お使いの認証方法で .dfs が必要ない場合、.blob エンドポイントを使用します。
 
 - *Account* - ストレージ アカウント名
 
@@ -141,14 +141,15 @@ WITH
 |  **Azure Blob Storage**  | SAS/MSI/サービス プリンシパル/キー/AAD |                      SAS/キー                       |                      SAS/キー                       |
 | **Azure Data Lake Gen2** | SAS/MSI/サービス プリンシパル/キー/AAD | SAS (BLOB<sup>1</sup>)/MSI (dfs<sup>2</sup>)/サービス プリンシパル/キー/AAD | SAS (BLOB<sup>1</sup>)/MSI (dfs<sup>2</sup>)/サービス プリンシパル/キー/AAD |
 
-1:外部のロケーション パスでは、BLOB エンドポイント ( **.blob**.core.windows.net) を使用する必要があります。
+1:この認証方法には、お使いの外部のロケーション パスに .blob エンドポイント ( **.blob**.core.windows.net) が必要です。
 
-2:外部のロケーション パスでは、dfs エンドポイント ( **.dfs**.core.windows.net) を使用する必要があります。
+2:この認証方法には、お使いの外部のロケーション パスに .dfs エンドポイント ( **.dfs**.core.windows.net) が必要です。
+
 
 > [!NOTE]  
 >
 > - AAD またはパブリック ストレージ アカウントを使用して認証する場合は、CREDENTIAL を指定する必要はありません。 
->  - ストレージ アカウントが VNet に関連付けられている場合は、MSI (マネージド ID) を使用して認証する必要があります。
+> - ストレージ アカウントが VNet に関連付けられている場合は、MSI (マネージド ID) を使用して認証する必要があります。
 
 - Shared Access Signatures (SAS) を使用した認証
   
@@ -428,9 +429,6 @@ WITH (
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>Parquet ファイルまたは ORC ファイルを読み込む COPY コマンドに関するファイルの分割ガイダンスについて教えてください。
 COPY コマンドによって自動的にファイルが分割されるため、Parquet ファイルと ORC ファイルを分割する必要はありません。 最適なパフォーマンスを得るには、Azure ストレージ アカウントの Parquet ファイルと ORC ファイルが 256MB 以上である必要があります。 
-
-### <a name="when-will-the-copy-command-be-generally-available"></a>COPY コマンドはいつ一般公開されますか?
-COPY コマンドは、この暦年 (2020) の終わりまでに一般提供されます。 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>ファイルの数やサイズに制限はありますか?
 ファイルの数やサイズに制限はありません。ただし、最適なパフォーマンスを得るには、少なくとも 4 MB のファイルを使用することをお勧めします。

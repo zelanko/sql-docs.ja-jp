@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c19088caa9942d3eafaf6ccf8c6195851f05c27f
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 8f0d845cc010b41fe7789ead2a66a188b214020a
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042823"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529493"
 ---
 # <a name="best-practices-with-query-store"></a>クエリ ストアを使用する際のベスト プラクティス
 
@@ -434,7 +434,7 @@ WHERE is_forced_plan = 1;
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の Just-In-Time ワークロード分析情報のためにクエリ ストアを使用している場合は、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 におけるパフォーマンス スケーラビリティの強化 ([KB 4340759](https://support.microsoft.com/help/4340759)) をできるだけ早くインストールするように計画してください。 これらの強化がない場合、データベースでワークロードが重いときにスピンロックの競合が発生し、サーバーのパフォーマンスが低速になる場合があります。 特に、`QUERY_STORE_ASYNC_PERSIST` スピンロックまたは `SPL_QUERY_STORE_STATS_COOKIE_CACHE` スピンロックで激しい競合が発生する場合があります。 この強化を適用すると、クエリ ストアによってスピンロックの競合が発生しなくなります。
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] の Just-In-Time ワークロード分析情報のためにクエリ ストアを使用している場合は、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 におけるパフォーマンス スケーラビリティの向上をできるだけ早くインストールするように計画してください。 この強化がない場合、データベースでアドホック ワークロードが重いときにクエリ ストアによって大量のメモリが使用され、サーバーのパフォーマンスが低速になる場合があります。 この強化を適用すると、クエリ ストアでは、さまざまなコンポーネントが使用できるメモリ量に内部的な制限が設けられます。また、十分なメモリが [!INCLUDE[ssde_md](../../includes/ssde_md.md)] に返されるまでの間、動作モードを読み取り専用に自動的に変更できます。 クエリ ストアの内部的なメモリ制限は、変更の可能性があるため文書化されないことに注意してください。  
+> ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] から [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Just-In-Time ワークロード分析情報のためにクエリ ストアを使用している場合は、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU15 と [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 のパフォーマンスのスケーラビリティ向上をできるだけ早くインストールするように計画してください。 この強化がない場合、データベースでアドホック ワークロードが重いときにクエリ ストアによって大量のメモリが使用され、サーバーのパフォーマンスが低速になる場合があります。 この強化を適用すると、クエリ ストアでは、さまざまなコンポーネントが使用できるメモリ量に内部的な制限が設けられます。また、十分なメモリが [!INCLUDE[ssde_md](../../includes/ssde_md.md)] に返されるまでの間、動作モードを読み取り専用に自動的に変更できます。 クエリ ストアの内部的なメモリ制限は、変更の可能性があるため文書化されないことに注意してください。  
 
 ## <a name="see-also"></a>関連項目
 

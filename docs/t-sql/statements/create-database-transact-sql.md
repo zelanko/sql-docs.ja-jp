@@ -1,8 +1,8 @@
 ---
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: SQL Server、Azure SQL Database、Azure Synapse Analytics、Analytics Platform System のデータベース構文を作成します。
-ms.custom: ''
-ms.date: 07/21/2020
+ms.custom: references_regions
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4738bbf83c73ae8f2e58b10196e1fc1394d43383
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b488b5861c807bbac66599b71feb71d70d261ba9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539878"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723503"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -84,7 +84,7 @@ SQL Server では、このステートメントは、新しいデータベース
 
 ## <a name="syntax"></a>構文
 
-データベースを作成します。
+データベースを作成する
 
 ```syntaxsql
 CREATE DATABASE database_name
@@ -133,14 +133,6 @@ CREATE DATABASE database_name
 FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY_OPTIMIZED_DATA ]
     <filespec> [ ,...n ]
 }
-
-<service_broker_option> ::=
-{
-    ENABLE_BROKER
-  | NEW_BROKER
-  | ERROR_BROKER_CONVERSATIONS
-}
-
 ```
 
 データベースのアタッチ
@@ -157,6 +149,13 @@ CREATE DATABASE database_name
       <service_broker_option>
     | RESTRICTED_USER
     | FILESTREAM ( DIRECTORY_NAME = { 'directory_name' | NULL } )
+}
+
+<service_broker_option> ::=
+{
+    ENABLE_BROKER
+  | NEW_BROKER
+  | ERROR_BROKER_CONVERSATIONS
 }
 ```
 
@@ -207,7 +206,7 @@ Windows 照合順序名および SQL 照合順序名について詳しくは、�
 > 包含データベースは、非包含データベースとは異なる方法で照合されます。 詳細については、「[包含データベースの照合順序](../../relational-databases/databases/contained-database-collations.md)」を参照してください。
 
 WITH \<option>
- **\<filestream_options>**
+ **\<filestream_option>**
 
 NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
 
@@ -897,8 +896,14 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {
   (<edition_options> [, ...n])
 }
-[ WITH CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }]
+[ WITH <with_options> [,..n]]
 [;]
+
+<with_options> ::=
+{
+  CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
+  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
+}
 
 <edition_options> ::=
 {
@@ -971,6 +976,11 @@ CATALOG_COLLATION: メタデータ カタログの既定の照合順序を指定
 
 *SQL_Latin1_General_CP1_CI_AS* では、固定照合順序 SQL_Latin1_General_CP1_CI_AS に対してシステム ビューとテーブルで使用されたメタデータ カタログが照合されることが指定されます。 指定がない場合、これは Azure SQL Database の既定の設定です。
 
+BACKUP_STORAGE_REDUNDANCY により、データベースのポイントインタイム リストア バックアップおよび長期保有バックアップがどのように複製されるかが指定されます。 Geo リストアまたは地域的な障害からの復旧機能は、データベースが "GEO" バックアップ ストレージの冗長性を使用して作成されている場合にのみ使用できます。 明示的に指定しない限り、T-SQL で作成されたデータベースは geo 冗長バックアップ ストレージを使用します。 
+
+> [!IMPORTANT]
+> Azure SQL Database の BACKUP_STORAGE_REDUNDANCY オプションは、Azure の東南アジア リージョンでのみ、パブリック プレビューで利用できます。  
+
 EDITION: データベースのサービス層を指定します。
 
 単一およびプールされたデータベース。 使用できる値は次のとおりです。'Basic'、'Standard'、'Premium'、'GeneralPurpose'、'BusinessCritical'、'Hyperscale'。
@@ -999,12 +1009,12 @@ MAXSIZE: データベースの最大サイズを指定します。 MAXSIZE は�
 |150 GB|該当なし|√|√|√|√|
 |200 GB|該当なし|√|√|√|√|
 |250 GB|該当なし|√ (D)|√ (D)|√|√|
-|300 GB|N/A|N/A|√|√|√|
-|400 GB|N/A|N/A|√|√|√|
-|500 GB|N/A|N/A|√|√ (D)|√|
-|750 GB|N/A|N/A|√|√|√|
-|1024 GB|N/A|N/A|√|√|√ (D)|
-|1024 GB から 4096 GB (256 GB ずつ増分)* |該当なし|N/A|N/A|該当なし|√|√|
+|300 GB|該当なし|該当なし|√|√|√|
+|400 GB|該当なし|該当なし|√|√|√|
+|500 GB|該当なし|該当なし|√|√ (D)|√|
+|750 GB|該当なし|該当なし|√|√|√|
+|1024 GB|該当なし|該当なし|√|√|√ (D)|
+|1024 GB から 4096 GB (256 GB ずつ増分)* |該当なし|該当なし|該当なし|該当なし|√|√|
 
 \* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。 P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、US Gov バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 DTU モデルのリソースの制限事項に関する詳細については、[DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。
 
@@ -1170,6 +1180,10 @@ AS COPY OF [source_server_name.]source_database_name **適用対象:** 単一の
 
 詳細については、[Transact-SQL を使った Azure SQL Database のコピーの作成](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/)に関するページを参照してください。
 
+> [!IMPORTANT]
+> 既定では、データベース コピーのバックアップ ストレージ冗長性は、そのソース データベースと同じ冗長性で作成されます。 データベース コピーの作成時のバックアップ ストレージの冗長性の変更は、T-SQL によってサポートされていません。 
+
+
 ## <a name="permissions"></a>アクセス許可
 
 データベースを作成するには、次のいずれかでログインする必要があります。
@@ -1258,6 +1272,15 @@ CREATE DATABASE db_copy
 ```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'Basic')
   WITH CATALOG_COLLATION = DATABASE_DEFAULT
+```
+
+### <a name="create-database-using-zone-redundancy-for-backups"></a>バックアップにゾーンの冗長性を使用したデータベースの作成
+
+次の例では、データベース バックアップのゾーン冗長が設定されます。 ポイントインタイム リストア バックアップおよび (構成されている場合) 長期保有バックアップのいずれも、同じバックアップ ストレージの冗長性が使用されます。
+
+```sql
+CREATE DATABASE test_zone_redundancy 
+  WITH BACKUP_STORAGE_REDUNDANCY = 'ZONE';
 ```
 
 ## <a name="see-also"></a>関連項目
@@ -1380,6 +1403,7 @@ Azure Synapse では、Azure SQL Database サーバーでこのステートメ�
 
 ## <a name="syntax"></a>構文
 
+### <a name="sql-pool"></a>[SQL プール](#tab/sqlpool)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
@@ -1400,6 +1424,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 )
 [;]
 ```
+### <a name="sql-on-demand-preview"></a>[SQL オンデマンド (プレビュー)](#tab/sqlod)
+```syntaxsql
+CREATE DATABASE database_name [ COLLATE collation_name ]
+[;] 
+```
+---
 
 ## <a name="arguments"></a>引数
 

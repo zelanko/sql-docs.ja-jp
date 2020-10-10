@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6835fbc893b45214cf8ea6f7b6a02d8f1e1df773
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 68bfdb9d087539efaf05d9f3f78bb5348d2a2831
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988742"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624839"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server Backup to URL
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -85,6 +85,9 @@ Blob Storage に大規模なデータベースをバックアップするとき�
   
 -   SQL Server では、ページ BLOB でサポートされる最大バックアップ サイズが 1 TB に制限されます。 ブロック BLOB を使ってサポートされる最大バックアップ サイズは、約 200 GB (50,000 ブロック * 4MB MAXTRANSFERSIZE) に制限されます。 ブロック BLOB はストライピングが可能であり、相当大きなバックアップ サイズがサポートされます。  
   
+    > [!IMPORTANT]  
+    >  1 つのブロック BLOB でサポートされる最大バックアップ サイズは 200 GB ですが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でより小さなブロック サイズで書き込むことにより、バックアップ全体が転送される前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が 5 万ブロックの制限に達してしまう場合があります。 特に、差分または非圧縮バックアップを使用する場合は、(サイズが 200 GB 未満の場合でも) バックアップをストライプしてブロックの制限を回避します。
+
 -   TSQL、SMO、PowerShell コマンドレット、SQL Server Management Studio のバックアップと復元ウィザードを使用して、BACKUP ステートメントや RESTORE ステートメントを実行できます。   
   
 -   論理デバイス名の作成はサポートされていません。 そのため、sp_dumpdevice または SQL Server Management Studio を使用してバックアップ デバイスとして URL を追加することはできません。  
