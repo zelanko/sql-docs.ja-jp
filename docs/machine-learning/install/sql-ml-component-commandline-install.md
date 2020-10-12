@@ -1,25 +1,25 @@
 ---
 title: コマンド プロンプトからのインストール
-description: SQL Server のコマンド ライン セットアップを実行して、R 言語と Python の統合を SQL Server データベース エンジンのインスタンスに追加します。
+description: SQL Server コマンド ライン セットアップを実行して、R と Python を備えた Machine Learning Services を SQL Server データベース エンジン インスタンスに追加します。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/04/2019
+ms.date: 09/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c496778731a972603019450be15b3ea72d4c415
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9769675d3901efc9e5ad794794705f924e494fe2
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179801"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624759"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>コマンド ラインから SQL Server Machine Learning R および Python コンポーネントをインストールする
+# <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>R と Python を備えた SQL Server Machine Learning Services をコマンド ラインからインストールする
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-この記事では、コマンド ラインから SQL Server の機械学習コンポーネントをインストールする手順について説明します。
+この記事では、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) をコマンド ラインからインストールする手順について説明します。
 
 + [新しい In-Database インスタンス](#indb)
 + [既存のデータベース エンジンのインスタンスに追加する](#add-existing)

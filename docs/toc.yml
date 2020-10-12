@@ -88,8 +88,6 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: オフライン展開
               href: big-data-cluster/deploy-offline.md
-            - name: Active Directory モード
-              href: big-data-cluster/deploy-active-directory.md
             - name: 高可用性で展開する
               items:
                 - name: マスター インスタンス
@@ -130,6 +128,22 @@
           href: big-data-cluster/concept-compute-pool.md
         - name: Security
           href: big-data-cluster/concept-security.md
+        - name: Active Directory モード
+          items:
+            - name: 前提条件
+              href: big-data-cluster/active-directory-prerequisites.md
+            - name: デプロイ
+              href: big-data-cluster/active-directory-deploy.md
+            - name: 接続する
+              href: big-data-cluster/active-directory-connect.md
+            - name: 同じ AD ドメインの複数の BDC
+              href: big-data-cluster/active-directory-deployment-background.md
+            - name: 自動生成された AD オブジェクト
+              href: big-data-cluster/active-directory-objects.md
+            - name: AD DNS の調整
+              href: big-data-cluster/active-directory-dns-reconciliation.md
+            - name: ユーザー アクセスを管理する
+              href: big-data-cluster/manage-user-access.md
         - name: プライベート クラスター
           items:
             - name: デプロイ
@@ -336,16 +350,8 @@
               href: big-data-cluster/kubernetes-rbac.md
             - name: AZDATA_PASSWORD を更新する
               href: big-data-cluster/change-azdata-password.md
-            - name: ユーザー アクセスを管理する
-              href: big-data-cluster/manage-user-access.md
             - name: ルートではないコンテナー
               href: big-data-cluster/non-root-containers.md
-            - name: 同じ AD ドメインの複数の BDC
-              href: big-data-cluster/active-directory-deployment-background.md
-            - name: 自動生成された AD オブジェクト
-              href: big-data-cluster/active-directory-objects.md
-            - name: AD DNS の調整
-              href: big-data-cluster/active-directory-dns-reconciliation.md
         - name: Spark ジョブ
           items:
             - name: Azure Data Studio で Spark ジョブを送信する
@@ -362,13 +368,17 @@
               href: big-data-cluster/cluster-troubleshooting-commands.md
             - name: Pyspark ノートブックのトラブルシューティング
               href: big-data-cluster/troubleshoot-pyspark-notebook.md
-            - name: Active Directory ドメイン グループのスコープ
-              href: big-data-cluster/troubleshoot-active-directory.md
-            - name: Active Directory DNS
-              href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
-            - name: Active Directory へのログインに失敗する
-              href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
-            - name: HDFS の管理者権限
+            - name: Active Directory のトラブルシューティング
+              items:
+                - name: AD の展開の停止
+                  href: big-data-cluster/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods.md
+                - name: AD ドメイン グループのスコープ
+                  href: big-data-cluster/troubleshoot-active-directory.md
+                - name: AD DNS
+                  href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+                - name: AD ログインに失敗する
+                  href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
+            - name: HDFS 管理者のアクセス許可のトラブルシューティング
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: リファレンス
       items:
@@ -7800,6 +7810,8 @@
                   href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
                 - name: SQL Server コネクタのトラブルシューティング
                   href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
+                - name: SQL Server コネクタのログ記録
+                  href: relational-databases/security/encryption/sql-server-connector-registry-modification.md
             - name: サービス マスター キーをバックアップする
               href: relational-databases/security/encryption/back-up-the-service-master-key.md
             - name: サービス マスター キーを復元する

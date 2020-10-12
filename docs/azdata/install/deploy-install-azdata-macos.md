@@ -5,23 +5,24 @@ description: macOS に azdata をインストールする方法について説�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c812600394546cba8adb0eacab59fa450b7c4bd2
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 19a3542f77708dcf779cf01d5299e7ff6add8273
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914908"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725243"
 ---
 # <a name="install-azdata-on-macos"></a>`azdata` の macOS へのインストール
 
-`azdata-cli` は、macOS プラットフォームには、Homebrew パッケージ マネージャーでインストールできます。 この CLI パッケージは、macOS の次のバージョンでテストされています。 
-* 10.13 High Sierra
-* 10.14 Mojave
-* 10.15 Catalina
+macOS プラットフォームの場合、Homebrew パッケージ マネージャーを使用して `azdata-cli` をインストールできます。 この CLI パッケージは、macOS の次のバージョンでテストされています。
+
+- 10.13 High Sierra
+- 10.14 Mojave
+- 10.15 Catalina
 
 ## <a name="install-with-homebrew"></a>Homebrew でインストールする
 

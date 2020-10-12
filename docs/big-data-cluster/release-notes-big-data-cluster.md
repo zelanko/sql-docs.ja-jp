@@ -5,16 +5,16 @@ description: この記事では、SQL Server ビッグ データ クラスター
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 09/02/2020
+ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 75af471239529587cf51b151c04a541a612949c0
-ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
+ms.openlocfilehash: 4217e2be765e29fe58ff423be8632f7e18e1b2eb
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91145391"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834509"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 ビッグ データ クラスターのリリース ノート
 
@@ -54,7 +54,7 @@ ms.locfileid: "91145391"
 |プラットフォーム|サポートされているバージョン|
 |---------|---------|
 |`azdata`|ベスト プラクティスとして、利用可能な最新バージョンを使用します。 SQL Server 2019 CU5 リリース以降では、`azdata` にサーバーから独立したセマンティック バージョンがあります。 <br/><br/>`azdata –-version` を実行して、バージョンを検証します。<br/><br/>最新バージョンについては、「[リリース履歴](#release-history)」を参照してください。|
-|Azure Data Studio|[Azure Data Studio](https://aka.ms/getazuredatastudio) の最新のビルドを取得します。|
+|Azure Data Studio|[Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) の最新のビルドを取得します。|
 
 完全な一覧については、「[必要なツール](deploy-big-data-tools.md#which-tools-are-required)」を参照してください
 
@@ -62,7 +62,7 @@ ms.locfileid: "91145391"
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] のリリース履歴の一覧を次の表に示します。
 
-| Release | BDC のバージョン  | `azdata` バージョン <sup>1</sup> | リリース日 |
+| リリース <sup>1</sup> | BDC のバージョン  | `azdata` バージョン <sup>2</sup> | リリース日 |
 |----------------------|--------------|-------------------------------|--------------|
 | [CU6](#cu6)          | 15.0.4053.23 | 20.0.1                        | 2020-08-04   |
 | [CU5](#cu5)          | 15.0.4043.16 | 20.0.0                        | 2020-06-22   |
@@ -72,7 +72,11 @@ ms.locfileid: "91145391"
 | [CU1](#cu1)          | 15.0.4003.23 | 15.0.4003                     | 2020-01-07   |
 | [GDR1](#rtm)         | 15.0.2070.34 | 15.0.2070                     | 2019-11-04   |
 
-<sup>1</sup> `azdata` バージョンは、CU リリース時のツールのバージョンを反映しています。 `azdata` はサーバー リリースとは無関係でリリースされることもあります。そのため、最新のパッケージをインストールするとき、新しいバージョンが取得されることがあります。 新しいバージョンは、前にリリースされた CU との間に互換性があります。
+<sup>1</sup> 次のリリースは BDC では使用できません。
+- CU7
+- CU8
+
+<sup>2</sup>`azdata` バージョンは、CU リリース時のツールのバージョンを反映しています。 `azdata` はサーバー リリースとは無関係でリリースされることもあります。そのため、最新のパッケージをインストールするとき、新しいバージョンが取得されることがあります。 新しいバージョンは、前にリリースされた CU との間に互換性があります。
 
 ## <a name="how-to-install-updates"></a>更新プログラムのインストール方法
 
@@ -111,7 +115,7 @@ SQL Server 2019 の累積的な更新プログラム 5 (CU5) リリース。
 - BDC のデプロイ セキュリティ モデルが更新されたため、BDC の一部としてデプロイされた特権コンテナーが "*必要*" なくなりました。 SQL Server 2019 CU5 を使用するすべての新しいデプロイでは、非特権だけでなく、コンテナーも既定では非ルート ユーザーとして実行されます。 
 - Active Directory ドメインに対して複数のビッグ データ クラスターをデプロイするためのサポートが追加されました。
 - `azdata` CLI には、サーバーから独立した独自のセマンティック バージョンがあります。 azdata のクライアントとサーバー バージョンの間の依存関係はすべて削除されます。 最新の拡張機能と修正プログラムの利点が確実に得られるように、クライアントとサーバーの両方に最新バージョンを使用することをお勧めします。
-- 特定の外部データ ソースのイントロスペクションをサポートするために、sp_data_source_objects と sp_data_source_table_columns という 2 つの新しいストアド プロシージャが導入されました。 これらは、お客様が T-SQL を介して直接使用し、スキーマを検出したり、仮想化が可能なテーブルを確認したりすることができます。 これらの変更は、Azure Data Studio 用の[データ仮想化拡張機能](../azure-data-studio/data-virtualization-extension.md)の外部テーブル ウィザードで活用されます。これにより、SQL Server、Oracle、MongoDB、Teradata から外部テーブルを作成することができます。
+- 特定の外部データ ソースのイントロスペクションをサポートするために、sp_data_source_objects と sp_data_source_table_columns という 2 つの新しいストアド プロシージャが導入されました。 これらは、お客様が T-SQL を介して直接使用し、スキーマを検出したり、仮想化が可能なテーブルを確認したりすることができます。 これらの変更は、Azure Data Studio 用の[データ仮想化拡張機能](../azure-data-studio/extensions/data-virtualization-extension.md)の外部テーブル ウィザードで活用されます。これにより、SQL Server、Oracle、MongoDB、Teradata から外部テーブルを作成することができます。
 - Grafana で実行されたカスタマイズを永続化するためのサポートが追加されました。 CU5 より前のお客様は、Grafana 構成でのすべての編集が、(Grafana ダッシュボードをホストする) `metricsui` ポッドの再起動時に失われることにお気付きかもしれません。 この問題は修正され、すべての構成が永続化されるようになりました。 
 - (`metricsdc` ポッドでホストされている) Telegraf を使ってポッドとノードのメトリックを収集するために使用される、API に関するセキュリティの問題が修正されました。 この変更の結果として、Telegraf を使用する場合、ポッドとノードのメトリックを収集するために必要なアクセス許可をサービス アカウント、クラスター ロールおよびクラスター バインドに付与することが必要になりました。 詳細については、「[ポッドとノードのメトリックの収集に必要なクラスター ロール](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection)」を参照してください。
 - ポッドとノードのメトリックの収集を制御するために、2 つの機能スイッチが追加されました。 Kubernetes インフラストラクチャの監視に別のソリューションを使用する場合は、control.json 展開構成ファイルで *allowNodeMetricsCollection* と *allowPodMetricsCollection* を false に設定し、ポッドとホスト ノードに対する組み込みのメトリック収集を無効にすることができます。 OpenShift 環境の場合、組み込みのデプロイ プロファイルではこれらの設定が既定では false に設定されます。これは、ポッドとノードのメトリックを収集するには特権機能が必要であるためです。
@@ -175,7 +179,7 @@ SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-cluster
 
 - **回避策**:BDC をアップグレードする前に、アクティブな Livy セッションまたはバッチ ジョブがないことを確認してください。 これを回避するには、「[サポートされているリリースからのアップグレード](deployment-upgrade.md#upgrade-from-supported-release)」の手順に従ってください。 
 
-   アップグレード処理中に Livy から 404 エラーが返された場合は、両方の sparkhead ノードで Livy サーバーを再起動します。 たとえば、次のように入力します。
+   アップグレード処理中に Livy から 404 エラーが返された場合は、両方の sparkhead ノードで Livy サーバーを再起動します。 次に例を示します。
 
    ```console
    kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy

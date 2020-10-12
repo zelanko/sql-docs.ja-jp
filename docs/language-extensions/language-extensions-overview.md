@@ -1,7 +1,7 @@
 ---
 title: SQL Server 言語拡張とは?
 titleSuffix: ''
-description: 言語拡張は、外部コードの実行に使用される SQL Server の機能です。 SQL Server 2019 では、Java がサポートされています。 リレーショナル データは、機能拡張フレームワークを使用して外部コードで使用できます。
+description: 言語拡張は、外部コードの実行に使用される SQL Server の機能です。 SQL Server 2019 では、Java、R、および Python がサポートされています。 リレーショナル データは、機能拡張フレームワークを使用して外部コードで使用できます。
 author: dphansen
 ms.author: davidph
 ms.date: 08/19/2020
@@ -9,12 +9,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3877e08c3f8976fc6a5c0aedfca594b8dee165a6
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: a7e79d6253c531ef2a008a7284fa8d7cd0365999
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645929"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765788"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>SQL Server 言語拡張とは?
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -30,7 +30,7 @@ SQL Server 2019 では、Java がサポートされています。 既定の Jav
 
 言語拡張には、外部コードの実行に拡張機能フレームワークが使用されます。 コードの実行はコア エンジン プロセスから分離されていますが、SQL Server のクエリ実行と完全に統合されています。 データが存在する場所でコードを実行できるため、ネットワーク経由でデータをプルする必要はありません。
 
-外部言語は [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql) で定義されます。 システム ストアド プロシージャ [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) は、コードを実行するためのインターフェイスとして使用されます。
+外部言語は [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md) で定義されます。 システム ストアド プロシージャ [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) は、コードを実行するためのインターフェイスとして使用されます。
 
 言語拡張には、次のような利点があります。
 
@@ -53,9 +53,9 @@ SQL Server 2019 では、Java がサポートされています。 既定の Jav
 
 + **[Microsoft 拡張機能 SDK for Java](how-to/extensibility-sdk-java-sql-server.md) をインストール**して、SQL Server 上で Java コードを実行します
 
-+ **[Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) または [SQL Server Management Studio ](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) を使用して** SQL Server 上で外部コードを実行します
++ **[Azure Data Studio](../azure-data-studio/what-is.md) または [SQL Server Management Studio ](../ssms/sql-server-management-studio-ssms.md) を使用して** SQL Server 上で外部コードを実行します
 
-+ **システム ストアド プロシージャ [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)** を使用して SQL Server 上で Java コードを実行します。
++ **システム ストアド プロシージャ [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)** を使用して SQL Server 上で Java コードを実行します。
 
 ### <a name="step-3-write-your-first-code"></a>手順 3:最初のコードを書く
 
@@ -69,5 +69,7 @@ T-SQL スクリプト内から Java コードを実行します。
 
 ## <a name="next-steps"></a>次のステップ
 
++ [SQL Server 用の Python カスタム ランタイム](../machine-learning/install/custom-runtime-python.md)をインストールする
++ [SQL Server 用の R カスタム ランタイム](../machine-learning/install/custom-runtime-r.md)をインストールする
 + [Windows 上](install/install-sql-server-language-extensions-on-windows.md)または [Linux 上に SQL Server 言語拡張をインストール](../linux/sql-server-linux-setup-language-extensions.md)します
 + [Microsoft 拡張機能 SDK for Java](how-to/extensibility-sdk-java-sql-server.md) をインストールします

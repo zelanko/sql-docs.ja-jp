@@ -5,16 +5,16 @@ description: Azure Arc 対応 SQL Server を使用して SQL Server のインス
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray
-ms.date: 09/10/2020
+ms.date: 10/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: c647a1cdf767b7dacef5b7e376d6e787af688469
-ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
+ms.openlocfilehash: 5cf1a67d1eeb36ec4889d75241eba34b515264b0
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589301"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834316"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>Azure Arc 対応 SQL Server (プレビュー)
 
@@ -44,8 +44,7 @@ Azure Arc 対応 SQL Server は、Windows または Linux オペレーティン�
 ### <a name="required-permissions"></a>必要なアクセス許可
 
 SQL Server インスタンスとホスティングを Azure Arc に接続するには、次の操作を実行する特権のあるアカウントが必要です。
-   * Microsoft.AzureData/sqlServerInstances/write
-   * Microsoft.AzureData/sqlServerInstances/read
+   * Microsoft.AzureData/*
    * Microsoft.HybridCompute/machines/read
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read
@@ -72,7 +71,7 @@ Connected Machine エージェントに必要な[ネットワーク構成、ト�
 - 西ヨーロッパ
 - 英国南部
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [SQL Server を Azure Arc に接続する](connect.md)
 - [オンデマンド SQL 評価を使用して、環境の正常性チェックを定期的に行うように SQL Server インスタンスを構成する](assess.md)
