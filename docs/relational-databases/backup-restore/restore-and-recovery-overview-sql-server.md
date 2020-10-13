@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e62b9f4c4de0db24294640cd2013f0fc4b0d6c7b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5157ab86adbbea5b6e9fa1bdb14264f5418ac07b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480415"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810706"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>復元と復旧の概要 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "89480415"
 
 -   **元に戻すフェーズ**では、ATT 内にある未完了のトランザクションがロールバックされ、データベースの整合性が確保されます。 ロールバック後、データベースはオンラインになり、そのデータベースにそれ以上のトランザクション ログ バックアップを適用できなくなります。
 
-各データベース復旧ステージの進行状況に関する情報は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の[エラー ログ](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)に記録されます。 データベース復旧の進行状況は、拡張イベントを使って追跡することもできます。 詳細については、ブログ記事「[データベース復旧の進行状況のための新しい拡張イベント](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/)」をご覧ください。
+各データベース復旧ステージの進行状況に関する情報は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の[エラー ログ](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)に記録されます。 データベース復旧の進行状況は、拡張イベントを使って追跡することもできます。 詳細については、ブログ記事「[データベース復旧の進行状況のための新しい拡張イベント](/archive/blogs/sql_server_team/new-extended-events-for-database-recovery-progress)」をご覧ください。
 
 > [!NOTE]
 > 段階的な部分復元のシナリオでは、読み取り専用ファイル グループがファイルのバックアップの作成前から読み取り専用だった場合は、ログ バックアップをファイル グループに適用する必要はないので、ファイルの復元の際にスキップされます。 
@@ -174,9 +174,9 @@ ms.locfileid: "89480415"
   
 データベース復旧アドバイザーの詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manageability の次のブログを参照してください。  
   
--   [復旧アドバイザー: 概要](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction)  
+-   [復旧アドバイザー: 概要](/archive/blogs/managingsql/recovery-advisor-an-introduction)  
   
--   [復旧アドバイザー: SSMS を使用して分割バックアップを作成/復元する](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
+-   [復旧アドバイザー: SSMS を使用して分割バックアップを作成/復元する](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> 高速データベース復旧
 [高速データベース復旧](/azure/sql-database/sql-database-accelerated-database-recovery/)は [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で利用できます。 高速データベース復旧では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の[復旧プロセス](#TlogAndRecovery)の再設計により、データベースの可用性が大幅に向上します (長時間トランザクションが存在する場合は特に)。 高速データベース復旧が有効にされたデータベースでは、フェールオーバーまたは他のクリーンではないシャットダウンの後の復旧プロセスが、非常に速く完了します。 高速データベース復旧を有効にした場合、取り消された長時間トランザクションのロールバックも非常に速く完了します。
@@ -195,4 +195,4 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
  [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     
  [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
- [トランザクション ログ バックアップの適用 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [トランザクション ログ バックアップの適用 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)

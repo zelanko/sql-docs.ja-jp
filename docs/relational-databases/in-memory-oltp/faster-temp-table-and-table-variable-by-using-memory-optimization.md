@@ -12,12 +12,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8f6369de798c04805e2c5facb01fcfd6dc31153
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 699819c74630687f4548d248632536e6e713e68b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723245"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869374"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>メモリ最適化を使用した一時テーブルとテーブル変数の高速化
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -429,11 +429,10 @@ Batch execution completed 5001 times.
   
 ## <a name="h-see-also"></a>H. 関連項目  
   
-- [メモリ最適化テーブル。](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+- [メモリ最適化テーブル。](./sample-database-for-in-memory-oltp.md)
 
 - [メモリ最適化オブジェクトの持続性の定義。](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)
 
 - [2017 年 9 月のブログで発表された、不適切なメモリ不足エラーの可能性を除去するための累積的な更新プログラム。](https://support.microsoft.com/help/4025208/fix-memory-leak-occurs-when-you-use-memory-optimized-tables-in-microso)
     - 「[SQL Server 2016 のビルド バージョン](https://support.microsoft.com/help/3177312/sql-server-2016-build-versions)」には、リリース、サービス パック、および累積的な更新プログラムの詳細が示されています。
     - このような不定期の不適切なエラーは、SQL Server Enterprise Edition では発生しませんでした。
-
