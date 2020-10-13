@@ -16,12 +16,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: befee8aca5a1c9d7a66015a02c8851c56d0e5a8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0939dd9a38e049fc0db732c1635fdb73b686f04
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464917"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809544"
 ---
 # <a name="spatial-data-types-overview"></a>空間データ型の概要
 
@@ -74,7 +74,7 @@ geometry 型の円弧セグメントは、XY デカルト座標平面上に定�
 
 平面 (平面地球) 座標系では、距離や面積の測定値は座標と同じ測定単位で表されます。 **geometry** データ型を使用した場合、(2, 2) と (5, 6) の間の距離は、使用されている単位に関係なく 5 単位になります。  
 
-楕円体 (球体地球) 座標系では、座標は緯度と経度で表されます。 ただし、長さと面積は、**geography** インスタンスの[空間参照系識別子](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids)によっても異なりますが、通常はメートルと平方メートルで測定されます。 メートルは、 **geography** データ型の最も一般的な測定単位です。  
+楕円体 (球体地球) 座標系では、座標は緯度と経度で表されます。 ただし、長さと面積は、**geography** インスタンスの[空間参照系識別子](./spatial-reference-identifiers-srids.md)によっても異なりますが、通常はメートルと平方メートルで測定されます。 メートルは、 **geography** データ型の最も一般的な測定単位です。  
 
 ### <a name="orientation-of-spatial-data"></a>空間データの方向
 
@@ -201,10 +201,10 @@ SELECT @g.ToString(), @g.STLength();
 
 ## <a name="see-also"></a>関連項目
 
-- [空間データ (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx)
-- [geometry データ型メソッド リファレンス](https://msdn.microsoft.com/library/bb933973.aspx)
-- [geography データ型メソッド リファレンス](https://docs.microsoft.com/sql/t-sql/spatial-geography/spatial-types-geography)
+- [空間データ (SQL Server)](./spatial-data-sql-server.md)
+- [geometry データ型メソッド リファレンス](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
+- [geography データ型メソッド リファレンス](../../t-sql/spatial-geography/spatial-types-geography.md)
 - [STNumCurves &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)
 - [STNumCurves &#40;geography データ型&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)
 - [STGeomFromText#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)
-- [STGeomFromText #40;geography データ型&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
+- [STGeomFromText #40;geography データ型&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)

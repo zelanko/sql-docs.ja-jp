@@ -16,12 +16,12 @@ ms.author: genemi
 ms.reviewer: maghan
 ms.date: 04/16/2020
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18e0b44567d2e6a06dfc243231aebe6f9be11222
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: b2cc5e7de4b96bbd85ebe36e3173189d08258139
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624789"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869423"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>クイック スタート:SQL Server の拡張イベント
 
@@ -49,13 +49,13 @@ ms.locfileid: "91624789"
 ブログやくだけた会話では、拡張イベントは *xevent*という略称で呼ばれることがあります。
 
 > [!NOTE]
-> コード サンプルを含む Azure SQL Database の拡張イベントの詳細については、「[SQL Database の拡張イベント](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)」をご覧ください。
+> コード サンプルを含む Azure SQL Database の拡張イベントの詳細については、「[SQL Database の拡張イベント](/azure/azure-sql/database/xevent-db-diff-from-svr)」をご覧ください。
 
 ## <a name="preparations-before-demo"></a>デモの準備
 
 次のデモを実際に行うには、以下の準備作業が必要になります。
 
-1. [SQL Server Management Studio (SSMS) のダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)
+1. [SQL Server Management Studio (SSMS) のダウンロード](../../ssms/download-sql-server-management-studio-ssms.md)
 
    毎月更新される最新の SSMS を毎月インストールする必要があります。
 2. Microsoft SQL Server 2014 以降にログインします。
@@ -359,7 +359,7 @@ SSMS **オブジェクト エクスプローラー**で、イベント セッシ
 - [ロックの大半を取得しているオブジェクトを見つける](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - このシナリオでは、生のイベント データを表示する前に処理するターゲット package0.histogram を使用します。
 - [ロックを保持しているクエリの特定](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
-  - このシナリオは、sqlserver.lock_acquire と lock_release がイベントのペアとなる、 [ターゲット package0.pair_matching](https://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3)を使用します。
+  - このシナリオは、sqlserver.lock_acquire と lock_release がイベントのペアとなる、 [ターゲット package0.pair_matching](/previous-versions/sql/sql-server-2016/ff878062(v=sql.130))を使用します。
 
 ## <a name="terms-and-concepts-in-extended-events"></a>拡張イベントの用語と概念
 
@@ -541,7 +541,7 @@ SELECT HAS_PERMS_BY_NAME
 - 組み込み関数 [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)の詳細
 - [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)
 - [GRANT (サーバーの権限の許可) (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
-- [sys.server_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
+- [sys.server_principals (Transact-SQL)](../system-catalog-views/sys-server-principals-transact-sql.md)
 - ブログ: [Effective Database Engine Permissions](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)(効果的なデータベース エンジンのアクセス許可)
 - すべての SQL Server 権限の階層を表示した、ズーム可能な [ポスター](https://aka.ms/sql-permissions-poster)(PDF)
 

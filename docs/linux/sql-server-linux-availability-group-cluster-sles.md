@@ -2,20 +2,20 @@
 title: SUSE:SQL Server on Linux の可用性グループを構成する
 titleSuffix: SQL Server
 description: SUSE Linux Enterprise Server (SLES) 用の可用性グループ クラスターを作成する方法について説明します。
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: c6c5ecf91349a94acb2b18156f28056ce04da3a1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: efa93b1d85e0aec5be7ea62ce76cb0270c68178f
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892337"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784874"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループ用の SLES クラスターを構成する
 

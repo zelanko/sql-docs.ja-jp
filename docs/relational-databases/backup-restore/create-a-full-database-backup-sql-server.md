@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5c691d1e4a6164087ee3bee776e27a786f68effe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d534efe7cf6de24acad83604b7ed6e42efa9ce6f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89519389"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809278"
 ---
 # <a name="create-a-full-database-backup"></a>データベースの完全バックアップの作成
 
@@ -208,7 +208,7 @@ GO
 
 以下の例では、Azure Blob Storage サービスへの `SQLTestDB` のデータベースの完全バックアップを実行します。 この例では、BLOB コンテナーを含むストレージ アカウントを既に用意していることを前提としています。 この例では、共有アクセス署名が自動的に作成されます。この例では、既存の共有アクセス署名のあるコンテナーがないからです。
 
-ストレージ アカウントに Azure BLOB コンテナーがない場合は、続行する前に作成してください。 詳細については、「[汎用ストレージアカウントの作成](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal)」と「[コンテナーを作成する](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)」を参照してください。
+ストレージ アカウントに Azure BLOB コンテナーがない場合は、続行する前に作成してください。 詳細については、「[汎用ストレージアカウントの作成](/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal)」と「[コンテナーを作成する](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)」を参照してください。
 
 1. **オブジェクト エクスプローラー**で適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続した後、サーバー ツリーを展開します。
 
@@ -368,7 +368,7 @@ GO
 > [!NOTE]
 > これらの例では、SqlServer モジュールが必要です。 それがインストールされているかどうかを判断するには、`Get-Module -Name SqlServer` を実行します。 このモジュールをインストールするには、PowerShell の管理者セッションで `Install-Module -Name SqlServer` を実行します。
 >
-> 詳細については、「 [SQL Server PowerShell プロバイダー](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider)」を参照してください。
+> 詳細については、「 [SQL Server PowerShell プロバイダー](../../powershell/sql-server-powershell-provider.md)」を参照してください。
 
 > [!IMPORTANT]
 > SQL Server Management Studio 内から PowerShell ウィンドウを開いて SQL Server のインストールに接続する場合、PowerShell とご利用の SQL Server インスタンスとの接続の確立には SSMS 内のご利用の資格情報が自動的に使用されるので、この例の資格情報の部分は省略できます。
@@ -379,7 +379,7 @@ GO
 
 次の例では、 `<myDatabase>` データベースの完全なバックアップを、サーバー インスタンス `Computer\Instance`の既定のバックアップ場所に作成します。 オプションで、この例では **-BackupAction Database**を指定します。
 
-完全な構文とその他の例については、「[Backup-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/backup-sqldatabase)」を参照してください。
+完全な構文とその他の例については、「[Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase)」を参照してください。
 
 ```powershell
 $credential = Get-Credential

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 77d47d7492b9c4973d58113c80e5cca737315282
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 53d2ea62bebcce1df978a8b4e539c56408a9f673
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540843"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809198"
 ---
 # <a name="temporal-table-usage-scenarios"></a>テンポラル テーブルの使用シナリオ
 
@@ -59,7 +59,7 @@ CREATE TABLE Employee
 
 ### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>データ監査用に既存のテーブルでシステム バージョン管理を有効にする
 
-既存のデータベースのデータを監査する必要がある場合、ALTER TABLE を使用し、非テンポラル テーブルをシステム バージョン管理テーブルにします。 アプリケーションの破壊的変更を回避するために、「[非テンポラル テーブルをシステム バージョン管理されたテンポラル テーブルに変更する](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3)」の説明に従って、期間列を HIDDEN として追加します。 次の例では、仮定の HR データベース内の既存の Employee テーブルで、システム バージョン管理を有効にする方法について説明します。
+既存のデータベースのデータを監査する必要がある場合、ALTER TABLE を使用し、非テンポラル テーブルをシステム バージョン管理テーブルにします。 アプリケーションの破壊的変更を回避するために、「[非テンポラル テーブルをシステム バージョン管理されたテンポラル テーブルに変更する](./creating-a-system-versioned-temporal-table.md)」の説明に従って、期間列を HIDDEN として追加します。 次の例では、仮定の HR データベース内の既存の Employee テーブルで、システム バージョン管理を有効にする方法について説明します。
 
 ```sql
 /*
