@@ -1,6 +1,6 @@
 ---
-description: sp_special_columns_100 (SQL Data Warehouse)
-title: sp_special_columns_100 (SQL Data Warehouse) |Microsoft Docs
+description: sp_special_columns_100 (Azure Synapse Analytics)
+title: sp_special_columns_100 (Azure Synapse Analytics)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
@@ -14,14 +14,14 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7089187cc0eaa6c0cc3667d8bbf34aeca93bc3f2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 605bc7a9a446139a637d5e960643fd49e3ca62a7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725043"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987826"
 ---
-# <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
+# <a name="sp_special_columns_100-azure-synapse-analytics"></a>sp_special_columns_100 (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   テーブル内の行を一意に識別する、最適な列のセットを返します。 では、トランザクションによって行の値が更新されると、自動的に更新される列も返されます。  
@@ -31,7 +31,7 @@ ms.locfileid: "91725043"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_special_columns_100 [ @table_name = ] 'table_name'     
      [ , [ @table_owner = ] 'table_owner' ]   
@@ -77,7 +77,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|行 ID の実際のスコープ。 0、1、または2を指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 常に0を返します。 このフィールドは常に値を返します。<br /><br /> 0 = SQL_SCOPE_CURROW。 行 ID は、その行に位置している場合にのみ有効であることが保証されます。 その行が別のトランザクションによって更新または削除された場合は、後でその行 ID を使って再度選択しても行は返されません。<br /><br /> 1 = SQL_SCOPE_TRANSACTION。 行 ID は、現在のトランザクションの間有効であることが保証されます。<br /><br /> 2 = SQL_SCOPE_SESSION。 行 ID は、セッションの間 (トランザクションの境界を越えて) 有効であることが保証されます。|  
-|COLUMN_NAME|**sysname**|返された *テーブル*の各列の列名。 このフィールドは常に値を返します。|  
+|COLUMN_NAME|**sysname**|返された *テーブル* の各列の列名。 このフィールドは常に値を返します。|  
 |DATA_TYPE|**smallint**|ODBC SQL データ型。|  
 |TYPE_NAME|**sysname**|データソースに依存するデータ型の名前。たとえば、 **char**、 **varchar**、 **money**、 **text**などです。|  
 |PRECISION|**Int**|データソースの列の有効桁数。 このフィールドは常に値を返します。|  
@@ -85,7 +85,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |SCALE|**smallint**|データソース上の列の小数点以下桁数。 小数点以下桁数が適用されないデータ型に対しては NULL が返されます。|  
 |PSEUDO_COLUMN|**smallint**|その列が疑似列であるかどうかを示します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 常に1を返します。<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  sp_special_columns は ODBC の SQLSpecialColumns に相当します。 返される結果は、スコープによって並べ替えられます。  
   
 ## <a name="permissions"></a>アクセス許可  

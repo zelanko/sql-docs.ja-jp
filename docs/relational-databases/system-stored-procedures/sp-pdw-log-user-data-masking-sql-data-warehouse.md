@@ -12,12 +12,12 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4b13e74eb5b40d76f6cbdec049a8680299d0c86f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c3b65b6e3626a79fae4f5b5ac87e997ce3c97554
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723980"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988806"
 ---
 # <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91723980"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;  
 ```
@@ -52,7 +52,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  パラメーターを指定せずに **sp_pdw_ log_user_data_masking** を実行すると、アプライアンス上の tde ログユーザーデータマスクの現在の状態がスカラー結果セットとして返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  ユーザーデータのマスキング [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] アクティビティログでは、ユーザーデータを含めることができる **SELECT** ステートメントと DML ステートメントで、定義済みの定数値を持つリテラルを置換できます。 *Masking_mode*を1に設定しても、列名やテーブル名などのメタデータはマスクされません。 *Masking_mode*を2に設定すると、列名やテーブル名などのメタデータを含むステートメントが削除されます。  
   
  アクティビティログでのユーザーデータのマスキング [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は、次のように実装されます。  
