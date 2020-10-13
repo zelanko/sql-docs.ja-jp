@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbe55bf680ffbb80dca592d9bbdf63d86aaa793c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: dc2c5467768aa92badb1a74e90a9f940eb0732e3
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116580"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810528"
 ---
 # <a name="statistics"></a>統計
 
@@ -121,7 +121,7 @@ ORDER BY s.name;
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前の環境でトレース フラグ 2371 を有効にするには、次のガイダンスを使用できます。
 
  - 古い統計が原因でパフォーマンスの問題が発生していない場合は、このトレース フラグを有効にする必要はありません。
- - SAP システムを使用している場合は、このトレース フラグを有効にします。  その他の情報については、こちらの[ブログ](https://docs.microsoft.com/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371)を参照してください。
+ - SAP システムを使用している場合は、このトレース フラグを有効にします。  その他の情報については、こちらの[ブログ](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371)を参照してください。
  - 現在の自動更新が十分頻繁にトリガーされないため、夜間ジョブを使用して統計を更新する必要がある場合は、トレース フラグ 2371 を有効にしてしきい値を小さくすることを検討します。
   
 クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリをコンパイルする前は、クエリ オプティマイザーで、クエリ述語内の列、テーブル、およびインデックス付きビューを使用して古くなっている可能性がある統計が判断されます。 キャッシュされたクエリ プランを実行する前は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。  
@@ -406,4 +406,4 @@ GO
  [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)    
- [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
+ [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d039034a5c76f5f7e98b2eed84f92c27a039832d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c1f91effdea8225df62e3782e43ff5e863d827c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493833"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866694"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Azure Data Studio で Always Encrypted を使用した列のクエリを実行する
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-この記事では、[Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) を使用して [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) によって暗号化された列にクエリを実行する方法について説明します。 Azure Data Studio では、以下を実行できます。
+この記事では、[Azure Data Studio](../../../azure-data-studio/what-is.md) を使用して [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) によって暗号化された列にクエリを実行する方法について説明します。 Azure Data Studio では、以下を実行できます。
 - 暗号化された列に格納された暗号化テキスト値を取得する。 
 - 暗号化された列に格納されたプレーンテキスト値を取得する。  
 - 暗号化された列をターゲットとするプレーンテキスト値を送信する (たとえば、`INSERT` または `UPDATE` ステートメントや、`WHERE` ステートメントの `SELECT` 句のルックアップ パラメーターとして)。 
@@ -113,7 +113,7 @@ Always Encrypted を有効 (無効) にするには、次のようにします�
 
 ## <a name="parameterization-for-always-encrypted"></a>Always Encrypted のパラメーター化
 
-Always Encrypted のパラメーター化は、Transact-SQL 変数をクエリ パラメーター ([SqlParameter クラス](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter)のインスタンス) に自動的に変換する Azure Data Studio 18.1 以降の機能です。 これにより、基になる [Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) は暗号化された列をターゲットとするデータを検出し、データベースに送信する前にそのデータを暗号化できます。
+Always Encrypted のパラメーター化は、Transact-SQL 変数をクエリ パラメーター ([SqlParameter クラス](/dotnet/api/microsoft.data.sqlclient.sqlparameter)のインスタンス) に自動的に変換する Azure Data Studio 18.1 以降の機能です。 これにより、基になる [Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) は暗号化された列をターゲットとするデータを検出し、データベースに送信する前にそのデータを暗号化できます。
   
 パラメーター化しないと、Microsoft .NET Data Provider for SQL Server は、クエリ ウィンドウで作成される各ステートメントを非パラメーター化クエリとして渡します。 クエリに、暗号化された列をターゲットとする Transact-SQL 変数またはリテラルが含まれている場合、.NET Framework Data Provider for SQL Server では、データベースにクエリを送信する前に、データを検出して暗号化することはできません。 その結果、(プレーンテキストのリテラル Transact-SQL 変数と暗号化された列の間で) 型が一致しないため、クエリは失敗します。 たとえば、 `SSN` 列が暗号化されていると仮定して、パラメーター化せずに以下のクエリを正常に実行することはできません。   
 
@@ -180,7 +180,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 
 Azure Data Studio では Intellisense を使用して、正常にパラメーター化できた変数と失敗したパラメーター化の試行 (およびその理由) を通知します。   
 
-クエリ ウィンドウでは、正常にパラメーター化できた変数の宣言に、情報メッセージの下線が付けられます。 情報メッセージの下線が付いた宣言ステートメントにカーソルを置くと、パラメーター化プロセスの結果を含むメッセージが表示されます。これには、結果の [SqlParameter クラス](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter) オブジェクトの主要なプロパティの値が含まれます (変数が [SqlDbType](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype)、[Size](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.size)、[Precision](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision)、[Scale](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale)、[SqlValue](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue) にマップされます)。 また、 **[問題]** ビューには、正常にパラメーター化されたすべての変数の完全な一覧も表示されます。 **[問題]** ビューを開くには、 **[ビュー]**  >  **[問題]** を選択します。    
+クエリ ウィンドウでは、正常にパラメーター化できた変数の宣言に、情報メッセージの下線が付けられます。 情報メッセージの下線が付いた宣言ステートメントにカーソルを置くと、パラメーター化プロセスの結果を含むメッセージが表示されます。これには、結果の [SqlParameter クラス](/dotnet/api/microsoft.data.sqlclient.sqlparameter) オブジェクトの主要なプロパティの値が含まれます (変数が [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype)、[Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size)、[Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision)、[Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale)、[SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue) にマップされます)。 また、 **[問題]** ビューには、正常にパラメーター化されたすべての変数の完全な一覧も表示されます。 **[問題]** ビューを開くには、 **[ビュー]**  >  **[問題]** を選択します。    
 
 
 

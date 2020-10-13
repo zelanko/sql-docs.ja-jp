@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 4d0af1b6f32ddc31cef057b2eb13a123dd13e348
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36eef2c38d708b3634d669830e34f46a8480e138
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718086"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809710"
 ---
 # <a name="file-restores-full-recovery-model"></a>ファイル復元 (完全復旧モデル)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "85718086"
   
      *オンライン ファイル復元*では、復元中にデータベースがオンラインであれば、データベースをオンラインにしたままファイル復元を実行できます。 ただし、復元操作時は、ファイルが復元される各ファイル グループがオフラインになります。 オフライン ファイル グループ内のすべてのファイルが復旧されると、そのファイル グループは自動的にオンラインになります。  
   
-     オンライン ページおよびファイルの復元に対するサポートの詳細については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 の各エディションとサポートされる機能) を参照してください。 オンライン復元の詳細については、「[Online Restore (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)」 (オンライン復元 (SQL Server)) を参照してください。
+     オンライン ページおよびファイルの復元に対するサポートの詳細については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)」 (SQL Server 2016 の各エディションとサポートされる機能) を参照してください。 オンライン復元の詳細については、「[Online Restore (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)」 (オンライン復元 (SQL Server)) を参照してください。
   
     > [!TIP]  
     >  ファイル復元のためにデータベースをオフラインにする場合は、次の [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) ステートメントを実行して復元シーケンスを開始する前に、データベースをオフラインにしてください。ALTER DATABASE *database_name* SET OFFLINE。  
@@ -141,5 +141,4 @@ RESTORE LOG database_name FROM <tail_log_backup>
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [データベースの全体復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
-  
   

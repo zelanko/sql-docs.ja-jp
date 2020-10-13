@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 0c2ab60111951167bffb4d3bafd04bca27f23a4d
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 23bd7c70522d1d691e4670c43bb7f07b5534c379
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497968"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005743"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle の新機能 (OracleToSQL)
 
@@ -73,7 +73,7 @@ SSMA for Oracle の v1.0 リリースには、次の変更が含まれていま�
 * 基本 `ALTER TRIGGER` / `ALTER INDEX` DDL (有効/無効など) のサポートを追加します。
 * 組み込み関数名に一致する列の変換の改善
 * 列に対してフィルター選択された一意のインデックスを生成する `NULL`
-* Azure SQL Data Warehouse の変数宣言の変換の改善
+* Azure Synapse Analytics の変数宣言変換の機能強化
 * プロジェクト名に特殊文字が含まれている問題の修正
 
 ## <a name="ssma-v88"></a>SSMA v 8.8
@@ -85,7 +85,7 @@ SSMA for Oracle の v1.0 リリースには次のものが含まれます。
 * 分析句の変換の改善 `OVER PARTITION`
 * 分析関数の新しい変換 `LEAD`
 * サブクエリのファクタリング句の新しい変換
-* `REPLICATE`Azure SQL Data Warehouse の新しいディストリビューションオプション
+* `REPLICATE`Azure Synapse Analytics の新しいディストリビューションオプション
 * 変換のパフォーマンスをさらに向上させるための新しい Oracle 構文パーサー
 
 ## <a name="ssma-v87"></a>SSMA v 8.7
@@ -251,7 +251,7 @@ SSMA for Oracle の version 7.5 リリースには、次の変更が含まれて
 
 SSMA for Oracle の v2.0 リリースには、次の変更が含まれています。
 
-* SSMA for Oracle では、移行のターゲットプラットフォームとして Azure SQL Data Warehouse がサポートされるようになりました。
+* SSMA for Oracle では、移行のターゲットプラットフォームとして Azure Synapse Analytics がサポートされるようになりました。
 
   ![[新しいプロジェクト] ウィンドウ](../media/new-project.png)
   * では、次の図に示すように、データウェアハウスのストレージオプションがサポートされています。
@@ -397,7 +397,7 @@ SSMA for Oracle の2011年4月のリリースには、次の変更が含まれ�
 * `Simple`およびログ復旧モデルを使用したデータ移行のパフォーマンスの向上 `Bulk` 。
 * 以前のバージョンの SSMA (v1.0 および v1.1) で作成されたプロジェクトの旧バージョンとの互換性のためのサポートを追加しました。
 * Ssma for Oracle v1.0 製品を旧バージョンの SSMA (v2.0 および v1.1) とサイドバイサイド (SxS) でインストールする機能が追加されました。
-* ユーザー定義型 (サブタイプ、 `VARRAY` 、 `NESTED TABLE` 、オブジェクトテーブル、オブジェクトビューを含む) とその使用状況を、特別なエラーメッセージを含む PL/SQL ブロックで報告するためのサポートが追加されました。
+* User-Defined の種類 (サブタイプ、 `VARRAY` 、 `NESTED TABLE` 、オブジェクトテーブル、オブジェクトビューを含む) とその使用状況を、特別なエラーメッセージを含む PL/SQL ブロックで報告するためのサポートが追加されました。
 
 ## <a name="july-2010"></a>2010 年 7 月
 
@@ -405,7 +405,7 @@ SSMA for Oracle の2010年7月のリリースには、次のものが追加さ�
 
 * SQL Server 2008 R2 への移行のサポート。
 * コマンドライン実行用の新しい SSMA コンソールアプリケーション。
-* サーバー側とクライアント側の両方のデータ移行エンジンを使用したデータ移行のサポート。
+* Server-Side と Client-Side の両方のデータ移行エンジンを使用したデータ移行のサポート。
 * データ移行での "カスタム SELECT" ステートメントのサポート。
 * Oracle 11g R2 からの移行のサポート。
 

@@ -11,23 +11,23 @@ ms.topic: conceptual
 ms.date: 06/10/2020
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: 7c23b7faa93281ab34ed4b500d10dfd50e9c8c76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 90c219cd2e1034df4cc714247ae8d983bf54ff01
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737043"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867763"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL データの検出と分類
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-データの検出と分類では、データベース内の機密データの**検出**、**分類**、**ラベル付け**、**レポート作成**を行うための新しいツールが導入されました。このツールは [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) に組み込まれています。
+データの検出と分類では、データベース内の機密データの**検出**、**分類**、**ラベル付け**、**レポート作成**を行うための新しいツールが導入されました。このツールは [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) に組み込まれています。
 最も機密性の高いデータ (ビジネス、財務、医療など) の検出と分類は、組織の情報保護の達成において極めて重要な役割を果たすことができます。 次のような場合にインフラストラクチャとして使用できます。
 * データのプライバシー基準を満たせるようにする。
 * 機密性の高いデータを含むデータベース/列へのアクセスを制御し、セキュリティを強化する。
 
 > [!NOTE]
-> データの検出と分類は、**SQL Server 2012 以降でサポートされ、[SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 以降で使用できます**。 Azure SQL Database については、「[Azure SQL Database のデータの検出と分類](/azure/sql-database/sql-database-data-discovery-and-classification/)」を参照してください。
+> データの検出と分類は、**SQL Server 2012 以降でサポートされ、[SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) 以降で使用できます**。 Azure SQL Database については、「[Azure SQL Database のデータの検出と分類](/azure/sql-database/sql-database-data-discovery-and-classification/)」を参照してください。
 
 ## <a name="overview"></a><a id="subheading-1"></a>概要
 データの検出と分類では高度な一連のサービスが導入され、データベースだけでなく、データの保護を目的とした新しい SQL Information Protection パラダイムが形成されます。
@@ -93,7 +93,7 @@ ms.locfileid: "85737043"
 
 ## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>SSMS で情報保護ポリシーを管理する
 
-[SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 以降を利用し、情報保護ポリシーを管理できます。
+[SSMS 18.4](../../ssms/download-sql-server-management-studio-ssms.md) 以降を利用し、情報保護ポリシーを管理できます。
 
 1. SQL Server Management Studio (SSMS) で、SQL Server に接続します。
 
@@ -116,7 +116,7 @@ ms.locfileid: "85737043"
 SQL Server 2019 には [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) というシステム カタログ ビューが導入されています。 このビューでは、情報の種類と機密ラベルが返されます。 
 
 > [!NOTE]
-> このビューには **VIEW ANY SENSITIVITY CLASSIFICATION** 権限が必要です。 詳細については、「 [Metadata Visibility Configuration](https://docs.microsoft.com/sql/relational-databases/security/metadata-visibility-configuration?view=sql-server-ver15)」を参照してください。
+> このビューには **VIEW ANY SENSITIVITY CLASSIFICATION** 権限が必要です。 詳細については、「 [Metadata Visibility Configuration](./metadata-visibility-configuration.md?view=sql-server-ver15)」を参照してください。
 
 SQL Server 2019 インスタンスで、`sys.sensitivity_classifications` を問い合わせ、分類されているすべての列とそれらに対応する分類を確認します。 次に例を示します。 
 
@@ -190,27 +190,27 @@ FROM
 # <a name="t-sql"></a>[T-SQL](#tab/t-sql)
 T-SQL を使って、列の分類を追加/削除し、データベース全体のすべての分類を取得することができます。
 
-- 1 つ以上の列の分類の追加/更新:[ADD SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
-- 1 つ以上の列の分類の削除:[DROP SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
+- 1 つ以上の列の分類の追加/更新:[ADD SENSITIVITY CLASSIFICATION](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+- 1 つ以上の列の分類の削除:[DROP SENSITIVITY CLASSIFICATION](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 # <a name="powershell-cmdlet"></a>[PowerShell コマンドレット](#tab/sql-powelshell)
 PowerShell コマンドレットを使用して列の分類を追加/削除し、すべての分類を取得し、データベース全体の推奨事項を取得できます。
 
-- [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
-- [Get-SqlSensitivityRecommendations](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
-- [Set-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
-- [Remove-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityClassification](/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityRecommendations](/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
+- [Set-SqlSensitivityClassification](/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
+- [Remove-SqlSensitivityClassification](/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
 
 ---
 
 ## <a name="next-steps"></a><a id="subheading-6"></a>次のステップ
 
-Azure SQL Database については、「[Azure SQL Database のデータの検出と分類](https://go.microsoft.com/fwlink/?linkid=866265)」を参照してください。
+Azure SQL Database については、「[Azure SQL Database のデータの検出と分類](/azure/azure-sql/database/data-discovery-and-classification-overview)」を参照してください。
 
 次の列レベルのセキュリティ メカニズムを適用して、機微な列の保護を検討してください。
 
-* [動的データ マスク](https://docs.microsoft.com/sql/relational-databases/security/dynamic-data-masking): 使用中の機微な列を難読化します。
-* [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine): 保存中の機微な列を暗号化します。
+* [動的データ マスク](./dynamic-data-masking.md): 使用中の機微な列を難読化します。
+* [Always Encrypted](./encryption/always-encrypted-database-engine.md): 保存中の機微な列を暗号化します。
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1

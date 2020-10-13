@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 27ccecb8293adff8fe5f2aaa3062a871d745c587
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: e33b72c93022a02538c143f976d4114589998b6f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435448"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867251"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>セキュア エンクレーブを使用する Always Encrypted
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -125,7 +125,7 @@ SQL Server のインスタンスで障害が発生した場合、そのデータ
 > [!IMPORTANT]
 > ランダム化された暗号化を使用して暗号化されているエンクレーブ対応の列で最初のインデックスを作成する**前**に、データベースに対して[高速データベース復旧 (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) を有効にすることを強くお勧めします。
 
-[従来のデータベース復旧プロセス](https://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) ([ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) 復旧モデルに従うもの) では、インデックスに対する変更を元に戻すには、アプリケーションが列の列暗号化キーをエンクレーブに提供するまで SQL Server は待機する必要があり、長くかかることがあります。 ADR では、エンクレーブ内のキャッシュで列暗号化キーを使用できないために遅延する必要がある元に戻す操作の数が、劇的に減少します。 その結果、新しいトランザクションがブロックされる可能性が最小限になり、データベースの可用性が大幅に向上します。 ADR を有効にしても、SQL Server ではやはり古いデータ バージョンのクリーンアップを完了するために列暗号化キーが必要になる場合がありますが、データベースまたはユーザーのトランザクションの可用性に影響を与えないバックグラウンド タスクとして行われます。 ただし、列暗号化キーがないためにクリーンアップ操作が失敗したことを示すエラー メッセージが、エラー ログに記録されることがあります。
+[従来のデータベース復旧プロセス](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) ([ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) 復旧モデルに従うもの) では、インデックスに対する変更を元に戻すには、アプリケーションが列の列暗号化キーをエンクレーブに提供するまで SQL Server は待機する必要があり、長くかかることがあります。 ADR では、エンクレーブ内のキャッシュで列暗号化キーを使用できないために遅延する必要がある元に戻す操作の数が、劇的に減少します。 その結果、新しいトランザクションがブロックされる可能性が最小限になり、データベースの可用性が大幅に向上します。 ADR を有効にしても、SQL Server ではやはり古いデータ バージョンのクリーンアップを完了するために列暗号化キーが必要になる場合がありますが、データベースまたはユーザーのトランザクションの可用性に影響を与えないバックグラウンド タスクとして行われます。 ただし、列暗号化キーがないためにクリーンアップ操作が失敗したことを示すエラー メッセージが、エラー ログに記録されることがあります。
 
 ### <a name="indexes-on-enclave-enabled-columns-using-deterministic-encryption"></a>決定論的な暗号化を使用してエンクレーブ対応の列でインデックスを作成する
 
@@ -187,5 +187,3 @@ bacpac ファイルを使ってデータベースを移行するときは、bacp
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する](always-encrypted-enclaves-query-columns.md)
 - [既存の暗号化された列に対してセキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [セキュリティで保護されたエンクレーブ列が設定された Always Encrypted でのインデックスの作成と使用](always-encrypted-enclaves-create-use-indexes.md)
-
-

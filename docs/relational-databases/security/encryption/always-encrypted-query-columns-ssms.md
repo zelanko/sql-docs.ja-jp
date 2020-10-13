@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cd8ae48dd5e1403b2dd84f6654c6954d9cd8e64
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 91523e68c03467a7c6aaab40a5cbd3ab696b1890
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942644"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866532"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -90,7 +90,7 @@ SSMS でデータベースに接続する場合は、データベース接続に
 新しい接続を作成するときや **[サーバーに接続]** ダイアログを使用して既存の接続を変更するときに、Always Encrypted を有効または無効にすることができます。 
 
 Always Encrypted を有効 (無効) にするには、次のようにします。
-1. **[サーバーに接続]** ダイアログを開きます (詳細については、「[SQL Server インスタンスに接続する](../../../ssms/tutorials/connect-query-sql-server.md#connect-to-a-sql-server-instance)」を参照してください)。
+1. **[サーバーに接続]** ダイアログを開きます (詳細については、「[SQL Server インスタンスに接続する](../../../ssms/quickstarts/connect-query-sql-server.md#connect-to-a-sql-server-instance)」を参照してください)。
 1. **[オプション >>]** をクリックします。
 1. SSMS 18 以降を使用している場合:
     1. **[Always Encrypted]** タブを選択します。
@@ -109,7 +109,7 @@ Always Encrypted を有効 (無効) にするには、次のようにします�
    
 ## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Always Encrypted のパラメーター化   
  
-Always Encrypted のパラメーター化は、Transact-SQL 変数をクエリ パラメーター ( [SqlParameter クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)のインスタンス) に自動的に変換する、SQL Server Management Studio の機能です (SSMS バージョン 17.0 以降が必要です)。これにより、基になる .NET Framework Data Provider for SQL Server は暗号化された列をターゲットとするデータを検出し、データベースに送信する前にそのデータを暗号化できます。 
+Always Encrypted のパラメーター化は、Transact-SQL 変数をクエリ パラメーター ( [SqlParameter クラス](/dotnet/api/system.data.sqlclient.sqlparameter)のインスタンス) に自動的に変換する、SQL Server Management Studio の機能です (SSMS バージョン 17.0 以降が必要です)。これにより、基になる .NET Framework Data Provider for SQL Server は暗号化された列をターゲットとするデータを検出し、データベースに送信する前にそのデータを暗号化できます。 
   
 パラメーター化しないと、.NET Framework Data Provider は、クエリ エディターで作成される各ステートメントを非パラメーター化クエリとして渡します。 クエリに、暗号化された列をターゲットとする Transact-SQL 変数またはリテラルが含まれている場合、.NET Framework Data Provider for SQL Server では、データベースにクエリを送信する前に、データを検出して暗号化することはできません。 その結果、(プレーンテキストのリテラル Transact-SQL 変数と暗号化された列の間で) 型が一致しないため、クエリは失敗します。 たとえば、 `SSN` 列が暗号化されていると仮定して、パラメーター化せずに以下のクエリを正常に実行することはできません。   
 
@@ -173,7 +173,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
  
 試行されたパラメーター化が正常に行われるようにするには   
 - パラメーター化する変数の初期化で使用されるリテラルの型は、変数宣言の型と一致する必要があります。   
-- 変数の宣言された型が日付型または時刻型である場合、次の [ISO 8601 に準拠した形式](https://docs.microsoft.com/sql/t-sql/functions/cast-and-convert-transact-sql#date-and-time-styles)のいずれかを使用する文字列で変数を初期化する必要があります。    
+- 変数の宣言された型が日付型または時刻型である場合、次の [ISO 8601 に準拠した形式](../../../t-sql/functions/cast-and-convert-transact-sql.md#date-and-time-styles)のいずれかを使用する文字列で変数を初期化する必要があります。    
 
 パラメーター化エラーの原因となる Transact-SQL 変数宣言の例を以下に示します。   
 ```sql
@@ -183,7 +183,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 SQL Server Management Studio では Intellisense を使用して、正常にパラメーター化できた変数と失敗したパラメーター化の試行 (およびその理由) を通知します。   
 
-クエリ エディターでは、正常にパラメーター化できた変数の宣言に警告の下線が付けられます。 警告の下線が付いた宣言ステートメントにカーソルを置くと、パラメーター化プロセスの結果が表示されます。これには、結果の [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) オブジェクト (変数に対応する) の次の主要なプロパティの値が含まれます:[SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)、[Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx)、[Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx)、[Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx)、[SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx)。 また、 **[エラー一覧]** ビューの **[警告]** タブには、正常にパラメーター化されたすべての変数の完全な一覧も表示されます。 **[エラー一覧]** ビューを開くには、メイン メニューから **[ビュー]** を選択し、 **[エラー一覧]** を選択します。    
+クエリ エディターでは、正常にパラメーター化できた変数の宣言に警告の下線が付けられます。 警告の下線が付いた宣言ステートメントにカーソルを置くと、パラメーター化プロセスの結果が表示されます。これには、結果の [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) オブジェクト (変数に対応する) の次の主要なプロパティの値が含まれます:[SqlDbType](/dotnet/api/system.data.sqlclient.sqlparameter.sqldbtype)、[Size](/dotnet/api/system.data.sqlclient.sqlparameter.size)、[Precision](/dotnet/api/system.data.sqlclient.sqlparameter.precision)、[Scale](/dotnet/api/system.data.sqlclient.sqlparameter.scale)、[SqlValue](/dotnet/api/system.data.sqlclient.sqlparameter.sqlvalue)。 また、 **[エラー一覧]** ビューの **[警告]** タブには、正常にパラメーター化されたすべての変数の完全な一覧も表示されます。 **[エラー一覧]** ビューを開くには、メイン メニューから **[ビュー]** を選択し、 **[エラー一覧]** を選択します。    
 
 SQL Server Management Studio が変数のパラメーター化を試みたときに、パラメーター化が失敗した場合には、変数の宣言にエラーの下線が付けられます。 エラーの下線が付けられた宣言ステートメントにカーソルを置くと、エラーに関する結果が表示されます。 また、 **[エラー一覧]** ビューの **[エラー]** タブで、すべての変数のパラメーター化エラーの完全な一覧を表示することもできます。 **[エラー一覧]** ビューを開くには、メイン メニューから **[ビュー]** を選択し、 **[エラー一覧]** を選択します。   
 

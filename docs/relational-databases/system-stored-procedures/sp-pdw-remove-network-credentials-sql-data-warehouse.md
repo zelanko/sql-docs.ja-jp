@@ -1,7 +1,7 @@
 ---
 description: sp_pdw_remove_network_credentials (SQL Data Warehouse)
 title: sp_pdw_remove_network_credentials
-titleSuffix: Azure SQL Data Warehouse
+titleSuffix: Azure Synapse Analytics
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 548779915a1d3a1753a99b16ac95969c755cbb19
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 4c65a7c67dde39e9a382180f0e01e2bf06cbbee3
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988778"
+ms.locfileid: "92005787"
 ---
 # <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -57,7 +57,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ## <a name="general-remarks"></a>全般的な解説  
  このストアドプロシージャは、の NetworkService アカウントからネットワーク資格情報を削除 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] します。 NetworkService アカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 制御ノードとコンピューティングノードで SMP の各インスタンスを実行します。 たとえば、バックアップ操作を実行すると、制御ノードと各コンピューティングノードは、NetworkService アカウントの資格情報を使用して対象サーバーにアクセスします。  
   
-## <a name="metadata"></a>メタデータ  
+## <a name="metadata"></a>Metadata  
  すべての資格情報を一覧表示し、資格情報が削除されたことを確認するには、 [sys.dm_pdw_network_credentials &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)を使用します。  
   
  資格情報を追加するには、 [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)を使用します。  

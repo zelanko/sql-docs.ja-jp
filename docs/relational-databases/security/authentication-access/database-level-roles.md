@@ -39,12 +39,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bb15e848af1a5a2fa6236be0f9999accf144b1a
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: ce99d5ffe875283675e62069efed8b855ad6d43a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624859"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867426"
 ---
 # <a name="database-level-roles"></a>データベース レベルのロール
 
@@ -97,7 +97,7 @@ ms.locfileid: "91624859"
 |**loginmanager** | 仮想 master データベースのログインを作成および削除できます。|
 
 > [!NOTE]
-> サーバー レベル プリンシパルと Azure Active Directory 管理者 (構成されている場合) には [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と Azure Synapse でのすべての権限があり、すべてのロールのメンバーである必要はありません。 詳細については、「[SQL Database の認証と承認:アクセス権の付与](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)」を参照してください。 
+> サーバー レベル プリンシパルと Azure Active Directory 管理者 (構成されている場合) には [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と Azure Synapse でのすべての権限があり、すべてのロールのメンバーである必要はありません。 詳細については、「[SQL Database の認証と承認:アクセス権の付与](/azure/azure-sql/database/logins-create-manage)」を参照してください。 
 
 一部のデータベース ロールは Azure SQL または Synapse SQL には該当しません。
 - **db_backupoperator** は、バックアップおよび復元の T-SQL コマンドで使用できないため、Azure SQL データベース (マネージド インスタンスではない) および Synapse SQL サーバーレス プールには該当しません。
@@ -153,5 +153,4 @@ ms.locfileid: "91624859"
  [SQL Server の保護](../../../relational-databases/security/securing-sql-server.md)  
   
  [sp_helprotect &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)  
-  
   

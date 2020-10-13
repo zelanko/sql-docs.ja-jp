@@ -18,12 +18,12 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4aeb545a92ef4eca7bdb7542b951021336de9800
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d422c78227a4fcfa6ef26bb39197a8639eeb98ba
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455454"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866581"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>空間インデックスの作成、変更、および削除
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "88455454"
   
 4.  **[空間インデックス]** ダイアログ ボックスの **[追加]** をクリックします。  
   
-5.  **[選択された空間インデックス]** ボックスの一覧で新しいインデックスを選択し、右側のグリッドで空間インデックスのプロパティを設定します。 プロパティの詳細については、「[[空間インデックス] ダイアログ ボックス &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f)」をご覧ください。  
+5.  **[選択された空間インデックス]** ボックスの一覧で新しいインデックスを選択し、右側のグリッドで空間インデックスのプロパティを設定します。 プロパティの詳細については、「[[空間インデックス] ダイアログ ボックス &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/spatial-indexes-dialog-box-visual-database-tools.md)」をご覧ください。  
   
   
 ###  <a name="to-alter-a-spatial-index"></a><a name="alter"></a> 空間インデックスを変更するには  
@@ -157,5 +157,4 @@ ms.locfileid: "88455454"
   
 ## <a name="see-also"></a>参照  
  [空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)  
-  
   

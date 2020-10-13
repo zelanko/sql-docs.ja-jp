@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 6af3d91a76dd1964b7ef2e929392f85eb4b9245c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5324b953f70a9f0f64a4988c50ae02d1653d94f5
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482489"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891132"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移行後の検証および最適化ガイド
 
@@ -38,7 +38,7 @@ ms.locfileid: "88482489"
 
 これは、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 以降、すべてのクエリ オプティマイザーの変更が最新の[データベース互換性レベル](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)と連携しているため、プランの変更は、アップグレードの時点ではなく、ユーザーが `COMPATIBILITY_LEVEL` のデータベース オプションを最新のものに変更した時点で発生するためです。 この機能とクエリ ストアの組み合わせによって、アップグレード プロセス中のクエリのパフォーマンスを高いレベルで制御できます。 
 
-[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] で導入されたクエリ オプティマイザーの変更の詳細については、「[Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx)」(SQL Server 2014 のカーディナリティ推定を使用したクエリ プランの最適化) を参照してください。
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] で導入されたクエリ オプティマイザーの変更の詳細については、「[Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](/previous-versions/dn673537(v=msdn.10))」(SQL Server 2014 のカーディナリティ推定を使用したクエリ プランの最適化) を参照してください。
 
 ### <a name="steps-to-resolve"></a>解決手順
 
@@ -67,7 +67,7 @@ ms.locfileid: "88482489"
 5.  `DISABLE_PARAMETER_SNIFFING` ヒントを使うようにクエリを書き直します。 `OPTION(RECOMPILE)`、`WITH RECOMPILE`、または `OPTIMIZE FOR <value>` が使われていない場合はパラメーター スニッフィングを完全に無効にすることで、ローカル変数の手法を使う場合と同じ効果があります。
 
 > [!TIP] 
-> これが問題かどうかをすばやく識別するには、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のプラン分析機能を利用します。 詳細については、[こちら](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)をご覧ください。
+> これが問題かどうかをすばやく識別するには、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のプラン分析機能を利用します。 詳細については、[こちら](/archive/blogs/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier)をご覧ください。
 
 ## <a name="missing-indexes"></a><a name="MissingIndexes"></a> 欠落したインデックス
 
@@ -166,8 +166,8 @@ SARGable ではない述語の例を次に示します。
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> その他の情報
 
  [クエリ ストアを使用する際の推奨事項](../relational-databases/performance/best-practice-with-the-query-store.md)  
-[メモリ最適化テーブル](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+[メモリ最適化テーブル](./in-memory-oltp/sample-database-for-in-memory-oltp.md)  
 [ユーザー定義関数](../relational-databases/user-defined-functions/user-defined-functions.md)  
-[テーブル変数と行の推定 - パート 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
-[テーブル変数と行の推定 - パート 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
+[テーブル変数と行の推定 - パート 1](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-1)  
+[テーブル変数と行の推定 - パート 2](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-2)  
 [実行プランのキャッシュと再利用](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)

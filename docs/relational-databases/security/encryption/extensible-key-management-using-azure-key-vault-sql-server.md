@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 71145a184d13ad4ca4393cd1468293e40f0ad594
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3b4cb86e387e076ac6dab0ca86642a3cb7860cd3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896849"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867837"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure Key Vault を使用する拡張キー管理 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "85896849"
    
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と Azure Key Vault の橋渡し的役割を担うことで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、Azure Key Vault サービスのスケーラビリティ、高パフォーマンス、高可用性を活かすことができます。 以下の図は、EKM プロバイダー アーキテクチャにおけるキーの階層が、Azure Key Vault および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタと連動するようすを表しています。  
   
-  Azure Key Vault は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure Virtual Machines 上の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] インストール環境で使用したり、オンプレミス サーバー用に使用したりすることが可能です。 また、資格情報コンテナー サービスでは、厳密な管理および監視下にあるハードウェア セキュリティ モジュール (HSM) を使用し、非対称暗号化キーをより高いレベルで保護するオプションも提供します。 資格情報コンテナーの詳細については、「 [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401)」を参照してください。  
+  Azure Key Vault は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure Virtual Machines 上の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] インストール環境で使用したり、オンプレミス サーバー用に使用したりすることが可能です。 また、資格情報コンテナー サービスでは、厳密な管理および監視下にあるハードウェア セキュリティ モジュール (HSM) を使用し、非対称暗号化キーをより高いレベルで保護するオプションも提供します。 資格情報コンテナーの詳細については、「 [Azure Key Vault](/azure/key-vault/general/basic-concepts)」を参照してください。  
   
  次の図は、Key Vault を使用した EKM のプロセス フローについてまとためものです。 (図の中にプロセス手順番号が示されていますが、図の後に示す設定手順の番号と対応しているわけではありません。)  
   
@@ -56,5 +56,4 @@ ms.locfileid: "85896849"
   
 ## <a name="see-also"></a>参照  
  [SQL Server コネクタのメンテナンスとトラブルシューティング](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
-  
   
