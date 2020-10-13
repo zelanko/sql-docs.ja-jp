@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d3804de9de13720d5d7813d54bf5f8962b5e2992
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b75085f8b5c01ad5257f5bc165f32be7a7a91902
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748424"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809240"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>資格情報の作成- Azure ストレージに対する認証
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "85748424"
   
 ## <a name="azure-credentials"></a>Azure 資格情報  
  **[管理証明書]**  
- このオプションを使用して、Azure からの管理証明書に一致するローカル証明書ストアの証明書を指定します。 Azure 管理証明書の詳細については、「[Azure の管理証明書の作成とアップロード](https://go.microsoft.com/fwlink/?LinkId=320781)」を参照してください。  
+ このオプションを使用して、Azure からの管理証明書に一致するローカル証明書ストアの証明書を指定します。 Azure 管理証明書の詳細については、「[Azure の管理証明書の作成とアップロード](/previous-versions/azure/gg551722(v=azure.100))」を参照してください。  
   
  **サブスクリプション**  
  ローカル証明書ストアの管理証明書と一致する Azure サブスクリプション ID を選択、入力、または貼り付けます。  
@@ -44,5 +44,4 @@ ms.locfileid: "85748424"
   
 ## <a name="storage-account"></a>ストレージ アカウント  
  バックアップ ファイルを格納するために使用するストレージ アカウントを選択します。  
-  
   

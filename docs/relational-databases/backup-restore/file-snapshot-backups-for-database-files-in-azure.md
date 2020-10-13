@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fd961b275f6b392e9284312675c873f16fecd27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe74f56af2726a32d6216852ca2d8dec341ee6dd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718067"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809444"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure でのデータベース ファイルのスナップショット バックアップ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85718067"
   
 -   RESTORE WITH MOVE が必須です。  
   
--   Premium Storage の詳細については、[Premium Storage: Azure 仮想マシン ワークロード向けの高パフォーマンス ストレージ](https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/)に関するページを参照してください  
+-   Premium Storage の詳細については、[Premium Storage: Azure 仮想マシン ワークロード向けの高パフォーマンス ストレージ](/azure/virtual-machines/disks-types)に関するページを参照してください  
   
  **単一のストレージ アカウント**: ファイル スナップショットと目的の BLOB では同じストレージ アカウントが使用されている必要があります。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "85718067"
   
  **オンライン復元**: ファイル スナップショット バックアップを使用するときは、オンライン復元を実行することはできません。 オンライン復元の詳細については、「[オンライン復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)」を参照してください。  
   
- **課金**: SQL Server のファイル スナップショット バックアップを使用すると、データの変化に応じて追加料金が発生します。 詳細については、「 [スナップショットの課金方法について](https://msdn.microsoft.com/library/azure/hh768807.aspx)」を参照してください。  
+ **課金**: SQL Server のファイル スナップショット バックアップを使用すると、データの変化に応じて追加料金が発生します。 詳細については、「 [スナップショットの課金方法について](/rest/api/storageservices/Understanding-How-Snapshots-Accrue-Charges)」を参照してください。  
   
  **アーカイブ**: ファイル スナップショット バックアップをアーカイブする場合は、BLOB ストレージまたはストリーミング バックアップにアーカイブできます。 Blob ストレージにアーカイブするには、ファイル スナップショット バックアップ セット内のスナップショットを別個の BLOB にコピーします。 ストリーミング バックアップにアーカイブするには、ファイル スナップショット バックアップを新しいデータベースとして復元し、圧縮や暗号化を使用した通常のストリーミング バックアップを実行して、必要に応じて、ベース BLOB とは別個にアーカイブします。  
   
@@ -178,5 +178,4 @@ GO
   
 ## <a name="see-also"></a>参照  
  [チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-  
   

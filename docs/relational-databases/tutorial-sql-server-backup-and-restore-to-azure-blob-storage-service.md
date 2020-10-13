@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 332fde643d285b20c0bd772918f8c9cf1bf578f2
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: a0fffe198adc37a9cabe232d5509e9df1652013b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864959"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809109"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>クイック スタート:Azure Blob Storage サービスへの SQL のバックアップと復元
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -26,10 +26,10 @@ ms.locfileid: "87864959"
 このクイックスタートを完了するには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップと復元の概念および T-SQL 構文についての知識が必要です。  Azure ストレージ アカウント、SQL Server Management Studio (SSMS)、および SQL Server または Azure SQL Managed Instance が実行されているサーバーへのアクセスが必要です。 また、BACKUP コマンドと RESTORE コマンドの実行に使用するアカウントは、**alter any credential** 権限を持つ **db_backup operator** データベース ロールに属している必要があります。 
 
 - 無料の [Azure アカウント](https://azure.microsoft.com/offers/ms-azr-0044p/)を取得する。
-- [Azure ストレージ アカウント](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)を作成します。
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
+- [Azure ストレージ アカウント](/azure/storage/common/storage-quickstart-create-account?tabs=portal)を作成します。
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールするか、[Azure SQL 仮想マシン](/azure/sql-database/sql-database-managed-instance-configure-vm)または[ポイント対サイト](/azure/sql-database/sql-database-managed-instance-configure-p2s)によって確立された接続を使用して [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started) をデプロイします。
-- ユーザー アカウントを [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) のロールに割り当て、[alter any credential](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 権限を付与する。 
+- ユーザー アカウントを [db_backupoperator](./security/authentication-access/database-level-roles.md) のロールに割り当て、[alter any credential](../t-sql/statements/alter-credential-transact-sql.md) 権限を付与する。 
 
 ## <a name="create-azure-blob-container"></a>Azure BLOB コンテナーを作成する
 コンテナーには、一連の BLOB をグループ化するコンテナーが用意されています。 すべての BLOB は 1 つのコンテナーに存在する必要があります。 ストレージ アカウントには、コンテナーを無制限に含めることができますが、少なくとも 1 つのコンテナーが必要です。 コンテナーには、BLOB を無制限に格納できます。 
@@ -46,7 +46,7 @@ ms.locfileid: "87864959"
     ![新しいコンテナー](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
   > [!NOTE]
-  > ストレージ アカウントへの認証は、パブリック コンテナーの作成を選択した場合でも、SQL Server のバックアップと復元に必要です。 コンテナーは、REST API を使用してプログラムで作成することもできます。 詳しくは、「[Create Container](https://docs.microsoft.com/rest/api/storageservices/Create-Container)」をご覧ください
+  > ストレージ アカウントへの認証は、パブリック コンテナーの作成を選択した場合でも、SQL Server のバックアップと復元に必要です。 コンテナーは、REST API を使用してプログラムで作成することもできます。 詳しくは、「[Create Container](/rest/api/storageservices/Create-Container)」をご覧ください
 
 ## <a name="create-a-test-database"></a>テスト データベースを作成する 
 このステップでは、SQL Server Management Studio (SSMS) を使用してテスト データベースを作成します。 
@@ -235,4 +235,3 @@ URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_ba
   
 -   [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
 -   [SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
-  

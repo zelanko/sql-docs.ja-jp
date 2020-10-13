@@ -2,19 +2,19 @@
 title: NFS ストレージ FCI の構成 - SQL Server on Linux
 description: SQL Server 用の NFS ストレージを使用してフェールオーバー クラスター インスタンス (FCI) を構成する方法について説明します。
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 47c2e816219ebbb4a4b3fefea2974ef511cdaee2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 06cd2218a2a194ab3345fc9ed00ae40e17f0141d
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897282"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784878"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスを構成する - NFS - SQL Server on Linux
 

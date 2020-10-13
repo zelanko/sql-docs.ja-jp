@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16671290ed86def1b013a77d991487dfdad26a10
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 225de42adb409ef908544bb51c4d523452554838
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85779497"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869317"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server での拡張イベントからのターゲット データの詳細表示
 
@@ -66,7 +66,7 @@ Microsoft SQL Server と Azure SQL Database の 2 つの製品における拡張
 
 Azure SQL Database に固有の拡張イベントに関するドキュメントについては、次を参照してください。
 
-- [Azure SQL Database での拡張イベント](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
+- [Azure SQL Database での拡張イベント](/azure/azure-sql/database/xevent-db-diff-from-svr)
 
 
 

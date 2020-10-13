@@ -8,12 +8,12 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: f366af08581accf5ef1f1c8fc00830f6cc592537
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0174ce5aae88406719fbf57c53734d535476a799
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403568"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868153"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>サービスの SID を使用して SQL Server のサービスにアクセス許可を付与する
 
@@ -28,7 +28,7 @@ SQL Server では、特定のサービスにアクセス許可を直接付与で
 
 一部のサービスには、既定ではサービス SID がありません。 サービス SID は、[SC.exe](/windows/desktop/services/configuring-a-service-using-sc) を使用して作成する必要があります。 [この方法](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/)は、SQL Server 内でヘルス サービスにアクセス許可を付与するために Microsoft System Center Operations Manager 管理者によって採用されています。
 
-サービス SID を作成し確定したら、SQL Server 内でそれにアクセス許可を付与する必要があります。 アクセス許可を付与するには、[SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) またはクエリのいずれかを使用して Windows ログインを作成します。 ログインを作成したら、他の任意のログインと同様に、アクセス許可を付与し、ロールに追加し、データベースにマップすることがします。
+サービス SID を作成し確定したら、SQL Server 内でそれにアクセス許可を付与する必要があります。 アクセス許可を付与するには、[SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) またはクエリのいずれかを使用して Windows ログインを作成します。 ログインを作成したら、他の任意のログインと同様に、アクセス許可を付与し、ロールに追加し、データベースにマップすることがします。
 
 > [!TIP]
 > エラー `Login failed for user 'NT AUTHORITY\SYSTEM'` が返された場合は、目的のサービスに対してサービス SID が存在すること、SQL Server 内でサービス SID ログインが作成されていること、SQL Server 内でサービス SID に適切なアクセス許可が付与されていることを確認します。
@@ -41,7 +41,7 @@ SQL Server では、特定のサービスにアクセス許可を直接付与で
 
 ### <a name="granular-permissions-to-system-accounts"></a>システム アカウントに対するきめ細かいアクセス許可
 
-これまで、システム アカウントにアクセス許可を付与するには、[LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190) ([en-us で NT AUTHORITY\SYSTEM](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)) または [NetworkService](/windows/desktop/Services/networkservice-account) ([en-us で NT AUTHORITY\NETWORK SERVICE](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)) アカウント用のログインを作成し、それらのログインにアクセス許可を付与していました。 この方法では、システム アカウントとして実行されている SQL への任意のプロセスまたはサービスのアクセス許可が付与されます。
+これまで、システム アカウントにアクセス許可を付与するには、[LocalSystem](/windows/win32/services/localsystem-account) ([en-us で NT AUTHORITY\SYSTEM](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Localized_service_names)) または [NetworkService](/windows/desktop/Services/networkservice-account) ([en-us で NT AUTHORITY\NETWORK SERVICE](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Localized_service_names)) アカウント用のログインを作成し、それらのログインにアクセス許可を付与していました。 この方法では、システム アカウントとして実行されている SQL への任意のプロセスまたはサービスのアクセス許可が付与されます。
 
 サービス SID を使用すると、特定のサービスにアクセス許可を付与することができます。 そのサービスは、実行時にアクセス許可を与えられたリソースにのみアクセスできます。 たとえば、`HealthService` が `LocalSystem` として実行されていて、それに `View Server State` が付与されている場合、`LocalSystem`アカウントは、`HealthService` のコンテキストで実行されているときに、`View Server State` に対してのみアクセスできます。 その他のどのプロセスが `LocalSystem` として SQL のサーバー状態にアクセスを試みても、アクセスは拒否されます。
 
@@ -106,8 +106,8 @@ GO
 
 サービス SID 構造体の詳細について、「[SERVICE_SID_INFO structure](/windows/win32/api/winsvc/ns-winsvc-service_sid_info)」 (SERVICE_SID_INFO 構造体) を参照してください。
 
-[ログインを作成](/sql/t-sql/statements/create-login-transact-sql)するときに使用できるその他のオプションについて確認してください。
+[ログインを作成](../../t-sql/statements/create-login-transact-sql.md)するときに使用できるその他のオプションについて確認してください。
 
-ロール ベースのセキュリティをサービス SID と一緒に使用するために、SQL Server で[ロールを作成](/sql/t-sql/statements/create-role-transact-sql)する方法を確認してください。
+ロール ベースのセキュリティをサービス SID と一緒に使用するために、SQL Server で[ロールを作成](../../t-sql/statements/create-role-transact-sql.md)する方法を確認してください。
 
-SQL Server 内でサービス SID に[アクセス許可を付与](/sql/t-sql/statements/grant-transact-sql)するさまざまな方法について確認してください。
+SQL Server 内でサービス SID に[アクセス許可を付与](../../t-sql/statements/grant-transact-sql.md)するさまざまな方法について確認してください。

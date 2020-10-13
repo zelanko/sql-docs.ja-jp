@@ -1,20 +1,20 @@
 ---
 title: SQL Server データベースを Windows から Linux に移行する
 description: このチュートリアルでは、Windows で SQL Server データベースのバックアップを作成し、SQL Server が実行されている Linux コンピューターに復元する方法について説明します。
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/16/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 63226ae06abe2771c50fc5debc1a1dc63cb7c590
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e28b690a6231a77b09664b1c8680522f426e5e92
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971530"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785067"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>バックアップと復元を使用して SQL Server データベースを Windows から Linux に移行する
 
