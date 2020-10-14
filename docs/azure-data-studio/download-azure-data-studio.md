@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 9/30/2020
-ms.openlocfilehash: 2e8d8175daebc99cd414e9deef4bb8692f4de833
-ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
+ms.openlocfilehash: 0d318fedc053c4d01db2fc192375c499daa4573d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589321"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987841"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio のダウンロードとインストール
 
@@ -178,7 +178,7 @@ Azure Data Studio は、Windows、macOS、および Linux 上で実行されま�
 
 ## <a name="supported-sql-offerings"></a>サポートされる SQL 製品
 
-- このバージョンの Azure Data Studio は、すべての[サポート対象バージョンである SQL Server 2014 から [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) で動作し、Azure SQL Database および Azure SQL Data Warehouse で最新のクラウド機能と連携するためのサポートが提供されます。 Azure Data Studio では、Azure SQL Managed Instance のプレビューもサポートされています。
+- このバージョンの Azure Data Studio は、すべての[サポート対象バージョンである SQL Server 2014 から [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) で動作し、Azure SQL Database および Azure Synapse Analytics で最新のクラウド機能と連携するためのサポートが提供されます。 Azure Data Studio では、Azure SQL Managed Instance のプレビューもサポートされています。
 
 ## <a name="upgrade-from-sql-operations-studio"></a>SQL Operations Studio からのアップグレード
 
