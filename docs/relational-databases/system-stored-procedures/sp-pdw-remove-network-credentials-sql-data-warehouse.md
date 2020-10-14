@@ -1,5 +1,5 @@
 ---
-description: sp_pdw_remove_network_credentials (SQL Data Warehouse)
+description: sp_pdw_remove_network_credentials (Azure Synapse Analytics)
 title: sp_pdw_remove_network_credentials
 titleSuffix: Azure Synapse Analytics
 ms.date: 03/14/2017
@@ -15,14 +15,14 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4c65a7c67dde39e9a382180f0e01e2bf06cbbee3
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: f53f7d439db50afde5b6aa556d418e20499ab0fc
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005787"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059334"
 ---
-# <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL Data Warehouse)
+# <a name="sp_pdw_remove_network_credentials-azure-synapse-analytics"></a>sp_pdw_remove_network_credentials (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   ネットワークファイル共有にアクセスするために、に格納されているネットワーク資格情報 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] を削除します。 たとえば、このストアドプロシージャを使用して、 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 独自のネットワーク内に存在するサーバーでバックアップ操作と復元操作を実行するための権限を削除します。  
@@ -60,7 +60,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ## <a name="metadata"></a>Metadata  
  すべての資格情報を一覧表示し、資格情報が削除されたことを確認するには、 [sys.dm_pdw_network_credentials &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)を使用します。  
   
- 資格情報を追加するには、 [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)を使用します。  
+ 資格情報を追加するには、 [Azure Synapse Analytics&#41;&#40;sp_pdw_add_network_credentials ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)を使用します。  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

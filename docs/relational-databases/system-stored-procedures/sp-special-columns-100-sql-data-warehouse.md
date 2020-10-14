@@ -14,12 +14,12 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 605bc7a9a446139a637d5e960643fd49e3ca62a7
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 03397db88a1a99e2fbf661662311537671bfa862
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987826"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059450"
 ---
 # <a name="sp_special_columns_100-azure-synapse-analytics"></a>sp_special_columns_100 (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -85,7 +85,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |SCALE|**smallint**|データソース上の列の小数点以下桁数。 小数点以下桁数が適用されないデータ型に対しては NULL が返されます。|  
 |PSEUDO_COLUMN|**smallint**|その列が疑似列であるかどうかを示します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 常に1を返します。<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  sp_special_columns は ODBC の SQLSpecialColumns に相当します。 返される結果は、スコープによって並べ替えられます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -100,8 +100,8 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 EXEC sp_special_columns_100 @table_name = 'FactFinance';  
 ```  
   
-## <a name="see-also"></a>参照  
- [ストアドプロシージャの SQL Data Warehouse](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)  
+## <a name="see-also"></a>関連項目  
+ [Azure Synapse Analytics ストアドプロシージャ](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)  
   
   
 

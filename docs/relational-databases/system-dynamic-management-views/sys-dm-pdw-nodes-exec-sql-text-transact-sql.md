@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: a6226009396b1eb99662b41bf73f9cfa096a38e1
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 2bf5b58a1e9dca5f282691ae29dd534a06ca5002
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037695"
+ms.locfileid: "92059477"
 ---
 # <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>sys.pdw_nodes_dm_exec_sql_text (Transact-sql)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -44,5 +44,5 @@ ms.locfileid: "92037695"
 ## <a name="see-also"></a>関連項目  
  [Azure Synapse Analytics と並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
-  ## <a name="next-steps"></a>次の手順
- 開発に関するその他のヒントについては、[SQL Data Warehouse の開発の概要](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)に関する記事をご覧ください。
+  ## <a name="next-steps"></a>次のステップ
+ 開発に関するその他のヒントについては、「 [Azure Synapse Analytics の開発の概要](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)」を参照してください。

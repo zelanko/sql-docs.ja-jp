@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ceaed72b9a7005cadc20e185099105282693cc95
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: fd660dcd2e4e79515065bfc9d221afbb3fe2806e
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006035"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059346"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "92006035"
 Azure SQL database または Azure Synapse Analytics のエディション (サービスレベル)、サービス目標 (価格レベル)、エラスティックプール名 (存在する場合) を返します。 Azure SQL Database サーバーの master データベースにログオンしている場合は、すべてのデータベースの情報が返されます。 Azure Synapse Analytics の場合は、master データベースに接続する必要があります。  
   
   
- 価格の詳細については、「 [SQL Database のオプションとパフォーマンス: SQL Database の価格](https://azure.microsoft.com/pricing/details/sql-database/) と [SQL Data Warehouse 価格](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)」を参照してください。  
+ 価格の詳細については、「 [SQL Database のオプションとパフォーマンス: SQL Database の価格](https://azure.microsoft.com/pricing/details/sql-database/) 」および「 [Azure Synapse Analytics の価格](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)」を参照してください。  
   
  サービスの設定を変更するには、「 [ALTER database (Azure SQL Database)](../../t-sql/statements/alter-database-transact-sql.md) 」および「 [Alter Database (Azure Synapse Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest)」を参照してください。  
   
@@ -40,7 +40,7 @@ Azure SQL database または Azure Synapse Analytics のエディション (サ�
 |-----------------|---------------|-----------------|  
 |database_id|INT|データベースの ID。 Azure SQL Database server のインスタンス内で一意です。 [Transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)に付属しています。|  
 |edition|sysname|データベースまたはデータウェアハウスのサービスレベル: **Basic**、 **Standard**、 **Premium** 、または **data warehouse**。|  
-|service_objective|sysname|データベースの価格レベル。 データベースがエラスティックプール内にある場合、は **ElasticPool**を返します。<br /><br /> **Basic**レベルでは、は**basic**を返します。<br /><br /> **Standard サービスレベルの単一データベースで** は、次のいずれかが返されます。 S0、S1、S2、S3、S4、S6、S7、S9、または S12。<br /><br /> **Premium レベルの単一のデータベース** は、次の値を返します: P1、P2、P4、P6、P11、または P15。<br /><br /> **SQL Data Warehouse** は DW30000C から DW100 を返します。<br /><br /> 詳細については、「[単一データベース](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/)、[エラスティックプール](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/)、[データウェアハウス](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)」を参照してください。|  
+|service_objective|sysname|データベースの価格レベル。 データベースがエラスティックプール内にある場合、は **ElasticPool**を返します。<br /><br /> **Basic**レベルでは、は**basic**を返します。<br /><br /> **Standard サービスレベルの単一データベースで** は、次のいずれかが返されます。 S0、S1、S2、S3、S4、S6、S7、S9、または S12。<br /><br /> **Premium レベルの単一のデータベース** は、次の値を返します: P1、P2、P4、P6、P11、または P15。<br /><br /> **Azure Synapse Analytics** は、DW30000C から DW100 を返します。<br /><br /> 詳細については、「[単一データベース](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/)、[エラスティックプール](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/)、[データウェアハウス](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)」を参照してください。|  
 |elastic_pool_name|sysname|データベースが属する [エラスティックプール](/azure/azure-sql/database/elastic-pool-overview) の名前。 データベースが単一データベースまたはデータウェアハウスの場合は **NULL** を返します。|  
   
 ## <a name="permissions"></a>アクセス許可  

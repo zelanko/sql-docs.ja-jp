@@ -1,5 +1,5 @@
 ---
-description: sp_pdw_add_network_credentials (SQL Data Warehouse)
+description: sp_pdw_add_network_credentials (Azure Synapse Analytics)
 title: sp_pdw_add_network_credentials
 titleSuffix: Azure Synapse Analytics
 ms.date: 03/14/2017
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a91960dc4dad3909e18003309bcd7f12f1461b67
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 87757b771e7c140454d8cdceac8dc1a77600f94b
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004535"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059350"
 ---
-# <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
+# <a name="sp_pdw_add_network_credentials-azure-synapse-analytics"></a>sp_pdw_add_network_credentials (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   これにより、にネットワーク資格情報が格納さ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] れ、サーバーに関連付けられます。 たとえば、このストアドプロシージャを使用して、 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 対象サーバーでデータベースのバックアップと復元操作を実行したり、TDE に使用する証明書のバックアップを作成したりするための適切な読み取り/書き込み権限を付与します。  
@@ -79,8 +79,8 @@ EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********'
 > [!NOTE]  
 >  InfiniBand でデータベースのバックアップを実行するには、必ずバックアップサーバーの InfiniBand IP アドレスを使用してください。  
   
-## <a name="see-also"></a>参照  
- [sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
+## <a name="see-also"></a>関連項目  
+ [sp_pdw_remove_network_credentials &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
   
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05d2521bef0502b5567c5a5f6d2c5006fb356f97
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 56dfe6c01407db04e55703e8ec07183354202c2f
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987583"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059430"
 ---
 # <a name="ado-md-code-examples"></a>ADO MD のコード例
 ADO MD のオブジェクト、メソッド、およびプロパティの使用方法については、次のコード例を参照してください。 これらの例は、SQL Server 7.0 の Microsoft SQL Server OLAP Services と共にインストールされるサンプルアプリケーションのサブセットです。  
@@ -29,8 +29,8 @@ ADO MD のオブジェクト、メソッド、およびプロパティの使用�
   
 -   [Visual Basic Scripting Edition での ADO MD コード例](./ado-md-code-examples-in-visual-basic-scripting-edition.md)  
   
-## <a name="see-also"></a>参照  
- [ADO MD API リファレンス](./ado-md-object-model.md?view=sql-server-ver15)   
+## <a name="see-also"></a>関連項目  
+ [ADO MD API リファレンス](./ado-md-object-model.md?view=sql-server-ver15&preserve-view=true)   
  [ADO MD コレクション](./ado-md-collections.md)   
  [ADO MD 列挙定数](./ado-md-enumerated-constants.md)   
  [ADO MD メソッド](./ado-md-methods.md)   

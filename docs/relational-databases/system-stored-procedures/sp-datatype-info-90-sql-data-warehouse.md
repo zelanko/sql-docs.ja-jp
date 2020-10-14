@@ -1,6 +1,6 @@
 ---
-description: sp_datatype_info_90 (SQL Data Warehouse)
-title: sp_datatype_info_90 (SQL Data Warehouse) |Microsoft Docs
+description: sp_datatype_info_90 (Azure Synapse Analytics)
+title: sp_datatype_info_90 (Azure Synapse Analytics)
 ms.custom: ''
 ms.date: 03/13/2017
 ms.service: sql-data-warehouse
@@ -12,14 +12,14 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a7f2cc25af40cc85ae3600e18d861d106af7168
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6c9d03578a2eab318be1669303e9a8b741eb3779
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987958"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059440"
 ---
-# <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
+# <a name="sp_datatype_info_90-azure-synapse-analytics"></a>sp_datatype_info_90 (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   現在の環境でサポートされているデータ型に関する情報を返します。  
@@ -70,7 +70,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|*Data_type*が**interval**の場合の間隔の先頭の有効桁数の値。それ以外の場合は NULL。|  
 |USERTYPE|**smallint**|systypes テーブルの**usertype**値。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  sp_datatype_info は、ODBC の SQLGetTypeInfo に相当します。 結果は、まず DATA_TYPE の順序で、次にデータ型が対応する ODBC SQL データ型にどれだけ正確にマップされているのかに基づいて返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -86,8 +86,8 @@ EXEC sp_datatype_info_90 -9;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [ストアドプロシージャの SQL Data Warehouse](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
+## <a name="see-also"></a>関連項目  
+ [Azure Synapse Analytics ストアドプロシージャ](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

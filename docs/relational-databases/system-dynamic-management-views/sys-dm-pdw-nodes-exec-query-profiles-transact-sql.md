@@ -13,19 +13,21 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ef3237f77272978c767e1519e6b7895ce4cb274b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 591bba14af18f8c622ffa5547339fd0024cf4445
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037715"
+ms.locfileid: "92059520"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-sql)
+
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 クエリの実行中にリアルタイムのデータウェアハウスのクエリの進行状況を監視します。   
   
-## <a name="table-returned"></a>返されたテーブル  
+## <a name="table-returned"></a>返されたテーブル
+  
 返されるカウンターは、スレッドごとの演算子ごとになります。 結果は動的であり、 `SET STATISTICS XML ON` クエリの終了時にのみ出力を作成するなど、既存のオプションの結果とは一致しません。  
   
 |列名|データ型|説明|  
@@ -68,15 +70,18 @@ ms.locfileid: "92037715"
 |actual_read_row_count|**bigint**|残存述語が適用される前に演算子によって読み取られた行の数。| 
 |estimated_read_row_count|**bigint**|**適用対象:** SP1 以降 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 。 <br/>残存述語が適用される前に、演算子によって読み取られると推定される行の数。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>解説
+
 [Sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15)の同じ解説が適用されます。  
 
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
+
  [Azure Synapse Analytics と並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    
 
- ## <a name="next-steps"></a>次の手順
- 開発に関するその他のヒントについては、[SQL Data Warehouse の開発の概要](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)に関する記事をご覧ください。
+ ## <a name="next-steps"></a>次のステップ 
+
+Azure Synapse Analytics の開発の概要] (/azure/sql-data-warehouse/sql-data-warehouse-overview-develop) をご説明します。
