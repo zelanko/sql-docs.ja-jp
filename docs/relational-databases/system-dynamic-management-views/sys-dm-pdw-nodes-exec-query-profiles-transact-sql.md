@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cd4f8ad0ae52876015df815089733f49a37d2f35
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: ef3237f77272978c767e1519e6b7895ce4cb274b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834331"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037715"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-sql)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -68,15 +68,15 @@ ms.locfileid: "91834331"
 |actual_read_row_count|**bigint**|残存述語が適用される前に演算子によって読み取られた行の数。| 
 |estimated_read_row_count|**bigint**|**適用対象:** SP1 以降 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 。 <br/>残存述語が適用される前に、演算子によって読み取られると推定される行の数。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 [Sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15)の同じ解説が適用されます。  
 
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  
 
-## <a name="see-also"></a>参照  
- [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>関連項目  
+ [Azure Synapse Analytics と並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    
 
- ## <a name="next-steps"></a>次のステップ
+ ## <a name="next-steps"></a>次の手順
  開発に関するその他のヒントについては、[SQL Data Warehouse の開発の概要](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)に関する記事をご覧ください。

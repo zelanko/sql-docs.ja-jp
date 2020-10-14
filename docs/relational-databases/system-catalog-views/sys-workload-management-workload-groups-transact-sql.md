@@ -13,12 +13,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: e6366de9514f625ef1c0a008b0ca6e0e331b5669
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: a2d573ef8cfc97d40451ad59d0fe51f98542c677
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006394"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92033769"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>sys.workload_management_workload_groups (Transact-sql)
 
@@ -47,4 +47,4 @@ VIEW SERVER STATE 権限が必要です。
 
 ## <a name="next-steps"></a>次の手順
 
- Azure Synapse Analytics と Parallel Data Warehouse のすべてのカタログビューの一覧については、「 [SQL Data Warehouse および並列データウェアハウスのカタログビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)」を参照してください。 ワークロードグループを作成するには、「 [ワークロードグループの作成](../../t-sql/statements/create-workload-group-transact-sql.md)」を参照してください。 ワークロードの分類の詳細については、「[ワークロードの分離](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)」を参照してください。
+ Azure Synapse Analytics と Parallel Data Warehouse のすべてのカタログビューの一覧については、「 [Azure Synapse analytics と並列データウェアハウスのカタログビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)」を参照してください。 ワークロードグループを作成するには、「 [ワークロードグループの作成](../../t-sql/statements/create-workload-group-transact-sql.md)」を参照してください。 ワークロードの分類の詳細については、「[ワークロードの分離](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)」を参照してください。
