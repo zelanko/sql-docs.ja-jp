@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d12d25873d7963a29afd66802f40e3074150e77
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: aa838fc8920469921063ebdface6680e3bc5a3bf
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725883"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892492"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>オンプレミスの OpenShift および Azure Red Hat OpenShift に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をデプロイする
 
@@ -37,8 +37,8 @@ SQL Server 2019 CU5 では、OpenShift での SQL Server ビッグ データ ク
 > [!IMPORTANT]
 > 以下の前提条件は、これらのクラスター レベル オブジェクトを作成するための十分なアクセス許可を持つ OpenShift クラスター管理者 (クラスター管理者クラスター ロール) によって実行される必要があります。 OpenShift でのクラスター ロールの詳細については、「[Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html)」 (アクセス許可を定義して適用するための RBAC の使用) を参照してください。
 
-1. OpenShift の **pidsLimit** 設定が、SQL Server のワークロードに対応するように更新されていることを確認します。 OpenShift の既定値は、ワークロードのような運用環境には低すぎます。 **4096** 以上の値を指定することをお勧めしますが、最適な値は SQL Server での "*最大ワーカー スレッド数*" の設定と、OpenShift ホスト ノード上の CPU プロセッサの数によって決まります。 
-    - OpenShift クラスターに対する **pidsLimit** を更新する方法については、[こちらの手順]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md)を参照してください。 **4.3.5** より前のバージョンの OpenShift には欠陥があり、更新した値が反映されないことに注意してください。 必ず、OpenShift を最新バージョンにアップグレードしてください。 
+1. OpenShift の `pidsLimit` 設定が、SQL Server のワークロードに対応するように更新されていることを確認します。 OpenShift の既定値は、ワークロードのような運用環境には低すぎます。 `4096` 以上の値を指定することをお勧めしますが、最適な値は SQL Server での "`max worker threads`" の設定と、OpenShift ホスト ノード上の CPU プロセッサの数によって決まります。 
+    - OpenShift クラスターに対する `pidsLimit` を更新する方法については、[こちらの手順]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md)を参照してください。 `4.3.5` より前のバージョンの OpenShift には欠陥があり、更新した値が反映されないことに注意してください。 必ず、OpenShift を最新バージョンにアップグレードしてください。 
     - 環境および予定されている SQL Server ワークロードに応じた最適な値を計算するには、次の推定と例を使用できます。
 
     |プロセッサの数|既定の最大ワーカー スレッド数|既定のプロセッサあたりワーカー数|pidsLimit の最小値|
@@ -56,7 +56,7 @@ SQL Server 2019 CU5 では、OpenShift での SQL Server ビッグ データ ク
     ```
 
     > [!NOTE]
-    > BDC に対するカスタム SCC は、OpenShift に組み込まれた "*非ルート*" SCC と追加のアクセス許可に基づきます。 OpenShift でのセキュリティ コンテキスト制約の詳細については、「[Managing Security Context Constraints](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html)」 (セキュリティ コンテキスト制約の管理) を参照してください。 "*非ルート*" SCC に追加する、ビッグ データ クラスターに必要なアクセス許可の詳細については、[こちら](https://aka.ms/sql-bdc-openshift-security)のホワイトペーパーをダウンロードしてください。
+    > BDC に対するカスタム SCC は、OpenShift に組み込まれた "`nonroot`" SCC と追加のアクセス許可に基づきます。 OpenShift でのセキュリティ コンテキスト制約の詳細については、「[Managing Security Context Constraints](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html)」 (セキュリティ コンテキスト制約の管理) を参照してください。 "`nonroot`" SCC に追加する、ビッグ データ クラスターに必要なアクセス許可の詳細については、[こちら](https://aka.ms/sql-bdc-openshift-security)のホワイトペーパーをダウンロードしてください。
 
 3. 名前空間とプロジェクトを作成します。
 
@@ -104,7 +104,7 @@ SQL Server 2019 CU5 では、OpenShift での SQL Server ビッグ データ ク
    azdata bdc config init --source openshift-dev-test --target custom-openshift
    ```
 
-   ARO へのデプロイの場合は、*aro-* プロファイルのいずれかを使用することをお勧めします。それの *serviceType* と *storageClass* には、この環境に適した既定値が設定されています。 次に例を示します。
+   ARO へのデプロイの場合は、`aro-` プロファイルのいずれかを使用することをお勧めします。それの `serviceType` と `storageClass` には、この環境に適した既定値が設定されています。 次に例を示します。
 
    ```console
    azdata bdc config init --source aro-dev-test --target custom-openshift
@@ -113,7 +113,7 @@ SQL Server 2019 CU5 では、OpenShift での SQL Server ビッグ データ ク
 1. 構成ファイル control.json と bdc.json をカスタマイズします。 さまざまなユース ケースでのサポートされるカスタマイズのガイドについては、次のリソースを参照してください。
 
    - [Storage](concept-data-persistence.md)
-   - [AD 関連の設定](deploy-active-directory.md)
+   - [AD 関連の設定](active-directory-deploy.md)
    - [その他のカスタマイズ](deployment-custom-configuration.md)
 
    > [!NOTE]
@@ -136,7 +136,7 @@ SQL Server 2019 CU5 では、OpenShift での SQL Server ビッグ データ ク
 
 ## <a name="openshift-specific-settings-in-the-deployment-configuration-files"></a>デプロイ構成ファイルでの OpenShift 固有の設定
 
-SQL Server 2019 CU5 では、ポッドとノードのメトリックのコレクションを制御する 2 つの機能スイッチが導入されました。 これらのパラメーターは、OpenShift 用の組み込みプロファイルでは既定で *false* に設定されています。これは、監視コンテナーでは[特権付きセキュリティ コンテキスト](https://www.openshift.com/blog/managing-sccs-in-openshift)が必要であるためです。これにより、BDC がデプロイされる名前空間に対するセキュリティ制約の一部が緩和されます。
+SQL Server 2019 CU5 では、ポッドとノードのメトリックのコレクションを制御する 2 つの機能スイッチが導入されました。 これらのパラメーターは、OpenShift 用の組み込みプロファイルでは既定で `false` に設定されています。これは、監視コンテナーでは[特権付きセキュリティ コンテキスト](https://www.openshift.com/blog/managing-sccs-in-openshift)が必要であるためです。これにより、BDC がデプロイされる名前空間に対するセキュリティ制約の一部が緩和されます。
 
 ```json
     "security": {

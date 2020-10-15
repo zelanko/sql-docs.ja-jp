@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: a15c888abefba554bb4170039eea23988a6615fd
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: fbfa8e19599294df827756da495fbe4eb43c479d
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725673"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081611"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Always Encrypted と Microsoft .NET Data Provider for SQL Server を使用する
 
@@ -561,7 +561,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 |[SqlConnection.ColumnEncryptionKeyCacheTtl プロパティ](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptionkeycachettl)|列暗号化キー キャッシュ内のエントリの有効期間の取得と設定を行います。|
 |[SqlConnection.ColumnEncryptionTrustedMasterKeyPaths プロパティ](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)|データベース サーバーの信頼されたキー パスの一覧を設定できます。 アプリケーション クエリの処理中に、一覧にないキー パスをドライバーが受け取った場合、クエリは失敗します。 このプロパティは、セキュリティが侵害され、偽のキー パスを提供し、キー ストアの資格情報漏洩につながるおそれがある SQL Server を含めたセキュリティ攻撃に対して、セキュリティ保護をさらに強化します。|
 |[SqlConnection.RegisterColumnEncryptionKeyStoreProviders メソッド](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders)|カスタム キー ストア プロバイダーを登録できます。 これは、キー ストア プロバイダー名をキー ストア プロバイダー実装にマップするディクショナリです。|
-|[SqlCommand コンストラクター (String、SqlConnection、SqlTransaction、SqlCommandColumnEncryptionSetting)](/dotnet/api/microsoft.data.sqlclient.sqlcommand.-ctor?view=sqlclient-dotnet-core-1.0#Microsoft_Data_SqlClient_SqlCommand__ctor_System_String_Microsoft_Data_SqlClient_SqlConnection_Microsoft_Data_SqlClient_SqlTransaction_Microsoft_Data_SqlClient_SqlCommandColumnEncryptionSetting_)|個々のクエリの Always Encrypted の動作を制御できます。|
+|[SqlCommand コンストラクター (String、SqlConnection、SqlTransaction、SqlCommandColumnEncryptionSetting)](/dotnet/api/microsoft.data.sqlclient.sqlcommand.-ctor?view=sqlclient-dotnet-core-1.0&preserve-view=true#Microsoft_Data_SqlClient_SqlCommand__ctor_System_String_Microsoft_Data_SqlClient_SqlConnection_Microsoft_Data_SqlClient_SqlTransaction_Microsoft_Data_SqlClient_SqlCommandColumnEncryptionSetting_)|個々のクエリの Always Encrypted の動作を制御できます。|
 |[SqlParameter.ForceColumnEncryption プロパティ](/dotnet/api/microsoft.data.sqlclient.sqlparameter.forcecolumnencryption)|パラメーターの暗号化を強制的に適用します。 パラメーターの暗号化が不要であることが SQL Server からドライバーに通知された場合、このパラメーターを使用するクエリは失敗します。 攻撃を受けた SQL Server がクライアントに不正な暗号化メタデータを提供すると、データ漏えいが引き起こされる可能性がありますが、このプロパティは、そのようなセキュリティ攻撃に対する保護を強化します。|
 |[接続文字列](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring)のキーワード: `Column Encryption Setting=enabled`|接続に対して Always Encrypted 機能を有効または無効にします。|
 
