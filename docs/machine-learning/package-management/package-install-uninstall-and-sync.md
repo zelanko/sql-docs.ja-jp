@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 75d5e4cc3892ed2fd33392dc413b55936eac191d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: c09f79fafca4c16048817f3ee2524f214cb13d49
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179691"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956623"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server の R パッケージの同期
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
@@ -23,7 +23,7 @@ SQL Server 2017 に含まれるバージョンの RevoScaleR には、パッケ�
 
 この機能は、SQL Server データベースに関連付けられている R パッケージ コレクションを容易にバックアップするために用意されています。 この機能を使用すると、管理者はデータベースだけでなく、そのデータベースで作業するデータ サイエンティストが使用していた R パッケージも復元できます。
 
-この記事では、パッケージの同期機能について説明すると共に、[rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) 関数を使用して、以下のタスクを実行する方法について説明します。
+この記事では、パッケージの同期機能について説明すると共に、[rxSyncPackages](/machine-learning-server/r-reference/revoscaler/rxsyncpackages) 関数を使用して、以下のタスクを実行する方法について説明します。
 
 + SQL Server データベース全体について、パッケージの一覧を同期します
 
@@ -56,7 +56,7 @@ SQL Server 2017 に含まれるバージョンの RevoScaleR には、パッケ�
 1. サーバー管理者が、SQL Server インスタンスでこの機能を有効にします。
 2. 各データベースについては、管理者がデータベース ロールを使用して、個々のユーザーに R パッケージをインストールまたは共有する権限を付与します。
 
-この処理が完了したら、[rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) などの RevoScaleR 関数を使用して、データベースにパッケージをインストールできます。  ユーザーおよびユーザーが使用できるパッケージに関する情報は、SQL Server インスタンスに格納されます。 
+この処理が完了したら、[rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages) などの RevoScaleR 関数を使用して、データベースにパッケージをインストールできます。  ユーザーおよびユーザーが使用できるパッケージに関する情報は、SQL Server インスタンスに格納されます。 
 
 パッケージ管理機能を使用して新しいパッケージを追加するたびに、SQL Server のレコードとファイル システムの両方が更新されます。 この情報は、データベース全体のパッケージ情報を復元する際に使用できます。
 
@@ -74,7 +74,7 @@ SQL Server 2017 に含まれるバージョンの RevoScaleR には、パッケ�
 
 ## <a name="how-package-synchronization-works"></a>パッケージの同期のしくみ
 
-パッケージの同期を使用するには、[rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages)を呼び出します。これは [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) の新しい関数です。 
+パッケージの同期を使用するには、[rxSyncPackages](/r-server/r-reference/revoscaler/rxsyncpackages)を呼び出します。これは [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) の新しい関数です。 
 
 `rxSyncPackages` を呼び出すたびに、SQL Server インスタンスとデータベースを指定する必要があります。 次に、同期するパッケージの一覧またはパッケージのスコープを指定します。
 

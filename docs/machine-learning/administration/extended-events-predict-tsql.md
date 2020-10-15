@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 79053a7dcf91b220bdb288fc7efc711c80684aa0
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3d312a74a8920031015e0a985d8b30933cfc039a
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88171851"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956847"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の拡張イベントで PREDICT T-SQL ステートメントを監視する
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "88171851"
 
 ## <a name="table-of-extended-events"></a>拡張イベントの表
 
-次の拡張イベントは、[PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) T-SQL ステートメントをサポートするすべてのバージョンの SQL Server で使用できます。 
+次の拡張イベントは、[PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL ステートメントをサポートするすべてのバージョンの SQL Server で使用できます。 
 
 |name |object_type|description| 
 |----|----|----|
@@ -47,7 +47,7 @@ WHERE object_name LIKE `predict%'
 
 PREDICT を使用してスコアリング セッションのパフォーマンスに関する情報を取得するには次の手順を実行します。
 
-1. Management Studio またはサポートされている別の[ツール](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)を使用して、新しい拡張イベント セッションを作成します。
+1. Management Studio またはサポートされている別の[ツール](../../relational-databases/extended-events/extended-events-tools.md)を使用して、新しい拡張イベント セッションを作成します。
 2. イベント `predict_function_completed` と `predict_model_cache_hit` をセッションに追加します。
 3. 拡張イベント セッションを開始します。
 4. PREDICT を使用するクエリを実行します。
@@ -82,6 +82,6 @@ WHERE TYPE = 'MEMOBJ_NATIVESCORING';
 拡張イベント (XEvent と呼ばれることもあります) の詳細と、セッションのイベントを追跡する方法の詳細については、次の記事を参照してください。
 
 + [SQL Server Machine Learning Services の拡張イベントで Python および R のスクリプトを監視する](extended-events.md)
-+ [拡張イベントの概念とアーキテクチャ](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
-+ [SSMS でのイベント キャプチャの設定](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
-+ [SQL Server オブジェクト エクスプローラーでのイベント セッションの管理](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)
++ [拡張イベントの概念とアーキテクチャ](../../relational-databases/extended-events/extended-events.md)
++ [SSMS でのイベント キャプチャの設定](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
++ [SQL Server オブジェクト エクスプローラーでのイベント セッションの管理](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)

@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 3bee37788001edabd454891d8e9081814f198490
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 8b2e61640c03af160985d9e65262eb3da600c3c2
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179231"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956693"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>Python ツールを使用して SQL Server 上にパッケージをインストールする
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88179231"
 
 スクリプトで使用できる新しい Python パッケージを SQL Server にインストールするには、Machine Learning Services のインスタンスにパッケージをインストールします。 Machine Learning Services のインスタンスが複数ある場合は、各インスタンスにパッケージを追加する必要があります。
 
-次の例でインストールされるパッケージは [CNTK](https://docs.microsoft.com/cognitive-toolkit/) です。これは、さまざまな種類のニューラル ネットワークのカスタマイズ、トレーニング、および共有をサポートする Microsoft のディープ ラーニング用フレームワークです。
+次の例でインストールされるパッケージは [CNTK](/cognitive-toolkit/) です。これは、さまざまな種類のニューラル ネットワークのカスタマイズ、トレーニング、および共有をサポートする Microsoft のディープ ラーニング用フレームワークです。
 
 ### <a name="for-offline-install-download-the-python-package"></a>オフライン インストールの場合は、Python パッケージをダウンロードします
 
@@ -63,7 +63,7 @@ ms.locfileid: "88179231"
 > [!IMPORTANT]
 > 必ず Windows バージョンのパッケージを入手します。 ファイルの末尾が .gz の場合は、正しいバージョンではない可能性があります。
 
-複数のプラットフォーム用の CNTK フレームワークと複数のバージョンの Python のダウンロードの詳細については、「[マシン上で CNTK をセットアップする](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)」を参照してください。
+複数のプラットフォーム用の CNTK フレームワークと複数のバージョンの Python のダウンロードの詳細については、「[マシン上で CNTK をセットアップする](/cognitive-toolkit/Setup-CNTK-on-your-machine)」を参照してください。
 
 ### <a name="locate-the-python-library"></a>Python ライブラリを見つける
 
@@ -123,5 +123,5 @@ import cntk
 ## <a name="see-also"></a>参照
 
 + [Python パッケージ情報の取得](python-package-information.md)
-+ [SQL Server Machine Learning Services 用の Python のチュートリアル](../tutorials/sql-server-python-tutorials.md)
++ [SQL Server Machine Learning Services 用の Python のチュートリアル](../tutorials/python-tutorials.md)
 + [Python API for CNTK](https://cntk.ai/pythondocs/tutorials.html)。

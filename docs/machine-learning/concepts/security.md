@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 61294897524a0e260e457cbf98e892cad940ca54
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: f51998b722748bdfe51b773e251de88c8cac07a2
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989839"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956526"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の機能拡張フレームワークに関するセキュリティ アーキテクチャ
 
@@ -153,7 +153,7 @@ SQL Server の機密性の高いリソースを保護するために、**SQLRUse
 
 ## <a name="appcontainer-isolation"></a>AppContainer の分離
 
-[AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) によって分離が実現されます。 実行時に、ストアド プロシージャまたはクエリで外部スクリプトが検出されると、拡張機能固有の起動ツールの要求を使用して SQL Server からスタート パッドが呼び出されます。 Launchpad は、自身の ID の下のプロセスで適切なランタイム環境を呼び出し、AppContainer をインスタンス化して、それを含めます。 ローカル アカウントとパスワードの管理が不要になったため、これは有益な変更です。 また、ローカル ユーザー アカウントが禁止されているインストールでは、ローカル ユーザー アカウントの依存関係を削除することで、この機能を使用できるようになります。
+[AppContainer](/windows/desktop/secauthz/appcontainer-isolation) によって分離が実現されます。 実行時に、ストアド プロシージャまたはクエリで外部スクリプトが検出されると、拡張機能固有の起動ツールの要求を使用して SQL Server からスタート パッドが呼び出されます。 Launchpad は、自身の ID の下のプロセスで適切なランタイム環境を呼び出し、AppContainer をインスタンス化して、それを含めます。 ローカル アカウントとパスワードの管理が不要になったため、これは有益な変更です。 また、ローカル ユーザー アカウントが禁止されているインストールでは、ローカル ユーザー アカウントの依存関係を削除することで、この機能を使用できるようになります。
 
 AppContainer は、SQL Server に実装されているため、内部メカニズムです。 プロセス モニターには AppContainer の物理的な証拠は表示されませんが、セットアップによって作成された、プロセスによるネットワーク呼び出しを防ぐための送信ファイアウォール規則で AppContainer を見つけることができます。 詳細については、「[SQL Server Machine Learning Services のファイアウォール構成](../../machine-learning/security/firewall-configuration.md)」を参照してください。
 
@@ -216,7 +216,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 "*暗黙の認証*" では、接続要求の動作が示されます。これにおいては、AppContainers で実行されている外部プロセスが、データまたは操作のループバック要求で、信頼されたユーザー ID として SQL Server に提示されます。 暗黙の認証は、R または Python スクリプトなどの外部プロセスから送信される要求で、SQL Server 接続文字列によって信頼関係接続が指定されるという点で、概念として Windows 認証に固有ではなくなりました。 これは、"*ループバック*" と呼ばれることもあります。
 
-ユーザーの資格情報を使用したリソースへのアクセスまたは他の環境へのログインを防ぐために、AppContainer では ID と資格情報が管理されます。 AppContainer 環境ではユーザーとアプリケーションの ID の組み合わせを使用した識別子が作成されるため、資格情報はユーザーとアプリケーションのペアリングごとに一意であり、アプリケーションがユーザーの権限を借用することができません。 詳細については、「[AppContainer の分離](https://docs.microsoft.com/windows/win32/secauthz/appcontainer-isolation)」を参照してください。
+ユーザーの資格情報を使用したリソースへのアクセスまたは他の環境へのログインを防ぐために、AppContainer では ID と資格情報が管理されます。 AppContainer 環境ではユーザーとアプリケーションの ID の組み合わせを使用した識別子が作成されるため、資格情報はユーザーとアプリケーションのペアリングごとに一意であり、アプリケーションがユーザーの権限を借用することができません。 詳細については、「[AppContainer の分離](/windows/win32/secauthz/appcontainer-isolation)」を参照してください。
 
 ループバック接続の詳細については、「[Python または R スクリプトからの SQL Server へのループバック接続](../connect/loopback-connection.md)」を参照してください。
 
