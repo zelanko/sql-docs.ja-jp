@@ -9,12 +9,12 @@ ms.date: 10/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: 5cf1a67d1eeb36ec4889d75241eba34b515264b0
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 59a3dab4136749f85e1f752ee823f8815080fd76
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834316"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987988"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>Azure Arc 対応 SQL Server (プレビュー)
 
@@ -49,7 +49,7 @@ SQL Server インスタンスとホスティングを Azure Arc に接続する�
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read
 
-セキュリティを最適化するために、最小限のアクセス許可が登録されているカスタム ロールを Azure で作成することをお勧めします。 これらのアクセス許可を持つカスタム ロールを Azure で作成する方法については、[カスタム ロールの概要](https://docs.microsoft.com/azure/active-directory/users-groups-roles/roles-custom-overview)に関するページを参照してください。 ロールの割り当てを追加するには、「[Azure portal を使用して Azure ロールの割り当てを追加または削除する](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal)」、または [Azure RBAC と Azure CLI を使用したロールの割り当ての追加または削除](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-cli)に関するページを参照してください。
+セキュリティを最適化するために、最小限のアクセス許可が登録されているカスタム ロールを Azure で作成することをお勧めします。 これらのアクセス許可を持つカスタム ロールを Azure で作成する方法については、[カスタム ロールの概要](/azure/active-directory/users-groups-roles/roles-custom-overview)に関するページを参照してください。 ロールの割り当てを追加するには、「[Azure portal を使用して Azure ロールの割り当てを追加または削除する](/azure/role-based-access-control/role-assignments-portal)」、または [Azure RBAC と Azure CLI を使用したロールの割り当ての追加または削除](/azure/role-based-access-control/role-assignments-cli)に関するページを参照してください。
 
 ### <a name="azure-subscription-and-service-limits"></a>Azure サブスクリプションとサービスの制限
 

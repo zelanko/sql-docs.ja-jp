@@ -38,12 +38,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 50542a1a86adcd2149a7170240796b4f6a511879
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 3ba349fc37aa4aae0aea7af7000380d1de031091
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288277"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035468"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>SQL Server Management Studio (SSMS) クエリ エディター
 
@@ -300,8 +300,8 @@ Microsoft データベース エンジン チューニング アドバイザー 
 | スクリプト内でドラッグ アンド ドロップによってテキストを移動します。| [テキストのドラッグ アンド ドロップ](../scripting/drag-and-drop-text.md) |
 | コードの重要箇所を見つけやすいようにブックマークを設定します。 | [ブックマークの管理](../scripting/manage-bookmarks.md) |
 | スクリプトまたはその結果をウィンドウまたはグリッドから印刷します。| [コードと結果の印刷](../scripting/print-code-and-results.md) |
-| MDX クエリ エディターの基本的な機能を表示し、使用します。 | [Analysis Services スクリプトの作成](https://docs.microsoft.com/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
-| DMX クエリ エディターの基本的な機能を表示し、使用します。 | [DMX クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
+| MDX クエリ エディターの基本的な機能を表示し、使用します。 | [Analysis Services スクリプトの作成](/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
+| DMX クエリ エディターの基本的な機能を表示し、使用します。 | [DMX クエリの作成](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
 | XML/A エディターの基本的な機能を表示し、使用します。 | [XML エディター](../scripting/xml-editor-sql-server-management-studio.md) |
 | データベース エンジン クエリ エディターで sqlcmd の機能を使用する方法。| [SQLCMD スクリプトの編集](../scripting/edit-sqlcmd-scripts-with-query-editor.md) |
 | データベース エンジン クエリ エディターでのコード スニペットの使用方法。 スニペットは、使用頻度の高いステートメントまたはブロックのテンプレートです。特定用途のスニペットを追加して拡張したりカスタマイズしたりすることができます。| [T-SQL コード スニペット](../scripting/add-transact-sql-snippets.md) |

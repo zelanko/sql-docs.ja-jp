@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5bf4e441352bce868d80ba00fe185c7494c0917
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f9c54984eb8d1c94176929579043f979aa518672
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111023"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988308"
 ---
 # <a name="failover-cluster-troubleshooting"></a>フェールオーバー クラスターのトラブルシューティング
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91111023"
 -   拡張ストアド プロシージャおよび COM オブジェクトの使用  
   
 ## <a name="basic-troubleshooting-steps"></a>基本的なトラブルシューティング手順  
- 診断の最初の手順では、新しいクラスターの検証チェックを実行します。 検証の詳細については、[フェールオーバー クラスターのステップ バイ ステップ ガイド: フェールオーバー クラスターのハードウェアの検証](https://technet.microsoft.com/library/cc732035.aspx)に関する記事を参照してください。  これは、オンラインのクラスター リソースに影響しないため、サービスを中断することなく実行できます。 フェールオーバー クラスタ リング機能をインストールしたら、クラスターの展開前、クラスターの作成中、クラスターの実行中を含め、いつでも検証を実行することができます。 実際には、クラスターの使用中に、可用性の高いワークロードのベスト プラクティスに従っているかどうかをチェックする追加テストも実行されます。 数十回のテストのうち数回は、実行中のクラスターのワークロードに影響しますが、これらはすべてストレージ カテゴリ内にあるため、このカテゴリ全体をスキップすると、簡単に中断を伴うテストを回避できます。  
+ 診断の最初の手順では、新しいクラスターの検証チェックを実行します。 検証の詳細については、[フェールオーバー クラスターのステップ バイ ステップ ガイド: フェールオーバー クラスターのハードウェアの検証](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10))に関する記事を参照してください。  これは、オンラインのクラスター リソースに影響しないため、サービスを中断することなく実行できます。 フェールオーバー クラスタ リング機能をインストールしたら、クラスターの展開前、クラスターの作成中、クラスターの実行中を含め、いつでも検証を実行することができます。 実際には、クラスターの使用中に、可用性の高いワークロードのベスト プラクティスに従っているかどうかをチェックする追加テストも実行されます。 数十回のテストのうち数回は、実行中のクラスターのワークロードに影響しますが、これらはすべてストレージ カテゴリ内にあるため、このカテゴリ全体をスキップすると、簡単に中断を伴うテストを回避できます。  
 フェールオーバー クラスタ リングには、検証でストレージ テストを実行する際の偶発的なダウンタイムを回避する組み込みのセーフガードが付属しています。 検証の開始時にクラスターにオンライン グループが含まれており、ストレージ テストが選択されたままになっていると、すべてのテストを実行する (この場合、ダウンタイムが発生します) か、ダウンタイムを避けるためにすべてのオンライン グループのディスクのテストをスキップするかを確認するプロンプトが表示されます。 ストレージ カテゴリ全体をテスト対象から除外すると、このプロンプトは表示されません。 これにより、ダウンタイムなしのクラスターの検証が有効になります。  
   
 #### <a name="how-to-revalidate-your-cluster"></a>クラスターを再検証する方法  
@@ -189,5 +189,4 @@ ms.locfileid: "91111023"
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [拡張ストアド プロシージャのしくみ](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [拡張ストアド プロシージャの実行における特性](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
-  
   

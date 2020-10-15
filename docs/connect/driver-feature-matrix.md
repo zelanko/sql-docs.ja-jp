@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: 4071353214f7ffde54ecd1097defaa6c60aa19d6
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 6a781688b4fc24f8b79f3820fbcc3dc339b6c068
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823357"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081431"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Microsoft SQL Server のドライバー機能のサポート マトリックス
 
@@ -51,8 +51,8 @@ Microsoft では、すべてのドライバーですべての機能がサポー�
 | [複数のアクティブな結果セット (MARS)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [あり](ado-net/sql/multiple-active-result-sets-mars.md) | [あり](ado-net/sql/multiple-active-result-sets-mars.md) | [あり](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) | [あり](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) |
 | [空間データ型](../relational-databases/spatial/spatial-data-sql-server.md) | | ○ | | はい |
 | [テーブル値パラメーター (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [あり](ado-net/sql/table-valued-parameters.md) | [あり](ado-net/sql/table-valued-parameters.md) | [あり](/dotnet/framework/data/adonet/sql/table-valued-parameters) | [あり](/dotnet/framework/data/adonet/sql/table-valued-parameters) |
-| [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [あり](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [あり](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [あり](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netcore-1.0) | [あり](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netframework-4.8) |
-| [透過的なネットワーク IP の解決](odbc/using-transparent-network-ip-resolution.md) | | [あり](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring?view=sqlclient-dotnet-1.1) | | [あり](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=netframework-4.8) |
+| [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [あり](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [あり](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [あり](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netcore-1.0&preserve-view=true) | [あり](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netframework-4.8&preserve-view=true) |
+| [透過的なネットワーク IP の解決](odbc/using-transparent-network-ip-resolution.md) | | [あり](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring?view=sqlclient-dotnet-1.1&preserve-view=true) | | [あり](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=netframework-4.8&preserve-view=true) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 | <a id="table2"></a>機能 | [Windows 上の ODBC Driver for SQL Server](odbc/microsoft-odbc-driver-for-sql-server.md) | [Linux および macOS 上の ODBC Driver for SQL Server](odbc/microsoft-odbc-driver-for-sql-server.md) | [JDBC Driver for SQL Server](jdbc/microsoft-jdbc-driver-for-sql-server.md) | [OLE DB Driver for SQL Server](oledb/oledb-driver-for-sql-server.md) |

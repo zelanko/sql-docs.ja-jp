@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 5b07323de0c8d385ad4df739c935a8bef96b4022
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: d5b66ac431bfadff06c930f76517f35d95dcb12f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990325"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987998"
 ---
 # <a name="connect-your-sql-server-to-azure-arc"></a>SQL Server を Azure Arc に接続する
 
@@ -22,7 +22,7 @@ ms.locfileid: "90990325"
 ## <a name="prerequisites"></a>前提条件
 
 * マシンに SQL Server の 1 つ以上のインスタンスがインストールされていること
-* Windows マシンの場合は、Azure PowerShell をインストール済みであること。 指示に従って、[Azure PowerShell をインストール](https://docs.microsoft.com/powershell/azure/install-az-ps)してください。
+* Windows マシンの場合は、Azure PowerShell をインストール済みであること。 指示に従って、[Azure PowerShell をインストール](/powershell/azure/install-az-ps)してください。
 * Linux マシンの場合は、Azure CLI をダウンロードしており、Azure アカウントを接続済みであること。 指示に従って、[Azure CLI をインストール](/cli/azure/install-azure-cli-apt)してください。
 
 
@@ -39,7 +39,7 @@ ms.locfileid: "90990325"
 3. サブスクリプション、リソース グループ、Azure リージョン、およびホスト オペレーティング システムを選択します。 必要に応じて、ネットワークでインターネットへの接続に使用するプロキシも指定します。
 
 > [!IMPORTANT]
-> SQL Server インスタンスをホストしているマシンが既に [Azure Arc に接続されている](https://docs.microsoft.com/azure/azure-arc/servers/onboard-portal)場合は、必ず、対応する __マシン - Azure Arc__ リソースを含む同じリソース グループを選択してください。
+> SQL Server インスタンスをホストしているマシンが既に [Azure Arc に接続されている](/azure/azure-arc/servers/onboard-portal)場合は、必ず、対応する __マシン - Azure Arc__ リソースを含む同じリソース グループを選択してください。
 
 ![サーバーの詳細](media/join/server-details-sql-server-azure-arc.png)
 
@@ -56,7 +56,7 @@ ms.locfileid: "90990325"
 
 ### <a name="windows"></a>Windows
 
-1. __powershell.exe__ の管理者インスタンスを起動し、Azure の資格情報を使用して PowerShell モジュールにサインインします。 [サインイン手順](https://docs.microsoft.com/powershell/azure/install-az-ps#sign-in)に従ってください。
+1. __powershell.exe__ の管理者インスタンスを起動し、Azure の資格情報を使用して PowerShell モジュールにサインインします。 [サインイン手順](/powershell/azure/install-az-ps#sign-in)に従ってください。
 
 2. ダウンロードしたスクリプトを実行します
 
@@ -69,7 +69,7 @@ ms.locfileid: "90990325"
 
 ### <a name="linux"></a>Linux
 
-1. Azure CLI を使用し、Azure の資格情報を使ってサインインします。 [サインイン手順](https://docs.microsoft.com/cli/azure/authenticate-azure-cli)に従ってください
+1. Azure CLI を使用し、Azure の資格情報を使ってサインインします。 [サインイン手順](/cli/azure/authenticate-azure-cli)に従ってください
 
 2. ダウンロードしたスクリプトに実行アクセス許可を付与して実行します。
 

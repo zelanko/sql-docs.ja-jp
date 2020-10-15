@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a54c7de35f9707701213488a4f51d23d5e314417
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: d9fee236a710d7bc742f9a8fed27e12801daa550
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570311"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988268"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "89570311"
 **sys.dm_db_stats_properties**動的管理ビュー (DMV) が追加されました。 この DMV を使用して、現在のデータベース内にある指定されたテーブルまたはインデックス付きビューの統計プロパティを返すことができます。 たとえば、この DMV は、サンプルの行数およびヒストグラムのステップ数を返します。  
   
 ## <a name="20-before-you-install"></a>2.0 インストールの準備  
-[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] の更新プログラムのインストール方法については、 [SQL Server 2008 R2 サービスのドキュメント](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx)を参照してください。  
+[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] の更新プログラムのインストール方法については、 [SQL Server 2008 R2 サービスのドキュメント](/previous-versions/sql/sql-server-2008-r2/dd638062(v=sql.105))を参照してください。  
   
 SQL Server 2008 R2 のインストール方法の一般的な情報については、SQL Server 2008 R2 の Readme を参照してください。 この Readme ドキュメントは、インストール メディアにあります。
   
@@ -65,4 +65,3 @@ SQL Server 2008 R2 のインストール方法の一般的な情報について�
   
 ## <a name="see-also"></a>参照  
 [SQL Server のバージョンとエディションを確認する方法](https://support.microsoft.com/kb/321185)  
-  
