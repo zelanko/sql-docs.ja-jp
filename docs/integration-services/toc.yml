@@ -1560,7 +1560,7 @@
   href: ../integration-services/load-data-to-from-excel-with-ssis.md
 - name: SQL Server または SQL Database へのデータの読み込み
   href: ../integration-services/load-data-to-sql-database-with-ssis.md
-- name: SQL Data Warehouse へのデータの読み込み
+- name: Azure Synapse Analytics へのデータの読み込み
   href: ../integration-services/load-data-to-sql-data-warehouse.md
 - name: 変更データ キャプチャ
   items:
