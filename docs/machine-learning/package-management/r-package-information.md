@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b998c66511dc749002df01349bcb965b7f42e713
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7b1004b6ecaffba0768d8565a90387964b62b53b
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178909"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956945"
 ---
 # <a name="get-r-package-information"></a>R パッケージ情報の取得
 
@@ -80,8 +80,8 @@ GO
 
 |パッケージ | Version | 説明 |
 |---------|---------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | ストアド プロシージャに R スクリプトを含めるために使用します。 |
+| [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
+| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | ストアド プロシージャに R スクリプトを含めるために使用します。 |
 
 ::: moniker-end
 
@@ -91,10 +91,10 @@ GO
 
 |パッケージ | Version | 説明 |
 |---------|---------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | ストアド プロシージャに R スクリプトを含めるために使用します。 |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | R に機械学習アルゴリズムを追加します。 | 
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | R で MDX ステートメントを記述するために使用します。 |
+| [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
+| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | ストアド プロシージャに R スクリプトを含めるために使用します。 |
+| [MicrosoftML](/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | R に機械学習アルゴリズムを追加します。 | 
+| [olapR](/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | R で MDX ステートメントを記述するために使用します。 |
 
 ::: moniker-end
 
@@ -104,10 +104,10 @@ GO
 
 |パッケージ | Version | 説明 |
 |---------|---------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.4.7 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | ストアド プロシージャに R スクリプトを含めるために使用します。 |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 9.4.7 | R に機械学習アルゴリズムを追加します。 |
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | R で MDX ステートメントを記述するために使用します。 |
+| [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 9.4.7 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
+| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | ストアド プロシージャに R スクリプトを含めるために使用します。 |
+| [MicrosoftML](/r-server/r-reference/microsoftml/microsoftml-package)| 9.4.7 | R に機械学習アルゴリズムを追加します。 |
+| [olapR](/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | R で MDX ステートメントを記述するために使用します。 |
 
 ::: moniker-end
 

@@ -8,16 +8,16 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 07b140aceae2eae1a63b826b0bb4f95c8cfc515b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 36d4581756cd89e016658f8e415aaec6fbe9a35b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990355"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988008"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>SQL Server インスタンスを大規模に Azure Arc に接続する
 
-複数の Windows または Linux マシンにインストールされている複数の SQL Server インスタンスは、[単一のマシンに対して生成したスクリプト](connect.md)と同じものを使用して、Azure Arc に接続することができます。 このスクリプトを使用すると、各マシンとそこにインストールされている SQL Server インスタンスが Azure Arc に接続されて登録されます。最適なエクスペリエンスを得るために、Azure Active Directory [サービス プリンシパル](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals)を使用することをお勧めします。 サービス プリンシパルは、マシンを Azure に接続する場合や、Azure Arc 対応サーバーと Azure Arc 対応 SQL Server サーバー用の Azure リソースを作成する場合に必要な最小限のアクセス許可のみが付与される、特殊な制限付きの管理用 ID です。 これは、テナント管理者のような、より高い特権を持つアカウントを使用するよりも安全で、アクセス制御セキュリティのベスト プラクティスに従っています。  
+複数の Windows または Linux マシンにインストールされている複数の SQL Server インスタンスは、[単一のマシンに対して生成したスクリプト](connect.md)と同じものを使用して、Azure Arc に接続することができます。 このスクリプトを使用すると、各マシンとそこにインストールされている SQL Server インスタンスが Azure Arc に接続されて登録されます。最適なエクスペリエンスを得るために、Azure Active Directory [サービス プリンシパル](/azure/active-directory/develop/app-objects-and-service-principals)を使用することをお勧めします。 サービス プリンシパルは、マシンを Azure に接続する場合や、Azure Arc 対応サーバーと Azure Arc 対応 SQL Server サーバー用の Azure リソースを作成する場合に必要な最小限のアクセス許可のみが付与される、特殊な制限付きの管理用 ID です。 これは、テナント管理者のような、より高い特権を持つアカウントを使用するよりも安全で、アクセス制御セキュリティのベスト プラクティスに従っています。  
 
 Connected Machine エージェントをインストールして構成するためのインストール方法を使用するには、使用する自動化された方法に、マシンでの管理者のアクセス許可が付与されている必要があります。 Linux ではルート アカウントを使用し、Windows ではローカルの Administrators グループのメンバーとして実行します。
 

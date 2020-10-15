@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e1da1d708bf8fbe5b3c3cb6cea0a6d65f6e9ccf
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: 0e8a7371760076e300fc4eb8dd75365682e34974
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059390"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098661"
 ---
 # <a name="ado-md-object-model"></a>ADO MD オブジェクト モデル
 このトピックでは、ADO MD でオブジェクトがどのように表され、関連付けられるかについて説明します。  
@@ -31,8 +31,8 @@ ms.locfileid: "92059390"
   
  [軸](./axis-object-ado-md.md)、[セル](./cell-object-ado-md.md)、セル[セット](./cellset-object-ado-md.md)、 [CubeDef](./cubedef-object-ado-md.md)、[ディメンション](./dimension-object-ado-md.md)、[階層](./hierarchy-object-ado-md.md)、[レベル](./level-object-ado-md.md)、および[メンバー](./member-object-ado-md.md)の各オブジェクトには、それぞれ標準の ADO[プロパティ](../ado-api/properties-collection-ado.md)コレクションがあります。  
   
-## <a name="see-also"></a>関連項目  
- [ADO MD API リファレンス](?view=sql-server-ver15&preserve-view=true)   
+## <a name="see-also"></a>参照  
+ [ADO MD API リファレンス](?view=sql-server-ver15)   
  [ADO MD コード例](./ado-md-code-examples.md)   
  [ADO MD コレクション](./ado-md-collections.md)   
  [ADO MD 列挙定数](./ado-md-enumerated-constants.md)   

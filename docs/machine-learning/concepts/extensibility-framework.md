@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2303fdda5ae28fb9a384a174a128b2487e637f7e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 053639f8ff25d50e7cad9c05d82cfcac6a0ee071
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173319"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956538"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の機能拡張アーキテクチャ 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -81,7 +81,7 @@ Linux では、1 つのデータベース エンジン インスタンスのみ�
 
 ## <a name="bxlserver-and-sql-satellite"></a>BxlServer と SQL サテライト
 
-**BxlServer** は、SQL Server と言語ランタイムの間の通信を管理する、Microsoft によって提供されている実行可能ファイルです。 これにより、外部スクリプト セッションの格納に使用される Windows ジョブ オブジェクト (Windows の場合) また名前空間 (Linux の場合) が作成されます。 また、外部スクリプト ジョブごとにセキュリティで保護された作業フォルダーが準備され、SQL サテライトを使用して外部ランタイムと SQL Server の間のデータ転送が管理されます。 ジョブの実行中に[プロセス エクスプローラー](https://technet.microsoft.com/sysinternals/processexplorer.aspx)を実行すると、BxlServer の 1 つまたは複数のインスタンスが表示される場合があります。
+**BxlServer** は、SQL Server と言語ランタイムの間の通信を管理する、Microsoft によって提供されている実行可能ファイルです。 これにより、外部スクリプト セッションの格納に使用される Windows ジョブ オブジェクト (Windows の場合) また名前空間 (Linux の場合) が作成されます。 また、外部スクリプト ジョブごとにセキュリティで保護された作業フォルダーが準備され、SQL サテライトを使用して外部ランタイムと SQL Server の間のデータ転送が管理されます。 ジョブの実行中に[プロセス エクスプローラー](/sysinternals/downloads/process-explorer)を実行すると、BxlServer の 1 つまたは複数のインスタンスが表示される場合があります。
 
 実際には BxlServer は、SQL Server と連携してデータの転送とタスクの管理を行う言語ランタイム環境に付随するものです。 BXL とは、バイナリ交換言語の略で、SQL Server と外部プロセスの間でデータを効率的に移動するために使用されるデータ形式を指します。 BxlServer は、Microsoft R Client や Microsoft R Server などの関連製品の重要な部分でもあります。
 
@@ -139,7 +139,7 @@ SQL サテライトは、Windows 拡張イベント (xEvent) を使用して監�
 
 + **その他のプロトコル**
 
-  "チャンク" で動作するか、またはリモート クライアントにデータを転送する必要のあるプロセスでは、[XDF ファイル形式](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)も使用できます。 実際のデータ転送は、エンコードされた BLOB を使用して行われます。
+  "チャンク" で動作するか、またはリモート クライアントにデータを転送する必要のあるプロセスでは、[XDF ファイル形式](/machine-learning-server/r/concept-what-is-xdf)も使用できます。 実際のデータ転送は、エンコードされた BLOB を使用して行われます。
 
 ## <a name="see-also"></a>参照
 

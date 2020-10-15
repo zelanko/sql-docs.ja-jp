@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0e912950c12b6d3a3c87a497a43d75ab1c29199
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f83f06c5aa72c31df711db05198032206c5a32b9
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059420"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098671"
 ---
 # <a name="ado-md-collections"></a>ADO MD のコレクション
 
@@ -33,8 +33,8 @@ ms.locfileid: "92059420"
 |[メンバー](./members-collection-ado-md.md)|レベルまたは軸に沿った位置からの **メンバー** オブジェクトを格納します。|  
 |[Positions](./positions-collection-ado-md.md)|軸上の点を定義する **位置** オブジェクトを格納します。|  
   
-## <a name="see-also"></a>関連項目  
- [ADO MD API リファレンス](./ado-md-object-model.md?view=sql-server-ver15&preserve-view=true)   
+## <a name="see-also"></a>参照  
+ [ADO MD API リファレンス](./ado-md-object-model.md?view=sql-server-ver15)   
  [ADO MD コード例](./ado-md-code-examples.md)   
  [ADO MD 列挙定数](./ado-md-enumerated-constants.md)   
  [ADO MD メソッド](./ado-md-methods.md)   

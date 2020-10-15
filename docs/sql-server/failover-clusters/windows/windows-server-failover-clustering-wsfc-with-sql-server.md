@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9854bef628a04871e0c173847651df0b64c83088
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3340ba57a0b316c9a58fbf1b0c65d7ca01f3e1ee
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896658"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988125"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Windows Server フェールオーバー クラスタリングと SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85896658"
   
 -   **フェールオーバーの調整。** 各リソースはプライマリ ノードでホストされるように構成され、それぞれ自動的に、または手動で 1 つ以上のセカンダリ ノードに転送されます。 正常性ベースのフェールオーバー ポリシーによって、ノード間でのリソース所有権の自動転送が制御されます。 フェールオーバーが発生すると、適切に対応できるように、ノードおよびホストされているアプリケーションに通知されます。  
   
- 詳細については、「 [フェールオーバー クラスタリングの概要](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)」を参照してください。  
+ 詳細については、「 [フェールオーバー クラスタリングの概要](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11))」を参照してください。  
   
 ##  <a name="sql-server-always-on-technologies-and-wsfc"></a><a name="AlwaysOnWsfcTech"></a> SQL Server Always On テクノロジと WSFC  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *Always On* は、WSFC を利用する、高可用性およびディザスター リカバリー ソリューションです。 Always On 機能は、アプリケーションの可用性を高め、ハードウェア投資の回収率を上げ、高可用性配置と管理を簡素化する、統合された柔軟なソリューションを提供します。  
@@ -85,7 +85,7 @@ ms.locfileid: "85896658"
 >  詳細については、「[Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
 ### <a name="instance-level-high-availability-with-always-on-failover-cluster-instances"></a>Always On フェールオーバー クラスター インスタンスとインスタンス レベルの高可用性  
- Always On *フェールオーバー クラスター インスタンス* (FCI) は、WSFC 内のノードにまたがってインストールされた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスです。 このタイプのインスタンスは、ストレージと仮想ネットワーク名のリソースに依存します。 ストレージは共有ディスク ストレージにファイバー チャネル、iSCSI、FCoE、または SAS を使用したり、[記憶域スペース ダイレクト (S2D)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview) でローカルにアタッチされたストレージを使用したりできます。 仮想ネットワーク名のリソースは、それぞれが異なるサブネットに存在する 1 つまたは複数の仮想 IP アドレスに依存します。 SQL Server サービスと SQL Server エージェント サービスもリソースであり、どちらもストレージと仮想ネットワーク名リソースに依存します。  
+ Always On *フェールオーバー クラスター インスタンス* (FCI) は、WSFC 内のノードにまたがってインストールされた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスです。 このタイプのインスタンスは、ストレージと仮想ネットワーク名のリソースに依存します。 ストレージは共有ディスク ストレージにファイバー チャネル、iSCSI、FCoE、または SAS を使用したり、[記憶域スペース ダイレクト (S2D)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview) でローカルにアタッチされたストレージを使用したりできます。 仮想ネットワーク名のリソースは、それぞれが異なるサブネットに存在する 1 つまたは複数の仮想 IP アドレスに依存します。 SQL Server サービスと SQL Server エージェント サービスもリソースであり、どちらもストレージと仮想ネットワーク名リソースに依存します。  
   
  フェールオーバーが発生した場合、WSFC サービスはインスタンスのリソース所有権を指定されたフェールオーバー ノードに転送します。 その後、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスは、フェールオーバー ノードで再起動され、データベースが通常どおり復元されます。 特定の時点で、FCI と基になるリソースをホストできるのは、クラスター内の 1 つのノードのみです。  
   
@@ -175,13 +175,13 @@ ms.locfileid: "85896658"
   
 -   [Windows Server テクノロジ: フェールオーバー クラスター](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
 
--   [記憶域スペース ダイレクト \(S2D\) の概要](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
+-   [記憶域スペース ダイレクト \(S2D\) の概要](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 
 -   [Windows Server 2008 R2 のフェールオーバー クラスター](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
 -   [フェールオーバー クラスターのイベントおよびログを表示する](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog フェールオーバー クラスター コマンドレット](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog フェールオーバー クラスター コマンドレット](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))  
   
 ## <a name="see-also"></a>参照  
  [Always On フェールオーバー クラスター インスタンス (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
@@ -190,4 +190,3 @@ ms.locfileid: "85896658"
  [フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [WSFC の強制クォーラムによる災害復旧 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
  [SQL Server 2016 は Windows Server 2016 の記憶域スペース ダイレクトをサポートします](https://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/)
-  
