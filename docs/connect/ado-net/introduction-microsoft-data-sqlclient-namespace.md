@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d72beeaf5b7652e040dd5bbe5f20373e655f822a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d02c12998f1083774727c33a261292396151a352
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725703"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081471"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Microsoft.Data.SqlClient 名前空間の概要
 
@@ -218,7 +218,7 @@ UTF-8 のサポートで、アプリケーション コードを変更する必�
 
 ### <a name="authentication"></a>認証
 
-_[認証]_ 接続文字列オプションを使用して、さまざまな認証モードを指定できます。 詳細については、[SqlAuthenticationMethod のドキュメント](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2)を参照してください。
+_[認証]_ 接続文字列オプションを使用して、さまざまな認証モードを指定できます。 詳細については、[SqlAuthenticationMethod のドキュメント](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2&preserve-view=true)を参照してください。
 
 > [!NOTE]
 > Azure Key Vault プロバイダーなどのカスタム キー ストア プロバイダーは、Microsoft.Data.SqlClient をサポートするように更新する必要があります。 同様に、エンクレーブ プロバイダーも Microsoft.Data.SqlClient をサポートするように更新する必要があります。

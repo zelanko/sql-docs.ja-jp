@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5629096fb59bbb081aa535e8e3436a4cb06130d8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c6f2e0f7eefdfe78d1058d839c3e5a4fa9404e77
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726717"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080571"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -129,7 +129,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>秘密度データ分類のメタデータ
 
-バージョン5.8.0 では、Microsoft SQL Server 2019 上で `sqlsrv_field_metadata` を使用して、ユーザーが[秘密度データ分類のメタデータ](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql&view=sql-server-ver15#subheading-4)にアクセスするために、新しいオプション `DataClassification` が導入されています。Microsoft ODBC Driver 17.4.2 以降が必要になります。
+バージョン5.8.0 では、Microsoft SQL Server 2019 上で `sqlsrv_field_metadata` を使用して、ユーザーが[秘密度データ分類のメタデータ](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql#subheading-4)にアクセスするために、新しいオプション `DataClassification` が導入されています。Microsoft ODBC Driver 17.4.2 以降が必要になります。
 
 既定で、オプション `DataClassification` は `false` になっていますが、`true` に設定されると、秘密度データ分類のメタデータがある場合には、`sqlsrv_field_metadata` によって返された配列には、そのデータが入力されます。 
 

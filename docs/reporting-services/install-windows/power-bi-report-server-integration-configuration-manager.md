@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: d0eb3bcdd62d7f78799f754b668544cfdd01fcd9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 66893eb9b35ac0635600d6628c3ef0121d5d37c9
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991871"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891302"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI レポート サーバーの統合 (構成マネージャー)
 
@@ -24,9 +24,9 @@ ms.locfileid: "88991871"
 
 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] サービスを参照できるようにするためのアクティブなインターネット接続に加え、 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]統合を完了するには次の要件があります。
 
-- **Azure Active Directory:** 組織で Azure Active Directory を使用する必要があります。Azure Active Directory では、Azure サービスと Web アプリケーションのディレクトリと ID を管理できます。 詳細については、「[Azure Active Directory とは](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)」を参照してください。
+- **Azure Active Directory:** 組織で Azure Active Directory を使用する必要があります。Azure Active Directory では、Azure サービスと Web アプリケーションのディレクトリと ID を管理できます。 詳細については、「[Azure Active Directory とは](/azure/active-directory/fundamentals/active-directory-whatis)」を参照してください。
 
-- **管理対象テナント:** レポート アイテムをピン留めする [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ダッシュボードは、Azure AD 管理対象テナントに属している必要があります。  管理対象テナントは、組織が Microsoft 365 や Microsoft Intune などの Azure サービスに初めてサブスクライブしたときに自動的に作成されます。   バイラル テナントは現在サポートされていません。  詳細については、「 [Azure AD ディレクトリとは](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)」の「Azure AD テナントとは」および「Azure AD ディレクトリを取得する方法」を参照してください。
+- **管理対象テナント:** レポート アイテムをピン留めする [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ダッシュボードは、Azure AD 管理対象テナントに属している必要があります。  管理対象テナントは、組織が Microsoft 365 や Microsoft Intune などの Azure サービスに初めてサブスクライブしたときに自動的に作成されます。   バイラル テナントは現在サポートされていません。  詳細については、「 [Azure AD ディレクトリとは](/previous-versions/azure/azure-services/jj573650(v=azure.100)#BKMK_WhatIsAnAzureADTenant)」の「Azure AD テナントとは」および「Azure AD ディレクトリを取得する方法」を参照してください。
 
 - [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 統合を実行するユーザーは、Azure AD テナントのメンバーで、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] システム管理者であり、ReportServer カタログ データベースのシステム管理者でもある必要があります。
 
@@ -46,7 +46,7 @@ ms.locfileid: "88991871"
 
 ## <a name="to-integrate-and-register-the-report-server"></a><a name="bkmk_steps2integrate"></a> レポート サーバーを統合および登録するには
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーで次の手順を完了します。 詳細については、「[Reporting Services 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーで次の手順を完了します。 詳細については、[Report Server 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)に関するページを参照してください。
 
 1. [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 統合ページを選択します。
 

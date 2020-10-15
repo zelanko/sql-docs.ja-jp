@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5b87404b685fe9e5de09f8703d3c06c48371836
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b0b603e2abb775383083942f93279c8c117a3829
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247241"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891492"
 ---
 # <a name="feature-reference-reporting-services"></a>機能リファレンス (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポートの作成、管理、表示に使用できるツールとアプリケーションが数種類用意されています。 ここでは、これらのツールとアプリケーションのダイアログ ボックス、Web ページ、およびウィザードに関する特有のトピックを紹介します。  
@@ -29,9 +29,6 @@ ms.locfileid: "87247241"
 ## <a name="in-this-section"></a>このセクションの内容  
  [レポート デザイナーの F1 ヘルプ](../reporting-services/tools/report-designer-f1-help.md)  
  レポート デザイナーと関連するダイアログ ボックス、レポート ウィザード、および画像ウィザードのヘルプについて説明します。  
-  
- [Reporting Services 構成マネージャーのヘルプ トピック](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
- レポート サーバー インスタンスの配置と管理に使用される [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成ツールのヘルプについて説明します。  
   
  [Management Studio のレポート サーバーの F1 ヘルプ](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] でレポートおよびレポート サーバーの管理に使用されるダイアログ ボックスのヘルプについて説明します。  

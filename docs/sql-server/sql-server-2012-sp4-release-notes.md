@@ -11,12 +11,12 @@ ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 395acfc882bdd4277a260f53eba4da8acf57d85f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: bdfedbb3a60a27ec53744b2b4a6919a5be9510fd
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111694"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986171"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack のリリース ノート
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -208,11 +208,11 @@ SQL Server 2012 Express Service Pack 1 (SP1) リリースには、SQL Server 201
 ### <a name="sql-server-data-tier-application-framework-dacfx"></a>SQL Server Data-Tier Application Framework (DACFx)  
 **インプレース アップグレードのサポート**  
   
-このバージョンの Data-Tier Application Framework (DACFx) では、以前のバージョンからのインプレース アップグレードがサポートされているので、このリリースにアップグレードする前に以前の DACFx インストールを削除する必要はありません。 今後のリリースの DACFx は、 [ここ](https://msdn.microsoft.com/library/dn702988.aspx)にあります。  
+このバージョンの Data-Tier Application Framework (DACFx) では、以前のバージョンからのインプレース アップグレードがサポートされているので、このリリースにアップグレードする前に以前の DACFx インストールを削除する必要はありません。 今後のリリースの DACFx は、 [ここ](/previous-versions/sql/sql-server-2016/dn702988(v=sql.130))にあります。  
   
 **選択的 XML インデックスのサポート**  
   
-SQL Server 2012 SP1 には、 [選択的 XML インデックス (SXI)](https://msdn.microsoft.com/598ecdcd-084b-4032-81b2-eed6ae9f5d44)のサポートが含まれています。これは SQL Server の新機能であり、高いパフォーマンスと効率で XML 列データのインデックスを作成できます。  
+SQL Server 2012 SP1 には、 [選択的 XML インデックス (SXI)](../relational-databases/xml/selective-xml-indexes-sxi.md)のサポートが含まれています。これは SQL Server の新機能であり、高いパフォーマンスと効率で XML 列データのインデックスを作成できます。  
   
 DACFx は、すべての DAC シナリオとクライアント ツールで、SXI インデックスをサポートするようになりました。 SXI がサポートされるのは、最新のバージョンの SSDT のみです。 SSDT RTM バージョンおよび September 2012 バージョンでは、SXI はサポートされません。  
   
@@ -232,7 +232,7 @@ DACFx は、すべての DAC シナリオとクライアント ツールで、SX
   
 -   BACPAC のインポート - .bacpac ファイルをインポートして、SQL Server または Azure SQL Database を新規に作成したり、空のデータベースにデータを入力したりできます。  
   
-SqlPackage.exe の完全なドキュメントは、MSDN の [ここ](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx)にあります。  
+SqlPackage.exe の完全なドキュメントは、MSDN の [ここ](../tools/sqlpackage.md)にあります。  
   
 **パッケージの互換性**  
   
@@ -243,11 +243,11 @@ SqlPackage.exe の完全なドキュメントは、MSDN の [ここ](https://msd
 -   以前のバージョンの DACFx で作成されたすべての DAC パッケージを、このリリースで使用できます。  
   
 ## <a name="see-also"></a>参照
-- [SQL Server 2012 サービス更新プログラムのインストール](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
+- [SQL Server 2012 サービス更新プログラムのインストール](/previous-versions/sql/sql-server-2012/hh479746(v=sql.110))
 - [SQL Server のバージョンとエディションを識別する方法](https://support.microsoft.com/help/321185)
-- [SQL Server 2012 サービス更新プログラムのインストール](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
+- [SQL Server 2012 サービス更新プログラムのインストール](/previous-versions/sql/sql-server-2012/hh479746(v=sql.110))
 - [SQL Server のバージョンとエディションを識別する方法](https://support.microsoft.com/help/321185) 
 - [SQL Server のバージョンとエディションを確認する方法](https://support.microsoft.com/kb/321185)  
-- [SQL Server 2014 の各エディションがサポートする機能](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
+- [SQL Server 2014 の各エディションがサポートする機能](./editions-and-components-of-sql-server-2016.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
