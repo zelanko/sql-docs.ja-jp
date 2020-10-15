@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 60bf46d57b029696229ebf50188eca39f5b97c0a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1f05ea22f092573364e663165559be73857ca320
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724513"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038919"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) の使用に関するヒントとテクニック
 
@@ -41,9 +41,9 @@ ms.locfileid: "91724513"
 
 この記事に記載されている手順をテストするには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、SQL サーバーへのアクセス、および AdventureWorks データベースが必要です。 
 
-* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
+* [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md) をインストールします。
 * [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールします。
-* [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードする。 SSMS でデータベースを復元する方法については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
+* [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードする。 SSMS でデータベースを復元する方法については、[データベースの復元](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)に関するページを参照してください。 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>T-SQL コードをコメント化する/コメント解除する
 
@@ -286,7 +286,7 @@ SQL Server に接続する前に、あるいは接続した後に、いくつか
 
 SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 以下の "*チュートリアル*" と "*操作方法*" に関する記事は、SSMS 内で使用できるさまざまな機能を使用するのに役立ちます。  以下の記事では、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能にアクセスする方法が説明されています。
 
-* [インスタンスに接続してクエリを実行する](connect-query-sql-server.md)
+* [インスタンスに接続してクエリを実行する](../quickstarts/connect-query-sql-server.md)
 * [スクリプトの作成](scripting-ssms.md)
 * [SSMS でテンプレートを使用する](../template/templates-ssms.md)
 * [SSMS を構成する](ssms-configuration.md)

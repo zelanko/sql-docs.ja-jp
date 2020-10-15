@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 4d8df5bbc3ead279cb9606da6a906f9d713ff439
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: a2fe23c032c9e11d31586b25064c2ede386fa3e5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662041"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038963"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>SQL Server Management Studio でオブジェクトのスクリプトを作成する
 
@@ -43,11 +43,11 @@ ms.locfileid: "91662041"
 
 このチュートリアルを実行するには、SQL Server Management Studio、SQL Server を実行しているサーバーへのアクセス、および AdventureWorks データベースが必要です。
 
-* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
+* [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md) をインストールします。
 * [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
 * [AdventureWorks2016 サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードする。
 
-SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
+SSMS でデータベースを復元する手順については、[データベースの復元](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)に関するページを参照してください。 
 
 ## <a name="script-queries-from-the-gui"></a>GUI からクエリのスクリプトを作成する
 
@@ -146,7 +146,7 @@ SSMS の GUI を使用してタスクを完了するたびに、タスクに対�
    ![オブジェクトをスクリプト化する](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > **[スクリプトを作成するデータの種類]** オプションに *[スキーマとデータ]* を選択すると、データベースのデータをスクリプト化することができます。 ただし、この設定は大規模なデータベースには適していません。 SSMS で割り当て可能なメモリよりも多くのメモリが割り当てられる可能性があります。 小さなデータベースの場合、この制限は問題ありません。 大規模なデータベースのデータを移動する場合は、[インポートとエクスポート ウィザード](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)を使用します。
+   > **[スクリプトを作成するデータの種類]** オプションに *[スキーマとデータ]* を選択すると、データベースのデータをスクリプト化することができます。 ただし、この設定は大規模なデータベースには適していません。 SSMS で割り当て可能なメモリよりも多くのメモリが割り当てられる可能性があります。 小さなデータベースの場合、この制限は問題ありません。 大規模なデータベースのデータを移動する場合は、[インポートとエクスポート ウィザード](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)を使用します。
 
 6. **[OK]** を選択し、 **[次へ]** を選択します。
 
@@ -199,7 +199,7 @@ SSMS の GUI を使用してタスクを完了するたびに、タスクに対�
 
 ## <a name="script-extended-events"></a>拡張イベントのスクリプトを作成する
 
-このセクションでは、[拡張イベント](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)のスクリプトを作成する方法について説明します。
+このセクションでは、[拡張イベント](../../relational-databases/extended-events/extended-events.md)のスクリプトを作成する方法について説明します。
 
 1. SQL Server を実行しているサーバーに接続します。
 
@@ -226,7 +226,7 @@ SSMS の GUI を使用してタスクを完了するたびに、タスクに対�
 
 SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 以下の "*チュートリアル*" と "*操作方法*" に関する記事は、SSMS 内で使用できるさまざまな機能を使用するのに役立ちます。 以下の記事では、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能にアクセスする方法が説明されています。
 
-* [インスタンスに接続してクエリを実行する](connect-query-sql-server.md)
+* [インスタンスに接続してクエリを実行する](../quickstarts/connect-query-sql-server.md)
 * [SSMS でテンプレートを使用する](../template/templates-ssms.md)
 * [SSMS を構成する](ssms-configuration.md)
 * [SSMS を使用するための追加のヒントとテクニック](ssms-tricks.md)

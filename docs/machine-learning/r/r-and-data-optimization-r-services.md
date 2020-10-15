@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 95600d85c02d120f1bb4df2e7a73411a9965550a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: eaabfce536283644a0ccedcc315d91e11f33eade
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179997"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956581"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services のパフォーマンス - データの最適化
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -131,19 +131,19 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 RevoScaleR アルゴリズムの多くが、トレーニング モデルの生成方法を制御するパラメーターをサポートしています。 モデルの精度と正確性は重要ですが、アルゴリズムのパフォーマンスも同様に重要な可能性があります。 正確性とトレーニング時間で適切なバランスを得るために、パラメーターを変更することで計算を高速化できます。ほとんどの場合、精度と正確性を低下させることなくパフォーマンスを向上させることができます。
 
-+ [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
++ [rxDTree](/r-server/r-reference/revoscaler/rxdtree)
 
     `rxDTree` では、`maxDepth` パラメーターがサポートされています。これはデシジョン ツリーの深さを制御します。 `maxDepth` が増加するとパフォーマンスが低下する可能性があります。したがって、深さを増やすメリットと、パフォーマンスを低下させるデメリットを分析することが重要です。
 
     `maxNumBins``maxDepth`、`maxComplete`、`maxSurrogate` などのパラメーターを調整することで、時間の複雑さと予測の精度のバランスを制御することもできます。 深さを 10 または 15 を超えた値に増やすと、計算が非常に不経済になる可能性があります。
 
-+ [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
++ [rxLinMod](/r-server/r-reference/revoscaler/rxlinmod)
 
     数式の最初の従属変数が因子変数の場合に、`cube` を使用してみます。
     
     `cube` が `TRUE` に設定されているとき、回帰は逆分割を使用して実行されます。これにより、標準的な回帰計算よりも高速になり、使用されるメモリが少なくなる可能性があります。 数式に大量の変数がある場合は、パフォーマンスが大幅に向上する可能性があります。
 
-+ [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
++ [rxLogit](/r-server/r-reference/revoscaler/rxlogit)
 
     数式の最初の従属変数が因子変数の場合に、`cube` を使用します。
     
@@ -153,31 +153,31 @@ RevoScaleR の最適化に関するその他のガイダンスについては、
 
 + サポート記事: [rxDForest と rxDTree のパフォーマンス チューニング オプション](https://support.microsoft.com/kb/3104235)
 
-+ ブースト ツリー モデルに合ったモデルを制御するためのメソッド: [ストキャスティクス勾配ブースティングを使用したモデルの推定](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ ブースト ツリー モデルに合ったモデルを制御するためのメソッド: [ストキャスティクス勾配ブースティングを使用したモデルの推定](/r-server/r/how-to-revoscaler-boosting)
 
-+ RevoScaleR の移動方法とデータの処理方法の概要: [ScaleR でカスタム チャンク アルゴリズムを作成する](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ RevoScaleR の移動方法とデータの処理方法の概要: [ScaleR でカスタム チャンク アルゴリズムを作成する](/r-server/r/how-to-developer-write-chunking-algorithms)
 
-+ RevoScaleR のプログラミング モデル:[RevoScaleR でのスレッドの管理](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
++ RevoScaleR のプログラミング モデル:[RevoScaleR でのスレッドの管理](/r-server/r/how-to-developer-manage-threads)
 
-+ [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest) 向け関数リファレンス
++ [rxDForest](/r-server/r-reference/revoscaler/rxdforest) 向け関数リファレンス
 
-+ [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees) 向け関数リファレンス
++ [rxBTrees](/r-server/r-reference/revoscaler/rxbtrees) 向け関数リファレンス
 
 ### <a name="use-microsoftml"></a>MicrosoftML を使用する
 
 また、新しい **MicrosoftML** パッケージを参照することをお勧めします。このパッケージには、RevoScaleR によって提供される計算コンテキストと変換を使用できる、スケーラブルな機械学習アルゴリズムが用意されています。
 
-+ [MicrosoftML の使用を開始する](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
++ [MicrosoftML の使用を開始する](/r-server/r/concept-what-is-the-microsoftml-package)
 
-+ [MicrosoftML アルゴリズムを選択する方法](https://docs.microsoft.com/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
++ [MicrosoftML アルゴリズムを選択する方法](/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
 
 ### <a name="operationalize-a-solution-using-microsoft-r-server"></a>Microsoft R Server を使用してソリューションを運用可能にする
 
-ご自身のシナリオに、格納されたモデルを使用した高速予測、またはアプリケーションへの機械学習の統合が含まれる場合は、Microsoft R Server の[運用可能化](https://docs.microsoft.com/r-server/what-is-operationalization)機能 (以前の DeployR) を使用できます。
+ご自身のシナリオに、格納されたモデルを使用した高速予測、またはアプリケーションへの機械学習の統合が含まれる場合は、Microsoft R Server の[運用可能化](/r-server/what-is-operationalization)機能 (以前の DeployR) を使用できます。
 
-+ **データ サイエンティスト**として、[mrsdeploy パッケージ](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package)を使用して、他のコンピューターと R コードを共有し、R 分析を Web、デスクトップ、モバイル、およびダッシュボード アプリケーションに統合します。[Microsoft R Server で R Web サービスを発行および管理する方法](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ **データ サイエンティスト**として、[mrsdeploy パッケージ](/r-server/r-reference/mrsdeploy/mrsdeploy-package)を使用して、他のコンピューターと R コードを共有し、R 分析を Web、デスクトップ、モバイル、およびダッシュボード アプリケーションに統合します。[Microsoft R Server で R Web サービスを発行および管理する方法](/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
-+ **管理者**として、パッケージの管理方法、Web ノードと計算ノードの監視方法、および R ジョブでのセキュリティ管理方法を学習します。[R で Web サービスを操作して使用する方法](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
++ **管理者**として、パッケージの管理方法、Web ノードと計算ノードの監視方法、および R ジョブでのセキュリティ管理方法を学習します。[R で Web サービスを操作して使用する方法](/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 
 ## <a name="articles-in-this-series"></a>このシリーズの記事
 

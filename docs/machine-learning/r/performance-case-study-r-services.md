@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6afdda3975fc8f6c269f9c1fcbca35318f0c4da
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b317c09026eb6baa0e9d0f8f2957c7c7c717af55
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179998"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956578"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services のパフォーマンス: 結果とリソース
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -357,19 +357,19 @@ R ジョブへの影響を評価するために、履歴書照合シナリオで
 
 + [64 ビット版 Windows 用の適切なページ ファイルのサイズを確認する方法](https://support.microsoft.com/kb/2860880)
 
-+ [NUMA について](https://technet.microsoft.com/library/ms178144.aspx)
++ [NUMA について](/previous-versions/sql/sql-server-2008-r2/ms178144(v=sql.105))
 
-+ [SQL Server で NUMA をサポートする方法](https://technet.microsoft.com/library/ms180954.aspx)
++ [SQL Server で NUMA をサポートする方法](/previous-versions/sql/sql-server-2008-r2/ms180954(v=sql.105))
 
-+ [ソフト NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [ソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)
 
 ### <a name="learn-about-sql-server-optimizations"></a>SQL Server の最適化について学習する
 
 + [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
-+ [メモリ最適化テーブルの概要](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
++ [メモリ最適化テーブルの概要](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)
 
-+ 「[実証: イン メモリ OLTP のパフォーマンスの向上](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
++ 「[実証: イン メモリ OLTP のパフォーマンスの向上](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)
 
 + [データ圧縮](../../relational-databases/data-compression/data-compression.md)
 
@@ -383,7 +383,7 @@ R ジョブへの影響を評価するために、履歴書照合シナリオで
 
 + [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)
 
-+ [Resource Governor の概要](https://technet.microsoft.com/library/bb895232.aspx)
++ [Resource Governor の概要](/previous-versions/sql/sql-server-2008-r2/bb895232(v=sql.105))
 
 + [Resource Governor を構成する例](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/)
 
@@ -391,7 +391,7 @@ R ジョブへの影響を評価するために、履歴書照合シナリオで
 
 + [DISKSPD ストレージ ロード ジェネレーター/パフォーマンス テスト ツール](https://github.com/microsoft/diskspd)
 
-+ [FSUtil ユーティリティ リファレンス](https://technet.microsoft.com/library/cc753059.aspx)
++ [FSUtil ユーティリティ リファレンス](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc753059(v=ws.11))
 
 
 ## <a name="other-articles-in-this-series"></a>このシリーズの他の記事

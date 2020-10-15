@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: f3d2051e7003407a4ba7cbb3fb2ff8682ec6ee8f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 41a7f1f4edc247f211ee5b3cdcaddfd139c5027c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227325"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988018"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>Azure Arc 対応 SQL Server インスタンスのオンデマンド SQL 評価を構成する
 
@@ -23,13 +23,13 @@ ms.locfileid: "91227325"
 
 * SQL Server インスタンスが Azure Arc に接続されていること。次の手順に従って、[SQL Server インスタンスを Arc 対応の SQL Server にオンボード](connect.md)します。
 
-* MMA の拡張機能がマシンにインストールされ、構成されていること。 次の手順に従って [Microsoft Monitoring Agent (MMA) をインストールします](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma)。 詳細については、[Log Analytics エージェント](https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent)に関するページを参照してください。
+* MMA の拡張機能がマシンにインストールされ、構成されていること。 次の手順に従って [Microsoft Monitoring Agent (MMA) をインストールします](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma)。 詳細については、[Log Analytics エージェント](/azure/azure-monitor/platform/log-analytics-agent)に関するページを参照してください。
 
 * SQL Server で [TCP/IP プロトコルが有効になっていること](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 
 * SQL Server の名前付きインスタンスを操作する場合は、[SQL Server ブラウザー](../../tools/configuration-manager/sql-server-browser-service.md)を実行していること。
 
-* 「[サービス ハブのオンデマンド評価の前提条件](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)」の SQL Server ドキュメントを確認済みであること。
+* 「[サービス ハブのオンデマンド評価の前提条件](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)」の SQL Server ドキュメントを確認済みであること。
 
 ## <a name="enable-on-demand-sql-assessment"></a>オンデマンド SQL Assessment を有効にする
 
@@ -75,6 +75,6 @@ Microsoft Monitoring Agent を使用すると、15 分ごとに作業フォル�
 
 ## <a name="next-steps"></a>次の手順
 
-詳細については、「[サービス ハブのオンデマンド評価の前提条件](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)」の SQL Server ドキュメントを参照してください。
+詳細については、「[サービス ハブのオンデマンド評価の前提条件](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)」の SQL Server ドキュメントを参照してください。
 
 オンデマンド SQL Assessment の包括的なサポートを受けるには、Premier または統合サポート サブスクリプションが必要です。 詳細については、[Azure Premier サポート](https://azure.microsoft.com/support/plans/premier)に関するページをご覧ください。

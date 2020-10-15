@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e60acfeb4f8a785fa55ee8df70003b9b8b42f13b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3b523b792889c21a0b1d00ea3ab3ea3ac6fbf2aa
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114645"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988400"
 ---
 # <a name="remove-a-failover-cluster-instance-setup"></a>フェールオーバー クラスター インスタンスの削除 (セットアップ)
 
@@ -39,7 +39,7 @@ ms.locfileid: "91114645"
   
 -   複数の SQL IP クラスター リソースを持つフェールオーバー クラスターをアンインストールする場合は、フェールオーバー クラスター マネージャーまたは PowerShell を使用してすべての SQL IP リソースを削除する必要があります。  
   
- コマンド プロンプトの構文については、「 [コマンド プロンプトから SQL Server 2016 をインストール](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」を参照してください。  
+ コマンド プロンプトの構文については、「 [コマンド プロンプトから SQL Server 2016 をインストール](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)」を参照してください。  
   
 ### <a name="to-uninstall-a-ssnoversion-failover-cluster-instance"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスをアンインストールには
   
@@ -47,5 +47,4 @@ ms.locfileid: "91114645"
   
 ## <a name="see-also"></a>参照  
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
   
