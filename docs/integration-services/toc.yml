@@ -82,6 +82,9 @@
   href: ../integration-services/integration-services-ssis-projects-and-solutions.md
 - name: SSIS DevOps
   href: ../integration-services/devops/ssis-devops-overview.md
+  items:
+    - name: スタンドアロン SSIS DevOps ツール
+      href: ../integration-services/devops/ssis-devops-standalone.md
 - name: ユーザー インターフェイス
   href: ../integration-services/integration-services-user-interface.md
   items:

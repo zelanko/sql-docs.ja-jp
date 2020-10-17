@@ -59,7 +59,7 @@
         - name: PowerShell の拡張機能
           href: extensions/powershell-extension.md
         - name: SandDance の拡張機能
-          href: sanddance-extension.md
+          href: extensions/sanddance-extension.md
         - name: スキーマ比較の拡張機能
           href: extensions/schema-compare-extension.md
         - name: SQL Database プロジェクトの拡張機能
@@ -84,10 +84,10 @@
           href: extensions/sql-server-profiler-extension.md
     - name: 拡張機能のオーサリング
       items:
-        - name: 拡張性の概要
-          href: extensibility.md
         - name: 拡張機能のオーサリング
           href: extensions/extension-authoring.md
+        - name: 拡張性の概要
+          href: extensibility.md
         - name: 拡張 API
           href: extensibility-apis.md
         - name: キーマップ拡張機能
@@ -102,6 +102,8 @@
           href: extensions/wizard-extension.md
     - name: 統合ターミナル (PowerShell、Bash)
       href: integrated-terminal.md
+    - name: プレビュー機能
+      href: preview-features.md
     - name: サーバー グループ
       href: server-groups.md
     - name: ソース管理
@@ -122,8 +124,12 @@
           href: notebooks/notebooks-kqlmagic.md
     - name: デプロイ
       items:
+        - name: Azure SQL Database のデプロイ
+          href: deploy-azure-sql-database.md
         - name: Azure SQL Edge のデプロイ
           href: deploy-azure-sql-edge.md
+        - name: Azure Virtual Machines 上の SQL Server をデプロイする
+          href: deploy-azure-sql-server-vm.md
     - name: ダッシュボードおよび分析情報のウィジェット
       href: insight-widgets.md
     - name: コード スニペット

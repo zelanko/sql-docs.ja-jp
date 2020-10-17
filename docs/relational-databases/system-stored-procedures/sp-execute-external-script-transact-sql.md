@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7953c9aafda19182395311b7adc648c04d5c1f39
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810195"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155078"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91810195"
 
 Machine Learning Services の場合、 [Python](../../machine-learning/concepts/extension-python.md) と [R](../../machine-learning/concepts/extension-r.md) はサポートされている言語です。 言語拡張の場合、Java はサポートされていますが、 [CREATE EXTERNAL Language](../../t-sql/statements/create-external-language-transact-sql.md)を使用して定義する必要があります。
 
-**Sp_execute_external_script**を実行するには、まず Machine Learning Services または言語拡張機能をインストールする必要があります。 詳細については、Windows および[linux](../../linux/sql-server-linux-setup-machine-learning.md)[に SQL Server Machine Learning Services (Python および R) をインストール](../../machine-learning/install/sql-machine-learning-services-windows-install.md)するか、windows および[Linux](../../linux/sql-server-linux-setup-language-extensions.md)[に SQL Server 言語拡張機能をインストール](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)してください。
+**Sp_execute_external_script**を実行するには、まず Machine Learning Services または言語拡張機能をインストールする必要があります。 詳細については、Windows および[linux](../../linux/sql-server-linux-setup-machine-learning.md)[に SQL Server Machine Learning Services (Python および R) をインストール](../../machine-learning/install/sql-machine-learning-services-windows-install.md)するか、windows および[Linux](../../linux/sql-server-linux-setup-language-extensions-java.md)[に SQL Server 言語拡張機能をインストール](../../language-extensions/install/windows-java.md)してください。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` 外部スクリプトによって使用される入力パラメーターの値の一覧です。  
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 > [!IMPORTANT]
 > クエリツリーは SQL machine learning によって制御され、ユーザーはクエリに対して任意の操作を実行できません。
@@ -225,7 +225,7 @@ Float 値 (たとえば、、 `+Inf` 、 `-Inf` `NaN` ) は、両方の言語で
 
 **すべての外部スクリプトデータベースの実行**権限が必要です。  
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 このセクションでは、を使用して、このストアドプロシージャを使用して R または Python スクリプトを実行する方法の例について説明 [!INCLUDE[tsql](../../includes/tsql-md.md)] します。
 
@@ -322,7 +322,7 @@ Python を使って似たモデルを生成するには、言語識別子を `@l
 
 スコアリングには、ネイティブな [PREDICT](../../t-sql/queries/predict-transact-sql.md) 関数を使うこともできます。通常、これは Python や R のランタイムを呼び出さないので高速です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 + [SQL 機械学習](../../machine-learning/index.yml)
 + [SQL Server 言語拡張機能](../../language-extensions/language-extensions-overview.md)。 
