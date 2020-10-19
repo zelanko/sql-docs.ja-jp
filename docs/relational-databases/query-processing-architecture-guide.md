@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 49fd020cbbe8162dd82b51ab4743730a85762598
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: b06b51e5c8f1cbe7d542c8ecf04df0ded859d775
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603378"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892442"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -148,7 +148,7 @@ GO
 - 定数のみから構成される数式 (1+1、5/3*2 など)。
 - 定数のみから構成される論理式 (1=1、1>2 AND 3>4 など)。
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってたたみ込み可能と判断された組み込み関数 (`CAST`、`CONVERT` など)。 固有の関数は、通常はたたみ込み可能です。ただし結果が関数への入力のみによって決まらず、SET オプション、言語設定、データベース オプション、暗号化キーなどの、状況によって変わりうる他の情報を交えて決まる場合は例外です。 非決定的関数はたたみ込み不可能です。 組み込みの決定的関数はたたみ込み可能ですが、一部例外があります。
-- CLR ユーザー定義型の決定的メソッドおよび決定的スカラー値 CLR ユーザー定義関数 ([!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降)。 詳細については、「[CLR ユーザー定義関数およびメソッドの定数たたみ込み](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15)」を参照してください。
+- CLR ユーザー定義型の決定的メソッドおよび決定的スカラー値 CLR ユーザー定義関数 ([!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降)。 詳細については、「[CLR ユーザー定義関数およびメソッドの定数たたみ込み](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014?view=sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods)」を参照してください。
 
 > [!NOTE] 
 > 例外の 1 つは LOB 型です。 たたみ込み処理の出力の種類がラージ オブジェクト型 (text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max)、または XML) である場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では式はたたみ込まれません。
@@ -1030,7 +1030,7 @@ WHERE ProductID = 63;
     カーソルについて詳しくは、「[DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)」をご覧ください。
     
 -   **再帰クエリ**        
-    再帰について詳しくは、「[再帰共通テーブル式の定義および使用に関するガイドライン](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)」および「[Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)」(T-SQL での再帰) をご覧ください。
+    再帰について詳しくは、「[再帰共通テーブル式の定義および使用に関するガイドライン](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)」および「[Recursion in T-SQL](/previous-versions/sql/legacy/aa175801(v=sql.80))」(T-SQL での再帰) をご覧ください。
 
 -   **複数ステートメント テーブル値関数 (MSTVF)**         
     MSTVF の詳細については、「[ユーザー定義関数の作成 (データベース エンジン)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)」を参照してください。
@@ -1270,7 +1270,8 @@ OLE DB データ ソースにリンク サーバーとしてアクセスする�
 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] では、多くの並列プランでのパーティション テーブルに対するクエリ処理のパフォーマンスが向上しています。また、並列プランと直列プランを表す方法が変更され、コンパイル時と実行時の両方の実行プランで示されるパーティション分割情報が強化されています。 このトピックでは、これらの機能強化について説明します。また、パーティション テーブルとパーティション インデックスのクエリ実行プランを解釈する方法、およびパーティション分割されたオブジェクトに対するクエリのパフォーマンス向上に関するベスト プラクティスについて説明します。 
 
 > [!NOTE]
-> パーティション テーブルとパーティション インデックスは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition、Developer Edition、および Evaluation Edition でのみサポートされます。
+> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] までは、パーティション テーブルおよびインデックスは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise、Developer および Evaluation Edition でのみサポートされます。   
+> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 以降では、パーティション テーブルおよびインデックスは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition でもサポートされます。 
 
 ### <a name="new-partition-aware-seek-operation"></a>新しいパーティション対応のシーク操作
 
@@ -1435,7 +1436,7 @@ XML プラン表示出力では、 `SeekPredicateNew` 要素がその要素を�
 * 高速なプロセッサおよびできるだけ多くのプロセッサ コアを搭載したサーバーを使用して、並列クエリ処理機能を活用します。
 * サーバーに十分な I/O コントローラーの帯域幅があることを確認します。 
 * すべての大きなパーティション テーブルにクラスター化インデックスを作成して、B ツリーのスキャンの最適化を活用します。
-* パーティション テーブルへのデータの一括読み込みを行う場合は、 [データ読み込みのパフォーマンス ガイド](https://msdn.microsoft.com/library/dd425070.aspx)に関するホワイト ペーパーで説明されている推奨事項に従ってください。
+* パーティション テーブルへのデータの一括読み込みを行う場合は、 [データ読み込みのパフォーマンス ガイド](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))に関するホワイト ペーパーで説明されている推奨事項に従ってください。
 
 ### <a name="example"></a>例
 

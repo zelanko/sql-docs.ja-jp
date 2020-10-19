@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 1413903521019e9b2c95b11143d7e0039fc8e103
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 0231111907d1f342aeda6aea5a9d824a56f40e8b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745972"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987571"
 ---
 # <a name="azure-data-studio-faq"></a>Azure Data Studio に関する FAQ
 
@@ -181,9 +181,9 @@ SQL PowerShell は、現在 PowerShell ギャラリーで入手できます。�
 
 開発者と DBA が通常は、Azure Data Studio のユーザーです。
 
-## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Azure Data Studio は Azure SQL Data Warehouse に統合されていますか?
+## <a name="does-azure-data-studio-integrate-with-azure-synapse-analytics"></a>Azure Data Studio は Azure Synapse Analytics に統合されますか?
 
-はい。 Azure SQL Data Warehouse に対する Azure Data Studio のサポートは、Azure SQL Managed Instance および SQL Server 2019 ビッグ データと共に現在プレビュー段階にあります。
+はい。 Azure Synapse Analytics に対する Azure Data Studio のサポートは、Azure SQL Managed Instance および SQL Server 2019 ビッグ データと共に、現在プレビュー段階にあります。
 
 ## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>新しいバージョンの SQL Server にとって Azure Data Studio が重要である理由は何ですか?
 

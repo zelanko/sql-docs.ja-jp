@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cab3daadc9c3fda3739db3c48fb623725098cba1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 70358a9ba4fc5cb9d9b326119b488efe6af3a9f5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480952"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868192"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>トランザクションのロックおよび行のバージョン管理ガイド
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -810,7 +810,7 @@ GO
 ## <a name="dynamic-locking"></a><a name="dynamic_locks"></a> 動的ロック
  行ロックなど、レベルの低いロックを使用すると、2 つのトランザクションが同時にデータの同じ部分に対するロックを要求する可能性が減ってコンカレンシーが高まります。 同時に、ロックの数も増えるので、ロックを管理するために多くのリソースが必要になります。 テーブルまたはページに対する高レベルのロックはオーバーヘッドが減りますが、コンカレンシーは低下します。  
   
- ![lockcht](../relational-databases/media/lockcht.png) 
+ ![ロック コストとコンカレンシー コスト](../relational-databases/media/lockcht.png) 
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] は、動的ロック ストラテジによって最もコストの低いロックを判断します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]はクエリを実行する際に、スキーマおよびクエリの特性に基づいて最適なロックを自動的に判断します。 たとえば、インデックス スキャンの実行時に、インデックス内でのページレベルのロックが選択されます。これにより、ロックのオーバーヘッドを減少させることができます。  
   
@@ -940,7 +940,7 @@ ORDER BY [Date] DESC
 
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
-![system_health_qry](../relational-databases/media/system_health_qry.png)
+![system_health_xevent_query_result](../relational-databases/media/system_health_qry.png)
 
 次の例では、上の結果の最初のリンクをクリックした後の出力を示します。
 
@@ -2080,8 +2080,15 @@ GO
   
 -   トランザクション中は、アクセスするデータ量をできるだけ少なくします。  
     アクセスするデータ量が少なければ、ロックされる行数が減るので、トランザクション間の競合が減少します。  
+    
+-   可能な限り、holdlock などのペシミスティック ロック ヒントは避けてください。 
+    HOLDLOCK や SERIALIZABLE 分離レベルのようなヒントを使用すると、共有ロックでもプロセスが待機状態となり、コンカレンシーが低下する可能性があります
+
+-   可能な限り、暗黙のトランザクションの使用は避けてください。暗黙のトランザクションを使用すると、その性質により、予期しない動作となる可能性があります。 [暗黙のトランザクションとコンカレンシーの問題](#implicit-transactions-and-avoiding-concurrency-and-resource-problems)に関する記述を参照してください
+
+-   [FILL FACTOR](indexes/specify-fill-factor-for-an-index.md) を減らしてインデックスを設計します。FILL FACTOR を減らすと、インデックス ページの断片化を防いだり、減らしたりすることができるため、特にディスクから取得した場合にインデックスのシーク時間を短縮するのに役立つことがあります。 テーブルまたはビューのデータとインデックスに関する断片化情報を表示するために、sys.dm_db_index_physical_stats を使用できます。 
   
-#### <a name="avoiding-concurrency-and-resource-problems"></a>コンカレンシーとリソースの問題の回避  
+#### <a name="implicit-transactions-and-avoiding-concurrency-and-resource-problems"></a>暗黙のトランザクションおよびコンカレンシーとリソースの問題の回避  
  コンカレンシーおよびリソースの問題を防ぐには、暗黙のトランザクションを注意深く管理します。 暗黙のトランザクションを使用する場合、[!INCLUDE[tsql](../includes/tsql-md.md)] または `COMMIT` の直後の `ROLLBACK` ステートメントから新しいトランザクションが自動的に開始されます。 その結果、アプリケーションでデータが参照されている間や、ユーザーからの入力を要求している間にも新しいトランザクションが開くことができます。 データの変更を防ぐことが必要な最後のトランザクションが完了した後、データの変更を防ぐことが必要な次のトランザクションまでは暗黙のトランザクションを無効にしてください。 そうすることで、アプリケーションでデータが参照されている間やユーザーが入力している間は、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]が自動コミット モードになります。  
   
  スナップショット分離レベルが有効である場合、新しいトランザクションがロックをかけることはありませんが、実行時間の長いトランザクションを実行する間はそれ以前のトランザクションが `tempdb` から削除されません。  
@@ -2112,8 +2119,8 @@ GO
  KILL ステートメントの使用が必要になる場合もあります。 ただし、重要なプロセスが実行中の場合は特に、このステートメントの使用には十分注意してください。 詳しくは、「[KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md)」をご覧ください。  
   
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> その他の情報   
-[行のバージョン管理のオーバーヘッド](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
+[行のバージョン管理のオーバーヘッド](/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
 [拡張イベント](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      
-[トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)     
+[トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)

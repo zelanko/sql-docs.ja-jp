@@ -17,16 +17,16 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cbc395652b7c829fe3694bf5d040a319073e958
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cdad35826cf23244264057c059d2f2c79f2049a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470370"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891012"
 ---
 # <a name="partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックス
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブルおよびインデックスのパーティション分割をサポートします。 パーティション テーブルとパーティション インデックスのデータは、データベース内の複数のファイル グループに分散できるように、複数の単位に分割されます。 行のグループが各パーティションにマップされるように、データは行方向にパーティション分割されます。 1 つのインデックスまたはテーブルのすべてのパーティションは、同じデータベース内に存在する必要があります。 データに対するクエリまたは更新の実行時は、テーブルやインデックスが 1 つの論理エンティティとして扱われます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 より前では、パーティション テーブルとパーティション インデックスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブルおよびインデックスのパーティション分割をサポートします。 パーティション テーブルとパーティション インデックスのデータは、データベース内の複数のファイル グループに分散できるように、複数の単位に分割されます。 行のグループが各パーティションにマップされるように、データは行方向にパーティション分割されます。 1 つのインデックスまたはテーブルのすべてのパーティションは、同じデータベース内に存在する必要があります。 データに対するクエリまたは更新の実行時は、テーブルやインデックスが 1 つの論理エンティティとして扱われます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 より前では、パーティション テーブルとパーティション インデックスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、既定で最大 15,000 個のパーティションをサポートします。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のバージョンでは、パーティションの数は既定で 1,000 に制限されていました。 x86 ベースのシステムでは、パーティション数が 1,000 を超えるテーブルまたはインデックスを作成できますが、サポートされていません。  
@@ -48,7 +48,7 @@ ms.locfileid: "88470370"
 テーブルおよびインデックスのパーティション分割に関連する用語を次に示します。  
   
 ### <a name="partition-function"></a>パーティション関数  
-テーブルまたはインデックスの行を、パーティション分割列と呼ばれる特定の列の値に基づいて、一連のパーティションにマップする方法を定義するデータベース オブジェクト。 つまり、テーブルのパーティションの数とパーティションの境界の定義方法は、パーティション関数によって定義されます。 たとえば、販売注文データを格納するテーブルの場合、販売日などの **datetime** 列に基づいて、月別の 12 のパーティションに分割できます。  
+テーブルまたはインデックスの行を、パーティション分割列と呼ばれる特定の列の値に基づいて、一連のパーティションにマップする方法を定義するデータベース オブジェクト。 パーティション分割列の各値は、パーティション値を返すパーティション関数への入力です。 パーティション関数によって、テーブルに含まれるパーティションの数とパーティションの境界が定義されます。 たとえば、販売注文データを格納するテーブルの場合、販売日などの **datetime** 列に基づいて、月別の 12 のパーティションに分割できます。  
   
 ### <a name="partition-scheme"></a>パーティション構成 
 パーティション関数のパーティションを一連のファイル グループにマップするデータベース オブジェクト。 パーティションを別々のファイル グループに配置する主な理由は、パーティションのバックアップ操作を個別に実行できるようにすることです。 これは、バックアップを個別のファイル グループで実行できるからです。  
@@ -129,9 +129,8 @@ ms.locfileid: "88470370"
  次のホワイトペーパーには、パーティション テーブルおよびパーティション インデックスの戦略と有用な実装について記述されています。  
 -   [SQL Server 2008 を使用したパーティション テーブルとパーティション インデックス](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
 -   [自動スライディング ウィンドウを実装する方法](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
--   [パーティション テーブルの一括読み込み](https://msdn.microsoft.com/library/cc966380.aspx)    
--   [プロジェクト REAL:データ ライフ サイクル -- パーティション分割](https://technet.microsoft.com/library/cc966424.aspx)    
--   [パーティション テーブルとパーティション インデックスに対するクエリ処理の機能強化](https://msdn.microsoft.com/library/ms345599.aspx)    
+-   [パーティション テーブルの一括読み込み](/previous-versions/sql/sql-server-2005/administrator/cc966380(v=technet.10))    
+-   [プロジェクト REAL:データ ライフ サイクル -- パーティション分割](/previous-versions/sql/sql-server-2005/administrator/cc966424(v=technet.10))    
+-   [パーティション テーブルとパーティション インデックスに対するクエリ処理の機能強化](/previous-versions/sql/sql-server-2008-r2/ms345599(v=sql.105))    
 -   [大規模なリレーショナル データ ウェアハウスを構築するためのトップ 10 のベスト プラクティス](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf) (_SQLCAT ガイド:リレーショナル エンジン_)
-  
   

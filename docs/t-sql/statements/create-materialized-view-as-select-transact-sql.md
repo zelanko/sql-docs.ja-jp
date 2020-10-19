@@ -38,16 +38,16 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: bd7a5056761f6b249caea00463637c90f8ba5a49
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: cda76ce52f9b14c732cb4effb95c3ff523dd460b
+ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671155"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847342"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 この記事では、ソリューション開発用の [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] の CREATE MATERIALIZED VIEW AS SELECT T-SQL ステートメントについて説明します。 この記事には、コード例も記載されています。
 
@@ -113,6 +113,11 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 
 Azure データ ウェアハウスの具体化されたビューは、SQL Server のインデックス付きビューに似ています。具体化されたビューで集計関数がサポートされる点を除き、インデックス付きビューとほぼ同じ制限が共有されています (詳細については、「[Create Indexed Views (インデックス付きビューを作成する)](/sql/relational-databases/views/create-indexed-views)」 を参照してください)。   
 
+>[!Note]
+>CREATE MATERIALIZED VIEW で COUNT、DISTINCT、COUNT (DISTINCT expression)、COUNT_BIG (DISTINCT expression) はサポートされていませんが、これらの関数を指定した SELECT クエリを使用すると、具体化されたビューの利点が得られ、パフォーマンスをより高速化することができます。これは、Synapse SQL オプティマイザーを使用すると、既存の具体化されたビューと一致するようにユーザー クエリの集計を自動的に再作成できるためです。  詳細については、この記事の例のセクションを確認してください。 
+
+CREATE MATERIALIZED VIEW AS SELECT で APPROX_COUNT_DISTINCT はサポートされません。
+
 具体化されたビューでは、CLUSTERED COLUMNSTORE INDEX のみがサポートされます。 
 
 具体化されたビューでは、他のビューを参照できません。  
@@ -146,6 +151,49 @@ SQL Server Management Studio 内の説明プランとグラフィカルな推定
 ## <a name="permissions"></a>アクセス許可
 
 ビューが作成されているスキーマに対する 1) REFERENCES と CREATE VIEW アクセス許可、または 2) CONTROL アクセス許可が必要です。 
+
+## <a name="example"></a>例
+A. この例には、Synapse SQL オプティマイザーで具体化されたビューを自動的に使用してクエリを実行し、パフォーマンスを向上させる方法が示されています。これは、クエリで、COUNT(DISTINCT expression) などの、CREATE MATERIALIZED VIEW でサポートされていない関数を使用する場合でも同様です。 これまで完了するのに数秒かかっていたクエリが、ユーザー クエリに変更を加えることなく 1 秒未満で終了するようになりました。   
+
+``` sql 
+
+-- Create a table with ~536 million rows
+create table t(a int not null, b int not null, c int not null) with (distribution=hash(a), clustered columnstore index);
+
+insert into t values(1,1,1);
+
+declare @p int =1;
+while (@P < 30)
+    begin
+    insert into t select a+1,b+2,c+3 from t;  
+    select @p +=1;
+end
+
+-- A SELECT query with COUNT_BIG (DISTINCT expression) took multiple seconds to complete and it reads data directly from the base table a. 
+select a, count_big(distinct b) from t group by a;
+
+-- Create two materialized views, not using COUNT_BIG(DISTINCT expression).
+create materialized view V1 with(distribution=hash(a)) as select a, b from dbo.t group by a, b;
+
+-- Clear all cache.
+
+DBCC DROPCLEANBUFFERS;
+DBCC freeproccache;
+
+-- Check the estimated execution plan in SQL Server Management Studio.  It shows the SELECT query is first step (GET operator) is to read data from the materialized view V1, not from base table a.
+select a, count_big(distinct b) from t group by a;
+
+-- Now execute this SELECT query.  This time it took sub-second to complete because Synapse SQL engine automatically matches the query with materialized view V1 and uses it for faster query execution.  There was no change in the user query.
+
+DECLARE @timerstart datetime2, @timerend datetime2;
+SET @timerstart = sysdatetime();
+
+select a, count_big(distinct b) from t group by a;
+
+SET @timerend = sysdatetime()
+select DATEDIFF(ms,@timerstart,@timerend);
+
+```
 
   
 ## <a name="see-also"></a>関連項目
