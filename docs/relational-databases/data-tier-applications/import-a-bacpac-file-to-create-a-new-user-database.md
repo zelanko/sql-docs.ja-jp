@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e02041dd6801f5ab0b819f4bffd91ca8ba38e8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77209c7b5156956897c3c458e825fddeb7462e22
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412438"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195595"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC ファイルのインポートによる新しいユーザー データベースの作成
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -122,8 +122,8 @@ ms.locfileid: "88412438"
   
  **Azure SQL データベースの場合**  
   
- - 「 **[BACPAC ファイルをインポートして新しい Azure SQL Database を作成する](https://azure.microsoft.com/documentation/articles/sql-database-import/)** 」を参照してください。Azure portal、PowerShell、SSMS、または SqlPackage を使用する場合の詳しい手順が記載されています。  
- - 「 **[SQL Database のオプションとパフォーマンス: 各サービス階層で使用できる内容について理解する](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** 」を参照してください。さまざまなサービス階層について、詳しく説明されています。  
+ - 「 **[BACPAC ファイルをインポートして新しい Azure SQL Database を作成する](/azure/azure-sql/database/database-import)** 」を参照してください。Azure portal、PowerShell、SSMS、または SqlPackage を使用する場合の詳しい手順が記載されています。  
+ - 「 **[SQL Database のオプションとパフォーマンス: 各サービス階層で使用できる内容について理解する](/azure/azure-sql/database/purchasing-models)** 」を参照してください。さまざまなサービス階層について、詳しく説明されています。  
 
 ### <a name="validation-page"></a>[検証] ページ  
  このページを使用して、操作の妨げとなる問題を確認します。 続行するには、妨げとなる問題を解決し、 **[検証の再実行]** をクリックして、検証が成功したことを確認します。  
@@ -144,8 +144,7 @@ ms.locfileid: "88412438"
  **[閉じる]** をクリックしてウィザードを閉じます。  
   
 ## <a name="see-also"></a>関連項目  
-[BACPAC ファイルをインポートして新しい Azure SQL Database を作成する](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+[BACPAC ファイルをインポートして新しい Azure SQL Database を作成する](/azure/azure-sql/database/database-import)  
  [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [データ層アプリケーションのエクスポート](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
-  
   

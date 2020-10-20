@@ -19,12 +19,12 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f31196ca74fa8aac69958ec47e084a3b63220ee7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90fdfd4a64d77d3fa51ef7dc4c39ccf11b1fb9f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425224"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196373"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services (SSIS) プロジェクトとパッケージの配置
 
@@ -95,7 +95,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
 
 このセクションで示したエラーと SSIS サービス アカウントで求められるアクセス許可の詳細については、次のブログ記事を参照してください。
  
-- [System.ComponentModel.Win32Exception: Deploying SSIS プロジェクトの配置中にクライアントが要求された特権を保有していません](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+- [System.ComponentModel.Win32Exception: Deploying SSIS プロジェクトの配置中にクライアントが要求された特権を保有していません](/archive/blogs/dataaccesstechnologies/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Integration Services サーバーへのプロジェクトの配置
   現在のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーを使用すると、さまざまな環境を利用して、パッケージの管理、パッケージの実行、およびパッケージに合わせたランタイム値の構成を行うことができます。  
@@ -114,7 +114,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
     -   以前のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]でプロジェクトを作成した場合、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクト ファイルを開いた後に、プロジェクトをプロジェクト配置モデルに変換します。  
   
         > [!NOTE]  
-        >  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有できるデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [パッケージでの接続マネージャーの追加、削除、または共有](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」 を参照してください。  
+        >  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有できるデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [パッケージでの接続マネージャーの追加、削除、または共有](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130))」 を参照してください。  
   
          **Integration Services プロジェクト変換ウィザード** を [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のいずれから実行するかによって、ウィザードが実行する変換タスクは異なります。  
   
@@ -530,7 +530,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   **Integration Services プロジェクト変換ウィザード** で、プロジェクトをプロジェクト配置モデルに変換します。  
   
 > [!NOTE]  
->  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有可能なデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [パッケージでの接続マネージャーの追加、削除、または共有](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」 を参照してください。  
+>  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有可能なデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [パッケージでの接続マネージャーの追加、削除、または共有](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130))」 を参照してください。  
   
  **目的に合ったトピックをクリックしてください**  
   
@@ -655,7 +655,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  プロジェクトの説明 (省略可能) を入力します。  
   
 ###  <a name="set-options-on-the-update-execute-package-task-page"></a><a name="executePackage"></a> [パッケージ実行タスクの更新] ページのオプションの設定  
- プロジェクト ベースの参照を使用するには、パッケージに含まれているパッケージ実行タスクを更新します。 詳細については、「 [パッケージ実行タスク エディター](../../integration-services/control-flow/execute-package-task-editor.md)」を参照してください。  
+ プロジェクト ベースの参照を使用するには、パッケージに含まれているパッケージ実行タスクを更新します。 詳細については、「 [パッケージ実行タスク エディター](../control-flow/execute-package-task.md)」を参照してください。  
   
  **[親パッケージ]**  
  パッケージ実行タスクを使用して子パッケージを実行するパッケージの名前を一覧表示します。  
@@ -746,4 +746,4 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  プロジェクトの変換は、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクトを保存しないと保存されません。  
   
  **[レポートの保存]**  
- プロジェクトの変換の概要を .xml ファイルに保存する場合にクリックします。  
+ プロジェクトの変換の概要を .xml ファイルに保存する場合にクリックします。

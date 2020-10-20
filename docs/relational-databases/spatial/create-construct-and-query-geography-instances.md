@@ -15,15 +15,15 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 271e1135cddfb775432660c1d4385753e95fbf16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8dd26e26f4b567918f56187b5be4442b286ffabb
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455475"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006335"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography インスタンスの作成、構築、およびクエリ
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
    地理空間データ型の **geography** は、球体地球座標系のデータを表します。 この型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では .NET 共通言語ランタイム (CLR) のデータ型として実装されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** データ型は、GPS の緯度経度座標などの楕円体 (球体地球) データを格納します。  
   
  **geography** 型は、各データベースで使用できるように事前に定義されています。 **geography** 型のテーブル列を作成し、システムが提供する他のデータ型を使用するときと同じように **geography** データを操作できます。  

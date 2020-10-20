@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c52bae62d70212ea735ec9d0d7eb25cf8af76551
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1a0646c394be5d00bea32f69b137e32c03d1663e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477852"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197099"
 ---
 # <a name="flat-file-source"></a>フラット ファイル ソース
 
@@ -50,7 +50,7 @@ ms.locfileid: "88477852"
     > [!NOTE]  
     >  長さ 0 の文字列を NULL として解釈するには、フラット ファイル ソースで使用するフラット ファイル接続マネージャーを、Delimited 形式を使用するように構成する必要があります。 フラット ファイル接続マネージャーで FixedWidth 形式または RaggedRight 形式が使用される場合、空白文字で構成されるデータを NULL 値として解釈できません。  
   
- フラット ファイル ソースの出力にある出力列には、FastParse プロパティが含まれています。 FastParse は、列が、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に用意されているロケール非依存型の高速な解析ルーチンを使用するか、ロケール依存型の標準的な解析ルーチンを使用するかを示します。 詳細については、「 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 」および「 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)」を参照してください。  
+ フラット ファイル ソースの出力にある出力列には、FastParse プロパティが含まれています。 FastParse は、列が、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に用意されているロケール非依存型の高速な解析ルーチンを使用するか、ロケール依存型の標準的な解析ルーチンを使用するかを示します。 詳細については、「 [Fast Parse](./parsing-data.md) 」および「 [Standard Parse](./parsing-data.md)」を参照してください。  
   
  出力列には、UseBinaryFormat プロパティも含まれます。 このプロパティを使用して、パック 10 進形式を使用するデータなど、バイナリ データのサポートをファイルに実装します。 既定では、UseBinaryFormat を **false**に設定します。 バイナリ形式を使用する場合は、UseBinaryFormat を **true** に設定し、出力列のデータ型を **DT_BYTES**に設定します。 この設定を行った場合、フラット ファイル ソースはデータ変換をスキップし、データを出力列にそのまま渡します。 この場合は、派生列変換またはデータ変換などの変換を使用して **DT_BYTES** データを別のデータ型にキャストするか、スクリプト変換でカスタム スクリプトを記述してデータを解釈できます。 また、カスタム データ フロー コンポーネントを記述してデータを解釈することもできます。 **DT_BYTES** をキャストできるデータ型の詳細については、「[Cast (SSIS 式)](../../integration-services/expressions/cast-ssis-expression.md)」を参照してください。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "88477852"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [フラット ファイルのカスタム プロパティ](../../integration-services/data-flow/flat-file-custom-properties.md)  
   
@@ -138,5 +138,4 @@ ms.locfileid: "88477852"
 ## <a name="see-also"></a>参照  
  [フラット ファイル変換先](../../integration-services/data-flow/flat-file-destination.md)   
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
-  
   
