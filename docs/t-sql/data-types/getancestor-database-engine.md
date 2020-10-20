@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3e87e45e43a6b85a04dc623a48135bdfab4c8ce8
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 0256deca482147f98ed93f788b8c77ea26a93b02
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115621"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037175"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (データベース エンジン)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -121,7 +121,6 @@ this.GetAncestor(1)
   
 ## <a name="see-also"></a>参照
 [IsDescendantOf &#40;データベース エンジン&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
-[hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid データ型メソッド リファレンス](./hierarchyid-data-type-method-reference.md)  
 [階層データ (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  

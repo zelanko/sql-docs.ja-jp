@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 566750ead98f817d995c258ce992c94d9404be44
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 1c196ea3219f4bdbad2e4001240f754b106e3917
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785123"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115425"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux のエディションとサポートされる機能
 
@@ -247,7 +247,5 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
  [SQL Server 2019 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [SQL Server 2017 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [SQL Server 2016 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [SQL Server をインストールする](../database-engine/install-windows/installation-for-sql-server-2016.md)  
- [SQL Server の製品仕様](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
-
-
+ [SQL Server をインストールする](../database-engine/install-windows/install-sql-server.md)  
+ [SQL Server の製品仕様](../sql-server/index.yml)

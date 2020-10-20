@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5b3784e4af35afe5fdf0b84290cdf33fc8c77496
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05fefa983f3b58f8ca8be95772d3fbc49f3e9afb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430154"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194070"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
 
@@ -45,7 +45,7 @@ ms.locfileid: "88430154"
   
 -   **SAP BW 接続マネージャー** - SAP BW 接続マネージャーによって、SAP Netweaver BW Version 7 システムに SAP BW 変換元または SAP BW 変換先が接続されます。  
   
- SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=301897)」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
+ SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server Integration Services](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100))」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
   
 ## <a name="documentation"></a>ドキュメント  
  この [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW のヘルプ ファイルには、次のトピックとセクションが含まれています。  
@@ -58,5 +58,4 @@ ms.locfileid: "88430154"
   
  [Microsoft Connector for SAP BW の F1 ヘルプ](../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW の各コンポーネントのユーザー インターフェイスについて説明します。  
-  
   

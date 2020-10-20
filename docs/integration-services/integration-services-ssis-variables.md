@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c27f3936edfc031f336b487d90e185a56d366363
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1dfeeecf62ad33ab5d2d66e0fdf454f89036d047
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449775"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193829"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) の変数
 
@@ -50,7 +50,7 @@ ms.locfileid: "88449775"
 ## <a name="system-and-user-defined-variables"></a>システム変数とユーザー定義変数  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、ユーザー定義変数とシステム変数の、2 種類の変数がサポートされています。 ユーザー定義変数とはパッケージの開発者によって定義された変数で、システム変数とは [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]によって定義された変数です。 ユーザー定義変数は、パッケージで必要な数だけ作成できますが、システム変数は追加作成できません。  
   
- 変数 (システム変数とユーザー定義変数) はすべて、SQL 実行タスクが使用するパラメーター バインドで使用して、SQL ステートメントのパラメーターに変数をマップできます。 詳細については、「 [SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)」を参照してください。  
+ 変数 (システム変数とユーザー定義変数) はすべて、SQL 実行タスクが使用するパラメーター バインドで使用して、SQL ステートメントのパラメーターに変数をマップできます。 詳細については、「 [SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](./control-flow/execute-sql-task.md)」を参照してください。  
   
 > [!NOTE]  
 >  ユーザー定義変数とシステム変数の名前では、大文字と小文字が区別されます。  
@@ -79,7 +79,7 @@ ms.locfileid: "88449775"
   
  コンテナーの種類ごとに、異なるセットのシステム変数を使用できます。 パッケージとパッケージ要素が使用するシステム変数の詳細については、「 [システム変数](../integration-services/system-variables.md)」を参照してください。  
   
- 変数の実際的な使用シナリオの詳細については、「 [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」を参照してください。  
+ 変数の実際的な使用シナリオの詳細については、「 [パッケージで変数を使用する]()」を参照してください。  
   
 ## <a name="properties-of-variables"></a>変数のプロパティ  
  **[変数]** ウィンドウまたは **[プロパティ]** ウィンドウで、次のプロパティを設定してユーザー定義変数を構成できます。 一部のプロパティは [プロパティ] ウィンドウでのみ使用できます。  
@@ -114,7 +114,7 @@ ms.locfileid: "88449775"
   
  変数は、パッケージのスコープ内、またはパッケージ内のコンテナー、タスク、またはイベント ハンドラーのスコープ内で作成されます。 パッケージ コンテナーは、コンテナー階層の最上層にあるため、パッケージ スコープを持つ変数はグローバル変数と同じように機能し、パッケージ内のすべてのコンテナーで使用できます。 同様に、For ループ コンテナーなどのコンテナーのスコープ内で定義された変数は、For ループ コンテナー内のすべてのタスクまたはコンテナーで使用できます。  
   
- パッケージでパッケージ実行タスクを使用して他のパッケージを実行する場合、呼び出し元のパッケージのスコープまたはパッケージ実行タスクで定義された変数は、構成の種類で親パッケージ変数を使用することにより、呼び出し先のパッケージで使用できます。 詳細については、「 [パッケージ構成](../integration-services/packages/package-configurations.md)」を参照してください。  
+ パッケージでパッケージ実行タスクを使用して他のパッケージを実行する場合、呼び出し元のパッケージのスコープまたはパッケージ実行タスクで定義された変数は、構成の種類で親パッケージ変数を使用することにより、呼び出し先のパッケージで使用できます。 詳細については、「 [パッケージ構成](./packages/legacy-package-deployment-ssis.md)」を参照してください。  
   
 **[IncludeInDebugDump]**  
  変数値がデバッグ ダンプ ファイルに含まれるかどうかを示します。  
@@ -159,13 +159,13 @@ ms.locfileid: "88449775"
   
  **データ フロー式** 変数を使用して、派生列変換と条件分割変換で列に値を設定するための式や、データ行を各種の変換出力に送るための式に値を提供します。 たとえば、式 `@varSalutation + LastName`は、 `VarSalutation` 変数の値と `LastName` 列を連結します。 式 `Income < @HighIncome` は、`Income` 列の値が `HighIncome` 変数の値よりも小さいデータ行を出力に送信します。 詳細については、「[派生列変換](../integration-services/data-flow/transformations/derived-column-transformation.md)」、「[条件分割変換](../integration-services/data-flow/transformations/conditional-split-transformation.md)」、および「[Integration Services (SSIS) の式](../integration-services/expressions/integration-services-ssis-expressions.md)」を参照してください。  
   
- **優先順位制約の式** 優先順位制約で制約付き実行可能ファイルを実行するかどうかを決定するために使用する値を提供します。 これらの式は、実行結果 (成功、失敗、完了) と組み合わせて使用することも、実行結果の代わりに使用することもできます。 たとえば、式 `@varMax > @varMin`が **true**に評価される場合、実行可能ファイルは実行されます。 詳細については、「 [優先順位制約に式を追加する](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)」を参照してください。  
+ **優先順位制約の式** 優先順位制約で制約付き実行可能ファイルを実行するかどうかを決定するために使用する値を提供します。 これらの式は、実行結果 (成功、失敗、完了) と組み合わせて使用することも、実行結果の代わりに使用することもできます。 たとえば、式 `@varMax > @varMin`が **true**に評価される場合、実行可能ファイルは実行されます。 詳細については、「 [優先順位制約に式を追加する](./control-flow/precedence-constraints.md)」を参照してください。  
   
- **パラメーターおよびリターン コード** 入力パラメーターに値を提供したり、出力パラメーターおよびリターン コードの値を格納したりします。 そのためには、変数をパラメーターおよび戻り値にマップします。 たとえば、変数 `varProductId` を 23 に設定して SQL ステートメント `SELECT * from Production.Product WHERE ProductID = ?`を実行すると、 `ProductID` が 23 である製品が取得されます。 詳細については、「 [SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)」を参照してください。  
+ **パラメーターおよびリターン コード** 入力パラメーターに値を提供したり、出力パラメーターおよびリターン コードの値を格納したりします。 そのためには、変数をパラメーターおよび戻り値にマップします。 たとえば、変数 `varProductId` を 23 に設定して SQL ステートメント `SELECT * from Production.Product WHERE ProductID = ?`を実行すると、 `ProductID` が 23 である製品が取得されます。 詳細については、「 [SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](./control-flow/execute-sql-task.md)」を参照してください。  
   
  **For ループ式** For ループの初期化式、評価式、および代入式で使用する値を提供します。 たとえば、変数 `varCount` が 2、変数 `varMaxCount` が 10、初期化式が `@varCount`、評価式が  `@varCount < @varMaxCount`、代入式が `@varCount =@varCount +1`の場合、ループは 8 回繰り返されます。 詳細については、「 [For ループ コンテナー](../integration-services/control-flow/for-loop-container.md)に評価されるまでそのワークフローを繰り返します。  
   
- **親パッケージ変数の構成** 親パッケージから子パッケージに値を渡します。 子パッケージは、親パッケージ変数の構成を使用することにより、親パッケージの変数にアクセスできます。 たとえば、子パッケージが親パッケージと同じ日付を使用する必要がある場合、子パッケージは親パッケージの GETDATE 関数によって設定される変数を指定する親パッケージ変数の構成を定義できます。 詳細については、「 [パッケージ実行タスク](../integration-services/control-flow/execute-package-task.md) 」と「 [パッケージ構成](../integration-services/packages/package-configurations.md)」を参照してください。  
+ **親パッケージ変数の構成** 親パッケージから子パッケージに値を渡します。 子パッケージは、親パッケージ変数の構成を使用することにより、親パッケージの変数にアクセスできます。 たとえば、子パッケージが親パッケージと同じ日付を使用する必要がある場合、子パッケージは親パッケージの GETDATE 関数によって設定される変数を指定する親パッケージ変数の構成を定義できます。 詳細については、「 [パッケージ実行タスク](../integration-services/control-flow/execute-package-task.md) 」と「 [パッケージ構成](./packages/legacy-package-deployment-ssis.md)」を参照してください。  
   
  **スクリプト タスクおよびスクリプト コンポーネント** 読み取り専用変数および読み取り/書き込み変数の一覧をスクリプト タスクまたはスクリプト コンポーネントに提供し、スクリプト内の読み取り/書き込み変数を更新して、更新された値をスクリプトの内外で使用します。 たとえば、コード `numberOfCars = CType(Dts.Variables("NumberOfCars").Value, Integer)`では、スクリプト変数 `numberOfCars` が変数 `NumberOfCars`の値によって更新されます。 詳細については、「 [スクリプト タスクでの変数の使用](../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)」を参照してください。  
 
@@ -189,7 +189,7 @@ ms.locfileid: "88449775"
   
 6.  必要に応じて、 **[グリッドのオプション]** アイコンをクリックし、 **[可変グリッドのオプション]** ダイアログ ボックスに表示する追加の列を選択して、 **[OK]** をクリックします。  
   
-7.  必要に応じて、変数のプロパティを設定します。 詳細については、「 [ユーザー定義変数のプロパティを設定する](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)によって定義された変数です。  
+7.  必要に応じて、変数のプロパティを設定します。 詳細については、「 [ユーザー定義変数のプロパティを設定する]()によって定義された変数です。  
   
 8.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
@@ -320,9 +320,9 @@ ms.locfileid: "88449775"
 8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
 ## <a name="update-a-variable-dynamically-with-configurations"></a>構成での変数の動的更新  
- 変数を動的に更新するために、変数の構成を作成し、パッケージと共に構成を配置して、パッケージの配置時に構成ファイルの変数の値を更新できます。 実行時に、パッケージは更新された変数の値を使用します。 詳細については、「 [パッケージ構成を作成する](../integration-services/packages/create-package-configurations.md)」を参照してください。  
+ 変数を動的に更新するために、変数の構成を作成し、パッケージと共に構成を配置して、パッケージの配置時に構成ファイルの変数の値を更新できます。 実行時に、パッケージは更新された変数の値を使用します。 詳細については、「 [パッケージ構成を作成する](./packages/legacy-package-deployment-ssis.md)」を参照してください。  
 
 ## <a name="related-tasks"></a>Related Tasks  
  [子パッケージでの変数およびパラメーターの値の使用](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
- [クエリ パラメーターをデータ フロー コンポーネントの変数にマップする](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
+ [クエリ パラメーターをデータ フロー コンポーネントの変数にマップする](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)
