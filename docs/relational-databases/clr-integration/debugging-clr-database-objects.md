@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a6e723c8ad5ff8c97a3b57edb554092211da4d7
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 1be293f98a3b78280b16f80ab7dcfcb656f7e0ec
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785158"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196906"
 ---
 # <a name="how-to-debug-clr-database-objects"></a>CLR データベースオブジェクトをデバッグする方法
 
@@ -47,7 +47,7 @@ ms.locfileid: "91785158"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデバッグは、接続ごとのモデルに準拠します。 デバッガーは、デバッガーがアタッチされているクライアント接続のみに関係したアクティビティを検出してデバッグを実行することができます。 デバッガーの機能は、接続の種類による制限を受けないので、表形式のデータ ストリーム (TDS) 接続と HTTP 接続の両方をデバッグできます。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、既存の接続をデバッグできません。 デバッグでは、サーバーで実行するルーチン内のすべての一般的なデバッグ機能をサポートします。 デバッガーと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との間のやり取りは、分散 COM (コンポーネント オブジェクト モデル) 経由で行われます。  
   
-マネージストアドプロシージャ、関数、トリガー、ユーザー定義型、および集計のデバッグの詳細およびシナリオについては、Visual Studio ドキュメントの「 [SQL SERVER CLR Integration Database デバッグ](https://go.microsoft.com/fwlink/?LinkId=120378) 」を参照してください。  
+マネージストアドプロシージャ、関数、トリガー、ユーザー定義型、および集計のデバッグの詳細およびシナリオについては、Visual Studio ドキュメントの「 [SQL SERVER CLR Integration Database デバッグ](/previous-versions/ms165050(v=vs.100)) 」を参照してください。  
   
 Visual Studio を使用してリモートで開発およびデバッグを行うには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで TCP/IP ネットワーク プロトコルを有効にする必要があります。 サーバーで TCP/IP プロトコルを有効にする方法の詳細については、「 [クライアントプロトコルを構成する](../../database-engine/configure-windows/configure-client-protocols.md)」を参照してください。  
   
@@ -60,7 +60,7 @@ Microsoft Visual Studio で CLR データベースオブジェクトをデバッ
 2. 新しい SQL CLR 型を作成する (C#):
 
    1. **ソリューションエクスプローラー**で、プロジェクトを右クリックし、[**追加**]、[**新しい項目**] の順に選択します。 
-   1. [ **新しい項目の追加** ] ウィンドウで、[ **Sql Clr c# ストアドプロシージャ**]、[Sql Clr **c# ユーザー定義関数**]、[sql **clr C# ユーザー定義型**]、[ **Sql Clr c# トリガー**]、[ **sql clr c# 集計**]、または [ **クラス**] を選択します。
+   1. [ **新しい項目の追加** ] ウィンドウで、[ **Sql Clr c# ストアドプロシージャ**]、[Sql clr **c# User-Defined 関数**]、[ **sql clr C# User-Defined の種類**]、[ **Sql Clr c# トリガー**]、[ **sql clr c# 集計**]、または [ **クラス**] を選択します。
    1. 新しい種類のソースファイルの名前を指定し、[ **追加**] を選択します。
 
 3. テキスト エディターに新しい型のコードを追加します。 ストアドプロシージャの例のサンプルコードについては、この記事の次の例のセクションを参照してください。
@@ -114,8 +114,8 @@ public class StoredProcedures
 EXEC GetVersion  
 ```  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
   
-Visual Studio を使用したマネージコードのデバッグの詳細については、Visual Studio ドキュメントの「 [マネージコードのデバッグ](https://go.microsoft.com/fwlink/?LinkId=120377) 」を参照してください。  
+Visual Studio を使用したマネージコードのデバッグの詳細については、Visual Studio ドキュメントの「 [マネージコードのデバッグ](/visualstudio/debugger/debugging-managed-code) 」を参照してください。  
 
 詳細については、「[共通言語ランタイムの統合のプログラミング概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)」を参照してください。  
