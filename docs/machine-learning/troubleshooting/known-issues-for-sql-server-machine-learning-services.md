@@ -3,18 +3,18 @@ title: Python と R に関する既知の問題
 description: この記事では、SQL Server Machine Learning Services および SQL Server 2016 R Services で提供される Python および R コンポーネントでの既知の問題または制限事項について説明します。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/15/2020
+ms.date: 10/13/2020
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 914f8626a297dd233d6b22230d579623e0e98cf6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e756203bb9eba1ec4646ff3e40686cd3838a0dbf
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495047"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059560"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での既知の問題
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -603,7 +603,7 @@ SQL Server 2017 CU2 以降では、Python コードが正常に実行された�
 
 この問題は、SQL Server 2017 累積的な更新プログラム 3 (CU3) で修正されました。 
 
-### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5.数値、10 進、通貨の各データ型がサポートされていない
+### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5. numeric、decimal、money の各データ型がサポートされていない
 
 SQL Server 2017 累積的な更新プログラム 12 (CU12) 以降では、`sp_execute_external_script` で Python を使用する場合、WITH RESULT SETS では数値、10 進、通貨の各データ型がサポートされていません。 次のメッセージが表示されることがあります。
 
@@ -718,7 +718,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 ### <a name="9-cannot-install-tensorflow-package-using-sqlmlutils"></a>9.**sqlmlutils** を使用して **tensorflow** パッケージをインストールできません
 
-[sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) パッケージは SQL Server 2019 に Python パッケージをインストールするために使用します。 ただし、パッケージ **tensorflow** は、sqlmlutils を使用してインストールできません。 tensorflow パッケージは、SQL Server にインストールされているバージョンより新しい numpy のバージョンに依存しています。 ただし、numpy は、tensorflow をインストールしようとしたときに sqlmlutils で更新できないプレインストールされたシステム パッケージです。
+[sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) パッケージは SQL Server 2019 に Python パッケージをインストールするために使用します。 [Microsoft Visual C++ 2015-2019 Redistributable (x64)](https://visualstudio.microsoft.com/downloads/) のダウンロード、インストールおよび更新を行う必要があります。 ただし、パッケージ **tensorflow** は、sqlmlutils を使用してインストールできません。 tensorflow パッケージは、SQL Server にインストールされているバージョンより新しい numpy のバージョンに依存しています。 ただし、numpy は、tensorflow をインストールしようとしたときに sqlmlutils で更新できないプレインストールされたシステム パッケージです。
 
 **回避策**
 

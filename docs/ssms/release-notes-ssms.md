@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: 46a8b73155fea5c22ef7d94acc3f128f42138410
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 7115c3c36f79b35fbb66d39ec530b320d7929c0e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603445"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039156"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のリリース ノート
 
@@ -66,8 +66,8 @@ SSMS 18.6 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | データ分類 | PowerShell コマンドレットによってエクスポートされたポリシーのインポート/エクスポートをサポートするように SSMS が更新されました。 |
 | フラット ファイルのインポート | 固定幅ファイルと、.csv/.tsv ファイルのファイルの種類の検出のサポートが追加され、それらがそれぞれ csv/tsv ファイルとして解析されるようになりました。 |
 | Integration Services | Azure-SSIS IR のパッケージ ストアから SSIS パッケージを実行するための Azure SQL Managed Instance エージェント ジョブのサポートが追加されました。 |
-| SMO/スクリプト作成 | [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (旧称 SQL Azure DW) でのスクリプト動的データ マスクのサポートが追加されました。 |
-| SMO/スクリプト作成 | [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (旧称 SQL DW) でのセキュリティ ポリシーのスクリプト作成のサポートが追加されました。 |
+| SMO/スクリプト作成 | [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (旧称 SQL Azure DW) でのスクリプト動的データ マスクのサポートが追加されました。 |
+| SMO/スクリプト作成 | [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (旧称 SQL DW) でのセキュリティ ポリシーのスクリプト作成のサポートが追加されました。 |
 
 ### <a name="bug-fixes-in-186"></a>18.6 でのバグ修正
 
@@ -376,7 +376,7 @@ SSMS 18.6 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | クエリの実行または結果 | 指定したクエリによってその実行が完了したときを指す "*完了時刻*" を、追跡するメッセージに追加しました。 |
 | クエリの実行または結果 | より多くのデータを表示し (結果をテキストで表示)、セルに格納することを許可します (結果をグリッドに表示)。 SSMS では、どちらも最大 200 万文字まで許可されるようになりました (それぞれ 256 K および 64 K から増加)。 これにより、ユーザーがグリッドのセルから 43,680 文字を超えて取得できないという問題にも対処しました。 |
 | プラン表示 | [インライン スカラー UDF 機能](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)が有効な場合、QueryPlan に新しい属性を追加しました (ContainsInlineScalarTsqludfs)。 |
-| SMO | *SQL Assessment API* のサポートが追加されました。 詳細については、「[SQL Assessment API](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview)」を参照してください。 |
+| SMO | *SQL Assessment API* のサポートが追加されました。 詳細については、「[SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md)」を参照してください。 |
 |  |  |
 
 #### <a name="bug-fixes-in-182"></a>18.2 でのバグの修正
@@ -526,7 +526,7 @@ SSMS 18.6 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 |SSMS には NetFx 4.7.2 以降が必要です|最小要件を NetFx4.6.1 から NetFx4.7.2 にアップグレードしました。その結果、新しいフレームワークで公開されている新しい機能を利用できるようになりました。|
 |SSMS 設定の移行機能| SSMS 18 を最初に起動したときに、17.x 設定を移行するように求めるメッセージがユーザーに表示されます。 ユーザーの設定ファイルはプレーン XML ファイルとして格納されるようになりました。そのため移植性が向上し、編集も場合によって可能となります。|
 |高 DPI のサポート| 高 DPI は既定で有効となりました。|
-|SSMS には Microsoft OLE DB ドライバーが付属しています| 詳細については、「[Microsoft OLE DB Driver for SQL Server のダウンロード](https://docs.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server)」を参照してください。|
+|SSMS には Microsoft OLE DB ドライバーが付属しています| 詳細については、「[Microsoft OLE DB Driver for SQL Server のダウンロード](../connect/oledb/download-oledb-driver-for-sql-server.md)」を参照してください。|
 |SSMS は Windows 8 ではサポートされていません。 Windows 10 と Windows Server 2016 にはバージョン 1607 (10.0.14393) 以降が必要になりました|NetFx 4.7.2 への新しい依存関係があるので、SSMS 18.0 は、Windows 8、Windows 10 の旧バージョン、および Windows Server 2016 にはインストールされません。 SSMS の設定では、これらのシステムはブロックされます。 Windows 8.1 はまだサポートされています。|
 |SSMS は PATH 環境変数に追加されなくなりました|SSMS.EXE (および一般的なツール) のパスは、パスに追加されなくなりました。 ユーザーは手動で追加するか、最新の Windows コンピューターの場合は [スタート] メニューを使用することができます。|
 |SSMS 拡張機能を開発するためのパッケージ ID が不要になりました| これまで、SSMS では既知のパッケージのみが選択されて読み込まれていたので、開発者は自分のパッケージを登録する必要がありました。 この点は変更されました。|
@@ -553,10 +553,10 @@ SSMS 18.6 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 |セキュア エンクレーブを使用する Always Encrypted| SQL Server 2019 では、セキュリティで保護されたエンクレーブが設定された Always Encrypted をサポートするためにいくつかの機能強化が加えられました。[サーバーに接続] ダイアログ (新しい [Always Encrypted] タブ) にエンクレーブの構成証明の URL を指定するテキスト フィールド。  [新しい列マスター キー] ダイアログに、新しい列マスターキーでエンクレーブ計算を許可するかどうかを制御する新しいチェックボックスが追加されました。  他の Always Encrypted キー管理ダイアログに、エンクレーブ計算を許可する列マスター キーの情報が表示されるようになりました。|
 |監査ファイル|認証方法をストレージ アカウント キー ベースから Azure AD ベースの認証に変更しました。|
 |データ分類| データ分類タスク メニューを再構成しました。データベース タスク メニューにサブメニューが追加され、最初に分類データ ウィンドウを開かなくても、メニューからレポートを開くためのオプションが追加されました。|
-|データ分類|SMO に新機能 'データ分類' が追加されました。 Column オブジェクトで新たに公開されたプロパティ:SensitivityLabelName、SensitivityLabelId、SensitivityInformationTypeName、SensitivityInformationTypeId、IsClassified (読み取り専用)。 詳細については、「[ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)」を参照してください。|
+|データ分類|SMO に新機能 'データ分類' が追加されました。 Column オブジェクトで新たに公開されたプロパティ:SensitivityLabelName、SensitivityLabelId、SensitivityInformationTypeName、SensitivityInformationTypeId、IsClassified (読み取り専用)。 詳細については、「[ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../t-sql/statements/add-sensitivity-classification-transact-sql.md)」を参照してください。|
 |データ分類|[データ分類] ポップアップに新しい [Classification Report]\(分類レポート\) メニュー項目が追加されました。|
 |データ分類| 推奨事項が更新されました。|
-|データベース互換性レベルのアップグレード|***[データベース名]*** > ***[タスク]*** > ***[データベースのアップグレード]*** に新しいオプションを追加しました。 これにより、ユーザーに次のプロセスをガイドする、新しい**クエリ調整アシスタント (QTA)** が開始されます。データベースの互換性レベルをアップグレードする前にパフォーマンスのベースラインを収集する。 目的のデータベース互換性レベルにアップグレードする。  同じワークロードを介してパフォーマンス データの 2 番目の受け渡しを収集する。 ワークロードの低下を検出し、ワークロードのパフォーマンスを改善するためのテスト済みのレコメンデーションを提供する。  これは、「[クエリ ストアの使用シナリオ](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade)」に記載されているデータベースのアップグレード プロセスに似ていますが、最後の手順 (QTA はレコメンデーションを生成するために以前の正常起動時の状態に依存しない) が異なります。|
+|データベース互換性レベルのアップグレード|***[データベース名]*** > ***[タスク]*** > ***[データベースのアップグレード]*** に新しいオプションを追加しました。 これにより、ユーザーに次のプロセスをガイドする、新しい**クエリ調整アシスタント (QTA)** が開始されます。データベースの互換性レベルをアップグレードする前にパフォーマンスのベースラインを収集する。 目的のデータベース互換性レベルにアップグレードする。  同じワークロードを介してパフォーマンス データの 2 番目の受け渡しを収集する。 ワークロードの低下を検出し、ワークロードのパフォーマンスを改善するためのテスト済みのレコメンデーションを提供する。  これは、「[クエリ ストアの使用シナリオ](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」に記載されているデータベースのアップグレード プロセスに似ていますが、最後の手順 (QTA はレコメンデーションを生成するために以前の正常起動時の状態に依存しない) が異なります。|
 |データ層アプリケーションのウィザード|グラフ テーブルを使用したデータ層アプリケーションのインポート/エクスポートのサポートが追加されました。|
 |フラット ファイルのインポート ウィザード|インポートで列の名前が変更された可能性があることをユーザーに通知するロジックが追加されました。|
 |Integration Services (SSIS)|顧客が Azure Government クラウド内にある Azure-SSIS IR で SSIS パッケージをスケジュールできるようにするためのサポートが追加されました。|
@@ -576,7 +576,7 @@ SSMS 18.6 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 |プラン表示|"Materializer Operator (External Select)" を表示するロジックを追加しました。|
 |プラン表示|"行ストアに対するバッチモード スキャン" 機能を使用しているクエリを簡単に識別できるように、新しい showplan 属性 BatchModeOnRowStoreUsed を追加します。 クエリが行ストアでバッチモード スキャンを実行するたびに、新しい属性 (BatchModeOnRowStoreUsed="true") が StmtSimple 要素に追加されます。|
 |プラン表示|DW ROLLUP および CUBE の LocalCube RelOp にプラン表示のサポートが追加されました。|
-|プラン表示|Azure SQL Data Warehouse の新しい ROLLUP および CUBE 集計の機能用の、新しい LocalCube 演算子。|
+|プラン表示|Azure Synapse Analytics の新しい ROLLUP および CUBE 集計の機能を対象とした、新しい LocalCube 演算子。|
 |SMO| 再開可能なインデックス作成の SMO サポートを拡張します。|
 |SMO| アプリケーション作成者が SMO のパフォーマンスの問題を早期に検出できるように、SMO オブジェクト ("PropertyMissing") に対する新しいイベントを追加しました。|
 |SMO| "バックアップ チェックサムの既定" サーバー構成にマップされる、Configuration オブジェクトに対する新しい DefaultBackupChecksum プロパティを公開しました。|

@@ -1,5 +1,5 @@
 ---
-title: リリース ノート
+title: Azure Data Studio リリース ノート
 description: この記事では、2017 年 11 月から現在までの Azure Data Studio リリースのリリース ノートを取り上げています。 まとめられている問題の多くについては、追加詳細のリンクがあります。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -8,17 +8,32 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 09/30/2020
-ms.openlocfilehash: 1d23774a2e722c85593af0238ef924569585ff62
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.date: 10/14/2020
+ms.openlocfilehash: c75105ddf77c62dd6c871b679dce32ec08c5364c
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725103"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059190"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新リリースのダウンロードとインストール](./download-azure-data-studio.md)**
+
+## <a name="october-2020"></a>2020 年 10 月
+
+2020 年 10 月 14 日 &nbsp; / &nbsp; バージョン: 1.23.0
+
+&nbsp;
+
+| Change | 詳細 |
+| ------ | ------- |
+| Azure SQL Edge | Azure SQL Edge オブジェクトのサポート。 |
+| バグの修正 | 修正の全一覧については、[GitHub のバグと問題](https://github.com/microsoft/azuredatastudio/issues?q=is:issue+milestone:%22October+2020+Release%22+is:closed)に関するページを参照してください。 |
+| データベース| 同じデータベース参照のサポート。 |
+| 拡張機能の更新プログラム | [Azure Arc](extensions/azure-arc-extension.md)</br>[azdata](../azdata/install/deploy-install-azdata.md)</br>[Machine Learning](extensions/machine-learning-extension.md)</br>[Kusto (KQL)](extensions/kusto-extension.md)</br>[スキーマ比較](extensions/schema-compare-extension.md)</br>SQL の評価</br>[SQL Database プロジェクト](extensions/sql-database-project-extension.md)</br>[SQL Server インポート](extensions/sql-server-import-extension.md) |
+| デプロイの新機能 | Azure SQL DB と VM のデプロイが追加されました。 |
+| PowerShell | PowerShell カーネル結果のストリーミングのサポートが追加されました。 |
 
 ## <a name="september-2020-hotfix"></a>2020 年 9 月 (hotfix)
 
@@ -28,7 +43,7 @@ ms.locfileid: "91725103"
 
 | Change | 詳細 |
 | ------ | ------- |
-| バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/releases/tag/1.22.1)を参照してください。 |
+| バグと問題が解決されました | 修正の全一覧については、[GitHub のバグと問題](https://github.com/microsoft/azuredatastudio/releases/tag/1.22.1)に関するページを参照してください。 |
 
 ## <a name="september-2020"></a>2020 年 9 月
 
@@ -68,8 +83,8 @@ ms.locfileid: "91725103"
 
 | Change | 詳細 |
 | :----- | :------ |
-| バグの修正 #11372 オブジェクト エクスプローラーのドラッグ アンド ドロップ テーブルでテーブル名が正しくラップされない | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
-| バグの修正 #11356 ダーク テーマが既定のテーマになってしまう | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| バグの修正 #11372 オブジェクト エクスプローラーのドラッグ アンド ドロップ テーブルでテーブル名が正しくラップされない | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372) |
+| バグの修正 #11356 ダーク テーマが既定のテーマになってしまう | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356) |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>既知の問題
@@ -90,7 +105,6 @@ ms.locfileid: "91725103"
 | アクティビティ バーへの Azure アカウント アイコンの追加 | Azure にサインインする場所をユーザーが簡単に確認できるようになりました |
 | バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed)を参照してください。 |
 | &nbsp; | &nbsp; |
-
 
 ## <a name="june-2020"></a>2020 年 6 月
 
@@ -882,7 +896,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 | Change | 詳細 |
 | :----- | :------ |
-| Azure SQL Database と Azure SQL Data Warehouse に接続する際に、[ファイアウォール規則の作成] ダイアログ ボックスを使用できるようになりました。 | &nbsp; |
+| Azure SQL Database と Azure Synapse Analytics への接続に役立つ [ファイアウォール規則の作成] ダイアログ ボックスを使用できるようになりました。 | &nbsp; |
 | Windows セットアップと、Linux DEB および RPM のインストール パッケージが追加されました。 | &nbsp; |
 | [ダッシュボードの管理] ビジュアル レイアウト エディター。 | &nbsp; |
 | *[ALTER としてスクリプト]* および *[Script As Execute]\(EXECUTE としてスクリプト\)* コマンド。 | &nbsp; |
@@ -904,7 +918,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 - [SQL Server に対する接続およびクエリ](quickstart-sql-server.md)
 - [Azure SQL Database に対する接続およびクエリ](quickstart-sql-database.md)
-- [Azure Data Warehouse に対する接続およびクエリ](quickstart-sql-dw.md)
+- [Azure Synapse Analytics に対する接続およびクエリ](quickstart-sql-dw.md)
 
 Azure Data Studio への投稿:
 

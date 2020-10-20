@@ -9,12 +9,12 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4217e2be765e29fe58ff423be8632f7e18e1b2eb
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 28cfd7e9a78646527bb8c0508535a1475159e35c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834509"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891082"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 ビッグ データ クラスターのリリース ノート
 
@@ -93,7 +93,7 @@ SQL Server 2019 の累積的な更新プログラム 6 (CU6) リリース。
 このリリースには、軽微な修正と機能強化が含まれています。 次の記事には、これらの更新プログラムに関連する情報が記されています。
 
 - [Active Directory モードでビッグ データ クラスター アクセスを管理する](manage-user-access.md)
-- [Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する](deploy-active-directory.md)
+- [Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する](active-directory-deploy.md)
 - [高可用性を使用して SQL Server ビッグ データ クラスターを展開する](deployment-high-availability.md)
 - [SQL Server ビッグ データ クラスターを構成する](configure-cluster.md)
 - [ビッグ データ クラスターで Apache Spark と Apache Hadoop を構成する](configure-spark-hdfs.md)
@@ -175,11 +175,11 @@ SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-cluster
 
 - **影響を受けるリリース**: 現在の累積的な更新プログラム全体
 
-- **問題およびユーザーへの影響**:アップグレード中、sparkhead は 404 エラーを返します。
+- **問題およびユーザーへの影響**:アップグレード中、`sparkhead` は 404 エラーを返します。
 
 - **回避策**:BDC をアップグレードする前に、アクティブな Livy セッションまたはバッチ ジョブがないことを確認してください。 これを回避するには、「[サポートされているリリースからのアップグレード](deployment-upgrade.md#upgrade-from-supported-release)」の手順に従ってください。 
 
-   アップグレード処理中に Livy から 404 エラーが返された場合は、両方の sparkhead ノードで Livy サーバーを再起動します。 次に例を示します。
+   アップグレード処理中に Livy から 404 エラーが返された場合は、両方の `sparkhead` ノードで Livy サーバーを再起動します。 次に例を示します。
 
    ```console
    kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy

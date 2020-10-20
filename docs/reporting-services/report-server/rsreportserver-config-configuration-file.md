@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d8076a74005b52da656b1241d215a5aed7f43ac2
-ms.sourcegitcommit: 6eae1fda4962050e8abd7f105a614744009712d9
+ms.openlocfilehash: 5e480c0b24a05a42ba7cb53a3d35125a7e2b3976
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84722984"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934912"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RSReportServer Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** ファイルには、レポート サーバー Web サービスおよびバックグラウンド処理で使用される設定が格納されます。 すべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションは、RSReportServer.config ファイルに格納された構成設定を読み取る単一のプロセス内で実行されます。 ネイティブ モードのレポート サーバーと SharePoint モードのレポート サーバーはどちらも RSReportServer.config を使用しますが、両方のモードで構成ファイル内のまったく同じ設定が使用されるわけではありません。 SharePoint モードの設定の多くは、ファイルではなく SharePoint 構成データベースに格納されるため、SharePoint モード バージョンのファイルは、より小さくなります。 このトピックでは、ネイティブ モードおよび SharePoint モード用にインストールされる既定の構成ファイル、いくつかの重要な設定、および構成ファイルによって制御される動作について説明します。  
@@ -72,7 +72,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |-------------|-----------------|----------|  
 |**Dsn**|レポート サーバー データベースをホストするデータベース サーバーへの接続文字列を指定します。 この値は、レポート サーバー データベースの作成時に、暗号化されて構成ファイルに追加されます。 SharePoint では、SharePoint 構成データベースからデータベース接続情報が取得されます。|N、S|  
 |**ConnectionType**|レポート サーバーがレポート サーバー データベースへの接続に使用する資格情報のタイプを指定します。 有効な値は、 **Default** および **Impersonate**です。 **Default** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインまたはサービス アカウントを使用してレポート サーバー データベースに接続するようにレポート サーバーを構成する場合に指定します。 **Impersonate** は、レポート サーバーが Windows アカウントを使用してレポート サーバー データベースに接続する場合に指定します。|N|  
-|**LogonUser、LogonDomain、LogonCred**|レポート サーバーがレポート サーバー データベースに接続するときに使用するドメイン アカウントのドメイン、ユーザー名、およびパスワードを格納します。 **LogonUser**、 **LogonDomain**、および **LogonCred** の値は、レポート サーバー接続がドメイン アカウントを使用するように構成されていると作成されます。 レポート サーバーのデータベース接続の詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。|N|  
+|**LogonUser、LogonDomain、LogonCred**|レポート サーバーがレポート サーバー データベースに接続するときに使用するドメイン アカウントのドメイン、ユーザー名、およびパスワードを格納します。 **LogonUser**、 **LogonDomain**、および **LogonCred** の値は、レポート サーバー接続がドメイン アカウントを使用するように構成されていると作成されます。 レポート サーバーのデータベース接続の詳細については、[レポート サーバー データベース接続の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) に関する記事を参照してください。|N|  
 |**InstanceID**|レポート サーバーのインスタンス用の識別子です。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に基づいています。 この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名を指定します。 既定では **MSRS12** _\<instancename>_ です。 この設定は変更しないでください。 完全な値の例を次に示します: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> SharePoint モードの例を次に示します:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N、S|  
 |**InstallationID**|セットアップによって作成されるレポート サーバーのインストール用の識別子です。 この値は GUID に設定されます。 この設定は変更しないでください。|N|  
 |**SecureConnectionLevel**|Web サービス呼び出しにおけるトランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) の使用レベルを指定します。 この設定は、レポート サーバー Web サービスと Web ポータルの両方で使用されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで、HTTP または HTTPS を使用するように URL を構成すると、この値が設定されます。 SQL Server 2008 R2 で、SecureConnectionLevel はオン/オフのスイッチとして使用されます。 SQL Server 2008 R2 より前のバージョンの場合、有効な値の範囲は 0 から 3 で、0 はセキュリティ レベルが最も低くなります。 詳細については、「[ConfigurationSetting メソッド - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md)」、「[セキュリティで保護された Web サービス メソッドの使用](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)」、および「[ネイティブ モードのレポート サーバーでの TLS 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。|N、S|
@@ -103,7 +103,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 > [!WARNING]  
 >  SharePoint モードでは、SharePoint サーバーの全体管理で URL 予約が構成されます。 詳細については、「[代替アクセス マッピングを構成する」(https://technet.microsoft.com/library/cc263208(office.12).aspx)](https://technet.microsoft.com/library/cc263208\(office.12\).aspx) を参照してください。  
   
- URL 予約を構成ファイル内で直接編集することは避けてください。 ネイティブ モードのレポート サーバーの URL 予約を作成または変更する場合は、必ず [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーまたはレポート サーバー WMI プロバイダーを使用します。 構成ファイルで値を変更すると、予約が破損して実行時にサーバー エラーが発生する場合や、HTTP.SYS 内に予約が取り残されて、ソフトウェアをアンインストールしても削除されなくなる場合があります。 詳細については、「[レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)」と「[構成ファイル内の URL &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)」を参照してください。  
+ URL 予約を構成ファイル内で直接編集することは避けてください。 ネイティブ モードのレポート サーバーの URL 予約を作成または変更する場合は、必ず [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーまたはレポート サーバー WMI プロバイダーを使用します。 構成ファイルで値を変更すると、予約が破損して実行時にサーバー エラーが発生する場合や、HTTP.SYS 内に予約が取り残されて、ソフトウェアをアンインストールしても削除されなくなる場合があります。 詳細については、「[レポート サーバー URL の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)」、および「[構成ファイル内の URL (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)」を参照してください。  
   
  **URLReservations** は省略可能な要素です。 この要素が RSReportServer.config ファイルに存在しない場合、サーバーが構成されていない可能性があります。 指定されている場合、 **AccountName** を除くすべての子要素が必要となります。  
   
@@ -115,7 +115,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**名前**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションを指定します。 有効な値は ReportServerWebService または ReportManager です。|N|  
 |**VirtualDirectory**|アプリケーションの仮想ディレクトリ名を指定します。|N|  
 |**URLs、URL**|アプリケーションの 1 つまたは複数の URL 予約を格納します。|N|  
-|**UrlString**|HTTP.SYS の有効な URL 構文を指定します。 構文の詳細については、「[URL 予約の構文 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)」を参照してください。|N|  
+|**UrlString**|HTTP.SYS の有効な URL 構文を指定します。 構文の詳細については、「[URL 予約の構文 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)」を参照してください。|N|  
 |**AccountSid**|URL 予約の作成対象となったアカウントのセキュリティ ID (SID) を指定します。 これは、Report Server サービスの実行に使用されているアカウントである必要があります。 SID がサービス アカウントと一致しない場合、レポート サーバーが、その URL で要求をリッスンできない場合があります。|N|  
 |**AccountName**|**AccountSid**に対応するわかりやすいアカウント名を指定します。 実際に使用されることはありませんが、URL 予約に使用されたアカウントのサービス アカウントを容易に判別できるようにファイルに表示されます。|N|  
   
@@ -176,7 +176,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**MaxAppDomainUnloadTime**|リサイクル中に、アプリケーション ドメインがアンロードを許可される間隔を指定します。 この間にリサイクルが完了しない場合、アプリケーション ドメインのすべての処理が停止します。 詳細については、「 [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)」を参照してください。<br /><br /> この値は分単位で指定します。 有効な値は、0 から整数型の最大値までです。 既定値は **30**です。|N、S、P|  
 |**MaxQueueThreads**|レポート サーバー Windows サービスがサブスクリプションと通知を同時に処理するために使用するスレッド数を指定します。 有効な値は、0 から整数型の最大値までです。 既定値は 0 です。 0 を選択した場合は、レポート サーバーによってスレッドの最大数が決定されます。 整数を指定した場合は、指定した値が、一度に作成できるスレッド数の上限に設定されます。 レポート サーバー Windows サービスがプロセスを実行するためにメモリをどのように管理するかについては、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。|N、S、P|  
 |**UrlRoot**|レポート サーバー配信拡張機能によって使用され、メールおよびファイル共有サブスクリプションで配信されるレポートで使用される URL が作成されます。また、Globals!ReportServerUrl を使用して式を解決するときにレポート処理でも使用されます。 パブリッシュされたレポートが置かれているレポート サーバーの有効な URL アドレスを指定する必要があります。 レポート サーバーは、この設定を使って、オフライン アクセスまたは自動アクセスに必要な URL を生成します。 これらの URL は、エクスポートされたレポートで使用されるほか、配信拡張機能が、リンクや電子メールなど、配信メッセージに追加される URL を構築する際に使用されます。 レポート サーバーは、次のようにして、レポート内の URL を決定します。<br /><br /> **[UrlRoot]** が空 (既定値) であり、URL 予約が存在する場合、レポート サーバーは、ListReportServerUrls メソッドによる URL 生成と同様の方法で、自動的に URL を決定します。 ListReportServerUrls メソッドで返される最初の URL が使用されます。 SecureConnectionLevel がゼロ (0) よりも大きい場合は、最初の TLS URL が使用されます。<br /><br /> **[UrlRoot]** が特定の値に設定された場合は、明示的な値が使用されます。<br /><br /> **[UrlRoot]** が空であり、URL 予約が構成されていない場合、レンダリングされたレポートや電子メール リンク内の URL に誤りが生じることになります。|N、S、P|  
-|**UnattendedExecutionAccount**|レポートを実行するために、レポート サーバーで使用されるユーザー名、パスワード、およびドメインを指定します。 これらの値は暗号化されます。 これらの値を設定するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールまたは **rsconfig** ユーティリティを使用します。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。<br /><br /> SharePoint モードでは、SharePoint サーバーの全体管理を使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの実行アカウントを設定します。 詳細については、「 [Reporting Services SharePoint サービス アプリケーションの管理](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)｣を参照してください|N、P|  
+|**UnattendedExecutionAccount**|レポートを実行するために、レポート サーバーで使用されるユーザー名、パスワード、およびドメインを指定します。 これらの値は暗号化されます。 これらの値を設定するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールまたは **rsconfig** ユーティリティを使用します。 詳細については、「[自動実行アカウントの構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。<br /><br /> SharePoint モードでは、SharePoint サーバーの全体管理を使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの実行アカウントを設定します。 詳細については、「 [Reporting Services SharePoint サービス アプリケーションの管理](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)｣を参照してください|N、P|  
 |**PolicyLevel**|セキュリティ ポリシーの構成ファイルを指定します。 有効な値は Rssrvrpolicy.config です。詳細については、「 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)」を参照してください。|N、S、P|  
 |**IsWebServiceEnabled**|レポート サーバー Web サービスが SOAP および URL アクセス要求に応答するかどうかを指定します。 ポリシー ベースの管理の [Reporting Services のセキュリティ構成] ファセットを使用してサービスを有効または無効にすると、この値が設定されます。|N、S|  
 |**IsReportManagerEnabled**|この設定は、SQL Server 2016 Reporting Services 累積更新プログラム 2 の時点で非推奨とされました。 Web ポータルは常に有効になります。|N|  
@@ -855,9 +855,10 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [レポート サーバーの初期化 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [暗号化されたレポート サーバー データの格納 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [レポート サーバー構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+
  その他の質問 [Reporting Services のフォーラムにアクセスします](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

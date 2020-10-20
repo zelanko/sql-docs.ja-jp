@@ -9,21 +9,28 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f90d3d25009676f33f57c42ced48284dfae75bd2
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: ca15786b88c62b41202310bd537a3224ddea458e
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765751"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934882"
 ---
 # <a name="whats-new-in-sql-server-language-extensions"></a>SQL Server 言語拡張の新機能
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
-外部言語とデータ プラットフォーム間の統合が継続的に拡大、拡張、および強化されており、各リリースで[言語拡張](language-extensions-overview.md)機能が SQL Server に追加されています。 
+外部言語とデータ プラットフォーム間の統合が継続的に拡大、拡張、および強化されており、各リリースで[言語拡張](language-extensions-overview.md)機能が SQL Server に追加されています。
 
-## <a name="new-in-sql-server-2019"></a>SQL Server 2019 の新機能 
+## <a name="new-python-and-r-language-extensions-in-sql-server-2019"></a>SQL Server 2019 の Python および R の新しい言語拡張
 
-このリリースでは、SQL Server 言語拡張のサポートが追加されました。 このリリースのすべての機能の詳細については、[SQL Server 2019 の新機能](../sql-server/what-s-new-in-sql-server-ver15.md)に関するページ、および「[SQL Server 2019 のリリース ノート](../sql-server/sql-server-version-15-release-notes.md)」を参照してください。
++ カスタム ランタイムは、[Windows の Python](../machine-learning/install/custom-runtime-python.md) で使用できます。 Linux にインストールするには、[SQL Server on Linux 用の Python カスタム ランタイムのインストール](../machine-learning/install/custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)に関するページを参照してください
+
++ カスタム ランタイムは、[Windows の R](../machine-learning/install/custom-runtime-r.md) で使用できます。 Linux にインストールするには、[SQL Server on Linux 用の R カスタム ランタイムのインストール](../machine-learning/install/custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true)に関するページを参照してください
+
+
+## <a name="new-java-language-extension-in-sql-server-2019"></a>SQL Server 2019 の新しい Java 言語拡張
+
+このリリースのすべての機能の詳細については、[SQL Server 2019 の新機能](../sql-server/what-s-new-in-sql-server-ver15.md)に関するページ、および「[SQL Server 2019 のリリース ノート](../sql-server/sql-server-version-15-release-notes.md)」を参照してください。
 
 - Windows および Linux の既定の Java ランタイムは Open Zulu JRE であり、[Windows 上の SQL Server 言語拡張のインストール](install/install-sql-server-language-extensions-on-windows.md)と [Linux 上の SQL Server 言語拡張のインストール](../linux/sql-server-linux-setup-language-extensions.md)に含まれています。
 - サポートされている [Java データ型](how-to/java-to-sql-data-types.md)。

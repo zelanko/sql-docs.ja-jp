@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: ba646353b0ded0a1cc4617c1b4c9ffc3c159662e
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: d44e59e8dfdd9ba38feb2c860348f44af325c768
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662838"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038387"
 ---
 # <a name="quickstart-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>クイックスタート: SQL Server Management Studio (SSMS) を使用して SQL Server インスタンスに接続し、クエリを行う
 
@@ -35,12 +35,12 @@ ms.locfileid: "91662838"
 
 この記事を完了するには、SQL Server Management Studio と、SQL Server インスタンスへのアクセスが必要です。
 
-* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
+* [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md) をインストールします。
 
 SQL Server インスタンスへのアクセス権を持っていない場合は、次のリンクからプラットフォームを選択します。 SQL 認証を選択する場合は、SQL Server のログイン資格情報を使用します。
 
 * **Windows**:[SQL Server 2019 Developer Edition をダウンロードする](https://www.microsoft.com/sql-server/sql-server-downloads)。
-* **macOS**:[Docker で SQL Server 2019 をダウンロードする](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
+* **macOS**:[Docker で SQL Server 2019 をダウンロードする](../../linux/quickstart-install-connect-docker.md)。
 
 ## <a name="connect-to-a-sql-server-instance"></a>SQL Server インスタンスに接続する
 
@@ -54,7 +54,7 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
 
     * **[サーバーの種類]** に、**[データベース エンジン]** (通常は既定のオプションです) を選択します。
     * **[サーバー名]** に、SQL Server インスタンスの名前を入力します。 (この記事では、ホスト名 NODE5 でインスタンス名 SQL2016ST を使用します [NODE5\SQL2016ST]。)SQL Server インスタンス名を確認する方法がわからない場合は、「[SSMS を使用するためのヒントとテクニック](../tutorials/ssms-tricks.md#find-sql-server-instance-name)」を参照してください。
-    * **[認証]** に、**[Windows 認証]** を選択します。 この記事では Windows 認証を使用しますが、SQL Server ログインもサポートされています。 **[SQL ログイン]** を選択した場合は、ユーザー名とパスワードが求められます。 認証の種類の詳細については、「[サーバーへの接続 (データベース エンジン)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)」を参照してください。
+    * **[認証]** に、**[Windows 認証]** を選択します。 この記事では Windows 認証を使用しますが、SQL Server ログインもサポートされています。 **[SQL ログイン]** を選択した場合は、ユーザー名とパスワードが求められます。 認証の種類の詳細については、「[サーバーへの接続 (データベース エンジン)](../f1-help/connect-to-server-database-engine.md)」を参照してください。
 
     ![SQL Server インスタンスの使用のオプションが表示された "サーバー名" フィールド](media/connect-query-sql-server/connection-2.png)
 
@@ -71,7 +71,7 @@ SQL Server 接続の成功を確認するには、**オブジェクト エクス
 * SQL Azure DB に接続 - この場合、msftestserver.database.windows.net: ![SQL Azure DB に接続](media/connect-query-sql-server/connect-sql-azure.png)
 
 > [!NOTE]
-> この記事では、以前、"*Windows 認証*" を使用してオンプレミス SQL Server に接続しましたが、この方法は SQL Azure DB によってサポートされていません。 そのため、この画像では、SQL 認証を使用して SQL Azure DB に接続しています。 詳細については、[SQL オンプレミス認証](../../relational-databases/security/choose-an-authentication-mode.md)に関するページと [SQL Azure 認証](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management)に関するページを参照してください。
+> この記事では、以前、"*Windows 認証*" を使用してオンプレミス SQL Server に接続しましたが、この方法は SQL Azure DB によってサポートされていません。 そのため、この画像では、SQL 認証を使用して SQL Azure DB に接続しています。 詳細については、[SQL オンプレミス認証](../../relational-databases/security/choose-an-authentication-mode.md)に関するページと [SQL Azure 認証](/azure/sql-database/sql-database-security-overview#access-management)に関するページを参照してください。
 
 ## <a name="create-a-database"></a>データベースを作成する
 
@@ -198,7 +198,7 @@ SQL Server 接続の成功を確認するには、**オブジェクト エクス
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 
-Azure Data Studio を使用して、[SQL Server](../../azure-data-studio/quickstart-sql-server.md)、[Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md)、および [Azure SQL Data Warehouse](../../azure-data-studio/quickstart-sql-dw.md) に接続してクエリを実行することもできます。
+Azure Data Studio を使用して、[SQL Server](../../azure-data-studio/quickstart-sql-server.md)、[Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md)、および [Azure Synapse Analyticss](../../azure-data-studio/quickstart-sql-dw.md) に接続し、クエリを実行することもできます。
 
 ## <a name="next-steps"></a>次のステップ
 

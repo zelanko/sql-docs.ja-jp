@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9793fb9a130fdca5c11af671f7fd3412530a6a98
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a322af478215a215975942fb2b055a6cff755dfe
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727563"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081701"
 ---
 # <a name="setting-the-connection-properties"></a>接続プロパティの設定
 
@@ -57,7 +57,7 @@ ms.locfileid: "91727563"
 | cancelQueryTimeout<br/><br/>INT<br/><br/>-1 | Microsoft JDBC Driver 6.4 for SQL Server 以降では、このプロパティを使用して、接続に設定されている **queryTimeout** を取り消すことができます。 SQL Server への TCP 接続が暗黙的に削除されると、クエリの実行がハングし、例外はスローされません。 このプロパティは、接続でも 'queryTimeout' が設定されている場合にのみ適用されます。 <br/><br/>ドライバーは **cancelQueryTimeout** + **queryTimeout** を合計した秒数を待機してから、接続を中断し、チャネルを閉じます。 <br/><br/>このプロパティの既定値は -1 で、動作は無期限の待機です。 |
 | clientCertificate<br/><br/>String<br/><br/>null | クライアント証明書の認証に使用する証明書の場所を指定します。 JDBC ドライバーでは、PFX、PEM、DER、CER ファイル拡張子がサポートされます。 <br/><br/>詳細については、「[ループバック シナリオにおけるクライアント証明書の認証](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md)」を参照してください。 |
 | clientKey <br/><br/>String<br/><br/>null | clientCertificate 属性によって指定された PEM、DER、CER 証明書の秘密キーのファイルの場所を指定します。 <br/><br/>詳細については、「[ループバック シナリオにおけるクライアント証明書の認証](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md)」を参照してください。 |
-| clientKeyPassword <br/><br/>String<br/><br/>null | clientKey ファイルの秘密キーにアクセスするために指定された省略可能なパスワード文字列。 <br/><br/>詳細については、「[ループバック シナリオにおけるクライアント証明書の認証](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md)」を参照してください。 |
+| clientKeyPassword <br/><br/>String<br/><br/>null | clientKey ファイルの秘密キーにアクセスするために指定された、省略可能なパスワード文字列。 <br/><br/>詳細については、「[ループバック シナリオにおけるクライアント証明書の認証](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md)」を参照してください。 |
 | columnEncryptionSetting<br/><br/>String<br/>["Enabled" &#124; "Disabled"]<br/><br/>無効 | Microsoft JDBC Driver 6.0 for SQL Server 以降では、"Enabled" に設定すると、Always Encrypted (AE) 機能を使用します。 AE を有効にすると、JDBC ドライバーは SQL Server の暗号化されたデータベースの列に格納されている機密データについて透過的に暗号化と暗号化の解除を行います。<br/><br/> **columnEncryptionSetting** の詳細については、「[JDBC ドライバーでの Always Encrypted の使用](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)」を参照してください。<br/><br/> **注:** Always Encrypted は、SQL Server 2016 以降のバージョンで利用できます。 |
 | databaseName,<br/>database<br/><br/>String<br/>[&lt;=128 文字]<br/><br/>null | 接続するデータベース名です。 <br/><br/>指定しない場合は、既定のデータベースへの接続が確立されます。 |
 | delayLoadingLobs<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>true | ResultSet から取得されるすべての LOB オブジェクトをストリームするかどうかを示すフラグ。 このプロパティを "false" に設定すると、LOB オブジェクト全体がストリーミングなしでメモリに読み込まれます。 |
@@ -109,7 +109,7 @@ ms.locfileid: "91727563"
 | trustStorePassword<br/><br/>String<br/><br/>null | trustStore データの整合性を確認するために使用するパスワードです。<br/><br/> trustStore プロパティは設定されているが trustStorePassword プロパティは設定されていない場合、trustStore の整合性は確認されません。<br/><br/> trustStore プロパティと trustStorePassword プロパティの両方が指定されていない場合、ドライバーでは、JVM システム プロパティの "javax.net.ssl.trustStore" と "javax.net.ssl.trustStorePassword" が使用されます。 "javax.net.ssl.trustStorePassword" システム プロパティが指定されていない場合、trustStore の整合性は確認されません。<br/><br/> trustStore プロパティは設定されていないが trustStorePassword プロパティは設定されている場合、JDBC ドライバーでは、"javax.net.ssl.trustStore" で指定されたファイルが信頼ストアとして使用され、指定された trustStorePassword を使用して信頼ストアの整合性が確認されます。 これは、クライアント アプリケーションでパスワードを JVM システム プロパティに格納しないようにする場合に必要となることがあります。<br/><br/> **注:** trustStorePassword プロパティが証明書の trustStore の検索に影響するのは、接続で TLS 接続が使用され、**trustServerCertificate** プロパティが "false" に設定されている場合のみです。 |
 | trustStoreType<br/><br/>String<br/><br/>JKS | FIPS モードで使用する信頼ストアの種類を指定するには、このプロパティを設定します。 <br/><br/>指定できる値は、**PKCS12** または FIPS プロバイダーによって定義された種類です。 |
 | useBulkCopyFor...<br/>BatchInsert<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | _useBulkCopyForBatchInsert_<br/><br/> Microsoft JDBC Driver 7.0 for SQL Server 以降では、`java.sql.PreparedStatement` を使用してバッチ挿入操作を実行するときに、一括コピー API を利用するためにこの接続プロパティを有効にして、パフォーマンスを向上させることができます。 <br/><br/>この機能は、ターゲット サーバーの種類が **Azure Data Warehouse** の場合にのみ機能します。 この機能は既定では無効になっており、有効にするには、このプロパティを "true" に設定します。 <br/></br> **重要な注意:** この機能では、完全にパラメーター化された INSERT クエリのみがサポートされます。 INSERT クエリが他の SQL クエリによって結合された場合、または値にデータが含まれている場合、実行は基本的なバッチ挿入操作にフォールバックします。 <br/><br/> このプロパティの使用方法について詳しくは、「[バッチ挿入操作に一括コピー API を使用する](use-bulk-copy-api-batch-insert-operation.md)」をご覧ください|
-| useFmtOnly<br /><br />boolean<br />["true" &#124; "false"]<br /><br />false | Microsoft JDBC Driver for SQL Server の v7.4 以降では、**useFmtOnly** 接続プロパティを指定することによって、サーバーからパラメーター メタデータのクエリを実行する別の方法が提供されています。 パラメーター メタデータのクエリを実行するときに、ドライバーで `SET FMTONLY` ロジックを使用する必要があることを指定するには、このプロパティを "true" に設定します。 この機能は既定ではオフになっています。`SET FMTONLY` は非推奨としてマークされているため、このプロパティを使用することは推奨されていません。 **useFmtOnly** は、[`sp_describe_undeclared_parameters`](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md?view=sql-server-2017) の既知の問題と制限の回避策としてのみ使用できます。<br/><br/> 現在、この機能では、単一の `SELECT/INSERT/UPDATE/DELETE` クエリのみがサポートされています。 サポートされていないクエリまたは複数のクエリでこの機能を使用しようとすると、ドライバーではクエリの解析が試行されますが、ほとんどの場合、例外が発生します。<br/><br/> 詳細については、「[UseFmtOnly を使用した ParameterMetaData の取得](../../connect/jdbc/using-usefmtonly.md)」を参照してください。 |
+| useFmtOnly<br /><br />boolean<br />["true" &#124; "false"]<br /><br />false | Microsoft JDBC Driver for SQL Server の v7.4 以降では、**useFmtOnly** 接続プロパティを指定することによって、サーバーからパラメーター メタデータのクエリを実行する別の方法が提供されています。 パラメーター メタデータのクエリを実行するときに、ドライバーで `SET FMTONLY` ロジックを使用する必要があることを指定するには、このプロパティを "true" に設定します。 この機能は既定ではオフになっています。`SET FMTONLY` は非推奨としてマークされているため、このプロパティを使用することは推奨されていません。 **useFmtOnly** は、[`sp_describe_undeclared_parameters`](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) の既知の問題と制限の回避策としてのみ使用できます。<br/><br/> 現在、この機能では、単一の `SELECT/INSERT/UPDATE/DELETE` クエリのみがサポートされています。 サポートされていないクエリまたは複数のクエリでこの機能を使用しようとすると、ドライバーではクエリの解析が試行されますが、ほとんどの場合、例外が発生します。<br/><br/> 詳細については、「[UseFmtOnly を使用した ParameterMetaData の取得](../../connect/jdbc/using-usefmtonly.md)」を参照してください。 |
 | userName,<br/>user<br/><br/>String<br/>[&lt;=128 文字]<br/><br/>null | SQL ユーザーとパスワードが接続されている場合のデータベース ユーザー。<br/><br/>プリンシパル名とパスワードを使用した Kerberos 接続の場合、このプロパティは Kerberos プリンシパル名に設定されます。 |
 | workstationID<br/><br/>String<br/>[&lt;=128 文字]<br/><br/>&lt;空の文字列&gt; | ワークステーション ID。 個別のワークステーションを識別するために、さまざまな [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロファイリング ツールおよびロギング ツールで使用されます。 <br/><br/>指定されていない場合は、&lt;空の文字列&gt; が使用されます。 |
 | xopenStates<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | "true" に設定すると、ドライバーが XOPEN 互換の状態コードを例外で返します。 <br/><br/>既定では、SQL 99 の状態コードを返します。 |

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 0f4ccc330491ba5699ed10de48a883792d896447
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4d11586f380354d0cef98039fbe95d2f9ed3287b
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725641"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081461"
 ---
 # <a name="handling-null-values"></a>null 値の処理
 
@@ -107,7 +107,7 @@ UDT 列の場合、null 値は常に `DataColumn` に関連付けられた型に
   
 - <xref:System.Data.DataRow.IsNull%2A> メソッドは、`true` と `DbNull.Value` のどちらに対しても `INullable.Null` を返します。  
   
-## <a name="assigning-null-values"></a>null 値の割り当て  
+## <a name="assigning-null-values-to-sqltypes"></a>SqlTypes への null 値の割り当て  
 任意の <xref:System.Data.SqlTypes> インスタンスの既定値は null です。  
   
 <xref:System.Data.SqlTypes> の null 値は型固有であり、`DbNull` などの 1 つの値で表すことはできません。 null 値を確認するには、`IsNull` プロパティを使用します。  

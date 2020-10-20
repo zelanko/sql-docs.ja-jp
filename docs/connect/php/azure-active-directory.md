@@ -11,17 +11,17 @@ helpviewer_keywords:
 - azure active directory, authentication, access token
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b0d644d362ad4105c4e0b4f0db8d50c92a7e8b1
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f7abb90d32f93975c9a984670ca450dc791a46ae
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726893"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004559"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Azure Active Directory 認証を使用して接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](/azure/active-directory/active-directory-whatis) (Azure AD) は、[SQL Server 認証](how-to-connect-using-sql-server-authentication.md)の代替手段として機能する、集中ユーザー ID 管理テクノロジです。 Azure AD を使用すると、ユーザー名とパスワード、Windows 統合認証、または Azure AD アクセス トークンを使用して、Azure AD のフェデレーション ID で、Microsoft Azure SQL Database と SQL Data Warehouse に接続できます。 SQL Server 用の PHP ドライバーでは、これらの機能が部分的にサポートされます。
+[Azure Active Directory](/azure/active-directory/active-directory-whatis) (Azure AD) は、[SQL Server 認証](how-to-connect-using-sql-server-authentication.md)の代替手段として機能する、集中ユーザー ID 管理テクノロジです。 Azure AD を使用すると、ユーザー名とパスワード、Windows 統合認証、または Azure AD アクセス トークンを使用して、Azure AD のフェデレーション ID で、Microsoft Azure SQL Database と Azure Synapse Analytics に接続できます。 SQL Server 用の PHP ドライバーでは、これらの機能が部分的にサポートされます。
 
 Azure AD を使用するには、次の表で示すように、**Authentication** または **AccessToken** キーワードを使用します (どちらか一方)。 技術的な詳細については、「[ODBC ドライバーでの Azure Active Directory の使用](../odbc/using-azure-active-directory.md)」をご覧ください。
 

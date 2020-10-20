@@ -8,12 +8,12 @@ ms.technology: security
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cf1db4f6e07609ce6da38569732f7dba333f86ff
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 40ddab224d24e566ad346d64d5238ca5c81d9f48
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497206"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891592"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name-san"></a>サブジェクト代替名 (SAN) を使用するように Reporting Services を構成する
 
@@ -33,11 +33,11 @@ Reporting Services の TLS 設定の詳細については、「[ネイティブ 
   
 1.  レポート サーバーの構成マネージャーを起動します。  
   
-     詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
+     詳細については、「[レポート サーバー構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
 2.  **[Web サービス URL]** ページで、TLS/SSL ポートおよび TLS/SSL 証明書を選択します。  
   
-     ![Reporting Services 構成マネージャー](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services 構成マネージャー")  
+     ![レポート サーバー構成マネージャー](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "レポート サーバー構成マネージャー")  
   
      構成マネージャーによって、ポート用の TLS/SSL 証明書が登録されます。  
   
@@ -155,7 +155,7 @@ Reporting Services の TLS 設定の詳細については、「[ネイティブ 
 ## <a name="see-also"></a>関連項目
 
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [レポート サーバー構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services の構成ファイルの変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [レポート サーバーの URL の構成](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 

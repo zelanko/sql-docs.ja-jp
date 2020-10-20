@@ -4,24 +4,24 @@ titleSuffix: SQL Server Language Extensions
 description: 機能拡張フレームワークを使用すると、SQL Server のプログラミング言語拡張機能を記述できます。 Microsoft SQL Server 用の機能拡張フレームワーク API は、SQL Server とやりとりしたり、データを交換したりするために言語拡張機能で使用できる API です。
 author: dphansen
 ms.author: davidph
-ms.date: 04/09/2020
+ms.date: 10/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a918ca8acb263e843915c48fc16e563433d32c2
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 3cc4e75f044476579859443b6a7407d01c3e92ea
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765767"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956863"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>SQL Server 用の機能拡張フレームワーク API
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 機能拡張フレームワークを使用すると、SQL Server のプログラミング言語拡張機能を記述できます。 Microsoft SQL Server 用の機能拡張フレームワーク API は、SQL Server とやりとりしたり、データを交換したりするために言語拡張機能で使用できる API です。
 
-言語拡張機能の作成者は、このリファレンスをオープンソースの [SQL Server 用 Java 言語拡張機能](../how-to/extensibility-sdk-java-sql-server.md)と共に使用して、独自の言語拡張機能を記述するための API の使用方法を理解することができます。 Java 言語拡張機能のソース コードは [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions) にあります。
+言語拡張機能の作成者は、このリファレンスをオープンソースの言語拡張機能と共に使用して、独自のものを記述するための API の使用方法を理解することができます。 言語拡張機能のソース コードは、[aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions) で見つけることができます。
 
 すべての API 関数の構文と引数に関する情報については、以下を参照してください。
 
@@ -36,7 +36,7 @@ ms.locfileid: "91765767"
 
 ## <a name="init"></a>Init
 
-この関数は 1 回だけ呼び出され、実行用にランタイムを初期化するために使用されます。 たとえば、Java 拡張機能によって JVM が初期化されます。
+この関数は 1 回だけ呼び出され、実行用にランタイムを初期化するために使用されます。 
 
 ### <a name="syntax"></a>構文
 
@@ -81,7 +81,7 @@ SQLRETURN Init(
 
 ## <a name="initsession"></a>InitSession
 
-セッションごとに 1 回呼び出され、セッション固有の設定を初期化する関数です。
+この関数は、セッションごとに 1 回呼び出され、セッション固有の設定を初期化します。
 
 ### <a name="syntax"></a>構文
 
@@ -583,7 +583,7 @@ SQLRETURN InstallExternalLibrary(
 \[入力\] LibraryInstallDirectory 文字列の長さ。
 
 *LibraryError*  
-\[出力\] オプションの出力パラメーター。 ライブラリのインストール中にエラーが発生した場合、LibraryError によって、エラーを説明する文字列がポイントされます。
+\[出力\] オプションの出力パラメーター。 ライブラリのインストール中にエラーが発生した場合は、LibraryError によって、エラーを説明する文字列がポイントされます。
 
 *LibraryErrorLength*  
 \[出力\] LibraryError 文字列の長さ。
@@ -638,3 +638,5 @@ SQLRETURN UninstallExternalLibrary(
 ## <a name="next-steps"></a>次のステップ
 
 - [SQL Server 用の Microsoft Extensibility SDK for Java](../how-to/extensibility-sdk-java-sql-server.md)
+- [Python カスタム ランタイム](../../machine-learning/install/custom-runtime-python.md)
+- [R カスタム ランタイム](../../machine-learning/install/custom-runtime-r.md)

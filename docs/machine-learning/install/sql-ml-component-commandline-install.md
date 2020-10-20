@@ -1,30 +1,25 @@
 ---
 title: コマンド プロンプトからのインストール
-description: SQL Server コマンド ライン セットアップを実行して、R と Python を備えた Machine Learning Services を SQL Server データベース エンジン インスタンスに追加します。
+description: SQL Server コマンド ライン セットアップを実行して、Python と R を備えた Machine Learning Services を SQL Server データベース エンジン インスタンスに追加します。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/30/2020
+ms.date: 10/12/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9769675d3901efc9e5ad794794705f924e494fe2
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: cd9e1e261790c301ceac8198a76fbe2906c8ccf6
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624759"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956768"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>R と Python を備えた SQL Server Machine Learning Services をコマンド ラインからインストールする
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-この記事では、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) をコマンド ラインからインストールする手順について説明します。
-
-+ [新しい In-Database インスタンス](#indb)
-+ [既存のデータベース エンジンのインスタンスに追加する](#add-existing)
-+ [サイレント インストール](#silent)
-+ [新しいスタンドアロン サーバー](#shared-feature)
+この記事では、Python と R を備えた [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) をコマンド ラインからインストールする手順を示します。
 
 セットアップのユーザー インターフェイスには、サイレント、基本、または完全な対話方式を指定できます。 この記事では、「[コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)」を補足し、R および Python の機械学習コンポーネントに固有のパラメーターについて説明します。
 
@@ -39,7 +34,6 @@ ms.locfileid: "91624759"
 + ドメイン コントローラーにはインストールしないでください。 セットアップの Machine Learning Services の部分が失敗します。
 
 + 同じコンピューター上に、スタンドアロン インスタンスと In-Database インスタンスをインストールすることは避けてください。 スタンドアロン サーバーが同じリソースの奪い合いをするため、両方のインストールのパフォーマンスが低下することになります。
-
 
 ## <a name="command-line-arguments"></a>コマンド ライン引数
 
@@ -202,7 +196,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 セットアップが完了すると、サーバー、Microsoft のパッケージ、R と Python のオープンソース ディストリビューション、ツール、サンプル、およびディストリビューションの一部であるスクリプトが揃います。 
 
-R のコンソール ウィンドウを開くには、`\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64` に移動し、**RGui.exe** をダブルクリックします。 R は初めてですか。 次のチュートリアルをお試しください:「[基本的な R コマンドと RevoScaleR 関数:25 個の一般的な例](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)」。
+R のコンソール ウィンドウを開くには、`\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64` に移動し、**RGui.exe** をダブルクリックします。 R は初めてですか。 次のチュートリアルをお試しください:「[基本的な R コマンドと RevoScaleR 関数:25 個の一般的な例](/machine-learning-server/r/tutorial-r-to-revoscaler)」。
 
 Python コマンドを開くには、`\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64` に移動し、**python.exe** をダブルクリックします。
 

@@ -1,6 +1,6 @@
 ---
-title: Azure SQL Data Warehouse への接続とクエリの実行
-description: このクイック スタートでは、Azure Data Studio を使用して Azure SQL Data Warehouse に接続し、クエリを実行する方法を示します
+title: Azure Synapse Analytics を使用した接続およびクエリ
+description: このクイックスタートでは、Azure Synapse Analytics の専用 SQL プールを使用して接続先となる Azure Data Studio を使用する方法、およびクエリを実行する方法について説明します。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
@@ -9,30 +9,30 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: e9c0ba08445eb1f9712b00b84cc07ac7eae310f1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c2282220dff18a7f054cc5fd01b3670b6fd14d43
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766371"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005488"
 ---
-# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>クイック スタート:Azure Data Studio を使用して、Azure SQL Data Warehouse のデータに接続してクエリを実行する
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>クイックスタート: Azure Synapse Analytics の専用 SQL プールを使用して接続先となる Azure Data Studio を使用し、クエリを実行する
 
-このクイック スタートでは、Azure Data Studio を使用して Azure SQL Data Warehouse に接続し、Transact-SQL ステートメントを使用してデータを作成、挿入、選択する方法について説明します。 
+このクイックスタートでは、Azure Synapse Analytics の専用 SQL プールを使用して接続先となる Azure Data Studio を使用する方法、および Transact-SQL ステートメントを使用してデータの作成、挿入、選択を行う方法について説明します。 
 
 ## <a name="prerequisites"></a>前提条件
-このクイック スタートを完了するには、Azure Data Studio と Azure SQL Data Warehouse が必要です。
+このクイックスタートを完了するには、Azure Data Studio、および Azure Synapse Analytics の専用 SQL プールが必要です。
 
 - [Azure Data Studio をインストールする](./download-azure-data-studio.md?view=sql-server-ver15)。
 
-SQL Data Warehouse がまだない場合は、[SQL Data Warehouse の作成](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)に関するページを参照してください。
+専用 SQL プールがない場合は、[専用 SQL プールの作成](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)に関する記事を参照してください。
 
 サーバー名とログイン資格情報を覚えておいてください。
 
 
-## <a name="connect-to-your-data-warehouse"></a>データ ウェアハウスに接続する
+## <a name="connect-to-your-dedicated-sql-pool"></a>専用 SQL プールに接続する
 
-Azure Data Studio を使用して、Azure SQL Data Warehouse サーバーへの接続を確立します。
+Azure Data Studio を使用して、Azure Synapse Analytics サーバーへの接続を確立します。
 
 1. 最初に Azure Data Studio を実行すると、 **[接続]** ページが開きます。 **[接続]** ページが表示されない場合は、 **[接続の追加]** をクリックするか、 **[サーバー]** サイドバーの **[新しい接続]** アイコンをクリックします。
    
@@ -58,7 +58,7 @@ Azure Data Studio を使用して、Azure SQL Data Warehouse サーバーへの�
 
 4. ご利用のサーバーに接続が正常に行われると、 *[サーバー]* サイドバーに表示されます。
 
-## <a name="create-the-tutorial-data-warehouse"></a>チュートリアル データ ウェアハウスを作成する
+## <a name="create-the-tutorial-dedicated-sql-pool"></a>チュートリアル専用 SQL プールを作成する
 1. オブジェクト エクスプローラーでご利用のサーバーを右クリックし、 **[新しいクエリ]** を選択します。
 
 1. クエリ エディターに次のスニペットを貼り付けて、 **[実行]** をクリックします。
@@ -145,4 +145,4 @@ Azure Data Studio を使用して、Azure SQL Data Warehouse サーバーへの�
 
 ## <a name="next-steps"></a>次のステップ
 
-Azure SQL Data Warehouse に正常に接続してクエリを実行したので、[コード エディターのチュートリアル](tutorial-sql-editor.md)をお試しください。
+Azure Synapse Analytics に正常に接続してクエリを実行したので、[コード エディターのチュートリアル](tutorial-sql-editor.md)を試してください。

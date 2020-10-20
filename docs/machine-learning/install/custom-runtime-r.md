@@ -9,18 +9,18 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d9ba741433cf5e010861dd3096ac9bf8b4f1707
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: fb7f365fdbf4421093c11b5223bb3c1036a8d911
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227163"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956359"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>SQL Server 用の R カスタム ランタイムをインストールする
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-この記事では、SQL Server で R スクリプトを実行するためのカスタム ランタイムをインストールする方法について説明します。 R 用のカスタム ランタイムは、次のシナリオで使用できます。
+この記事では、SQL Server で R スクリプトを実行するためのカスタム ランタイムをインストールする方法について説明します。 カスタム ランタイムによって、外部コードを実行するための機能拡張フレームワーク上に構築された言語拡張テクノロジが使用されます。 R 用のカスタム ランタイムは、次のシナリオで使用できます。
 
 + 機能拡張フレームワークを使用する SQL Server のインストール。
 
@@ -71,7 +71,7 @@ R カスタム ランタイムをインストールする前に、次のもの�
     + データベース エンジン サービス
     + Machine Learning Services および言語の拡張
 
-1. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)」を参照してください。
+1. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。
 
 ## <a name="install-r"></a>R のインストール
 

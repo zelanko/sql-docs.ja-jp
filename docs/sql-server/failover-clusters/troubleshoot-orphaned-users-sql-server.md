@@ -20,12 +20,12 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e538c68882c1fc49a449767c51c39123ee222f6
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 435cc59989b8a06ac651ccc93f73bdfebec3946d
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115337"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006258"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>孤立したユーザーのトラブルシューティング (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,9 +73,9 @@ WHERE sp.SID IS NULL
   
  現在のデータベース内で、どの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにもリンクされていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ユーザーとそのセキュリティ識別子 (SID) が出力されます。  
 
-**SQL Database および SQL Data Warehouse の場合**
+**SQL Database と Azure Synapse Analytics の場合**
 
-`sys.server_principals` テーブルは、SQL Database または SQL Data Warehouse では使用できません。 これらの環境では、次の手順を使用して孤立ユーザーを識別します。
+`sys.server_principals` テーブルは、SQL Database または Azure Synapse Analytics では使用できません。 これらの環境では、次の手順を使用して孤立ユーザーを識別します。
 
 1. `master` データベースに接続し、次のクエリを使用してログインの SID を選択します。
     ```

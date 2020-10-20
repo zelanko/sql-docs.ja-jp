@@ -29,12 +29,12 @@ ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 61d00005973755588012d0e7e1d9f4be9327fa08
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 9a3fa6a8e427417b8c165f031cf5bd2295e9a50a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076757"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005600"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 
@@ -42,7 +42,7 @@ ms.locfileid: "90076757"
 
 > Linux 上で bcp を使用する場合は、[Linux への sqlcmd と bcp のインストール](../linux/sql-server-linux-setup-tools.md)に関する記事を参照してください。
 >
-> bcp を Azure SQL Data Warehouse と共に使用する方法の詳細については、[bcp を使用したデータの読み込み](/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)に関する記事を参照してください。
+> bcp を Azure Synapse Analytics と共に使用する方法の詳細については、[bcp を使用したデータの読み込み](/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)に関する記事を参照してください。
 
 **b**ulk **c**opy **p**rogram ユーティリティ (**bcp**) は、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスと、ユーザー指定の形式のデータ ファイルとの間でデータの一括コピーを行います。 **bcp** ユーティリティを使うと、多数の新規行を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルにインポートしたり、データをテーブルからデータ ファイルにエクスポートしたりできます。 このユーティリティでは [!INCLUDE[tsql](../includes/tsql-md.md)] **の知識は必要ありません。ただし、** queryout オプションと同時に使う場合はその知識が必要になります。 データをテーブルにインポートするには、そのテーブル用に作成されたフォーマット ファイルを使用するか、テーブルの構造およびテーブルの列に有効なデータの型を理解しておく必要があります。  
 
@@ -64,8 +64,8 @@ ms.locfileid: "90076757"
 ビルド番号:15.0.2000.5<br>
 リリース日: 2020 年 9 月 11 日
 
-新しいバージョンの SQLCMD では、SQL Database、SQL Data Warehouse、Always Encrypted 機能の Multi-Factor Authentication (MFA) のサポートを含め、Azure AD 認証がサポートされています。
-新しい BCP は、SQL Database と SQL Data Warehouse の Multi-Factor Authentication (MFA) のサポートを含め、Azure AD 認証をサポートします。
+新しいバージョンの SQLCMD では、SQL Database、Azure Synapse Analytics、Always Encrypted 機能の Multi-Factor Authentication (MFA) のサポートを含め、Azure AD 認証がサポートされています。
+新しい BCP では、SQL Database と Azure Synapse Analytics の Multi-Factor Authentication (MFA) のサポートを含め、Azure AD 認証がサポートされています。
 
 ### <a name="system-requirements"></a>システム要件
 
@@ -181,7 +181,8 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  接続先のデータベースを指定します。 既定では、bcp.exe はユーザーの既定のデータベースに接続します。 -d database_name と 3 つの部分で構成される名前 (bcp.exe に最初のパラメーターとして渡される database_name.schema.table) が指定されている場合、データベース名を 2 回指定できないため、エラーが発生します。 *database_name* がハイフン (-) またはスラッシュ (/) で始まる場合は、 **-d** とデータベース名の間に空白を入れないでください。  
 
 **-D**<a name="D"></a>  
-`bcp` `-S` オプションに渡された値が、データ ソース名 (DSN) として解釈されるようにします。 詳細については、「[sqlcmd による接続](../connect/odbc/linux-mac/connecting-with-sqlcmd.md)」の「_sqlcmd および bcp の DSN サポート_」を参照してください。
+`bcp` `-S` オプションに渡された値が、データ ソース名 (DSN) として解釈されるようにします。 DSN を使用すると、ドライバー オプションを埋め込んで、コマンド ラインを簡略化したり、MultiSubnetFailover などのコマンド ラインからアクセスできないドライバー オプションを適用したり、コマンド ライン引数として検出されないように機密性の高い資格情報を保護したりできます。 詳細については、「[sqlcmd による接続](../connect/odbc/linux-mac/connecting-with-sqlcmd.md)」の「_sqlcmd および bcp の DSN サポート_」を参照してください。
+
 
  **-e** _**err\_file**_<a name="e"></a>  
  **bcp** ユーティリティがファイルからデータベースに転送できなかったすべての行を格納するエラー ファイルの完全パスを指定します。 **bcp** コマンドからのエラー メッセージは、ユーザーのワークステーションに送られます。 このオプションを指定しないと、エラー ファイルは作成されません。  
@@ -215,7 +216,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 **-G**<a name="G"></a>
 
- このスイッチは、Azure SQL Database または Azure SQL Data Warehouse に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 -G スイッチには[バージョン 14.0.3008.27 以降](https://go.microsoft.com/fwlink/?LinkID=825643)が必要です。 バージョンを判断するには、bcp -v を実行します。 詳細については、「[Azure Active Directory 認証を使用して SQL Database または SQL Data Warehouse を認証する](/azure/sql-database/sql-database-aad-authentication)」を参照してください。 
+ このスイッチは、Azure SQL Database または Azure Synapse Analytics に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 -G スイッチには[バージョン 14.0.3008.27 以降](https://go.microsoft.com/fwlink/?LinkID=825643)が必要です。 バージョンを判断するには、bcp -v を実行します。 詳細については、[SQL Database または Azure Synapse Analytics での認証に Azure Active Directory 認証を使用する](/azure/sql-database/sql-database-aad-authentication)に関するページをご覧ください。 
 
 > [!IMPORTANT]
 > **-G** オプションは、Azure SQL Database と Azure Data Warehouse にのみ適用されます。
@@ -258,7 +259,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Azure Active Directory 対話型**  
 
-   Azure SQL Database と SQL Data Warehouse の Azure AD 対話型認証では、多要素認証をサポートする対話的な方法を使用できます。 詳細については、「[Active Directory 対話型認証](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)」を参照してください。
+   Azure SQL Database と Azure Synapse Analytics の Azure AD 対話型認証では、多要素認証をサポートする対話的な方法を使用できます。 詳細については、「[Active Directory 対話型認証](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)」を参照してください。
 
    Azure AD 対話型には、**bcp** [バージョン 15.0.1000.34](#download-the-latest-version-of-bcp-utility) 以降と [ODBC バージョン 17.2 以降](https://aka.ms/downloadmsodbcsql)が必要です。  
 
@@ -404,13 +405,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続することを指定します。 ネットワーク ユーザーのセキュリティ資格情報である *login_id*および *password* は必要ありません。 **-T** を指定しない場合、正常にログインするには **-U** と **-P** を指定する必要があります。
 
 > [!IMPORTANT]
-> **bcp** ユーティリティが、統合セキュリティを使用したセキュリティ接続で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続している場合は、 **user name** と *password* の組み合わせではなく、 *-T* オプション (セキュリティ接続) を使用します。 **bcp** ユーティリティが SQL Database または SQL Data Warehouse に接続している場合、Windows 認証または Azure Active Directory 認証の使用はサポートされません。 **-U** および **-P** オプションを使用します。 
+> **bcp** ユーティリティが、統合セキュリティを使用したセキュリティ接続で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続している場合は、 **user name** と *password* の組み合わせではなく、 *-T* オプション (セキュリティ接続) を使用します。 **bcp** ユーティリティが SQL Database または Azure Synapse Analytics に接続している場合、Windows 認証または Azure Active Directory 認証の使用はサポートされません。 **-U** および **-P** オプションを使用します。 
   
  **-U** _**login\_id**_<a name="U"></a>  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]への接続に使用されるログイン ID を指定します。  
   
 > [!IMPORTANT]
-> **bcp** ユーティリティが、統合セキュリティを使用したセキュリティ接続で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続している場合は、 **user name** と *password* の組み合わせではなく、 *-T* オプション (セキュリティ接続) を使用します。 **bcp** ユーティリティが SQL Database または SQL Data Warehouse に接続している場合、Windows 認証または Azure Active Directory 認証の使用はサポートされません。 **-U** および **-P** オプションを使用します。
+> **bcp** ユーティリティが、統合セキュリティを使用したセキュリティ接続で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続している場合は、 **user name** と *password* の組み合わせではなく、 *-T* オプション (セキュリティ接続) を使用します。 **bcp** ユーティリティが SQL Database または Azure Synapse Analytics に接続している場合、Windows 認証または Azure Active Directory 認証の使用はサポートされません。 **-U** および **-P** オプションを使用します。
   
  **-v**<a name="v"></a>  
  **bcp** ユーティリティのバージョン番号と著作権に関する情報を報告します。  

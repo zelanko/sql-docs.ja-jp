@@ -9,17 +9,17 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ca8827f5dcee9b25d873ac7fed83679480bedb44
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: d02217eaae3cf402a1ccb6e08780f4e9406d446f
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227266"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956360"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>SQL Server 用の Python カスタム ランタイムをインストールする
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-この記事では、SQL Server で Python スクリプトを実行するためのカスタム ランタイムをインストールする方法について説明します。 Python 用のカスタム ランタイムは、次のシナリオで使用できます。
+この記事では、SQL Server で Python スクリプトを実行するためのカスタム ランタイムをインストールする方法について説明します。 カスタム ランタイムによって、外部コードを実行するための機能拡張フレームワーク上に構築された言語拡張テクノロジが使用されます。 Python 用のカスタム ランタイムは、次のシナリオで使用できます。
 
 + 機能拡張フレームワークを使用する SQL Server のインストール。
 
@@ -29,6 +29,8 @@ ms.locfileid: "91227266"
 
 > [!NOTE]
 > この記事では、Windows に Python 用のカスタム ランタイムをインストールする方法について説明します。 Linux にインストールするには、[SQL Server on Linux 用の Python カスタム ランタイムのインストール](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)に関するページを参照してください
+
+
 
 ## <a name="pre-install-checklist"></a>インストール前のチェックリスト
 
@@ -73,14 +75,14 @@ Python カスタム ランタイムをインストールする前に、次のも
     + データベース エンジン サービス
     + Machine Learning Services および言語の拡張
 
-1. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)」を参照してください。
+1. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。
 
 
 ## <a name="install-python-37"></a>Python 3.7 をインストールする 
 
 [Python 3.7]( https://www.python.org/downloads/release/python-379/) をインストールし、PATH に追加します。
 
-![Python 3.7 をパスに追加します。](../install/media/python-379.png) **イメージ名を更新する - note**
+![Python 3.7 をパスに追加します。](../install/media/python-379.png) 
 
 
 #### <a name="install-pandas"></a>pandas をインストールする
@@ -105,7 +107,7 @@ PYTHONHOME が既に存在する場合は、 **[編集]** を選択し、Python 
 
 ## <a name="grant-access-to-the-custom-python-installation-folder"></a>カスタム Python インストール フォルダーへのアクセスを許可する
 
-新しい "*管理者特権*" でのコマンド プロンプトから次の **icacls** コマンドを実行して、PYTHONHOME に対する READ および EXECUTE のアクセス権を、**SQL Server Launchpad サービス**と SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**) に付与します。 Launchpad サービスのユーザー名は `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME` という形式であり、これは SQL Server のインスタンス名です。 そのコマンドでは、指定したディレクトリ パスの下にあるすべてのファイルとフォルダーへのアクセス権が再帰的に許可されます。
+新しい "*管理者特権*" でのコマンド プロンプトから次の **icacls** コマンドを実行して、PYTHONHOME に対する READ および EXECUTE のアクセス権を、**SQL Server Launchpad サービス**と SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**) に付与します。 Launchpad サービスのユーザー名は `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME` はご利用の SQL Server のインスタンス名です。 そのコマンドでは、指定したディレクトリ パスの下にあるすべてのファイルとフォルダーへのアクセス権が再帰的に許可されます。
 
 インスタンス名を `MSSQLLAUNCHPAD` に追加します (`MSSQLLAUNCHPAD$INSTANCENAME`)。 この例では、INSTANCENAME は既定のインスタンス `MSSQLSERVER` です。
 
@@ -138,7 +140,7 @@ net start MSSQLLAUNCHPAD$MSSQLSERVER
 
 ## <a name="register-external-language"></a>外部言語を登録する
 
-拡張機能を使用するデータベースごとに、[CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) でこの Python 言語拡張機能を登録します。 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) を使用して SQL Server に接続し、次の T-SQL コマンドを実行します。 このステートメントのパスを変更して、ダウンロードした言語拡張機能の zip ファイル (python-lang-extension.zip) の場所を反映します。
+拡張機能を使用するデータベースごとに、[CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) でこの Python 言語拡張機能を登録します。 [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) を使用して SQL Server に接続し、次の T-SQL コマンドを実行します。 このステートメントのパスを変更して、ダウンロードした言語拡張機能の zip ファイル (python-lang-extension.zip) の場所を反映します。
 
 > [!NOTE]
 > Python は予約語です。 外部言語には別の名前を使用します (たとえば "myPython")。
@@ -284,7 +286,7 @@ sudo systemctl restart mssql-launchpadd
 
 ## <a name="register-external-language"></a>外部言語を登録する
 
-拡張機能を使用するデータベースごとに、[CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) でこの Python 言語拡張機能を登録します。 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) を使用して SQL Server に接続し、次の T-SQL コマンドを実行します。 
+拡張機能を使用するデータベースごとに、[CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) でこの Python 言語拡張機能を登録します。 [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) を使用して SQL Server に接続し、次の T-SQL コマンドを実行します。 
 このステートメントのパスを変更して、ダウンロードした言語拡張機能の zip ファイル (python-lang-extension.zip) の場所を反映します。
 
 > [!NOTE]
@@ -302,7 +304,7 @@ GO
 
 Python の外部スクリプトは、ストアド プロシージャ [sp_execute_external スクリプト](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)を SQL Server に対して実行することによって実行できます。 
 
-外部スクリプトを有効にするには、SQL Server に接続されている [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) を使用して、次の SQL コマンドを実行します。
+外部スクリプトを有効にするには、SQL Server に接続されている [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) を使用して、次の SQL コマンドを実行します。
 
 ```sql
 sp_configure 'external scripts enabled', 1;

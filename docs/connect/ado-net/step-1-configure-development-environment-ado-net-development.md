@@ -11,12 +11,12 @@ ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: dde55bd4afd162869606e336126c32c274ea7445
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2e9f0619f26abf8b077059c7e12c7fc34c51a2e6
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633318"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081301"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>手順 1:ADO.NET 開発用に開発環境を構成する
 
@@ -30,7 +30,7 @@ ms.locfileid: "81633318"
 
 ### <a name="adonet-for-windows"></a>ADO.NET (Windows の場合)
 
-- ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[ADO.NET を含む .NET Framework をダウンロードしてインストールするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![丸で囲まれたダウンロード矢印 (Framework)](../../ssms/media/download-icon.png)[.NET Framework をダウンロードする (ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access) を含む)
 
 - C# ソース コードを記述してコンパイルするために、Visual Studio Community または同様の統合開発環境 (IDE) をインストールします。 現在 Microsoft では、Visual Studio Community を *無料*で提供しています。  
     - [Visual Studio Community をダウンロードする](https://www.visualstudio.com/products/visual-studio-community-vs)  
@@ -41,4 +41,4 @@ ms.locfileid: "81633318"
 
 各種オペレーティング システム用の .NET Core をダウンロードするためのリンクは、以下にあります。
 
-- ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[ .NET Core をダウンロードしてインストールするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![丸で囲まれたダウンロード矢印 (Core)](../../ssms/media/download-icon.png)[.NET Core をダウンロードしてインストールする](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

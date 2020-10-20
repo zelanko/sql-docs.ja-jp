@@ -1,6 +1,6 @@
 ---
 title: SSDT での Azure Active Directory
-description: SQL Server Data Tools (SSDT) で Azure SQL Database と Azure SQL Data Warehouse に対して用意されている Azure Active Directory の認証方法について説明します。
+description: SQL Server Data Tools (SSDT) で Azure SQL Database と Azure Synapse Analytics に対して用意されている Azure Active Directory の認証方法について説明します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +10,18 @@ reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f35d9ad1cf571708e547924d75efc9522db21cc1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: cde082f95bc7ff150c263742450a69fa9c90e6b7
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480846"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005916"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) での Azure Active Directory のサポート
 
 [!INCLUDE[appliesto-xx-asdb-asdb-xxx-md.md](../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-SQL Server Data Tools (SSDT) では、[Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) の認証方法がいくつか用意されています。
+SQL Server Data Tools (SSDT) では、[Azure Active Directory (Azure AD)](/azure/active-directory/active-directory-whatis) の認証方法がいくつか用意されています。
 
 Visual Studio で **[SQL Server オブジェクト エクスプローラー]** ( **[表示]** メニュー) を開き、 **[SQL Server の追加]** を選択します。
 
@@ -32,7 +32,7 @@ Visual Studio で **[SQL Server オブジェクト エクスプローラー]** (
 この記事では、[Azure クラウド](https://azure.microsoft.com/)の次の *Azure SQL 製品*を対象に Azure AD について説明します。
 
 - Azure SQL データベース
-- Azure SQL Data Warehouse
+- Azure Synapse Analytics
 
 ## <a name="active-directory-password-authentication"></a>Active Directory パスワード認証
 
@@ -41,18 +41,18 @@ Visual Studio で **[SQL Server オブジェクト エクスプローラー]** (
 - Azure とフェデレーションしていないドメインから資格情報を利用して Windows にログインしている。
 - Azure AD 認証と Azure AD を利用している。その基盤は初期またはクライアント ドメインである。
 
-詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)に関するページを参照してください。  
+詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](/azure/sql-database/sql-database-aad-authentication)に関するページを参照してください。  
 
 ## <a name="active-directory-integrated-authentication"></a>Active Directory 統合認証
 
-*Active Directory 統合認証*は、Azure Active Directory (Azure AD) の ID を使用して上記の Azure SQL 製品に接続するメカニズムです。 フェデレーション ドメインから Azure Active Directory の資格情報を使用して Windows にログインしている場合は、この方法を使用して接続します。 詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)に関するページを参照してください。
+*Active Directory 統合認証*は、Azure Active Directory (Azure AD) の ID を使用して上記の Azure SQL 製品に接続するメカニズムです。 フェデレーション ドメインから Azure Active Directory の資格情報を使用して Windows にログインしている場合は、この方法を使用して接続します。 詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](/azure/sql-database/sql-database-aad-authentication)に関するページを参照してください。
 
 ## <a name="active-directory-interactive-authentication"></a>Active Directory 対話型認証
 
-*Active Directory 対話型認証*は、SSDT を含む上記 Azure SQL 製品に接続するときに利用できますが、[.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) 以降のバージョンが必要になります。
+*Active Directory 対話型認証*は、SSDT を含む上記 Azure SQL 製品に接続するときに利用できますが、[.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2) 以降のバージョンが必要になります。
 
 - [各種バージョンの .NET Framework をダウンロードし、インストールする](https://www.microsoft.com/net/download/all)。
-- [Visual Studio 2017 バージョン 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) またはそれ以降のバージョン。
+- [Visual Studio 2017 バージョン 15.6](/visualstudio/releasenotes/vs2017-relnotes) またはそれ以降のバージョン。
 
 #### <a name="multi-factor-authentication-mfa"></a>Multi-Factor Authentication (MFA)
 
@@ -86,9 +86,9 @@ MFA の実施は、Azure AD によって、この追加の MFA ポップアッ�
 
 ## <a name="see-also"></a>参照  
 
-[多要素認証](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
-[SQL Database での Azure Active Directory 認証](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
+[多要素認証](/azure/sql-database/sql-database-ssms-mfa-authentication)  
+[SQL Database での Azure Active Directory 認証](/azure/sql-database/sql-database-aad-authentication-configure)  
 [SSDT MSDN フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[SSDT チーム ブログ](https://docs.microsoft.com/archive/blogs/ssdt/)  
-[DACFx API リファレンス](https://msdn.microsoft.com/library/dn645454.aspx)  
-[SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)  
+[SSDT チーム ブログ](/archive/blogs/ssdt/)  
+[DACFx API リファレンス](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))  
+[SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)
