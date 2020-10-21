@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 935729861e3cd2a1119290cab46eaa76a1b36621
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: decbd12174f6000a44a3cfd95b145c70de10740c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864047"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004665"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>包含データベース ユーザー - データベースの可搬性を確保する
 
@@ -41,7 +41,7 @@ ms.locfileid: "91864047"
 
  包含データベース ユーザー モデルでは、ログインが master データベースには存在しません。 認証プロセスはユーザー データベースで実行されます。master データベースには、ユーザー データベース内のデータベース ユーザーに関連付けられたログインは存在しません。 包含データベース ユーザー モデルは Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の両方をサポートしており、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDS](../../includes/sssds-md.md)]の両方で使用できます。 包含データベース ユーザーとして接続するには必ず、ユーザー データベースのパラメーターが接続文字列に含まれている必要があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] はそれを基に、認証プロセスがどちらのデータベースで管理されるかを判別します。 包含データベース ユーザーのアクティビティは、そのユーザーを認証するデータベースに限定されます。そのため包含データベース ユーザーとして接続しているときは、そのユーザーが必要とする個々のデータベースに、ユーザー アカウントを別々に作成する必要があります。 データベースを切り替えるには、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ユーザー側で新しい接続を作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内の包含データベース ユーザーは、別のデータベースに同一ユーザーが存在する場合、データベースを切り替えることができます。  
   
-**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] と [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] は、包含データベース ユーザーとしての Azure Active Directory ID をサポートします。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] では、 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 認証で包含データベース ユーザーがサポートされますが、 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] ではサポートされません。 詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](/azure/azure-sql/database/authentication-aad-overview)に関するページを参照してください。 Azure Active Directory 認証を使用するとき、Active Directory ユニバーサル認証を使用し、SSMS から接続できます。  管理者は多要素認証を要求するようにユニバーサル認証を設定できます。多要素認証では、電話、テキスト メッセージ、PIN のあるスマート カード、モバイル アプリ通知を利用して ID を確認します。 詳細については、「 [SQL Database と SQL Data Warehouse での Azure AD MFA のための SSMS のサポート](/azure/azure-sql/database/authentication-mfa-ssms-overview)」をご覧ください。  
+**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] と [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] は、包含データベース ユーザーとしての Azure Active Directory ID をサポートします。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] では、 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 認証で包含データベース ユーザーがサポートされますが、 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] ではサポートされません。 詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](/azure/azure-sql/database/authentication-aad-overview)に関するページを参照してください。 Azure Active Directory 認証を使用するとき、Active Directory ユニバーサル認証を使用し、SSMS から接続できます。  管理者は多要素認証を要求するようにユニバーサル認証を設定できます。多要素認証では、電話、テキスト メッセージ、PIN のあるスマート カード、モバイル アプリ通知を利用して ID を確認します。 詳細については、[SQL Database と Azure Synapse Analytics での Azure AD MFA の SSMS サポート](/azure/azure-sql/database/authentication-mfa-ssms-overview)に関する記事を参照してください。  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]に関しては、接続文字列にはデータベース名が常に必要となるため、従来のモデルから包含データベース ユーザー モデルに切り替える際、接続文字列に対する変更は不要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続の場合は、データベースの名前を接続文字列に追加する必要があります (既に存在する場合は不要)。  
   

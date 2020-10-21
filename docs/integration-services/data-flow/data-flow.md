@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa3fff63528c11e57c6517393c28a5deb2acfcfe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4bbd5718a5c57bdb874af00ba57dafedc9dd8654
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430964"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195970"
 ---
 # <a name="data-flow"></a>Data Flow
 
@@ -37,7 +37,7 @@ ms.locfileid: "88430964"
   
  また、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、コンポーネントの出力を別のコンポーネントの入力に連結するパスが用意されています。 パスは、コンポーネントの順序を定義します。また、パスを使用して注釈をデータ フローに追加したり、列の変換元を表示したりすることもできます。  
   
- データ フロー コンポーネントを連結するには、変換元と変換の出力を、変換と変換先の入力に連結します。 データ フローを構築する場合、通常は 2 番目以降のコンポーネントを追加するときに、データ フローに連結します。 コンポーネントを連結すると、コンポーネントを構成するための入力列が使用できるようになります。 使用できる入力列がない場合、コンポーネントをデータ フローに連結した後に、そのコンポーネントの構成を完了する必要があります。 詳細については、「 [Integration Services のパス](../../integration-services/data-flow/integration-services-paths.md) 」と「 [パスを使用してコンポーネントを連結する](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)」を参照してください。  
+ データ フロー コンポーネントを連結するには、変換元と変換の出力を、変換と変換先の入力に連結します。 データ フローを構築する場合、通常は 2 番目以降のコンポーネントを追加するときに、データ フローに連結します。 コンポーネントを連結すると、コンポーネントを構成するための入力列が使用できるようになります。 使用できる入力列がない場合、コンポーネントをデータ フローに連結した後に、そのコンポーネントの構成を完了する必要があります。 詳細については、「 [Integration Services のパス](../../integration-services/data-flow/integration-services-paths.md) 」と「 [パスを使用してコンポーネントを連結する](./connect-components-in-a-data-flow.md)」を参照してください。  
   
  次の図は、1 つの変換元、入力と出力を 1 つずつとる 1 つの変換、および 1 つの変換先を持つデータ フローを示しています。 この図には、入力列、出力列、および外部列に加え、入力、出力、およびエラー出力が含まれています。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "88430964"
 |SAP BI 変換元|SAP BI 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI の変換元コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI には、接続マネージャーおよび変換先も含まれます。 詳細については、 [Microsoft SQL Server 用 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)のダウンロード ページを参照してください。|  
 |Teradata 変換元|Teradata 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity の変換元コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity には、接続マネージャーおよび変換先も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384) のダウンロード ページを参照してください。|  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity のパフォーマンス強化を活用する方法の例については、「 [Microsoft Connector for Oracle by Attunity のパフォーマンス (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkID=210369)」を参照してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity のパフォーマンス強化を活用する方法の例については、「 [Microsoft Connector for Oracle by Attunity のパフォーマンス (SQL Server ビデオ)](/previous-versions/dn912438(v=msdn.10))」を参照してください。  
   
 ## <a name="transformations"></a>変換  
  変換の機能は多岐にわたります。 変換では、データを更新、集約、クリーンアップ、マージ、および分散するタスクを実行できます。 列の値の変更、テーブルの値の参照、データのクリーンアップ、および列の値の集計ができます。  
@@ -169,10 +169,10 @@ ms.locfileid: "88430964"
 |SAP BI 変換先|SAP BI 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI の変換先コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI には、接続マネージャーおよび変換元も含まれます。 詳細については、 [Microsoft SQL Server 用 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)のダウンロード ページを参照してください。|  
 |Teradata 変換先|Teradata 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity の変換先コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity には、接続マネージャーおよび変換元も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384) のダウンロード ページを参照してください。|  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity のパフォーマンス強化を活用する方法の例については、「 [Microsoft Connector for Oracle by Attunity のパフォーマンス (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkID=210369)」を参照してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity のパフォーマンス強化を活用する方法の例については、「 [Microsoft Connector for Oracle by Attunity のパフォーマンス (SQL Server ビデオ)](/previous-versions/dn912438(v=msdn.10))」を参照してください。  
   
 ## <a name="connection-managers"></a>接続マネージャー  
- 多くのデータ フロー コンポーネントはデータ ソースに接続します。そのため、コンポーネントを正しく構成するには、コンポーネントに必要な接続マネージャーをパッケージに追加する必要があります。 接続マネージャーは、データ フローを構築するときと、データ フローの構築を開始する前に追加できます。 詳細については、「[Integration Services (SSIS) の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」および「[接続マネージャーを作成する](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)」を参照してください。  
+ 多くのデータ フロー コンポーネントはデータ ソースに接続します。そのため、コンポーネントを正しく構成するには、コンポーネントに必要な接続マネージャーをパッケージに追加する必要があります。 接続マネージャーは、データ フローを構築するときと、データ フローの構築を開始する前に追加できます。 詳細については、「[Integration Services (SSIS) の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」および「[接続マネージャーを作成する](../connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
 ## <a name="external-metadata"></a>外部メタデータ  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーを使用してパッケージ内にデータ フローを作成する場合、変換元と変換先のメタデータは、変換元と変換先の外部列にコピーされ、スキーマのスナップショットとして機能します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がパッケージを検証する際に、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーはこのスナップショットを変換元または変換先のスキーマと比較し、変更内容に応じてエラーと警告を通知します。  
@@ -220,4 +220,4 @@ ms.locfileid: "88430964"
  [データ フロー内でコンポーネントを連結する](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- technet.microsoft.com のビデオ「 [Microsoft Connector for Oracle by Attunity のパフォーマンス (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkID=210369)」  
+ technet.microsoft.com のビデオ「 [Microsoft Connector for Oracle by Attunity のパフォーマンス (SQL Server ビデオ)](/previous-versions/dn912438(v=msdn.10))」

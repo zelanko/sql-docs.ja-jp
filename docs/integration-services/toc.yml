@@ -50,9 +50,9 @@
     - name: チュートリアル - Azure でのパッケージの配置と実行
       href: ../integration-services/lift-shift/ssis-azure-deploy-run-monitor-tutorial.md
     - name: Windows 認証でのデータへの接続
-      href: ../integration-services/lift-shift/ssis-azure-connect-with-windows-auth.md
+      href: /azure/data-factory/ssis-azure-connect-with-windows-auth
     - name: ファイルの保存とファイル共有への接続
-      href: ../integration-services/lift-shift/ssis-azure-files-file-shares.md
+      href: /azure/data-factory/ssis-azure-files-file-shares
     - name: Azure の SSIS カタログに接続する
       href: ../integration-services/lift-shift/ssis-azure-connect-to-catalog-database.md
     - name: Azure に配置されたパッケージの検証
@@ -327,7 +327,7 @@
           href: ../integration-services/control-flow/message-queue-task.md
           items:
             - name: '[変数の選択]'
-              href: ../integration-services/control-flow/select-variables.md
+              href: ./control-flow/message-queue-task.md
             - name: '[パッケージの選択]'
               href: ../integration-services/control-flow/select-a-package.md
         - name: オペレーターへの通知タスク
@@ -630,7 +630,7 @@
       href: ../integration-services/data-flow/transformations/dqs-cleansing-transformation.md
       items:
         - name: DQS クレンジング接続マネージャー
-          href: ../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md
+          href: ./connection-manager/dqs-cleansing-connection-manager.md
         - name: データ ソースにデータ品質ルールを適用する
           href: ../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md
         - name: 複合ドメインへの列のマップ
@@ -657,9 +657,9 @@
         - name: キャッシュなしモードまたは部分キャッシュ モードの参照を実装する
           href: ../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md
         - name: キャッシュ接続マネージャーの変換を使用してフル キャッシュ モードの参照変換を実装する
-          href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md
+          href: ./connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md
         - name: OLE DB 接続マネージャーを使用してフル キャッシュ モードの参照変換を実装する
-          href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+          href: ./connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
         - name: 参照変換用のキャッシュを作成および配置する
           href: ../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md
         - name: '[リレーションシップの作成]'
@@ -668,7 +668,7 @@
           href: ../integration-services/data-flow/transformations/cache-transform.md
           items:
             - name: キャッシュ接続マネージャー
-              href: ../integration-services/data-flow/transformations/cache-connection-manager.md
+              href: ./connection-manager/cache-connection-manager.md
     - name: マージ変換
       href: ../integration-services/data-flow/transformations/merge-transformation.md
     - name: Merge Join Transformation
@@ -1846,7 +1846,7 @@
 - name: リソース
   items:
     - name: SSIS フォーラム >>
-      href: 'https://docs.microsoft.com/answers/topics/sql-server-integration-services.html'
+      href: /answers/topics/sql-server-integration-services.html
     - name: スタック オーバーフロー >>
       href: 'https://stackoverflow.com/questions/tagged/ssis'
     - name: SSIS ブログ >>

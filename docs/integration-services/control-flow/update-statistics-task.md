@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0ed05c62844c8531b119454d2465e8212e1ae270
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 09afac2a2eebfc32af84035cd11ee0c43a5663dc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349358"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192754"
 ---
 # <a name="update-statistics-task"></a>統計の更新タスク
 
@@ -57,10 +57,9 @@ ms.locfileid: "88349358"
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
-  
   

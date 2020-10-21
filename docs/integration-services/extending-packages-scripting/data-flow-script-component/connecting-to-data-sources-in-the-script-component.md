@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b647745e46b2326ab247cd2ef67ec480835dc16e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 960ad33c2b4b166caa01205721101eafdc71e380
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430274"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193082"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>スクリプト コンポーネントでのデータ ソースへの接続
 
@@ -27,7 +27,7 @@ ms.locfileid: "88430274"
 
   接続マネージャーは、便宜上、特定の種類のデータ ソースに接続するために必要な情報をカプセル化して格納するユニットです。 詳細については、「[Integration Services (SSIS) の接続](../../../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
- 既存の接続マネージャーを、変換元または変換先コンポーネントのカスタム スクリプトでアクセスできるようにするには、**[スクリプト変換エディター]** の **[接続マネージャー] ** ページで、**[追加]** および **[削除] ** ボタンをクリックします。 ただし、データの読み込みや保存、場合によってはデータ ソースとの接続や切断を行うためには、独自のカスタム コードを記述する必要があります。 **[スクリプト変換エディター]** の **[接続マネージャー]** ページの詳細については、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」および「[スクリプト変換エディター &#40;[接続マネージャー] ページ&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)」を参照してください。  
+ 既存の接続マネージャーを、変換元または変換先コンポーネントのカスタム スクリプトでアクセスできるようにするには、**[スクリプト変換エディター]** の **[接続マネージャー] ** ページで、**[追加]** および **[削除] ** ボタンをクリックします。 ただし、データの読み込みや保存、場合によってはデータ ソースとの接続や切断を行うためには、独自のカスタム コードを記述する必要があります。 **[スクリプト変換エディター]** の **[接続マネージャー]** ページの詳細については、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」および「[スクリプト変換エディター &#40;[接続マネージャー] ページ&#41;](../../data-flow/transformations/script-component.md)」を参照してください。  
   
  スクリプト コンポーネントは、**ComponentWrapper** プロジェクト アイテム内に **Connections** コレクション クラスを作成します。ここには、各接続マネージャーに対して、接続マネージャー自体と同じ名前を持つ、厳密に型指定されたアクセサー プロパティが含まれています。 このコレクションは、**ScriptMain** クラスの **Connections** プロパティを介して公開されます。 アクセサー プロパティは、接続マネージャーへの参照を <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> のインスタンスとして返します。 たとえば、ダイアログ ボックスの [接続マネージャー] ページで `MyADONETConnection` という名前の接続マネージャーを追加した場合、次のコードを追加することで、スクリプト内のその接続マネージャーへの参照を取得できます。  
   
@@ -61,6 +61,5 @@ ms.locfileid: "88430274"
   
 ## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; の接続](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [接続マネージャーを作成する](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
-  
+ [接続マネージャーを作成する](../../connection-manager/integration-services-ssis-connections.md)  
   
