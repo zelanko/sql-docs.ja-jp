@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: e28b690a6231a77b09664b1c8680522f426e5e92
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 125e1b8fdadc04a7d3ba08807a72ef594b42388e
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785067"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115855"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>バックアップと復元を使用して SQL Server データベースを Windows から Linux に移行する
 
@@ -37,7 +37,7 @@ SQL Server のバックアップと復元の機能は、Windows の SQL Server �
 
 * 次のものを備えた Windows コンピューター:
   * [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) がインストールされている。
-  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) がインストールされている。
+  * [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) がインストールされている。
   * 移行対象のデータベース。
 
 * 次のものがインストールされた Linux コンピューター:
@@ -78,7 +78,7 @@ Windows でデータベースのバックアップ ファイルを作成する�
 
 1. **scp** (セキュア コピー) コマンドと **ssh** (リモート ログイン) コマンドがサポートされている Bash シェルを、Windows コンピューターにインストールします。 次の 2 つの例があります。
 
-   * [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) (Windows 10)
+   * [Windows Subsystem for Linux](/windows/wsl/about) (Windows 10)
    * Git Bash シェル ([https://git-scm.com/downloads](https://git-scm.com/downloads))
 
 1. Windows で Bash セッションを開きます。

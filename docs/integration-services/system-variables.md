@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 913345034da936d6ed7a0c9ea3678c427b4f34ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf44509a479e66175d89c38c42595e418dc6c750
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495322"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192408"
 ---
 # <a name="system-variables"></a>システム変数
 
@@ -109,6 +109,5 @@ ms.locfileid: "88495322"
  この規則は、ユーザー定義変数にも当てはまります。 ただし、システム変数のデータ型は変更できないため、システム変数を使用する場合はそのデータ型に合わせた調整が必要ですが、ユーザー定義変数にはそれに比べると高い柔軟性があります。 パラメーター バインドで使用するユーザー定義変数は、通常、マップ先パラメーターのデータ型と互換性のあるデータ型で定義します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [クエリ パラメーターを SQL 実行タスクの変数にマップする方法](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
-  
+ [クエリ パラメーターを SQL 実行タスクの変数にマップする方法](./control-flow/execute-sql-task.md)  
   

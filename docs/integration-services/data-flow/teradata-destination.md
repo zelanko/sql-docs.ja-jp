@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: caa6cc656e37f4718e06c9af010b458dfa1b738d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 191c89d1fdced6ad1581dadff1e4ed92f397f640
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484520"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194715"
 ---
 # <a name="teradata-destination"></a>Teradata 変換先
 
@@ -223,7 +223,7 @@ Teradata 変換先エディターの [マッピング] ページを開くには
 
 Teradata 変換先でフローのエラーを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。
 
-**関連トピック:** [データのエラー処理](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**関連トピック:** [データのエラー処理](./error-handling-in-data.md?view=sql-server-2017)
 
 **切り捨て**
 
