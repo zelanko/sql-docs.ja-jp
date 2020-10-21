@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: b4bcae3e857fd6dfa7a64acd828529bf9a599552
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 3be7312cceacd7d6cef6c60fbe54515c7577c5f2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990035"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194102"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>チュートリアル:Azure で SQL Server Integration Services (SSIS) パッケージをデプロイし、実行する
 
@@ -26,9 +26,9 @@ ms.locfileid: "90990035"
 
 ## <a name="prerequisites"></a>前提条件
 
-始める前に、バージョン 17.2 以降の SQL Server Management Studio があることを確認します。 最新バージョンの SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
+始める前に、バージョン 17.2 以降の SQL Server Management Studio があることを確認します。 最新バージョンの SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](../../ssms/download-sql-server-management-studio-ssms.md)」を参照してください。
 
-また、Azure で SSISDB データベースを設定し、Azure SSIS 統合ランタイムをプロビジョニングしていることを確認してください。 Azure で SSIS をプロビジョニングする方法については、「[SQL Server Integration Services パッケージを Azure にデプロイする](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)」を参照してください。
+また、Azure で SSISDB データベースを設定し、Azure SSIS 統合ランタイムをプロビジョニングしていることを確認してください。 Azure で SSIS をプロビジョニングする方法については、「[SQL Server Integration Services パッケージを Azure にデプロイする](/azure/data-factory/tutorial-deploy-ssis-packages-azure)」を参照してください。
 
 ## <a name="for-azure-sql-database-get-the-connection-info"></a>Azure SQL Database の場合の接続情報の取得
 
@@ -192,7 +192,7 @@ Integration Services サーバー上で現在実行されている Integration S
 
 また、オブジェクト エクスプローラーでパッケージを選択し、右クリックして **[レポート]** を選択し、 **[標準レポート]** 、 **[すべての実行]** の順に選択することもできます。
 
-SSMS で実行中のパッケージを監視する方法の詳細については、「[パッケージとその他の操作を実行するモニター](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations)」を参照してください。
+SSMS で実行中のパッケージを監視する方法の詳細については、「[パッケージとその他の操作を実行するモニター](../performance/monitor-running-packages-and-other-operations.md)」を参照してください。
 
 ## <a name="monitor-the-execute-ssis-package-activity"></a>SSIS パッケージの実行アクティビティを監視する
 
@@ -204,7 +204,7 @@ SSIS パッケージの実行アクティビティを使用して Azure Data Fac
 
 パッケージが実行されている Azure SSIS 統合ランタイムに関する状態情報を取得するには、次の PowerShell コマンドを使用します。 コマンドごとに、データ ファクトリ、Azure SSIS IR、およびリソース グループの名前を入力します。
 
-詳細については、[Azure SSIS 統合ランタイムの監視](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)に関するページを参照してください。
+詳細については、[Azure SSIS 統合ランタイムの監視](/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)に関するページを参照してください。
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime に関するメタデータを取得する
 

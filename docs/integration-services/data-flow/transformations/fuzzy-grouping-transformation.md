@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e69c2b63e617e37fcd4dec1b7589e9b1808fefce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ce27ef50da9b1c72bc3b620dda61e6c1c925d14
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88348448"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195957"
 ---
 # <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
 
@@ -44,7 +44,7 @@ ms.locfileid: "88348448"
   あいまいグループ化変換は、重複部分と考えられるデータの行を識別し、データを標準化するときに使用するデータの正規行を選択することで、データ クリーニング タスクを実行します。  
   
 > [!NOTE]  
->  パフォーマンスやメモリの制限など、あいまいグループ化変換に関する詳細については、ホワイト ペーパー「 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)」(SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化) をご覧ください。  
+>  パフォーマンスやメモリの制限など、あいまいグループ化変換に関する詳細については、ホワイト ペーパー「 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90))」(SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化) をご覧ください。  
   
  あいまいグループ化変換では、変換アルゴリズムの処理に必要な一時 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルを作成するために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続が必要になります。 接続時には、データベース内にテーブルを作成する権限を持つユーザーの解決が必要です。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88348448"
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -184,5 +184,4 @@ ms.locfileid: "88348448"
 ## <a name="see-also"></a>関連項目  
  [あいまい参照変換](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

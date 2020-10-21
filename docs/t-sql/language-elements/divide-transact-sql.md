@@ -21,12 +21,12 @@ ms.assetid: 1d69893b-e5c3-441d-8dd8-0e5eb872ecfc
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da987dbea422db8ab6e26ce9b84ff55b5d5abb2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6670c42505ef245b06fb2f605ebca078167d1a6c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459414"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196596"
 ---
 # <a name="-division-transact-sql"></a>/ (除算) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88459414"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 dividend / divisor  
 ```  
   
@@ -61,7 +61,7 @@ dividend / divisor
 ## <a name="examples"></a>例  
  次の例では、算術除算演算子を使用して、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] の販売員の各月の販売目標を計算しています。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT s.BusinessEntityID AS SalesPersonID, FirstName, LastName, SalesQuota, SalesQuota/12 AS 'Sales Target Per Month'  
@@ -88,7 +88,7 @@ SalesPersonID FirstName    LastName          SalesQuota  Sales Target Per Month
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、除算算術演算子を使用して、各従業員の休暇時間と病気時間の単純な比率を計算します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, VacationHours/SickLeaveHours AS PersonalTimeRatio  

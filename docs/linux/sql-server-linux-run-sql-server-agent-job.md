@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: 49d8dab49fef03b3bf06269ef4397656dfa888e3
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e7cc33b3f01ae9562f1d9fb1a84830df7a807c9b
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088822"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115835"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Microsoft SQL Server エージェント ジョブを作成して Linux 上で実行する
 
@@ -39,7 +39,7 @@ Linux 上の SQL Server エージェントに関する既知の問題につい�
 次の前提条件には対応しなくてもかまいません。
 
 * SSMS を備えた Windows 仮想マシン:
-  * SSMS 手順を実行するための [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) (オプション)。
+  * SSMS 手順を実行するための [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (オプション)。
 
 ## <a name="enable-sql-server-agent"></a>SQL Server エージェントを有効にする
 
@@ -81,7 +81,7 @@ Linux 上で SQL Server エージェントを使用するには、まず SQL Ser
 次の手順では、Transact-SQL コマンドを使用して、Linux 上に SQL Server エージェント ジョブを作成します。 このジョブによって、サンプル データベース (**SampleDB**) のバックアップが毎日実行されます。
 
 > [!TIP]
-> 任意の T-SQL クライアントを使用して、これらのコマンドを実行できます。 たとえば、Linux 上で、[sqlcmd](sql-server-linux-setup-tools.md) または [Visual Studio Code](sql-server-linux-develop-use-vscode.md) を使用できます。 リモート Windows Server から SQL Server Management Studio (SSMS) でクエリを実行したり、次のセクションで説明されているジョブ管理用の UI インターフェイスを使用したりすることもできます。
+> 任意の T-SQL クライアントを使用して、これらのコマンドを実行できます。 たとえば、Linux 上で、[sqlcmd](sql-server-linux-setup-tools.md) または [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) を使用できます。 リモート Windows Server から SQL Server Management Studio (SSMS) でクエリを実行したり、次のセクションで説明されているジョブ管理用の UI インターフェイスを使用したりすることもできます。
 
 1. [sp_add_job](../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md) を実行して、`Daily SampleDB Backup` という名前のジョブを作成します。
 
@@ -200,4 +200,4 @@ Windows 上で SQL Server Management Studio (SSMS) を使用して、ジョブ�
 次に、ジョブの作成と管理に関するその他の機能を確認してください。
 
 > [!div class="nextstepaction"]
->[SQL Server エージェントのドキュメント](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)
+>[SQL Server エージェントのドキュメント](../ssms/agent/sql-server-agent.md)

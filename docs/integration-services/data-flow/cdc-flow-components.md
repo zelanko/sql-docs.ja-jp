@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb7897aa3f14a043eef6f983daafe8121a07c8bf
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 0306e266f48259d0a7cc68a455116ec5a5ce847f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480894"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196486"
 ---
 # <a name="cdc-flow-components"></a>CDC フロー コンポーネント
 
@@ -86,7 +86,7 @@ CDC コンポーネントをインストールしたら、SQL [!INCLUDE[ssBIDevS
   
  この [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 制御フローには、2 つの CDC 制御タスクとデータ フロー タスクが含まれています。 **Get CDC Processing Range** (CDC 処理範囲の取得) という最初のタスクでは、 **Process Changes**(変更の処理) というデータ フロー タスクで処理される変更の LSN 範囲を設定します。 この範囲は、前回のパッケージ実行時に処理されて永続的なストアに保存された内容に基づいて設定されます。  
   
- CDC 制御タスクの使用の詳細については、「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) 」と「 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)」を参照してください。  
+ CDC 制御タスクの使用の詳細については、「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) 」と「 [CDC Control Task Editor](../control-flow/cdc-control-task.md)」を参照してください。  
   
  次の図に、変更の処理方法を概念的に表した、 **Process Changes (変更の処理)** データ フローを示します。  
   
@@ -104,11 +104,11 @@ CDC コンポーネントをインストールしたら、SQL [!INCLUDE[ssBIDevS
   
  [CDC ソース](../../integration-services/data-flow/cdc-source.md)  
   
- [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+ [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](./cdc-source.md)  
   
- [[CDC ソース エディター] &#40;[列] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+ [[CDC ソース エディター] &#40;[列] ページ&#41;](./cdc-source.md)  
   
- [CDC ソース エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [CDC ソース エディター &#40;[エラー出力] ページ&#41;](./cdc-source.md)  
   
  CDC スプリッターの詳細については、以下のトピックを参照してください。  
   
@@ -217,9 +217,8 @@ CDC コンポーネントをインストールしたら、SQL [!INCLUDE[ssBIDevS
   
 -   social.technet.microsoft.com の技術記事「 [Microsoft Change Data Capture for Oracle by Attunity の CDC インスタンス エラーのトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=252961)」  
   
--   technet.microsoft.com のビデオ「 [SQL Server Integration Services 2012 を使用した Oracle データベースの CDC (SQL Server ビデオ)](https://technet.microsoft.com/sqlserver/jj218898)」  
+-   technet.microsoft.com のビデオ「 [SQL Server Integration Services 2012 を使用した Oracle データベースの CDC (SQL Server ビデオ)](/previous-versions/dn912438(v=msdn.10))」  
   
 ## <a name="see-also"></a>関連項目  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
-  
   

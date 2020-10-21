@@ -24,12 +24,12 @@ ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 498c2a81c0d7b94cd6288c24165f051bfc073fbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dd89533ee030204cfb0b57a3c51d4a03bb790462
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459478"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92189235"
 ---
 # <a name="-bitwise-not-transact-sql"></a>~ (ビット演算子 NOT) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88459478"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 ~ expression  
 ```  
   
@@ -71,7 +71,7 @@ ms.locfileid: "88459478"
 ## <a name="examples"></a>例  
  次の例では、**int** 型で値を格納するテーブルを作成し、1 行に 2 つの値を挿入します。  
   
-```  
+```sql  
 CREATE TABLE bitwise (  
   a_int_value INT NOT NULL,  
   b_int_value INT NOT NULL); 
@@ -82,7 +82,7 @@ GO
   
  このクエリでは、`a_int_value` 列と `b_int_value` 列に対して、それぞれビットごとの NOT を実行します。  
   
-```  
+```sql  
 SELECT ~ a_int_value, ~ b_int_value  
 FROM bitwise;  
 ```  

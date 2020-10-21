@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6cd4c4988b07e19c04d72efe2fc19200313f355
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: edb5d6b73305b9acc840c2f34461c3056a3b9cbd
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866633"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006474"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
 
@@ -52,7 +52,7 @@ TDE では、保存データ (データとログ ファイル) が保護され�
 >**関連項目:**
 >
 > - [Azure SQL Database での Transparent Data Encryption](/azure/azure-sql/database/transparent-data-encryption-tde-overview)
-> - [SQL Data Warehouse での Transparent Data Encryption (TDE) の概要](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
+> - [Azure Synapse Analytics での Transparent Data Encryption (TDE) の概要](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
 > - [別の SQL Server への TDE で保護されたデータベースの移動](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)
 > - [EKM の使用による TDE の有効化](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)
 > - [SQL 暗号化機能への SQL Server コネクタの使用](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)
@@ -325,7 +325,7 @@ TDE を使用してデータベースを暗号化する場合、バッファー 
 ## <a name="related-content"></a>関連コンテンツ
 
 [Azure SQL Database での Transparent Data Encryption](/azure/azure-sql/database/transparent-data-encryption-tde-overview)  
-[SQL Data Warehouse での Transparent Data Encryption (TDE) の概要](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)  
+[Azure Synapse Analytics での Transparent Data Encryption (TDE) の概要](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)  
 [SQL Server の暗号化](../../../relational-databases/security/encryption/sql-server-encryption.md)  
 [SQL Server とデータベースの暗号化キー (データベース エンジン)](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 
