@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5aed55fa41bfd3998b4580e5ee0b66a35997b942
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 23b04ae0e205a70b195b7da39a666256463bfa1c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987589"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192852"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 内の SQL Server データ ファイル
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ Azure ディスクは、エンタープライズ規模のビジネスの継続�
 ### <a name="azure-storage-concepts"></a>Azure Storage の概念  
 Azure の機能で SQL Server データ ファイルを使用する場合は、Azure 内でストレージ アカウントとコンテナーを作成する必要があります。 次に、SQL Server 資格情報を作成する必要があります。これには、コンテナーのポリシーに関する情報と、コンテナーにアクセスするために必要な Shared Access Signature が含まれます。  
 
-[Microsoft Azure](https://azure.microsoft.com) の [Azure Storage](https://azure.microsoft.com/services/storage/) アカウントは、BLOB にアクセスするための名前空間の最高レベルを表します。 ストレージ アカウントには、合計サイズがストレージの制限内であれば、無制限の数のコンテナーを含めることができます。 ストレージの制限に関する最新情報については、「 [Azure のサブスクリプションとサービスの制限、クォータ、および制約](https://docs.microsoft.com/azure/azure-subscription-service-limits)」をご覧ください。 コンテナーには、一連の [BLOB](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage) をグループ化するコンテナーが用意されています。 すべての BLOB は 1 つのコンテナーに存在する必要があります。 アカウントには、無制限の数のコンテナーを含めることができます。 同様に、コンテナーには、BLOB を無制限に格納できます。 Azure Storage に格納できる BLOB には、ブロック BLOB とページ BLOB の 2 種類があります。 この新しい機能ではページ BLOB が使用されます。ファイル内のバイト範囲が頻繁に変更される場合はこちらの方が効率的です。 BLOB には、`https://storageaccount.blob.core.windows.net/<container>/<blob>` という URL 形式を使用してアクセスできます。  
+[Microsoft Azure](https://azure.microsoft.com) の [Azure Storage](https://azure.microsoft.com/services/storage/) アカウントは、BLOB にアクセスするための名前空間の最高レベルを表します。 ストレージ アカウントには、合計サイズがストレージの制限内であれば、無制限の数のコンテナーを含めることができます。 ストレージの制限に関する最新情報については、「 [Azure のサブスクリプションとサービスの制限、クォータ、および制約](/azure/azure-subscription-service-limits)」をご覧ください。 コンテナーには、一連の [BLOB](/azure/storage/common/storage-introduction#blob-storage) をグループ化するコンテナーが用意されています。 すべての BLOB は 1 つのコンテナーに存在する必要があります。 アカウントには、無制限の数のコンテナーを含めることができます。 同様に、コンテナーには、BLOB を無制限に格納できます。 Azure Storage に格納できる BLOB には、ブロック BLOB とページ BLOB の 2 種類があります。 この新しい機能ではページ BLOB が使用されます。ファイル内のバイト範囲が頻繁に変更される場合はこちらの方が効率的です。 BLOB には、`https://storageaccount.blob.core.windows.net/<container>/<blob>` という URL 形式を使用してアクセスできます。  
 
 ### <a name="azure-billing-considerations"></a>Azure の課金に関する注意点  
 
@@ -91,7 +91,7 @@ ON
 >[!IMPORTANT]
 >コンテナーのデータ ファイルに対するアクティブな参照が存在する場合、対応する SQL Server 資格情報を削除しようとすると失敗します。
 
-詳細については、「 [Azure のストレージ リソースへのアクセスの管理](https://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources)」をご覧ください。  
+詳細については、「 [Azure のストレージ リソースへのアクセスの管理](/azure/storage/blobs/storage-manage-access-to-resources)」をご覧ください。  
 
 ### <a name="security"></a>セキュリティ  
  Azure Storage に SQL Server データ ファイルを格納する場合のセキュリティに関する考慮事項と要件は次のとおりです。
@@ -120,7 +120,7 @@ ON
   
 - Azure 機能で SQL Server データ ファイルを使用する場合は、ストレージ アカウントに対する地理的レプリケーションはサポートされません。 ストレージ アカウントで地理的レプリケーションが実行されている場合に、地理的フェールオーバーが発生すると、データの破損が発生する可能性があります。  
   
-- 容量の制限については、「[Blob Storage の概要](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)」を参照してください。  
+- 容量の制限については、「[Blob Storage の概要](/azure/storage/blobs/storage-blobs-introduction)」を参照してください。  
   
 - Azure Storage 機能で SQL Server データ ファイルを使用する場合は、インメモリ OLTP データを BLOB ストレージ内に格納することはできません。 これは、インメモリ OLTP に **FileStream** に対する依存関係があり、この機能の現在のリリースでは、Azure Storage に **FileStream** データを格納することがサポートされていないためです。  
   
@@ -166,10 +166,10 @@ ON
     解決策:Azure Storage にあるアクティブなデータベース ファイルで使用中の資格情報を削除しようとすると、このエラーが発生することがあります。 資格情報を削除するには、まずこのデータベース ファイルのある関連 BLOB を削除する必要があります。 アクティブなリースを保持している BLOB を削除するには、先にリースを終了する必要があります。  
   
 - *コンテナーに対して Shared Access Signature が正しく作成されていません。*    
-     解決策:コンテナーに対して Shared Access Signature が正しく作成されていることを確認します。 「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)」をご覧ください。  
+     解決策:コンテナーに対して Shared Access Signature が正しく作成されていることを確認します。 「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature)」をご覧ください。  
   
 - *SQL Server 資格情報が正しく作成されていません。*    
-    解決策: **[ID]** フィールドに 'Shared Access Signature' を使用して、シークレットが正しく作成されたことを確認します。 「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../lesson-3-database-backup-to-url.md)」をご覧ください。  
+    解決策: **[ID]** フィールドに 'Shared Access Signature' を使用して、シークレットが正しく作成されたことを確認します。 「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#3---database-backup-to-url)」をご覧ください。  
   
  **BLOB リース エラー**  
   

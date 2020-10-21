@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93548684fb17ce59e5cee78e2a7a268dfce903ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df48a338c2fe6cbc938284ed85b3b08fdc06f1cc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430694"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193218"
 ---
 # <a name="derived-column-transformation"></a>派生列変換
 
@@ -66,7 +66,7 @@ ms.locfileid: "88430694"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "88430694"
  新しい列にデータを追加すると、 **[派生列変換エディター]** ダイアログ ボックスによって、DT_STR データ型のコード ページが自動的に設定されます。 **[コード ページ]** は必要に応じて更新できます。  
   
  **[エラー出力の構成]**  
- [[エラー出力の構成]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスを使用して、エラーの処理方法を指定します。  
+ [[エラー出力の構成]](../error-handling-in-data.md) ダイアログ ボックスを使用して、エラーの処理方法を指定します。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」  
+ social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7e1d10976a795570a1bfded3d4d379284dc317b3
-ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
+ms.openlocfilehash: 39110067ea0abb2722da0ee88f70946d2875ccee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91847352"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192573"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>データベース スナップショットの作成 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -120,7 +120,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     *source_**database_name* はソース データベース、*logical_file_name* はファイルを参照するときに SQL Server で使用される論理名、*os_file_name* はファイルを作成する際にオペレーティング システムが使用するパスとファイル名、*database_snapshot_name* はデータベースを戻す対象になるスナップショットの名前です。 この構文の詳細については、「 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)を使用することです。  
+     *source_**database_name* はソース データベース、*logical_file_name* はファイルを参照するときに SQL Server で使用される論理名、*os_file_name* はファイルを作成する際にオペレーティング システムが使用するパスとファイル名、*database_snapshot_name* はデータベースを戻す対象になるスナップショットの名前です。 この構文の詳細については、「 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)を使用することです。  
   
     > [!NOTE]  
     >  データベース スナップショットを作成する場合、ログ ファイル、オフラインのファイル、復元中のファイル、および機能していないファイルを CREATE DATABASE ステートメントで使用することはできません。  
@@ -148,7 +148,7 @@ GO
 ```  
   
 ####  <a name="b-creating-a-snapshot-on-the-sales-database"></a><a name="Creating_on_Sales"></a> B. Sales データベースのスナップショットを作成する  
- この例では、 `sales_snapshot1200`データベースのデータベース スナップショット `Sales` を作成します。 このデータベースは [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md). の例「ファイル グループのあるデータベースを作成する」で作成したものです。  
+ この例では、 `sales_snapshot1200`データベースのデータベース スナップショット `Sales` を作成します。 このデータベースは [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md). の例「ファイル グループのあるデータベースを作成する」で作成したものです。  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  
@@ -179,8 +179,6 @@ GO
 -   [データベース スナップショットの削除 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
  [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
-  
-

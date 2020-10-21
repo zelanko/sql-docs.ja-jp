@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0a9650958d90712f659d4adade529049ad4a4775
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 8ebfca7738f8310108aab9ba988e658e7a5c1e17
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115030"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038365"
 ---
 # <a name="parse-database-engine"></a>Parse (データベース エンジン)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -93,8 +93,7 @@ SqlHierarchyId.Parse(input);
 ```  
   
 ## <a name="see-also"></a>参照
-[hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid データ型メソッド リファレンス](./hierarchyid-data-type-method-reference.md)  
 [階層データ (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

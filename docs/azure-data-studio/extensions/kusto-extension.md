@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 2ffe3945f8dd7e8c0ce9cf504c09622ca1a20331
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c6e4dd8869c9f26adb34c5acb965241ff9a2198e
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725191"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098701"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Azure Data Studio 用の Kusto (KQL) 拡張機能 (プレビュー)
 
@@ -124,7 +124,7 @@ Kusto 拡張機能の設定を変更するには、次の手順に従います�
 
 ## <a name="sanddance-visualization"></a>SandDance 視覚化
 
-Azure Data Studio で [SandDance 拡張機能](../sanddance-extension.md)を Kusto (KQL) とともに使用すると、リッチな対話型の視覚化も実現できます。 KQL クエリの結果セットから **[ビジュアライザー]** ボタンを選択して [SandDance](https://sanddance.js.org/) を起動します。
+Azure Data Studio で [SandDance 拡張機能](sanddance-extension.md)を Kusto (KQL) とともに使用すると、リッチな対話型の視覚化も実現できます。 KQL クエリの結果セットから **[ビジュアライザー]** ボタンを選択して [SandDance](https://sanddance.js.org/) を起動します。
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Kusto 拡張機能":::
 

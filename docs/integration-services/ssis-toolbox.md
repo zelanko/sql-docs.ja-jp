@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2523c8ac095a576d243aef661092e7939e27863b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c67835df192436ce3b8264849589a1db3f66fee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487665"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192380"
 ---
 # <a name="ssis-toolbox"></a>SSIS ツールボックス
 
@@ -34,7 +34,7 @@ ms.locfileid: "88487665"
  > [!NOTE]
 > ツールボックスが表示されない場合は、[ビュー] -> [その他のウィンドウ] -> [SSIS ツールボックス] の順に選択します。
  
-ツールボックス内のコンポーネントについての詳細情報を得るには、そのコンポーネントをクリックすると、ツールボックスの下部に説明が表示されます。 一部のコンポーネントでは、コンポーネントを構成および使用する方法を示すサンプルにアクセスすることもできます。 サンプルは、 [MSDN](https://go.microsoft.com/fwlink/?LinkId=259189)から利用できます。 **SSIS ツールボックス**からサンプルにアクセスするには、説明の下に表示される **[サンプルの検索]** リンクをクリックします。  
+ツールボックス内のコンポーネントについての詳細情報を得るには、そのコンポーネントをクリックすると、ツールボックスの下部に説明が表示されます。 一部のコンポーネントでは、コンポーネントを構成および使用する方法を示すサンプルにアクセスすることもできます。 サンプルは、 [MSDN](/samples/browse/)から利用できます。 **SSIS ツールボックス**からサンプルにアクセスするには、説明の下に表示される **[サンプルの検索]** リンクをクリックします。  
   
 > [!NOTE]
 > ツールボックスからインストールされているコンポーネントを*削除*することはできません。  
@@ -65,5 +65,4 @@ ms.locfileid: "88487665"
   
 ## <a name="refresh-the-ssis-toolbox"></a>SSIS ツールボックスを更新する  
   
-1.  SSIS ツールボックスを右クリックして、 **[ツールボックスの更新]** をクリックします。  
-
+1.  SSIS ツールボックスを右クリックして、 **[ツールボックスの更新]** をクリックします。

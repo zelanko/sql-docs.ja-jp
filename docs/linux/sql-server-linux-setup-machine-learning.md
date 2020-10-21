@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed29244d06e0fcf08c5f56af59c3e1f9feeb2883
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6efa57a482943b6dbef2ebecdc0668dac017a01a
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178257"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115765"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Linux に SQL Server Machine Learning Services (Python と R) をインストールする
 
@@ -47,7 +47,7 @@ ms.locfileid: "88178257"
 
 * T-SQL コマンドを実行するためのツールを用意しておく必要があります。 
 
-  * [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) を使用できます。これは、Linux、Windows、macOS で実行される無料のデータベース ツールです。
+  * [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) を使用できます。これは、Linux、Windows、macOS で実行される無料のデータベース ツールです。
 
 ## <a name="package-list"></a>パッケージ一覧
 
@@ -439,4 +439,4 @@ Python 開発者は、次のチュートリアルに従って、SQL Server で P
 R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクを参照してください。
 
 + [クイック スタート: T-SQL での R の実行](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [チュートリアル:R 開発者向けのデータベース内分析](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [チュートリアル:R 開発者向けのデータベース内分析](../machine-learning/tutorials/r-taxi-classification-introduction.md)
