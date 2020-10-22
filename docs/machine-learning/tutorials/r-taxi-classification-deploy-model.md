@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ffebcaa9afc8f2caa8717170d9746787c17593b3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d5132b0616dd223e195f47b1333308a920fb2572
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173605"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196278"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>R チュートリアル:SQL ストアド プロシージャで予測を実行する
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -70,7 +70,7 @@ GO
 
 + SELECT ステートメントは、シリアル化されたモデルをデータベースから取得し、R を利用してさらに処理するために R 変数 `mod` にモデルを保存します。
 
-+ スコア付けの新しいケースは、ストアド プロシージャの最初のパラメーター、`@inquery`で指定された [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリから取得されます。 クエリ データが読み取られると、行が既定のデータ フレーム `InputDataSet`に保存されます。 このデータ フレームは [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) の [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 関数に渡され、スコアが生成されます。
++ スコア付けの新しいケースは、ストアド プロシージャの最初のパラメーター、`@inquery`で指定された [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリから取得されます。 クエリ データが読み取られると、行が既定のデータ フレーム `InputDataSet`に保存されます。 このデータ フレームは [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) の [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) 関数に渡され、スコアが生成されます。
   
   `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -193,7 +193,7 @@ GO
    @dropoff_longitude = -73.977303
    ```
 
-   または、ストアド プロシージャの [パラメーターでサポー](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters)トされている短い形式を使用します。
+   または、ストアド プロシージャの [パラメーターでサポー](../../relational-databases/stored-procedures/specify-parameters.md)トされている短い形式を使用します。
   
    ```sql
    EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303

@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2cd8a40fc1c85b8a58216a4c15ff0d1bb56df1da
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: d10d65f8be4ff8e53cbfad795f1e515a22eada71
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892242"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098861"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R と SQL Server の間のデータ型マッピング
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 この記事では、SQL Server Machine Learning Services の R 統合機能を使用する場合にサポートされるデータ型および実行されるデータ型変換の一覧を示します。
 

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8eccd11403f93b1307995a44d38100d680fa8149
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 661ce31839d08b36e7a51f1d09965b68e5350317
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179760"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193646"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>R モデルを配置して SQL Server で使用する (チュートリアル)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -216,7 +216,7 @@ ms.locfileid: "88179760"
     ```
 
     >[!TIP]
-    > R Tools for Visual Studio (RTVS) により、SQL Server と R の両方の優れた統合がもたらされます。SQL Server 接続での RODBC の使用例については、こちらの記事を参照してください。[SQL Server と R の使用](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
+    > R Tools for Visual Studio (RTVS) により、SQL Server と R の両方の優れた統合がもたらされます。SQL Server 接続での RODBC の使用例については、こちらの記事を参照してください。[SQL Server と R の使用](/visualstudio/rtvs/sql-server)
 
 ## <a name="next-steps"></a>次のステップ
 
@@ -229,5 +229,5 @@ ms.locfileid: "88179760"
 
 + [データ サイエンスのシナリオとソリューション テンプレート](data-science-scenarios-and-solution-templates.md)
 + [高度な分析 (データベース内)](r-taxi-classification-introduction.md)
-+ [Machine Learning Server に関するハウツー ガイド](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
-+ [Machine Learning Server のその他のリソース](https://docs.microsoft.com//machine-learning-server/resources-more)
++ [Machine Learning Server に関するハウツー ガイド](/machine-learning-server/r/how-to-introduction)
++ [Machine Learning Server のその他のリソース](//machine-learning-server/resources-more)

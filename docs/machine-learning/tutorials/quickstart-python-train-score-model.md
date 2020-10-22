@@ -11,12 +11,12 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 43453738d9351a18e4ed6e9887fdf75bb2e9521a
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: e5a64e3de5dae2e879c4537783d33aab81dd9662
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834057"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194467"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>クイック スタート:SQL 機械学習を使用して Python で予測モデルを作成してスコア付けする
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -95,7 +95,7 @@ SQL で実行されている 2 つのストアド プロシージャを作成し
 
 この手順では、埋め込みコードを実行するプロシージャを実行し、トレーニング済みのシリアル化されたモデルを出力として作成します。 
 
-データベースで再利用するために格納されているモデルは、バイト ストリームとしてシリアル化され、データベース テーブルの「VARBINARY (MAX)」列に格納されます。 モデルの作成、トレーニング、シリアル化、およびデータベースへの保存が完了すると、他のプロシージャ、またはスコアリング ワークロードの [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 関数から呼び出すことができます。
+データベースで再利用するために格納されているモデルは、バイト ストリームとしてシリアル化され、データベース テーブルの「VARBINARY (MAX)」列に格納されます。 モデルの作成、トレーニング、シリアル化、およびデータベースへの保存が完了すると、他のプロシージャ、またはスコアリング ワークロードの [PREDICT T-SQL](../../t-sql/queries/predict-transact-sql.md) 関数から呼び出すことができます。
 
 1. プロシージャを実行するには、次のコードを実行します。 ストアド プロシージャを実行するための特定のステートメントは、4 行目の `EXECUTE` です。
 

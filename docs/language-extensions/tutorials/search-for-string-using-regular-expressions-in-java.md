@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9de0a8e595cca3009be4a44b63ce268d673b6dff
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: bc69f01a3cc05f1f1b128ac7ed9fd99d84c7e757
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765740"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155043"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>チュートリアル:Java での正規表現 (regex) を使用した文字列の検索
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -26,7 +26,7 @@ Java クラスに送信されるテキスト列内の指定のテキストが、
 
 ## <a name="prerequisites"></a>前提条件
 
-+ [Windows](../install/install-sql-server-language-extensions-on-windows.md) または [Linux](../../linux/sql-server-linux-setup-language-extensions.md) 用の SQL Server 2019 データベース エンジン インスタンスと拡張機能、および Java プログラミングの拡張機能。 詳細については、[SQL Server 2019 での言語拡張](../language-extensions-overview.md)に関する記事を参照してください。 コードの要件については、[SQL Server での Java の呼び出し方法](../how-to/call-java-from-sql.md)に関する記事を参照してください。
++ [Windows](../install/windows-java.md) または [Linux](../../linux/sql-server-linux-setup-language-extensions-java.md) 用の SQL Server 2019 データベース エンジン インスタンスと拡張機能、および Java プログラミングの拡張機能。 詳細については、[SQL Server 2019 での言語拡張](../language-extensions-overview.md)に関する記事を参照してください。 コードの要件については、[SQL Server での Java の呼び出し方法](../how-to/call-java-from-sql.md)に関する記事を参照してください。
 
 + T-SQL 実行用の SQL Server Management Studio または Azure Data Studio。
 
@@ -255,7 +255,7 @@ Java コードを実行するユーザーには、その特定の言語を外部
 > [!NOTE]
 > 前の手順で外部ライブラリを使用している場合は、この手順を省略してください。 外部ライブラリは、ご自分の `.jar` ファイルから作成することをお勧めします。
 
-外部ライブラリを使用しない場合は、必要なアクセス許可を設定する必要があります。 スクリプトの実行は、プロセス ID がお使いのコードにアクセスできる場合にのみ成功します。 アクセス許可の設定の詳細については、[インストール ガイド](../install/install-sql-server-language-extensions-on-windows.md)を参照してください。
+外部ライブラリを使用しない場合は、必要なアクセス許可を設定する必要があります。 スクリプトの実行は、プロセス ID がお使いのコードにアクセスできる場合にのみ成功します。 アクセス許可の設定の詳細については、[インストール ガイド](../install/windows-java.md)を参照してください。
 
 ### <a name="on-linux"></a>Linux の場合
 

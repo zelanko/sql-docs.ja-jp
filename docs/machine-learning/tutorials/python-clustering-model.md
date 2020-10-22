@@ -12,12 +12,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8b6e6b67a73fe61997c847b33e66400855e80a50
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 0aa373bcbb6e71dab6bd3b579728222e13a3b952
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173437"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194488"
 ---
 # <a name="python-tutorial-categorizing-customers-using-k-means-clustering-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習で K-Means クラスタリングを使用して顧客を分類する
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88173437"
 ## <a name="prerequisites"></a>前提条件
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) に Python 言語オプションがあること。[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fmachine-learning%2ftoc.json&view=sql-server-linux-ver15)に記載されているインストール手順に従ってください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
+* [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) に Python 言語オプションがあること。[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](../../linux/sql-server-linux-setup-machine-learning.md?toc=%252fsql%252fmachine-learning%252ftoc.json&view=sql-server-linux-ver15)に記載されているインストール手順に従ってください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) に Python 言語オプションがあること。[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)に記載されているインストール手順に従ってください。
@@ -63,7 +63,7 @@ ms.locfileid: "88173437"
 * サンプル データベースを Azure SQL Managed Instance に復元するための [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 ::: moniker-end
 
-* [Azure Data Studio](../../azure-data-studio/what-is.md) Azure Data Studio では、Python と SQL の両方にノートブックを使用します。 ノードブックの詳細については、「[Azure Data Studio でノートブックを使用する方法](../../azure-data-studio/sql-notebooks.md)」を参照してください。
+* [Azure Data Studio](../../azure-data-studio/what-is.md) Azure Data Studio では、Python と SQL の両方にノートブックを使用します。 ノードブックの詳細については、「[Azure Data Studio でノートブックを使用する方法](../../azure-data-studio/notebooks/notebooks-guidance.md)」を参照してください。
 
 * 追加の Python パッケージ - このチュートリアル シリーズの例では、インストールされていない Python パッケージを使用する可能性があります。
 

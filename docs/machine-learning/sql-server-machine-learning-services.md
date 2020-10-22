@@ -9,15 +9,15 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 31d95c5881c68e6e897c18a935e4fa85799be60c
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 8113b373c328bac5a6ba95b7f4f40e5ab583503d
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892132"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098821"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>SQL Server Machine Learning Services とは (Python と R)
-[!INCLUDE [SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Machine Learning Services は、リレーショナル データを使用して Python および R スクリプトを実行できるようになる SQL Server の機能です。 オープンソースのパッケージとフレームワーク、および予測分析と機械学習用の [Microsoft Python および R パッケージ](#packages)を使用できます。 スクリプトは、SQL Server の外部またはネットワーク経由でデータを移動することなく、データベース内で実行されます。 この記事では、SQL Server Machine Learning Services の基本と開始方法について説明します。
 

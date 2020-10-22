@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9371d2f988642a5f5ab0e7b715130772a693bb52
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1e5e4a4856b91cd717e9498fb96567ecd6c70ca6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173707"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192644"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python および R チュートリアル用の NYC タクシー のデモ データ
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 この記事では、[New York City Taxi and Limousine Commission (ニューヨーク市のタクシーとリムジンのコミッション)](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) からのパブリック データで構成されるサンプル データベースを設定する方法について説明します。 このデータは、SQL Server でのデータベース内分析のために、いくつかの R および Python のチュートリアルで使用されています。 サンプル コードの実行速度を高めるために、データの代表的な 1% のサンプルを作成しました。 システムでは、データベース バックアップ ファイルが 90 MB をわずかに上回り、プライマリ データ テーブル内に 170 万行が提供されます。
 
-この演習を完了するには、[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)、またはデータベース バックアップ ファイルを復元し、T-SQL クエリを実行できる別のツールが必要です。
+この演習を完了するには、[SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017)、またはデータベース バックアップ ファイルを復元し、T-SQL クエリを実行できる別のツールが必要です。
 
 このデータセットを使用したチュートリアルとクイックスタートには、次のものがあります。
 

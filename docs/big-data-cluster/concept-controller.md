@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8fd56c7b3c3177f1ae08c9b2c5d821d1c2552f70
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 97df8916b713feae56a7cd5344e7fbdc93038317
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765681"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358490"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのコントローラーとは
 
@@ -57,7 +57,7 @@ ms.locfileid: "88765681"
 コントローラー サービス エンドポイントに対する認証は、Active Directory ID を使用するか、ユーザー名とパスワードに基づいています。 これらの資格情報は、環境変数 `AZDATA_USERNAME` および `AZDATA_PASSWORD` の入力を使用して、クラスターのブートストラップ時にプロビジョニングされます。
 
 > [!NOTE]
-> [SQL Server パスワードの複雑さの要件](../relational-databases/security/password-policy.md?view=sql-server-2017)に準拠したパスワードを指定する必要があります。
+> [SQL Server パスワードの複雑さの要件](../relational-databases/security/password-policy.md)に準拠したパスワードを指定する必要があります。
 
 ## <a name="next-steps"></a>次のステップ
 

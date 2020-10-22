@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 67176b65c8fe285d87bd56fff0b547b7bf5b8428
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 89643fabf2db39e7006e0efaac87adb991893f67
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956635"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098841"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services でストアド プロシージャを使用して R コードを運用可能にする
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 SQL Server Machine Learning Services の R および Python 機能を使用しているとき、ソリューションを運用環境に移行するアプローチとして最も一般的なのは、コードをストアド プロシージャに埋め込むことです。 この記事では、SQL Server を使用して R コードを運用可能にするときの SQL 開発者を対象とした重要な考慮事項についてまとめます。
 

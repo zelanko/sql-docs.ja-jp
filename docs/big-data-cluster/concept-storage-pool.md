@@ -9,12 +9,12 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 16a0309eda16ceab13720c83e1c36045dee2c1ff
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4d810220e0bd1148d4f572638c3ac67d4c3b44c0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725065"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257243"
 ---
 # <a name="what-is-the-storage-pool-big-data-clusters-2019"></a>記憶域プールとは ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])
 
@@ -57,7 +57,7 @@ ms.locfileid: "91725065"
 次のものを使用して HDFS とやりとりすることもできます。
 
 - Azure Data Studio。
-- azdata クライアント ツール。
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 - Hadoop コンテナーにコマンドを発行する kubectl。
 - HDFS http ゲートウェイ。
 

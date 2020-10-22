@@ -7,7 +7,12 @@ ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.tsqlquery.f1
-- sql23.swb.tsqlresults.f1
+- sql13.swb.tsqlresults.f1
+- sql13.swb.query.advanced.f1
+- sql13.swb.query.ansi.f1
+- sql13.swb.query.general.f1
+- sql13.swb.query.general.f1
+- sql13.swb.sqleditors.multiserverresultssettings
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -38,12 +43,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 3ba349fc37aa4aae0aea7af7000380d1de031091
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 219ebb8a431b997951b22d443877dfb751665384
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035468"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344068"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>SQL Server Management Studio (SSMS) クエリ エディター
 
@@ -300,8 +305,8 @@ Microsoft データベース エンジン チューニング アドバイザー 
 | スクリプト内でドラッグ アンド ドロップによってテキストを移動します。| [テキストのドラッグ アンド ドロップ](../scripting/drag-and-drop-text.md) |
 | コードの重要箇所を見つけやすいようにブックマークを設定します。 | [ブックマークの管理](../scripting/manage-bookmarks.md) |
 | スクリプトまたはその結果をウィンドウまたはグリッドから印刷します。| [コードと結果の印刷](../scripting/print-code-and-results.md) |
-| MDX クエリ エディターの基本的な機能を表示し、使用します。 | [Analysis Services スクリプトの作成](/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
-| DMX クエリ エディターの基本的な機能を表示し、使用します。 | [DMX クエリの作成](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
+| MDX クエリ エディターの基本的な機能を表示し、使用します。 | [Analysis Services スクリプトの作成](/analysis-services/instances/create-analysis-services-scripts-in-management-studio) |
+| DMX クエリ エディターの基本的な機能を表示し、使用します。 | [DMX クエリの作成](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio) |
 | XML/A エディターの基本的な機能を表示し、使用します。 | [XML エディター](../scripting/xml-editor-sql-server-management-studio.md) |
 | データベース エンジン クエリ エディターで sqlcmd の機能を使用する方法。| [SQLCMD スクリプトの編集](../scripting/edit-sqlcmd-scripts-with-query-editor.md) |
 | データベース エンジン クエリ エディターでのコード スニペットの使用方法。 スニペットは、使用頻度の高いステートメントまたはブロックのテンプレートです。特定用途のスニペットを追加して拡張したりカスタマイズしたりすることができます。| [T-SQL コード スニペット](../scripting/add-transact-sql-snippets.md) |

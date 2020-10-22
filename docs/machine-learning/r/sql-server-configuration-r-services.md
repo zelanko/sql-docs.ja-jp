@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f9d4d3eab9f8f6d1d19b107eaf3825e9488df382
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: feaa53fa47591ecdb3f1f0bc66ab390def8fbbb1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180473"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195776"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R で使用するための SQL Server の構成
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "88180473"
 これは、2 つのケース スタディに基づいて R Services のパフォーマンスの最適化について説明するシリーズの 2 番目の記事です。  この記事では、SQL Server R Services を実行するために使用するコンピューターのハードウェアおよびネットワーク構成に関するガイダンスを提供します。 また、ソリューションで使用される SQL Server インスタンス、データベース、またはテーブルを構成する方法についても説明します。 SQL Server で NUMA を使用すると、ハードウェアとデータベースの最適化の間の区別が曖昧になるので、3 番目のセクションでは、CPU のアフィニタイズとリソース ガバナンスの詳細について説明します。
 
 > [!TIP]
-> SQL Server を初めて使用する場合は、「SQL Server のパフォーマンス チューニング ガイド」も確認することを強くお勧めします。[パフォーマンスの監視とチューニング](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance)。
+> SQL Server を初めて使用する場合は、「SQL Server のパフォーマンス チューニング ガイド」も確認することを強くお勧めします。[パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)。
 
 ## <a name="hardware-optimization"></a>ハードウェアの最適化
 
@@ -149,7 +149,7 @@ FROM sys.dm_os_memory_clerks
 
 クエリが単一のメモリ ノード (ノード 0) を返す場合は、ハードウェア NUMA を備えていないか、またはハードウェアがインターリーブ (非 NUMA) として構成されています。 また、CPU が 4 つ以下の場合、または少なくとも 1 つのノードに CPU が 1 つしかない場合も、SQL Server はハードウェア NUMA を無視します。
 
-コンピューターに複数のプロセッサが搭載されていても、ハードウェア NUMA が備えていない場合は、[ソフト NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server) を使用して、CPU をより小さなグループに分割することもできます。  SQL Server 2016 と SQL Server 2017 の両方で、SQL Server サービスを開始したときにソフト NUMA 機能が自動的に有効になります。
+コンピューターに複数のプロセッサが搭載されていても、ハードウェア NUMA が備えていない場合は、[ソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) を使用して、CPU をより小さなグループに分割することもできます。  SQL Server 2016 と SQL Server 2017 の両方で、SQL Server サービスを開始したときにソフト NUMA 機能が自動的に有効になります。
 
 ソフト NUMA が有効になっていると、SQL Server によってノードが自動的に管理されます。ただし、特定のワークロードを最適化するために、_ソフト アフィニティ_を無効にして、ソフト NUMA ノードの CPU アフィニティを手動で構成することができます。 これにより、特にリソース ガバナンスをサポートする SQL Server のエディションを使用している場合に、どのワークロードがどのノードに割り当てられるかをより詳細に制御できるようになります。 CPU アフィニティを指定し、リソース プールを CPU のグループに合わせることで、待機時間を短縮し、関連するプロセスが同じ NUMA ノード内で実行されるようにすることができます。
 
@@ -164,7 +164,7 @@ R ワークロードをサポートするようにソフト NUMA と CPU アフ�
 
 **その他のリソース**
 
-+ [SQL Server のソフト NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [SQL Server のソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)
     
     CPU へのソフト NUMA ノードのマッピング方法
 
@@ -178,7 +178,7 @@ R の 1 つの問題点は、通常、1 つの CPU で処理されることで�
 
 特徴エンジニアリングのパフォーマンスを向上させるには、複数の方法があります。 R コードを最適化し、モデリング プロセス内に特徴抽出を維持するか、特徴エンジニアリング プロセスを SQL に移行することができます。
 
-- R を使用します。関数を定義し、トレーニング中に [rxTransform](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxtransform) に引数として渡します。 モデルで並列処理がサポートされている場合、特徴エンジニアリング タスクは複数の CPU を使用して処理できます。 このアプローチを使用して、データ サイエンス チームはスコアリング時間に関して 16% のパフォーマンス向上を実現しました。 ただし、この方法では、並列処理をサポートするモデルと、並列プランを使用して実行できるクエリが必要です。
+- R を使用します。関数を定義し、トレーニング中に [rxTransform](/r-server/r-reference/revoscaler/rxtransform) に引数として渡します。 モデルで並列処理がサポートされている場合、特徴エンジニアリング タスクは複数の CPU を使用して処理できます。 このアプローチを使用して、データ サイエンス チームはスコアリング時間に関して 16% のパフォーマンス向上を実現しました。 ただし、この方法では、並列処理をサポートするモデルと、並列プランを使用して実行できるクエリが必要です。
 
 - SQL コンピューティングのコンテキストで R を使用します。 分離されたリソースを個別のバッチの実行に使用できるマルチプロセッサ環境では、各バッチに使用される SQL クエリを分離してテーブルからデータを抽出し、同じワークロード グループにデータを制限することで、効率を高めることができます。 バッチを分離するために使用する方法には、パーティション分割、PowerShell を使用した個別のクエリの並列実行などが含まれます。
 
