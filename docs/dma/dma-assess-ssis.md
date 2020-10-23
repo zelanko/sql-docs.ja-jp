@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1dcae45aef82859a961202ff30c3daca18e909b8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 20f216b920eb16651ca0d06a6b8090e431f8c592
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726315"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439406"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant を使用して SQL Server 統合サービスの移行評価を実行する
 
@@ -55,12 +55,12 @@ SQL Server 統合サービス (SSIS) パッケージを評価するには、以�
 1. OptionalSSIS パッケージが格納されているフォルダーパスを入力します。
 1. Optional該当する場合は、パッケージ暗号化パスワードを入力します。
 1. [転送元の SQL server に **接続** する] をクリックします。
-  ![ソースの追加](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
+  ![[サーバーへの接続] ウィンドウが表示され、[SSIS パッケージを含むフォルダーパスを入力してください] オプションが表示されたスクリーンショット。該当するオプションが呼び出された場合は、パッケージ暗号化パスワードを入力します。](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
 
 ## <a name="add-sources-to-assess"></a>評価するソースの追加
 
 1. 評価する SSIS パッケージのストレージの種類を選択し、[ **追加**] を選択します。
-![ソースの追加](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
+![[ソースの追加] ペインを示すスクリーンショット。](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
 1. [ **ソースの追加** ] を選択して接続のフライアウトメニューを開きます (複数のフォルダーを評価する必要がある場合)。
 1. **[Start Assessment]** (評価の開始) をクリックします。
   ![評価の開始](media/dma-assess-ssis/dma-assess-ssis-assess.png)
