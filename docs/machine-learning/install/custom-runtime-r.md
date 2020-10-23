@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb7f365fdbf4421093c11b5223bb3c1036a8d911
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8f3ee552c2e58fa295d4a0094430bfca4ef3dcac
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956359"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155088"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>SQL Server 用の R カスタム ランタイムをインストールする
 
@@ -37,7 +37,7 @@ R カスタム ランタイムをインストールする前に、次のもの�
 
 + [Windows 用 SQL Server 2019 (累積的な更新プログラム 3 以降)](../../database-engine/install-windows/install-sql-server.md)。
 
-+ [機能拡張フレームワークのある Windows への SQL Server 言語拡張機能](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)。
++ [機能拡張フレームワークのある Windows への SQL Server 言語拡張機能](../../language-extensions/install/windows-java.md)。
 
 + [R バージョン 3.3 以降](https://cran.r-project.org/)。
 
@@ -196,7 +196,7 @@ R カスタム ランタイムをインストールする前に、次のもの�
 + [Linux 用 SQL Server 2019 (累積的な更新プログラム 3 以降)](../../linux/sql-server-linux-setup.md)。
 SQL Server on Linux をインストールする前に、Microsoft リポジトリを構成する必要があります。 詳細については、[リポジトリの構成](../../linux/sql-server-linux-change-repo.md)に関するページを参照してください。
 
-+ [機能拡張フレームワークのある Linux への SQL Server 言語拡張機能](../../linux/sql-server-linux-setup-language-extensions.md)。
++ [機能拡張フレームワークのある Linux への SQL Server 言語拡張機能](../../linux/sql-server-linux-setup-language-extensions-java.md)。
 
 + [R バージョン 3.3 以降](https://cran.r-project.org/)。
 

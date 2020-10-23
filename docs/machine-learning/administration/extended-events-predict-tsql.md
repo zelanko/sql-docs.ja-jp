@@ -8,16 +8,16 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3d312a74a8920031015e0a985d8b30933cfc039a
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: bbe54a44113ebadc07c837887f0d92e7bfb44cb4
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956847"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115398"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の拡張イベントで PREDICT T-SQL ステートメントを監視する
-[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 拡張イベントを使用して、SQL Server Machine Learning Services で [PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL ステートメントを監視およびトラブルシューティングする方法について説明します。
 
@@ -25,22 +25,22 @@ ms.locfileid: "91956847"
 
 次の拡張イベントは、[PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL ステートメントをサポートするすべてのバージョンの SQL Server で使用できます。 
 
-|name |object_type|description| 
-|----|----|----|
-|predict_function_completed |イベント  |組み込み実行時間のブレークダウン|
-|predict_model_cache_hit |イベント|モデルが PREDICT 関数モデル キャッシュから取得されるときに発生します。 PREDICT 関数モデル キャッシュが原因で発生した問題についてトラブルシューティングを行うには、このイベントを他の predict_model_cache_* イベントと共に使用します。|
-|predict_model_cache_insert |イベント  |   モデルが PREDICT 関数モデル キャッシュに挿入されるときに発生します。 PREDICT 関数モデル キャッシュが原因で発生した問題についてトラブルシューティングを行うには、このイベントを他の predict_model_cache_* イベントと共に使用します。    |
-|predict_model_cache_miss   |イベント|モデルが PREDICT 関数モデル キャッシュで見つからないときに発生します。 このイベントが頻繁に発生する場合、SQL Server がより多くのメモリを必要としていることを示している可能性があります。 PREDICT 関数モデル キャッシュが原因で発生した問題についてトラブルシューティングを行うには、このイベントを他の predict_model_cache_* イベントと共に使用します。|
-|predict_model_cache_remove |イベント| モデルが PREDICT 関数のモデル キャッシュから削除されるときに発生します。 PREDICT 関数モデル キャッシュが原因で発生した問題についてトラブルシューティングを行うには、このイベントを他の predict_model_cache_* イベントと共に使用します。|
+| name                       | object_type | description |
+|----------------------------|-------------|-------------|
+| predict_function_completed | イベント       | 組み込み実行時間のブレークダウン|
+| predict_model_cache_hit    | イベント       | モデルが PREDICT 関数モデル キャッシュから取得されるときに発生します。 PREDICT 関数モデル キャッシュが原因で発生した問題についてトラブルシューティングを行うには、このイベントを他の predict_model_cache_* イベントと共に使用します。|
+| predict_model_cache_insert | イベント       | モデルが PREDICT 関数モデル キャッシュに挿入されるときに発生します。 PREDICT 関数モデル キャッシュが原因で発生した問題についてトラブルシューティングを行うには、このイベントを他の predict_model_cache_* イベントと共に使用します。   |
+| predict_model_cache_miss   | イベント       | モデルが PREDICT 関数モデル キャッシュで見つからないときに発生します。 このイベントが頻繁に発生する場合、SQL Server がより多くのメモリを必要としていることを示している可能性があります。 PREDICT 関数モデル キャッシュが原因で発生した問題についてトラブルシューティングを行うには、このイベントを他の predict_model_cache_* イベントと共に使用します。|
+| predict_model_cache_remove | イベント       | モデルが PREDICT 関数のモデル キャッシュから削除されるときに発生します。 PREDICT 関数モデル キャッシュが原因で発生した問題についてトラブルシューティングを行うには、このイベントを他の predict_model_cache_* イベントと共に使用します。|
 
 ## <a name="query-for-related-events"></a>関連イベントをクエリします。
 
 これらのイベントに対して返されたすべての列の一覧を表示するには、SQL Server Management Studio で次のクエリを実行します。
 
 ```sql
-SELECT * 
-FROM sys.dm_xe_object_columns 
-WHERE object_name LIKE `predict%'
+SELECT *
+FROM sys.dm_xe_object_columns
+WHERE object_name LIKE 'predict%'
 ```
 
 ## <a name="examples"></a>例

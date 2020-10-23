@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 070832ff6d934a8bcc4f8e88210f26205a92a48a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 25f61771524d170ade9914605916c6f2cffc6d3b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180328"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193704"
 ---
 # <a name="r-tutorial-create-data-features"></a>R チュートリアル:データの機能の作成
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88180328"
 
 [第 5 回](r-taxi-classification-deploy-model.md) では、第 4 回でトレーニングして保存したモデルを運用化する方法について説明します。
 
-[第 5 回](sqldev-py6-operationalize-the-model.md) では、第 4 回でトレーニングして保存したモデルを運用化する方法について説明します。
+[第 5 回](./python-taxi-classification-deploy-model.md) では、第 4 回でトレーニングして保存したモデルを運用化する方法について説明します。
 
 ## <a name="about-feature-engineering"></a>機能エンジニアリングについて
 

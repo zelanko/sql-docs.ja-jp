@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fbd7b7f6c286a3d782ed8a40441260f3faea248e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 544991790a86e1738474b7b71c39bcbcb7fc395a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035365"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412509"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-sql)
 
@@ -46,6 +46,7 @@ ms.locfileid: "92035365"
 |classifier_name|**sysname**|リソースを利用する要求の場合、リソースの割り当てに使用される分類子の名前と重要度。||
 |resource_allocation_percentage|**decimal (5, 2)**|要求に割り当てられたリソースの割合。</br>適用対象:Azure Synapse Analytics|
 |result_cache_hit|**int**|完了したクエリで結果セットキャッシュが使用されたかどうかを詳細に表示します。  </br>適用対象:Azure Synapse Analytics| 1 = 結果セットのキャッシュヒット </br> 0 = 結果セットのキャッシュミス </br> 負の整数値 = 結果セットのキャッシュが使用されなかった理由。  詳細については、「解説」を参照してください。|
+|command2|**nvarchar9max)**|ユーザーによって送信された要求の完全なテキストを保持します。 4000文字を超えるクエリを保持します。|任意の有効なクエリまたは要求テキスト。 NULL = 4000 文字以下のクエリの場合、これらのクエリでは、[コマンド] 列の下にフルテキストが表示されます。|
 ||||
   
 ## <a name="remarks"></a>解説 
