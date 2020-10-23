@@ -58,7 +58,7 @@
           items:
             - name: ビッグ データ ツールをインストールする
               href: big-data-cluster/deploy-big-data-tools.md
-            - name: azdata をインストールする
+            - name: Azure Data CLI をインストールする
               items:
                 - name: インストール
                   href: azdata/install/deploy-install-azdata.md
@@ -196,7 +196,7 @@
               href: big-data-cluster/data-ingestion-restore-database.md
         - name: 展開および使用するアプリ
           items:
-            - name: azdata を使用した配置
+            - name: Azure Data CLI を使用してデプロイする
               href: big-data-cluster/app-create.md
             - name: VS Code を使用した展開
               href: big-data-cluster/app-deployment-extension.md
@@ -402,9 +402,9 @@
               href: big-data-cluster/reference-config-master-instance.md
             - name: Apache Spark と Apache Hadoop
               href: big-data-cluster/reference-config-spark-hadoop.md
-        - name: azdata リファレンス
+        - name: Azure Data CLI リファレンス
           items:
-            - name: azdata
+            - name: Azure データ CLI
               items:
                 - name: azdata
                   href: azdata/reference/reference-azdata.md
