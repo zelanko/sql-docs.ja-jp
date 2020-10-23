@@ -10,19 +10,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 12f964b71bd7dee79eeb3287efc7b67273abb65e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a0cacd4beee72cef845fa161d1a1bcd0263a7e6b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180366"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193689"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>R チュートリアル:データの調査と視覚化
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 全 5 回からなるこのチュートリアル シリーズの第 2 回では、サンプル データを探索し、いくつかのプロットを生成します。 後で、Python でグラフィックス オブジェクトをシリアル化し、それらのオブジェクトを逆シリアル化してプロットする方法を学習します。
 
-全 5 回からなるこのチュートリアル シリーズの第 2 回では、サンプル データを確認し、[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) からの [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) と base R の汎用 [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) 関数を使用して、プロットをいくつか生成します。
+全 5 回からなるこのチュートリアル シリーズの第 2 回では、サンプル データを確認し、[RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) からの [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) と base R の汎用 [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) 関数を使用して、プロットをいくつか生成します。
 
 この記事の主な目的は、ストアド プロシージャの [!INCLUDE[tsql](../../includes/tsql-md.md)] から R 関数を呼び出し、結果をアプリケーション ファイル形式で保存する方法を示すことです。
 
@@ -83,7 +83,7 @@ ms.locfileid: "88180366"
 > SQL Server 2019 以降、この分離メカニズムを使用して、プロット ファイルが保存されるディレクトリに適切なアクセス許可を与える必要があります。 これらのアクセス許可の設定方法の詳細については、[「Windows 上の SQL Server 2019:Machine Learning Services」の「ファイルのアクセス許可」](../install/sql-server-machine-learning-services-2019.md#file-permissions)セクションを参照してください。
 ::: moniker-end
 
-プロットを作成するには、[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) で提供されている拡張 R 関数の 1 つである [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) を使用します。 この手順では、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリのデータに基づいてヒストグラムをプロットします。 この関数は、ストアド プロシージャ **RxPlotHistogram** でラップすることができます。
+プロットを作成するには、[RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) で提供されている拡張 R 関数の 1 つである [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) を使用します。 この手順では、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリのデータに基づいてヒストグラムをプロットします。 この関数は、ストアド プロシージャ **RxPlotHistogram** でラップすることができます。
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、オブジェクト エクスプローラーで、**NYCTaxi_Sample** データベースを右クリックし、 **[新しいクエリ]** を選択します。
 
@@ -114,7 +114,7 @@ ms.locfileid: "88180366"
 
 このスクリプトで理解する重要なポイントは、次のとおりです。
   
-+ 変数 `@query` によりクエリ テキスト (`'SELECT tipped FROM nyctaxi_sample'`) が定義され、スクリプト入力変数 `@input_data_1`の引数として R スクリプトに渡されます。 外部プロセスとして実行する R スクリプトの場合、スクリプトへの入力と、SQL Server で R セッションを開始する [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) システム ストアド プロシージャへの入力の間に 1 対 1 のマッピングが必要です。
++ 変数 `@query` によりクエリ テキスト (`'SELECT tipped FROM nyctaxi_sample'`) が定義され、スクリプト入力変数 `@input_data_1`の引数として R スクリプトに渡されます。 外部プロセスとして実行する R スクリプトの場合、スクリプトへの入力と、SQL Server で R セッションを開始する [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) システム ストアド プロシージャへの入力の間に 1 対 1 のマッピングが必要です。
   
 + R スクリプト内では、イメージを格納するための変数 (`image_file`) が定義されています。
 
