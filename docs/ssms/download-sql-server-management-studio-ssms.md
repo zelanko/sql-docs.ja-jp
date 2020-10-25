@@ -24,12 +24,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/20/2020
-ms.openlocfilehash: 02526928d102dd9dba8a0f19b7a05f36a7de3bcc
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: e86a46603aeac49d0622f17c0520eb7d16970948
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257992"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412641"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 
@@ -162,5 +162,6 @@ SSMS の現在のリリースでは、利用可能な最新の Service Pack と�
 - [SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [最新の更新プログラム](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 - [Azure データ アーキテクチャ ガイド](https://docs.microsoft.com/azure/architecture/data-guide/)
+- [SQL Server のブログ](https://cloudblogs.microsoft.com/sqlserver/)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

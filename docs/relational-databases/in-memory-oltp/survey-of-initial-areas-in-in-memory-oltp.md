@@ -12,12 +12,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92be3a1844fde38aca090dd8032736f34fe99361
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 4ed52b1ddfe0a55a4a443dd865f980367b90f973
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866673"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005675"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>インメモリ OLTP での初期領域の調査
 
@@ -72,7 +72,7 @@ Transact-SQL で大量の計算を処理するシステムには最適です。
 2 つの主なシナリオを以下に示します。  
   
 - *バッチ運用分析* では、営業時間後に実行されるか、トランザクション データのコピーを持つセカンダリ ハードウェアに対して実行される集計処理を参照します。  
-  - [Azure SQL データ ウェアハウス](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) もバッチ運用分析に関連します。  
+  - [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) もバッチ運用分析に関連します。  
 - *リアルタイム運用分析* では、営業時間内およびトランザクション ワークロードに使用されるプライマリ ハードウェアで実行される集計処理を参照します。  
   
   
@@ -109,8 +109,8 @@ Transact-SQL で大量の計算を処理するシステムには最適です。
 #### <a name="bulk-importation-of-data"></a>データの一括インポート
 
 1. [クラスター化列ストア: 一括読み込み](/archive/blogs/sqlserverstorageengine/clustered-column-store-index-bulk-loading-the-data)
-2. [クラスター化列ストア インデックス: データ読み込みの最適化 - 最小ログ記録](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-data-load-optimizations-minimal-logging)
-3. [クラスター化列ストア インデックス: データ読み込みの最適化 - 並行一括インポート](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-parallel-bulk-import)
+2. [クラスター化列ストア インデックス:データ読み込みの最適化 - 最小ログ記録](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-data-load-optimizations-minimal-logging)
+3. [クラスター化列ストア インデックス:データ読み込みの最適化 - 並行一括インポート](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-parallel-bulk-import)
 
 
 

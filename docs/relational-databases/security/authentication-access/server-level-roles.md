@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f185faf3ef585c1f76b3c1dea605632cedf7bd1b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 976bfdb47aae7037e3a7636299ff98e4a1424944
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869022"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004276"
 ---
 # <a name="server-level-roles"></a>サーバー レベルのロール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91869022"
   
  サーバー レベルのロールには、サーバー レベルのプリンシパル ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン、Windows アカウント、および Windows グループ) を追加できます。 固定サーバー ロールの各メンバーは、そのロールに他のログインを追加することができます。 ユーザー定義のサーバー ロールのメンバーは、そのロールに他のサーバー プリンシパルを追加できません。  
 > [!NOTE]
->  サーバー レベルの権限は、SQL Database や SQL Data Warehouse では使用できません。 SQL Database の詳細については、「[データベース アクセスの制御と許可](/azure/sql-database/sql-database-manage-logins)」を参照してください。
+>  サーバー レベルの権限は、SQL Database や Azure Synapse Analytics では使用できません。 SQL Database の詳細については、「[データベース アクセスの制御と許可](/azure/sql-database/sql-database-manage-logins)」を参照してください。
   
 ## <a name="fixed-server-level-roles"></a>固定サーバー レベル ロール  
  次の表に、固定サーバー レベル ロールとその機能を示します。  

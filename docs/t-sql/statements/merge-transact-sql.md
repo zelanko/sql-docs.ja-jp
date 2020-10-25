@@ -23,18 +23,18 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], MERGE statement
 - inserting data
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c0e716d7405580dcda3cd4f3aa4d175141469b2b
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+author: XiaoyuMSFT
+ms.author: XiaoyuL
+ms.openlocfilehash: 86f620b1c99345134a0768574d44da2bbae11c6b
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227303"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098851"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa.md)]
 
 ソース テーブルとの結合結果から、挿入、更新、または削除操作を対象テーブルに対して実行します。 たとえば、他のテーブルとの違いに基づいて、あるテーブル内の行を挿入、更新、または削除することにより、2 つのテーブルを同期します。  
   
@@ -52,6 +52,8 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
+
+-- SQL Server and Azure SQL Database
 [ WITH <common_table_expression> [,...n] ]  
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
@@ -96,9 +98,25 @@ MERGE
 <clause_search_condition> ::=  
     <search_condition> 
 ```  
-  
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
+```syntaxsql
+-- MERGE (Preview) for Azure Synapse Analytics 
+[ WITH <common_table_expression> [,...n] ]  
+MERGE
+    [ INTO ] <target_table> [ [ AS ] table_alias ]  
+    USING <table_source> [ [ AS ] table_alias ]
+    ON <merge_search_condition>  
+    [ WHEN MATCHED [ AND <clause_search_condition> ]  
+        THEN <merge_matched> ] [ ...n ]  
+    [ WHEN NOT MATCHED [ BY TARGET ] [ AND <clause_search_condition> ]  
+        THEN <merge_not_matched> ]  
+    [ WHEN NOT MATCHED BY SOURCE [ AND <clause_search_condition> ]  
+        THEN <merge_matched> ] [ ...n ]
+    [ OPTION ( <query_hint> [ ,...n ] ) ]
+;  -- The semi-colon is required, or the query will return syntax  error. 
+```
+ 
 ## <a name="arguments"></a>引数
 
 WITH \<common_table_expression>  
@@ -212,6 +230,16 @@ DEFAULT VALUES
 グラフの一致パターンを指定します。 この句の引数の詳細については、「[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)」を参照してください
   
 ## <a name="remarks"></a>解説
+>[!NOTE]
+> Azure Synapse Analytics での MERGE コマンド (プレビュー) は、SQL サーバーや Azure SQL データベースと比べて次のような違いがあります。  
+> - MERGE 更新は、削除と挿入のペアとして実装されます。 MERGE 更新の影響を受ける行の数には、削除される行と挿入される行が含まれます。 
+> - 各種の分散タイプでのテーブルのサポートについては、次の表で説明しています。
+
+>|Azure Synapse Analytics での MERGE CLAUSE|サポートされる TARGE 分散テーブル| サポートされる SOURCE 分散テーブル|コメント|  
+>|-----------------|---------------|-----------------|-----------|  
+>|**WHEN MATCHED**| HASH、ROUND_ROBIN、REPLICATE |すべての分散タイプ||  
+>|**NOT MATCHED BY TARGET**|HASH |すべての分散タイプ|UPDATE/DELETE FROM…JOIN を使用して、2 つのテーブルを同期します。 |
+>|**NOT MATCHED BY SOURCE**|すべての分散タイプ|すべての分散タイプ|UPDATE/DELETE FROM…JOIN を使用して、2 つのテーブルを同期します。||  
 
 3 つの MATCHED 句のうち、少なくとも 1 つは指定する必要があります。これらの句は、任意の順序で指定できます。 1 つの MATCHED 句で 1 つの変数を複数回更新することはできません。  
   
@@ -224,7 +252,8 @@ MERGE の後に [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcou
 データベースの互換性レベルが 100 以上に設定されている場合、MERGE は完全に予約されたキーワードです。 MERGE ステートメントはデータベースの互換性レベルが 90 と 100 の両方で使用できますが、データベースの互換性レベルが 90 に設定されている場合、MERGE キーワードは完全には予約されません。  
   
 **MERGE** ステートメントは、キュー更新レプリケーションの使用時には使用しないでください。 **MERGE** とキュー更新トリガーには互換性がありません。 **MERGE** ステートメントは、挿入ステートメントまたは更新ステートメントと置き換えてください。  
-  
+
+
 ## <a name="trigger-implementation"></a>トリガーの実装
 
 MERGE ステートメントに指定された挿入、更新、削除の各操作に対し、対象テーブルで定義された対応する AFTER トリガーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって起動されますが、どの操作に対するトリガーからどのような順序で起動されるかは決まっていません。 同じ操作に対して定義された複数のトリガーは、指定した順序に従います。 トリガー起動順序の設定の詳細については、「[最初と最後のトリガーの指定](../../relational-databases/triggers/specify-first-and-last-triggers.md)」を参照してください。  
@@ -483,9 +512,6 @@ GO
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. MERGE を使用して、グラフ データベース内のターゲット エッジ テーブルに対する INSERT または UPDATE を実行する
 
 この例では、ノード テーブル `Person` および `City` と、エッジ テーブル `livesIn` を作成します。 `livesIn` エッジに対して MERGE ステートメントを使用し、`Person` と `City` の間にエッジがまだ存在していなければ、新しい行を挿入します。 エッジが既に存在する場合は、`livesIn` エッジに対して StreetAddress 属性の更新を行います。
-
-> [!NOTE]
-> 次の例は 2019 以降の SQL Server に適用されます。
 
 ```sql
 -- CREATE node and edge tables

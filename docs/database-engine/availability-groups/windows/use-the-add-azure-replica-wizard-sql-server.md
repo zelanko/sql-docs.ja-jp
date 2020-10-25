@@ -12,17 +12,19 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e712528cc3716f054b498e4f322c64ea4873918d
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 590c559b283a91a7b6c4ecde7b455287d2f3b3bb
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670667"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005798"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>可用性グループでセカンダリ レプリカとして Azure VM を構成する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Azure のレプリカ追加ウィザードを使用して、ハイブリッド IT 環境に新しい Azure VM を作成し、新規または既存の Always On 可用性グループのセカンダリ レプリカとしてこれを構成することができます。  
-  
+
+>  [!IMPORTANT]  
+>  Azure には、リソースの作成と操作に関して 2 種類のデプロイメント モデルがあります。リソース マネージャー デプロイメント モデルとクラシック デプロイメント モデルです。 この記事では、クラシック デプロイ モデルの使用方法について説明します。 最新のデプロイメントでは、リソース マネージャー モデルを使用することをお勧めします。 この記事の手順は、Resource Manager モデルを使用して Azure 仮想マシンをデプロイしている場合には適用されません。   
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
  これまでに可用性グループに可用性レプリカを追加したことがない場合は、「 [Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」の、「サーバー インスタンス」と「可用性グループとレプリカ」のセクションを参照してください。  
@@ -47,6 +49,12 @@ ms.locfileid: "91670667"
  また、可用性グループへのレプリカ追加ウィザードでデータベース ミラーリング エンドポイントを管理できるようにする場合は、CONTROL ON ENDPOINT 権限も必要です。  
   
 ##  <a name="using-the-add-azure-replica-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Azure のレプリカ追加ウィザードの使用 (SQL Server Management Studio)  
+
+>  [!IMPORTANT]  
+>  Azure レプリカの追加ウィザードでサポートされるのは、クラシック デプロイ モデルで作成された仮想マシンのみです。 新しい仮想マシンのデプロイでは、新しい Resource Manager モデルを使用する必要があります。 Resource Manager で仮想マシンを使用する場合は、Transact-SQL コマンド (ここには示されていません) を使用して、セカンダリ Azure レプリカを手動で追加する必要があります。 このウィザードは、Resource Manager のシナリオでは機能しません。 
+>
+>  Azure レプリカの追加ウィザードは、SQL Server Management Studio の最新リリース (バージョン 18.x および 17.x) では使用できません。
+        
  Azure のレプリカ追加ウィザードは、 [[レプリカの指定] ページ](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)から起動できます。 このページを開くには、次の 2 つの方法があります。  
   
 -   [可用性グループ ウィザードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  

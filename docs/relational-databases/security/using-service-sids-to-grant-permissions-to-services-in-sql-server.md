@@ -8,16 +8,16 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: 0174ce5aae88406719fbf57c53734d535476a799
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ab9af4d073cbec00736bab6a24817502d353ffd8
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868153"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175931"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>サービスの SID を使用して SQL Server のサービスにアクセス許可を付与する
 
-SQL Server では、特定のサービスにアクセス許可を直接付与できるようにするために、[サービスごとのセキュリティ識別子 (SID)](https://support.microsoft.com/help/2620201/sql-server-uses-a-service-sid-to-provide-service-isolation) が使用されます。 この方法は、エンジン サービスおよびエージェント サービス (それぞれ、NT SERVICE\MSSQL$<InstanceName> および NT SERVICE\SQLAGENT$<InstanceName>) にアクセス許可を付与するために、SQL Server によって使用されます。 この方法を使用すると、それらのサービスからデータベース エンジンにアクセスできるのは、サービスが実行されている場合のみとなります。
+SQL Server では、特定のサービスにアクセス許可を直接付与できるようにするために、[サービスごとのセキュリティ識別子 (SID)](https://support.microsoft.com/help/2620201/sql-server-uses-a-service-sid-to-provide-service-isolation) (サービス セキュリティ プリンシパル (SID) とも呼ばれます) が使用されます。 この方法は、エンジン サービスおよびエージェント サービス (それぞれ、NT SERVICE\MSSQL$<InstanceName> および NT SERVICE\SQLAGENT$<InstanceName>) にアクセス許可を付与するために、SQL Server によって使用されます。 この方法を使用すると、それらのサービスからデータベース エンジンにアクセスできるのは、サービスが実行されている場合のみとなります。
 
 その他のサービスにアクセス許可を付与する場合も、これと同じ方法を使用できます。 サービス SID を使用すると、サービス アカウントを管理および維持するのにかかるオーバーヘッドが不要になり、システム リソースに付与するアクセス許可をより厳密により細かく制御することができます。
 
@@ -33,7 +33,7 @@ SQL Server では、特定のサービスにアクセス許可を直接付与で
 > [!TIP]
 > エラー `Login failed for user 'NT AUTHORITY\SYSTEM'` が返された場合は、目的のサービスに対してサービス SID が存在すること、SQL Server 内でサービス SID ログインが作成されていること、SQL Server 内でサービス SID に適切なアクセス許可が付与されていることを確認します。
 
-## <a name="security"></a>セキュリティ
+## <a name="security"></a>Security
 
 ### <a name="eliminate-service-accounts"></a>サービス アカウントを不要にする
 
@@ -101,6 +101,35 @@ GO
 GRANT VIEW SERVER STATE TO [NT SERVICE\ClusSvc]
 GO
 ```
+
+  > [!NOTE]
+  > サービス SID ログインを削除したり、sysadmin サーバー ロールから削除したりすると、SQL Server データベース エンジンに接続する SQL Server のさまざまなコンポーネントで問題が発生する可能性があります。 問題の一部を次に示します。
+  > - SQL Server エージェントが SQL Server サービスを開始できなくなったり、接続できなくなる
+  > - SQL Server セットアップ プログラムで、次のマイクロソフトサポート技術情報記事に記載されている問題が発生する: https://support.microsoft.com/help/955813/you-may-be-unable-to-restart-the-sql-server-agent-service-after-you-re
+  >
+  > SQL Server の既定のインスタンスの場合は、次の Transact-SQL コマンドを使用してサービス SID を追加することにより、この状況を修正できます。
+  >
+  > ```sql
+  > CREATE LOGIN [NT SERVICE\MSSQLSERVER] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\MSSQLSERVER]
+  > 
+  > CREATE LOGIN [NT SERVICE\SQLSERVERAGENT] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\SQLSERVERAGENT]
+  > ```
+  > SQL Server の名前付きインスタンスの場合は、次の Transact-SQL コマンドを使用します。
+  > ```sql
+  > CREATE LOGIN [NT SERVICE\MSSQL$SQL2019] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\MSSQL$SQL2019]
+  > 
+  > CREATE LOGIN [NT SERVICE\SQLAgent$SQL2019] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\SQLAgent$SQL2019]
+  > 
+  > ```
+  > この例で、`SQL2019` は SQL Server のインスタンス名です。
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1699ac4a2ad49a6a65fafed6a75c71585514de51
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: dcad505d75528f17c65263f3b3a68defdcb6fb30
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868056"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005581"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>データの一括インポートでのフォーマット ファイルの使用 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "91868056"
   * SQLCHAR または SQLVARYCHAR (データは、クライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます)
   * SQLNCHAR または SQLNVARCHAR (データは Unicode として送信されます)
   * SQLBINARY または SQLVARYBIN (データは変換なしで送られます)
-* Azure SQL Database と Azure SQL Data Warehouse は、 [bcp](../../tools/bcp-utility.md)のみをサポートします。  追加情報については、次を参照してください。
-  * [Azure SQL Data Warehouse にデータを読み込む](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
-  * [SQL Server から Azure SQL Data Warehouse にデータを読み込む (フラット ファイル)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+* Azure SQL Database と Azure Synapse Analytics では、[bcp](../../tools/bcp-utility.md) のみサポートされます。  追加情報については、次を参照してください。
+  * [Azure Synapse Analytics にデータを読み込む](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [SQL Server から Azure Synapse Analytics にデータを読み込む (フラット ファイル)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
   * [データを移行する](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-develop)
 
 ## <a name="example-test-conditions"></a>テスト条件の例

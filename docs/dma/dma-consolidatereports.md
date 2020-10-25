@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e989e524a35763927ac949a88592b38c28a18dc5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 03ea9cc4d6b7842739f4431fea2e9a418e0f3f9e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727803"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523919"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>DMA で企業を評価し評価レポートを統合する
 
@@ -96,7 +96,7 @@ Csv ファイルを使用してデータをインポートする場合は、デ�
 - DatabaseName
 - AssessmentFlag
 
-![SQL Server テーブルの内容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
+![SQL Server テーブルを使用している場合の SQL Server テーブルの内容のスクリーンショット。](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 このデータベースがツールコンピューター上にない場合は、ツールコンピューターにこの SQL Server インスタンスへのネットワーク接続があることを確認してください。
 
@@ -110,10 +110,10 @@ CSV ファイルに対して SQL Server テーブルを使用する利点は、[
 
 - ServerName
 - InstanceName
-- Port
+- ポート
 - AssessmentFlag
 
-![SQL Server テーブルの内容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+![インスタンスインベントリを使用している場合の SQL Server テーブルの内容のスクリーンショット。](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
 
 ## <a name="running-a-scaled-assessment"></a>スケーリングされた評価の実行
 

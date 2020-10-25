@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 31b07b70e5a90d36a7094f38eab7b99f3bac821e
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 23eadb2089e3f692e5e054441b7617e09e71ac01
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834023"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005849"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server 上の外部データにアクセスするための PolyBase の構成
 
@@ -81,7 +81,7 @@ SQL Server データ ソースのデータに対してクエリを実行する�
 
 ## <a name="sql-server-connector-compatible-types"></a>SQL Server コネクタの互換性のある型
 
-SQL Server の接続を認識するその他のデータ ソースに接続することができます。 SQL Server PolyBase のコネクタを使用して、Azure SQL Data Warehouse と Azure SQL Database の両方の外部テーブルを作成します。 このタスクを実行するには、前に示したのと同じ手順に従います。 データベース スコープ資格情報、サーバーのアドレス、ポート、場所の文字列が接続先の互換データ ソースのものと関連付けられていることを確認してください。
+SQL Server の接続を認識するその他のデータ ソースに接続することができます。 SQL Server PolyBase のコネクタを使用して、Azure Synapse Analytics と Azure SQL Database の両方の外部テーブルを作成します。 このタスクを実行するには、前に示したのと同じ手順に従います。 データベース スコープ資格情報、サーバーのアドレス、ポート、場所の文字列が接続先の互換データ ソースのものと関連付けられていることを確認してください。
 
 ## <a name="next-steps"></a>次のステップ
 

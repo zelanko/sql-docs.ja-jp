@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: a374a5eaa64eb69d96ddfe609fb8561a1dc983b6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c0864f868cc046fcd1f0763fff7e5a97e2fe8607
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725985"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006205"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW アップロード タスク
 
@@ -27,8 +27,8 @@ ms.locfileid: "91725985"
 
 
 
-**Azure SQL DW アップロード タスク**により、SSIS パッケージはファイル システムまたは Azure Blob Storage から Azure SQL Data Warehouse (DW) に表形式データをコピーできます。
-「[Azure SQL Data Warehouse Loading Patterns and Strategies](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies)」(Azure SQL Data Warehouse の読み込みパターンと戦略) で説明されているように、このタスクはパフォーマンス向上のために PolyBase を利用します。
+**Azure SQL DW アップロード タスク**により、SSIS パッケージはファイル システムまたは Azure Blob Storage から Azure Synapse Analytics (DW) に表形式データをコピーできます。
+「[Azure Synapse Analytics Loading Patterns and Strategies](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies)」(Azure Synapse Analytics の読み込みパターンと戦略) で説明されているように、このタスクはパフォーマンス向上のために PolyBase を利用します。
 現在サポートされているソース データ ファイル形式は、UTF8 エンコーディングの区切り記号付きテキストです。
 ファイル システムからのコピーでは、データは最初にステージングのために Azure Blob Storage にアップロードされ、それから Azure SQL DW にアップロードされます。 そのため、Azure Blob Storage アカウントが必要です。
 

@@ -1,6 +1,6 @@
 ---
-title: SQL Server Integration Services (SSIS) を使用して Azure SQL Data Warehouse にデータを読み込む | Microsoft Docs
-description: さまざまなデータ ソースから Azure SQL Data Warehouse にデータを移動するための SQL Server Integration Services (SSIS) パッケージを作成する方法を示します。
+title: SQL Server Integration Services (SSIS) を使用して Azure Synapse Analytics にデータを読み込む | Microsoft Docs
+description: さまざまなデータ ソースから Azure Synapse Analytics にデータを移動するための SQL Server Integration Services (SSIS) パッケージを作成する方法を示します。
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,20 +10,20 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 317a17d667c9c09009c3fcbd9bab6565108110ad
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 3cd591bd087170e6f5a6329c4411b2674d19b4f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943204"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192502"
 ---
-# <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して Azure SQL Data Warehouse にデータを読み込む
+# <a name="load-data-into-azure-synapse-analytics-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して Azure Synapse Analytics にデータを読み込む
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
-SQL Server Integration Services (SSIS) パッケージを作成して、[Azure SQL Data Warehouse](/azure/sql-data-warehouse/index) にデータを読み込みます。 SSIS データ フローを通過するときに、必要に応じてデータを再構築、変換、およびクレンジングすることができます。
+SQL Server Integration Services (SSIS) パッケージを作成して、[Azure Synapse Analytics](/azure/sql-data-warehouse/index) にデータを読み込みます。 SSIS データ フローを通過するときに、必要に応じてデータを再構築、変換、およびクレンジングすることができます。
 
 この記事では、以下の操作の実行方法について説明します。
 
@@ -46,7 +46,7 @@ SQL Server Integration Services (SSIS) とは、SQL Data Warehouse に接続す�
 
 1. 最適なパフォーマンスを提供する推奨される方法は、[Azure SQL DW アップロード タスク](control-flow/azure-sql-dw-upload-task.md)を使用してデータを読み込むパッケージを作成することです。 このタスクでは、ソースと変換先の情報の両方がカプセル化されます。 ソースのデータは、ローカルの区切りテキスト ファイルに保存されていることを前提としています。
 
-2. また、ソースと変換先を含むデータ フロー タスクを使用するパッケージを作成することもできます。 このアプローチは、SQL Server と Azure SQL Data Warehouse を含む幅広いデータ ソースをサポートしています。
+2. また、ソースと変換先を含むデータ フロー タスクを使用するパッケージを作成することもできます。 このアプローチは、SQL Server と Azure Synapse Analytics を含む幅広いデータ ソースをサポートしています。
 
 ## <a name="prerequisites"></a>前提条件
 このチュートリアルの手順を実行するには、以下の要素が必要です。
@@ -54,7 +54,7 @@ SQL Server Integration Services (SSIS) とは、SQL Data Warehouse に接続す�
 1. **SQL Server Integration Services (SSIS)** . SSIS は SQL Server のコンポーネントであり、使用するには SQL Server のライセンス版、開発者版、または評価版が必要です。 SQL Server の評価版を取得するには、[SQL Server の評価](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)に関するページを参照してください。
 2. **Visual Studio** (省略可能)。 無料の Visual Studio Community Edition を取得するには、[Visual Studio Community][Visual Studio Community] に関するページを参照してください。 Visual Studio をインストールしない場合は、SQL Server Data Tools (SSDT) のみをインストールできます。 SSDT をインストールすると、機能が制限されたバージョンの Visual Studio がインストールされます。
 3. **Visual Studio 用 SQL Server Data Tools (SSDT)** 。 Visual Studio 用 SQL Server Data Tools を取得するには、[SQL Server Data Tools (SSDT) のダウンロード][Download SQL Server Data Tools (SSDT)]に関するページを参照してください。
-4. **Azure SQL Data Warehouse データベースとアクセス許可**。 このチュートリアルでは、SQL Data Warehouse のインスタンスに接続し、そのインスタンスにデータを読み込みます。 接続し、テーブルを作成し、データを読み込むことができるアクセス許可が必要です。
+4. **Azure Synapse Analytics データベースと権限**。 このチュートリアルでは、SQL Data Warehouse のインスタンスに接続し、そのインスタンスにデータを読み込みます。 接続し、テーブルを作成し、データを読み込むことができるアクセス許可が必要です。
 
 ## <a name="create-a-new-integration-services-project"></a>新しい Integration Services プロジェクトを作成する
 1. Visual Studio を起動します。
@@ -80,7 +80,7 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
 
 - [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]。 SQL DW アップロード タスクは、Feature Pack のコンポーネントです。
 
-- [Azure Blob Storage](https://docs.microsoft.com/azure/storage/) アカウント。 SQL DW アップロード タスクは、Azure Blob Storage から Azure SQL Data Warehouse にデータを読み込みます。 Blob Storage に既に格納されているファイルから読み込むか、ローカル コンピューターからファイルを読み込むことができます。 ローカル コンピューター上のファイルを選択すると、SQL DW アップロード タスクはまず BLOB Storage にアップロードし、ステージングしてから、SQL Data Warehouse に読み込みます。
+- [Azure Blob Storage](/azure/storage/) アカウント。 SQL DW アップロード タスクは、Azure Blob Storage から Azure Synapse Analytics にデータを読み込みます。 Blob Storage に既に格納されているファイルから読み込むか、ローカル コンピューターからファイルを読み込むことができます。 ローカル コンピューター上のファイルを選択すると、SQL DW アップロード タスクはまず BLOB Storage にアップロードし、ステージングしてから、SQL Data Warehouse に読み込みます。
 
 ### <a name="add-and-configure-the-sql-dw-upload-task"></a>SQL DW アップロード タスクを追加および構成する
 
@@ -98,11 +98,11 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
 
 1. Azure Blob Upload Task を使用して、Azure Blob Storage でデータのステージングを行う。 Azure BLOB アップロード タスクを取得するには、[Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure] をダウンロードしてください。
 
-2. 次に、SSIS の SQL 実行タスクを使用して、SQL Data Warehouse にデータを読み込む PolyBase スクリプトを起動します。 (SSIS を使用せずに) Azure Blob Storage から SQL Data Warehouse にデータを読み込む例については、「[チュートリアル: Azure SQL Data Warehouse へのデータの読み込み](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)」を参照してください。
+2. 次に、SSIS の SQL 実行タスクを使用して、SQL Data Warehouse にデータを読み込む PolyBase スクリプトを起動します。 (SSIS を使用せずに) Azure Blob Storage から SQL Data Warehouse にデータを読み込む例については、「[チュートリアル:Azure Synapse Analytics へのデータの読み込み](/azure/sql-data-warehouse/load-data-wideworldimportersdw)」を参照してください。
 
 ## <a name="option-2---use-a-source-and-destination"></a>オプション 2 - ソースと変換先を使用する
 
-2 つ目のアプローチは、ソースと変換先を含むデータ フロー タスクを使用する一般的なパッケージです。 このアプローチは、SQL Server と Azure SQL Data Warehouse を含む幅広いデータ ソースをサポートしています。
+2 つ目のアプローチは、ソースと変換先を含むデータ フロー タスクを使用する一般的なパッケージです。 このアプローチは、SQL Server と Azure Synapse Analytics を含む幅広いデータ ソースをサポートしています。
 
 このチュートリアルでは、SQL Server をデータ ソースとして使用します。 SQL Server は、オンプレミスまたは Azure の仮想マシン上で実行されます。
 
@@ -171,7 +171,7 @@ SQL Server と SQL Data Warehouse に接続するには、ADO.NET 接続マネ�
 1. 変換先アダプターをダブルクリックして、**ADO.NET 変換先エディター**を開きます。
    
     ![ADO.NET 変換先エディターのスクリーンショット。 [接続マネージャー] タブが表示されます。データ フローのプロパティを構成するためのコントロールがあります。][11]
-2. **ADO.NET 変換先エディター**の **[接続マネージャー]** タブで、 **[接続マネージャー]** リストの横にある **[新規]** ボタンをクリックして、 **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスを開き、このチュートリアルでのデータの読み込み先である Azure SQL Data Warehouse データベースに対する接続設定を作成します。
+2. **ADO.NET 変換先エディター**の **[接続マネージャー]** タブで、 **[接続マネージャー]** リストの横にある **[新規]** ボタンをクリックして、 **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスを開き、このチュートリアルでのデータの読み込み先である Azure Synapse Analytics データベースに対する接続設定を作成します。
 3. **[ADO.NET 接続マネージャーの構成]** ダイアログ ボックスで、 **[新規]** ボタンをクリックして **[接続マネージャー]** ダイアログ ボックスを開き、新しいデータ接続を作成します。
 4. **[接続マネージャー]** ダイアログ ボックスで、次の操作を行います。
    1. **[プロバイダー]** で、SqlClient データ プロバイダーを選択します。
@@ -189,7 +189,7 @@ SQL Server と SQL Data Warehouse に接続するには、ADO.NET 接続マネ�
    
    1. 変換先テーブルの名前を **SalesOrderDetail** に変更します。
    2. **rowguid** 列を削除します。 SQL Data Warehouse では、**uniqueidentifier** データ型はサポートされていません。
-   3. **[LineTotal]** 列のデータ型を **[money]** に変更します。 SQL Data Warehouse では、**decimal** データ型はサポートされていません。 サポートされるデータ型に関する情報については、[CREATE TABLE (Azure SQL Data Warehouse、Parallel Data Warehouse)][CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)] に関するページを参照してください。
+   3. **[LineTotal]** 列のデータ型を **[money]** に変更します。 SQL Data Warehouse では、**decimal** データ型はサポートされていません。 サポートされるデータ型に関する情報については、[CREATE TABLE (Azure Synapse Analytics、Parallel Data Warehouse)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)] に関するページを参照してください。
       
        ![[テーブルの作成] ダイアログ ボックスのスクリーンショット。money 列として LineTotal があり、rowguid 列がない、SalesOrderDetail という名前のテーブルを作成するコードが表示されています。][12b]
    4. **[OK]** をクリックして、テーブルを作成し、**ADO.NET 変換先エディター**に戻ります。
@@ -211,7 +211,7 @@ SQL Server と SQL Data Warehouse に接続するには、ADO.NET 接続マネ�
 
 ![ソース アダプターと変換先アダプターを示すスクリーンショット。 各アダプターの上に緑色のチェックマークがあり、それらの間に "121317 行" というテキストがあります。][15]
 
-お疲れさまでした。 SQL Server Integration Services を使用して Azure SQL Data Warehouse にデータを読み込むことに成功しました。
+お疲れさまでした。 SQL Server Integration Services を使用して Azure Synapse Analytics にデータを読み込むことに成功しました。
 
 ## <a name="next-steps"></a>次のステップ
 
@@ -242,7 +242,7 @@ SQL Server と SQL Data Warehouse に接続するには、ADO.NET 接続マネ�
 <!-- MSDN references -->
 [PolyBase Guide]: ../relational-databases/polybase/polybase-guide.md
 [Download SQL Server Data Tools (SSDT)]: ../ssdt/download-sql-server-data-tools-ssdt.md
-[CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)]: ../t-sql/statements/create-table-azure-sql-data-warehouse.md
+[CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)]: ../t-sql/statements/create-table-azure-sql-data-warehouse.md
 [Data Flow]: ./data-flow/data-flow.md
 [Troubleshooting Tools for Package Development]: ./troubleshooting/troubleshooting-tools-for-package-development.md
 [Deployment of Projects and Packages]: ./packages/deploy-integration-services-ssis-projects-and-packages.md

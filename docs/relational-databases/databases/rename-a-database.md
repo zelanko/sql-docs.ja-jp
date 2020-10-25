@@ -15,12 +15,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d6131b3481be154cda88aee47bd226ce293613e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b81e565875074e3ba3fc08dd85f27b9c077ebb08
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471182"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005505"
 ---
 # <a name="rename-a-database"></a>データベースの名前変更
 
@@ -44,7 +44,7 @@ ms.locfileid: "88471182"
 - **Follow Up:**  [After renaming a database](#backup-after-renaming-a-database)  
 
 > [!NOTE]
-> Azure SQL Data Warehouse または Parallel Data Warehouse でデータベースの名前を変更するには、[RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) ステートメントを使用します。
+> Azure Synapse Analytics または Parallel Data Warehouse でデータベースの名前を変更するには、[RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) ステートメントを使用します。
   
 ## <a name="before-you-begin"></a>はじめに
   

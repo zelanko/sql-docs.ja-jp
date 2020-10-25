@@ -17,16 +17,16 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cdad35826cf23244264057c059d2f2c79f2049a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e02e5e2e6449a1c8c62072d0cd5a86d44cdf22ce
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891012"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006002"
 ---
 # <a name="partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックス
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブルおよびインデックスのパーティション分割をサポートします。 パーティション テーブルとパーティション インデックスのデータは、データベース内の複数のファイル グループに分散できるように、複数の単位に分割されます。 行のグループが各パーティションにマップされるように、データは行方向にパーティション分割されます。 1 つのインデックスまたはテーブルのすべてのパーティションは、同じデータベース内に存在する必要があります。 データに対するクエリまたは更新の実行時は、テーブルやインデックスが 1 つの論理エンティティとして扱われます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 より前では、パーティション テーブルとパーティション インデックスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブルおよびインデックスのパーティション分割をサポートします。 パーティション テーブルとパーティション インデックスのデータは、必要に応じてデータベース内の複数のファイル グループに分散できるように、複数の単位に分割されます。 行のグループが各パーティションにマップされるように、データは行方向にパーティション分割されます。 1 つのインデックスまたはテーブルのすべてのパーティションは、同じデータベース内に存在する必要があります。 データに対するクエリまたは更新の実行時は、テーブルやインデックスが 1 つの論理エンティティとして扱われます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 より前では、パーティション テーブルとパーティション インデックスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、既定で最大 15,000 個のパーティションをサポートします。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のバージョンでは、パーティションの数は既定で 1,000 に制限されていました。 x86 ベースのシステムでは、パーティション数が 1,000 を超えるテーブルまたはインデックスを作成できますが、サポートされていません。  
@@ -40,9 +40,12 @@ ms.locfileid: "91891012"
   
 -   頻繁に実行するクエリの種類とハードウェア構成に基づいて、クエリのパフォーマンスを改善できる場合があります。 たとえば、クエリ オプティマイザーで 2 つ以上のパーティション テーブル間の等結合クエリを行う場合、そのパーティション分割列が、テーブルが結合される列と同じであれば、処理がより高速になります。 詳細については、下の「[クエリ](#queries)」をご覧ください。
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により I/O 操作用にデータの並べ替えが実行される場合、まずパーティションでデータが並べ替えられます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、一度に 1 つのドライブにしかアクセスできないので、パフォーマンスが低下することがあります。 データの並べ替えのパフォーマンスを向上させるには、RAID を構成して複数のディスク間でパーティションのデータ ファイルをストライプします。 この方法を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では今までどおりデータがパーティションで並べ替えられますが、すべてのドライブの各パーティションに同時にアクセスできるようになります。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により I/O 操作用にデータの並べ替えが実行される場合、まずパーティションでデータが並べ替えられます。 データの並べ替えのパフォーマンスを向上させるには、RAID を構成して複数のディスク間でパーティションのデータ ファイルをストライプします。 この方法を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では今までどおりデータがパーティションで並べ替えられますが、すべてのドライブの各パーティションに同時にアクセスできるようになります。  
   
 さらに、テーブル全体ではなくパーティション レベルでのロックのエスカレーションを有効にしてパフォーマンスを向上させることができます。 これにより、テーブルでのロックの競合を減らすことができます。 パーティションへのロックのエスカレーションを有効にしてロックの競合を減らすには、`ALTER TABLE` ステートメントの `LOCK_ESCALATION` オプションを AUTO に設定します。 
+
+> [!TIP]
+> テーブルやインデックスのパーティションは、1 つのファイル グループ (たとえば `PRIMARY` ファイル グループ) に配置することも、複数のファイル グループに配置することもできます。 階層化されたストレージを使用する場合は、複数のファイル グループを使用することで、特定のパーティションを特定のストレージ階層に割り当てることができます。 パーティション分割のその他の利点もすべて、使用するファイル グループの数や特定のファイル グループのパーティション配置に関係なく利用できます。
   
 ## <a name="components-and-concepts"></a>コンポーネントおよび概念  
 テーブルおよびインデックスのパーティション分割に関連する用語を次に示します。  
@@ -114,6 +117,8 @@ ms.locfileid: "91891012"
 -  同数のパーティションが定義されている
 -  パーティションに同じ境界値が定義されている
 このような性質により、パーティション自体を結合できるので、クエリ オプティマイザーでは結合をより高速に処理できます。 クエリで、併置されていないか、または結合フィールドでパーティション分割されていない 2 つのテーブルを結合すると、パーティションが存在することが原因で、クエリ処理のパフォーマンスは向上せず、低下することがあります。
+
+クエリ処理でのパーティション処理の詳細については、「[パーティション テーブルとパーティション インデックスに対するクエリ処理の機能強化](../../relational-databases/query-processing-architecture-guide.md#query-processing-enhancements-on-partitioned-tables-and-indexes)」を参照してください。
 
 ## <a name="behavior-changes-in-statistics-computation-during-partitioned-index-operations"></a>パーティション インデックス操作中の統計計算での動作の変更  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、パーティション インデックスが作成または再構築された場合、テーブル内のすべての行をスキャンして統計を作成することはできません。 代わりに、クエリ オプティマイザーが既定のサンプリング アルゴリズムを使用して統計を生成します。 パーティション インデックスでデータベースをアップグレードした後で、これらのインデックスのヒストグラム データに違いが見つかる場合があります。 この動作の変更はクエリ パフォーマンスに影響しない可能性があります。 テーブル内のすべての行をスキャンしてパーティション インデックスの統計を作成するには、`FULLSCAN` 句で `CREATE STATISTICS` または `UPDATE STATISTICS` を使用します。  

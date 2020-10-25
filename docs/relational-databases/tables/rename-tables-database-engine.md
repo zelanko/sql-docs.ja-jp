@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5f00ffc9ce946c3c6116ba85af0c4ff7c82405b
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 87a05942a1061db1f074266d0b5df3b1797f5e73
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645793"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006124"
 ---
 # <a name="rename-tables-database-engine"></a>テーブル名の変更 (データベース エンジン)
 
@@ -29,7 +29,7 @@ ms.locfileid: "88645793"
 
 SQL Server または Azure SQL Database のテーブル名を変更します。
 
-Azure SQL Data Warehouse または Parallel Data Warehouse でテーブルの名前を変更するには、[RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) ステートメントを使用します。 
+Azure Synapse Analytics または Parallel Data Warehouse でテーブルの名前を変更するには、t-sql [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) ステートメントを使用します。 
   
 > [!CAUTION]  
 >  テーブル名の変更については、十分に検討してください。 そのテーブルを参照するクエリ、ビュー、ユーザー定義関数、ストアド プロシージャ、またはプログラムが存在する場合、テーブル名を変更すると、各オブジェクトが無効になります。  

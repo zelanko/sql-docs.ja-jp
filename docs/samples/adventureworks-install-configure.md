@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f4140db7be7367105832ff564d927ba6bc40ed25
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 1482104a0c8ffea7f7f2502b83b9b268b7bb08d2
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955893"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523957"
 ---
 # <a name="adventureworks-sample-databases"></a>AdventureWorks サンプルデータベース
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "91955893"
 
 必要なものがわからない場合は、SQL Server バージョンと一致する OLTP バージョンから開始してください。 
 
-|**OLTP** |**データウェアハウス** |**軽量**|
+|**OLTP** |**データ ウェアハウス (data warehouse)** |**軽量**|
 |---------|---------|---------|
 |[AdventureWorks2019](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak)|[AdventureWorksDW2019](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2019.bak)|[AdventureWorksLT2019](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2019.bak)|
 |[AdventureWorks2017](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak)|[AdventureWorksDW2017](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak)|[AdventureWorksLT2017](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2017.bak)|
@@ -75,7 +75,7 @@ SQL Server Management Studio でデータベースを復元するには、次の
 3. SQL Server Management Studio (SSMS) を開き、で SQL Server に接続します。 
 4. データベースの復元ウィザードを起動するには**オブジェクトエクスプローラー**[データベースの復元 **] で [データベース]** を右クリックします。  >  **Restore Database...** **Restore Database** 
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元することを選択します。":::
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元する方法を示すスクリーンショット。":::
 
 
 1. [ **デバイス** ] を選択し、省略記号 **(...)** を選択してデバイスを選択します。 
@@ -84,7 +84,7 @@ SQL Server Management Studio でデータベースを復元するには、次の
 1. [ **ファイル** ] タブを確認し **て、復元** の場所とファイル名が **データベースの復元** ウィザードの目的の場所とファイル名と一致していることを確認します。 
 1. **[OK]** を選択してデータベースを復元します。 
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元することを選択します。":::
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元する方法を示すスクリーンショット。":::
 
 SQL Server データベースの復元の詳細については、「 [SSMS を使用したデータベースバックアップの復元](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)」を参照してください。
 
@@ -117,25 +117,25 @@ Azure Data Studio でデータベースを復元するには、次の手順を�
 1. Azure Data Studio Studio を開き、SQL Server インスタンスに接続します。
 1. サーバーを右クリックし、[ **管理**] を選択します。
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元することを選択します。":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元する方法を示すスクリーンショット。":::
 
 1. **復元**の選択
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元することを選択します。":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元する方法を示すスクリーンショット。":::
 
 1. [ **全般** ] タブで、[ **ソース**] の一覧に表示される値を入力します。
     1. [ **復元元**] で、[ *バックアップファイル*] を選択します。
     1. [ **バックアップファイルのパス**] で、.bak ファイルを保存した場所を選択します。 
     
-   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元することを選択します。":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元する方法を示すスクリーンショット。":::
     
     これにより、 **データベース**、 **ターゲットデータベース** 、復元などの残りのフィールドが自動的 **に**設定されます。 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元することを選択します。":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元する方法を示すスクリーンショット。":::
 
 1. [ **復元** ] を選択して、データベースを復元します。 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元することを選択します。":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元する方法を示すスクリーンショット。":::
 
 ---
 
@@ -157,7 +157,7 @@ Azure SQL Database で新しいデータベースを作成する場合は、空�
 1. 要求された情報を入力して、データベースを作成します。 
 1. [**追加設定**] タブで、[**データソース**] の下の既存のデータとして [**サンプル**] を選択します。 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元することを選択します。":::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元する方法を示すスクリーンショット。":::
 
 1. [ **作成** ] を選択して、AdventureWorksLT データベースの復元されたコピーである新しい SQL Database を作成します。 
 
@@ -172,7 +172,7 @@ SQL Server から Azure SQL Database にサンプルデータベースを配置�
 1. まだ実行していない場合は、 [サンプルデータベースを SQL Server に復元](#restore-to-sql-server)します。 
 1. 復元したデータベースを右クリックし、**オブジェクトエクスプローラー**  >  **タスク**] [  >  **データベースを Microsoft Azure SQL Database に配置**...] の順にクリックします。 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元することを選択します。":::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元する方法を示すスクリーンショット。":::
 
 1. ウィザードに従って Azure SQL Database に接続し、データベースをデプロイします。 
 

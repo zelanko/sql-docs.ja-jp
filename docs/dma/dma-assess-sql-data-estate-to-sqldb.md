@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 095c14150a3f78f49a8e1dd6d711b5fefc617d49
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 9aae42b92c6d7d9bb5c26c84e49c49a8cde6bc57
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726343"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523879"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant を使用して Azure SQL Database に移行する SQL Server のデータ資産の準備状況を評価する
 
@@ -101,7 +101,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
     オンプレミスの SQL Server インスタンスを SQL Server の新しいバージョンまたは Azure VM でホストされている SQL Server にアップグレードする場合は、ソースとターゲットのサーバーの種類を **SQL Server**に設定します。 Azure SQL Database (PaaS) ターゲット準備の評価については、対象サーバーの種類を **AZURE SQL Managed Instance** に設定します。
 
-3. **［作成］** を選択します
+3. **[作成]** を選択します。
 
    ![Azure Migrate-Data Migration Assistant インターフェイス](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 
@@ -132,11 +132,11 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
 5. 評価が完了したら、[ **Azure Migrate にアップロード**] を選択します。
 
-   ![Azure Migrate Data Migration Assistant-レビュー結果画面](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
+   ![[Azure Migrate にアップロード] オプションを使用して Data Migration Assistant を示すスクリーンショット。](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
 6. Azure portal にサインインします。
 
-   ![Azure Migrate Data Migration Assistant-レビュー結果画面](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
+   ![Azure portal サインインウィンドウを表示している Data Migration Assistant のスクリーンショット。](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 
 7. 評価結果をアップロードするサブスクリプションと Azure Migrate プロジェクトを選択し、[ **アップロード**] を選択します。
 
@@ -178,7 +178,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
    ![Azure Migrate-移行ブロックの確認](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 * [Data Migration Assistant: 構成設定](../dma/dma-configurationsettings.md)
