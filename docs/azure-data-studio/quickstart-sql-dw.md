@@ -9,14 +9,14 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: f0d6ba76868bb1b8a226145b2aa1306db46baa17
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 1679f7416306b8dda564576779ae2e315f589311
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115900"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257334"
 ---
-# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>クイックスタート: Azure Synapse Analytics の専用 SQL プールを使用して接続先となる Azure Data Studio を使用し、クエリを実行する
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>クイックスタート: Azure Data Studio を使用して Azure Synapse Analytics の専用 SQL プールに接続し、データにクエリを実行する
 
 このクイックスタートでは、Azure Data Studio を使用して Azure Synapse Analytics 内の専用 SQL プールに接続する方法を示します。
 
@@ -139,5 +139,6 @@ Azure Data Studio を使用して、Azure Synapse Analytics サーバーへの�
 この記事で作成したサンプル データベースの操作を続行する予定がない場合は、[リソース グループを削除](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources)してください。
 
 ## <a name="next-steps"></a>次のステップ
+詳細については、[Azure Data Studio を使用した Synapse SQL への接続](https://docs.microsoft.com/azure/synapse-analytics/sql/get-started-azure-data-studio)に関する記事を参照してください。
 
 Azure Synapse Analytics に正常に接続してクエリを実行したので、[コード エディターのチュートリアル](tutorial-sql-editor.md)を試してください。
