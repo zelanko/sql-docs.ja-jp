@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8a17a153aedecac36acb02946e726d07a50e4c60
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: b66c95d7818144abd41b7a5b9fbedb93ba81aded
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529470"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300458"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -69,9 +69,9 @@ ALTER EXTERNAL DATA SOURCE data_source_name
  CREDENTIAL = Credential_Name: 名前付きの資格情報を指定します。 「[CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」を参照してください。
 
 TYPE = [HADOOP | BLOB_STORAGE]   
-**適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
+**適用対象** : [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
 一括操作の場合のみ、`LOCATION` は Azure BLOB ストレージの有効な URL にする必要があります。 `LOCATION` URL の末尾に、 **/** 、ファイル名、または Shared Access Signature パラメーターを配置しないでください。
-使用される資格情報は、`SHARED ACCESS SIGNATURE` を使用して ID として作成する必要があります。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。
+使用される資格情報は、`SHARED ACCESS SIGNATURE` を使用して ID として作成する必要があります。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。
 
   
 

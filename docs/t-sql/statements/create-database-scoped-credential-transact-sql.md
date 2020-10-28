@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 560c5c4c3888c36ef77030db2151f09a47b1dcc0
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: cfca6f2f7e40593e4480c90ecf543eb39fc810be
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834212"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300937"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -53,7 +53,7 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* 作成するデータベース スコープの資格情報の名前を指定します。 *credential_name* はシャープ (#) 記号で始めることはできません。 システム資格情報は ## で始まります。
 
-IDENTITY **='** _identity\_name_ **'** サーバーの外部に接続するときに使用するアカウントの名前を指定します。 共有キーを使用して Azure Blob Storage からファイルをインポートするには、ID 名が `SHARED ACCESS SIGNATURE` である必要があります。 データを SQL DW に読み込むには、任意の有効な値を ID に使用できます。 Shared Access Signature の詳細については、「[Shared Access Signatures (SAS) の使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」をご覧ください。 Kerberos (Windows Active Directory または MIT KDC) の使用時、IDENTITY 引数でドメイン名を使用しないでください。 アカウント名にしておけば問題ありません。
+IDENTITY **='** _identity\_name_ **'** サーバーの外部に接続するときに使用するアカウントの名前を指定します。 共有キーを使用して Azure Blob Storage からファイルをインポートするには、ID 名が `SHARED ACCESS SIGNATURE` である必要があります。 データを SQL DW に読み込むには、任意の有効な値を ID に使用できます。 Shared Access Signature の詳細については、「[Shared Access Signatures (SAS) の使用](/azure/storage/storage-dotnet-shared-access-signature-part-1)」をご覧ください。 Kerberos (Windows Active Directory または MIT KDC) の使用時、IDENTITY 引数でドメイン名を使用しないでください。 アカウント名にしておけば問題ありません。
 
 > [!IMPORTANT]
 > PolyBase 用の SQL、Oracle、Teradata、および MongoDB ODBC コネクタでサポートされるのは、Kerberos 認証ではなく、基本認証のみです。
@@ -85,7 +85,7 @@ IDENTITY が Windows ユーザーの場合、このシークレットはパス�
 
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] は、データベース スコープ資格情報を使用して、Azure Blob Storage に拡張イベント ファイルを書き込みます。
 
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] は、エラスティック プールにデータベース スコープ資格情報を使用します。 詳しくは、[エラスティック データベースでの急増の緩和](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)に関する記事をご覧ください
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] は、エラスティック プールにデータベース スコープ資格情報を使用します。 詳しくは、[エラスティック データベースでの急増の緩和](/azure/azure-sql/database/elastic-pool-overview)に関する記事をご覧ください
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) と [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) は、データベース スコープ資格情報を使用して Azure Blob Storage からデータにアクセスします。 詳しくは、「[Azure BLOB ストレージのデータに一括アクセスする例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)」をご覧ください。 
 
@@ -127,7 +127,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 次の例では、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] で PolyBase によって使用できる[外部データ ソース](../../t-sql/statements/create-external-data-source-transact-sql.md)の作成に使用できるデータベース スコープ資格情報を作成します。
 
 Azure Data Lake Store は、Azure Active Directory アプリケーションをサービス間認証に使用します。
-データベース スコープ資格情報を作成する前に、[AAD アプリケーションを作成](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)し、client_id、OAuth_2.0_Token_EndPoint、キーを文書化してください。
+データベース スコープ資格情報を作成する前に、[AAD アプリケーションを作成](/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)し、client_id、OAuth_2.0_Token_EndPoint、キーを文書化してください。
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.
@@ -148,4 +148,4 @@ WITH
 - [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)
 - [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)
 - [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)
-- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
+- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)

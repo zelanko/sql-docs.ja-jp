@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f9db43b930baffc31529a3e36fb014225957a39
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: 4f979bc7b5dd8a3a3e67c499480003c45a8c4ebd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529393"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255779"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -87,6 +87,9 @@ WITH (
     }  
     [ , DATA_COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec' ]);
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ### <a name="orc"></a>[ORC](#tab/orc)
 ```syntaxsql  
 --Create an external file format for ORC file.  
@@ -98,6 +101,9 @@ WITH (
       | 'org.apache.hadoop.io.compress.DefaultCodec'      }  
     ]);  
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ### <a name="parquet"></a>[Parquet](#tab/parquet)
 ```syntaxsql
 --Create an external file format for PARQUET files.  
@@ -121,6 +127,9 @@ WITH (
       | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
     ]);  
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ---
   
 ## <a name="arguments"></a>引数  
@@ -244,11 +253,11 @@ PolyBase の読み込みの間にすべてのファイルで最初に読み取�
 > [!IMPORTANT]
 > カスタム `DATE_FORMAT` を指定すると、すべての既定の型の形式が上書きされます。 つまり、ファイル内のすべての日時、日付、時刻のセルで同じ日付形式を使用する必要があります。 オーバーライドされた `DATE_FORMAT` では、日付と時刻の値を異なる形式にすることはできません。
 
-**日付形式の例**を次の表に示します。
+**日付形式の例** を次の表に示します。
   
 テーブルに関する注意事項:  
   
--   年、月、日は、さまざまな形式と順序で指定できます。 表では、**ymd** 形式のみを示します。 月は、1 または 2 桁の数字、または 3 つの文字で指定できます。 日は、1 または 2 桁の数字で指定できます。 年は、2 または 4 桁の数字で指定できます。
+-   年、月、日は、さまざまな形式と順序で指定できます。 表では、 **ymd** 形式のみを示します。 月は、1 または 2 桁の数字、または 3 つの文字で指定できます。 日は、1 または 2 桁の数字で指定できます。 年は、2 または 4 桁の数字で指定できます。
   
 -   ミリ秒 (fffffff) は、必須ではありません。
   

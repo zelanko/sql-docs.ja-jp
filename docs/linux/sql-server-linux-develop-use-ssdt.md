@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: dc8975a1454996ffbbab38e3e443f3f3847dc8a1
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: dd4de5567d2bafd21b321dc388068b6ee6c24ed5
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115471"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523927"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio を使用して SQL Server on Linux 用のデータベースを作成する
 
@@ -47,15 +47,15 @@ SQL Server on Linux は、SSDT バージョン 17.0 RC 以降でサポートさ�
 
 3. **[接続]** ページで、 **[ローカル Git リポジトリ]** セクションの **[新規]** をクリックします。
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="Screenshot of the Local Git Repository section with the New option called out." style="width: 300px;"/>
 
 4. **Create** をクリックしてください。 ローカル Git リポジトリが作成されたら、 **[SSDTRepo]** をダブルクリックします。
 
 5. **[ソリューション]** セクションの **[新規]** をクリックします。 **[新規プロジェクト]** ダイアログで、 **[その他の言語]** ノードの下の **[SQL Server]** を選択します。
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="Screenshot of the Solutions section with the New option and SQL Server option called out." style="width: 480px;"/>
 
-6. [名前] に「**TutorialDB**」と入力し、 **[OK]** をクリックして新しいデータベース プロジェクトを作成します。
+6. [名前] に「 **TutorialDB** 」と入力し、 **[OK]** をクリックして新しいデータベース プロジェクトを作成します。
 
 ## <a name="create-a-new-table-in-the-database-project"></a>データベース プロジェクト内に新しいテーブルを作成する
 
@@ -69,15 +69,15 @@ SQL Server on Linux は、SSDT バージョン 17.0 RC 以降でサポートさ�
 
 4. テーブル デザイナーを使用して、次の図に示すように、[Name] `nvarchar(50)` と [Location] `nvarchar(50)` の 2 つの列を追加します。 デザイナーで列を追加すると、SSDT によって `CREATE TABLE` スクリプトが生成されます。
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="add columns" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="Screenshot of the table designer with the Name and Location values called out." style="width: 480px;"/>
 
-5. **Table1.sql**ファイルを保存します。
+5. **Table1.sql** ファイルを保存します。
 
 ## <a name="build-and-validate-the-database"></a>データベースをビルドして検証する
 
 1. **[TutorialDB]** のデータベース プロジェクト メニューを開き、 **[ビルド]**  を選択します。 SSDT によって、プロジェクト内の .sql ソース コード ファイルがコンパイルされ、データ層アプリケーション パッケージ (dacpac) ファイルがビルドされます。 これを使用して、Linux 上の SQL Server インスタンスにデータベースを発行できます。 
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="Screenshot showing the TutorialDB with the Build option called out." style="width: 400px;"/>
 
 2. Visual Studio の **[出力]** ウィンドウで、ビルド成功メッセージを確認します。 
 

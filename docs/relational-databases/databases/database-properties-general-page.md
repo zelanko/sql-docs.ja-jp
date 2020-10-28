@@ -10,15 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.general.f1
 - sql13.swb.databaseproperties.segments.f1
+- sql13.swb.databaseproperties.databasecapabilities.f1
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 741ba510a628addbbf7c3150315a9aaaea7fa5ce
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e544c071a90a99fb8182348a2ce009690b0a5413
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192872"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358901"
 ---
 # <a name="database-properties-general-page"></a>[データベースのプロパティ] ([全般] ページ)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7c6ae2579cad1a04239f6d4abc4691982a49d0ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff8efe5476597a85a26034cc278730c2d867ddae
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547552"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300232"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  ユーザー定義集計で定義された 1 つまたは複数のパラメーター。 パラメーターの値は、集計関数の実行時にユーザーが指定する必要があります。 パラメーター名は、最初の文字を "アット" マーク ( **@** ) にして指定します。 パラメーター名は[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。 パラメーターは関数に対してローカルです。  
   
  *system_scalar_type*  
- 入力パラメーターの値または戻り値を保持する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムのスカラーのデータ型です。 **text**、**ntext**、**image** 以外のすべてのスカラーのデータ型は、ユーザー定義集計のパラメーターとして使用できます。 **cursor** や **table** など、スカラー型以外のデータ型は指定できません。  
+ 入力パラメーターの値または戻り値を保持する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムのスカラーのデータ型です。 **text** 、 **ntext** 、 **image** 以外のすべてのスカラーのデータ型は、ユーザー定義集計のパラメーターとして使用できます。 **cursor** や **table** など、スカラー型以外のデータ型は指定できません。  
   
  *udt_schema_name*  
  CLR ユーザー定義型が所属しているスキーマの名前です。 指定しない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は次の順序で *udt_type_name* を参照します。  
@@ -82,7 +82,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  現在のデータベースに既に作成されている CLR ユーザー定義型の名前です。 *udt_schema_name* を指定しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、型は現在のユーザーのスキーマに所属すると見なされます。  
   
  *assembly_name* [ **.**_class_name_ ]  
- ユーザー定義集計関数にバインドするアセンブリ、および必要に応じて、アセンブリが所属するスキーマの名前とユーザー定義集計を実装するアセンブリ内のクラス名を指定します。 アセンブリは、CREATE ASSEMBLY ステートメントを使用してデータベース内に作成されている必要があります。 *class_name* は有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子でなければならず、アセンブリに存在するクラスの名前と一致する必要があります。 C# など、クラスを記述するのに使用するプログラミング言語で名前空間を使用する場合、*class_name* には名前空間で修飾された名前を指定できます。 *class_name* を指定しない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*aggregate_name* と同じであると見なされます。  
+ ユーザー定義集計関数にバインドするアセンブリ、および必要に応じて、アセンブリが所属するスキーマの名前とユーザー定義集計を実装するアセンブリ内のクラス名を指定します。 アセンブリは、CREATE ASSEMBLY ステートメントを使用してデータベース内に作成されている必要があります。 *class_name* は有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子でなければならず、アセンブリに存在するクラスの名前と一致する必要があります。 C# など、クラスを記述するのに使用するプログラミング言語で名前空間を使用する場合、 *class_name* には名前空間で修飾された名前を指定できます。 *class_name* を指定しない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 *aggregate_name* と同じであると見なされます。  
   
 ## <a name="remarks"></a>注釈  
  既定では、CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能はオフになっています。 マネージド コード モジュールを参照するデータベース オブジェクトを作成、変更、削除できますが、これらのモジュールのコードは、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) を有効にしない限り [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでは動作しません。  
@@ -93,7 +93,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  EXTERNAL NAME 句で指定されているアセンブリ上に CREATE AGGREGATE 権限と REFERENCES 権限が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例は、StringUtilities.csproj サンプル アプリケーションがコンパイルされていることを前提としています。 詳細については、「[文字列ユーティリティ関数サンプル](https://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c)」を参照してください。  
+ 次の例は、StringUtilities.csproj サンプル アプリケーションがコンパイルされていることを前提としています。 詳細については、「[文字列ユーティリティ関数サンプル](/previous-versions/sql/sql-server-2016/ff878119(v=sql.130))」を参照してください。  
   
  この例は集計 `Concatenate` を作成します。 集計が作成される前に、アセンブリ `StringUtilities.dll` がローカル データベースに登録されます。  
   
@@ -120,5 +120,4 @@ GO
   
 ## <a name="see-also"></a>参照  
  [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
-  
   

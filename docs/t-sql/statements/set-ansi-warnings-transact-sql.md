@@ -24,12 +24,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d33d1b9e1369128bc3eeae3df1ca48c4dbbb69e8
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 8b41f37f996015de4b853c9443ef700b16242b44
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227089"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300837"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ SET ANSI_WARNINGS ON
   
 -   ON に設定した場合、SUM、AVG、MAX、MIN、STDEV、STDEVP、VAR、VARP、COUNT などの集計関数に NULL 値が含まれていると、警告メッセージが生成されます。 OFF の場合、警告メッセージは生成されません。  
   
--   ON に設定した場合、0 除算や演算オーバーフロー エラーが発生すると、ステートメントはロールバックされエラー メッセージが生成されます。 OFF に設定した場合、0 除算や演算オーバーフロー エラーが発生すると、NULL 値が返されます。 INSERT または UPDATE が **character**、Unicode、**binary** 型の列に対して実行され、新しい値の長さが列の最大サイズを超過すると、0 除算や演算オーバーフロー エラーが原因となって NULL 値が返されます。 SET ANSI_WARNINGS が ON の場合、INSERT または UPDATE は ISO 標準の指定に従って取り消されます。 文字型の列の末尾の空白文字とバイナリ列の末尾の NULL 値は無視されます。 OFF の場合、データは列のサイズに切り捨てられ、ステートメントは成功します。  
+-   ON に設定した場合、0 除算や演算オーバーフロー エラーが発生すると、ステートメントはロールバックされエラー メッセージが生成されます。 OFF に設定した場合、0 除算や演算オーバーフロー エラーが発生すると、NULL 値が返されます。 INSERT または UPDATE が **character** 、Unicode、 **binary** 型の列に対して実行され、新しい値の長さが列の最大サイズを超過すると、0 除算や演算オーバーフロー エラーが原因となって NULL 値が返されます。 SET ANSI_WARNINGS が ON の場合、INSERT または UPDATE は ISO 標準の指定に従って取り消されます。 文字型の列の末尾の空白文字とバイナリ列の末尾の NULL 値は無視されます。 OFF の場合、データは列のサイズに切り捨てられ、ステートメントは成功します。  
   
 > [!NOTE]  
 > **binary** データと **varbinary** データの型変換で切り捨てが発生した場合は、SET オプションの設定に関係なく、警告やエラーは発生しません。  
@@ -76,7 +76,7 @@ sp_configure の user options オプションを使用すると、ANSI_WARNINGS 
 > [!IMPORTANT]
 > 分散クエリを実行する場合は、ANSI_WARNINGS を ON に設定してください。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、および Microsoft JDBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] などのクライアントでは、接続フラグで ANSI_WARNINGS が自動的にオンに設定されます。 この構成は、ODBC データ ソースまたは ODBC 接続属性で定義され、接続前にアプリケーションで設定できます。 DB-Library アプリケーションからの接続に対しては、既定では SET ANSI_WARNINGS は OFF に設定されています。 詳細については、表形式データ ストリーム (TDS) プロトコル仕様の [LOGIN7](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) を参照してください。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、および Microsoft JDBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] などのクライアントでは、接続フラグで ANSI_WARNINGS が自動的にオンに設定されます。 この構成は、ODBC データ ソースまたは ODBC 接続属性で定義され、接続前にアプリケーションで設定できます。 DB-Library アプリケーションからの接続に対しては、既定では SET ANSI_WARNINGS は OFF に設定されています。 詳細については、表形式データ ストリーム (TDS) プロトコル仕様の [LOGIN7](/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) を参照してください。 
 
 ANSI_DEFAULTS が ON の場合は、ANSI_WARNINGS は有効になります。  
   
@@ -188,5 +188,4 @@ DROP TABLE T1;
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
  [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
-  
   

@@ -22,12 +22,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 606548b95d1d825341c44e03eb406c271763c12b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 76deea6c09a14a420ac5916248d0a3944ea5609a
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541394"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300636"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -62,11 +62,11 @@ ms.locfileid: "89541394"
 
 このコマンドでは、Hadoop クラスターに格納されているデータに PolyBase でアクセスするための外部テーブルが作成されるか、Hadoop クラスターまたは Azure Blob ストレージに格納されているデータを参照する Azure Blob ストレージ PolyBase 外部テーブルが作成されます。
 
-**適用対象**:SQL Server 2016 (以降)
+**適用対象** :SQL Server 2016 (以降)
 
 PolyBase クエリ用の外部データ ソースが含まれる外部テーブルを使用します。 外部データ ソースを使用して接続を確立し、次の主なユース ケースをサポートします。
 
-- [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide) を使用したデータ仮想化とデータ読み込み
+- [PolyBase](../../relational-databases/polybase/polybase-guide.md) を使用したデータ仮想化とデータ読み込み
 - `BULK INSERT` または `OPENROWSET` を使用して、SQL Server または SQL Database を使用した一括読み込み操作
 
 「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」と「[DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md)」も参照してください。
@@ -102,13 +102,13 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 。作成するテーブルの 1 つから 3 つの部分で構成される名前。 外部テーブルの場合、SQL では、Hadoop または Azure Blob Storage 内で参照されているファイルまたはフォルダーに関する基本的な統計情報と共に、テーブルのメタデータのみが格納されます。 実際のデータは移動されず、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されません。
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
+\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
 
 データ型と列の数を含む列の定義は、外部ファイルのデータと一致している必要があります。 不一致がある場合、実際のデータに対してクエリを実行するときに、ファイルの行が拒否されます。
 
-LOCATION = '*folder_or_filepath*'。Hadoop または Azure Blob Storage にある実際のデータのフォルダーまたはファイル パスとファイル名を指定します。 ルート フォルダーから、場所を開始します。 ルート フォルダーは、外部データ ソースで指定されたデータの場所です。
+LOCATION = ' *folder_or_filepath* '。Hadoop または Azure Blob Storage にある実際のデータのフォルダーまたはファイル パスとファイル名を指定します。 ルート フォルダーから、場所を開始します。 ルート フォルダーは、外部データ ソースで指定されたデータの場所です。
 
-SQL Server では、CREATE EXTERNAL TABLE ステートメントによって、まだ存在しない場合にパスとフォルダーが作成されます。 その後、INSERT INTO を使用して、ローカルの SQL Server テーブルからのデータを外部データ ソースをエクスポートすることができます。 詳細については、[PolyBase クエリ](/sql/relational-databases/polybase/polybase-queries)に関するページを参照してください。
+SQL Server では、CREATE EXTERNAL TABLE ステートメントによって、まだ存在しない場合にパスとフォルダーが作成されます。 その後、INSERT INTO を使用して、ローカルの SQL Server テーブルからのデータを外部データ ソースをエクスポートすることができます。 詳細については、[PolyBase クエリ](../../relational-databases/polybase/polybase-queries.md)に関するページを参照してください。
 
 LOCATION をフォルダーとして指定した場合、外部テーブルから選択する PolyBase クエリでは、フォルダーとそのすべてのサブフォルダーからファイルが取得されます。 Hadoop と同じように PolyBase で非表示のフォルダーは返されません。 ファイル名が下線 (_) またはピリオド (.) で始まるファイルも返されません。
 
@@ -118,11 +118,11 @@ LOCATION をフォルダーとして指定した場合、外部テーブルか�
 
 既定値を変更して、読み取りをルート フォルダーからのみに限定するには、core-site.xml 構成ファイル内で属性\<polybase.recursive.traversal> を 'false' に設定します。 このファイルは `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` の配下に配置されます。 たとえば、「 `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` 」のように入力します。
 
-DATA_SOURCE = *external_data_source_name*。外部データの場所を含む外部データ ソースの名前を指定します。 この場所は Hadoop File System (HDFS) か、Azure ストレージ BLOB コンテナーか、Azure Data Lake Store になります。 外部データ ソースを作成するには、[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用します。
+DATA_SOURCE = *external_data_source_name* 。外部データの場所を含む外部データ ソースの名前を指定します。 この場所は Hadoop File System (HDFS) か、Azure ストレージ BLOB コンテナーか、Azure Data Lake Store になります。 外部データ ソースを作成するには、[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用します。
 
-FILE_FORMAT = *external_file_format_name*。外部データのファイルの種類と圧縮方法を格納する外部ファイル形式のオブジェクトの名前を指定します。 外部ファイル形式を作成するには、[CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md) を使用します。
+FILE_FORMAT = *external_file_format_name* 。外部データのファイルの種類と圧縮方法を格納する外部ファイル形式のオブジェクトの名前を指定します。 外部ファイル形式を作成するには、[CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md) を使用します。
 
-拒否オプション。PolyBase が外部データ ソースから取得した*ダーティ* レコードを処理する方法を決定する、reject パラメーターを指定できます。 データ レコードの実際のデータの種類または列の数が、外部テーブルの列の定義と一致しない場合、そのデータ レコードは "ダーティ" と見なされます。
+拒否オプション。PolyBase が外部データ ソースから取得した *ダーティ* レコードを処理する方法を決定する、reject パラメーターを指定できます。 データ レコードの実際のデータの種類または列の数が、外部テーブルの列の定義と一致しない場合、そのデータ レコードは "ダーティ" と見なされます。
 
 reject 値を指定または変更しない場合、PolyBase では既定値が使用されます。 reject パラメーターに関するこの情報は、CREATE EXTERNAL TABLE ステートメントを使用して外部テーブルを作成するときに、追加メタデータとして格納されます。 以降の SELECT ステートメントまたは SELECT INTO SELECT ステートメントで外部テーブルからデータを選択するとき、拒否オプションを使用して、実際のクエリが失敗するまでに拒否できる行の数または割合が PolyBase によって決定されます。 拒否のしきい値を超えるまで、クエリの (部分的な) 結果が返されます。 その後、適切なエラー メッセージと共に失敗します。
 
@@ -134,20 +134,20 @@ value。REJECT_VALUE は、割合ではなくリテラル値です。 拒否さ�
 
 percentage。REJECT_VALUE は、リテラル値ではなく割合です。 失敗した行の *percentage* が *reject_value* を超えると、PolyBase クエリは失敗します。 失敗した行の割合は、間隔をおいて計算されます。
 
-REJECT_VALUE = *reject_value*。クエリが失敗する前に拒否できる行を値または割合で指定します。
+REJECT_VALUE = *reject_value* 。クエリが失敗する前に拒否できる行を値または割合で指定します。
 
-REJECT_TYPE = value の場合、*reject_value* は 0 から 2,147, 483,647 の範囲の整数にする必要があります。
+REJECT_TYPE = value の場合、 *reject_value* は 0 から 2,147, 483,647 の範囲の整数にする必要があります。
 
-REJECT_TYPE = percentage の場合、*reject_value* は 0 から 100 の範囲の浮動小数にする必要があります。
+REJECT_TYPE = percentage の場合、 *reject_value* は 0 から 100 の範囲の浮動小数にする必要があります。
 
-REJECT_SAMPLE_VALUE = *reject_sample_value*。REJECT_TYPE = percentage を指定する場合、この属性は必須です。 それにより、拒否された行の割合が PolyBase によって再計算されるまでに取得が試行される行の数が決定します。
+REJECT_SAMPLE_VALUE = *reject_sample_value* 。REJECT_TYPE = percentage を指定する場合、この属性は必須です。 それにより、拒否された行の割合が PolyBase によって再計算されるまでに取得が試行される行の数が決定します。
 
 *reject_sample_value* パラメーターは、0 から 2,147,483,647 の範囲の整数にする必要があります。
 
 たとえば、REJECT_SAMPLE_VALUE = 1000 の場合、PolyBase によって外部データ ファイルから 1000 行のインポートが試みられた後、失敗した行の割合が再計算されます。 失敗した行のパーセンテージが *reject_value* 未満の場合、PolyBase は別の 1000 行の取得を試みます。 1000 行ずつ追加でインポートを試みた後、失敗した行の割合の再計算を続けます。
 
 > [!NOTE]
-> PolyBase では間隔を置いて失敗した行のパーセンテージを計算するため、実際の失敗した行のパーセンテージは、*reject_value* を超える場合があります。
+> PolyBase では間隔を置いて失敗した行のパーセンテージを計算するため、実際の失敗した行のパーセンテージは、 *reject_value* を超える場合があります。
 
 例:
 
@@ -163,7 +163,7 @@ SCHEMA_NAME。SCHEMA_NAME 句では、外部テーブルの定義をリモート
 
 OBJECT_NAME。OBJECT_NAME 句では、外部テーブルの定義をリモート データベース上の別の名前を持つテーブルにマップする機能が提供されます。 ローカルおよびリモートの両方のデータベースに存在するオブジェクト名の間であいまいさを排除するには、この句を使用します。
 
-DISTRIBUTION。任意。 これは SHARD_MAP_MANAGER 型のデータベースの場合にのみ必須です。 この引数では、テーブルをシャード化されたテーブルとして扱うか、レプリケートされたテーブルとして扱うかを制御します。 **SHARDED** (*列名*) テーブルでは、異なるテーブルからのデータは重複しません。 **REPLICATED** は、テーブルですべてのシャードに同じデータを持つことを指定します。 **ROUND_ROBIN** は、データを分散するためにアプリケーション固有のメソッドが使用されていることを示します。
+DISTRIBUTION。任意。 これは SHARD_MAP_MANAGER 型のデータベースの場合にのみ必須です。 この引数では、テーブルをシャード化されたテーブルとして扱うか、レプリケートされたテーブルとして扱うかを制御します。 **SHARDED** ( *列名* ) テーブルでは、異なるテーブルからのデータは重複しません。 **REPLICATED** は、テーブルですべてのシャードに同じデータを持つことを指定します。 **ROUND_ROBIN** は、データを分散するためにアプリケーション固有のメソッドが使用されていることを示します。
 
 ## <a name="permissions"></a>アクセス許可
 
@@ -231,7 +231,7 @@ SCHEMARESOLUTION オブジェクトに対する共有ロック。
 
 ### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>A. テキスト区切り形式のデータを含む外部テーブルを作成します
 
-この例では、テキスト区切りのファイルで書式設定されたデータを含む外部テーブルを作成するために必要なすべての手順を示します。 これは、外部データ ソース *mydatasource*c と外部ファイルの形式 *myfileformat* を定義します。 その後、これらのデータベース レベル オブジェクトは、CREATE EXTERNAL TABLE ステートメントで参照されます。 詳細については、「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」と「[CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)」を参照してください。
+この例では、テキスト区切りのファイルで書式設定されたデータを含む外部テーブルを作成するために必要なすべての手順を示します。 これは、外部データ ソース *mydatasource* c と外部ファイルの形式 *myfileformat* を定義します。 その後、これらのデータベース レベル オブジェクトは、CREATE EXTERNAL TABLE ステートメントで参照されます。 詳細については、「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」と「[CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)」を参照してください。
 
 ```sql
 CREATE EXTERNAL DATA SOURCE mydatasource
@@ -344,7 +344,7 @@ WHERE cs.url = 'msdn.microsoft.com'
 
 ### <a name="f-import-data-from-hadoop-into-a-sql-table"></a>F. Hadoop から SQL テーブルへのデータのインポート
 
-この例では、標準の SQL テーブル *user*と外部テーブル *ClickStream* との結合の結果を永続的に格納する新しい SQL テーブル ms_user を作成します。
+この例では、標準の SQL テーブル *user* と外部テーブル *ClickStream* との結合の結果を永続的に格納する新しい SQL テーブル ms_user を作成します。
 
 ```sql
 SELECT DISTINCT user.FirstName, user.LastName
@@ -629,7 +629,7 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 。作成するテーブルの 1 つから 3 つの部分で構成される名前。 外部テーブルの場合、SQL では、Azure SQL Database 内で参照されているファイルまたはフォルダーに関する基本的な統計情報と共に、テーブルのメタデータのみが格納されます。 実際のデータは移動されず、Azure SQL Database に格納されません。
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
+\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
 
 > [!NOTE]
 > `Text`、`nText`、および `XML` は、Azure SQL Database の外部テーブルの列に対してサポートされているデータ型ではありません。
@@ -638,11 +638,11 @@ column_name <data_type>
 
 シャード化された外部テーブルのオプション
 
-[エラスティック クエリ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)の外部データ ソース (SQL Server 以外のデータ ソース) と配布方法を指定します。
+[エラスティック クエリ](/azure/azure-sql/database/elastic-query-overview)の外部データ ソース (SQL Server 以外のデータ ソース) と配布方法を指定します。
 
-DATA_SOURCE DATA_SOURCE 句は、外部テーブルに使用される外部データ ソース (シャード マップ) を定義します。 例については、「[外部テーブルを作成する](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)」を参照してください。
+DATA_SOURCE DATA_SOURCE 句は、外部テーブルに使用される外部データ ソース (シャード マップ) を定義します。 例については、「[外部テーブルを作成する](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)」を参照してください。
 
-SCHEMA_NAME と OBJECT_NAME SCHEMA_NAME 句と OBJECT_NAME 句は、外部テーブルの定義を別のスキーマ内のテーブルにマップします。 これらを省略した場合、リモート オブジェクトのスキーマは "dbo" と見なされ、その名前は定義されている外部テーブルの名前と同一であると見なされます。 これは、リモート テーブルの名前が、外部テーブルを作成するデータベースで既に取得されている場合に便利です。 たとえば、スケールアウトされたデータ層のカタログ ビューまたは DMV の集計ビューを取得する外部テーブルを定義する場合が挙げられます。 カタログ ビューと DMV は既にローカルに存在するため、外部テーブルの定義にその名前を使うことはできません。 代わりに、別の名前を使用して、カタログ ビューまたは DMV の名前を SCHEMA_NAME 句または OBJECT_NAME 句で使用します。 例については、「[外部テーブルを作成する](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)」を参照してください。
+SCHEMA_NAME と OBJECT_NAME SCHEMA_NAME 句と OBJECT_NAME 句は、外部テーブルの定義を別のスキーマ内のテーブルにマップします。 これらを省略した場合、リモート オブジェクトのスキーマは "dbo" と見なされ、その名前は定義されている外部テーブルの名前と同一であると見なされます。 これは、リモート テーブルの名前が、外部テーブルを作成するデータベースで既に取得されている場合に便利です。 たとえば、スケールアウトされたデータ層のカタログ ビューまたは DMV の集計ビューを取得する外部テーブルを定義する場合が挙げられます。 カタログ ビューと DMV は既にローカルに存在するため、外部テーブルの定義にその名前を使うことはできません。 代わりに、別の名前を使用して、カタログ ビューまたは DMV の名前を SCHEMA_NAME 句または OBJECT_NAME 句で使用します。 例については、「[外部テーブルを作成する](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)」を参照してください。
 
 DISTRIBUTION DISTRIBUTION 句は、このテーブルに使用するデータ分散を指定します。 クエリ プロセッサは、DISTRIBUTION 句で提供される情報を使用して、最も効率的なクエリ プランを作成します。
 
@@ -719,9 +719,9 @@ WITH
 
 ## <a name="see-also"></a>参照
 
-- [Azure SQL Database のエラスティック クエリの概要](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-overview)
-- [スケールアウトされたクラウド データベース全体をレポートする](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
-- [クロスデータベース クエリの概要 (列方向のパーティション分割)](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
+- [Azure SQL Database のエラスティック クエリの概要](/azure/sql-database/sql-database-elastic-query-overview)
+- [スケールアウトされたクラウド データベース全体をレポートする](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
+- [クロスデータベース クエリの概要 (列方向のパーティション分割)](/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -785,14 +785,14 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 。作成するテーブルの 1 つから 3 つの部分で構成される名前。 外部テーブルの場合、Azure Data Lake、Hadoop、または Azure Blob Storage 内で参照されているファイルまたはフォルダーに関する基本的な統計情報と共に、テーブルのメタデータのみ。 外部テーブルの作成時に、実際のデータは移動または格納されません。
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
+\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
 
 > [!NOTE]
 > `Text`、`nText`、および `XML` は、Azure SQL Warehouse の外部テーブルの列に対してサポートされているデータ型ではありません。
 
 データ型と列の数を含む列の定義は、外部ファイルのデータと一致している必要があります。 不一致がある場合、実際のデータに対してクエリを実行するときに、ファイルの行が拒否されます。
 
-LOCATION = '*folder_or_filepath*'。Azure Data Lake、Hadoop、または Azure Blob Storage にある実際のデータのフォルダーまたはファイル パスとファイル名を指定します。 ルート フォルダーから、場所を開始します。 ルート フォルダーは、外部データ ソースで指定されたデータの場所です。 [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) ステートメントによって、存在しない場合にパスとフォルダーが作成されます。 `CREATE EXTERNAL TABLE` では、パスとフォルダーが作成されません。
+LOCATION = ' *folder_or_filepath* '。Azure Data Lake、Hadoop、または Azure Blob Storage にある実際のデータのフォルダーまたはファイル パスとファイル名を指定します。 ルート フォルダーから、場所を開始します。 ルート フォルダーは、外部データ ソースで指定されたデータの場所です。 [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) ステートメントによって、存在しない場合にパスとフォルダーが作成されます。 `CREATE EXTERNAL TABLE` では、パスとフォルダーが作成されません。
 
 LOCATION をフォルダーとして指定した場合、外部テーブルから選択する PolyBase クエリでは、フォルダーとそのすべてのサブフォルダーからファイルが取得されます。 Hadoop と同じように PolyBase で非表示のフォルダーは返されません。 ファイル名が下線 (_) またはピリオド (.) で始まるファイルも返されません。
 
@@ -802,11 +802,11 @@ LOCATION をフォルダーとして指定した場合、外部テーブルか�
 
 既定値を変更して、読み取りをルート フォルダーからのみに限定するには、core-site.xml 構成ファイル内で属性\<polybase.recursive.traversal> を 'false' に設定します。 このファイルは `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` の配下に配置されます。 たとえば、「 `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` 」のように入力します。
 
-DATA_SOURCE = *external_data_source_name*。外部データの場所を含む外部データ ソースの名前を指定します。 この場所は Azure Data Lake 内にあります。 外部データ ソースを作成するには、[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用します。
+DATA_SOURCE = *external_data_source_name* 。外部データの場所を含む外部データ ソースの名前を指定します。 この場所は Azure Data Lake 内にあります。 外部データ ソースを作成するには、[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用します。
 
-FILE_FORMAT = *external_file_format_name*。外部データのファイルの種類と圧縮方法を格納する外部ファイル形式のオブジェクトの名前を指定します。 外部ファイル形式を作成するには、[CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md) を使用します。
+FILE_FORMAT = *external_file_format_name* 。外部データのファイルの種類と圧縮方法を格納する外部ファイル形式のオブジェクトの名前を指定します。 外部ファイル形式を作成するには、[CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md) を使用します。
 
-拒否オプション。PolyBase が外部データ ソースから取得した*ダーティ* レコードを処理する方法を決定する、reject パラメーターを指定できます。 データ レコードの実際のデータの種類または列の数が、外部テーブルの列の定義と一致しない場合、そのデータ レコードは "ダーティ" と見なされます。
+拒否オプション。PolyBase が外部データ ソースから取得した *ダーティ* レコードを処理する方法を決定する、reject パラメーターを指定できます。 データ レコードの実際のデータの種類または列の数が、外部テーブルの列の定義と一致しない場合、そのデータ レコードは "ダーティ" と見なされます。
 
 reject 値を指定または変更しない場合、PolyBase では既定値が使用されます。 reject パラメーターに関するこの情報は、CREATE EXTERNAL TABLE ステートメントを使用して外部テーブルを作成するときに、追加メタデータとして格納されます。 以降の SELECT ステートメントまたは SELECT INTO SELECT ステートメントで外部テーブルからデータを選択するとき、拒否オプションを使用して、実際のクエリが失敗するまでに拒否できる行の数または割合が PolyBase によって決定されます。 拒否のしきい値を超えるまで、クエリの (部分的な) 結果が返されます。 その後、適切なエラー メッセージと共に失敗します。
 
@@ -818,20 +818,20 @@ value。REJECT_VALUE は、割合ではなくリテラル値です。 拒否さ�
 
 percentage。REJECT_VALUE は、リテラル値ではなく割合です。 失敗した行の *percentage* が *reject_value* を超えると、PolyBase クエリは失敗します。 失敗した行の割合は、間隔をおいて計算されます。
 
-REJECT_VALUE = *reject_value*。クエリが失敗する前に拒否できる行を値または割合で指定します。
+REJECT_VALUE = *reject_value* 。クエリが失敗する前に拒否できる行を値または割合で指定します。
 
-REJECT_TYPE = value の場合、*reject_value* は 0 から 2,147, 483,647 の範囲の整数にする必要があります。
+REJECT_TYPE = value の場合、 *reject_value* は 0 から 2,147, 483,647 の範囲の整数にする必要があります。
 
-REJECT_TYPE = percentage の場合、*reject_value* は 0 から 100 の範囲の浮動小数にする必要があります。
+REJECT_TYPE = percentage の場合、 *reject_value* は 0 から 100 の範囲の浮動小数にする必要があります。
 
-REJECT_SAMPLE_VALUE = *reject_sample_value*。REJECT_TYPE = percentage を指定する場合、この属性は必須です。 それにより、拒否された行の割合が PolyBase によって再計算されるまでに取得が試行される行の数が決定します。
+REJECT_SAMPLE_VALUE = *reject_sample_value* 。REJECT_TYPE = percentage を指定する場合、この属性は必須です。 それにより、拒否された行の割合が PolyBase によって再計算されるまでに取得が試行される行の数が決定します。
 
 *reject_sample_value* パラメーターは、0 から 2,147,483,647 の範囲の整数にする必要があります。
 
 たとえば、REJECT_SAMPLE_VALUE = 1000 の場合、PolyBase によって外部データ ファイルから 1000 行のインポートが試みられた後、失敗した行の割合が再計算されます。 失敗した行のパーセンテージが *reject_value* 未満の場合、PolyBase は別の 1000 行の取得を試みます。 1000 行ずつ追加でインポートを試みた後、失敗した行の割合の再計算を続けます。
 
 > [!NOTE]
-> PolyBase では間隔を置いて失敗した行のパーセンテージを計算するため、実際の失敗した行のパーセンテージは、*reject_value* を超える場合があります。
+> PolyBase では間隔を置いて失敗した行のパーセンテージを計算するため、実際の失敗した行のパーセンテージは、 *reject_value* を超える場合があります。
 
 例:
 
@@ -1025,11 +1025,11 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 。作成するテーブルの 1 つから 3 つの部分で構成される名前。 外部テーブルの場合、Analytics Platform System では、Hadoop または Azure Blob Storage 内で参照されているファイルまたはフォルダーに関する基本的な統計情報と共に、テーブルのメタデータのみが格納されます。 実際のデータが Analytics Platform System に移されたり、格納されたりすることはありません。
 
-\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
+\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
 
 データ型と列の数を含む列の定義は、外部ファイルのデータと一致している必要があります。 不一致がある場合、実際のデータに対してクエリを実行するときに、ファイルの行が拒否されます。
 
-LOCATION = '*folder_or_filepath*'。Hadoop または Azure Blob Storage にある実際のデータのフォルダーまたはファイル パスとファイル名を指定します。 ルート フォルダーから、場所を開始します。 ルート フォルダーは、外部データ ソースで指定されたデータの場所です。
+LOCATION = ' *folder_or_filepath* '。Hadoop または Azure Blob Storage にある実際のデータのフォルダーまたはファイル パスとファイル名を指定します。 ルート フォルダーから、場所を開始します。 ルート フォルダーは、外部データ ソースで指定されたデータの場所です。
 
 Analytics Platform System では、[CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) ステートメントによって、存在しない場合にパスとフォルダーが作成されます。 `CREATE EXTERNAL TABLE` では、パスとフォルダーが作成されません。
 
@@ -1041,11 +1041,11 @@ LOCATION をフォルダーとして指定した場合、外部テーブルか�
 
 既定値を変更して、読み取りをルート フォルダーからのみに限定するには、core-site.xml 構成ファイル内で属性\<polybase.recursive.traversal> を 'false' に設定します。 このファイルは `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` の配下に配置されます。 たとえば、「 `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` 」のように入力します。
 
-DATA_SOURCE = *external_data_source_name*。外部データの場所を含む外部データ ソースの名前を指定します。 この場所は、Hadoop または Azure BLOB ストレージです。 外部データ ソースを作成するには、[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用します。
+DATA_SOURCE = *external_data_source_name* 。外部データの場所を含む外部データ ソースの名前を指定します。 この場所は、Hadoop または Azure BLOB ストレージです。 外部データ ソースを作成するには、[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用します。
 
-FILE_FORMAT = *external_file_format_name*。外部データのファイルの種類と圧縮方法を格納する外部ファイル形式のオブジェクトの名前を指定します。 外部ファイル形式を作成するには、[CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md) を使用します。
+FILE_FORMAT = *external_file_format_name* 。外部データのファイルの種類と圧縮方法を格納する外部ファイル形式のオブジェクトの名前を指定します。 外部ファイル形式を作成するには、[CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md) を使用します。
 
-拒否オプション。PolyBase が外部データ ソースから取得した*ダーティ* レコードを処理する方法を決定する、reject パラメーターを指定できます。 データ レコードの実際のデータの種類または列の数が、外部テーブルの列の定義と一致しない場合、そのデータ レコードは "ダーティ" と見なされます。
+拒否オプション。PolyBase が外部データ ソースから取得した *ダーティ* レコードを処理する方法を決定する、reject パラメーターを指定できます。 データ レコードの実際のデータの種類または列の数が、外部テーブルの列の定義と一致しない場合、そのデータ レコードは "ダーティ" と見なされます。
 
 reject 値を指定または変更しない場合、PolyBase では既定値が使用されます。 reject パラメーターに関するこの情報は、CREATE EXTERNAL TABLE ステートメントを使用して外部テーブルを作成するときに、追加メタデータとして格納されます。 以降の SELECT ステートメントまたは SELECT INTO SELECT ステートメントで外部テーブルからデータを選択するとき、拒否オプションを使用して、実際のクエリが失敗するまでに拒否できる行の数または割合が PolyBase によって決定されます。 拒否のしきい値を超えるまで、クエリの (部分的な) 結果が返されます。 その後、適切なエラー メッセージと共に失敗します。
 
@@ -1057,20 +1057,20 @@ value。REJECT_VALUE は、割合ではなくリテラル値です。 拒否さ�
 
 percentage。REJECT_VALUE は、リテラル値ではなく割合です。 失敗した行の *percentage* が *reject_value* を超えると、PolyBase クエリは失敗します。 失敗した行の割合は、間隔をおいて計算されます。
 
-REJECT_VALUE = *reject_value*。クエリが失敗する前に拒否できる行を値または割合で指定します。
+REJECT_VALUE = *reject_value* 。クエリが失敗する前に拒否できる行を値または割合で指定します。
 
-REJECT_TYPE = value の場合、*reject_value* は 0 から 2,147, 483,647 の範囲の整数にする必要があります。
+REJECT_TYPE = value の場合、 *reject_value* は 0 から 2,147, 483,647 の範囲の整数にする必要があります。
 
-REJECT_TYPE = percentage の場合、*reject_value* は 0 から 100 の範囲の浮動小数にする必要があります。
+REJECT_TYPE = percentage の場合、 *reject_value* は 0 から 100 の範囲の浮動小数にする必要があります。
 
-REJECT_SAMPLE_VALUE = *reject_sample_value*。REJECT_TYPE = percentage を指定する場合、この属性は必須です。 それにより、拒否された行の割合が PolyBase によって再計算されるまでに取得が試行される行の数が決定します。
+REJECT_SAMPLE_VALUE = *reject_sample_value* 。REJECT_TYPE = percentage を指定する場合、この属性は必須です。 それにより、拒否された行の割合が PolyBase によって再計算されるまでに取得が試行される行の数が決定します。
 
 *reject_sample_value* パラメーターは、0 から 2,147,483,647 の範囲の整数にする必要があります。
 
 たとえば、REJECT_SAMPLE_VALUE = 1000 の場合、PolyBase によって外部データ ファイルから 1000 行のインポートが試みられた後、失敗した行の割合が再計算されます。 失敗した行のパーセンテージが *reject_value* 未満の場合、PolyBase は別の 1000 行の取得を試みます。 1000 行ずつ追加でインポートを試みた後、失敗した行の割合の再計算を続けます。
 
 > [!NOTE]
-> PolyBase では間隔を置いて失敗した行のパーセンテージを計算するため、実際の失敗した行のパーセンテージは、*reject_value* を超える場合があります。
+> PolyBase では間隔を置いて失敗した行のパーセンテージを計算するため、実際の失敗した行のパーセンテージは、 *reject_value* を超える場合があります。
 
 例:
 

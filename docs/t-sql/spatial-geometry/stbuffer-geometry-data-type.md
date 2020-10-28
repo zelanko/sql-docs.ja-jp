@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c916977259dc82638117b800e5fc6c2d306edf04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7644e25159a7df28d2de51d5e1a08a0e1b36ef05
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454271"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300380"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,9 +49,9 @@ ms.locfileid: "88454271"
  CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="remarks"></a>注釈  
- `STBuffer()` は、*tolerance* = distance \* .001 と *relative* = **false** を指定して [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) と同様の方法でバッファーを計算します。  
+ `STBuffer()` は、 *tolerance* = distance \* .001 と *relative* = **false** を指定して [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) と同様の方法でバッファーを計算します。  
   
- *distance* > 0 のときは、**Polygon** または **MultiPolygon** インスタンスが返されます。  
+ *distance* > 0 のときは、 **Polygon** または **MultiPolygon** インスタンスが返されます。  
   
 > [!NOTE]  
 >  distance は **float** であるため、非常に小さな値は計算においてゼロと同一視されることがあります。  その場合、呼び出し元の **geometry** インスタンスのコピーが返されます。  「[float と real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)」を参照してください。  
@@ -69,7 +69,7 @@ ms.locfileid: "88454271"
   
  バッファーに負の値を指定すると、geometry インスタンスの境界から、指定された距離の範囲内にある地点がすべて削除されます。  
   
- 理論上のバッファーと計算されたバッファーの間の誤差は、max(tolerance, extents * 1.E-7) です。tolerance は distance \* .001 になります。 エクステントの詳細については、「[geometry データ型メソッド リファレンス](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)」を参照してください。  
+ 理論上のバッファーと計算されたバッファーの間の誤差は、max(tolerance, extents * 1.E-7) です。tolerance は distance \* .001 になります。 エクステントの詳細については、「[geometry データ型メソッド リファレンス](./spatial-types-geometry-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
   
@@ -163,11 +163,9 @@ ms.locfileid: "88454271"
  SELECT @g.STBuffer(1.6).ToString();
  ```  
   
- 最初の 2 つの **SELECT** ステートメントでは、*distance* が (1 1) と (1 4) の 2 つの地点の距離の 1/2 以下であるため、`MultiPolygon` インスタンスが返されます。 3 番目の **SELECT** ステートメントでは、(1 1) と (1 4) の 2 つの地点のバッファーに格納されたインスタンスが重なるため、`Polygon` インスタンスが返されます。  
+ 最初の 2 つの **SELECT** ステートメントでは、 *distance* が (1 1) と (1 4) の 2 つの地点の距離の 1/2 以下であるため、`MultiPolygon` インスタンスが返されます。 3 番目の **SELECT** ステートメントでは、(1 1) と (1 4) の 2 つの地点のバッファーに格納されたインスタンスが重なるため、`Polygon` インスタンスが返されます。  
   
 ## <a name="see-also"></a>関連項目  
  [BufferWithTolerance &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [Geometry インスタンスの OGC メソッド](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
-  
-

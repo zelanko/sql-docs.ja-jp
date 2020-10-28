@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9ae874a6b9b734b6fe0ab802a3b1aa9d2ebb2ff3
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: a1ca67466a58dea0b374d9da14e66de64ba02d81
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688661"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300503"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -85,15 +85,15 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
 -   テーブル内の各 **xml** 列には、1 つのプライマリ XML インデックスと、複数のセカンダリ XML インデックスを作成できます。  
   
--   列にセカンダリ XML インデックスを作成するには、**xml** 列にプライマリ XML インデックスが存在している必要があります。  
+-   列にセカンダリ XML インデックスを作成するには、 **xml** 列にプライマリ XML インデックスが存在している必要があります。  
   
 -   1 つの XML インデックスは単一の **xml** 列でのみ作成できます。 XML インデックスは **xml** 以外の列には作成できません。またリレーショナル インデックスは **xml** 列には作成できません。  
   
--   ビュー内の **xml** 列、**xml** 列を使用したテーブル値変数、および **xml** 型の変数には、プライマリまたはセカンダリのいずれの XML インデックスも作成できません。  
+-   ビュー内の **xml** 列、 **xml** 列を使用したテーブル値変数、および **xml** 型の変数には、プライマリまたはセカンダリのいずれの XML インデックスも作成できません。  
   
 -   **xml** 計算列にプライマリ XML インデックスを作成することはできません。  
   
--   SET オプション設定は、インデックス付きビューおよび計算列インデックスに必要な設定と同じにする必要がある。 特に、XML インデックスを作成し、**xml** 列に値を挿入、削除、更新する場合は、オプション ARITHABORT が ON に設定されている必要があります。  
+-   SET オプション設定は、インデックス付きビューおよび計算列インデックスに必要な設定と同じにする必要がある。 特に、XML インデックスを作成し、 **xml** 列に値を挿入、削除、更新する場合は、オプション ARITHABORT が ON に設定されている必要があります。  
   
  詳細については、「[XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)」をご覧ください。  
   
@@ -146,7 +146,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF または *fillfactor* の指定なし  
  中間レベルのページはほぼ全容量が使用されます。ただし、中間ページにあるキーのセットを考慮して、インデックスに割り当てることのできる、少なくとも 1 行の最大サイズが収まる分の領域は残されます。  
   
- PAD_INDEX では FILLFACTOR で指定されるパーセンテージが使用されるので、PAD_INDEX オプションは、FILLFACTOR が指定されている場合にのみ有効です。 FILLFACTOR で指定されるパーセンテージで 1 行分のデータを格納できない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では内部的に、最小サイズを格納できるパーセンテージにオーバーライドします。 中間インデックス ページの行数は、*fillfactor* の値がどれだけ小さくなっても 2 未満にはなりません。  
+ PAD_INDEX では FILLFACTOR で指定されるパーセンテージが使用されるので、PAD_INDEX オプションは、FILLFACTOR が指定されている場合にのみ有効です。 FILLFACTOR で指定されるパーセンテージで 1 行分のデータを格納できない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では内部的に、最小サイズを格納できるパーセンテージにオーバーライドします。 中間インデックス ページの行数は、 *fillfactor* の値がどれだけ小さくなっても 2 未満にはなりません。  
   
  FILLFACTOR **=** _fillfactor_  
  インデックスの作成時または再構築時に、[!INCLUDE[ssDE](../../includes/ssde-md.md)] が各インデックス ページのリーフ レベルをどの程度まで埋めるかを、パーセント値で指定します。 *fillfactor* 値には、1 ～ 100 の整数値を指定してください。 既定値は 0 です。 *fillfactor* が 100 または 0 の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では全容量を使用するリーフ ページでインデックスが作成されます。  
@@ -170,7 +170,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  中間の並べ替え結果はインデックスと同じデータベースに格納されます。  
   
- インデックスを作成するためにユーザー データベース内に必要となる領域の他に、**tempdb** には、並べ替えの中間結果を格納するためにほぼ同じ大きさの追加領域が必要になります。 詳細については、「[インデックスの SORT_IN_TEMPDB オプション](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)」を参照してください。  
+ インデックスを作成するためにユーザー データベース内に必要となる領域の他に、 **tempdb** には、並べ替えの中間結果を格納するためにほぼ同じ大きさの追加領域が必要になります。 詳細については、「[インデックスの SORT_IN_TEMPDB オプション](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)」を参照してください。  
   
  IGNORE_DUP_KEY **=OFF**  
  インデックスの種類が一意になることはないので、XML インデックスでは無効です。 このオプションを ON に設定すると、エラーが発生します。  
@@ -192,7 +192,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  オフラインのインデックス操作で、XML インデックスの作成、再構築、または削除を行う場合は、テーブルで Sch-M (スキーマ修正) ロックが取得されます。 このため、操作中は、すべてのユーザーは基になるテーブルにアクセスできません。  
   
 > [!NOTE]
->  オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
+>  オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
  行ロックを許可するかどうかを指定します。 既定値は ON です。  
@@ -232,10 +232,10 @@ CREATE [ PRIMARY ] XML INDEX index_name
  詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
   
 > [!NOTE]
->  並列インデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
+>  並列インデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
 ## <a name="remarks"></a>解説  
- 計算列のデータ型をインデックス キー列または非キー列として使用できる限り、**xml** データ型から派生した計算列は、キー列または非キー列としてインデックスを設定できます。 **xml** 計算列にプライマリ XML インデックスを作成することはできません。  
+ 計算列のデータ型をインデックス キー列または非キー列として使用できる限り、 **xml** データ型から派生した計算列は、キー列または非キー列としてインデックスを設定できます。 **xml** 計算列にプライマリ XML インデックスを作成することはできません。  
   
  XML インデックスについての情報を表示するには、[sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md) カタログ ビューを使用します。  
   
@@ -297,5 +297,3 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
-  
-

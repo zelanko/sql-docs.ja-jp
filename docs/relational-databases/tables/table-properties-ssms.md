@@ -1,6 +1,6 @@
 ---
+title: Table Properties - SSMS
 description: Table Properties - SSMS
-title: テーブルのプロパティ - SSMS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,23 +9,25 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
+- sql12.SWB.SELECTCOLUMNS.F1
+- sql13.SWB.SELECTCOLUMNS.F1
 - sql13.swb.tableproperties.storage.f1
 - sql13.swb.tableproperties.changetracking.f1
 - sql13.swb.tableproperties.general.f1
-- sql12.SWB.SELECTCOLUMNS.F1
 - sql13.swb.tableproperties.filetable.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 018b1388e283541f883844daf77c68267c535a9c
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: a76a0aac8ff4630eb8b51835bba618303fe497cb
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810471"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344058"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [テーブルのプロパティ] ダイアログ ボックスに表示されるテーブルのプロパティについて説明します。 これらのプロパティの表示方法の詳細については、「 [テーブル定義の表示](../../relational-databases/tables/view-the-table-definition.md)」を参照してください。  
@@ -69,7 +71,7 @@ ms.locfileid: "91810471"
  オブジェクトが、引用符で囲まれた識別子オプションが ON に設定されて作成されたかどうかを指定します。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」を参照してください。  
   
  **[ロックのエスカレーション]**  
- テーブルのロック エスカレーションの粒度を示します。 データベース エンジンのロックの詳細については、「 [SQL Server トランザクションのロックおよび行のバージョン管理ガイド](../sql-server-transaction-locking-and-row-versioning-guide.md?view=sql-server-ver15)」をご覧ください。 次のいずれかの値になります。  
+ テーブルのロック エスカレーションの粒度を示します。 データベース エンジンのロックの詳細については、「 [SQL Server トランザクションのロックおよび行のバージョン管理ガイド](../sql-server-transaction-locking-and-row-versioning-guide.md)」をご覧ください。 次のいずれかの値になります。  
   
  AUTO  
  このオプションを使用すると、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、テーブル スキーマに適したロック エスカレーションの粒度を選択します。  
@@ -88,7 +90,7 @@ ms.locfileid: "91810471"
   
 ##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> [変更の追跡] ページ  
  **変更の追跡**  
- テーブルに対する変更の追跡が有効かどうかを示します。 既定値は **False**です。  
+ テーブルに対する変更の追跡が有効かどうかを示します。 既定値は **False** です。  
   
  このオプションは、データベースに対して変更の追跡が有効になっている場合にのみ使用できます。  
   
@@ -109,7 +111,7 @@ ms.locfileid: "91810471"
  FileTable のルート フォルダー。  
   
  **FileTable の名前空間の有効化**  
- **True**の場合、この値はテーブルが FileTable であることを示します。 この値を **False**に変更すると、FileTable が通常のユーザー テーブルに変更されます。 後でテーブルを FileTable に戻す場合は、変換時に FileTable 一貫性チェックを行い、テーブルに問題がないことを確認する必要があります。  
+ **True** の場合、この値はテーブルが FileTable であることを示します。 この値を **False** に変更すると、FileTable が通常のユーザー テーブルに変更されます。 後でテーブルを FileTable に戻す場合は、変換時に FileTable 一貫性チェックを行い、テーブルに問題がないことを確認する必要があります。  
   
 ##  <a name="storage-page"></a><a name="Storage"></a> [ストレージ] ページ  
  選択されているテーブルのストレージに関連するプロパティを表示します。  
