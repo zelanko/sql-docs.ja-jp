@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ca15786b88c62b41202310bd537a3224ddea458e
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 1583ab8c54d16d7bcf129e401c2e540fabb342b3
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934882"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155092"
 ---
 # <a name="whats-new-in-sql-server-language-extensions"></a>SQL Server 言語拡張の新機能
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "91934882"
 
 このリリースのすべての機能の詳細については、[SQL Server 2019 の新機能](../sql-server/what-s-new-in-sql-server-ver15.md)に関するページ、および「[SQL Server 2019 のリリース ノート](../sql-server/sql-server-version-15-release-notes.md)」を参照してください。
 
-- Windows および Linux の既定の Java ランタイムは Open Zulu JRE であり、[Windows 上の SQL Server 言語拡張のインストール](install/install-sql-server-language-extensions-on-windows.md)と [Linux 上の SQL Server 言語拡張のインストール](../linux/sql-server-linux-setup-language-extensions.md)に含まれています。
+- Windows および Linux の既定の Java ランタイムは Open Zulu JRE であり、[Windows 上の SQL Server 言語拡張のインストール](install/windows-java.md)と [Linux 上の SQL Server 言語拡張のインストール](../linux/sql-server-linux-setup-language-extensions-java.md)に含まれています。
 - サポートされている [Java データ型](how-to/java-to-sql-data-types.md)。
 - SQL Server で外部言語 (Java など) を登録するための [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md)。
 - [Microsoft 拡張機能 SDK for Java](how-to/extensibility-sdk-java-sql-server.md)。
@@ -41,4 +41,4 @@ ms.locfileid: "91934882"
 
 ## <a name="next-steps"></a>次のステップ
 
-+ [Windows 上](install/install-sql-server-language-extensions-on-windows.md)または [Linux 上に SQL Server 言語拡張をインストール](../linux/sql-server-linux-setup-language-extensions.md)します
++ [Windows 上](install/windows-java.md)または [Linux 上に SQL Server 言語拡張をインストール](../linux/sql-server-linux-setup-language-extensions-java.md)します。

@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d5c30e4c3d7c3188920ecd15104b20a5472e306
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: a2b95ef0934c1eb01944df562c4c34cd73d8e0d0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892502"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257342"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>同じ Active Directory ドメインに複数の [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をデプロイする
 
@@ -140,7 +140,7 @@ Active Directory 構成仕様で新しく導入されたサブドメイン パ�
 
 ### <a name="how-to-revert-back-to-the-pre-cu5-behavior"></a>CU5 より前の動作に戻すにはどうすればよいですか?
 
-新しく導入された `subdomain` パラメーターに対応できないシナリオもあります。 たとえば、CU5 より前のリリースをデプロイする必要があり、`azdata` CLI がアップグレード済みである場合です。 これは非常にまれですが、CU5 より前の動作に戻す必要がある場合は、`control.json` の Active Directory セクションで `useSubdomain` パラメーターを `false` に設定できます。
+新しく導入された `subdomain` パラメーターに対応できないシナリオもあります。 たとえば、CU5 より前のリリースをデプロイする必要があり、[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] がアップグレード済みである場合です。 これは非常にまれですが、CU5 より前の動作に戻す必要がある場合は、`control.json` の Active Directory セクションで `useSubdomain` パラメーターを `false` に設定できます。
 
 次の例では、このシナリオで `useSubdomain` を `false` に設定します。
 

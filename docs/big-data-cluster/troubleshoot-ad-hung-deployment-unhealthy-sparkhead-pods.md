@@ -9,12 +9,12 @@ ms.date: 08/20/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a51f5efc0c4c9cd2a341efd158b271853c0fb936
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 521efff2d77f2d0b6423b61c9b9b74e507764ff0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898728"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257102"
 ---
 # <a name="ad-mode-deployment-hangs--unhealthy-sparkhead-pods"></a>AD モードの展開がハングする - 異常な `sparkhead` ポッド
 
@@ -101,12 +101,12 @@ Azure Data Studio (ADS) からコントローラーに接続し、ビッグ デ�
 `\mssql-cluster\control-<identifier>\controller\control-<identifier>-controller-stdout.log`.
 
 > [!TIP]
-> ログを収集するには、複数の方法があります。 `azdata` を使用してログをコピーする代わりに、Azure Data Studio でノートブックを使用できます。
+> ログを収集するには、複数の方法があります。 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] を使用してログをコピーする代わりに、Azure Data Studio でノートブックを使用できます。
 > Azure Data Studio で Kubernetes クラスターに接続し、適切なトラブルシューティング ノートブックを実行します。 ノートブックの例を次に示します。
 >
 > - TSG027 - クラスターのデプロイを観察する
 > - TSG061 - BDC 名前空間内にあるポッドのすべてのコンテナー ログの末尾を取得する
-> - TSG001 - `azdata` copy-logs を実行する
+> - TSG001 - `azdata copy-logs` を実行する
 >
   
 ## <a name="inspect-the-logs"></a>ログを調べる

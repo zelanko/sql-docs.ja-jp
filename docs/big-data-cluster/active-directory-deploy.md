@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb42be7b0affc351a013e29af9370d1a109e3d93
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 48dde8000274ea74df1c6095714b54669c5becdd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898754"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257292"
 ---
 # <a name="deploy-sql-server-big-data-cluster-in-active-directory-mode"></a>Active Directory モードで SQL Server ビッグ データ クラスターを展開する
 
@@ -50,9 +50,9 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
 - `security.activeDirectory.domainControllerFullyQualifiedDns`:ドメイン コントローラーの FQDN の一覧。 FQDN には、ドメイン コントローラーのコンピューター名またはホスト名が含まれています。 複数のドメイン コントローラーがある場合、ここで一覧を指定できます。 例: `HOSTNAME.CONTOSO.LOCAL`.
 
   > [!IMPORTANT]
-  > 複数のドメイン コントローラーがドメインにサービスを提供している場合は、セキュリティ構成の `domainControllerFullyQualifiedDns` 一覧の最初のエントリとして、プライマリ ドメインコントローラー (PDC) を使用します。PDC 名を取得するには、コマンド プロンプトで「`netdom query fsmo`」と入力し、**Enter** キーを押します。
+  > 複数のドメイン コントローラーがドメインにサービスを提供している場合は、セキュリティ構成の `domainControllerFullyQualifiedDns` 一覧の最初のエントリとして、プライマリ ドメインコントローラー (PDC) を使用します。PDC 名を取得するには、コマンド プロンプトで「`netdom query fsmo`」と入力し、 **Enter** キーを押します。
 
-- `security.activeDirectory.realm` **省略可能なパラメーター**: ほとんどの場合、領域はドメイン名と同じです。 同じでない場合、このパラメーターを使用し、領域の名前を定義します (例: `CONTOSO.LOCAL`)。 このパラメーターに指定する値は、完全修飾されている必要があります。
+- `security.activeDirectory.realm` **省略可能なパラメーター** : ほとんどの場合、領域はドメイン名と同じです。 同じでない場合、このパラメーターを使用し、領域の名前を定義します (例: `CONTOSO.LOCAL`)。 このパラメーターに指定する値は、完全修飾されている必要があります。
 
   > [!IMPORTANT]
   > 現時点では、BDC では、Active Directory ドメイン名が Active Directory ドメインの **NETBIOS** 名と異なる構成はサポートされていません。
@@ -77,7 +77,7 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
   >展開を開始する前に、これらのグループを AD 内に作成します。 これらの AD グループのいずれかのスコープがドメイン ローカルの場合、展開は失敗します。
 
   >[!IMPORTANT]
-  >ドメイン ユーザーが多数のグループ メンバーシップを所有している場合は、カスタム *bdc.json* デプロイ構成ファイルを使用して、ゲートウェイ設定 `httpserver.requestHeaderBuffer` (既定値は `8192`) と HDFS 設定 `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (既定値は `10`) の値を調整する必要があります。 これは、ゲートウェイへの接続タイムアウトや 431 (*Request Header Fields Too Large*) 状態コードの HTTP 応答を回避するためのベスト プラクティスです。 以下は、これらの設定の値を定義する方法と、グループ メンバーシップの数が多い場合に推奨される値を示す構成ファイルのセクションです。
+  >ドメイン ユーザーが多数のグループ メンバーシップを所有している場合は、カスタム *bdc.json* デプロイ構成ファイルを使用して、ゲートウェイ設定 `httpserver.requestHeaderBuffer` (既定値は `8192`) と HDFS 設定 `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (既定値は `10`) の値を調整する必要があります。 これは、ゲートウェイへの接続タイムアウトや 431 ( *Request Header Fields Too Large* ) 状態コードの HTTP 応答を回避するためのベスト プラクティスです。 以下は、これらの設定の値を定義する方法と、グループ メンバーシップの数が多い場合に推奨される値を示す構成ファイルのセクションです。
 
 ```json
 {
@@ -113,13 +113,13 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
   >[!IMPORTANT]
   >デプロイを開始する前に、AD で下記の設定に提供されるグループを作成します。 これらの AD グループのいずれかのスコープがドメイン ローカルの場合、展開は失敗します。
 
-- `security.activeDirectory.appOwners` **省略可能なパラメーター**: あらゆるアプリケーションを作成、削除、実行する権限が与えられる AD グループの一覧。 この一覧には、ユニバーサル グループまたはグローバル グループのいずれかのスコープを持つ AD グループを含めることができます。 ドメイン ローカル グループを含めることはできません。
+- `security.activeDirectory.appOwners` **省略可能なパラメーター** : あらゆるアプリケーションを作成、削除、実行する権限が与えられる AD グループの一覧。 この一覧には、ユニバーサル グループまたはグローバル グループのいずれかのスコープを持つ AD グループを含めることができます。 ドメイン ローカル グループを含めることはできません。
 
-- `security.activeDirectory.appReaders` **省略可能なパラメーター**: あらゆるアプリケーションを実行する権限を持つ AD グループの一覧。 この一覧には、ユニバーサル グループまたはグローバル グループのいずれかのスコープを持つ AD グループを含めることができます。 ドメイン ローカル グループを含めることはできません。
+- `security.activeDirectory.appReaders` **省略可能なパラメーター** : あらゆるアプリケーションを実行する権限を持つ AD グループの一覧。 この一覧には、ユニバーサル グループまたはグローバル グループのいずれかのスコープを持つ AD グループを含めることができます。 ドメイン ローカル グループを含めることはできません。
 
 次の表に、アプリケーション管理用の承認モデルを示します。
 
-|   承認済みロール   |   azdata コマンド   |
+|   承認済みロール   |   [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] コマンド   |
 |----------------------|--------------------|
 |   appOwner           | azdata app create  |
 |   appOwner           | azdata app update  |
@@ -128,17 +128,17 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
 |   appOwner           | azdata app delete  |
 |   appOwner、appReader| azdata app run     |
 
-- `security.activeDirectory.subdomain`:**省略可能なパラメーター** このパラメーターは、同じドメインに対する複数のビッグ データ クラスターのデプロイをサポートするために SQL Server 2019 CU5 リリースで導入されました。 この設定を使用すると、デプロイされたビッグ データ クラスターごとに異なる DNS 名を指定できます。 このパラメーターの値が `control.json` ファイルの Active Directory セクションに指定されていない場合、既定で、ビッグ データ クラスター名 (Kubernetes 名前空間名と同じ) がサブドメイン設定の値を計算するために使用されます。 
+- `security.activeDirectory.subdomain`: **省略可能なパラメーター** このパラメーターは、同じドメインに対する複数のビッグ データ クラスターのデプロイをサポートするために SQL Server 2019 CU5 リリースで導入されました。 この設定を使用すると、デプロイされたビッグ データ クラスターごとに異なる DNS 名を指定できます。 このパラメーターの値が `control.json` ファイルの Active Directory セクションに指定されていない場合、既定で、ビッグ データ クラスター名 (Kubernetes 名前空間名と同じ) がサブドメイン設定の値を計算するために使用されます。 
 
   >[!NOTE]
   >サブドメイン設定を介して渡される値は、新しい AD ドメインではなく、BDC クラスターによって内部で使用される DNS ドメインだけです。
 
   >[!IMPORTANT]
-  >これらの新機能を利用し、同じドメイン内に複数のビッグ データ クラスターをデプロイするには、SQL Server 2019 CU5 リリース以降の **azdata CLI** の最新バージョンをインストールまたはアップグレードする必要があります。
+  >これらの新機能を利用し、同じドメイン内に複数のビッグ データ クラスターをデプロイするには、SQL Server 2019 CU5 リリース以降の **[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]** の最新バージョンをインストールまたはアップグレードする必要があります。
 
   同じ Active Directory ドメインに複数のビッグ データクラスターをデプロイすることに関する詳細については、[概念: Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] をデプロイする](active-directory-deployment-background.md)方法に関するページを参照してください。
 
-- `security.activeDirectory.accountPrefix`:**省略可能なパラメーター** このパラメーターは、同じドメインに対する複数のビッグ データ クラスターのデプロイをサポートするために SQL Server 2019 CU5 リリースで導入されました。 この設定により、さまざまなビッグ データ クラスター サービスに対してアカウント名の一意性が保証されます。それは 2 つのクラスター間で異なる必要があります。 アカウント プレフィックス名のカスタマイズは省略可能で、既定では、サブドメイン名がアカウント プレフィックスとして使用されます。 サブドメイン名が 12 文字より長い場合、サブドメイン名の最初の 12 文字がアカウント プレフィックスとして使用されます。  
+- `security.activeDirectory.accountPrefix`: **省略可能なパラメーター** このパラメーターは、同じドメインに対する複数のビッグ データ クラスターのデプロイをサポートするために SQL Server 2019 CU5 リリースで導入されました。 この設定により、さまざまなビッグ データ クラスター サービスに対してアカウント名の一意性が保証されます。それは 2 つのクラスター間で異なる必要があります。 アカウント プレフィックス名のカスタマイズは省略可能で、既定では、サブドメイン名がアカウント プレフィックスとして使用されます。 サブドメイン名が 12 文字より長い場合、サブドメイン名の最初の 12 文字がアカウント プレフィックスとして使用されます。  
 
   >[!NOTE]
   >Active Directory では、アカウント名を 20 文字までに制限する必要があります。 ポッドと StatefulSet を区別するために、BDC クラスターでは 8 文字を使用する必要があります。 これにより、アカウント プレフィックスの制限として 12 文字が残されます
@@ -151,7 +151,7 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
 azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 ```
 
-`control.json` ファイルで上記のパラメーターを設定するには、次の `azdata` コマンドを使用します。 これらのコマンドによって展開前に構成が置換され、独自の値が提供されます。
+`control.json` ファイルで上記のパラメーターを設定するには、次の [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] コマンドを使用します。 これらのコマンドによって展開前に構成が置換され、独自の値が提供されます。
 
 > [!IMPORTANT]
 > SQL Server 2019 CU2 リリースでは、展開プロファイルのセキュリティ構成セクションの構造が多少変更され、Active Directory 関連の設定はすべて、`control.json` ファイル内の `security` の下にある json ツリー内の新しい `activeDirectory` 内にあります。
@@ -213,7 +213,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoin
 AD 統合を利用し、単一ノード Kubernetes クラスター (kubeadm) で SQL Server ビッグ データ クラスターを展開するサンプル スクリプトは[こちら](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm-ad)にあります。
 
 > [!Note]
-> 新しく導入された `subdomain` パラメーターに対応できないシナリオもあります。 たとえば、CU5 より前のリリースをデプロイする必要があり、**azdata CLI** が既にアップグレード済みである場合です。 これは非常にまれですが、CU5 より前の動作に戻す必要がある場合は、`control.json` の Active Directory セクションで `useSubdomain` パラメーターを `false` に設定できます。  これを実行するコマンドを次に示します。
+> 新しく導入された `subdomain` パラメーターに対応できないシナリオもあります。 たとえば、CU5 より前のリリースをデプロイする必要があり、 **[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]** がアップグレード済みである場合です。 これは非常にまれですが、CU5 より前の動作に戻す必要がある場合は、`control.json` の Active Directory セクションで `useSubdomain` パラメーターを `false` に設定できます。  これを実行するコマンドを次に示します。
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.useSubdomain=false"
@@ -221,7 +221,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.act
 
 これで、Active Directory 統合を使用し、BDC の展開に必要なパラメーターをすべて設定できたはずです。
 
-`azdata` コマンドと kubeadm-prod デプロイ プロファイルを使用して、Active Directory と統合された BDC クラスターをデプロイできるようになりました。 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] をデプロイする方法の完全なドキュメントについては、「[Kubernetes 上に SQL Server ビッグ データ クラスターを展開する方法](deployment-guidance.md)」を参照してください。
+[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] コマンドと kubeadm-prod デプロイ プロファイルを使用して、Active Directory と統合された BDC クラスターをデプロイできるようになりました。 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] をデプロイする方法の完全なドキュメントについては、「[Kubernetes 上に SQL Server ビッグ データ クラスターを展開する方法](deployment-guidance.md)」を参照してください。
 
 ## <a name="verify-reverse-dns-entry-for-domain-controller"></a>ドメイン コントローラーの逆引き DNS エントリを確認する
 

@@ -9,25 +9,25 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48a2c99a029517ebbab24b017bbaeba906b1c6cb
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cef348aee2b917b0a6afd61d30b5e4f7fa7da665
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725865"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257202"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>クラスター リソースとサービスの展開設定を構成する
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-`azdata` 管理ツールに組み込まれている事前定義された構成プロファイルのセットから開始すると、ご自分の BDC ワークロード要件に合わせて、既定の設定を簡単に変更することができます。 構成ファイルの構造により、リソースの各サービスの設定を詳細に更新することができます。
+[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 管理ツールに組み込まれている事前定義された構成プロファイルのセットから開始すると、ご自分の BDC ワークロード要件に合わせて、既定の設定を簡単に変更することができます。 構成ファイルの構造により、リソースの各サービスの設定を詳細に更新することができます。
 
 ビッグ データ クラスターの構成の概要については、この 13 分間のビデオをご覧ください。
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Cluster-Configuration/player?WT.mc_id=dataexposed-c9-niner]
 
 > [!TIP]
-> 高可用性サービスを展開する方法の詳細については、[SQL Server マスター](deployment-high-availability.md)や [HDFS 名前ノード](deployment-high-availability-hdfs-spark.md)などのミッション クリティカルなコンポーネントに対して**高可用性**を構成する方法に関する記事を参照してください。
+> 高可用性サービスを展開する方法の詳細については、 [SQL Server マスター](deployment-high-availability.md)や [HDFS 名前ノード](deployment-high-availability-hdfs-spark.md)などのミッション クリティカルなコンポーネントに対して **高可用性** を構成する方法に関する記事を参照してください。
 
 リソース レベルの構成を設定したり、リソース内のすべてのサービスの構成を更新したりすることもできます。 `bdc.json` の構造の概要を次に示します。
 
@@ -312,7 +312,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 > [!TIP]
 > 記憶域構成の詳細については、「[Kubernetes 上の SQL Server ビッグ データ クラスターでのデータ永続化](concept-data-persistence.md)」を参照してください。
 
-まず、次のように、"*記憶域*" の設定を調整する patch.json ファイルを作成します。
+まず、次のように、" *記憶域* " の設定を調整する patch.json ファイルを作成します。
 
 ```json
 {
@@ -648,7 +648,7 @@ azdata bdc config patch --config-file custom-bdc/bdc.json --patch-file ./patch.j
 }
 ```
 
-手動で `control.json` を編集して、上記のセクションを `spec` に追加することができます。または、次のような修正プログラム ファイル `elasticsearch-patch.json` 作成し、`azdata` CLI を使用して `control.json` ファイルに修正プログラムを適用することもできます。
+手動で `control.json` を編集して、上記のセクションを `spec` に追加することができます。または、次のような修正プログラム ファイル `elasticsearch-patch.json` を作成し、[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] を使用して `control.json` ファイルに修正プログラムを適用することもできます。
 
 ```json
 {
@@ -677,8 +677,8 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 ## <a name="turn-pods-and-nodes-metrics-collection-onoff"></a>ポッドとノードのメトリックのコレクションをオンまたはオフにする
 
-SQL Server 2019 CU5 では、ポッドとノードのメトリック収集を制御する 2 つの機能スイッチが有効になっています。 Kubernetes インフラストラクチャの監視に別のソリューションを使用する場合は、*control.json* 展開構成ファイルで *allowNodeMetricsCollection* と *allowPodMetricsCollection* を *false* に設定して、ポッドとホスト ノードに対する組み込みのメトリック収集を無効にすることができます。 OpenShift 環境の場合、組み込みの展開プロファイルでは、これらの設定が既定では *false* に設定されます。これは、ポッドとノードのメトリックを収集するには特権機能が必要であるためです。
-次のコマンドを実行して、*azdata* CLI を使用し、カスタム構成ファイル内のこれらの設定値を更新します。
+SQL Server 2019 CU5 では、ポッドとノードのメトリック収集を制御する 2 つの機能スイッチが有効になっています。 Kubernetes インフラストラクチャの監視に別のソリューションを使用する場合は、 *control.json* 展開構成ファイルで *allowNodeMetricsCollection* と *allowPodMetricsCollection* を *false* に設定して、ポッドとホスト ノードに対する組み込みのメトリック収集を無効にすることができます。 OpenShift 環境の場合、組み込みの展開プロファイルでは、これらの設定が既定では *false* に設定されます。これは、ポッドとノードのメトリックを収集するには特権機能が必要であるためです。
+次のコマンドを実行して、 *azdata* CLI を使用し、カスタム構成ファイル内のこれらの設定値を更新します。
 
 ```bash
  azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"

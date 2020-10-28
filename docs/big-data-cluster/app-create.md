@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 890b029833e7d34da7663b9f0e6ccfa63195c6d5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8e91315b5ec79c136b4d84a7fbc36a707cc3d82f
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725083"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257302"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターにアプリを展開する方法
 
@@ -32,7 +32,7 @@ ms.locfileid: "91725083"
 - ホストされるアプリケーションの種類が増えました (SQL Server Integration Services (SSIS) と MLeap)。
 - アプリケーションの展開を管理する [Visual Studio Code 拡張機能](app-deployment-extension.md)。
 
-アプリケーションは、`azdata` コマンドライン ユーティリティを使用して展開および管理されます。 この記事では、コマンド ラインからアプリを展開する方法の例を示します。 Visual Studio Code でこれを使用する方法については、[Visual Studio Code 拡張機能](app-deployment-extension.md)に関する記事を参照してください。
+アプリケーションは [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] を使用してデプロイおよび管理されます。 この記事では、コマンド ラインからアプリを展開する方法の例を示します。 Visual Studio Code でこれを使用する方法については、[Visual Studio Code 拡張機能](app-deployment-extension.md)に関する記事を参照してください。
 
 サポートされているアプリの種類は次のとおりです。
 
@@ -44,11 +44,11 @@ ms.locfileid: "91725083"
 ## <a name="prerequisites"></a>前提条件
 
 - [SQL Server 2019 ビッグ データ クラスター](deployment-guidance.md)
-- [azdata コマンドライン ユーティリティ](../azdata/install/deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>機能
 
-SQL Server 2019 では、アプリケーションの作成、削除、説明、初期化、一覧の実行、更新を行うことができます。 次の表では、**azdata** で使用できるアプリケーションの展開コマンドについて説明します。
+SQL Server 2019 では、アプリケーションの作成、削除、説明、初期化、一覧の実行、更新を行うことができます。 次の表では、 **azdata** で使用できるアプリケーションの展開コマンドについて説明します。
 
 |コマンド |説明 |
 |:---|:---|
@@ -114,7 +114,7 @@ spec.yaml
 
 ## <a name="create-an-app"></a>アプリを作成する
 
-アプリケーションを作成するには、`azdata` コマンドと共に `app create` を使用します。 これらのファイルは、アプリを作成するマシンのローカルに展開されます。
+アプリケーションを作成するには、[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] コマンドと共に `app create` を使用します。 これらのファイルは、アプリを作成するマシンのローカルに展開されます。
 
 ビッグ データ クラスターに新しいアプリを作成するには、次の構文を使用します。
 

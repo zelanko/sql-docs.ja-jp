@@ -10,12 +10,12 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e54c9b01a58ba6eeeeda2fb74ca422d9d90ae45c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 9020f8745c22a9e6382b6538d5bf650c17e923e4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725788"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196126"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Azure Data Studio ノートブックを使用して SQL Server ビッグ データ クラスターを管理する
 
@@ -23,7 +23,7 @@ ms.locfileid: "91725788"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] は、ノートブックを含む Azure Data Studio の拡張機能を提供します。 ノートブックには、SQL Server 2019 ビッグ データ クラスターを管理するために Azure Data Studio で使用できるドキュメントとコードが用意されています。
 
-もともとは、オープン ソース プロジェクトとして実装され、[ノートブック](../azure-data-studio/notebooks/notebooks-guidance.md)は [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15) 内に組み込まれていました。 テキスト セル内のテキストに対してはマークダウンを、また、コード セル内にコードを記述するには利用可能なカーネルの 1 つを使用できます。
+もともとは、オープン ソース プロジェクトとして実装され、[ノートブック](../azure-data-studio/notebooks/notebooks-guidance.md)は [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) 内に組み込まれていました。 テキスト セル内のテキストに対してはマークダウンを、また、コード セル内にコードを記述するには利用可能なカーネルの 1 つを使用できます。
 
 ノートブックを使用して、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] に対してビッグ データ クラスターを展開できます。
 
@@ -33,7 +33,7 @@ ms.locfileid: "91725788"
 
 ノートブックを開くには、次のコンポーネントが必要です。
 
-* [Azure Data Studio Insiders ビルド](./deploy-big-data-tools.md?viewFallbackFrom=sqlallproducts)の最新バージョン
+* [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) の最新バージョン
 * [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 拡張機能が Azure Data Studio にインストールされている
 
 これらのコンポーネントに加えて、SQL Server 2019 ビッグ データ クラスターを展開するには、次のコンポーネントも必要です。
@@ -50,7 +50,7 @@ ms.locfileid: "91725788"
 
 1. **[ビュー]**  >  **[コマンド パレット]** を選択します。
 
-2. 「**Jupyter Books:SQL Server 2019 Guide**」と入力します。
+2. 「 **Jupyter Books:SQL Server 2019 Guide** 」と入力します。
 
 SQL Server ビッグ データ クラスターに関連するトラブルシューティング ノートブックを含む Jupyter Book が含まれている Jupyter Books Viewlet が開きます。
 
