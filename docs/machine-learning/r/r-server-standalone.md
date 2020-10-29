@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 342c9bd2f83fed2b74cbce1f5ea7b7d942e9fd63
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 95b00aff6a4a42ff0bc0cc01d6e4933f8ef6ceae
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956913"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793799"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>SQL Server でのスタンドアロン Machine Learning Server または R Server とは
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -80,7 +80,7 @@ RevoScaleR、revoscalepy、および機械学習アルゴリズムの関数を�
 
 ### <a name="step-4-operationalize-your-solution"></a>手順 4:ソリューションを操作化する
 
-スタンドアロン サーバーでは、SQL 以外の [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) の[操作化](//machine-learning-server/what-is-operationalization)機能を使用できます。 操作化のためのスタンドアロン サーバーを構成できます。これにより、コードを Web サービスとしてデプロイしてホストし、診断を実行し、Web サービスのキャパシティをテストするという利点が得られます。
+スタンドアロン サーバーでは、SQL 以外の [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) の[操作化](/machine-learning-server/what-is-operationalization)機能を使用できます。 操作化のためのスタンドアロン サーバーを構成できます。これにより、コードを Web サービスとしてデプロイしてホストし、診断を実行し、Web サービスのキャパシティをテストするという利点が得られます。
 
 ### <a name="step-5-maintain-your-server"></a>手順 5:サーバーの保守
 

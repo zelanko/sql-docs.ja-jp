@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ea99f736af30fb1989bd8728896bed3f12c4c59c
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: cdb11607fe7424c8c1159ba767e6f8292361065f
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956633"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793759"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>SQL Server で R を使用して SSIS および SSRS ワークフローを作成する
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -127,7 +127,7 @@ end;
 GO
 ```
 
-SSIS デザイナーで [SQL タスクの実行](../../integration-services/control-flow/execute-sql-task.md)を作成して、**generate_iris_rx_model** ストアド プロシージャを実行します。 モデルはシリアル化され、ssis_iris_models テーブルに保存されます。 **SQLStatement** のスクリプトは次のとおりです。
+SSIS デザイナーで [SQL タスクの実行](../../integration-services/control-flow/execute-sql-task.md)を作成して、 **generate_iris_rx_model** ストアド プロシージャを実行します。 モデルはシリアル化され、ssis_iris_models テーブルに保存されます。 **SQLStatement** のスクリプトは次のとおりです。
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -143,7 +143,7 @@ update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default 
 
 これで、トレーニング データを読み込み、モデルを生成するコードが完成しました。残りの手順は、モデルを使用して予測を生成することだけです。 
 
-これを行うには、SQL クエリに R スクリプトを配置し、ssis_iris_model で [rxPredict](//machine-learning-server/r-reference/revoscaler/rxpredict) 組み込み R 関数をトリガーします。 このタスクは **predict_species_length** と名付けられたストアド プロシージャによって実現されます。
+これを行うには、SQL クエリに R スクリプトを配置し、ssis_iris_model で [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) 組み込み R 関数をトリガーします。 このタスクは **predict_species_length** と名付けられたストアド プロシージャによって実現されます。
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -171,7 +171,7 @@ colnames(OutputDataSet) <- c("id", "Sepal.Length.Actual", "Sepal.Length.Expected
 end;
 ```
 
-SSIS デザイナーで、**predict_species_length** ストアド プロシージャを実行する [SQL タスクの実行](../../integration-services/control-flow/execute-sql-task.md)を作成し、予測される花弁長を生成します。
+SSIS デザイナーで、 **predict_species_length** ストアド プロシージャを実行する [SQL タスクの実行](../../integration-services/control-flow/execute-sql-task.md)を作成し、予測される花弁長を生成します。
 
 ```T-SQL
 exec predict_species_length 'rxLinMod';

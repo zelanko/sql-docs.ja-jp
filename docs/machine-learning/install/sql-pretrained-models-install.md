@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a509b16abc2c52f504cf3783f5fb22370faaef94
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 6407ed2cd23b8fad1f63a1b670a4cce2ad54790c
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956753"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793749"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>事前トレーニング済みの機械学習モデルを SQL Server にインストールする
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-この記事では、PowerShell を使用して、"*感情分析*" および "*イメージの特性付け*" のための無料の事前トレーニング済みの機械学習モデルを、R または Python が統合されている SQL Server インスタンスに追加する方法について説明します。 事前トレーニング済みのモデルは Microsoft によって構築され、すぐに使用できる状態で、インストール後のタスクとしてインスタンスに追加されます。 これらのモデルの詳細については、この記事の「[リソース](#bkmk_resources)」セクションを参照してください。
+この記事では、PowerShell を使用して、" *感情分析* " および " *イメージの特性付け* " のための無料の事前トレーニング済みの機械学習モデルを、R または Python が統合されている SQL Server インスタンスに追加する方法について説明します。 事前トレーニング済みのモデルは Microsoft によって構築され、すぐに使用できる状態で、インストール後のタスクとしてインスタンスに追加されます。 これらのモデルの詳細については、この記事の「[リソース](#bkmk_resources)」セクションを参照してください。
 
 インストールが完了すると、事前トレーニング済みのモデルは、MicrosoftML (R) ライブラリと microsoftml (Python) ライブラリの特定の機能を強化する実装の詳細と見なされます。 モデルを表示、カスタマイズ、または再トレーニングしないでください (そうすることもできません)。また、これらをカスタム コードの独立したリソースとして扱うことや、他の関数と組み合わせて使用することもできません。 
 
@@ -27,7 +27,7 @@ ms.locfileid: "91956753"
 
 | R 関数 (MicrosoftML) | Python 関数 (microsoftml) | 使用法 |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](//machine-learning-server/python-reference/microsoftml/get-sentiment) | テキスト入力に対して正/負のセンチメント スコアを生成します。 |
+| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](/machine-learning-server/python-reference/microsoftml/get-sentiment) | テキスト入力に対して正/負のセンチメント スコアを生成します。 |
 | [featurizeImage](/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](/machine-learning-server/python-reference/microsoftml/featurize-image) | 画像ファイル入力からテキスト情報を抽出します。 |
 
 ## <a name="prerequisites"></a>前提条件
@@ -196,7 +196,7 @@ R モデルと Python モデルのインストール パスは次のとおりで
 
 ## <a name="research-and-resources"></a>調査とリソース
 
-現在使用できるモデルは、感情分析とイメージ分類のためのディープ ニューラル ネットワーク (DNN) モデルです。 事前トレーニング済みのモデルはすべて、Microsoft の [Computation Network Toolkit](https://cntk.ai/Features/Index.html) (**CNTK**) を使用してトレーニングされています。
+現在使用できるモデルは、感情分析とイメージ分類のためのディープ ニューラル ネットワーク (DNN) モデルです。 事前トレーニング済みのモデルはすべて、Microsoft の [Computation Network Toolkit](https://cntk.ai/Features/Index.html) ( **CNTK** ) を使用してトレーニングされています。
 
 各ネットワークの構成は、次の参照実装に基づいています。
 
