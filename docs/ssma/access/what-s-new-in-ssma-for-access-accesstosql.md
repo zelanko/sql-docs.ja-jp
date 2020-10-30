@@ -4,22 +4,31 @@ description: 各リリースのアクセス用 (SSMA) の SQL Server Migration A
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 9/28/2020
+ms.date: 10/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 5aaa4ad6a29d9582a8c62a94fbb94c18f79bfcff
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: c563769ec4c0b15ac3009b6cbe3207896e7f7c4c
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497915"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036063"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access の新機能 (アクセス可能な Sql)
 
 この記事では、各リリースでのアクセス変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v815"></a>SSMA v 8.15
+
+ユーザー補助機能の強化に加えて、SSMA for Access の v 8.15 リリースには、次の変更が含まれています。
+
+* 外部キーに対して自動作成されたインデックスを無視する
+* 改良評価レポートを最新のブラウザーで動作させる
+* Azure AD 認証にデータベースによって提供される権限を使用する
+* ファイルから読み込まれたステートメントの名前付けを改善する
 
 ## <a name="ssma-v814"></a>SSMA v 8.14
 
@@ -78,7 +87,7 @@ SSMA for Access のリリースでは、クエリでの関数の変換が改善�
 
 ユーザビリティとパフォーマンスを向上させるために設計された一連の修正に加え、SSMA の SSMA リリースは、ユーザーが変換されたコードで SSMA 拡張プロパティを省略できるようにする設定を追加することによって強化されています。
 
-Ssma for Access でこの設定を利用するには、[**ツール**] [  >  **プロジェクト設定**] [  >  **全般**  >  **変換**] の順に移動し、[その**他**] の [**拡張プロパティを省略**] 設定の値を **[はい]** に更新します。
+Ssma for Access でこの設定を利用するには、[ **ツール** ] [  >  **プロジェクト設定** ] [  >  **全般**  >  **変換** ] の順に移動し、[その **他** ] の [ **拡張プロパティを省略** ] 設定の値を **[はい]** に更新します。
 
 ![拡張プロパティの設定を省略する](../access/media/ssma-omit-extended-properties.png)
 
@@ -130,7 +139,7 @@ SSMA for Access の v2.0 リリースは、品質と変換メトリックの向�
 
   ![SQL MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
 
-* 変換後の **修正アドバイザー**。 詳細について [は、こちら](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733)を参照してください。
+* 変換後の **修正アドバイザー** 。 詳細について [は、こちら](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733)を参照してください。
 
 * データベース/スキーマの事前選択。
 
