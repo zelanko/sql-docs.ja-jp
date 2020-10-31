@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 87757b771e7c140454d8cdceac8dc1a77600f94b
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: 212e8e5ab05204a6497282e79c4134dcff844299
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059350"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067322"
 ---
 # <a name="sp_pdw_add_network_credentials-azure-synapse-analytics"></a>sp_pdw_add_network_credentials (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,30 +34,29 @@ ms.locfileid: "92059350"
   
 sp_pdw_add_network_credentials 'target_server_name',  'user_name', 'password'  
 ```  
-
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>引数  
- '*target_server_name*'  
+ ' *target_server_name* '  
  対象サーバーのホスト名または IP アドレスを指定します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は、このストアドプロシージャに渡されたユーザー名とパスワードの資格情報を使用して、このサーバーにアクセスします。  
   
  InfiniBand ネットワーク経由で接続するには、対象サーバーの InfiniBand IP アドレスを使用します。  
   
  *target_server_name* は nvarchar (]) として定義されています。  
   
- '*user_name*'  
+ ' *user_name* '  
  対象サーバーにアクセスする権限を持つ user_name を指定します。 対象サーバーの資格情報が既に存在する場合は、新しい資格情報に更新されます。  
   
  *user_name* は nvarchar (513) として定義されています。  
   
- '*password*ꞌ  
- *User_name*のパスワードを指定します。  
+ ' *password* ꞌ  
+ *User_name* のパスワードを指定します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
- **ALTER SERVER STATE**権限が必要です。  
+ **ALTER SERVER STATE** 権限が必要です。  
   
 ## <a name="error-handling"></a>エラー処理  
  [制御] ノードおよびすべての計算ノードで資格情報を追加できない場合、エラーが発生します。  
@@ -79,7 +78,7 @@ EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********'
 > [!NOTE]  
 >  InfiniBand でデータベースのバックアップを実行するには、必ずバックアップサーバーの InfiniBand IP アドレスを使用してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_pdw_remove_network_credentials &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
   
