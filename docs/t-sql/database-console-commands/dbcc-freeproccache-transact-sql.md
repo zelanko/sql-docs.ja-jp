@@ -26,12 +26,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44c696a3c912f52fef2ca5d5ece3411e59dba5d3
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 51c7252e957a9f19d83c6d2b840f91a7261af02b
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91957013"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639005"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,17 +43,16 @@ ms.locfileid: "91957013"
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>構文  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の構文:
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)] の構文:
-
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の構文:
   
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 
      [ WITH NO_INFOMSGS ]   
 [;]  
@@ -76,7 +75,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
  -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
-*pool_name* は、Resource Governor リソース共有元の名前です *pool_name* は **sysname** 型であり、[sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 動的管理ビューに対してクエリを実行して取得できます。  
+*pool_name* は、Resource Governor リソース共有元の名前です *pool_name* は **sysname** 型であり、 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 動的管理ビューに対してクエリを実行して取得できます。  
  Resource Governor ワークロード グループをリソース共有元に関連付けるには、[sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 動的管理ビューに対してクエリを実行します。 セッションのワークロード グループの情報を表示するには、[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 動的管理ビューに対してクエリを実行します。  
 
   
@@ -95,7 +94,11 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ## <a name="remarks"></a>注釈  
 DBCC FREEPROCCACHE を使用してプラン キャッシュをクリアする際には注意が必要です。 プロシージャ (プラン) キャッシュをクリアすると、すべてのプランが削除されます。その後にクエリを実行すると、以前にキャッシュされたプランは再利用されず、新しいプランがコンパイルされます。 
 
-そのため、新しいコンパイルの数が増えると、クエリのパフォーマンスが突然一時的に低下する可能性があります。 プラン キャッシュ内のキャッシュストアがクリアされるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、'DBCC FREEPROCCACHE' 操作または 'DBCC FREESYSTEMCACHE' 操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました。" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
+そのため、新しいコンパイルの数が増えると、クエリのパフォーマンスが突然一時的に低下する可能性があります。 プラン キャッシュ内のキャッシュストアが消去されるたびに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに、以下の通知メッセージが記録されます。
+
+> `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.` 
+
+このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
 
 次の再構成操作でもプロシージャ キャッシュはクリアされます。
 -   access check cache bucket count  
@@ -182,7 +185,7 @@ DBCC FREEPROCCACHE WITH NO_INFOMSGS;
 ```  
   
 ### <a name="c-clearing-all-cache-entries-associated-with-a-resource-pool"></a>C. リソース プールに関連付けられたすべてのキャッシュ エントリを削除する  
-次の例では、指定したリソース プールに関連付けられているすべてのキャッシュ エントリを削除します。 最初に、`sys.dm_resource_governor_resource_pools` ビューに対してクエリを実行し、*pool_name* の値を取得します。
+次の例では、指定したリソース プールに関連付けられているすべてのキャッシュ エントリを削除します。 最初に、`sys.dm_resource_governor_resource_pools` ビューに対してクエリを実行し、 *pool_name* の値を取得します。
   
 ```sql  
 SELECT * FROM sys.dm_resource_governor_resource_pools;  

@@ -8,17 +8,18 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
-ms.date: 09/22/2020
-ms.openlocfilehash: 65006891a6633a75482f9a32c328dea0d8bf76fc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.date: 10/22/2020
+ms.openlocfilehash: bd361913ac7f094e217b6b75163a0dd96d97d7e2
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123238"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496742"
 ---
 # <a name="sql-database-projects-extension-preview"></a>SQL Database プロジェクトの拡張機能 (プレビュー)
 
 SQL Database プロジェクトの拡張機能 (プレビュー) は、プロジェクトベースの開発環境で SQL データベースを開発するための拡張機能です。 
+
 
 ## <a name="features"></a>特徴
 
@@ -32,16 +33,20 @@ SQL Database プロジェクトの拡張機能 (プレビュー) は、プロジ
 8. 1 つのプロジェクトをデプロイします。
 9. デプロイ プロファイルから接続の詳細 (SQL Windows 認証) と SQLCMD 変数を読み込みます。
 
+Azure Data Studio での SQL Database Projects 拡張機能の概要については、次の 10 分間の短いビデオをご覧ください。
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Build-SQL-Database-Projects-Easily-in-Azure-Data-Studio/player?WT.mc_id=dataexposed-c9-niner]
+
 ## <a name="install-the-sql-database-projects-extension"></a>SQL Database プロジェクトの拡張機能をインストールする
 
 1. 拡張機能マネージャーを開いて、使用可能な拡張機能にアクセスします。  そのためには、拡張機能アイコンを選択するか、 **[表示]** メニューの **[拡張機能]** を選択します。
-2. 拡張機能の検索ボックスに名前の一部または全部を入力して、"*SQL Database プロジェクト*" の拡張機能を特定します。 使用可能な拡張機能を選択すると、その詳細が表示されます。
+2. 拡張機能の検索ボックスに名前の一部または全部を入力して、" *SQL Database プロジェクト* " の拡張機能を特定します。 使用可能な拡張機能を選択すると、その詳細が表示されます。
 
    ![拡張機能のインストール](media/sql-database-projects-extension/install-database-projects.png)
 
-3. 必要な拡張機能を選択して**インストール**します。
+3. 必要な拡張機能を選択して **インストール** します。
 4. **[再読み込み]** を選択して拡張機能を有効にします (拡張機能を初めてインストールするときにのみ必要です)。
-5. アクティビティ バーから [ファイル] アイコンを選択するか、 **[表示]** メニューから **[エクスプローラー]** を選択します。 **プロジェクト**用の新しい viewlet が使用できるようになりました。
+5. アクティビティ バーから [ファイル] アイコンを選択するか、 **[表示]** メニューから **[エクスプローラー]** を選択します。 **プロジェクト** 用の新しい viewlet が使用できるようになりました。
 
    > [!NOTE]
    > プロジェクトのビルド機能には .NET Core SDK が必要であり、拡張機能でそれを検出できない場合は、.NET Core SDK をインストールするように求められます。  .NET Core SDK (v3.1 以降) は、[https://dotnet.microsoft.com/download/dotnet-core/3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1) からダウンロードしてインストールできます。

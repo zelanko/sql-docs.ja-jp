@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c1f91effdea8225df62e3782e43ff5e863d827c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 82315c744073fa5f497f0aaf78eb6dedc04126a9
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866694"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679040"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Azure Data Studio で Always Encrypted を使用した列のクエリを実行する
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91866694"
 ### <a name="example"></a>例
 `SSN` が `Patients` テーブルの暗号化された列であると仮定して、以下に示されているクエリでバイナリ暗号化テキスト値を取得します (Always Encrypted がデータベース接続で無効になっている場合)。   
 
-![always-encrypted-ads-query-ciphertext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
+![SELECT * FROM [dbo].[Patients] クエリと、バイナリ暗号化テキスト値として表示されたクエリの結果のスクリーンショット。](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
  
 ## <a name="retrieving-plaintext-values-stored-in-encrypted-columns"></a>暗号化された列に格納されたプレーンテキスト値の取得    
 このセクションでは、暗号化された列に格納されているデータを暗号化テキストとして取得する方法について説明します。
@@ -52,7 +52,7 @@ ms.locfileid: "91866694"
 ### <a name="example"></a>例
 SSN が `Patients` テーブルで暗号化された列であると仮定して、以下に示されているクエリでプレーンテキスト値を返します (Always Encrypted がデータベース接続で有効になっている場合、および `SSN` 列に構成された列マスター キーにアクセスできる場合)。   
 
-![always-encrypted-ads-query-plaintext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
+![SELECT * FROM [dbo].[Patients] クエリと、プレーン テキスト値として表示されたクエリの結果のスクリーンショット。](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
  
 ## <a name="sending-plaintext-values-targeting-encrypted-columns"></a>暗号化された列をターゲットとするプレーンテキスト値の送信       
 このセクションでは、暗号化された列をターゲットとする値を送信するクエリを実行する方法について説明します。 たとえば、暗号化された列に格納されている値の挿入、更新、またはフィルター処理を行うクエリについて説明します。
@@ -71,7 +71,7 @@ SSN が `Patients` テーブルで暗号化された列であると仮定して�
 ### <a name="example"></a>例
 `SSN` が `Patients` テーブルの暗号化された `char(11)` 列であるとすると、次のスクリプトによって、SSN 列に `'795-73-9838'` が含まれる行が検索されます。 データベース接続に対して Always Encrypted が有効になっており、クエリ ウィンドウで Always Encrypted のパラメーター化が有効になっていて、かつ `SSN` 列に対して構成されている列マスター キーにアクセスできる場合は、結果が返されます。   
 
-![always-encrypted-ads-query-parameters](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
+![DECLARE @SSN char(11) = '795-73-9838' SELECT * FROM [dbo].[Patients] WHERE [SSN] = @SSN クエリとクエリ結果のスクリーンショット。](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
 
 ## <a name="permissions-for-querying-encrypted-columns"></a>暗号化された列にクエリを実行するためのアクセス許可
 
@@ -79,8 +79,8 @@ SSN が `Patients` テーブルで暗号化された列であると仮定して�
 
 これらの権限に加え、クエリ結果を暗号化解除する場合や、(Transact-SQL 変数をパラメーター化することで生成される) クエリ パラメーターを暗号化する場合には、ターゲット列を保護する列マスター キーにアクセスする必要もあります。
 
-- **証明書ストア - ローカル コンピューター:** 列マスター キーとして使用される証明書への**読み取り**アクセス権を持っているか、コンピューターの管理者である必要があります。   
-- **Azure Key Vault:** 列マスター キーが格納されているキー コンテナーに対する **get**、**unwrapKey**、および **verify** の権限が必要です。
+- **証明書ストア - ローカル コンピューター:** 列マスター キーとして使用される証明書への **読み取り** アクセス権を持っているか、コンピューターの管理者である必要があります。   
+- **Azure Key Vault:** 列マスター キーが格納されているキー コンテナーに対する **get** 、 **unwrapKey** 、および **verify** の権限が必要です。
 
 詳細については、 [列マスター キーの作成と格納 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) を参照してください。
 
@@ -103,7 +103,7 @@ Always Encrypted を有効 (無効) にするには、次のようにします�
 3. [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] を使用して SQL Server インスタンスがセキュア エンクレーブで構成されている場合は、エンクレーブ プロトコルおよびエンクレーブ構成証明の URL を指定できます。 SQL Server インスタンスでセキュア エンクレーブを使用しない場合は、 **[Attestation Protocol]** (構成証明プロトコル) および **[エンクレーブ構成証明 URL]** フィールドを空白のままにしてください。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](always-encrypted-enclaves.md)」を参照してください。
 4. **[OK]** をクリックして **[詳細プロパティ]** を閉じます。
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
+![接続に対して Always Encrypted を有効にする手順を示す短い動画。](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
 
 > [!TIP]
 > 既存のクエリ ウィンドウで Always Encrypted を有効または無効に切り替えるには、 **[切断]** をクリックしてから **[接続]** をクリックし、上記の手順を完了して、 **[Always Encrypted]** フィールドの目的の値を使用してデータベースに再接続します。 
@@ -134,7 +134,7 @@ Always Encrypted のパラメーター化の有効/無効を切り替えるに�
 3. **[Always Encrypted のパラメーター化を有効にする]** を選択または選択解除します。
 4. **[設定]** ウィンドウを閉じます。
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
+![Always Encrypted のパラメーター化の有効または無効を切り替える手順を示す短い動画。](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
 
 > [!NOTE]
 > Always Encrypted のパラメーター化は、Always Encrypted が有効にされたデータベース接続を使用するクエリでのみ機能します (「[データベース接続での Always Encrypted の有効化と無効化](#enabling-and-disabling-always-encrypted-for-a-database-connection)」を参照してください)。 クエリ ウィンドウで Always Encrypted が有効な状態ではないデータベース接続を使用すると、Transact-SQL 変数がパラメーター化されません。

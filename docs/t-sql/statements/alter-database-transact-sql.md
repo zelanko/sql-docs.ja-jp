@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5f41b3cc0e5a9d895d83c6696105bdded8302217
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 73525f3a89fd0e132de819deefee840c8db8944a
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725913"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497034"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -54,7 +54,7 @@ ms.locfileid: "91725913"
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -135,32 +135,32 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>引数
 
-*database_name*: 変更するデータベースの名前です。
+*database_name* : 変更するデータベースの名前です。
 
 > [!NOTE]
 > このオプションは、包含データベースでは使用できません。
 
-現在の**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
+現在の **適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
 
 使用中の現在のデータベースを変更することを指定します。
 
-MODIFY NAME **=** _new_database_name_: データベースの名前を、*new_database_name* で指定した名前に変更します。
+MODIFY NAME **=** _new_database_name_ : データベースの名前を、 *new_database_name* で指定した名前に変更します。
 
-COLLATE *collation_name*: データベースの照合順序を指定します。 *collation_name* には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合は、データベースに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの照合順序が割り当てられます。
+COLLATE *collation_name* : データベースの照合順序を指定します。 *collation_name* には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合は、データベースに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの照合順序が割り当てられます。
 
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でデータベースが作成された後は、照合順序を変更することはできません。
 
-既定の照合順序以外でデータベースを作成する場合、データベース内のデータは常に、指定された照合順序を優先します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、包含データベースを作成する場合、内部カタログの情報は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定の照合順序、**Latin1_General_100_CI_AS_WS_KS_SC** を使用して維持されます。
+既定の照合順序以外でデータベースを作成する場合、データベース内のデータは常に、指定された照合順序を優先します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、包含データベースを作成する場合、内部カタログの情報は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定の照合順序、 **Latin1_General_100_CI_AS_WS_KS_SC** を使用して維持されます。
 
 Windows 照合順序名および SQL 照合順序名について詳しくは、「[COLLATE](~/t-sql/statements/collations.md)」をご覧ください。
 
 **\<delayed_durability_option> ::=** 
-**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。
+**適用対象** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。
 
 詳しくは、「[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)」および「[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)」をご覧ください。
 
-**\<file_and_filegroup_options>::=** 詳しくは、[ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)に関する記事をご覧ください。
+**\<file_and_filegroup_options>::=** 詳しくは、 [ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)に関する記事をご覧ください。
 
 ## <a name="remarks"></a>解説
 
@@ -205,7 +205,7 @@ Windows 照合順序名および SQL 照合順序名について詳しくは、�
 - 現在データベースを使用しているのは、1 人だけである。
 - データベースの照合順序に依存するスキーマ バインド オブジェクトがない。
 
-データベースの照合順序に依存する次のオブジェクトがデータベース内に存在する場合、ALTER DATABASE*database_name*COLLATE ステートメントは失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、`ALTER` アクションをブロックしているオブジェクトごとにエラー メッセージを返します。
+データベースの照合順序に依存する次のオブジェクトがデータベース内に存在する場合、ALTER DATABASE *database_name* COLLATE ステートメントは失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、`ALTER` アクションをブロックしているオブジェクトごとにエラー メッセージを返します。
 
 - SCHEMABINDING を指定して作成されたユーザー定義関数およびビュー
 - 計算列
@@ -252,7 +252,7 @@ GO
 
 次の例では、`testdb`S 照合順序で `SQL_Latin1_General_CP1_CI_A` という名前のデータベースを作成した後、`testdb` データベースの照合順序を `COLLATE French_CI_AI` に変更します。
 
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。
+**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。
 
 ```sql
 USE master;
@@ -295,7 +295,7 @@ GO
         **_\* SQL Database \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -403,11 +403,11 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>引数
 
-*database_name*: 変更するデータベースの名前です。
+*database_name* : 変更するデータベースの名前です。
 
 CURRENT: 使用中の現在のデータベースを変更する必要があることを指定します。
 
-MODIFY NAME **=** _new_database_name_: データベースの名前を、*new_database_name* で指定した名前に変更します。 次の例では、`db1` データベースの名前を `db2` に変更します。
+MODIFY NAME **=** _new_database_name_ : データベースの名前を、 *new_database_name* で指定した名前に変更します。 次の例では、`db1` データベースの名前を `db2` に変更します。
 
 ```sql
 ALTER DATABASE db1
@@ -462,7 +462,7 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) データベー
 |1024 GB|該当なし|√|√|√|√ (D)|
 |1024 GB から 4096 GB (256 GB ずつ増分)*|該当なし|該当なし|該当なし|該当なし|√|
 
-\* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。 P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、US Gov バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 DTU モデルのリソースの制限事項に関する詳細については、[DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。
+\* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。 P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、US Gov バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 DTU モデルのリソースの制限事項に関する詳細については、[DTU リソースの制限](/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。
 
 DTU モデルの MAXSIZE 値。指定される場合は、上記の表に示すように指定されたサービス レベルで有効な値である必要があります。
 
@@ -558,7 +558,7 @@ DTU モデルの MAXSIZE 値。指定される場合は、上記の表に示す�
 |:----- | -------: | -------: | -------: | -------: | -------: |
 |データの最大サイズ (GB)|1280|1536|2048|4096|4096|
 
-vCore モデルを使用する場合に `MAXSIZE` 値が設定されていない場合、既定値は 32 GB です。 仮想コア モデルのリソースの制限事項の詳細については、[仮想コア リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関するページを参照してください。
+vCore モデルを使用する場合に `MAXSIZE` 値が設定されていない場合、既定値は 32 GB です。 仮想コア モデルのリソースの制限事項の詳細については、[仮想コア リソースの制限](/azure/sql-database/sql-database-dtu-resource-limits)に関するページを参照してください。
 
 引数 MAXSIZE および EDITION には、以下の規則が適用されます。
 
@@ -586,9 +586,9 @@ SERVICE_OBJECTIVE
 
   - コンピューティング サイズ (サービス目標) を指定します。 サービスの目標に使用できる値は、`HS_GEN4_1`、`HS_GEN4_2`、`HS_GEN4_4`、`HS_GEN4_8`、`HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80` です。
 
-サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、[Azure SQL Database サービス レベルとパフォーマンス レベル](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)、[DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)、[仮想コア リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。 PRS サービスの目標のサポートはなくなりました。 質問については、電子メール エイリアス premium-rs@microsoft.com を使用してください。
+サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、[Azure SQL Database サービス レベルとパフォーマンス レベル](/azure/azure-sql/database/purchasing-models)、[DTU リソースの制限](/azure/sql-database/sql-database-dtu-resource-limits)、[仮想コア リソースの制限](/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。 PRS サービスの目標のサポートはなくなりました。 質問については、電子メール エイリアス premium-rs@microsoft.com を使用してください。
 
-MODIFY (ERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>): エラスティック プールに既存のデータベースを追加するには、データベースの SERVICE_OBJECTIVE を ELASTIC_POOL に設定し、エラスティック プールの名前を指定します。 このオプションを使用して、データベースを同じサーバー内の別のエラスティック プールに変更することもできます。 詳しくは、[SQL Database エラスティック プールの作成と管理](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)に関するページをご覧ください。 エラスティック プールからデータベースを削除するには、ALTER DATABASE を使用して、SERVICE_OBJECTIVE を単一のデータベースのコンピューティング サイズ (サービス目標) に設定します。
+MODIFY (ERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>): エラスティック プールに既存のデータベースを追加するには、データベースの SERVICE_OBJECTIVE を ELASTIC_POOL に設定し、エラスティック プールの名前を指定します。 このオプションを使用して、データベースを同じサーバー内の別のエラスティック プールに変更することもできます。 詳しくは、[SQL Database エラスティック プールの作成と管理](/azure/azure-sql/database/elastic-pool-overview)に関するページをご覧ください。 エラスティック プールからデータベースを削除するには、ALTER DATABASE を使用して、SERVICE_OBJECTIVE を単一のデータベースのコンピューティング サイズ (サービス目標) に設定します。
 
 > [!NOTE]
 > ハイパースケール サービス層のデータベースをエラスティック プールに追加することはできません。
@@ -763,7 +763,7 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
+        **_\* SQL Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -834,7 +834,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>引数
 
-*database_name*: 変更するデータベースの名前です。
+*database_name* : 変更するデータベースの名前です。
 
 CURRENT: 使用中の現在のデータベースを変更する必要があることを指定します。
 
@@ -899,7 +899,7 @@ ALTER DATABASE WideWorldImporters
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -984,9 +984,9 @@ ALTER DATABASE { database_name | Current }
 
 ## <a name="arguments"></a>引数
 
-*database_name*: 変更するデータベースの名前を指定します。
+*database_name* : 変更するデータベースの名前を指定します。
 
-MODIFY NAME = *new_database_name*: データベースの名前を、*new_database_name* で指定した名前に変更します。
+MODIFY NAME = *new_database_name* : データベースの名前を、 *new_database_name* で指定した名前に変更します。
 
 MAXSIZE 既定値は 245,760 GB (240 TB) です。
 
@@ -998,7 +998,7 @@ MAXSIZE 既定値は 245,760 GB (240 TB) です。
 
 データベースの行ストア データの最大許容サイズ。 行ストア テーブル、列ストア インデックスのデルタストア、またはクラスター化列ストア インデックスの非クラスター化インデックスに格納されているデータは MAXSIZE を超えることはできません。 列ストア形式に圧縮されたデータにはサイズ制限はなく、MAXSIZE に制約されません。
 
-SERVICE_OBJECTIVE: コンピューティング サイズ (サービス目標) を指定します。 Azure Synapse のサービス目標の詳細については、「[Data Warehouse ユニット (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)」を参照してください。
+SERVICE_OBJECTIVE: コンピューティング サイズ (サービス目標) を指定します。 Azure Synapse のサービス目標の詳細については、「[Data Warehouse ユニット (DWU)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可
 
@@ -1011,9 +1011,9 @@ SERVICE_OBJECTIVE: コンピューティング サイズ (サービス目標) �
 
 ## <a name="general-remarks"></a>全般的な解説
 
-現在のデータベースは、変更対象とは異なるデータベースである必要があります。したがって、**ALTER は master データベースに接続されている間に実行する必要があります**。
+現在のデータベースは、変更対象とは異なるデータベースである必要があります。したがって、 **ALTER は master データベースに接続されている間に実行する必要があります** 。
 
-SQL Analytics の COMPATIBILITY_LEVEL は既定で 130 に設定されており、変更できません。 詳細については、「[ALTER DATABASE (TRANSACT-SQL) の互換性レベル](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)」を参照してください。
+SQL Analytics の COMPATIBILITY_LEVEL は既定で 130 に設定されており、変更できません。 詳細については、「[ALTER DATABASE (TRANSACT-SQL) の互換性レベル](./alter-database-transact-sql-compatibility-level.md)」を参照してください。
 
 > [!NOTE]
 > COMPATIBILITY_LEVEL はプロビジョニング済みのリソース (プール) にのみ適用されます。
@@ -1030,7 +1030,7 @@ SQL Analytics の COMPATIBILITY_LEVEL は既定で 130 に設定されており�
 
 ## <a name="examples"></a>例
 
-これらの例を実行する前に、変更対象のデータベースが現在のデータベースでないことを確認します。 現在のデータベースは、変更対象とは異なるデータベースである必要があります。したがって、**ALTER は master データベースに接続されている間に実行する必要があります**。
+これらの例を実行する前に、変更対象のデータベースが現在のデータベースでないことを確認します。 現在のデータベースは、変更対象とは異なるデータベースである必要があります。したがって、 **ALTER は master データベースに接続されている間に実行する必要があります** 。
 
 ### <a name="a-change-the-name-of-the-database"></a>A. データベースの名前を変更します。
 
@@ -1060,7 +1060,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ## <a name="see-also"></a>参照
 
 - [CREATE DATABASE (Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
-- [Azure Synapse Analytics 参照記事一覧](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/)
+- [Azure Synapse Analytics 参照記事一覧](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
@@ -1073,7 +1073,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1114,7 +1114,7 @@ ALTER DATABASE database_name
 
 ## <a name="arguments"></a>引数
 
-*database_name*: 変更するデータベースの名前です。 アプライアンス上でデータベースの一覧を表示するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) を使用します。
+*database_name* : 変更するデータベースの名前です。 アプライアンス上でデータベースの一覧を表示するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) を使用します。
 
 AUTOGROW = { ON | OFF }: AUTOGROW オプションを更新します。 AUTOGROW が ON のとき、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、複製テーブル、分散テーブル、トランザクション ログの割り当て領域を必要に応じて自動的に増やし、記憶域要件の増加に対応します。 AUTOGROW が OFF のとき、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、複製テーブル、分散テーブル、トランザクション ログが最大サイズ設定を超過したときにエラーを返します。
 
@@ -1124,7 +1124,7 @@ DISTRIBUTED_SIZE = *size* [GB]: 変更されているデータベースのすべ
 
 LOG_SIZE = *size* [GB]: 変更されているデータベースのすべてのトランザクション ログを格納するための新しい最大 GB をデータベースごとに指定します。 このサイズは、アプライアンスの計算ノード全体で分散されます。
 
-ENCRYPTION { ON | OFF }: データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の暗号化は、[sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) が **1** に設定されているときにのみ構成できます。 Transparent Data Encryption を構成するには、先にデータベース暗号化キーを作成する必要があります。 データベース暗号化の詳細については、「[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。
+ENCRYPTION { ON | OFF }: データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の暗号化は、 [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) が **1** に設定されているときにのみ構成できます。 Transparent Data Encryption を構成するには、先にデータベース暗号化キーを作成する必要があります。 データベース暗号化の詳細については、「[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。
 
 SET AUTO_CREATE_STATISTICS { ON | OFF } 統計の自動作成オプション AUTO_CREATE_STATISTICS がオンの場合、クエリ プランのカーディナリティの推定を向上させるために、クエリ オプティマイザーによってクエリ述語内の個々の列に関する統計が必要に応じて作成されます。 これらの 1 列ずつの統計は、既存の統計オブジェクトにまだヒストグラムがない列について作成されます。
 
@@ -1142,7 +1142,7 @@ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 統計の非同期更新オプシ�
 
 AU7 へのアップグレード後に作成された新しいデータベースの場合、既定値は ON です。 アップグレードの前に作成されたデータベースの場合、既定値は OFF です。
 
-統計の詳細については、「[統計](/sql/relational-databases/statistics/statistics)」を参照してください。
+統計の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可
 
