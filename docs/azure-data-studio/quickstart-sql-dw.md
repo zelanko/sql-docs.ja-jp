@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 1679f7416306b8dda564576779ae2e315f589311
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 526349f9e6ca186b8555d52f76f3663c0862503c
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257334"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793699"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>クイックスタート: Azure Data Studio を使用して Azure Synapse Analytics の専用 SQL プールに接続し、データにクエリを実行する
 
@@ -36,13 +36,13 @@ Azure Data Studio を使用して、Azure Synapse Analytics サーバーへの�
 
 1. 最初に Azure Data Studio を実行すると、 **[接続]** ページが開きます。 **[接続]** ページが表示されない場合は、 **[接続の追加]** を選択するか、 **[サーバー]** サイドバーの **[新しい接続]** アイコンを選択します。
    
-   ![新しい接続アイコン](media/quickstart-sql-dw/new-connection-icon.png)
+   ![[接続] ページのスクリーンショット。[新しい接続] アイコンが選択されています。](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. この記事では、*SQL ログイン*を使用しますが、*Windows 認証*もサポートされています。 *ご利用の* Azure SQL サーバーのサーバー名、ユーザー名、パスワードを使用して、次のようにフィールドに入力します。
+2. この記事では、 *SQL ログイン* を使用しますが、 *Windows 認証* もサポートされています。 *ご利用の* Azure SQL サーバーのサーバー名、ユーザー名、パスワードを使用して、次のようにフィールドに入力します。
 
    |   設定    | 推奨値 | 説明 |
    |--------------|-----------------|-------------| 
-   | **サーバー名** | 完全修飾サーバー名 | たとえば、**sqlpoolservername.database.windows.net** のような名前を指定します。 |
+   | **サーバー名** | 完全修飾サーバー名 | たとえば、 **sqlpoolservername.database.windows.net** のような名前を指定します。 |
    | **認証** | SQL ログイン| このチュートリアルでは、SQL 認証を使用します。 |
    | **ユーザー名** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
    | **パスワード (SQL ログイン)** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
@@ -75,7 +75,7 @@ Azure Data Studio を使用して、Azure Synapse Analytics サーバーへの�
 
 ## <a name="create-a-table"></a>テーブルを作成する
 
-クエリ エディターはまだ *master* データベースに接続されていますが、*TutorialDB* データベースにテーブルを作成する必要があります。 
+クエリ エディターはまだ *master* データベースに接続されていますが、 *TutorialDB* データベースにテーブルを作成する必要があります。 
 
 1. 接続コンテキストを **TutorialDB** に変更します。
 
@@ -136,7 +136,7 @@ Azure Data Studio を使用して、Azure Synapse Analytics サーバーへの�
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップする
 
-この記事で作成したサンプル データベースの操作を続行する予定がない場合は、[リソース グループを削除](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources)してください。
+この記事で作成したサンプル データベースの操作を続行する予定がない場合は、[リソース グループを削除](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources)してください。
 
 ## <a name="next-steps"></a>次のステップ
 詳細については、[Azure Data Studio を使用した Synapse SQL への接続](https://docs.microsoft.com/azure/synapse-analytics/sql/get-started-azure-data-studio)に関する記事を参照してください。
