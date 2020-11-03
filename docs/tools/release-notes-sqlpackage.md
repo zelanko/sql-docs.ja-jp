@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 90485210bbc0fe657516306dd433f3241b5c90c9
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: d78df7ed144c1cb94f486a20bd65ffc9c1c9cafb
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005979"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496703"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe のリリース ノート
 
@@ -57,7 +57,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="fixes"></a>修正
 | 機能 | 詳細 |
 | :------ | :------ | 
-| デプロイ | Azure SQL Database Managed Instance を非 sysadmin ユーザーとしてターゲットにすると、正しくないデプロイ スクリプトが生成される問題を解消しました  | 
+| デプロイ | Azure SQL Managed Instance を非 sysadmin ユーザーとしてターゲットにする場合に正しくないデプロイ スクリプトが生成される問題を解消しました  | 
 | デプロイ | スクリプト アクションを実行するとき、デプロイの共同作成者を読み込む問題を解消しました | 
 | ヘルプ | 操作に 1 日以上かかるとき、sqlpackage に正しい経過時間を出力します | 
 | デプロイ | .NET Core に対してデプロイするときの dacpac 登録の問題を解消しました | 
@@ -356,7 +356,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Fix | 詳細 |
 | :-- | :------ |
-| [インポート] | Azure SQL Database の .bacpac をオンプレミスのインスタンスにインポートする際の、"_パスワードのないデータベース マスター キーは、このバージョンの SQL Server ではサポートされていません_" に起因するエラーが修正されました。 |
+| [インポート] | Azure SQL Database の .bacpac をオンプレミスのインスタンスにインポートする際の、" _パスワードのないデータベース マスター キーは、このバージョンの SQL Server ではサポートされていません_ " に起因するエラーが修正されました。 |
 | グラフ | グラフ テーブルの解決されない擬似列エラーが修正されました。 |
 | スキーマ比較 | スキーマを比較するための SQL 認証を修正しました。 | 
 | &nbsp; | &nbsp; |
@@ -370,7 +370,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 特徴量 | 詳細 |
 | :------ | :------ |
-| デプロイ |  SQL 2017 以降と Azure SQL Database での_テンポラル保持ポリシー_のサポートが追加されました。 | 
+| デプロイ |  SQL 2017 以降と Azure SQL Database での _テンポラル保持ポリシー_ のサポートが追加されました。 | 
 | 診断 | 診断情報を保存するファイル パスを指定する /DiagnosticsFile:"C:\Temp\sqlpackage.log" コマンドライン パラメーターが追加されました。 | 
 | 診断 | 診断情報をコンソールにログ記録する /Diagnostics コマンドライン パラメーターが追加されました。 |
 | &nbsp; | &nbsp; |

@@ -10180,6 +10180,8 @@
   items:
     - name: 概要
       href: sql-server/azure-arc/overview.md
+    - name: リリース ノート
+      href: sql-server/azure-arc/release-notes.md
     - name: 接続する
       href: sql-server/azure-arc/connect.md
     - name: 大規模な接続

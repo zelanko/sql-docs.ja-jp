@@ -24,12 +24,12 @@ ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: 37580f0069d4621f759d258e238ba3f8cf2d7d14
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: faee93b7e3185b11f2c603c0017f88f51f21f232
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688078"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067482"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 
@@ -76,7 +76,7 @@ ALTER CERTIFICATE certificate_name
         DECRYPTION BY PASSWORD = '<key password>' )
 }  
 ```  
-  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -89,27 +89,27 @@ ALTER CERTIFICATE certificate_name
   
  WITH PRIVATE KEY は、証明書の秘密キーを SQL Server に読み込むように指定します。
 
- FILE ='*path_to_private_key*'  
+ FILE =' *path_to_private_key* '  
  秘密キーへの完全なパスを、ファイル名を含めて指定します。 このパラメーターには、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 このファイルには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストでアクセスします。 このオプションを使用する場合は、サービス アカウントに指定したファイルへのアクセス権があることを確認します。
  
  ファイル名だけを指定した場合、そのファイルがインスタンスの既定のユーザー データ フォルダーに保存されます。 このフォルダーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA フォルダーであってもなくても構いません。 SQL Server Express LocalDB の場合、インスタンスの既定のユーザー データ フォルダーは、インスタンスを作成したアカウントの `%USERPROFILE%` 環境変数で指定されたパスです。  
   
- BINARY ='*private_key_bits*'  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
+ BINARY =' *private_key_bits* '  
+ **適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  バイナリ定数として指定された秘密キーのビット。 これらのビットは暗号化された形式でもかまいません。 暗号化されている場合は、ユーザーは暗号化解除パスワードを指定する必要があります。 パスワード ポリシーのチェックは、このパスワードに対しては実行されません。 秘密キーのビットは PVK ファイル形式にする必要があります。  
   
- DECRYPTION BY PASSWORD ='*current_password*'  
+ DECRYPTION BY PASSWORD =' *current_password* '  
  秘密キーの暗号化解除に必要なパスワードを指定します。  
   
- ENCRYPTION BY PASSWORD ='*new_password*'  
+ ENCRYPTION BY PASSWORD =' *new_password* '  
  データベース内の証明書の秘密キーを暗号化するために使用されるパスワードを指定します。 *new_password* は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターの Windows のパスワード ポリシー要件を満たす必要があります。 詳細については、「 [Password Policy](../../relational-databases/security/password-policy.md)」をご参照ください。  
   
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換の発信側で証明書を使用できるようにします。  
   
 ## <a name="remarks"></a>解説  
- 秘密キーは、*certificate_name* で指定する公開キーに対応している必要があります。  
+ 秘密キーは、 *certificate_name* で指定する公開キーに対応している必要があります。  
   
  DECRYPTION BY PASSWORD 句は、ファイル内のパスワードが NULL パスワードで保護されている場合は省略できます。  
   

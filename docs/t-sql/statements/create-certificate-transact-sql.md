@@ -28,12 +28,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ae27e25e16022aa1ec497188bee7fde68a9bca3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3d4799b962fd1c8b6084443f5d83fa171fe4b0a1
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458825"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067426"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
@@ -112,6 +112,7 @@ CREATE CERTIFICATE certificate_name
 <date_options> ::=  
     START_DATE ='datetime' | EXPIRY_DATE ='datetime'  
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -125,7 +126,7 @@ CREATE CERTIFICATE certificate_name
  ASSEMBLY *assembly_name*  
  データベース内に既に読み込まれている署名付きアセンブリを指定します。  
   
- [ EXECUTABLE ] FILE = '*path_to_file*'  
+ [ EXECUTABLE ] FILE = ' *path_to_file* '  
  証明書が含まれる DER エンコード ファイルへの完全なパスを、ファイル名を含めて指定します。 EXECUTABLE オプションを使用する場合、ファイルはこの証明書によって署名された DLL になります。 *path_to_file* には、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 ファイルには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストでアクセスします。 このアカウントは、ファイル システムで必要となる権限を保持している必要があります。  
 
 > [!IMPORTANT]
@@ -133,35 +134,35 @@ CREATE CERTIFICATE certificate_name
   
  BINARY = *asn_encoded_certificate*  
  バイナリ定数として指定された、ASN でエンコードされた証明書バイト。  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
+ **適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  WITH PRIVATE KEY  
  証明書の秘密キーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込むように指定します。 この句は、アセンブリから証明書を作成する場合には無効です。 アセンブリから作成された証明書の秘密キーを読み込むには、[ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md) を使用します。  
   
- FILE ='*path_to_private_key*'  
+ FILE =' *path_to_private_key* '  
  秘密キーへの完全なパスを、ファイル名を含めて指定します。 *path_to_private_key* には、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 ファイルには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストでアクセスします。 このアカウントは、ファイル システムで必要となる権限を保持している必要があります。  
   
 > [!IMPORTANT]  
 > このオプションは、包含データベースまたは [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では使用できません。  
   
  BINARY = *private_key_bits*  
- **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  バイナリ定数として指定された秘密キーのビット。 これらのビットは暗号化された形式でもかまいません。 暗号化されている場合は、ユーザーは暗号化解除パスワードを指定する必要があります。 パスワード ポリシーのチェックは、このパスワードに対しては実行されません。 秘密キーのビットは PVK ファイル形式にする必要があります。  
   
- DECRYPTION BY PASSWORD = '*key_password*'  
+ DECRYPTION BY PASSWORD = ' *key_password* '  
  ファイルから取得する秘密キーの暗号化解除に必要なパスワードを指定します。 秘密キーが NULL パスワードで保護されている場合、この句は省略可能です。 パスワード保護なしで秘密キーをファイルに保存することは推奨されません。 パスワードが必要な場合にパスワードを指定しない場合、ステートメントは失敗します。  
   
- ENCRYPTION BY PASSWORD = '*password*'  
+ ENCRYPTION BY PASSWORD = ' *password* '  
  秘密キーの暗号化に使用するパスワードを指定します。 このオプションは、証明書をパスワードで暗号化する場合にのみ使用します。 この句を省略した場合、秘密キーはデータベースのマスター キーで暗号化されます。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。 詳細については、「 [Password Policy](../../relational-databases/security/password-policy.md)」をご参照ください。  
   
- SUBJECT = '*certificate_subject_name*'  
- "*サブジェクト*" という用語は、X.509 標準で定義されている、証明書のメタデータ内にあるフィールドを指します。 Linux 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の場合、サブジェクトは半角 64 文字以下の長さでなければなりません。 Windows 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の場合は、サブジェクトは半角 128 文字まで設定できます。 128 文字を超えた場合、サブジェクトはカタログに格納されるときには切り捨てられますが、証明書を含むバイナリ ラージ オブジェクト (BLOB) では、完全なサブジェクト名が保持されます。  
+ SUBJECT = ' *certificate_subject_name* '  
+ " *サブジェクト* " という用語は、X.509 標準で定義されている、証明書のメタデータ内にあるフィールドを指します。 Linux 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の場合、サブジェクトは半角 64 文字以下の長さでなければなりません。 Windows 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の場合は、サブジェクトは半角 128 文字まで設定できます。 128 文字を超えた場合、サブジェクトはカタログに格納されるときには切り捨てられますが、証明書を含むバイナリ ラージ オブジェクト (BLOB) では、完全なサブジェクト名が保持されます。  
   
- START_DATE = '*datetime*'  
+ START_DATE = ' *datetime* '  
  証明書が有効となる日付を指定します。 指定しない場合、START_DATE は現在の日付に設定されます。 START_DATE は UTC 時刻で、日時に変換可能な任意の形式で指定できます。  
   
- EXPIRY_DATE = '*datetime*'  
+ EXPIRY_DATE = ' *datetime* '  
  証明書が期限切れとなる日付を指定します。 指定しない場合、EXPIRY_DATE は START_DATE の 1 年後の日付に設定されます。 EXPIRY_DATE は UTC 時刻で、日時に変換可能な任意の形式で指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker は、有効期限の日付を確認します。 証明書を使用する暗号化されたバックアップでは、有効期限も確認され、期限切れの証明書を使用する新しいバックアップの作成は許可されません。ただし、期限切れの証明書を使用する復元は許可されます。 ただし、証明書がデータベースの暗号化または Always Encrypted のために使用される場合、有効期限は強制されません。  
   
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
@@ -176,7 +177,7 @@ CREATE CERTIFICATE certificate_name
   
  証明書の発行者フィールド全体が格納されているが、カタログ ビューの sys.certificates で最初の 884 バイトのみです。  
   
- 秘密キーは、*certificate_name* で指定する公開キーに対応している必要があります。  
+ 秘密キーは、 *certificate_name* で指定する公開キーに対応している必要があります。  
   
  証明書をコンテナーから作成する場合、秘密キーの読み込みは省略可能です。 しかし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で自己署名証明書が生成されるときには、常に秘密キーが作成されます。 既定では、秘密キーはデータベースのマスター キーを使用して暗号化されます。 データベースのマスター キーが存在せず、パスワードを指定しない場合、ステートメントは失敗します。  
   
@@ -187,7 +188,7 @@ CREATE CERTIFICATE certificate_name
 > [!NOTE]  
 > 暗号化や署名用の組み込み関数では、証明書の有効期限はチェックされません。 これらの関数を使用する場合、ユーザーは、証明書の有効期限をいつチェックするかを自分で決定する必要があります。  
   
- 証明書のバイナリ記述は、[CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) および [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md) 関数を使って作成できます。 **CERTPRIVATEKEY** と **CERTENCODED** を使用して証明書を別のデータベースにコピーする例については、「[CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)」の例 B を参照してください。  
+ 証明書のバイナリ記述は、[CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) および [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md) 関数を使って作成できます。 **CERTPRIVATEKEY** と **CERTENCODED** を使用して証明書を別のデータベースにコピーする例については、「 [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)」の例 B を参照してください。  
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、MD2、MD4、MD5、SHA、SHA1 のアルゴリズムは非推奨です。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] までは、SHA1 を使用して自己署名証明書が作成されます。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降では、SHA2_256 を使用して自己署名証明書が作成されます。
 

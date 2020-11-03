@@ -19,12 +19,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5f27289f3363ea503e365c9398d387dcb71222b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 49ddfeda6b720d774e2b1d7c089fb295d185e40a
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195506"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067394"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,14 +63,14 @@ SET
 ```  
 Azure Synapse Analytics と Parallel Data Warehouse の構文:  
 ```syntaxsql
-SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression  
+SET @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
 **@** _local_variable_  
-**cursor**、**text**、**ntext**、**image**、または **table** を除く任意の型の変数の名前。 変数名の先頭には 1 つのアット マーク ( **@** ) を指定します。 変数名は[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
+**cursor** 、 **text** 、 **ntext** 、 **image** 、または **table** を除く任意の型の変数の名前。 変数名の先頭には 1 つのアット マーク ( **@** ) を指定します。 変数名は[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
 *property_name*  
 ユーザー定義型のプロパティ。  
@@ -82,7 +82,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 共通言語ランタイム (CLR) ユーザー定義型の名前。  
   
 `{ . | :: }`  
-CLR ユーザー定義型のメソッドを指定します。 静的メソッド以外のインスタンス メソッドでは、ピリオド (**.**) を使用します。 静的メソッドでは、2 つのコロン (**::**) を使用します。 CLR ユーザー定義型のメソッド、プロパティ、またはフィールドを呼び出すには、その型に対する EXECUTE 権限が必要です。  
+CLR ユーザー定義型のメソッドを指定します。 静的メソッド以外のインスタンス メソッドでは、ピリオド ( **.** ) を使用します。 静的メソッドでは、2 つのコロン ( **::** ) を使用します。 CLR ユーザー定義型のメソッド、プロパティ、またはフィールドを呼び出すには、その型に対する EXECUTE 権限が必要です。  
   
 _method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 ユーザー定義型のメソッド。このメソッドでは、ある型のインスタンスの状態を変更するために、1 つ以上の引数を受け取ります。 静的メソッドはパブリックであることが必要です。  
@@ -169,7 +169,7 @@ READ ONLY
 このカーソルによる更新を禁止します。 UPDATE または DELETE ステートメントの WHERE CURRENT OF 句で、このカーソルを参照することはできません。 このオプションは、更新対象のカーソルの既定の機能をオーバーライドします。 このキーワードは、以前は READ_ONLY と表記していましたが、今後は、READ と ONLY の間にアンダースコアではなくスペースを指定するようになりました。  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-カーソル内で更新できる列を定義します。 OF *column_name* [**,**...*n*] を指定した場合は、指定した列に対してのみ更新ができます。 一覧を指定しないと、カーソルを READ ONLY として定義していない限り、すべての列を更新できます。  
+カーソル内で更新できる列を定義します。 OF *column_name* [ **,**... *n* ] を指定した場合は、指定した列に対してのみ更新ができます。 一覧を指定しないと、カーソルを READ ONLY として定義していない限り、すべての列を更新できます。  
   
 ## <a name="remarks"></a>解説  
 変数は宣言後、NULL に初期化されます。 宣言された変数に NULL 以外の値を代入するには、SET ステートメントを使用します。 変数に値を代入する SET ステートメントでは、1 つの値が返されます。 複数の変数を初期化する場合は、各ローカル変数に対して 1 つずつ、SET ステートメントを使用してください。  
