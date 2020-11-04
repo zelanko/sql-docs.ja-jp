@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f62aebfe079ed8a701301ca7d5d3a5c70127407a
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: 8816e2ca5872da55193fab016a459a461359c742
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92678899"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328578"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-sql)
 
@@ -41,11 +41,11 @@ ms.locfileid: "92678899"
 |database_id|**int**|明示的なコンテキストによって使用されるデータベースの識別子 (たとえば、DB_X を使用します)。|「 [Transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)の ID」を参照してください。|  
 |command|**nvarchar (4000)**|ユーザーによって送信された要求の完全なテキストを保持します。|任意の有効なクエリまたは要求テキスト。 4000バイトを超えるクエリは切り捨てられます。|  
 |resource_class|**nvarchar (20)**|この要求に使用するワークロードグループ。 |静的リソース クラス</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>動的リソース クラス</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance|**nvarchar(128)**|要求を実行するときの重要度を設定します。  これは、このワークロードグループでの要求の相対的な重要度であり、共有リソースの複数のワークロードグループにまたがっています。  分類子で指定された重要度は、ワークロードグループの重要度の設定よりも優先されます。</br>適用対象:Azure SQL Data Warehouse|NULL</br>low</br>below_normal</br>標準 (既定値)</br>above_normal</br>high|
-|group_name|**sysname** |リソースを利用する要求の場合、group_name は、要求が実行されているワークロードグループの名前です。  要求でリソースが使用されない場合、group_name は null になります。</br>適用対象:Azure SQL Data Warehouse|
+|importance|**nvarchar(128)**|要求を実行するときの重要度を設定します。  これは、このワークロードグループでの要求の相対的な重要度であり、共有リソースの複数のワークロードグループにまたがっています。  分類子で指定された重要度は、ワークロードグループの重要度の設定よりも優先されます。</br>適用対象:Azure Synapse Analytics|NULL</br>low</br>below_normal</br>標準 (既定値)</br>above_normal</br>high|
+|group_name|**sysname** |リソースを利用する要求の場合、group_name は、要求が実行されているワークロードグループの名前です。  要求でリソースが使用されない場合、group_name は null になります。</br>適用対象:Azure Synapse Analytics|
 |classifier_name|**sysname**|リソースを利用する要求の場合、リソースの割り当てに使用される分類子の名前と重要度。||
-|resource_allocation_percentage|**decimal (5, 2)**|要求に割り当てられたリソースの割合。</br>適用対象:Azure SQL Data Warehouse|
-|result_cache_hit|**int**|完了したクエリで結果セットキャッシュが使用されたかどうかを詳細に表示します。  </br>適用対象:Azure SQL Data Warehouse| 1 = 結果セットのキャッシュヒット </br> 0 = 結果セットのキャッシュミス </br> 負の整数値 = 結果セットのキャッシュが使用されなかった理由。  詳細については、「解説」を参照してください。|
+|resource_allocation_percentage|**decimal (5, 2)**|要求に割り当てられたリソースの割合。</br>適用対象:Azure Synapse Analytics|
+|result_cache_hit|**int**|完了したクエリで結果セットキャッシュが使用されたかどうかを詳細に表示します。  </br>適用対象:Azure Synapse Analytics| 1 = 結果セットのキャッシュヒット </br> 0 = 結果セットのキャッシュミス </br> 負の整数値 = 結果セットのキャッシュが使用されなかった理由。  詳細については、「解説」を参照してください。|
 |client_correlation_id|**nvarchar (255)**|クライアントセッションのオプションのユーザー定義名。  セッションに対してを設定するには、sp_set_session_context ' client_correlation_id '、' ' を呼び出し <CorrelationIDName> ます。  を実行して `SELECT SESSION_CONTEXT(N'client_correlation_id')` 値を取得します。|
 ||||
 
@@ -54,7 +54,7 @@ ms.locfileid: "92678899"
 
 Result_cache_hit 列の負の整数値は、適用されているすべての理由のビットマップ値で、クエリの結果セットをキャッシュすることはできません。  この列は [|(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) 次の1つまたは複数の値の積。  
   
-|[値]            |説明  |  
+|値            |説明  |  
 |-----------------|-----------------|  
 |**1**|結果セットのキャッシュヒット|  
 |**0x00** ( **0** )|結果セットのキャッシュミス|  
@@ -81,4 +81,4 @@ Result_cache_hit 列の負の整数値は、適用されているすべての理
   
 ## <a name="see-also"></a>参照
 
- [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
+ [Azure Synapse Analytics と並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

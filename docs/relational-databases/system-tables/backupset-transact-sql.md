@@ -21,12 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9f566216c0dfd9f30a35c9472db433ad71e2f3c
-ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
+ms.openlocfilehash: 84c61b1e6517bc98e8acb32a8215f2dad853d7e5
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93294388"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328597"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-sql)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "93294388"
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メジャーバージョン番号。 NULL にすることができます。|  
 |**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマイナー バージョン番号。 NULL にすることができます。|  
 |**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のビルド番号。 NULL にすることができます。|  
-|**time_zone**|**smallint**|バックアップ操作の開始時に、15分間隔で現地時刻 (バックアップ操作が行われている場所) と世界協定時刻 (UTC) の差。 値は、-48 ~ + 48 の範囲で指定できます。 値 127 は、不明な状態を表します。 たとえば、-20 は東部標準時刻 (EST) を表し、これは UTC の 5 時間前にあたります。 NULL にすることができます。|  
+|**time_zone**|**smallint**|バックアップ操作の開始時のタイムゾーン情報を使用して、ローカル時刻 (バックアップ操作が実行されている場所) と世界協定時刻 (UTC) の差を15分間隔で指定します。 値は、-48 ~ + 48 の範囲で指定できます。 値 127 は、不明な状態を表します。 たとえば、-20 は東部標準時刻 (EST) を表し、これは UTC の 5 時間前にあたります。 NULL にすることができます。|  
 |**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format のマイナー バージョン番号。 NULL にすることができます。|  
 |**first_lsn**|**numeric(25,0)**|バックアップセット内の最初または最も古いログレコードのログシーケンス番号。 NULL にすることができます。|  
 |**last_lsn**|**numeric(25,0)**|バックアップ セットの次のログ レコードのログ シーケンス番号。 NULL にすることができます。|  
