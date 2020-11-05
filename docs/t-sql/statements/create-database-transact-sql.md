@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: SQL Server、Azure SQL Database、Azure Synapse Analytics、Analytics Platform System のデータベース構文を作成します。
 ms.custom: references_regions
-ms.date: 09/29/2020
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 211ed452674eb5cfc8d33d648fbefc66913ba4bd
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: e66c5801b3a927b28f355e450be9d31c796e78dc
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496912"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235399"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -979,7 +979,7 @@ CATALOG_COLLATION: メタデータ カタログの既定の照合順序を指定
 BACKUP_STORAGE_REDUNDANCY により、データベースのポイントインタイム リストア バックアップおよび長期保有バックアップがどのように複製されるかが指定されます。 Geo リストアまたは地域的な障害からの復旧機能は、データベースが "GEO" バックアップ ストレージの冗長性を使用して作成されている場合にのみ使用できます。 明示的に指定しない限り、T-SQL で作成されたデータベースは geo 冗長バックアップ ストレージを使用します。 
 
 > [!IMPORTANT]
-> Azure SQL Database の BACKUP_STORAGE_REDUNDANCY オプションは、Azure の東南アジア リージョンでのみ、パブリック プレビューで利用できます。  
+> Azure SQL Database の BACKUP_STORAGE_REDUNDANCY オプションは、ブラジル南部ではパブリック プレビューとして利用でき、一般公開されているのは東南アジアの Azure リージョンのみです。  
 
 EDITION: データベースのサービス層を指定します。
 

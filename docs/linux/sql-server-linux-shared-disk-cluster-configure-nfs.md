@@ -9,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 06cd2218a2a194ab3345fc9ed00ae40e17f0141d
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 218c4685b7305a1442f85e9b10da7144c6189ea3
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784878"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235659"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスを構成する - NFS - SQL Server on Linux
 
@@ -36,7 +36,7 @@ NFS サーバーで共有されるようにフォルダーを構成するとき�
 
 アクセスに対してセキュリティ標準が適用されていることを確認します。 フォルダーを構成するときは、FCI に参加しているサーバーだけが NFS フォルダーを参照するようにします。 Linux ベースの NFS ソリューション上で変更された /etc/exports の例を次に示します。フォルダーは FCIN1 および FCIN2 に制限されています。
 
-![05-nfsacl][1]
+![Linux ベースの NFS ソリューション上で変更された /etc/exports の例のスクリーンショットを次に示します。フォルダーは FCIN1 および FCIN2 に制限されています。][1]
 
 ## <a name="instructions"></a>Instructions
 
@@ -132,7 +132,7 @@ NFS サーバーで共有されるようにフォルダーを構成するとき�
     mount
     ```
 
-    ![10-mountnoswitches][2]
+    ![mount コマンドとスイッチなしを示すコマンドへの応答のスクリーンショット。][2]
 
    * mssql ユーザーに切り替えます。 成功した場合は、確認応答を何も受け取りません。
 
@@ -228,7 +228,7 @@ NFS サーバーで共有されるようにフォルダーを構成するとき�
 
    * テストするには、そのフォルダーにデータベースを作成します。 次の例では、sqlcmd を使用してデータベースを作成し、コンテキストをそれに切り替え、ファイルが OS レベルで存在することを確認した後、一時的な場所を削除します。 SSMS を使用できます。
 
-    ![15-createtestdatabase][4]
+    ![sqlcmd コマンドとコマンドへの応答のスクリーンショット。][4]
  
    * 共有のマウントを解除します 
 

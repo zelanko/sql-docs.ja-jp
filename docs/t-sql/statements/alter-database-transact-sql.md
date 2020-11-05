@@ -2,7 +2,7 @@
 description: ALTER DATABASE (Transact-SQL)
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
 ms.custom: references_regions
-ms.date: 09/29/2020
+ms.date: 10/30/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73525f3a89fd0e132de819deefee840c8db8944a
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: c452310bbc2813cb3d11ced51f680c7a1f66e5e0
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92497034"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235389"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -68,23 +68,30 @@ ms.locfileid: "92497034"
 
 ## <a name="overview-sql-server"></a>概要:SQL Server
 
-SQL Server では、このステートメントはデータベース、またはそのデータベースに関連付けられているファイルおよびファイル グループを変更します。 データベースに対するファイルやファイル グループの追加と削除、データベースおよびデータベースのファイルやファイル グループの属性の変更、データベースの照合順序の変更、データベース オプションの設定を行えます。 データベース スナップショットを変更することはできません。 レプリケーションに関連するデータベース オプションを変更するには、[sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) を使用してください。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このステートメントはデータベース、またはそのデータベースに関連付けられているファイルおよびファイル グループを変更します。 データベースに対するファイルやファイル グループの追加と削除、データベースおよびデータベースのファイルやファイル グループの属性の変更、データベースの照合順序の変更、データベース オプションの設定を行えます。 データベース スナップショットを変更することはできません。 レプリケーションに関連するデータベース オプションを変更するには、[sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) を使用してください。
 
-解説が長くなるため、ALTER DATABASE の構文は複数の記事に分けて説明します。
+解説が長くなるため、`ALTER DATABASE` の構文は複数の記事に分けて説明します。
 
-ALTER DATABASE: この記事では、データベースの名前と照合順序を変更するための構文および関連情報について説明します。
+ALTER DATABASE   
+この記事では、データベースの名前と照合順序を変更するための構文および関連情報について説明します。
 
-「[ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」では、データベースのファイルおよびファイル グループを追加したり削除したりするための構文と関連情報のほか、ファイルおよびファイル グループの属性を変更するための構文について説明します。
+[ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)   
+データベースのファイルおよびファイル グループを追加したり削除したりするための構文と関連情報のほか、ファイルおよびファイル グループの属性を変更するための構文について説明します。
 
-「[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)」では、ALTER DATABASE の SET オプションを使ってデータベースの属性を変更するための構文と関連情報について説明します。
+[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ALTER DATABASE の SET オプションを使ってデータベースの属性を変更するための構文と関連情報について説明します。
 
-[ALTER DATABASE のデータベース ミラーリング](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) ALTER DATABASE のデータベース ミラーリングに関連した SET オプションの構文と関連情報について説明します。
+[ALTER DATABASE データベース ミラーリング](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
+ALTER DATABASE のデータベース ミラーリングに関連した SET オプションの構文と関連情報について説明します。
 
-[ALTER DATABASE の SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) Always On 可用性グループのセカンダリ レプリカ上のセカンダリ データベースを構成するための、ALTER DATABASE の [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] オプションの構文と関連情報について説明します。
+[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
+Always On 可用性グループのセカンダリ レプリカ上のセカンダリ データベースを構成するための、ALTER DATABASE の [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] オプションの構文と関連情報について説明します。
 
-「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」では、ALTER DATABASE のデータベース互換レベルに関連した SET オプションの構文と関連情報について説明します。
+[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
+ALTER DATABASE のデータベース互換レベルに関連した SET オプションの構文と関連情報について説明します。
 
-[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 関連する動作のクエリの最適化とクエリの実行など、個別のデータベース レベルの設定に使用するため、データベース スコープ構成に関連する構文について説明します。
+[データベース スコープ構成の変更](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+関連する動作のクエリの最適化とクエリの実行など、個別のデータベース レベルの設定に使用するため、データベース スコープ構成に関連する構文について説明します。
 
 ## <a name="syntax"></a>構文
 
@@ -140,13 +147,16 @@ ALTER DATABASE { database_name | CURRENT }
 > [!NOTE]
 > このオプションは、包含データベースでは使用できません。
 
-現在の **適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
+CURRENT   
+**適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
 
 使用中の現在のデータベースを変更することを指定します。
 
-MODIFY NAME **=** _new_database_name_ : データベースの名前を、 *new_database_name* で指定した名前に変更します。
+MODIFY NAME **=** _new_database_name_   
+データベースの名前を、 *new_database_name* で指定した名前に変更します。
 
-COLLATE *collation_name* : データベースの照合順序を指定します。 *collation_name* には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合は、データベースに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの照合順序が割り当てられます。
+COLLATE *collation_name*   
+データベースの照合順序を指定します。 *collation_name* には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合は、データベースに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの照合順序が割り当てられます。
 
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でデータベースが作成された後は、照合順序を変更することはできません。
@@ -155,12 +165,13 @@ COLLATE *collation_name* : データベースの照合順序を指定します�
 
 Windows 照合順序名および SQL 照合順序名について詳しくは、「[COLLATE](~/t-sql/statements/collations.md)」をご覧ください。
 
-**\<delayed_durability_option> ::=** 
+**\<delayed_durability_option> ::=**    
 **適用対象** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。
 
 詳しくは、「[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)」および「[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)」をご覧ください。
 
-**\<file_and_filegroup_options>::=** 詳しくは、 [ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)に関する記事をご覧ください。
+**\<file_and_filegroup_options>::=**    
+詳しくは、「[ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」をご覧ください。
 
 ## <a name="remarks"></a>解説
 
@@ -311,13 +322,16 @@ GO
 
 Azure SQL Database では、このステートメントを使ってデータベースを変更します。 データベースの名前の変更、データベースのエディションとサービス目標の変更、エラスティック プールへのデータベースの参加またはエラスティック プールからのデータベースの削除、データベース オプションの設定、geo レプリケーション リレーションシップでのセカンダリ としてのデータベースの追加または削除、データベースの互換性レベルの設定を行うには、このステートメントを使います。
 
-解説が長くなるため、ALTER DATABASE の構文は複数の記事に分けて説明します。
+解説が長くなるため、`ALTER DATABASE` の構文は複数の記事に分けて説明します。
 
-ALTER DATABASE: この記事では、データベースの名前と照合順序を変更するための構文および関連情報について説明します。
+ALTER DATABASE   
+この記事では、データベースの名前と照合順序を変更するための構文および関連情報について説明します。
 
-「[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-currentls)」では、ALTER DATABASE の SET オプションを使ってデータベースの属性を変更するための構文と関連情報について説明します。
+[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-currentls)    
+ALTER DATABASE の SET オプションを使ってデータベースの属性を変更するための構文と関連情報について説明します。
 
-「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-currentls)」では、ALTER DATABASE のデータベース互換レベルに関連した SET オプションの構文と関連情報について説明します。
+[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-currentls)   
+ALTER DATABASE のデータベース互換レベルに関連した SET オプションの構文と関連情報について説明します。
 
 ## <a name="syntax"></a>構文
 
@@ -403,18 +417,22 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>引数
 
-*database_name* : 変更するデータベースの名前です。
+*database_name*   
+変更するデータベースの名前です。
 
-CURRENT: 使用中の現在のデータベースを変更する必要があることを指定します。
+CURRENT   
+使用中の現在のデータベースを変更することを指定します。
 
-MODIFY NAME **=** _new_database_name_ : データベースの名前を、 *new_database_name* で指定した名前に変更します。 次の例では、`db1` データベースの名前を `db2` に変更します。
+MODIFY NAME **=** _new_database_name_   
+データベースの名前を、 *new_database_name* で指定した名前に変更します。 次の例では、`db1` データベースの名前を `db2` に変更します。
 
 ```sql
 ALTER DATABASE db1
     MODIFY Name = db2 ;
 ```
 
-MODIFY (EDITION **=** ['Basic' \| 'Standard' \| 'Premium' \|'GeneralPurpose' \| 'BusinessCritical' \| 'Hyperscale']) データベースのサービス レベルを変更します。
+MODIFY (EDITION **=** ['Basic' \| 'Standard' \| 'Premium' \|'GeneralPurpose' \| 'BusinessCritical' \| 'Hyperscale'])   
+データベースのサービス階層を変更します。
 
 次の例では、エディションを `Premium` に変更します。
 
@@ -426,12 +444,14 @@ ALTER DATABASE current
 > [!IMPORTANT]
 > データベースの MAXSIZE プロパティがそのエディションでサポートされる有効な範囲内の値に設定されていない場合、EDITION の変更は失敗します。
 
-MODIFY (BACKUP_STORAGE_REDUNDANCY **=** ['LOCAL' \| 'ZONE' \| 'GEO']) データベースのポイントインタイム リストア バックアップおよび長期保有バックアップの (構成されている場合) ストレージの冗長性を変更します。 この変更は、将来的に行われるすべてのバックアップに適用されます。 既存のバックアップによって、引き続き以前の設定が使用されます。 
+MODIFY (BACKUP_STORAGE_REDUNDANCY **=** ['LOCAL' \| 'ZONE' \| 'GEO'])   
+データベースのポイントインタイム リストア バックアップと長期保有バックアップ (構成されている場合) のストレージの冗長性が変更されます。 この変更は、将来的に行われるすべてのバックアップに適用されます。 既存のバックアップによって、引き続き以前の設定が使用されます。 
 
 > [!IMPORTANT]
-> Azure SQL Database の BACKUP_STORAGE_REDUNDANCY オプションは、Azure の東南アジア リージョンでのみ、パブリック プレビューで利用できます。  
+> Azure SQL Database の BACKUP_STORAGE_REDUNDANCY オプションは、ブラジル南部ではパブリック プレビューとして利用でき、一般公開されているのは東南アジアの Azure リージョンのみです。  
 
-MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) データベースの最大サイズを指定します。 最大サイズは、データベースの EDITION プロパティの有効な値セットに準拠している必要があります。 データベースの最大サイズを変更すると、データベースの EDITION も変更される場合があります。
+MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB)   
+データベースの最大サイズを指定します。 最大サイズは、データベースの EDITION プロパティの有効な値セットに準拠している必要があります。 データベースの最大サイズを変更すると、データベースの EDITION も変更される場合があります。
 
 > [!NOTE]
 > **MAXSIZE** 引数は、ハイパースケール サービス層の単一データベースには適用されません。 ハイパースケール サービス層のデータベースは、必要に応じて 100 TB まで拡張できます。 SQL Database サービスによってストレージが自動的に追加されます。最大サイズを設定する必要はありません。
@@ -565,14 +585,15 @@ vCore モデルを使用する場合に `MAXSIZE` 値が設定されていない
 - EDITION が指定され、MAXSIZE が指定されていない場合は、エディションの既定値が使用されます。 たとえば、EDITION が Standard に設定されていて、MAXSIZE が指定されていない場合、MAXSIZE は自動的に 250 MB に設定されます。
 - MAXSIZE も EDITION も指定されていない場合、EDITION は General Purpose に設定され、MAXSIZE は 32 GB に設定されます。
 
-MODIFY (SERVICE_OBJECTIVE = \<service-objective>): コンピューティング サイズ (サービス目標) を指定します。 次の例では、Premium データベースのサービスの目標を `P6` に変更します。
+MODIFY (SERVICE_OBJECTIVE = \<service-objective>)   
+コンピューティング サイズ (サービス目標) を指定します。 次の例では、Premium データベースのサービスの目標を `P6` に変更します。
 
 ```sql
 ALTER DATABASE current
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```
 
-SERVICE_OBJECTIVE
+SERVICE_OBJECTIVE   
 
 - **単一のデータベースおよびプールされたデータベースの場合**
 
@@ -588,13 +609,13 @@ SERVICE_OBJECTIVE
 
 サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、[Azure SQL Database サービス レベルとパフォーマンス レベル](/azure/azure-sql/database/purchasing-models)、[DTU リソースの制限](/azure/sql-database/sql-database-dtu-resource-limits)、[仮想コア リソースの制限](/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。 PRS サービスの目標のサポートはなくなりました。 質問については、電子メール エイリアス premium-rs@microsoft.com を使用してください。
 
-MODIFY (ERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>): エラスティック プールに既存のデータベースを追加するには、データベースの SERVICE_OBJECTIVE を ELASTIC_POOL に設定し、エラスティック プールの名前を指定します。 このオプションを使用して、データベースを同じサーバー内の別のエラスティック プールに変更することもできます。 詳しくは、[SQL Database エラスティック プールの作成と管理](/azure/azure-sql/database/elastic-pool-overview)に関するページをご覧ください。 エラスティック プールからデータベースを削除するには、ALTER DATABASE を使用して、SERVICE_OBJECTIVE を単一のデータベースのコンピューティング サイズ (サービス目標) に設定します。
+MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)   
+エラスティック プールに既存のデータベースを追加するには、データベースの SERVICE_OBJECTIVE を ELASTIC_POOL に設定し、エラスティック プールの名前を指定します。 このオプションを使用して、データベースを同じサーバー内の別のエラスティック プールに変更することもできます。 詳しくは、[SQL Database エラスティック プールの作成と管理](/azure/azure-sql/database/elastic-pool-overview)に関するページをご覧ください。 エラスティック プールからデータベースを削除するには、ALTER DATABASE を使用して、SERVICE_OBJECTIVE を単一のデータベースのコンピューティング サイズ (サービス目標) に設定します。
 
 > [!NOTE]
 > ハイパースケール サービス層のデータベースをエラスティック プールに追加することはできません。
 
-ADD SECONDARY ON SERVER \<partner_server_name>
-
+ADD SECONDARY ON SERVER \<partner_server_name>   
 パートナー サーバー上に同じ名前の geo レプリケーションのセカンダリ データベースを作成し、ローカル データベースを geo レプリケーションのプライマリにして、プライマリから新しいセカンダリに非同期でデータのレプリケーションを開始します。 セカンダリ上に同じ名前のデータベースが既に存在する場合、コマンドは失敗します。 コマンドは、プライマリとなるローカル データベースをホストしているサーバーの master データベースで実行されます。
 
 > [!IMPORTANT]
@@ -603,7 +624,8 @@ ADD SECONDARY ON SERVER \<partner_server_name>
 > [!IMPORTANT]
 > 既定では、セカンダリ データベースは、プライマリ データベースまたはソース データベースと同じバックアップ ストレージ冗長性を使用して作成されます。 セカンダリの作成時のバックアップ ストレージの冗長性の変更は、T-SQL によってサポートされていません。 
 
-WITH ALLOW_CONNECTIONS { **ALL** | NO }: ALLOW_CONNECTIONS が指定されていない場合は、これは既定で ALL に設定されます。 ALL に設定されている場合は、適切なアクセス許可を持つすべてのログインに接続を許可する読み取り専用データベースになります。
+WITH ALLOW_CONNECTIONS { **ALL** | NO }   
+ALLOW_CONNECTIONS が指定されていない場合は、既定では ALL に設定されます。 ALL に設定されている場合は、適切なアクセス許可を持つすべてのログインに接続を許可する読み取り専用データベースになります。
 
 WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, `GP_Fsv2_14`, `GP_Fsv2_16`, `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`, `GP_Fsv2_32`, `GP_Fsv2_36`, `GP_Fsv2_72`, `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`, `GP_S_Gen5_18`, `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen5_32`, `GP_S_Gen5_40`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`, `BC_M_16`, `BC_M_18`, `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64`, `BC_M_128` }
 
@@ -779,17 +801,21 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
 
 ## <a name="overview-azure-sql-managed-instance"></a>概要:Azure SQL Managed Instance
 
-Azure SQL Managed Instance では、このステートメントを使ってデータベース オプションを設定します。
+[!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] では、このステートメントを使用してデータベース オプションが設定されます。
 
-解説が長くなるため、ALTER DATABASE の構文は複数の記事に分けて説明します。
+解説が長くなるため、`ALTER DATABASE` の構文は複数の記事に分けて説明します。
 
-ALTER DATABASE: この記事では、ファイルとファイル グループのオプションの設定、データベース オプションの設定、およびデータベースの互換性レベルの設定のための構文と関連情報を説明します。  
+ALTER DATABASE   
+この記事では、ファイルとファイル グループのオプションの設定、データベース オプションの設定、およびデータベースの互換性レベルの設定のための構文と関連情報を説明します。  
   
-「[ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi)」では、データベースのファイルおよびファイル グループを追加したり削除したりするための構文と関連情報のほか、ファイルおよびファイル グループの属性を変更するための構文について説明します。  
+[ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi)   
+データベースのファイルおよびファイル グループを追加したり削除したりするための構文と関連情報のほか、ファイルおよびファイル グループの属性を変更するための構文について説明します。  
   
-「[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi)」では、ALTER DATABASE の SET オプションを使ってデータベースの属性を変更するための構文と関連情報について説明します。  
+[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi)   
+ALTER DATABASE の SET オプションを使ってデータベースの属性を変更するための構文と関連情報について説明します。  
   
-「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi)」では、ALTER DATABASE のデータベース互換レベルに関連した SET オプションの構文と関連情報について説明します。  
+[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi)   
+ALTER DATABASE のデータベース互換レベルに関連した SET オプションの構文と関連情報について説明します。  
 
 ## <a name="syntax"></a>構文
 
@@ -834,9 +860,11 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>引数
 
-*database_name* : 変更するデータベースの名前です。
+*database_name*   
+変更するデータベースの名前です。
 
-CURRENT: 使用中の現在のデータベースを変更する必要があることを指定します。
+CURRENT   
+使用中の現在のデータベースを変更することを指定します。
 
 ## <a name="remarks"></a>解説
 
@@ -913,11 +941,12 @@ ALTER DATABASE WideWorldImporters
 
 ## <a name="overview-azure-synapse-analytics"></a>概要:Azure Synapse Analytics
 
-Azure Synapse では、'ALTER DATABASE' によりデータベースの名前、最大サイズ、またはサービス目標が変更されます。
+Azure Synapse では、`ALTER DATABASE` によりデータベースの名前、最大サイズ、またはサービス目標が変更されます。
 
-解説が長くなるため、ALTER DATABASE の構文は複数の記事に分けて説明します。
+解説が長くなるため、`ALTER DATABASE` の構文は複数の記事に分けて説明します。
 
-「[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)」では、ALTER DATABASE の SET オプションを使ってデータベースの属性を変更するための構文と関連情報について説明します。
+[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ALTER DATABASE の SET オプションを使ってデータベースの属性を変更するための構文と関連情報について説明します。
 
 ## <a name="syntax"></a>構文
 
@@ -984,11 +1013,14 @@ ALTER DATABASE { database_name | Current }
 
 ## <a name="arguments"></a>引数
 
-*database_name* : 変更するデータベースの名前を指定します。
+*database_name*   
+変更するデータベースの名前を指定します。
 
-MODIFY NAME = *new_database_name* : データベースの名前を、 *new_database_name* で指定した名前に変更します。
+MODIFY NAME = *new_database_name*   
+データベースの名前を、 *new_database_name* で指定した名前に変更します。
 
-MAXSIZE 既定値は 245,760 GB (240 TB) です。
+MAXSIZE   
+既定値は 245,760 GB (240 TB) です。
 
 **適用対象:** Gen1 コンピューティングに最適化
 
@@ -998,7 +1030,8 @@ MAXSIZE 既定値は 245,760 GB (240 TB) です。
 
 データベースの行ストア データの最大許容サイズ。 行ストア テーブル、列ストア インデックスのデルタストア、またはクラスター化列ストア インデックスの非クラスター化インデックスに格納されているデータは MAXSIZE を超えることはできません。 列ストア形式に圧縮されたデータにはサイズ制限はなく、MAXSIZE に制約されません。
 
-SERVICE_OBJECTIVE: コンピューティング サイズ (サービス目標) を指定します。 Azure Synapse のサービス目標の詳細については、「[Data Warehouse ユニット (DWU)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)」を参照してください。
+SERVICE_OBJECTIVE   
+コンピューティング サイズ (サービス目標) を指定します。 Azure Synapse のサービス目標の詳細については、「[Data Warehouse ユニット (DWU)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可
 
@@ -1114,31 +1147,40 @@ ALTER DATABASE database_name
 
 ## <a name="arguments"></a>引数
 
-*database_name* : 変更するデータベースの名前です。 アプライアンス上でデータベースの一覧を表示するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) を使用します。
+*database_name*   
+変更するデータベースの名前。 アプライアンス上でデータベースの一覧を表示するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) を使用します。
 
-AUTOGROW = { ON | OFF }: AUTOGROW オプションを更新します。 AUTOGROW が ON のとき、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、複製テーブル、分散テーブル、トランザクション ログの割り当て領域を必要に応じて自動的に増やし、記憶域要件の増加に対応します。 AUTOGROW が OFF のとき、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、複製テーブル、分散テーブル、トランザクション ログが最大サイズ設定を超過したときにエラーを返します。
+AUTOGROW = { ON | OFF }   
+AUTOGROW オプションを更新します。 AUTOGROW が ON のとき、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、複製テーブル、分散テーブル、トランザクション ログの割り当て領域を必要に応じて自動的に増やし、記憶域要件の増加に対応します。 AUTOGROW が OFF のとき、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、複製テーブル、分散テーブル、トランザクション ログが最大サイズ設定を超過したときにエラーを返します。
 
-REPLICATED_SIZE = *size* [GB]: 変更されているデータベースのすべての複製テーブルを格納するための新しい最大 GB を計算ノードごとに指定します。 アプライアンスの記憶域を計画している場合、アプライアンスの計算ノード数に REPLICATED_SIZE を掛ける必要があります。
+REPLICATED_SIZE = *size* [GB]   
+変更されているデータベースのすべての複製テーブルを格納するための新しい最大 GB を計算ノードごとに指定します。 アプライアンスの記憶域を計画している場合、アプライアンスの計算ノード数に REPLICATED_SIZE を掛ける必要があります。
 
-DISTRIBUTED_SIZE = *size* [GB]: 変更されているデータベースのすべての分散テーブルを格納するための新しい最大 GB をデータベースごとに指定します。 このサイズは、アプライアンスの計算ノード全体で分散されます。
+DISTRIBUTED_SIZE = *size* [GB]   
+変更されているデータベースのすべての分散テーブルを格納するための新しい最大 GB をデータベースごとに指定します。 このサイズは、アプライアンスの計算ノード全体で分散されます。
 
-LOG_SIZE = *size* [GB]: 変更されているデータベースのすべてのトランザクション ログを格納するための新しい最大 GB をデータベースごとに指定します。 このサイズは、アプライアンスの計算ノード全体で分散されます。
+LOG_SIZE = *size* [GB]   
+変更されているデータベースのすべてのトランザクション ログを格納するための新しい最大 GB をデータベースごとに指定します。 このサイズは、アプライアンスの計算ノード全体で分散されます。
 
-ENCRYPTION { ON | OFF }: データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の暗号化は、 [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) が **1** に設定されているときにのみ構成できます。 Transparent Data Encryption を構成するには、先にデータベース暗号化キーを作成する必要があります。 データベース暗号化の詳細については、「[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。
+ENCRYPTION { ON | OFF }   
+データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の暗号化は、 [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) が **1** に設定されているときにのみ構成できます。 Transparent Data Encryption を構成するには、先にデータベース暗号化キーを作成する必要があります。 データベース暗号化の詳細については、「[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。
 
-SET AUTO_CREATE_STATISTICS { ON | OFF } 統計の自動作成オプション AUTO_CREATE_STATISTICS がオンの場合、クエリ プランのカーディナリティの推定を向上させるために、クエリ オプティマイザーによってクエリ述語内の個々の列に関する統計が必要に応じて作成されます。 これらの 1 列ずつの統計は、既存の統計オブジェクトにまだヒストグラムがない列について作成されます。
+SET AUTO_CREATE_STATISTICS { ON | OFF }   
+統計の自動作成オプション AUTO_CREATE_STATISTICS が ON の場合、クエリ プランのカーディナリティの推定を向上させるために、クエリ オプティマイザーによってクエリ述語内の個々の列に関する統計が必要に応じて作成されます。 これらの 1 列ずつの統計は、既存の統計オブジェクトにまだヒストグラムがない列について作成されます。
 
 AU7 へのアップグレード後に作成された新しいデータベースの場合、既定値は ON です。 アップグレードの前に作成されたデータベースの場合、既定値は OFF です。
 
 統計の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。
 
-SET AUTO_UPDATE_STATISTICS { ON | OFF } 統計の自動更新オプション AUTO_UPDATE_STATISTICS がオンの場合、古くなっている可能性がある統計がクエリ オプティマイザーによって判断され、それらがクエリで使用されると更新されます。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。
+SET AUTO_UPDATE_STATISTICS { ON | OFF }   
+統計の自動更新オプション AUTO_UPDATE_STATISTICS が ON の場合、古くなっている可能性がある統計がクエリ オプティマイザーによって判断され、それらがクエリで使用されると更新されます。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。
 
 AU7 へのアップグレード後に作成された新しいデータベースの場合、既定値は ON です。 アップグレードの前に作成されたデータベースの場合、既定値は OFF です。
 
 統計の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。
 
-SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 統計の非同期更新オプション AUTO_UPDATE_STATISTICS_ASYNC によって、クエリ オプティマイザーで統計の同期更新と非同期更新のどちらを使用するかが決まります。 AUTO_UPDATE_STATISTICS_ASYNC オプションは、インデックスに対して作成された統計オブジェクト、クエリ述語内の列に対して 1 列ずつ作成された統計オブジェクト、および CREATE STATISTICS ステートメントを使用して作成された統計に適用されます。
+SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }   
+統計の非同期更新オプション AUTO_UPDATE_STATISTICS_ASYNC によって、クエリ オプティマイザーで統計の同期更新と非同期更新のどちらを使用するかが決まります。 AUTO_UPDATE_STATISTICS_ASYNC オプションは、インデックスに対して作成された統計オブジェクト、クエリ述語内の列に対して 1 列ずつ作成された統計オブジェクト、および CREATE STATISTICS ステートメントを使用して作成された統計に適用されます。
 
 AU7 へのアップグレード後に作成された新しいデータベースの場合、既定値は ON です。 アップグレードの前に作成されたデータベースの場合、既定値は OFF です。
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 562063245f2c8aaf5204385be20e6687554d5d46
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: f54f2fdce030f477a9e203daa837287dff86f107
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300186"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043846"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -493,7 +493,7 @@ WITH
 
 資格情報の作成時の追加の注意事項とガイダンス:
 
-- Azure Storage から [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] にデータを読み込むには、Azure Storage キーを使用します。
+- Azure Storage から [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] にデータを読み込むには、Shared Access Signature (SAS トークン) を使用します。
 - `CREDENTIAL` は、データがセキュリティ保護されている場合にのみ必須です。 匿名アクセスを許可するデータ セットには、`CREDENTIAL` は必要ありません。
 - `TYPE` = `BLOB_STORAGE` の場合、`SHARED ACCESS SIGNATURE` を ID として使用して、資格情報を作成する必要があります。 さらに、SAS トークンを次のように構成する必要があります。
   - シークレットとして構成されている場合、先頭の `?` を除外する
