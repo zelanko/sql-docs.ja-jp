@@ -6,13 +6,13 @@ ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- sql13.swb.tsqlquery.f1
-- sql13.swb.tsqlresults.f1
 - sql13.swb.query.advanced.f1
 - sql13.swb.query.ansi.f1
 - sql13.swb.query.general.f1
-- sql13.swb.query.general.f1
+- sql13.swb.query.grid.f1
 - sql13.swb.sqleditors.multiserverresultssettings
+- sql13.swb.tsqlquery.f1
+- sql13.swb.tsqlresults.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -43,12 +43,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 219ebb8a431b997951b22d443877dfb751665384
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.openlocfilehash: 7450a77549d05dab5a024b39be6d2b4aef6c09de
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344068"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364848"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>SQL Server Management Studio (SSMS) クエリ エディター
 
@@ -94,7 +94,7 @@ SSMS のエディターは、一般的なアーキテクチャを共有します
 
 選択されているコードを実行します。コードが選択されていない場合は、すべてのクエリ エディター コードを実行します。
 
-F5 キーを押すか、[コンテキスト メニュー](#execute-using-the-context-menu)から選択してクエリを**実行**することもできます。
+F5 キーを押すか、 [コンテキスト メニュー](#execute-using-the-context-menu)から選択してクエリを **実行** することもできます。
 
 ### <a name="cancel-executing-query-using-the-editor-toolbar"></a>エディター ツール バーを使用した [クエリ実行のキャンセル]
 
@@ -118,31 +118,31 @@ Alt + Break キー押して、実行中のクエリをキャンセルするこ�
 
 **[クエリ オプション]** ダイアログ ボックスを開きます。 このダイアログ ボックスを使用すると、クエリの実行およびクエリ結果に関する既定のオプションを構成できます。
 
-**[クエリ オプション]** は、[コンテキスト メニュー](#query-options-using-the-context-menu)から選択することもできます。
+**[クエリ オプション]** は、 [コンテキスト メニュー](#query-options-using-the-context-menu)から選択することもできます。
 
 ### <a name="intellisense-enabled-using-the-editor-toolbar"></a>エディター ツール バーを使用した [IntelliSense 有効]
 
 データベース エンジン クエリ エディターで、[IntelliSense](../scripting/configure-intellisense-sql-server-management-studio.md) 機能が使用できるかどうかを示します。 このオプションは、既定で設定されています。
 
-**[IntelliSense 有効]** を選択するには、Ctrl + B キーを押した後、Ctrl + I キーを押すか、[コンテキスト メニュー](#intellisense-enabled-using-the-context-menu)から選択することもできます。
+**[IntelliSense 有効]** を選択するには、Ctrl + B キーを押した後、Ctrl + I キーを押すか、 [コンテキスト メニュー](#intellisense-enabled-using-the-context-menu)から選択することもできます。
 
 ### <a name="include-actual-execution-plan-using-the-editor-toolbar"></a>エディター ツール バーを使用した [実際の実行プランを含める]
 
 クエリを実行し、クエリ結果を返し、クエリに対して実行プランを使用します。 クエリは、グラフィカルなクエリ プランとして **[実行プラン]** ウィンドウに表示されます。
 
-**[実際の実行プランを含める]** を選択するには、Ctrl + M キーを押すか、[コンテキスト メニュー](#include-actual-execution-plan-using-the-context-menu)から選択することもできます。
+**[実際の実行プランを含める]** を選択するには、Ctrl + M キーを押すか、 [コンテキスト メニュー](#include-actual-execution-plan-using-the-context-menu)から選択することもできます。
 
 ### <a name="include-live-query-statistics-using-the-editor-toolbar"></a>エディター ツール バーを使用した [ライブ クエリ統計を含む]
 
 クエリ プラン演算子間の制御フローとして、クエリ実行プロセスのリアルタイムの分析情報を提供します。
 
-**[ライブ クエリ統計を含む]** は、[コンテキスト メニュー](#include-live-query-statistics-using-the-context-menu)から選択することもできます。
+**[ライブ クエリ統計を含む]** は、 [コンテキスト メニュー](#include-live-query-statistics-using-the-context-menu)から選択することもできます。
 
 ### <a name="include-client-statistics-using-the-editor-toolbar"></a>エディター ツール バーを使用した [クライアント統計情報を含める]
 
 クエリおよびネットワーク パケットに関する統計、およびクエリの経過時間を表示する **[クライアント統計]** ウィンドウを含めます。
 
-**[ライブ クエリ統計を含む]** は、Shift + Alt + S キーを押すか、[コンテキスト メニュー](#include-client-statistics-using-the-context-menu)から選択することもできます。
+**[ライブ クエリ統計を含む]** は、Shift + Alt + S キーを押すか、 [コンテキスト メニュー](#include-client-statistics-using-the-context-menu)から選択することもできます。
 
 ### <a name="results-to-text-using-the-editor-toolbar"></a>エディター ツール バーを使用した [結果をテキストで表示]
 
@@ -158,7 +158,7 @@ Alt + Break キー押して、実行中のクエリをキャンセルするこ�
 
 ### <a name="results-to-file-using-the-editor-toolbar"></a>エディター ツール バーを使用した [結果をファイルに出力]
 
-クエリを実行したときに、 **[結果の保存]** ダイアログ ボックスが開きます。 ファイルを保存するフォルダーを **[保存先]** で選択します。 **[ファイル名]** にファイルの名前を入力し、 **[保存]** を選択して、拡張子 .rpt を持つ**レポート** ファイルとしてクエリ結果を保存します。 詳細設定オプションを指定するには、 **[保存]** ボタンの下向き矢印を選択し、 **[エンコード付きで保存]** を選択します。
+クエリを実行したときに、 **[結果の保存]** ダイアログ ボックスが開きます。 ファイルを保存するフォルダーを **[保存先]** で選択します。 **[ファイル名]** にファイルの名前を入力し、 **[保存]** を選択して、拡張子 .rpt を持つ **レポート** ファイルとしてクエリ結果を保存します。 詳細設定オプションを指定するには、 **[保存]** ボタンの下向き矢印を選択し、 **[エンコード付きで保存]** を選択します。
 
 結果をテキストで返すには、Ctrl + Shift + F キーを押すか、[コンテキスト メニュー](#results-using-the-context-menu)から選択することもできます。
 
@@ -188,7 +188,7 @@ Ctrl + K キーを押してから Ctrl + U キーを押しても、行をコメ�
 
 ## <a name="context-menu"></a>コンテキスト メニュー
 
-コンテキスト メニューにアクセスするには、クエリ エディター内の任意の場所で*右クリック*します。 コンテキスト メニュー内のオプションは、SQL エディター ツール バーと同様です。 コンテキスト メニューでは、 **[接続]** および **[実行]** と同じオプションが表示されますが、 **[スニペットの挿入]** や **[ブロックの挿入]** などの他のオプションも表示されます。
+コンテキスト メニューにアクセスするには、クエリ エディター内の任意の場所で *右クリック* します。 コンテキスト メニュー内のオプションは、SQL エディター ツール バーと同様です。 コンテキスト メニューでは、 **[接続]** および **[実行]** と同じオプションが表示されますが、 **[スニペットの挿入]** や **[ブロックの挿入]** などの他のオプションも表示されます。
 
 ![オプション](media/database-engine-query-editor-sql-server-management-studio/context-menu.png)
 
@@ -258,13 +258,13 @@ Microsoft データベース エンジン チューニング アドバイザー 
 
 ![結果オプション](media/database-engine-query-editor-sql-server-management-studio/context-menu-results.png)
 
-コンテキスト メニューから、任意の "*結果*" オプションを選択できます。
+コンテキスト メニューから、任意の " *結果* " オプションを選択できます。
 
 - **[結果をテキストで表示]** - クエリ結果をテキストとして **[結果]** ウィンドウに表示します。
 
 - **[結果をグリッドに表示]** - クエリ結果を 1 つまたは複数のグリッドとして **[結果]** ウィンドウに表示します。
 
-- **[結果をファイルに出力]** - クエリを実行したときに、 **[結果の保存]** ダイアログ ボックスが開きます。 ファイルを保存するフォルダーを **[保存先]** で選択します。 **[ファイル名]** にファイルの名前を入力し、 **[保存]** を選択して、拡張子 .rpt を持つ**レポート** ファイルとしてクエリ結果を保存します。 詳細設定オプションを指定するには、 **[保存]** ボタンの下向き矢印を選択し、 **[エンコード付きで保存]** を選択します。
+- **[結果をファイルに出力]** - クエリを実行したときに、 **[結果の保存]** ダイアログ ボックスが開きます。 ファイルを保存するフォルダーを **[保存先]** で選択します。 **[ファイル名]** にファイルの名前を入力し、 **[保存]** を選択して、拡張子 .rpt を持つ **レポート** ファイルとしてクエリ結果を保存します。 詳細設定オプションを指定するには、 **[保存]** ボタンの下向き矢印を選択し、 **[エンコード付きで保存]** を選択します。
 
 ### <a name="properties-window-using-the-context-menu"></a>コンテキスト メニューを使用したプロパティ ウィンドウ
 

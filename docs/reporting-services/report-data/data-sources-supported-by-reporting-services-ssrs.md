@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da34a74163bae218b13d8f95ebcf5797731790ac
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 5b8fb15c2fb479471000fc9979c691761e4d81cd
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006459"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328564"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services でサポートされるデータ ソース (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でレポート データをデータ ソースから取得する処理は、データ処理拡張機能を使用するモジュール式の拡張可能なデータ レイヤーを通して行われます。 レポート データをデータ ソースから取得するには、対象となるデータ ソースの種類 (データ ソースで動作しているバージョンのソフトウェア) およびデータ ソース プラットフォーム (32 ビットまたは 64 ビット [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) がサポートされているデータ処理拡張機能を選択する必要があります。  
@@ -104,7 +104,7 @@ ms.locfileid: "92006459"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース|OLEDB|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|System.Data.OledbClient を拡張|Y|Y|SQL Server 2012 以降。|Y|Y|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース|[ODBC](#ODBC)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|System.Data.OdbcClient を拡張|Y|○|SQL Server 2012 以降。|Y|○|  
 |[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Microsoft Azure SQL Database](#Azure)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|System.Data.SqlClient を拡張|該当なし|なし|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Y|○|
-|SQL Data Warehouse|[Microsoft Azure SQL Database](#Azure)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|System.Data.SqlClient を拡張|該当なし|なし|SQL Data Warehouse|Y|○| 
+|Azure Synapse Analytics|[Microsoft Azure SQL Database](#Azure)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|System.Data.SqlClient を拡張|該当なし|なし|Azure Synapse Analytics|Y|○| 
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] アプライアンス|[Microsoft 並列データ ウェアハウス](#PWD)|非推奨とされている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|該当なし|該当なし|なし|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|×|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多次元データベースまたはテーブル データベース|[Microsoft SQL Server Analysis Services](#AnalysisServices)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|ADOMD.NET を使用|Y|○|SQL Server 2012 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以降|Y|○|  
 |Power BI Premium データセット (Reporting Services 2019 および Power BI Report Server (2020 年 1 月) 以降) |[Microsoft SQL Server Analysis Services](#AnalysisServices)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|ADOMD.NET を使用|Y|○|SQL Server 2019 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以降|Y|○|
@@ -151,9 +151,9 @@ ms.locfileid: "92006459"
 ###  <a name="microsoft-azure-sql-database-processing-extension"></a><a name="Azure"></a> Microsoft Azure SQL Database 処理拡張機能  
  データ ソースの種類 **Microsoft Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** は、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をラップし、拡張したものです。  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]では、このデータ拡張機能に関連付けられているグラフィカル クエリ デザイナーは、リレーショナル クエリ デザイナーです。**Microsoft SQL Server** のデータ ソースの種類で使う Visual Database Tools デザイナーではありません。  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]では、このデータ拡張機能に関連付けられているグラフィカル クエリ デザイナーは、リレーショナル クエリ デザイナーです。 **Microsoft SQL Server** のデータ ソースの種類で使う Visual Database Tools デザイナーではありません。  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]は、**Microsoft Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** と **Microsoft SQL Server** のデータ ソースの種類を自動的に区別し、データ ソースの種類に関連付けられているグラフィカル クエリ デザイナーを開きます。  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]は、 **Microsoft Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** と **Microsoft SQL Server** のデータ ソースの種類を自動的に区別し、データ ソースの種類に関連付けられているグラフィカル クエリ デザイナーを開きます。  
   
  クエリ デザイナーをグラフィカル モードで使用すると、クエリが分析され、再作成される場合があります。 クエリの作成に、テキスト ベースのクエリ デザイナーを使用することもできます。 クエリに使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文を制御するには、テキストベースのクエリ デザイナーを使用します。   
   
