@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 91fc06c59f9e2be53409d67d0c00de1fe187e611
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 396df64c5c5be5d7ea9c5fc67d7cb1ff0a7d990f
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035983"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243851"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) とは何か?
 
@@ -33,14 +33,14 @@ ms.locfileid: "92035983"
 - [**SQL Server Developer のダウンロード**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
 - [**Visual Studio のダウンロード**](https://www.visualstudio.com/downloads/)
 
-![SSMS](media/sql-server-management-studio-ssms/ssms.png)
+![SQL Server Management Studio のスクリーンショット。](media/sql-server-management-studio-ssms/ssms.png)
 
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio のコンポーネント  
   
 |説明|コンポーネント|  
 |---------------|---------|  
 |**オブジェクト エクスプローラー** を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の 1 つ以上のインスタンスに存在するすべてのオブジェクトを表示および管理します。|[[オブジェクト エクスプローラー]](../ssms/object/object-explorer.md)|  
-|**テンプレート エクスプローラー**を使用し、クエリとスクリプトの開発を迅速化する定型句ファイルを作成し、管理する方法。|[テンプレート エクスプローラー](../ssms/template/template-explorer.md)|  
+|**テンプレート エクスプローラー** を使用し、クエリとスクリプトの開発を迅速化する定型句ファイルを作成し、管理する方法。|[テンプレート エクスプローラー](../ssms/template/template-explorer.md)|  
 |将来非推奨となっている **ソリューション エクスプローラー** を使用して、スクリプトやクエリなどの管理アイテムを扱うためのプロジェクトを構築する方法。|[ソリューション エクスプローラー](../ssms/solution/solution-explorer.md)|  
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]に付属のビジュアル デザイン ツールを使用する方法。|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 言語エディターを使用し、クエリおよびスクリプトを対話形式でビルド、デバッグする方法。|[クエリ エディターとテキスト エディター](./f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)

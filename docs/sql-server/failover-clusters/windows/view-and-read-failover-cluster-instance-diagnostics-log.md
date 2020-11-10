@@ -10,20 +10,20 @@ ms.topic: how-to
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 811b996732dac0f8c6bc0c71e9c8976dc3244085
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 06148ae5d10db159745a7eb55be06735efa49531
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114622"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364722"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>フェールオーバー クラスター インスタンスの診断ログを表示して読む方法
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  SQL Server Resource DLL のすべての重大なエラーと警告イベントが、Windows イベント ログに書き込まれます。 [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) システム ストアド プロシージャによってキャプチャされる SQL Server に固有の診断情報の実行ログは、SQL Server フェールオーバー クラスター診断ログ ファイル (*SQLDIAG* ログとも呼ばれます) に書き込まれます。  
+  SQL Server Resource DLL のすべての重大なエラーと警告イベントが、Windows イベント ログに書き込まれます。 [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) システム ストアド プロシージャによってキャプチャされる SQL Server に固有の診断情報の実行ログは、SQL Server フェールオーバー クラスター診断ログ ファイル ( *SQLDIAG* ログとも呼ばれます) に書き込まれます。  
   
--   **作業を開始する準備:** [推奨事項](#Recommendations)、[セキュリティ](#Security)  
+-   **作業を開始する準備:** [推奨事項](#Recommendations)、 [セキュリティ](#Security)  
   
--   **診断ログを表示するには、次を使用:** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **診断ログを表示するには、次を使用:** [SQL Server Management Studio](#SSMSProcedure)、 [Transact-SQL](#TsqlProcedure)  
   
 -   **診断ログ設定を構成するには、次を使用:** [Transact-SQL](#TsqlConfigure)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "91114622"
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
- **fn_xe_file_target_read_file**を実行するには、VIEW SERVER STATE 権限が必要です。  
+ **fn_xe_file_target_read_file** を実行するには、VIEW SERVER STATE 権限が必要です。  
   
  SQL Server Management Studio を管理者として開きます。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "91114622"
   
 1.  **[ファイル]** メニューから、 **[開く]** 、 **[ファイル]** を選択し、表示する診断ログ ファイルを選択します。  
   
-2.  イベントは、右ペインに行として表示されます。既定では、 **名前**と **タイムスタンプ** の 2 つの列だけが表示されます。  
+2.  イベントは、右ペインに行として表示されます。既定では、 **名前** と **タイムスタンプ** の 2 つの列だけが表示されます。  
   
      また、 **[ExtendedEvents]** メニューがアクティブ化されます。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "91114622"
   
 4.  **[ExtendedEvents]** メニューを使用し、 **[フィルター]** オプションを選択することによって、イベント データをフィルター選択したり並べ替えたりすることができます。  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="view-diagnostic-log-files-with-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL を使用して診断ログ ファイルを表示する  
  **診断ログ ファイルを表示するには**  
   
  SQLDIAG ログ ファイル内のすべてのログ アイテムを表示するには、次のクエリを使用します。  
@@ -88,13 +88,13 @@ ORDER BY Time;
 > [!NOTE]  
 >  WHERE 句を使用して、特定のコンポーネントまたは状態の結果にフィルターを適用することができます。  
   
-##  <a name="using-transact-sql"></a><a name="TsqlConfigure"></a> Transact-SQL の使用  
+##  <a name="configure-diagnostic-log-properties-with-transact-sql"></a><a name="TsqlConfigure"></a> Transact-SQL を使用して診断ログのプロパティを構成する  
  **診断ログのプロパティを構成するには**  
   
 > [!NOTE]  
 >  この手順の例については、このセクションの後半の「 [例 (Transact-SQL)](#TsqlExample)」を参照してください。  
   
- データ定義言語 (DDL) ステートメント **ALTER SERVER CONFIGURATION** を使用すると、[sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) プロシージャによってキャプチャされた診断データのログ記録を開始または停止し、SQLDIAG ログの構成パラメーター (ログ ファイルのロールオーバー回数、ログ ファイルのサイズ、ファイルの場所など) を設定できます。 構文の詳細については、「 [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic)」を参照してください。  
+ データ定義言語 (DDL) ステートメント **ALTER SERVER CONFIGURATION** を使用すると、 [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) プロシージャによってキャプチャされた診断データのログ記録を開始または停止し、SQLDIAG ログの構成パラメーター (ログ ファイルのロールオーバー回数、ログ ファイルのサイズ、ファイルの場所など) を設定できます。 構文の詳細については、「 [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic)」を参照してください。  
   
 ###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a> 例 (Transact-SQL)  
   

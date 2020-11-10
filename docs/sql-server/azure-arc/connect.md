@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: d5b66ac431bfadff06c930f76517f35d95dcb12f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e80892bfef7ee2c8cf22aef1b491ab5ea0c0addd
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987998"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235566"
 ---
 # <a name="connect-your-sql-server-to-azure-arc"></a>SQL Server を Azure Arc に接続する
 
@@ -24,11 +24,15 @@ ms.locfileid: "91987998"
 * マシンに SQL Server の 1 つ以上のインスタンスがインストールされていること
 * Windows マシンの場合は、Azure PowerShell をインストール済みであること。 指示に従って、[Azure PowerShell をインストール](/powershell/azure/install-az-ps)してください。
 * Linux マシンの場合は、Azure CLI をダウンロードしており、Azure アカウントを接続済みであること。 指示に従って、[Azure CLI をインストール](/cli/azure/install-azure-cli-apt)してください。
+* **Microsoft.AzureData** リソース プロバイダーが登録されました。 リソース プロバイダーの詳細については、「Azure リソース プロバイダーと種類」を参照してください。
+    * PowerShell では、`Register-AzResourceProvider -ProviderNamespace Microsoft.AzureData` を実行します
+    * Linux では、`az provider register --namespace 'Microsoft.AzureData` を実行します
+
 
 
 ## <a name="generate-a-registration-script-for-sql-server"></a>SQL Server の登録スクリプトを生成する
 
-この手順では、マシンにインストールされているすべての SQL Server インスタンスを検出し、__SQL Server - Azure Arc__ リソースとして登録するスクリプトを生成します。 ホストしている物理または仮想マシンが Azure Arc に登録されていない場合、スクリプトによって自動的に行われます。
+この手順では、マシンにインストールされているすべての SQL Server インスタンスを検出し、 __SQL Server - Azure Arc__ リソースとして登録するスクリプトを生成します。 ホストしている物理または仮想マシンが Azure Arc に登録されていない場合、スクリプトによって自動的に行われます。
 
 1. __SQL Server - Azure Arc__ リソースの種類を検索し、作成ブレードを使用して新しいものを追加します。
 
@@ -49,7 +53,7 @@ ms.locfileid: "91987998"
 
 ## <a name="connect-the-installed-sql-server-instances-to-azure-arc"></a>インストールされている SQL Server インスタンスを Azure Arc に接続する
 
-この手順では、Azure portal からダウンロードしたスクリプトを使用し、ターゲットの物理または仮想マシンで実行します。 その結果、マシンにインストールされている各 SQL Server インスタンスが、__SQL Server - Azure Arc__ リソースとして登録されます。 さらに、マシン自体にゲスト構成エージェントがインストールされていない場合は、自動的にインストールされ、__マシン - Azure Arc__ リソースとして登録されます。
+この手順では、Azure portal からダウンロードしたスクリプトを使用し、ターゲットの物理または仮想マシンで実行します。 その結果、マシンにインストールされている各 SQL Server インスタンスが、 __SQL Server - Azure Arc__ リソースとして登録されます。 さらに、マシン自体にゲスト構成エージェントがインストールされていない場合は、自動的にインストールされ、 __マシン - Azure Arc__ リソースとして登録されます。
 
 > [!NOTE]
 > 必ず、「[前提条件](overview.md#prerequisites)」で説明されている最小限のアクセス許可要件を満たすアカウントを使用して、スクリプトを実行してください。

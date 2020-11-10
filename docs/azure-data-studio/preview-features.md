@@ -9,12 +9,12 @@ ms.author: hanqin
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: bfb4ea0b745fa61ea6d7c688ab90eaf369b2a5bb
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 4054917071578fb0b3ddcf5c22d5950075a2b0fe
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035999"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328486"
 ---
 # <a name="preview-features-in-azure-data-studio"></a>Azure Data Studio のプレビュー機能
 
@@ -77,7 +77,7 @@ Azure Data Studio の新機能と機能強化は、一般公開 (GA) される�
 ### <a name="first-party-extensions-in-preview"></a>プレビュー段階のファーストパーティ拡張機能
 
 * SQL Server 用の管理パック
-* Azure SQL Data Warehouse Insights
+* Azure Synapse Analytics Insights
 * 中央管理サーバー
 * Database Administration Tool Extensions for Windows
 * Kusto

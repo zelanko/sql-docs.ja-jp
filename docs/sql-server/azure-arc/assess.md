@@ -7,12 +7,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 459a49a4f2ed41b8e9d95c805431ff2c29a770fa
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: c6f2a0989cb13253ef4a6a26e013a6b8c7a84ded
+ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257993"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93294377"
 ---
 # <a name="configure-sql-assessment-on-an-azure-arc-enabled-sql-server-instance"></a>Azure Arc 対応 SQL Server インスタンスで SQL Assessment を構成する
 
@@ -37,11 +37,22 @@ SQL Assessment には、SQL Server の構成を評価するためのメカニズ
    > [!div class="mx-imgBorder"]
    > [ ![SQL Server - Azure Arc リソースの [Environment Health]\(環境の正常性\) 画面が示されているスクリーンショット](media/assess/sql-assessment-heading-sql-server-arc.png) ](media/assess/sql-assessment-heading-sql-server-arc.png#lightbox)
 
-1. データ コレクション マシンで作業ディレクトリを指定します。 既定では `C:\sql_assessment\work_dir` が使用されます。 収集および分析時、データは一時的にそのフォルダーに格納されます。 フォルダーが存在しない場合は、自動的に作成されます。
+> [!IMPORTANT]
+> MMA の拡張機能がインストールされていない場合、オンデマンドでの SQL Assessment は開始できません。
 
-1. **[構成スクリプトのダウンロード]** を選択します。 ダウンロードしたスクリプトをターゲット マシンにコピーします。
+2. [アカウントの種類] を選択します。 管理されたサービス アカウントがある場合は、ポータルから直接 SQL Assessment を開始できます。 アカウント名を指定します。
 
-1. **powershell.exe** の管理者インスタンスを開き、次のいずれかのコード ブロックを実行します。
+> [!NOTE]
+> " *管理されたサービス アカウント* " を指定すると **[Configure SQL Assessment]** \(SQL Assessment の構成\) ボタンがアクティブになり、 *CustomScriptExtension* を展開してポータルから評価を開始できるようになります。 *CustomScriptExtension* は一度に 1 つしか展開できないため、SQL Assessment のスクリプト拡張機能は実行後に自動的に削除されます。 既に別の *CustomScriptExtension* がホスト コンピューターに展開されている場合、 **[Configure SQL Assessment]** \(SQL Assessment の構成\) ボタンはアクティブになりません。
+
+3. 既定を変更したい場合は、データ コレクション コンピューターで作業ディレクトリを指定します。 既定では `C:\sql_assessment\work_dir` が使用されます。 収集および分析時、データは一時的にそのフォルダーに格納されます。 フォルダーが存在しない場合は、自動的に作成されます。
+
+4. **[Configure SQL Assessment]** \(SQL Assessment の構成\) をクリックしてポータルから SQL Assessment を開始する場合、標準の展開のポップアップが表示されます。
+
+> [!div class="mx-imgBorder"]
+   > [ ![CustomScriptExtension の展開を示すスクリーンショット。](media/assess/sql-assessment-custom-script-deployment.png) ](media/assess/sql-assessment-custom-script-deployment.png#lightbox)
+
+5. ターゲット コンピューターから SQL Assessment を開始する場合は、 **[構成スクリプトのダウンロード]** をクリックし、ダウンロードしたスクリプトをターゲット コンピューターにコピーして、 **powershell.exe** の管理者インスタンスで次の 1 つのコード ブロックを実行します。
 
    * " _ドメイン アカウント_ ": ユーザー アカウントとパスワードの入力を求められます。
 
