@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 073776c042c0a0da136347c8e1658603b755208f
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 51286acc7f963b8d680bd81121cc22bab1c1a0a6
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378407"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364384"
 ---
 # <a name="troubleshooting-big-data-clusters-bdc-with-notebooks"></a>ノートブックを使用したビッグ データクラスター (BDC) のトラブルシューティング
 
@@ -80,7 +80,7 @@ SQL Server ビッグ データ クラスターの既知の状況と状態を修�
 |名前 |説明 |
 |---|---|---|---|
 |TSG005 - 転送ループが検出された|ユーティリティ dnsmasq によって resolv.conf 内にローカル ループバックを設定できます。これにより、初期クラスターのデプロイ中にコントローラー ポッドが CrashLoopBackOff になる可能性があります。そこで検出された転送ループを処理するために、このノートブックを使用します: https://askubuntu.com/questions/627899/nameserver-127-0-1-1-in-resolv-conf-wont-go-away|
-|TSG011 - sparkhistory サーバーを再起動する|このノートブックを使用して sparkhistory サーバーを再起動します (sparkhistory Java プロセスが起動中にハングする可能性があるため)。 sparkhistory サーバーの再起動 (supervisorctl restart sparkhistory) を実行することで、この問題を解決できる場合があります。|
+|TSG011 - sparkhistory サーバーを再起動する|このノートブックを使用して、sparkhistory サーバーを再起動します (sparkhistory java プロセスが起動中に応答を停止するおそれがあるため)。 sparkhistory サーバーの再起動 (supervisorctl restart sparkhistory) を実行することで、この問題を解決できる場合があります。|
 |TSG018 - マスター プールで sqlservr プロセスを強制終了する| このノートブックは、T-SQL の SHUTDOWN で ./sqlservr プロセスが正常にリサイクルされない場合に使用します。 このノートブックを使用してメインの sqlservr プロセスを強制終了すると、それは ./sqlservr フロントエンド プロセスによって自動的に再起動されます。|
 |TSG024 - Namenode がセーフ モードである| このノートブックは、HDFS がセーフ モードになった場合に使用します。 たとえば、記憶域プールであまりにも多くのポッドがあまりにも速くリサイクルされた場合、セーフ モードが自動的に有効になることがあります。|
 |TSG028 - すべての記憶域プール ノード上でノード マネージャーを再起動する| このノートブックは、すべての記憶域プール ノードでノード マネージャーを再起動する必要がある場合に使用します。|
@@ -104,4 +104,3 @@ SQL Server ビッグ データ クラスターの既知の状況と状態を修�
 ## <a name="next-steps"></a>次のステップ
 
 ビッグ データ クラスターの詳細については、[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] とは](big-data-cluster-overview.md)の概要に関するページを参照してください。
-
