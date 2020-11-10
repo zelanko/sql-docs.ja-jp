@@ -15,12 +15,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: af830fc0130c4404f4321c3ec5c03bd1111a11a0
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 5b565d7d62b1e189ec9d187c6a585449713f0df0
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809753"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384625"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用
 
@@ -33,7 +33,7 @@ SQL Server による Microsoft Azure Blob Storage サービスの統合のサポ
   
 ## <a name="prerequisites"></a>前提条件
 
-このチュートリアルを完了するには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップと復元の概念と T-SQL 構文についての知識が必要です。 このチュートリアルを使用するには、Azure ストレージ アカウント、SQL Server Management Studio (SSMS)、オンプレミスの SQL Server のインスタンスへのアクセス、SQL Server 2016 を実行している Azure 仮想マシン (VM) へのアクセス、および AdventureWorks2016 データベースが必要です。 また、BACKUP コマンドと RESTORE コマンドの実行に使用するアカウントは、**alter any credential** 権限を持つ **db_backup operator** データベース ロールに属している必要があります。 
+このチュートリアルを完了するには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップと復元の概念と T-SQL 構文についての知識が必要です。 このチュートリアルを使用するには、Azure ストレージ アカウント、SQL Server Management Studio (SSMS)、オンプレミスの SQL Server のインスタンスへのアクセス、SQL Server 2016 を実行している Azure 仮想マシン (VM) へのアクセス、および AdventureWorks2016 データベースが必要です。 また、BACKUP コマンドと RESTORE コマンドの実行に使用するアカウントは、 **alter any credential** 権限を持つ **db_backup operator** データベース ロールに属している必要があります。 
 
 - 無料の [Azure アカウント](https://azure.microsoft.com/offers/ms-azr-0044p/)を取得する。
 - [Azure ストレージ アカウント](/azure/storage/common/storage-quickstart-create-account?tabs=portal)を作成します。
@@ -411,7 +411,7 @@ AdventureWorks2016 データベースにアクティビティを生成し、フ�
     ```sql  
     -- restore as a new database from a transaction log backup file  
     RESTORE DATABASE AdventureWorks2016_EOM   
-        FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/<logbackupfile.bak'    
+        FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/<logbackupfile.bak>'    
         WITH MOVE 'AdventureWorks2016_data' to 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2014_EOM_Data.mdf'  
        , MOVE 'AdventureWorks2016_log' to 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2014_EOM_Log.ldf'  
        , RECOVERY  

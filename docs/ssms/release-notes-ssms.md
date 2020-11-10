@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: ce232d98e441d6ce217a2f97f6b8b1b5e130b7f3
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.openlocfilehash: fbfe0f98d5a61033bdc17e7c974e3859814ce4cc
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734641"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364784"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のリリース ノート
 
@@ -123,7 +123,7 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | Analysis Services | msmdpump.dll 経由で SSAS に接続しようとするとエラーとなる可能性のある問題が修正されました。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696)を参照してください。 |
 | バックアップ/復元 | SQL 2016 以前で [接続のプロパティの表示] を選択したときに HostDistribution prop が見つからないという SMO エラーが発生する問題が修正されました。 |
 | データベース デザイナー | 10 進数を処理するときに SSMS がクラッシュする原因となる問題が修正されました。 |
-| データベース ダイアグラム | [テーブルの追加] ダイアログが正しく表示されていないデータベース ダイアグラムを使用するときに、SSMS がクラッシュまたはハングする原因となる可能性のある問題が修正されました。 |
+| データベース ダイアグラム | [テーブルの追加] ダイアログが正しく表示されていないデータベース ダイアグラムを使用するときに、SSMS がクラッシュまたは応答を停止する原因となるおそれのある問題が修正されました。 |
 | データベース ミラーリング | ミラーの構成が失敗する原因となる問題が修正されました。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897281)を参照してください。 |
 | SSMS 全般 | Azure SQL DB に接続しようとすると数秒かかる可能性があるという問題が修正されました (ユーザー データベースでの SQL ログイン)。 |
 | SSMS 全般 | キャプチャされたデッドロック (.xdl ファイル) が SSMS で処理または表示されないという問題が修正されました。 |
@@ -164,7 +164,7 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 
 ### <a name="186"></a>18.6
 
-![ダウンロード](media/download-icon.png) [SSMS 18.6 をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2146265)
+![ダウンロード](media/download-icon.png) [SSMS 18.6 をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2135491)
 
 - リリース番号:18.6
 - ビルド番号:15.0.18338.0

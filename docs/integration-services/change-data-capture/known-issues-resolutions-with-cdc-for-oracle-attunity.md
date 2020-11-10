@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 899a00273fbccb1e68e6690556e81bb3f0bde05c
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: ad867768d72d9e03b7d76761bd371dd369c7161b
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523907"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384732"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Change Data Capture for Oracle by Attunity の既知のエラーと解決策
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -74,9 +74,9 @@ ms.locfileid: "92523907"
 - CDC for Oracle インスタンスが起動時にハングし、変更をキャプチャしません。 Oracle サーバーのメモリがメモリ不足になるか、クラッシュするまで増えることがあります。
 - [2672759](https://support.microsoft.com/kb/2672759): Microsoft Change Data Capture Service for Oracle by Attunity の使用時のエラー メッセージ: "ORA-00600: 内部エラー コード"。 SOURCE レベル トレースを追加し、同じ ORA-00600 エラーが表示されるかどうかを確認します。 Oracle パッチ ダウンロードによって修正されました。
 - 複数パーティション
-    - Oracle テーブルで 10 個を超えるパーティションを使用すると、CDC インスタンスでは、そのテーブルの変更を全部キャプチャできません。 Oracle テーブルが 10 個を超えるパーティションで定義されると、変更は最後の 10 個のパーティションからのみキャプチャされます。 _SQL Server 2012 向け Service Pack 1 リリース_ で修正されました。 [SP1 用 Feature Pack のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=35580)を参照してください。 
+    - Oracle テーブルで 10 個を超えるパーティションを使用すると、CDC インスタンスでは、そのテーブルの変更を全部キャプチャできません。 Oracle テーブルが 10 個を超えるパーティションで定義されると、変更は最後の 10 個のパーティションからのみキャプチャされます。 _SQL Server 2012 向け Service Pack 1 リリース_ で修正されました。 [SP1 用 Feature Pack のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=35575)を参照してください。 
 - 変更が失われます
-    - イベントのキャプチャが無限ループに入り、新しいデータ変更のキャプチャが停止することがあります (Oracle バグ 5623813 に関連)。 Oracle RAC 環境で CDC インスタンスの停止または再開を実行しているとき、変更はスキップされたり、失われたりすることがあります。 つまり、SQL Server 変更データ キャプチャで重要な行が失われ、そのため、データ ウェアハウスやサブスクリプション システムでデータが失われます。 _SQL Server 2012 向け Service Pack 1 リリース_ で修正されました。 [SP1 用 Feature Pack のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=35580)を参照してください
+    - イベントのキャプチャが無限ループに入り、新しいデータ変更のキャプチャが停止することがあります (Oracle バグ 5623813 に関連)。 Oracle RAC 環境で CDC インスタンスの停止または再開を実行しているとき、変更はスキップされたり、失われたりすることがあります。 つまり、SQL Server 変更データ キャプチャで重要な行が失われ、そのため、データ ウェアハウスやサブスクリプション システムでデータが失われます。 _SQL Server 2012 向け Service Pack 1 リリース_ で修正されました。 [SP1 用 Feature Pack のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=35575)を参照してください
 - SQL で列の幅が 2 倍になる
     - CDC for Oracle インスタンスの作成時、SQL Server に対して実行するスクリプトで、変数の幅のデータ型列の長さが、スクリプトで作成された SQL Server テーブルで 2 倍になります。 たとえば、Oracle テーブルで VARCHAR2(10) 列の変更を追跡しようとすると、SQL Server テーブルのそれに対応する列が配置スクリプトで NVARCHAR(20) になります。 KB [2769673](https://support.microsoft.com/kb/2769673) で説明されているとおり、 _SQL Server 2012 SP1 向け累積更新プログラム 2_ または _SQL Server 2012 向け累積更新プログラム 5_ で修正されました。 
 - DDL データが切り捨てられます

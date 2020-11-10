@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1b1ae5e016d407a0aeee6c34fcc75dd71e8fa229
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 91478060af31e142f94730b9df3c0a3cdf2a24ef
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688092"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384796"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,12 +51,12 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  拡張キー管理プロバイダーの名前を指定します。  
   
  *path_of_DLL*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張キー管理インターフェイスを実装する .dll ファイルのパスを指定します。 **SQL Server コネクタ for Microsoft Azure Key Vault** を使うときの既定の場所は、**'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'** です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張キー管理インターフェイスを実装する .dll ファイルのパスを指定します。 **SQL Server コネクタ for Microsoft Azure Key Vault** を使うときの既定の場所は、 **'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'** です。  
   
 ## <a name="remarks"></a>解説  
  プロバイダーによって作成されるキーはいずれも、プロバイダーをその GUID で参照します。 GUID は、DLL のすべてのバージョン間で保持されます。  
   
- SQLEKM インターフェイスを実装する DLL は、任意の証明書を使用して、デジタル署名する必要があります。 この署名は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって検証されます。 これにはその証明書チェーンも含まれます。証明書チェーンのルートは、Windows システムの**信頼されたルート証明機関**がある場所にインストールされている必要があります。 署名が正しく検証されなかった場合は、CREATE CRYPTOGRAPHIC PROVIDER ステートメントが失敗します。 証明書と証明書チェーンについて詳しくは、「[SQL Server の証明書と非対称キー](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
+ SQLEKM インターフェイスを実装する DLL は、任意の証明書を使用して、デジタル署名する必要があります。 この署名は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって検証されます。 これにはその証明書チェーンも含まれます。証明書チェーンのルートは、Windows システムの **信頼されたルート証明機関** がある場所にインストールされている必要があります。 署名が正しく検証されなかった場合は、CREATE CRYPTOGRAPHIC PROVIDER ステートメントが失敗します。 証明書と証明書チェーンについて詳しくは、「[SQL Server の証明書と非対称キー](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
   
  EKM プロバイダーの dll で必要なメソッドの一部が実装されなかった場合は、CREATE CRYPTOGRAPHIC PROVIDER から次のエラー 33085 が返されることがあります。  
   
@@ -84,5 +84,8 @@ CREATE CRYPTOGRAPHIC PROVIDER SecurityProvider
  [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-cryptographic-provider-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Azure Key Vault を使用した SQL Server TDE 拡張キー管理を設定する](../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
+ [sys.cryptographic_providers](../../relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql.md)  
+ [sys.dm_cryptographic_provider_properties](../../relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql.md)
   
   

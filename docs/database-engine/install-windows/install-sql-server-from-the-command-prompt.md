@@ -85,20 +85,20 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/26/2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 380a3b3f08d0e9f974ceee5356401461a33925fb
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.openlocfilehash: de4026f7fdf2dbde32998657e84a7b9b0c54b1f5
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92639015"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94418039"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server のインストール
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
-  
-  SQL Server のセットアップを実行する前に、「 [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)」を参照してください。  
-  
- SQL Server の新しいインスタンスをコマンド プロンプトでインストールすると、インストールする機能とその機能の構成を指定できます。 また、セットアップのユーザー インターフェイスに、サイレント モード、基本的な対話方式、または完全な対話方式を指定できます。  
+
+SQL Server のセットアップを実行する前に、「 [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)」を参照してください。  
+
+SQL Server の新しいインスタンスをコマンド プロンプトでインストールすると、インストールする機能とその機能の構成を指定できます。 また、セットアップのユーザー インターフェイスに、サイレント モード、基本的な対話方式、または完全な対話方式を指定できます。  
 
 コマンド プロンプトからインストールするには、管理コマンド プロンプトを開き、[SQL Server セットアップ メディア](https://www.microsoft.com/sql-server/sql-server-downloads)内の setup.exe がある場所に移動します。 実行しようとしている操作を達成するための、必須のパラメーターと省略可能なパラメーターと共に、`setup.exe` コマンドを実行します。
 
@@ -858,7 +858,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||IS_Worker|Integration Services Scale Out のスケール アウト ワーカーが含まれています。| 
 |MDS||[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] がインストールされます。|  
 |SQL_SHARED_MPY||[SQL Server 2017 Machine Learning Server (スタンドアロン)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) の Python パッケージをインストールします。 |  
-|SQL_SHARED_MR||[SQL Server 2016 R Server (スタンドアロン)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md?view=sql-server-2016) または [SQL Server Machine Learning Server (スタンドアロン)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) の R パッケージをインストールします。 |  
+|SQL_SHARED_MR||[SQL Server 2016 R Server (スタンドアロン)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) または [SQL Server Machine Learning Server (スタンドアロン)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) の R パッケージをインストールします。 |  
 |Tools*||クライアント ツールおよび SQL Server オンライン ブック コンポーネントをインストールします。|  
 ||BC|旧バージョンとの互換性コンポーネントをインストールします。|  
 ||Conn|接続コンポーネントをインストールします。|
@@ -870,9 +870,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 
 *[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) は、現在、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストーラーとは別のスタンドアロン インストーラー内にあります。 詳細については、[SQL Server Management Studio (SSMS) のダウンロード](../../ssms/download-sql-server-management-studio-ssms.md)に関するページを参照してください。
 
-**[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] の SKU をインストールするときに、LocalDB を選択できます。 詳細については、「 [SQL Server 2016 Express LocalDB](../configure-windows/sql-server-express-localdb.md)」をご覧ください。 
-  
-### <a name="feature-parameter-examples"></a>機能パラメーターの例:  
+### <a name="feature-parameter-examples"></a>機能パラメーターの例:
   
 |パラメーターおよび値|説明| 
 |---------------|-----------------|  
@@ -882,49 +880,51 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=BOL|ヘルプ コンテンツを表示および管理するための SQL Server オンライン ブック コンポーネントをインストールします。|  
 |/FEATURES=SQLEngine,PolyBase|PolyBase エンジンをインストールします。|  
   
-##  <a name="role-parameters"></a><a name="RoleParameters"></a> ロール パラメーター  
- セットアップ ロール パラメーター (/Role パラメーター) は、あらかじめ構成された機能の選択内容をインストールするために使用されます。 SSAS ロールでは、既存の SharePoint ファーム、または新しい未構成のファームのどちらかに SSAS インスタンスがインストールされます。 これらのシナリオをサポートするために、2 つのセットアップ ロールが用意されています。 インストールするために選択できるセットアップ ロールは一度に 1 つだけです。 セットアップ ロールを選択すると、そのロールに所属する機能とコンポーネントがセットアップによってインストールされます。 ロールに指定されている機能とコンポーネントは変更できません。 機能ロール パラメーターの使用方法の詳細については、「 [コマンド プロンプトからの Power Pivot のインストール](/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)」をご覧ください。 
-  
- AllFeatures_WithDefaults ロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のエディションの既定の動作であり、このロールを指定した場合は、ユーザーに対して表示されるダイアログ ボックスの数が減少します。 このロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]以外の SQL Server エディションをインストールするときに、コマンド ラインから指定できます。 
-  
+##  <a name="role-parameters"></a><a name="RoleParameters"></a> ロール パラメーター
+
+セットアップ ロール パラメーター (/Role パラメーター) は、あらかじめ構成された機能の選択内容をインストールするために使用されます。 SSAS ロールでは、既存の SharePoint ファーム、または新しい未構成のファームのどちらかに SSAS インスタンスがインストールされます。 これらのシナリオをサポートするために、2 つのセットアップ ロールが用意されています。 インストールするために選択できるセットアップ ロールは一度に 1 つだけです。 セットアップ ロールを選択すると、そのロールに所属する機能とコンポーネントがセットアップによってインストールされます。 ロールに指定されている機能とコンポーネントは変更できません。 機能ロール パラメーターの使用方法の詳細については、「 [コマンド プロンプトからの Power Pivot のインストール](/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)」をご覧ください。
+
+AllFeatures_WithDefaults ロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のエディションの既定の動作であり、このロールを指定した場合は、ユーザーに対して表示されるダイアログ ボックスの数が減少します。 このロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]以外の SQL Server エディションをインストールするときに、コマンド ラインから指定できます。
+
 |Role|説明|インストールされる機能|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 名前付きインスタンスとして、既存の [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ファームまたはスタンドアロン サーバーにインストールします。|メモリ内のデータの格納と処理用にあらかじめ構成された、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算エンジン。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション パッケージ<br /><br /> [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] のインストーラー プログラム<br /><br /> SQL Server オンライン ブック|  
 |SPI_AS_NewFarm|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] および [!INCLUDE[ssDE](../../includes/ssde-md.md)] を [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の名前付きインスタンスとして、新しい未構成の Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ファームまたはスタンドアロン サーバーにインストールします。 SQL Server セットアップは、機能ロールのインストール時にファームを構成します。|メモリ内のデータの格納と処理用にあらかじめ構成された、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算エンジン。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション パッケージ<br /><br /> SQL Server オンライン ブック<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> 構成ツール (Configuration Tools)<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
-|AllFeatures_WithDefaults|現在のエディションで使用できるすべての機能をインストールします。<br /><br /> 現在のユーザーを SQL Server **sysadmin** 固定サーバー ロールに追加します。<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降を使用していて、そのオペレーティング システムがドメイン コントローラーでない場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は既定で NTAUTHORITY\NETWORK SERVICE アカウントを使用し、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は既定で NTAUTHORITY\NETWORK SERVICE アカウントを使用します。<br /><br /> このロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のエディションで、既定で有効になっています。 その他のエディションの場合、このロールは有効になっていませんが、UI またはコマンドライン パラメーターを使用して指定できます。|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のエディションの場合は、そのエディションで使用できる機能のみがインストールされます。 その他のエディションの場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての機能がインストールされます。<br /><br /> **AllFeatures_WithDefaults** パラメーターは、 **AllFeatures_WithDefaults** パラメーターの設定をオーバーライドする他のパラメーターと組み合わせることができます。 たとえば、 **AllFeatures_WithDefaults** パラメーターと **/Features=RS** パラメーターを組み合わせて使用すると、すべての機能をインストールするコマンドがオーバーライドされ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のみがインストールされますが、 **AllFeatures_WithDefaults** パラメーターを適用することで、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に対して既定のサービス アカウントが使用されます。<br /><br /> **AllFeatures_WithDefaults** パラメーターを **/ADDCURRENTUSERASSQLADMIN=FALSE** と共に使用すると、準備ダイアログには現在のユーザーに関する情報が自動入力されません。 SQL Server エージェントのサービス アカウントとパスワードを指定するには、 **/AGTSVCACCOUNT** と **/AGTSVCPASSWORD** を追加します。|  
-  
-##  <a name="controlling-failover-behavior-using-the-failoverclusterrollownership-parameter"></a><a name="RollOwnership"></a> /FAILOVERCLUSTERROLLOWNERSHIP パラメーターを使用したフェールオーバーの動作の制御  
-[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスターを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードするには、フェールオーバー クラスター ノードのパッシブ ノードから開始して、1 ノードごとにセットアップを実行する必要があります。 フェールオーバー クラスター インスタンスのノード総数と、アップグレード済みのノードの数との違いに応じて、セットアップがアップグレード済みのノードにフェールオーバーする時期が決まります。 ノード総数の半数以上がアップグレード済みの場合、既定のセットアップにより、アップグレード済みのノードにフェールオーバーが発生します。 
- 
-アップグレード プロセス中にクラスター ノードのフェールオーバーの動作を制御するには、コマンド プロンプトでアップグレード操作を実行して /FAILOVERCLUSTERROLLOWNERSHIP パラメーターを使用し、アップグレード操作によってノードがオフラインになる前にフェールオーバーの動作を制御します。 このパラメーターの使用方法は次のとおりです。  
-  
--   /FAILOVERCLUSTERROLLOWNERSHIP=0 を指定すると、クラスターの所有権 (グループの移動) がアップグレード済みのノードに移動しないため、このノードはアップグレード終了時に SQL Server クラスターの実行可能な所有者の一覧に追加されません。 
-  
--   /FAILOVERCLUSTERROLLOWNERSHIP=1 を指定すると、クラスターの所有権 (グループの移動) がアップグレードされたノードに移動するため、このノードはアップグレード終了時に SQL Server クラスターの実行可能な所有者の一覧に追加されます。 
-  
--   /FAILOVERCLUSTERROLLOWNERSHIP=2 は既定の設定です。 これは、このパラメーターが指定されていない場合に使用されます。 この設定は、SQL Server セットアップによってクラスターの所有権 (グループの移動) が必要に応じて管理されることを示しています。 
-  
-##  <a name="instance-id-or-instanceid-configuration"></a><a name="InstanceID"></a> インスタンス ID (InstanceID) の構成  
- インスタンス ID (/InstanceID) パラメーターは、インスタンス コンポーネントのインストール先と、インスタンスのレジストリ パスを指定するために使用されます。 INSTANCEID の値は文字列で、一意である必要があります。 
-  
--   SQL インスタンス ID: `MSSQLxx.<INSTANCEID>`  
-  
--   AS インスタンス ID: `MSASxx.<INSTANCEID>`  
-  
--   RS インスタンス ID: `MSRSxx.<INSTANCEID>`  
-  
+|AllFeatures_WithDefaults|現在のエディションで使用できるすべての機能をインストールします。<br /><br /> 現在のユーザーを SQL Server **sysadmin** 固定サーバー ロールに追加します。<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降を使用していて、そのオペレーティング システムがドメイン コントローラーでない場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は既定で NTAUTHORITY\NETWORK SERVICE アカウントを使用し、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は既定で NTAUTHORITY\NETWORK SERVICE アカウントを使用します。<br /><br /> このロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のエディションで、既定で有効になっています。 その他のエディションの場合、このロールは有効になっていませんが、UI またはコマンドライン パラメーターを使用して指定できます。|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のエディションの場合は、そのエディションで使用できる機能のみがインストールされます。 その他のエディションの場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての機能がインストールされます。<br /><br /> **AllFeatures_WithDefaults** パラメーターは、 **AllFeatures_WithDefaults** パラメーターの設定をオーバーライドする他のパラメーターと組み合わせることができます。 たとえば、 **AllFeatures_WithDefaults** パラメーターと **/Features=RS** パラメーターを組み合わせて使用すると、すべての機能をインストールするコマンドがオーバーライドされ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のみがインストールされますが、 **AllFeatures_WithDefaults** パラメーターを適用することで、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に対して既定のサービス アカウントが使用されます。<br /><br /> **AllFeatures_WithDefaults** パラメーターを **/ADDCURRENTUSERASSQLADMIN=FALSE** と共に使用すると、準備ダイアログには現在のユーザーに関する情報が自動入力されません。 SQL Server エージェントのサービス アカウントとパスワードを指定するには、 **/AGTSVCACCOUNT** と **/AGTSVCPASSWORD** を追加します。|
+
+## <a name="controlling-failover-behavior-using-the-failoverclusterrollownership-parameter"></a><a name="RollOwnership"></a> /FAILOVERCLUSTERROLLOWNERSHIP パラメーターを使用したフェールオーバーの動作の制御  
+[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスターを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードするには、フェールオーバー クラスター ノードのパッシブ ノードから開始して、1 ノードごとにセットアップを実行する必要があります。 フェールオーバー クラスター インスタンスのノード総数と、アップグレード済みのノードの数との違いに応じて、セットアップがアップグレード済みのノードにフェールオーバーする時期が決まります。 ノード総数の半数以上がアップグレード済みの場合、既定のセットアップにより、アップグレード済みのノードにフェールオーバーが発生します。
+
+アップグレード プロセス中にクラスター ノードのフェールオーバーの動作を制御するには、コマンド プロンプトでアップグレード操作を実行して /FAILOVERCLUSTERROLLOWNERSHIP パラメーターを使用し、アップグレード操作によってノードがオフラインになる前にフェールオーバーの動作を制御します。 このパラメーターの使用方法は次のとおりです。
+
+- /FAILOVERCLUSTERROLLOWNERSHIP=0 を指定すると、クラスターの所有権 (グループの移動) がアップグレード済みのノードに移動しないため、このノードはアップグレード終了時に SQL Server クラスターの実行可能な所有者の一覧に追加されません。 
+
+- /FAILOVERCLUSTERROLLOWNERSHIP=1 を指定すると、クラスターの所有権 (グループの移動) がアップグレードされたノードに移動するため、このノードはアップグレード終了時に SQL Server クラスターの実行可能な所有者の一覧に追加されます。 
+
+- /FAILOVERCLUSTERROLLOWNERSHIP=2 は既定の設定です。 これは、このパラメーターが指定されていない場合に使用されます。 この設定は、SQL Server セットアップによってクラスターの所有権 (グループの移動) が必要に応じて管理されることを示しています。 
+
+##  <a name="instance-id-or-instanceid-configuration"></a><a name="InstanceID"></a> インスタンス ID (InstanceID) の構成
+
+インスタンス ID (/InstanceID) パラメーターは、インスタンス コンポーネントのインストール先と、インスタンスのレジストリ パスを指定するために使用されます。 INSTANCEID の値は文字列で、一意である必要があります。 
+
+- SQL インスタンス ID: `MSSQLxx.<INSTANCEID>`
+
+- AS インスタンス ID: `MSASxx.<INSTANCEID>`
+
+- RS インスタンス ID: `MSRSxx.<INSTANCEID>`
+
 インスタンス対応のコンポーネントは次の場所に格納されます。  
-  
-`%Program Files%\Microsoft SQL Server\<SQLInstanceID>`  
-  
-`%Program Files%\Microsoft SQL Server\<ASInstanceID>`  
-  
-`%Program Files%\Microsoft SQL Server\<RSInstanceID>`  
-  
+
+`%Program Files%\Microsoft SQL Server\<SQLInstanceID>`
+
+`%Program Files%\Microsoft SQL Server\<ASInstanceID>`
+
+`%Program Files%\Microsoft SQL Server\<RSInstanceID>`
+
 > [!NOTE]
 > INSTANCEID をコマンド ラインで指定しない場合、既定のセットアップでは、\<INSTANCEID> の代わりに \<INSTANCENAME> が使用されます。 
-  
-## <a name="see-also"></a>参照  
- [インストール ウィザードからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [SQL Server フェールオーバー クラスターのインストール](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
- [SQL Server 2016 のビジネス インテリジェンス機能のインストール](../../sql-server/install/install-sql-server-business-intelligence-features.md)     
+
+## <a name="see-also"></a>参照
+- [インストール ウィザードからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+- [SQL Server フェールオーバー クラスターのインストール](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
+- [SQL Server 2016 のビジネス インテリジェンス機能のインストール](../../sql-server/install/install-sql-server-business-intelligence-features.md)
