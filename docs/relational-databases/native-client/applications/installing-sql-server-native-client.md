@@ -22,12 +22,12 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a3047db0cedf165016257961ea9c27474a941ef
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 0537a9fc955cdd27a243ec020199122260db2890
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892332"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384836"
 ---
 # <a name="installing-sql-server-native-client"></a>SQL Server Native Client のインストール
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91892332"
  
  SQL Server 2016 Native Client がありません。 詳細については、「 [SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client.md)」を参照してください。 
  
-また、SQL Server 2012 Feature Pack web ページから sqlncli.msi を取得することもできます。 最新バージョンの SQL Server Native Client をダウンロードするには、 [Microsoft® SQL Server® 2012 Feature Pack](https://www.microsoft.com/download/confirmation.aspx?id=29065)」を参照してください。 SQL Server 2012 より前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client もコンピューターにインストールされている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client 11.0 は以前のバージョンとサイドバイサイドでインストールされます。  
+また、SQL Server 2012 Feature Pack web ページから sqlncli.msi を取得することもできます。 最新バージョンの SQL Server Native Client をダウンロードするには、 [Microsoft® SQL Server® 2012 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041)」を参照してください。 SQL Server 2012 より前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client もコンピューターにインストールされている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client 11.0 は以前のバージョンとサイドバイサイドでインストールされます。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client のファイル (sqlncli11.dll、sqlnclir11.rll、および s11ch_sqlncli.chm) は、次の場所にインストールされます。  
   
