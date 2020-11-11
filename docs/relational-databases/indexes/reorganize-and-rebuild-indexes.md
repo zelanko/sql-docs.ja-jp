@@ -246,7 +246,7 @@ object_id   TableName                   index_id    IndexName                   
 - **db_owner** データベース ロール
 - **sysadmin** サーバー ロール
 
-<sup>1</sup>**db_ddladmin** データベース ロールには[最も低い特権レベル](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models)が設定されています。
+<sup>1</sup>**db_ddladmin** データベース ロールには [最も低い特権レベル](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models)が設定されています。
 
 ### <a name="remove-fragmentation-using-ssmanstudiofull"></a><a name="SSMSProcedureReorg"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を利用して断片化を取り除く
 
@@ -401,13 +401,13 @@ ALTER INDEX ALL ON HumanResources.Employee
 > [!WARNING]
 > 固定されていないインデックスをパーティションが 1, 000 個以上あるテーブルに作成または再構築することは可能ですが、サポートされていません。 このような操作を行うと、操作中にパフォーマンスが低下したりメモリが過度に消費される可能性があります。 パーティションの数が 1,000 個を超えた場合は、[固定されたインデックス](../partitions/partitioned-tables-and-indexes.md#aligned-index)のみを使用することをお勧めします。
 
-インデックスのあるファイル グループが**オフライン**であるか、または**読み取り専用**に設定されている場合、インデックスを再構成または再構築することはできません。 キーワード `ALL` を指定した場合で、1 つ以上のインデックスがオフラインまたは読み取り専用のファイル グループにある場合、ステートメントは失敗します。
+インデックスのあるファイル グループが **オフライン** であるか、または **読み取り専用** に設定されている場合、インデックスを再構成または再構築することはできません。 キーワード `ALL` を指定した場合で、1 つ以上のインデックスがオフラインまたは読み取り専用のファイル グループにある場合、ステートメントは失敗します。
 
 [統計] :
 
-- インデックスが**作成**または**再構築**されるとき、テーブル内のすべての行がスキャンされて、統計が作成または更新されます。 ただし、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、パーティション インデックスが作成または再構築されたとき、テーブル内のすべての行をスキャンして統計が作成または更新されることはありません。 代わりに、クエリ オプティマイザーによって既定のサンプリング アルゴリズムを使用してこれらの統計が生成されます。 テーブル内のすべての行をスキャンしてパーティション インデックスの統計を作成するには、`FULLSCAN` 句で [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) または [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) を使用します。
+- インデックスが **作成** または **再構築** されるとき、テーブル内のすべての行がスキャンされて、統計が作成または更新されます。 ただし、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、パーティション インデックスが作成または再構築されたとき、テーブル内のすべての行をスキャンして統計が作成または更新されることはありません。 代わりに、クエリ オプティマイザーによって既定のサンプリング アルゴリズムを使用してこれらの統計が生成されます。 テーブル内のすべての行をスキャンしてパーティション インデックスの統計を作成するには、`FULLSCAN` 句で [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) または [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) を使用します。
 
-- インデックスが**再構成**されるとき、統計は更新されません。
+- インデックスが **再構成** されるとき、統計は更新されません。
 
 `ALLOW_PAGE_LOCKS` を OFF に設定した場合、インデックスを再構成することはできません。
 
