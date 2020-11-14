@@ -2731,10 +2731,10 @@
           items:
             - name: 言語拡張とは
               href: language-extensions/language-extensions-overview.md
+            - name: Java 言語拡張とは
+              href: language-extensions/java-overview.md
             - name: 新機能
               href: language-extensions/language-extensions-whats-new.md
-            - name: Java 言語拡張機能の概要
-              href: language-extensions/java-overview.md
         - name: インストール
           items:
             - name: Windows に言語拡張をインストールする

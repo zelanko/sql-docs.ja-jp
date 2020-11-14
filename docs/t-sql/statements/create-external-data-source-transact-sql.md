@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f54f2fdce030f477a9e203daa837287dff86f107
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+ms.openlocfilehash: 05995a1205677bbeefbb2b025268af20e445a1b4
+ms.sourcegitcommit: ab68925e9869e6cf5b39efdb415ecc8e8f5b08fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043846"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93417423"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -107,7 +107,7 @@ WITH
 - `<`Namenode`>` = Hadoop クラスター内の `Namenode` のマシン名、ネーム サービス URI、または IP アドレス。 PolyBase では Hadoop クラスターで使用されているすべての DNS 名が解決される必要があります。 <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
 - `port` = 外部データ ソースがリッスンしているポート。 Hadoop では、`fs.defaultFS` 構成パラメーターを使用してポートを見つけることができます。 既定値は 8020 です。
 - `<container>` = データを保持するストレージ アカウントのコンテナー。 ルート コンテナーは読み取り専用で、このコンテナーにデータを書き込むことはできません。
-- `<storage_account>` = azure リソースのストレージ アカウント名。
+- `<storage_account>` = Azure リソースのストレージ アカウント名。
 - `<server_name>` = ホスト名。
 - `<instance_name>` = SQL Server の名前付きインスタンスの名前。 ターゲット インスタンスで実行中の SQL Server Browser サービスがある場合に使用されます。
 
@@ -678,6 +678,7 @@ PolyBase 用の外部データ ソースを作成します。 外部データ �
 
 ## <a name="syntax"></a>構文
 
+### [[!INCLUDE[sss-dedicated-pool-md.md](../../includes/sss-dedicated-pool-md.md)]](#tab/dedicated)
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
@@ -686,6 +687,15 @@ WITH
     [ [ , ] TYPE = HADOOP ]
 [ ; ]
 ```
+### [[!INCLUDE[sssod-md.md](../../includes/sssod-md.md)]](#tab/serverless)
+```syntaxsql
+CREATE EXTERNAL DATA SOURCE <data_source_name>  
+WITH
+(    LOCATION = '<prefix>://<path>[:<port>]'
+) 
+[;]
+```
+---
 
 ## <a name="arguments"></a>引数
 
@@ -706,7 +716,7 @@ WITH
 場所のパス:
 
 - `<container>` = データを保持するストレージ アカウントのコンテナー。 ルート コンテナーは読み取り専用で、このコンテナーにデータを書き込むことはできません。
-- `<storage_account>` = azure リソースのストレージ アカウント名。
+- `<storage_account>` = Azure リソースのストレージ アカウント名。
 
 場所を設定する場合の追加の注意事項とガイダンス:
 
@@ -965,7 +975,7 @@ WITH
 - `<Namenode>` = Hadoop クラスター内の `Namenode` のマシン名、ネーム サービス URI、または IP アドレス。 PolyBase では Hadoop クラスターで使用されているすべての DNS 名が解決される必要があります。 <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
 - `port` = 外部データ ソースがリッスンしているポート。 Hadoop では、`fs.defaultFS` 構成パラメーターを使用してポートを見つけることができます。 既定値は 8020 です。
 - `<container>` = データを保持するストレージ アカウントのコンテナー。 ルート コンテナーは読み取り専用で、このコンテナーにデータを書き込むことはできません。
-- `<storage_account>` = azure リソースのストレージ アカウント名。
+- `<storage_account>` = Azure リソースのストレージ アカウント名。
 
 場所を設定する場合の追加の注意事項とガイダンス:
 
