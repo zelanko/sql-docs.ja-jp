@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: aa433db303e80610fb8f109d8a0905f888348c1b
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6633eae12aa231b4b4a97b1c663d6b2e15339ee2
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671145"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583712"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>AlwaysOn 可用性グループのレプリカ インスタンスのアップグレード
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ Always On 可用性グループ (AG) をホストする [!INCLUDE[ssNoVersion](.
 -   AG をフェールオーバーする前に、フェールオーバー ターゲットの同期状態が SYNCHRONIZED であることを確認してください。  
 
   > [!WARNING]
-  > 古いバージョンの SQL Server がインストールされているサーバーに、SQL Server の新しいインスタンスまたは新しいバージョンをインストールすると、誤って**古いバージョンの SQL Server でホストされていた可用性グループが停止する可能性があります。** これは、SQL Server のインスタンスまたはバージョンのインストールの間に、SQL Server の高可用性モジュール (RHS.EXE) がアップグレードされるためです。 これにより、サーバー上のプライマリ ロール内の既存の可用性グループが一時的に中断します。 そのため、可用性グループが使用されている古いバージョンの SQL Server を既にホストしているシステムに、新しいバージョンの SQL Server をインストールするときは、次のいずれかのようにすることを強くお勧めします。
+  > 古いバージョンの SQL Server がインストールされているサーバーに、SQL Server の新しいインスタンスまたは新しいバージョンをインストールすると、誤って **古いバージョンの SQL Server でホストされていた可用性グループが停止する可能性があります。** これは、SQL Server のインスタンスまたはバージョンのインストールの間に、SQL Server の高可用性モジュール (RHS.EXE) がアップグレードされるためです。 これにより、サーバー上のプライマリ ロール内の既存の可用性グループが一時的に中断します。 そのため、可用性グループが使用されている古いバージョンの SQL Server を既にホストしているシステムに、新しいバージョンの SQL Server をインストールするときは、次のいずれかのようにすることを強くお勧めします。
   > - メンテナンス期間中に、新しいバージョンの SQL Server をインストールします。 
   > - 可用性グループをセカンダリ レプリカにフェールオーバーして、新しい SQL Server インスタンスのインストールの間はプライマリではないようにします。 
   
