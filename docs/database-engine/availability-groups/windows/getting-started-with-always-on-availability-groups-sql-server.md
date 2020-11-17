@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], about
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 0a180d924a4033b45bdcfe60746110bc560aa470
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 64dbc41027229f1904cf653a46c9015ca54d2c8c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727876"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584293"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>Always On 可用性グループの概要
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "91727876"
 |タスク|Link|  
 |----------|----------|  
 |可用性グループの [柔軟なフェールオーバー ポリシー](./configure-flexible-automatic-failover-policy.md) を変更して、自動フェールオーバーを実行する条件を制御します。 このポリシーは、自動フェールオーバーが可能な場合にのみ関係します。|[可用性グループの柔軟なフェールオーバー ポリシーの構成](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)|  
-|計画的な手動フェールオーバーか、 *強制フェールオーバー*と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) を実行します。 詳細については、「 [フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。|[計画的な手動フェールオーバーの実行](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [強制手動フェールオーバーの実行](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
+|計画的な手動フェールオーバーか、 *強制フェールオーバー* と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) を実行します。 詳細については、「 [フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。|[計画的な手動フェールオーバーの実行](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [強制手動フェールオーバーの実行](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
 |一連の定義済みポリシーを使用して、可用性グループとレプリカおよびデータベースの正常性を表示します。|[ポリシー ベースの管理を使用した可用性グループの正常性の表示](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [AlwaysOn グループ ダッシュボードの使用](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)|  
 |セカンダリ レプリカを追加または削除します。|[セカンダリ レプリカの追加](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [セカンダリ レプリカの削除](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
 |可用性データベースを中断または再開します。 セカンダリ データベースを中断すると、データベースを再開するまで現在の状態が維持されます。|[データベースの中断](../../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md)<br /><br /> [データベースの再開](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)|  

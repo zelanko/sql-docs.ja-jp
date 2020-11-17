@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], distributed
 ms.assetid: ''
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: dac452cc825cef7099cd2f0f27c7d2045f6811ff
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7c0ce9d5364865e2bd487cf6866f97e1d1e08a89
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727936"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584357"
 ---
 # <a name="distributed-availability-groups"></a>分散型可用性グループ
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "91727936"
 
 ![分散型可用性グループの概要](./media/distributed-availability-group/dag-01-high-level-view-distributed-ag.png)
 
-分散型可用性グループでのデータ移動は、同期または非同期として構成できます。 ただし、分散型可用性グループでのデータの移動は、従来の可用性グループと若干異なります。 各可用性グループにはプライマリ レプリカがありますが、挿入、更新、削除を受け付けることができるのは、分散型可用性グループに参加しているデータベースの 1 つのコピーだけです。 次の図に示すように、AG 1 はプライマリ可用性グループです。 AG 1 のプライマリ レプリカは、AG 1 のセカンダリ レプリカと AG 2 のプライマリ レプリカの両方にトランザクションを送信します。 AG 2 のプライマリ レプリカは、*フォワーダー*とも呼ばれます。 フォワーダーは、分散型可用性グループのセカンダリ可用性グループのプライマリ レプリカです。 フォワーダーは、プライマリ可用性グループ内のプライマリ レプリカからトランザクションを受信し、それを独自の可用性グループ内のセカンダリ レプリカに転送します。  そしてフォワーダーが、更新された AG 2 のセカンダリ レプリカを保持します。 
+分散型可用性グループでのデータ移動は、同期または非同期として構成できます。 ただし、分散型可用性グループでのデータの移動は、従来の可用性グループと若干異なります。 各可用性グループにはプライマリ レプリカがありますが、挿入、更新、削除を受け付けることができるのは、分散型可用性グループに参加しているデータベースの 1 つのコピーだけです。 次の図に示すように、AG 1 はプライマリ可用性グループです。 AG 1 のプライマリ レプリカは、AG 1 のセカンダリ レプリカと AG 2 のプライマリ レプリカの両方にトランザクションを送信します。 AG 2 のプライマリ レプリカは、*フォワーダー* とも呼ばれます。 フォワーダーは、分散型可用性グループのセカンダリ可用性グループのプライマリ レプリカです。 フォワーダーは、プライマリ可用性グループ内のプライマリ レプリカからトランザクションを受信し、それを独自の可用性グループ内のセカンダリ レプリカに転送します。  そしてフォワーダーが、更新された AG 2 のセカンダリ レプリカを保持します。 
 
 ![分散型可用性グループとそのデータ移動](./media/distributed-availability-group/dag-02-distributed-ag-data-movement.png)
 

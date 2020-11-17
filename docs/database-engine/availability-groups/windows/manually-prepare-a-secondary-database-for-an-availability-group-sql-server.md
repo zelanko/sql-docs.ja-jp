@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], databases
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: aaf5b4f4c8e93d3f36ddbd4768ebf2e453112fae
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 114a47009a1920ba3068f97701c785fa4666040e
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726376"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584195"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Always On 可用性グループに対するセカンダリ データベースの準備
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -180,7 +180,7 @@ ms.locfileid: "91726376"
         > [!IMPORTANT]  
         >  プライマリ データベースとセカンダリ データベースのパス名が異なる場合は、ファイルを追加することはできません。 ファイル追加操作のログの受信時に、セカンダリ レプリカのサーバー インスタンスがプライマリ データベースで使用されるのと同じパスに新しいファイルを配置しようとするためです。  
   
-         たとえば、次のコマンドは、既定の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]インスタンスのデータ ディレクトリ (C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA) に存在するプライマリ データベースのバックアップを復元します。 データベースの復元操作では、別のクラスター ノードのセカンダリ レプリカをホストする、( [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] AlwaysOn1 *) という*のリモート インスタンスのデータ ディレクトリにデータベースを移動する必要があります。 そこで、データおよびログ ファイルが *C:\Program Files\Microsoft SQL Server\MSSQL13.Always On1\MSSQL\DATA* ディレクトリに復元されます。 この復元操作では WITH NORECOVERY を使用してセカンダリ データベースを復元するデータベースに残します。  
+         たとえば、次のコマンドは、既定の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]インスタンスのデータ ディレクトリ (C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA) に存在するプライマリ データベースのバックアップを復元します。 データベースの復元操作では、別のクラスター ノードのセカンダリ レプリカをホストする、( [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] AlwaysOn1 *) という* のリモート インスタンスのデータ ディレクトリにデータベースを移動する必要があります。 そこで、データおよびログ ファイルが *C:\Program Files\Microsoft SQL Server\MSSQL13.Always On1\MSSQL\DATA* ディレクトリに復元されます。 この復元操作では WITH NORECOVERY を使用してセカンダリ データベースを復元するデータベースに残します。  
   
         ```  
         RESTORE DATABASE MyDB1  

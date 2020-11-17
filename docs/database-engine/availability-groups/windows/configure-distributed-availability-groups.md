@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 537dbc1d60fc707f3d00aacd85e1ec5e335519c0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: df4daf119464ccf90c751f97daeea0379d8e8a21
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727983"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584490"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Always On 分散型可用性グループの構成  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ GO
 ## <a name="create-first-availability-group"></a>最初の可用性グループを作成する
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>最初のクラスターにプライマリ可用性グループを作成する  
-最初の Windows Server フェールオーバー クラスター (WSFC) に可用性グループを作成します。   この例では、データベース `ag1` の `db1`という可用性グループです。 プライマリ可用性グループのプライマリ レプリカは、分散型可用性グループでは**グローバル プライマリ**と呼ばれます。 この例の server1 はグローバル プライマリです。        
+最初の Windows Server フェールオーバー クラスター (WSFC) に可用性グループを作成します。   この例では、データベース `ag1` の `db1`という可用性グループです。 プライマリ可用性グループのプライマリ レプリカは、分散型可用性グループでは **グローバル プライマリ** と呼ばれます。 この例の server1 はグローバル プライマリです。        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -111,7 +111,7 @@ GO
   
 
 ## <a name="create-second-availability-group"></a>2 つ目の可用性グループを作成する  
- 2 つ目の WSFC に 2 つ目の可用性グループ `ag2`を作成します。 この場合、データベースはプライマリ可用性グループから自動的にシード処理されるため、データベースを指定しません。  セカンダリ可用性グループのプライマリ レプリカは、分散型可用性グループでは**フォワーダー**と呼ばれます。 この例の server3 はフォワーダーです。 
+ 2 つ目の WSFC に 2 つ目の可用性グループ `ag2`を作成します。 この場合、データベースはプライマリ可用性グループから自動的にシード処理されるため、データベースを指定しません。  セカンダリ可用性グループのプライマリ レプリカは、分散型可用性グループでは **フォワーダー** と呼ばれます。 この例の server3 はフォワーダーです。 
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag2]   
@@ -181,7 +181,7 @@ GO
 
 ### <a name="cancel-automatic-seeding-to-forwarder"></a>フォワーダーへの自動シード処理を取り消す
 
-何らかの理由で、2 つの可用性グループを同期する_前に_フォワーダーの初期化を取り消すことが必要になる場合、フォワーダーの SEEDING_MODE パラメーターを MANUAL に設定することで分散型可用性グループを変更し、すぐにシード処理を取り消します。 グローバル プライマリでコマンドを実行します。 
+何らかの理由で、2 つの可用性グループを同期する _前に_ フォワーダーの初期化を取り消すことが必要になる場合、フォワーダーの SEEDING_MODE パラメーターを MANUAL に設定することで分散型可用性グループを変更し、すぐにシード処理を取り消します。 グローバル プライマリでコマンドを実行します。 
 
 ```sql
 -- Cancel automatic seeding.  Connect to global primary but specify DAG AG2

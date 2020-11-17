@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
-ms.openlocfilehash: 7bbd02e21b369732da72d7dbd7563d32f81c2a46
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 855ed087fb8276e83db72c7ca6a12a22f0225eef
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727945"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584388"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Always On 可用性グループのリスナーの構成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -268,7 +268,7 @@ ms.locfileid: "91727945"
     >  WSFC クラスター (フェールオーバー クラスター マネージャーの GUI) を通して可用性グループ リスナーを作成すると、 **RegisterAllProvidersIP** は既定で 0 (false) になります。  
   
 ###  <a name="hostrecordttl-setting"></a><a name="HostRecordTTL"></a> HostRecordTTL の設定  
- 既定では、クライアントは 20 分間、クラスター DNS レコードをキャッシュします。  **HostRecordTTL**の値 (キャッシュするレコードの有効期限 (TTL)) を小さくすると、レガシ クライアントはよりすばやく再接続できるようになります。  ただし、**HostRecordTTL** の設定を小さくすると、DNS サーバーへのトラフィックが増加する可能性があります。  
+ 既定では、クライアントは 20 分間、クラスター DNS レコードをキャッシュします。  **HostRecordTTL** の値 (キャッシュするレコードの有効期限 (TTL)) を小さくすると、レガシ クライアントはよりすばやく再接続できるようになります。  ただし、**HostRecordTTL** の設定を小さくすると、DNS サーバーへのトラフィックが増加する可能性があります。  
   
 ###  <a name="sample-powershell-script-to-disable-registerallprovidersip-and-reduce-ttl"></a><a name="SampleScript"></a> RegisterAllProvidersIP を無効にし、TTL を短縮する PowerShell サンプル スクリプト  
  次の PowerShell の例では、リスナー リソースに対する **RegisterAllProvidersIP** クラスター パラメーターと **HostRecordTTL** クラスター パラメーターの両方を構成する方法を示しています。  DNS レコードは、既定の 20 分間ではなく、5 分間キャッシュされます。  両方のクラスター パラメーターを変更すると、 **MultiSubnetFailover** パラメーターを使用できないレガシ クライアントのフェールオーバーが発生した後に、適切な IP アドレスに接続する時間が短縮される可能性があります。  `yourListenerName` は、変更対象のリスナーの名前に置き換えてください。  

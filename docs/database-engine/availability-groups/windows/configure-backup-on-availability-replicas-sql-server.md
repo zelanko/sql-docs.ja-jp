@@ -16,14 +16,14 @@ helpviewer_keywords:
 - automated backup preference
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ebe23aa1fb252ce19f887b225527c3ec7a3339c6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1d9a6dc56f0c61e454d368215cb37f4a2f5602c2
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726468"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584510"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Always On 可用性グループのセカンダリ レプリカのバックアップの構成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "91726468"
   
      可用性グループに可用性レプリカを追加する場合は、 **New-SqlAvailabilityReplica** コマンドレットを使用します。 既存の可用性レプリカを変更する場合は、 **Set-SqlAvailabilityReplica** コマンドレットを使用します。 どちらの場合も **BackupPriority**_n_ パラメーターを使用します。 *n* は 0 ～ 100 の値です。  
   
-     たとえば、次のコマンドは、可用性レプリカ `MyReplica` のバックアップの優先順位を **60**に設定します。  
+     たとえば、次のコマンドは、可用性レプリカ `MyReplica` のバックアップの優先順位を **60** に設定します。  
   
     ```  
     Set-SqlAvailabilityReplica -BackupPriority 60 `  
@@ -143,9 +143,9 @@ ms.locfileid: "91726468"
      バックアップを実行するレプリカを選択するときにバックアップ ジョブが可用性レプリカのロールを無視するように指定します。 バックアップ ジョブは、動作状態および接続状態と組み合わせて、各可用性レプリカのバックアップ優先順位などの他の要素を評価する場合があります。  
   
     > [!IMPORTANT]  
-    >  **AutomatedBackupPreference**は適用されません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ロジックが存在する場合)。 自動バックアップ設定はアドホック バックアップには影響しません。 詳細については、このトピックの「 [補足情報: セカンダリ レプリカでバックアップを構成した後](#FollowUp) 」を参照してください。  
+    >  **AutomatedBackupPreference** は適用されません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ロジックが存在する場合)。 自動バックアップ設定はアドホック バックアップには影響しません。 詳細については、このトピックの「 [補足情報: セカンダリ レプリカでバックアップを構成した後](#FollowUp) 」を参照してください。  
   
-     たとえば、次のコマンドは、可用性グループ **の** AutomatedBackupPreference `MyAg` プロパティを **SecondaryOnly**に設定します。 この可用性グループ内のデータベースの自動バックアップはプライマリ レプリカでは行われませんが、バックアップの優先度設定が最も高いセカンダリ レプリカにリダイレクトされます。  
+     たとえば、次のコマンドは、可用性グループ **の** AutomatedBackupPreference `MyAg` プロパティを **SecondaryOnly** に設定します。 この可用性グループ内のデータベースの自動バックアップはプライマリ レプリカでは行われませんが、バックアップの優先度設定が最も高いセカンダリ レプリカにリダイレクトされます。  
   
     ```  
     Set-SqlAvailabilityGroup `  
