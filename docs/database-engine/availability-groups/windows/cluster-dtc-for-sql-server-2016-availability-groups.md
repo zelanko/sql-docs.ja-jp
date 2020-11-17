@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b5232854920083c685e426e0ca55eeb9a065c70
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4078d42ddb680c46f763065a47406f855093801c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726503"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584541"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Always On 可用性グループの DTC サービスをクラスター化する方法
 
@@ -35,7 +35,7 @@ ms.locfileid: "91726503"
 
 |タスク|リファレンス|  
 |-----------------|----------|  
-|共有記憶域ドライブ。|[Configuring the Shared-Storage Drive](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx)(共有記憶域ドライブの構成)。 ドライブ文字に **M**を使用することを検討します。|
+|共有記憶域ドライブ。|[Configuring the Shared-Storage Drive](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx)(共有記憶域ドライブの構成)。 ドライブ文字に **M** を使用することを検討します。|
 |固有の DTC ネットワーク名リソース。  名前は、Active Directory にクラスター コンピューター オブジェクトとして登録されます。<br /><br />次のいずれかが満たされていることを確認します。<br /><br />• DTC ネットワーク名リソースを作成するユーザーに、DTC ネットワーク名リソースが保存される OU またはコンテナーに対するコンピューター オブジェクト作成アクセス許可があること。<br /><br />•  ユーザーにコンピューター オブジェクトの作成アクセス許可がない場合は、DTC ネットワーク名リソース用のクラスター コンピューター オブジェクトの用意をドメイン管理者に依頼します。|[Active Directory ドメイン サービスでクラスター コンピューター オブジェクトをプレステージする](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466519(v=ws.11))|
 |使用可能な有効な静的 IP アドレスとその IP アドレスの適切なサブネット マスク。||
 

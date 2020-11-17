@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], policies
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: de57f7518136cecca09041e0ce93971aeebe9fd9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 080cd11de04984114fd5eda5f1d8b2e78dfdaca3
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724569"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584781"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Always On 可用性グループでの運用上の問題に対するポリシー ベースの管理
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "91724569"
 ##  <a name="extending-the-always-on-health-model"></a><a name="ExtendHealthModel"></a> AlwaysOn 正常性モデルの拡張  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性モデルを拡張するには、独自のユーザー定義のポリシーを作成し、監視するオブジェクトの種類に基づいて特定のカテゴリに分類します。  いくつかの設定を変更した後、独自のユーザー定義のポリシーおよび AlwaysOn の定義済みのポリシーが、AlwaysOn ダッシュボードによって自動的に評価されます。  
   
- ユーザー定義ポリシーでは、AlwaysOn の定義済みポリシーで使用されているものを含め、使用可能なすべての PBM ファセットを使用できます (このトピックの「 [定義済みのポリシーと問題点](#Always OnPBM)」を参照してください)。 サーバーのファセットは、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性状態の監視用に、**IsHadrEnabled** プロパティおよび **HadrManagerStatus**プロパティを提供します。 サーバーのファセットは、WSFC クラスター構成の監視用に、**ClusterQuorumType** プロパティおよび **ClusterQuorumState** プロパティも提供します。  
+ ユーザー定義ポリシーでは、AlwaysOn の定義済みポリシーで使用されているものを含め、使用可能なすべての PBM ファセットを使用できます (このトピックの「 [定義済みのポリシーと問題点](#Always OnPBM)」を参照してください)。 サーバーのファセットは、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性状態の監視用に、**IsHadrEnabled** プロパティおよび **HadrManagerStatus** プロパティを提供します。 サーバーのファセットは、WSFC クラスター構成の監視用に、**ClusterQuorumType** プロパティおよび **ClusterQuorumState** プロパティも提供します。  
   
  詳細については、「 [AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) 」を参照してください (SQL Server AlwaysOn チームのブログ)。  
   

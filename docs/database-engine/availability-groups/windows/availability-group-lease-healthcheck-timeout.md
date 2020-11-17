@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: ''
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 074a66a094b08f843eed67cfb0276f8c9e635a63
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: fb236820958875458d391495028f04181c8ba47b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753751"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584646"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 可用性グループのリース、クラスター、正常性チェック タイムアウトのしくみとガイドライン。 
 
@@ -29,7 +29,7 @@ ms.locfileid: "91753751"
 
 SQL Server の場合、AG リソース DLL は、AG リース メカニズムと Always On 正常性検出に基づいて、AG の正常性を判断します。 AG リソース DLL は、`IsAlive` 操作を介してリソースの正常性を公開します。 リソース モニターは、`CrossSubnetDelay` と `SameSubnetDelay` のクラスター全体の値で設定される、クラスターのハートビート間隔で `IsAlive` をポーリングします。 プライマリ ノードでは、リソース DLL に対する `IsAlive` 呼び出しで AG が正常でないことが返されるたびに、クラスター サービスがフェールオーバーを開始します。 
 
-クラスター サービスはクラスター内の他のノードにハートビートを送信し、そこから受信したハートビートを確認します。 ノードは、一連の未確認ハートビートから通信エラーを検出すると、到達可能なすべてのノードでクラスター ノードの正常性ビューを調整するようにメッセージをブロードキャストします。 このイベント (*再グループ化イベント*と呼ばれる) により、ノード間のクラスター状態の一貫性が維持されます。 再グループ化イベントの後、クォーラムが失われた場合、このパーティションの AG を含むすべてのクラスター リソースがオフラインになります。 このパーティションのすべてのノードは、解決中の状態に遷移します。 クォーラムを保持する、パーティションが存在する場合、AG はそのパーティションの 1 つのノードに割り当てられ、プライマリ レプリカになり、他のすべてのノードがセカンダリ レプリカになります。 
+クラスター サービスはクラスター内の他のノードにハートビートを送信し、そこから受信したハートビートを確認します。 ノードは、一連の未確認ハートビートから通信エラーを検出すると、到達可能なすべてのノードでクラスター ノードの正常性ビューを調整するようにメッセージをブロードキャストします。 このイベント (*再グループ化イベント* と呼ばれる) により、ノード間のクラスター状態の一貫性が維持されます。 再グループ化イベントの後、クォーラムが失われた場合、このパーティションの AG を含むすべてのクラスター リソースがオフラインになります。 このパーティションのすべてのノードは、解決中の状態に遷移します。 クォーラムを保持する、パーティションが存在する場合、AG はそのパーティションの 1 つのノードに割り当てられ、プライマリ レプリカになり、他のすべてのノードがセカンダリ レプリカになります。 
 
 ## <a name="always-on-health-detection"></a>Always On 正常性検出 
 
