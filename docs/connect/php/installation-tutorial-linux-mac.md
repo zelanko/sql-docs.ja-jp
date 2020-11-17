@@ -1,7 +1,7 @@
 ---
 title: Drivers for PHP 用の Linux と macOS のインストール
 description: この手順では、SQL Server on Linux または macOS 用の Microsoft Drivers for PHP をインストールする方法について説明します。
-ms.date: 10/30/2020
+ms.date: 11/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 66c505f588d6f250c0e18dc88a79b21ed658f2b5
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 41b5eaec44c61e03db609bcd81b3e732a2119e7f
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243735"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384221"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server の Linux および macOS インストール チュートリアル
 次の手順では、クリーンな環境を想定し、PHP 7.x、Microsoft ODBC ドライバー、Apache Web サーバー、Microsoft Drivers for PHP for SQL Server を、Ubuntu 16.04、18.04、および 20.04、RedHat 7 および 8、Debian 8、9、および 10、Suse 12 および 15、Alpine 3.11、macOS 10.13、10.14、および 10.15 にインストールする方法を説明します。 これらの手順では、PECL を使用してドライバーをインストールすることをお勧めしていますが、[Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub プロジェクト ページから事前構築済みバイナリをダウンロードし、「[Microsoft Drivers for PHP for SQL Server の読み込み](../../connect/php/loading-the-php-sql-driver.md)」の手順に従ってそれらをインストールすることもできます。 拡張機能の読み込みおよび php.ini に拡張機能を追加しない理由の説明については、[ドライバーの読み込み](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup)に関するセクションを参照してください。
@@ -407,6 +407,7 @@ sudo apachectl restart
 ## <a name="testing-your-installation"></a>インストールのテスト
 
 このサンプル スクリプトをテストするには、システムのドキュメント ルートに testsql.php というファイルを作成します。 これは、Ubuntu、Debian、および Redhat では `/var/www/html/`、SUSE では `/srv/www/htdocs`、Alpine では `/var/www/localhost/htdocs`、macOS では `/usr/local/var/www` です。 次のスクリプトをそれにコピーし、該当する場合にサーバー、データベース、ユーザー名、およびパスワードを置き換えます。
+
 ```php
 <?php
 $serverName = "yourServername";
@@ -466,7 +467,14 @@ function formatErrors($errors)
 }
 ?>
 ```
-ブラウザーで https://localhost/testsql.php (macOS では https://localhost:8080/testsql.php ) をポイントします。 SQL Server または Azure SQL データベースに接続できるようになったはずです。 SQL バージョン情報を示す成功メッセージが表示されない場合、ヘルプの場所を確認するには、[サポート リソース](support-resources-for-the-php-sql-driver.md)に関する記事を参照してください。
+
+ブラウザーで https://localhost/testsql.php (macOS では https://localhost:8080/testsql.php ) をポイントします。 SQL Server または Azure SQL データベースに接続できるようになったはずです。 SQL のバージョン情報を示す成功メッセージが表示されない場合は、コマンド ラインからスクリプトを実行することで、いくつかの基本的なトラブルシューティングを行うことができます。
+
+```bash
+php testsql.php
+```
+
+コマンド ラインからの実行は成功するがブラウザーに何も表示されない場合は、[Apache ログ ファイル](https://linuxize.com/post/apache-log-files/#location-of-the-log-files)を確認します。 追加のヘルプについては、「[サポート リソース](support-resources-for-the-php-sql-driver.md)」を参照してください。
 
 ## <a name="see-also"></a>参照  
 [Microsoft Drivers for PHP for SQL Server の概要](../../connect/php/getting-started-with-the-php-sql-driver.md)

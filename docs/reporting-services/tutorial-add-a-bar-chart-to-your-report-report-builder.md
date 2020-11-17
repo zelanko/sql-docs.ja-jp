@@ -1,6 +1,6 @@
 ---
 title: 'チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー) | Microsoft Docs'
-description: カテゴリでグループ化された一連の縦棒で数値を表現する棒グラフを含めた、Reporting Services のページ分割されたレポートを作成する方法を説明します。
+description: レポート ビルダーのウィザードを使用して、Reporting Services のページ分割されたレポート内に横棒グラフを作成する方法について説明します。
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 57dd6f4472c64ee37190d5149ef354d5829e1266
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+ms.openlocfilehash: 9b18950488cb0fed336feb3df61e5a4e66b56603
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043730"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521122"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>チュートリアル:レポートへの横棒グラフの追加 (レポート ビルダー)
 このチュートリアルでは、ウィザードを使用して、[!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] で [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに横棒グラフを作成します。 次にフィルターを追加してグラフを強化します。 
@@ -121,7 +121,7 @@ ms.locfileid: "93043730"
   
 2.  縦軸を右クリックし、 **[縦軸のプロパティ]** をクリックします。  
   
-3.  **[軸の範囲と間隔]** の **[間隔]** ボックスに「 **1** 」と入力します。  
+3.  **[軸の範囲と間隔]** の **[間隔]** ボックスに「 **1**」と入力します。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -200,7 +200,7 @@ ms.locfileid: "93043730"
   
 1.  レポート デザイン ビューに切り替えます。  
   
-2.  グラフ上部の **[グラフのタイトル]** というテキストを選択し、「 **Sales for 2014 and 2015** 」と入力します。  
+2.  グラフ上部の **[グラフのタイトル]** というテキストを選択し、「**Sales for 2014 and 2015**」と入力します。  
   
 3.  [プロパティ] ペインで、タイトルを選択した状態で **[色]** を **[黒]** に、 **[フォント サイズ]** を **[12 ポイント]** に変更します。 
   
@@ -252,7 +252,7 @@ ms.locfileid: "93043730"
   
 8.  **[演算子]** で、ドロップダウン リストから **[上位 N]** を選択します。  
   
-9. **[値]** に式「 **=5** 」を入力します。  
+9. **[値]** に式「 **=5**」を入力します。  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -266,7 +266,7 @@ ms.locfileid: "93043730"
   
 1.  デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
-2.  「 **Sales Bar Chart** 」と入力して Enter キーを押し、さらに「 **Top Five Sellers for 2015** 」と入力します。次のように表示されます。  
+2.  「 **Sales Bar Chart**」と入力して Enter キーを押し、さらに「 **Top Five Sellers for 2015**」と入力します。次のように表示されます。  
   
     **Sales Bar Chart**  
   
@@ -288,7 +288,7 @@ ms.locfileid: "93043730"
   
 2.  **[ファイル]**  >  **[名前を付けて保存]** をクリックします。  
   
-3.  **[名前]** に「 **Sales Bar Chart** 」と入力します。  
+3.  **[名前]** に「 **Sales Bar Chart**」と入力します。  
 
     コンピューターまたはレポート サーバーに保存できます。
   

@@ -1,28 +1,28 @@
 ---
 description: SQL Server のプライバシーの補足情報
 title: SQL Server のプライバシーの補足情報 | Microsoft Docs
-ms.date: 09/30/2020
+ms.date: 11/11/2020
 ms.prod: sql
 ms.technology: release-landing
-ms.reviewer: mikeray
+ms.reviewer: wopeter
 ms.custom: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
-author: jaszymas
-ms.author: jaszymas
-ms.openlocfilehash: f8356b5c07e6d85d9359276740fdd30adc200493
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 87cd9ec5266002f91fea682591e82dfecd403ab5
+ms.sourcegitcommit: 4545b502e3cae7136411fd9a7c15450315665f38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793809"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94550005"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server のプライバシーの補足情報
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-この記事では、機能使用状況および診断データを匿名で収集して Microsoft に送信する、インターネット対応機能の概要を説明します。 SQL Server では、標準的なコンピューター情報、および使用とパフォーマンスに関するデータが収集される場合があります。これらの情報は Microsoft に送信され、製品の品質、セキュリティ、および信頼性を向上させる目的で分析されます。
+この記事では、機能使用状況および診断データを匿名で収集して Microsoft に送信する、インターネット対応機能の概要を説明します。 SQL Server では、標準的なコンピューター情報、および使用とパフォーマンスに関するデータが収集される場合があります。これらの情報は Microsoft に送信され、製品の品質、セキュリティ、および信頼性を向上させる目的で分析されます。 Microsoft Azure サービスの仮想マシンに SQL Server をインストールすると、環境情報が Microsoft に送信され、Microsoft で仮想マシンへの SQL Server IaaS Agent 拡張機能のインストールと SQL VM リソース プロバイダーへの SQL 仮想マシン リソースの登録を実行できるようになります。詳細については、[こちら](/azure/azure-sql/virtual-machines/windows/sql-vm-resource-provider-register)を参照してください。
 
 この記事は、[Microsoft のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=521839)全体の内容を補うものです。 この記事のデータ分類は、SQL Server オンプレミス製品のバージョンにのみ適用されます。 次のアイテムには適用されません。
 

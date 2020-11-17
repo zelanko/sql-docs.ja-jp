@@ -135,7 +135,13 @@
             - name: 前提条件
               href: big-data-cluster/active-directory-prerequisites.md
             - name: デプロイ
-              href: big-data-cluster/active-directory-deploy.md
+              items:
+                - name: 単純な AD の展開
+                  href: big-data-cluster/active-directory-deploy.md
+                - name: AKS で AD を計画する
+                  href: big-data-cluster/active-directory-deployment-aks.md
+                - name: チュートリアル - AKS の AD
+                  href: big-data-cluster/active-directory-deployment-aks-tutorial.md
             - name: 接続する
               href: big-data-cluster/active-directory-connect.md
             - name: 同じ AD ドメインの複数の BDC
@@ -9992,11 +9998,11 @@
               href: linux/sql-server-linux-setup-full-text-search.md
             - name: SQL Server Integration Services のインストール
               href: linux/sql-server-linux-setup-ssis.md
-            - name: SQL Server Machine Learning Services のインストール
+            - name: SQL Server Machine Learning Services のインストール (Python と R)
               href: linux/sql-server-linux-setup-machine-learning.md
-            - name: Docker に SQL Server Machine Learning Services をインストールする
+            - name: Docker に SQL Server Machine Learning Services (Python と R) をインストールする
               href: linux/sql-server-linux-setup-machine-learning-docker.md
-            - name: SQL Server の言語拡張をインストールする
+            - name: SQL Server Java 言語拡張機能をインストールする
               href: linux/sql-server-linux-setup-language-extensions-java.md
             - name: リポジトリの構成
               href: linux/sql-server-linux-change-repo.md
