@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 1c196ea3219f4bdbad2e4001240f754b106e3917
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f208b424272644f3d66146014401a1343f00e576
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115425"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674204"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux のエディションとサポートされる機能
 
@@ -225,6 +225,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 | &nbsp; | Filetable、FILESTREAM |
 | &nbsp; | EXTERNAL_ACCESS 権限または UNSAFE 権限が設定された CLR アセンブリ |
 | &nbsp; | バッファー プール拡張 |
+| &nbsp; | URL へのバックアップ - ページ BLOB <sup>2</sup> |
 | **SQL Server エージェント** |  サブシステム: CmdExec、PowerShell、キュー リーダー、SSIS、SSAS、SSRS |
 | &nbsp; | 警告 |
 | &nbsp; | 管理対象のバックアップ |
@@ -241,7 +242,9 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 | &nbsp; | マスター データ サービス |
 
 <sup>1</sup> SQL Server 内では SQL Server R がサポートされていますが、個別のパッケージとしての SQL Server R サービスはサポートされていません。
-  
+
+<sup>2</sup> URL へのバックアップは、[Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) を使用して、ブロック BLOB に対してサポートされています。
+
 ## <a name="next-steps"></a>次のステップ
  [SQL Server 2017 の各エディションとサポートされる機能 - Linux](sql-server-linux-editions-and-components-2017.md)  
  [SQL Server 2019 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  

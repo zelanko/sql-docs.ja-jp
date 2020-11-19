@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/07/2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 599f0edf2a62413aaa44ccaff191bfac034aa3d9
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: eb38c37dcb5a570364675fece213c8c6868173ec
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418024"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570949"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>SQL Server のインスタンスへの機能の追加 (セットアップ)
 
@@ -114,7 +114,7 @@ ms.locfileid: "94418024"
 
 19. [分散再生コントローラーの構成] ページを使用して、分散再生コントローラー サービスに対する管理権限を付与するユーザーを指定します。 管理権限を持つユーザーには、分散再生コントローラー サービスへの無制限のアクセス許可が与えられます。
 
-    分散再生コントローラー サービスに対するアクセス許可を付与するユーザーを追加するには、 **[現在のユーザーの追加]** を選択します。 分散再生コントローラー サービスのアクセス許可を追加するには、 **[追加]** を選択します。 分散再生コントローラー サービスからアクセス許可を削除するには、 **[削除]** ボタンを選択します。
+    分散再生コントローラー サービスに対するアクセス許可を付与するユーザーを追加するには、 **[現在のユーザーの追加]** ボタンを選択します。 分散再生コントローラー サービスのアクセス許可を追加するには、 **[追加]** ボタンを選択します。 分散再生コントローラー サービスからアクセス許可を削除するには、 **[削除]** ボタンを選択します。
 
     続けるには、 **[次へ]** を選択します。
 
