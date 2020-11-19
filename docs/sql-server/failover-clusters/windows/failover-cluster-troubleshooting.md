@@ -127,9 +127,9 @@ ms.locfileid: "91988308"
   
  **解決策 3:** 名前付きパイプで接続するには、SQL Server 構成マネージャーを使用して別名を作成し、適切なコンピューターに接続します。 たとえば、2 つのノード (**Node A** および **Node B**) から成るクラスター、および既定のインスタンスを使用するフェールオーバー クラスター インスタンス (**Virtsql**) がある場合、次の手順に従って、オフラインのネットワーク名リソースがあるサーバーに接続できます。  
   
-1.  クラスター アドミニストレーターを使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを含むグループが実行されているノードを特定します。 この例では、 **Node A**です。  
+1.  クラスター アドミニストレーターを使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを含むグループが実行されているノードを特定します。 この例では、 **Node A** です。  
   
-2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] net start **を使用して、そのコンピューターの**サービスを開始します。 **net start**の使用方法については、「 [手動による SQL Server の起動](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx)」を参照してください。  
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] net start **を使用して、そのコンピューターの** サービスを開始します。 **net start** の使用方法については、「 [手動による SQL Server の起動](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx)」を参照してください。  
   
 3.  **Node A** で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server 構成マネージャーを起動します。サーバーがリッスンしているパイプ名を確認します。 パイプ名は \\\\.\\$$\VIRTSQL\pipe\sql\query のように表示されます。  
   

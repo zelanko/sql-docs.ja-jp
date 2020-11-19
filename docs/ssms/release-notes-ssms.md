@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: fbfe0f98d5a61033bdc17e7c974e3859814ce4cc
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: c2139f53771ed50a5ce01cc9fb4c3c64bfd14692
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364784"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570969"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のリリース ノート
 
@@ -60,7 +60,7 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | SSMS 全般 | SMO を使用する SSMS 拡張機能は、新しい SSMS 固有の SMO v161 パッケージを対象とするように再コンパイルする必要があります。 https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ で新しいバージョンが利用できるようになりました </br></br> 以前の 160 バージョンの Microsoft.SqlServer.SqlManagementObjects パッケージに対してコンパイルされた拡張機能は、引き続き機能します。 | 該当なし |
 | Integration Services | Integration Services でパッケージをインポートまたはエクスポートするとき、または Azure-SSIS Integration Runtime でパッケージをエクスポートするときに、スクリプト タスク/コンポーネントを含むパッケージのスクリプトが失われます。 対処法:フォルダー "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild" を削除します。 | 該当なし |
 | Integration Services | Integration Services へのリモート接続が新しいオペレーティング システムで、"The specified service does not exist as an installed service." (指定されたサービスはインストールされたサービスとして存在しません。) で 失敗する場合があります。 対処法:Integration Services に関連するレジストリの場所を Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID の下とこれらのハイブ内で特定し、接続しようとしている Integration Services の特定のバージョンについて 'LocalService' という名前のレジストリ キーの名前を 'LocalService_A' に変更します。 | 該当なし |
-| オブジェクト エクスプローラー | [Azure Synapse Analytics SQL オンデマンド](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)に関連するエンジンの変更により、18.7 より前の SSMS のリリースでは、オブジェクト エクスプローラーに重大な変更が加えられています。 | Azure Synapse Analytics SQL オンデマンドと共に SSMS でオブジェクト エクスプローラーを引き続き利用するには、SSMS 18.7 以降が必要です。 |
+| オブジェクト エクスプローラー | [Azure Synapse Analytics SQL オンデマンド](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)に関連するエンジンの変更により、18.7 より前の SSMS のリリースでは、オブジェクト エクスプローラーに重大な変更が加えられています。 | Azure Synapse Analytics SQL オンデマンドと共に SSMS でオブジェクト エクスプローラーを引き続き利用するには、SSMS 18.7 以降を使用する必要があります。 |
 
 他の既知の問題について、および製品チームにフィードバックを提供するには、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035-sql-server)を参照できます。
 
@@ -199,13 +199,13 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | SSMS 全般 | データベースのプロパティの "サイズ" に SQL Azure DB のデータベースの実際のサイズではなく最大サイズが表示される問題が修正されました (注: DW の場合は、引き続き最大サイズが表示されます)。 |
 | SSMS 全般 | SSMS の 3 つの一般的なハングの原因が解決されました。 |
 | SSMS 全般 | SSMS 接続ダイアログのエントリ (サーバー/ユーザー/パスワード) を *忘れる* ことに関連するいくつかの問題が修正されました。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/40256401)と [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/40015519)を参照してください。 |
-| SSMS 全般 | **[統計のプロパティ]** ダイアログで、 **[この列の統計を更新する]** チェックボックスをオンにして、 **[OK]** を選択しても効果がない問題が修正されました。 統計が更新されず、アクションをスクリプト化しようとすると、 *スクリプトを作成するアクションはありません* メッセージが生成されます。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/37799992)を参照してください。 |
+| SSMS 全般 | **[統計のプロパティ]** ダイアログで、 **[この列の統計を更新する]** チェックボックスをオンにして、 **[OK]** を選択しても効果がない問題が修正されました。 統計が更新されず、アクションをスクリプト化しようとすると、*スクリプトを作成するアクションはありません* メッセージが生成されます。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/37799992)を参照してください。 |
 | SSMS 全般 | [CVE-2020-1455](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1455) に関連する問題が対処されました。 | 
 | データ層アプリケーションのインポート/エクスポート | bacpac ファイルのインポート時に SSMS がエラーをスローしていた問題が修正されました。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/40229137)を参照してください。 |
 | Integration Services | ユーザーが SSMS バージョン 18.4 以前を使用して Azure SQL Managed Instance で SSIS パッケージを実行するときに、SQL エージェント ジョブ ステップを編集できないというバグが修正されました。 |
 | Integration Services | **[実行オプション]** タブに、オンプレミスの SQL Server の SQL エージェント ジョブ ステップで SSIS パッケージを実行するための **[32 ビット ランタイムを使用する]** オプションがなくなるバグが修正されました。 |
 | Intellisense/エディター | [ファイル] > [新規作成] > [データベース エンジン クエリ] を実行すると、エラー ダイアログが表示されることがある問題が修正されました。 |
-| オブジェクト エクスプローラー | オブジェクト エクスプローラーのテーブルまたはインデックス ノードを右クリックしたときに、Azure SQL Database に対して、" *プロパティ ウィンドウ* " を使用できなかった問題が修正されました。 |
+| オブジェクト エクスプローラー | オブジェクト エクスプローラーのテーブルまたはインデックス ノードを右クリックしたときに、Azure SQL Database に対して、"*プロパティ ウィンドウ*" を使用できなかった問題が修正されました。 |
 | オブジェクト エクスプローラー | sys.database_service_objectives に影響するコントロール プレーンの停止がある場合、SSMS が Azure でマスターのデータベース ノードを展開できない問題が対処されました。 |
 | Reports | Linux で破損したいくつかの標準レポートが修正されました </br></br> 例:メモリ消費量レポートが、"/var/opt/mssql/log/log_116.trc\log.trc' は無効です..." というようなエラーで失敗します。 |
 | SMO/スクリプト作成 | 既定の SLO として Gen5_2 を使用するために新しいデータベースを Azure SQL Database に作成するようにロジックが更新されました。 |
@@ -274,10 +274,10 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | Integration Services | オンプレミスの SSIS エージェント ジョブの、ADF パイプラインおよびトリガーへの移行がサポートされます。
 | Integration Services | SSIS DB から SSIS プロジェクトをエクスポートする際のユーザー エクスペリエンスが改善されました。 SSIS プロジェクトにパッケージを読み込んでアップグレードしていた古いエクスポートと比較すると、バージョンに依存しない新しいエクスポートでは、SSIS プロジェクトにパッケージを読み込んでアップグレードすることはありません。 代わりに、保護レベルを EncryptSensitiveWithUserKey に変更する以外は、SSIS DB にあるのと同じ状態でプロジェクトにパッケージを保持します。 |
 | SMO/スクリプト作成 | View オブジェクトに新しい DwMaterializedViewDistribution プロパティが追加されました。 |
-| SMO/スクリプト作成 | " *機能制限* " のサポートが削除されました (このプレビュー機能は SQL Azure と SQL オンプレミスから削除されています)。 |
+| SMO/スクリプト作成 | "*機能制限*" のサポートが削除されました (このプレビュー機能は SQL Azure と SQL オンプレミスから削除されています)。 |
 | SMO/スクリプト作成 | スクリプト生成ウィザードの保存先として *Notebook* が追加されました。 |
 | SMO/スクリプト作成 | *SQL On Demand* のサポートが追加されました。 |
-| SMO/スクリプト作成 | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Platform、Name、および engineEdition フィールドに、通常のコンマで区切られた一覧を含めることができるようになりました ( *platform* :\[*Windows* , *Linux*\])。正規表現も使用できます ( *platform* : *\/Windows\|Linux\/* )
+| SMO/スクリプト作成 | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Platform、Name、および engineEdition フィールドに、通常のコンマで区切られた一覧を含めることができるようになりました (*platform*:\[*Windows*, *Linux*\])。正規表現も使用できます (*platform*: *\/Windows\|Linux\/* )
 | SMO/スクリプト作成 | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 13 個の評価規則が追加されました。 詳細については、[GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api) にアクセスしてください。 |
 
 #### <a name="bug-fixes-in-185"></a>18.5 でのバグの修正
@@ -298,12 +298,12 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | データ分類 | 分類済みの列テーブルのすぐ上にあるボタンによって、表示どおりに推奨事項パネルを最小化できるようになりました。 |
 | SSMS 全般 | MSODBC および MSOLEDB ドライバーのバージョンを更新します。 |
 | SSMS 全般 | SSMS でのハングとクラッシュに関する、少なくとも 2 つの一般的な原因が対処されました。 |
-| SSMS 全般 | [参照] ボタンを選択すると " *[復元] ダイアログ* " がハングするもう 1 つのケースも対処されました。 |
-| SSMS 全般 | SQL On Demand の " *新しいデータベース GUI* " を修正しました。 |
+| SSMS 全般 | [参照] ボタンを選択すると " *[復元] ダイアログ*" がハングするもう 1 つのケースも対処されました。 |
+| SSMS 全般 | SQL On Demand の "*新しいデータベース GUI*" を修正しました。 |
 | SSMS 全般 | SQL On Demand の *[New External Table...]\(新しい外部テーブル...\)* テンプレートと *[New External Data Source...]\(新しい外部データ ソース...\)* テンプレートを修正しました。 |
 | SSMS 全般 | SQL On Demand のデータベースのプロパティ、接続のプロパティ、レポートの非表示と名前の変更を修正しました。 |
 | SSMS 全般 | Always Encrypted: 新しいエンクレーブ対応キーを選択したときにキー名のドロップダウンが読み取り専用になる問題を修正しました。 |
-| SSMS 全般 | 2 つの " *その他のカテゴリ* " が表示されていた " *データベースのプロパティのオプション* " グリッドをクリーンアップしました。 |
+| SSMS 全般 | 2 つの "*その他のカテゴリ*" が表示されていた "*データベースのプロパティのオプション*" グリッドをクリーンアップしました。 |
 | SSMS 全般 | スクロール バーが "データベースのプロパティのオプション" グリッドの中央から開始された問題を修正しました。 |
 | SSMS 全般 | Analysis Services サーバーへの接続中に .sql ファイルを開くと SSMS がクラッシュする原因となっていた問題を修正しました。 |
 | SSMS 全般 | 接続ダイアログ: [パスワードを保存する] をオフにしても機能しない問題を修正しました。 |
@@ -320,7 +320,7 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 |フラット ファイルのインポート | フラット ファイルのインポート ウィザードが更新され、null を許可する列に対してすべて選択を使用できるようになりました。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/38027137)を参照してください。 |
 | オブジェクト エクスプローラー | 接続ダイアログで、接続のために接続文字列が使用されている場合に、オブジェクト エクスプローラーに誤った情報が表示される可能性がある問題を修正しました。 |
 | オブジェクト エクスプローラー | 数万のテーブル (20k+) を含むデータベースに対するテーブルの拡張で、OE が低速になった問題を修正しました。 |
-| クエリ ストア UI | TRC レポートで、(" *待機時間* " メトリックの) 実行回数が、個別の待機カテゴリごとの実行回数の合計として計算される正しくない動作を修正しました。 ただし、クエリを 1 回実行する場合は、クエリが待機していた待機カテゴリごとに登録されます。 そのため、TRC によって単に待機カテゴリ全体が合計されただけの場合は、実行回数が肥大化します。 実際には、これは wait_category 全体の最大値である必要があります。 |
+| クエリ ストア UI | TRC レポートで、("*待機時間*" メトリックの) 実行回数が、個別の待機カテゴリごとの実行回数の合計として計算される正しくない動作を修正しました。 ただし、クエリを 1 回実行する場合は、クエリが待機していた待機カテゴリごとに登録されます。 そのため、TRC によって単に待機カテゴリ全体が合計されただけの場合は、実行回数が肥大化します。 実際には、これは wait_category 全体の最大値である必要があります。 |
 | クエリ ストア UI | TRC の詳細ビューで、結果セットが上位 x でフィルター処理されている場合に、正しくないデータが返される動作を修正しました。 これは、クエリによって複数の共通テーブル式が使用され、それが結合されて最終的な結果セットが作成されるために発生します。 上位 x が CTE にプッシュされると、必要な行が除外されることがあります。 これにより、結果セットが非決定論的になる場合があります。 修正方法は、CTE に上位 x 句をプッシュしないことです。 |
 | クエリ ストア UI | 両方のプラン概要を修正しました - グリッド ビューまたはグラフ ビューには、最後のクエリ実行の待機時間が必要です。 この列がない場合、クエリは中断されます。 この変更セットにより、この列が待機統計 CTE に追加されます。 |
 | プラン表示 | SSMS で、複数の実行を伴う演算子の推定行数を表示する方法が改善されました。(1) SSMS の *[予測行数]* が "実行ごとの予測行数" に変更されました。(2) 新しいプロパティ *[Estimated Number of Rows for All Executions]\(すべての実行の予測行数\)* が追加されました。(3) プロパティ *[実際の行数]* が *[Actual Number of Rows for All Executions]\(すべての実行の実際の行数\)* に変更されます。 |
@@ -364,7 +364,7 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | [新しい項目] | 詳細 |
 |----------|---------|
 | データ分類 | データ分類に対してカスタム情報保護ポリシーのサポートが追加されました。 |
-| クエリ ストア | ダイアログのプロパティに " *クエリごとに最大プラン* " の値が追加されました。 |
+| クエリ ストア | ダイアログのプロパティに "*クエリごとに最大プラン*" の値が追加されました。 |
 | クエリ ストア | 新しいカスタム キャプチャ ポリシーのサポートが追加されました。 |
 | クエリ ストア | **[クエリ ストア]** の **[データベースのプロパティ]** オプションに **[Wait Statistics Capture Mode]\(待機統計取り込みモード\)** を追加しました。 |
 | SMO/スクリプト作成 | SQL DW で具体化されたビューのスクリプトをサポートします。 |
@@ -384,13 +384,13 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 |----------|---------|
 | Analysis Services | 多次元データベース用 DAX スクリプト エディターで IntelliSense にテーブルが表示されない問題を修正しました。 |
 | Analysis Services | DAX パーサーを使用して、エンジン文字列に変換します。 これは、国際的な区切り記号、小数点、および空白文字を対象としています。 |
-| Always Encrypted | " *要求の検証* " で " *大文字と小文字が区別されない* " 問題を修正しました。 |
+| Always Encrypted | "*要求の検証*" で "*大文字と小文字が区別されない*" 問題を修正しました。 |
 | Always Encrypted | エラー/警告レポートが正しく機能しない問題を修正しました。 |
 | データベース コピー ウィザード | このダイアログのレンダリングにおけるさまざまな切り捨てとレイアウトの問題を修正しました。 |
 | SSMS 全般 | SQL ファイルも指定されたときにコマンド ラインで渡された接続情報が SSMS で優先されないという長い間解決されなかった問題を修正しました。 |
 | SSMS 全般 | "レプリケーションフィルター" オブジェクトでセキュリティ保護可能なリソースを表示しようとしたときの SSMS のクラッシュを修正しました。 |
 | SSMS 全般 | SSMS で資格情報のキャッシュを参照することにより、-P コマンド ライン オプションの削除を軽減しました。必要な資格情報が見つかった場合は、それを使用して接続が確立されます。 |
-| フラット ファイルのインポート | " *フラット ファイルのインポート* " 機能でテキスト修飾子が正しく処理されない問題を修正しました。 |
+| フラット ファイルのインポート | "*フラット ファイルのインポート*" 機能でテキスト修飾子が正しく処理されない問題を修正しました。 |
 | オブジェクト エクスプローラー | オブジェクト エクスプローラーでの Azure SQL Database の削除で正しくないメッセージが表示される問題を修正しました。 |
 | クエリ結果 | グリッドが少し狭すぎて、すべての列で最長文字列の末尾に *...* が表示されるという、SSMS 18.3.1 で発生するようになった問題を修正しました。 |
 | レプリケーション ツール | SQL Agent のジョブを編集しようとすると、アプリケーションでエラー ("ファイルまたはアセンブリ ... が読み込めませんでした") がスローされる原因となっていた問題を修正しました。 |
@@ -420,8 +420,8 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 
 | [新しい項目] | 詳細 |
 |----------|---------|
-| データ分類 | データ分類情報が列のプロパティ UI に追加されます (" *情報の種類* "、" *情報の種類 ID* "、" *機密ラベル* "、および " *機密ラベル ID* " は SSMS UI では公開されません)。 |
-| Intellisense/エディター | SQL Server 2019 に最近追加された機能のサポートを更新しました (たとえば、 *ALTER SERVER CONFIGURATION* )。 |
+| データ分類 | データ分類情報が列のプロパティ UI に追加されます ("*情報の種類*"、"*情報の種類 ID*"、"*機密ラベル*"、および "*機密ラベル ID*" は SSMS UI では公開されません)。 |
+| Intellisense/エディター | SQL Server 2019 に最近追加された機能のサポートを更新しました (たとえば、*ALTER SERVER CONFIGURATION*)。 |
 | Integration Services | 新しい選択メニュー項目 `Tools > Migrate to Azure > Configure Azure-enabled DTExec` が追加されます。これにより、Azure-SSIS Integration Runtime 上で、SSIS パッケージ実行が、ADF パイプラインでの SSIS パッケージの実行アクティビティとして呼び出されます。 |
 | SMO/スクリプト作成 | Azure SQL DW 固有の制約のスクリプト作成サポートに対するサポートを追加しました。 |
 | SMO/スクリプト作成 | データ分類 </br> - SQL バージョン 10 (SQL 2008) 以降のサポートを追加しました。 </br> - SQL バージョン 15 (SQL 2019) 以降および Azure SQL Database に新しい機密属性 'rank' を追加しました。 |
@@ -478,7 +478,7 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | Intellisense/エディター | データ分類に対するサポートを追加しました。 |
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | Intellisense サポートを追加しました。 |
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | インデックスへの高コンカレンシーの挿入のスループット向上に役立つ、データベース エンジン内での最適化を有効にします。 このオプションは、最終ページ挿入の競合が起きやすいインデックスを対象としています。これは、一般に、ID 列、シーケンス、または日付/時刻列などの連続したキーを持つインデックスでよく見られます。 詳細については、「[CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys)」を参照してください。 |
-| クエリの実行または結果 | 指定したクエリによってその実行が完了したときを指す " *完了時刻* " を、追跡するメッセージに追加しました。 |
+| クエリの実行または結果 | 指定したクエリによってその実行が完了したときを指す "*完了時刻*" を、追跡するメッセージに追加しました。 |
 | クエリの実行または結果 | より多くのデータを表示し (結果をテキストで表示)、セルに格納することを許可します (結果をグリッドに表示)。 SSMS では、どちらも最大 200 万文字まで許可されるようになりました (それぞれ 256 K および 64 K から増加)。 これにより、ユーザーがグリッドのセルから 43,680 文字を超えて取得できないという問題にも対処しました。 |
 | プラン表示 | [インライン スカラー UDF 機能](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)が有効な場合、QueryPlan に新しい属性を追加しました (ContainsInlineScalarTsqludfs)。 |
 | SMO | *SQL Assessment API* のサポートが追加されました。 詳細については、「[SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md)」を参照してください。 |
@@ -492,32 +492,32 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | 常時接続 | 可用性グループ (AG) を削除しようとすると、SSMS からエラーがスローされる問題を修正しました |
 | 常時接続 | 読み取りスケール AG (クラスターの種類 = NONE) を使用しているときにレプリカを Synchronous と構成すると、SSMS で不適切なフェールオーバー ウィザードが表示されていた問題を修正しました。 SSMS では、Force_Failover_Allow_Data_Loss オプションのウィザードが表示されるようになりました。これは、クラスターの種類 NONE Availability に対して許可されている唯一のオプションです。 |
 | 常時接続 | ウィザードで、許可される同期数が 3 に制限されていた問題を修正しました |
-| データ分類 | CompatLevel が 150 未満のデータベース上でデータ分類レポートを表示しようとすると、SSMS から " *インデックス (ゼロベース) は 0 以上でなければなりません* " のエラーがスローされる問題を修正しました。 |
+| データ分類 | CompatLevel が 150 未満のデータベース上でデータ分類レポートを表示しようとすると、SSMS から "*インデックス (ゼロベース) は 0 以上でなければなりません*" のエラーがスローされる問題を修正しました。 |
 | SSMS 全般 | ユーザーがマウス ホイールを使って結果ウィンドウを水平方向にスクロールできなかった問題を修正しました。 詳細については、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/34145641)を参照してください。 |
-| SSMS 全般 | 無害な待機の種類 SQLTRACE_WAIT_ENTRIES を無視するように " *利用状況モニター* " を更新しました |
+| SSMS 全般 | 無害な待機の種類 SQLTRACE_WAIT_ENTRIES を無視するように "*利用状況モニター*" を更新しました |
 | SSMS 全般 | 一部の色オプション *([テキスト エディター] > [エディターのタブとステータス バー])* が保存されない問題を修正しました。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/37924165)を参照してください
 | SSMS 全般 | 接続ダイアログで、 *[Azure Active Directory - Universal with MFA のサポート]* を *[Azure Active Directory - Universal with MFA]* に置き換えました (機能は同じですが、混乱を軽減するため)。 |
 | SSMS 全般 | Azure SQL Database を作成するときに正しい既定値を使用するように SSMS を更新しました。 |
 | SSMS 全般 | サーバーが [SQL Linux コンテナー](../linux/quickstart-install-connect-docker.md)の場合に [[サーバーの登録]](register-servers/register-servers.md) のノードからユーザーが *PowerShell を起動* できなかった問題を修正しました。 |
 | フラット ファイルのインポート | SSMS 18.0 から 18.1 にアップグレードした後に *[フラット ファイルのインポート]* が機能しなかった問題を修正しました。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/37912636)を参照してください |
-| フラット ファイルのインポート | Unicode 文字のヘッダーを持つ .csv ファイルの場合に " *フラット ファイルのインポート ウィザードで重複または無効な列* " が報告されていた問題を修正しました。 |
-| オブジェクト エクスプローラー | SQL Express に接続したときに一部のメニュー項目 (たとえば、SQL サーバーの " *インポートおよびエクスポート ウィザード* ") が見つからないか無効になる問題を修正しました。 詳細については、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/37500016)を参照してください。 |
+| フラット ファイルのインポート | Unicode 文字のヘッダーを持つ .csv ファイルの場合に "*フラット ファイルのインポート ウィザードで重複または無効な列*" が報告されていた問題を修正しました。 |
+| オブジェクト エクスプローラー | SQL Express に接続したときに一部のメニュー項目 (たとえば、SQL サーバーの "*インポートおよびエクスポート ウィザード*") が見つからないか無効になる問題を修正しました。 詳細については、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/37500016)を参照してください。 |
 | オブジェクト エクスプローラー | オブジェクトをオブジェクト エクスプローラーからエディターにドラッグすると、SSMS がクラッシュする問題を修正しました。 詳細については、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/37887988)を参照してください。 |
 | オブジェクト エクスプローラー | データベースの名前を変更すると、正しくないデータベース名がオブジェクト エクスプローラーに表示される問題を修正しました。 詳細については、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/37638472)を参照してください。 |
 | オブジェクト エクスプローラー | Windows でサポートされなくなった照合順序を使用するように設定されているデータベースに対して、オブジェクト エクスプローラーで *Tables* ノードを展開しようとするとエラーがトリガーされる (また、ユーザーは自分のテーブルを展開できない) という長い間未解決だった問題を修正しました。 そのような照合順序の例は、Korean_Wansung_Unicode_CI_AS です。 |
 | [サーバーの登録](register-servers/register-servers.md) | [登録済みサーバー] で *[Active Directory - 統合]* または *[Azure Active Directory - Universal with MFA]* のいずれかが使用されている場合に、複数のサーバーに対して ([登録済みサーバー] の *[グループ]* ) クエリを発行しようとしても、SSMS 接続の失敗のために機能しない問題を修正しました。 |
 | [サーバーの登録](register-servers/register-servers.md) | 登録済みサーバーで *[Active Directory - パスワード]* または *[SQL Auth]\(SQL 認証\)* のいずれかが使用され、ユーザーがパスワードを記憶しないことを選択している場合に、複数のサーバーに対して ([登録済みサーバー] の *[グループ]* で) クエリを発行しようとしても、SSMS がクラッシュする問題を修正しました。 |
-| Reports | データ ファイルのエクステント数が膨大な場合にレポートが失敗する " *ディスク使用量* " レポートの問題を修正しました。 |
+| Reports | データ ファイルのエクステント数が膨大な場合にレポートが失敗する "*ディスク使用量*" レポートの問題を修正しました。 |
 | レプリケーション ツール | レプリケーション モニターが AG のパブリッシャー DB および AG のディストリビューターで機能しない問題を修正しました (これは以前に SSMS 17.x で修正済み) |
 | SQL エージェント | ジョブ ステップの追加、挿入、編集、または削除時に、アクティブな行ではなく最初の行でフォーカスがリセットされる問題を修正しました。 詳細については、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/38070892)を参照してください。 |
 | SMO/スクリプト作成 | *CREATE OR ALTER* で拡張プロパティを持つオブジェクトがスクリプト化されない問題を修正しました。 詳細については、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035-sql-server/suggestions/37236748)を参照してください。 |
 | SMO/スクリプト作成 | SSMS が CREATE EXTERNAL LIBRARY を正しくスクリプト化できない問題を修正しました。 詳細については、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/37868089)を参照してください。 |
-| SMO/スクリプト作成 | 数千のテーブルを持つデータベースに対して " *スクリプトの生成* " を実行しようとしたときの問題 (進行状況ダイアログが停止しているように見える) を修正しました。 |
-| SMO/スクリプト作成 | SQL 2019 で " *外部テーブル* " のスクリプトが機能しない問題を修正しました。 |
-| SMO/スクリプト作成 | SQL 2019 で " *外部データ ソース* " のスクリプトが機能しない問題を修正しました。 詳細については、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/34295080)を参照してください。 |
+| SMO/スクリプト作成 | 数千のテーブルを持つデータベースに対して "*スクリプトの生成*" を実行しようとしたときの問題 (進行状況ダイアログが停止しているように見える) を修正しました。 |
+| SMO/スクリプト作成 | SQL 2019 で "*外部テーブル*" のスクリプトが機能しない問題を修正しました。 |
+| SMO/スクリプト作成 | SQL 2019 で "*外部データ ソース*" のスクリプトが機能しない問題を修正しました。 詳細については、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/34295080)を参照してください。 |
 | SMO/スクリプト作成 | Azure SQL Database をターゲットにしているときに列の "*拡張プロパティ*" がスクリプト化されない問題を修正しました。 詳細については「[stackoverflow](https://stackoverflow.com/questions/56952337/how-can-i-script-the-descriptions-of-columns-in-ms-sql-server-management-studio)」を参照してください。 |
 | SMO/スクリプト作成 | 最後のページ挿入:SMO - Add property *Index.IsOptimizedForSequentialKey* |
-|**SSMS セットアップ**| **SSMS のセットアップで、言語の不一致を報告する SSMS のインストールが誤ってブロックされていた問題を軽減しました。これは、セットアップの中止や SSMS の以前のバージョンの誤ったアンインストールなど、一部の異常な状況で問題になる可能性がありました。詳細については、 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/37483594/)を参照してください。** |
+|**SSMS セットアップ**| **SSMS のセットアップで、言語の不一致を報告する SSMS のインストールが誤ってブロックされていた問題を軽減しました。これは、セットアップの中止や SSMS の以前のバージョンの誤ったアンインストールなど、一部の異常な状況で問題になる可能性がありました。詳細については、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/37483594/)を参照してください。** |
 | XEvent プロファイラー | ビューアーが閉じられるときのクラッシュを修正しました。 |
 
 #### <a name="known-issues-182"></a>既知の問題 (18.2)
@@ -581,7 +581,7 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | Reports | レポートで GrantedQueryMemory を KB 単位で表示するように修正しました (SQL パフォーマンス ダッシュボード レポート)。 詳細については、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/37167289)を参照してください。 |
 | Reports | Always-On シナリオでのログ ブロックのトレースが改善されました。 |
 | プラン表示 | 新しいプラン表示要素 *SpillOccurred* をプラン表示スキーマに追加しました。 |
-| プラン表示 | リモートの読み取り ( *ActualPageServerReads* 、 *ActualPageServerReadAheads* 、 *ActualLobPageServerReads* 、 *ActualLobPageServerReadAheads* ) をプラン表示スキーマに追加しました。 |
+| プラン表示 | リモートの読み取り (*ActualPageServerReads*、*ActualPageServerReadAheads*、*ActualLobPageServerReads*、*ActualLobPageServerReadAheads*) をプラン表示スキーマに追加しました。 |
 | SMO/スクリプト作成 | グラフではないテーブルのスクリプト作成中のエッジ制約のクエリを回避します。 |
 | SMO/スクリプト作成 | *データ分類* を使用した列のスクリプト作成時の機密分類に関する制約を削除しました。 |
 | SMO/スクリプト作成 | データ生成時にグラフ テーブルでの "スクリプトの生成" が失敗する問題を修正しました。 詳細については、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898466)を参照してください。 |
@@ -637,7 +637,7 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 |SSMS 拡張機能を開発するためのパッケージ ID が不要になりました| これまで、SSMS では既知のパッケージのみが選択されて読み込まれていたので、開発者は自分のパッケージを登録する必要がありました。 この点は変更されました。|
 |SSMS 全般|SSMS の Filegroups に関する AUTOGROW_ALL_FILES 構成オプションを公開しています。|
 |SSMS 全般|SSMS GUI から、危険な 'lightweight pooling' と 'priority boost' オプションを削除しました。 詳細については、「[priority boost の詳細 - 推奨されない理由](https://deep.data.blog/2010/01/26/priority-boost-details-and-why-its-not-recommended/)」をご覧ください。
-|SSMS 全般|ファイルを作成するための新しいメニューとキー バインド: **CTRL+ALT+N** 。 **CTRL + N** でも引き続き新しいクエリを作成できます。|
+|SSMS 全般|ファイルを作成するための新しいメニューとキー バインド:**CTRL+ALT+N**。 **CTRL + N** でも引き続き新しいクエリを作成できます。|
 |SSMS 全般|**[新しいファイアウォール規則]** ダイアログで、自動的に生成される規則名ではなく、ユーザーが規則名を指定できるようになりました。|
 |SSMS 全般|特に v140+ T-SQL に合わせてエディターの IntelliSense が改善されました。|
 |SSMS 全般|SSMS UI の照合順序ダイアログに UTF-8 のサポートが追加されました。|
@@ -666,7 +666,7 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 |フラット ファイルのインポート ウィザード|インポートで列の名前が変更された可能性があることをユーザーに通知するロジックが追加されました。|
 |Integration Services (SSIS)|顧客が Azure Government クラウド内にある Azure-SSIS IR で SSIS パッケージをスケジュールできるようにするためのサポートが追加されました。|
 |Integration Services (SSIS)|Azure SQL Managed Instance の SQL エージェントを SSMS を介して使用するときに、SSIS エージェント ジョブ ステップでパラメーターと接続マネージャーを構成できます。|
-|Integration Services (SSIS)|Azure SQL Database または Azure SQL Managed Instance に接続するときに、" *既定* " を初期データベースとして使用して接続できます。|
+|Integration Services (SSIS)|Azure SQL Database または Azure SQL Managed Instance に接続するときに、"*既定*" を初期データベースとして使用して接続できます。|
 |Integration Services (SSIS)|[Integration Services カタログ] の下に新しい項目 **[Try SSIS in Azure Data Factory]\(Azure Data Factory で SSIS を試す\)** が追加されました。これは、統合ランタイムの作成ウィザードを起動して Azure-SSIS Integration Runtime をすばやく作成するのに使用できます。
 |Integration Services (SSIS)|カタログ作成ウィザードに **[Create SSIS IR]\(SSIS IR の作成\)** ボタンが追加されました。これは、統合ランタイムの作成ウィザードを起動して Azure-SSIS Integration Runtime をすばやく作成するのに使用できます。|
 |Integration Services (SSIS)|ISDeploymentWizard で、SQL 認証、Azure Active Directory 統合認証、および Azure Active Directory パスワード認証がコマンド ライン モードでサポートされるようになりました。|
@@ -813,7 +813,7 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 |結果グリッド|グリッドをクリックすると "インデックスが範囲外です" となる問題を修正しました。|
 |結果グリッド|グリッド結果の背景色が無視される問題を修正しました。 詳細については、[https://feedback.azure.com/forums/908035/suggestions/32895916](https://feedback.azure.com/forums/908035/suggestions/32895916) を参照してください。 |
 |プラン表示|複数のスレッドが存在する場合、新しい memory grant 演算子プロパティが正しく表示されません。|
-|プラン表示|実際の実行プラン xml の RunTimeCountersPerThread に、次の 4 つの属性を追加しました。HpcRowCount ( *hpc* デバイスが処理した行数)、HpcKernelElapsedUs (使用中のカーネルの実行待機の経過時間)、HpcHostToDeviceBytes (ホストからデバイスに転送されたバイト数)、および HpcDeviceToHostBytes (デバイスからホストに転送されたバイト数)。|
+|プラン表示|実際の実行プラン xml の RunTimeCountersPerThread に、次の 4 つの属性を追加しました。HpcRowCount (*hpc* デバイスが処理した行数)、HpcKernelElapsedUs (使用中のカーネルの実行待機の経過時間)、HpcHostToDeviceBytes (ホストからデバイスに転送されたバイト数)、および HpcDeviceToHostBytes (デバイスからホストに転送されたバイト数)。|
 |プラン表示|類似するプラン ノードが誤った位置で強調表示される問題を修正しました。|
 |SMO|SMO/ServerConnection で SqlCredential ベースの接続が正しく行われない問題を修正しました。 詳細については、[https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941](https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941) を参照してください。 |
 |SMO|SMO を使用して作成されたアプリケーションで、複数のスレッドで同じサーバーのデータベースを列挙しようとした場合に、各スレッドで別の SqlConnection インスタンスを使用していてもエラーが発生していた問題が修正されました。|
