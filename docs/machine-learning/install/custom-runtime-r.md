@@ -5,16 +5,16 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/20/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f3ee552c2e58fa295d4a0094430bfca4ef3dcac
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 2b058fe7aa723eddcdcf97158d19a053bf2b062b
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155088"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870053"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>SQL Server 用の R カスタム ランタイムをインストールする
 
@@ -137,7 +137,7 @@ setx /m PATH "path\to\installation\of\R\bin\x64;%PATH%"
 
 インスタンス名を `MSSQLLAUNCHPAD` に追加します (`MSSQLLAUNCHPAD$INSTANCENAME`)。 この例では、`INSTANCENAME` は既定のインスタンス `MSSQLSERVER` です。
 
-1. **SQL Server Launchpad サービスのユーザー名**にアクセス許可を付与します
+1. **SQL Server Launchpad サービスのユーザー名** にアクセス許可を付与します
 
     ```cmd
     icacls "%R_HOME%" /grant "NT Service\MSSQLLAUNCHPAD$MSSQLSERVER":(OI)(CI)RX /T
@@ -233,7 +233,7 @@ sudo zypper install mssql-server-extensibility
 ## <a name="install-r"></a>R のインストール
 
 >[!NOTE]
->SQL Machine Learning Services の場合、R は `/opt/microsoft/ropen/3.5.2/lib64/R` に既にインストールされています。 このパスを R_HOME として引き続き使用する場合は、次の手順にスキップして **Rcpp をインストール**してください。 
+>SQL Machine Learning Services の場合、R は `/opt/microsoft/ropen/3.5.2/lib64/R` に既にインストールされています。 このパスを R_HOME として引き続き使用する場合は、次の手順にスキップして **Rcpp をインストール** してください。 
 
 R の別のランタイムを使用する場合は、新しいバージョンのインストールを続ける前に、まず `microsoft-r-open-mro` を削除する必要があります。 Ubuntu の例:
 

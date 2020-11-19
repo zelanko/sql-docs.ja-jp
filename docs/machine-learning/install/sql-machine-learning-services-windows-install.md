@@ -5,16 +5,16 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 02/29/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: abe3a4d1315ab8192a35e9e8a5a2c64f2a99158a
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 11e051a87e0b5d051cf62c702c13f1189a21ca05
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155060"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870500"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows に SQL Server Machine Learning Services (Python と R) をインストールする
 
@@ -41,7 +41,7 @@ Windows に SQL Server Machine Learning Services をインストールする方�
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> Machine Learning Services は、既定で **SQL Server ビッグ データ クラスター**にインストールされます。 **ビッグ データ クラスター**を使用する場合、この記事の手順を実行する必要はありません。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../../big-data-cluster/machine-learning-services.md)に関するページを参照してください。
+> Machine Learning Services は、既定で **SQL Server ビッグ データ クラスター** にインストールされます。 **ビッグ データ クラスター** を使用する場合、この記事の手順を実行する必要はありません。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../../big-data-cluster/machine-learning-services.md)に関するページを参照してください。
 ::: moniker-end
 
 > [!IMPORTANT]
@@ -171,7 +171,7 @@ Python および R と Machine Learning Services との統合をサポートす�
 
 ## <a name="set-environment-variables"></a>環境変数の設定
 
-R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、Intel Math Kernel Library (MKL) 計算からの[一貫した出力を保証](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)する必要があります。
+R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、Intel Math Kernel Library (MKL) 計算からの [一貫した出力を保証](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)する必要があります。
 
 1. コントロール パネルで、 **[システムとセキュリティ]**  >  **[システム]**  >  **[システムの詳細設定]**  >  **[環境変数]** の順にクリックします。
 
@@ -230,7 +230,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 
    **run_value** は 1 に設定されます。
     
-2. **[サービス]** パネルまたは SQL Server 構成マネージャーを開き、**SQL Server Launchpad サービス**が実行されていることを確認します。 R または Python がインストールされているすべてのデータベース エンジンのインスタンスに対して 1 つのサービスがある必要があります。 サービスの詳細については、[機能拡張フレームワーク](../concepts/extensibility-framework.md)に関するページを参照してください。 
+2. **[サービス]** パネルまたは SQL Server 構成マネージャーを開き、**SQL Server Launchpad サービス** が実行されていることを確認します。 R または Python がインストールされているすべてのデータベース エンジンのインスタンスに対して 1 つのサービスがある必要があります。 サービスの詳細については、[機能拡張フレームワーク](../concepts/extensibility-framework.md)に関するページを参照してください。 
    
 3. スタート パッドが実行されている場合は、単純な Python および R スクリプトを実行して、外部スクリプト ランタイムから SQL Server と通信できることを確認できます。
 

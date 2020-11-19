@@ -7,14 +7,13 @@ ms.date: 08/26/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 229b0843fc8602457328921eaa6ff8991f4b5655
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: b77fb8eac5b2c14bb181e2e10d9a32721ccec42b
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956713"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870400"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>sqlmlutils を使用した Python パッケージのインストール
 
@@ -51,7 +50,7 @@ ms.locfileid: "91956713"
 
 + Python パッケージ ライブラリは SQL Server インスタンスの Program Files フォルダー内にあります。既定では、このフォルダーにインストールするには管理者権限が必要です。 詳細については、[パッケージ ライブラリの場所](../package-management/python-package-information.md#default-python-library-location)に関するページを参照してください。
 
-+ パッケージのインストールは、**sqlmlutils** に渡す接続情報で指定する SQL インスタンス、データベース、ユーザーに固有のものです。 パッケージを複数の SQL インスタンスまたはデータベースで使用する場合や、別のユーザーに対してパッケージを使用する場合は、それぞれにパッケージをインストールする必要があります。 例外として、`dbo` のメンバーによってパッケージがインストールされた場合、そのパッケージは*パブリック*であり、すべてのユーザーと共有することができます。 ユーザーがパブリック パッケージの新しいバージョンをインストールした場合、パブリック パッケージは影響を受けませんが、そのユーザーは新しいバージョンにアクセスできます。
++ パッケージのインストールは、**sqlmlutils** に渡す接続情報で指定する SQL インスタンス、データベース、ユーザーに固有のものです。 パッケージを複数の SQL インスタンスまたはデータベースで使用する場合や、別のユーザーに対してパッケージを使用する場合は、それぞれにパッケージをインストールする必要があります。 例外として、`dbo` のメンバーによってパッケージがインストールされた場合、そのパッケージは *パブリック* であり、すべてのユーザーと共有することができます。 ユーザーがパブリック パッケージの新しいバージョンをインストールした場合、パブリック パッケージは影響を受けませんが、そのユーザーは新しいバージョンにアクセスできます。
 
 + パッケージを追加する前に、パッケージが SQL Server 環境に適しているかどうかを検討してください。
 
@@ -92,7 +91,7 @@ pip install sqlmlutils
 
 1. **pip** がインストールされていることを確認します。 詳細については [pip のインストール](https://pip.pypa.io/en/stable/installing/)に関するページを参照してください。
 1. 最新の **sqlmlutils** zip ファイルを、 https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist からクライアント コンピューターにダウンロードします。 ファイルは解凍しないでください。
-1. **コマンド プロンプト**を開き、次のコマンドを実行して **sqlmlutils** パッケージをインストールします。 ダウンロードした **sqlmlutils** zip ファイルの完全なパスに置き換えます。この例では、ダウンロードしたファイルが `c:\temp\sqlmlutils-1.0.0.zip` であることを想定しています。
+1. **コマンド プロンプト** を開き、次のコマンドを実行して **sqlmlutils** パッケージをインストールします。 ダウンロードした **sqlmlutils** zip ファイルの完全なパスに置き換えます。この例では、ダウンロードしたファイルが `c:\temp\sqlmlutils-1.0.0.zip` であることを想定しています。
    ```console
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-1.0.0.zip
    ```
@@ -135,7 +134,7 @@ SQL Server への接続に使用するクライアント コンピューター�
 
 #### <a name="on-a-computer-with-internet-access"></a>インターネットに接続されているコンピューター
 
-1. **コマンド プロンプト**を開き、次のコマンドを実行して、**テキスト ツール** パッケージを含むローカル フォルダーを作成します。 この例では、フォルダー `c:\temp\text-tools` を作成します。
+1. **コマンド プロンプト** を開き、次のコマンドを実行して、**テキスト ツール** パッケージを含むローカル フォルダーを作成します。 この例では、フォルダー `c:\temp\text-tools` を作成します。
 
    ```console
    pip download text-tools -d c:\temp\text-tools
@@ -147,7 +146,7 @@ SQL Server への接続に使用するクライアント コンピューター�
 
 **sqlmlutils** を使用して、**pip** で作成した、ローカル フォルダー内にある各パッケージ (WHL ファイル) をインストールします。 パッケージはどのような順序でインストールしてもかまいません。
 
-この例では、**テキスト ツール**に依存関係がないので、インストールする `text-tools` フォルダー内のファイルは 1 つのみです。 これに対し、**scikit-plot** のようなパッケージには 11 個の依存関係があるため、フォルダー内に 12 個のファイル (**scikit-plot** パッケージと 11 個の依存パッケージ) があり、それぞれをインストールします。
+この例では、**テキスト ツール** に依存関係がないので、インストールする `text-tools` フォルダー内のファイルは 1 つのみです。 これに対し、**scikit-plot** のようなパッケージには 11 個の依存関係があるため、フォルダー内に 12 個のファイル (**scikit-plot** パッケージと 11 個の依存パッケージ) があり、それぞれをインストールします。
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 

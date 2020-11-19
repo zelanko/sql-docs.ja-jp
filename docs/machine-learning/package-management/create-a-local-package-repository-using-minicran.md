@@ -8,15 +8,14 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f792898232017b0573813b7fb73e6f783e6e3936
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8a23b12f1cd42a1c6f67a09708481134d8d893d4
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956729"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870470"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>miniCRAN を使用してローカル R パッケージ リポジトリを作成する
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -75,7 +74,7 @@ local_repo <- "C:/miniCRANZooPackages"
 
 **miniCRAN** がインストールされて読み込まれたら、ダウンロードする追加パッケージを指定する一覧を作成します。
 
-この最初の一覧には依存関係は追加**しない**でください。 **miniCRAN** によって使用される **igraph** パッケージは、依存関係の一覧を自動的に生成します。 生成された依存関係グラフの使用方法について詳しくは、「[miniCRAN を使用したパッケージの依存関係の識別](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html)」を参照してください。
+この最初の一覧には依存関係は追加 **しない** でください。 **miniCRAN** によって使用される **igraph** パッケージは、依存関係の一覧を自動的に生成します。 生成された依存関係グラフの使用方法について詳しくは、「[miniCRAN を使用したパッケージの依存関係の識別](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html)」を参照してください。
 
 1. ターゲット パッケージ "zoo" と "forecast" を変数に追加します。
 

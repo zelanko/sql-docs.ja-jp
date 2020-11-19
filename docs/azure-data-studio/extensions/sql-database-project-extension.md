@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 10/22/2020
-ms.openlocfilehash: bd361913ac7f094e217b6b75163a0dd96d97d7e2
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: e4030cac39eca0d57af3bf2bcefad293e83971c2
+ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496742"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704167"
 ---
 # <a name="sql-database-projects-extension-preview"></a>SQL Database プロジェクトの拡張機能 (プレビュー)
 
@@ -40,7 +40,7 @@ Azure Data Studio での SQL Database Projects 拡張機能の概要について
 ## <a name="install-the-sql-database-projects-extension"></a>SQL Database プロジェクトの拡張機能をインストールする
 
 1. 拡張機能マネージャーを開いて、使用可能な拡張機能にアクセスします。  そのためには、拡張機能アイコンを選択するか、 **[表示]** メニューの **[拡張機能]** を選択します。
-2. 拡張機能の検索ボックスに名前の一部または全部を入力して、" *SQL Database プロジェクト* " の拡張機能を特定します。 使用可能な拡張機能を選択すると、その詳細が表示されます。
+2. 拡張機能の検索ボックスに名前の一部または全部を入力して、"*SQL Database プロジェクト*" の拡張機能を特定します。 使用可能な拡張機能を選択すると、その詳細が表示されます。
 
    ![拡張機能のインストール](media/sql-database-projects-extension/install-database-projects.png)
 
@@ -56,14 +56,11 @@ Azure Data Studio での SQL Database Projects 拡張機能の概要について
 
 ## <a name="known-limitations"></a>既知の制限事項
 
-1. Azure Data Studio viewlet でプロジェクト参照を追加したり、既存のプロジェクト参照を読み込んだりすることは、現在はサポートされていません。
-2. 現在、Azure Data Studio viewlet では、リンクとしてのファイルの読み込みはサポートされていませんが、ファイルはツリーの最上位レベルに読み込まれ、ビルドによりこれらのファイルが正常に組み込まれます。
-3. 現在、viewlet でのデプロイ前およびデプロイ後のスクリプトの追加と読み込みはサポートされていません。ただし、これらのファイルをプロジェクトに手動で追加すると、ビルド時に受け入れられます。
-4. プロジェクト内の SQLCLR オブジェクトは、.NET Core バージョンの DacFx ではサポートされていません。
-5. タスク (ビルド、発行) はユーザー定義ではありません。
-6. DacFx によって定義されたターゲットを発行します。
-7. ソース管理の統合と新しいプロジェクトの作成では、.gitignore ファイルは自動的に作成されません。
-8. WSL 環境のサポートは制限されています。
+- 現在、Azure Data Studio viewlet では、リンクとしてのファイルの読み込みはサポートされていませんが、ファイルはツリーの最上位レベルに読み込まれ、ビルドによりこれらのファイルが正常に組み込まれます。
+- プロジェクト内の SQLCLR オブジェクトは、.NET Core バージョンの DacFx ではサポートされていません。
+- タスク (ビルド、発行) はユーザー定義ではありません。
+- DacFx によって定義されたターゲットを発行します。
+- WSL 環境のサポートは制限されています。
 
 ## <a name="next-steps"></a>次のステップ
 
