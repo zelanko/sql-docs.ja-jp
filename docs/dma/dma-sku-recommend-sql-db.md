@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: a5ebfaaf303a354124f3668b65716cd65bdb8043
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 035273939e2141b8497b5b0c38762fd7b7d47564
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727773"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947932"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>オンプレミスデータベースの適切な Azure SQL Database/Managed Instance SKU を特定する
 
@@ -42,8 +42,10 @@ SKU の推奨事項機能を使用すると、データベースをホストし�
 
 - 最新バージョンの [DMA](https://aka.ms/get-dma)をダウンロードしてインストールします。 以前のバージョンのツールが既にある場合は、それを開くと、DMA をアップグレードするように求められます。
 - すべてのスクリプトを実行するために必要な [PowerShell バージョン 5.1](https://www.microsoft.com/download/details.aspx?id=54616) 以降がコンピューターにインストールされていることを確認します。 コンピューターにインストールされている PowerShell のバージョンを確認する方法については、「 [Windows powershell 5.1 をダウンロードしてインストール](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)する」を参照してください。
+  > [!NOTE]
+  > データ収集スクリプトでは、コンピューター情報を収集するために、PowerShell 6 で非推奨とされた Get-WmiObject コマンドレットを使用します。 このスクリプトを PowerShell 6 または7で実行するには、WMI コマンドレットを新しい CIM コマンドレットで置き換える必要があります。
 - コンピューターに Azure Powershell モジュールがインストールされていることを確認します。 詳細については、「 [Install the Azure PowerShell module](/powershell/azure/install-az-ps?view=azps-1.8.0)」を参照してください。
-- パフォーマンスカウンターを収集するために必要な PowerShell ファイル **SkuRecommendationDataCollectionScript.ps1**が、DMA フォルダーにインストールされていることを確認します。
+- パフォーマンスカウンターを収集するために必要な PowerShell ファイル **SkuRecommendationDataCollectionScript.ps1** が、DMA フォルダーにインストールされていることを確認します。
 - このプロセスを実行するコンピューターに、データベースをホストしているコンピューターに対する管理者権限があることを確認します。
 
 ## <a name="collect-performance-counters"></a>パフォーマンス カウンターを収集します。
@@ -69,7 +71,7 @@ SKU の推奨事項機能を使用すると、データベースをホストし�
      -ComputerName Foobar1
      -OutputFilePath D:\counters2.csv
      -CollectionTimeInSeconds 2400
-     -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
+     -DbConnectionString Server=localhost;Initial Catalog=master;Integrated Security=SSPI;
     ```
 
     コマンドの実行後、プロセスは、指定した場所にパフォーマンスカウンターを含むファイルを出力します。 このファイルは、プロセスの次の部分の入力として使用できます。これにより、単一データベースとマネージインスタンスの両方のオプションについて SKU の推奨事項が提供されます。
@@ -182,7 +184,7 @@ DMA CLI を使用して SKU の推奨事項を取得するには、コマンド�
 - **Regionname** –対応する SKU のリージョン名。 
 - **I(推奨** )-各レベルに対して SKU の最小推奨事項を作成します。 次に、ヒューリスティックを適用して、データベースの適切なレベルを決定します。 これは、データベースに推奨されるレベルを表します。 
 - **ExclusionReasons** -この値は、レベルが推奨されている場合は空白です。 推奨されていない階層ごとに、選択されなかった理由が示されます。
-- 適用された規則-適用され**た規則の**短い表記。
+- 適用された規則-適用され **た規則の** 短い表記。
 
 最終的に推奨されるレベル ( **Metrictype**) と値 (つまり **metrictype**) は、 **Iの推奨** 列が TRUE である場合に、オンプレミスデータベースに似た成功率で Azure で実行するためにクエリに必要な最小 SKU を反映しています。 Azure SQL Managed Instance の場合、現時点では、最もよく使用される8vcore から40vcore の Sku に対する推奨事項が DMA によってサポートされています。 たとえば、standard レベルでは、推奨される最小 SKU が S4 の場合、S3 以下を選択すると、クエリがタイムアウトになるか、実行に失敗します。
 
@@ -235,6 +237,6 @@ HTML ファイルには、この情報がグラフィック形式で含まれて
     > [!NOTE]
     > サブネット (特に初めて) でマネージインスタンスを作成するには、完了までに数時間かかることがあります。 PowerShell を使用してプロビジョニングスクリプトを実行した後、Azure Portal でデプロイの状態を確認できます。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 - CLI から DMA を実行するためのコマンドの完全な一覧については、「 [コマンドラインから Data Migration Assistant を実行](./dma-commandline.md?view=sql-server-2017)する」を参照してください。
