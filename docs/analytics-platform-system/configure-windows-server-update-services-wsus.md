@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e6242699ac8a4079ddd2811c016ba8a1969e448e
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+ms.openlocfilehash: 06ac0126bb12668654c04e6a82b20ca551dd925e
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947953"
+ms.locfileid: "94983062"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Analytics Platform System での Windows Server Update Services (WSUS) の構成
 ここでは、Windows Server Update Services (WSUS) 構成ウィザードを使用して、Analytics Platform System 用に WSUS を構成する手順について説明します。 ソフトウェア更新プログラムをアプライアンスに適用する前に、WSUS を構成する必要があります。 WSUS はアプライアンスの VMM 仮想マシンに既にインストールされています。  
@@ -156,7 +156,7 @@ WSUS を構成するには、次のことを行う必要があります。
   
     分析プラットフォームシステムアプライアンス用に同期する更新プログラムの [ **重要な更新** プログラム、 **セキュリティ更新** プログラム、および更新プログラムの **ロールアップ** ] を選択し、[ **次へ**] をクリックします。  
   
-    ![分類の選択](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
+    ![分類の選択](./media/configure-windows-server-update-services-wsus/sql-server-pdw-wsus-choose-classifications.png "sql-server-pdw-[分類]")  
   
 10. 同期スケジュールを構成します。  
   
