@@ -2,7 +2,7 @@
 title: SQL Server Machine Learning Services の新機能
 titleSuffix: ''
 description: SQL Server Machine Learning Services および SQL Server 2016 R Services の各リリースの新機能に関するお知らせ。
-ms.date: 11/04/2019
+ms.date: 11/17/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
@@ -10,17 +10,17 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 287b0fd536e5d3a6c76e8ef3760702da061a90ec
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 8d0da76c639048e9479afd575b584275a9bb51c6
+ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195064"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810512"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の新機能
 [!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
 
-データ プラットフォーム、高度な分析、データ サイエンスの間の統合を継続的に拡大、拡張、強化するために、機械学習機能は、SQL Server の各リリースに追加されています。 
+この記事では、[SQL Server Machine Learning Services](sql-server-machine-learning-services.md) の各バージョンに含まれている新しい機能について説明します。 データ プラットフォーム、高度な分析、データ サイエンスの間の統合を継続的に拡大、拡張、強化するために、機械学習機能は、SQL Server の各リリースに追加されています。 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2019"></a>SQL Server 2019 の新機能
@@ -52,7 +52,7 @@ ms.locfileid: "92195064"
 
 SQL Server Machine Learning Services の R コンポーネントは SQL Server 2016 R Services の次世代で、基本の R、RevoScaler、およびその他のパッケージの更新バージョンが含まれています。
 
-R の新機能には、次のような特徴を持つ[**パッケージ管理**](package-management/install-r-packages-with-tsql.md)が含まれます。 
+R の新機能には、次のような特徴を持つ [**パッケージ管理**](package-management/install-r-packages-with-tsql.md)が含まれます。 
 
 + データベース ロールは、DBA がパッケージを管理したり、パッケージのインストールにアクセス許可を割り当てたりするのに役立ちます。
 + [CREATE EXTERNAL LIBRARY](../t-sql/statements/create-external-library-transact-sql.md) は、DBA が使い慣れた T-SQL 言語でパッケージを管理するのに役立ちます。

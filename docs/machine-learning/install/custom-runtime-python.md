@@ -5,16 +5,16 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/20/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a625684b3196fc246b2753fc7b7e38b3e603f6e
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 2a37b086804a8fabe3719db0744b49345d69e6b8
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155070"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674140"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>SQL Server 用の Python カスタム ランタイムをインストールする
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -30,16 +30,11 @@ ms.locfileid: "92155070"
 > [!NOTE]
 > この記事では、Windows に Python 用のカスタム ランタイムをインストールする方法について説明します。 Linux にインストールするには、[SQL Server on Linux 用の Python カスタム ランタイムのインストール](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)に関するページを参照してください
 
-
-
 ## <a name="pre-install-checklist"></a>インストール前のチェックリスト
 
 Python カスタム ランタイムをインストールする前に、次のものをインストールします。
 
-+ [SQL Server 2019 for Windows CU3 以降](../../database-engine/install-windows/install-sql-server.md)。
-
-  > [!NOTE]
-  > Python カスタム ランタイムには、SQL Server 2019 の累積的な更新プログラム (CU) 3 以降が必要です。
++ [Windows 用の SQL Server 2019 Cumulative Update (CU) 3](../../database-engine/install-windows/install-sql-server.md)。
 
 + [機能拡張フレームワークのある Windows への SQL Server 言語拡張機能](../../language-extensions/install/windows-java.md)。
 
@@ -107,11 +102,11 @@ PYTHONHOME が既に存在する場合は、 **[編集]** を選択し、Python 
 
 ## <a name="grant-access-to-the-custom-python-installation-folder"></a>カスタム Python インストール フォルダーへのアクセスを許可する
 
-新しい "*管理者特権*" でのコマンド プロンプトから次の **icacls** コマンドを実行して、PYTHONHOME に対する READ および EXECUTE のアクセス権を、**SQL Server Launchpad サービス**と SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**) に付与します。 Launchpad サービスのユーザー名は `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME` はご利用の SQL Server のインスタンス名です。 そのコマンドでは、指定したディレクトリ パスの下にあるすべてのファイルとフォルダーへのアクセス権が再帰的に許可されます。
+新しい "*管理者特権*" でのコマンド プロンプトから次の **icacls** コマンドを実行して、PYTHONHOME に対する READ および EXECUTE のアクセス権を、**SQL Server Launchpad サービス** と SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**) に付与します。 Launchpad サービスのユーザー名は `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME` はご利用の SQL Server のインスタンス名です。 そのコマンドでは、指定したディレクトリ パスの下にあるすべてのファイルとフォルダーへのアクセス権が再帰的に許可されます。
 
 インスタンス名を `MSSQLLAUNCHPAD` に追加します (`MSSQLLAUNCHPAD$INSTANCENAME`)。 この例では、INSTANCENAME は既定のインスタンス `MSSQLSERVER` です。
 
-1. **SQL Server Launchpad サービスのユーザー名**にアクセス許可を付与します。
+1. **SQL Server Launchpad サービスのユーザー名** にアクセス許可を付与します。
 
     ```cmd
     icacls "%PYTHONHOME%" /grant "NT Service\MSSQLLAUNCHPAD$MSSQLSERVER":(OI)(CI)RX /T
@@ -302,7 +297,7 @@ GO
 
 ## <a name="enable-external-script-execution-in-sql-server"></a>SQL Server で外部スクリプトの実行を有効にする
 
-Python の外部スクリプトは、ストアド プロシージャ [sp_execute_external スクリプト](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)を SQL Server に対して実行することによって実行できます。 
+Python の外部スクリプトは、ストアド プロシージャ [sp_execute_external スクリプト](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)を SQL Server に対して実行することによって実行できます。 
 
 外部スクリプトを有効にするには、SQL Server に接続されている [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) を使用して、次の SQL コマンドを実行します。
 

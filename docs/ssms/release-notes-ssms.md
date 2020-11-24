@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: c2139f53771ed50a5ce01cc9fb4c3c64bfd14692
-ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
+ms.openlocfilehash: eb3fa0a07e9a0b5e7cf1bc1c7564fdb7b0d82a62
+ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94570969"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704197"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のリリース ノート
 
@@ -58,6 +58,7 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | Analysis Services | 場合によっては、アップグレード セットアップを使用しているときに、SSMS のアップグレード後に DAX エディターを開こうとすると、"オブジェクトのインスタンスにオブジェクトが設定されていません" というエラーが発生することがまれにあります。 | この問題を解決するには、SSMS をアンインストールしてから再インストールします。 |
 | SSMS 全般 | 新しい [サーバー監査の仕様] ダイアログにより、SSMS がアクセス違反エラーでクラッシュする場合があります。 | 該当なし |
 | SSMS 全般 | SMO を使用する SSMS 拡張機能は、新しい SSMS 固有の SMO v161 パッケージを対象とするように再コンパイルする必要があります。 https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ で新しいバージョンが利用できるようになりました </br></br> 以前の 160 バージョンの Microsoft.SqlServer.SqlManagementObjects パッケージに対してコンパイルされた拡張機能は、引き続き機能します。 | 該当なし |
+| スクリプト生成ウィザード | SQL Server 2014 以前では、データベース オブジェクトを列挙しようとすると、ウィザードが失敗します。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587)を参照してください。 | SSMS 18.6 を使用して、SQL 2014 以前用のスクリプト生成ウィザードでオブジェクトを選択します。 |
 | Integration Services | Integration Services でパッケージをインポートまたはエクスポートするとき、または Azure-SSIS Integration Runtime でパッケージをエクスポートするときに、スクリプト タスク/コンポーネントを含むパッケージのスクリプトが失われます。 対処法:フォルダー "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild" を削除します。 | 該当なし |
 | Integration Services | Integration Services へのリモート接続が新しいオペレーティング システムで、"The specified service does not exist as an installed service." (指定されたサービスはインストールされたサービスとして存在しません。) で 失敗する場合があります。 対処法:Integration Services に関連するレジストリの場所を Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID の下とこれらのハイブ内で特定し、接続しようとしている Integration Services の特定のバージョンについて 'LocalService' という名前のレジストリ キーの名前を 'LocalService_A' に変更します。 | 該当なし |
 | オブジェクト エクスプローラー | [Azure Synapse Analytics SQL オンデマンド](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)に関連するエンジンの変更により、18.7 より前の SSMS のリリースでは、オブジェクト エクスプローラーに重大な変更が加えられています。 | Azure Synapse Analytics SQL オンデマンドと共に SSMS でオブジェクト エクスプローラーを引き続き利用するには、SSMS 18.7 以降を使用する必要があります。 |
@@ -157,6 +158,7 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | Analysis Services | 場合によっては、アップグレード セットアップを使用しているときに、SSMS のアップグレード後に DAX エディターを開こうとすると、"オブジェクトのインスタンスにオブジェクトが設定されていません" というエラーが発生することがまれにあります。 | この問題を解決するには、SSMS をアンインストールしてから再インストールします。 |
 | SSMS 全般 | 新しい [サーバー監査の仕様] ダイアログにより、SSMS がアクセス違反エラーでクラッシュする場合があります。 | 該当なし |
 | SSMS 全般 | SMO を使用する SSMS 拡張機能は、新しい SSMS 固有の SMO v161 パッケージを対象とするように再コンパイルする必要があります。 https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ で新しいバージョンが利用できるようになりました </br></br> 以前の 160 バージョンの Microsoft.SqlServer.SqlManagementObjects パッケージに対してコンパイルされた拡張機能は、引き続き機能します。 | 該当なし |
+| スクリプト生成ウィザード | SQL Server 2014 以前では、データベース オブジェクトを列挙しようとすると、ウィザードが失敗します。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587)を参照してください。 | SSMS 18.6 を使用して、SQL 2014 以前用のスクリプト生成ウィザードでオブジェクトを選択します。 |
 | Integration Services | Integration Services でパッケージをインポートまたはエクスポートするとき、または Azure-SSIS Integration Runtime でパッケージをエクスポートするときに、スクリプト タスク/コンポーネントを含むパッケージのスクリプトが失われます。 対処法:フォルダー "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild" を削除します。 | 該当なし |
 | Integration Services | Integration Services へのリモート接続が新しいオペレーティング システムで、"The specified service does not exist as an installed service." (指定されたサービスはインストールされたサービスとして存在しません。) で 失敗する場合があります。 対処法:Integration Services に関連するレジストリの場所を Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID の下とこれらのハイブ内で特定し、接続しようとしている Integration Services の特定のバージョンについて 'LocalService' という名前のレジストリ キーの名前を 'LocalService_A' に変更します。 | 該当なし |
 | オブジェクト エクスプローラー | [Azure Synapse Analytics SQL オンデマンド](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)に関連するエンジンの変更により、18.7 より前の SSMS のリリースでは、オブジェクト エクスプローラーに重大な変更が加えられています。 | Azure Synapse Analytics SQL オンデマンドと共に SSMS でオブジェクト エクスプローラーを引き続き利用するには、SSMS 18.7 以降が必要です。 |

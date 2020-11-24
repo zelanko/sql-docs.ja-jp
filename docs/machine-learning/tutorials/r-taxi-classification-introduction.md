@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b3f8d66d7197e2e55a07f7a5b6de5da1b4ee24a
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: db8a0c073821df46e6d9d5bda43e74aae19a2501
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412556"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585056"
 ---
 # <a name="r-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>R チュートリアル:二項分類を使用して NYC タクシーの料金を予測する
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -33,7 +33,7 @@ SQL プログラマー向けのこの 5 部構成のチュートリアル シリ
 ::: moniker-end
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
-SQL プログラマー向けのこの 5 部構成のチュートリアル シリーズでは、[Azure SQL Managed Instance の Machine Learning Services (プレビュー)](/azure/azure-sql/managed-instance/machine-learning-services-overview) での R 統合について説明します。
+SQL プログラマー向けのこの 5 部構成のチュートリアル シリーズでは、[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) での R 統合について説明します。
 ::: moniker-end
 
 SQL Server でサンプル データベースを使用して、R ベースの機械学習ソリューションをビルドしてデプロイします。 T-SQL、Azure Data Studio または SQL Server Management Studio、およびデータベース エンジン インスタンスを SQL 機械学習と R 言語サポートと共に使用します
