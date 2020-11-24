@@ -46,12 +46,14 @@
         - name: SQL Server のセキュリティ
           href: ../connect/ado-net/sql/sql-server-security.md
           items:
-            - name: SQL Server での認証
+            - name: 認証
               href: ../connect/ado-net/sql/authentication-sql-server.md
-            - name: SQL Server におけるアプリケーション セキュリティのシナリオ
+            - name: Azure Active Directory 認証
+              href: ../connect/ado-net/sql/azure-active-directory-authentication.md
+            - name: アプリケーション セキュリティ シナリオ
               href: ../connect/ado-net/sql/application-security-scenarios-sql-server.md
               items:
-                - name: SQL Server での安全な動的 SQL の作成
+                - name: 安全な動的 SQL の作成
                   href: ../connect/ado-net/sql/writing-secure-dynamic-sql.md
             - name: SQL Server Express のセキュリティ
               href: ../connect/ado-net/sql/sql-server-express-security.md
