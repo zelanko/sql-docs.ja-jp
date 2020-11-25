@@ -13,6 +13,6 @@ ms.lasthandoff: 09/30/2020
 ms.locfileid: "91603300"
 ---
 > [!NOTE]
-> 2021 年 12 月、18.6 より前の SSMS のリリースでは、MFA を使用した Azure Active Directory による認証が行われなくなりました。
+> 2021 年 12 月、18.6 より前の SSMS のリリースでは、MFA を使用した Azure Active Directory による認証が行われなくなります。
 >
 > MFA で Azure Active Directory 認証を引き続き利用するには、[SSMS 18.6 以降](../ssms/download-sql-server-management-studio-ssms.md)が必要です。
