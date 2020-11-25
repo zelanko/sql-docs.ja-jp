@@ -31,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: da44ed2decbaeb2dbaf23c03381a8f58e61f90f6
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: 8050d90cfac0081629f4b7c1d18e2ff0aeb2b770
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496902"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983126"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -45,6 +45,9 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[
 お使いの特定バージョンの SQL の構文、引数、注釈、権限、例を表示するには、以下のいずれかのタブを選択します。
 
 構文表記規則の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。
+
+> [!NOTE]
+> ALTER DATABASE で一部のオプションを設定する場合は、データベースへの排他アクセスが必要になることがあります。 ALTER DATABASE ステートメントが時間内に完了しない場合は、データベース内の他のセッションが ALTER DATABASE セッションをブロックしているかどうかを確認してください。
 
 ## <a name="select-a-product"></a>製品を選択する
 
@@ -76,7 +79,7 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[
 データベース スコープ構成は、複数のデータベース構成を個々のデータベース レベルで設定するために使用されます。 詳細については、「[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。
 
 > [!NOTE]
-> 多くのデータベース設定オプションは、[SET ステートメント](../../t-sql/statements/set-statements-transact-sql.md)を使用して現在のセッション用に構成できます。これらは多くの場合、接続するアプリケーションによって構成されます。 セッション レベルの SET オプションは、 **ALTER DATABASE SET** の値をオーバーライドします。 次のセクションで説明されているデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。
+> 多くのデータベース設定オプションは、[SET ステートメント](../../t-sql/statements/set-statements-transact-sql.md)を使用して現在のセッション用に構成できます。これらは多くの場合、接続するアプリケーションによって構成されます。 セッション レベルの SET オプションは、**ALTER DATABASE SET** の値をオーバーライドします。 次のセクションで説明されているデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。
 
 ## <a name="syntax"></a>構文
 
@@ -319,12 +322,12 @@ SET
 変更するデータベースの名前。
 
 CURRENT     
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 現在のデータベースでアクションが実行されます。 `CURRENT` は、すべてのコンテキスト内のすべてのオプションでサポートされるわけではありません。 `CURRENT` でエラーが発生した場合は、データベース名を指定してください。
 
 **\<accelerated_database_recovery> ::=**      
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
 
 データベースごとに[高速データベース復旧](../../relational-databases/accelerated-database-recovery-management.md) (ADR) を有効にする。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、ADR は既定で OFF に設定されています。 この構文を使用すると、永続的なバージョン ストア (PVS) データの特定のファイル グループを指定できます。 ファイル グループが指定されていない場合、PVS はプライマリ ファイル グループに格納されます。 例と詳細については、[高速データベース復旧](../../relational-databases/accelerated-database-recovery-management.md)に関するページを参照してください。
 
@@ -366,7 +369,7 @@ OFF
 詳細については、「[統計](../../relational-databases/statistics/statistics.md)」の「データベース全体の統計オプションの使用」セクションを参照してください。
 
 INCREMENTAL = ON | **OFF**     
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 AUTO_CREATE_STATISTICS を ON に設定し、INCREMENTAL を ON に設定します。 これにより、増分統計がサポートされている場合は常に、自動的に作成された統計情報が増分として設定されます。 既定値は OFF です。 詳しくは、「[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。
 
@@ -429,7 +432,7 @@ AUTO_UPDATE_STATISTICS オプションの統計の更新を同期更新にする
 統計の同期更新と非同期更新をそれぞれどのような場合に使用するのかについては、「[統計](../../relational-databases/statistics/statistics.md#statistics-options)」の「統計オプション」セクションを参照してください。
 
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降)
 
 `FORCE_LAST_GOOD_PLAN` [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)オプションを有効または無効にします。
 
@@ -443,7 +446,7 @@ OFF
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューのクエリ プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql-md](../../includes/tsql-md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決できます。 既定値は OFF です。
 
 **\<change_tracking_option> ::=**      
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
 
 変更の追跡のオプションを制御します。 変更の追跡の有効化、オプションの設定、オプションの変更、および変更の追跡の無効化が可能です。 例については、後の「例」のセクションをご覧ください。
 
@@ -468,7 +471,7 @@ OFF
 データベースの変更の追跡を無効にします。 データベースの変更の追跡を無効にする前に、すべてのテーブルで変更の追跡を無効にしてください。
 
 **\<containment_option> ::=**      
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 データベースの包含オプションを制御します。
 
@@ -495,7 +498,7 @@ SET ステートメントを使用した接続レベルの設定は、CURSOR_CLO
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_cursor_close_on_commit_on` 列または [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の `IsCloseCursorsOnCommitEnabled` プロパティを調べることでこのオプションの状態を判断できます。
 
 CURSOR_DEFAULT { LOCAL | GLOBAL }     
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 カーソルのスコープを LOCAL と GLOBAL のどちらにするかを制御します。
 
@@ -513,7 +516,7 @@ GLOBAL
 
 **\<data_retention_policy> ::=**
 
-**適用対象** :Azure SQL Edge *のみ*
+**適用対象**:Azure SQL Edge *のみ*
 
 DATA_RETENTION { ON | OFF }   
 ON    
@@ -523,18 +526,18 @@ OFF
 データベースでデータ保持ポリシーを使用したクリーンアップを無効にします。
 
 **\<database_mirroring>**     
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 引数の説明については、「[ALTER DATABASE データベース ミラーリング](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)」をご覧ください。
 
 **\<date_correlation_optimization_option> ::=**      
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 date_correlation_optimization オプションを制御します。
 
 DATE_CORRELATION_OPTIMIZATION { ON | **OFF** }     
 ON     
-データベース内にある FOREIGN KEY 制約でリンクされ、 **datetime** 列を含む任意の 2 つのテーブル間の相関関係に関する統計が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって保持されます。
+データベース内にある FOREIGN KEY 制約でリンクされ、**datetime** 列を含む任意の 2 つのテーブル間の相関関係に関する統計が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって保持されます。
 
 OFF     
 相関統計は保持されません。
@@ -554,12 +557,12 @@ OFF
 暗号化しないデータベースを設定します。
 
 SUSPEND     
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)     
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)     
 
 Transparent Data Encryption が有効化または無効化された後や暗号化キーが変更された後に、暗号化スキャンを一時停止するのに使用できます。
 
 RESUME     
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
 
 以前に一時停止した暗号化スキャンを再開するために使用できます。
 
@@ -570,7 +573,7 @@ RESUME
 データベースの暗号化の状態や暗号化スキャンの状態を確認するには、[sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動的管理ビューを使用します。
 
 **\<db_state_option> ::=**      
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 データベースの状態を制御します。
 
@@ -611,7 +614,7 @@ READ_WRITE
 データベースへのユーザー アクセスを制御します。
 
 SINGLE_USER     
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 一度に 1 人のユーザーだけがデータベースにアクセスできます。 SINGLE_USER を指定し、他のユーザーがデータベースに接続している場合には、指定したデータベースからすべてのユーザーが接続解除するまで、ALTER DATABASE ステートメントはブロックされます。 この動作をオーバーライドするには、WITH \<termination> 句をご覧ください。
 
@@ -634,7 +637,7 @@ MULTI_USER
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `user_access` 列を調べることでこのオプションの状態を判断できます。 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の `UserAccess` プロパティを調べることで状態を判断することもできます。
 
 **\<delayed_durability_option> ::=**      
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)
 
 トランザクションを完全持続性または遅延持続性のどちらとしてコミットするかどうかを制御します。
 
@@ -648,7 +651,7 @@ FORCED
 `SET FORCED` 以後のトランザクションはすべて遅延持続性になります。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
 
 **\<external_access_option> ::=**      
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 別のデータベースのオブジェクトなど、外部リソースからデータベースにアクセスできるかどうかを制御します。
 
@@ -684,7 +687,7 @@ OFF
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_trustworthy_on` 列を調べることでこのオプションの状態を判断できます。
 
 DEFAULT_FULLTEXT_LANGUAGE     
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 フルテキスト インデックス列に、既定の言語の値を指定します。
 
@@ -692,27 +695,27 @@ DEFAULT_FULLTEXT_LANGUAGE
 > このオプションは、CONTAINMENT が PARTIAL に設定されている場合にのみ使用できます。 CONTAINMENT が NONE に設定されている場合、エラーが発生します。
 
 DEFAULT_LANGUAGE     
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 新しく作成するすべてのログインの既定の言語を指定します。 ローカル ID (LCID)、言語の名前、または言語のエイリアスを提供することで言語を指定することができます。 使用可能な言語名およびエイリアスの一覧については、「[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)」をご覧ください。 このオプションは、CONTAINMENT が PARTIAL に設定されている場合にのみ使用できます。 CONTAINMENT が NONE に設定されている場合、エラーが発生します。
 
 NESTED_TRIGGERS     
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 AFTER トリガーを連鎖できるかどうかを指定します。つまり、1 つの操作が別のトリガーを開始し、開始されたトリガーからさらに別のトリガーを開始するなどの動作ができるかどうかを制御します。 このオプションは、CONTAINMENT が PARTIAL に設定されている場合にのみ使用できます。 CONTAINMENT が NONE に設定されている場合、エラーが発生します。
 
 TRANSFORM_NOISE_WORDS     
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 ノイズ ワード (ストップワード) が原因でフルテキスト クエリのブール演算が失敗する場合に、エラー メッセージを非表示にします。 このオプションは、CONTAINMENT が PARTIAL に設定されている場合にのみ使用できます。 CONTAINMENT が NONE に設定されている場合、エラーが発生します。
 
 TWO_DIGIT_YEAR_CUTOFF     
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 2 桁の数字を 4 桁の西暦として解釈する場合に、世紀の解釈の区切りとする年を 1753 ～ 9999 範囲の整数で指定します。 このオプションは、CONTAINMENT が PARTIAL に設定されている場合にのみ使用できます。 CONTAINMENT が NONE に設定されている場合、エラーが発生します。
 
 **\<FILESTREAM_option> ::=**      
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 FileTable の設定を制御します。
 
@@ -730,12 +733,12 @@ DIRECTORY_NAME = *\<directory_name>*
 Windows と互換性のあるディレクトリ名です。 この名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべてのデータベース レベルのディレクトリ名の中で一意である必要があります。 一意性の比較では、照合順序の設定とは関係なく、大文字と小文字は区別されません。 このオプションは、このデータベース内に FileTable を作成する前に設定する必要があります。
 
 **\<HADR_options> ::=**      
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 「[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)」をご覧ください。
 
 **\<mixed_page_allocation_option> ::=**      
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
 
 データベースが、テーブルまたはインデックスの最初の 8 ページに対して混合エクステントを使用して、最初のページを作成できるかどうかを制御します。
 
@@ -761,7 +764,7 @@ FORCED
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_parameterization_forced column` 列を調べることで、このオプションの現在の設定を判断できます。
 
 <a name="query-store"></a> **\<query_store_options> ::=**      
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
 
 ON | **OFF** [ ( FORCED )  ] | CLEAR [ ALL ]     
 このデータベースでクエリ ストアを有効にするかどうかを制御します。また、クエリ ストアの内容の削除も制御します。 詳細については、「[クエリ ストアの使用シナリオ](../../relational-databases/performance/query-store-usage-scenarios.md)」を参照してください。
@@ -835,7 +838,7 @@ NONE
 新しいクエリのキャプチャを停止します。 クエリ ストアは、既にキャプチャされたクエリのコンパイルと実行時の統計情報を収集し続けます。 重要なクエリがキャプチャされない可能性があるため、この構成は慎重に使用してください。
 
 CUSTOM     
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
 
 QUERY_CAPTURE_POLICY オプションを制御できます。
 
@@ -845,7 +848,7 @@ max_plans_per_query
 各クエリに対して保持するプランの最大数を定義します。 MAX_PLANS_PER_QUERY は **int** 型です。既定値は **200** です。
 
 WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降)
 
 待機統計をクエリごとにキャプチャするかどうかを制御します。
 
@@ -856,7 +859,7 @@ OFF
 クエリごとの待機統計情報はキャプチャされません。
 
 **\<query_capture_policy_option_list> :: =**      
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
 
 クエリ ストアのキャプチャ ポリシー オプションを制御します。 STALE_CAPTURE_POLICY_THRESHOLD を除き、これらのオプションでは、定義された古いキャプチャ ポリシーのしきい値でクエリがキャプチャされるために必要な OR 条件が定義されます。
 
@@ -873,7 +876,7 @@ TOTAL_EXECUTION_CPU_TIME_MS
 評価期間中、クエリによって使用される実行 CPU の合計経過時間を定義します。 既定値は 100 です。これは、既定の古いキャプチャ ポリシーのしきい値に対して、クエリがクエリ ストアに保存されるためには、1 日で実行に費やされる CPU 時間の合計が 100 ミリ秒以上である必要があることを意味します。 TOTAL_EXECUTION_CPU_TIME_MS は **int** 型です。
 
 **\<recovery_option> ::=**      
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 データベース復旧オプションおよびディスク I/O エラー チェックを制御します。
 
@@ -889,7 +892,7 @@ SIMPLE
 > [!IMPORTANT]
 > 単純復旧モデルは、他の 2 つのモデルよりも管理が簡単ですが、データ ファイルが破損した場合にデータが失われる危険性が高くなります。 前回のデータベースのバックアップ作成や差分バックアップ作成の後に行った変更はすべて失われるため、手作業で入力し直す必要があります。
 
-既定の復旧モデルは、 **model** データベースの復旧モデルによって決定されます。 適切な復旧モデルの選択について詳しくは、「[復旧モデル](../../relational-databases/backup-restore/recovery-models-sql-server.md)」をご覧ください。
+既定の復旧モデルは、**model** データベースの復旧モデルによって決定されます。 適切な復旧モデルの選択について詳しくは、「[復旧モデル](../../relational-databases/backup-restore/recovery-models-sql-server.md)」をご覧ください。
 
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの **recovery_model** 列と **recovery_model_desc** 列を調べることでこのオプションの状態を判断できます。 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の `Recovery` プロパティを調べることで状態を判断することもできます。
 
@@ -942,7 +945,7 @@ PAGE_VERIFY オプションを使用する場合は、次に示す重要な点�
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `page_verify_option` 列または [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の `IsTornPageDetectionEnabled` プロパティを調べることでこのオプションの現在の状態を判断できます。
 
 **\<remote_data_archive_option> ::=**      
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
 
 そのデータベースについて Stretch Database を有効または無効にします。 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。
 
@@ -976,7 +979,7 @@ OFF
 Stretch を無効にしても、リモート データベースは削除されません。 リモート データベースを削除するには、Azure portal を使用してそれを削除します。
 
 **\<service_broker_option> ::=**      
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 次の [!INCLUDE[ssSB](../../includes/sssb-md.md)] オプション (メッセージ配信の有効化または無効化、新しい [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別子の設定、メッセージ交換の優先度の ON または OFF への設定) を制御します。
 
@@ -1044,10 +1047,10 @@ master、tempdb、または msdb システム データベースでは、READ_CO
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_read_committed_snapshot_on` 列を調べることでこのオプションの現在の設定を判断できます。
 
 > [!WARNING]
-> **DURABILITY = SCHEMA_ONLY** でテーブルが作成される場合、 **READ_COMMITTED_SNAPSHOT** がその後 **ALTER DATABASE** を使用して変更されると、テーブル内のデータは失われます。
+> **DURABILITY = SCHEMA_ONLY** でテーブルが作成される場合、**READ_COMMITTED_SNAPSHOT** がその後 **ALTER DATABASE** を使用して変更されると、テーブル内のデータは失われます。
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | **OFF** }     
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)
 
 ON     
 トランザクション分離レベルが SNAPSHOT より低い分離レベルに設定されている場合は、メモリ最適化テーブル上で解釈されたすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作が SNAPSHOT 分離レベルで実行されます。 SNAPSHOT よりも低い分離レベルの例として、READ COMMITTED、READ UNCOMMITTEDREAD があります。 このような操作は、トランザクション分離レベルがセッション レベルで明示的に設定されているか、既定値が暗黙的に使用されるかに関係なく実行されます。
@@ -1098,7 +1101,7 @@ SET ステートメントを使用した接続レベルの設定は、ANSI_NULLS
 
 ANSI_PADDING { ON | **OFF** }     
 ON     
-比較を行う前に、文字列が同じ長さになるようにパディングされます。 また、 **varchar** または **nvarchar** データ型に挿入される前にも、同じ長さになるようにパディングされます。
+比較を行う前に、文字列が同じ長さになるようにパディングされます。 また、**varchar** または **nvarchar** データ型に挿入される前にも、同じ長さになるようにパディングされます。
 
 OFF     
 文字値の末尾にある空白を **varchar** 型または **nvarchar** 型の列に挿入します。 **varbinary** 型の列に挿入されたバイナリ値の末尾にある 0 はそのまま残されます。 列の長さに合わせるためにパディングされることはありません。
@@ -1108,7 +1111,7 @@ OFF を指定した場合、この設定は新しい列の定義にのみ影響�
 > [!IMPORTANT]
 > 今後のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ANSI_PADDING が常に ON になり、このオプションを明示的に OFF に設定するすべてのアプリケーションでエラーが発生します。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 ANSI_PADDING は常に ON に設定することをお勧めします。 計算列やインデックス付きビューのインデックスを作成または操作するときには、ANSI_PADDING を ON に設定する必要があります。
 
-**char( _n_ )** および **binary( _n_ )** 列が NULL を許容する場合は、ANSI_PADDING を ON に設定すると、列の長さに合うようにパディングされます。 ANSI_PADDING を OFF に設定すると、末尾の空白および 0 は切り捨てられます。 **char( _n_ )** および **binary( _n_ )** 列が NULL を許容しない場合は、常に列の長さに合うようにパディングが行われます。
+**char(_n_)** および **binary(_n_)** 列が NULL を許容する場合は、ANSI_PADDING を ON に設定すると、列の長さに合うようにパディングされます。 ANSI_PADDING を OFF に設定すると、末尾の空白および 0 は切り捨てられます。 **char(_n_)** および **binary(_n_)** 列が NULL を許容しない場合は、常に列の長さに合うようにパディングが行われます。
 
 SET ステートメントを使用した接続レベルの設定は、ANSI_PADDING に関するデータベースレベルの既定の設定をオーバーライドします。 既定では、ODBC クライアントと OLE DB クライアントは、セッションの ANSI_PADDING を ON に設定する接続レベルの SET ステートメントを発行します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続すると、クライアントはステートメントを実行します。 詳しくは、「[SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)」をご覧ください。
 
@@ -1201,7 +1204,7 @@ OFF
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_recursive_triggers_on` 列または [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の `IsRecursiveTriggersEnabled` プロパティを調べることでこのオプションの状態を判断できます。
 
 **\<target_recovery_time_option> ::=**      
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 間接的なチェックポイントの生成頻度をデータベースごとに指定します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、新しいデータベースに対する既定値は **1 分** であり、これはデータベースが間接チェックポイントを使用することを示します。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定によって異なります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ほとんどのシステムに対して 1 分をお勧めします。
 
@@ -1397,7 +1400,7 @@ SET CHANGE_TRACKING = OFF;
 
 ### <a name="e-enabling-the-query-store"></a>E. クエリのストアを有効にする
 
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
 
 次の例では、クエリ ストアを有効にし、そのパラメーターを構成します。
 
@@ -1416,7 +1419,7 @@ SET QUERY_STORE = ON
 
 ### <a name="f-enabling-the-query-store-with-wait-statistics"></a>F. 待機統計を使用してクエリ ストアを有効にする
 
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降)
 
 次の例では、クエリ ストアを有効にし、そのパラメーターを構成します。
 
@@ -1437,7 +1440,7 @@ SET QUERY_STORE = ON
 
 ### <a name="g-enabling-the-query-store-with-custom-capture-policy-options"></a>G. カスタム キャプチャ ポリシー オプションを使用してクエリ ストアを有効にする
 
-**適用対象** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
 
 次の例では、クエリ ストアを有効にし、そのパラメーターを構成します。
 
@@ -1504,7 +1507,7 @@ SET QUERY_STORE = ON
 互換性レベルは `SET` のオプションですが、「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」で説明されています。
 
 > [!NOTE]
-> 多くのデータベース設定オプションは、[SET ステートメント](../../t-sql/statements/set-statements-transact-sql.md)を使用して現在のセッション用に構成できます。これらは多くの場合、接続するアプリケーションによって構成されます。 セッション レベルの SET オプションは、 **ALTER DATABASE SET** の値をオーバーライドします。 次のセクションで説明されているデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。
+> 多くのデータベース設定オプションは、[SET ステートメント](../../t-sql/statements/set-statements-transact-sql.md)を使用して現在のセッション用に構成できます。これらは多くの場合、接続するアプリケーションによって構成されます。 セッション レベルの SET オプションは、**ALTER DATABASE SET** の値をオーバーライドします。 次のセクションで説明されているデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。
 
 ## <a name="syntax"></a>構文
 
@@ -1735,7 +1738,7 @@ AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプ�
 統計の同期更新と非同期更新をそれぞれどのような場合に使用するのかについては、「[統計](../../relational-databases/statistics/statistics.md#statistics-options)」の「統計オプション」セクションを参照してください。
 
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
-**適用対象** : [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+**適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
 [自動チューニング](../../relational-databases/automatic-tuning/automatic-tuning.md)に関する自動オプションを制御します。
 
@@ -1911,7 +1914,7 @@ DATA_FLUSH_INTERVAL_SECONDS
 クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送の頻度は、DATA_FLUSH_INTERVAL_SECONDS 引数を使用して構成します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。 既定値は **900** (15 分) です。
 
 MAX_STORAGE_SIZE_MB     
-クエリ ストアに割り当てる領域を指定します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition の既定値は **1 GB** 、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの既定値は **10 MB** です。
+クエリ ストアに割り当てる領域を指定します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition の既定値は **1 GB**、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの既定値は **10 MB** です。
 
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`MAX_STORAGE_SIZE_MB` 設定の上限は 10,240 MB です。 
@@ -2076,7 +2079,7 @@ SET ステートメントを使用した接続レベルの設定は、ANSI_NULLS
 
 ANSI_PADDING { ON | **OFF** }     
 ON     
-比較を行う前に、文字列が同じ長さになるようにパディングされます。 また、 **varchar** または **nvarchar** データ型に挿入される前にも、同じ長さになるようにパディングされます。
+比較を行う前に、文字列が同じ長さになるようにパディングされます。 また、**varchar** または **nvarchar** データ型に挿入される前にも、同じ長さになるようにパディングされます。
 
 OFF     
 文字値の末尾にある空白を **varchar** 型または **nvarchar** 型の列に挿入します。 **varbinary** 型の列に挿入されたバイナリ値の末尾にある 0 はそのまま残されます。 列の長さに合わせるためにパディングされることはありません。
@@ -2086,7 +2089,7 @@ OFF を指定した場合、この設定は新しい列の定義にのみ影響�
 > [!IMPORTANT]
 > 今後のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ANSI_PADDING が常に ON になり、このオプションを明示的に OFF に設定するすべてのアプリケーションでエラーが発生します。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 ANSI_PADDING は常に ON に設定することをお勧めします。 計算列やインデックス付きビューのインデックスを作成または操作するときには、ANSI_PADDING を ON に設定する必要があります。
 
-**char( _n_ )** および **binary( _n_ )** 列が NULL を許容する場合は、ANSI_PADDING を ON に設定すると、列の長さに合うようにパディングされます。 ANSI_PADDING を OFF に設定すると、末尾の空白および 0 は切り捨てられます。 **char( _n_ )** および **binary( _n_ )** 列が NULL を許容しない場合は、常に列の長さに合うようにパディングが行われます。
+**char(_n_)** および **binary(_n_)** 列が NULL を許容する場合は、ANSI_PADDING を ON に設定すると、列の長さに合うようにパディングされます。 ANSI_PADDING を OFF に設定すると、末尾の空白および 0 は切り捨てられます。 **char(_n_)** および **binary(_n_)** 列が NULL を許容しない場合は、常に列の長さに合うようにパディングが行われます。
 
 SET ステートメントを使用した接続レベルの設定は、ANSI_PADDING に関するデータベースレベルの既定の設定をオーバーライドします。 既定では、ODBC クライアントと OLE DB クライアントは、セッションの ANSI_PADDING を ON に設定する接続レベルの SET ステートメントを発行します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続すると、クライアントはステートメントを実行します。 詳しくは、「[SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)」をご覧ください。
 
@@ -2199,7 +2202,7 @@ MINUTES
 > [!NOTE]
 > すべてのデータベース オプションで WITH \<termination> 句が使用できるわけではありません。 詳細については、この記事の「解説」セクションの「[オプションの設定](#SettingOptions)」にある表をご覧ください。
 
-ROLLBACK AFTER " *整数* " [SECONDS] | ROLLBACK IMMEDIATE     
+ROLLBACK AFTER "*整数*" [SECONDS] | ROLLBACK IMMEDIATE     
 指定した秒数の後、または直ちにロールバックするかどうかを指定します。
 
 NO_WAIT     
@@ -2399,7 +2402,7 @@ SET QUERY_STORE = ON
 互換性レベルは `SET` のオプションですが、「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」で説明されています。
 
 > [!NOTE]
-> 多くのデータベース設定オプションは、[SET ステートメント](../../t-sql/statements/set-statements-transact-sql.md)を使用して現在のセッション用に構成できます。これらは多くの場合、接続するアプリケーションによって構成されます。 セッション レベルの SET オプションは、 **ALTER DATABASE SET** の値をオーバーライドします。 次のセクションで説明されているデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。
+> 多くのデータベース設定オプションは、[SET ステートメント](../../t-sql/statements/set-statements-transact-sql.md)を使用して現在のセッション用に構成できます。これらは多くの場合、接続するアプリケーションによって構成されます。 セッション レベルの SET オプションは、**ALTER DATABASE SET** の値をオーバーライドします。 次のセクションで説明されているデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。
 
 ## <a name="syntax"></a>構文
 
@@ -2610,7 +2613,7 @@ AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプ�
 統計の同期更新と非同期更新をそれぞれどのような場合に使用するのかについては、「[統計](../../relational-databases/statistics/statistics.md)」の「データベース全体の統計オプションの使用」セクションを参照してください。
 
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**      
-**適用対象** : [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+**適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
 `FORCE_LAST_GOOD_PLAN` [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)オプションを有効または無効にします。
 
@@ -2845,7 +2848,7 @@ master、tempdb、または msdb システム データベースでは、READ_CO
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_read_committed_snapshot_on` 列を調べることでこのオプションの現在の設定を判断できます。
 
 > [!WARNING]
-> **DURABILITY = SCHEMA_ONLY** でテーブルが作成される場合、 **READ_COMMITTED_SNAPSHOT** がその後 **ALTER DATABASE** を使用して変更されると、テーブル内のデータは失われます。
+> **DURABILITY = SCHEMA_ONLY** でテーブルが作成される場合、**READ_COMMITTED_SNAPSHOT** がその後 **ALTER DATABASE** を使用して変更されると、テーブル内のデータは失われます。
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | **OFF** }     
 ON     
@@ -2897,7 +2900,7 @@ UNICODE 以外の値と null 値の比較結果は、両方の値が NULL であ
 
 ANSI_PADDING { ON | **OFF** }     
 ON     
-比較を行う前に、文字列が同じ長さになるようにパディングされます。 また、 **varchar** または **nvarchar** データ型に挿入される前にも、同じ長さになるようにパディングされます。
+比較を行う前に、文字列が同じ長さになるようにパディングされます。 また、**varchar** または **nvarchar** データ型に挿入される前にも、同じ長さになるようにパディングされます。
 
 OFF     
 文字値の末尾にある空白を **varchar** 型または **nvarchar** 型の列に挿入します。 **varbinary** 型の列に挿入されたバイナリ値の末尾にある 0 はそのまま残されます。 列の長さに合わせるためにパディングされることはありません。
@@ -2907,7 +2910,7 @@ OFF を指定した場合、この設定は新しい列の定義にのみ影響�
 > [!IMPORTANT]
 > 今後のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ANSI_PADDING が常に ON になり、このオプションを明示的に OFF に設定するすべてのアプリケーションでエラーが発生します。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 ANSI_PADDING は常に ON に設定することをお勧めします。 計算列やインデックス付きビューのインデックスを作成または操作するときには、ANSI_PADDING を ON に設定する必要があります。
 
-**char( _n_ )** および **binary( _n_ )** 列が NULL を許容する場合は、ANSI_PADDING を ON に設定すると、列の長さに合うようにパディングされます。 ANSI_PADDING を OFF に設定すると、末尾の空白および 0 は切り捨てられます。 **char( _n_ )** および **binary( _n_ )** 列が NULL を許容しない場合は、常に列の長さに合うようにパディングが行われます。
+**char(_n_)** および **binary(_n_)** 列が NULL を許容する場合は、ANSI_PADDING を ON に設定すると、列の長さに合うようにパディングされます。 ANSI_PADDING を OFF に設定すると、末尾の空白および 0 は切り捨てられます。 **char(_n_)** および **binary(_n_)** 列が NULL を許容しない場合は、常に列の長さに合うようにパディングが行われます。
 
   SET ステートメントを使用した接続レベルの設定は、ANSI_PADDING に関するデータベースレベルの既定の設定をオーバーライドします。 既定では、ODBC クライアントと OLE DB クライアントは、セッションの ANSI_PADDING を ON に設定する接続レベルの SET ステートメントを発行します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続すると、クライアントはステートメントを実行します。 詳しくは、「[SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)」をご覧ください。
 
@@ -3014,7 +3017,7 @@ MINUTES
 
 間接的なチェックポイントについて詳しくは、「[データベース チェックポイント](../../relational-databases/logs/database-checkpoints-sql-server.md)」をご覧ください。
 
-ROLLBACK AFTER " *整数* " [SECONDS] | ROLLBACK IMMEDIATE     
+ROLLBACK AFTER "*整数*" [SECONDS] | ROLLBACK IMMEDIATE     
 指定した秒数の後、または直ちにロールバックするかどうかを指定します。
 
 NO_WAIT     
@@ -3294,7 +3297,7 @@ OFF
 > [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] の場合、ユーザー データベースから `ALTER DATABASE SET QUERY_STORE` を実行する必要があります。 別のデータ ウェアハウス インスタンスからのステートメントの実行は、サポートされていません。
 
 **<result_set_caching_option> ::=**      
-**適用対象** :Azure Synapse Analytics  
+**適用対象**:Azure Synapse Analytics  
 
 クエリ結果をデータベースにキャッシュするかどうかを制御します。
 
@@ -3334,7 +3337,7 @@ WHERE request_id = <'Your_Query_Request_ID'>
 RESULT_SET_CACHING オプションを設定するには、ユーザーにサーバーレベルのプリンシプル ログインを与えるか (プロビジョニング プロセスで作成されるもの)、ユーザーが `dbmanager` データベース ロールのメンバーになる必要があります。  
 
 **<snapshot_option> ::=**      
-**適用対象** :Azure Synapse Analytics
+**適用対象**:Azure Synapse Analytics
 
 データベースのトランザクション分離レベルを制御します。
 
