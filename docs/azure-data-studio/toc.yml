@@ -154,6 +154,8 @@
   items:
     - name: よく寄せられる質問
       href: faq.md
+    - name: トラブルシューティング
+      href: troubleshooting.md
     - name: Azure Data Studio の GitHub リポジトリ >
       href: 'https://www.github.com/Microsoft/azuredatastudio'
     - name: 問題の報告とご提案 >
