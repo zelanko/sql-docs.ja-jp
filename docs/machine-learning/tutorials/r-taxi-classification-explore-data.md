@@ -11,10 +11,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
 ms.openlocfilehash: cba06a816e57189cb69f9680542452d2788b233e
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92412535"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>R チュートリアル:データの調査と視覚化
@@ -51,7 +51,7 @@ ms.locfileid: "92412535"
 
 データ科学ソリューションの開発には、通常、集中的なデータの探索とデータの視覚化が伴います。 最初に、サンプル データを確認してください (まだ確認していない場合)。
 
-元のパブリック データセットでは、タクシーの識別情報と乗車レコードが別々のファイルに入力されていました。 ですが、サンプル データの利用を簡単にするために、 _medallion_ 、 _hack\_license_ 、 _pickup\_datetime_ 列で元のデータセットを結合しました。  レコードもサンプリングされており、元のレコード数の 1% だけが取得されています。 結果的にダウンサンプリングされたデータセットは 1,703,957 行と 23 列です。
+元のパブリック データセットでは、タクシーの識別情報と乗車レコードが別々のファイルに入力されていました。 ですが、サンプル データの利用を簡単にするために、_medallion_、 _hack\_license_、_pickup\_datetime_ 列で元のデータセットを結合しました。  レコードもサンプリングされており、元のレコード数の 1% だけが取得されています。 結果的にダウンサンプリングされたデータセットは 1,703,957 行と 23 列です。
 
 **タクシーの識別子**
   
@@ -85,9 +85,9 @@ ms.locfileid: "92412535"
 
 プロットを作成するには、R 関数 `barplot` を使用します。 この手順では、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリのデータに基づいてヒストグラムをプロットします。 この関数は、ストアド プロシージャ **RPlotHistogram** でラップすることができます。
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、オブジェクト エクスプローラーで、 **NYCTaxi_Sample** データベースを右クリックし、 **[新しいクエリ]** を選択します。 または、Azure Data Studio の **[ファイル]** メニューで、 **[新しいノートブック]** を選択して、データベースに接続します。
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、オブジェクト エクスプローラーで、**NYCTaxi_Sample** データベースを右クリックし、 **[新しいクエリ]** を選択します。 または、Azure Data Studio の **[ファイル]** メニューで、 **[新しいノートブック]** を選択して、データベースに接続します。
 
-2. 次のスクリプトに貼り付けて、ヒストグラムをプロットするストアド プロシージャを作成します。 この例には、 **RPlotHistogram** という名前が付けられています。
+2. 次のスクリプトに貼り付けて、ヒストグラムをプロットするストアド プロシージャを作成します。 この例には、**RPlotHistogram** という名前が付けられています。
 
    ```sql
    CREATE PROCEDURE [dbo].[RPlotHistogram]
@@ -182,13 +182,13 @@ ms.locfileid: "92412535"
   
 ## <a name="create-a-stored-procedure-using-hist"></a>`hist` を使用してストアド プロシージャを作成する
 
-一般的に、データ サイエンティストはデータ視覚化を複数行い、さまざまな観点からデータを考察します。 この例では、 **RPlotHist** というストアド プロシージャを作成し、ヒストグラム、その他の R グラフィックスを .JPG および .PDF 形式で書き込みます。
+一般的に、データ サイエンティストはデータ視覚化を複数行い、さまざまな観点からデータを考察します。 この例では、**RPlotHist** というストアド プロシージャを作成し、ヒストグラム、その他の R グラフィックスを .JPG および .PDF 形式で書き込みます。
 
 このストアド プロシージャは、`hist` 関数を使用してヒストグラムを作成し、.JPG、.PDF、および .PNG などの一般的な形式でバイナリ データをエクスポートします。
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、オブジェクト エクスプローラーで、 **NYCTaxi_Sample** データベースを右クリックし、 **[新しいクエリ]** を選択します。
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、オブジェクト エクスプローラーで、**NYCTaxi_Sample** データベースを右クリックし、 **[新しいクエリ]** を選択します。
 
-2. 次のスクリプトに貼り付けて、ヒストグラムをプロットするストアド プロシージャを作成します。 この例には、 **RPlotHist** という名前が付けられています。
+2. 次のスクリプトに貼り付けて、ヒストグラムをプロットするストアド プロシージャを作成します。 この例には、**RPlotHist** という名前が付けられています。
   
    ```sql
    CREATE PROCEDURE [dbo].[RPlotHist]  

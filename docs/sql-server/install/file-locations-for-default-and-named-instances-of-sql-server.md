@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 69458d99f5c7a594915c2539b57e01102df1042e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2165dccef242e1c813f83a64a598262be7f260c2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988110"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127553"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "91988110"
 > [!WARNING]
 > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ フォルダーがアクセス許可の制限により保護されていることを確認してください。  
   
-ファイルの場所の既定のドライブは *systemdrive*で、通常は C ドライブです。子機能のインストール パスは、親機能のインストール パスと同じになります。  
+ファイルの場所の既定のドライブは *systemdrive* で、通常は C ドライブです。子機能のインストール パスは、親機能のインストール パスと同じになります。  
   
 <sup>1</sup> 1 つのインストール パスが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] とクライアント コンポーネントの間で共有されます。 1 つのコンポーネントのインストール パスを変更すると、他のコンポーネントのパスも変更されます。 後続のインストールでは、最初のインストールと同じ場所にコンポーネントがインストールされます。  
   

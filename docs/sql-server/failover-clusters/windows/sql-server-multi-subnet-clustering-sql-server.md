@@ -14,14 +14,14 @@ helpviewer_keywords:
 - multi-site failover cluster
 - failover clustering [SQL Server]
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ef365002594de1c5d038f19f06b47911c5dfb722
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5a96de77d3a1bad6f4faec4aab089d466cc2710d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987813"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121060"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server マルチサブネット クラスタリング (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,25 +37,25 @@ ms.locfileid: "91987813"
 ##  <a name="multi-subnet-failover-cluster-instance-configurations"></a><a name="Configurations"></a> マルチサブネット フェールオーバー クラスター インスタンス構成  
  複数のサブネットを使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI の例を次に示します。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 には Node1 および Node2 が含まれます。 Node1 は Subnet1 に接続されています。 Node2 は Subnet2 に接続されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup ではこの構成をマルチサブネット クラスターと認識し、IP アドレス リソースの依存関係が **OR**に設定されます。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 には Node1 および Node2 が含まれます。 Node1 は Subnet1 に接続されています。 Node2 は Subnet2 に接続されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup ではこの構成をマルチサブネット クラスターと認識し、IP アドレス リソースの依存関係が **OR** に設定されます。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 には Node1、Node2 および Node3 が含まれます。 Node1 および Node2 は Subnet1 に接続されています。 Node 3 は Subnet2 に接続されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup ではこの構成をマルチサブネット クラスターと認識し、IP アドレス リソースの依存関係が **OR**に設定されます。 Node1 と Node2 が同じサブネット上にあるため、この構成ではローカルでの可用性が強化されます。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 には Node1、Node2 および Node3 が含まれます。 Node1 および Node2 は Subnet1 に接続されています。 Node 3 は Subnet2 に接続されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup ではこの構成をマルチサブネット クラスターと認識し、IP アドレス リソースの依存関係が **OR** に設定されます。 Node1 と Node2 が同じサブネット上にあるため、この構成ではローカルでの可用性が強化されます。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 には Node1 および Node2 が含まれます。 Node1 は Subnet1 に接続されています。 Node2 は Subnet1 および Subnet2 に接続されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup ではこの構成をマルチサブネット クラスターと認識し、IP アドレス リソースの依存関係が **OR**に設定されます。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 には Node1 および Node2 が含まれます。 Node1 は Subnet1 に接続されています。 Node2 は Subnet1 および Subnet2 に接続されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup ではこの構成をマルチサブネット クラスターと認識し、IP アドレス リソースの依存関係が **OR** に設定されます。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 には Node1 および Node2 が含まれます。 Node1 は Subnet1 および Subnet2 に接続されています。 Node2 も Subnet1 および Subnet2 に接続されています。 IP アドレス リソースの依存関係は、 **Setup によって** AND [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に設定されています。  
   
     > **注:** クラスター ノードが同じサブネットのセットに含まれているため、この構成はマルチサブネット フェールオーバー クラスター構成と見なされません。  
   
 ##  <a name="ip-address-resource-considerations"></a><a name="ComponentsAndConcepts"></a> IP アドレス リソースに関する考慮事項  
- マルチサブネット フェールオーバー クラスターの構成では、フェールオーバー クラスター内のすべてのノードが IP アドレスを所有するわけではありません。また、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の起動時に一部のノードがオンラインにならない場合があります。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]以降では、IP アドレス リソースの依存関係を **OR**に設定することができます。 そのため、バインドできる有効な IP アドレスが少なくとも 1 つ存在していれば、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をオンラインにすることができます。  
+ マルチサブネット フェールオーバー クラスターの構成では、フェールオーバー クラスター内のすべてのノードが IP アドレスを所有するわけではありません。また、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の起動時に一部のノードがオンラインにならない場合があります。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]以降では、IP アドレス リソースの依存関係を **OR** に設定することができます。 そのため、バインドできる有効な IP アドレスが少なくとも 1 つ存在していれば、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をオンラインにすることができます。  
   
   > [!NOTE] 
   > - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]では、フェイル オーバー用の単一の IP アドレスをサイト全体に公開するために、マルチサイト クラスター構成で拡張 V-LAN テクノロジを使用していました。 異なるサブネットにわたるノードをクラスター化するための [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新しい機能を使用することで、拡張 V-LAN テクノロジを実装することなく、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターを複数のサイトを対象として構成できるようになりました。  
 
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>IP アドレス リソースの OR 依存関係に関する考慮事項  
- IP アドレス リソースの依存関係を **OR**に設定する場合、次のフェールオーバーの動作を考慮してください:  
+ IP アドレス リソースの依存関係を **OR** に設定する場合、次のフェールオーバーの動作を考慮してください:  
   
 -   現在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クラスター リソース グループを所有しているノード上の IP アドレスの 1 つが使用不能な場合、そのノード上で有効なすべての IP アドレスが使用不能にならない限り、フェールオーバーが自動的に発生することはありません。  
   

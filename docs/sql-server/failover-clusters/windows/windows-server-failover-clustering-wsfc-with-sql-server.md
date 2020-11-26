@@ -14,14 +14,14 @@ helpviewer_keywords:
 - quorum [SQL Server]
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3340ba57a0b316c9a58fbf1b0c65d7ca01f3e1ee
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ac7272b1a8548f6265c9271a4f6bdb0799f02862
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988125"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127566"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Windows Server フェールオーバー クラスタリングと SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "91988125"
   
 
 ##  <a name="overview-of-windows-server-failover-clustering"></a><a name="Overview"></a> Windows Server フェールオーバー クラスタリングの概要  
- Windows Server フェールオーバー クラスタリングは、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] や Microsoft Exchange などのホストされるサーバー アプリケーションの高可用性とディザスター リカバリー シナリオをサポートするインフラストラクチャ機能を提供します。 クラスター ノードまたはサービスに障害が発生すると、そのノードでホストされていたサービスは自動的に、または手動で、他の可用性ノードに転送されます。このプロセスを *フェールオーバー*と呼びます。  
+ Windows Server フェールオーバー クラスタリングは、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] や Microsoft Exchange などのホストされるサーバー アプリケーションの高可用性とディザスター リカバリー シナリオをサポートするインフラストラクチャ機能を提供します。 クラスター ノードまたはサービスに障害が発生すると、そのノードでホストされていたサービスは自動的に、または手動で、他の可用性ノードに転送されます。このプロセスを *フェールオーバー* と呼びます。  
   
  WSFC 内のノードは連携して、次のような機能を提供します。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "91988125"
 ##  <a name="sql-server-always-on-technologies-and-wsfc"></a><a name="AlwaysOnWsfcTech"></a> SQL Server Always On テクノロジと WSFC  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *Always On* は、WSFC を利用する、高可用性およびディザスター リカバリー ソリューションです。 Always On 機能は、アプリケーションの可用性を高め、ハードウェア投資の回収率を上げ、高可用性配置と管理を簡素化する、統合された柔軟なソリューションを提供します。  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と Always On フェールオーバー クラスター インスタンスのどちらも WSFC をプラットフォーム テクノロジとして使用して、コンポーネントを WSFC クラスター リソースとして登録します。  関連するリソースは*ロール*としてまとめられ、他の WSFC クラスター リソースに依存するように設定できます。 これによって、WSFC は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを再起動する必要がある場合はこれを検出して通知したり、WSFC 内の他のサーバー ノードに自動的にフェールオーバーしたりできます。  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と Always On フェールオーバー クラスター インスタンスのどちらも WSFC をプラットフォーム テクノロジとして使用して、コンポーネントを WSFC クラスター リソースとして登録します。  関連するリソースは *ロール* としてまとめられ、他の WSFC クラスター リソースに依存するように設定できます。 これによって、WSFC は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを再起動する必要がある場合はこれを検出して通知したり、WSFC 内の他のサーバー ノードに自動的にフェールオーバーしたりできます。  
   
 > **重要!!** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On テクノロジの利点を完全に活かすには、WSFC 関連のいくつかの前提条件を適用する必要があります。  
 >   
@@ -126,9 +126,9 @@ ms.locfileid: "91988125"
 ### <a name="wsfc-inter-node-health-detection-and-quorum-voting"></a>WSFC ノード間の正常性の検出とクォーラム投票  
  WSFC 内の各ノードは、定期的なハートビート通信に参加し、ノードの正常性状態を他のノードと共有します。 応答しないノードは、エラー状態であると見なされます。  
   
- *クォーラム*は、十分なリソースが WSFC でオンラインになっていることを確認することで、WSFC が確実に稼働するようにするメカニズムです。 WSFC に十分な投票がある場合は、正常であり、ノード レベルのフォールト トレランスを提供できます。  
+ *クォーラム* は、十分なリソースが WSFC でオンラインになっていることを確認することで、WSFC が確実に稼働するようにするメカニズムです。 WSFC に十分な投票がある場合は、正常であり、ノード レベルのフォールト トレランスを提供できます。  
   
- *クォーラム モード*は、WSFC で構成され、クォーラム投票の方法、および自動フェールオーバーを実行するタイミングまたはクラスターをオフラインにするタイミングを指定します。 
+ *クォーラム モード* は、WSFC で構成され、クォーラム投票の方法、および自動フェールオーバーを実行するタイミングまたはクラスターをオフラインにするタイミングを指定します。 
   
 > **ヒント:** WSFC のクォーラム投票の数は、常に奇数にすることをお勧めします。  クォーラム投票のために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をクラスター内のすべてのノードにインストールする必要はありません。 追加サーバーはクォーラム メンバーとして機能できます。また、リモート ファイル共有を決定機構として使用するように WSFC クォーラム モデルを構成することもできます。  
 >   
@@ -137,7 +137,7 @@ ms.locfileid: "91988125"
 ### <a name="disaster-recovery-through-forcing-quorum"></a>強制クォーラムによるディザスター リカバリー  
  実際の運用状況と WSFC 構成に応じて、自動フェールオーバーと手動フェールオーバーの両方を使用できます。これによって、堅牢でフォールト トレランスな [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On ソリューションを維持できます。 ただし、WSFC 内の投票ノードのクォーラムが相互に通信できない場合、または WSFC クラスターがこれ以外の理由で正常性の検証に失敗する場合は、WSFC がオフラインになる場合があります。  
   
- 災害や、永続的なハードウェア障害または通信障害が原因で WSFC がオフラインになった場合は、手動で管理操作を実行して、*クォーラムを強制*し、稼働しているクラスター ノードを非フォールト トレラント構成でオンラインに戻す必要があります。  
+ 災害や、永続的なハードウェア障害または通信障害が原因で WSFC がオフラインになった場合は、手動で管理操作を実行して、*クォーラムを強制* し、稼働しているクラスター ノードを非フォールト トレラント構成でオンラインに戻す必要があります。  
   
  その後、WSFC を再構成し、影響を受けたデータベース レプリカを復元し、新しいクォーラムを再構築するという一連の手順を実行する必要があります。  
   
