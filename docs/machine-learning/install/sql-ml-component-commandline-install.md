@@ -3,18 +3,18 @@ title: コマンド プロンプトからのインストール
 description: SQL Server コマンド ライン セットアップを実行して、Python と R を備えた Machine Learning Services を SQL Server データベース エンジン インスタンスに追加します。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/12/2020
+ms.date: 11/25/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cd9e1e261790c301ceac8198a76fbe2906c8ccf6
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8e32b14682c7813dd911b52e80249cf6af7ebaac
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956768"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122762"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>R と Python を備えた SQL Server Machine Learning Services をコマンド ラインからインストールする
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "91956768"
 
 ## <a name="command-line-arguments"></a>コマンド ライン引数
 
-ライセンス条項の契約と同様に、FEATURES 引数は必須です。 
+ライセンス条項の契約と同様に、 **/FEATURES** 引数は必須です。 
 
-コマンド プロンプトを使用してインストールする場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、/Q パラメーターを使用した非表示モード、または /QS パラメーターを使用した簡易非表示モードがサポートされます。 /QS スイッチでは、進捗状況のみが表示され、入力はできません。また、該当する場合でもエラー メッセージは表示されません。 /QS パラメーターは、/Action=install を指定した場合にのみサポートされます。
+コマンド プロンプトを使用してインストールするときは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、 **/Q** パラメーターを使用した非表示モード、または **/QS** パラメーターを使用した簡易非表示モードがサポートされます。 **/QS** スイッチを使用すると、進捗状況のみが表示され、入力はできません。また、該当する場合でもエラー メッセージは表示されません。 **/QS** パラメーターは、 **/Action=install** を指定した場合にのみサポートされます。
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 | 引数 | 説明 |

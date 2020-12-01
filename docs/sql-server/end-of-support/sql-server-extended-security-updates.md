@@ -2,20 +2,20 @@
 title: 延長セキュリティ更新プログラムとは
 description: サポートとライフサイクルが終了した SQL Server 2008 や SQL Server 2008 R2 などの SQL Server 製品について、SQL Server レジストリを使用して延長セキュリティ更新プログラムを入手する方法を説明します。
 ms.custom: ''
-ms.date: 12/09/2019
+ms.date: 11/24/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f0eabc247645000d95f9b9c83c17ababc47c6cc2
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: f3a337395be09743be335dd01ac80caf9dc98be0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793819"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121270"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>SQL Server 用の延長セキュリティ更新プログラムとは
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "92793819"
 ## <a name="what-are-extended-security-updates"></a>延長セキュリティ更新プログラムとは
 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 用の延長セキュリティ更新プログラム (ESU) には、延長サポート更新プログラムのサブスクリプションをご購入いただいたお客様に対する、セキュリティ更新プログラムの提供が含まれています。
 
-ESU は、セキュリティの脆弱性が検出され、 [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com) によって **クリティカル** と評価されると、 **必要に応じて** 利用可能になります。 そのため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESU に定期的なリリース周期はありません。
+ESU は、セキュリティの脆弱性が検出され、[Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com) によって **クリティカル** と評価されると、**必要に応じて** 利用可能になります。 そのため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESU に定期的なリリース周期はありません。
 
 ESU に含まれないもの:
 - 新機能
@@ -52,11 +52,11 @@ ESU にテクニカル サポートは含まれていませんが、オンプレ
 ESU は、Azure、オンプレミス、またはホスト環境でワークロードを実行しているお客様にご利用いただけます。
 
 ### <a name="azure-virtual-machines"></a>Azure Virtual Machines
-ワークロードを Azure Virtual Machines (IaaS) に移行すると、サポート終了後最大 3 年間、[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] と [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] のセキュリティ更新プログラムにアクセスできます。仮想マシンの実行コストを上回る **追加料金はかかりません** 。 お客様が Azure で延長セキュリティ更新プログラムを受け取るためにソフトウェア アシュアランスは必要ありません。 
+ワークロードを Azure Virtual Machines (IaaS) に移行すると、サポート終了後最大 3 年間、[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] と [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] のセキュリティ更新プログラムにアクセスできます。仮想マシンの実行コストを上回る **追加料金はかかりません**。 お客様が Azure で延長セキュリティ更新プログラムを受け取るためにソフトウェア アシュアランスは必要ありません。 
 
-**Windows Server 2008 R2 以降** で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行している Azure Virtual Machines では、 [自動修正](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)を使用するよう仮想マシンが構成されている場合、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラム チャネルを通じて自動的に ESU を受け取ります。
+**Windows Server 2008 R2 以降** で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行している Azure Virtual Machines では、[自動修正](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)を使用するよう仮想マシンが構成されている場合、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラム チャネルを通じて自動的に ESU を受け取ります。
 
-**Windows Server 2008** 上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行している Azure Virtual Machines (VM)、または **[自動修正](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)が構成されて _いない_** 仮想マシンの場合、「 [オンプレミスまたはホスト環境](#on-premises-or-hosted-environments)」セクションの説明に従って ESU 修正プログラムを手動でダウンロードして展開する必要があります。
+**Windows Server 2008** 上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行している Azure Virtual Machines (VM)、または **[自動修正](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)が構成されて _いない_** 仮想マシンの場合、「[オンプレミスまたはホスト環境](#on-premises-or-hosted-environments)」セクションの説明に従って ESU 修正プログラムを手動でダウンロードして展開する必要があります。
 
 ### <a name="on-premises-or-hosted-environments"></a>オンプレミスまたはホスト環境
 ソフトウェア アシュアランスをご利用の場合は、Enterprise Agreement (EA)、エンタープライズ サブスクリプション契約 (EAS)、サーバーおよびクラウド加入契約 (SCE)、または教育ソリューション加入契約 (EES) のもとで、サポート終了日から最大 3 年間の延長セキュリティ更新プログラム (ESU) サブスクリプションをご購入いただけます。 ESU は、対象にする必要があるサーバー用にのみご購入いただけます。 ESU は、Microsoft または Microsoft のライセンス パートナーから直接お買い求めいただけます。 
@@ -91,11 +91,11 @@ SQL Server レジストリを作成するには、次の手順に従います。
 
    ![[基本] タブが表示されている SQL Server レジストリのスクリーンショット。](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
 
-1. **[確認および作成]** を選択して、 **SQL Server レジストリ** の詳細を確認します。 検証に合格したら、 **[作成]** を選択します。 
+1. **[確認および作成]** を選択して、**SQL Server レジストリ** の詳細を確認します。 検証に合格したら、 **[作成]** を選択します。 
 
 ## <a name="register-instances-for-esus"></a>ESU 用にインスタンスを登録する
 
-**SQL Server レジストリ** リソースがデプロイされた後、 [1 つ](#single-sql-server-instance)の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを登録するか、複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを [一括](#multiple-sql-server-instances-in-bulk)で登録することができます。 ESU パッケージをダウンロードするには、少なくとも 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが SQL Server レジストリのスコープに登録されている必要があります。 
+**SQL Server レジストリ** リソースがデプロイされた後、[1 つ](#single-sql-server-instance)の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを登録するか、複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを [一括](#multiple-sql-server-instances-in-bulk)で登録することができます。 ESU パッケージをダウンロードするには、少なくとも 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが SQL Server レジストリのスコープに登録されている必要があります。 
 
 ### <a name="single-sql-server-instance"></a>1 つの SQL Server インスタンス
 
@@ -207,11 +207,44 @@ ESU をダウンロードするには、次の手順に従います。
 
 1. セキュリティ更新プログラムが利用可能な場合、利用可能になった時点で、こちらからダウンロードしてください。 
 
+## <a name="supported-regions-and-data-residency"></a>サポートされているリージョンとデータ所在地
+
+**SQL Server レジストリ** サービス (プレビュー) は、Azure リージョンのサブセットで利用できます。 次の表に示すリージョンと、それぞれにおけるデータ所在地の種類が、サポートされています。
+
+| **リージョン** | **データの保存場所** |
+|:--|:--|
+|オーストラリア東部|ジオ (主要地域)|
+|オーストラリア南東部|ジオ (主要地域)|
+|カナダ中部|ジオ (主要地域)|
+|フランス中部|ジオ (主要地域)|
+|東日本|ジオ (主要地域)|
+|西日本|ジオ (主要地域)|
+|韓国中部|ジオ (主要地域)|
+|韓国南部|ジオ (主要地域)|
+|米国中北部|ジオ (主要地域)|
+|北ヨーロッパ|ジオ (主要地域)|
+|米国中南部|ジオ (主要地域)|
+|東南アジア|単一リージョン|
+|インド南部|ジオ (主要地域)|
+|南アフリカ北部|ジオ (主要地域)|
+|英国南部|ジオ (主要地域)|
+|英国西部|ジオ (主要地域)|
+|米国西部|ジオ (主要地域)|
+|米国東部|ジオ (主要地域)|
+|米国中部|ジオ (主要地域)|
+|東アジア|ジオ (主要地域)|
+|西ヨーロッパ|ジオ (主要地域)|
+|米国中西部|ジオ (主要地域)|
+|米国西部 2|ジオ (主要地域)|
+|米国東部 2|ジオ (主要地域)|
+
+リージョンに地理的な所在地が含まれる場合は、SQL レジストリ サービスによって geo 冗長ストレージ アカウント (GRS) にデータ バックアップが保持されます。  リージョンに含まれるのが単一のリージョン所在地である場合は、SQL レジストリ サービスによってゾーン冗長ストレージ アカウント (ZRS) にデータ バックアップが保持されます。 詳細については、[トラスト センター](https://azuredatacentermap.azurewebsites.net/)に関するページを参照してください。
+
 ## <a name="configure-regional-redundancy"></a>リージョン冗長を構成する 
 
-**SQL Server レジストリ** に対するリージョン冗長を必要とするお客様は、2 つの異なるリージョンに登録データを作成できます。 その後、お客様は、 **SQL Server レジストリ** サービスの可用性に基づいて、いずれかのリージョンからセキュリティ更新プログラムをダウンロードできます。 
+**SQL Server レジストリ** に対するリージョン冗長を必要とするお客様は、2 つの異なるリージョンに登録データを作成できます。 その後、お客様は、**SQL Server レジストリ** サービスの可用性に基づいて、いずれかのリージョンからセキュリティ更新プログラムをダウンロードできます。 
 
-リージョン冗長を使用するには、 **SQL Server レジストリ** サービスを 2 つの異なるリージョンに作成する必要があり、SQL Server のインベントリをこれら 2 つのサービス間で分割する必要があります。 これにより、SQL Server の半分は一方のリージョンのレジストリ サービスに登録され、SQL Server の残りの半分はもう一方のリージョンのレジストリ サービスに登録されます。 
+リージョン冗長を使用するには、**SQL Server レジストリ** サービスを 2 つの異なるリージョンに作成する必要があり、SQL Server のインベントリをこれら 2 つのサービス間で分割する必要があります。 これにより、SQL Server の半分は一方のリージョンのレジストリ サービスに登録され、SQL Server の残りの半分はもう一方のリージョンのレジストリ サービスに登録されます。 
 
 リージョン冗長を構成するには、次の手順のようにします。
 
@@ -248,7 +281,7 @@ Microsoft ライフサイクル ポリシーでは、ビジネスおよび開発
 
 **延長セキュリティ更新プログラムには何が含まれていますか?** 
 
-延長セキュリティ更新プログラムでは、2019 年 7 月 9 日から最大 3 年間、 [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/) によって **クリティカル** と評価されたセキュリティ更新プログラムとセキュリティ情報が提供されます。 延長セキュリティ更新プログラムは、利用可能な場合に利用可能になった時点で配信されます。 延長セキュリティ更新プログラムにはテクニカル サポートは含まれていませんが、延長セキュリティ更新プログラムの対象となるワークロードに関する [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] の質問には、[!INCLUDE[msCoName](../../includes/msconame-md.md)] の他のサポート プランを使用できます。 延長セキュリティ更新プログラムには、新機能や機能強化、またはお客様のご要望による修正プログラムは含まれません。 ただし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] には、必要と見なされたセキュリティ以外の修正プログラムが含まれる場合があります。
+延長セキュリティ更新プログラムでは、2019 年 7 月 9 日から最大 3 年間、[Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/) によって **クリティカル** と評価されたセキュリティ更新プログラムとセキュリティ情報が提供されます。 延長セキュリティ更新プログラムは、利用可能な場合に利用可能になった時点で配信されます。 延長セキュリティ更新プログラムにはテクニカル サポートは含まれていませんが、延長セキュリティ更新プログラムの対象となるワークロードに関する [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] の質問には、[!INCLUDE[msCoName](../../includes/msconame-md.md)] の他のサポート プランを使用できます。 延長セキュリティ更新プログラムには、新機能や機能強化、またはお客様のご要望による修正プログラムは含まれません。 ただし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] には、必要と見なされたセキュリティ以外の修正プログラムが含まれる場合があります。
 
 **SQL Server 2008 および 2008 R2 の延長セキュリティ更新プログラムでは、なぜ "クリティカル" な更新プログラムのみが提供されるのですか?**
 
