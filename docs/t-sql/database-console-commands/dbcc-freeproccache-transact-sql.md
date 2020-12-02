@@ -27,11 +27,11 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51c7252e957a9f19d83c6d2b840f91a7261af02b
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92639005"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128597"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
  -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
-*pool_name* は、Resource Governor リソース共有元の名前です *pool_name* は **sysname** 型であり、 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 動的管理ビューに対してクエリを実行して取得できます。  
+*pool_name* は、Resource Governor リソース共有元の名前です *pool_name* は **sysname** 型であり、[sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 動的管理ビューに対してクエリを実行して取得できます。  
  Resource Governor ワークロード グループをリソース共有元に関連付けるには、[sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 動的管理ビューに対してクエリを実行します。 セッションのワークロード グループの情報を表示するには、[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 動的管理ビューに対してクエリを実行します。  
 
   
@@ -185,7 +185,7 @@ DBCC FREEPROCCACHE WITH NO_INFOMSGS;
 ```  
   
 ### <a name="c-clearing-all-cache-entries-associated-with-a-resource-pool"></a>C. リソース プールに関連付けられたすべてのキャッシュ エントリを削除する  
-次の例では、指定したリソース プールに関連付けられているすべてのキャッシュ エントリを削除します。 最初に、`sys.dm_resource_governor_resource_pools` ビューに対してクエリを実行し、 *pool_name* の値を取得します。
+次の例では、指定したリソース プールに関連付けられているすべてのキャッシュ エントリを削除します。 最初に、`sys.dm_resource_governor_resource_pools` ビューに対してクエリを実行し、*pool_name* の値を取得します。
   
 ```sql  
 SELECT * FROM sys.dm_resource_governor_resource_pools;  

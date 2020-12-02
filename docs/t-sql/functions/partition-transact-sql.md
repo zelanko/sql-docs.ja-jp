@@ -20,11 +20,11 @@ ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 95f101b79978c86e2b963891d495ff5a067b5fd9
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380778"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128375"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91380778"
  パーティション分割列の値のセットが適用される、既存のパーティション関数の名前を指定します。  
   
  *式 (expression)*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。このデータ型は、対応するパーティション分割列のデータ型と一致するか、パーティション分割列のデータ型に暗黙的に変換される必要があります。 *式* に現在参加しているパーティション分割列の名前を指定できますも *partition_function_name*です。  
+ [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。このデータ型は、対応するパーティション分割列のデータ型と一致するか、パーティション分割列のデータ型に暗黙的に変換される必要があります。 *式* に現在参加しているパーティション分割列の名前を指定できますも *partition_function_name* です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  

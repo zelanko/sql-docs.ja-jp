@@ -23,11 +23,11 @@ ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 0a6ff9b888601403029ef8c830dd8dd674aa1f10
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235651"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128527"
 ---
 # <a name="context_info--transact-sql"></a>CONTEXT_INFO  (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +61,7 @@ CONTEXT_INFO()
 - **sys.sysprocesses**
   
 ## <a name="examples"></a>例  
-この簡単な例では、 **context_info** 値を `0x1256698456` に設定してから、`CONTEXT_INFO` 関数を使用して値を取得します。
+この簡単な例では、**context_info** 値を `0x1256698456` に設定してから、`CONTEXT_INFO` 関数を使用して値を取得します。
   
 ```sql
 SET CONTEXT_INFO 0x1256698456;  
