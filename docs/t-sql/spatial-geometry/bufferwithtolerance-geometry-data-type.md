@@ -19,11 +19,11 @@ ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a039118dc0abe85b065d74b96f551c2991820333
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037069"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128181"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "92037069"
  *tolerance*  
  バッファー距離の許容範囲を指定する **float** 式です。  
   
- *許容範囲*とは、返された線形近似の理想的なバッファー距離の最大幅のことです。  
+ *許容範囲* とは、返された線形近似の理想的なバッファー距離の最大幅のことです。  
   
  たとえば、ある地点の理想のバッファー距離は円ですが、多角形によって近似された形状になる必要があります。 許容範囲が小さいほど、多角形の頂点の数は多くなります。つまり、計算結果の複雑性が増しますが、元の図形との差が小さくなります。  
   

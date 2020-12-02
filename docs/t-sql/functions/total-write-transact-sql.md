@@ -23,11 +23,11 @@ ms.assetid: cd528126-51ee-4aa4-a21f-f32ce5c80fac
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: d7047288c3607c91455d1cf17881efb0866205e6
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379567"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128365"
 ---
 # <a name="x40x40total_write-transact-sql"></a>&#x40;&#x40;TOTAL_WRITE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "91379567"
  **integer**  
   
 ## <a name="remarks"></a>解説  
- いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行を含む、読み取りおよび書き込み動作では、統計、 **sp_monitor**です。  
+ いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行を含む、読み取りおよび書き込み動作では、統計、 **sp_monitor** です。  
   
 ## <a name="examples"></a>例  
  次の例では、現在のシステム上の日付と時刻におけるディスクの読み取りおよび書き込みの合計数が返されます。  
