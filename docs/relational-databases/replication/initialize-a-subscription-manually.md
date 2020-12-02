@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: bfa7cc36898aa521fed2e0e20fd08a5296147fcf
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91869225"
 ---
 # <a name="initialize-a-subscription-manually"></a>手動によるサブスクリプションの初期化
@@ -64,7 +64,7 @@ ms.locfileid: "91869225"
   
 1.  スキーマとデータがサブスクリプション データベースに存在することを確認します。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)を実行します。 **\@destination_db** にパブリッシュ済みのデータを格納するサブスクライバー側データベースの名前、 **\@subscription_type** に対する **push**の値、 **\@sync_type** に対する **replication support only** の値を指定します。 サブスクリプションの更新については、「 [Create an Updatable Subscription to a Transactional Publication](./publish/create-an-updatable-subscription-to-a-transactional-publication.md)」を参照してください。  
+2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)を実行します。 **\@destination_db** にパブリッシュ済みのデータを格納するサブスクライバー側データベースの名前、 **\@subscription_type** に対する **push** の値、 **\@sync_type** に対する **replication support only** の値を指定します。 サブスクリプションの更新については、「 [Create an Updatable Subscription to a Transactional Publication](./publish/create-an-updatable-subscription-to-a-transactional-publication.md)」を参照してください。  
   
 3.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)を実行します。 詳細については、「 [プッシュ サブスクリプションの作成](../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
   

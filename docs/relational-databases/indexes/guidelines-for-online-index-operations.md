@@ -20,10 +20,10 @@ ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 047ca1b9ebb3a9157dfe9cbea2ececb898f6b478
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91867673"
 ---
 # <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
@@ -32,7 +32,7 @@ ms.locfileid: "91867673"
 
 インデックス操作をオンラインで実行するときは、次のガイドラインに従ってください。  
 
-- 基になるテーブルに **image**、 **ntext**、 **text**などの LOB (ラージ オブジェクト) データ型が含まれている場合、クラスター化インデックスの作成、再構築、または削除は、オフラインで行う必要があります。  
+- 基になるテーブルに **image**、 **ntext**、 **text** などの LOB (ラージ オブジェクト) データ型が含まれている場合、クラスター化インデックスの作成、再構築、または削除は、オフラインで行う必要があります。  
 - テーブルに LOB データ型が含まれていても、そのデータ型の列がキー列または非キー (付加) 列としてインデックス定義で使用されていない場合は、一意ではない非クラスター化インデックスをオンラインで作成できます。  
 - ローカル一時テーブルのインデックスの作成、再構築、または削除は、オンラインでは実行できません。 この制限は、グローバル一時テーブルのインデックスには当てはまりません。
 - インデックスは、予期しないエラー、データベースのフェールオーバー、または **PAUSE** コマンドの後で、停止したところから再開できます。 「[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)」および「[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。

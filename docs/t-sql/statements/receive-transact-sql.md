@@ -23,10 +23,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: b299ace817088af33732d9e4a9984d7978709f6c
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91498189"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)

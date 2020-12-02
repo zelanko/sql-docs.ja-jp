@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4a17fb30859866155b2e3976e3d1a1bb2890ac4e
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92006224"
 ---
 # <a name="polygon"></a>多角形
@@ -30,7 +30,7 @@ ms.locfileid: "92006224"
 ## <a name="polygon-instances"></a>Polygon インスタンス  
  **Polygon** インスタンスは、3 つ以上の異なる点を持つリングで形成されます。 **Polygon** インスタンスは空にすることもできます。  
   
-**Polygon** の外部および内部のリングは、その境界を定義します。 リング内の空間は **Polygon**の内部を定義します。  
+**Polygon** の外部および内部のリングは、その境界を定義します。 リング内の空間は **Polygon** の内部を定義します。  
   
 次の図は、 **Polygon** インスタンスの例です。  
   

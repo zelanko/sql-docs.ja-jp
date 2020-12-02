@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4759838a20e721031db8e4ea5e644cc3822285a8
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91868944"
 ---
 # <a name="upgrade-full-text-search"></a>フルテキスト検索のアップグレード
@@ -99,7 +99,7 @@ ms.locfileid: "91868944"
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]でノイズ ワード ファイルが変更された場合は、アップグレード時にその変更が失われます。 このような更新を再作成するには、対応する [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のストップリストで、これらの変更を手動で再作成する必要があります。 詳細については、「[ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)」を参照してください。  
   
--   フルテキスト インデックスにストップワードを適用しない場合 (たとえば、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のインストールでノイズ ワード ファイルを削除または消去した場合) は、アップグレードされたフルテキスト インデックスごとに、ストップリストを無効にする必要があります。 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します ( *database* をアップグレードされたデータベースの名前に置き換え、 *table* を *table*の名前に置き換えます)。  
+-   フルテキスト インデックスにストップワードを適用しない場合 (たとえば、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のインストールでノイズ ワード ファイルを削除または消去した場合) は、アップグレードされたフルテキスト インデックスごとに、ストップリストを無効にする必要があります。 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します ( *database* をアップグレードされたデータベースの名前に置き換え、 *table* を *table* の名前に置き換えます)。  
   
     ```  
     Use database;   
@@ -131,15 +131,15 @@ ms.locfileid: "91868944"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] フルテキスト カタログのインポート中に、データベースとカタログ ファイルをバックアップおよび復元できます。 次に示すように、動作は [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と同じです。  
   
--   データベースの完全バックアップには、フルテキスト カタログが含まれます。 フルテキスト カタログを参照するには、その [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ファイル名 sysft_+*catalog-name*を使用します。  
+-   データベースの完全バックアップには、フルテキスト カタログが含まれます。 フルテキスト カタログを参照するには、その [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ファイル名 sysft_+*catalog-name* を使用します。  
   
 -   フルテキスト カタログがオフラインの場合、バックアップは失敗します。  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]フルテキスト カタログのバックアップと復元の詳細については、 オンライン ブックの「[フルテキスト カタログのバックアップと復元 ](./back-up-and-restore-full-text-catalogs-and-indexes.md)」および「[ファイルのバックアップと復元およびフルテキスト カタログ](/previous-versions/sql/sql-server-2008-r2/ms190643(v=sql.105))」[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] を参照してください。  
   
- データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に復元すると、フルテキスト カタログ用の新しいデータベース ファイルが作成されます。 このファイルの既定の名前は、ftrow_*catalog-name*.ndf です。 たとえば、 *catalog-name* が `cat1`の場合、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース ファイルの既定の名前は `ftrow_cat1.ndf`となります。 ただし、作成先のディレクトリでこの既定の名前が既に使用されている場合は、新しいデータベース ファイルの名前は `ftrow_`*catalog-name*`{`*GUID*`}.ndf`となります。 *GUID* は、新しいファイルのグローバル一意識別子です。  
+ データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に復元すると、フルテキスト カタログ用の新しいデータベース ファイルが作成されます。 このファイルの既定の名前は、ftrow_ *catalog-name*.ndf です。 たとえば、 *catalog-name* が `cat1`の場合、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース ファイルの既定の名前は `ftrow_cat1.ndf`となります。 ただし、作成先のディレクトリでこの既定の名前が既に使用されている場合は、新しいデータベース ファイルの名前は `ftrow_`*catalog-name*`{`*GUID*`}.ndf`となります。 *GUID* は、新しいファイルのグローバル一意識別子です。  
   
- カタログのインポート後、 **sys.database_files** と **sys.master_files**が更新されてカタログ エントリが削除され、 **sys.fulltext_catalogs** の **path** 列が NULL に設定されます。  
+ カタログのインポート後、 **sys.database_files** と **sys.master_files** が更新されてカタログ エントリが削除され、 **sys.fulltext_catalogs** の **path** 列が NULL に設定されます。  
   
  **データベースをバックアップするには**  
   

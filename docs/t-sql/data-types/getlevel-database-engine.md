@@ -19,10 +19,10 @@ ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f0aa604a88902dc8bfba522556f11b267fa1e184
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92037165"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (データベース エンジン)
@@ -46,7 +46,7 @@ SqlInt16 GetLevel ( )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>戻り値の型  
-**SQL Server の戻り値の型: smallint **
+**SQL Server の戻り値の型: smallint**
   
 **CLR の戻り値の型: SqlInt16**
   

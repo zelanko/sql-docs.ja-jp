@@ -24,10 +24,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2cd9fc9bc52a69fb5200abaf2bd5f678fe4a1f73
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379958"
 ---
 # <a name="schema_id-transact-sql"></a>SCHEMA_ID (Transact-SQL)
@@ -49,7 +49,7 @@ SCHEMA_ID ( [ schema_name ] )
   
 |期間|定義|  
 |----------|----------------|  
-|*schema_name*|スキーマの名前です。 *schema_name* は、 **sysname**です。 場合 *schema_name* が指定されていない、SCHEMA_ID は、呼び出し元の既定のスキーマの ID を返します。|  
+|*schema_name*|スキーマの名前です。 *schema_name* は、 **sysname** です。 場合 *schema_name* が指定されていない、SCHEMA_ID は、呼び出し元の既定のスキーマの ID を返します。|  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
