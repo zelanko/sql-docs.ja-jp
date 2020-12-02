@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 11/12/2020
-ms.openlocfilehash: 23e7ee0063ad8e5a3e8dd8653cfd5aab8a1753bc
-ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
+ms.openlocfilehash: 64cd6b3a60e07344dbe33287b23b2c3c77eaaa79
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94570939"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442672"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio のダウンロードとインストール
 
@@ -38,16 +38,16 @@ Azure Data Studio では、IntelliSense、コード スニペット、ソース�
 
 Azure Data Studio のこのリリースには、標準の Windows インストーラーのエクスペリエンスと、.zip ファイルが含まれています。
 
-管理者特権を必要としないため、" *ユーザー インストーラー* " をお勧めします。これにより、インストールとアップグレードの両方が簡略化されます。 場所はユーザーの Local AppData (LOCALAPPDATA) フォルダーの下にあるため、ユーザー インストーラーに管理者特権は必要ありません。 また、ユーザーインストーラーでは、より滑らかなバックグラウンドの更新エクスペリエンスも提供されます。 詳細については、[Windows 用のユーザーのセットアップ](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows)に関するセクションを参照してください。
+管理者特権を必要としないため、"*ユーザー インストーラー*" をお勧めします。これにより、インストールとアップグレードの両方が簡略化されます。 場所はユーザーの Local AppData (LOCALAPPDATA) フォルダーの下にあるため、ユーザー インストーラーに管理者特権は必要ありません。 また、ユーザーインストーラーでは、より滑らかなバックグラウンドの更新エクスペリエンスも提供されます。 詳細については、[Windows 用のユーザーのセットアップ](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows)に関するセクションを参照してください。
 
 **ユーザー インストーラー** (推奨)
 
-1. [Windows 用の Azure Data Studio " *ユーザー* " インストーラー](https://go.microsoft.com/fwlink/?linkid=2148607)をダウンロードして実行します。
+1. [Windows 用の Azure Data Studio "*ユーザー*" インストーラー](https://go.microsoft.com/fwlink/?linkid=2148607)をダウンロードして実行します。
 2. Azure Data Studio アプリを起動します。
 
 **システム インストーラー**
 
-1. [Windows 用の Azure Data Studio " *システム* " インストーラー](https://go.microsoft.com/fwlink/?linkid=2148907) をダウンロードして実行します。
+1. [Windows 用の Azure Data Studio "*システム*" インストーラー](https://go.microsoft.com/fwlink/?linkid=2148907) をダウンロードして実行します。
 2. Azure Data Studio アプリを起動します。
 
 **zip ファイル**
@@ -60,7 +60,7 @@ Azure Data Studio のこのリリースには、標準の Windows インスト�
 
 1. [Azure Data Studio for macOS](https://go.microsoft.com/fwlink/?linkid=2148710) をダウンロードします。
 2. zip のコンテンツを展開するには、ダブルクリックします。
-3. Azure Data Studio を *スタート パッド* で使用できるようにするには、 *Azure Data Studio.app* を *[アプリケーション]* フォルダーにドラッグします。
+3. Azure Data Studio を *スタート パッド* で使用できるようにするには、*Azure Data Studio.app* を *[アプリケーション]* フォルダーにドラッグします。
 
 ## <a name="get-azure-data-studio-for-linux"></a>Linux 用の Azure Data Studio を取得する
 
@@ -242,7 +242,7 @@ Windows インストーラーを使用して Azure Data Studio をインスト�
 - [Azure Data Studio リリース ノート](release-notes-azure-data-studio.md)
 - [SQL Server に対する接続およびクエリ](quickstart-sql-server.md)
 - [Azure SQL Database に対する接続およびクエリ](quickstart-sql-database.md)
-- [Azure Data Warehouse に対する接続およびクエリ](quickstart-sql-dw.md)
+- [Azure Synapse Analytics に対する接続およびクエリ](quickstart-sql-dw.md)
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
