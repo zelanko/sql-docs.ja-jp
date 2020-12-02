@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: Rupp29
 ms.author: arupp
-ms.openlocfilehash: e3b12ed6d4f28ce04c1ceac5960ae564368d9a9a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 4df1fb243b2e811b216b03ec453164ae1a00b1af
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866606"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130211"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>Azure Key Vault を使用した SQL Server TDE 拡張キー管理を設定する
 
@@ -83,7 +83,7 @@ SQL Server インスタンスのアクセス権を Azure Key Vault に付与す�
 
     ![[クライアント シークレットの追加] セクションのスクリーンショット](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-add-secret.png)  
 
-    f. **[証明書とシークレット]** ウィンドウの **[値]** で、SQL Server で非対称キーを作成するために使用するクライアント シークレットの値の横にある**コピー** ボタンを選択します。
+    f. **[証明書とシークレット]** ウィンドウの **[値]** で、SQL Server で非対称キーを作成するために使用するクライアント シークレットの値の横にある **コピー** ボタンを選択します。
 
     ![シークレット値のスクリーンショット](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png)  
 
@@ -245,7 +245,7 @@ Azure portal を使用してキー コンテナーを作成し、そのキー �
     > [!IMPORTANT]
     > Azure AD サービス プリンシパルには、キー コンテナーに対して少なくとも *get*、*list*、*wrapKey*、および *unwrapKey* の権限が必要です。  
   
-    次のコマンドに示すように、`ServicePrincipalName` パラメーターには「[手順 1: Azure AD サービス プリンシパルを設定する](#step-1-set-up-an-azure-ad-service-principal)」でコピーした**アプリ (クライアント) ID** を使用します。 `Set-AzKeyVaultAccessPolicy` は、メッセージを伴わずに実行されます。正常に実行されたとしても何も出力されません。  
+    次のコマンドに示すように、`ServicePrincipalName` パラメーターには「[手順 1: Azure AD サービス プリンシパルを設定する](#step-1-set-up-an-azure-ad-service-principal)」でコピーした **アプリ (クライアント) ID** を使用します。 `Set-AzKeyVaultAccessPolicy` は、メッセージを伴わずに実行されます。正常に実行されたとしても何も出力されません。  
   
     ```powershell  
     Set-AzKeyVaultAccessPolicy -VaultName 'ContosoEKMKeyVault' `  
@@ -408,12 +408,12 @@ SQL Server コネクタのエラー コードの説明、構成設定、また�
     - `IDENTITY` 引数 (`ContosoEKMKeyVault`) を編集し、Azure Key Vault を参照するようにします。
       - *グローバル Azure* を使用している場合は、`IDENTITY` 引数を「[手順 2: キー コンテナーを作成する](#step-2-create-a-key-vault)」で使用した実際の Azure Key Vault の名前に置き換えます。
       - *プライベート Azure クラウド* (Azure Government、Azure China 21Vianet、Azure Germany など) を使用している場合は、`IDENTITY` 引数を「[PowerShell を使用してキー コンテナーとキーを作成する](#create-a-key-vault-and-key-by-using-powershell)」の手順 3 で返された Vault URI に置き換えます。 Vault URI に "https://" は含めないでください。
-    - `SECRET` 引数の最初の部分を、「[手順 1: Azure AD サービス プリンシパルを設定する](#step-1-set-up-an-azure-ad-service-principal)」で使用した Azure Active Directory のクライアント ID に置き換えます。 この例の**クライアント ID** は `9A57CBC54C4C40E2B517EA677E0EFA00` です。  
+    - `SECRET` 引数の最初の部分を、「[手順 1: Azure AD サービス プリンシパルを設定する](#step-1-set-up-an-azure-ad-service-principal)」で使用した Azure Active Directory のクライアント ID に置き換えます。 この例の **クライアント ID** は `9A57CBC54C4C40E2B517EA677E0EFA00` です。  
   
       > [!IMPORTANT]
       > アプリ (クライアント) ID のハイフンは必ず削除してください。  
   
-    - `SECRET` 引数の 2 番目の部分を、「[手順 1: Azure AD サービス プリンシパルを設定する](#step-1-set-up-an-azure-ad-service-principal)」で使用した**クライアント シークレット**に置き換えます。  この例のクライアント シークレットは `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m` です。 完成した `SECRET` 引数は、ハイフンを含まないアルファベットと数字から成る長い文字列になります。  
+    - `SECRET` 引数の 2 番目の部分を、「[手順 1: Azure AD サービス プリンシパルを設定する](#step-1-set-up-an-azure-ad-service-principal)」で使用した **クライアント シークレット** に置き換えます。  この例のクライアント シークレットは `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m` です。 完成した `SECRET` 引数は、ハイフンを含まないアルファベットと数字から成る長い文字列になります。  
   
     ```sql  
     USE master;  
@@ -466,7 +466,7 @@ SQL Server コネクタのエラー コードの説明、構成設定、また�
 1. 新しいログインを変更して、EKM 資格情報を新しいログインにマップします。
 
      ```sql  
-    --Now drop the credential mapping from the original association
+    --Now add the credential mapping to the new Login
     ALTER LOGIN TDE_Login
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```  

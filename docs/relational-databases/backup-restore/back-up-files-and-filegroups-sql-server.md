@@ -15,14 +15,14 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5ba5f84315eec687e6ab93c407226a3ff2fbc343
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6b400efdcf437fd97952ae215f5279d770c0598a
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809192"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130565"
 ---
 # <a name="back-up-files-and-filegroups"></a>ファイルおよびファイル グループのバックアップ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

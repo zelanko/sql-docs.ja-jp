@@ -73,6 +73,24 @@
           items:
             - name: SQL Server の接続プール (ADO.NET)
               href: ../connect/ado-net/sql-server-connection-pooling.md
+        - name: コマンドおよびパラメーター
+          href: ../connect/ado-net/commands-parameters.md
+          items:
+            - name: コマンドの実行
+              href: ../connect/ado-net/execute-command.md
+            - name: パラメーターの構成
+              href: ../connect/ado-net/configure-parameters.md
+            - name: CommandBuilder でのコマンドの生成
+              href: ../connect/ado-net/generate-commands-with-commandbuilders.md
+            - name: データベースからの単一の値の取得
+              href: ../connect/ado-net/obtain-single-value-from-database.md
+            - name: コマンドを使用したデータ変更
+              href: ../connect/ado-net/use-commands-to-modify-data.md
+              items:
+                - name: データ ソースのデータの更新
+                  href: ../connect/ado-net/update-data-inside-data-source.md
+                - name: カタログ操作の実行
+                  href: ../connect/ado-net/perform-catalog-operations.md
     - name: SQL Server と ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:

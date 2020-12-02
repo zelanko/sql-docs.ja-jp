@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1487d56bd1f93e0410f6c9b6001f4f379b466fb5
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380339"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131144"
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -57,7 +57,7 @@ DROP ROLE role_name
 
 ## <a name="arguments"></a>引数
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、ロールを削除します。  
   

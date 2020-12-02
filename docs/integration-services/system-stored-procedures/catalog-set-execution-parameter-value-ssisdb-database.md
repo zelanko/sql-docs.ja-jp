@@ -12,11 +12,11 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5775b87b13fc126907dfc0f121e9838c2d490fd0
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243663"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129659"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB データベース)
 
@@ -45,7 +45,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  [ @object_type = ] *object_type*  
  パラメーターの型。  
   
- 次のパラメーターでは、 *object_type* を 50 に指定します。  
+ 次のパラメーターでは、*object_type* を 50 に指定します。  
   
 -   LOGGING_LEVEL  
   
@@ -74,7 +74,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 ## <a name="remarks"></a>注釈  
  特定の実行に使用されたパラメーター値を調べるには、catalog.execution_parameter_values ビューに対してクエリを実行します。  
   
- パッケージの実行中にログに記録される情報のスコープを指定するには、 *parameter_name* を LOGGING_LEVEL に設定して、 *parameter_value* を次のいずれかの値に設定します。  
+ パッケージの実行中にログに記録される情報のスコープを指定するには、*parameter_name* を LOGGING_LEVEL に設定して、*parameter_value* を次のいずれかの値に設定します。  
   
  *object_type* パラメーターを 50 に設定します。  
   

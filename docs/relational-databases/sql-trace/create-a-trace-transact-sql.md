@@ -15,11 +15,11 @@ ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff2970bf4d450c425f169be7b2bb72c24db7d2d0
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364795"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130182"
 ---
 # <a name="create-a-trace-transact-sql"></a>トレースの作成 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "93364795"
   
 ### <a name="to-create-a-trace"></a>トレースを作成するには  
   
-1.  必要なパラメーターを指定して **sp_trace_create** を実行し、新しいトレースを作成します。 新しいトレースは停止状態 ( *status* の値が **0** ) になります。  
+1.  必要なパラメーターを指定して **sp_trace_create** を実行し、新しいトレースを作成します。 新しいトレースは停止状態 (*status* の値が **0**) になります。  
   
 2.  必要なパラメーターを指定して **sp_trace_setevent** を実行し、トレースするイベントおよび列を選択します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "93364795"
      **sp_trace_setevent** と **sp_trace_setfilter** は、停止状態の既存のトレースに対してのみ実行できます。  
   
     > [!IMPORTANT]  
-    >  通常のストアド プロシージャとは異なり、すべての SQL Server Profiler ストアド プロシージャ ( <strong>sp_trace_ *xx*</strong>) のパラメーターでは、データ型が厳密に定義されており、データ型の自動変換はサポートされていません。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
+    >  通常のストアド プロシージャとは異なり、すべての SQL Server Profiler ストアド プロシージャ (<strong>sp_trace_ *xx*</strong>) のパラメーターでは、データ型が厳密に定義されており、データ型の自動変換はサポートされていません。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
   
 ## <a name="examples"></a>例
 

@@ -26,11 +26,11 @@ ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 94fcbdfe06b99e0fb66cb6d462512c7d2a283914
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497931"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131043"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,7 +56,7 @@ END CONVERSATION conversation_handle
  終了するメッセージ交換のメッセージ交換ハンドルを指定します。  
   
  WITH ERROR =*failure_code*  
- エラー コードです。 *Failure_code* のデータ型は **int**です。このエラー コードはユーザー定義のコードであり、メッセージ交換の相手側に送信するエラー メッセージの一部となります。 このエラー コードは 0 よりも大きい値にする必要があります。  
+ エラー コードです。 *Failure_code* のデータ型は **int** です。このエラー コードはユーザー定義のコードであり、メッセージ交換の相手側に送信するエラー メッセージの一部となります。 このエラー コードは 0 よりも大きい値にする必要があります。  
   
  DESCRIPTION =*failure_text*  
  エラー メッセージです。 *Failure_text* のデータ型は **nvarchar (3000)** です。 このエラー テキストはユーザー定義のテキストであり、メッセージ交換の相手側に送信するエラー メッセージの一部となります。  

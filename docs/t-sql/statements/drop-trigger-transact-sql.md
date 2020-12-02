@@ -26,11 +26,11 @@ ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: d800de4adea71523c3ae05bed53c97697c718d70
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379647"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131074"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ ON ALL SERVER
 
 ## <a name="arguments"></a>引数
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで、[!INCLUDE[sssds](../../includes/sssds-md.md)])。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで、[!INCLUDE[sssds](../../includes/sssds-md.md)])。  
   
  条件付きでは既に存在する場合にのみ、トリガーを削除します。  
   

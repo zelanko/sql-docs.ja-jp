@@ -20,11 +20,11 @@ ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 2bb618bfc53e481e2ea7d86749aaf093d3ec2542
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380047"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131306"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 
 ## <a name="arguments"></a>引数
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、既定値を削除します。  
   
