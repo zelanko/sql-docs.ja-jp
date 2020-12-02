@@ -27,11 +27,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 284d4110c4c0a2b8b4b7a1c26c4a4148fb5c50a6
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193332"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124409"
 ---
 # <a name="-modulus-transact-sql"></a>% (剰余) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ dividend % divisor
 
 ## <a name="arguments"></a>引数
  *dividend*  
- 除算される数値式です。 *dividend* には、整数および通貨型に分類されるデータ型、または **numeric** データ型の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定する必要があります。  
+ 除算される数値式です。 *dividend* には、整数および通貨型に分類されるデータ型、または **numeric** データ型の有効な [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定する必要があります。  
   
  *divisor*  
  被除数を除算する数値式です。 *divisor* には、整数および通貨型に分類されるデータ型、または **numeric** データ型の任意の有効な式を指定する必要があります。  

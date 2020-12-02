@@ -16,31 +16,31 @@ helpviewer_keywords:
 - errors [SQL Server], Setup
 - logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5f3e65de977926076ec10ef1609bf712c9579faa
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 4cf535ee95b91a0e9b6ed3ba2b8745478736a142
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243821"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125667"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>SQL Server セットアップ ログ ファイルの表示と読み取り
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-SQL Server のセットアップでは、既定で、 **\%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log** 内の日付と時刻を名前に含むフォルダーに、ログ ファイルが作成されます。 *nnn* は、インストールされている SQL Server のバージョンに対応する番号です。 タイムスタンプ付きのログ フォルダーの名前形式は YYYYMMDD_hhmmss です。 セットアップを自動モードで実行した場合は、%temp%\sqlsetup*.log 内にログが作成されます。 ログ フォルダー内のログ ファイルはすべて、それぞれのログ フォルダー内で Log\*.cab ファイルにアーカイブされます。  
+SQL Server のセットアップでは、既定で、 **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** 内の日付と時刻を名前に含むフォルダーに、ログ ファイルが作成されます。*nnn* は、インストールされている SQL Server のバージョンに対応する番号です。 タイムスタンプ付きのログ フォルダーの名前形式は YYYYMMDD_hhmmss です。 セットアップを自動モードで実行した場合は、%temp%\sqlsetup*.log 内にログが作成されます。 ログ フォルダー内のログ ファイルはすべて、それぞれのログ フォルダー内で Log\*.cab ファイルにアーカイブされます。  
 
    | ファイル           | Path |
    | :------        | :----------------------------- |
-   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log |
-   | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss |
-   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss|
-   | **データストア** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
-   | **MSI ログ ファイル** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Name>.log|
-   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss |
-   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log |
+   | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss|
+   | **データストア** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
+   | **MSI ログ ファイル** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Name>.log|
+   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
    | **無人インストールの場合** | %temp%\sqlsetup*.log |
 
 
@@ -86,7 +86,7 @@ SQL Server のセットアップでは、既定で、 **\%programfiles%\Microsof
   > 修正プログラムの適用時、似たような一連のファイルが含まれるサブフォルダーが多数存在することがあります (修正プログラムが適用されるインスタンスごとにサブフォルダーが 1 つ、共有機能のために 1 つ) (すなわち、%programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER)。 
   
 ### <a name="location"></a>場所  
- summary.txt は %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\ 内にあります。
+ summary.txt は %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\ 内にあります。
   
  概要テキスト ファイル内でエラーを見つけるには、"エラー" や "失敗" をキーワードにして検索できます。
   
@@ -96,7 +96,7 @@ SQL Server のセットアップでは、既定で、 **\%programfiles%\Microsof
  summary_engine の基本的なファイルは概要ファイルに似ていますが、メイン ワークフロー内で生成されます。
   
 ### <a name="location"></a>場所  
- Summary_\<MachineName>_YYYYMMDD_HHMMss.txt ファイルは %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\ にあります。
+ Summary_\<MachineName>_YYYYMMDD_HHMMss.txt ファイルは %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\ にあります。
   
   
 ## <a name="detailtxt-file"></a>Detail.txt ファイル
@@ -105,7 +105,7 @@ SQL Server のセットアップでは、既定で、 **\%programfiles%\Microsof
  Detail.txt はインストールやアップグレードなど、メイン ワークフロー内で生成され、実行の詳細を示します。 ファイル内のログは、インストールの各アクションが呼び出されたときの時刻に基づいて生成されます。 テキスト ファイルには、アクションが実行された順所とその依存関係が示されます。  
   
 ### <a name="location"></a>場所  
- detail.txt ファイルは %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt 内にあります。  
+ detail.txt ファイルは %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt 内にあります。  
   
  セットアップ過程でエラーが発生すると、例外やエラーはこのファイルの終わりに記録されます。 このファイル内でエラーを見つけるには、まずファイルの終わりを調べてから、"エラー" や "例外" をキーワードにして検索します。
     
@@ -121,7 +121,7 @@ SQL Server のセットアップでは、既定で、 **\%programfiles%\Microsof
 -   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### <a name="location"></a>場所  
- MSI ログ ファイルは %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log にあります。  
+ MSI ログ ファイルは %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log にあります。  
   
  ファイルの終わりに実行の概要があり、成功したかどうかとプロパティを示します。 MSI ファイルのエラーを見つけるには、"value 3" を探し、その前後のテキストを確認します。  
   
@@ -131,7 +131,7 @@ SQL Server のセットアップでは、既定で、 **\%programfiles%\Microsof
  構成ファイルにはインストール時に使用される入力の設定が含まれています。 手動で設定を入力しなくてもインストールを再起動できるようにするときに使用できます。 ただし、パスワード、PID、およびパラメーターの一部は構成ファイルには保存されません。 設定はファイルに追加できますが、コマンドラインまたはセットアップのインターフェイスを使って供給することもできます。 詳細については、「 [構成ファイルを使用した SQL Server 2016 のインストール](./install-sql-server-using-a-configuration-file.md)」を参照してください。  
   
 ### <a name="location"></a>場所  
- ConfigurationFile.ini は %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\ にあります。  
+ ConfigurationFile.ini は %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\ にあります。  
   
 ## <a name="systemconfigurationcheck_reporthtm-file"></a>SystemConfigurationCheck_Report.htm ファイル
   
@@ -139,7 +139,7 @@ SQL Server のセットアップでは、既定で、 **\%programfiles%\Microsof
  システム構成チェッカーのレポートには、実行された各ルールの簡単な記述と、実行ステータスが含まれています。
   
 ### <a name="location"></a>場所  
-SystemConfigurationCheck_Report.htm は %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\ にあります。
+SystemConfigurationCheck_Report.htm は %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\ にあります。
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   

@@ -22,11 +22,11 @@ ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 34df520dcb0f193e2b548a909ea10cd4113995fc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196656"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124479"
 ---
 # <a name="comparison-operators-transact-sql"></a>比較演算子 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "92196656"
 |[\!> (以下)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|より大きくない (ISO 標準外)|  
   
 ## <a name="boolean-data-type"></a>Boolean データ型  
- 比較演算子の結果は**ブール** データ型になります。 有効値には、TRUE、FALSE、UNKNOWN があります。 **ブール** データ型を返す式は、ブール式とも呼ばれます。  
+ 比較演算子の結果は **ブール** データ型になります。 有効値には、TRUE、FALSE、UNKNOWN があります。 **ブール** データ型を返す式は、ブール式とも呼ばれます。  
   
  **ブール** データ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他のデータ型と異なり、テーブルの列や変数のデータ型として指定することはできず、結果セットで返すこともできません。  
   

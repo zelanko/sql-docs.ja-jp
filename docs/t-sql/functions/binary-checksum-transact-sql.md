@@ -21,11 +21,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2dd65d2923d063440e292884da2bb4c6aecf0ec4
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255470"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124895"
 ---
 # <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -77,7 +77,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 
 or  
 
-* **sql_variant** ( **sql_variant** の基本データ型が文字列データ型の場合)。  
+* **sql_variant** (**sql_variant** の基本データ型が文字列データ型の場合)。  
   
 たとえば、文字列 "McCavity" と "Mccavity" の `BINARY_CHECKSUM` 値は異なります。 これに対し、大文字小文字が区別されないサーバーの場合、`CHECKSUM` ではこれらの文字列に同じチェックサム値が返されます。 `CHECKSUM` 値と `BINARY_CHECKSUM` 値の比較は避ける必要があります。
  

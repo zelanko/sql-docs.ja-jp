@@ -79,18 +79,18 @@ helpviewer_keywords:
 - nodes [Faillover Clustering], command prompt
 - INSTALLSQLSHAREDDIR parameter
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/26/2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: de4026f7fdf2dbde32998657e84a7b9b0c54b1f5
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: 2119b3917d6adb13d29627d148a969bf4ccc92c5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418039"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126000"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server のインストール
 
@@ -155,7 +155,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 -   /PARAMETER="値" (すべての単一値パラメーター用)。 (例: `/PID="PID" /SQLSVCSTARTUPTYPE="Automatic"`)
     - パスを必要とするパラメーターの場合、`/INSTANCEDIR=c:\Path` または `/INSTANCEDIR="c:\Path"` がサポートされています。  
 -   /PARAMETER="値 1" "値 2" "値 3" (すべての複数値パラメーター用)。 (例: `/SQLSYSADMINACCOUNTS="Contoso\John" "Contoso\Mary"`)
-    - **例外** : `/FEATURES`。これは複数値を持つパラメーターですが、その書式はスペースのないコンマ区切りの `/FEATURES=AS,RS,IS` です。 
+    - **例外**: `/FEATURES`。これは複数値を持つパラメーターですが、その書式はスペースのないコンマ区切りの `/FEATURES=AS,RS,IS` です。 
 
   
 > [!IMPORTANT]  
@@ -174,7 +174,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。<br /><br /> サポートされる値: **インストール** 。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。<br /><br /> サポートされる値:**インストール**。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/SUPPRESSPRIVACYSTATEMENTNOTICE<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|プライバシーに関する声明を非表示にします。 このフラグを使用すると、[プライバシーに関する声明](../../sql-server/sql-server-privacy.md)に同意したことになります。  |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python セットアップ コントロール|/IACCEPTPYTHONLICENSETERMS <br /><br /> **Anaconda Python パッケージを含む自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。| 
@@ -196,7 +196,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **省略可能**|エンジン サービス アカウントのパスワードを指定します。 管理されたサービス アカウント、仮想アカウント、またはビルトイン アカウントの使用時、このパラメーターは省略できます。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **省略可能**|PolyBase エンジン サービスのスタートアップ モードを指定します Automatic (既定値)、Disabled、Manual。|  
 |PolyBase|/PBPORTRANGE<br /><br /> **省略可能**|PolyBase サービスのポート範囲 (6 ポート以上) を指定します。 例:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **省略可能**|PolyBase スケールアウト計算グループの一部として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスを使用するかどうかを指定します。 ヘッド ノードを含む PolyBase スケール アウト計算グループを構成する場合は、このオプションを使用します。 サポートされる値: **True** 、 **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **省略可能**|PolyBase スケールアウト計算グループの一部として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスを使用するかどうかを指定します。 ヘッド ノードを含む PolyBase スケール アウト計算グループを構成する場合は、このオプションを使用します。 サポートされる値:**True**、**False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/PID<br /><br /> **省略可能**|SQL Server のエディション用のプロダクト キーを指定します。 このパラメーターが指定されていない場合、Evaluation が使用されます。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/Q または /QUIET<br /><br /> **省略可能**|セットアップが、ユーザー インターフェイスなしで、非表示モードで実行されるように指定します。 このパラメーターは、自動インストールに使用されます。 /Q パラメーターによって /QS パラメーターの入力がオーバーライドされます。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/QS または /QUIETSIMPLE <br /><br /> **省略可能**|セットアップが UI を使用して実行され、UI を使用して進捗状況が表示されるように指定します。さらに、セットアップで入力ができないように、またはエラー メッセージが表示されないように指定します。|  
@@ -207,7 +207,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント|/AGTSVCPASSWORD<br /><br /> [必須](#Accounts)|SQL Server エージェント サービス アカウントのパスワードを指定します。 管理されたサービス アカウント、仮想アカウント、またはビルトイン アカウントの使用時、このパラメーターは省略できます。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント|/AGTSVCSTARTUPTYPE<br /><br /> **省略可能**|SQL Server エージェント サービスの [スタートアップ](#Accounts) モードを指定します。<br /><br /> サポートされる値:<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] バックアップ ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値: **Latin1_General_CI_AS**|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値:**Latin1_General_CI_AS**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 構成ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ログ ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`|  
@@ -226,10 +226,10 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENABLERANU<br /><br /> **省略可能**|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインストールの実行アカウント資格情報を有効にします。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイルのデータ ディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL の場合に必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** アカウントのパスワードを指定します。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。<br /><br /> このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。<br /><br /> サポートされる値: **SQL**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。<br /><br /> このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。<br /><br /> サポートされる値:**SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可能**|バックアップ ファイルのディレクトリを指定します。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定のインストール設定はオペレーティング システム (OS) ロケールによって決定されます。 サーバーレベルの照合順序はセットアップ中に変更するか、インストール前に OS ロケールを変更することで変更できます。 既定の照合順序は、特定のロケール別に関連付けられている中で最も古いバージョンに設定されます。 これは下位互換性によるものです。 そのため、これが常に推奨される照合順序になるとは限りません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能を活用するには、Windows 照合順序を使用するように既定のインストール設定を変更します。 たとえば、OS のロケールが **英語 (米国)** (コード ページ 1252) の場合、セットアップ中、既定の照合順序は **SQL_Latin1_General_CP1_CI_AS** になります。これは Windows 照合順序でそれに最も近い **Latin1_General_100_CI_AS_SC** に変更できます。 <br /><br />詳細については、「[照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **省略可能**|現在のユーザーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 固定サーバー ロールに追加します。 /ADDCURRENTUSERASSQLADMIN パラメーターは、Express エディションをインストールする場合、または /Role=ALLFeatures_WithDefaults が指定されている場合に使用できます。 詳細については、後述の /ROLE をご覧ください。<br /><br /> /ADDCURRENTUSERASSQLADMIN の使用はオプションですが、/ADDCURRENTUSERASSQLADMIN または /SQLSYSADMINACCOUNTS のどちらかを指定する必要があります。 既定値:<br /><br /> **のエディション:** True [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 他のすべてのエディション: **False**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **省略可能**|現在のユーザーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 固定サーバー ロールに追加します。 /ADDCURRENTUSERASSQLADMIN パラメーターは、Express エディションをインストールする場合、または /Role=ALLFeatures_WithDefaults が指定されている場合に使用できます。 詳細については、後述の /ROLE をご覧ください。<br /><br /> /ADDCURRENTUSERASSQLADMIN の使用はオプションですが、/ADDCURRENTUSERASSQLADMIN または /SQLSYSADMINACCOUNTS のどちらかを指定する必要があります。 既定値:<br /><br /> **のエディション:** True [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 他のすべてのエディション:**False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始アカウントを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必須](#Accounts)|SQLSVCACCOUNT のパスワードを指定します。 管理されたサービス アカウント、仮想アカウント、またはビルトイン アカウントの使用時、このパラメーターは省略できます。 |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **省略可能**|[サービスの](#Accounts) スタートアップ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] モードを指定します。 サポートされる値:<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
@@ -282,7 +282,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。<br /><br /> サポートされる値: **PrepareImage**|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。<br /><br /> サポートされる値:**PrepareImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ENU<br /><br /> **省略可能**|ローカライズされたオペレーティング システムに SQL Server の英語版をインストールする場合に、オペレーティング システムに対応する言語と英語の両方の言語パックがインストール メディアに含まれているときは、このパラメーターを使用します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/UpdateEnabled<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが製品の更新プログラムを検出し、それらを含める必要があるかどうかを指定します。 有効値は True および False または 1 および 0 です。 既定では、SQL Server セットアップには検出された更新プログラムが含まれます。|  
@@ -299,7 +299,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **省略可能**|エンジン サービス アカウントのパスワードを指定します。 管理されたサービス アカウント、仮想アカウント、またはビルトイン アカウントの使用時、このパラメーターは省略できます。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **省略可能**|PolyBase エンジン サービスのスタートアップ モードを指定します Automatic (既定値)、Disabled、Manual。|  
 |PolyBase|/PBPORTRANGE<br /><br /> **省略可能**|PolyBase サービスのポート範囲 (6 ポート以上) を指定します。 例:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **省略可能**|PolyBase スケールアウト計算グループの一部として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスを使用するかどうかを指定します。 サポートされる値: **True** 、 **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **省略可能**|PolyBase スケールアウト計算グループの一部として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスを使用するかどうかを指定します。 サポートされる値:**True**、**False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/Q または /QUIET <br /><br /> **省略可能**|セットアップが、ユーザー インターフェイスなしで、非表示モードで実行されるように指定します。 このパラメーターは、自動インストールに使用されます。 /Q パラメーターによって /QS パラメーターの入力がオーバーライドされます。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/QS または /QUIETSIMPLE<br /><br /> **省略可能**|セットアップが UI を使用して実行され、UI を使用して進捗状況が表示されるように指定します。さらに、セットアップで入力ができないように、またはエラー メッセージが表示されないように指定します。|  
   
@@ -315,7 +315,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。<br /><br /> サポートされる値: **CompleteImage**|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。<br /><br /> サポートされる値:**CompleteImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ENU<br /><br /> **省略可能**|ローカライズされたオペレーティング システムに SQL Server の英語版をインストールする場合に、オペレーティング システムに対応する言語と英語の両方の言語パックがインストール メディアに含まれているときは、このパラメーターを使用します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/CONFIGURATIONFILE<br /><br /> **省略可能**|使用する [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) を指定します。|  
@@ -328,7 +328,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **省略可能**|エンジン サービス アカウントのパスワードを指定します。 管理されたサービス アカウント、仮想アカウント、またはビルトイン アカウントの使用時、このパラメーターは省略できます。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **省略可能**|PolyBase エンジン サービスのスタートアップ モードを指定します (Automatic (既定)、Disabled、Manual)。|  
 |PolyBase|/PBPORTRANGE<br /><br /> **省略可能**|PolyBase サービスのポート範囲 (6 ポート以上) を指定します。 例:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **省略可能**|PolyBase スケールアウト計算グループの一部として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスを使用するかどうかを指定します。 サポートされる値: **True** 、 **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **省略可能**|PolyBase スケールアウト計算グループの一部として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスを使用するかどうかを指定します。 サポートされる値:**True**、**False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/PID<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディション用のプロダクト キーを指定します。 このパラメーターが指定されていない場合、Evaluation が使用されます。<br /><br /> **注:** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Tools、または [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services をインストールする場合、PID は事前に定義されます。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/Q または /QUIET <br /><br /> **省略可能**|セットアップが、ユーザー インターフェイスなしで、非表示モードで実行されるように指定します。 このパラメーターは、自動インストールに使用されます。 /Q パラメーターによって /QS パラメーターの入力がオーバーライドされます。 |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/QS または /QUIETSIMPLE<br /><br /> **省略可能**|セットアップが UI を使用して実行され、UI を使用して進捗状況が表示されるように指定します。さらに、セットアップで入力ができないように、またはエラー メッセージが表示されないように指定します。|  
@@ -341,7 +341,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENABLERANU<br /><br /> **省略可能**|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインストールの実行アカウント資格情報を有効にします。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイルのデータ ディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL の場合に必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** アカウントのパスワードを指定します。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。<br /><br /> このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。<br /><br /> サポートされる値: **SQL**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。<br /><br /> このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。<br /><br /> サポートされる値:**SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可能**|バックアップ ファイルのディレクトリを指定します。<br /><br /> 既定値:<br /><br /> `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値は、Windows オペレーティング システムのロケールに基づいています。 詳細については、「 [セットアップでの照合順序の設定](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始アカウントを指定します。|  
@@ -418,7 +418,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|修復ワークフローを示すために必要です。<br /><br /> サポートされる値: **修復**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|修復ワークフローを示すために必要です。<br /><br /> サポートされる値:**修復**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ENU<br /><br /> **省略可能**|ローカライズされたオペレーティング システムに [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の英語版をインストールする場合に、オペレーティング システムに対応する言語と英語の両方の言語パックがインストール メディアに含まれているときは、このパラメーターを使用します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FEATURES<br /><br /> **必須**|修復する [コンポーネント](#Feature) を指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/INSTANCENAME<br /><br /> **必須**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンス名を指定します。<br /><br /> 詳細については、「 [Instance Configuration](../../sql-server/install/instance-configuration.md)」を参照してください。|  
@@ -426,7 +426,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **省略可能**|エンジン サービス アカウントのパスワードを指定します。 管理されたサービス アカウント、仮想アカウント、またはビルトイン アカウントの使用時、このパラメーターは省略できます。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **省略可能**|PolyBase エンジン サービスのスタートアップ モードを指定します (Automatic (既定)、Disabled、Manual)。|  
 |PolyBase|/PBPORTRANGE<br /><br /> **省略可能**|PolyBase サービスのポート範囲 (6 ポート以上) を指定します。 例:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **省略可能**|PolyBase スケールアウト計算グループの一部として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスを使用するかどうかを指定します。 サポートされる値: **True** 、 **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **省略可能**|PolyBase スケールアウト計算グループの一部として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスを使用するかどうかを指定します。 サポートされる値:**True**、**False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/Q または /QUIET <br /><br /> **省略可能**|セットアップが、ユーザー インターフェイスなしで、非表示モードで実行されるように指定します。 このパラメーターは、自動インストールに使用されます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/HIDECONSOLE<br /><br /> **省略可能**|コンソール ウィンドウを非表示にするか閉じる場合に指定します。|  
   
@@ -442,7 +442,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|データベースの再構築に関するワークフローを示すのに必要です。<br /><br /> サポートされる値: **Rebuilddatabase**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|データベースの再構築に関するワークフローを示すのに必要です。<br /><br /> サポートされる値:**Rebuilddatabase**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/INSTANCENAME<br /><br /> **必須**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンス名を指定します。<br /><br /> 詳細については、「 [Instance Configuration](../../sql-server/install/instance-configuration.md)」を参照してください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/Q または /QUIET <br /><br /> **省略可能**|セットアップが、ユーザー インターフェイスなしで、非表示モードで実行されるように指定します。 このパラメーターは、自動インストールに使用されます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可能**|新しいサーバー レベルの照合順序を指定します。<br /><br /> 既定値は、Windows オペレーティング システムのロケールに基づいています。 詳細については、「 [セットアップでの照合順序の設定](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。|  
@@ -461,7 +461,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|アンインストール ワークフローを示すために必要です。<br /><br /> サポートされる値: **アンインストール**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|アンインストール ワークフローを示すために必要です。<br /><br /> サポートされる値:**アンインストール**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/CONFIGURATIONFILE<br /><br /> **省略可能**|使用する [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) を指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FEATURES<br /><br /> **必須**|アンインストールする [コンポーネント](#Feature) を指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/HELP、H、?<br /><br /> **省略可能**|パラメーターの使用方法を表示します。|  
@@ -505,7 +505,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|詳細|  
 |-----------------------------------------|---------------|-------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|フェールオーバー クラスター インストール ワークフローを示すために必要です。<br /><br /> サポートされる値: **InstallFailoverCluster**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|フェールオーバー クラスター インストール ワークフローを示すために必要です。<br /><br /> サポートされる値:**InstallFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ENU<br /><br /> **省略可能**|ローカライズされたオペレーティング システムに SQL Server の英語版をインストールする場合に、オペレーティング システムに対応する言語と英語の両方の言語パックがインストール メディアに含まれているときは、このパラメーターを使用します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FAILOVERCLUSTERGROUP<br /><br /> **省略可能**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスターに使用されるリソース グループの名前を指定します。 名前は、既存のクラスター グループの名前か新規のリソース グループの名前のどちらかになります。<br /><br /> 既定値:<br /><br /> SQL Server (\<InstanceName>)|  
@@ -513,7 +513,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **省略可能**|エンジン サービス アカウントのパスワードを指定します。 管理されたサービス アカウント、仮想アカウント、またはビルトイン アカウントの使用時、このパラメーターは省略できます。 |  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **省略可能**|PolyBase エンジン サービスのスタートアップ モードを指定します Automatic (既定値)、Disabled、Manual。|  
 |PolyBase|/PBPORTRANGE<br /><br /> **省略可能**|PolyBase サービスのポート範囲 (6 ポート以上) を指定します。 例:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **省略可能**|PolyBase スケールアウト計算グループの一部として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスを使用するかどうかを指定します。 サポートされる値: **True** 、 **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **省略可能**|PolyBase スケールアウト計算グループの一部として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスを使用するかどうかを指定します。 サポートされる値:**True**、**False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/*UpdateEnabled*<br /><br /> **省略可能**|SQL Server セットアップが製品の更新プログラムを検出し、それらを含める必要があるかどうかを指定します。 有効値は True および False または 1 および 0 です。 既定では、SQL Server セットアップには検出された更新プログラムが含まれます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/*UpdateSource*<br /><br /> **省略可能**|SQL Server セットアップが製品の更新プログラムを取得する場所を指定します。 有効値は [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update を検索する "MU"、有効なフォルダー パス、相対パス (.\MyUpdates など)、または UNC 共有です。 既定では、SQL Server セットアップは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update または Windows Server Update Services を介して Windows Update Service を検索します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/CONFIGURATIONFILE<br /><br /> **省略可能**|使用する [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) を指定します。|  
@@ -537,7 +537,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |SQL Server エージェント|/AGTSVCACCOUNT<br /><br /> **必須**|SQL Server エージェント サービスのアカウントを指定します。|  
 |SQL Server エージェント|/AGTSVCPASSWORD<br /><br /> [必須](#Accounts)|SQL Server エージェント サービス アカウントのパスワードを指定します。 管理されたサービス アカウント、仮想アカウント、またはビルトイン アカウントの使用時、このパラメーターは省略できます。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] バックアップ ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値: **Latin1_General_CI_AS**|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値:**Latin1_General_CI_AS**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 構成ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ログ ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`|  
@@ -547,7 +547,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー モードを指定します。 クラスターのシナリオで有効な値は、MULTIDIMENSIONAL または TABULAR です。 **ASSERVERMODE** では、大文字と小文字が区別されます。 値はすべて大文字で指定する必要があります。 有効な値の詳細については、「表形式モードでの Analysis Services のインストール」を参照してください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイルのデータ ディレクトリを指定します。<br /><br /> データ ディレクトリは、共有クラスター ディスク上に指定する必要があります。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL の場合に必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** アカウントのパスワードを指定します。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。<br /><br /> このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。<br /><br /> サポートされる値: **SQL**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。<br /><br /> このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。<br /><br /> サポートされる値:**SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可能**|バックアップ ファイルのディレクトリを指定します。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値は、Windows オペレーティング システムのロケールに基づいています。 詳細については、「 [セットアップでの照合順序の設定](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始アカウントを指定します。|  
@@ -591,7 +591,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|フェールオーバー クラスターの準備に関するワークフローを示すために必要です。<br /><br /> サポートされる値: **PrepareFailoverCluster**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|フェールオーバー クラスターの準備に関するワークフローを示すために必要です。<br /><br /> サポートされる値:**PrepareFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ENU<br /><br /> **省略可能**|ローカライズされたオペレーティング システムに SQL Server の英語版をインストールする場合に、オペレーティング システムに対応する言語と英語の両方の言語パックがインストール メディアに含まれているときは、このパラメーターを使用します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/*UpdateEnabled*<br /><br /> **省略可能**|SQL Server セットアップが製品の更新プログラムを検出し、それらを含める必要があるかどうかを指定します。 有効値は True および False または 1 および 0 です。 既定では、SQL Server セットアップには検出された更新プログラムが含まれます。|  
@@ -610,7 +610,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **省略可能**|エンジン サービス アカウントのパスワードを指定します。 管理されたサービス アカウント、仮想アカウント、またはビルトイン アカウントの使用時、このパラメーターは省略できます。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **省略可能**|PolyBase エンジン サービスのスタートアップ モードを指定します (Automatic (既定)、Disabled、Manual)。|  
 |PolyBase|/PBPORTRANGE<br /><br /> **省略可能**|PolyBase サービスのポート範囲 (6 ポート以上) を指定します。 例:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **省略可能**|PolyBase スケールアウト計算グループの一部として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスを使用するかどうかを指定します。 サポートされる値: **True** 、 **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **省略可能**|PolyBase スケールアウト計算グループの一部として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスを使用するかどうかを指定します。 サポートされる値:**True**、**False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/PID<br /><br /> **省略可能**|SQL Server のエディション用のプロダクト キーを指定します。 このパラメーターが指定されていない場合、<br /><br /> Evaluation が使用されます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/Q または /QUIET <br /><br /> **省略可能**|セットアップが、ユーザー インターフェイスなしで、非表示モードで実行されるように指定します。 このパラメーターは、自動インストールに使用されます。 /Q パラメーターによって /QS パラメーターの入力がオーバーライドされます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/QS または /QUIETSIMPLE <br /><br /> **省略可能**|セットアップが UI を使用して実行され、UI を使用して進捗状況が表示されるように指定します。さらに、セットアップで入力ができないように、またはエラー メッセージが表示されないように指定します。|  
@@ -656,7 +656,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|フェールオーバー クラスターの完了に関するワークフローを示すために必要です。<br /><br /> サポートされる値: **CompleteFailoverCluster**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|フェールオーバー クラスターの完了に関するワークフローを示すために必要です。<br /><br /> サポートされる値:**CompleteFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ENU<br /><br /> **省略可能**|ローカライズされたオペレーティング システムに SQL Server の英語版をインストールする場合に、オペレーティング システムに対応する言語と英語の両方の言語パックがインストール メディアに含まれているときは、このパラメーターを使用します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FAILOVERCLUSTERGROUP<br /><br /> **省略可能**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスターに使用されるリソース グループの名前を指定します。 名前は、既存のクラスター グループの名前か新規のリソース グループの名前のどちらかになります。<br /><br /> 既定値:<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<InstanceName>)|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/CONFIGURATIONFILE<br /><br /> **省略可能**|使用する [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) を指定します。|  
@@ -674,7 +674,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **必須**|新しい [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスターのネットワーク名を指定します。 このネットワーク名は、ネットワーク上で新しい [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスター インスタンスを識別するために使用されます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/CONFIRMIPDEPENDENCYCHANGE|マルチサブネット フェールオーバー クラスターについて、IP アドレス リソースの依存関係を OR に設定することを示します。 詳細については、「[新しい SQL Server フェールオーバー クラスターの作成 &#40;セットアップ&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)」をご覧ください。 サポートされる値:<br /><br /> 0 = False (既定値)<br /><br /> 1 = True|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] バックアップ ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値: **Latin1_General_CI_AS**|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値:**Latin1_General_CI_AS**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 構成ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **省略可能**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ログ ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`|  
@@ -684,7 +684,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **省略可能**|MSOLAP プロバイダーをインプロセスで実行できるかどうかを指定します。<br /><br /> 既定値:1 = 有効|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイルのデータ ディレクトリを指定します。<br /><br /> データ ディレクトリは、共有クラスター ディスク上に指定する必要があります。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL の場合に必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** アカウントのパスワードを指定します。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。<br /><br /> このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。<br /><br /> サポートされる値: **SQL**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。<br /><br /> このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。<br /><br /> サポートされる値:**SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可能**|バックアップ ファイルのディレクトリを指定します。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値は、Windows オペレーティング システムのロケールに基づいています。 詳細については、「 [セットアップでの照合順序の設定](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必須**|sysadmin ロールのメンバーになるためにログインを準備するには、このパラメーターを使用します。|  
@@ -719,7 +719,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。<br /><br /> サポートされる値: **アップグレード**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。<br /><br /> サポートされる値:**アップグレード**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ENU<br /><br /> **省略可能**|ローカライズされたオペレーティング システムに SQL Server の英語版をインストールする場合に、オペレーティング システムに対応する言語と英語の両方の言語パックがインストール メディアに含まれているときは、このパラメーターを使用します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/*UpdateEnabled*<br /><br /> **省略可能**|SQL Server セットアップが製品の更新プログラムを検出し、それらを含める必要があるかどうかを指定します。 有効値は True および False または 1 および 0 です。 既定では、SQL Server セットアップには検出された更新プログラムが含まれます。|  
@@ -749,7 +749,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|AddNode ワークフローを示すために必要です。<br /><br /> サポートされる値: **AddNode**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|AddNode ワークフローを示すために必要です。<br /><br /> サポートされる値:**AddNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ENU<br /><br /> **省略可能**|ローカライズされたオペレーティング システムに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の英語版をインストールする場合に、オペレーティング システムに対応する言語と英語の両方の言語パックがインストール メディアに含まれているときは、このパラメーターを使用します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/*UpdateEnabled*<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが製品の更新プログラムを検出し、それらを含める必要があるかどうかを指定します。 有効値は True および False または 1 および 0 です。 既定では、SQL Server セットアップには検出された更新プログラムが含まれます。|  
@@ -762,7 +762,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **省略可能**|エンジン サービス アカウントのパスワードを指定します。 管理されたサービス アカウント、仮想アカウント、またはビルトイン アカウントの使用時、このパラメーターは省略できます。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **省略可能**|PolyBase エンジン サービスのスタートアップ モードを指定します (Automatic (既定)、Disabled、Manual)。|  
 |PolyBase|/PBPORTRANGE<br /><br /> **省略可能**|PolyBase サービスのポート範囲 (6 ポート以上) を指定します。 例:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **省略可能**|PolyBase スケールアウト計算グループの一部として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスを使用するかどうかを指定します。 サポートされる値: **True** 、 **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **省略可能**|PolyBase スケールアウト計算グループの一部として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスを使用するかどうかを指定します。 サポートされる値:**True**、**False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/PID<br /><br /> **省略可能**|SQL Server のエディション用のプロダクト キーを指定します。 このパラメーターが指定されていない場合、Evaluation が使用されます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/Q または /QUIET <br /><br /> **省略可能**|セットアップが、ユーザー インターフェイスなしで、非表示モードで実行されるように指定します。 このパラメーターは、自動インストールに使用されます。 /Q パラメーターによって /QS パラメーターの入力がオーバーライドされます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/QS または /QUIETSIMPLE <br /><br /> **省略可能**|セットアップが UI を使用して実行され、UI を使用して進捗状況が表示されるように指定します。さらに、セットアップで入力ができないように、またはエラー メッセージが表示されないように指定します。|  
@@ -794,7 +794,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|RemoveNode ワークフローを示すために必要です。<br /><br /> サポートされる値: **RemoveNode**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|RemoveNode ワークフローを示すために必要です。<br /><br /> サポートされる値:**RemoveNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/CONFIGURATIONFILE<br /><br /> **省略可能**|使用する [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) を指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/HELP、?<br /><br /> **省略可能**|パラメーターの使用方法を表示します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/INDICATEPROGRESS<br /><br /> **省略可能**|詳細なセットアップ ログ ファイルがコンソールにパイプされるように指定します。|  
@@ -815,7 +815,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
  ビルトイン アカウント、ローカル アカウント、またはドメイン アカウントを使用して、SQL Server サービスを構成できます。 
   
 > [!NOTE] 
-> 管理されたサービス アカウント、仮想アカウント、またはビルトイン アカウントを使用する場合、対応するパスワード パラメーターを指定しないでください。 これらのサービス アカウントの詳細については、「 [Windows サービス アカウントとアクセス許可の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」の「 **[!INCLUDE[win7](../../includes/win7-md.md)] と [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] で利用可能な新しいアカウントの種類** 」セクションをご覧ください。 
+> 管理されたサービス アカウント、仮想アカウント、またはビルトイン アカウントを使用する場合、対応するパスワード パラメーターを指定しないでください。 これらのサービス アカウントの詳細については、「[Windows サービス アカウントとアクセス許可の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」の「 **[!INCLUDE[win7](../../includes/win7-md.md)] と [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] で利用可能な新しいアカウントの種類**」セクションをご覧ください。 
   
  サービス アカウント構成の詳細については、「[Windows サービス アカウントとアクセス許可の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」をご覧ください。 
   
@@ -842,12 +842,12 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||FullText|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]と共にフルテキスト コンポーネントをインストールします。|  
 ||DQ|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了するために必要なファイルをコピーします。 SQL Server のインストールが完了したら、DQSInstaller.exe ファイルを実行して、 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了させる必要があります。 詳細については、「 [Data Quality Server のインストールを完了するための DQSInstaller.exe の実行](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)」をご覧ください。 このパラメーターでは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]もインストールされます。|  
 ||PolyBase |PolyBase コンポーネントをインストールします。|
-||PolyBaseCore | SQL Server 2019 以降では、Oracle、Teradata、SQL Server、その他のリレーショナル データと非リレーショナル データで標準 T-SQL ステートメントを使った十分に統合されたクエリを可能にする Polybase テクノロジをインストールするには、 **PolyBase** と併用してください。 |
-|| PolyBaseJava | SQL Server 2019 以降では、HDFS データで標準 T-SQL ステートメントを使った十分に統合されたクエリを可能にする PolyBase Java Connector をインストールするには、 **PolyBase** と併用してください。
+||PolyBaseCore | SQL Server 2019 以降では、Oracle、Teradata、SQL Server、その他のリレーショナル データと非リレーショナル データで標準 T-SQL ステートメントを使った十分に統合されたクエリを可能にする Polybase テクノロジをインストールするには、**PolyBase** と併用してください。 |
+|| PolyBaseJava | SQL Server 2019 以降では、HDFS データで標準 T-SQL ステートメントを使った十分に統合されたクエリを可能にする PolyBase Java Connector をインストールするには、**PolyBase** と併用してください。
 ||AdvancedAnalytics |[SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) または [SQL Server 2016 R Services (データベース内)](../../machine-learning/install/sql-r-services-windows-install.md) をインストールします。|  
-||SQL_INST_MR |[SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) に適用されます。 R Open と専用の R パッケージをインストールするには、 **AdvancedAnalytics** と併用してください。|  
-||SQL_INST_MPY|[SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) に適用されます。 Anaconda と専用の Python パッケージをインストールするには、 **AdvancedAnalytics** と併用してください。|  
-||SQL_INST_JAVA |[SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) に適用されます。 標準 T-SQL ステートメントを使った Java との統合を可能にする拡張機能をインストールするには、 **AdvancedAnalytics** と併用してください。|  
+||SQL_INST_MR |[SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) に適用されます。 R Open と専用の R パッケージをインストールするには、**AdvancedAnalytics** と併用してください。|  
+||SQL_INST_MPY|[SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) に適用されます。 Anaconda と専用の Python パッケージをインストールするには、**AdvancedAnalytics** と併用してください。|  
+||SQL_INST_JAVA |[SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) に適用されます。 標準 T-SQL ステートメントを使った Java との統合を可能にする拡張機能をインストールするには、**AdvancedAnalytics** と併用してください。|  
 |AS||すべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] コンポーネントをインストールします。|  
 |RS||すべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントをインストールします。 SQL Server 2017 以降で削除されました。 |  
 |RS_SHP||SharePoint 用の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントをインストールします。 SQL Server 2017 以降で削除されました。|  
@@ -890,7 +890,7 @@ AllFeatures_WithDefaults ロールは、 [!INCLUDE[ssExpress](../../includes/sse
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 名前付きインスタンスとして、既存の [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ファームまたはスタンドアロン サーバーにインストールします。|メモリ内のデータの格納と処理用にあらかじめ構成された、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算エンジン。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション パッケージ<br /><br /> [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] のインストーラー プログラム<br /><br /> SQL Server オンライン ブック|  
 |SPI_AS_NewFarm|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] および [!INCLUDE[ssDE](../../includes/ssde-md.md)] を [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の名前付きインスタンスとして、新しい未構成の Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ファームまたはスタンドアロン サーバーにインストールします。 SQL Server セットアップは、機能ロールのインストール時にファームを構成します。|メモリ内のデータの格納と処理用にあらかじめ構成された、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算エンジン。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション パッケージ<br /><br /> SQL Server オンライン ブック<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> 構成ツール (Configuration Tools)<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
-|AllFeatures_WithDefaults|現在のエディションで使用できるすべての機能をインストールします。<br /><br /> 現在のユーザーを SQL Server **sysadmin** 固定サーバー ロールに追加します。<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降を使用していて、そのオペレーティング システムがドメイン コントローラーでない場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は既定で NTAUTHORITY\NETWORK SERVICE アカウントを使用し、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は既定で NTAUTHORITY\NETWORK SERVICE アカウントを使用します。<br /><br /> このロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のエディションで、既定で有効になっています。 その他のエディションの場合、このロールは有効になっていませんが、UI またはコマンドライン パラメーターを使用して指定できます。|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のエディションの場合は、そのエディションで使用できる機能のみがインストールされます。 その他のエディションの場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての機能がインストールされます。<br /><br /> **AllFeatures_WithDefaults** パラメーターは、 **AllFeatures_WithDefaults** パラメーターの設定をオーバーライドする他のパラメーターと組み合わせることができます。 たとえば、 **AllFeatures_WithDefaults** パラメーターと **/Features=RS** パラメーターを組み合わせて使用すると、すべての機能をインストールするコマンドがオーバーライドされ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のみがインストールされますが、 **AllFeatures_WithDefaults** パラメーターを適用することで、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に対して既定のサービス アカウントが使用されます。<br /><br /> **AllFeatures_WithDefaults** パラメーターを **/ADDCURRENTUSERASSQLADMIN=FALSE** と共に使用すると、準備ダイアログには現在のユーザーに関する情報が自動入力されません。 SQL Server エージェントのサービス アカウントとパスワードを指定するには、 **/AGTSVCACCOUNT** と **/AGTSVCPASSWORD** を追加します。|
+|AllFeatures_WithDefaults|現在のエディションで使用できるすべての機能をインストールします。<br /><br /> 現在のユーザーを SQL Server **sysadmin** 固定サーバー ロールに追加します。<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降を使用していて、そのオペレーティング システムがドメイン コントローラーでない場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は既定で NTAUTHORITY\NETWORK SERVICE アカウントを使用し、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は既定で NTAUTHORITY\NETWORK SERVICE アカウントを使用します。<br /><br /> このロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のエディションで、既定で有効になっています。 その他のエディションの場合、このロールは有効になっていませんが、UI またはコマンドライン パラメーターを使用して指定できます。|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のエディションの場合は、そのエディションで使用できる機能のみがインストールされます。 その他のエディションの場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての機能がインストールされます。<br /><br /> **AllFeatures_WithDefaults** パラメーターは、**AllFeatures_WithDefaults** パラメーターの設定をオーバーライドする他のパラメーターと組み合わせることができます。 たとえば、 **AllFeatures_WithDefaults** パラメーターと **/Features=RS** パラメーターを組み合わせて使用すると、すべての機能をインストールするコマンドがオーバーライドされ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のみがインストールされますが、 **AllFeatures_WithDefaults** パラメーターを適用することで、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に対して既定のサービス アカウントが使用されます。<br /><br /> **AllFeatures_WithDefaults** パラメーターを **/ADDCURRENTUSERASSQLADMIN=FALSE** と共に使用すると、準備ダイアログには現在のユーザーに関する情報が自動入力されません。 SQL Server エージェントのサービス アカウントとパスワードを指定するには、 **/AGTSVCACCOUNT** と **/AGTSVCPASSWORD** を追加します。|
 
 ## <a name="controlling-failover-behavior-using-the-failoverclusterrollownership-parameter"></a><a name="RollOwnership"></a> /FAILOVERCLUSTERROLLOWNERSHIP パラメーターを使用したフェールオーバーの動作の制御  
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスターを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードするには、フェールオーバー クラスター ノードのパッシブ ノードから開始して、1 ノードごとにセットアップを実行する必要があります。 フェールオーバー クラスター インスタンスのノード総数と、アップグレード済みのノードの数との違いに応じて、セットアップがアップグレード済みのノードにフェールオーバーする時期が決まります。 ノード総数の半数以上がアップグレード済みの場合、既定のセットアップにより、アップグレード済みのノードにフェールオーバーが発生します。

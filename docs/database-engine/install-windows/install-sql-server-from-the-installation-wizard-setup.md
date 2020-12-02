@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1b9e9e71fc425ca978d3050e8fdfd72a1c39d7f
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 6280e0abe6c95b2ac0a13339b0dfe2c6092e2fa3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670447"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125962"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>SQL Server をインストール ウィザードからインストールする (セットアップ)
 
@@ -59,7 +59,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
 
 ## <a name="to-install-sql-server-2016-and-2017"></a>SQL Server 2016 および 2017 をインストールするには  
 
-1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの **Setup.exe**をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、**Setup.exe** をダブルクリックします。  
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの **Setup.exe** をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、**Setup.exe** をダブルクリックします。  
   
 1. インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインストールを作成するには、左側のナビゲーション領域の **[インストール]** を選択し、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加]** を選択します。  
 
@@ -131,17 +131,17 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
 
     > [!NOTE]
-    > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービス アカウントで[データベースのファイル瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を使用するには、 **[SQL Server データベース エンジン サービスにボリューム メンテナンス タスクを実行する特権を付与する]** チェック ボックスをオンにします。
+    > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービス アカウントで [データベースのファイル瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を使用するには、 **[SQL Server データベース エンジン サービスにボリューム メンテナンス タスクを実行する特権を付与する]** チェック ボックスをオンにします。
   
 1. **[サーバーの構成 - 照合順序]** ページを使用して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に既定以外の照合順序を指定します。    
 
-   既定のインストール設定はオペレーティング システム (OS) ロケールによって決定されます。 サーバーレベルの照合順序はセットアップ中に変更するか、インストール前に OS ロケールを変更することで変更できます。 既定の照合順序は、特定のロケール別に関連付けられている中で最も古いバージョンに設定されます。 これは下位互換性によるものです。 そのため、これが常に推奨される照合順序になるとは限りません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能を活用するには、Windows 照合順序を使用するように既定のインストール設定を変更します。 たとえば、OS のロケールが**英語 (米国)** (コード ページ 1252) の場合、セットアップ中、既定の照合順序は **SQL_Latin1_General_CP1_CI_AS** になります。これは Windows 照合順序でそれに最も近い **Latin1_General_100_CI_AS_SC** に変更できます。
+   既定のインストール設定はオペレーティング システム (OS) ロケールによって決定されます。 サーバーレベルの照合順序はセットアップ中に変更するか、インストール前に OS ロケールを変更することで変更できます。 既定の照合順序は、特定のロケール別に関連付けられている中で最も古いバージョンに設定されます。 これは下位互換性によるものです。 そのため、これが常に推奨される照合順序になるとは限りません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能を活用するには、Windows 照合順序を使用するように既定のインストール設定を変更します。 たとえば、OS のロケールが **英語 (米国)** (コード ページ 1252) の場合、セットアップ中、既定の照合順序は **SQL_Latin1_General_CP1_CI_AS** になります。これは Windows 照合順序でそれに最も近い **Latin1_General_100_CI_AS_SC** に変更できます。
 
    詳細については、「[照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
 1. **[データベース エンジンの構成 - サーバーの構成]** ページを使用して、次のオプションを指定します。  
   
-    * **[セキュリティ モード]** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対して **Windows 認証**または**混合モード認証**を選択します。 **混合モード認証**を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力する必要があります。  
+    * **[セキュリティ モード]** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対して **Windows 認証** または **混合モード認証** を選択します。 **混合モード認証** を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力する必要があります。  
   
        デバイスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との接続を正常に確立した後のセキュリティ メカニズムは、Windows 認証モードでも混合モード認証でも同じです。 詳細については、「[[データベース エンジンの構成] - [サーバー構成] ページ](../../sql-server/install/instance-configuration.md#serverconfig)」を参照してください。
   
@@ -204,7 +204,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
   
      * 続けるには、 **[次へ]** を選択します。  
   
-1. **[インストールの準備完了]** ページには、セットアップで指定したインストール オプションのツリー ビューが表示されます。 このページで、セットアップは**製品の更新プログラム**機能が有効/無効であるか、および最終バージョンの更新プログラムであるかどうかを示します。  
+1. **[インストールの準備完了]** ページには、セットアップで指定したインストール オプションのツリー ビューが表示されます。 このページで、セットアップは **製品の更新プログラム** 機能が有効/無効であるか、および最終バージョンの更新プログラムであるかどうかを示します。  
   
      続行するには、 **[インストール]** を選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、選択した機能の必須の前提条件が最初にインストールされた後、選択した機能がインストールされます。  
   
@@ -224,7 +224,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
 ## <a name="to-install-sql-server-2019"></a>SQL Server 2019 をインストールするには 
   
-1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの **Setup.exe**をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、**Setup.exe** をダブルクリックします。  
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの **Setup.exe** をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、**Setup.exe** をダブルクリックします。  
   
 1. インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインストールを作成するには、左側のナビゲーション領域の **[インストール]** を選択し、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加]** を選択します。  
 
@@ -232,7 +232,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
   
    続けるには、 **[次へ]** を選択します。
   
-1. **[ライセンス条項]** ページで、ライセンス条項を確認します。 同意する場合は、 **[ライセンス条項と[プライバシーに関する声明](https://privacy.microsoft.com/privacystatement)に同意します]** チェック ボックスをオンして、 **[次へ]** を選択します。  
+1. **[ライセンス条項]** ページで、ライセンス条項を確認します。 同意する場合は、 **[ライセンス条項と [プライバシーに関する声明](https://privacy.microsoft.com/privacystatement)に同意します]** チェック ボックスをオンして、 **[次へ]** を選択します。  
 
    > [!NOTE]
    > Enterprise Server または Enterprise CAL ライセンス プロダクト キーが入力されていて、マシンに 20 個を超える物理コアがある場合、またはハイパースレッディングが有効になっている場合に 40 個の論理コアがある場合は、セットアップ中に警告が表示されます。 **[このボックスをオンにしてこの制限を承認して続行するか、[戻る/キャンセル] をクリックしてオペレーティング システムの最大までサポートする Enterprise Core 製品ライセンスを入力します。]** チェック ボックスをオンにしてセットアップを続行することもできます。または、 **[戻る]** をクリックして、オペレーティング システムの最大プロセッサ数をサポートするライセンス キーを入力します。
@@ -300,13 +300,13 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
 
     > [!NOTE]
-    > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービス アカウントで[データベースのファイル瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を使用するには、 **[SQL Server データベース エンジン サービスにボリューム メンテナンス タスクを実行する特権を付与する]** チェック ボックスをオンにします。
+    > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービス アカウントで [データベースのファイル瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を使用するには、 **[SQL Server データベース エンジン サービスにボリューム メンテナンス タスクを実行する特権を付与する]** チェック ボックスをオンにします。
   
      **[サーバーの構成] - [照合順序]** ページを使用して、[!INCLUDE[ssDE](../../includes/ssde-md.md)]および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に既定以外の照合順序を指定します。 詳細については、「[照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
 1. **[データベース エンジンの構成 - サーバーの構成]** ページを使用して、次のオプションを指定します。  
   
-    * **[セキュリティ モード]** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対して **Windows 認証**または**混合モード認証**を選択します。 **混合モード認証**を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウント (sa) の強力なパスワードを入力する必要があります。  
+    * **[セキュリティ モード]** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対して **Windows 認証** または **混合モード認証** を選択します。 **混合モード認証** を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウント (sa) の強力なパスワードを入力する必要があります。  
   
        デバイスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との接続を正常に確立した後のセキュリティ メカニズムは、Windows 認証モードでも混合モード認証でも同じです。 詳細については、「[[データベース エンジンの構成] - [サーバー構成] ページ](../../sql-server/install/instance-configuration.md#serverconfig)」を参照してください。
   
@@ -326,14 +326,14 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
     > [!NOTE]  
     > このページは、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降のセットアップでのみ使用できます。 
     
-    詳細については、「[[データベース エンジンの構成] - [MAXDOP] ページ](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#maxdop)」を参照してください。 
+    詳細については、「[[データベース エンジンの構成] - [MAXDOP] ページ](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#maxdop)」を参照してください。 
 
-     **[データベース エンジンの構成] - [メモリ]** ページを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のこのインスタンスで起動後に使用される**最小サーバー メモリ**および**最大サーバー メモリ**の値を指定します。 **[推奨]** オプションを選択した後、既定値を使用するか、計算された推奨値を使用するか、独自の値を手動で指定することができます。
+     **[データベース エンジンの構成] - [メモリ]** ページを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のこのインスタンスで起動後に使用される **最小サーバー メモリ** および **最大サーバー メモリ** の値を指定します。 **[推奨]** オプションを選択した後、既定値を使用するか、計算された推奨値を使用するか、独自の値を手動で指定することができます。
      
     > [!NOTE]  
     > このページは、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降のセットアップでのみ使用できます。 
     
-    詳細については、「[[データベース エンジンの構成] - [メモリ] ページ](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#memory)」を参照してください。 
+    詳細については、「[[データベース エンジンの構成] - [メモリ] ページ](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#memory)」を参照してください。 
 
      **[データベース エンジンの構成] - [FILESTREAM]** ページを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対する FILESTREAM を有効にします。 詳細については、「[[データベース エンジンの構成] - [FILESTREAM] ページ](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page)」を参照してください。  
   
@@ -382,7 +382,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
   
      * 続けるには、 **[次へ]** を選択します。  
   
-1. **[インストールの準備完了]** ページには、セットアップで指定したインストール オプションのツリー ビューが表示されます。 このページで、セットアップは**製品の更新プログラム**機能が有効/無効であるか、および最終バージョンの更新プログラムであるかどうかを示します。  
+1. **[インストールの準備完了]** ページには、セットアップで指定したインストール オプションのツリー ビューが表示されます。 このページで、セットアップは **製品の更新プログラム** 機能が有効/無効であるか、および最終バージョンの更新プログラムであるかどうかを示します。  
   
      続行するには、 **[インストール]** を選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、選択した機能の必須の前提条件が最初にインストールされた後、選択した機能がインストールされます。  
   
@@ -401,7 +401,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
 
 ## <a name="next-steps"></a>次のステップ
 
-[新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールを構成します。](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-instances-sql-server?view=sql-server-2017)  
+[新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールを構成します。](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
 システムのセキュリティを向上させるため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、主要なサービスと機能を個別にインストールし、有効化できるようになっています。 詳細については、「[セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)」を参照してください。  
   

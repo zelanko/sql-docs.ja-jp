@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6670c42505ef245b06fb2f605ebca078167d1a6c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196596"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124451"
 ---
 # <a name="-division-transact-sql"></a>/ (除算) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,7 @@ dividend / divisor
 
 ## <a name="arguments"></a>引数
  *dividend*  
- 除算される数値式です。 *dividend* には、数値型に分類されるデータ型を持つ有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定できます。ただし、**datetime** および **smalldatetime** データ型は除きます。  
+ 除算される数値式です。 *dividend* には、数値型に分類されるデータ型を持つ有効な [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定できます。ただし、**datetime** および **smalldatetime** データ型は除きます。  
   
  *divisor*  
  被除数を除算する数値式です。 *divisor* には、数値型に分類されるデータ型を持つ有効な式を指定できます。ただし、**datetime** および **smalldatetime** データ型は除きます。  
