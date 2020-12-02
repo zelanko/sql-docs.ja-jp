@@ -22,10 +22,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 569bc6057e719db436ddbefd04157e8b6a73a252
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92190092"
 ---
 # <a name="rand-transact-sql"></a>RAND (Transact-SQL)
@@ -48,7 +48,7 @@ RAND ( [ seed ] )
 
 ## <a name="arguments"></a>引数
  *seed*  
- シード値を指定する整数の[式](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**、**smallint**、または **int**)。 場合* シード* が指定されていない、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] シード値をランダムに割り当てられます。 指定したシード値について、返される結果は常に同じです。  
+ シード値を指定する整数の [式](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**、**smallint**、または **int**)。 場合 *シード* が指定されていない、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] シード値をランダムに割り当てられます。 指定したシード値について、返される結果は常に同じです。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  

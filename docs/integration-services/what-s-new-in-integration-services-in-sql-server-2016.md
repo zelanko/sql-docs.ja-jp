@@ -16,10 +16,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0088f32b5108eef5f3656a2b7640340c001f28a7
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "94384871"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 の Integration Services の新機能
@@ -203,7 +203,7 @@ ms.locfileid: "94384871"
  SSIS カタログの新しい **RuntimeLineage** ログ記録レベルは、データ フローの系列情報を追跡するために必要な情報を収集します。 この系列情報を解析して、タスク間の系列の関係をマッピングできます。 ISV と開発者は、この情報を利用して、カスタム系列マッピング ツールを構築できます。 
 
 ####  <a name="new-custom-logging-level-in-the-ssis-catalog"></a><a name="CustomLogging"></a> SSIS カタログでの新しいカスタム ログ レベル  
- SSIS カタログの以前のバージョンでは、パッケージを実行するときに、4 つの組み込みログ記録レベル ( **なし、基本、パフォーマンス、または詳細** ) から選択できました。 SQL Server 2016 では、 **RuntimeLineage** ログ記録レベルが追加されています。 さらに、複数のカスタム ログ記録レベルを作成して SSIS カタログに保存し、パッケージを実行するときに、毎回ログ記録レベルを選択できるようになりました。 カスタム ログ記録レベルでは、キャプチャする統計とイベントのみを選択します。 必要に応じて、変数の値、接続文字列、およびタスクのプロパティを確認するために、イベント コンテキストを含めます。 詳細については、「 [SSIS サーバーでのパッケージ実行のログ記録を有効にする](../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。 
+ SSIS カタログの以前のバージョンでは、パッケージを実行するときに、4 つの組み込みログ記録レベル ( **なし、基本、パフォーマンス、または詳細**) から選択できました。 SQL Server 2016 では、**RuntimeLineage** ログ記録レベルが追加されています。 さらに、複数のカスタム ログ記録レベルを作成して SSIS カタログに保存し、パッケージを実行するときに、毎回ログ記録レベルを選択できるようになりました。 カスタム ログ記録レベルでは、キャプチャする統計とイベントのみを選択します。 必要に応じて、変数の値、接続文字列、およびタスクのプロパティを確認するために、イベント コンテキストを含めます。 詳細については、「 [SSIS サーバーでのパッケージ実行のログ記録を有効にする](../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。 
 
 ####  <a name="column-names-for-errors-in-the-data-flow"></a><a name="ErrorColumn"></a> データ フロー内のエラー列の名前  
  エラー出力にエラーが含まれるデータ フロー内の行をリダイレクトすると、出力には、エラーが発生したが列の名前が表示されない列の数値識別子が含まれています。 エラーが発生した列の名前を、さまざまな方法で検索または表示できるようになりました。  

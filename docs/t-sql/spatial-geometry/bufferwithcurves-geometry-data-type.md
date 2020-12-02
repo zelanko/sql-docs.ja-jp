@@ -17,11 +17,11 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b1249cafc3fd10cdded36ed7d73f190c38d02f5d
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235529"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96115906"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (geometry データ型)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "93235529"
 
 ## <a name="arguments"></a>引数  
  *distance*  
- バッファーを形成するポイントの、 **geometry** インスタンスからの最大距離を示す **float** を指定します。  
+ バッファーを形成するポイントの、**geometry** インスタンスからの最大距離を示す **float** を指定します。  
   
 ## <a name="return-types"></a>戻り値の型
 SQL Server 戻り値の型: **geometry**  
@@ -46,13 +46,13 @@ SQL Server 戻り値の型: **geometry**
  CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="exceptions"></a>例外  
- 次の条件を満たす場合、 **ArgumentException** がスローされます。  
+ 次の条件を満たす場合、**ArgumentException** がスローされます。  
   
 -   パラメーター (`@g.BufferWithCurves()` など) は、このメソッドに渡されません。  
   
 -   数値以外のパラメーター (`@g.BufferWithCurves('a')` など) がこのメソッドに渡されます。  
   
--   `@g.BufferWithCurves(NULL)` のように、 **NULL** がメソッドに渡された。  
+-   `@g.BufferWithCurves(NULL)` のように、**NULL** がメソッドに渡された。  
   
 ## <a name="remarks"></a>注釈  
  次の図には、このメソッドによって返される geometry インスタンスの例を示しています。  
@@ -73,7 +73,7 @@ SQL Server 戻り値の型: **geometry**
   
  バッファーに負の値を指定すると、geometry インスタンスの境界から、指定された距離の範囲内にある地点がすべて削除されます。 次の図には、負の値のバッファーを薄い網掛けがある円の領域として示しています。 点線は元の多角形の境界を示しており、実線は結果として得られる多角形の境界を示しています。  
   
- **string** パラメーターをこのメソッドに渡すと、 **float** に変換されるか、`ArgumentException` がスローされます。  
+ **string** パラメーターをこのメソッドに渡すと、**float** に変換されるか、`ArgumentException` がスローされます。  
   
 ## <a name="examples"></a>例  
   
@@ -94,7 +94,7 @@ SQL Server 戻り値の型: **geometry**
  ```  
   
 ### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. パラメーターに 0 を下回る (< 0) 値を指定して、BufferWithCurves() を呼び出し、空の GeometryCollection を返す  
- 次の例では、 *distance* パラメーターが -2 の場合にどうなるかを示します。  
+ 次の例では、*distance* パラメーターが -2 の場合にどうなるかを示します。  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
@@ -156,7 +156,7 @@ SQL Server 戻り値の型: **geometry**
  SELECT @g.BufferWithCurves(1.6).ToString();
  ```  
   
- 最初の 2 つの **SELECT** ステートメントでは、 *distance* が (1 1) と (1 4) の 2 つの地点の距離の 1/2 以下であるため、`GeometryCollection` インスタンスが返されます。 3 番目の **SELECT** ステートメントでは、(1 1) と (1 4) の 2 つの地点のバッファーに格納されたインスタンスが重なるため、`CurvePolygon` インスタンスが返されます。  
+ 最初の 2 つの **SELECT** ステートメントでは、*distance* が (1 1) と (1 4) の 2 つの地点の距離の 1/2 以下であるため、`GeometryCollection` インスタンスが返されます。 3 番目の **SELECT** ステートメントでは、(1 1) と (1 4) の 2 つの地点のバッファーに格納されたインスタンスが重なるため、`CurvePolygon` インスタンスが返されます。  
   
 ## <a name="see-also"></a>参照  
  [geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  

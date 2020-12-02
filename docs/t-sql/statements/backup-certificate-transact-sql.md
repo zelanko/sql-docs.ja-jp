@@ -30,11 +30,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest'
 ms.openlocfilehash: 06776d309042483f879dd3d31d9f6bae62119037
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067494"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124174"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
@@ -79,18 +79,18 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *certname*  
  バックアップする証明書の名前。
 
- TO FILE = ' *path_to_file* '  
+ TO FILE = '*path_to_file*'  
  証明書を保存するファイルの完全なパスを、ファイル名を含めて指定します。 このパスには、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 ファイル名のみを指定すると、ファイルがインスタンスの既定のユーザー データ フォルダー ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA フォルダーであってもなくても構いません) に保存されます。 SQL Server Express LocalDB の場合、インスタンスの既定のユーザー データ フォルダーは、インスタンスを作成したアカウントの `%USERPROFILE%` 環境変数で指定されたパスです。  
 
  WITH PRIVATE KEY は、証明書の秘密キーをファイルに保存するように指定します。 この句は省略可能です。
 
- FILE = ' *path_to_private_key_file* '  
+ FILE = '*path_to_private_key_file*'  
  秘密キーを保存するファイルの完全なパスを、ファイル名を含めて指定します。 このパスには、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 ファイル名のみを指定すると、ファイルがインスタンスの既定のユーザー データ フォルダー ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA フォルダーであってもなくても構いません) に保存されます。 SQL Server Express LocalDB の場合、インスタンスの既定のユーザー データ フォルダーは、インスタンスを作成したアカウントの `%USERPROFILE%` 環境変数で指定されたパスです。  
 
- ENCRYPTION BY PASSWORD = ' *encryption_password* '  
+ ENCRYPTION BY PASSWORD = '*encryption_password*'  
  バックアップ ファイルに秘密キーを書き込む前に、キーを暗号化するため使用するパスワードを指定します。 パスワードに対しては、複雑性がチェックされます。  
   
- DECRYPTION BY PASSWORD = ' *decryption_password* '  
+ DECRYPTION BY PASSWORD = '*decryption_password*'  
  秘密キーをバックアップする前に、秘密キーの暗号化を解除するため使用するパスワードを指定します。 証明書がマスター キーによって暗号化されている場合、この引数は必要ありません。 
   
 ## <a name="remarks"></a>解説  

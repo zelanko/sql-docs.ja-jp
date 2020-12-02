@@ -10,10 +10,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b22c31b7e38936adec2ac7355912e2899024659c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92197020"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>Transact-SQL を使用して SSMS から SSIS パッケージを実行する

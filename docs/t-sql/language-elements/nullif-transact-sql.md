@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8bf1b3c571806aaaca17894c52c4673709074261
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92188015"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
@@ -49,9 +49,9 @@ NULLIF ( expression , expression )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>戻り値の型
- 最初の*式*と同じ型を返します。  
+ 最初の *式* と同じ型を返します。  
   
- NULLIF は、2 つの式が等しくない場合、最初の*式*を返します。 式が等しい場合、NULLIF は最初の*式*のデータ型の NULL 値を返します。  
+ NULLIF は、2 つの式が等しくない場合、最初の *式* を返します。 式が等しい場合、NULLIF は最初の *式* のデータ型の NULL 値を返します。  
   
 ## <a name="remarks"></a>注釈  
  NULLIF は、2 つの式を比較し、その 2 つが等価な場合に NULL を返す検索 CASE 式と同じです。  

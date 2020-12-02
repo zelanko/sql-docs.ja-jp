@@ -24,11 +24,11 @@ ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 91478060af31e142f94730b9df3c0a3cdf2a24ef
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384796"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124101"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  拡張キー管理プロバイダーの名前を指定します。  
   
  *path_of_DLL*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張キー管理インターフェイスを実装する .dll ファイルのパスを指定します。 **SQL Server コネクタ for Microsoft Azure Key Vault** を使うときの既定の場所は、 **'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'** です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張キー管理インターフェイスを実装する .dll ファイルのパスを指定します。 **SQL Server コネクタ for Microsoft Azure Key Vault** を使うときの既定の場所は、**'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'** です。  
   
 ## <a name="remarks"></a>解説  
  プロバイダーによって作成されるキーはいずれも、プロバイダーをその GUID で参照します。 GUID は、DLL のすべてのバージョン間で保持されます。  

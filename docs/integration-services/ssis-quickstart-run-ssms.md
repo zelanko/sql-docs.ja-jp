@@ -10,10 +10,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: beb9a1e1dcb25f42e2d9a49c1e0e5c1a77a3f0ea
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193062"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を使用して SSIS パッケージを実行する

@@ -25,10 +25,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0751b396deef4a8617b18e9555aae50fdb835010
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193382"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
@@ -62,9 +62,9 @@ test_expression [ NOT ] IN
  **Boolean**  
   
 ## <a name="result-value"></a>結果の値  
- *test_expression* の値が *subquery* によって返される値と等しい場合、またはコンマ区切りの一覧内の任意の*式*と等しい場合、結果の値は TRUE です。それ以外の場合、結果の値は FALSE です。  
+ *test_expression* の値が *subquery* によって返される値と等しい場合、またはコンマ区切りの一覧内の任意の *式* と等しい場合、結果の値は TRUE です。それ以外の場合、結果の値は FALSE です。  
   
- NOT IN を使用すると、*サブクエリ*値または*式*が否定されます。  
+ NOT IN を使用すると、*サブクエリ* 値または *式* が否定されます。  
   
 > [!CAUTION]  
 >  IN または NOT IN を使用して *test_expression* と比較される *subquery* または *expression* で NULL 値が返された場合は、すべて UNKNOWN が返されます。 IN または NOT IN と共に NULL 値を使用すると、予期しない結果が生じる可能性があります。  

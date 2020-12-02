@@ -14,10 +14,10 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 ms.openlocfilehash: 01b629b65c7f8ab1571aa53a944a8525bd09a0b0
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "93235459"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移行後の検証および最適化ガイド
@@ -94,7 +94,7 @@ ms.locfileid: "93235459"
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行で、移行元の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にこの問題が存在していた場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の新しいバージョンにそのまま移行したのでは、このシナリオには対処できません。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、コンパイル時に認識されている情報のみを考慮することができます。 ワークロードが実行時にのみ認識できる述語に依存する場合は、不適切なプランの選択が増える可能性があります。 高品質のプランでは、述語は **SARGable** ( **S** earch **Arg** ument **able** : 検索引数化可能 ) である必要があります。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、コンパイル時に認識されている情報のみを考慮することができます。 ワークロードが実行時にのみ認識できる述語に依存する場合は、不適切なプランの選択が増える可能性があります。 高品質のプランでは、述語は **SARGable** (**S** earch **Arg** ument **able**: 検索引数化可能 ) である必要があります。
 
 SARGable ではない述語の例を次に示します。
 -   VARCHAR から NVARCHAR、INT から VARCHAR のような暗黙的なデータ変換。 実際の実行プランで実行時の CONVERT_IMPLICIT 警告を探します。 型を変換すると、精度が失われるをこともあります。

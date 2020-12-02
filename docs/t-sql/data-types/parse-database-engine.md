@@ -19,10 +19,10 @@ ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8ebfca7738f8310108aab9ba988e658e7a5c1e17
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92038365"
 ---
 # <a name="parse-database-engine"></a>Parse (データベース エンジン)
@@ -59,7 +59,7 @@ CLR : 評価される String 値。
 **CLR 戻り値の型:SqlHierarchyId**
   
 ## <a name="remarks"></a>解説  
-場合 解析 の有効な文字列表記ではない値を受け取る、 **hierarchyid**, 、例外が発生します。 たとえば場合、 **cha**r データ型には、末尾のスペースが含まれている、例外が発生します。
+場合 解析 の有効な文字列表記ではない値を受け取る、 **hierarchyid**, 、例外が発生します。 たとえば場合、 **cha** r データ型には、末尾のスペースが含まれている、例外が発生します。
   
 ## <a name="examples"></a>例  
   
