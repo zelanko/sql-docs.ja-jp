@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 3da101331d6c8ecfeae4fa2167fdae2101445cd2
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 0b12445989fd044a39ab88b2d840368aec206025
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126465"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419713"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server のデータ型のマッピング
 
@@ -73,4 +73,5 @@ SQL Server のデータ型について詳しくは、「[データ型 (Transact-
 
 - [SQL Server データ型と ADO.NET](./sql/sql-server-data-types.md)
 - [SQL Server のバイナリ データと大きな値のデータ](./sql/sql-server-binary-large-value-data.md)
+- [パラメーターの構成](configure-parameters.md)
 - [ADO.NET でのデータ型のマッピング](data-type-mappings-ado-net.md)
