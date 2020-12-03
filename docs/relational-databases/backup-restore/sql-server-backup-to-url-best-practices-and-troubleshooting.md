@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d1487a5c7a6c9343438c1a3f6d42fd49e425000b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4212c397c712351e951060032f6e7a2ece6a5c3f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809178"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129028"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング
 
@@ -35,7 +35,7 @@ ms.locfileid: "91809178"
   
 -   BLOB を誤って上書きしないように、各バックアップに一意なファイル名を付けることをお勧めします。  
   
--   コンテナーを作成する際は、アクセス レベルを **private**に設定し、必要な認証情報を指定できるユーザーまたはアカウントだけがコンテナー内の BLOB の読み取りや書き込みを実行できるようにすることをお勧めします。  
+-   コンテナーを作成する際は、アクセス レベルを **private** に設定し、必要な認証情報を指定できるユーザーまたはアカウントだけがコンテナー内の BLOB の読み取りや書き込みを実行できるようにすることをお勧めします。  
   
 -   Azure 仮想マシンで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの場合、仮想マシンと同じリージョンのストレージ アカウントを使用して、リージョン間のデータ転送のコストがかからないようにします。 また、同じ地域を使用すると、バックアップ操作と復元操作で最適なパフォーマンスを得ることができます。  
   
@@ -70,11 +70,11 @@ ms.locfileid: "91809178"
     , SECRET = '<storage access key>' ;  
     ```  
   
--   資格情報は存在しますが、BACKUP コマンドの実行に使用されるログイン アカウントに資格情報へのアクセス権限がありません。 **Alter any credential** 権限がある ***db_backupoperator*** ロールのログイン アカウントを使用してください。  
+-   資格情報は存在しますが、BACKUP コマンドの実行に使用されるログイン アカウントに資格情報へのアクセス権限がありません。 **_Alter any credential_* _ 権限がある **db_backupoperator** ロールのログイン アカウントを使用してください。  
   
 -   ストレージ アカウントの名前とキーの値を確認してください。 資格情報に格納されている情報は、バックアップ操作と復元操作で使用する Azure ストレージ アカウントのプロパティの値と一致する必要があります。  
   
- **バックアップ エラー/障害:**  
+ _ *バックアップ エラー/障害:* *  
   
 -   同じ BLOB への並列バックアップを実行すると、バックアップの 1 つが " **初期化に失敗しました** " エラーで失敗します。  
   

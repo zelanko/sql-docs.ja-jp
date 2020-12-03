@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 00cfd711ce130fa9c90c11000a6853082494e9bd
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300305"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124297"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,17 +45,17 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  変更対象のデータベース スコープ資格情報の名前を指定します。  
   
- IDENTITY **=' ***identity_name*** '**  
+ IDENTITY **='** _identity_name_*_'_*  
  サーバーの外部に接続するときに使用するアカウントの名前を指定します。 Azure Blob Storage からファイルをインポートするには、ID 名が `SHARED ACCESS SIGNATURE` である必要があります。  Shared Access Signature の詳細については、「[Shared Access Signatures (SAS) の使用](/azure/storage/storage-dotnet-shared-access-signature-part-1)」をご覧ください。  
     
   
- SECRET **=' ***secret*** '**  
- 送信の認証に必要なシークレットを指定します。 " *シークレット* " は、Azure BLOB ストレージからファイルをインポートするために必要です。 " *シークレット* " は、他の目的では省略可能な場合があります。   
+ SECRET **='** _secret_*_'_*  
+ 送信の認証に必要なシークレットを指定します。 "*シークレット*" は、Azure BLOB ストレージからファイルをインポートするために必要です。 "*シークレット*" は、他の目的では省略可能な場合があります。   
 > [!WARNING]
 >  SAS キーの値は '?' (疑問符) で始まる可能性があります。 SAS キーを使用する場合は、先頭の '?' を削除する必要があります。 そうしないと、作業がブロックされる可能性があります。    
   
 ## <a name="remarks"></a>解説  
- データベース スコープの資格情報が変更されたとき、 *identity_name* の値と " *シークレット* " の値は両方ともリセットされます。 SECRET 引数を省略すると、格納されているシークレットの値は NULL に設定されます。  
+ データベース スコープの資格情報が変更されたとき、*identity_name* の値と "*シークレット*" の値は両方ともリセットされます。 SECRET 引数を省略すると、格納されているシークレットの値は NULL に設定されます。  
   
  シークレットはサービス マスター キーを使用して暗号化されます。 サービス マスター キーが再生成された場合、シークレットは新しいサービス マスター キーを使って再暗号化されます。  
   
