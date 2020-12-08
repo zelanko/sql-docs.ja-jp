@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 68e48fb6316b5794d51208b42ab10938b17126dc
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c8cd352c5347cbc48979af4e03775c9d7da8f3d1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890751"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504968"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -124,10 +124,10 @@ ms.locfileid: "91890751"
   
 -   **SP:StmtCompleted**  
   
- これらのトレース イベントの **Starting** バージョンを使用することもできます。 たとえば、 **SQL:BatchStarting**などです。 ただし、これらのトレース イベントの **Completed** バージョンには、 **Duration** 列が含まれているので、データベース エンジン チューニング アドバイザーは、より効率的にワークロードのチューニングを行うことができます。 データベース エンジン チューニング アドバイザーは、他の種類のトレース イベントのチューニングは行いません。 これらのトレース イベントの詳細については、「 [Stored Procedures Event Category](../../relational-databases/event-classes/stored-procedures-event-category.md) 」および「 [TSQL Event Category](../../relational-databases/event-classes/tsql-event-category.md)」を参照してください。 SQL トレース ストアド プロシージャを使用したトレース ファイル ワークロードの作成の詳細については、「[トレースの作成 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)」を参照してください。  
+ これらのトレース イベントの **Starting** バージョンを使用することもできます。 たとえば、 **SQL:BatchStarting** などです。 ただし、これらのトレース イベントの **Completed** バージョンには、 **Duration** 列が含まれているので、データベース エンジン チューニング アドバイザーは、より効率的にワークロードのチューニングを行うことができます。 データベース エンジン チューニング アドバイザーは、他の種類のトレース イベントのチューニングは行いません。 これらのトレース イベントの詳細については、「 [Stored Procedures Event Category](../../relational-databases/event-classes/stored-procedures-event-category.md) 」および「 [TSQL Event Category](../../relational-databases/event-classes/tsql-event-category.md)」を参照してください。 SQL トレース ストアド プロシージャを使用したトレース ファイル ワークロードの作成の詳細については、「[トレースの作成 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)」を参照してください。  
   
 ### <a name="trace-file-or-trace-table-workloads-that-contain-the-loginname-data-column"></a>LoginName データ列を含んでいるトレース ファイル ワークロードまたはトレース テーブル ワークロード  
- データベース エンジン チューニング アドバイザーは、チューニング処理の一環としてプラン表示要求を送信します。 **LoginName** データ列が含まれているトレース テーブルまたはトレース ファイルをワークロードとして使用する場合、データベース エンジン チューニング アドバイザーは、 **LoginName**に指定されているユーザーの権限を借用します。 トレースに含まれているステートメントに対してプラン表示を実行し生成するための SHOWPLAN 権限がそのユーザーに許可されていない場合、そのステートメントのチューニングは行われません。  
+ データベース エンジン チューニング アドバイザーは、チューニング処理の一環としてプラン表示要求を送信します。 **LoginName** データ列が含まれているトレース テーブルまたはトレース ファイルをワークロードとして使用する場合、データベース エンジン チューニング アドバイザーは、 **LoginName** に指定されているユーザーの権限を借用します。 トレースに含まれているステートメントに対してプラン表示を実行し生成するための SHOWPLAN 権限がそのユーザーに許可されていない場合、そのステートメントのチューニングは行われません。  
   
 ##### <a name="to-avoid-granting-the-showplan-permission-to-each-user-specified-in-the-loginname-column-of-the-trace"></a>トレースの LoginName 列に指定された各ユーザーに SHOWPLAN 権限を許可しないようにするには  
   

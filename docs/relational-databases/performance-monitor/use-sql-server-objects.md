@@ -29,19 +29,19 @@ helpviewer_keywords:
 - counters [SQL Server]
 - performance counters [SQL Server], listed
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 0dd256b071ce3621f02e6c4a6a152670e2fd5c0f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 6595db2d6d9f0c2f4e3cbd50dcadbc16e379d05f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892222"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505425"
 ---
 # <a name="use-sql-server-objects"></a>SQL Server オブジェクトの使用
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、システム モニターで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを実行しているコンピューターの利用状況を監視できるオブジェクトとカウンターが用意されています。 オブジェクトとは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロックや Windows プロセスなど任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースです。 各オブジェクトには、監視するオブジェクトのさまざまな特性を示す 1 つ以上のカウンターが含まれます。 たとえば、 **SQL Server Locks** オブジェクトには、 **Number of Deadlocks/sec** や **Lock Timeouts/sec**という名前のカウンターが含まれています。  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、システム モニターで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを実行しているコンピューターの利用状況を監視できるオブジェクトとカウンターが用意されています。 オブジェクトとは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロックや Windows プロセスなど任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースです。 各オブジェクトには、監視するオブジェクトのさまざまな特性を示す 1 つ以上のカウンターが含まれます。 たとえば、 **SQL Server Locks** オブジェクトには、 **Number of Deadlocks/sec** や **Lock Timeouts/sec** という名前のカウンターが含まれています。  
   
  同じ種類の複数のリソースがコンピューター上に存在する場合、オブジェクトによっては複数のインスタンスがある場合があります。 たとえば、システムに複数のプロセッサが搭載されている場合、オブジェクトの種類 **Processor** には複数のインスタンスがあります。 オブジェクトの種類 **Databases** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベースごとに 1 つのインスタンスがあります。 **Memory Manager** オブジェクトなど一部のオブジェクトの種類には、1 しかインスタンスのないものもあります。 あるオブジェクトの種類に複数のインスタンスがある場合には、インスタンスごとに、または多くの場合は一度にすべてのインスタンスに、統計を追跡するためのカウンターを追加できます。 既定のインスタンスのカウンターは、**SQLServer:** _\<object name>_ の形式で表示されます。 名前付きインスタンスのカウンターは、**MSSQL$** _\<instance name>_ **:** _\<counter name>_ または **SQLAgent$** _\<instance name>_ **:** _\<counter name>_ の形式で表示されます。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "91892222"
  **SSIS Pipeline** カウンターの詳細については、「 [パフォーマンス カウンター](../../integration-services/performance/performance-counters.md)」を参照してください。  
   
 ##  <a name="required-permissions"></a><a name="RequiredPermissions"></a> 必要な権限  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgent:Alerts **以外の**オブジェクトを使用する際の権限は Windows のアクセス許可に依存しています。 **SQLAgent:Alerts** を使用するには、ユーザーは **sysadmin**固定サーバー ロールのメンバーでなければなりません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgent:Alerts **以外の** オブジェクトを使用する際の権限は Windows のアクセス許可に依存しています。 **SQLAgent:Alerts** を使用するには、ユーザーは **sysadmin** 固定サーバー ロールのメンバーでなければなりません。  
   
 ## <a name="see-also"></a>参照  
  [パフォーマンス オブジェクトの使用](../../ssms/agent/use-performance-objects.md)   

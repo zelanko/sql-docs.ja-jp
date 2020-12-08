@@ -13,14 +13,14 @@ helpviewer_keywords:
 - plan guides [SQL Server], enabling
 - disabling plan guides
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 04180f951747b7517775ec7c222f679d043286c3
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 094fa6511875a77751eda2132529ce5548d2d215
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457274"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505241"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>プラン ガイドの有効化または無効化
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "86457274"
   
 #### <a name="to-disable-or-enable-a-plan-guide"></a>プラン ガイドを無効化または有効化するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "86457274"
   
 #### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>データベース内のすべてのプラン ガイドを無効化または有効化するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

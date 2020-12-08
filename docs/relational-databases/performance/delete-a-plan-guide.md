@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - plan guides [SQL Server], deleting
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: e93982c0ad59b7016902c64cd4dd81d0f81c270f
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 17e2c32fbf7f26ecb0e3044e248f3b52469dad5e
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457314"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505304"
 ---
 # <a name="delete-a-plan-guide"></a>プラン ガイドの削除
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "86457314"
   
 #### <a name="to-delete-a-single-plan-guide"></a>単一のプラン ガイドを削除するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "86457314"
   
 #### <a name="to-delete-all-plan-guides-in-a-database"></a>データベース内のすべてのプラン ガイドを削除するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

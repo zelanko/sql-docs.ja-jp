@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: pmasl
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ad9bb98b55e654efd60c028187d6085f698e1f9
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: dadf7f495198879035f4cbbbad1dcb06df5b6003
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194334"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505406"
 ---
 # <a name="best-practices-with-query-store"></a>クエリ ストアを使用する際のベスト プラクティス
 
@@ -294,7 +294,7 @@ FROM sys.database_query_store_options;
 
 クエリ ストアを読み取り/書き込みモードに戻してデータの収集を再開するには、次の手順を実行します。
 
-- **ALTER DATABASE** の **MAX_STORAGE_SIZE_MB**オプションを使用して、ストレージの最大サイズを増やします。
+- **ALTER DATABASE** の **MAX_STORAGE_SIZE_MB** オプションを使用して、ストレージの最大サイズを増やします。
 - 次のステートメントを使用して、クエリ ストアのデータをクリーンアップする。
 
   ```sql
@@ -312,7 +312,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 
 - 推奨事項を取り入れることで、操作モードが通知なしに変更されることを防ぐことができます。 クエリ ストアのサイズが許可される最大値を常に下回り、読み取り専用モードに移行される可能性が大幅に低くなるようにしてください。 [クエリ ストアの構成](#Configure)に関するセクションの説明に従って、サイズ ベースのポリシーを有効にし、クエリ ストアでサイズが制限に近づくと自動的にデータがクリーンアップされるようにします。
 - 最新のデータを確実に保持するには、古くなった情報を定期的に削除するように時間ベースのポリシーを構成します。
-- 最後に、**クエリ ストア キャプチャ モード**を **Auto** に設定することを検討してください。そうすることで、通常はワークロードにとってあまり関連性のないクエリが除外されるためです。
+- 最後に、**クエリ ストア キャプチャ モード** を **Auto** に設定することを検討してください。そうすることで、通常はワークロードにとってあまり関連性のないクエリが除外されるためです。
 
 ### <a name="error-state"></a>エラー状態
 

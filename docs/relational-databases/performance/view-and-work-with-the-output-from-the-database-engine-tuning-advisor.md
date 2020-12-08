@@ -24,14 +24,14 @@ helpviewer_keywords:
 - reports [SQL Server], tuning
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: e81bbff1dd2eedace6ac7a5e535db9e9689157e8
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 87ecdbd39bb5773b114358ed4d22e8c560b77f87
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734675"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504896"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>データベース エンジン チューニング アドバイザー (DTA) からの出力を表示および操作する
 
@@ -153,7 +153,7 @@ ms.locfileid: "92734675"
   
 3.  使い慣れた XML エディター、テキスト エディター、または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、手順 2. で作成した XML ファイルを開きます。 **Configuration** 要素まで下方向にスクロールします。 **Configuration** 要素セクションをコピーし、XML 入力ファイル テンプレートの **TuningOptions** 要素の後に貼り付けます。 この XML 入力ファイルを保存します。  
   
-4.  手順 3. で作成した新しい XML 入力ファイルで、 **TuningOptions** 要素にチューニング オプションを指定し、 **Configuration** 要素セクションを編集し (分析に応じて適宜、物理デザイン構造を追加または削除)、ファイルを保存して、データベース エンジン チューニング アドバイザー XML スキーマに対する検証を行います。 この XML ファイルの編集方法については、「[XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)」を参照してください。  
+4.  手順 3. で作成した新しい XML 入力ファイルで、**TuningOptions** 要素にチューニング オプションを指定し、**Configuration** 要素セクションを編集し (分析に応じて適宜、物理デザイン構造を追加または削除)、ファイルを保存して、データベース エンジン チューニング アドバイザー XML スキーマに対する検証を行います。 この XML ファイルの編集方法については、「[XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)」を参照してください。  
   
 5.  **dta** コマンド ライン ユーティリティへの入力として、手順 4. で作成した XML ファイルを使用します。 このツールでの XML 入力ファイルの使用については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」の「dta ユーティリティの使用によるデータベースのチューニング」を参照してください。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "92734675"
   
 2.  [ユーザー指定の構成を指定した XML 入力ファイルのサンプル &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) をコピーして、XML エディターまたはテキスト エディターに貼り付けます。 このサンプルを使用して、チューニング セッションの XML 入力ファイルを作成します。 このタスクの実行については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」の「XML 入力ファイルの作成」を参照してください。  
   
-3.  サンプルの XML 入力ファイルで、 **TuningOptions** 要素と **Configuration** 要素を編集します。 **TuningOptions** 要素で、データベース エンジン チューニング アドバイザーでチューニング セッション中に考慮される物理デザイン構造を指定します。 **Configuration** 要素で、データベース エンジン チューニング アドバイザーで分析される、物理データベース デザイン構造の仮定の構成に一致する物理デザイン構造を指定します。 **TuningOptions** 親要素および **Configuration** 親要素と共に使用できる属性と子要素の詳細については、「 [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)」を参照してください。  
+3.  サンプルの XML 入力ファイルで、 **TuningOptions** 要素と **Configuration** 要素を編集します。 **TuningOptions** 要素で、データベース エンジン チューニング アドバイザーでチューニング セッション中に考慮される物理デザイン構造を指定します。 **Configuration** 要素で、データベース エンジン チューニング アドバイザーで分析される、物理データベース デザイン構造の仮定の構成に一致する物理デザイン構造を指定します。 **TuningOptions** 親要素および **Configuration** 親要素と共に使用できる属性と子要素の詳細については、「[XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)」を参照してください。  
   
 4.  **.xml** 拡張子を付けて、入力ファイルを保存します。  
   
