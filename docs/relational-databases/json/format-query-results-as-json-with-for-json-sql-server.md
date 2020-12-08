@@ -15,16 +15,16 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3621fcc105d7b03d2347bc723f2ddb552bc9e81
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 852cb235738316312794a963879e49f1a5eb7ee6
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765711"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595223"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>FOR JSON を使用してクエリ結果を JSON として書式設定する (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
 クエリ結果を JSON として書式設定するか、SQL Server のデータを JSON としてエクスポートするには、**FOR JSON** 句を **SELECT** ステートメントに追加します。 **FOR JSON** 句を使用して、JSON 出力の書式設定をアプリから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に委任することによって、クライアント アプリケーションを簡素化します。 [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) は、フラット文字列を表示するのではなく、(この記事に示されているように) JSON の結果を自動的に書式設定するので、JSON クエリ用に推奨されるクエリ エディターです。
   
@@ -181,7 +181,7 @@ JSON_F52E2B61-18A1-11d1-B105-00805F49916B
 1.  結果セットには 1 つの列が含まれます。
     -   小さな結果セットには 1 つの行が含まれます。
     -   大きな結果セットでは、長い JSON 文字列が複数行に分割されます。
-        -   出力設定が**結果をグリッドに表示**の場合、SQL Server Management Studio (SSMS) は既定で結果を単一行に連結します。 SSMS のステータス バーに、実際の行数が表示されます。
+        -   出力設定が **結果をグリッドに表示** の場合、SQL Server Management Studio (SSMS) は既定で結果を単一行に連結します。 SSMS のステータス バーに、実際の行数が表示されます。
         -   他のクライアント アプリケーションでは、複数の行の内容を連結することによって長い結果を単一の有効な JSON 文字列に結合し直すにはコードが必要になることがあります。 C# アプリケーションでのこのコードの例については、「[C# クライアント アプリで FOR JSON 出力を使用する](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md#use-for-json-output-in-a-c-client-app)」をご覧ください。
   
      ![FOR JSON 出力の例](../../relational-databases/json/media/forjson-example2.png)  

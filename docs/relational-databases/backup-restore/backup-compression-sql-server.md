@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c39b9520bebf08cf523bece5b2c9bab78675138d
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 278ee9ecf44a90574d212e761089127342b2c9be
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129345"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563128"
 ---
 # <a name="backup-compression-sql-server"></a>バックアップの圧縮 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、バックアップの圧縮の制限、パフォーマンス面のトレードオフ、バックアップの圧縮の構成、圧縮比率など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの圧縮について説明します。  バックアップの圧縮は、次の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] エディションでサポートされています (Enterprise、Standard、Developer)。  圧縮されたバックアップは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降の各エディションで復元できます。 
+  このトピックでは、バックアップの圧縮の制限、パフォーマンス面のトレードオフ、バックアップの圧縮の構成、圧縮比率など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの圧縮について説明します。  バックアップの圧縮は、次の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションでサポートされています (Enterprise、Standard、Developer)。  圧縮されたバックアップは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降の各エディションで復元できます。 
  
   
 ##  <a name="benefits"></a><a name="Benefits"></a> 利点  

@@ -3,18 +3,18 @@ title: 'ホワイトペーパー: スピンロックの競合の診断と解決'
 description: この記事では、SQL Server で発生するスピンロックの競合の診断と解決について詳細に説明します。 この記事は、当初、Microsoft の SQLCAT チームによって公開されたものです。
 ms.date: 09/30/2020
 ms.prod: sql
-ms.reviewer: jroth
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf22570ae96e0ee2a839088e6848443d0c9dddd9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 6ecce46a04943d36dc6d821d6a3457b056f00356
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91811864"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506316"
 ---
 # <a name="diagnose-and-resolve-spinlock-contention-on-sql-server"></a>SQL Server でのスピンロックの競合を診断および解決する
 
@@ -81,7 +81,7 @@ order by spins desc
 
 * 特定のスピンロックの種類について多数のスピンとバックオフが観察される。
 
-* システムで、高い CPU 使用量または CPU 消費量のスパイクが発生している。 CPU の負荷が高いシナリオでは、(DMV *sys.dm_os_wait_stats*によって報告される) SOS_SCHEDULER_YEILD で高いシグナル待機率が見られます。
+* システムで、高い CPU 使用量または CPU 消費量のスパイクが発生している。 CPU の負荷が高いシナリオでは、(DMV *sys.dm_os_wait_stats* によって報告される) SOS_SCHEDULER_YEILD で高いシグナル待機率が見られます。
 
 * システムで、多くの同時実行が発生する。
 

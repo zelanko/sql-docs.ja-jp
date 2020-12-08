@@ -22,14 +22,14 @@ helpviewer_keywords:
 - monitoring performance [SQL Server], memory usage
 - server performance [SQL Server], memory
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 0d390a0ed1397a7f433c5582361def2f4022d09b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 93e2780c3e51ce46e0687864896c36b7d3166917
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906273"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506009"
 ---
 # <a name="monitor-memory-usage"></a>メモリ使用率の監視
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

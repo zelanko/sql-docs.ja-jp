@@ -21,15 +21,15 @@ helpviewer_keywords:
 - data compression wizard
 - compression [SQL Server], enable
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8d168265fbd400f94939103411a6f56afe901f07
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 27fd0226590b0466a00299c20688cfbb136f0c09
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457534"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506504"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>テーブルまたはインデックスの圧縮の有効化
 
@@ -210,7 +210,7 @@ SQL Server で、`sp_estimate_data_compression_savings` を実行してから、
 
 #### <a name="to-enable-compression-on-a-table"></a>テーブルで圧縮を有効にするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -228,7 +228,7 @@ SQL Server で、`sp_estimate_data_compression_savings` を実行してから、
   
 #### <a name="to-enable-compression-on-an-index"></a>インデックスで圧縮を有効にするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -258,7 +258,7 @@ Azure SQL Database では、`sp_estimate_data_compression` はサポートされ
 
 #### <a name="to-enable-compression-on-a-table"></a>テーブルで圧縮を有効にするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -275,7 +275,7 @@ Azure SQL Database では、`sp_estimate_data_compression` はサポートされ
   
 #### <a name="to-enable-compression-on-an-index"></a>インデックスで圧縮を有効にするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

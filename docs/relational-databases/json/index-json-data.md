@@ -14,22 +14,22 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81ba47199707e4f59094ec0070017610f61d3187
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: eb884b2a3e2114d86dda60fc63b528e11a6386c9
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439465"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595053"
 ---
 # <a name="index-json-data"></a>JSON データへのインデックスの追加
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
 SQL Server と SQL Database では、JSON のデータ型は組み込まれておらず、SQL Server には、カスタム JSON インデックスはありません。 ただし、標準的なインデックスを使用して、JSON ドキュメント用にクエリを最適化できます。 
 
 データベース インデックスでは、フィルターおよび並べ替え操作のパフォーマンスを向上させることができます。 インデックスがない場合、SQL Server は、データのクエリを実行するたびに、テーブルを完全にスキャンしなければなりません。  
   
 ## <a name="index-json-properties-by-using-computed-columns"></a>計算列を使用した JSON のプロパティへのインデックスの追加  
-SQL Server に JSON データを格納するときは通常、JSON ドキュメントの 1 つまたは複数の " *プロパティ* " でクエリ結果をフィルターしたり並べ替えたりします。  
+SQL Server に JSON データを格納するときは通常、JSON ドキュメントの 1 つまたは複数の "*プロパティ*" でクエリ結果をフィルターしたり並べ替えたりします。  
 
 ### <a name="example"></a>例 
 この例では、AdventureWorks の `SalesOrderHeader` テーブルに、注文に関するさまざまな情報を JSON 形式で格納している `Info` 列があるものとします。 たとえば、顧客、営業担当者、出荷および請求先住所などの情報が含まれます。 顧客の販売注文をフィルター処理するために、`Info` 列の値を使用したいとします。
@@ -46,7 +46,7 @@ WHERE JSON_VALUE(Info, '$.Customer.Name') = N'Aaron Campbell'
 ```  
 
 ### <a name="example-index"></a>インデックスの例
-JSON ドキュメントのプロパティでフィルターまたは `ORDER BY` 句を高速化する場合は、他の列で既に使用しているのと同じインデックスを使用します。 ただし、JSON ドキュメントのプロパティを " *直接* " 参照することはできません。
+JSON ドキュメントのプロパティでフィルターまたは `ORDER BY` 句を高速化する場合は、他の列で既に使用しているのと同じインデックスを使用します。 ただし、JSON ドキュメントのプロパティを "*直接*" 参照することはできません。
     
 1.  最初に、フィルター処理に使用する値を返す "仮想列" を作成する必要があります。
 2.  それからその仮想列にインデックスを作成します。  
