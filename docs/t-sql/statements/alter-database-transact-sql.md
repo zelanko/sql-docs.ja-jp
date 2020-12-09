@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c452310bbc2813cb3d11ced51f680c7a1f66e5e0
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: af8f519e7fec6a440fcdce44ccebbcfab2f0e0a9
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235389"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443201"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -142,18 +142,18 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>引数
 
-*database_name* : 変更するデータベースの名前です。
+*database_name*: 変更するデータベースの名前です。
 
 > [!NOTE]
 > このオプションは、包含データベースでは使用できません。
 
 CURRENT   
-**適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
 
 使用中の現在のデータベースを変更することを指定します。
 
 MODIFY NAME **=** _new_database_name_   
-データベースの名前を、 *new_database_name* で指定した名前に変更します。
+データベースの名前を、*new_database_name* で指定した名前に変更します。
 
 COLLATE *collation_name*   
 データベースの照合順序を指定します。 *collation_name* には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合は、データベースに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの照合順序が割り当てられます。
@@ -161,12 +161,12 @@ COLLATE *collation_name*
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でデータベースが作成された後は、照合順序を変更することはできません。
 
-既定の照合順序以外でデータベースを作成する場合、データベース内のデータは常に、指定された照合順序を優先します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、包含データベースを作成する場合、内部カタログの情報は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定の照合順序、 **Latin1_General_100_CI_AS_WS_KS_SC** を使用して維持されます。
+既定の照合順序以外でデータベースを作成する場合、データベース内のデータは常に、指定された照合順序を優先します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、包含データベースを作成する場合、内部カタログの情報は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定の照合順序、**Latin1_General_100_CI_AS_WS_KS_SC** を使用して維持されます。
 
 Windows 照合順序名および SQL 照合順序名について詳しくは、「[COLLATE](~/t-sql/statements/collations.md)」をご覧ください。
 
 **\<delayed_durability_option> ::=**    
-**適用対象** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。
 
 詳しくは、「[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)」および「[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)」をご覧ください。
 
@@ -263,7 +263,7 @@ GO
 
 次の例では、`testdb`S 照合順序で `SQL_Latin1_General_CP1_CI_A` という名前のデータベースを作成した後、`testdb` データベースの照合順序を `COLLATE French_CI_AI` に変更します。
 
-**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。
 
 ```sql
 USE master;
@@ -424,7 +424,7 @@ CURRENT
 使用中の現在のデータベースを変更することを指定します。
 
 MODIFY NAME **=** _new_database_name_   
-データベースの名前を、 *new_database_name* で指定した名前に変更します。 次の例では、`db1` データベースの名前を `db2` に変更します。
+データベースの名前を、*new_database_name* で指定した名前に変更します。 次の例では、`db1` データベースの名前を `db2` に変更します。
 
 ```sql
 ALTER DATABASE db1
@@ -470,13 +470,13 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB)
 |20 GB|該当なし|√|√|√|√|
 |30 GB|該当なし|√|√|√|√|
 |40 GB|該当なし|√|√|√|√|
-|50 GB|該当なし|√|√|√|√|
+|50 GB|該当なし|√ (D)|√|√|√|
 |100 GB|該当なし|√|√|√|√|
 |150 GB|該当なし|√|√|√|√|
-|200 GB|該当なし|√|√|√|√|
+|200 GB|該当なし|√|√ (D)|√|√|
 |250 GB|該当なし|√ (D)|√ (D)|√|√|
-|300 GB|該当なし|√|√|√|√|
-|400 GB|該当なし|√|√|√|√|
+|300 GB|該当なし|√|√|√ (D)|√|
+|400 GB|N/A|√|√|√|√|
 |500 GB|該当なし|√|√|√ (D)|√|
 |750 GB|該当なし|√|√|√|√|
 |1024 GB|該当なし|√|√|√|√ (D)|
@@ -950,7 +950,7 @@ ALTER DATABASE の SET オプションを使ってデータベースの属性を
 
 ## <a name="syntax"></a>構文
 
-### <a name="sql-pool"></a>[SQL プール](#tab/sqlpool)
+### <a name="dedicated-sql-pool"></a>[専用 SQL プール](#tab/sqlpool)
 ```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 {
@@ -974,7 +974,7 @@ ALTER DATABASE { database_name | CURRENT }
           | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }
 ```
-### <a name="sql-on-demand-preview"></a>[SQL オンデマンド (プレビュー)](#tab/sqlod)
+### <a name="serverless-sql-pool"></a>[サーバーレス SQL プール](#tab/sqlod)
 ```syntaxsql
 ALTER DATABASE { database_name | Current } 
 { 
@@ -1017,7 +1017,7 @@ ALTER DATABASE { database_name | Current }
 変更するデータベースの名前を指定します。
 
 MODIFY NAME = *new_database_name*   
-データベースの名前を、 *new_database_name* で指定した名前に変更します。
+データベースの名前を、*new_database_name* で指定した名前に変更します。
 
 MAXSIZE   
 既定値は 245,760 GB (240 TB) です。
@@ -1044,7 +1044,7 @@ SERVICE_OBJECTIVE
 
 ## <a name="general-remarks"></a>全般的な解説
 
-現在のデータベースは、変更対象とは異なるデータベースである必要があります。したがって、 **ALTER は master データベースに接続されている間に実行する必要があります** 。
+現在のデータベースは、変更対象とは異なるデータベースである必要があります。したがって、**ALTER は master データベースに接続されている間に実行する必要があります**。
 
 SQL Analytics の COMPATIBILITY_LEVEL は既定で 130 に設定されており、変更できません。 詳細については、「[ALTER DATABASE (TRANSACT-SQL) の互換性レベル](./alter-database-transact-sql-compatibility-level.md)」を参照してください。
 
@@ -1063,7 +1063,7 @@ SQL Analytics の COMPATIBILITY_LEVEL は既定で 130 に設定されており�
 
 ## <a name="examples"></a>例
 
-これらの例を実行する前に、変更対象のデータベースが現在のデータベースでないことを確認します。 現在のデータベースは、変更対象とは異なるデータベースである必要があります。したがって、 **ALTER は master データベースに接続されている間に実行する必要があります** 。
+これらの例を実行する前に、変更対象のデータベースが現在のデータベースでないことを確認します。 現在のデータベースは、変更対象とは異なるデータベースである必要があります。したがって、**ALTER は master データベースに接続されている間に実行する必要があります**。
 
 ### <a name="a-change-the-name-of-the-database"></a>A. データベースの名前を変更します。
 
@@ -1163,7 +1163,7 @@ LOG_SIZE = *size* [GB]
 変更されているデータベースのすべてのトランザクション ログを格納するための新しい最大 GB をデータベースごとに指定します。 このサイズは、アプライアンスの計算ノード全体で分散されます。
 
 ENCRYPTION { ON | OFF }   
-データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の暗号化は、 [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) が **1** に設定されているときにのみ構成できます。 Transparent Data Encryption を構成するには、先にデータベース暗号化キーを作成する必要があります。 データベース暗号化の詳細については、「[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。
+データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の暗号化は、[sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) が **1** に設定されているときにのみ構成できます。 Transparent Data Encryption を構成するには、先にデータベース暗号化キーを作成する必要があります。 データベース暗号化の詳細については、「[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。
 
 SET AUTO_CREATE_STATISTICS { ON | OFF }   
 統計の自動作成オプション AUTO_CREATE_STATISTICS が ON の場合、クエリ プランのカーディナリティの推定を向上させるために、クエリ オプティマイザーによってクエリ述語内の個々の列に関する統計が必要に応じて作成されます。 これらの 1 列ずつの統計は、既存の統計オブジェクトにまだヒストグラムがない列について作成されます。
