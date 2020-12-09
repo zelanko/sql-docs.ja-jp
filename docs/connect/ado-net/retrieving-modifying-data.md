@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: cbe61aafd8dcd1681230c355187a65a231535e00
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 8fc6a8ed3cf4fec9b97b81c38fb1667588623ba7
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126462"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419745"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET でのデータの取得と変更
 
@@ -29,11 +29,11 @@ ms.locfileid: "96126462"
 
 [データ ソースへの接続](connecting-to-data-source.md) データ ソースへの接続を確立する方法と、接続イベントを使用する方法について説明します。
 
-[接続文字列](connection-strings.md) 接続文字列のキーワード、セキュリティ情報、セキュリティ情報の格納や取得など、接続文字列を使用するときのさまざまな側面に関して説明するトピックが含まれます。
+[接続文字列](connection-strings.md) 接続文字列のキーワード、セキュリティ情報、およびそれらの格納や取得など、接続文字列を使用するときのさまざまな側面に関して説明するトピックが含まれます。
 
 [接続プール](connection-pooling.md) Microsoft SqlClient Data Provider for SQL Server の接続プールについて説明します。
 
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET でのデータ型のマッピング](data-type-mappings-ado-net.md)
+- [ADO.NET のデータ型のマッピング](data-type-mappings-ado-net.md)
 - [SQL Server と ADO.NET](./sql/index.md)

@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 02fbb46968d51bc4dbe730fcc7d575793063bcff
-ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
+ms.openlocfilehash: b3265c99e185f4a8fcbe68e400ab1277b1e72671
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631688"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442882"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 ビッグ データ クラスターのリリース ノート
 
@@ -113,8 +113,10 @@ SQL Server 2019 の累積的な更新プログラム 6 (CU6) リリース。
 - [Active Directory モードでビッグ データ クラスター アクセスを管理する](manage-user-access.md)
 - [Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する](active-directory-deploy.md)
 - [Active Directory モードで AKS に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する](active-directory-deployment-aks.md)
-- [高可用性で [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する](deployment-high-availability.md)
-- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を構成する](configure-cluster.md)
+- [Azure Kubernetes Service (AKS) プライベート クラスターでビッグ データ クラスターを展開する](private-deploy.md)
+- [Azure Kubernetes Service (AKS) プライベート クラスターでビッグ データ クラスター (BDC) クラスターのエグレス トラフィックを制限する](private-restrict-egress-traffic.md)
+- [高可用性を使用して SQL Server ビッグ データ クラスターを展開する](deployment-high-availability.md)
+- [SQL Server ビッグ データ クラスターを構成する](configure-cluster.md)
 - [ビッグ データ クラスターで Apache Spark と Apache Hadoop を構成する](configure-spark-hdfs.md)
 - [SQL Server マスター インスタンスの構成プロパティ](reference-config-master-instance.md)
 - [Apache Spark と Apache Hadoop (HDFS) の構成プロパティ](reference-config-spark-hadoop.md)

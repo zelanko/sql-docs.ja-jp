@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: 30155a584de4e22692601a1dcf9551a67d4f580f
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: eef9e81c94c930b9f00689b41339d54a0f0302be
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95011796"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442717"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>SqlClient ドライバーのサポート ライフサイクル
 
@@ -32,14 +32,19 @@ Microsoft.Data.SqlClient ライブラリは、すべてのリリースで最新�
 
 新しい安定版 (GA) リリースは、バージョン 1.2 以降、定期的に 6 か月ごとに公開され、その間に 2、3 個のプレビュー リリースが公開されます。 長期サポート (LTS) リリースは、いくつかの条件とお客様の反応に基づいて、利害関係者と保守担当者が選択します。
 
-### <a name="release-life-cycles"></a>リリース ライフ サイクル
+### <a name="actively-supported-releases"></a>アクティブにサポートされているリリース
 
 | Version | 公式リリース日 | 最新の修正プログラム バージョン | 修正プログラム リリース日 | サポート レベル  | サポートの終了 |
 | -- | -- | -- | -- | -- | -- |
 | 2.1 | 2020 年 11 月 19 日 | 2.1.0 | 2020 年 11 月 19 日 | Current | |
-| 2.0 | 2020 年 6 月 16 日 | 2.0.1 | 2020 年 8 月 25 日 | Current | |
+| 2.0 | 2020 年 6 月 16 日 | 2.0.1 | 2020 年 8 月 25 日 | Current | 2021 年 2 月 19 日 |
 | 1.1 | 2019 年 11 月 20 日 | 1.1.3 | 2020 年 5 月 15 日 | LTS | 2022 年 11 月 21 日 |
-| 1.0 | 2019 年 8 月 28 日 | 1.0.19269.1 | 2019 年 9 月 26 日 | Current | 2020 年 2 月 20 日 |
+
+### <a name="out-of-support-releases"></a>サポート対象外のリリース
+
+| バージョン | 最新の修正プログラム リリース日 | 最新の修正プログラム バージョン | サポート終了 |
+| -- | -- | -- | -- |
+| 1.0 | 2019 年 9 月 26 日 | 1.0.19269.1 | 2020 年 2 月 20 日 |
 
 ### <a name="long-term-support-lts-releases"></a>長期サポート (LTS) リリース
 
@@ -57,3 +62,20 @@ LTS リリースは、初回リリース後 3 年間サポートされます。
 |2.0|はい|はい|はい|はい|はい|はい|はい|はい|
 |1.1|はい|はい|はい|はい|はい|はい|はい|はい|
 |1.0|はい|はい|はい|はい|はい|はい|はい|はい|
+
+## <a name="supported-os-versions"></a>サポートされている OS のバージョン
+
+### <a name="support-for-net-framework-applications"></a>.NET Framework アプリケーションのサポート
+
+Microsoft.Data.SqlClient では、.NET Framework v4.6 以降でサポートされるすべてのオペレーティング システムがサポートされます。
+
+[.NET Framework のシステム要件](/dotnet/framework/get-started/system-requirements)。
+
+### <a name="support-for-net-core-applications"></a>.NET Core アプリケーションのサポート
+
+Microsoft.Data.SqlClient では、.NET Core v2.1 以降でサポートされるすべてのオペレーティング システムがサポートされます。
+
+[.NET Core でサポートされている OS ライフサイクル ポリシー](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)。
+
+> [!NOTE]
+> 現在、グローバリゼーション インバリアント モードはサポートされていません。

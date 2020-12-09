@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: ee78b145965c17ff0a496611c6506d23df1a31a3
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: 7894ea12ef77a7fb07a61ff454f27150812c7dfb
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384501"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443071"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -245,7 +245,7 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|データベースへの公開時に、SQL Server がルーティング テーブルにルートを保持する時間の相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|データベースに公開するとき、T-SQL ステートメント間のセミコロンの相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|データベースに公開するとき、テーブル オプションの相違を無視するか、更新するかを指定します。|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|データベースに公開するとき、テーブル パーティション オプションの相違を無視するか、更新するかを指定します。  このオプションは、Azure Synapse Analytics SQL プール (データ ウェアハウス) データベースにのみ適用されます。|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|データベースに公開するとき、テーブル パーティション オプションの相違を無視するか、更新するかを指定します。  このオプションは、Azure Synapse Analytics 専用 SQL プール データベースにのみ適用されます。|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|データベースに公開するとき、ユーザー設定オブジェクトの相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|データベースに公開するとき、空白の相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|公開時に、CHECK 制約の WITH NOCHECK 句の値の相違を無視するか、更新するかを指定します。|

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 40fc82cdc264951d1e776875a48b5a516b4b26a8
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: f61b867b70825595a012b2167d2c63b13409a8e2
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126522"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442817"
 ---
 # <a name="connection-string-syntax"></a>接続文字列の構文
 
@@ -69,7 +69,7 @@ SQL Server への接続には Windows 認証の使用をお勧めします。 �
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
 
-Azure SQL Database または Azure SQL Data Warehouse に接続し、`user@servername` の形式でログインを指定する場合は、ログインの `servername` の値が `Server=` に指定されている値と一致することを確認します。
+Azure SQL Database または Azure Synapse Analytics に接続して `user@servername` 形式でログインを指定する場合は、ログインの `servername` 値が `Server=` に指定された値と一致していることを確認してください。
 
 > [!NOTE]
 > Windows 認証は SQL Server ログインよりも優先されます。 Integrated Security を true に指定し、ユーザー名とパスワードも指定した場合、ユーザー名とパスワードは無視され、Windows 認証が使用されます。
@@ -116,8 +116,8 @@ SQL Server で構成されたセキュリティのレベルを、アプリケー
 |[プロトコルの暗号化を設定する] クライアント設定|[サーバー証明書を信頼する] クライアント設定|Encrypt/Use Encryption for Data 接続文字列/属性|Trust Server Certificate 接続文字列/属性|結果|  
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |いいえ|N/A|無効 (既定値)|無視|暗号化は行われません。|  
-|いいえ|該当なし|はい|無効 (既定値)|暗号化は、検証可能なサーバー証明書が提供されている場合にのみ行われます。それ以外の場合は、接続試行が失敗します。|  
-|いいえ|該当なし|はい|はい|暗号化は常に行われますが、自己署名入りのサーバー証明書を使用することがあります。|  
+|いいえ|N/A|はい|無効 (既定値)|暗号化は、検証可能なサーバー証明書が提供されている場合にのみ行われます。それ以外の場合は、接続試行が失敗します。|  
+|いいえ|N/A|はい|はい|暗号化は常に行われますが、自己署名入りのサーバー証明書を使用することがあります。|  
 |はい|いいえ|無視|無視|暗号化は、検証可能なサーバー証明書が提供されている場合にのみ行われます。それ以外の場合は、接続試行が失敗します。|  
 |はい|はい|無効 (既定値)|無視|暗号化は常に行われますが、自己署名入りのサーバー証明書を使用することがあります。|  
 |はい|はい|はい|無効 (既定値)|暗号化は、検証可能なサーバー証明書が提供されている場合にのみ行われます。それ以外の場合は、接続試行が失敗します。|  

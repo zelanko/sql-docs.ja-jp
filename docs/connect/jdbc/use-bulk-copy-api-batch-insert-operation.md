@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09eac13d41656721a9a4cc6d8fb8fa9790779018
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 14074b0136baf800b038e4b113325e81d65dc3e7
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943031"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442598"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>バッチ挿入操作に一括コピー API を使用する
 
@@ -71,7 +71,7 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
 
 ## <a name="example"></a>例
 
-次に示すのは、通常と一括コピー API の両方のシナリオで、1,000 行の Azure Synapse Analytics (SQL DW) に対するバッチ挿入操作のユース ケースを示すコード例です。
+次に示すのは、通常と一括コピー API の両方のシナリオで、1,000 行の Azure Synapse Analytics に対するバッチ挿入操作のユース ケースを示すコード例です。
 
 ```java
     public static void main(String[] args) throws Exception
