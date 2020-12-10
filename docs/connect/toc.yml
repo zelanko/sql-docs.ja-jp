@@ -93,6 +93,27 @@
                   href: ../connect/ado-net/update-data-inside-data-source.md
                 - name: カタログ操作の実行
                   href: ../connect/ado-net/perform-catalog-operations.md
+        - name: DataAdapter と DataReader
+          href: ../connect/ado-net/dataadapters-datareaders.md
+          items:
+            - name: DataReader によってデータを取得する
+              href: ../connect/ado-net/retrieve-data-by-datareader.md
+            - name: DataAdapter から DataSet を設定する
+              href: ../connect/ado-net/populate-dataset-from-dataadapter.md
+            - name: DataAdapter パラメーター
+              href: ../connect/ado-net/dataadapter-parameters.md
+            - name: DataSet に既存の制約を追加する
+              href: ../connect/ado-net/add-existing-constraints-to-dataset.md
+            - name: DataAdapter、DataTable、DataColumn のマッピング
+              href: ../connect/ado-net/dataadapter-datatable-datacolumn-mappings.md
+            - name: クエリ結果のページング
+              href: ../connect/ado-net/paging-through-query-result.md
+            - name: DataAdapter を使用してデータ ソースを更新する
+              href: ../connect/ado-net/update-data-sources-with-dataadapters.md
+            - name: DataAdapter イベントを処理する
+              href: ../connect/ado-net/handle-dataadapter-events.md
+            - name: DataAdapter を使用したバッチ操作
+              href: ../connect/ado-net/batch-operations-using-dataadapters.md
     - name: SQL Server と ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:
