@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 41842a2eb754aedc31bad206ad427a86bb65f00f
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 41b139d2f22a9cb3137879d96224b02eafc24bab
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126512"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761500"
 ---
 # <a name="connection-pooling"></a>接続のプール
 
@@ -27,8 +27,10 @@ ms.locfileid: "96126512"
 
 ## <a name="in-this-section"></a>このセクションの内容  
 
-[SQL Server の接続プール (ADO.NET)](sql-server-connection-pooling.md) 接続プールの概要および SQL Server における接続プールの動作を説明します。
+[SQL Server の接続プール (ADO.NET)](sql-server-connection-pooling.md)  
+接続プールの概要および SQL Server における接続プールの動作を説明します。
 
 ## <a name="see-also"></a>関連項目
 
 - [ADO.NET でのデータの取得および変更](retrieving-modifying-data.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

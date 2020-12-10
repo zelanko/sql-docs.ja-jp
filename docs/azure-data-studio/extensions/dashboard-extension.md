@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 091bf94f01c66b3f991c0457adcfa4d119d49167
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: c7402c8dd0d2d85d38536a0bcfea3ce8cd780657
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364099"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900875"
 ---
 # <a name="create-an-azure-data-studio-dashboard-extension"></a>Azure Data Studio ダッシュボード拡張機能を作成する
 
@@ -44,7 +44,7 @@ Azure Data Studio は Visual Studio Code と同じフレームワーク上に構
 拡張機能作成のプロセスを簡単にするため、Yeoman を利用して[拡張機能ジェネレーター](https://code.visualstudio.com/docs/extensions/yocode)を構築しました。 これをインストールするには、コマンド プロンプトから次のコマンドを実行します。
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-dashboard-extension"></a>ダッシュボード拡張機能を作成する
@@ -87,7 +87,7 @@ Azure Data Studio 接続ダッシュボードとは、ユーザーの接続を�
 
 ### <a name="run-the-extension"></a>拡張機能を実行する
 
-拡張機能を実行して、ダッシュボード テンプレートが提供する内容を見てみましょう。 実行する前に、**Azure Data Studio Debug 拡張機能**が確実に Visual Studio Code にインストールされているようにします。
+拡張機能を実行して、ダッシュボード テンプレートが提供する内容を見てみましょう。 実行する前に、**Azure Data Studio Debug 拡張機能** が確実に Visual Studio Code にインストールされているようにします。
 
 Visual Studio Code で **F5** を選択すると、Azure Data Studio がデバッグ モードで起動され、拡張機能が実行されます。 この既定のテンプレートがダッシュボードにどのように役立つのかを確認できます。
 
@@ -108,7 +108,7 @@ Visual Studio Code で **F5** を選択すると、Azure Data Studio がデバ�
 他者と共有するには、拡張機能を 1 つのファイルにパッケージ化する必要があります。 拡張機能は、Azure Data Studio 拡張機能マーケットプレースに公開することも、チームまたはコミュニティと共有することもできます。 この手順を行うには、別の npm パッケージをコマンド ラインからインストールする必要があります。
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 `README.md` ファイルを好みに合わせて編集します。 次に、拡張機能のベース ディレクトリに移動し、`vsce package` を実行します。 必要に応じてリポジトリを拡張機能とリンクすることも、それなしで続行することもできます。 1 つ追加するには、`package.json` ファイルに同様の行を追加します。

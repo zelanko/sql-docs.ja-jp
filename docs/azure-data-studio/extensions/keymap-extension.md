@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 76fd809993b47f3ae3dad363887eb9ac735e6b0b
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 127b163ff7f75b4c7ebeff37781f8a5670a47cf9
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364079"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900825"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>Azure Data Studio キーマップ拡張機能を作成する
 
@@ -44,7 +44,7 @@ Azure Data Studio は Visual Studio Code と同じフレームワーク上に構
 拡張機能作成のプロセスを簡単にするため、Yeoman を利用して[拡張機能ジェネレーター](https://code.visualstudio.com/docs/extensions/yocode)を構築しました。 これをインストールするには、コマンド プロンプトで次のコードを実行します。
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-keymap-extension"></a>キーマップ拡張機能を作成する
@@ -137,7 +137,7 @@ Azure Data Studio Debug 拡張機能を、確実に Visual Studio Code にイン
 他者と共有するには、拡張機能を 1 つのファイルにパッケージ化する必要があります。 ファイルは Azure Data Studio 拡張機能マーケットプレースに公開するか、チームやコミュニティで共有できます。 それを行うには、別の npm パッケージをコマンド ラインからインストールする必要があります。
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 拡張機能のベース ディレクトリに移動し、`vsce package` を実行します。 *vsce* ツールからの不満を解消する目的で余計な行をいくつか追加する必要がありました。

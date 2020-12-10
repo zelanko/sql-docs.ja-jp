@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 5d9138a5d02008cc173bc7f0b64d354d67112d3b
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 9f6449c11c4033324b8f294449942b67425a737c
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364089"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900895"
 ---
 # <a name="create-a-jupyter-book-extension"></a>Jupyter Book 拡張機能を作成する
 
@@ -57,7 +57,7 @@ Azure Data Studio は Visual Studio Code と同じフレームワーク上に構
 拡張機能作成のプロセスを簡単にするため、Yeoman を利用して[拡張機能ジェネレーター](https://www.npmjs.com/package/generator-azuredatastudio)を構築しました。 これをインストールするには、コマンド プロンプトから次のコマンドを実行します。
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-extension"></a>拡張機能を作成する
@@ -151,7 +151,7 @@ export function activate(context: vscode.ExtensionContext) {
 他者と共有するには、拡張機能を 1 つのファイルにパッケージ化する必要があります。 拡張機能は、Azure Data Studio 拡張機能マーケットプレースに公開することも、チームまたはコミュニティと共有することもできます。 この手順を行うには、別の npm パッケージをコマンド ラインからインストールする必要があります。
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 `README.md` ファイルを好みに合わせて編集します。 次に、拡張機能のベース ディレクトリに移動し、`vsce package` を実行します。 必要に応じてリポジトリを拡張機能とリンクすることも、それなしで続行することもできます。 1 つ追加するには、`package.json` ファイルに同様の行を追加します。

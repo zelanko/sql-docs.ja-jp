@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 2eb3c7d996463b9c581ea60bc11f853a5d131582
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: cb77d01ede16a6fa68aac6dcb49612ad8fd9a191
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419748"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563087"
 ---
 # <a name="establishing-connection"></a>接続の確立
 
@@ -29,12 +29,12 @@ Microsoft SQL Server に接続するには、Microsoft SqlClient Data Provider f
 
 ## <a name="closing-connections"></a>接続の終了
 
-接続がプールに返されるようにするために、接続を使い終えたら必ず接続を終了することをお勧めします。 Visual Basic または C# の `Using` ブロックは、コードがこのブロックを終了したときに接続を破棄します。これは、未処理の例外の場合でも実行されます。 詳しくは、「[using ステートメント](/dotnet/docs/csharp/language-reference/keywords/using-statement.md)」および「[Using ステートメント](/dotnet/docs/visual-basic/language-reference/statements/using-statement.md)」をご覧ください。
+接続がプールに返されるようにするために、接続を使い終えたら必ず接続を終了することをお勧めします。 Visual Basic または C# の `Using` ブロックは、コードがこのブロックを終了したときに接続を破棄します。これは、未処理の例外の場合でも実行されます。 詳しくは、「[using ステートメント](/dotnet/csharp/language-reference/keywords/using-statement)」および「[Using ステートメント](/dotnet/visual-basic/language-reference/statements/using-statement)」をご覧ください。
 
 接続オブジェクトの `Close` または `Dispose` メソッドを使用することもできます。 明示的に終了されていない接続は、プールに追加したり返したりすることができないことがあります。 たとえば、スコープ外に出ても、明示的に終了されていない接続は、最大プール サイズに達した時点でその接続がまだ有効である場合にだけ接続プールに返されます。
 
 > [!NOTE]
-> クラスの `Finalize` メソッド内で、**Connection**、**DataReader**、またはその他のマネージド オブジェクトの `Close` または `Dispose` を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は、クラス定義に `Finalize` メソッドを含めないでください。 詳しくは、「[ガベージ コレクション](/dotnet/docs/standard/garbage-collection/index.md)」をご覧ください。
+> クラスの `Finalize` メソッド内で、**Connection**、**DataReader**、またはその他のマネージド オブジェクトの `Close` または `Dispose` を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は、クラス定義に `Finalize` メソッドを含めないでください。 詳しくは、「[ガベージ コレクション](/dotnet/standard/garbage-collection/index)」をご覧ください。
 
 > [!NOTE]
 > 接続が接続プールからフェッチされたり接続プールに返されたりしたとき、ログイン イベントとログアウト イベントはサーバーで発生しません。これは、接続プールに返されても接続は実際には終了していないためです。 詳しくは、「[SQL Server の接続プール (ADO.NET)](sql-server-connection-pooling.md)」をご覧ください。

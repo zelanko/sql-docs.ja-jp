@@ -9,16 +9,16 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 50440aca120dad6cfd165262bd4bfd2e139393cf
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 2d4864a3475b8e27fd86e90fbfa690c49a0c413d
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364059"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900795"
 ---
 # <a name="create-an-azure-data-studio-wizard-extension"></a>Azure Data Studio のウィザード拡張機能を作成する
 
-このチュートリアルでは、新しい **Azure Data Studio のウィザード拡張機能**を作成する方法について説明します。 この拡張機能は、Azure Data Studio でのウィザードとユーザーのやりとりに役立ちます。
+このチュートリアルでは、新しい **Azure Data Studio のウィザード拡張機能** を作成する方法について説明します。 この拡張機能は、Azure Data Studio でのウィザードとユーザーのやりとりに役立ちます。
 
 この記事では、次の方法について説明します。
 > [!div class="checklist"]
@@ -43,7 +43,7 @@ Azure Data Studio は Visual Studio Code と同じフレームワーク上に構
 拡張機能作成のプロセスを簡単にするため、Yeoman を利用して[拡張機能ジェネレーター](https://code.visualstudio.com/docs/extensions/yocode)を構築しました。 これをインストールするには、コマンド プロンプトから次を実行します。
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-wizard-extension"></a>ウィザード拡張機能を作成する
@@ -74,7 +74,7 @@ Azure Data Studio は Visual Studio Code と同じフレームワーク上に構
 
 ### <a name="run-the-extension"></a>拡張機能を実行する
 
-拡張機能を実行して、ウィザード テンプレートが提供する内容を見てみましょう。 実行する前に、**Azure Data Studio Debug 拡張機能**を、確実に Visual Studio Code にインストールします。
+拡張機能を実行して、ウィザード テンプレートが提供する内容を見てみましょう。 実行する前に、**Azure Data Studio Debug 拡張機能** を、確実に Visual Studio Code にインストールします。
 
 VS Code で **F5** を選択します。すると、Azure Data Studio がデバッグ モードで起動し、拡張機能が実行されます。 次に、Azure Data Studio で、新しいウィンドウのコマンド パレット (Ctr + Shift + P キー) から **[Launch Wizard]\(ウィザードの起動\)** コマンドを実行します。 その結果、この拡張機能によって提供される既定のウィザードが起動します。
 
@@ -104,7 +104,7 @@ VS Code で **F5** を選択します。すると、Azure Data Studio がデバ�
 他者と共有するには、拡張機能を 1 つのファイルにパッケージ化する必要があります。 ファイルは Azure Data Studio 拡張機能マーケットプレースに公開するか、チームやコミュニティで共有できます。 それを行うには、別の npm パッケージをコマンド ラインからインストールする必要があります。
 
 ```console
-npm install -g vsce`
+npm install -g vsce
 ```
 
 `README.md` を好みに応じて編集し、次に拡張機能のベース ディレクトリに移動して、`vsce package` を実行します。 必要に応じてリポジトリを拡張機能とリンクすることも、それなしで続行することもできます。 1 つ追加するには、`package.json` ファイルに同様の行を追加します。

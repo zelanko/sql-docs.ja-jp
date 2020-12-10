@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 1cf7cf010724453aadcc3c93ef216e44d6a869fc
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: ef687114ff2ceceabc1ed87d67a4585a5846029d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419743"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563080"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server の接続プール (ADO.NET)
 
@@ -68,10 +68,10 @@ ms.locfileid: "96419743"
 接続プーラーは、接続がプールに解放されたときに接続の再割り当てを行って、接続に対する要求に応えます。 最大プール サイズに達すると、使用可能な接続を取得できなくなり、要求はキューに置かれます。 その後、プーラーによって、タイムアウトに達するまで (**既定値は 15 秒**) 接続の再利用が試みられます。 接続がタイムアウトになる前に、プーラーが要求を満たすことができない場合は、例外がスローされます。
 
 > [!CAUTION]
-> 接続がプールに返されるようにするために、接続を使い終えたら必ず接続を終了することを強くお勧めします。 この操作は、`Connection` オブジェクトの `Close` または `Dispose` メソッドを使用して、あるいは C# の `using` ステートメントまたは Visual Basic の `Using` ステートメントの内部ですべての接続を開くことによって、行うことができます。 明示的に終了されていない接続は、プールに追加したり返したりすることができないことがあります。 詳しくは、「[using ステートメント](/dotnet/docs/csharp/language-reference/keywords/using-statement.md)」または「[方法: システム リソースを破棄する](/dotnet/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)」 (Visual Basic の場合) をご覧ください。
+> 接続がプールに返されるようにするために、接続を使い終えたら必ず接続を終了することを強くお勧めします。 この操作は、`Connection` オブジェクトの `Close` または `Dispose` メソッドを使用して、あるいは C# の `using` ステートメントまたは Visual Basic の `Using` ステートメントの内部ですべての接続を開くことによって、行うことができます。 明示的に終了されていない接続は、プールに追加したり返したりすることができないことがあります。 詳しくは、「[using ステートメント](/dotnet/csharp/language-reference/keywords/using-statement)」または「[方法: システム リソースを破棄する](/dotnet/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource)」 (Visual Basic の場合) をご覧ください。
 
 > [!NOTE]
-> クラスの `Close` メソッド内で `Dispose`、`Connection`、またはその他のマネージド オブジェクトの `DataReader` または `Finalize` を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は、クラス定義に `Finalize` メソッドを含めないでください。 詳しくは、「[ガベージ コレクション](/dotnet/docs/standard/garbage-collection/index.md)」をご覧ください。
+> クラスの `Close` メソッド内で `Dispose`、`Connection`、またはその他のマネージド オブジェクトの `DataReader` または `Finalize` を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は、クラス定義に `Finalize` メソッドを含めないでください。 詳しくは、「[ガベージ コレクション](/dotnet/standard/garbage-collection/index)」をご覧ください。
 
 接続の開始と終了に関連するイベントについて詳しくは、SQL Server のドキュメントの「[Audit Login イベント クラス](/sql/relational-databases/event-classes/audit-login-event-class)」および「[Audit Logout イベント クラス](/sql/relational-databases/event-classes/audit-logout-event-class)」をご覧ください。
 

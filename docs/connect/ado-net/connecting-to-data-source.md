@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 26554deb5d8a3786efd1bd869a2692d368132531
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 0fdf91c5a4da33b585f10939cd6a801a46b236b3
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419813"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761520"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>ADO.NET のデータ ソースへの接続
 
@@ -39,3 +39,5 @@ Microsoft SqlClient Data Provider for SQL Server には、<xref:System.Data.Comm
 
 - [接続文字列](connection-strings.md)
 - [接続プール](connection-pooling.md)
+- [コマンドとパラメーター](commands-parameters.md)
+- [DataAdapter と DataReader](dataadapters-datareaders.md)

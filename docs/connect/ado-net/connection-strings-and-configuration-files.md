@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: c5610f182adaab2197b67578e51331fd6d7ce19b
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: fb290f9a795c9f64bcb2ee95c66210790a80a71d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126505"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563118"
 ---
 # <a name="connection-strings-and-configuration-files"></a>接続文字列と構成ファイル
 
@@ -25,7 +25,7 @@ ms.locfileid: "96126505"
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-接続文字列をアプリケーションのコードに組み込むと、セキュリティ上の脆弱性やメンテナンスの問題を引き起こす可能性があります。 アプリケーションのソース コード内にコンパイルされた暗号化されていない接続文字列は、[Ildasm.exe (IL 逆アセンブラー)](/dotnet/docs/framework/tools/ildasm-exe-il-disassembler.md) ツールを使用して参照することができます。 さらに、接続文字列が変わるたびにアプリケーションを再コンパイルする必要性が生じます。 そのため、接続文字列はアプリケーション構成ファイルに保存することをお勧めします。
+接続文字列をアプリケーションのコードに組み込むと、セキュリティ上の脆弱性やメンテナンスの問題を引き起こす可能性があります。 アプリケーションのソース コード内にコンパイルされた暗号化されていない接続文字列は、[Ildasm.exe (IL 逆アセンブラー)](/dotnet/framework/tools/ildasm-exe-il-disassembler) ツールを使用して参照することができます。 さらに、接続文字列が変わるたびにアプリケーションを再コンパイルする必要性が生じます。 そのため、接続文字列はアプリケーション構成ファイルに保存することをお勧めします。
 
 ## <a name="working-with-application-configuration-files"></a>アプリケーション構成ファイルの使用
 
@@ -194,5 +194,5 @@ ASP.NET アプリケーションのセキュリティ保護について詳しく
 - [接続文字列ビルダー](connection-string-builders.md)
 - [接続情報の保護](protecting-connection-information.md)
 - [構成クラスの使用](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [アプリの構成](/dotnet/docs/framework/configure-apps/index.md)
+- [アプリの構成](/dotnet/framework/configure-apps/index)
 - [ASP.NET Web サイト管理](/previous-versions/aspnet/6hy1xzbw(v=vs.100))
