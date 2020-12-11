@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_profiles (Transact-SQL)
-title: dm_exec_query_profiles (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_query_profiles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b761064191f26a05d565e673428221afb4805b1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 332b554797282510463ae3ec837fb00256db31b3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548605"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330886"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "89548605"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|このクエリが実行されるセッションを識別します。 dm_exec_sessions.session_id を参照します。|  
-|request_id|**int**|ターゲット要求を識別します。 Dm_exec_sessions を参照しています。 request_id。|  
-|sql_handle|**varbinary(64)**|クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。 Dm_exec_query_stats を参照しています。 sql_handle。|  
-|plan_handle|**varbinary(64)**|は、実行され、そのプランがプランキャッシュに存在するか、現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 Dm_exec_query_stats を参照しています。 plan_handle。|  
+|request_id|**int**|ターゲット要求を識別します。 Dm_exec_sessions request_id を参照します。|  
+|sql_handle|**varbinary(64)**|クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。 Dm_exec_query_stats を参照します。|  
+|plan_handle|**varbinary(64)**|は、実行され、そのプランがプランキャッシュに存在するか、現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 Dm_exec_query_stats plan_handle を参照します。|  
 |physical_operator_name|**nvarchar (256)**|物理操作名。|  
 |node_id|**int**|クエリ ツリー内の演算子ノードを識別します。|  
 |thread_id|**int**|同じクエリ演算子ノードに属している (並列クエリの) スレッドを識別します。|  
-|task_address|**varbinary (8)**|このスレッドが使用している SQLOS タスクを識別します。 Dm_os_tasks を参照しています。 task_address。|  
+|task_address|**varbinary (8)**|このスレッドが使用している SQLOS タスクを識別します。 Dm_os_tasks task_address を参照します。|  
 |row_count|**bigint**|これまでに演算子によって返された行の数。|  
 |rewind_count|**bigint**|これまでの巻き戻しの数。|  
 |rebind_count|**bigint**|これまでの再バインドの数。|  
@@ -84,14 +84,14 @@ ms.locfileid: "89548605"
   
 -   並列スキャンがある場合、この DMV では、スキャンで使用される並列スレッドごとにカウンターがレポートされます。
  
-SP1 以降では [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 、 *標準のクエリ実行統計プロファイルインフラストラクチャ* は、 *軽量のクエリ実行統計プロファイルインフラストラクチャ*とサイドバイサイドで存在します。 `SET STATISTICS XML ON` と `SET STATISTICS PROFILE ON` は、常に *標準のクエリ実行統計プロファイルインフラストラクチャ*を使用します。 にデータを設定するには `sys.dm_exec_query_profiles` 、クエリプロファイルインフラストラクチャの1つを有効にする必要があります。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。    
+SP1 以降では [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 、 *標準のクエリ実行統計プロファイルインフラストラクチャ* は、 *軽量のクエリ実行統計プロファイルインフラストラクチャ* とサイドバイサイドで存在します。 `SET STATISTICS XML ON` と `SET STATISTICS PROFILE ON` は、常に *標準のクエリ実行統計プロファイルインフラストラクチャ* を使用します。 にデータを設定するには `sys.dm_exec_query_profiles` 、クエリプロファイルインフラストラクチャの1つを有効にする必要があります。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。    
 
 >[!NOTE]
 > 調査対象のクエリは、クエリのプロファイルインフラストラクチャが有効になっ **た後** に開始する必要があります。クエリを開始した後で有効にすると、で結果が生成されません `sys.dm_exec_query_profiles` 。 クエリプロファイルインフラストラクチャを有効にする方法の詳細については、「 [クエリプロファイリングインフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]および AZURE SQL Managed Instance では、 `VIEW DATABASE STATE` データベースロールの権限とメンバーシップが必要です `db_owner` 。   
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
    
 ## <a name="examples"></a>例  
  手順 1: によって分析されるクエリの実行を計画しているセッションにログインし `sys.dm_exec_query_profiles` ます。 プロファイル用のクエリを構成するには `SET STATISTICS PROFILE ON` 同じセッションでクエリを実行します。  

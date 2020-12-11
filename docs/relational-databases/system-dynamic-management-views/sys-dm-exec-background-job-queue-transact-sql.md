@@ -1,6 +1,6 @@
 ---
-description: dm_exec_background_job_queue (Transact-sql)
-title: dm_exec_background_job_queue (Transact-sql) |Microsoft Docs
+description: sys.dm_exec_background_job_queue (Transact-sql)
+title: sys.dm_exec_background_job_queue (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4499bbffd3e5b14eb870db2bf55e639188c08912
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b60bed7d0e0126b8ac765c2fc910d75da6475a01
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534126"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334565"
 ---
-# <a name="sysdm_exec_background_job_queue-transact-sql"></a>dm_exec_background_job_queue (Transact-sql)
+# <a name="sysdm_exec_background_job_queue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   非同期 (バックグラウンド) 実行用にスケジュールされているクエリプロセッサジョブごとに1行の値を返します。  
   
-> **注:** またはからこれを呼び出すに **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** は **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** 、 **dm_pdw_nodes_exec_background_job_queue**という名前を使用します。  
+> **注:** またはからこれを呼び出すに **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** は **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** 、 **sys.dm_pdw_nodes_exec_background_job_queue** という名前を使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -54,12 +54,12 @@ ms.locfileid: "89534126"
 ## <a name="permissions"></a>アクセス許可
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
   
 ## <a name="remarks"></a>解説  
  このビューは、統計の非同期更新ジョブに関する情報のみを返します。 統計の非同期更新の詳細については、「 [統計](../../relational-databases/statistics/statistics.md)」を参照してください。  
   
- **Object_id4**を通じて**object_id1**の値は、ジョブ要求の種類によって異なります。 次の表は、それぞれのジョブの種類の列に関する説明です。  
+ **Object_id4** を通じて **object_id1** の値は、ジョブ要求の種類によって異なります。 次の表は、それぞれのジョブの種類の列に関する説明です。  
   
 |要求の種類|object_id1|object_id2|object_id3|object_id4|  
 |------------------|-----------------|-----------------|-----------------|-----------------|  
