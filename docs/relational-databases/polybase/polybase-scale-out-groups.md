@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 11462e9c55f22e16fb3e20920c104bf1047d8991
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 3ab1841c009094831ae114d701d526a1d3036dba
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523857"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535276"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase スケールアウト グループ
 
@@ -35,11 +35,11 @@ PolyBase を使用するスタンドアロンの SQL Server インスタンス�
   
 ## <a name="head-node"></a>ヘッド ノード  
 
-ヘッド ノードには、PolyBase クエリの送信先の SQL Server インスタンスが含まれています。 各 PolyBase グループは、ヘッド ノードを 1 つだけ保持できます。 ヘッド ノードは、SQL Server インスタンス上の SQL データベース エンジン、PolyBase エンジン、および PolyBase データ移動サービスの論理グループです。
+ヘッド ノードには、PolyBase クエリの送信先の SQL Server インスタンスが含まれています。 各 PolyBase グループは、ヘッド ノードを 1 つだけ保持できます。 ヘッド ノードは、SQL Server インスタンス上の SQL Server データベース エンジン、PolyBase エンジン、および PolyBase データ移動サービスの論理グループです。 SQL Server 2017 および SQL Server 2016 では、ヘッド ノードは Enterprise Edition である必要があります。 SQL Server 2019 以降では、PolyBase ヘッド ノードは Enterprise または Standard Edition のいずれかを使用できます。
   
-## <a name="compute-node"></a>コンピューティング ノード  
+## <a name="compute-node"></a>コンピューティング ノード
 
-コンピューティング ノードには、外部データに対するスケールアウト クエリ処理を支援する SQL Server インスタンスが含まれています。 コンピューティング ノードは、SQL Server インスタンス上の SQL Server と PolyBase データ移動サービスの論理グループです。 PolyBase グループは、複数のコンピューティング ノードを保持できます。 ヘッド ノードとコンピューティング ノードはすべて、同じバージョンの SQL Server を実行する必要があります。
+コンピューティング ノードには、外部データに対するスケールアウト クエリ処理を支援する SQL Server インスタンスが含まれています。 コンピューティング ノードは、SQL Server インスタンス上の SQL Server と PolyBase データ移動サービスの論理グループです。 PolyBase グループは、複数のコンピューティング ノードを保持できます。 ヘッド ノードとコンピューティング ノードはすべて、同じバージョンの SQL Server を実行する必要があります。 SQL Server 2016 の最初のリリースでは、計算ノードを Enterprise または Standard Edition のいずれかにすることができました。 SQL Server 2016 SP1 以降では、SQL Server のすべてのエディションを計算ノードにすることができます。
 
 ## <a name="scale-out-reads"></a>スケールアウト読み取り
 

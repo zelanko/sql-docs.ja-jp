@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05995a1205677bbeefbb2b025268af20e445a1b4
-ms.sourcegitcommit: ab68925e9869e6cf5b39efdb415ecc8e8f5b08fc
+ms.openlocfilehash: 7888360aa4d4bdfa9b9eb782226f718d8f503ff8
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93417423"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443095"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -63,7 +63,7 @@ PolyBase クエリ用の外部データ ソースを作成します。 外部デ
 - [PolyBase][intro_pb] を使用したデータ仮想化とデータ読み込み
 - `BULK INSERT` または `OPENROWSET` を使用した一括読み込み操作
 
-**適用対象** :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降
+**適用対象**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降
 
 ## <a name="syntax"></a>構文
 
@@ -367,7 +367,7 @@ go
 
 ### <a name="i-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage"></a>I. Azure Storage からデータを取得する一括操作用の外部データ ソースを作成する
 
-**適用対象** : [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
+**適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
 [BULK INSERT][bulk_insert] または [OPENROWSET][openrowset] を使用する一括操作に対し、次のデータ ソースを使用します。 資格情報は、`SHARED ACCESS SIGNATURE` を ID として設定する必要があり、SAS トークンの先頭に `?` があってはなりません。また、読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可が必要で、有効期限が有効である必要があります (すべての日付は UTC 時間です)。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用][sas_token]」を参照してください。
 
 ```sql
@@ -732,7 +732,7 @@ WITH
 
 資格情報の作成時の追加の注意事項とガイダンス:
 
-- Azure Storage または Azure Data Lake Store (ADLS) Gen 2 から SQL DW にデータを読み込むには、Azure Storage キーを使用します。
+- Azure Storage または Azure Data Lake Store (ADLS) Gen 2 から Azure Synapse Analytics にデータを読み込むには、Azure Storage キーを使用します。
 - `CREDENTIAL` は、データがセキュリティ保護されている場合にのみ必須です。 匿名アクセスを許可するデータ セットには、`CREDENTIAL` は必要ありません。
 
 データベース スコープ資格情報を作成するには、「[CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]」を参照してください。

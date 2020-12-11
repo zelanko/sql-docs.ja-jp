@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c9edfd5b460a6a6b80900e1beced674b80bfce93
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: a72ccacd9401a8b7955eae10751c5ac67ca211ac
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195018"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523062"
 ---
 # <a name="move-system-databases"></a>システム データベースの移動
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "92195018"
 >  システム データベースを移動した後に master データベースを再構築すると、すべてのシステム データベースがそれぞれ既定の場所にインストールされるため、システム データベースを再度移動する必要があります。  
 
 > [!IMPORTANT]  
->  ファイルを移動すると、 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] サービス アカウントに、新しいファイル フォルダーの場所にあるファイルへのアクセス権が必要になります。
+>  ファイルを移動すると、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] サービス アカウントに、新しいファイル フォルダーの場所にあるファイルへのアクセス権が必要になります。 詳細については、「[データベース エンジン アクセスのファイル システム権限の構成](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)」を参照してください。
     
   
 ##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> 計画に従った再配置とスケジュールされたディスク メンテナンスの手順  

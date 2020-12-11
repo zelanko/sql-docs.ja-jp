@@ -1,5 +1,5 @@
 ---
-title: COPY INTO (Transact-SQL) (プレビュー)
+title: COPY INTO (Transact-SQL)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Azure Synapse Analytics で COPY ステートメントを使用して、外部ストレージ アカウントからの読み込みを行います。
 ms.date: 09/25/2020
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 0951081be190fff9c2d7f88d28f88b14f793eb43
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: a6cb58245e4128b58e237d61e2a278ea039afe9c
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300289"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788005"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -45,7 +45,7 @@ COPY ステートメントを使用した包括的な例とクイックスター
 
 - [クイック スタート: COPY ステートメントを使用してデータを一括読み込みする](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
 - [クイック スタート: COPY ステートメントとそのサポートされている認証方法の使用例](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [クイック スタート: 機能が豊富な Synapse Studio UI を使用して COPY ステートメントを作成する (Workspace プレビュー)](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [クイック スタート: 機能が豊富な Synapse Studio UI を使用して COPY ステートメントを作成する](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## <a name="syntax"></a>構文  
 
@@ -75,7 +75,7 @@ WITH
 ## <a name="arguments"></a>引数  
 
 *schema_name*  
-操作を実行するユーザーの既定のスキーマが、指定したテーブルのスキーマと同じ場合は省略可能です。 " *スキーマ* " を指定せず、さらに COPY 操作を実行するユーザーの既定のスキーマが、指定したテーブルのスキーマと異なる場合、COPY は取り消され、エラー メッセージが返されます。  
+操作を実行するユーザーの既定のスキーマが、指定したテーブルのスキーマと同じ場合は省略可能です。 "*スキーマ*" を指定せず、さらに COPY 操作を実行するユーザーの既定のスキーマが、指定したテーブルのスキーマと異なる場合、COPY は取り消され、エラー メッセージが返されます。  
 
 *table_name*  
 データの COPY 先のテーブルの名前です。 ターゲット テーブルは、一時テーブルまたはパーマネント テーブルであり、データベースに既に存在している必要があります。 
@@ -95,8 +95,8 @@ WITH
 *External locations(s)*</br>
 データを含むファイルがステージングされる場所です。 現在、Azure Data Lake Storage (ADLS) Gen2 と Azure Blob Storage がサポートされています。
 
-- Blob Storage の *External location* : https://<account>.blob.core.windows.net/<container>/<path>
-- ADLS Gen2 の *External location* : https://<account>. dfs.core.windows.net/<container>/<path>
+- Blob Storage の *External location*: https://<account>.blob.core.windows.net/<container>/<path>
+- ADLS Gen2 の *External location*: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
 > .blob エンドポイントは ADLS Gen2 にも使用でき、現在最高のパフォーマンスを実現しています。 お使いの認証方法で .dfs が必要ない場合、.blob エンドポイントを使用します。
@@ -141,9 +141,9 @@ WITH
 |  **Azure Blob Storage**  | SAS/MSI/サービス プリンシパル/キー/AAD |                      SAS/キー                       |                      SAS/キー                       |
 | **Azure Data Lake Gen2** | SAS/MSI/サービス プリンシパル/キー/AAD | SAS (BLOB<sup>1</sup>)/MSI (dfs<sup>2</sup>)/サービス プリンシパル/キー/AAD | SAS (BLOB<sup>1</sup>)/MSI (dfs<sup>2</sup>)/サービス プリンシパル/キー/AAD |
 
-1:この認証方法には、お使いの外部のロケーション パスに .blob エンドポイント ( **.blob** .core.windows.net) が必要です。
+1:この認証方法には、お使いの外部のロケーション パスに .blob エンドポイント ( **.blob**.core.windows.net) が必要です。
 
-2:この認証方法には、お使いの外部のロケーション パスに .dfs エンドポイント ( **.dfs** .core.windows.net) が必要です。
+2:この認証方法には、お使いの外部のロケーション パスに .dfs エンドポイント ( **.dfs**.core.windows.net) が必要です。
 
 
 > [!NOTE]  
@@ -154,7 +154,7 @@ WITH
 - Shared Access Signatures (SAS) を使用した認証
   
   - *IDENTITY:* "Shared Access Signature" の値が含まれている定数
-  - *SECRET:*  [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) " *を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
+  - *SECRET:*  [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) "*を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
   -  最低限必要な権限: READ および LIST
   
 - [*サービス プリンシパル*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)を使用した認証
@@ -179,7 +179,7 @@ WITH
   - 最低限必要な RBAC ロール: AAD ユーザーに対するストレージ BLOB データ共同作成者またはストレージ BLOB データ所有者
 
 *ERRORFILE = Directory Location*</br>
-*ERRORFILE* は CSV にのみ適用されます。 COPY ステートメント内でディレクトリを指定します。拒否された行と該当するエラー ファイルがそこに書き込まれます。 ストレージ アカウントからの完全なパスを指定することも、コンテナーを基準とした相対パスを指定することもできます。 指定したパスが存在しない場合は、自動的に作成されます。 " _rejectedrows" という名前で子ディレクトリが作成されます。"_ " 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 
+*ERRORFILE* は CSV にのみ適用されます。 COPY ステートメント内でディレクトリを指定します。拒否された行と該当するエラー ファイルがそこに書き込まれます。 ストレージ アカウントからの完全なパスを指定することも、コンテナーを基準とした相対パスを指定することもできます。 指定したパスが存在しない場合は、自動的に作成されます。 "_rejectedrows" という名前で子ディレクトリが作成されます。"_ " 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 
 
 このディレクトリ内には、YearMonthDay -HourMinuteSecond (例: 20180330-173205) のロード サブミッション時間に基づいて作成されたフォルダーがあります。 このフォルダーには、理由 (エラー) ファイルとデータ (行) ファイルの 2 種類のファイルが書き込まれ、それぞれ queryID、distributionID、ファイル GUID が事前に追加されています。 データと理由が別々のファイル内にあり、対応するファイルはプレフィックスが一致しています。
 
@@ -193,7 +193,7 @@ ERRORFILE でストレージ アカウントの完全なパスが定義されて
   
 - Shared Access Signatures (SAS) を使用した認証
   - *IDENTITY:* "Shared Access Signature" の値が含まれている定数
-  - *SECRET:*  [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) " *を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
+  - *SECRET:*  [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) "*を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
   - 最低限必要な権限: READ、LIST、WRITE、CREATE、DELETE
   
 - [*サービス プリンシパル*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)を使用した認証
@@ -262,7 +262,7 @@ DATEFORMAT は CSV にのみ適用され、SQL Server 日付形式に対する�
 *ENCODING* は CSV にのみ適用されます。 既定値は UTF8 です。 COPY コマンドによって読み込まれたファイルのデータ エンコード標準を指定します。 
 
 *IDENTITY_INSERT = ‘ON’ | ‘OFF’*</br>
-IDENTITY_INSERT は、インポートしたデータ ファイルの ID 値 (複数可) を ID 列に使用するかどうかを指定します。 IDENTITY_INSERT が OFF (既定値) の場合、この列の ID 値は検証されますが、インポートされません。 テーブル作成時に指定されたシード値と増分値に基づいて、固有の値が SQL DW によって自動的に割り当てられます。 COPY コマンドによる次の動作に注意してください。
+IDENTITY_INSERT は、インポートしたデータ ファイルの ID 値 (複数可) を ID 列に使用するかどうかを指定します。 IDENTITY_INSERT が OFF (既定値) の場合、この列の ID 値は検証されますが、インポートされません。 テーブル作成時に指定されたシード値と増分値に基づいて、一意の値が Azure Synapse Analytics によって自動的に割り当てられます。 COPY コマンドによる次の動作に注意してください。
 
 - IDENTITY_INSERT が OFF で、テーブルに ID 列がある場合
   - 入力フィールドを ID 列にマップしない列リストを指定する必要があります。
@@ -433,17 +433,6 @@ COPY コマンドによって自動的にファイルが分割されるため、
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>ファイルの数やサイズに制限はありますか?
 ファイルの数やサイズに制限はありません。ただし、最適なパフォーマンスを得るには、少なくとも 4 MB のファイルを使用することをお勧めします。
 
-### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>Synapse ワークスペース (プレビュー) を使用した場合、COPY には何か制限がありますか?
-
-マネージド ID (MSI) を使用する認証は、COPY ステートメントまたは PolyBase (パイプラインで使用する場合を含む) ではサポートされていません。 次のようなエラー メッセージが表示されることがあります。
-
-*com.microsoft.sqlserver.jdbc.SQLServerException: マネージド サービス ID はこのサーバーでは有効にされていません。マネージド サービス ID を有効にして、もう一度お試しください。*
-
-ストレージ アカウントが VNet に関連付けられている場合、MSI 認証が必要です。 ストレージ アカウントが VNet に関連付けられている場合は、COPY または PolyBase ではなく、BCP の一括挿入を使用してデータを読み込む必要があります。
-
-この制限は、Synapse ワークスペース (プレビュー) に属する SQL プールにのみ適用されます。 今後のリリースでは、Synapse ワークスペースで MSI がサポートされるようになります。 
-
-フィードバックや問題は、配布リストの sqldwcopypreview@service.microsoft.com までお寄せください。
 
 ## <a name="see-also"></a>関連項目  
 

@@ -1,19 +1,19 @@
 ---
 title: PolyBase のよく寄せられる質問 |Microsoft Docs
 description: PolyBase とリンク サーバーを比較して、ビッグ データ クラスターの PolyBase とスタンドアロン インスタンスの PolyBase を比較します。 PolyBase 2019 の新機能について説明します。
-ms.date: 04/23/2019
+ms.date: 12/02/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 627afe62630dbca81c77bef45d8263824d8c41df
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 57d59e774c1042bf7989bcd2df4a652ed4498f0d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "96127852"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563138"
 ---
 # <a name="frequently-asked-questions"></a>よく寄せられる質問
 
@@ -55,13 +55,13 @@ ms.locfileid: "96127852"
 
 |機能 |ビッグ データ クラスター|スタンドアロン インスタンス|
 |--------------------------|--------------------------|---------|   
-|SQL Server、Oracle、Teradata、Mongo DB に対する外部データ ソースを作成する |X|X |
+|SQL Server、Oracle、Teradata、Mongo DB に対する外部データ ソースを作成する |X|X|
 |互換性のあるサードパーティ製 ODBC ドライバーを使用して外部データ ソースを作成する | | X|
 |HADOOP データ ソースに対する外部データ ソースを作成する | X| X|
 |Azure Blob Storage に対する外部データ ソースを作成する | X| X|
 |SQL Server データ プールに外部テーブルを作成する | X| |
 |SQL Server ストレージ プールに外部テーブルを作成する | X| |
-|クエリの実行をスケールアウトする | X| X|
+|クエリの実行をスケールアウトする | X| X (Windows のみ) |
 
 > [!NOTE]
 >この表では、最新の [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] CTP で利用できる機能については説明されていません。 使用可能な機能については、リリース ノートをご覧ください。 ODBC ジェネリック コネクタを使用した接続の詳細については、[ODBC ジェネリック型を構成するためのハウツー ガイド](polybase-configure-odbc-generic.md)の記事をご覧ください。

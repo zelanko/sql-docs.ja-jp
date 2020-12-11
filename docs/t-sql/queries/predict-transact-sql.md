@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a21506caf12537eb8acab96c97fa53c62b7fadf
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: ff521b8cf230bcb2113937ee6c223b55c61be02a
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116283"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523051"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
@@ -120,9 +120,9 @@ DATA パラメーターは、スコア付けまたは予測に使用するモデ
 **RUNTIME = ONNX**
 
 > [!IMPORTANT]
-> `RUNTIME = ONNX` 引数は [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) および [Azure SQL Edge](/azure/sql-database-edge/onnx-overview) でのみ使用できます。
+> `RUNTIME = ONNX` 引数は [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview)、[Azure SQL Edge](/azure/sql-database-edge/onnx-overview)、および [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is) でのみ使用できます。
 
-モデルの実行に使用される機械学習エンジンを示します。 `RUNTIME` パラメーターの値は常に `ONNX` です。 Azure SQL Edge にはこのパラメーターが必須です。 Azure SQL Managed Instance では、パラメーターは省略可能で、ONNX モデルを使用する場合にのみ使用されます。
+モデルの実行に使用される機械学習エンジンを示します。 `RUNTIME` パラメーターの値は常に `ONNX` です。 Azure SQL Edge と Azure Synapse Analytics にはこのパラメーターが必須です。 Azure SQL Managed Instance では、パラメーターは省略可能で、ONNX モデルを使用する場合にのみ使用されます。
 
 **WITH ( <result_set_definition> )**
 
@@ -186,14 +186,14 @@ DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE mode
 
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+    DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 ::: moniker-end
 
 `DATA` パラメーターでテーブル ソースに指定された別名 **d** は、`dbo.mytable` に属する列を参照するために使用されます。 `PREDICT` 関数に指定された別名 **p** は、`PREDICT` 関数によって返される列を参照するために使用されます。
 
-- モデルは `varbinary(max)` 列として **Models** という名前のテーブルに格納されます。 モードを識別するために、**ID** や**説明**などの追加情報がテーブルに保存されます。
+- モデルは `varbinary(max)` 列として **Models** という名前のテーブルに格納されます。 モードを識別するために、**ID** や **説明** などの追加情報がテーブルに保存されます。
 - `DATA` パラメーターでテーブル ソースに指定された別名 **d** は、`dbo.mytable` に属する列を参照するために使用されます。 入力データ列の名前は、モデルの入力名と一致している必要があります。
 - `PREDICT` 関数に指定された別名 **p** は、`PREDICT` 関数によって返される予測される列を参照するために使用されます。 列名は、モデルの出力名と同じ名前にする必要があります。
 - すべての入力データ列と予測される列は、SELECT ステートメントで表示できるようになります。
@@ -207,7 +207,7 @@ CREATE VIEW predictions
 AS
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
-             DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+             DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -216,6 +216,8 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 
 予測の一般的なユース ケースは、入力データ用のスコアを生成してから、予測した値をテーブルに挿入する方法です。 次の例では、呼び出し元のアプリケーションがストアド プロシージャを使用して予測値を含む行をテーブルに挿入することを前提としています。
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
@@ -223,6 +225,20 @@ INSERT INTO loan_applications (c1, c2, c3, c4, score)
 SELECT d.c1, d.c2, d.c3, d.c4, p.score
 FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 ```
+
+:::moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```sql
+DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
+
+INSERT INTO loan_applications (c1, c2, c3, c4, score)
+SELECT d.c1, d.c2, d.c3, d.c4, p.score
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH(score FLOAT) AS p;
+```
+
+:::moniker-end
 
 - `PREDICT` の結果は、PredictionResults という名前のテーブルに格納されます。 
 - モデルは `varbinary(max)` 列として **Models** という名前のテーブルに格納されます。 モデルを識別するために、ID や説明などの追加情報がテーブルに保存されます。

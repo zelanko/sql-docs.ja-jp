@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 4cccda1a792b8c006b758c3788d910e745e94989
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: 96e137f3e49ac21a38577704c2663d3de85151ff
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418029"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505146"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
 
@@ -35,7 +35,7 @@ Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] におけるクエリ スト
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> クエリのストアを有効にする
 
- クエリ ストアは、新しい SQL Server と Azure Synapse Analytics (SQL DW) データベースでは既定で有効ではなく、新しい Azure SQL Database データベースでは既定で有効です。
+ クエリ ストアは、新しい SQL Server と Azure Synapse Analytics データベースでは既定で有効ではなく、新しい Azure SQL Database データベースでは既定で有効です。
 
 ### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [クエリ ストア] ページを使う
 
@@ -130,7 +130,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 クエリ ストアでは、待機の種類が **待機カテゴリ** に組み合わされます。 待機カテゴリから待機の種類へのマッピングは、[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) で使用できます。
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 以降では、 **[クエリ待機統計]** を選択して **[クエリ待機統計]** ペインを開きます。 [クエリ待機統計] ペインには、クエリ ストアで上位の待機カテゴリを含む棒グラフが表示されます。 上部のドロップダウンを使用して、待機時間の集計条件を選択します (平均、最大、最小、標準偏差、 **合計** (既定値))。
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 以降では、 **[クエリ待機統計]** を選択して **[クエリ待機統計]** ペインを開きます。 [クエリ待機統計] ペインには、クエリ ストアで上位の待機カテゴリを含む棒グラフが表示されます。 上部のドロップダウンを使用して、待機時間の集計条件を選択します (平均、最大、最小、標準偏差、**合計** (既定値))。
 
 ![SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ待機統計](../../relational-databases/performance/media/query-store-waits.PNG "SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ待機統計")
 
@@ -138,7 +138,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 ![SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ待機統計の詳細ビュー](../../relational-databases/performance/media/query-store-waits-detail.PNG "SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ待機統計の詳細ビュー")
 
-上部のドロップダウン ボックスを使用して、選択した待機カテゴリのさまざまな待機時間条件に基づいてクエリをフィルター処理します (平均、最大、最小、標準偏差、 **合計** (既定値))。 プランを選択して、グラフィカルなクエリ プランを表示します。 ソース クエリの表示、クエリ プランの強制と強制解除、表示の更新に使用できるボタンが用意されています。
+上部のドロップダウン ボックスを使用して、選択した待機カテゴリのさまざまな待機時間条件に基づいてクエリをフィルター処理します (平均、最大、最小、標準偏差、**合計**(既定値))。 プランを選択して、グラフィカルなクエリ プランを表示します。 ソース クエリの表示、クエリ プランの強制と強制解除、表示の更新に使用できるボタンが用意されています。
 
 **待機カテゴリ** では、異なる待機種類が性質の類似性によってバケットに組み合わされます。 問題の解決に必要なフォローアップ分析は待機カテゴリによって異なりますが、同じカテゴリの待機種類からは非常によく似たトラブルシューティング エクスペリエンスが得られ、待機の先頭に影響受けたクエリを提供することは、このような調査の大部分を正常に完了するために不足している部分です。
 
@@ -385,8 +385,8 @@ EXEC sp_MSforeachdb @command
 
 上記の例では、 **sp_query_store_remove_query** 拡張ストアド プロシージャを使用して不要なデータを削除しています。 以下を使用することもできます。
 
-- **sp_query_store_reset_exec_stats** 。指定されたプランの実行時統計をクリアします。
-- **sp_query_store_remove_plan** 。1 つのプランを削除します。
+- **sp_query_store_reset_exec_stats**。指定されたプランの実行時統計をクリアします。
+- **sp_query_store_remove_plan**。1 つのプランを削除します。
 
 ### <a name="performance-auditing-and-troubleshooting"></a><a name="Peformance"></a> パフォーマンスの監査とトラブルシューティング
 
