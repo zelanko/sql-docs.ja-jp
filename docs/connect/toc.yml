@@ -114,6 +114,28 @@
               href: ../connect/ado-net/handle-dataadapter-events.md
             - name: DataAdapter を使用したバッチ操作
               href: ../connect/ado-net/batch-operations-using-dataadapters.md
+        - name: トランザクションとコンカレンシー
+          href: ../connect/ado-net/transactions-and-concurrency.md
+          items:
+            - name: ローカル トランザクション
+              href: ../connect/ado-net/local-transactions.md
+            - name: 分散トランザクション
+              href: ../connect/ado-net/distributed-transactions.md
+            - name: SQL Server と System.Transactions の統合
+              href: ../connect/ado-net/system-transactions-integration-with-sql-server.md
+            - name: オプティミスティック コンカレンシー
+              href: ../connect/ado-net/optimistic-concurrency.md
+        - name: データベース スキーマ情報の取得
+          href: ../connect/ado-net/retrieving-database-schema-information.md
+          items:
+            - name: GetSchema およびスキーマ コレクション
+              href: ../connect/ado-net/getschema-and-schema-collections.md
+            - name: スキーマの制限
+              href: ../connect/ado-net/schema-restrictions.md
+            - name: 共通のスキーマ コレクション
+              href: ../connect/ado-net/common-schema-collections.md
+            - name: SQL Server スキーマ コレクション
+              href: ../connect/ado-net/sql-server-schema-collections.md
     - name: SQL Server と ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:
