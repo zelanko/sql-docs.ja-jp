@@ -1,6 +1,6 @@
 ---
 description: sys.master_files (Transact-SQL)
-title: master_files (Transact-sql) |Microsoft Docs
+title: sys.master_files (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ecf00931301e468f3fcaa92b95e15f778bd1607c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3bd6320435c372b99d9b88f9e0ecc7e41c41cf90
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548703"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405414"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "89548703"
 |data_space_id|**int**|このファイルが属しているデータ領域の ID。 データ領域はファイルグループです。<br /><br /> 0 = ログ ファイル|  
 |name|**sysname**|データベース内のファイルの論理名。|  
 |physical_name|**nvarchar(260)**|オペレーティングシステムのファイル名。|  
-|状態|**tinyint**|ファイルの状態です。<br /><br /> 0 = ONLINE<br /><br /> 1 = 復元中<br /><br /> 2 = 回復中<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = 問題あり<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT|  
+|state|**tinyint**|ファイルの状態です。<br /><br /> 0 = ONLINE<br /><br /> 1 = 復元中<br /><br /> 2 = 回復中<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = 問題あり<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT|  
 |state_desc|**nvarchar(60)**|ファイルの状態の説明です。<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 詳しくは、「[ファイルの状態](../../relational-databases/databases/file-states.md)」をご覧ください。|  
-|サイズ|**int**|現在のファイルサイズ (8 KB ページ単位)。 データベース スナップショットの場合、size は、スナップショットがファイルに対して使用する中で最大の領域を表します。<br /><br /> メモ: このフィールドは、FILESTREAM コンテナーの場合は0として設定されます。 FILESTREAM コンテナーの実際のサイズについては、 *database_files* カタログビューに対してクエリを実行します。|  
+|サイズ|**int**|現在のファイルサイズ (8 KB ページ単位)。 データベース スナップショットの場合、size は、スナップショットがファイルに対して使用する中で最大の領域を表します。<br /><br /> メモ: このフィールドは、FILESTREAM コンテナーの場合は0として設定されます。 FILESTREAM コンテナーの実際のサイズについては、 *sys.database_files* カタログビューにクエリを実行します。|  
 |max_size|**int**|最大ファイルサイズ (8 KB ページ単位):<br /><br /> 0 = 拡張は許可されません。<br /><br /> -1 = ディスクがいっぱいになるまでファイル サイズが拡張します。<br /><br /> 268435456 = ログファイルは、最大サイズの 2 TB まで拡張されます。<br /><br /> 注: ログファイルのサイズを無制限にアップグレードしたデータベースは、ログファイルの最大サイズに対して-1 を報告します。|  
 |成長|**int**|0 = ファイルは固定サイズであり、拡張されません。<br /><br /> >0 = ファイルは自動的に拡張されます。<br /><br /> is_percent_growth が 0 の場合、拡張増分は 8 KB ページ単位で表され、最も近い 64 KB 単位の値に切り上げられます。<br /><br /> is_percent_growth が 1 の場合、拡張増分は、整数のパーセンテージで表されます。|  
 |is_media_read_onlyF|**bit**|1 = ファイルは読み取り専用メディア上にあります。<br /><br /> 0 = ファイルは読み取り/書き込みメディア上にあります。|  

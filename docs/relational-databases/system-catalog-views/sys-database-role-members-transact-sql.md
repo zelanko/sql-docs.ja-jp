@@ -1,6 +1,6 @@
 ---
 description: sys.database_role_members (Transact-SQL)
-title: database_role_members (Transact-sql) |Microsoft Docs
+title: sys.database_role_members (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 443df263f534d6f15648caacb5a810a0c15e555a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 603ecd155e076b4f8798e7d5259eee902e4eab79
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482141"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405605"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  データベース ロールのメンバーごとに 1 行のデータを返します。  データベースユーザー、アプリケーションロール、およびその他のデータベースロールは、データベースロールのメンバーになることができます。 ロールにメンバーを追加するには、 [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) ステートメントをオプションと共に使用し `ADD MEMBER` ます。 値の名前を返すには、 [database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)と結合します。 `principal_id`
+  データベース ロールのメンバーごとに 1 行のデータを返します。  データベースユーザー、アプリケーションロール、およびその他のデータベースロールは、データベースロールのメンバーになることができます。 ロールにメンバーを追加するには、 [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) ステートメントをオプションと共に使用し `ADD MEMBER` ます。 値の名前を返すには、 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) と結合し `principal_id` ます。
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
