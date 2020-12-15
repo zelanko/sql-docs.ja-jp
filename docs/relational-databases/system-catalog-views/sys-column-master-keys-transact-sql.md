@@ -1,6 +1,6 @@
 ---
 description: sys.column_master_keys (TRANSACT-SQL)
-title: column_master_keys (Transact-sql) |Microsoft Docs
+title: sys.column_master_keys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
 ms.prod: sql
@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a49dd0832e0319f078d91c44708e8ab821ad107
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9b62a54ec2ab17d76f5f726dbd26f28a60d79afc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646722"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429642"
 ---
 # <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (TRANSACT-SQL)
 
@@ -48,12 +48,12 @@ ms.locfileid: "88646722"
 |**key_store_provider_name**|**sysname**|CMK を含む列マスターキーストアのプロバイダーの名前。 使用できる値は、以下のとおりです。<br /><br /> MSSQL_CERTIFICATE_STORE-列マスターキーストアが証明書ストアである場合。<br /><br /> 列マスターキーストアがカスタム型である場合は、ユーザー定義の値。|  
 |**key_path**|**nvarchar (4000)**|キーの列マスターキーストア固有のパス。 パスの形式は、列のマスターキーストアの種類によって異なります。 例:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> カスタム列マスターキーストアの場合、開発者は、カスタム列マスターキーストアのキーパスを定義する必要があります。|  
 |**allow_enclave_computations**|**bit**|列マスターキーがエンクレーブに設定されているかどうかを示します (このマスターキーで暗号化された列暗号化キーは、サーバー側の secure enclaves 内の計算に使用できます)。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。|  
-|**signature**|**varbinary(max)**|**Key_path**によって参照される列マスターキーを使用して生成された**key_path**および**allow_enclave_computations**のデジタル署名。|
+|**signature**|**varbinary(max)**|**Key_path** によって参照される列マスターキーを使用して生成された **key_path** および **allow_enclave_computations** のデジタル署名。|
 
 
   
 ## <a name="permissions"></a>アクセス許可  
- **VIEW ANY COLUMN MASTER KEY**権限が必要です。  
+ **VIEW ANY COLUMN MASTER KEY** 権限が必要です。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   

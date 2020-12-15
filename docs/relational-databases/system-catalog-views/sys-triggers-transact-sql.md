@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: cefa4fc4-b8b9-4cd7-b124-eed5283acbfc
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b533a4bd4f2b404975e8315f36aba9b31e3b51ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6f39b3bff2073475c9bd0d969efa3901ff055edb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545374"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97428794"
 ---
 # <a name="systriggers-transact-sql"></a>sys.triggers (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  TR トリガーまたは TA トリガーであるオブジェクトごとに、1 行のデータを格納します。 DML トリガー名はスキーマスコープであるため、 **sys. オブジェクト**に表示されます。 DDL トリガー名は親エンティティによってスコープが設定され、このビューでのみ表示されます。  
+  TR トリガーまたは TA トリガーであるオブジェクトごとに、1 行のデータを格納します。 DML トリガー名はスキーマスコープであるため、 **sys. オブジェクト** に表示されます。 DDL トリガー名は親エンティティによってスコープが設定され、このビューでのみ表示されます。  
   
- **Parent_class**列と**name**列は、データベース内のトリガーを一意に識別します。  
+ **Parent_class** 列と **name** 列は、データベース内のトリガーを一意に識別します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

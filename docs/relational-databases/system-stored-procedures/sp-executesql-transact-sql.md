@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6eac2107c22781c278e173992d8994fc68fea981
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 315abb75423d2d7fa11d70ab1b2d6897b8bbc372
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005758"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427970"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ sp_executesql [ @stmt = ] statement
   
 ## <a name="arguments"></a>引数  
  [ \@ stmt =] *ステートメント*  
- ステートメントまたはバッチを含む Unicode 文字列を指定し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 \@stmt は、Unicode 定数または Unicode 変数のいずれかである必要があります。 + 演算子で 2 つの文字列を連結するなどの複雑な Unicode 式は使用できません。 文字定数も使用できません。 Unicode 定数を指定する場合は、先頭に **N**を付ける必要があります。たとえば、Unicode 定数 **N ' sp_who '** は有効ですが、文字定数 **' sp_who '** は有効ではありません。 文字列のサイズは、使用可能なデータベースサーバーのメモリによってのみ制限されます。 64ビットサーバーでは、文字列のサイズは、最大サイズである **nvarchar (max)** の 2 GB に制限されています。  
+ ステートメントまたはバッチを含む Unicode 文字列を指定し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 \@stmt は、Unicode 定数または Unicode 変数のいずれかである必要があります。 + 演算子で 2 つの文字列を連結するなどの複雑な Unicode 式は使用できません。 文字定数も使用できません。 Unicode 定数を指定する場合は、先頭に **N** を付ける必要があります。たとえば、Unicode 定数 **N ' sp_who '** は有効ですが、文字定数 **' sp_who '** は有効ではありません。 文字列のサイズは、使用可能なデータベースサーバーのメモリによってのみ制限されます。 64ビットサーバーでは、文字列のサイズは、最大サイズである **nvarchar (max)** の 2 GB に制限されています。  
   
 > [!NOTE]  
 >  \@stmt には、変数名と同じ形式のパラメーターを含めることができます。次に例を示します。 `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  

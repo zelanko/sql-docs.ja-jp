@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebb703be1a68e8cc11ac5e9cfb832ca6f8145abb
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3144fc924a7e270e56006cf8a9b595fc9c1b385b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97332849"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97428164"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>sys.dm_exec_connections (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ SQL Database Basic、S0、S1 のサービス目標、およびエラスティッ
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-| 最初の要素 | 2番目の要素 | Relationship |
+| 最初の要素 | 2番目の要素 | リレーションシップ |
 | --------------| -------------- | ------------ |  
 |dm_exec_sessions dm_exec_sessions.session_id|dm_exec_connections.session_id|一対一|  
 |dm_exec_requests.connection_id|dm_exec_connections.connection_id|多対一|  
