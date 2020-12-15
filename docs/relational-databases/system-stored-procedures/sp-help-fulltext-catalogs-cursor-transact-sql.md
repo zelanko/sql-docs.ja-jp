@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d44478d1-0cc4-415e-9d1a-6dccb64674fa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ad9cbdb0fba866cd126d9a55b322e027b3db1bb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2a999b80932f4b6fb81307614d2d03bbb301e260
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538840"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468413"
 ---
 # <a name="sp_help_fulltext_catalogs_cursor-transact-sql"></a>sp_help_fulltext_catalogs_cursor (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89538840"
   カーソルを使用して、指定したフルテキストカタログの ID、名前、ルートディレクトリ、状態、およびフルテキストインデックスが作成されたテーブルの数を返します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、 [fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) カタログビューを使用してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) カタログビューを使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,9 +45,9 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @cursor_return = ] @cursor_variable OUTPUT`**Cursor**型の出力変数を入力します。 カーソルは、読み取り専用、スクロール可能、動的カーソルです。  
+`[ @cursor_return = ] @cursor_variable OUTPUT`**Cursor** 型の出力変数を入力します。 カーソルは、読み取り専用、スクロール可能、動的カーソルです。  
   
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` フルテキストカタログの名前を指定します。 *fulltext_catalog_name* は **sysname**です。 このパラメーターを省略した場合、または NULL の場合は、現在のデータベースに関連付けられているすべてのフルテキストカタログに関する情報が返されます。  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` フルテキストカタログの名前を指定します。 *fulltext_catalog_name* は **sysname** です。 このパラメーターを省略した場合、または NULL の場合は、現在のデータベースに関連付けられているすべてのフルテキストカタログに関する情報が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または (1) エラー  

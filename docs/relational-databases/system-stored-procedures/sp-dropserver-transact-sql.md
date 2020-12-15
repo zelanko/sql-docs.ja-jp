@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c6bb8e372ffa6a9bea01052f4185040dd9942157
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: e3caee2593f6b02688ab82fcfd72686670c493dd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549819"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466813"
 ---
 # <a name="sp_dropserver-transact-sql"></a>sp_dropserver (Transact-sql)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,10 +42,10 @@ sp_dropserver [ @server = ] 'server'
   
 ## <a name="arguments"></a>引数  
  *server*  
- 削除するサーバーを指定します。 *server* のデータ型は **sysname**で、既定値はありません。 *サーバー* が存在している必要があります。  
+ 削除するサーバーを指定します。 *server* のデータ型は **sysname** で、既定値はありません。 *サーバー* が存在している必要があります。  
   
  *droplogins*  
- **Droplogins**を指定した場合に、*サーバー*の関連するリモートサーバーおよびリンクサーバーログインも削除する必要があることを示します。 **`@droplogins`** の型は **char (10)** で、既定値は NULL です。  
+ **Droplogins** を指定した場合に、*サーバー* の関連するリモートサーバーおよびリンクサーバーログインも削除する必要があることを示します。 **`@droplogins`** の型は **char (10)** で、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

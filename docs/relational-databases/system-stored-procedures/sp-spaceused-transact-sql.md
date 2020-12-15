@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f2e03e32842a9187761c0f4471d871277682005
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b887b79a2e768f3c73a683ae6f60b06fb8d16a2c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067514"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466833"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,32 +52,32 @@ sp_spaceused [[ @objname = ] 'objname' ]
    
  領域の使用情報を要求するテーブル、インデックス付きビュー、またはキューの、修飾付きまたは修飾なしの名前を指定します。 引用符は、修飾されたオブジェクト名が指定されている場合にのみ必要です。 完全修飾オブジェクト名 (データベース名を含む) が指定されている場合、データベース名は現在のデータベースの名前である必要があります。  
 場合 *objname* が指定されていない、データベース全体の結果が返されます。  
-*objname* は **nvarchar (776)** ,、既定値は NULL です。  
+*objname* は **nvarchar (776)**,、既定値は NULL です。  
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] と [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] は、データベースオブジェクトとテーブルオブジェクトのみをサポートしています。
   
-`[ @updateusage = ] 'updateusage'` 領域の使用状況情報を更新するために DBCC UPDATEUSAGE を実行する必要があることを示します。 場合 *objname* が指定されていない、ステートメントは、データベース全体で実行されます。それ以外の場合、ステートメントは *objname* で実行されます。 値は **true** または **false** です。 *updateusage* は **varchar (5)** ,、既定値は **false** です。  
+`[ @updateusage = ] 'updateusage'` 領域の使用状況情報を更新するために DBCC UPDATEUSAGE を実行する必要があることを示します。 場合 *objname* が指定されていない、ステートメントは、データベース全体で実行されます。それ以外の場合、ステートメントは *objname* で実行されます。 値は **true** または **false** です。 *updateusage* は **varchar (5)**,、既定値は **false** です。  
   
 `[ @mode = ] 'mode'` 結果のスコープを示します。 拡張されたテーブルまたはデータベースの場合、 *mode* パラメーターを使用すると、オブジェクトのリモート部分を含めたり、除外したりできます。 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。  
   
  *Mode* 引数には、次の値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |ALL|ローカル部分とリモート部分の両方を含む、オブジェクトまたはデータベースのストレージの統計を返します。|  
 |LOCAL_ONLY|オブジェクトまたはデータベースのローカル部分のみのストレージ統計情報を返します。 オブジェクトまたはデータベースで Stretch が有効になっていない場合、は = ALL と同じ統計を返し @mode ます。|  
 |REMOTE_ONLY|オブジェクトまたはデータベースのリモート部分のみのストレージ統計情報を返します。 このオプションでは、次のいずれかの条件に該当する場合にエラーが発生します。<br /><br /> テーブルで Stretch が有効になっていません。<br /><br /> テーブルで Stretch が有効になっていますが、データ移行が有効になっていません。 この場合、リモートテーブルにはまだスキーマがありません。<br /><br /> ユーザーはリモートテーブルを手動で削除しました。<br /><br /> リモートデータアーカイブのプロビジョニングは成功の状態を返しましたが、実際には失敗しました。|  
   
- *モード* は **varchar (11)** ,、既定値は **N'ALL '** です。  
+ *モード* は **varchar (11)**,、既定値は **N'ALL '** です。  
   
 `[ @oneresultset = ] oneresultset` 1つの結果セットを返すかどうかを示します。 *Oneresultset* 引数には、次の値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |0|*\@ Objname* が null またはが指定されていない場合、2つの結果セットが返されます。 2つの結果セットが既定の動作です。|  
 |1|*\@ Objname* = null またはが指定されていない場合、1つの結果セットが返されます。|  
   
- *oneresultset* は **ビット** ,、既定値は **0** です。  
+ *oneresultset* は **ビット**,、既定値は **0** です。  
 
 `[ @include_total_xtp_storage] 'include_total_xtp_storage'`
 **適用対象:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 、 [!INCLUDE[sssds-md](../../includes/sssds-md.md)] 。  
@@ -166,12 +166,12 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**xtp_used**|**varchar (18)**|構築中、アクティブ、およびマージターゲットの状態を持つチェックポイントファイルの合計サイズ (KB 単位)。 これは、メモリ最適化テーブルのデータに対してアクティブに使用されるディスク領域です。 データベースに少なくとも1つのコンテナーを含む memory_optimized_data ファイルグループがない場合は、NULL を返します。 *この列は、 @include_total_xtp_storage = 1 の場合にのみ含ま* れます。| 
 |**xtp_pending_truncation**|**varchar (18)**|状態 WAITING_FOR_LOG_TRUNCATION のチェックポイントファイルの合計サイズ (KB 単位)。 これは、ログの切り捨てが行われると、クリーンアップを待機しているチェックポイントファイルに使用されるディスク領域です。 データベースに少なくとも1つのコンテナーを含む memory_optimized_data ファイルグループがない場合は、NULL を返します。 この列は、の場合にのみ含まれ `@include_total_xtp_storage=1` ます。|
 
-## <a name="remarks"></a>注釈  
- **database_size** は **reserved**  +  ログファイルのサイズが含まれていますが、 **予約済み** で **unallocated_space** データページのみを考慮しているため、通常は予約済みの **未割り当て領域** の合計より大きくなります。 Azure Synapse Analytics では、このステートメントが true でない場合があります。 
+## <a name="remarks"></a>解説  
+ **database_size** は  +  ログファイルのサイズが含まれていますが、**予約済み** で **unallocated_space** データページのみを考慮しているため、通常は予約済みの **未割り当て領域** の合計より大きくなります。 Azure Synapse Analytics では、このステートメントが true でない場合があります。 
   
- XML インデックスとフルテキストインデックスによって使用されるページは、両方の結果セットの **index_size** に含まれています。 *Objname* を指定すると、オブジェクトの XML インデックスとフルテキストインデックスのページも、 **予約** された結果と **index_size** の結果の合計にカウントされます。  
+ XML インデックスとフルテキストインデックスによって使用されるページは、両方の結果セットの **index_size** に含まれています。 *Objname* を指定すると、オブジェクトの XML インデックスとフルテキストインデックスのページも、**予約** された結果と **index_size** の結果の合計にカウントされます。  
   
- 空間インデックスを持つデータベースまたはオブジェクトに対して領域の使用量を計算する場合、 **database_size** 、 **予約済み** 、 **index_size** などの領域サイズの列には、空間インデックスのサイズが含まれます。  
+ 空間インデックスを持つデータベースまたはオブジェクトに対して領域の使用量を計算する場合、 **database_size**、 **予約済み**、 **index_size** などの領域サイズの列には、空間インデックスのサイズが含まれます。  
   
  *Updateusage* が指定されている場合、は [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] データベース内のデータページをスキャンし、必要に応じて、各テーブルで使用されるストレージ領域に関するカタログビューを **sys.allocation_units** して修正し **ます。** たとえば、インデックスが削除された後、テーブルの領域情報が最新でない可能性があります。 *updateusage* は、大規模なテーブルまたはデータベースで実行されるまでに時間がかかることがあります。 *Updateusage* を使用するのは、返される値が正しくないと思われる場合と、プロセスがデータベース内の他のユーザーやプロセスに悪影響を与えない場合のみです。 DBCC UPDATEUSAGE は、別に実行することもできます。  
   
@@ -179,7 +179,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 >  大きなインデックスを削除または再構築したり、大きなテーブルを削除したり切り捨てたりすると、では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] トランザクションがコミットされるまで、実際のページの割り当て解除とそれに関連付けられているロックが延期されます。 遅延削除操作では、割り当てられた領域はすぐに解放されません。 このため、大きなオブジェクトを削除または切り捨てた直後に **sp_spaceused** によって返された値は、実際に使用可能なディスク領域を反映していない可能性があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- **sp_spaceused** の実行権限は、 **public** ロールに与えられています。 **\@updateusage** パラメーターを指定できるのは、 **db_owner** 固定データベース ロールのメンバーだけです。  
+ **sp_spaceused** の実行権限は、 **public** ロールに与えられています。 **\@updateusage** パラメーターを指定できるのは、**db_owner** 固定データベース ロールのメンバーだけです。  
   
 ## <a name="examples"></a>例  
   

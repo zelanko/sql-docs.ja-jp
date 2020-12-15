@@ -1,6 +1,6 @@
 ---
-description: query_store_wait_stats (Transact-sql)
-title: query_store_wait_stats (Transact-sql) |Microsoft Docs
+description: sys.query_store_wait_stats (Transact-sql)
+title: sys.query_store_wait_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc28729ef4f3743e945f782fed0409057e90224a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2ab48b6155e26873c22a3b951ef65705d3addd79
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537315"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466923"
 ---
-# <a name="sysquery_store_wait_stats-transact-sql"></a>query_store_wait_stats (Transact-sql)
+# <a name="sysquery_store_wait_stats-transact-sql"></a>sys.query_store_wait_stats (Transact-sql)
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
@@ -36,8 +36,8 @@ ms.locfileid: "89537315"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|Plan_id、runtime_stats_interval_id、execution_type、および wait_category の待機統計を表す行の識別子。 これは、過去の実行時統計の間隔に対してのみ一意です。 現在アクティブな間隔では、plan_id によって参照されるプランの待機統計を表す複数の行があり、execution_type によって表される実行の種類と wait_category によって表される待機カテゴリが含まれている場合があります。 通常、1つの行は、ディスクにフラッシュされる待機統計を表し、他の行はメモリ内の状態を表します。 このため、各間隔の実際の状態を取得するには、メトリックを集計し、plan_id、runtime_stats_interval_id、execution_type、および wait_category でグループ化する必要があります。 |  
-|**plan_id**|**bigint**|外部キー。 [Query_store_plan &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)に結合します。|  
-|**runtime_stats_interval_id**|**bigint**|外部キー。 [Query_store_runtime_stats_interval &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)に結合します。|  
+|**plan_id**|**bigint**|外部キー。 [Sys.query_store_plan &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)に結合します。|  
+|**runtime_stats_interval_id**|**bigint**|外部キー。 [Sys.query_store_runtime_stats_interval &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)に結合します。|  
 |**wait_category**|**tinyint**|待機の種類は次の表を使用して分類され、待機時間はこれらの待機カテゴリ間で集計されます。 この問題を解決するには異なる待機カテゴリが必要ですが、同じカテゴリの待機の種類は同様のトラブルシューティングエクスペリエンスをもたらし、待機に加えて影響を受けたクエリを提供することは、このような調査の大半を正常に完了するための不足している部分です。|
 |**wait_category_desc**|**nvarchar(128)**|[待機カテゴリ] フィールドの説明テキストを表示するには、次の表を確認してください。|
 |**execution_type**|**tinyint**|クエリ実行の種類を決定します。<br /><br /> 0-通常の実行 (正常に完了)<br /><br /> 3-クライアントが開始した実行中止<br /><br /> 4-例外が実行を中止しました|  
@@ -55,15 +55,15 @@ ms.locfileid: "89537315"
   
 |整数値|待機のカテゴリ|カテゴリには待機の種類が含まれます|  
 |-----------------|---------------|-----------------|  
-|**0**|**Unknown**|Unknown |  
+|**0**|**Unknown**|不明 |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**ワーカースレッド**|THREADPOOL|
 |**3**|**[Lock] (ロック)**|LCK_M_%|
 |**4**|**ラッチ**|LATCH_%|
 |**5**|**バッファーラッチ**|PAGELATCH_%|
 |**6**|**バッファー IO**|PAGEIOLATCH_%|
-|**7**|**Asp.net***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
-|**8**|**SQL CLR**|CLR%、SQLCLR%|
+|**7**|**コンパイル** _|RESOURCE_SEMAPHORE_QUERY_COMPILE|
+|_ *8**|**SQL CLR**|CLR%、SQLCLR%|
 |**9**|**ミラーリング**|DBMIRROR|
 |"**10**"|**トランザクション**|XACT%、DTC%、TRAN_MARKLATCH_%、MSQL_XACT_%、TRANSACTION_MUTEX|
 |**11**|**アイドル**|SLEEP_%、LAZYWRITER_SLEEP、SQLTRACE_BUFFER_FLUSH、SQLTRACE_INCREMENTAL_FLUSH_SLEEP、SQLTRACE_WAIT_ENTRIES、FT_IFTS_SCHEDULER_IDLE_WAIT、XE_DISPATCHER_WAIT、REQUEST_FOR_DEADLOCK_SEARCH、LOGMGR_QUEUE、ONDEMAND_TASK_QUEUE、CHECKPOINT_QUEUE、XE_TIMER_EVENT|
@@ -77,7 +77,7 @@ ms.locfileid: "89537315"
 |**21**|**トレース**|TRACEWRITE、SQLTRACE_LOCK、SQLTRACE_FILE_BUFFER、SQLTRACE_FILE_WRITE_IO_COMPLETION、SQLTRACE_FILE_READ_IO_COMPLETION、SQLTRACE_PENDING_BUFFER_WRITERS、SQLTRACE_SHUTDOWN、QUERY_TRACEOUT、TRACE_EVTNOTIFF|
 |**20**|**フルテキスト検索**|FT_RESTART_CRAWL、フルテキスト GATHERER、MSSEARCH、FT_METADATA_MUTEX、FT_IFTSHC_MUTEX、FT_IFTSISM_MUTEX、FT_IFTS_RWLOCK、FT_COMPROWSET_RWLOCK、FT_MASTER_MERGE、FT_PROPERTYLIST_CACHE、FT_MASTER_MERGE_COORDINATOR、PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC|
 |**22**|**その他のディスク IO**|ASYNC_IO_COMPLETION、IO_COMPLETION、BACKUPIO、WRITE_COMPLETION、IO_QUEUE_LIMIT、IO_RETRY|
-|**22**|**レプリケーション**|SE_REPL_%、REPL_%、HADR_% **(HADR_THROTTLE_LOG_RATE_GOVERNOR ではありません)**、PWAIT_HADR_%、REPLICA_WRITES、FCB_REPLICA_WRITE、FCB_REPLICA_READ、PWAIT_HADRSIM|
+|**22**|**Replication**|SE_REPL_%、REPL_%、HADR_% **(HADR_THROTTLE_LOG_RATE_GOVERNOR ではありません)**、PWAIT_HADR_%、REPLICA_WRITES、FCB_REPLICA_WRITE、FCB_REPLICA_READ、PWAIT_HADRSIM|
 |**23**|**ログレートガバナー**|LOG_RATE_GOVERNOR、POOL_LOG_RATE_GOVERNOR、HADR_THROTTLE_LOG_RATE_GOVERNOR、INSTANCE_LOG_RATE_GOVERNOR|
 
 **コンパイル** 待機カテゴリは現在サポートされていません。

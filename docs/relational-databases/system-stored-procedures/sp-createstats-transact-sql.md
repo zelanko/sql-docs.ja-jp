@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c49367f78a257b1ba4e19d9916b590a67991d1a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7af34bd1bbe065012b18826f7edaec31940d1e50
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536703"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466873"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89536703"
   
  sp_createstats は、クエリの実行時間が重要であり、クエリオプティマイザーが単一列の統計を生成するのを待機できない場合のベンチマークなどのアプリケーションに役立ちます。 ほとんどの場合、sp_createstats を使用する必要はありません。クエリオプティマイザーでは、必要に応じて1列ずつの統計が生成され、 **AUTO_CREATE_STATISTICS** オプションがオンになっている場合にクエリプランが向上します。  
   
- 統計の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。 1列ずつの統計の生成の詳細については、「 [ALTER DATABASE SET Options &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」の**AUTO_CREATE_STATISTICS**オプションを参照してください。  
+ 統計の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。 1列ずつの統計の生成の詳細については、「 [ALTER DATABASE SET Options &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」の **AUTO_CREATE_STATISTICS** オプションを参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,11 +51,11 @@ sp_createstats
 ## <a name="arguments"></a>引数  
 `[ @indexonly = ] 'indexonly'` では、既存のインデックス内の列に対してのみ統計が作成され、インデックス定義の最初の列ではありません。 **indexonly** は **char (9)** です。 既定値は NO です。  
   
-`[ @fullscan = ] 'fullscan'`[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)ステートメントを**FULLSCAN**オプションと共に使用します。 **fullscan** は **char (9)** です。  既定値は NO です。  
+`[ @fullscan = ] 'fullscan'`[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)ステートメントを **FULLSCAN** オプションと共に使用します。 **fullscan** は **char (9)** です。  既定値は NO です。  
   
-`[ @norecompute = ] 'norecompute'`[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)ステートメントを**NORECOMPUTE**オプションと共に使用します。 **norecompute** は **char (12)** です。  既定値は NO です。  
+`[ @norecompute = ] 'norecompute'`[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)ステートメントを **NORECOMPUTE** オプションと共に使用します。 **norecompute** は **char (12)** です。  既定値は NO です。  
   
-`[ @incremental = ] 'incremental'`[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)ステートメントを**増分 = ON**オプションと共に使用します。 **増分** は **char (12)** です。  既定値は NO です。  
+`[ @incremental = ] 'incremental'`[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)ステートメントを **増分 = ON** オプションと共に使用します。 **増分** は **char (12)** です。  既定値は NO です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 18d4e9c18c4848a0857c1afb146b0d0405f418ce
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 5096ecd27f6ba9d5d06dd4efd322a42e3218a0bd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956563"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466603"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW のインストールと構成
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ SQL Server または Azure SQL Database のエディションに対応するサ�
 5. 必要に応じて、[ **ファイル** ] ウィンドウでデータファイルとログファイルのターゲットの場所を変更します。 データファイルとログファイルは別のドライブに配置することをお勧めします。
 6. **[OK]** をクリックします。 これにより、データベースの復元が開始されます。 完了すると、SQL Server インスタンスにデータベース WideWorldImporters がインストールされます。
 
-### <a name="azure-sql-database"></a>Azure SQL データベース
+### <a name="azure-sql-database"></a>Azure SQL Database
 
 Bacpac を新しい SQL Database にインポートするには、Management Studio を使用できます。
 

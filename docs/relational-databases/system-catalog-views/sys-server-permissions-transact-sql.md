@@ -1,6 +1,6 @@
 ---
 description: sys.server_permissions (Transact-SQL)
-title: server_permissions (Transact-sql) |Microsoft Docs
+title: sys.server_permissions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/20/2019
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8f0541d743ea7feaa8991c2b085173b4c6e8f40
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bc833da8d53eadd88152e603777b4799ac30938f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88376938"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464663"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "88376938"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|権限が存在するリソースのクラスの識別子。<br /><br /> 100 = サーバー<br /><br /> 101 = サーバープリンシパル<br /><br /> 105 = エンドポイント|  
-|**class_desc**|**nvarchar(60)**|権限が存在するクラスの説明です。 次のいずれかの値です。<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **終点**|  
+|**class_desc**|**nvarchar(60)**|権限が存在するクラスの説明です。 次のいずれかの値です。<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
 |**major_id**|**int**|権限が存在するセキュリティ保護可能なリソースの ID。クラスに基づいて解釈されます。 ほとんどの場合、これはクラスが表すものに適用される ID の種類にすぎません。 標準以外のリソースに対する解釈は、次のようになります。<br /><br /> 100 = 常に0|  
 |**minor_id**|**int**|権限が存在するセカンダリ ID。クラスに従って解釈されます。|  
 |**grantee_principal_id**|**int**|権限が付与されているサーバープリンシパル ID。|  
 |**grantor_principal_id**|**int**|サーバープリンシパル-これらのアクセス許可の権限の許可の付与の ID。|  
 |**type**|**char (4)**|サーバー権限の種類。 権限の種類の一覧については、次の表を参照してください。|  
 |**permission_name**|**nvarchar(128)**|アクセス許可の名前。|  
-|**状態**|**char (1)**|アクセス許可の状態:<br /><br /> D = 拒否<br /><br /> R = 取り消し<br /><br /> G = 許可<br /><br /> W = grant With Grant option|  
+|**state**|**char(1)**|アクセス許可の状態:<br /><br /> D = 拒否<br /><br /> R = 取り消し<br /><br /> G = 許可<br /><br /> W = grant With Grant option|  
 |**state_desc**|**nvarchar(60)**|権限の状態の説明。<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |アクセス許可の種類|アクセス許可名|適用されるセキュリティ保護可能なリソース|  

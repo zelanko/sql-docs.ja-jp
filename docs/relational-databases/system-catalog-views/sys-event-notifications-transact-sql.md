@@ -1,6 +1,6 @@
 ---
-description: event_notifications (Transact-sql)
-title: event_notifications (Transact-sql) |Microsoft Docs
+description: sys.event_notifications (Transact-sql)
+title: sys.event_notifications (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 136a76ee-2b35-4418-ab46-fda2d51f7d99
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7051716ff8b401c04f1be90ec92d4a154dd0d68
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fa6f06df580b7f76309660a87e24ae458bf1c2d5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548807"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467043"
 ---
-# <a name="sysevent_notifications-transact-sql"></a>event_notifications (Transact-sql)
+# <a name="sysevent_notifications-transact-sql"></a>sys.event_notifications (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   イベント通知であるオブジェクトごとに1行の値を返します **。型** = EN。  
@@ -41,7 +41,7 @@ ms.locfileid: "89548807"
 |**parent_class_desc**|**nvarchar(60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
 |**parent_id**|**int**|親オブジェクトの0以外の ID。<br /><br /> 0 = 親クラスはデータベースです。|  
 |**create_date**|**datetime**|作成日。|  
-|**modify_date**|**datetime**|常に **create_date**と等しくなります。|  
+|**modify_date**|**datetime**|常に **create_date** と等しくなります。|  
 |**service_name**|**nvarchar (256)**|通知の送信先のサービスの名前です。|  
 |**broker_instance**|**nvarchar(128)**|通知が送信されるブローカーインスタンス。|  
 |**principal_id**|**int**|このイベント通知を所有するデータベースプリンシパルの ID。|  

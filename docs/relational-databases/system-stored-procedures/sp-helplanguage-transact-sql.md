@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0e28b9c039bd620780930a2795914432bf07669
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b40e6caf31616f7dc1749a80746ea4ab2b9039ed
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535217"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468383"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @language = ] 'language'` 情報を表示する代替言語の名前を指定します。 *language* は **sysname**,、既定値は NULL です。 *Language*を指定すると、指定した言語に関する情報が返されます。 言語が指定されていない場合は、 **sys.sys言語** の互換性ビューのすべての言語に関する情報が返されます。  
+`[ @language = ] 'language'` 情報を表示する代替言語の名前を指定します。 *language* は **sysname**,、既定値は NULL です。 *Language* を指定すると、指定した言語に関する情報が返されます。 言語が指定されていない場合は、 **sys.sys言語** の互換性ビューのすべての言語に関する情報が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
