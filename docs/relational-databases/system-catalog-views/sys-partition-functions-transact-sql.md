@@ -1,6 +1,6 @@
 ---
-description: partition_functions (Transact-sql)
-title: partition_functions (Transact-sql) |Microsoft Docs
+description: sys.partition_functions (Transact-sql)
+title: sys.partition_functions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 96515727-728b-4bea-804a-36ce915b8b75
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0613fd963c527bcee8479cd0b8d16f70e7aa7fd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: db403e41aee6f4d654c9b406908c9c07f1c8fe79
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537351"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439577"
 ---
-# <a name="syspartition_functions-transact-sql"></a>partition_functions (Transact-sql)
+# <a name="syspartition_functions-transact-sql"></a>sys.partition_functions (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパーティション関数ごとに 1 行のデータを保持します。  

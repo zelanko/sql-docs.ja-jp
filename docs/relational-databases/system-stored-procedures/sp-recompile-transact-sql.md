@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e0f32166351f80b87b28a169ea0204af97f832f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bf933bec30b2434583970992f79dfc4e898cd479
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547608"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439437"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ sp_recompile [ @objname = ] 'object'
   
 ## <a name="arguments"></a>引数  
  [ @objname =] '*オブジェクト*'  
- 現在のデータベースにあるストアド プロシージャ、トリガー、テーブル、ビュー、またはユーザー定義関数の修飾名または非修飾名を指定します。 *オブジェクト* は **nvarchar (776)**,、既定値はありません。 *オブジェクト*がストアドプロシージャ、トリガー、またはユーザー定義関数の名前である場合、ストアドプロシージャ、トリガー、または関数は、次回実行時に再コンパイルされます。 *オブジェクト*がテーブルまたはビューの名前である場合、テーブルまたはビューを参照するすべてのストアドプロシージャ、トリガー、またはユーザー定義関数は、次回の実行時に再コンパイルされます。  
+ 現在のデータベースにあるストアド プロシージャ、トリガー、テーブル、ビュー、またはユーザー定義関数の修飾名または非修飾名を指定します。 *オブジェクト* は **nvarchar (776)**,、既定値はありません。 *オブジェクト* がストアドプロシージャ、トリガー、またはユーザー定義関数の名前である場合、ストアドプロシージャ、トリガー、または関数は、次回実行時に再コンパイルされます。 *オブジェクト* がテーブルまたはビューの名前である場合、テーブルまたはビューを参照するすべてのストアドプロシージャ、トリガー、またはユーザー定義関数は、次回の実行時に再コンパイルされます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または0以外の数値 (失敗)  
