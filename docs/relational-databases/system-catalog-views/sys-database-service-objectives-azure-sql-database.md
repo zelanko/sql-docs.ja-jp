@@ -16,13 +16,13 @@ ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: fd660dcd2e4e79515065bfc9d221afbb3fe2806e
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: ca0b8567115c2a9209efb61185aad4fa4d05fa24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059346"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412987"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -40,7 +40,7 @@ Azure SQL database または Azure Synapse Analytics のエディション (サ�
 |-----------------|---------------|-----------------|  
 |database_id|INT|データベースの ID。 Azure SQL Database server のインスタンス内で一意です。 [Transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)に付属しています。|  
 |edition|sysname|データベースまたはデータウェアハウスのサービスレベル: **Basic**、 **Standard**、 **Premium** 、または **data warehouse**。|  
-|service_objective|sysname|データベースの価格レベル。 データベースがエラスティックプール内にある場合、は **ElasticPool**を返します。<br /><br /> **Basic**レベルでは、は**basic**を返します。<br /><br /> **Standard サービスレベルの単一データベースで** は、次のいずれかが返されます。 S0、S1、S2、S3、S4、S6、S7、S9、または S12。<br /><br /> **Premium レベルの単一のデータベース** は、次の値を返します: P1、P2、P4、P6、P11、または P15。<br /><br /> **Azure Synapse Analytics** は、DW30000C から DW100 を返します。<br /><br /> 詳細については、「[単一データベース](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/)、[エラスティックプール](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/)、[データウェアハウス](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)」を参照してください。|  
+|service_objective|sysname|データベースの価格レベル。 データベースがエラスティックプール内にある場合、は **ElasticPool** を返します。<br /><br /> **Basic** レベルでは、は **basic** を返します。<br /><br /> **Standard サービスレベルの単一データベースで** は、次のいずれかが返されます。 S0、S1、S2、S3、S4、S6、S7、S9、または S12。<br /><br /> **Premium レベルの単一のデータベース** は、次の値を返します: P1、P2、P4、P6、P11、または P15。<br /><br /> **Azure Synapse Analytics** は、DW30000C から DW100 を返します。<br /><br /> 詳細については、「[単一データベース](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/)、[エラスティックプール](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/)、[データウェアハウス](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)」を参照してください。|  
 |elastic_pool_name|sysname|データベースが属する [エラスティックプール](/azure/azure-sql/database/elastic-pool-overview) の名前。 データベースが単一データベースまたはデータウェアハウスの場合は **NULL** を返します。|  
   
 ## <a name="permissions"></a>アクセス許可  
