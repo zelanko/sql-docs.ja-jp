@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de602d5a975cb04c6c2f1496f0fcf01eae5a85a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 39a4d0a6136990cdb583a432757503099f61cfb6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485373"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97403543"
 ---
 # <a name="get-information-about-dml-triggers"></a>DML トリガーに関する情報の取得
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88485373"
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>DML トリガーの定義を表示するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  目的のデータベースを展開し、 **[テーブル]** を展開します。次に、定義を表示するトリガーが格納されているテーブルを展開します。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "88485373"
 
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>DML トリガーの依存関係を表示するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  目的のデータベースを展開し、 **[テーブル]** を展開します。次に、表示するトリガーとその依存関係が格納されているテーブルを展開します。  
   

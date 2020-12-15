@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e18319e45c3d397e4283013ec31bb3c98424c892
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: f07f4d02c005ee89b24a323111c05789dbbd9fac
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96131091"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96901045"
 ---
 # <a name="drop-symmetric-key-transact-sql"></a>DROP SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,9 +54,8 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
  EKM デバイスから拡張キー管理 (EKM) を削除します。 拡張キー管理について詳しくは、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。  
   
 ## <a name="remarks"></a>注釈  
- 現在のセッションでキーが開かれている場合、ステートメントは失敗します。  
   
- 非対称キーが EKM デバイスの拡張キー管理 (EKM) にマップされており、**REMOVE PROVIDER KEY** オプションが指定されていない場合は、キーはデータベースから削除されますが、デバイスからは削除されず、警告が発行されます。  
+非対称キーが EKM デバイスの拡張キー管理 (EKM) にマップされており、**REMOVE PROVIDER KEY** オプションが指定されていない場合は、キーはデータベースから削除されますが、デバイスからは削除されず、警告が発行されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  対称キーに対する CONTROL 権限が必要です。  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bb90c0f00087f0d2b0b76b3fa66b8cca2f4707c
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c18b6842139e5a4f5f0261761fa93cc42d3a506c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96130906"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405693"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>DAC パッケージでの Always Encrypted を使用した列暗号化の構成 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "96130906"
 ## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項
 暗号化操作を実行するには、DACPAC をデプロイするために使用するツールにより、データをデータベースから移動する必要があります。 このツールでは、データベース内で必要な暗号化構成を使用して新しい 1 つまたは複数のテーブルが作成され、元のテーブルからすべてのデータが読み込まれ、要求された暗号化操作が実行され、データを新しいテーブルにアップロードされた後、元のテーブルが新しいテーブルに入れ替えられます。 暗号化操作の実行には時間がかかる場合があります。 その間、データベースでトランザクションを書き込むことはできません。 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] を使用していて、お使いの SQL Server インスタンスがセキュリティで保護されたエンクレーブで構成されている場合は、データベースからデータを移動せずに、暗号化操作をインプレースで実行できます。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する](always-encrypted-enclaves-configure-encryption.md)」を参照してください。 DACPAC のデプロイでは、インプレース暗号化は使用できないことに注意してください。
