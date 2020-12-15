@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 931c36619f5eaed0159ee04db3a08eb745634698
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: f899ad41e609874cbcc22c2a3ac959c41574e0eb
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428279"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761530"
 ---
 # <a name="commands-and-parameters"></a>コマンドおよびパラメーター
 
@@ -29,17 +29,22 @@ ms.locfileid: "96428279"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[コマンドの実行](execute-command.md) ADO.NET `Command` オブジェクトについて、またそれを使用してデータ ソースに対してクエリとコマンドを実行する方法について説明します。
+[コマンドの実行](execute-command.md)  
+ADO.NET の `Command` オブジェクトと、それを使用してデータ ソースに対してクエリやコマンドを実行する方法について説明します。
 
-[パラメーターの構成](configure-parameters.md) `Command` パラメーターの使用方法について説明します。たとえば方向、データ型、パラメーター構文などです。
+[パラメーターの構成](configure-parameters.md)  
+`Command` のパラメーターの使用 (方向、データ型、パラメーター構文など) について説明します。
 
 [CommandBuilder を使用したコマンドの生成](generate-commands-with-commandbuilders.md)  
 `DataAdapter` に単一テーブルを対象とする SELECT コマンドが割り当てられているときに、コマンド ビルダーを使用して INSERT、UPDATE、DELETE の各コマンドを自動的に生成する方法について説明します。
 
-[データベースからの単一の値の取得](obtain-single-value-from-database.md) `Command` オブジェクトの `ExecuteScalar` メソッドを使用して、データベース クエリから単一の値を返す方法について説明します。
+[データベースからの単一の値の取得](obtain-single-value-from-database.md)  
+`ExecuteScalar` オブジェクトの `Command` メソッドを使用してデータベース クエリから単一の値を返す方法について説明します。
 
-[コマンドを使用したデータ変更](use-commands-to-modify-data.md) Microsoft SqlClient Data Provider for SQL Server を使用して、ストアド プロシージャやデータ定義言語 (DDL) ステートメントを実行する方法について説明します。
+[コマンドを使用したデータ変更](use-commands-to-modify-data.md)  
+Microsoft SqlClient Data Provider for SQL Server を使用して、ストアド プロシージャやデータ定義言語 (DDL) ステートメントを実行する方法について説明します。
 
 ## <a name="see-also"></a>関連項目
 
 - [データ ソースへの接続](connecting-to-data-source.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

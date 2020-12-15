@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: b26571c01db073aa2567ebbee19ff2183c47a552
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: fd95dd20cf72900a85c675c0e6b89689553d55f5
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96127675"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999248"
 ---
 # <a name="before-installing-failover-clustering"></a>フェールオーバー クラスタリングをインストールする前に
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -170,7 +170,7 @@ ms.locfileid: "96127675"
   
 -   リモート管理が有効になっている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ポートでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ネットワークの構成で、ブロックを解除するインスタンスの TCP/IP プロトコルを確認します。 インストール後に TCP を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続する場合は、IPALL に対して TCP ポートを有効にする必要があります。 既定では、SQL Browser は UDP ポート 1434 でリッスンします。  
+- 既定以外のポートを使用している SQL Server インスタンスの場合は、SQL Server 構成マネージャーのネットワーク構成を使用して、ブロックを解除する SQL Server インスタンスによって使用されるポートを決定します。 クラスター化されたインスタンスとは異なる IP アドレスを使用する [SQL Server Browser サービス](../../../tools/configuration-manager/sql-server-browser-service.md)と、UDP ポート 1434 を使用して SQL Server インスタンスに接続する場合は、ファイアウォールで IPALL の TCP ポートを有効にします。 
   
 -   フェールオーバー クラスター セットアップ操作には、ネットワーク バインド順序をチェックするルールが含まれています。 バインド順序が正しいように見えても、実際には実体のない無効化された NIC 構成がシステムに存在している場合があります。 実体のない NIC 構成が存在すると、バインド順序に影響が生じ、バインド順序ルールから警告が発行されることがあります。 この状況を回避するには、次の手順で無効なネットワーク アダプターを特定し、削除します。  
   

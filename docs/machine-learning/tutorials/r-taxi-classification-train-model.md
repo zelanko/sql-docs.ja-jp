@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d42d51371b0641fe460150e68fe96c5eb68e09cb
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 0b5f930568e655df645cbaed140f163ada3e3afa
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412549"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934032"
 ---
 # <a name="r-tutorial-train-and-save-model"></a>R チュートリアル:モデルのトレーニングと保存
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -42,7 +42,7 @@ T-SQL から R を呼び出すときは、システムストアドプロシー�
 
 1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で、新しい **[クエリ]** ウィンドウを開きます。
 
-2. 次のステートメントを実行して、ストアド プロシージャ **RTrainLogitModel** を作成します。 このストアド プロシージャでは、入力データを定義し、 **glm** を使用して、ロジスティック回帰モデルを作成します。
+2. 次のステートメントを実行して、ストアド プロシージャ **RTrainLogitModel** を作成します。 このストアド プロシージャでは、入力データを定義し、**glm** を使用して、ロジスティック回帰モデルを作成します。
 
    ```sql
    CREATE PROCEDURE [dbo].[RTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
@@ -79,7 +79,7 @@ T-SQL から R を呼び出すときは、システムストアドプロシー�
   
    + R スクリプトは、R 関数 **glm** を呼び出して、ロジスティック回帰モデルを作成します。
   
-     二項変数 _tipped_ が *ラベル* または結果列として使用され、モデルは、  _passenger_count_ 、 _trip_distance_ 、 _trip_time_in_secs_ 、および _direct_distance_ の機能列を使用して調整されます。
+     二項変数 _tipped_ が *ラベル* または結果列として使用され、モデルは、  _passenger_count_、 _trip_distance_、 _trip_time_in_secs_、および _direct_distance_ の機能列を使用して調整されます。
   
    + R 変数 `logitObj` に保存されたトレーニング済みのモデルはシリアル化され、出力パラメーターとして返されます。
 
@@ -101,7 +101,7 @@ T-SQL から R を呼び出すときは、システムストアドプロシー�
 
 3. ステートメントが完了したら、テーブル *nyc_taxi_models* を開きます。 データの処理とモデルの調整には、しばらく時間がかかる場合があります。
 
-   _model_ 列にシリアル化されたモデル、および _name_ 列にモデル名 **TrainLog_model** を含む、1 つの新しい行が追加されていることがわかります。
+   _[モデル]_ 列にシリアル化されたモデル、および _[名前]_ 列にモデル名 **RTrainLogit_model** を含む、1 つの新しい行が追加されていることがわかります。
 
    ```text
    model                        name

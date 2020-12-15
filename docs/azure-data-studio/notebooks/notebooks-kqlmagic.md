@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 10/29/2020
-ms.openlocfilehash: 436c176e469e7ce0f34e26a883fae4cdd6bb59a1
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.openlocfilehash: cdb110059043741627300e1f6d080582363d834b
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067244"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900835"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Azure Data Studio の Kqlmagic
 
@@ -71,7 +71,7 @@ ms.locfileid: "93067244"
    ```
 
    > [!Note]
-   > `Samples@help` がパスワードの入力を求めている場合は、空白のままにして、 **Enter** キーを押します。
+   > `Samples@help` がパスワードの入力を求めている場合は、空白のままにして、**Enter** キーを押します。
 
    ![Help](media/notebooks-kqlmagic/install-help.png)
 
@@ -112,7 +112,7 @@ ms.locfileid: "93067244"
     > 独自の ADX クラスターを使用している場合は、次のように、接続文字列にリージョンを含める必要があります。   
     ```%kql azuredataexplorer://code;cluster='mycluster.westus';database='mykustodb'```
 
-   デバイスのログインを使用して認証します。 出力からコードをコピーし、 **認証** を選択します。これにより、コードを貼り付ける必要があるブラウザーが開きます。 正常に認証されたら、Azure Data Studio に戻って、スクリプトの残りの部分を続行できます。
+   デバイスのログインを使用して認証します。 出力からコードをコピーし、**認証** を選択します。これにより、コードを貼り付ける必要があるブラウザーが開きます。 正常に認証されたら、Azure Data Studio に戻って、スクリプトの残りの部分を続行できます。
 
    ![Azure Data Explorer 認証](media/notebooks-kqlmagic/ade-auth.png)
 
@@ -257,6 +257,6 @@ ms.locfileid: "93067244"
 - [Azure Data Studio 用の Kusto (KQL) 拡張機能 (プレビュー)](https://docs.microsoft.com/sql/azure-data-studio/extensions/kusto-extension)
 - [Kusto (KQL) ノートブックの作成と実行 (プレビュー)](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-kusto-kernel)
 - [Jupyter Notebook と Kqlmagic 拡張機能を使用して Azure Data Explorer 内のデータを分析する](/azure/data-explorer/Kqlmagic)
-- Kusto、Application Insights、および LogAnalytics のデータを使用してノートブック エクスペリエンスを実現する、[Jupyter Notebook と Jupyter Lab への拡張 (マジック)](https://github.com/Microsoft/jupyter-Kqlmagic)
+- Kusto、Application Insights、および LogAnalytics のデータを使用してノートブック エクスペリエンスを実現する、[Jupyter Notebook と Jupyter Lab への拡張 (マジック)](https://github.com/Microsoft/jupyter-Kqlmagic)。
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [Azure Data Studio でノートブックを使用する方法](./notebooks-guidance.md)

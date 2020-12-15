@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 8fc6a8ed3cf4fec9b97b81c38fb1667588623ba7
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: d6e4d6c298c632c446e1671b5d9adabaa19e0776
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419745"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761490"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET でのデータの取得と変更
 
@@ -27,13 +27,23 @@ ms.locfileid: "96419745"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[データ ソースへの接続](connecting-to-data-source.md) データ ソースへの接続を確立する方法と、接続イベントを使用する方法について説明します。
+[データ ソースへの接続](connecting-to-data-source.md)  
+データ ソースへの接続を確立する方法、および接続イベントを使用する方法について説明します。
 
-[接続文字列](connection-strings.md) 接続文字列のキーワード、セキュリティ情報、およびそれらの格納や取得など、接続文字列を使用するときのさまざまな側面に関して説明するトピックが含まれます。
+[接続文字列](connection-strings.md)  
+接続文字列のキーワード、セキュリティ情報、セキュリティ情報の格納や取得など、接続文字列を使用するうえでのさまざまな側面について説明します。
 
-[接続プール](connection-pooling.md) Microsoft SqlClient Data Provider for SQL Server の接続プールについて説明します。
+[接続プール](connection-pooling.md)  
+Microsoft SqlClient Data Provider for SQL Server の接続プールについて説明します。
+
+[コマンドおよびパラメーター](commands-parameters.md)  
+コマンドおよびコマンド ビルダーを作成する方法、パラメーターを構成する方法、およびコマンドを実行してデータを取得および変更する方法について説明します。
+
+[DataAdapter と DataReader](dataadapters-datareaders.md)  
+DataReaders、DataAdapters、パラメーター、DataAdapter イベントの処理、およびバッチ操作の実行について説明します。
 
 ## <a name="see-also"></a>関連項目
 
 - [ADO.NET のデータ型のマッピング](data-type-mappings-ado-net.md)
 - [SQL Server と ADO.NET](./sql/index.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
