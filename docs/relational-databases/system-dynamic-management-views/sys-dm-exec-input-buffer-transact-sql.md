@@ -1,6 +1,6 @@
 ---
-description: dm_exec_input_buffer (Transact-sql)
-title: dm_exec_input_buffer (Transact-sql) |Microsoft Docs
+description: sys.dm_exec_input_buffer (Transact-sql)
+title: sys.dm_exec_input_buffer (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2019
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fecdc698dc7015ab47e5a8c97b3990c7e5bf1f4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 68673cb11ce5a003b2c9317939942b1d602095be
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536956"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477263"
 ---
-# <a name="sysdm_exec_input_buffer-transact-sql"></a>dm_exec_input_buffer (Transact-sql)
+# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
@@ -42,13 +42,13 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="arguments"></a>引数
 
-*session_id* 検索するバッチを実行するセッション ID を指定します。 *session_id* は **smallint**です。 *session_id* は、次の動的管理オブジェクトから取得できます。
+*session_id* 検索するバッチを実行するセッション ID を指定します。 *session_id* は **smallint** です。 *session_id* は、次の動的管理オブジェクトから取得できます。
 
 - [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
 - [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
 - [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)
 
-*request_id*[Dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)からの request_id。 *request_id* は **int**です。
+*request_id*[Sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)からの request_id。 *request_id* は **int** です。
 
 ## <a name="table-returned"></a>返されるテーブル
 
@@ -72,7 +72,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="remarks"></a>解説
 
-この動的管理関数は、 **クロス適用**を行うことによって、dm_exec_sessions または sys. dm_exec_requests と組み合わせて使用できます。
+この動的管理関数は、 **クロス適用** を行うことで sys.dm_exec_sessions または sys.dm_exec_requests と組み合わせて使用できます。
 
 ## <a name="examples"></a>例
 

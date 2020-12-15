@@ -1,6 +1,6 @@
 ---
-description: foreign_key_columns (Transact-sql)
-title: foreign_key_columns (Transact-sql) |Microsoft Docs
+description: sys.foreign_key_columns (Transact-sql)
+title: sys.foreign_key_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 7247f065-5441-4bcf-9f25-c84a03290dc6
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67b53a6321cffdd7a396e9faa252efce2c8100e0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6cc20df728d29a92f003ab16436b79d9e9b5c0fd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546881"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477443"
 ---
-# <a name="sysforeign_key_columns-transact-sql"></a>foreign_key_columns (Transact-sql)
+# <a name="sysforeign_key_columns-transact-sql"></a>sys.foreign_key_columns (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   外部キーを構成する列または列のセットごとに1行の値を格納します。  
@@ -36,7 +36,7 @@ ms.locfileid: "89546881"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**constraint_object_id**|**int**|外部キー制約の ID。|  
-|**constraint_column_id**|**int**|外部キーを構成する*1* つまたは複数の列の ID (n = 列の数) です。|  
+|**constraint_column_id**|**int**|外部キーを構成する *1* つまたは複数の列の ID (n = 列の数) です。|  
 |**parent_object_id**|**int**|参照元のオブジェクトである、制約の親の ID。|  
 |**parent_column_id**|**int**|参照元の列である、親列の ID です。|  
 |**referenced_object_id**|**int**|候補キーを持つ、参照先のオブジェクトの ID。|  

@@ -12,23 +12,23 @@ dev_langs:
 ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fb32b46347105b6dd80bf8013fe263018fad80e3
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: 8c93497ad0fd1c51a5422b80c835f3dbc8f1aff7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035015"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477373"
 ---
 # <a name="syspdw_database_mappings-transact-sql"></a>sys.pdw_database_mappings (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  **Database_id**のデータベースを、コンピューティングノードで使用される物理名にマップし、システム上のデータベース所有者の**プリンシパル id**を提供します。 **Sys.pdw_nodes_pdw_physical_databases**に**sys.pdw_database_mappings**を**追加します**。  
+  **Database_id** のデータベースを、コンピューティングノードで使用される物理名にマップし、システム上のデータベース所有者の **プリンシパル id** を提供します。 **Sys.pdw_nodes_pdw_physical_databases** に **sys.pdw_database_mappings** を **追加します**。  
   
 |列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|physical_name|**nvarchar (36)**|計算ノード上のデータベースの物理名。<br /><br /> このビューのキーは**physical_name**と**database_id**によって形成されます。||  
-|database_id|**int**|データベースのオブジェクト ID。 「 [データベース &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)」を参照してください。<br /><br /> このビューのキーは**physical_name**と**database_id**によって形成されます。||  
+|physical_name|**nvarchar (36)**|計算ノード上のデータベースの物理名。<br /><br /> このビューのキーは **physical_name** と **database_id** によって形成されます。||  
+|database_id|**int**|データベースのオブジェクト ID。 「 [データベース &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)」を参照してください。<br /><br /> このビューのキーは **physical_name** と **database_id** によって形成されます。||  
   
 ## <a name="examples-sspdw"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、sys.pdw_database_mappings を他のシステムテーブルに結合して、データベースがどのようにマップされているかを示します。  

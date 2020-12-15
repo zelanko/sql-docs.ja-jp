@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccce0c55e7c59cd72e004d6c7bd52fe03a1c4e1f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 473dd22d2f19d29e5b778a585ad59d0d99acbaee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91807350"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479103"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>スキーマカタログビュー-sys スキーマ
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91807350"
 |**schema_id**|**int**|スキーマの ID です。 データベース内で一意です。|  
 |**principal_id**|**int**|このスキーマを所有するプリンシパルの ID。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 データベーススキーマは、テーブル、ビュー、プロシージャ、関数など、オブジェクトの名前空間またはコンテナーとして機能します。これは、 **のカタログビュー** にあります。  
 
 各スキーマには所有者があります。 所有者はセキュリティ [プリンシパル](../../relational-databases/security/authentication-access/principals-database-engine.md)です。

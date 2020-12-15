@@ -1,6 +1,6 @@
 ---
 description: sys.asymmetric_keys (Transact-SQL)
-title: asymmetric_keys (Transact-sql) |Microsoft Docs
+title: sys.asymmetric_keys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d8ff4d42014f0e3b61c4087ae879edfb8f9da744
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 785b3095987a0ade14008f9251a45167ce5011ce
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539707"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479073"
 ---
 # <a name="sysasymmetric_keys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "89539707"
 |**asymmetric_key_id**|**int**|キーの ID。 データベース内で一意です。|  
 |**pvt_key_encryption_type**|**char(2)**|キーの暗号化方法。<br /><br /> NA = 暗号化されていません。<br /><br /> MK = キーはマスター キーにより暗号化されています。<br /><br /> PW = キーはユーザー定義のパスワードによって暗号化されます。<br /><br /> SK = キーはサービス マスター キーにより暗号化されています。|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|秘密キーの暗号化方法の説明。<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
-|**拇印**|**varbinary(32)**|キーの SHA-1 ハッシュ。 ハッシュはグローバルに一意です。|  
+|**thumbprint**|**varbinary(32)**|キーの SHA-1 ハッシュ。 ハッシュはグローバルに一意です。|  
 |**アルゴリズム**|**char(2)**|キーと一緒に使用されるアルゴリズム。<br /><br /> 1R = 512 ビット RSA<br /><br /> 2R = 1024 ビット RSA<br /><br /> 3R = 2048 ビット RSA|  
 |**algorithm_desc**|**nvarchar(60)**|キーで使用されるアルゴリズムの説明。<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|キーのビット長。|  

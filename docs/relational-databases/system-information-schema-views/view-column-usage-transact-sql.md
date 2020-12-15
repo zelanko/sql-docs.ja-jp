@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: fc0b3608-a7e8-4532-8215-32235d6670f1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aacea1639acd400334c19922588f0e9fc1298631
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4765b8955b47d67fb9e324cd019b7103d448bb6f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753859"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482470"
 ---
 # <a name="view_column_usage-transact-sql"></a>VIEW_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "91753859"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**VIEW_CATALOG**|**nvarchar (** 128 **)**|ビュー修飾子。|  
-|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|ビューを含むスキーマの名前です。<br /><br /> **&#42;&#42; 重要な **  のは、オブジェクトのスキーマを検索する信頼できる方法は、 &#42;&#42;カタログビューに対してクエリを実行することだけです。|  
+|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|ビューを含むスキーマの名前です。<br /><br /> **&#42;&#42; 重要な**  のは、オブジェクトのスキーマを検索する信頼できる方法は、 &#42;&#42;カタログビューに対してクエリを実行することだけです。|  
 |**VIEW_NAME**|**sysname**|ビューの名前。|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|テーブル修飾子。|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|テーブルを含むスキーマの名前。<br /><br /> **&#42;&#42; 重要な **  のは、オブジェクトのスキーマを検索する信頼できる方法は、 &#42;&#42;カタログビューに対してクエリを実行することだけです。|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|テーブルを含むスキーマの名前。<br /><br /> **&#42;&#42; 重要な**  のは、オブジェクトのスキーマを検索する信頼できる方法は、 &#42;&#42;カタログビューに対してクエリを実行することだけです。|  
 |**TABLE_NAME**|**sysname**|ベーステーブル。|  
 |**COLUMN_NAME**|**sysname**|列名。|  
   

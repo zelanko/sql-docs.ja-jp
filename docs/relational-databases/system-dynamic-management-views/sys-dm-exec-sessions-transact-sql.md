@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_sessions (Transact-SQL)
-title: dm_exec_sessions (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_sessions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -20,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d160be9c71c75e58a892f4b43494046b293caeb6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7b50b83a71df6485afae83fb371abb04209898ae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539447"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482793"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   の認証済みセッションごとに1行を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 sys.dm_exec_sessions は、すべてのアクティブなユーザー接続と内部タスクに関する情報を示すサーバー スコープのビューです。 この情報には、クライアント バージョン、クライアント プログラム名、クライアントのログイン日時、ログイン ユーザー、現在のセッション設定などが含まれます。 sys.dm_exec_sessions を使用して、最初に、現在のシステムの負荷を表示して目的のセッションを特定します。その後、他の動的管理ビューまたは動的管理関数を使用して、そのセッションの詳細を参照します。  
   
- Dm_exec_connections、dm_exec_sessions、および dm_exec_requests の動的管理ビューは、 [sys.sysプロセス](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) システムテーブルにマップされます。  
+ Sys.dm_exec_connections、sys.dm_exec_sessions、および sys.dm_exec_requests の動的管理ビューは、 [sys.sysプロセス](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) システムテーブルにマップされます。  
   
-> **注:** またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_exec_sessions**という名前を使用します。  
+> **注:** またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **sys.dm_pdw_nodes_exec_sessions** という名前を使用します。  
   
 |列名|データ型|説明とバージョン固有の情報|  
 |-----------------|---------------|-----------------|  
@@ -94,8 +94,8 @@ ms.locfileid: "89539447"
   
 ## <a name="permissions"></a>アクセス許可  
 すべてのユーザーが独自のセッション情報を見ることができます。  
-** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** `VIEW SERVER STATE` [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] サーバー上のすべてのセッションを表示するには、に対する権限が必要です。  
-** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** `VIEW DATABASE STATE` 現在のデータベースへのすべての接続を表示する必要があります。 `VIEW DATABASE STATE` データベースでは許可さ `master` れません。 
+**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** `VIEW SERVER STATE` [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] サーバー上のすべてのセッションを表示するには、に対する権限が必要です。  
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** `VIEW DATABASE STATE` 現在のデータベースへのすべての接続を表示する必要があります。 `VIEW DATABASE STATE` データベースでは許可さ `master` れません。 
   
   
 ## <a name="remarks"></a>解説  
@@ -115,12 +115,12 @@ ms.locfileid: "89539447"
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|From|終了|オン/適用|リレーションシップ|  
+|差出人|終了|オン/適用|リレーションシップ|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|1対0または1対多|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|1対0または1対多|  
 |sys.dm_exec_sessions|[sys.dm_tran_session_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)|session_id|1対0または1対多|  
-|sys.dm_exec_sessions|[dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> 外側適用|1対0または1対多|  
+|sys.dm_exec_sessions|[sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> 外側適用|1対0または1対多|  
 |sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|一対一|  
   
 ## <a name="examples"></a>例  

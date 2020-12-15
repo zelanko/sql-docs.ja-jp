@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46360eac7080f92f98ba3f081b7cd9ec505f12c9
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 481e104f4762638fb4c71a548c3a390e1babe762
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753572"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478933"
 ---
 # <a name="parameters-transact-sql"></a>パラメーター (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,8 +45,8 @@ ms.locfileid: "91753572"
 |**AS_LOCATOR**|**nvarchar (** 10 **)**|ロケーターとして宣言された場合は YES が返されます。 その他の場合は NO が返されます。|  
 |**PARAMETER_NAME**|**nvarchar (** 128 **)**|パラメーターの名前。 関数の戻り値に相当する場合は NULL になります。|  
 |**DATA_TYPE**|**nvarchar (** 128 **)**|システムにより提供されるデータ型。|  
-|**CHARACTER_MAXIMUM_LENGTH**|**int**|バイナリまたは文字データ型の文字列の最大長。<br /><br /> **xml**と大きな値の型のデータの場合は-1。 その他の場合は NULL が返されます。|  
-|**CHARACTER_OCTET_LENGTH**|**int**|バイナリまたは文字データ型の最大バイト数。<br /><br /> **xml**と大きな値の型のデータの場合は-1。 その他の場合は NULL が返されます。|  
+|**CHARACTER_MAXIMUM_LENGTH**|**int**|バイナリまたは文字データ型の文字列の最大長。<br /><br /> **xml** と大きな値の型のデータの場合は-1。 その他の場合は NULL が返されます。|  
+|**CHARACTER_OCTET_LENGTH**|**int**|バイナリまたは文字データ型の最大バイト数。<br /><br /> **xml** と大きな値の型のデータの場合は-1。 その他の場合は NULL が返されます。|  
 |**COLLATION_CATALOG**|**nvarchar (** 128 **)**|常に NULL が返されます。|  
 |**COLLATION_SCHEMA**|**nvarchar (** 128 **)**|常に NULL が返されます。|  
 |**COLLATION_NAME**|**nvarchar (** 128 **)**|パラメーター照合の名前。 文字型の 1 つでない場合は、NULL が返されます。|  
@@ -56,7 +56,7 @@ ms.locfileid: "91753572"
 |**NUMERIC_PRECISION**|**tinyint**|数値データの概数、正確な数値データ、整数データ、または通貨データの有効桁数。 その他の場合は NULL が返されます。|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|数値データの概数、正確な数値データ、整数データ、または通貨データの有効桁数の基数。 その他の場合は NULL が返されます。|  
 |**NUMERIC_SCALE**|**tinyint**|数値データの概数、正確な数値データ、整数データ、または通貨データの桁数。 その他の場合は NULL が返されます。|  
-|**DATETIME_PRECISION**|**smallint**|パラメーターの型が **datetime** または **smalldatetime**の場合の秒の小数部の有効桁数。 その他の場合は NULL が返されます。|  
+|**DATETIME_PRECISION**|**smallint**|パラメーターの型が **datetime** または **smalldatetime** の場合の秒の小数部の有効桁数。 その他の場合は NULL が返されます。|  
 |**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL。 将来使用するために予約されています。|  
 |**INTERVAL_PRECISION**|**smallint**|NULL。 将来使用するために予約されています。|  
 |**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL。 将来使用するために予約されています。|  

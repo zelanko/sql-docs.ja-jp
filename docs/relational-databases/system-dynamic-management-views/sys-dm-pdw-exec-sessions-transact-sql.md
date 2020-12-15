@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d155f836abb975b39ef7b2396057a43e59686f9b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 1e5fc3af931460de84dde4467b803226dcd6d431
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035344"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482566"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "92035344"
 |is_transactional|**bit**|セッションが現在トランザクション内にあるかどうかをキャプチャします。|自動コミットの場合は0、トランザクションの場合は1。|  
 |client_id|**nvarchar (255)**|セッションのクライアント情報をキャプチャします。|任意の有効な文字列。|  
 |app_name|**nvarchar (255)**|必要に応じて、接続プロセスの一部として設定されたアプリケーション名情報をキャプチャします。|任意の有効な文字列。|  
-|sql_spid|**int**|SPID の id 番号。 このセッションを使用し `session_id` ます。 列を使用して `sql_spid` **sys.dm_pdw_nodes_exec_sessions**に結合します。<br /><br /> 警告この列には閉じた spid が含まれています。 ** \* \* \* \* **||  
+|sql_spid|**int**|SPID の id 番号。 このセッションを使用し `session_id` ます。 列を使用して `sql_spid` **sys.dm_pdw_nodes_exec_sessions** に結合します。<br /><br /> 警告この列には閉じた spid が含まれています。 **\* \* \* \***||  
   
  このビューで保持される最大行数の詳細については、「 [容量制限](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 」トピックの「メタデータ」セクションを参照してください。  
   

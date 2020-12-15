@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 944eac31-5691-432b-b9f5-f1e11c05191f
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: de46fc1078b4a8a7d3898fbb034aa147cec157e5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: f89d6ce4c8a385906856dde4c71e97d8a6e24ad2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035376"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482581"
 ---
 # <a name="sysdm_pdw_errors-transact-sql"></a>sys.dm_pdw_errors (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "92035376"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar (36)**|このビューのキー。<br /><br /> エラーに関連付けられている一意の数値 id。|システム内のすべてのクエリエラー間で一意です。|  
 |source|**nvarchar (64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|type|**nvarchar (4000)**|発生したエラーの種類です。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|型|**nvarchar (4000)**|発生したエラーの種類です。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |create_time|**datetime**|エラーが発生した時刻。|小または現在の時刻と等しい。|  
 |pwd_node_id|**int**|関連する特定のノードの識別子 (存在する場合)。 ノード id の詳細については、「 [sys.dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)」を参照してください。||  
 |session_id|**nvarchar(32)**|関連するセッションの識別子 (存在する場合)。 セッション id の詳細については、「  [sys.dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)」を参照してください。||  

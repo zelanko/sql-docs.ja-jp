@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44097fb7340dd61f467b4bb08e0b4a718d6ab323
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 279789c40dbc79dd3d7b2d421d757a936b0e6126
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528534"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482400"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,18 +45,18 @@ sp_column_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>引数  
  [ @table_name =] '*table_name*'  
- カタログ情報を返すために使用するテーブルを指定します。 *table_name* は **sysname**であり、既定値はありません。 ワイルドカードのパターンマッチングはサポートされていません。  
+ カタログ情報を返すために使用するテーブルを指定します。 *table_name* は **sysname** であり、既定値はありません。 ワイルドカードのパターンマッチングはサポートされていません。  
   
  [ @table_owner =] '*table_owner*'  
- カタログ情報を返すために使用するテーブルの所有者を示します。 *table_owner* は **sysname**,、既定値は NULL です。 ワイルドカードのパターンマッチングはサポートされていません。 *Table_owner*が指定されていない場合は、基になるデータベース管理システム (DBMS) の既定のテーブル可視性ルールが適用されます。  
+ カタログ情報を返すために使用するテーブルの所有者を示します。 *table_owner* は **sysname**,、既定値は NULL です。 ワイルドカードのパターンマッチングはサポートされていません。 *Table_owner* が指定されていない場合は、基になるデータベース管理システム (DBMS) の既定のテーブル可視性ルールが適用されます。  
   
- 指定した名前のテーブルを現在のユーザーが所有している場合は、そのテーブルの列が返されます。 *Table_owner*が指定されておらず、現在のユーザーが指定された*table_name*のテーブルを所有していない場合、sp_column 権限は、データベース所有者が所有する、指定された*table_name*を持つテーブルを検索します。 存在する場合は、そのテーブルの列が返されます。  
+ 指定した名前のテーブルを現在のユーザーが所有している場合は、そのテーブルの列が返されます。 *Table_owner* が指定されておらず、現在のユーザーが指定された *table_name* のテーブルを所有していない場合、sp_column 権限は、データベース所有者が所有する、指定された *table_name* を持つテーブルを検索します。 存在する場合は、そのテーブルの列が返されます。  
   
  [ @table_qualifier =] '*table_qualifier*'  
- テーブル修飾子の名前を指定します。 *table_qualifier* は *sysname*,、既定値は NULL です。 さまざまな DBMS 製品では、3つの要素で構成するテーブル (_修飾子_) がサポート**しています。**_所有者_**。**_名前_)。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この列はデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
+ テーブル修飾子の名前を指定します。 *table_qualifier* は *sysname*,、既定値は NULL です。 さまざまな DBMS 製品では、3つの要素で構成するテーブル (_修飾子_) がサポート **しています。**_所有者_**。**_名前_)。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この列はデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
   
  [ @column_name =] '*column*'  
- カタログ情報の列を1つだけ取得する場合に使用する単一の列を示します。 *列* は **nvarchar (** 384 **)**,、既定値は NULL です。 *列*が指定されていない場合は、すべての列が返されます。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 *列* は、テーブルに示されている列名を表します。 *列* には、基になる DBMS のワイルドカードパターンを使用したワイルドカード文字を含めることができます。 相互運用性を最大にするために、ゲートウェイクライアントは ISO 標準のパターン照合 (% と _ ワイルドカード文字) のみを想定する必要があります。  
+ カタログ情報の列を1つだけ取得する場合に使用する単一の列を示します。 *列* は **nvarchar (** 384 **)**,、既定値は NULL です。 *列* が指定されていない場合は、すべての列が返されます。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 *列* は、テーブルに示されている列名を表します。 *列* には、基になる DBMS のワイルドカードパターンを使用したワイルドカード文字を含めることができます。 相互運用性を最大にするために、ゲートウェイクライアントは ISO 標準のパターン照合 (% と _ ワイルドカード文字) のみを想定する必要があります。  
   
 ## <a name="result-sets"></a>結果セット  
  sp_column_privileges は、ODBC の SQLColumnPrivileges に相当します。 返される結果は、TABLE_QUALIFIER、TABLE_OWNER、TABLE_NAME、COLUMN_NAME、PRIVILEGE の順序に従って並べ替えられます。  

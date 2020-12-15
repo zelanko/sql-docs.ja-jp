@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c742ebd930066c4e242cabff781b0c61af5f566f
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f167741a2064020cfbc7fdc43e881a74609e4ac6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235579"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480163"
 ---
 # <a name="sql-graph-architecture"></a>SQL グラフのアーキテクチャ  
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -78,7 +78,7 @@ SQL Graph の設計方法について説明します。 基本を理解するこ
  
 |列名 |データ型 |説明 |
 |--- |---|--- |
-|graph_type |int |値のセットを含む内部列。 値は、グラフの列の場合は1-8、それ以外の場合は NULL になります。  |
+|graph_type |INT |値のセットを含む内部列。 値は、グラフの列の場合は1-8、それ以外の場合は NULL になります。  |
 |graph_type_desc |nvarchar(60)  |値のセットを含む内部列 |
  
 次の表に、列の有効な値の一覧を示します。 `graph_type`
@@ -136,7 +136,7 @@ SQL Graph の設計方法について説明します。 基本を理解するこ
  
 ### <a name="data-definition-language-ddl-statements"></a>データ定義言語 (DDL) ステートメント
 
-|タスク   |関連記事  |メモ
+|タスク   |関連記事  |ノート
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` は、ノードまたはエッジとしてのテーブルの作成をサポートするように拡張されました。 エッジテーブルには、ユーザー定義の属性が含まれている場合とない場合があることに注意してください。  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|ノードテーブルとエッジテーブルは、を使用して、リレーショナルテーブルと同じように変更でき `ALTER TABLE` ます。 ユーザーは、ユーザー定義の列、インデックス、または制約を追加または変更できます。 ただし、やなどの内部グラフ列を変更すると、エラーが発生 `$node_id` `$edge_id` します。  |
@@ -147,7 +147,7 @@ SQL Graph の設計方法について説明します。 基本を理解するこ
 
 ### <a name="data-manipulation-language-dml-statements"></a>データ操作言語 (DML) ステートメント
 
-|タスク   |関連記事  |メモ
+|タスク   |関連記事  |ノート
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|ノードテーブルへの挿入は、リレーショナルテーブルへの挿入と同じです。 列の値 `$node_id` が自動的に生成されます。 列または列に値を挿入しようとすると `$node_id` `$edge_id` 、エラーが発生します。 `$from_id`エッジテーブルに挿入するときに、ユーザーが列と列の値を指定する必要があり `$to_id` ます。 `$from_id` と `$to_id` は、 `$node_id` 指定されたエッジが接続するノードの値です。  |
 |DELETE | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|ノードまたはエッジテーブルからのデータは、リレーショナルテーブルから削除するのと同じ方法で削除できます。 ただし、このリリースでは、ノードを削除しても、削除されたノードを指し、エッジのカスケード削除がサポートされないようにするための制約はありません。 ノードが削除されるたびに、グラフの整合性を維持するために、そのノードに接続しているすべてのエッジも削除されることをお勧めします。  |

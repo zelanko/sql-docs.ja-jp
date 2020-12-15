@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: f7032fa0-7c16-4492-bb82-685806c63a8c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d0dd52ae5c84ab13266bc1c90f81a3d9b2ad869
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 49ce800cf2b831501237f4f15169637fa8c52187
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005623"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477393"
 ---
 # <a name="sysquery_store_query_text-transact-sql"></a>sys.query_store_query_text (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "92005623"
 |**has_restricted_text**|**bit**|クエリテキストには、パスワードまたはその他の unmentionable 語が含まれています。<br/>**注:** Azure Synapse Analytics は常にゼロ (0) を返します。|
   
 ## <a name="permissions"></a>アクセス許可  
- **VIEW DATABASE STATE**権限が必要です。  
+ **VIEW DATABASE STATE** 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
  [sys.database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

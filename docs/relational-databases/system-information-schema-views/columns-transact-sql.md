@@ -19,20 +19,20 @@ helpviewer_keywords:
 ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4f49fe215279782a5f2e8df8fe501e0619f4bd2
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5dd88dffcf5171250936c75ff56ee5948148adad
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753633"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478973"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のデータベースの現在のユーザーがアクセスできる列ごとに1行のデータを返します。  
   
- これらのビューから情報を取得するには、 **INFORMATION_SCHEMA**_.view_name_の完全修飾名を指定します。  
+ これらのビューから情報を取得するには、 **INFORMATION_SCHEMA**_.view_name_ の完全修飾名を指定します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -44,13 +44,13 @@ ms.locfileid: "91753633"
 |**COLUMN_DEFAULT**|**nvarchar (** 4000 **)**|列の既定値です。|  
 |**IS_NULLABLE**|**varchar (** 3 **)**|列に NULL 値が許容されるかどうかを指定します。 この列が NULL を許容する場合、この列は YES を返します。 その他の場合は NO が返されます。|  
 |**DATA_TYPE**|**nvarchar (** 128 **)**|システムにより提供されるデータ型。|  
-|**CHARACTER_MAXIMUM_LENGTH**|**int**|バイナリ データ、文字データ、またはテキストおよびイメージ データの最大文字列長。<br /><br /> **xml**と大きな値の型のデータの場合は-1。 その他の場合は NULL が返されます。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。|  
-|**CHARACTER_OCTET_LENGTH**|**int**|バイナリ データ、文字データ、またはテキストおよびイメージ データの最大バイト長。<br /><br /> **xml**と大きな値の型のデータの場合は-1。 その他の場合は NULL が返されます。|  
+|**CHARACTER_MAXIMUM_LENGTH**|**int**|バイナリ データ、文字データ、またはテキストおよびイメージ データの最大文字列長。<br /><br /> **xml** と大きな値の型のデータの場合は-1。 その他の場合は NULL が返されます。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。|  
+|**CHARACTER_OCTET_LENGTH**|**int**|バイナリ データ、文字データ、またはテキストおよびイメージ データの最大バイト長。<br /><br /> **xml** と大きな値の型のデータの場合は-1。 その他の場合は NULL が返されます。|  
 |**NUMERIC_PRECISION**|**tinyint**|数値データの概数、正確な数値データ、整数データ、または通貨データの有効桁数。 その他の場合は NULL が返されます。|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|数値データの概数、正確な数値データ、整数データ、または通貨データの有効桁数の基数。 その他の場合は NULL が返されます。|  
 |**NUMERIC_SCALE**|**int**|数値データの概数、正確な数値データ、整数データ、または通貨データの桁数。 その他の場合は NULL が返されます。|  
-|**DATETIME_PRECISION**|**smallint**|**Datetime**および ISO **interval**データ型のサブタイプコード。 その他のデータ型に対しては NULL が返されます。|  
-|**CHARACTER_SET_CATALOG**|**nvarchar (** 128 **)**|**Master**を返します。 列が文字データまたは **テキスト** データ型の場合、文字セットが存在するデータベースを示します。 その他の場合は NULL が返されます。|  
+|**DATETIME_PRECISION**|**smallint**|**Datetime** および ISO **interval** データ型のサブタイプコード。 その他のデータ型に対しては NULL が返されます。|  
+|**CHARACTER_SET_CATALOG**|**nvarchar (** 128 **)**|**Master** を返します。 列が文字データまたは **テキスト** データ型の場合、文字セットが存在するデータベースを示します。 その他の場合は NULL が返されます。|  
 |**CHARACTER_SET_SCHEMA**|**nvarchar (** 128 **)**|常に NULL が返されます。|  
 |**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|この列が文字データまたは **テキスト** データ型の場合、文字セットの一意の名前を返します。 その他の場合は NULL が返されます。|  
 |**COLLATION_CATALOG**|**nvarchar (** 128 **)**|常に NULL が返されます。|  

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea021b39d01af931a989c55233a7f1cd8fa2cb82
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6a55bcdd0df9f288daa22c5f4f1454b14305ec6a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004793"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478943"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,12 +47,12 @@ sp_pkeys [ @table_name = ] 'name'
  情報を返すテーブルを指定します。 *名前* は **sysname**,、既定値はありません。 ワイルドカードのパターンマッチングはサポートされていません。  
   
  [ @table_owner =] '*owner*'  
- 指定したテーブルのテーブル所有者を指定します。 *owner* は **sysname**,、既定値は NULL です。 ワイルドカードのパターンマッチングはサポートされていません。 *Owner*が指定されていない場合、基になる DBMS の既定のテーブル可視性ルールが適用されます。  
+ 指定したテーブルのテーブル所有者を指定します。 *owner* は **sysname**,、既定値は NULL です。 ワイルドカードのパターンマッチングはサポートされていません。 *Owner* が指定されていない場合、基になる DBMS の既定のテーブル可視性ルールが適用されます。  
   
- では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、指定された名前のテーブルが現在のユーザーによって所有されている場合、そのテーブルの列が返されます。 *所有者*が指定されておらず、現在のユーザーが指定された*名前*のテーブルを所有していない場合、このプロシージャは、データベース所有者が所有する、指定された*名前*のテーブルを検索します。 そのテーブルが存在する場合、そのテーブルの列が返されます。  
+ では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、指定された名前のテーブルが現在のユーザーによって所有されている場合、そのテーブルの列が返されます。 *所有者* が指定されておらず、現在のユーザーが指定された *名前* のテーブルを所有していない場合、このプロシージャは、データベース所有者が所有する、指定された *名前* のテーブルを検索します。 そのテーブルが存在する場合、そのテーブルの列が返されます。  
   
  [ @table_qualifier =] '*修飾子*'  
- テーブル修飾子を示します。 *修飾子* は **sysname**,、既定値は NULL です。 さまざまな DBMS 製品では、3つの要素で構成するテーブル (_修飾子_) がサポート**しています。**_所有者_**。**_名前_)。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この列はデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
+ テーブル修飾子を示します。 *修飾子* は **sysname**,、既定値は NULL です。 さまざまな DBMS 製品では、3つの要素で構成するテーブル (_修飾子_) がサポート **しています。**_所有者_**。**_名前_)。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この列はデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
