@@ -1,6 +1,6 @@
 ---
-description: dm_db_xtp_memory_consumers (Transact-sql)
-title: dm_db_xtp_memory_consumers (Transact-sql) |Microsoft Docs
+description: sys.dm_db_xtp_memory_consumers (Transact-sql)
+title: sys.dm_db_xtp_memory_consumers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 321297a2590a18ed7e51364b3f532076f90ce740
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a962925e0a359055286b6598914cd3e79cf8036c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542238"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474973"
 ---
-# <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>dm_db_xtp_memory_consumers (Transact-sql)
+# <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-sql)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベース エンジンのデータベース レベルのメモリ コンシューマーを報告します。 ビューは、データベースエンジンが使用するメモリコンシューマーごとに1行のデータを返します。 この DMV を使用して、さまざまな内部オブジェクト間でメモリがどのように分散されているかを確認します。  
@@ -47,11 +47,11 @@ ms.locfileid: "89542238"
 |allocated_bytes|**bigint**|このコンシューマーのために予約されたバイト数。|  
 |used_bytes|**bigint**|このコンシューマーによって使用されているバイト数。 VARHEAP のみに適用されます。|  
 |allocation_count|**int**|割り当ての数。|  
-|partition_count|**int**|内部使用のみです。|  
-|sizeclass_count|**int**|内部使用のみです。|  
-|min_sizeclass|**int**|内部使用のみです。|  
-|max_sizeclass|**int**|内部使用のみです。|  
-|memory_consumer_address|**varbinary**|コンシューマーの内部アドレス。 内部使用のみ。|  
+|partition_count|**int**|内部使用のみ。|  
+|sizeclass_count|**int**|内部使用のみ。|  
+|min_sizeclass|**int**|内部使用のみ。|  
+|max_sizeclass|**int**|内部使用のみ。|  
+|memory_consumer_address|**varbinary**|コンシューマーの内部アドレス。 内部使用専用です。|  
 |xtp_object_id|**bigint**|メモリ最適化テーブルに対応するインメモリ OLTP オブジェクト ID。|  
   
 ## <a name="remarks"></a>解説  
@@ -65,7 +65,7 @@ ms.locfileid: "89542238"
  システム テーブルは、VIEW DATABASE STATE 権限を持つユーザーにのみ返されます。  
   
 ## <a name="general-remarks"></a>全般的な解説  
- メモリ最適化テーブルに列ストアインデックスがある場合、システムでは、一部のメモリを消費する内部テーブルを使用して、列ストアインデックスのデータを追跡します。 これらの内部テーブルと、メモリ使用量を示すサンプルクエリの詳細については、「 [memory_optimized_tables_internal_attributes (transact-sql)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)」を参照してください。
+ メモリ最適化テーブルに列ストアインデックスがある場合、システムでは、一部のメモリを消費する内部テーブルを使用して、列ストアインデックスのデータを追跡します。 これらの内部テーブルと、メモリ使用量を示すサンプルクエリの詳細については、「 [sys.memory_optimized_tables_internal_attributes (transact-sql)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)」を参照してください。
  
   
 ## <a name="examples"></a>例  
@@ -112,7 +112,7 @@ NULL       VARHEAP                   NULL        NULL        1405943808         
 (17 row(s) affected)  
 ```  
   
- この DMV から割り当てられて使用されるメモリの合計は、 [sys. dm_db_xtp_table_memory_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)のオブジェクトレベルと同じです。  
+ この DMV から割り当てられて使用されるメモリの合計は、 [sys.dm_db_xtp_table_memory_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)のオブジェクトレベルと同じです。  
   
 ```  
 select  sum(allocated_bytes)/(1024*1024) as total_allocated_MB,   

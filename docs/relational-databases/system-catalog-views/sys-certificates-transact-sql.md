@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95e4d3b3b1b06810fc1e60564a4ad7c84e85189a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 169f0069565c3d1f6561d6edc8e8b459fc77ac9a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486540"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475263"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,12 +43,12 @@ ms.locfileid: "88486540"
 |**is_active_for_begin_dialog**|**bit**|1の場合、この証明書は暗号化されたサービスダイアログを開始するために使用されます。|  
 |**issuer_name**|**nvarchar (442)**|証明書の発行者の名前。|  
 |**cert_serial_number**|**nvarchar (64)**|証明書のシリアル番号。|  
-|**sid**|**varbinary (85)**|この証明書のログイン SID。|  
+|**sid**|**varbinary(85)**|この証明書のログイン SID。|  
 |**string_sid**|**nvarchar(128)**|この証明書のログイン SID の文字列表現|  
 |**subject**|**nvarchar (4000)**|証明書のサブジェクト。|  
 |**expiry_date**|**datetime**|証明書の有効期限が切れた場合。|  
 |**start_date**|**datetime**|証明書が有効になったとき。|  
-|**拇印**|**varbinary(32)**|証明書の SHA-1 ハッシュ。 SHA-1 ハッシュはグローバルに一意です。|  
+|**thumbprint**|**varbinary(32)**|証明書の SHA-1 ハッシュ。 SHA-1 ハッシュはグローバルに一意です。|  
 |**attested_by**|**nvarchar(260)**|システムでのみ使用されます。|  
 |**pvt_key_last_backup_date**|**datetime**|証明書の秘密キーが最後にエクスポートされた日付と時刻。|  
   

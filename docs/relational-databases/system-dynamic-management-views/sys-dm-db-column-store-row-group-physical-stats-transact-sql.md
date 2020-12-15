@@ -20,13 +20,13 @@ helpviewer_keywords:
 - sys.dm_db_column_store_row_group_physical_stats dynamic management view
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 106c471efa0f7b42f707e418c04120b50ab86f54
-ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ddbed928d4d7ef379b7d4c164ffcc150f035b8d4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96934027"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475043"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-sql)
 
@@ -45,7 +45,7 @@ ms.locfileid: "96934027"
 |**row_group_id**|**int**|この行グループの ID。 パーティションテーブルの場合、値はパーティション内で一意です。<br /><br /> インメモリテールの場合は-1。|  
 |**delta_store_hobt_id**|**bigint**|デルタストアの行グループの hobt_id。<br /><br /> 行グループがデルタストアに存在しない場合は NULL になります。<br /><br /> メモリ内のテーブルの末尾の場合は NULL です。|  
 |**state**|**tinyint**|*State_description* に関連付けられた ID 番号。<br /><br /> 0 = 非表示<br /><br /> 1 = OPEN <br /><br /> 2 = CLOSED <br /><br /> 3 = 圧縮<br /><br /> 4 = 廃棄標識<br /><br /> 圧縮は、インメモリテーブルに適用される唯一の状態です。|  
-|**state_desc**|**nvarchar(60)**|行グループの状態の説明:<br /><br /> 0-非表示-ビルドされている行グループ。 例: <br />列ストアの行グループは、データの圧縮中は非表示になります。 圧縮が完了すると、メタデータスイッチは列ストアの行グループの状態を "非表示" から "圧縮済み" に変更し、デルタストアの行グループの状態を "終了" から "廃棄済み" に変更します。<br /><br /> 1-OPEN-新しい行を受け入れる、デルタストアの行グループ。 開いている行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。<br /><br /> 2-CLOSED-最大行数を含むデルタストア内の行グループ。これは、組ムーバープロセスによって列ストアに圧縮されるのを待機しています。<br /><br /> 3-圧縮-列ストア圧縮で圧縮され、列ストアに格納される行グループ。<br /><br /> 4-TOMBSTONE-以前はデルタストア内にあった行グループは使用されなくなりました。|  
+|**state_desc**|**nvarchar(60)**|行グループの状態の説明:<br /><br /> 0-非表示-ビルドされている行グループ。 次に例を示します。 <br />列ストアの行グループは、データの圧縮中は非表示になります。 圧縮が完了すると、メタデータスイッチは列ストアの行グループの状態を "非表示" から "圧縮済み" に変更し、デルタストアの行グループの状態を "終了" から "廃棄済み" に変更します。<br /><br /> 1-OPEN-新しい行を受け入れる、デルタストアの行グループ。 開いている行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。<br /><br /> 2-CLOSED-最大行数を含むデルタストア内の行グループ。これは、組ムーバープロセスによって列ストアに圧縮されるのを待機しています。<br /><br /> 3-圧縮-列ストア圧縮で圧縮され、列ストアに格納される行グループ。<br /><br /> 4-TOMBSTONE-以前はデルタストア内にあった行グループは使用されなくなりました。|  
 |**total_rows**|**bigint**|行グループに物理的に格納されている行の数。 圧縮された行グループの場合。 削除済みとしてマークされている行が含まれます。|  
 |**deleted_rows**|**bigint**|削除対象としてマークされている圧縮行グループに物理的に格納されている行の数。<br /><br /> デルタ ストア内の行グループの場合は 0 です。|  
 |**size_in_bytes**|**bigint**|この行グループ内のすべてのページの合計サイズ (バイト単位)。 このサイズには、メタデータまたは共有辞書を格納するために必要なサイズは含まれていません。|  

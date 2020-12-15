@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8400701be6e002701da112294bbfbf7c11b7da18
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 09a7add1433bc9eb8184843f24d113e3706a4c36
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537359"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475093"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "89537359"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|型の名前。 スキーマ内で一意です。|  
 |**system_type_id**|**tinyint**|型の内部システム型の ID。|  
-|**user_type_id**|**int**|型の ID です。 データベース内で一意です。 システムデータ型の場合は、 **user_type_id**  =  **system_type_id**ます。|  
+|**user_type_id**|**int**|型の ID です。 データベース内で一意です。 システムデータ型の場合は、 **user_type_id**  =  **system_type_id** ます。|  
 |**schema_id**|**int**|型が属するスキーマの ID。|  
 |**principal_id**|**int**|スキーマの所有者と異なる場合は、個々の所有者の ID。 既定では、スキーマに含まれるオブジェクトはスキーマの所有者によって所有されます。 ただし、ALTER AUTHORIZATION ステートメントを使用して所有権を変更することによって、代替所有者を指定できます。<br /><br /> 別の所有者がいない場合は NULL になります。|  
-|**max_length**|**smallint**|型の最大長 (バイト単位)。<br /><br /> -1 = 列のデータ型は **varchar (max)**,、 **nvarchar (max)**,、 **varbinary (max)**,、または **xml**です。<br /><br /> **テキスト**列の場合、 **max_length**値は16になります。|  
+|**max_length**|**smallint**|型の最大長 (バイト単位)。<br /><br /> -1 = 列のデータ型は **varchar (max)**,、 **nvarchar (max)**,、 **varbinary (max)**,、または **xml** です。<br /><br /> **テキスト** 列の場合、 **max_length** 値は16になります。|  
 |**有効桁数 (precision)**|**tinyint**|数値ベースの場合の型の最大有効桁数。それ以外の場合は0です。|  
 |**scale**|**tinyint**|数値ベースの場合の型の最大小数点以下桁数それ以外の場合は0です。|  
 |**collation_name**|**sysname**|文字ベースの場合は、型の照合順序の名前。それ以外の場合は NULL です。|  

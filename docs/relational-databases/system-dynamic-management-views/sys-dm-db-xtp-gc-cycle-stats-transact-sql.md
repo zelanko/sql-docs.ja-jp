@@ -1,6 +1,6 @@
 ---
-description: dm_db_xtp_gc_cycle_stats (Transact-sql)
-title: dm_db_xtp_gc_cycle_stats (Transact-sql) |Microsoft Docs
+description: sys.dm_db_xtp_gc_cycle_stats (Transact-sql)
+title: sys.dm_db_xtp_gc_cycle_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cd3e4fef0d6d02508ff8b6cd917b1a02a08585e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8dab39f3f8d7274879e8a69742724c98956b6386
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542254"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474953"
 ---
-# <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>dm_db_xtp_gc_cycle_stats (Transact-sql)
+# <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-sql)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   1 つ以上の行を削除したコミット済みトランザクションの現在の状態を出力します。 アイドル状態のガベージコレクションスレッドは、最後のガベージコレクションサイクル以降にコミットされた DML トランザクションの数が内部しきい値を超えたときに、1分ごとに起動されます。 ガベージ コレクション サイクルの一環として、コミット済みトランザクションは、generation と関連付けられている 1 つ以上のキューに移動されます。 古いバージョンを生成したトランザクションは、次のようにして、16 の generation にわたり 16 トランザクションごとの単位にグループ化されます。  

@@ -1,6 +1,6 @@
 ---
 description: sys.fn_check_object_signatures (Transact-SQL)
-title: fn_check_object_signatures (Transact-sql) |Microsoft Docs
+title: sys.fn_check_object_signatures (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7dc2f5c8700bef804b77e97917250152988baf7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 652f7d896d68097d081d209fd6617a8a3b389eb9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481829"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472773"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -53,7 +53,7 @@ fn_ check_object_signatures (
   
 -   'asymmetric key'  
   
- \@*class* は **sysname** です。  
+ \@*クラス* は **sysname** です。  
   
  { \@ *thumbprint* }  
  キーの暗号化で使用された証明書の SHA-1 ハッシュ。または、キーの暗号化で使用された非対称キーの GUID。 \@*拇印* は **varbinary (20)** です。  
@@ -69,7 +69,7 @@ fn_ check_object_signatures (
 |is_signature_valid|**int**|is_signed の値が 1 の場合、署名が有効ではないときは 0 を返します。 署名が有効な場合は1を返します。<br /><br /> is_signed の値が 0 の場合は、常に 0 を返します。|  
   
 ## <a name="remarks"></a>解説  
- **Fn_check_object_signatures**を使用して、悪意のあるユーザーがオブジェクトを改ざんしていないことを確認します。  
+ **Fn_check_object_signatures** を使用して、悪意のあるユーザーがオブジェクトを改ざんしていないことを確認します。  
   
 ## <a name="permissions"></a>アクセス許可  
  証明書または非対称キーに対する VIEW DEFINITION が必要です。  

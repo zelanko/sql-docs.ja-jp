@@ -1,6 +1,6 @@
 ---
-description: fulltext_index_fragments (Transact-sql)
-title: fulltext_index_fragments (Transact-sql) |Microsoft Docs
+description: sys.fulltext_index_fragments (Transact-sql)
+title: sys.fulltext_index_fragments (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,15 +23,15 @@ ms.assetid: a82e5018-5d88-45c0-9a47-c251e17a6cdb
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 953bf5145712d81acf0ed193719d290cc2397e43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5e0f1882c6840048e3308120e6b8768897b43d6b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88401368"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475183"
 ---
-# <a name="sysfulltext_index_fragments-transact-sql"></a>fulltext_index_fragments (Transact-sql)
+# <a name="sysfulltext_index_fragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   フルテキストインデックスでは、 *フルテキストインデックスフラグメント* と呼ばれる内部テーブルを使用して、逆インデックスデータを格納します。 このビューを使用すると、これらのフラグメントに関するメタデータをクエリできます。 このビューは、フルテキスト インデックスが含まれているすべてのテーブルのフルテキスト インデックス フラグメントごとに 1 行のデータを格納しています。  
@@ -55,7 +55,7 @@ SELECT table_id, status FROM sys.fulltext_index_fragments
    WHERE status=4 OR status=6;  
 ```  
   
- クエリ可能なフラグメントが多数存在する場合は、フルテキストインデックスを含むフルテキストカタログを再編成してフラグメントをマージすることをお勧めします。 フルテキストカタログのを再構成するには、 [ALTER フルテキストカタログ](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)を使用して再編成*catalog_name*ます。 たとえば、データベース内のという名前のフルテキストカタログを再編成するには、次のように `ftCatalog` `AdventureWorks2012` 入力します。  
+ クエリ可能なフラグメントが多数存在する場合は、フルテキストインデックスを含むフルテキストカタログを再編成してフラグメントをマージすることをお勧めします。 フルテキストカタログのを再構成するには、 [ALTER フルテキストカタログ](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)を使用して再編成 *catalog_name* ます。 たとえば、データベース内のという名前のフルテキストカタログを再編成するには、次のように `ftCatalog` `AdventureWorks2012` 入力します。  
   
 ```  
 USE AdventureWorks2012;  

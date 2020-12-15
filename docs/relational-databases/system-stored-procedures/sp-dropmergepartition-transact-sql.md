@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 1be511c1-79ff-4947-9379-78d83b7b8945
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 304741f1c987f2f6c57b3e4e03a59b83987116b4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 850130a686a114d2e7a8bafaea8b0133d40215cd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539012"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472733"
 ---
 # <a name="sp_dropmergepartition-transact-sql"></a>sp_dropmergepartition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,9 +43,9 @@ sp_dropmergepartition [ @publication = ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication] = 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @suser_sname = ] 'suser_sname'` サブスクライバー側でパーティションを定義するために使用する [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 関数の値を指定します。 *suser_sname* は **sysname**であり、既定値はありません。  
+`[ @suser_sname = ] 'suser_sname'` サブスクライバー側でパーティションを定義するために使用する [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 関数の値を指定します。 *suser_sname* は **sysname** であり、既定値はありません。  
   
-`[ @host_name = ] 'host_name'` サブスクライバー側でパーティションを定義するために使用する [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 関数の値を指定します。 *host_name* は **sysname**であり、既定値はありません。  
+`[ @host_name = ] 'host_name'` サブスクライバー側でパーティションを定義するために使用する [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 関数の値を指定します。 *host_name* は **sysname** であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
@@ -54,7 +54,7 @@ sp_dropmergepartition [ @publication = ] 'publication'
  **sp_dropmergepartition** は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_dropmergepartition**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_dropmergepartition** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [パラメーター化されたフィルターによるマージ パブリケーションのパーティションの管理](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)  

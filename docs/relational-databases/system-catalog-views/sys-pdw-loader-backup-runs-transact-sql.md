@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 31d8ae2e196d116b6e3ff58c23deedc20425fdf5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: e74c866747b7e8f9c784f43e60ab7fb6ce4cc673
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036985"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472913"
 ---
 # <a name="syspdw_loader_backup_runs-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "92036985"
 |end_time|**datetime**|操作が完了した、失敗した、または取り消された時刻。||  
 |total_elapsed_time|**int**|Start_time と現在の時刻の間の経過時間、または完了、取り消し、または失敗した実行の start_time と end_time の間の合計時間。|Total_elapsed_time が整数の最大値 (ミリ秒単位で24.8 日) を超えた場合、オーバーフローによる具体化エラーが発生します。<br /><br /> ミリ秒単位の最大値は24.8 日に相当します。|  
 |operation_type|**nvarchar (16)**|読み込みの種類。|' BACKUP '、' LOAD '、' RESTORE '|  
-|mode|**nvarchar (16)**|実行の種類内のモードです。|Operation_type =**バックアップ**の場合<br />**記号**<br />**FULL**<br /><br /> Operation_type の場合 = **読み込み**<br />**追記**<br />**直し**<br />**UPSERT**<br /><br /> Operation_type の場合 = **復元**<br />**データベース**<br />**HEADER_ONLY**|  
+|mode|**nvarchar (16)**|実行の種類内のモードです。|Operation_type =**バックアップ** の場合<br />**DIFFERENTIAL**<br />**FULL**<br /><br /> Operation_type の場合 = **読み込み**<br />**追記**<br />**直し**<br />**UPSERT**<br /><br /> Operation_type の場合 = **復元**<br />**DATABASE**<br />**HEADER_ONLY**|  
 |database_name|**nvarchar (255)**|この操作のコンテキストであるデータベースの名前||  
 |table_name|**nvarchar (255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|操作を要求しているユーザーの ID。||  

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5fa8a1df313af5473de9c49137166a6c2ac50589
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: ef24acb23a346b59b747d876d60d9a58374188bd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521106"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469973"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>マネージインスタンスで MDS データベースをホストする
 
@@ -64,7 +64,7 @@ ms.locfileid: "94521106"
      - 要求監視
      - パフォーマンス
      - 静的コンテンツ圧縮
-     - セキュリティ
+     - Security
      - 要求のフィルタリング
      - Windows 認証
        > [!NOTE]
@@ -93,7 +93,7 @@ SQL Server セットアップインストールウィザードまたはコマン
 
 1. `Setup.exe`を開き、インストールウィザードの手順に従います。
 
-2. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] [機能の選択] **ページで、** [共有機能] **の [** ] を選択します。
+2. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] [機能の選択] **ページで、** [共有機能] **の [**] を選択します。
 この操作は次のようにインストールされます。
    - [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]
    - アセンブリ
@@ -133,24 +133,24 @@ SQL Server セットアップインストールウィザードまたはコマン
 
 1. [ **次** へ] を選択すると、データベースの設定の概要が表示さ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] れます。 もう一度 [  **次へ** ] を選択して、データベースを作成します。 [ **進行状況と完了** ] ページが表示されます。
 
-1. データベースの作成と構成が完了したら、[ **完了** ] を選択します。
+1. データベースの作成と構成が完了したら、[ **完了**] を選択します。
 
-   **データベースの作成ウィザード** の設定の詳細については、「 [データベースの作成ウィザード &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)」を参照してください。
+   **データベースの作成ウィザード** の設定の詳細については、「[データベースの作成ウィザード &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)」を参照してください。
 
-1. の [ **データベースの構成** ] ページで、[データベースの選択] を [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 選択します **Select Database** 。
+1. の [**データベースの構成**] ページで、[データベースの選択] を [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 選択します。
 
-1. [ **接続** ] を選択し、データベースを選択して、[ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] **OK]** を選択します。
+1. [ **接続**] を選択し、データベースを選択して、[ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] **OK]** を選択します。
 
    ![[データベースへの接続] ダイアログボックスのスクリーンショット。](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "SQLServer2019-Config-MI_connectDBName")
 
 1. の [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 左側のウィンドウで、[ **Web 構成** ] を選択します。
 
-1. [Web **サイト] ボックスの一覧で** [ **既定の web サイト** ] を選択し、[ **作成** ] を選択して web アプリケーションを作成します。
+1. [Web **サイト] ボックスの一覧で** [ **既定の web サイト**] を選択し、[ **作成** ] を選択して web アプリケーションを作成します。
 
    ![[マスターデータサービス構成マネージャー] ダイアログボックスのスクリーンショット。](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "SQLServer2019-Config-MI_WebConfiguration")
 
    > [!NOTE]
-   > [既定の **Web サイト** ] を選択した場合は、個別に web アプリケーションを作成する必要があります。 リストボックスで [ **新しい web サイトを作成** する] を選択すると、アプリケーションが自動的に作成されます。
+   > [既定の **Web サイト**] を選択した場合は、個別に web アプリケーションを作成する必要があります。 リストボックスで [ **新しい web サイトを作成** する] を選択すると、アプリケーションが自動的に作成されます。
 
 1. [ **アプリケーションプール** ] セクションで、別のユーザー名を入力し、パスワードを入力して、[ **OK]** を選択します。
 
@@ -161,7 +161,7 @@ SQL Server セットアップインストールウィザードまたはコマン
 
    [ **Web アプリケーションの作成** ] ダイアログボックスの詳細については、「[ [Web アプリケーションの作成] ダイアログボックス &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)」を参照してください。
 
-1. **Web アプリケーション** ウィンドウの [ **web 構成** ] ウィンドウで、作成したアプリケーションを選択し、[ **アプリケーションとデータベースの関連付け** ] セクションで [ **選択** ] を選択します。
+1. **Web アプリケーション** ウィンドウの [ **web 構成**] ウィンドウで、作成したアプリケーションを選択し、[**アプリケーションとデータベースの関連付け**] セクションで [**選択**] を選択します。
 
 1. [ **接続** ] を選択し、 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web アプリケーションに関連付けるデータベースを選択します。 **[OK]** を選択します。
 
@@ -212,17 +212,17 @@ MDS では、次の接続文字列の例に示すように、Active Directory �
 
 1. を開き、 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 左ペインで [  **データベース構成** ] を選択します。
 
-1. の [ **データベースの構成** ] ページで、[データベースの選択] を [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 選択します **Select Database** 。
+1. の [**データベースの構成**] ページで、[データベースの選択] を [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 選択します。
 
-1. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]Web アプリケーションに関連付けるデータベースを選択します。 [ **接続** ] を選択し、[ **OK]** を選択します。
+1. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]Web アプリケーションに関連付けるデータベースを選択します。 [ **接続**] を選択し、[ **OK]** を選択します。
 
    ![[マスターデータサービスデータベースへの接続] ダイアログボックスのスクリーンショット。](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "SQLServer2019-Config-MI_ConnectDBName")
 
-1. [ **データベースのアップグレード** ] を選択します。 .
+1. [**データベースのアップグレード**] を選択します。 .
 
    ![[データベースのアップグレード] オプションのスクリーンショット。](../master-data-services/media/mds-sqlserver2019-config-mi-selectupgradedb.png "SQLServer2019-Config-MI_SelectUpgradeDB")
 
-1. データベースのアップグレードウィザードの [ **ようこそ** ] ページで [ **次へ** ] を選択し、[ **アップグレードの確認** ] ページをクリックします。
+1. データベースのアップグレードウィザードの [**ようこそ**] ページで [**次へ**] を選択し、[**アップグレードの確認**] ページをクリックします。
 
    ![データベースのアップグレードウィザードの [アップグレードの確認] ページのスクリーンショット。](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbwizard.png "SQLServer2019-Config-MI_UpgradeDBWizard")
 

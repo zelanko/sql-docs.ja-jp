@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: acdb347af36812095df03f61ae9f118493496e51
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: f0ae8e1f4ec9fdf83ce3f143c175fd08b153a960
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364774"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475063"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL データベース)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
@@ -59,7 +59,7 @@ Geo レプリケーションリンクに関する情報を取得するには、 
 ## <a name="permissions"></a>アクセス許可  
  このビューは、サーバーレベルプリンシパルログインの **master** データベースでのみ使用できます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  ソースサーバーまたはターゲットサーバーの **master** データベースの **sys.dm_database_copies** ビューを使用でき [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ます。 データベースのコピーが正常に完了し、新しいデータベースがオンラインになると、 **sys.dm_database_copies** ビューの行が自動的に削除されます。  
   
   

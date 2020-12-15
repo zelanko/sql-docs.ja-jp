@@ -10,14 +10,14 @@ ms.topic: language-reference
 ms.assetid: 7f353e2a-f8fc-4366-97e4-aa1c49eadaf4
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 483fa1c826c4b495d609d1c893f5bb022ac6f943
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b65d705e6b6f961629d64d08408c4e3dece9d377
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546390"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474773"
 ---
 # <a name="sysdm_xe_database_session_targets-azure-sql-database"></a>sys.dm_xe_database_session_targets (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "89546390"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary (8)**|イベントセッションのメモリアドレス。 には、dm_xe_database_sessions との多対一のリレーションシップがあります。 NULL 値は許可されません。|  
+|event_session_address|**varbinary (8)**|イベントセッションのメモリアドレス。 には、sys.dm_xe_database_sessions との多対一のリレーションシップがあります。 NULL 値は許可されません。|  
 |target_name|**nvarchar(60)**|セッション内のターゲットの名前。 NULL 値は許可されません。|  
 |target_package_guid|**uniqueidentifier**|ターゲットを含むパッケージの GUID。 NULL 値は許可されません。|  
 |execution_count|**bigint**|セッションに対してターゲットが実行された回数。 NULL 値は許可されません。|  
@@ -42,8 +42,8 @@ ms.locfileid: "89546390"
   
 ### <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|From|終了|リレーションシップ|  
+|差出人|終了|リレーションシップ|  
 |----------|--------|------------------|  
-|dm_xe_database_session_targets。 event_session_address|dm_xe_database_sessions. アドレス|多対一|  
+|sys.dm_xe_database_session_targets sys.dm_xe_database_session_targets.event_session_address|sys.dm_xe_database_sessions。アドレス|多対一|  
   
   

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: adf2a1eb88397acbbc8e092eb320e15f239ae8f2
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cad75b88b14fd9bc64acbbd8b167619d3dbcc2e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834523"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472883"
 ---
 # <a name="sysdm_db_tuning_recommendations-transact-sql"></a>sys.dm \_ db \_ チューニングに \_ 関する推奨事項 (transact-sql)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "91834523"
 | **スコア** | **int** | 0-100 スケールでのこの推奨事項の推定値/影響 (より優れたもの) |
 | **住所** | **nvarchar(max)** | 推奨事項についての詳細が記載された JSON ドキュメント。 次のフィールドを使用できます。<br /><br />`planForceDetails`<br />-    `queryId` - \_ 低下したクエリのクエリ id。<br />-    `regressedPlanId` -低下したプランの plan_id。<br />-   `regressedPlanExecutionCount` -回帰が検出されるまでの低下した plan を使用したクエリの実行回数。<br />-    `regressedPlanAbortedCount` -低下したプランの実行中に検出されたエラーの数。<br />-    `regressedPlanCpuTimeAverage` -回帰が検出される前に低下したクエリによって消費される平均 CPU 時間 (マイクロ秒)。<br />-    `regressedPlanCpuTimeStddev` -回帰が検出される前に低下したクエリによって消費される CPU 時間の標準偏差。<br />-    `recommendedPlanId` -強制する計画の plan_id。<br />-   `recommendedPlanExecutionCount`-回帰が検出される前に強制される必要があるプランを持つクエリの実行回数。<br />-    `recommendedPlanAbortedCount` -プランの実行中に強制される必要がある検出されたエラーの数。<br />-    `recommendedPlanCpuTimeAverage` -強制的に実行する必要がある (回帰が検出される前に計算された) プランで実行されたクエリによって消費される平均 CPU 時間 (マイクロ秒)。<br />-    `recommendedPlanCpuTimeStddev` 回帰が検出される前に低下したクエリによって消費される CPU 時間の標準偏差。<br /><br />`implementationDetails`<br />-  `method` -回帰を修正するために使用する必要があるメソッド。 値は常に `TSql` です。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 推奨されるプランを強制するために実行するスクリプト。 |
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  によって返される情報 `sys.dm_db_tuning_recommendations` は、データベースエンジンによってクエリパフォーマンスの潜在的な回帰が識別され、保存されない場合に更新されます。 推奨事項は、が再起動されるまで保持され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 サーバーの再利用後に保持する場合は、データベース管理者がチューニングの推奨設定のバックアップコピーを定期的に作成する必要があります。 
 
  `currentValue` 列のフィールドには `state` 、次の値が含まれる場合があります。

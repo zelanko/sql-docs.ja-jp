@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8dcd78028499875016828e31bd3386eaf23c85a4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 51123619f1369b61bcbcba4db8314989cd9a0fd4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550406"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472963"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89550406"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |\<inherited columns>||は、すべての[列を継承します。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
-|**start_value**|**NULL 以外の sql_variant**|シーケンスオブジェクトの開始値。 ALTER SEQUENCE を使用してシーケンス オブジェクトを再開するときに、この値から再開されます。 シーケンスオブジェクトは、 **start_value**ではなく、 **minimum_value**または**maximum_value**に進みます。|  
+|**start_value**|**NULL 以外の sql_variant**|シーケンスオブジェクトの開始値。 ALTER SEQUENCE を使用してシーケンス オブジェクトを再開するときに、この値から再開されます。 シーケンスオブジェクトは、 **start_value** ではなく、 **minimum_value** または **maximum_value** に進みます。|  
 |**increment**|**NULL 以外の sql_variant**|生成された各値の後にシーケンスオブジェクトをインクリメントするために使用される値。|  
 |**minimum_value**|**sql_variant NULL**|シーケンスオブジェクトによって生成できる最小値。 この値に達すると、シーケンスオブジェクトは、より多くの値を生成するときにエラーを返すか、または CYCLE オプションが指定されている場合に再起動します。 MINVALUE が指定されていない場合、この列は、シーケンスジェネレーターのデータ型でサポートされる最小値を返します。|  
 |**maximum_value**|**sql_variant NULL**|シーケンスオブジェクトによって生成できる最大値。 この値に達すると、シーケンスオブジェクトは、より多くの値を生成しようとしたときにエラーを返すか、または CYCLE オプションが指定されている場合に再起動します。 MAXVALUE が指定されていない場合、この列は、シーケンス ジェネレーターのデータ型によってサポートされる最大値を返します。|  

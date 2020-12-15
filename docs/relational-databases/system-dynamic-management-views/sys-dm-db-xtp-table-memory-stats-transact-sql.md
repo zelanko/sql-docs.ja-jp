@@ -1,6 +1,6 @@
 ---
-description: dm_db_xtp_table_memory_stats (Transact-sql)
-title: dm_db_xtp_table_memory_stats (Transact-sql) |Microsoft Docs
+description: sys.dm_db_xtp_table_memory_stats (Transact-sql)
+title: sys.dm_db_xtp_table_memory_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ad0efc06-3d9c-4861-9dfa-a7a87822d0c8
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bf82197a769e8268d882aadc9358a4b4ee8bbb7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: daa5c0a36884c06ae4c335a016b4cdcbbb33bfa5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537010"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474933"
 ---
-# <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>dm_db_xtp_table_memory_stats (Transact-sql)
+# <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-sql)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   現在のデータベースの各 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] テーブル (ユーザーおよびシステム) におけるメモリ使用量に関する統計を返します。 システムテーブルには負のオブジェクト Id があり、エンジンの実行時の情報を格納するために使用され [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ます。 ユーザー オブジェクトとは異なり、システム テーブルは内部で使用され、メモリ内にしか存在しないため、カタログ ビューには表示されません。 システムテーブルは、ストレージ内のすべてのデータ/デルタファイルのメタデータ、マージ要求、行をフィルター処理するためのデルタファイルのウォーターマーク、削除されたテーブル、回復とバックアップに関する関連情報などの情報を格納するために使用されます。 エンジンは、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 最大8192のデータファイルとデルタファイルのペアを持つことができるため、大規模なインメモリデータベースでは、システムテーブルによって使用されるメモリが数メガバイトになることがあります。  

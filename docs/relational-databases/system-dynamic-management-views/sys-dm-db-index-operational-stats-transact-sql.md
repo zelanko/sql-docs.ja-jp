@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4d69890ba5c76c3d37ecd6accd9ba13caa7b089
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b1f177d09dd741eadc967a2b32a87a905e04dfb6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036098"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475073"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +57,7 @@ sys.dm_db_index_operational_stats (
 
   データベースの ID です。 *database_id* は **smallint** です。 有効な入力値は、データベースの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。    
     
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのすべてのデータベースに関する情報を返すには NULL を指定します。 *Database_id* に null を指定した場合は、 *object_id* 、 *index_id* 、および *partition_number* にも null を指定する必要があります。    
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのすべてのデータベースに関する情報を返すには NULL を指定します。 *Database_id* に null を指定した場合は、 *object_id*、 *index_id*、および *partition_number* にも null を指定する必要があります。    
     
  組み込み関数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) を指定できます。    
 
@@ -106,11 +106,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|インデックスまたはヒープで開始された範囲スキャンとテーブル スキャンの累積数。|    
 |**singleton_lookup_count**|**bigint**|インデックスまたはヒープから取得した単一行の累積数。|    
 |**forwarded_fetch_count**|**bigint**|前方向レコードを介してフェッチされた行の数。<br /><br /> 0 = インデックス|    
-|**lob_fetch_in_pages**|**bigint**|LOB_DATA アロケーション ユニットから取得したラージ オブジェクト (LOB) ページの累積数。 これらのページには、 **text** 、 **ntext** 、 **image** 、 **varchar (max)** 、 **nvarchar (max)** 、 **varbinary (max)** 、および **xml** 型の列に格納されているデータが含まれています。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。|    
+|**lob_fetch_in_pages**|**bigint**|LOB_DATA アロケーション ユニットから取得したラージ オブジェクト (LOB) ページの累積数。 これらのページには、 **text**、 **ntext**、 **image**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、および **xml** 型の列に格納されているデータが含まれています。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。|    
 |**lob_fetch_in_bytes**|**bigint**|取得した LOB データの累積バイト数。|    
 |**lob_orphan_create_count**|**bigint**|一括操作用に作成された、孤立した LOB 値の累積数。<br /><br /> 0 = 非クラスター化インデックス|    
 |**lob_orphan_insert_count**|**bigint**|一括操作中に挿入された、孤立した LOB 値の累積数。<br /><br /> 0 = 非クラスター化インデックス|    
-|**row_overflow_fetch_in_pages**|**bigint**|ROW_OVERFLOW_DATA アロケーション ユニットから取得した行オーバーフロー データ ページの累積数。<br /><br /> これらのページには、行外にプッシュされた **varchar (n)** 、 **nvarchar (n)** 、 **varbinary (n)** 、および **sql_variant** 型の列に格納されているデータが含まれています。|    
+|**row_overflow_fetch_in_pages**|**bigint**|ROW_OVERFLOW_DATA アロケーション ユニットから取得した行オーバーフロー データ ページの累積数。<br /><br /> これらのページには、行外にプッシュされた **varchar (n)**、 **nvarchar (n)**、 **varbinary (n)**、および **sql_variant** 型の列に格納されているデータが含まれています。|    
 |**row_overflow_fetch_in_bytes**|**bigint**|取得した行オーバーフロー データの累積バイト数。|    
 |**column_value_push_off_row_count**|**bigint**|挿入または更新された行をページ内に収めるため、行外に出された LOB データおよび行オーバーフロー データに対する列値の累積数。|    
 |**column_value_pull_in_row_count**|**bigint**|行内に取り込まれた LOB データおよび行オーバーフロー データに対する列値の累積数。 これは、更新操作によりレコード内の領域が解放され、LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットから IN_ROW_DATA アロケーション ユニットに 1 つ以上の行外値を取り込めるようになったときに発生します。|    
@@ -133,14 +133,14 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|テーブル、インデックス、またはインデックス付きビューの特定のパーティションで、ページ レベルの圧縮が評価されたページの数。 大幅な節減を実現できないため圧縮されなかったページも含まれます。 列ストア インデックスでは、常に 0 です。|    
 |**page_compression_success_count**|**bigint**|テーブル、インデックス、またはインデックス付きビューの特定のパーティションで、ページの圧縮を使用して圧縮されたデータ ページの数。 列ストア インデックスでは、常に 0 です。|    
     
-## <a name="remarks"></a>注釈    
+## <a name="remarks"></a>解説    
  この動的管理オブジェクトは、およびからの相関パラメーターを受け入れません `CROSS APPLY` `OUTER APPLY` 。    
     
  **sys.dm_db_index_operational_stats** を使用すると、テーブル、インデックス、またはパーティションに対する読み書きを行うために、ユーザーが待機する必要がある時間の長さを追跡でき、重大な I/O 動作やホット スポットが発生したテーブルまたはインデックスを特定できます。    
     
  競合について確認するには、次の列を使用します。    
     
- **テーブルまたはインデックス パーティションへの一般的なアクセス パターンを分析する場合** 、次の列を使用します。    
+ **テーブルまたはインデックス パーティションへの一般的なアクセス パターンを分析する場合**、次の列を使用します。    
     
 -   **leaf_insert_count**    
     
@@ -177,7 +177,7 @@ sys.dm_db_index_operational_stats (
 ## <a name="column-remarks"></a>列の解説    
  **lob_orphan_create_count** および **lob_orphan_insert_count** 内の値は、常に同じになります。    
     
- 付加列として 1 つ以上の LOB 列を含む非クラスター化インデックスの場合、 **lob_fetch_in_pages** および **lob_fetch_in_bytes** 列内の値は 0 より大きくなります。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。 同様に、行外に出される可能性がある列を含む非クラスター化インデックスの場合は、 **row_overflow_fetch_in_pages** および **row_overflow_fetch_in_bytes** 列内の値は 0 より大きくなります。    
+ 付加列として 1 つ以上の LOB 列を含む非クラスター化インデックスの場合、**lob_fetch_in_pages** および **lob_fetch_in_bytes** 列内の値は 0 より大きくなります。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。 同様に、行外に出される可能性がある列を含む非クラスター化インデックスの場合は、**row_overflow_fetch_in_pages** および **row_overflow_fetch_in_bytes** 列内の値は 0 より大きくなります。    
     
 ## <a name="how-the-counters-in-the-metadata-cache-are-reset"></a>メタデータキャッシュ内のカウンターのリセット方法    
  **sys.dm_db_index_operational_stats** により返されるデータが存在するのは、ヒープまたはインデックスを表すメタデータ キャッシュ オブジェクトが使用できる間だけです。 このデータは持続性はなく、トランザクション上の一貫性もありません。 つまり、これらのカウンターを使って、インデックスが使用されているかどうかや、インデックスが最後に使用されたのはいつであるかを判断することはできません。 詳細については、「 [sys.dm_db_index_usage_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)」を参照してください。    
@@ -192,9 +192,9 @@ sys.dm_db_index_operational_stats (
     
 -   `CONTROL` データベース内の指定されたオブジェクトに対する権限    
     
--   `VIEW DATABASE STATE` オブジェクトのワイルドカード @ *object_id* = NULL を使用して、指定したデータベース内のすべてのオブジェクトに関する情報を返す権限    
+-   `VIEW DATABASE STATE` オブジェクトのワイルドカード @*object_id* = NULL を使用して、指定したデータベース内のすべてのオブジェクトに関する情報を返す権限    
     
--   `VIEW SERVER STATE` データベースのワイルドカードを使用してすべてのデータベースに関する情報を返す権限 @ *database_id* = NULL    
+-   `VIEW SERVER STATE` データベースのワイルドカードを使用してすべてのデータベースに関する情報を返す権限 @*database_id* = NULL    
     
  許可 `VIEW DATABASE STATE` すると、特定のオブジェクトに対して拒否された制御権限に関係なく、データベース内のすべてのオブジェクトを返すことができます。    
     

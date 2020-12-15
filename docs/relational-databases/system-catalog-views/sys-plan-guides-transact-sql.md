@@ -1,6 +1,6 @@
 ---
-description: plan_guides (Transact-sql)
-title: plan_guides (Transact-sql) |Microsoft Docs
+description: sys.plan_guides (Transact-sql)
+title: sys.plan_guides (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8aacbeebf50eae1a6e20d35262dbdc054f1429d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 11e71695f2deddfec1e84c608bcf893fe7073361
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550482"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475133"
 ---
-# <a name="sysplan_guides-transact-sql"></a>plan_guides (Transact-sql)
+# <a name="sysplan_guides-transact-sql"></a>sys.plan_guides (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   データベース内のプラン ガイドごとに 1 行のデータを保持します。  

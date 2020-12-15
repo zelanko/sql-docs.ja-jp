@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a3befa2740bd11fcd88233cef3000deec0d7006e
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 7ab227e9df241914cba5f242eed6a38cf35815b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809328"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472933"
 ---
 # <a name="sysservers-transact-sql"></a>sys. servers (Transact-sql)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "91809328"
 |**catalog**|**sysname**|カタログ接続プロパティを OLE DB します。 None の場合は NULL です。|  
 |**connect_timeout**|**int**|接続タイムアウト (秒単位)、0 (なしの場合)。|  
 |**query_timeout**|**int**|クエリタイムアウト (秒単位)。存在しない場合は0です。|  
-|**is_linked**|**bit**|0 = **sp_addserver**を使用して追加された古い形式のサーバーであり、RPC と分散トランザクションの動作が異なります。<br /><br /> 1 の場合、標準リンク サーバーです。|  
+|**is_linked**|**bit**|0 = **sp_addserver** を使用して追加された古い形式のサーバーであり、RPC と分散トランザクションの動作が異なります。<br /><br /> 1 の場合、標準リンク サーバーです。|  
 |**is_remote_login_enabled**|**bit**|RPC オプションは、このサーバーの受信リモートログインを有効にするように設定されています。|  
 |**is_rpc_out_enabled**|**bit**|(このサーバーからの) 発信 RPC が有効です。|  
 |**is_data_access_enabled**|**bit**|サーバーで分散クエリが有効になっています。|  
@@ -63,7 +63,7 @@ ms.locfileid: "91809328"
 |**is_rda_server**|**bit**|**適用対象:** 以降 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br />サーバーはリモートデータアーカイブの有効化 (stretch 対応) です。 詳細については、「 [Enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)」を参照してください。|
   
 ## <a name="permissions"></a>アクセス許可  
- **Provider_string**の値は、呼び出し元が ALTER ANY LINKED SERVER 権限を持っていない限り、常に NULL になります。  
+ **Provider_string** の値は、呼び出し元が ALTER ANY LINKED SERVER 権限を持っていない限り、常に NULL になります。  
   
  ローカルサーバーを表示するためにアクセス許可は必要ありません (**server_id** = 0)。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "91809328"
  既定のログインマッピングが削除された場合、リンクされたログインまたはリモートログインとして明示的に追加されたユーザーのみが、ログインがあるリンクサーバーまたはリモートサーバーを表示できます。  既定のログインマッピングの後、すべてのリンクサーバーとリモートサーバーを表示するには、次のアクセス許可が必要です。  
   
 - `ALTER ANY LINKED SERVER` または `ALTER ANY LOGIN ON SERVER`  
-- **Setupadmin**または**sysadmin**固定サーバーロールのメンバーシップ  
+- **Setupadmin** または **sysadmin** 固定サーバーロールのメンバーシップ  
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

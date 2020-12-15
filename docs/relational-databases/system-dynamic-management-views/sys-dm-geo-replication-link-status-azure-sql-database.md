@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0d105ddedeafa8a82c068fce90f3e29bc4622f57
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: cb9936ce01a68055b7f050ddc7dbdb21a9802438
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834254"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474853"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 
@@ -44,14 +44,14 @@ ms.locfileid: "91834254"
 |role|**tinyint**|Geo レプリケーションロール。次のいずれかになります。<br /><br /> 0 = プライマリ。 Database_id は、geo レプリケーションパートナーシップのプライマリデータベースを参照します。<br /><br /> 1 = セカンダリ。  Database_id は、geo レプリケーションパートナーシップのプライマリデータベースを参照します。|  
 |role_desc|**nvarchar (256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|セカンダリ型。次のいずれかになります。<br /><br /> 0 = セカンダリデータベースへの直接接続は許可されず、データベースを読み取りアクセスに使用することはできません。<br /><br /> 2 = セカンダリ repl 内のデータベースへのすべての接続が許可されます。読み取り専用アクセスの場合は。|  
-|secondary_allow_connections_desc|**nvarchar (256)**|いいえ<br /><br /> All|  
+|secondary_allow_connections_desc|**nvarchar (256)**|いいえ<br /><br /> すべて|  
 |last_commit|**datetimeoffset**|最後のトランザクションがデータベースにコミットされた時刻。 プライマリデータベースで取得された場合は、プライマリデータベースの最後のコミット時刻を示します。 セカンダリデータベースで取得された場合は、セカンダリデータベースの最後のコミット時刻を示します。 レプリケーションリンクのプライマリがダウンしたときにセカンダリデータベースで取得された場合は、セカンダリがどの時点でキャッチされたかを示します。|
   
 > [!NOTE]  
 >  セカンダリデータベース (セクション 4.2) を削除することによってレプリケーション関係が終了した場合、[ **sys.dm_geo_replication_link_status** ] ビューにそのデータベースの行が表示されなくなります。  
   
 ## <a name="permissions"></a>アクセス許可  
- View_database_state のアクセス許可を持つアカウントは、 **sys.dm_geo_replication_link_status**を照会できます。  
+ View_database_state のアクセス許可を持つアカウントは、 **sys.dm_geo_replication_link_status** を照会できます。  
   
 ## <a name="example"></a>例  
  セカンダリデータベースのレプリケーションラグと最後のレプリケーション時刻を表示します。  

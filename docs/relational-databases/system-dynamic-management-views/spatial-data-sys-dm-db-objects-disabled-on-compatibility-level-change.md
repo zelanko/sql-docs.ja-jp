@@ -1,6 +1,6 @@
 ---
-description: dm_db_objects_disabled_on_compatibility_level_change (Transact-sql)
-title: dm_db_objects_disabled_on_compatibility_level_change (Transact-sql) |Microsoft Docs
+description: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-sql)
+title: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4779675cd37f6f49f90ab01fa17e5f5e9259260
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fdb9fb661ed0da6eee45206acb302922243609c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89519205"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475083"
 ---
-# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>空間データ-sys. dm_db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>空間データ-sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   で互換性レベルを変更した結果として無効になるインデックスと制約の一覧を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 更新または互換性レベルの変更後に、式が空間 Udt を使用する、保存される計算列を含むインデックスおよび制約は無効になります。 互換性レベルの変更の影響を判断するには、この動的管理関数を使用します。  
@@ -43,7 +43,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 ##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  *compatibility_level*  
- 設定を計画している互換性レベルを識別する**int** 。  
+ 設定を計画している互換性レベルを識別する **int** 。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
@@ -141,13 +141,13 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  1 つの列を無効にすることはできないので、クラスター化インデックスまたはヒープを無効にすると、テーブル全体が無効になります。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
  VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="example"></a>例  
- 次の例では、互換性レベルを120に変更することによって影響を受けるオブジェクトを検索するために、dm_db_objects_disabled_on_compatibility_level_change に対するクエリを示します **。**  
+ 次の例では、互換性レベルを120に変更することによって影響を受けるオブジェクトを検索するために **sys.dm_db_objects_disabled_on_compatibility_level_change** に対するクエリを示します。  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  
