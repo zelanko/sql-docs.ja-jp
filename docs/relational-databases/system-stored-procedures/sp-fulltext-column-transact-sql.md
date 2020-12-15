@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55f25dad90002ea50ba797a7960f22cfee5055c8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: aadc6c5b5548b2fccb3c37fdc9eb06a9baf69dcc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543374"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440536"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -50,24 +50,24 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ## <a name="arguments"></a>引数  
 `[ @tabname = ] 'qualified_table_name'` 1つまたは2つの要素で構成されるテーブル名を指定します。 テーブルは、現在のデータベース内に存在している必要があります。 テーブルにフルテキスト インデックスがある。 *qualified_table_name* は **nvarchar (517)** で、既定値はありません。  
   
-`[ @colname = ] 'column_name'`*Qualified_table_name*内の列の名前を指定します。 列には、文字、 **varbinary (max)** 、または **image** 型の列を指定する必要があり、計算列にすることはできません。 *column_name* は **sysname**であり、既定値はありません。  
+`[ @colname = ] 'column_name'`*Qualified_table_name* 内の列の名前を指定します。 列には、文字、 **varbinary (max)** 、または **image** 型の列を指定する必要があり、計算列にすることはできません。 *column_name* は **sysname** であり、既定値はありません。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **varbinary (max)** または **image** データ型の列に格納されているテキストデータのフルテキストインデックスを作成できます。 画像と画像にはインデックスが付けられません。  
   
 `[ @action = ] 'action'` 実行するアクションを指定します。 *アクション* は **varchar (20)**,、既定値はありません、次の値のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|**add**|テーブルの非アクティブなフルテキストインデックスに*qualified_table_name*の*column_name*を追加します。 この操作により、列でフルテキストインデックスを作成できるようになります。|  
-|**」**|テーブルの非アクティブなフルテキストインデックスから*qualified_table_name*の*column_name*を削除します。|  
+|**add**|テーブルの非アクティブなフルテキストインデックスに *qualified_table_name* の *column_name* を追加します。 この操作により、列でフルテキストインデックスを作成できるようになります。|  
+|**」**|テーブルの非アクティブなフルテキストインデックスから *qualified_table_name* の *column_name* を削除します。|  
   
-`[ @language = ] 'language_term'` 列に格納されているデータの言語を示します。 に含まれる言語の一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [Fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)」を参照してください。  
+`[ @language = ] 'language_term'` 列に格納されているデータの言語を示します。 に含まれる言語の一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [Sys.fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
 >  列に複数の言語またはサポートされていない言語のデータが含まれている場合は、' ニュートラル ' を使用してください。 既定値は、構成オプション ' default full text language ' によって指定されます。  
   
-`[ @type_colname = ] 'type_column_name'`*Column_name*のドキュメント型を保持する*qualified_table_name*内の列の名前を指定します。 この列は **char**、 **nchar**、 **varchar**、または **nvarchar**である必要があります。 *Column_name*のデータ型が**varbinary (max)** または**image**型の場合にのみ使用されます。 *type_column_name* は **sysname**であり、既定値はありません。  
+`[ @type_colname = ] 'type_column_name'`*Column_name* のドキュメント型を保持する *qualified_table_name* 内の列の名前を指定します。 この列は **char**、 **nchar**、 **varchar**、または **nvarchar** である必要があります。 *Column_name* のデータ型が **varbinary (max)** または **image** 型の場合にのみ使用されます。 *type_column_name* は **sysname** であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581ac92066750ac578cf8103383087fddeb01e65
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 60d30105f0c56224748a3c676ba4d76b73aa989b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810299"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462673"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>システム ストアド プロシージャ (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "91810299"
   
 |カテゴリ|説明|  
 |--------------|-----------------|  
-|[アクティブ Geo レプリケーションのストアドプロシージャ]()|Azure SQL Database でアクティブな Geo レプリケーションの構成を管理するために、を管理するために使用されます|  
+|[アクティブな Geo-Replication ストアドプロシージャ]()|Azure SQL Database で Active Geo-Replication 構成を管理するために使用されます。|  
 |[カタログ ストアド プロシージャ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|ODBC データ辞書関数を実装し、ODBC アプリケーションを基になるシステムテーブルへの変更から分離するために使用されます。|  
 |[変更データ キャプチャ ストアド プロシージャ](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|変更データキャプチャオブジェクトの有効化、無効化、またはレポートに使用されます。|  
 |[カーソル ストアド プロシージャ](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|カーソル変数の機能を実装するために使用されます。|  

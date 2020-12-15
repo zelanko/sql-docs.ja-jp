@@ -1,6 +1,6 @@
 ---
 description: sys.all_views (Transact-SQL)
-title: all_views (Transact-sql) |Microsoft Docs
+title: sys.all_views (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: d8829213-fce2-41c6-9ab2-aaab5836c941
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e351487e2c33c91f6d8777d955c5433319e1987
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 46ca240f9c49cd50dee9175ab9d05347a9492fcf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537546"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461693"
 ---
 # <a name="sysall_views-transact-sql"></a>sys.all_views (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "89537546"
 |**has_opaque_metadata**|**bit**|1 = ビューに対して指定された VIEW_METADATA オプションです。 詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」を参照してください。|  
 |**has_unchecked_assembly_data**|**bit**|1 = テーブルには、最後の ALTER ASSEMBLY 中に定義が変更されたアセンブリに依存する永続化されたデータが含まれています。 このデータは、DBCC CHECKDB または DBCC CHECKTABLE が次回正常に終了した後、0 にリセットされます。|  
 |**with_check_option**|**bit**|1 = WITH CHECK OPTION がビュー定義で指定されています。|  
-|**is_date_correlation_view**|**bit**|1 = ビューは、datetime 列間の相関関係情報を格納するためにシステムによって自動的に作成されました。 DATE_CORRELATION_OPTIMIZATION を **ON**に設定することにより、このビューの作成が有効になりました。|  
+|**is_date_correlation_view**|**bit**|1 = ビューは、datetime 列間の相関関係情報を格納するためにシステムによって自動的に作成されました。 DATE_CORRELATION_OPTIMIZATION を **ON** に設定することにより、このビューの作成が有効になりました。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1fd58cef1e99a1c7648ea8ad73657b7dc02be01
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c87ba11d6a38b69c63839db9b918fe44dbca2641
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006016"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97444277"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "92006016"
   現在のデータベースのパーティションごとに、ページ数と行数の情報を返します。  
   
 > [!NOTE]  
-> またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **sys.dm_pdw_nodes_db_partition_stats**という名前を使用します。 Sys.dm_pdw_nodes_db_partition_stats の partition_id は、Azure Synapse Analytics の [パーティション] カタログビューの partition_id とは異なります。
+> またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **sys.dm_pdw_nodes_db_partition_stats** という名前を使用します。 Sys.dm_pdw_nodes_db_partition_stats の partition_id は、Azure Synapse Analytics の [パーティション] カタログビューの partition_id とは異なります。
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|パーティションの ID。 データベース内で一意です。 これは、Azure Synapse Analytics を**除く、カタログビュー**の**partition_id**と同じ値です。|  
+|**partition_id**|**bigint**|パーティションの ID。 データベース内で一意です。 これは、Azure Synapse Analytics を **除く、カタログビュー** の **partition_id** と同じ値です。|  
 |**object_id**|**int**|パーティションが属するテーブルまたはインデックス付きビューのオブジェクト ID。|  
 |**index_id**|**int**|パーティションが属するヒープまたはインデックスの ID。<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化インデックス<br /><br /> > 1 = 非クラスター化インデックス|  
 |**partition_number**|**int**|インデックスまたはヒープ内の、1 から始まるパーティション番号。|  
@@ -49,8 +49,8 @@ ms.locfileid: "92006016"
 |**lob_reserved_page_count**|**bigint**|パーティションで行外の **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml** 型列の格納と管理に予約されているページの合計数。ページが使用されているかどうかは考慮されません。 IAM ページは含まれます。<br /><br /> パーティションで列ストア インデックスの格納と管理のために予約されている LOB の合計数。|  
 |**row_overflow_used_page_count**|**bigint**|パーティションで行オーバーフローの **varchar**、**nvarchar**、**varbinary**、**sql_variant** 型列の格納と管理に使用されているページ数。 IAM ページは含まれます。<br /><br /> 列ストア インデックスでは、常に 0 です。|  
 |**row_overflow_reserved_page_count**|**bigint**|パーティションで行オーバーフローの **varchar**、**nvarchar**、**varbinary**、**sql_variant** 型列の格納と管理に予約されているページの合計数。ページが使用されているかどうかは考慮されません。 IAM ページは含まれます。<br /><br /> 列ストア インデックスでは、常に 0 です。|  
-|**used_page_count**|**bigint**|パーティションで使用されているページの合計数。 **In_row_used_page_count**lob_used_page_count row_overflow_used_page_count として計算さ  +  **lob_used_page_count**  +  **row_overflow_used_page_count**れます。|  
-|**reserved_page_count**|**bigint**|パーティションで予約されているページの合計数。 **In_row_reserved_page_count**lob_reserved_page_count row_overflow_reserved_page_count として計算さ  +  **lob_reserved_page_count**  +  **row_overflow_reserved_page_count**れます。|  
+|**used_page_count**|**bigint**|パーティションで使用されているページの合計数。 **In_row_used_page_count** lob_used_page_count row_overflow_used_page_count として計算さ  +    +  れます。|  
+|**reserved_page_count**|**bigint**|パーティションで予約されているページの合計数。 **In_row_reserved_page_count** lob_reserved_page_count row_overflow_reserved_page_count として計算さ  +    +  れます。|  
 |**row_count**|**bigint**|パーティション内の行数の概算値です。|  
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
 |**distribution_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 分布に関連付けられている一意の数値 id です。|  
@@ -67,7 +67,7 @@ ms.locfileid: "92006016"
  各テーブルまたはインデックスの合計数は、関連するすべてのパーティションにおける数を加算することで取得されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- `VIEW DATABASE STATE` `VIEW DEFINITION` には、 **sys.dm_db_partition_stats**動的管理ビューにクエリを実行するための権限とアクセス許可が必要です。 動的管理ビューに対する権限の詳細については、「 [transact-sql&#41;&#40;の動的管理ビューおよび関数 ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
+ `VIEW DATABASE STATE` `VIEW DEFINITION` には、 **sys.dm_db_partition_stats** 動的管理ビューにクエリを実行するための権限とアクセス許可が必要です。 動的管理ビューに対する権限の詳細については、「 [transact-sql&#41;&#40;の動的管理ビューおよび関数 ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
   

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5a43d23f-adcf-4c0b-95ad-07cee03c1f9d
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af42a0f719e490ce32c6f81ee92722a540f1271a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d1a3144ed51592d3014564d7d5b9690fed958fb9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498148"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440603"
 ---
 # <a name="change_tracking_min_valid_version-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,13 +43,13 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
   
 ## <a name="arguments"></a>引数  
  *table_object_id*  
- テーブルのオブジェクト ID を示します。 *table_object_id* は **int**です。  
+ テーブルのオブジェクト ID を示します。 *table_object_id* は **int** です。  
   
 ## <a name="return-type"></a>戻り値の型  
  **bigint**  
   
 ## <a name="remarks"></a>解説  
- この関数を使用して、CHANGETABLE の *last_sync_version* パラメーターの値を検証します。 *Last_sync_version*がこの関数によって報告された値より小さい場合は、CHANGETABLE への後の呼び出しで返される結果が有効でない可能性があります。  
+ この関数を使用して、CHANGETABLE の *last_sync_version* パラメーターの値を検証します。 *Last_sync_version* がこの関数によって報告された値より小さい場合は、CHANGETABLE への後の呼び出しで返される結果が有効でない可能性があります。  
   
  CHANGE_TRACKING_MIN_VALID_VERSION では、次の情報を使用して戻り値を決定します。  
   

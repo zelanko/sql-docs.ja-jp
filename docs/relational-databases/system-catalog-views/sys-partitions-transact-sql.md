@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0947a58b607d781b05eb5633b0664d7f0da4d107
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 889b96df7adaff39f3f032a272c319e62d1e8e51
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546753"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461673"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "89546753"
 |hobt_id|**bigint**|このパーティションの行を含むデータヒープまたは B ツリー (HoBT) の ID を示します。|  
 |rows|**bigint**|このパーティション内の行の概数を示します。|  
 |filestream_filegroup_id|**smallint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> このパーティションに格納されている FILESTREAM ファイルグループの ID を示します。|  
-|data_compression|**tinyint**|各パーティションの圧縮の状態を示します。<br /><br /> 0 = NONE <br />1 = 行 <br />2 = ページ <br />3 = 列ストア: 以降**に適用さ**れます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br />4 = COLUMNSTORE_ARCHIVE:**以降に適用さ**れます。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> **注:** フルテキストインデックスは、のどのエディションでも圧縮され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
+|data_compression|**tinyint**|各パーティションの圧縮の状態を示します。<br /><br /> 0 = NONE <br />1 = 行 <br />2 = ページ <br />3 = 列ストア: 以降 **に適用さ** れます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br />4 = COLUMNSTORE_ARCHIVE:**以降に適用さ** れます。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> **注:** フルテキストインデックスは、のどのエディションでも圧縮され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |data_compression_desc|**nvarchar(60)**|各パーティションの圧縮の状態を示します。 行ストア テーブルに指定できる値は、NONE、ROW、および PAGE です。 列ストアテーブルに指定できる値は、列ストアと COLUMNSTORE_ARCHIVE です。|  
   
 ## <a name="permissions"></a>アクセス許可  

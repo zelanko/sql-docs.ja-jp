@@ -1,6 +1,6 @@
 ---
-description: dm_os_virtual_address_dump (Transact-sql)
-title: dm_os_virtual_address_dump (Transact-sql) |Microsoft Docs
+description: sys.dm_os_virtual_address_dump (Transact-sql)
+title: sys.dm_os_virtual_address_dump (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 7b24ea55-3873-42fd-a86c-441c92eb6175
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 731d180d3f269c6404c9cadf9587099d6ee48f41
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 87b213cd9a3d41e6cd0422a16c0431daeaedd1e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539276"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464563"
 ---
-# <a name="sysdm_os_virtual_address_dump-transact-sql"></a>dm_os_virtual_address_dump (Transact-sql)
+# <a name="sysdm_os_virtual_address_dump-transact-sql"></a>sys.dm_os_virtual_address_dump (Transact-sql)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   呼び出しプロセスの仮想アドレス空間にあるページの範囲に関する情報を返します。  
@@ -37,7 +37,7 @@ ms.locfileid: "89539276"
 >  この情報は、 **Virtualquery** Windows API からも返されます。  
   
 > [!NOTE]  
->  またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_os_virtual_address_dump**という名前を使用します。  
+>  またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **sys.dm_pdw_nodes_os_virtual_address_dump** という名前を使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 57d0a8e10eb79213de7eb29a2d18ea8837d7f908
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current
+ms.openlocfilehash: 142269f7c3cd8a5a1e764e2e48cf41f83490bd76
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809322"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464603"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Azure SQL Managed Instance の CPU 使用率、IO、およびストレージデータを返します。 データは、5 分間隔で収集と集計が実行されます。 15 秒ごとの報告につき 1 行作成されます。 返されるデータには、CPU 使用率、ストレージサイズ、IO 使用率、SKU が含まれます。 履歴データは約 14 日間保持されます。
 
-**Sys.server_resource_stats**ビューの定義は、データベースが関連付けられている Azure SQL Managed Instance のバージョンによって異なります。 新しいサーバーバージョンにアップグレードするときに、これらの違いとアプリケーションで必要な変更を検討してください。
+**Sys.server_resource_stats** ビューの定義は、データベースが関連付けられている Azure SQL Managed Instance のバージョンによって異なります。 新しいサーバーバージョンにアップグレードするときに、これらの違いとアプリケーションで必要な変更を検討してください。
  
   
  次の表では、v12 サーバーで使用できる列について説明します。  
@@ -59,8 +59,8 @@ Azure SQL Managed Instance の CPU 使用率、IO、およびストレージデ�
 ## <a name="permissions"></a>アクセス許可  
  このビューは、 **master** データベースに接続する権限を持つすべてのユーザーロールで使用できます。  
   
-## <a name="remarks"></a>注釈  
- **Sys.server_resource_stats**によって返されるデータは、実行しているサービス階層/パフォーマンスレベルで許容される最大限度に対する割合として表される、avg_cpu 以外のバイトまたはメガバイト (列名で示される) で使用される合計として表されます。  
+## <a name="remarks"></a>解説  
+ **Sys.server_resource_stats** によって返されるデータは、実行しているサービス階層/パフォーマンスレベルで許容される最大限度に対する割合として表される、avg_cpu 以外のバイトまたはメガバイト (列名で示される) で使用される合計として表されます。  
  
 ## <a name="examples"></a>例  
  次の例では、過去1週間のコンピューティング使用率の平均が80% 以上のすべてのデータベースを返します。  

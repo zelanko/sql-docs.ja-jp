@@ -13,14 +13,14 @@ dev_langs:
 ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f8bf71d7cc81c8433821393779bf2d80595f2f78
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 2e69f8446bc7a98b6aa3bae68a169d5e88759ea2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92254690"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461543"
 ---
 # <a name="sp_pdw_remove_network_credentials-azure-synapse-analytics"></a>sp_pdw_remove_network_credentials (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -49,7 +49,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
  0 (成功) または 1 (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
- **ALTER SERVER STATE**権限が必要です。  
+ **ALTER SERVER STATE** 権限が必要です。  
   
 ## <a name="error-handling"></a>エラー処理  
  [制御] ノードおよびすべての計算ノードで資格情報の削除が成功しなかった場合に、エラーが発生します。  

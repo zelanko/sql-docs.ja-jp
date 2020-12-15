@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec57f41be3971b41d5bebf6c139b9913666e8c20
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: eb990b9cb78d36bfe680562574eda0688422c7c3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753971"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462733"
 ---
 # <a name="routine_columns-transact-sql"></a>ROUTINE_COLUMNS (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,13 +44,13 @@ ms.locfileid: "91753971"
 |**COLUMN_DEFAULT**|**nvarchar (** 4000 **)**|列の既定値です。|  
 |**IS_NULLABLE**|**varchar (** 3 **)**|この列が NULL 値を許容する場合、は YES を返します。 その他の場合は NO が返されます。|  
 |**DATA_TYPE**|**nvarchar (** 128 **)**|システムにより提供されるデータ型。|  
-|**CHARACTER_MAXIMUM_LENGTH**|**int**|バイナリ データ、文字データ、またはテキストおよびイメージ データの最大文字列長。<br /><br /> **xml**と大きな値の型のデータの場合は-1。 その他の場合は NULL が返されます。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。|  
-|**CHARACTER_OCTET_LENGTH**|**int**|バイナリ データ、文字データ、またはテキストおよびイメージ データの最大バイト長。<br /><br /> **xml**と大きな値の型のデータの場合は-1。 その他の場合は NULL が返されます。|  
+|**CHARACTER_MAXIMUM_LENGTH**|**int**|バイナリ データ、文字データ、またはテキストおよびイメージ データの最大文字列長。<br /><br /> **xml** と大きな値の型のデータの場合は-1。 その他の場合は NULL が返されます。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。|  
+|**CHARACTER_OCTET_LENGTH**|**int**|バイナリ データ、文字データ、またはテキストおよびイメージ データの最大バイト長。<br /><br /> **xml** と大きな値の型のデータの場合は-1。 その他の場合は NULL が返されます。|  
 |**NUMERIC_PRECISION**|**tinyint**|数値データの概数、正確な数値データ、整数データ、または通貨データの有効桁数。 その他の場合は NULL が返されます。|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|数値データの概数、正確な数値データ、整数データ、または通貨データの有効桁数の基数。 その他の場合は NULL が返されます。|  
 |**NUMERIC_SCALE**|**tinyint**|数値データの概数、正確な数値データ、整数データ、または通貨データの桁数。 その他の場合は NULL が返されます。|  
-|**DATETIME_PRECISION**|**smallint**|**Datetime**および ISO**整数**データ型のサブタイプコード。 その他のデータ型の場合は、NULL を返します。|  
-|**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|**Master**を返します。 これは、列が文字データまたは **テキスト** データ型の場合に、文字セットが配置されているデータベースを示します。 その他の場合は NULL が返されます。|  
+|**DATETIME_PRECISION**|**smallint**|**Datetime** および ISO **整数** データ型のサブタイプコード。 その他のデータ型の場合は、NULL を返します。|  
+|**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|**Master** を返します。 これは、列が文字データまたは **テキスト** データ型の場合に、文字セットが配置されているデータベースを示します。 その他の場合は NULL が返されます。|  
 |**CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|常に NULL が返されます。|  
 |**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|この列が文字データまたは **テキスト** データ型の場合、文字セットの一意の名前を返します。 その他の場合は NULL が返されます。|  
 |**COLLATION_CATALOG**|**varchar (** 6 **)**|常に NULL が返されます。|  
