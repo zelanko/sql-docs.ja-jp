@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 693e724256d8792581770e7fde4f4e6c991701bf
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 590ca4149bc93fd2c22d04f22c3c47b7389245a2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97420169"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489609"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>スケールアウト MPP データウェアハウスである Analytics Platform System の新機能
 Microsoft Analytics Platform System (APS) の最新のアプライアンス更新プログラムの新機能を参照してください。 APS は、MPP SQL Server 並列データウェアハウスをホストする、スケールアウトされたオンプレミスのアプライアンスです。 
@@ -45,13 +45,13 @@ CU 7.6 にアップグレードすると、ユーザーが作成したテーブ�
 リリース日-2019 年9月
 
 ### <a name="alter-external-data-source"></a>外部データソースの変更
-お客様は、CU 7.5 更新プログラムを使用して外部データソース定義を変更することができます。 Hadoop 名前ノードの高可用性を使用しているお客様は、フェールオーバーが発生したときに、データソースを変更して引数を変更できるようになりました。 APS の場合、場所、RESOURCE_MANAGER_LOCATION、資格情報のみを変更できます。 詳細については、「 [alter external data source](../t-sql/statements/alter-external-data-source-transact-sql.md?view=sql-server-2017) 」を参照してください。
+お客様は、CU 7.5 更新プログラムを使用して外部データソース定義を変更することができます。 Hadoop 名前ノードの高可用性を使用しているお客様は、フェールオーバーが発生したときに、データソースを変更して引数を変更できるようになりました。 APS の場合、場所、RESOURCE_MANAGER_LOCATION、資格情報のみを変更できます。 詳細については、「 [alter external data source](../t-sql/statements/alter-external-data-source-transact-sql.md?view=sql-server-2017&preserve-view=true) 」を参照してください。
 
 ### <a name="cdh-515-and-516-support-with-polybase"></a>CDH 5.15 と5.16 の PolyBase のサポート
 CU 7.5 update を使用する APS の PolyBase では、Cloudera からの、CDH 5.15 および5.16 バージョンの Hadoop 配布がサポートされるようになりました。 CDH 5.x バージョンにはオプション6を使用します。 
 
 ### <a name="try_convert-and-try_cast-support"></a>Try_Convert と Try_Cast のサポート
-CU 7.5 APS では、 [TRY_CAST](../t-sql/functions/try-cast-transact-sql.md?view=sql-server-2017) および [TRY_CONVERT](../t-sql/functions/try-convert-transact-sql.md?view=sql-server-2017) tsql 関数がサポートされるようになりました。 これらの関数は、変換が成功した場合に、指定したデータ型に変換された値を返します。それ以外の場合は null を返します。
+CU 7.5 APS では、 [TRY_CAST](../t-sql/functions/try-cast-transact-sql.md?view=sql-server-2017&preserve-view=true) および [TRY_CONVERT](../t-sql/functions/try-convert-transact-sql.md?view=sql-server-2017&preserve-view=true) tsql 関数がサポートされるようになりました。 これらの関数は、変換が成功した場合に、指定したデータ型に変換された値を返します。それ以外の場合は null を返します。
 
 <a name="h2-aps-cu7.4"></a>
 ## <a name="aps-cu74"></a>APS CU7.4
@@ -150,7 +150,7 @@ SMO を使用する代わりに、メタデータ呼び出しに catalog オブ�
 ### <a name="bug-fixes"></a>バグの修正
 APS CU 7.1 で SQL Server 2016 SP2 CU2 にアップグレードしました。 このアップグレードでは、以下に示すいくつかの問題が修正されます。
 
-| Title | 説明 |
+| タイトル | 説明 |
 |:---|:---|
 | **考えられる組ムーバーのデッドロック** |このアップグレードでは、分散トランザクションと組ムーバーのバックグラウンドスレッドでデッドロックが発生する可能性があることを修正しました。 CU 7.1 をインストールした後、TF634 を使用してタプルムーバーを停止すると SQL Server スタートアップパラメーターまたはグローバルトレースフラグとして削除できます。 | 
 | **特定のラグ/リードクエリが失敗する** |遅延/リード関数が入れ子になっている CCI テーブルに対する特定のクエリは、このアップグレードによって修正されました。 | 

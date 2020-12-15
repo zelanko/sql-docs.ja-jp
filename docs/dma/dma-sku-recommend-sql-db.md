@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 035273939e2141b8497b5b0c38762fd7b7d47564
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+ms.openlocfilehash: 8d4de2aea0a9020a7f971f36dd011c435a3cec3d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947932"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489498"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>オンプレミスデータベースの適切な Azure SQL Database/Managed Instance SKU を特定する
 
@@ -44,7 +44,7 @@ SKU の推奨事項機能を使用すると、データベースをホストし�
 - すべてのスクリプトを実行するために必要な [PowerShell バージョン 5.1](https://www.microsoft.com/download/details.aspx?id=54616) 以降がコンピューターにインストールされていることを確認します。 コンピューターにインストールされている PowerShell のバージョンを確認する方法については、「 [Windows powershell 5.1 をダウンロードしてインストール](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)する」を参照してください。
   > [!NOTE]
   > データ収集スクリプトでは、コンピューター情報を収集するために、PowerShell 6 で非推奨とされた Get-WmiObject コマンドレットを使用します。 このスクリプトを PowerShell 6 または7で実行するには、WMI コマンドレットを新しい CIM コマンドレットで置き換える必要があります。
-- コンピューターに Azure Powershell モジュールがインストールされていることを確認します。 詳細については、「 [Install the Azure PowerShell module](/powershell/azure/install-az-ps?view=azps-1.8.0)」を参照してください。
+- コンピューターに Azure Powershell モジュールがインストールされていることを確認します。 詳細については、「 [Install the Azure PowerShell module](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true)」を参照してください。
 - パフォーマンスカウンターを収集するために必要な PowerShell ファイル **SkuRecommendationDataCollectionScript.ps1** が、DMA フォルダーにインストールされていることを確認します。
 - このプロセスを実行するコンピューターに、データベースをホストしているコンピューターに対する管理者権限があることを確認します。
 
@@ -239,4 +239,4 @@ HTML ファイルには、この情報がグラフィック形式で含まれて
 
 ## <a name="next-step"></a>次のステップ
 
-- CLI から DMA を実行するためのコマンドの完全な一覧については、「 [コマンドラインから Data Migration Assistant を実行](./dma-commandline.md?view=sql-server-2017)する」を参照してください。
+- CLI から DMA を実行するためのコマンドの完全な一覧については、「 [コマンドラインから Data Migration Assistant を実行](./dma-commandline.md)する」を参照してください。

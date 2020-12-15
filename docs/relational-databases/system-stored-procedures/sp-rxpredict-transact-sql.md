@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 55514f89487a06e16413f199f744013d2c4f8c90
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: fb1f2af32479ef295d578b3fd6f0f7581524d960
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461503"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489531"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -53,18 +53,18 @@ sp_rxPredict  ( @model, @input )
 スコア列、および入力データソースのすべてのパススルー列が返されます。
 アルゴリズムがそのような値の生成をサポートしている場合は、信頼区間などの追加のスコア列を返すことができます。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 ストアドプロシージャを使用できるようにするには、インスタンスで SQLCLR が有効になっている必要があります。
 
 > [!NOTE]
-> このオプションの enabing には、セキュリティ上の影響があります。 サーバーで SQLCLR が有効になっていない場合は、 [TRANSACT-SQL PREDICT](../../t-sql/queries/predict-transact-sql.md?view=sql-server-2017) 関数などの代替の実装を使用します。
+> このオプションを有効にすると、セキュリティに影響があります。 サーバーで SQLCLR が有効になっていない場合は、 [TRANSACT-SQL PREDICT](../../t-sql/queries/predict-transact-sql.md?view=sql-server-2017&preserve-view=true) 関数などの代替の実装を使用します。
 
 ユーザーは、 `EXECUTE` データベースに対する権限が必要です。
 
 ### <a name="supported-algorithms"></a>サポートされているアルゴリズム
 
-モデルを作成してトレーニングするには、R または Python に対してサポートされているアルゴリズムのいずれかを使用します。 [SQL Server Machine Learning Services (r または python)](../../machine-learning/sql-server-machine-learning-services.md)、 [SQL Server 2016 R Services](../../machine-learning/r/sql-server-r-services.md)、 [SQL Server Machine Learning Server (スタンドアロン)](../../machine-learning/r/r-server-standalone.md)、または [SQL Server 2016 R Server (スタンドアロン)](../../machine-learning/r/r-server-standalone.md?view=sql-server-2016)によって提供されます。
+モデルを作成してトレーニングするには、R または Python に対してサポートされているアルゴリズムのいずれかを使用します。 [SQL Server Machine Learning Services (r または python)](../../machine-learning/sql-server-machine-learning-services.md)、 [SQL Server 2016 R Services](../../machine-learning/r/sql-server-r-services.md)、 [SQL Server Machine Learning Server (スタンドアロン)](../../machine-learning/r/r-server-standalone.md)、または [SQL Server 2016 R Server (スタンドアロン)](../../machine-learning/r/r-server-standalone.md?view=sql-server-2016&preserve-view=true)によって提供されます。
 
 #### <a name="r-revoscaler-models"></a>R: RevoScaleR モデル
 
