@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b057d193af0cea47e1dc19c58c508d45786b940
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3dd7431a208db3f0da1e2ee53522920319b40af0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482735"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407476"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>列ストア インデックス - データ読み込みガイダンス
 
@@ -28,7 +28,7 @@ ms.locfileid: "88482735"
  列ストア インデックスを初めて使用する場合は、 「[列ストア インデックス - 概要](../../relational-databases/indexes/columnstore-indexes-overview.md)」と「[列ストア インデックスのアーキテクチャ](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)」を参照してください。
   
 ## <a name="what-is-bulk-loading"></a>一括読み込みとは
-*一括読み込み*は、大量の行がデータ ストアに追加される方法を表します。 これは、バッチの行を対象とするため、データを列ストア インデックスに移動するために、最もパフォーマンスが良い方法です。 一括読み込みでは、行グループを最大容量まで入れ、直接列ストアに圧縮します。 行グループごとに最小値の 102,400 行に一致しない読み込みの最後の行のみが、デルタストアに移動されます。  
+*一括読み込み* は、大量の行がデータ ストアに追加される方法を表します。 これは、バッチの行を対象とするため、データを列ストア インデックスに移動するために、最もパフォーマンスが良い方法です。 一括読み込みでは、行グループを最大容量まで入れ、直接列ストアに圧縮します。 行グループごとに最小値の 102,400 行に一致しない読み込みの最後の行のみが、デルタストアに移動されます。  
 
 一括読み込みを実行するには、[bcp ユーティリティ](../../tools/bcp-utility.md)、[Integration Services](../../integration-services/sql-server-integration-services.md) を使用したり、ステージング テーブルから行を選択したりすることができます。
 
@@ -104,7 +104,7 @@ SELECT <list of columns> FROM <Staging Table>
   
 ## <a name="what-is-trickle-insert"></a>トリクル挿入とは
 
-*トリクル挿入*は、個々の行が列ストア インデックスに移動する方法を表します。 トリクル挿入では、[INSERT INTO](../../t-sql/statements/insert-transact-sql.md) ステートメントを使用します。 トリクル挿入を使用すると、すべての行はデルタストアに移動されます。 これは行が少数のときに便利ですが、大量の読み込みは実用的ではありません。
+*トリクル挿入* は、個々の行が列ストア インデックスに移動する方法を表します。 トリクル挿入では、[INSERT INTO](../../t-sql/statements/insert-transact-sql.md) ステートメントを使用します。 トリクル挿入を使用すると、すべての行はデルタストアに移動されます。 これは行が少数のときに便利ですが、大量の読み込みは実用的ではありません。
   
 ```sql  
 INSERT INTO <table-name> VALUES (<set of values>)  
