@@ -8,17 +8,28 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 11/12/2020
-ms.openlocfilehash: b9bfda0507b81211feefb0fdb2505ae31f0c8c3b
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.date: 12/9/2020
+ms.openlocfilehash: cd990278d7478c089df7b01fa4a3738ad36368c3
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442642"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933848"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新リリースのダウンロードとインストール](./download-azure-data-studio.md)**
+
+## <a name="december-2020"></a>2020 年 12 月
+
+2020 年 12 月 9 日 &nbsp; / &nbsp; バージョン:1.25.0
+
+&nbsp;
+
+| Change | 詳細 |
+| ------ | ------- |
+| バグの修正 | 修正の全一覧については、[GitHub のバグと問題](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22December+2020+Release%22)に関するページを参照してください。 |
+| データベース プロジェクトの拡張機能の更新 | ワークスペースの追加とサイドバーの改良 |
 
 ## <a name="november-2020"></a>2020 年 11 月
 
