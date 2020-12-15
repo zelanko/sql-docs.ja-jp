@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52c91c09c440402df383253996e660d7abdb317c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 13d9b45efd0fc75e1e17ea0ec5b21537fae71971
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551166"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427219"
 ---
 # <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,10 +54,10 @@ sp_updateextendedproperty
   
 ## <a name="arguments"></a>引数  
  [ @name =] {'*property_name*'}  
- 更新するプロパティの名前です。 *property_name* は **sysname**であり、NULL にすることはできません。  
+ 更新するプロパティの名前です。 *property_name* は **sysname** であり、NULL にすることはできません。  
   
  [ @value =] {'*値*'}  
- プロパティに関連付けられている値を指定します。 *値* は **sql_variant**,、既定値は NULL です。 *値*のサイズは7500バイト以下である必要があります。  
+ プロパティに関連付けられている値を指定します。 *値* は **sql_variant**,、既定値は NULL です。 *値* のサイズは7500バイト以下である必要があります。  
   
  [ @level0type =] {'*level0_object_type*'}  
  ユーザーまたはユーザー定義型を指定します。 *level0_object_type* は **varchar (128)**,、既定値は NULL です。 有効な入力は、ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、PLAN GUIDE、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE、および NULL です。  
@@ -86,7 +86,7 @@ sp_updateextendedproperty
 ## <a name="remarks"></a>解説  
  拡張プロパティを指定するために、データベース内のオブジェクト [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は3つのレベル (0、1、および 2) に分類されます。 レベル0は最上位レベルで、データベーススコープに含まれるオブジェクトとして定義されます。 レベル 1 のオブジェクトはスキーマ スコープまたはユーザー スコープに含まれ、レベル 2 のオブジェクトはレベル 1 のオブジェクトに含まれます。 これら、どのレベルのオブジェクトに対しても、拡張プロパティを定義できます。 1 つのレベルにあるオブジェクトを参照する場合は、そのオブジェクトを所有または格納する上位レベルのオブジェクトの名前で修飾する必要があります。  
   
- 有効な *property_name* と *値*が指定されている場合、すべてのオブジェクトの種類と名前が null の場合、更新されたプロパティは現在のデータベースに属します。  
+ 有効な *property_name* と *値* が指定されている場合、すべてのオブジェクトの種類と名前が null の場合、更新されたプロパティは現在のデータベースに属します。  
   
 ## <a name="permissions"></a>アクセス許可  
  固定データベース ロール db_owner および db_ddladmin のメンバーは、任意のオブジェクトの拡張プロパティを更新できます。ただし、例外として、db_ddladmin はデータベース自体、ユーザー、およびロールに対しては、プロパティを追加できません。  
@@ -138,9 +138,9 @@ GO
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [extended_properties &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [sys.extended_properties &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   
