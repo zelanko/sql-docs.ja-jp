@@ -11,13 +11,13 @@ ms.assetid: bb13e323-a984-4462-8b6d-6019c38ddd9d
 author: ronortloff
 ms.author: rortloff
 ms.reviewer: ''
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f432d19a558b82abd52bef2839c0887dff70f7ba
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 89be1645a93d10e09b43dd3c32fc1fee72785791
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92254759"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410514"
 ---
 # <a name="sp_pdw_database_encryption_regenerate_system_keys-azure-synapse-analytics"></a>sp_pdw_database_encryption_regenerate_system_keys (Azure Synapse Analytics)
 
@@ -44,7 +44,7 @@ sp_pdw_database_encryption_regenerate_system_keys  ;
  この手順は、アプライアンスのトラフィックが少ない場合に使用する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**固定データベースロールまたは**CONTROL SERVER**権限のメンバーシップが必要です。  
+ **Sysadmin** 固定データベースロールまたは **CONTROL SERVER** 権限のメンバーシップが必要です。  
   
 ## <a name="example"></a>例  
  次の例では、データベース暗号化キーを再生成します。  

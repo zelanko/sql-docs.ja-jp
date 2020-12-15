@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
 author: ronortloff
 ms.author: rortloff
-monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 080808c2f32990070ab630042a00e2173f0440a2
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+monikerRange: = azure-sqldw-latest
+ms.openlocfilehash: 1ee858953867209a6686f1775c17e539d13aae2f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059540"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410134"
 ---
 # <a name="azure-synapse-analytics-stored-procedures"></a>Azure Synapse Analytics ストアドプロシージャ
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "92059540"
 > [!NOTE]  
 >  いくつかの追加のシステムストアドプロシージャは、のインスタンス内 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはクライアント api を使用してのみ使用され、一般的な顧客使用を目的としていません。 これらの手順については、 [「システムストアドプロシージャ (transact-sql)](./system-stored-procedures-transact-sql.md)」をご覧ください。 これらの手順は変更される可能性があり、互換性は保証されません。 この一覧に記載されているすべてのプロシージャは、では使用できません [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システムストアド関数 &#40;Transact-sql&#41;](~/relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   

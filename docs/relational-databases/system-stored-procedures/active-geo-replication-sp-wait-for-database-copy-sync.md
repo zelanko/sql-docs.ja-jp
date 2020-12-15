@@ -1,5 +1,5 @@
 ---
-description: アクティブ Geo レプリケーション-sp_wait_for_database_copy_sync
+description: アクティブな Geo-Replication-sp_wait_for_database_copy_sync
 title: sp_wait_for_database_copy_sync
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 72d18f2857b561015348a7738128cd8f1e51cf00
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8d453d6d3fa43226921aa6f5f0322b8f574a5e31
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542069"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410850"
 ---
-# <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>アクティブ Geo レプリケーション-sp_wait_for_database_copy_sync
+# <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>アクティブな Geo-Replication-sp_wait_for_database_copy_sync
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  このプロシージャは、プライマリとセカンダリの間の[!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] リレーションシップを対象としています。 **Sp_wait_for_database_copy_sync**を呼び出すと、コミットされたすべてのトランザクションがアクティブなセカンダリデータベースによってレプリケートおよび確認されるまで、アプリケーションは待機します。 プライマリデータベースのみで **sp_wait_for_database_copy_sync** を実行します。  
+  このプロシージャは、プライマリとセカンダリの間の[!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] リレーションシップを対象としています。 **Sp_wait_for_database_copy_sync** を呼び出すと、コミットされたすべてのトランザクションがアクティブなセカンダリデータベースによってレプリケートおよび確認されるまで、アプリケーションは待機します。 プライマリデータベースのみで **sp_wait_for_database_copy_sync** を実行します。  
   
 ||  
 |-|  
@@ -57,13 +57,13 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
   
 -   指定されたサーバー名またはデータベースに対するリンクが見つからない。  
   
--   インターリンク接続が切断されました。 接続のタイムアウト後に**sp_wait_for_database_copy_sync**が返されます。  
+-   インターリンク接続が切断されました。 接続のタイムアウト後に **sp_wait_for_database_copy_sync** が返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  プライマリ データベース内のすべてのユーザーが、このシステム ストアド プロシージャを呼び出すことができます。 ログインは、プライマリデータベースとアクティブセカンダリデータベースの両方のユーザーである必要があります。  
   
 ## <a name="remarks"></a>解説  
- **Sp_wait_for_database_copy_sync**呼び出しの前にコミットされたすべてのトランザクションが、アクティブなセカンダリデータベースに送信されます。  
+ **Sp_wait_for_database_copy_sync** 呼び出しの前にコミットされたすべてのトランザクションが、アクティブなセカンダリデータベースに送信されます。  
   
 ## <a name="examples"></a>例  
  次の例では、 **sp_wait_for_database_copy_sync** を呼び出して、すべてのトランザクションがプライマリデータベース db0 にコミットされていることを確認します。これは、ターゲットサーバー ubfyu5ssyt 上のアクティブなセカンダリデータベースに送信されます。  
@@ -76,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+ [sys.dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
  [Geo レプリケーションの動的管理ビュー (Dmv) と関数 &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
  [sys.dm_geo_replication_link_status](../system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)
   

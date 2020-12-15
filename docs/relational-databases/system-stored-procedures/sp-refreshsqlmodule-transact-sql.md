@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5265d2b38f8d41be321a63b701bb286b3b793e1c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: dc3be80416180b8e87cacc848a4322e013ce368a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535033"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410515"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -59,7 +59,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="arguments"></a>引数  
 `[ @name = ] 'module\_name'` ストアドプロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベースレベルの DDL トリガー、またはサーバーレベルの DDL トリガーの名前を指定します。 *module_name* を共通言語ランタイム (clr) ストアドプロシージャまたは clr 関数にすることはできません。 *module_name* をスキーマバインドにすることはできません。 *module_name* は **nvarchar**,、既定値はありません。 *module_name* にはマルチパート識別子を指定できますが、参照できるのは現在のデータベース内のオブジェクトだけです。  
   
-`[ , @namespace = ] ' \<class> '` は、指定されたモジュールのクラスです。 *Module_name*が DDL トリガーである場合 \<class> は、が必要です。 *\<class>***nvarchar**(20) です。 有効な入力は次のとおりです。  
+`[ , @namespace = ] ' \<class> '` は、指定されたモジュールのクラスです。 *Module_name* が DDL トリガーである場合 \<class> は、が必要です。 *\<class>***nvarchar**(20) です。 有効な入力は次のとおりです。  
 
 * DATABASE_DDL_TRIGGER
 
@@ -69,14 +69,14 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
  0 (成功) または0以外の数値 (失敗)  
   
 ## <a name="remarks"></a>解説  
- 定義に影響を与えるモジュールの基になるオブジェクトに変更が加えられたときに、 **sp_refreshsqlmodule**を実行する必要があります。 そうしないと、クエリまたは呼び出されたときに、予期しない結果が生成される可能性があります。 ビューを更新するには、 **sp_refreshsqlmodule** または **sp_refreshview** を同じ結果で使用できます。  
+ 定義に影響を与えるモジュールの基になるオブジェクトに変更が加えられたときに、 **sp_refreshsqlmodule** を実行する必要があります。 そうしないと、クエリまたは呼び出されたときに、予期しない結果が生成される可能性があります。 ビューを更新するには、 **sp_refreshsqlmodule** または **sp_refreshview** を同じ結果で使用できます。  
   
  **sp_refreshsqlmodule** は、オブジェクトに関連付けられている権限、拡張プロパティ、または SET オプションには影響しません。  
   
  サーバーレベルの DDL トリガーを更新するには、任意のデータベースのコンテキストからこのストアドプロシージャを実行します。  
   
 > [!NOTE]  
->  オブジェクトに関連付けられている署名は、 **sp_refreshsqlmodule**を実行すると削除されます。  
+>  オブジェクトに関連付けられている署名は、 **sp_refreshsqlmodule** を実行すると削除されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  モジュールに対する ALTER 権限、およびオブジェクトによって参照される CLR ユーザー定義型と XML スキーマ コレクションに対する REFERENCES 権限が必要です。 指定されたモジュールがデータベース レベルの DDL トリガーである場合は、現在のデータベースに対する ALTER ANY DATABASE DDL TRIGGER 権限が必要です。 指定されたモジュールがサーバーレベルの DDL トリガーである場合、CONTROL SERVER 権限が必要です。  

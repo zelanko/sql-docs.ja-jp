@@ -11,14 +11,14 @@ dev_langs:
 ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 212e8e5ab05204a6497282e79c4134dcff844299
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.openlocfilehash: 0aeb775ea03d022337f45463b16e7134cfb12dc8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067322"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410749"
 ---
 # <a name="sp_pdw_add_network_credentials-azure-synapse-analytics"></a>sp_pdw_add_network_credentials (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -37,19 +37,19 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', 'password'
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>引数  
- ' *target_server_name* '  
+ '*target_server_name*'  
  対象サーバーのホスト名または IP アドレスを指定します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は、このストアドプロシージャに渡されたユーザー名とパスワードの資格情報を使用して、このサーバーにアクセスします。  
   
  InfiniBand ネットワーク経由で接続するには、対象サーバーの InfiniBand IP アドレスを使用します。  
   
  *target_server_name* は nvarchar (]) として定義されています。  
   
- ' *user_name* '  
+ '*user_name*'  
  対象サーバーにアクセスする権限を持つ user_name を指定します。 対象サーバーの資格情報が既に存在する場合は、新しい資格情報に更新されます。  
   
  *user_name* は nvarchar (513) として定義されています。  
   
- ' *password* ꞌ  
+ '*password* ꞌ  
  *User_name* のパスワードを指定します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
