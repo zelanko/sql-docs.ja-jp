@@ -1,6 +1,6 @@
 ---
-description: dm_sql_referencing_entities (Transact-sql)
-title: dm_sql_referencing_entities (Transact-sql) |Microsoft Docs
+description: sys.dm_sql_referencing_entities (Transact-sql)
+title: sys.dm_sql_referencing_entities (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9855ef4c747c411476df5700f4a61f43f31de299
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 517e6f8faaccf40091535b8a78d47d0fa8a43032
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550200"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484574"
 ---
-# <a name="sysdm_sql_referencing_entities-transact-sql"></a>dm_sql_referencing_entities (Transact-sql)
+# <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  別のユーザー定義エンティティを名前で参照する、現在のデータベース内のエンティティごとに1行のデータを返します。 2つのエンティティ間の依存関係は、 *参照先*エンティティと呼ばれる1つのエンティティが、別のエンティティの永続化された SQL 式 (参照 *元エンティティ*と呼ばれます) で名前によって表示される場合に作成されます。 たとえば、参照先エンティティとしてユーザー定義型 (UDT) が指定されている場合、この関数は、定義内でその型を名前で参照する各ユーザー定義エンティティを返します。 関数は、指定されたエンティティを参照する可能性がある他のデータベース内のエンティティを返しません。 この関数は、サーバーレベルの DDL トリガーを参照元エンティティとして返すために、master データベースのコンテキストで実行する必要があります。  
+  別のユーザー定義エンティティを名前で参照する、現在のデータベース内のエンティティごとに1行のデータを返します。 2つのエンティティ間の依存関係は、 *参照先* エンティティと呼ばれる1つのエンティティが、別のエンティティの永続化された SQL 式 (参照 *元エンティティ* と呼ばれます) で名前によって表示される場合に作成されます。 たとえば、参照先エンティティとしてユーザー定義型 (UDT) が指定されている場合、この関数は、定義内でその型を名前で参照する各ユーザー定義エンティティを返します。 関数は、指定されたエンティティを参照する可能性がある他のデータベース内のエンティティを返しません。 この関数は、サーバーレベルの DDL トリガーを参照元エンティティとして返すために、master データベースのコンテキストで実行する必要があります。  
   
  この動的管理関数に参照先エンティティを指定すると、現在のデータベース内で、そのエンティティを参照する次の種類のエンティティをレポートできます。  
   
@@ -100,8 +100,8 @@ sys.dm_sql_referencing_entities (
   
 |エンティティの種類|参照元エンティティ|参照先エンティティ|  
 |-----------------|------------------------|-----------------------|  
-|Table|はい*|はい|  
-|View|はい|はい|  
+|テーブル|はい*|はい|  
+|表示|はい|はい|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ**|はい|はい|  
 |CLR ストアド プロシージャ (CLR stored procedure)|いいえ|はい|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数|はい|はい|  
@@ -127,7 +127,7 @@ sys.dm_sql_referencing_entities (
   
 -   参照先のオブジェクトに対する CONTROL 権限が必要です。 参照先エンティティがパーティション関数である場合、データベースに対する CONTROL 権限が必要です。  
   
--   Dm_sql_referencing_entities に対する SELECT 権限が必要です。 既定では、SELECT 権限が public に与えられます。  
+-   Sys.dm_sql_referencing_entities に対する SELECT 権限が必要です。 既定では、SELECT 権限が public に与えられます。  
   
 ### <a name="sssql14---sscurrent"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   

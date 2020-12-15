@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4738fca47b35cae4e6b895ac59aa26213f17a7d8
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 117c4c2e6bc3e08ea32869cd198850eb3bb29ab2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753987"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484564"
 ---
 # <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,7 +77,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|サーバーの照合順序|セキュリティ保護可能なクラスの説明。|  
 |permission_name|**nvarchar(60)**|サーバーの照合順序|アクセス許可の名前。|  
-|type|**varchar (4)**|サーバーの照合順序|Compact アクセス許可の型コード。 次の表を参照してください。|  
+|型|**varchar (4)**|サーバーの照合順序|Compact アクセス許可の型コード。 次の表を参照してください。|  
 |covering_permission_name|**nvarchar(60)**|サーバーの照合順序|NULL でない場合は、このクラスのアクセス許可の名前を指定します。これは、このクラスの他のアクセス許可を意味します。|  
 |parent_class_desc|**nvarchar(60)**|サーバーの照合順序|NULL でない場合、現在のクラスを含む親クラスの名前。|  
 |parent_covering_permission_name|**nvarchar(60)**|サーバーの照合順序|NULL でない場合、親クラスの権限で、そのクラスの他の権限をすべて含む権限の名前。|  
@@ -99,7 +99,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER|CERTIFICATE|  
 |AL|ALTER|CONTRACT|  
 |AL|ALTER|DATABASE|  
-|AL|ALTER<br /> **T o が適用さ**れます。 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] |DATABASE SCOPED CREDENTIAL|
+|AL|ALTER<br /> **T o が適用さ** れます。 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] |DATABASE SCOPED CREDENTIAL|
 |AL|ALTER|ENDPOINT|  
 |AL|ALTER|FULLTEXT CATALOG|  
 |AL|ALTER|FULLTEXT STOPLIST|  

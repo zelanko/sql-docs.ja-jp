@@ -20,13 +20,13 @@ ms.assetid: 58d8564b-9c43-4965-a31c-2893890334ef
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8410f8e2a09cbf9fe65e688d14277b763a58f202
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ae7ec8d8a4dde2a30e86b5c6a47e2af4d0c6c73b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97334223"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484634"
 ---
 # <a name="sysdm_fts_population_ranges-transact-sql"></a>sys.dm_fts_population_ranges (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ SQL Database Basic、S0、S1 のサービス目標、およびエラスティッ
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|差出人|終了|Relationship|  
+|差出人|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |dm_fts_population_ranges dm_fts_population_ranges.parent_memory_address|dm_fts_index_population.memory_address|多対一|  
   

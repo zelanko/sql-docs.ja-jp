@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 56895fe5-e8df-4d75-9adc-c1f7757cdef8
 author: pmasl
 ms.author: pelopes
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4948ec70d4073f3c3fbae8774b1974c84af84e2
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 37f765dd9821d6323a13ec52ad49fcaf2821d9c7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97323894"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484674"
 ---
 # <a name="sysdm_fts_memory_buffers-transact-sql"></a>sys.dm_fts_memory_buffers (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ SQL Database Basic、S0、S1 のサービス目標、およびエラスティッ
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|差出人|終了|Relationship|  
+|差出人|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |dm_fts_memory_buffers dm_fts_memory_buffers.pool_id|dm_fts_memory_pools.pool_id|多対一|  
   
