@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48ea2ba928333eef0980ad199e33f93f94a859c6
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ec7815d623208c5e2860fd233ba5a290e2e8762b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195436"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460905"
 ---
 # <a name="unary-operators---positive"></a>単項演算子 - 正号
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -54,10 +54,10 @@ ms.locfileid: "92195436"
 
 ## <a name="arguments"></a>引数
  *numeric_expression*  
- **datetime** および **smalldatetime** データ型を除く、数値データ型カテゴリ内のいずれかのデータ型の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ **datetime** および **smalldatetime** データ型を除く、数値データ型カテゴリ内のいずれかのデータ型の有効な [式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
 ## <a name="result-types"></a>戻り値の型  
- データ型を返す *numeric_expression*です。  
+ データ型を返す *numeric_expression* です。  
   
 ## <a name="remarks"></a>解説  
  単項プラスは任意の数値式の前に付けることができますが、その式が返す値に対して何の操作も行いません。 つまり、負の式の値を正の値にして返すわけではありません。 負の式の値を正の値として返すには、[ABS](../../t-sql/functions/abs-transact-sql.md) 関数を使用します。  

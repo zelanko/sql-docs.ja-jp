@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f3e8a42bce62455b998ee9e4c121256bab7953a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4daec2e6e616ef0922e5700c77539e61496b69aa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646028"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462603"
 ---
 # <a name="delete-foreign-key-relationships"></a>外部キーのリレーションシップの削除
 
@@ -52,7 +52,7 @@ ms.locfileid: "88646028"
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>外部キーの制約を削除するには  
   
-1.  **オブジェクト エクスプローラー**で、制約が含まれているテーブルを展開し、 **[キー]** を展開します。  
+1.  **オブジェクト エクスプローラー** で、制約が含まれているテーブルを展開し、 **[キー]** を展開します。  
   
 2.  制約を右クリックし、 **[削除]** をクリックします。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "88646028"
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>外部キーの制約を削除するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

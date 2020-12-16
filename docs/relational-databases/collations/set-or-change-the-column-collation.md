@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98faafb23e6f5c3f981fdf04eca99a7ab3eb7a7b
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3f408175a59484aa162c0db654ebf4b1d5656901
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384822"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460585"
 ---
 # <a name="set-or-change-the-column-collation"></a>列の照合順序の設定または変更
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  **char** 型、 **varchar** 型、 **text** 型、 **nchar** 型、 **nvarchar** 型、および **ntext** 型のデータのデータベース照合順序は、テーブルの列ごとに異なる照合順序を指定し、次のいずれかを使用することでオーバーライドできます。  
+  **char** 型、**varchar** 型、**text** 型、**nchar** 型、**nvarchar** 型、および **ntext** 型のデータのデータベース照合順序は、テーブルの列ごとに異なる照合順序を指定し、次のいずれかを使用することでオーバーライドできます。  
   
 -   次の例で示すような、[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) と [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) の COLLATE 句。 
 

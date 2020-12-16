@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 34beb660-db19-46ca-ac90-2218471457bf
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a94c49a193d4ca0589fa733576acda27c2e0e92
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a29bc4a3c81422507628129e6a0a42458dd4921c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193317"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460975"
 ---
 # <a name="-multiplication-transact-sql"></a>* (乗算) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,7 @@ expression * expression
 
 ## <a name="arguments"></a>引数
  *式 (expression)*  
- 数値データ型に分類されるデータ型を持つ有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。ただし、**datetime** および **smalldatetime** データ型は除きます。  
+ 数値データ型に分類されるデータ型を持つ有効な [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。ただし、**datetime** および **smalldatetime** データ型は除きます。  
   
 ## <a name="result-types"></a>戻り値の型  
  優先順位が高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  

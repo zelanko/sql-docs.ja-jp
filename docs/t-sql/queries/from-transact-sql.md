@@ -34,13 +34,13 @@ helpviewer_keywords:
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cc3f414e9e771eb48734a2c8c188d28ac8bc321
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 188610b1f6eef0835bf20f7b86e99647df699539
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035863"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464223"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 句と JOIN、APPLY、PIVOT (Transact-SQL)
 
@@ -267,7 +267,7 @@ FROM { <table_source> [ ,...n ] }
  選択されたサンプルを再度返すことができることを示します。 同じ *repeat_seed* 値を使用して指定されている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はテーブル内の行に変更が行われない限り同じ行のサブセットを返します。 異なる *repeat_seed* 値を使用して指定されている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、テーブル内の異なる行のサンプルをいくつか返す可能性があります。 テーブルに対する挿入、更新、削除、インデックスの再構築またはデフラグ、およびデータベースの復元またはアタッチは、変更と見なされます。  
   
  *repeat_seed*  
- 乱数を生成するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって使用される整数の定数式です。 *repeat_seed* は **bigint**です。 *repeat_seed* が指定されていない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってランダムに値が割り当てられます。 テーブルに変更が適用されていない場合は、特定の *repeat_seed* 値に対して、サンプル結果は常に同じになります。 *repeat_seed* 式は、0 より大きい整数値に評価される必要があります。  
+ 乱数を生成するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって使用される整数の定数式です。 *repeat_seed* は **bigint** です。 *repeat_seed* が指定されていない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってランダムに値が割り当てられます。 テーブルに変更が適用されていない場合は、特定の *repeat_seed* 値に対して、サンプル結果は常に同じになります。 *repeat_seed* 式は、0 より大きい整数値に評価される必要があります。  
   
 ### <a name="tablesample-clause"></a>TABLESAMPLE 句
 **適用対象:** [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]

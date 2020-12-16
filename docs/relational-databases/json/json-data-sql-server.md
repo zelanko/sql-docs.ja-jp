@@ -13,13 +13,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
-monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c24de4dba33fce34eb88333b8c877d13a4a1ebb0
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3ca366f274f4880fdb629eab4b77fa180bacb60b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006583"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463513"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server の JSON データ
 
@@ -269,7 +269,7 @@ JSON テキストは `VARCHAR` または `NVARCHAR` 列に格納され、プレ�
 
 ## <a name="store-and-index-json-data-in-sql-server"></a>JSON データの SQL Server への格納とインデックスの追加
 
-JSON はテキスト形式なので、SQL Database の `NVARCHAR` 列に JSON ドキュメントを格納できます。 `NVARCHAR` 型は、すべての SQL Server サブシステムでサポートされているので、**CLUSTERED COLUMNSTORE** インデックスが付いたテーブル、**メモリ最適化**テーブル、または OPENROWSET または PolyBase を使用して読み取ることができる外部ファイルに JSON ドキュメントを格納することができます。
+JSON はテキスト形式なので、SQL Database の `NVARCHAR` 列に JSON ドキュメントを格納できます。 `NVARCHAR` 型は、すべての SQL Server サブシステムでサポートされているので、**CLUSTERED COLUMNSTORE** インデックスが付いたテーブル、**メモリ最適化** テーブル、または OPENROWSET または PolyBase を使用して読み取ることができる外部ファイルに JSON ドキュメントを格納することができます。
 
 JSON データの SQL Server への保存、インデックスの追加、最適化のオプションに関する詳細については、次の記事を参照してください。
 

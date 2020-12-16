@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39c6ae00a1416727740d09f2aab3436f8ef616e7
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2dcdf0ed9fa0e62be66cde8773a741b37ffa3306
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379797"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461203"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -117,7 +117,7 @@ bcd
 > [!NOTE]  
 >  次の例を実行するには、**pubs** データベースをインストールする必要があります。  
   
- 次の例では、`pubs` データベースにある `pub_info` テーブルの **text** および **image** データ列から、それぞれ最初の 10 文字を返す方法を示します。 **text** としてデータが返される **varchar**, 、および **image** としてデータが返されます **varbinary**です。  
+ 次の例では、`pubs` データベースにある `pub_info` テーブルの **text** および **image** データ列から、それぞれ最初の 10 文字を返す方法を示します。 **text** としてデータが返される **varchar**, 、および **image** としてデータが返されます **varbinary** です。  
   
 ```sql
 USE pubs;  
