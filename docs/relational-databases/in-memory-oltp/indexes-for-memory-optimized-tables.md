@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 817e126cfcd6bd4f825cb8e3158cc96d0a78e30c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7f43554f4b14b1afa5eee8a2cf3600c7b9ae2fab
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866616"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480113"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルのインデックス
 
@@ -37,7 +37,7 @@ ms.locfileid: "91866616"
 - メモリ最適化済み非クラスター化インデックス (B ツリーの既定の内部構造を意味します) 
   
 *ハッシュ* インデックスについては、「[メモリ最適化テーブルのハッシュ インデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)」で、詳しく説明します。  
-*非クラスター化*インデックスについては、「[Nonclustered Index for Memory-Optimized Tables](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)」(メモリ最適化テーブルの非クラスター化インデックス) で、詳しく説明します。  
+*非クラスター化* インデックスについては、「[Nonclustered Index for Memory-Optimized Tables](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)」(メモリ最適化テーブルの非クラスター化インデックス) で、詳しく説明します。  
 *列ストア* インデックスについては、 [別の記事](../../relational-databases/indexes/columnstore-indexes-overview.md)で説明します。  
 
 ## <a name="syntax-for-memory-optimized-indexes"></a>メモリ最適化インデックスの構文  
@@ -214,7 +214,7 @@ WHERE col1 = 'dn';
 
 ## <a name="summary-table-to-compare-index-use-scenarios"></a>インデックス使用のシナリオを比較する概要表  
   
-次の表は、異なるインデックスの種類でサポートされるすべての操作を示しています。 *はい*はインデックスが要求に十分に対応できることを意味し、*いいえ*はインデックスが要求に十分に対応できないことを意味します。 
+次の表は、異なるインデックスの種類でサポートされるすべての操作を示しています。 *はい* はインデックスが要求に十分に対応できることを意味し、*いいえ* はインデックスが要求に十分に対応できないことを意味します。 
   
 | 操作 | メモリ最適化、 <br/> hash | メモリ最適化、 <br/> 非クラスター化 | ディスク ベース、 <br/> (非) クラスター化 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  

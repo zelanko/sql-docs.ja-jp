@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9da4fe7d516453b91ab5d60ec170431035146b6b
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 568b3f60205e94bd0b81ff5e80e8b3db372a4691
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496952"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480913"
 ---
 # <a name="dynamic-data-masking"></a>動的なデータ マスキング
 [!INCLUDE [SQL Server 2016 ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "92496952"
   
 |機能|説明|例|  
 |--------------|-----------------|--------------|  
-|Default|指定のフィールドのデータ型に応じたフル マスク。<br /><br /> 文字列データ型 ( **char** 、 **nchar** 、  **varchar** 、 **nvarchar** 、 **text** 、 **ntext** ) のフィールドのサイズが 4 文字未満の場合は、XXXX またはそれ未満の数の X を使用します。  <br /><br /> 数値データ型 ( **bigint** 、 **bit** 、 **decimal** 、 **int** 、 **money** 、 **numeric** 、 **smallint** 、 **smallmoney** 、 **tinyint** 、 **float** 、 **real** ) の場合は値 0 を使用します。<br /><br /> 日付/時刻のデータ型 ( **date** 、 **datetime2** 、 **datetime** 、 **datetimeoffset** 、 **smalldatetime** 、 **time** ) の場合は、01.01.1900 00:00:00.0000000 を使用します。<br /><br />バイナリ データ型 ( **binary** 、 **varbinary** 、 **image** ) の場合は、ASCII 値 0 のシングル バイトを使用します。|列定義の構文例: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> ALTER 構文例: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|Default|指定のフィールドのデータ型に応じたフル マスク。<br /><br /> 文字列データ型 (**char**、 **nchar**、  **varchar**、 **nvarchar**、 **text**、 **ntext**) のフィールドのサイズが 4 文字未満の場合は、XXXX またはそれ未満の数の X を使用します。  <br /><br /> 数値データ型 (**bigint**、 **bit**、 **decimal**、 **int**、 **money**、 **numeric**、 **smallint**、 **smallmoney**、 **tinyint**、 **float**、 **real**) の場合は値 0 を使用します。<br /><br /> 日付/時刻のデータ型 (**date**、 **datetime2**、 **datetime**、 **datetimeoffset**、 **smalldatetime**、 **time**) の場合は、01.01.1900 00:00:00.0000000 を使用します。<br /><br />バイナリ データ型 (**binary**、 **varbinary**、 **image**) の場合は、ASCII 値 0 のシングル バイトを使用します。|列定義の構文例: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> ALTER 構文例: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|メール アドレスの最初の 1 文字と定数サフィックスの ".com" をメール アドレスのフォームで公開するマスク方法。 `aXXX@XXXX.com`.|定義の構文例: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> ALTER 構文例: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |ランダム|ランダム マスク関数は任意の数字型に使用でき、指定した範囲内で生成したランダムな値でオリジナルの値をマスクします。|定義の構文例: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> ALTER 構文例: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |カスタム文字列|間にカスタム埋め込み文字列を追加し、最初と最後の文字を公開するマスク方法。 `prefix,[padding],suffix`<br /><br /> 注:元の文字列が全体をマスクするには短すぎる場合、プレフィックスまたはサフィックスの一部は公開されません。|定義の構文例: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> ALTER 構文例: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> その他の例:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`|  
@@ -61,7 +61,7 @@ ms.locfileid: "92496952"
   
 -   `SELECT INTO` または `INSERT INTO` を使用して、マスクされた列を別のテーブルにコピーすると、対象のテーブルにマスクされたデータが表示されます。  
   
--   動的データ マスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートとエクスポートを実行すると適用されます。 マスクされた列を含むデータベースは、マスクされたデータを含むエクスポートされたデータ ファイルを生成し ( **UNMASK** 特権がないユーザーがエクスポートしたことを前提とします)、インポートされたデータベースは、マスクされたデータを静的に格納します。  
+-   動的データ マスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートとエクスポートを実行すると適用されます。 マスクされた列を含むデータベースは、マスクされたデータを含むエクスポートされたデータ ファイルを生成し (**UNMASK** 特権がないユーザーがエクスポートしたことを前提とします)、インポートされたデータベースは、マスクされたデータを静的に格納します。  
   
 ## <a name="querying-for-masked-columns"></a>マスクされた列に対してクエリを実行する  
  **sys.masked_columns** ビューを使用して、マスク関数が適用されたテーブルの列に対してクエリを実行します。 このビューが継承、 **sys.columns** ビューです。 **sys.columns** ビューのすべての列と、 **is_masked** 列および **masking_function** 列を返して、マスクされた列かどうかを示し、マスクされた列の場合は、どのようなマスキング関数が定義されているかを示します。 これは、列があるマスキング関数が適用されるは表示のみを表示します。  
@@ -87,7 +87,7 @@ WHERE is_masked = 1;
   
 -   データ マスクを持つ列を FULLTEXT インデックスのキーにすることはできません。  
   
- **UNMASK** アクセス許可のないユーザーの場合、非推奨とされている **READTEXT** 、 **UPDATETEXT** 、および **WRITETEXT** ステートメントは、動的データ マスク用に構成された列で適切に動作しません。 
+ **UNMASK** アクセス許可のないユーザーの場合、非推奨とされている **READTEXT**、 **UPDATETEXT**、および **WRITETEXT** ステートメントは、動的データ マスク用に構成された列で適切に動作しません。 
  
  動的データ マスクの追加は基になっているテーブルでのスキーマ変更として実装されるため、依存関係を持つ列では実行できません。 この制限を回避するには、最初に依存関係を削除してから、動的データ マスクを追加した後、依存関係を再作成します。 たとえば、依存関係がその列に依存するインデックスによるものである場合は、インデックスを削除し、マスクを追加してから、依存するインデックスを再作成します。
  

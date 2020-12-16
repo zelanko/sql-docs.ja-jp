@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 88321dc6030b76869c55039f04dea39728342751
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 7cd44046d1c21fc365adc0608592b5139270f97b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868119"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479533"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>ディストリビューターとパブリッシャーのプロパティの表示および変更
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -139,7 +139,7 @@ ms.locfileid: "91868119"
   
 5.  (省略可) プロパティを変更するには、 <xref:Microsoft.SqlServer.Replication.ReplicationServer> オブジェクトの設定可能なディストリビューター プロパティに新しい値を設定します。  
   
-6.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> オブジェクトの <xref:Microsoft.SqlServer.Replication.ReplicationServer> プロパティが **true**に設定されている場合は、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出して変更内容をサーバーにコミットします。  
+6.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> オブジェクトの <xref:Microsoft.SqlServer.Replication.ReplicationServer> プロパティが **true** に設定されている場合は、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出して変更内容をサーバーにコミットします。  
   
 #### <a name="to-view-and-modify-distribution-database-properties"></a>ディストリビューション データベースのプロパティを表示および変更するには  
   
@@ -147,11 +147,11 @@ ms.locfileid: "91868119"
   
 2.  <xref:Microsoft.SqlServer.Replication.DistributionDatabase> クラスのインスタンスを作成します。 name プロパティを指定し、手順 1. の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを渡します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、サーバーからプロパティを取得します。 このメソッドから **false**が返された場合、指定した名前のデータベースはサーバー上に存在しません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、サーバーからプロパティを取得します。 このメソッドから **false** が返された場合、指定した名前のデータベースはサーバー上に存在しません。  
   
 4.  (省略可) プロパティを変更するには、 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> の設定可能なプロパティに新しい値を設定します。  
   
-5.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> オブジェクトの <xref:Microsoft.SqlServer.Replication.DistributionDatabase> プロパティが **true**に設定されている場合は、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出して変更内容をサーバーにコミットします。  
+5.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> オブジェクトの <xref:Microsoft.SqlServer.Replication.DistributionDatabase> プロパティが **true** に設定されている場合は、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出して変更内容をサーバーにコミットします。  
   
 #### <a name="to-view-and-modify-publisher-properties"></a>パブリッシャーのプロパティを表示および変更するには  
   
@@ -161,7 +161,7 @@ ms.locfileid: "91868119"
   
 3.  (省略可) プロパティを変更するには、 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> の設定可能なプロパティに新しい値を設定します。  
   
-4.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> オブジェクトの <xref:Microsoft.SqlServer.Replication.DistributionPublisher> プロパティが **true**に設定されている場合は、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出して変更内容をサーバーにコミットします。  
+4.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> オブジェクトの <xref:Microsoft.SqlServer.Replication.DistributionPublisher> プロパティが **true** に設定されている場合は、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出して変更内容をサーバーにコミットします。  
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>パブリッシャーからディストリビューターへの管理接続に使用されているパスワードを変更するには  
   

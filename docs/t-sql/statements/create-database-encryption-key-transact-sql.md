@@ -28,17 +28,17 @@ helpviewer_keywords:
 ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: e3ed7051503f4e4242cf75d22cca2fd5017f5c55
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c6fa73ff61c166bed70b941c944a85d24cce8ec5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067415"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478553"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 
-[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
  データベースを透過的に暗号化するために使用する暗号化キーを作成します。 透過的データベース暗号化について詳しくは、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」をご覧ください。  
   
@@ -59,18 +59,15 @@ CREATE DATABASE ENCRYPTION KEY
 [ ; ]  
 ```  
   
-> [!Note]
-> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
-   
+  
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
 
 CREATE DATABASE ENCRYPTION KEY  
        WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY }  
    ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name   
 [ ; ]  
 ```  
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -79,7 +76,7 @@ CREATE DATABASE ENCRYPTION KEY
 WITH ALGORITHM = { AES_128 \| AES_192 \| AES_256 \| TRIPLE_DES_3KEY  }  
 暗号化キーに使用する暗号化アルゴリズムを指定します。
 
-> [!NOTE]
+> [!WARNING]
 > SQL Server 2016以降、AES_128、AES_192、AES_256 以外のすべてのアルゴリズムが非推奨とされました。 古いアルゴリズムを使用する場合は (推奨されません)、データベース互換性レベルを 120 以下に設定する必要があります。  
   
 ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name  

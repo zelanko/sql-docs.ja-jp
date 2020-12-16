@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4b7c552fa3955818c8d9978802f950f07f8a6bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ce010e0093e234c9095c440f3283b8c7942c78bc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408268"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480053"
 ---
 # <a name="create-indexes-with-included-columns"></a>付加列インデックスの作成
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88408268"
  クエリ内のすべての列が、キー列または非キー列としてインデックスに含まれるているとき、非キー列を含むインデックスにより、クエリ パフォーマンスが大幅に向上します。 クエリ オプティマイザーではインデックス内のすべての列値を参照できるので、テーブルやクラスター化インデックスのデータにアクセスすることがなく、ディスク I/O 操作が少なくて済むため、パフォーマンスが向上します。  
   
 > [!NOTE]  
-> クエリによって参照されるすべての列がインデックスに含まれているときは、一般的に、そのインデックスは *クエリをカバーしている*と呼ばれます。  
+> クエリによって参照されるすべての列がインデックスに含まれているときは、一般的に、そのインデックスは *クエリをカバーしている* と呼ばれます。  
    
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
@@ -105,7 +105,7 @@ ms.locfileid: "88408268"
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>非キー列を含むインデックスを作成するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

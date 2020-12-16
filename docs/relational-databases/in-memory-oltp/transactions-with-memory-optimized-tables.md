@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c41b7f8fc9f1851daa72ca5189fee433c217f20
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cef950e416d811133f1c12b524222c7caefc0db6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868664"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480103"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>メモリ最適化テーブルでのトランザクション
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ SQL Server のトランザクション分離レベルは、ディスク ベー�
   
 SQL Server のトランザクション開始モードは次のとおりです。  
   
-- **オートコミット** - シンプルなクエリまたは DML ステートメントが開始されると、トランザクションが暗黙的に開かれ、ステートメントが終了すると、トランザクションが暗黙的にコミットされます。 既定値は**自動コミット**です。  
+- **オートコミット** - シンプルなクエリまたは DML ステートメントが開始されると、トランザクションが暗黙的に開かれ、ステートメントが終了すると、トランザクションが暗黙的にコミットされます。 既定値は **自動コミット** です。  
   - オートコミット モードでは、通常、FROM 句で、メモリ最適化テーブルのトランザクション分離レベルに関するテーブル ヒントをコーディングする必要はありません。  
   
 - **Explicit** - Transact-SQL には、BEGIN TRANSACTION コードと共に最終的な COMMIT TRANSACTION コードが含まれています。 2 つ以上のステートメントを、同じトランザクションに含めることができます。  

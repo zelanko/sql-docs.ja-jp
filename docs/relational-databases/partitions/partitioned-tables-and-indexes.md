@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e02e5e2e6449a1c8c62072d0cd5a86d44cdf22ce
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4cb894ef393f767d85af5c43b50bffce87f3a6fc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006002"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480043"
 ---
 # <a name="partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックス
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "92006002"
 パーティション関数のパーティションを一連のファイル グループにマップするデータベース オブジェクト。 パーティションを別々のファイル グループに配置する主な理由は、パーティションのバックアップ操作を個別に実行できるようにすることです。 これは、バックアップを個別のファイル グループで実行できるからです。  
   
 ### <a name="partitioning-column"></a>パーティション分割列  
-パーティション関数が、テーブルまたはインデックスをパーティション分割するために使用するテーブルまたはインデックスの列。 パーティション関数に参加する計算列は、明示的に PERSISTED とマークされている必要があります。 **timestamp**型を除き、インデックス列として使用できるすべてのデータ型をパーティション分割列として使用できます。 **ntext**、 **text**、 **image**、 **xml**、 **varchar(max)** 、 **nvarchar(max)** 、または **varbinary(max)** データ型を指定することはできません。 また、Microsoft .NET Framework 共通言語ランタイム (CLR) ユーザー定義型の列とエイリアス データ型の列を指定することはできません。  
+パーティション関数が、テーブルまたはインデックスをパーティション分割するために使用するテーブルまたはインデックスの列。 パーティション関数に参加する計算列は、明示的に PERSISTED とマークされている必要があります。 **timestamp** 型を除き、インデックス列として使用できるすべてのデータ型をパーティション分割列として使用できます。 **ntext**、 **text**、 **image**、 **xml**、 **varchar(max)** 、 **nvarchar(max)** 、または **varbinary(max)** データ型を指定することはできません。 また、Microsoft .NET Framework 共通言語ランタイム (CLR) ユーザー定義型の列とエイリアス データ型の列を指定することはできません。  
   
 ### <a name="aligned-index"></a>固定されたインデックス  
 対応するテーブルと同じパーティション構成に基づいて構築されたインデックス。 テーブルとインデックスが固定されている状態では、両者のパーティション構造を保ったまま [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がパーティションをすばやく効率的に切り替えることができます。 ベース テーブルに固定させるために、インデックスを同じ名前のパーティション関数に加える必要はありません。 ただし、インデックスとベース テーブルのパーティション関数が次の点で基本的に同じでなければなりません。

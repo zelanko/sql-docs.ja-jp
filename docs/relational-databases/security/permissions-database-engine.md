@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: AndreasWolter
 ms.author: anwolter
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5da1bad65cf04093be339e1f2e55bddd30efffbf
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0b7839615ed830f91ced84f1c565d9c2d32bf3a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243641"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479423"
 ---
 # <a name="permissions-database-engine"></a>権限 (データベース エンジン)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,11 +53,11 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
      セキュリティ保護可能な特定のリソースのプロパティを変更できるようにします。ただし、所有権は変更できません。 スコープに対して許可された場合、ALTER では、そのスコープに含まれているセキュリティ保護可能なすべてのリソースの変更、作成、または削除も行えるようになります。 たとえば、スキーマに対する ALTER 権限には、スキーマのオブジェクトを作成、変更、および削除する権限が含まれています。  
   
--   ALTER ANY \<*Server Securable*>。ここで、 *Server Securable* には、任意のセキュリティ保護可能なサーバーを指定できます。  
+-   ALTER ANY \<*Server Securable*>。ここで、*Server Securable* には、任意のセキュリティ保護可能なサーバーを指定できます。  
   
      *Server Securable* の個々のインスタンスを作成、変更、削除できるようにします。 たとえば、ALTER ANY LOGIN では、インスタンス内の任意のログインを作成、変更、または削除できます。  
   
--   ALTER ANY \<*Database Securable*>。ここで、 *Database Securable* には、データベース レベルの任意のセキュリティ保護可能なリソースを指定できます。  
+-   ALTER ANY \<*Database Securable*>。ここで、*Database Securable* には、データベース レベルの任意のセキュリティ保護可能なリソースを指定できます。  
   
      *Database Securable* の個々のインスタンスを CREATE、ALTER、DROP できるようにします。 たとえば、ALTER ANY SCHEMA では、データベース内の任意のスキーマを作成、変更、または削除できます。  
   
@@ -364,7 +364,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> 権限チェック アルゴリズムの概要  
- 権限のチェックは複雑な場合があります。 権限チェック アルゴリズムには、グループ メンバーシップの重複、所有権の継承、明示的および暗黙的な権限が含まれます。また、セキュリティ保護可能なエンティティを含むセキュリティ保護可能なクラスに対する権限の影響を受けることもあります。 アルゴリズムの一般的な手順では、関連する権限がすべて収集されます。 ブロックする DENY が見つからない場合、十分なアクセス権を付与する GRANT が検索されます。 アルゴリズムには、不可欠な要素が 3 つあります。 **セキュリティ コンテキスト** 、 **権限領域** 、および **必要な権限** です。  
+ 権限のチェックは複雑な場合があります。 権限チェック アルゴリズムには、グループ メンバーシップの重複、所有権の継承、明示的および暗黙的な権限が含まれます。また、セキュリティ保護可能なエンティティを含むセキュリティ保護可能なクラスに対する権限の影響を受けることもあります。 アルゴリズムの一般的な手順では、関連する権限がすべて収集されます。 ブロックする DENY が見つからない場合、十分なアクセス権を付与する GRANT が検索されます。 アルゴリズムには、不可欠な要素が 3 つあります。 **セキュリティ コンテキスト**、 **権限領域**、および **必要な権限** です。  
   
 > [!NOTE]  
 >  sa、dbo、エンティティ所有者、information_schema、sys、または自分自身に対する権限を許可、拒否、または取り消すことはできません。  

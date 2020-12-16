@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c7e4f4589fa5d6c4e2758a2b259ff8e6129904f7
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 843ce787a060481f933376470ef431c6c8e8df08
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869076"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479743"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>レプリケーションのセキュリティ設定の表示および変更
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -274,7 +274,7 @@ ms.locfileid: "91869076"
     -   パブリッシャーへの接続時に使用するセキュリティ モードを **1** から **0** に変更する場合、またはこの接続に使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインを変更する場合は、`@publisher_login` および `@publisher_password` を指定します。  
   
     > [!IMPORTANT]  
-    >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+    >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password* を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>ログ リーダー エージェントのセキュリティ設定を変更するには  
   
@@ -292,7 +292,7 @@ ms.locfileid: "91869076"
     >  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
     > [!IMPORTANT]  
-    >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+    >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password* を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription"></a>プッシュ サブスクリプションに対するディストリビューション エージェントのセキュリティ設定を変更するには  
   
@@ -312,7 +312,7 @@ ms.locfileid: "91869076"
     >  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
     > [!IMPORTANT]  
-    >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 **distrib_job_login** および **distrib_job_password**を含むすべてのプロパティに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+    >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 **distrib_job_login** および **distrib_job_password** を含むすべてのプロパティに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription"></a>プル サブスクリプションに対するディストリビューション エージェントのセキュリティ設定を変更するには  
   
@@ -353,7 +353,7 @@ ms.locfileid: "91869076"
     >  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
     > [!IMPORTANT]  
-    >  リモート ディストリビューターを使用してパブリッシャーを構成する場合、 **merge_job_login** および **merge_job_password**を含むすべてのプロパティに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+    >  リモート ディストリビューターを使用してパブリッシャーを構成する場合、 **merge_job_login** および **merge_job_password** を含むすべてのプロパティに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription"></a>プル サブスクリプションに対するマージ エージェントのセキュリティ設定を変更するには  
   
@@ -383,7 +383,7 @@ ms.locfileid: "91869076"
 2.  パブリッシャーで、[sp_changedynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md) を実行します。`@publication` を指定し、`dynamic_snapshot_jobname` に手順 1 で取得した値を指定して、`@job_password` に新しいパスワードを指定するか、または `@job_login` と `@job_password` にエージェントの実行に使用する Windows アカウントのログインとパスワードを指定します。  
   
     > [!IMPORTANT]  
-    >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+    >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password* を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 #### <a name="to-change-security-settings-for-the-queue-reader-agent"></a>キュー リーダー エージェントのセキュリティ設定を変更するには  
   
@@ -450,7 +450,7 @@ ms.locfileid: "91869076"
   
 3.  サブスクリプションの <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> の各プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに対し、手順 1. で作成した接続を設定します。  
   
-4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから **false**が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから **false** が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
   
 5.  <xref:Microsoft.SqlServer.Replication.TransSubscription>のインスタンスに対し、次のいずれかまたは複数のセキュリティ プロパティを設定します。  
   
@@ -458,7 +458,7 @@ ms.locfileid: "91869076"
   
     -   エージェントがサブスクライバーとの接続に使用する認証の種類に Windows 統合認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> フィールドを **true**」を参照してください。  
   
-    -   エージェントがサブスクライバーとの接続に使用する認証の種類に SQL&#xA0;Server 認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> フィールドを **false**に設定し、さらに、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 」および「 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドに対して、サブスクライバーのログイン資格情報を設定します。  
+    -   エージェントがサブスクライバーとの接続に使用する認証の種類に SQL&#xA0;Server 認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> フィールドを **false** に設定し、さらに、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 」および「 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドに対して、サブスクライバーのログイン資格情報を設定します。  
   
         > [!NOTE]  
         >  ディストリビューターに対するエージェント接続は、常に、 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>によって指定された Windows 資格情報を使用して確立されます。 このアカウントは、Windows 認証を使ってリモート接続を確立する際にも使用されます。  
@@ -473,7 +473,7 @@ ms.locfileid: "91869076"
   
 3.  サブスクリプションの <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> の各プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに対し、手順 1. で作成した接続を設定します。  
   
-4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから **false**が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから **false** が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
   
 5.  <xref:Microsoft.SqlServer.Replication.TransPullSubscription>のインスタンスに対し、次のいずれかまたは複数のセキュリティ プロパティを設定します。  
   
@@ -481,7 +481,7 @@ ms.locfileid: "91869076"
   
     -   エージェントがディストリビューターとの接続に使用する認証の種類に Windows 統合認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> フィールドを **true**」を参照してください。  
   
-    -   エージェントがディストリビューターとの接続に使用する認証の種類に SQL&#xA0;Server 認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> フィールドを **false**に設定し、さらに、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 」および「 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドに対して、サブスクライバーのログイン資格情報を設定します。  
+    -   エージェントがディストリビューターとの接続に使用する認証の種類に SQL&#xA0;Server 認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> フィールドを **false** に設定し、さらに、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 」および「 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドに対して、サブスクライバーのログイン資格情報を設定します。  
   
         > [!NOTE]  
         >  サブスクライバーに対するエージェント接続は、常に、 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>によって指定された Windows 資格情報を使用して確立されます。 このアカウントは、Windows 認証を使ってリモート接続を確立する際にも使用されます。  
@@ -496,7 +496,7 @@ ms.locfileid: "91869076"
   
 3.  サブスクリプションの <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> の各プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに対し、手順 1. で作成した接続を設定します。  
   
-4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから **false**が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから **false** が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
   
 5.  <xref:Microsoft.SqlServer.Replication.MergePullSubscription>のインスタンスに対し、次のいずれかまたは複数のセキュリティ プロパティを設定します。  
   
@@ -504,11 +504,11 @@ ms.locfileid: "91869076"
   
     -   エージェントがディストリビューターとの接続に使用する認証の種類に Windows 統合認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> フィールドを **true**」を参照してください。  
   
-    -   エージェントがディストリビューターとの接続に使用する認証の種類に SQL&#xA0;Server 認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> フィールドを **false**に設定し、さらに、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 」および「 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドに対して、サブスクライバーのログイン資格情報を設定します。  
+    -   エージェントがディストリビューターとの接続に使用する認証の種類に SQL&#xA0;Server 認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> フィールドを **false** に設定し、さらに、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 」および「 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドに対して、サブスクライバーのログイン資格情報を設定します。  
   
     -   エージェントがパブリッシャーとの接続に使用する認証の種類に Windows 統合認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> フィールドを **true**」を参照してください。  
   
-    -   エージェントがパブリッシャーとの接続に使用する認証の種類に SQL&#xA0;Server 認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> フィールドを **false**に設定し、さらに、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 」および「 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドに対して、サブスクライバーのログイン資格情報を設定します。  
+    -   エージェントがパブリッシャーとの接続に使用する認証の種類に SQL&#xA0;Server 認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> フィールドを **false** に設定し、さらに、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 」および「 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドに対して、サブスクライバーのログイン資格情報を設定します。  
   
         > [!NOTE]  
         >  サブスクライバーに対するエージェント接続は、常に、 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>によって指定された Windows 資格情報を使用して確立されます。 このアカウントは、Windows 認証を使ってリモート接続を確立する際にも使用されます。  
@@ -523,7 +523,7 @@ ms.locfileid: "91869076"
   
 3.  サブスクリプションの <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> の各プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに対し、手順 1. で作成した接続を設定します。  
   
-4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから **false**が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから **false** が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
   
 5.  <xref:Microsoft.SqlServer.Replication.MergeSubscription>のインスタンスに対し、次のいずれかまたは複数のセキュリティ プロパティを設定します。  
   
@@ -531,11 +531,11 @@ ms.locfileid: "91869076"
   
     -   エージェントがサブスクライバーとの接続に使用する認証の種類に Windows 統合認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> フィールドを **true**」を参照してください。  
   
-    -   エージェントがサブスクライバーとの接続に使用する認証の種類に SQL&#xA0;Server 認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> フィールドを **false**に設定し、さらに、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 」および「 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドに対して、サブスクライバーのログイン資格情報を設定します。  
+    -   エージェントがサブスクライバーとの接続に使用する認証の種類に SQL&#xA0;Server 認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> フィールドを **false** に設定し、さらに、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 」および「 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドに対して、サブスクライバーのログイン資格情報を設定します。  
   
     -   エージェントがパブリッシャーとの接続に使用する認証の種類に Windows 統合認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> フィールドを **true**」を参照してください。  
   
-    -   エージェントがパブリッシャーとの接続に使用する認証の種類に SQL&#xA0;Server 認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> フィールドを **false**に設定し、さらに、 <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A> 」および「 <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> フィールドに対して、サブスクライバーのログイン資格情報を設定します。  
+    -   エージェントがパブリッシャーとの接続に使用する認証の種類に SQL&#xA0;Server 認証を指定するには、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> プロパティの <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> フィールドを **false** に設定し、さらに、 <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A> 」および「 <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> フィールドに対して、サブスクライバーのログイン資格情報を設定します。  
   
         > [!NOTE]  
         >  ディストリビューターに対するエージェント接続は、常に、 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>によって指定された Windows 資格情報を使用して確立されます。 このアカウントは、Windows 認証を使ってリモート接続を確立する際にも使用されます。  
@@ -548,7 +548,7 @@ ms.locfileid: "91869076"
   
 2.  サブスクリプション データベースの <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> クラスのインスタンスを作成します。 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.Name%2A> を指定し、 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> に手順 1. の <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>を指定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから **false**が返された場合、手順 2. で指定したデータベースのプロパティが正しく定義されていないか、サブスクリプション データベースが存在していません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから **false** が返された場合、手順 2. で指定したデータベースのプロパティが正しく定義されていないか、サブスクリプション データベースが存在していません。  
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LinkPublicationForUpdateableSubscription%2A> メソッドに次のパラメーターを指定して呼び出します。  
   
