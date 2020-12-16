@@ -7,20 +7,20 @@ ms.date: 01/25/2019
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fcdb8353abe029291352f031d5261849514ef8fd
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 9734b1315aa782f83f8f02cfb9d0d78da52460d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92195756"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470733"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>SQLRUserGroup のログインｎ作成
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-スクリプト内の [ループ バック接続](../../relational-databases/security/authentication-access/create-a-login.md)が [信頼関係接続](../concepts/security.md#sqlrusergroup)を指定するとき、 [SQLRUserGroup](../../machine-learning/concepts/security.md#implied-authentication) のための *SQL Server へのログイン* を作成すると、あなたのコードを含むオブジェクトの実行に使用される ID は Windows のユーザー アカウントです。
+スクリプト内の [ループ バック接続](../../relational-databases/security/authentication-access/create-a-login.md)が [信頼関係接続](../concepts/security.md#sqlrusergroup)を指定するとき、[SQLRUserGroup](../../machine-learning/concepts/security.md#implied-authentication) のための *SQL Server へのログイン* を作成すると、あなたのコードを含むオブジェクトの実行に使用される ID は Windows のユーザー アカウントです。
 
-信頼関係接続とは、接続文字列に `Trusted_Connection=True` を持つ接続のことです。 SQL Server が信頼関係接続を指定する要求を受信すると、現在の Windows ユーザーの ID にログインがあるかどうかを確認します。 ワーカー アカウント ( **SQLRUserGroup** からの MSSQLSERVER01 など) として実行されている外部プロセスの場合、既定ではこれらのアカウントにはログインがないため、要求は失敗します。
+信頼関係接続とは、接続文字列に `Trusted_Connection=True` を持つ接続のことです。 SQL Server が信頼関係接続を指定する要求を受信すると、現在の Windows ユーザーの ID にログインがあるかどうかを確認します。 ワーカー アカウント (**SQLRUserGroup** からの MSSQLSERVER01 など) として実行されている外部プロセスの場合、既定ではこれらのアカウントにはログインがないため、要求は失敗します。
 
 **SQLServerRUserGroup** のログインを作成することによって、接続エラーを回避できます。 ID と外部プロセスの詳細については、「[機能拡張フレームワークのセキュリティの概要](../concepts/security.md)」を参照してください。
 
