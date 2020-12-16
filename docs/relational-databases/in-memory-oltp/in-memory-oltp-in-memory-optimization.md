@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42f9feb302418cd42cd49cd53dc866dbdccc2301
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9f462f256c98c4482af67527401cc6d30f3f0776
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867684"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465383"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>インメモリ OLTP とメモリ最適化
 
@@ -71,7 +71,7 @@ SQL Server 上のインメモリ OLTP について説明し、パフォーマン
 
 このセクションでは、SQL Server 上のインメモリ OLTP に関する情報を含むその他の Web サイトへのリンクを紹介します。
 
-- [インメモリ OLTP について説明し、パフォーマンス上の利点を示す**動画**](#anchorname-17minute-video)
+- [インメモリ OLTP について説明し、パフォーマンス上の利点を示す **動画**](#anchorname-17minute-video)
 
 - [インメモリ OLTP パフォーマンス デモ v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 
@@ -89,7 +89,7 @@ SQL Server 上のインメモリ OLTP について説明し、パフォーマン
 
 - _動画のタイトル:_ &nbsp; **SQL Server 2016 のインメモリ OLTP**
 - _公開日:_ &nbsp; 2019-03-10 (`YouTube.com` 上)。
-- _期間:_ &nbsp; 17:32 &nbsp; &nbsp; (ビデオへのリンクについては、次の[**インデックス**](#anchorname-index-17minute-video)に関する記事を参照してください。)
+- _期間:_ &nbsp; 17:32 &nbsp; &nbsp; (ビデオへのリンクについては、次の [**インデックス**](#anchorname-index-17minute-video)に関する記事を参照してください。)
 - _ホスト元:_ &nbsp; SQL Server のシニア プログラム マネージャーである Jos de Bruijn
 
 ### <a name="demo-can-be-downloaded"></a>デモをダウンロードできます

@@ -18,13 +18,13 @@ ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 047ca1b9ebb3a9157dfe9cbea2ececb898f6b478
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 17c91b53c786934d292692493fa886698128b34d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91867673"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465303"
 ---
 # <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
 
@@ -129,7 +129,7 @@ ELEVATE_ONLINE と ELEVATE_RESUMABLE はいずれも、オンラインと再開�
 > [!NOTE]
 > ELEVATE_ONLINE と ELEVATE_RESUMABLE は XML インデックス操作に適用されません。
 
-## <a name="related-content"></a>関連コンテンツ
+## <a name="related-content"></a>関連するコンテンツ
 
 - [オンライン インデックス操作の動作原理](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [オンラインでのインデックス操作の実行](../../relational-databases/indexes/perform-index-operations-online.md)  
