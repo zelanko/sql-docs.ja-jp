@@ -8,14 +8,14 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
+monikerRange: '>= sql-server-ver15'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 1cfc3dc5fa707a10f6adcf6e12122698ff4f9428
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 6c27959422023c0407d7abe3a1219c6a242bae7f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92524019"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469073"
 ---
 # <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>ODBC データ ソースで外部テーブル ウィザードを使用する
 
@@ -45,7 +45,7 @@ SQL Server 2019 の主なシナリオの 1 つは、データを仮想化する�
 
 ## <a name="create-a-database-master-key"></a>データベースのマスター キーを作成する
 
-このステップでは、データベースのマスター キーを作成します。 マスター キーの作成は必須です。 マスター キーにより、外部データ ソースによって使用される資格情報がセキュリティ保護されます。 マスター キーには強力なパスワードを選択してください。 また、 **BACKUP MASTER KEY** を使用して、マスター キーをバックアップします。 バックアップを安全な場所に保存します。
+このステップでは、データベースのマスター キーを作成します。 マスター キーの作成は必須です。 マスター キーにより、外部データ ソースによって使用される資格情報がセキュリティ保護されます。 マスター キーには強力なパスワードを選択してください。 また、**BACKUP MASTER KEY** を使用して、マスター キーをバックアップします。 バックアップを安全な場所に保存します。
 
 ![データベースのマスター キーを作成する](media/data-virtualization/virtualize-data-master-key.png)
 

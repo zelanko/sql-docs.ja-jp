@@ -22,13 +22,13 @@ helpviewer_keywords:
 - rank
 ms.custom: ''
 ms.date: 06/10/2020
-monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: cc5f77d8590434d8d8d03e5ef8ab68365be3c4ca
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current"
+ms.openlocfilehash: a9654a26ff748afa039ac5b0d2088135eea6a796
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784787"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466033"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "91784787"
 
 1 つ以上のデータベース列に秘密度の分類に関するメタデータを追加します。 分類には、機密ラベルと情報の種類を含めることができます。
 
-SQL Server では、これは SQL Server 2012 で導入されました。
+SQL Server では、これは SQL Server 2019 で導入されました。
 
 データベース環境で機密データを分類すると、可視性の拡張と保護の強化が実現します。 詳しくは、[SQL Information Protection の概要](https://aka.ms/sqlip)に関する記事をご覧ください。
 

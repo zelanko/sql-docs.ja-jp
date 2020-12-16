@@ -34,13 +34,13 @@ helpviewer_keywords:
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7484fb48a77edaaaf7f231a487307faaf1f7aadd
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a42d01bead1a5d3882dcce0df67cda7785724b5e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227386"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466153"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -88,7 +88,7 @@ _UOW_
 孤立した分散トランザクションを終了するには、KILL _UOW_ を使用します。 これらのトランザクションは、実際のセッション ID には関連付けられていませんが、人為的にセッション ID = '-2' に関連付けられています。 sys.dm_tran_locks、sys.dm_exec_sessions、または sys.dm_exec_requests  のいずれかの動的管理ビューのセッション ID 列を照会すれば、孤立したトランザクションをこのセッション ID で容易に識別できます。  
   
 WITH STATUSONLY  
-指定した_セッション ID_ または _UOW_の、前の KILL ステートメントに従って実行されているロールバックの進行状況レポートを生成します。 KILL WITH STATUSONLY では、_セッション ID_ または _UOW_ の終了もロールバックも実行されません。 このコマンドは、ロールバックの現在の進行状況のみを表示します。  
+指定した _セッション ID_ または _UOW_ の、前の KILL ステートメントに従って実行されているロールバックの進行状況レポートを生成します。 KILL WITH STATUSONLY では、_セッション ID_ または _UOW_ の終了もロールバックも実行されません。 このコマンドは、ロールバックの現在の進行状況のみを表示します。  
   
 ## <a name="remarks"></a>解説  
 KILL は、通常は、他の重要なプロセスをロックを使用してブロックしているプロセスを終了するために使用されます。 KILL は、必要なシステム リソースを使用しているクエリを実行しているプロセスを停止するためにも使用できます。 システム プロセスと拡張ストアド プロシージャを実行しているプロセスは終了できません。  

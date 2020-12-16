@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1219ff15ea4aa2f5836c6adb792884c557d9e698
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2b1c63e6e7ef97f4a9936d623b26950b0a0040f4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448644"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467983"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout (timeout &gt; 0) イベント クラス
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88448644"
 |DatabaseID|**int**|タイムアウトが発生したデータベースの ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |DatabaseName|**nvarchar**|タイムアウトが発生したデータベースの名前。|35|はい|  
 |Duration|**bigint**|イベントにかかった時間 (マイクロ秒)。|13|はい|  
-|EndTime|**datetime**|イベントの終了時刻。 **SQL:BatchStarting** や **SP:Starting**などの開始イベント クラスについては、この列に値が格納されません。|15|はい|  
+|EndTime|**datetime**|イベントの終了時刻。 **SQL:BatchStarting** や **SP:Starting** などの開始イベント クラスについては、この列に値が格納されません。|15|はい|  
 |EventClass|**int**|イベントの種類 = 189。|27|いいえ|  
 |EventSequence|**int**|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |GroupID|**int**|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  

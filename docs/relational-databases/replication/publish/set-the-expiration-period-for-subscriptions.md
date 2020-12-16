@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 4244219c81d511dee739b7c39fbc6a469bc02707
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 677d469c12dd2f72988d469b2fc5541ad0900996
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88326978"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468923"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>サブスクリプションの有効期限の設定
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88326978"
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
--   サブスクリプションの有効期限は、 *パブリケーション保有期間*とも呼ばれます。 マージ レプリケーション メタデータのクリーンアップは、この設定に依存します。  
+-   サブスクリプションの有効期限は、 *パブリケーション保有期間* とも呼ばれます。 マージ レプリケーション メタデータのクリーンアップは、この設定に依存します。  
   
     -   保有期間が終了するまで、パブリケーションおよびサブスクリプション データベースでメタデータをクリーンアップすることはできません。 レプリケーション パフォーマンスを低下させる可能性があるため、保有期間に大きな値を指定する際は注意してください。 すべてのサブスクライバーが保有期間内で定期的に同期されることを確実に予測できる場合は、小さい値を使用することをお勧めします。  
   

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3662722ae800aa078fe5ba58567d2c55efbb613
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 16477e0e469ef67b0dbbceb04d5760b7edc6730a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92187647"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468093"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 
@@ -77,13 +77,13 @@ END
 
 ## <a name="arguments"></a>引数  
  *input_expression*  
- 単純 CASE 形式を使用した場合に評価される式です。 *input_expression* は任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ 単純 CASE 形式を使用した場合に評価される式です。 *input_expression* は任意の有効な [式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
  WHEN *when_expression*  
  単純 CASE 形式を使用した場合に *input_expression* と比較される単純式です。 *when_expression* は任意の有効な式です。 *input_expression* と各 *when_expression* のデータ型は同一であるか、暗黙的な変換によって同一の型になる必要があります。  
   
  THEN *result_expression*  
- *input_expression* = *when_expression* が TRUE に評価されるとき、または *Boolean_expression* が TRUE に評価されるときに返される式です。 *result_expression* は任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ *input_expression* = *when_expression* が TRUE に評価されるとき、または *Boolean_expression* が TRUE に評価されるときに返される式です。 *result_expression* は任意の有効な [式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
  ELSE *else_result_expression*  
  比較操作の評価がいずれも TRUE でなかった場合に返される式です。 この引数を省略し、比較操作のいずれも TRUE でなかった場合、CASE は NULL を返します。 *else_result_expression* は任意の有効な式です。 *else_result_expression* とすべての *result_expression* のデータ型は同一であるか、暗黙的な変換によって同一の型になる必要があります。  

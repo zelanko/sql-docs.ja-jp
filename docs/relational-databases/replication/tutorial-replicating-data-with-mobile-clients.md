@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4ffeb0300e8211110ba3a8b303ff21b230626b9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7070e1aa45101022073d4ce21cf7943cfca31d34
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866909"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468713"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>チュートリアル:サーバーとモバイル クライアントの間のレプリケーション (マージ) を構成する
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -147,7 +147,7 @@ ms.locfileid: "91866909"
 
     ![パブリケーション名が表示された [ウィザードの完了] ページ](media/tutorial-replicating-data-with-mobile-clients/namemergerepl.png)
   
-24. パブリケーションが作成されたら、 **[閉じる]** を選択します。 **オブジェクト エクスプローラー**で **[レプリケーション]** ノードの下の **[ローカル パブリケーション]** を右クリックして **[更新]** を選択し、新しいマージ レプリケーションを表示します。  
+24. パブリケーションが作成されたら、 **[閉じる]** を選択します。 **オブジェクト エクスプローラー** で **[レプリケーション]** ノードの下の **[ローカル パブリケーション]** を右クリックして **[更新]** を選択し、新しいマージ レプリケーションを表示します。  
   
 ### <a name="view-the-status-of-snapshot-generation"></a>スナップショット生成の状態を表示する  
   

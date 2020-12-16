@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 31850fe7f9ecf78af666faced53f552646de672a
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 2a75dec86a197a5a0c4f4029a947ad801b1f2271
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364696"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467393"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>レプリケーション スクリプトのアップグレード (レプリケーション Transact-SQL プログラミング)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a4e4aa7795ad7ddb4a8c321afd5eb8f33b49db5
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bbc919848acf3031771bd83b43f94c48fe58883d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227036"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465883"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  切り捨てるまたはすべての行を削除するテーブルの名前を指定します。 *table_name* はリテラルで指定する必要があります。 *table_name* することはできません、 **OBJECT_ID()** 関数または変数です。  
   
  WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )    
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)
   
  切り捨てるパーティション、またはすべての行を削除するパーティションを指定します。 テーブルがパーティション分割されていない場合に `WITH PARTITIONS` 引数を使用すると、エラーが発生します。 `WITH PARTITIONS` 句が指定されていない場合、テーブル全体が切り捨てられます。  
   
@@ -162,7 +162,7 @@ GO
   
 ### <a name="b-truncate-table-partitions"></a>B. テーブル パーティションを切り捨てる  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)
   
  次の例では、パーティション分割されたテーブルの指定パーティションを切り捨てます。 `WITH (PARTITIONS (2, 4, 6 TO 8))` 構文によりパーティション番号、2、4、6、7、および 8 が切り捨てられます。  
   

@@ -32,13 +32,13 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b574c9efb9f6c5d5cda38731546403e1219c8a36
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 99ef20a9db20238f24361327b79068ed39d430f4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193512"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465673"
 ---
 # <a name="collation-and-unicode-support"></a>照合順序と Unicode のサポート
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -492,7 +492,7 @@ Unicode または非 Unicode データ型の使用に関連する問題点を評
 さまざまな状況で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって他のサーバーまたはクライアントとのやり取りが行われ、組織ではアプリケーションやサーバー インスタンス間で複数のデータ アクセス標準を使用する可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントは次の 2 つの主要タイプのいずれかになります。    
     
 -   OLE DB および Open Database Connectivity (ODBC) バージョン 3.7 以降を使用する **Unicode クライアント**。    
--   DB ライブラリおよび ODBC バージョン 3.6 以前を使用する**非 Unicode クライアント**。    
+-   DB ライブラリおよび ODBC バージョン 3.6 以前を使用する **非 Unicode クライアント**。    
     
 以下の表では、Unicode 型サーバーと非 Unicode 型サーバーの各種の組み合わせにおける多言語データの使用に関する情報を示します。    
     
@@ -600,7 +600,7 @@ Unicode Consortium では、各文字に一意のコード ポイント (000000 
 <sup>2</sup>[補助文字](#Supplementary_Characters)のコード ポイント範囲。
 
 > [!TIP]   
-> [CHAR(*n*) および VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、または[NCHAR(*n*) および NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) では、*n* は文字数を定義すると考えるのが一般的です。 これは、CHAR (10) 列の例では、0 – 127 の範囲の 10 個の ASCII 文字を **Latin1_General_100_CI_AI** などの照合順序を使用して格納できるためで、この範囲内の各文字が 1 バイトのみを使用するためです。
+> [CHAR(*n*) および VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、または [NCHAR(*n*) および NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) では、*n* は文字数を定義すると考えるのが一般的です。 これは、CHAR (10) 列の例では、0 – 127 の範囲の 10 個の ASCII 文字を **Latin1_General_100_CI_AI** などの照合順序を使用して格納できるためで、この範囲内の各文字が 1 バイトのみを使用するためです。
 >    
 > ただし、[CHAR(*n*) および VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) では、*n* によって "*バイト*" での文字列のサイズ (0 – 8,000) が定義され、[NCHAR(*n*) および NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) では *n* によって "*バイトペア*" での文字列のサイズ (0 – 4,000) が定義されます。 *n* は、格納できる文字数を定義しません。
 

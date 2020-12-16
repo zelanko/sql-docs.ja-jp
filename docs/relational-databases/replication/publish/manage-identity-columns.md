@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7d0a169e6b160bc865c5ba3c115803fb690cbe68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 6c7f660c4550a3bd792b2132ad0699d944b90a2e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423486"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468993"
 ---
 # <a name="manage-identity-columns"></a>ID 列の管理
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -130,9 +130,9 @@ ms.locfileid: "88423486"
   
 #### <a name="to-change-automatic-identity-range-management-settings-for-an-existing-article-in-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションの既存のアーティクルに対する ID 範囲管理設定を自動的に変更するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md) を実行し、結果セットの **identityrangemanagementoption** の値を確認します。 値が **0**の場合、自動 ID 範囲管理は有効ではありません。  
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md) を実行し、結果セットの **identityrangemanagementoption** の値を確認します。 値が **0** の場合、自動 ID 範囲管理は有効ではありません。  
   
-2.  結果セットの **identityrangemanagementoption** の値が **1**の場合、次のようにして設定を変更します。  
+2.  結果セットの **identityrangemanagementoption** の値が **1** の場合、次のようにして設定を変更します。  
   
     -   割り当てられている ID 範囲を変更するには、パブリッシャー側のパブリケーション データベースに対して [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) を実行します。 **\@property** に **identity_range** か **pub_identity_range** を指定し、 **\@value** に新しい範囲値を指定します。  
   
@@ -140,9 +140,9 @@ ms.locfileid: "88423486"
   
 #### <a name="to-change-automatic-identity-range-management-settings-for-an-existing-article-in-a-merge-publication"></a>マージ パブリケーションの既存のアーティクルに対する ID 範囲管理設定を自動的に変更するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) を実行し、結果セットの **identity_support** の値を確認します。 値が **0**の場合、自動 ID 範囲管理は有効ではありません。  
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) を実行し、結果セットの **identity_support** の値を確認します。 値が **0** の場合、自動 ID 範囲管理は有効ではありません。  
   
-2.  結果セットの **identity_support** の値が **1**の場合、次のようにして設定を変更します。  
+2.  結果セットの **identity_support** の値が **1** の場合、次のようにして設定を変更します。  
   
     -   割り当てられている ID 範囲を変更するには、パブリッシャー側のパブリケーション データベースに対して [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。 **\@property** に **identity_range** か **pub_identity_range** を指定し、 **\@value** に新しい範囲値を指定します。  
   

@@ -9,13 +9,13 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5ab1ef128b86f3426193b648c41f6cac6b324e71
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15'
+ms.openlocfilehash: fdbc2112467cadc2aaec390a667e3d189786b3ef
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834046"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467493"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>MongoDB 上の外部データにアクセスするための PolyBase の構成
 
@@ -128,7 +128,7 @@ MongoDB データ ソースのデータに対してクエリを実行するに�
 
 ## <a name="cosmos-db-connection"></a>Cosmos DB 接続
 
-Cosmos DB の Mongo API および Mongo DB PolyBase コネクタを使用すると、**Cosmos DB インスタンス**の外部テーブルを作成することができます。 これは、上記と同じ手順に従って行います。 データベースのスコープ資格情報、サーバーのアドレス、ポート、場所の文字列が Cosmos DB サーバーのものを反映していることを確認してください。 
+Cosmos DB の Mongo API および Mongo DB PolyBase コネクタを使用すると、**Cosmos DB インスタンス** の外部テーブルを作成することができます。 これは、上記と同じ手順に従って行います。 データベースのスコープ資格情報、サーバーのアドレス、ポート、場所の文字列が Cosmos DB サーバーのものを反映していることを確認してください。 
 
 ## <a name="next-steps"></a>次のステップ
 

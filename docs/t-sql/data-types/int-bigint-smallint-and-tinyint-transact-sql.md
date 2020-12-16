@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83abf17fc4d5e182834a3085f49c862cb0dcd2e8
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a388e1cf13ce0de99a51b099e79e94dafa9dc0a4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111239"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466183"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint、および tinyint (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "91111239"
   
 **bigint** 間に位置 **smallmoney** と **int** データ型の優先順位表でします。
   
-関数を返します。 **bigint** 、パラメーター式が場合にのみ、 **bigint** データ型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] その他の整数データ型を自動的に昇格しません (**tinyint**, 、**smallint**, 、および **int**) に **bigint**です。
+関数を返します。 **bigint** 、パラメーター式が場合にのみ、 **bigint** データ型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] その他の整数データ型を自動的に昇格しません (**tinyint**, 、**smallint**, 、および **int**) に **bigint** です。
   
 > [!CAUTION]  
 >  +、-、\*、/、または % の算術演算子を使用して、**int**、**smallint**、**tinyint**、または **bigint** の定数値の暗黙的または明示的変換を実行して **float**、**real**、**decimal**、または **numeric** データ型にした場合、データ型と式の精度を計算するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が適用する規則は、クエリが自動パラメーター化されているかどうかに応じて異なります。  
@@ -64,7 +64,7 @@ ms.locfileid: "91111239"
 ## <a name="converting-integer-data"></a>整数型データの変換
 整数を暗黙的に文字データ型に変換するとき、整数が大きすぎて文字型フィールドに格納できない場合、ASCII 文字コード 42 のアスタリスク (*) が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって入力されます。
   
-2,147, 483,647 に変換されます。 よりも大きい整数の定数、 **decimal** データ型ではなく、 **bigint** データ型。 次の例は、しきい値を超過すると、結果のデータ型変更から、 **int** を **decimal**です。
+2,147, 483,647 に変換されます。 よりも大きい整数の定数、 **decimal** データ型ではなく、 **bigint** データ型。 次の例は、しきい値を超過すると、結果のデータ型変更から、 **int** を **decimal** です。
   
 ```sql
 SELECT 2147483647 / 2 AS Result1, 2147483649 / 2 AS Result2 ;  
