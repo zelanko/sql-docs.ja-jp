@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e58213e5098a1565dc25d702aef5f68589a55475
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dea62262cf7a9d5f8965dd4eeff6f412776fbc32
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679170"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484094"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -89,7 +89,7 @@ DECLARE
  変数名を指定します。 変数名は、アット マーク (@) で始める必要があります。 ローカル変数名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
 *data_type*  
- システム提供の共通言語ランタイム (CLR) ユーザー定義テーブル型または別名データ型を指定します。 変数のデータ型としては **text** 、 **ntext** 、 **image** を指定できません。  
+ システム提供の共通言語ランタイム (CLR) ユーザー定義テーブル型または別名データ型を指定します。 変数のデータ型としては **text**、**ntext**、**image** を指定できません。  
   
  システム データ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。 CLR ユーザー定義型または別名データ型の詳細については、「[CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)」を参照してください。  
   
@@ -122,19 +122,19 @@ CURSOR
  *computed_column_expression*  
  計算列の値を定義する式を指定します。 計算列は、同じテーブルの他の列を使用した式によって計算されます。 たとえば、計算列は **cost** AS **price \* qty** として定義されます。この式には、計算列以外の列の名前、定数、組み込み関数、変数、およびこれらを 1 つ以上の演算子で結合した組み合わせを使用できます。 この式はサブクエリまたはユーザー定義関数にはできません。 この式は CLR ユーザー定義型を参照できません。  
   
- [ COLLATE *collation_name* ]  
- 列の照合順序を指定します。 *collation_name* には、Windows の照合順序名か SQL の照合順序名を指定できます。これは、データ型が **char** 、 **varchar** 、 **text** 、 **nchar** 、 **nvarchar** 、 **ntext** の列にだけ適用できます。 指定しないと、列がユーザー定義データ型である場合はユーザー定義データ型の照合順序、または現在のデータベースの照合順序が割り当てられます。  
+ [ COLLATE *collation_name*]  
+ 列の照合順序を指定します。 *collation_name* には、Windows の照合順序名か SQL の照合順序名を指定できます。これは、データ型が **char**、**varchar**、**text**、**nchar**、**nvarchar**、**ntext** の列にだけ適用できます。 指定しないと、列がユーザー定義データ型である場合はユーザー定義データ型の照合順序、または現在のデータベースの照合順序が割り当てられます。  
   
  Windows と SQL の照合順序名については、「[COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)」を参照してください。  
   
  DEFAULT  
- 挿入の際に明示的な値を指定しない場合に、列に入力される値を指定します。 DEFAULT 定義は、 **timestamp** として定義された列または IDENTITY プロパティを持つ列以外のすべての列に適用できます。 テーブルが削除されると、DEFAULT 定義は削除されます。 既定値として使用できるのは、文字列などの定数値、SYSTEM_USER() などのシステム関数、または NULL だけです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の旧バージョンとの互換性を保つため、DEFAULT に制約名を割り当てることができます。  
+ 挿入の際に明示的な値を指定しない場合に、列に入力される値を指定します。 DEFAULT 定義は、**timestamp** として定義された列または IDENTITY プロパティを持つ列以外のすべての列に適用できます。 テーブルが削除されると、DEFAULT 定義は削除されます。 既定値として使用できるのは、文字列などの定数値、SYSTEM_USER() などのシステム関数、または NULL だけです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の旧バージョンとの互換性を保つため、DEFAULT に制約名を割り当てることができます。  
   
  *constant_expression*  
  列の既定値として使用される定数、NULL またはシステム関数を指定します。  
   
  IDENTITY  
- 新しい列が ID 列であることを指定します。 テーブルに行が新しく追加されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では列に一意な増分値が設定されます。 ID 列は通常、PRIMARY KEY 制約と組み合わせて使用し、テーブルの一意な行識別子 (ROWID) の役割を果たします。 IDENTITY プロパティは、 **tinyint** 、 **smallint** 、 **int** 、 **decimal(p,0)** 、 **numeric(p,0)** のいずれかの列に割り当てることができます。 ID 列は 1 つのテーブルにつき 1 つだけ作成できます。 バインドされた既定値および DEFAULT 制約を ID 列と共に使用することはできません。 seed と increment は、両方を指定するか、どちらも指定しないでください。 どちらも指定しないときの既定値は (1,1) です。  
+ 新しい列が ID 列であることを指定します。 テーブルに行が新しく追加されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では列に一意な増分値が設定されます。 ID 列は通常、PRIMARY KEY 制約と組み合わせて使用し、テーブルの一意な行識別子 (ROWID) の役割を果たします。 IDENTITY プロパティは、**tinyint**、**smallint**、**int**、**decimal(p,0)** 、**numeric(p,0)** のいずれかの列に割り当てることができます。 ID 列は 1 つのテーブルにつき 1 つだけ作成できます。 バインドされた既定値および DEFAULT 制約を ID 列と共に使用することはできません。 seed と increment は、両方を指定するか、どちらも指定しないでください。 どちらも指定しないときの既定値は (1,1) です。  
   
  *seed*  
  テーブルに読み込まれる最初の行に使用される値です。  

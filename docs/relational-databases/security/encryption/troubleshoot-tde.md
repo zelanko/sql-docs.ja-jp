@@ -13,13 +13,13 @@ ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2eb908b1d63b70453aeff0e650f93b7c4e794520
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 2328cb73bbd101af12074620d0f755209e6dd185
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679249"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489842"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Azure Key Vault のカスタマー マネージド キーを使った透過的なデータ暗号化に関する一般的なエラー
 
@@ -34,7 +34,7 @@ Azure Key Vault のカスタマー マネージド キーを使用するよう�
 
 アクセスできないデータベースがもう必要ない場合は、すぐに削除してコストを抑えることができます。 Azure Key Vault キーへのアクセスが復元され、データベースがオンラインに戻るまで、データベースに対する他のすべての操作は許可されません。 カスタマー マネージド キーで暗号化されたデータベースにアクセスできない間は、サーバーで TDE のオプションをカスタマー マネージド キーからサービス マネージド キーに変更することもできません。 これは、TDE 保護機能へのアクセス許可が取り消されているときに、データを不正アクセスから保護するために必要です。 
 
-データベースにアクセスできない期間が 8 時間を超えると、自動修復は行われなくなります。 この期間の後に必要な Azure Key Vault のキー アクセスが復元された場合は、キーへのアクセスを手動で再検証して、データベースをオンラインに戻す必要があります。 この状況でデータベースをオンラインに戻す場合は、データベースのサイズによってはかなり時間がかかることがあります。 データベースがオンラインに戻ると、 [フェールオーバー グループ](/azure/sql-database/sql-database-auto-failover-group)、PITR 履歴、タグなどの以前に構成した設定は **失われます** 。 そのため、基になっている Key Vault のキー アクセスの問題にできる限り早く気付き、対処できるように、[アクション グループ](/azure/azure-monitor/platform/action-groups)を使用して通知システムを実装することをお勧めします。 
+データベースにアクセスできない期間が 8 時間を超えると、自動修復は行われなくなります。 この期間の後に必要な Azure Key Vault のキー アクセスが復元された場合は、キーへのアクセスを手動で再検証して、データベースをオンラインに戻す必要があります。 この状況でデータベースをオンラインに戻す場合は、データベースのサイズによってはかなり時間がかかることがあります。 データベースがオンラインに戻ると、[フェールオーバー グループ](/azure/sql-database/sql-database-auto-failover-group)、PITR 履歴、タグなどの以前に構成した設定は **失われます**。 そのため、基になっている Key Vault のキー アクセスの問題にできる限り早く気付き、対処できるように、[アクション グループ](/azure/azure-monitor/platform/action-groups)を使用して通知システムを実装することをお勧めします。 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>データベースにアクセスできなくなる原因となる一般的なエラー
 
@@ -62,7 +62,7 @@ Key Vault による TDE を使用しているときに発生する問題のほ�
 
 **エラー メッセージ**
 
-" _401 AzureKeyVaultNoServerIdentity - サーバーでサーバー ID が正しく構成されていません。サポートにお問い合わせください。_ "
+"_401 AzureKeyVaultNoServerIdentity - サーバーでサーバー ID が正しく構成されていません。サポートにお問い合わせください。_ "
 
 **検出**
 
@@ -70,7 +70,7 @@ Key Vault による TDE を使用しているときに発生する問題のほ�
 
 - Azure PowerShell:[Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
 
-- Azure CLI: [az-sql-server-show](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+- Azure CLI: [az-sql-server-show](/cli/azure/sql/server#az-sql-server-show)
 
 **軽減策**
 
@@ -78,7 +78,7 @@ Key Vault による TDE を使用しているときに発生する問題のほ�
 
 - Azure PowerShell:`-AssignIdentity` オプションを指定した [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0)。
 
-- Azure CLI: `--assign_identity` オプションを指定した [az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update)。
+- Azure CLI: `--assign_identity` オプションを指定した [az sql server update](/cli/azure/sql/server#az-sql-server-update)。
 
 Azure portal では、キー コンテナーに移動してから、 **[アクセス ポリシー]** に移動します。 以下の手順を実行します。 
 
@@ -95,7 +95,7 @@ Azure portal では、キー コンテナーに移動してから、 **[アク�
 
 **エラー メッセージ**
 
-" _503 AzureKeyVaultConnectionFailed - Azure Key Vault への接続の試みが失敗したため、サーバーでの操作を完了できませんでした_ "
+"_503 AzureKeyVaultConnectionFailed - Azure Key Vault への接続の試みが失敗したため、サーバーでの操作を完了できませんでした_"
 
 **検出**
 
@@ -105,7 +105,7 @@ Azure portal では、キー コンテナーに移動してから、 **[アク�
 
     - Azure PowerShell:[Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-    - Azure CLI: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+    - Azure CLI: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key#az-sql-server-tde-key-show) 
 
 1. キー URI を使用して、キー コンテナーを識別します。
 
@@ -126,9 +126,9 @@ Azure portal では、キー コンテナーに移動してから、 **[アク�
 
 **エラー メッセージ**
 
-" _404 ServerKeyNotFound - The requested server key was not found on the current subscription._ " (404 ServerKeyNotFound - 要求されたサーバー キーは、現在のサブスクリプションで使用できません。) 
+"_404 ServerKeyNotFound - The requested server key was not found on the current subscription._ " (404 ServerKeyNotFound - 要求されたサーバー キーは、現在のサブスクリプションで使用できません。) 
 
-" _409 ServerKeyDoesNotExists - The server key does not exist._ " (409 ServerKeyDoesNotExists - サーバー キーは存在しません。)
+"_409 ServerKeyDoesNotExists - The server key does not exist._ " (409 ServerKeyDoesNotExists - サーバー キーは存在しません。)
 
 **検出**
 
@@ -147,7 +147,7 @@ TDE プロテクターが Key Vault に存在することを確認します。
 
 **エラー メッセージ**
 
-" _401 AzureKeyVaultMissingPermissions - The server is missing required permissions on the Azure Key Vault._ " (401 AzureKeyVaultMissingPermissions - サーバーには Azure Key Vault に必要なアクセス許可がありません。)
+"_401 AzureKeyVaultMissingPermissions - The server is missing required permissions on the Azure Key Vault._ " (401 AzureKeyVaultMissingPermissions - サーバーには Azure Key Vault に必要なアクセス許可がありません。)
 
 **検出**
 

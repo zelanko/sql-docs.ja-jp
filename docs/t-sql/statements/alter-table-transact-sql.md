@@ -60,13 +60,13 @@ helpviewer_keywords:
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cef7fd2ddbcc95789ddb8a306538b6dfdaf29c5
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: aff544048da8bb09a2fd488d26a7bd1f69cf8f56
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521189"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489594"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -785,7 +785,7 @@ SET FILESTREAM_ON 句を指定した ALTER TABLE は、テーブルに FILESTREA
 
 *partition_scheme_name* を指定すると、[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) のルールが適用されます。 テーブルが行データ用に既にパーティション分割されていることを確認します。また、そのパーティション構成では、FILESTREAM パーティション構成と同じパーティション関数とパーティション列を使用する必要があります。
 
-*filestream_filegroup_name* には、FILESTREAM ファイル グループの名前を指定します。 ファイル グループには、[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017) または [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使って、ファイル グループ用に定義されたファイルが 1 つ含まれている必要があります。それ以外の場合はエラーが発生します。
+*filestream_filegroup_name* には、FILESTREAM ファイル グループの名前を指定します。 ファイル グループには、[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) または [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使って、ファイル グループ用に定義されたファイルが 1 つ含まれている必要があります。それ以外の場合はエラーが発生します。
 
 **"** default **"** には、DEFAULT プロパティ セットを含む FILESTREAM ファイル グループを指定します。 FILESTREAM ファイル グループがない場合は、エラーが発生します。
 

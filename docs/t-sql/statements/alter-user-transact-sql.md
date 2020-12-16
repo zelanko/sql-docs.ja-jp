@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ecb1710f992535ca4e6ebca3a3f825c5e1bffc9a
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4f2a00a567282eb4a2d5990360b630817d1950c6
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496977"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489476"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "92496977"
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -57,7 +57,7 @@ ms.locfileid: "92496977"
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -85,36 +85,36 @@ NAME = newUserName
 
 ## <a name="arguments"></a>引数
 
- *userName* : データベース内でユーザーを識別する名前を指定します。
+ *userName*: データベース内でユーザーを識別する名前を指定します。
 
- LOGIN **=** _loginName_ : ユーザーのセキュリティ識別子 (SID) を別のログインの SID に一致するように変更することで、ユーザーを別のログインに再マッピングします。
+ LOGIN **=** _loginName_: ユーザーのセキュリティ識別子 (SID) を別のログインの SID に一致するように変更することで、ユーザーを別のログインに再マッピングします。
 
- NAME **=** _newUserName_ : このユーザーの新しい名前を指定します。 *newUserName* は現在のデータベースに存在しない名前にする必要があります。
+ NAME **=** _newUserName_: このユーザーの新しい名前を指定します。 *newUserName* は現在のデータベースに存在しない名前にする必要があります。
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } このユーザー用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。 既定のスキーマを NULL に設定すると、既定のスキーマが Windows グループから削除されます。 Windows ユーザーでは NULL オプションは使用できません。
 
- PASSWORD **=** ' *password* ' **適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+ PASSWORD **=** '*password*' **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
  変更するユーザーのパスワードを指定します。 パスワードでは大文字と小文字が区別されます。
 
 > [!NOTE]
 > このオプションは、包含ユーザーに対してのみ使用できます。 詳しくは、「[包含データベース](../../relational-databases/databases/contained-databases.md)」および「[sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)」をご覧ください。
 
- OLD_PASSWORD **=** _'oldpassword'_ **適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+ OLD_PASSWORD **=** _'oldpassword'_ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
- ' *password* ' で置き換える現在のユーザー パスワードです。 パスワードでは大文字と小文字が区別されます。 **ALTER ANY USER** 権限がない場合、パスワードを変更するには、 *OLD_PASSWORD* が必要です。 *OLD_PASSWORD* を必須にすることで、 **IMPERSONATION** 権限を持つユーザーによるパスワードの変更を防止できます。
+ '*password*' で置き換える現在のユーザー パスワードです。 パスワードでは大文字と小文字が区別されます。 **ALTER ANY USER** 権限がない場合、パスワードを変更するには、*OLD_PASSWORD* が必要です。 *OLD_PASSWORD* を必須にすることで、**IMPERSONATION** 権限を持つユーザーによるパスワードの変更を防止できます。
 
 > [!NOTE]
 > このオプションは、包含ユーザーに対してのみ使用できます。
 
- DEFAULT_LANGUAGE **=** _{ NONE \| \<lcid> \| \<language name> \| \<language alias> }_ **適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
+ DEFAULT_LANGUAGE **=** _{ NONE \| \<lcid> \| \<language name> \| \<language alias> }_ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
 
  ユーザーに割り当てる既定の言語を指定します。 このオプションを NONE に設定した場合、既定の言語はデータベースの現在の既定の言語に設定されます。 データベースの既定の言語が将来変更されても、ユーザーの既定の言語は変更されません。 *DEFAULT_LANGUAGE* には、ローカル ID (LCID)、言語の名前、または言語の別名を指定できます。
 
 > [!NOTE]
 > このオプションは包含データベースでのみ指定でき、また、包含ユーザーに対してのみ指定できます。
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] **適用対象** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
 
  一括コピー操作でのサーバーの暗号化メタデータ チェックを抑制します。 これによりユーザーは、データを暗号化解除することなく、テーブルまたはデータベース間で暗号化データを一括コピーできます。 既定値は OFF です。
 
@@ -125,7 +125,7 @@ NAME = newUserName
 
  既定のスキーマは、このデータベース ユーザー用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマになります。 特に指定しない限り、このデータベース ユーザーによって作成されたオブジェクトの所有者になるのは、既定のスキーマです。
 
- ユーザーに既定のスキーマが指定されている場合は、その既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが所属しているグループに既定のスキーマが指定されている場合は、グループの既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが複数のグループに所属している場合、そのユーザーの既定のスキーマは、最も小さい principle_id と明示的に設定された既定のスキーマを持つ Windows グループのスキーマになります。 ユーザーに対する既定のスキーマを決定できない場合は、 **dbo** スキーマが使用されます。
+ ユーザーに既定のスキーマが指定されている場合は、その既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが所属しているグループに既定のスキーマが指定されている場合は、グループの既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが複数のグループに所属している場合、そのユーザーの既定のスキーマは、最も小さい principle_id と明示的に設定された既定のスキーマを持つ Windows グループのスキーマになります。 ユーザーに対する既定のスキーマを決定できない場合は、**dbo** スキーマが使用されます。
 
  DEFAULT_SCHEMA には、現在データベースに存在しないスキーマも設定できます。 したがって、スキーマが作成される前に DEFAULT_SCHEMA をユーザーに割り当てることができます。
 
@@ -162,7 +162,7 @@ NAME = newUserName
 
 ### <a name="permissions"></a>アクセス許可
 
- ユーザーの名前を変更するには、 **ALTER ANY USER** 権限が必要です。
+ ユーザーの名前を変更するには、**ALTER ANY USER** 権限が必要です。
 
  ターゲットを変更するには、ユーザーのログインにデータベースの **CONTROL** 権限が必要です。
 
@@ -196,7 +196,7 @@ GO
 
  次の例では、包含データベース ユーザーに対する複数のオプションを 1 つのステートメントで変更します。
 
-**適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
 
 ```sql
 ALTER USER Philip
@@ -216,11 +216,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_**
@@ -232,7 +232,7 @@ GO
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -278,31 +278,31 @@ ALTER USER userName
 
 ## <a name="arguments"></a>引数
 
- *userName* : データベース内でユーザーを識別する名前を指定します。
+ *userName*: データベース内でユーザーを識別する名前を指定します。
 
- LOGIN **=** _loginName_ : ユーザーのセキュリティ識別子 (SID) を別のログインの SID に一致するように変更することで、ユーザーを別のログインに再マッピングします。
+ LOGIN **=** _loginName_: ユーザーのセキュリティ識別子 (SID) を別のログインの SID に一致するように変更することで、ユーザーを別のログインに再マッピングします。
 
  ALTER USER ステートメントが SQL のバッチ内の唯一のステートメントである場合、Azure SQL Database では WITH LOGIN 句がサポートされます。 ALTER USER ステートメントが SQL バッチ内の唯一のステートメントではない場合、または動的 SQL で実行されている場合、WITH LOGIN 句はサポートされません。
 
- NAME **=** _newUserName_ : このユーザーの新しい名前を指定します。 *newUserName* は現在のデータベースに存在しない名前にする必要があります。
+ NAME **=** _newUserName_: このユーザーの新しい名前を指定します。 *newUserName* は現在のデータベースに存在しない名前にする必要があります。
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } このユーザー用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。 既定のスキーマを NULL に設定すると、既定のスキーマが Windows グループから削除されます。 Windows ユーザーでは、NULL オプションは使用できません。
 
- PASSWORD **=** ' *password* ' **適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+ PASSWORD **=** '*password*' **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
  変更するユーザーのパスワードを指定します。 パスワードでは大文字と小文字が区別されます。
 
 > [!NOTE]
 > このオプションは、包含ユーザーに対してのみ使用できます。 詳しくは、「[包含データベース](../../relational-databases/databases/contained-databases.md)」および「[sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)」をご覧ください。
 
- OLD_PASSWORD **=** _'oldpassword'_ **適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+ OLD_PASSWORD **=** _'oldpassword'_ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
- ' *password* ' で置き換える現在のユーザー パスワードです。 パスワードでは大文字と小文字が区別されます。 **ALTER ANY USER** 権限がない場合、パスワードを変更するには、 *OLD_PASSWORD* が必要です。 *OLD_PASSWORD* を必須にすることで、 **IMPERSONATION** 権限を持つユーザーによるパスワードの変更を防止できます。
+ '*password*' で置き換える現在のユーザー パスワードです。 パスワードでは大文字と小文字が区別されます。 **ALTER ANY USER** 権限がない場合、パスワードを変更するには、*OLD_PASSWORD* が必要です。 *OLD_PASSWORD* を必須にすることで、**IMPERSONATION** 権限を持つユーザーによるパスワードの変更を防止できます。
 
 > [!NOTE]
 > このオプションは、包含ユーザーに対してのみ使用できます。
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] **適用対象** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
 
  一括コピー操作でのサーバーの暗号化メタデータ チェックを抑制します。 これによりユーザーは、データを暗号化解除することなく、テーブルまたはデータベース間で暗号化データを一括コピーできます。 既定値は OFF です。
 
@@ -313,7 +313,7 @@ ALTER USER userName
 
  既定のスキーマは、このデータベース ユーザー用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマになります。 特に指定しない限り、このデータベース ユーザーによって作成されたオブジェクトの所有者になるのは、既定のスキーマです。
 
- ユーザーに既定のスキーマが設定されている場合は、その既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが所属しているグループに既定のスキーマが指定されている場合は、グループの既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが複数のグループに所属している場合、そのユーザーの既定のスキーマは、最も小さい principle_id と明示的に設定された既定のスキーマを持つ Windows グループのスキーマになります。 ユーザーに対する既定のスキーマを決定できない場合は、 **dbo** スキーマが使用されます。
+ ユーザーに既定のスキーマが設定されている場合は、その既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが所属しているグループに既定のスキーマが指定されている場合は、グループの既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが複数のグループに所属している場合、そのユーザーの既定のスキーマは、最も小さい principle_id と明示的に設定された既定のスキーマを持つ Windows グループのスキーマになります。 ユーザーに対する既定のスキーマを決定できない場合は、**dbo** スキーマが使用されます。
 
  DEFAULT_SCHEMA には、現在データベースに存在しないスキーマも設定できます。 したがって、スキーマが作成される前に DEFAULT_SCHEMA をユーザーに割り当てることができます。
 
@@ -350,7 +350,7 @@ ALTER USER userName
 
 ### <a name="permissions"></a>アクセス許可
 
- ユーザーの名前を変更するには、 **ALTER ANY USER** 権限が必要です。
+ ユーザーの名前を変更するには、**ALTER ANY USER** 権限が必要です。
 
  ターゲットを変更するには、ユーザーのログインにデータベースの **CONTROL** 権限が必要です。
 
@@ -401,11 +401,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -417,7 +417,7 @@ GO
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -466,17 +466,17 @@ ALTER USER userName
 
 ## <a name="arguments"></a>引数
 
- *userName* : データベース内でユーザーを識別する名前を指定します。
+ *userName*: データベース内でユーザーを識別する名前を指定します。
 
- LOGIN **=** _loginName_ : ユーザーのセキュリティ識別子 (SID) を別のログインの SID に一致するように変更することで、ユーザーを別のログインに再マッピングします。
+ LOGIN **=** _loginName_: ユーザーのセキュリティ識別子 (SID) を別のログインの SID に一致するように変更することで、ユーザーを別のログインに再マッピングします。
 
  ALTER USER ステートメントが SQL のバッチ内の唯一のステートメントである場合、Azure SQL Database では WITH LOGIN 句がサポートされます。 ALTER USER ステートメントが SQL バッチ内の唯一のステートメントではない場合、または動的 SQL で実行されている場合、WITH LOGIN 句はサポートされません。
 
- NAME **=** _newUserName_ : このユーザーの新しい名前を指定します。 *newUserName* は現在のデータベースに存在しない名前にする必要があります。
+ NAME **=** _newUserName_: このユーザーの新しい名前を指定します。 *newUserName* は現在のデータベースに存在しない名前にする必要があります。
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } このユーザー用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。 既定のスキーマを NULL に設定すると、既定のスキーマが Windows グループから削除されます。 Windows ユーザーでは、NULL オプションは使用できません。
 
- PASSWORD **=** ' *password* '
+ PASSWORD **=** '*password*'
 
  変更するユーザーのパスワードを指定します。 パスワードでは大文字と小文字が区別されます。
 
@@ -485,7 +485,7 @@ ALTER USER userName
 
  OLD_PASSWORD **=** _'oldpassword'_
 
- ' *password* ' で置き換える現在のユーザー パスワードです。 パスワードでは大文字と小文字が区別されます。 **ALTER ANY USER** 権限がない場合、パスワードを変更するには、 *OLD_PASSWORD* が必要です。 *OLD_PASSWORD* を必須にすることで、 **IMPERSONATION** 権限を持つユーザーによるパスワードの変更を防止できます。
+ '*password*' で置き換える現在のユーザー パスワードです。 パスワードでは大文字と小文字が区別されます。 **ALTER ANY USER** 権限がない場合、パスワードを変更するには、*OLD_PASSWORD* が必要です。 *OLD_PASSWORD* を必須にすることで、**IMPERSONATION** 権限を持つユーザーによるパスワードの変更を防止できます。
 
 > [!NOTE]
 > このオプションは、包含ユーザーに対してのみ使用できます。
@@ -508,7 +508,7 @@ ALTER USER userName
 
  既定のスキーマは、このデータベース ユーザー用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマになります。 特に指定しない限り、このデータベース ユーザーによって作成されたオブジェクトの所有者になるのは、既定のスキーマです。
 
- ユーザーに既定のスキーマが設定されている場合は、その既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが所属しているグループに既定のスキーマが指定されている場合は、グループの既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが複数のグループに所属している場合、そのユーザーの既定のスキーマは、最も小さい principle_id と明示的に設定された既定のスキーマを持つ Windows グループのスキーマになります。 ユーザーに対する既定のスキーマを決定できない場合は、 **dbo** スキーマが使用されます。
+ ユーザーに既定のスキーマが設定されている場合は、その既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが所属しているグループに既定のスキーマが指定されている場合は、グループの既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが複数のグループに所属している場合、そのユーザーの既定のスキーマは、最も小さい principle_id と明示的に設定された既定のスキーマを持つ Windows グループのスキーマになります。 ユーザーに対する既定のスキーマを決定できない場合は、**dbo** スキーマが使用されます。
 
  DEFAULT_SCHEMA には、現在データベースに存在しないスキーマも設定できます。 したがって、スキーマが作成される前に DEFAULT_SCHEMA をユーザーに割り当てることができます。
 
@@ -557,13 +557,13 @@ ALTER USER userName
 - 移行のあらゆるケースにおいて、Windows ユーザーまたはグループのロールとアクセス許可は、新しい Azure AD ユーザーまたはグループに自動的に転送されます。
 - Windows ユーザーおよびグループを、SQL オンプレミスから Azure AD ユーザーおよびグループに変更するために、新しい構文拡張機能 **FROM EXTERNAL PROVIDER** を使用できます。 この拡張機能を使用する場合、Windows ドメインが Azure AD とフェデレーションされていて、かつすべての Windows ドメイン メンバーが Azure AD 内に存在している必要があります。 **FROM EXTERNAL PROVIDER** 構文は Azure SQL Managed Instance に適用されます。これは、Windows ユーザーが元の SQL インスタンスに対するログインを持っておらず、スタンドアロンの Azure AD データベース ユーザーにマップする必要がある場合に使用する必要があります。
 - この場合、許可されるユーザー名は次のようになります。
-- Widows ユーザー ( _domain\user_ )。
-- Windows グループ ( _MyWidnowsGroup_ )。
-- Windows の別名 ( _MyWindowsAlias_ )。
+- Widows ユーザー (_domain\user_)。
+- Windows グループ (_MyWidnowsGroup_)。
+- Windows の別名 (_MyWindowsAlias_)。
 - ALTER コマンドの結果によって、古い userName が、古い userName の元の SID に基づいて Azure AD で検索された対応する名前に置き換えられます。 変更された名前は置き換えられ、データベースのメタデータに格納されます。
-- ( _domain\user_ ) は、Azure AD user@domain.com に置き換えられます。
-- ( _domain\\MyWidnowsGroup_ ) は、Azure AD グループに置き換えられます。
-- ( _MyWindowsAlias_ ) は変更されませんが、このユーザーの SID は Azure AD でチェックされます。
+- (_domain\user_) は、Azure AD user@domain.com に置き換えられます。
+- (_domain\\MyWidnowsGroup_) は、Azure AD グループに置き換えられます。
+- (_MyWindowsAlias_) は変更されませんが、このユーザーの SID は Azure AD でチェックされます。
 
 > [!NOTE]
 > objectID に変換された元のユーザーの SID が Azure AD 内に見つからない場合、ALTER USER コマンドは失敗します。
@@ -584,7 +584,7 @@ ALTER USER userName
 
 ### <a name="permissions"></a>アクセス許可
 
- ユーザーの名前を変更するには、 **ALTER ANY USER** 権限が必要です。
+ ユーザーの名前を変更するには、**ALTER ANY USER** 権限が必要です。
 
  ターゲットを変更するには、ユーザーのログインにデータベースの **CONTROL** 権限が必要です。
 
@@ -669,11 +669,11 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 - [チュートリアル:T-SQL DDL 構文を使用して、SQL Server オンプレミスの Windows ユーザーとグループを SQL Managed Instance に移行する](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -685,7 +685,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -710,13 +710,13 @@ ALTER USER userName
 
 ## <a name="arguments"></a>引数
 
- *userName* : データベース内でユーザーを識別する名前を指定します。
+ *userName*: データベース内でユーザーを識別する名前を指定します。
 
- LOGIN **=** _loginName_ : ユーザーのセキュリティ識別子 (SID) を別のログインの SID に一致するように変更することで、ユーザーを別のログインに再マッピングします。
+ LOGIN **=** _loginName_: ユーザーのセキュリティ識別子 (SID) を別のログインの SID に一致するように変更することで、ユーザーを別のログインに再マッピングします。
 
  ALTER USER ステートメントが SQL のバッチ内の唯一のステートメントである場合、Azure SQL Database では WITH LOGIN 句がサポートされます。 ALTER USER ステートメントが SQL バッチ内の唯一のステートメントではない場合、または動的 SQL で実行されている場合、WITH LOGIN 句はサポートされません。
 
- NAME **=** _newUserName_ : このユーザーの新しい名前を指定します。 *newUserName* は現在のデータベースに存在しない名前にする必要があります。
+ NAME **=** _newUserName_: このユーザーの新しい名前を指定します。 *newUserName* は現在のデータベースに存在しない名前にする必要があります。
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } このユーザー用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。 既定のスキーマを NULL に設定すると、既定のスキーマが Windows グループから削除されます。 Windows ユーザーでは、NULL オプションは使用できません。
 
@@ -724,7 +724,7 @@ ALTER USER userName
 
  既定のスキーマは、このデータベース ユーザー用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマになります。 特に指定しない限り、このデータベース ユーザーによって作成されたオブジェクトの所有者になるのは、既定のスキーマです。
 
- ユーザーに既定のスキーマが設定されている場合は、その既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが所属しているグループに既定のスキーマが指定されている場合は、グループの既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが複数のグループに所属している場合、そのユーザーの既定のスキーマは、最も小さい principle_id と明示的に設定された既定のスキーマを持つ Windows グループのスキーマになります。 ユーザーに対する既定のスキーマを決定できない場合は、 **dbo** スキーマが使用されます。
+ ユーザーに既定のスキーマが設定されている場合は、その既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが所属しているグループに既定のスキーマが指定されている場合は、グループの既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが複数のグループに所属している場合、そのユーザーの既定のスキーマは、最も小さい principle_id と明示的に設定された既定のスキーマを持つ Windows グループのスキーマになります。 ユーザーに対する既定のスキーマを決定できない場合は、**dbo** スキーマが使用されます。
 
  DEFAULT_SCHEMA には、現在データベースに存在しないスキーマも設定できます。 したがって、スキーマが作成される前に DEFAULT_SCHEMA をユーザーに割り当てることができます。
 
@@ -755,7 +755,7 @@ ALTER USER userName
 
 ### <a name="permissions"></a>アクセス許可
 
- ユーザーの名前を変更するには、 **ALTER ANY USER** 権限が必要です。
+ ユーザーの名前を変更するには、**ALTER ANY USER** 権限が必要です。
 
  ターゲットを変更するには、ユーザーのログインにデータベースの **CONTROL** 権限が必要です。
 
@@ -794,11 +794,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -835,13 +835,13 @@ ALTER USER userName
 
 ## <a name="arguments"></a>引数
 
- *userName* : データベース内でユーザーを識別する名前を指定します。
+ *userName*: データベース内でユーザーを識別する名前を指定します。
 
- LOGIN **=** _loginName_ : ユーザーのセキュリティ識別子 (SID) を別のログインの SID に一致するように変更することで、ユーザーを別のログインに再マッピングします。
+ LOGIN **=** _loginName_: ユーザーのセキュリティ識別子 (SID) を別のログインの SID に一致するように変更することで、ユーザーを別のログインに再マッピングします。
 
  ALTER USER ステートメントが SQL のバッチ内の唯一のステートメントである場合、Azure SQL Database では WITH LOGIN 句がサポートされます。 ALTER USER ステートメントが SQL バッチ内の唯一のステートメントではない場合、または動的 SQL で実行されている場合、WITH LOGIN 句はサポートされません。
 
- NAME **=** _newUserName_ : このユーザーの新しい名前を指定します。 *newUserName* は現在のデータベースに存在しない名前にする必要があります。
+ NAME **=** _newUserName_: このユーザーの新しい名前を指定します。 *newUserName* は現在のデータベースに存在しない名前にする必要があります。
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } このユーザー用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。 既定のスキーマを NULL に設定すると、既定のスキーマが Windows グループから削除されます。 Windows ユーザーでは、NULL オプションは使用できません。
 
@@ -849,7 +849,7 @@ ALTER USER userName
 
  既定のスキーマは、このデータベース ユーザー用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマになります。 特に指定しない限り、このデータベース ユーザーによって作成されたオブジェクトの所有者になるのは、既定のスキーマです。
 
- ユーザーに既定のスキーマが設定されている場合は、その既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが所属しているグループに既定のスキーマが指定されている場合は、グループの既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが複数のグループに所属している場合、そのユーザーの既定のスキーマは、最も小さい principle_id と明示的に設定された既定のスキーマを持つ Windows グループのスキーマになります。 ユーザーに対する既定のスキーマを決定できない場合は、 **dbo** スキーマが使用されます。
+ ユーザーに既定のスキーマが設定されている場合は、その既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが所属しているグループに既定のスキーマが指定されている場合は、グループの既定のスキーマが使用されます。 ユーザーに既定のスキーマが指定されておらず、そのユーザーが複数のグループに所属している場合、そのユーザーの既定のスキーマは、最も小さい principle_id と明示的に設定された既定のスキーマを持つ Windows グループのスキーマになります。 ユーザーに対する既定のスキーマを決定できない場合は、**dbo** スキーマが使用されます。
 
  DEFAULT_SCHEMA には、現在データベースに存在しないスキーマも設定できます。 したがって、スキーマが作成される前に DEFAULT_SCHEMA をユーザーに割り当てることができます。
 
@@ -880,7 +880,7 @@ ALTER USER userName
 
 ### <a name="permissions"></a>アクセス許可
 
- ユーザーの名前を変更するには、 **ALTER ANY USER** 権限が必要です。
+ ユーザーの名前を変更するには、**ALTER ANY USER** 権限が必要です。
 
  ターゲットを変更するには、ユーザーのログインにデータベースの **CONTROL** 権限が必要です。
 

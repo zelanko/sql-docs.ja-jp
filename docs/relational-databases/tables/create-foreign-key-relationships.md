@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea3a7bec04dcd7e584d541cf4fa4ccee3cf48915
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fdd110fd51d42ae13054a5d189c1180a9af623ee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645847"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484514"
 ---
 # <a name="create-foreign-key-relationships"></a>外部キーのリレーションシップの作成
 
@@ -58,7 +58,7 @@ ms.locfileid: "88645847"
 
 1. オブジェクト エクスプローラーで、リレーションシップの外部キー側となるテーブルを右クリックして、 **[デザイン]** をクリックします。
 
-   [ **[テーブル デザイナー]** ](../../ssms/visual-db-tools/design-tables-visual-database-tools.md) にテーブルが表示されます。
+   [ **[テーブル デザイナー]**](../../ssms/visual-db-tools/design-tables-visual-database-tools.md) にテーブルが表示されます。
 2. **[テーブル デザイナー]** メニューの **[リレーションシップ]** をクリックします。
 3. **[外部キーのリレーションシップ]** ダイアログ ボックスで、 **[追加]** をクリックします。
 

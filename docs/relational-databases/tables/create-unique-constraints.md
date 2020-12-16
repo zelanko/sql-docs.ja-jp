@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa72cf50aed832d92d0351ceb699df0646debacd
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 06f465d3c4ff6086d74c155c4f810730eca50742
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809659"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484484"
 ---
 # <a name="create-unique-constraints"></a>UNIQUE 制約の作成
 
@@ -57,7 +57,7 @@ ms.locfileid: "91809659"
   
 #### <a name="to-create-a-unique-constraint"></a>UNIQUE 制約を作成するには  
   
-1.  **オブジェクト エクスプローラー**で、UNIQUE 制約を追加するテーブルを右クリックし、 **[デザイン]** をクリックします。  
+1.  **オブジェクト エクスプローラー** で、UNIQUE 制約を追加するテーブルを右クリックし、 **[デザイン]** をクリックします。  
   
 2.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "91809659"
   
 #### <a name="to-create-a-unique-constraint"></a>UNIQUE 制約を作成するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "91809659"
   
 #### <a name="to-create-a-unique-constraint-on-an-existing-table"></a>既存のテーブルに UNIQUE 制約を作成するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "91809659"
   
 #### <a name="to-create-a-unique-constraint-on-a-new-table"></a>新しいテーブルに UNIQUE 制約を作成するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

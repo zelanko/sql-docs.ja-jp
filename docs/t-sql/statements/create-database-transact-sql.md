@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: SQL Server、Azure SQL Database、Azure Synapse Analytics、Analytics Platform System のデータベース構文を作成します。
 ms.custom: references_regions
-ms.date: 10/30/2020
+ms.date: 12/11/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -36,13 +36,13 @@ helpviewer_keywords:
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e66c5801b3a927b28f355e450be9d31c796e78dc
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
+ms.openlocfilehash: 0e0cf7b17061340f347af536cad762f63cc38ef3
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235399"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489143"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -54,7 +54,7 @@ ms.locfileid: "93235399"
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -70,7 +70,7 @@ ms.locfileid: "93235399"
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -174,15 +174,15 @@ CREATE DATABASE database_snapshot_name
 
 ## <a name="arguments"></a>引数
 
-*database_name* : 新しいデータベースの名前です。 データベース名は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意であり、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。
+*database_name*: 新しいデータベースの名前です。 データベース名は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意であり、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。
 
-ログ ファイルに論理名が指定されていない場合を除き、 *database_name* には、最大 128 文字まで指定できます。 ログ ファイルの論理名が指定されていない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 *database_name* にサフィックスを付加することにより、ログの *logical_file_name* および *os_file_name* を生成します。 生成された論理ファイル名が 128 文字を超えないようにするため、 *database_name* は 123 文字に制限されます。
+ログ ファイルに論理名が指定されていない場合を除き、*database_name* には、最大 128 文字まで指定できます。 ログ ファイルの論理名が指定されていない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、*database_name* にサフィックスを付加することにより、ログの *logical_file_name* および *os_file_name* を生成します。 生成された論理ファイル名が 128 文字を超えないようにするため、*database_name* は 123 文字に制限されます。
 
-データ ファイル名が指定されていない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 *logical_file_name* および *os_file_name* の両方に *database_name* を使用します。 既定のパスはレジストリから取得されます。 既定のパスを変更するには、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の **[サーバーのプロパティ] ([データベースの設定] ページ)** を使用します。 既定のパスを変更するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動する必要があります。
+データ ファイル名が指定されていない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*logical_file_name* および *os_file_name* の両方に *database_name* を使用します。 既定のパスはレジストリから取得されます。 既定のパスを変更するには、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の **[サーバーのプロパティ] ([データベースの設定] ページ)** を使用します。 既定のパスを変更するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動する必要があります。
 
 CONTAINMENT = { NONE | PARTIAL }
 
-**適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
 
 データベースの包含状態を指定します。 NONE = 非包含データベース。 PARTIAL = 部分的包含データベース。
 
@@ -196,7 +196,7 @@ LOG ON: データベース ログの格納に使用するディスク ファイ�
 
 LOG ON はデータベース スナップショットでは指定できません。
 
-COLLATE *collation_name* : データベースの既定の照合順序を指定します。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合は、データベースに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの既定の照合順序が割り当てられます。 照合順序名は、データベース スナップショットでは指定できません。
+COLLATE *collation_name*: データベースの既定の照合順序を指定します。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合は、データベースに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの既定の照合順序が割り当てられます。 照合順序名は、データベース スナップショットでは指定できません。
 
 照合順序名は、FOR ATTACH 句や FOR ATTACH_REBUILD_LOG 句と共に指定することはできません。 アタッチされたデータベースの照合順序を変更する方法の詳細については、この [Microsoft Web サイト](https://go.microsoft.com/fwlink/?linkid=16419&kbid=325335)を参照してください。
 
@@ -208,7 +208,7 @@ Windows 照合順序名および SQL 照合順序名について詳しくは、�
 WITH \<option>
  **\<filestream_option>**
 
-NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
+NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
 
 データベースに対する非トランザクション FILESTREAM アクセスのレベルを指定します。
 
@@ -219,7 +219,7 @@ NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **適用対象** : [!INCL
 |FULL|FILESTREAM FileTable に対する完全な非トランザクション アクセスは有効です。|
 
 DIRECTORY_NAME = \<directory_name>
-**適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
 
 Windows と互換性のあるディレクトリ名です。 この名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべての Database_Directory 名の中で一意である必要があります。 一意性の比較では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序の設定とは関係なく、大文字と小文字は区別されません。 このオプションは、このデータベース内に FileTable を作成する前に設定する必要があります。
 
@@ -227,25 +227,25 @@ Windows と互換性のあるディレクトリ名です。 この名前は、[!
 
 - **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
+  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
 
   このオプションの詳細については、「[default full-text language サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md)」を参照してください。
 
 - **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
+  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
 
   このオプションの詳細については、「[default language サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)」を参照してください。
 
 - **NESTED_TRIGGERS = { OFF | ON}**
 
-  **適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
+  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
 
   このオプションの詳細については、「[nested triggers サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)」を参照してください。
 
 - **TRANSFORM_NOISE_WORDS = { OFF | ON}**
 
-  **適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
+  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
 
   このオプションの詳細については、「[transform noise words サーバー構成オプション](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)」を参照してください。
 
@@ -276,7 +276,7 @@ Windows と互換性のあるディレクトリ名です。 この名前は、[!
 
 - **PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='' )**
 
-  このオプションを指定すると、ストレージ クラス メモリ (NVDIMM-N 不揮発性ストレージ、永続的ログ バッファーとも呼ばれます) によってバックアップされるディスク デバイス上のボリュームに、トランザクション ログ バッファーが作成されます。 詳しくは、「[Transaction Commit latency acceleration using Storage Class Memory](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)」(ストレージ クラス メモリを使用したトランザクション コミット待機時間の短縮) をご覧ください。 **適用対象** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降。
+  このオプションを指定すると、ストレージ クラス メモリ (NVDIMM-N 不揮発性ストレージ、永続的ログ バッファーとも呼ばれます) によってバックアップされるディスク デバイス上のボリュームに、トランザクション ログ バッファーが作成されます。 詳しくは、「[Transaction Commit latency acceleration using Storage Class Memory](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)」(ストレージ クラス メモリを使用したトランザクション コミット待機時間の短縮) をご覧ください。 **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降。
 
 FOR ATTACH [ WITH \< attach_database_option > ]: 既存のオペレーティング システム ファイルのセットを[アタッチ](../../relational-databases/databases/database-detach-and-attach-sql-server.md)することによりデータベースを作成するように指定します。 プライマリ ファイルを指定する \<filespec> エントリが必要です。 他に必要な \<filespec> エントリは、データベースが最初に作成されたとき、または最後にアタッチされたときからパスが変わったファイルのエントリだけです。 これらのファイルの \<filespec> エントリを指定する必要があります。
 
@@ -315,14 +315,14 @@ ERROR_BROKER_CONVERSATIONS: データベースがアタッチまたは復元さ�
 - バージョンに関係なく、別のサーバー インスタンスにデータベースをアタッチする場合は、アタッチ操作が完了した後、[sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) を実行してレプリケーションを削除する必要があります。
 
 > [!NOTE]
-> アタッチは **vardecimal** ストレージ形式で動作しますが、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 以降にアップグレードする必要があります。 vardecimal ストレージ形式を使用するデータベースを以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアタッチすることはできません。 **vardecimal** ストレージ形式の詳細については、「 [データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。
+> アタッチは **vardecimal** ストレージ形式で動作しますが、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 以降にアップグレードする必要があります。 vardecimal ストレージ形式を使用するデータベースを以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアタッチすることはできません。 **vardecimal** ストレージ形式の詳細については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。
 
 データベースが最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチまたは復元されるとき、データベース マスター キー (サービス マスター キーにより暗号化されたもの) のコピーはまだサーバーに格納されていません。 **OPEN MASTER KEY** を使用して、データベース マスター キー (DMK) を暗号化解除する必要があります。 DMK の暗号化が解除されると、 **ALTER MASTER KEY REGENERATE** ステートメントを使用して、サービス マスター キー (SMK) で暗号化された DMK のコピーをサーバーに提供することにより、将来、自動的に暗号化解除することも可能となります。 データベースを以前のバージョンからアップグレードした場合、新しい AES アルゴリズムを使用するように DMK を再作成する必要があります。 DMK を再作成する方法の詳細については、[ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md) に関するページを参照してください。 DMK キーを再作成して AES にアップグレードするのに必要な時間は、DMK によって保護されているオブジェクトの数によって異なります。 DMK キーを再作成して AES にアップグレードする作業は、1 回限りで済み、今後のキー ローテーション方法には影響を与えません。 アタッチを使用してデータベースをアップグレードする方法については、[デタッチとアタッチを使用したデータベースのアップグレード](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md)に関するページを参照してください。
 
 > [!IMPORTANT]
 > 不明なソースや信頼されていないソースからのデータベースはアタッチしないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前には、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。
 > [!NOTE]
-> データベースをアタッチするときに、 **TRUSTWORTHY** オプションおよび **DB_CHAINING** オプションによる効果は発生しません。
+> データベースをアタッチするときに、**TRUSTWORTHY** オプションおよび **DB_CHAINING** オプションによる効果は発生しません。
 
 FOR ATTACH_REBUILD_LOG: 既存のオペレーティング システム ファイルのセットをアタッチすることによりデータベースを作成するように指定します。 このオプションは読み取り/書き込みデータベースに限定されます。 プライマリ ファイルを指定する *\<filespec>* エントリが必要です。 1 つ以上のトランザクション ログ ファイルが見つからない場合、ログ ファイルは再構築されます。 ATTACH_REBUILD_LOG を指定すると、1 MB のログ ファイルが自動的に新規作成されます。 このファイルは既定のログ ファイルの場所に保存されます。 この場所については、[データ ファイルとログ ファイルの既定の場所の表示または変更 - SSMS](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md) に関するページを参照してください。
 
@@ -345,9 +345,9 @@ FOR ATTACH_REBUILD_LOG はデータベース スナップショットでは指�
 
 \<filespec>: ファイル プロパティを制御します。
 
-NAME *logical_file_name* : ファイルの論理名を指定します。 NAME は、FOR ATTACH 句の 1 つを指定する場合以外に、FILENAME が指定されるときに必要です。 FILESTREAM ファイル グループの名前を PRIMARY にすることはできません。
+NAME *logical_file_name*: ファイルの論理名を指定します。 NAME は、FOR ATTACH 句の 1 つを指定する場合以外に、FILENAME が指定されるときに必要です。 FILESTREAM ファイル グループの名前を PRIMARY にすることはできません。
 
-*logical_file_name* : ファイルを参照するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される論理名を指定します。 *Logical_file_name* は、データベース内で一意であり、 [識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 この名前は、文字定数、UNICODE 定数、標準の識別子、区切られた識別子のいずれでもかまいません。
+*logical_file_name*: ファイルを参照するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される論理名を指定します。 *Logical_file_name* は、データベース内で一意であり、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 この名前は、文字定数、UNICODE 定数、標準の識別子、区切られた識別子のいずれでもかまいません。
 
 FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** }: オペレーティング システムの (物理) ファイル名です。
 
@@ -355,7 +355,7 @@ FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** }: オ�
 
 ファイルに対して UNC パスが指定されている場合は、SIZE、MAXSIZE、および FILEGROWTH パラメーターを設定できます。
 
-ファイルが未処理のパーティション上にある場合、 *os_file_name* には、未処理になっている既存のパーティションのドライブ文字のみを指定する必要があります。 1 つの未処理のパーティションに作成できるのは 1 つのデータ ファイルだけです。
+ファイルが未処理のパーティション上にある場合、*os_file_name* には、未処理になっている既存のパーティションのドライブ文字のみを指定する必要があります。 1 つの未処理のパーティションに作成できるのは 1 つのデータ ファイルだけです。
 
 ファイルが読み取り専用のセカンダリ ファイルであるか、データベースが読み取り専用である場合を除き、データ ファイルを圧縮ファイル システム上に置かないでください。 ログ ファイルは、圧縮ファイル システム上に置くことはできません。
 
@@ -365,28 +365,28 @@ FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** }: オ�
 
 SIZE プロパティおよび FILEGROWTH プロパティは、FILESTREAM ファイル グループには適用されません。
 
-SIZE *size* : ファイルのサイズを指定します。
+SIZE *size*: ファイルのサイズを指定します。
 
 *os_file_name* が UNC パスとして指定されている場合、SIZE を指定することはできません。 SIZE は、FILESTREAM ファイル グループには適用されません。
 
-*size* : ファイルの初期サイズです。
+*size*: ファイルの初期サイズです。
 
 プライマリ ファイルに *size* が指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、model データベースのプライマリ ファイルのサイズを使用します。 モデルの既定のサイズは 8 MB ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) または 1 MB (それより前のバージョン) です。 セカンダリ データ ファイルまたはログ ファイルが指定されているにもかかわらず、そのファイルに対して *size* サイズが指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、そのファイルのサイズが 8 MB ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) または 1 MB (それより前のバージョン) になります。 なお、プライマリ ファイルに対して指定するサイズは、model データベースのプライマリ ファイルのサイズ以上である必要があります。
 
 サフィックスとして、キロバイト (KB)、メガバイト (MB)、ギガバイト (GB)、またはテラバイト (TB) を使用できます。 既定値は MB です。 整数を指定します。小数を含めないでください。 *size* は整数値です。 2,147,483,647 を超える値に対しては、より大きな単位を使用してください。
 
-MAXSIZE *max_size* : ファイルのサイズの上限を指定します。 *os_file_name* が UNC パスとして指定されている場合、MAXSIZE を指定することはできません。
+MAXSIZE *max_size*: ファイルのサイズの上限を指定します。 *os_file_name* が UNC パスとして指定されている場合、MAXSIZE を指定することはできません。
 
-*max_size* : ファイルの最大サイズです。 サフィックスとして、KB、MB、GB、および TB を使用できます。 既定値は MB です。 整数を指定します。小数を含めないでください。 *max_size* を指定しないと、ファイルはディスク領域がなくなるまで拡張されます。 *max_size* は整数値です。 2,147,483,647 を超える値に対しては、より大きな単位を使用してください。
+*max_size*: ファイルの最大サイズです。 サフィックスとして、KB、MB、GB、および TB を使用できます。 既定値は MB です。 整数を指定します。小数を含めないでください。 *max_size* を指定しないと、ファイルはディスク領域がなくなるまで拡張されます。 *max_size* は整数値です。 2,147,483,647 を超える値に対しては、より大きな単位を使用してください。
 
 UNLIMITED: ディスクがいっぱいになるまでファイルを拡張するように指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、無制限に拡張するファイル固有のログの最大サイズは 2 TB で、データ ファイルの最大サイズは 16 TB です。
 
 > [!NOTE]
 > FILESTREAM コンテナーに対してこのオプションを指定した場合、最大サイズはありません。 ディスクがいっぱいになるまでファイル サイズが拡張します。
 
-FILEGROWTH *growth_increment* : ファイルを自動拡張するときの増加量を指定します。 ファイルの FILEGROWTH の設定を MAXSIZE の設定より大きくすることはできません。 *os_file_name* が UNC パスとして指定されている場合、FILEGROWTH を指定することはできません。 FILEGROWTH は、FILESTREAM ファイル グループには適用されません。
+FILEGROWTH *growth_increment*: ファイルを自動拡張するときの増加量を指定します。 ファイルの FILEGROWTH の設定を MAXSIZE の設定より大きくすることはできません。 *os_file_name* が UNC パスとして指定されている場合、FILEGROWTH を指定することはできません。 FILEGROWTH は、FILESTREAM ファイル グループには適用されません。
 
-*growth_increment* : 新しい領域が必要とされるたびにファイルに追加される領域の容量です。
+*growth_increment*: 新しい領域が必要とされるたびにファイルに追加される領域の容量です。
 
 値は MB、KB、GB、TB または % の単位で指定できます。 サフィックス MB、KB、または % を付けないで数値を指定した場合の既定値は MB です。 % を指定すると、1 回の増加量は、増加時のファイル サイズに指定されたパーセンテージを掛けた値になります。 指定されたサイズは、最も近い 64 KB 単位の値に丸められ、最小値は 64 KB になります。
 
@@ -402,7 +402,7 @@ FILEGROWTH が指定されていない場合、既定値は次のとおりです
 
 \<filegroup>: ファイル グループ プロパティを制御します。 ファイル グループは、データベース スナップショットでは指定できません。
 
-FILEGROUP *filegroup_name* : ファイル グループの論理名です。
+FILEGROUP *filegroup_name*: ファイル グループの論理名です。
 
 *filegroup_name*
 *filegroup_name* はデータベース内で一意である必要があり、システムで提示された名前である PRIMARY や PRIMARY_LOG にすることはできません。 この名前は、文字定数、UNICODE 定数、標準の識別子、区切られた識別子のいずれでもかまいません。 名前は、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。
@@ -411,13 +411,13 @@ CONTAINS FILESTREAM: ファイル グループで FILESTREAM バイナリ ラー
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**適用対象** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降
 
 ファイル グループで memory_optimized データをファイル システムに格納することを指定します。 詳細については、「 [インメモリ OLTP - インメモリ最適化](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。 MEMORY_OPTIMIZED_DATA ファイル グループは、1 つのデータベースにつき 1 つしか許可されません。 メモリ最適化データを格納するファイルグループを作成するコード サンプルについては、「[メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)」を参照してください。
 
 DEFAULT: 指定されたファイル グループが、データベースの既定のファイル グループであることを指定します。
 
-*database_snapshot_name* : 新しいデータベース スナップショットの名前です。 データベース スナップショット名は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意であり、識別子のルールに従っている必要があります。 *database_snapshot_name* は 128 文字以下です。
+*database_snapshot_name*: 新しいデータベース スナップショットの名前です。 データベース スナップショット名は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意であり、識別子のルールに従っている必要があります。 *database_snapshot_name* は 128 文字以下です。
 
 ON **(** NAME **=** _logical\_file\_name_ **,** FILENAME **='** _os\_file\_name_ **')** [ **,** ... *n* ]: データベース スナップショットを作成するには、ソース データベースのファイルのリストを指定します。 スナップショットが機能するためには、すべてのデータ ファイルを個別に指定する必要があります。 ただし、データベース スナップショットにログ ファイルは指定できません。 FILESTREAM ファイル グループは、データベース スナップショットではサポートされていません。 CREATE DATABASE ON 句に FILESTREAM データ ファイルが含まれていると、ステートメントが失敗してエラーが発生します。
 
@@ -426,7 +426,7 @@ NAME、FILENAME、およびそれらの値については、相当する \<files
 > [!NOTE]
 > データベース スナップショットを作成する場合、他の \<filespec> オプションおよびキーワード PRIMARY は許可されません。
 
-AS SNAPSHOT OF *source_database_name* : 作成されるデータベースが、 *source_database_name* によって指定されたソース データベースのデータベース スナップショットであることを指定します。 スナップショットとソース データベースは同じインスタンス上に存在する必要があります。
+AS SNAPSHOT OF *source_database_name*: 作成されるデータベースが、*source_database_name* によって指定されたソース データベースのデータベース スナップショットであることを指定します。 スナップショットとソース データベースは同じインスタンス上に存在する必要があります。
 
 詳細については、「解説」セクションの「[データベース スナップショット](#database-snapshots)」を参照してください。
 
@@ -456,7 +456,7 @@ AS SNAPSHOT OF *source_database_name* : 作成されるデータベースが、 
 
 ## <a name="database-files-and-filegroups"></a>データベース ファイルとファイル グループ
 
-すべてのデータベースには、 *プライマリ ファイル* と *トランザクション ログ ファイル* という少なくとも 2 つのファイル、および少なくとも 1 つのファイル グループがあります。 各データベースに、最大 32,767 のファイルと 32,767 のファイル グループを指定できます。
+すべてのデータベースには、*プライマリ ファイル* と *トランザクション ログ ファイル* という少なくとも 2 つのファイル、および少なくとも 1 つのファイル グループがあります。 各データベースに、最大 32,767 のファイルと 32,767 のファイル グループを指定できます。
 
 データベースを作成する際に、データ ファイルのサイズは、データベースに記述されるデータの最大量を基に可能な限り大きく設定しておきます。
 
@@ -464,7 +464,7 @@ AS SNAPSHOT OF *source_database_name* : 作成されるデータベースが、 
 
 ## <a name="database-snapshots"></a>データベース スナップショット
 
-`CREATE DATABASE` ステートメントを使用して、" *ソース データベース* " の読み取り専用の静的ビューである " *データベース スナップショット* " を作成できます。 データベース スナップショットは、スナップショットが作成された時点で存在していたソース データベースと、トランザクション的に一貫性があります。 ソース データベースは複数のスナップショットを持つことができます。
+`CREATE DATABASE` ステートメントを使用して、"*ソース データベース*" の読み取り専用の静的ビューである "*データベース スナップショット*" を作成できます。 データベース スナップショットは、スナップショットが作成された時点で存在していたソース データベースと、トランザクション的に一貫性があります。 ソース データベースは複数のスナップショットを持つことができます。
 
 > [!NOTE]
 > データベース スナップショットを作成する際、`CREATE DATABASE` ステートメントを使用して、ログ ファイル、オフライン ファイル、復元ファイル、および現存しないファイルを参照することはできません。
@@ -485,7 +485,7 @@ AS SNAPSHOT OF *source_database_name* : 作成されるデータベースが、 
 
 `CREATE DATABASE <database_name>` ステートメントがサイズ パラメーターを追加せずに指定されている場合、プライマリ データ ファイルは、model データベースのプライマリ ファイルと同じサイズになります。
 
-`FOR ATTACH` が指定されていない限り、それぞれの新しいデータベースは、model データベースからデータベース オプションの設定を継承します。 たとえば、auto shrink データベース オプションは、model データベースにおいても、作成するどの新規データベースにおいても、 **true** に設定されます。 model データベースのオプションを変更すると、これらの新しいオプション設定が、作成する新規のデータベースで使用されます。 model データベースの操作の変更は、既存のデータベースには影響を与えません。 CREATE DATABASE ステートメントで FOR ATTACH を指定すると、新しいデータベースは元のデータベースからデータベース オプションの設定を継承します。
+`FOR ATTACH` が指定されていない限り、それぞれの新しいデータベースは、model データベースからデータベース オプションの設定を継承します。 たとえば、auto shrink データベース オプションは、model データベースにおいても、作成するどの新規データベースにおいても、**true** に設定されます。 model データベースのオプションを変更すると、これらの新しいオプション設定が、作成する新規のデータベースで使用されます。 model データベースの操作の変更は、既存のデータベースには影響を与えません。 CREATE DATABASE ステートメントで FOR ATTACH を指定すると、新しいデータベースは元のデータベースからデータベース オプションの設定を継承します。
 
 ## <a name="viewing-database-information"></a>データベース情報の表示
 
@@ -859,11 +859,11 @@ GO
 - [バイナリ ラージ オブジェクト - BLOB データ](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_**
@@ -875,7 +875,7 @@ GO
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -966,9 +966,9 @@ CREATE DATABASE database_name
 
 ## <a name="arguments"></a>引数
 
-*database_name* : 新しいデータベースの名前です。 この名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上で一意であり、識別子に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に準拠している必要があります。 詳細については、「[データベース識別子](https://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。
+*database_name*: 新しいデータベースの名前です。 この名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上で一意であり、識別子に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に準拠している必要があります。 詳細については、「[データベース識別子](https://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。
 
-*Collation_name* : データベースの既定の照合順序を指定します。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合、既定の照合順序である SQL_Latin1_General_CP1_CI_AS がデータベースに割り当てられます。
+*Collation_name*: データベースの既定の照合順序を指定します。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合、既定の照合順序である SQL_Latin1_General_CP1_CI_AS がデータベースに割り当てられます。
 
 Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-SQL)](../../t-sql/statements/collations.md) に関するページを参照してください。
 
@@ -997,7 +997,7 @@ MAXSIZE: データベースの最大サイズを指定します。 MAXSIZE は�
 |100 MB|√|√|√|√|√|
 |500 MB|√|√|√|√|√|
 |1 GB|√|√|√|√|√|
-|2 GB|√ (D)|√|√|√|√|
+|2 GB|√ (D)|√|√ (D)|√|√|
 |5 GB|該当なし|√|√|√|√|
 |10 GB|該当なし|√|√|√|√|
 |20 GB|該当なし|√|√|√|√|
@@ -1007,13 +1007,13 @@ MAXSIZE: データベースの最大サイズを指定します。 MAXSIZE は�
 |100 GB|該当なし|√|√|√|√|
 |150 GB|該当なし|√|√|√|√|
 |200 GB|該当なし|√|√|√|√|
-|250 GB|該当なし|√ (D)|√ (D)|√|√|
+|250 GB|該当なし|√ (D)|√ (D)|√ (D)|√ (D)|
 |300 GB|該当なし|該当なし|√|√|√|
 |400 GB|該当なし|該当なし|√|√|√|
 |500 GB|該当なし|該当なし|√|√ (D)|√|
 |750 GB|該当なし|該当なし|√|√|√|
 |1024 GB|該当なし|該当なし|√|√|√ (D)|
-|1024 GB から 4096 GB (256 GB ずつ増分)* |該当なし|該当なし|該当なし|該当なし|√|√|
+|1024 GB から 4096 GB (256 GB ずつ増分)* |該当なし|該当なし|該当なし|N/A|√|√|
 
 \* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。 P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、US Gov バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 DTU モデルのリソースの制限事項に関する詳細については、[DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。
 
@@ -1140,7 +1140,7 @@ ELASTIC_POOL (name = \<elastic_pool_name>) **適用対象:** 単一のデータ�
 AS COPY OF [source_server_name.]source_database_name **適用対象:** 単一のデータベースおよびプールされたデータベースのみ。
 データベースを同じ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーにコピーするか別のサーバーにコピーするかを指定します。
 
-*source_server_name* : ソース データベースが配置されている [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーの名前。 このパラメーターは、ソース データベースと対象データベースが同じ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバー上にある場合は省略可能です。
+*source_server_name*: ソース データベースが配置されている [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーの名前。 このパラメーターは、ソース データベースと対象データベースが同じ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバー上にある場合は省略可能です。
 
 > [!NOTE]
 > `AS COPY OF` 引数で一意の完全修飾ドメイン名を使用することはできません。 つまり、サーバーの完全修飾ドメイン名が `serverName.database.windows.net` である場合は、`serverName` のみをデータベース コピー中に使用します。
@@ -1165,7 +1165,7 @@ AS COPY OF [source_server_name.]source_database_name **適用対象:** 単一の
 
 `CREATE DATABASE` ステートメントを使用したデータベースのコピーは、非同期操作です。 したがって、コピー プロセスが完了するまで [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーに接続している必要はありません。 `CREATE DATABASE` ステートメントは、sys.databases へのエントリが作成された後、データベース コピー操作が完了する前に、制御をユーザーに戻します。 つまり、`CREATE DATABASE` ステートメントは、データベース コピーがまだ進行しているときに正常に復帰します。
 
-- [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] サーバーでのコピー プロセスの監視: [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) の `percentage_complete` または `replication_state_desc` 列、もしくは **sys.databases** ビューの `state` 列に対するクエリを実行します。 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) ビューを使用できるだけでなく、このビューからデータベース コピーを含むデータベース操作の状態も返されます。
+- [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] サーバーでのコピー プロセスの監視:[dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) の `percentage_complete` または `replication_state_desc` 列、もしくは **sys.databases** ビューの `state` 列に対するクエリを実行します。 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) ビューを使用できるだけでなく、このビューからデータベース コピーを含むデータベース操作の状態も返されます。
 
 コピー プロセスが正常に完了した時点で、ソース データベースに対するトランザクションが対象データベースに反映されています。
 
@@ -1288,11 +1288,11 @@ CREATE DATABASE test_zone_redundancy
 - [ALTER DATABASE - Azure SQL Database](alter-database-transact-sql.md?view=azuresqldb-currentls)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1304,7 +1304,7 @@ CREATE DATABASE test_zone_redundancy
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1324,13 +1324,13 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 ```
 
 > [!IMPORTANT]
-> マネージ インスタンスでファイルを追加するかデータベースの包含を設定するには、[ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldbmi) ステートメントを使います。
+> マネージ インスタンスでファイルを追加するかデータベースの包含を設定するには、[ALTER DATABASE](alter-database-transact-sql.md?tabs=sqldbmi) ステートメントを使います。
 
 ## <a name="arguments"></a>引数
 
-*database_name* : 新しいデータベースの名前です。 この名前は、SQL Server で一意であり、識別子に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に準拠している必要があります。 詳細については、「[データベース識別子](https://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。
+*database_name*: 新しいデータベースの名前です。 この名前は、SQL Server で一意であり、識別子に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に準拠している必要があります。 詳細については、「[データベース識別子](https://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。
 
-*Collation_name* : データベースの既定の照合順序を指定します。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合、既定の照合順序である SQL_Latin1_General_CP1_CI_AS がデータベースに割り当てられます。
+*Collation_name*: データベースの既定の照合順序を指定します。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合、既定の照合順序である SQL_Latin1_General_CP1_CI_AS がデータベースに割り当てられます。
 
 Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-SQL)](../../t-sql/statements/collations.md) に関するページを参照してください。
 
@@ -1372,11 +1372,11 @@ CREATE DATABASE TestDB1;
 「[ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)」をご覧ください。
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1388,7 +1388,7 @@ CREATE DATABASE TestDB1;
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1402,7 +1402,7 @@ Azure Synapse では、Azure SQL Database サーバーでこのステートメ�
 
 ## <a name="syntax"></a>構文
 
-### <a name="sql-pool"></a>[SQL プール](#tab/sqlpool)
+### <a name="dedicated-sql-pool"></a>[専用 SQL プール](#tab/sqlpool)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
@@ -1423,7 +1423,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 )
 [;]
 ```
-### <a name="sql-on-demand-preview"></a>[SQL オンデマンド (プレビュー)](#tab/sqlod)
+### <a name="serverless-sql-pool"></a>[サーバーレス SQL プール](#tab/sqlod)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 [;] 
@@ -1432,15 +1432,15 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 ## <a name="arguments"></a>引数
 
-*database_name* : 新しいデータベースの名前です。 この名前は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] データベースと [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] データベースの両方をホストでき、ID の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に従う、SQL Server に固有のものである必要があります。 詳細については、「[データベース識別子](https://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。
+*database_name*: 新しいデータベースの名前です。 この名前は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] データベースと [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] データベースの両方をホストでき、ID の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に従う、SQL Server に固有のものである必要があります。 詳細については、「[データベース識別子](https://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。
 
-*collation_name* : データベースの既定の照合順序を指定します。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合、既定の照合順序である SQL_Latin1_General_CP1_CI_AS がデータベースに割り当てられます。
+*collation_name*: データベースの既定の照合順序を指定します。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合、既定の照合順序である SQL_Latin1_General_CP1_CI_AS がデータベースに割り当てられます。
 
 Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx) に関するページを参照してください。
 
-*EDITION* : データベースのサービス層を指定します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] の場合は、"datawarehouse" を使用します。
+*EDITION*: データベースのサービス層を指定します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] の場合は、"datawarehouse" を使用します。
 
-*MAXSIZE* : 既定値は 245,760 GB (240 TB) です。
+*MAXSIZE*: 既定値は 245,760 GB (240 TB) です。
 
 **適用対象:** Gen1 コンピューティングに最適化
 
@@ -1504,11 +1504,11 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 - [DROP DATABASE - Transact-SQL](../../t-sql/statements/drop-database-transact-sql.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1546,17 +1546,17 @@ WITH (
 
 ## <a name="arguments"></a>引数
 
-*database_name* : 新しいデータベースの名前です。 許容されるデータベース名の詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]の "オブジェクトの名前付け規則" と "予約済みデータベース名" を参照してください。
+*database_name*: 新しいデータベースの名前です。 許容されるデータベース名の詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]の "オブジェクトの名前付け規則" と "予約済みデータベース名" を参照してください。
 
-AUTOGROW = ON | **OFF** このデータベースの *replicated_size* *distributed_size* 、および *log_size* パラメーターが、必要な場合に指定のサイズを超えて自動的に増加するかどうかを指定します。 既定値は **OFF** です。
+AUTOGROW = ON | **OFF** このデータベースの *replicated_size* *distributed_size*、および *log_size* パラメーターが、必要な場合に指定のサイズを超えて自動的に増加するかどうかを指定します。 既定値は **OFF** です。
 
-AUTOGROW が ON の場合、 *replicated_size* 、 *distributed_size* 、 *log_size* は、割り当て以上の記憶域を必要とするデータの挿入、更新、その他のアクションごとに、必要に応じて増加します (最初に指定したサイズのブロックではなく)。
+AUTOGROW が ON の場合、*replicated_size*、*distributed_size*、*log_size* は、割り当て以上の記憶域を必要とするデータの挿入、更新、その他のアクションごとに、必要に応じて増加します (最初に指定したサイズのブロックではなく)。
 
-AUTOGROW が OFF の場合、サイズは自動増加しません。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、 *replicated_size* 、 *distributed_size* 、 *log_size* がその指定値を超えて増加することが要求されるアクションを試行するとエラーを返します。
+AUTOGROW が OFF の場合、サイズは自動増加しません。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、*replicated_size*、*distributed_size*、*log_size* がその指定値を超えて増加することが要求されるアクションを試行するとエラーを返します。
 
-AUTOGROW はすべてのサイズに対して ON にするか、すべてのサイズに対して OFF にします。 たとえば、 *log_size* に対して AUTOGROW を ON に設定し、 *replicated_size* に対しては ON に設定しないということはできません。
+AUTOGROW はすべてのサイズに対して ON にするか、すべてのサイズに対して OFF にします。 たとえば、*log_size* に対して AUTOGROW を ON に設定し、*replicated_size* に対しては ON に設定しないということはできません。
 
-*replicated_size* [ GB ]: 正の数です。 *計算ノードごとに* 、複製テーブルと対応データに割り当てる合計領域のサイズを設定します (整数または 10 進数の GB)。 *replicated_size* の最小要件と最大要件については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] の "最小値と最大値" を参照してください。
+*replicated_size* [ GB ]: 正の数です。 *計算ノードごとに*、複製テーブルと対応データに割り当てる合計領域のサイズを設定します (整数または 10 進数の GB)。 *replicated_size* の最小要件と最大要件については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] の "最小値と最大値" を参照してください。
 
 AUTOGROW が ON の場合、複製テーブルはこの上限を超えて増加できます。
 
@@ -1599,11 +1599,11 @@ CREATE DATABASE ステートメントは、明示的なトランザクション�
 
 データベースの制約の最小値と最大値については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] の "最小値と最大値" を参照してください。
 
-データベースを作成するときは、次のサイズの組み合わせ合計を割り当てるために、 *計算ノードごとに* 十分な空き領域が必要になります。
+データベースを作成するときは、次のサイズの組み合わせ合計を割り当てるために、*計算ノードごとに* 十分な空き領域が必要になります。
 
 - テーブルのサイズが *replicated_table_size* の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。
-- テーブルのサイズが ( *distributed_table_size* / 計算ノードの数) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。
-- ログのサイズが ( *log_size* / 計算ノードの数) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+- テーブルのサイズが (*distributed_table_size* / 計算ノードの数) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。
+- ログのサイズが (*log_size* / 計算ノードの数) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
 ## <a name="locking"></a>ロック
 

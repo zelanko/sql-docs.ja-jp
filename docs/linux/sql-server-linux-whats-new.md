@@ -7,12 +7,12 @@ ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5f2b955579853c48f7899614f0e87dd996f3076e
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 7f2eba8e373fd291606a3580f0464b829a86d03c
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115585"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489762"
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>SQL Server 2017 on Linux の新機能
 
@@ -25,11 +25,11 @@ ms.locfileid: "92115585"
 
 ## <a name="ubuntu-1804-supported"></a>Ubuntu 18.04 をサポート
 
-SQL Server 2017 CU20 以降では、Ubuntu 18.04 がサポートされるようになりました。 [Ubuntu での SQL Server のインストールとデータベースの作成](quickstart-install-connect-ubuntu.md?view=sql-server-2017)に関するクイック スタートを参照してください。
+SQL Server 2017 CU20 以降では、Ubuntu 18.04 がサポートされるようになりました。 [Ubuntu での SQL Server のインストールとデータベースの作成](quickstart-install-connect-ubuntu.md)に関するクイック スタートを参照してください。
 
 ## <a name="rhel-8-supported"></a>RHEL 8 をサポート
 
-SQL Server 2017 CU20 以降では、RHEL 8 がサポートされるようになりました。 [Red Hat での SQL Server のインストールとデータベースの作成](quickstart-install-connect-red-hat.md?view=sql-server-2017)に関するクイック スタートを参照してください。
+SQL Server 2017 CU20 以降では、RHEL 8 がサポートされるようになりました。 [Red Hat での SQL Server のインストールとデータベースの作成](quickstart-install-connect-red-hat.md)に関するクイック スタートを参照してください。
 
 ## <a name="sql-server-database-engine"></a>SQL Server データベース エンジン
 

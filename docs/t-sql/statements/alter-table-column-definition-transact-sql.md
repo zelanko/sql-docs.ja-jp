@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28472efd6747239910630388133bdfe3ca95a6a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f4ff1708cf4c3986a90aff1b4c8048879bf0658e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547805"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489468"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -157,7 +157,7 @@ DEFAULT
  リテラル値、NULL 値、または列の既定値として使用されるシステム関数です。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ユーザー定義型として定義されている列と共に使用する場合は、その型を実装したときに、*constant_expression* からユーザー定義型への暗黙的な変換がサポートされる必要があります。  
   
 WITH VALUES   
- DEFAULT 制約と共に列を追加する際に列が NULL を許容している場合、WITH VALUES を使用すると、既存の行の新しい列の値は DEFAULT の *constant_expression* で指定される値に設定されます。 追加する列が NULL を許容していない場合、既存の行のその列の値は常に DEFAULT の *constant expression* で指定される値に設定されます。 SQL Server 2012 以降、これはメタ データの操作 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation) である場合があります。
+ DEFAULT 制約と共に列を追加する際に列が NULL を許容している場合、WITH VALUES を使用すると、既存の行の新しい列の値は DEFAULT の *constant_expression* で指定される値に設定されます。 追加する列が NULL を許容していない場合、既存の行のその列の値は常に DEFAULT の *constant expression* で指定される値に設定されます。 SQL Server 2012 以降、これはメタ データの操作 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation) である場合があります。
 関連する列が追加されない場合にこれを使用しても、影響はありません。
  
  DEFAULT *constant_expression* で指定される値が、既存の行に追加される新規列に格納されることを指定します。 追加する列に NULL 値が許容され、WITH VALUES を指定した場合、新しい列には既定値が格納され、既存の行に追加されます。 NULL 値が許容される列に対して WITH VALUES を指定しない場合は、既存の行の新しい列には NULL 値が格納されます。 新しい列で NULL 値が許容されない場合は、WITH VALUES の指定に関係なく、新しい行に既定値が格納されます。  
