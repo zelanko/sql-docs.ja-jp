@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 20f92233-c912-4382-8993-8e2e23d03fbe
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a2f0ff2d9798534358e57f56c5952d6b4746807
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0b1cda9e97b45092bc0ec2225120c415d95be3ef
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428534"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469753"
 ---
 # <a name="deadlock-graph-event-class"></a>Deadlock Graph イベント クラス
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88428534"
 |**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  
 |**StartTime**|**datetime**|デッドロックが検出された時刻。|14|はい|  
 |**TextData**|**ntext**|デッドロックの XML 表記による説明。|1|はい|  
-|**TransactionID**|**bigint**|使用しません。|4|はい|  
+|**TransactionID**|**bigint**|使用されていません。|4|はい|  
   
 ## <a name="see-also"></a>参照  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

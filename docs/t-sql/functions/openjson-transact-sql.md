@@ -17,13 +17,13 @@ ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 93113a42ca267f9d5c241636dfbf49aa8e75ae90
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
+ms.openlocfilehash: b3f0ea1a5a1260699fa4bbc0a2fbf84930b1c07e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117076"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472013"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -146,7 +146,7 @@ JSON の式のプロパティを持つパスの手順を照合に使用する比
 
 *colName*。出力列の名前。  
   
-**OPENJSON** は既定では、列の名前を使用して、JSON テキストのプロパティと一致します。 たとえば、*name*の列をスキーマを指定する場合、OPENJSON は JSON テキストには、"name"プロパティを使用して、この列を作成しようとします。 使用して、この既定のマッピングをオーバーライドすることができます、  *column_path* 引数。  
+**OPENJSON** は既定では、列の名前を使用して、JSON テキストのプロパティと一致します。 たとえば、*name* の列をスキーマを指定する場合、OPENJSON は JSON テキストには、"name"プロパティを使用して、この列を作成しようとします。 使用して、この既定のマッピングをオーバーライドすることができます、  *column_path* 引数。  
   
 *type*  
 出力列のデータ型。  
@@ -225,13 +225,13 @@ OPENJSON 関数によって返される列は、WITH オプションによって
 1. OPENJSON を既定のスキーマで呼び出した場合 (つまり、WITH 句に明示的にスキーマを指定しない場合)、関数は、次の列を持つテーブルを返します。  
     1.  **[キー]** 指定したプロパティの名前か、指定した配列内の要素のインデックスを含む nvarchar (4000) 値。 キー列は BIN2 照合順序を持っています。  
     2.  **値**。 プロパティの値を含む、nvarchar (max) 値です。 [値] 列では、その照合順序を継承 *jsonExpression* から。
-    3.  **[種類]** 。 値の型を含む int 値。 **型**の列には、既定のスキーマを OPENJSON を使用する場合にのみが返されます。 型の列では、次の values. のことがあります。  
+    3.  **[種類]** 。 値の型を含む int 値。 **型** の列には、既定のスキーマを OPENJSON を使用する場合にのみが返されます。 型の列では、次の values. のことがあります。  
   
         |型の列の値|JSON データ型|  
         |------------------------------|--------------------|  
         |0|null|  
         |1|string|  
-        |2|数値|  
+        |2|number|  
         |3|true/false|  
         |4|array|  
         |5|object|  
@@ -291,7 +291,7 @@ WHERE product.productTypeID IN (1,2,3,4)
   
 ### <a name="example-2---merge-properties-from-two-json-objects"></a>例 3 - 2 つの JSON オブジェクトからのマージ プロパティ
 
-次の例では、2 つの JSON オブジェクトのすべてのプロパティの和集合を選択します。 2 つのオブジェクトでは、重複する*name*プロパティがあります。 例では、キーの値を使って、結果から重複する行を除外しています。  
+次の例では、2 つの JSON オブジェクトのすべてのプロパティの和集合を選択します。 2 つのオブジェクトでは、重複する *name* プロパティがあります。 例では、キーの値を使って、結果から重複する行を除外しています。  
   
 ```sql  
 DECLARE @json1 NVARCHAR(MAX),@json2 NVARCHAR(MAX)

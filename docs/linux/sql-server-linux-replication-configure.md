@@ -11,13 +11,13 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 titleSuffix: SQL Server on Linux
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c4a22b43650292055a7b1c48b9408b4d8e85f6c
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 54eb732e45515176f7fd1e8b258310e7de2b535c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785052"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471513"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Linux 上で SQL Server レプリケーションを構成する
 
@@ -75,7 +75,7 @@ SQL Server Management Studio (SSMS) または Transact-SQL ストアド プロ�
 
 1. **[レプリケーション]** を右クリックし、**[ディストリビューションを構成する]** をクリックします。
 
-1. **ディストリビューションの構成ウィザード**で次の手順を行います。
+1. **ディストリビューションの構成ウィザード** で次の手順を行います。
 
 ### <a name="create-publication-and-articles"></a>パブリケーションとアーティクルを作成する
 
@@ -83,7 +83,7 @@ SQL Server Management Studio (SSMS) または Transact-SQL ストアド プロ�
 
 1. オブジェクト エクスプローラーで、 **[レプリケーション]**  >  **[ローカル パブリケーション]** >  **[新しいパブリケーション]** の順にクリックします。
 
-1. **パブリケーションの新規作成ウィザード**の指示に従って、レプリケーションの種類と、パブリケーションに属するアーティクルを構成します。
+1. **パブリケーションの新規作成ウィザード** の指示に従って、レプリケーションの種類と、パブリケーションに属するアーティクルを構成します。
 
 ### <a name="configure-the-subscription"></a>サブスクリプションを構成する
 

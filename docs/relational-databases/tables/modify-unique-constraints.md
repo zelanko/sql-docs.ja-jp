@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e9617509a4e9e0a08dbcd1a0d6225e748c9f59a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0546bd8ed476891a177f5246c0ff65859835a0fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646664"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472623"
 ---
 # <a name="modify-unique-constraints"></a>UNIQUE 制約の変更
 
@@ -53,7 +53,7 @@ ms.locfileid: "88646664"
   
 #### <a name="to-modify-a-unique-constraint"></a>UNIQUE 制約を変更するには  
   
-1.  **オブジェクト エクスプローラー**で、UNIQUE 制約を含むテーブルを右クリックし、 **[デザイン]** をクリックします。  
+1.  **オブジェクト エクスプローラー** で、UNIQUE 制約を含むテーブルを右クリックし、 **[デザイン]** をクリックします。  
   
 2.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fa33627c-2e99-4be3-9424-52ab83446e07
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 39f0360c29942ffb7f9c44ce1a67838353987a8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: e5762cff5b74df960ed366d6058fc43f857bacd3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486623"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473353"
 ---
 # <a name="mssql_eng020596"></a>MSSQL_ENG020596
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88486623"
  匿名サブスクリプションのエージェントを削除するために必要な権限がありません。 [sp_dropanonymousagent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropanonymousagent-transact-sql.md) を呼び出すときに使用するログインは、ディストリビューターの固定サーバー ロール **sysadmin** またはディストリビューション データベースの固定データベース ロール **db_owner** のメンバーであるか、エージェントを最初に起動したユーザーである必要があります。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- 適切な資格情報でログインして **sp_dropanonymousagent**を実行します。  
+ 適切な資格情報でログインして **sp_dropanonymousagent** を実行します。  
   
 ## <a name="see-also"></a>参照  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  

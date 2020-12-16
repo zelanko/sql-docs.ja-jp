@@ -8,13 +8,13 @@ ms.date: 10/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c6f791cf96520f46c37bb061f30ac7df962695e5
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15'
+ms.openlocfilehash: 4630a96f1abf961174ece179aabfd160a5784ad9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115690"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471613"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>SQL Server on Linux 用に永続メモリ (PMEM) を構成する
 
@@ -27,7 +27,7 @@ ms.locfileid: "92115690"
 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] には、永続メモリを使用するインメモリ機能が多数あります。 このドキュメントでは、SQL Server on Linux 用に永続メモリを構成するために必要な手順について説明します。
 
 > [!NOTE]
-> 用語_エンライトメント_は、永続メモリ対応ファイル システムの操作の概念を伝えるために導入されました。 ユーザー スペース アプリケーションからファイル システムへの直接アクセスは、メモリ マッピング (`mmap()`) を使用することで容易になります。 ファイルのメモリ マッピングを作成すると、アプリケーションは、I/O スタックを完全にバイパスするロード命令またはストア命令を発行できます。 これは、ホスト拡張アプリケーション (SQLPAL と Windows OS または Linux OS がやり取りできるようにするブラック ボックス コード) の観点からは、「エンライトメントされた」ファイル システムと見なされます。
+> 用語 _エンライトメント_ は、永続メモリ対応ファイル システムの操作の概念を伝えるために導入されました。 ユーザー スペース アプリケーションからファイル システムへの直接アクセスは、メモリ マッピング (`mmap()`) を使用することで容易になります。 ファイルのメモリ マッピングを作成すると、アプリケーションは、I/O スタックを完全にバイパスするロード命令またはストア命令を発行できます。 これは、ホスト拡張アプリケーション (SQLPAL と Windows OS または Linux OS がやり取りできるようにするブラック ボックス コード) の観点からは、「エンライトメントされた」ファイル システムと見なされます。
 
 ## <a name="create-namespaces-for-pmem-devices"></a>PMEM デバイスの名前空間を作成する
 

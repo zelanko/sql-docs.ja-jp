@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330e45c8ae007f4f2a2caeb5ba906561fe3d456f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 53b60d5be7c76e68de10f799100f3ccf3b2d6894
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494393"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469673"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill イベント クラス
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88494393"
   
  通常、そのような範囲スキャンを生成する [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリには、多くの BETWEEN 操作が含まれています。各 BETWEEN 操作では、テーブルまたはインデックスから行の範囲を選択します。 または、(T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120) などの式を使用して、複数の範囲を取得できます。 さらに、クエリ プランでは、このような範囲を順番にスキャンする必要があります。これは T.a に ORDER BY 句があり、プラン内の反復子で並べ替え順に組を使用することが必要なためです。  
   
- このようなクエリのクエリ プランに複数の **Parallelism** 操作が含まれているときは、 **Parallelism** 操作によって使用されるメモリ通信バッファーがいっぱいになり、その結果クエリの実行の進行が停止するという状況が起こります。 このような状況では、 **Parallelism** 操作のいずれかにより、入力バッファーの行を使用できるように、出力バッファーが **tempdb** に書き込まれます (この操作を *Exchange Spill*と呼びます)。 最終的には、書き込まれた行は、コンシューマーでその行を使用する準備が整ったときにコンシューマーに返されます。  
+ このようなクエリのクエリ プランに複数の **Parallelism** 操作が含まれているときは、 **Parallelism** 操作によって使用されるメモリ通信バッファーがいっぱいになり、その結果クエリの実行の進行が停止するという状況が起こります。 このような状況では、 **Parallelism** 操作のいずれかにより、入力バッファーの行を使用できるように、出力バッファーが **tempdb** に書き込まれます (この操作を *Exchange Spill* と呼びます)。 最終的には、書き込まれた行は、コンシューマーでその行を使用する準備が整ったときにコンシューマーに返されます。  
   
  同じ実行プラン内で複数の Exchange Spill を行うことができますが、これによって非常にまれにクエリの実行速度が低下する場合があります。 同じクエリ プランの実行内に 5 つを超える書き込みがある場合は、サポート担当者に問い合わせてください。  
   
