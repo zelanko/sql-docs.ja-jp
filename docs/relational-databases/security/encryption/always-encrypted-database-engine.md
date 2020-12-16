@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c13a720a9578600d80bb989ef740d3654cc4ae6
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1f097d500c1d1b0a035f2bb0e737214d65803414
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810008"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477723"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -132,7 +132,7 @@ Always Encrypted の構成の詳細については、以下を参照してくだ
 >  ウィザードの利用方法については、「 [Getting Started with Always Encrypted with SSMS](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)」(SSMS での Always Encrypted の作業の開始) の動画をご覧ください。
 
 1.  Management Studio の **オブジェクト エクスプローラー** を使用して暗号化する列があるテーブルを含む既存のデータベースに接続するか、新しいデータベースを作成し、暗号化する列がある 1 つ以上のテーブルを作成し、接続します。
-2.  データベースを右クリックして **[タスク]** をポイントし、 **[列の暗号化]** をクリックして **Always Encrypted ウィザード**を開きます。
+2.  データベースを右クリックして **[タスク]** をポイントし、 **[列の暗号化]** をクリックして **Always Encrypted ウィザード** を開きます。
 3.  **[概要]** ページの内容を確認し、 **[次へ]** をクリックします。
 4.  **[列の選択]** ページで、テーブルを展開して暗号化する列を選択します。
 5.  暗号化する選択した各列で、 **[暗号化の種類]** を *[明確]* または *[ランダム化]* のいずれかに設定します。

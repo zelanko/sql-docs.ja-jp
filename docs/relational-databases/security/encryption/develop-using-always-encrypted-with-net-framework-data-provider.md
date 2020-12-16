@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2bf769680bfc19180b03cf30235e6abbc8dd77b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4e3bd7a6481f677de9355a892eb78b3b5aeaaa15
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867954"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477583"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Always Encrypted と .NET Framework Data Provider for SQL Server を使用する
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ Always Encrypted を使用すると、クライアント アプリケーショ�
 > .NET Framework の特定のバージョンでは、Always Encrypted のサポート レベルが異なります。 詳細については、以下の「Always Encrypted API リファレンス」セクションを参照してください。
 
 ## <a name="enabling-always-encrypted-for-application-queries"></a>アプリケーション クエリで Always Encrypted を有効にする
-パラメーターの暗号化と、暗号化された列をターゲットとするクエリ結果の暗号化解除を有効にする最も簡単な方法としては、Column Encryption Setting 接続文字列キーワードの値を **enabled**に設定します。
+パラメーターの暗号化と、暗号化された列をターゲットとするクエリ結果の暗号化解除を有効にする最も簡単な方法としては、Column Encryption Setting 接続文字列キーワードの値を **enabled** に設定します。
 
 Always Encrypted を有効にする接続文字列の例を次に示します。
 
@@ -470,7 +470,7 @@ connection, null, SqlCommandColumnEncryptionSetting.ResultSetOnly))
 
 このような攻撃を防ぐために、アプリケーションはパラメーターの [SqlParameter.ForceColumnEncryption プロパティ](/dotnet/api/system.data.sqlclient.sqlparameter.forcecolumnencryption) を true に設定することができます。 これにより、.NET Framework Data Provider for SQL Server は、サーバーから受信したメタデータにパラメーターを暗号化する必要がないと示されている場合に、例外をスローするようになります。
 
-**SqlParameter.ForceColumnEncryption プロパティ**の使用はセキュリティの向上に役立ちますが、クライアント アプリケーションに対する暗号化の透明度が損なわれます。 データベース スキーマを更新して暗号化された列のセットを変更する場合は、アプリケーションの変更も必要になることがあります。
+**SqlParameter.ForceColumnEncryption プロパティ** の使用はセキュリティの向上に役立ちますが、クライアント アプリケーションに対する暗号化の透明度が損なわれます。 データベース スキーマを更新して暗号化された列のセットを変更する場合は、アプリケーションの変更も必要になることがあります。
 
 以下に、 **SqlParameter.ForceColumnEncryption プロパティ** を使用して、社会保障番号がデータベースにプレーンテキストで送信されないようにする場合のコード サンプルを示します。 
 

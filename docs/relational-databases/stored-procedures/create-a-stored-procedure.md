@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5da64e544211e29491ce4270c91ae527bda923de
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c1ab9e2681f229fba5294f061d8d83e98aabac64
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364764"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475323"
 ---
 # <a name="create-a-stored-procedure"></a>ストアド プロシージャの作成
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "93364764"
   
 -   **作業を開始する準備:** [アクセス許可](#Permissions)  
   
--   **プロシージャを作成するには次を使用します:** [SQL Server Management Studio](#SSMSProcedure)、 [Transact-SQL](#TsqlProcedure)  
+-   **プロシージャを作成するには次を使用します:** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースの CREATE PROCEDURE 権限と、プロシージャを作成するスキーマに対する ALTER 権限が必要です。  
@@ -62,10 +62,10 @@ ms.locfileid: "93364764"
     |説明|従業員のデータが返されます。|  
     |[Procedure_name]|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
-    |@Datatype_For_Param1|**nvarchar** (50)|  
+    |@Datatype_For_Param1|**nvarchar**(50)|  
     |[Default_Value_For_Param1]|NULL|  
     |@Param2|@FirstName|  
-    |@Datatype_For_Param2|**nvarchar** (50)|  
+    |@Datatype_For_Param2|**nvarchar**(50)|  
     |[Default_Value_For_Param2]|NULL|  
   
 6.  **[OK]** をクリックします。  

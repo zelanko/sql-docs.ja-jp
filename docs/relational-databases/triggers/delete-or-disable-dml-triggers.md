@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec282485aec37e07684de2430c2379bf584b4b05
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1c3e022c0c284fa1c2b4ef6824c94cec609e8222
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485439"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477203"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>DML トリガーの削除または無効化
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "88485439"
   
 #### <a name="to-delete-a-dml-trigger"></a>DML トリガーを削除するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  目的のデータベースを展開し、 **[テーブル]** を展開します。次に、削除するトリガーが格納されているテーブルを展開します。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "88485439"
   
 #### <a name="to-disable-and-enable-a-dml-trigger"></a>DML トリガーを有効または無効にするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  目的のデータベースを展開し、 **[テーブル]** を展開します。次に、無効にするトリガーが格納されているテーブルを展開します。  
   

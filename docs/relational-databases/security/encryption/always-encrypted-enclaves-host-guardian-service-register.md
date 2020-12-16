@@ -9,13 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e161eff506c1aa5398752f052f00dc4dd69ae8d9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1774e2b2a27b2b1f0c36b298f98c916318fd1543
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868903"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477653"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>ホスト ガーディアン サービスにコンピューターを登録する
 
@@ -281,7 +281,7 @@ IsFallbackInUse                : False
 
 | AttestationSubStatus | 意味と対処法 |
 | -------------------- | ---------------------------- |
-| CodeIntegrityPolicy | コンピューターのコードの整合性ポリシーが HGS に登録されていないか、*または*コンピューターが現在コードの整合性ポリシーを使用していません。 ガイダンスについては、「[コードの整合性ポリシーを構成する](#configure-a-code-integrity-policy)」を参照してください。 |
+| CodeIntegrityPolicy | コンピューターのコードの整合性ポリシーが HGS に登録されていないか、*または* コンピューターが現在コードの整合性ポリシーを使用していません。 ガイダンスについては、「[コードの整合性ポリシーを構成する](#configure-a-code-integrity-policy)」を参照してください。 |
 | DumpsEnabled | コンピューターはクラッシュ ダンプを許可するように構成されていますが、Hgs_DumpsEnabled ポリシーでダンプが許可されていません。 このコンピューターでダンプを無効にするか、Hgs_DumpsEnabled ポリシーを無効にして続行してください。 |
 | FullBoot | コンピューターがスリープ状態または休止状態から再開されたため、TPM の測定値が変更されました。 クリーンな TPM の測定値を生成するためにコンピューターを再起動してください。 |
 | HibernationEnabled | コンピューターが、休止状態ファイルを暗号化しない休止状態を許可するように構成されています。 この問題を解決するには、コンピューターで休止状態を無効にしてください。 |

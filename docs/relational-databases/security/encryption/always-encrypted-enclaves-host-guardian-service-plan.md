@@ -9,13 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2fcf4a523331260cea82a8537d83c891ea4a1c4
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ed376fd4fe0f3c38d9996157c30722c24b27e8aa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869160"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477643"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>ホスト ガーディアン サービスの構成証明の計画
 
@@ -66,9 +66,9 @@ HGS では、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] �
 
 一般に、次の推奨事項があります。
 
-- **物理的な運用サーバー**の場合は、提供される追加の保証に TPM 構成証明を使用することをお勧めします。
-- **仮想運用サーバー**の場合は、ほとんどの仮想マシンに仮想 TPM とセキュア ブートがないため、ホスト キー構成証明をお勧めします。 [オンプレミスのシールドされた VM](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node) のようなセキュリティが強化された VM を使用している場合は、TPM モードの使用を選択できます。 すべての仮想化されたデプロイでは、構成証明プロセスで、VM 環境のみが分析され、VM の下の仮想化プラットフォームは分析されません。
-- **開発/テスト シナリオ**の場合は、設定が簡単なため、ホスト キー構成証明をお勧めします。
+- **物理的な運用サーバー** の場合は、提供される追加の保証に TPM 構成証明を使用することをお勧めします。
+- **仮想運用サーバー** の場合は、ほとんどの仮想マシンに仮想 TPM とセキュア ブートがないため、ホスト キー構成証明をお勧めします。 [オンプレミスのシールドされた VM](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node) のようなセキュリティが強化された VM を使用している場合は、TPM モードの使用を選択できます。 すべての仮想化されたデプロイでは、構成証明プロセスで、VM 環境のみが分析され、VM の下の仮想化プラットフォームは分析されません。
+- **開発/テスト シナリオ** の場合は、設定が簡単なため、ホスト キー構成証明をお勧めします。
 
 ### <a name="trust-model"></a>信頼モデル
 

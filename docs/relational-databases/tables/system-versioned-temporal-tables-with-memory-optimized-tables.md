@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ddfdf4456f3195d2d9d15c2a7f63fffc5b574fa
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b93b419e4678b84684c524011ed4df4feb6fcb14
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810462"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474573"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル
 
@@ -44,12 +44,12 @@ ms.locfileid: "91810462"
 - システム バージョン管理できるのは、持続性のあるメモリ最適化テーブルだけです (**DURABILITY = SCHEMA_AND_DATA**)。
 - メモリ最適化されてシステム バージョン管理されたテーブルの履歴テーブルは、エンド ユーザーまたはシステムのどちらによって作成される場合でも、ディスク ベースでなければなりません。
 - 現在のテーブル (インメモリ) のみに影響するクエリは、 [ネイティブ コンパイル T-SQL モジュール](../in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)で使用できます。 FOR SYSTEM TIME 句を使用したテンポラル クエリは、ネイティブ コンパイル モジュールではサポートされません。 アドホック クエリおよび非ネイティブ モジュールでの FOR SYSTEM TIME 句とメモリ最適化テーブルの使用はサポートされています。
-- **SYSTEM_VERSIONING = ON**のときは、現在のメモリ最適化テーブルでの更新および削除操作の結果である最新のシステム バージョン管理された変更を受け入れるため、内部的なメモリ最適化ステージング テーブルが自動的に作成されます。
+- **SYSTEM_VERSIONING = ON** のときは、現在のメモリ最適化テーブルでの更新および削除操作の結果である最新のシステム バージョン管理された変更を受け入れるため、内部的なメモリ最適化ステージング テーブルが自動的に作成されます。
 - 内部のメモリ最適化ステージング テーブルからのデータは、非同期のデータ フラッシュ タスクによって、ディスク ベースの履歴テーブルに定期的に移動されます。 このデータ フラッシュ メカニズムの目的は、親オブジェクトによる内部メモリ バッファーのメモリ使用量を 10% 未満に維持することです。 [sys.dm_db_xtp_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql.md) をクエリし、内部メモリ最適化ステージング テーブルと現在のテンポラル テーブルのデータを集計することにより、システム バージョン管理されたメモリ最適化テンポラル テーブルの総メモリ消費量を要約できます。
 - データ フラッシュを適用するには、 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)を呼び出します。
 - **SYSTEM_VERSIONING = OFF** のとき、またはシステム バージョン管理されたテーブルのスキーマが列を追加、削除、または変更することによって変更されると、内部ステージング バッファーの内容全体がディスク ベースの履歴テーブルに移動されます。
 - 履歴データのクエリは実質的にスナップショット分離レベルであり、メモリ内ステージング バッファーとディスク ベース テーブルの重複がない和集合を常に返します。
-- テーブルのスキーマを内部的に変更する**ALTER TABLE** 操作はデータのフラッシュを実行する必要があり、操作の時間を長引かせる可能性があります。
+- テーブルのスキーマを内部的に変更する **ALTER TABLE** 操作はデータのフラッシュを実行する必要があり、操作の時間を長引かせる可能性があります。
 
 ## <a name="the-internal-memory-optimized-staging-table"></a>内部メモリ最適化ステージング テーブル
 

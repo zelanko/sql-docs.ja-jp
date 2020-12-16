@@ -11,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7014f349998781dcd890e84a77deb4732fe028c9
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f03f5dc54c525e850c7654c5860fb56d35ad75c7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127719"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475603"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>PowerShell での Always Encrypted を使用した列暗号化の構成
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 この記事では、( [SqlServer](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) PowerShell モジュールで) *Set-SqlColumnEncryption* コマンドレットを使用して、データベース列にターゲット Always Encrypted 構成を設定する手順を説明します。 **Set-SqlColumnEncryption** コマンドレットは、ターゲット データベースと選択した列に格納されたデータの両方のスキーマを変更します。 列に格納されたデータは、その列に指定されたターゲットの暗号化設定と現在の暗号化の構成に応じて、暗号化、再暗号化、または復号化できます。
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] を使用していて、お使いの SQL Server インスタンスがセキュリティで保護されたエンクレーブで構成されている場合は、データベースからデータを移動せずに、暗号化操作をインプレースで実行できます。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する](always-encrypted-enclaves-configure-encryption.md)」を参照してください。 PowerShell では、インプレース暗号化がサポートされていないことに注意してください。

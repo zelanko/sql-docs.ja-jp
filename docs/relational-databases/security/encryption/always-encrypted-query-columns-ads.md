@@ -9,13 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82315c744073fa5f497f0aaf78eb6dedc04126a9
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7ac5e42497a0167a0e935c116a1efd9cc466300c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679040"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477613"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Azure Data Studio で Always Encrypted を使用した列のクエリを実行する
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -80,7 +80,7 @@ SSN が `Patients` テーブルで暗号化された列であると仮定して�
 これらの権限に加え、クエリ結果を暗号化解除する場合や、(Transact-SQL 変数をパラメーター化することで生成される) クエリ パラメーターを暗号化する場合には、ターゲット列を保護する列マスター キーにアクセスする必要もあります。
 
 - **証明書ストア - ローカル コンピューター:** 列マスター キーとして使用される証明書への **読み取り** アクセス権を持っているか、コンピューターの管理者である必要があります。   
-- **Azure Key Vault:** 列マスター キーが格納されているキー コンテナーに対する **get** 、 **unwrapKey** 、および **verify** の権限が必要です。
+- **Azure Key Vault:** 列マスター キーが格納されているキー コンテナーに対する **get**、**unwrapKey**、および **verify** の権限が必要です。
 
 詳細については、 [列マスター キーの作成と格納 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) を参照してください。
 
