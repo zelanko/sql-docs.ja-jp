@@ -18,12 +18,12 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 12adf94f84fbe9c1b47093cf8ab6b106fb9d5249
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c69b375ae55f8d7a4d76c4c619f9c9afe1d50def
+ms.sourcegitcommit: 86534989f7827f1c36ed1333ad9c4557dfd77f3d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440653"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97515372"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (Azure SQL Database)
 
@@ -34,8 +34,8 @@ ms.locfileid: "97440653"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|データベースビュー内の現在のデータベースの ID。|  
-|start_date|**datetimeoffset**|データベースレプリケーションが開始されたときの地域 SQL Database データセンターでの UTC 時刻|  
-|modify_date|**datetimeoffset**|リージョン SQL Database データセンターでの UTC 時刻 (データベースの geo レプリケーションが完了したとき)。 この時点で、新しいデータベースがプライマリデータベースと同期されます。 .|  
+|start_date|**datetimeoffset**|データベースレプリケーションが開始されたときの地域 SQL Database データセンターでの UTC 時刻。|  
+|modify_date|**datetimeoffset**|リージョン SQL Database データセンターでの UTC 時刻 (データベースの geo レプリケーションが完了したとき)。 この時点で、新しいデータベースがプライマリデータベースと同期されます。|  
 |link_guid|**uniqueidentifier**|Geo レプリケーションリンクの一意の ID。|  
 |partner_server|**sysname**|Geo レプリケートされたデータベースを含む SQL Database サーバーの名前。|  
 |partner_database|**sysname**|リンクされた SQL Database サーバー上の geo レプリケートされたデータベースの名前。|  

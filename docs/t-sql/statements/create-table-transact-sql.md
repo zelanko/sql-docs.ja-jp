@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a6b0e958439025019e51bac7edb103febfe6409a
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+ms.openlocfilehash: 9fb4195047df5e996cbef4a3fbceb1367172df6b
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521170"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490082"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -420,7 +420,7 @@ ON や `TEXTIMAGE_ON` と同様に、`FILESTREAM_ON` の `CREATE TABLE` を使�
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) ステートメントでヒープをクラスター化インデックスに変換する。 この場合は、異なる FILESTREAM ファイル グループ、パーティション構成、または NULL を指定できます。
 - [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) ステートメントでクラスター化インデックスをヒープに変換する。 この場合は、異なる FILESTREAM ファイル グループ、パーティション構成、または **"default"** を指定できます。
 
-`FILESTREAM_ON <filegroup>` 句のファイル グループ、またはパーティション構成で指定されている各 FILESTREAM ファイル グループには、ファイルが 1 つ定義されている必要があります。 このファイルは、[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017) ステートメントまたは [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用して定義する必要があります。それ以外の場合は、エラーが発生します。
+`FILESTREAM_ON <filegroup>` 句のファイル グループ、またはパーティション構成で指定されている各 FILESTREAM ファイル グループには、ファイルが 1 つ定義されている必要があります。 このファイルは、[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) ステートメントまたは [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用して定義する必要があります。それ以外の場合は、エラーが発生します。
 
 FILESTREAM の関連トピックについては、[バイナリ ラージ オブジェクト - BLOB データ](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)に関するページをご覧ください。
 
