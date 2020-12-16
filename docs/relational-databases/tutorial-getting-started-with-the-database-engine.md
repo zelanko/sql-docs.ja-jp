@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cad1def690f9ebf0803f25e83300d3790d6ef4c9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7007db1b4be0abc75e8a20cf5874b6157b63b399
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809383"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97426416"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>チュートリアル : データベース エンジンの概要
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "91809383"
 [レッスン 2:別のコンピューターからの接続](../relational-databases/lesson-2-connecting-from-another-computer.md)  
 このレッスンでは、別のコンピューターから [!INCLUDE[ssDE](../includes/ssde-md.md)] に接続する方法を学習します。これには、プロトコルを有効化する方法や、ポートやファイアウォール設定を構成する方法も含まれます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
 このチュートリアルに予備知識は必要ありません。  
   
 このチュートリアルを使用するには、システムに以下のコンポーネントがインストールされている必要があります。  
