@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1085686f4c83198a043855e701ec2ef38d17541f
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 9c97ee3e1f268553a828e035498b203c8fa1e747
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496947"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438947"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -63,15 +63,15 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ## <a name="arguments"></a>引数
  **[ [ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*** は、データベースに作成するテーブルの 1 から 3 部構成の名前です。 外部テーブルの場合、テーブル メタデータのみがリレーショナル データベースに格納されます。 
 
- **LOCATION =  ' *hdfs_folder* '** には、外部データ ソースで SELECT ステートメントの結果を書き込む場所を指定します。 場所はフォルダー名であり、必要に応じて、Hadoop クラスターまたは BLOB ストレージのルート フォルダーへの相対パスを含めることができます。 PolyBase ではパスとフォルダー (まだ存在しない場合) が作成されます。
+ **LOCATION =  '*hdfs_folder*'** には、外部データ ソースで SELECT ステートメントの結果を書き込む場所を指定します。 場所はフォルダー名であり、必要に応じて、Hadoop クラスターまたは BLOB ストレージのルート フォルダーへの相対パスを含めることができます。 PolyBase ではパスとフォルダー (まだ存在しない場合) が作成されます。
 
-外部ファイルは *hdfs_folder* に書き込まれ、 *QueryID_date_time_ID.format* という名前が付けられます ( *ID* は増分識別子、 *format* はエクスポートされるデータ形式)。 たとえば、QID776_20160130_182739_0.orc です。
+外部ファイルは *hdfs_folder* に書き込まれ、*QueryID_date_time_ID.format* という名前が付けられます (*ID* は増分識別子、*format* はエクスポートされるデータ形式)。 たとえば、QID776_20160130_182739_0.orc です。
 
  **DATA_SOURCE = *external_data_source_name*** には、外部データが格納されている、または格納される場所を含む、外部データ ソース オブジェクトの名前を指定します。 場所は、Hadoop クラスターまたは Azure Blob ストレージのいずれかです。 外部データ ソースを作成するには、[CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用します。
 
  **FILE_FORMAT = *external_file_format_name*** には、外部データ ファイルの形式を含む、外部ファイル形式オブジェクトの名前を指定します。 外部ファイル形式を作成するには、[CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md) を使用します。
 
- この CREATE EXTERNAL TABLE AS SELECT ステートメントの実行時に、 **REJECT オプション** は適用されません。 代わりに、ここで指定し、後で外部テーブルからデータをインポートする際に、データベースで使用できるようにします。 後で CREATE TABLE AS SELECT ステートメントで外部テーブルからデータを選択するときに、データベースでは拒否オプションを使用して、インポートを停止するまでにインポートの失敗が許容される行の数または割合を決定します。
+ この CREATE EXTERNAL TABLE AS SELECT ステートメントの実行時に、**REJECT オプション** は適用されません。 代わりに、ここで指定し、後で外部テーブルからデータをインポートする際に、データベースで使用できるようにします。 後で CREATE TABLE AS SELECT ステートメントで外部テーブルからデータを選択するときに、データベースでは拒否オプションを使用して、インポートを停止するまでにインポートの失敗が許容される行の数または割合を決定します。
 
    - **REJECT_VALUE = *reject_value*** には、インポートに失敗することができる行の値または割合を指定します。これを超えると、データベースのインポートが停止されます。
 
@@ -106,7 +106,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 
 ## <a name="permissions"></a>アクセス許可
 
- このコマンドを実行するには、 *データベース ユーザー* は以下のすべての権限またはメンバーシップが必要です。
+ このコマンドを実行するには、*データベース ユーザー* は以下のすべての権限またはメンバーシップが必要です。
 
 - **db_ddladmin** 固定データベース ロールの新しいテーブルまたはメンバーシップを含む、ローカル スキーマに対する **ALTER SCHEMA** 権限。
 - **db_ddladmin** 固定データベース ロールの **CREATE TABLE** 権限またはメンバーシップ。

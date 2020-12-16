@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5285873c9fc81849d8da8b48140dfbb71281e1aa
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
+ms.openlocfilehash: 16f81a4ac6265d37cb9e5d50a6500ca68740e394
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670523"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438845"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 データベース エンジンの非推奨の機能
 
@@ -50,7 +50,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>SQL Server の次のバージョンで非推奨となっている機能
 
-次の SQL Server データベース エンジン機能は、SQL Server の次のバージョンでは非推奨となっています。 新規の開発作業ではこれらの機能を使用しないようにし、現在これらの機能を使用しているアプリケーションはできるだけ早く修正してください。 **機能名**の値は、トレース イベントには ObjectName として表示され、パフォーマンス カウンターと `sys.dm_os_performance_counters` にはインスタンス名として表示されます。 **機能 ID** の値は、トレース イベントに ObjectId として表示されます。
+次の SQL Server データベース エンジン機能は、SQL Server の次のバージョンでは非推奨となっています。 新規の開発作業ではこれらの機能を使用しないようにし、現在これらの機能を使用しているアプリケーションはできるだけ早く修正してください。 **機能名** の値は、トレース イベントには ObjectName として表示され、パフォーマンス カウンターと `sys.dm_os_performance_counters` にはインスタンス名として表示されます。 **機能 ID** の値は、トレース イベントに ObjectId として表示されます。
 
 ### <a name="back-up-and-restore"></a>バックアップと復元
 
@@ -89,7 +89,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 | 非推奨の機能 | 代替 | 機能名 | 機能 ID |
 |--------------------|-------------|--------------|------------|
-| **SET ROWCOUNT** 、 **INSERT**、および **UPDATE**ステートメントの **DELETE** | TOP キーワード | SET ROWCOUNT | 109 |
+| **SET ROWCOUNT** 、 **INSERT**、および **UPDATE** ステートメントの **DELETE** | TOP キーワード | SET ROWCOUNT | 109 |
 | HOLDLOCK table hint without parenthesis | かっこ付きの HOLDLOCK を使用します。 | HOLDLOCK table hint without parenthesis | 167 |
 
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>SQL Server の将来のバージョンで非推奨となっている機能
@@ -329,7 +329,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | 3 つおよび 4 つの部分で構成された列参照 | 2 つの部分で構成される名前が標準に準拠した動作です。|3 つ以上の部分で構成される列名 |
 | SELECT リストの式に対して、列の別名として使用される、引用符で囲まれた文字列:<br /><br />'*string_alias*' = *expression* | *expression* [AS] *column_alias*<br /><br />*expression* [AS] [*column_alias*]<br /><br />*expression* [AS] "*column_alias*"<br /><br />*expression* [AS] '*column_alias*'<br /><br />*column_alias* = *expression* | 列の別名としての文字列リテラル |
 | 番号付きプロシージャ | [なし] : 使用しないでください。 | ProcNums |
-| DROP INDEX での*table_name.index_name* 構文|DROP INDEX での*index_name* ON *table_name* 構文です。|2 部構成の名前が使用された DROP INDEX |
+| DROP INDEX での *table_name.index_name* 構文|DROP INDEX での *index_name* ON *table_name* 構文です。|2 部構成の名前が使用された DROP INDEX |
 | セミコロンで終了しない Transact-SQL ステートメント。|Transact-SQL ステートメントをセミコロン (;) で終了してください。 | なし |
 | GROUP BY ALL|状況に応じて UNION または派生テーブルを使用したカスタム ソリューションを使用してください。 | GROUP BY ALL |
 | DML ステートメントでの列名としての ROWGUIDCOL の使用|$rowguid を使用してください。|ROWGUIDCOL |

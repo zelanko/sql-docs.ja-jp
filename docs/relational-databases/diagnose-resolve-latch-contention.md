@@ -8,13 +8,13 @@ ms.technology: performance
 ms.topic: how-to
 author: bluefooted
 ms.author: pamela
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a1ce0e4a54810730935b4a93aef72edfa404d88
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 75f999052eecd750d548cb6d383eafe5375ed130
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506453"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440147"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>SQL Server でラッチの競合を診断および解決する
 
@@ -70,10 +70,10 @@ SQL Server のページは 8 KB で、複数の行を格納できます。 コ�
 |ラッチ モード |**KP**  |**SH** |**UP**  |**EX**  |**DT**|
 |--------|--------|-------|--------|--------|--------|
 |**KP**  |Y       |Y      |Y       |Y       |N|
-|**SH**  |Y       |Y      |Y       |×       |N|
-|**UP**  |Y       |Y      |×       |×       |N|
-|**EX**  |Y       |×      |×       |×       |N|
-|**DT**  |N       |×      |×       |×       |N|
+|**SH**  |Y       |Y      |Y       |N       |N|
+|**UP**  |Y       |Y      |N       |N       |N|
+|**EX**  |Y       |N      |N       |N       |N|
+|**DT**  |N       |N      |N       |N       |N|
 
 ## <a name="sql-server-superlatches-and-sublatches"></a>SQL Server の SuperLatch とサブラッチ
 

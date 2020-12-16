@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c5d2d1f0af5abdf24fce8be780c15a73f2a778a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81bb8dd3acae7fda65af0ada009b065c909506b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864474"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460060"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>データベース エンジンの権限の概要
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "91864474"
 ##### <a name="database-users"></a>データベース ユーザー  
  データベースにデータベース ユーザーを作成してそのデータベース ユーザーをログインにマッピングすることで、ログインにデータベースへのアクセスが付与されます。 通常、データベース ユーザー名はログイン名と同じですが、同じにする必要はありません。 各データベース ユーザーは、単一のログインにマッピングされます。 ログインはデータベース内の 1 つのユーザーにのみマッピングできますが、異なる複数のデータベースにデータベース ユーザーとしてマッピングできます。  
   
- 対応するログインがないデータベース ユーザーも作成できます。 これらは *包含データベース ユーザー*と呼ばれます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] では包含データベース ユーザーの使用をお勧めしています。 ログインと同様に、包含データベース ユーザーは Windows 認証または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証のいずれかを使用できます。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
+ 対応するログインがないデータベース ユーザーも作成できます。 これらは *包含データベース ユーザー* と呼ばれます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] では包含データベース ユーザーの使用をお勧めしています。 ログインと同様に、包含データベース ユーザーは Windows 認証または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証のいずれかを使用できます。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
   
  12 種類のユーザーはそれぞれ認証方法がわずかに異なり、それぞれ何を代表するかも異なります。 ユーザーの一覧は「[CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)」で確認してください。  
   
@@ -81,15 +81,13 @@ ms.locfileid: "91864474"
   
 #### <a name="if-the-person-connecting-will-be-connecting-to-only-one-database"></a>接続するユーザーが 1 つのデータベースにのみ接続する場合  
   
-1.  Windows グループのログインを作成します。 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する場合は、Active Directory の手順をスキップし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証のログインをここで作成します)。  
+1.  ユーザー データベースで、Windows グループの包含データベース ユーザーを作成します。 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する場合は、Active Directory の手順をスキップし、包含データベース ユーザーの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証をここで作成します)。  
   
-2.  ユーザー データベースで、Windows グループの包含データベース ユーザーを作成します。 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する場合は、Active Directory の手順をスキップし、包含データベース ユーザーの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証をここで作成します)。  
+1.  ユーザー データベースで、それぞれ類似した職務を表すユーザー定義データベース ロールを 1 つ以上作成します。 たとえば、財務アナリストやセールス アナリストなどです。  
   
-3.  ユーザー データベースで、それぞれ類似した職務を表すユーザー定義データベース ロールを 1 つ以上作成します。 たとえば、財務アナリストやセールス アナリストなどです。  
+1.  データベース ユーザーを 1 つ以上のユーザー定義データベース ロールに追加します。  
   
-4.  データベース ユーザーを 1 つ以上のユーザー定義データベース ロールに追加します。  
-  
-5.  ユーザー定義データベース ロールに権限を付与します。  
+1.  ユーザー定義データベース ロールに権限を付与します。  
   
  この時点での一般的な結果としては、Windows ユーザーは Windows グループのメンバーです。 Windows グループには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]にログインがあります。 ログインは、ユーザー データベース内のユーザー ID にマップされます。 ユーザーはデータベース ロールのメンバーです。 次に、ロールに権限を追加する必要があります。  
   

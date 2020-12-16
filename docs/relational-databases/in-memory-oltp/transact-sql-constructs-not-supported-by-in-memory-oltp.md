@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04bc3b16152307b5d5ed4a3437934e5c7ce6a45a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f28ea2b3ce9520eca770b0808738a53073d70316
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868783"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438735"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>インメモリ OLTP でサポートされていない Transact-SQL の構造
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "91868783"
 |Type|特徴量|解決方法|  
 |----------|-------------|----------------|  
 |特徴量|インライン テーブル変数|テーブル型は、変数宣言を使用してインラインで宣言できません。 テーブル型は、 **CREATE TYPE** ステートメントを使用して明示的に宣言する必要があります。|  
-|特徴量|カーソル|カーソルは、ネイティブ コンパイル ストアド プロシージャではサポートされていません。<br /><br /> クライアントからプロシージャを実行する場合、カーソル API ではなく RPC を使用します。 ODBC で、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントから削除してください。 **EXECUTE**を避け、代わりにプロシージャの名前を直接指定します。<br /><br /> [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチまたは他のストアド プロシージャからプロシージャを実行する場合、ネイティブ コンパイル ストアド プロシージャでカーソルを使用しないでください。<br /><br /> ネイティブ コンパイル ストアド プロシージャを作成する場合は、カーソルを使用せずに、セットベースのロジックまたは **WHILE** ループを使用します。|  
+|特徴量|カーソル|カーソルは、ネイティブ コンパイル ストアド プロシージャではサポートされていません。<br /><br /> クライアントからプロシージャを実行する場合、カーソル API ではなく RPC を使用します。 ODBC で、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントから削除してください。 **EXECUTE** を避け、代わりにプロシージャの名前を直接指定します。<br /><br /> [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチまたは他のストアド プロシージャからプロシージャを実行する場合、ネイティブ コンパイル ストアド プロシージャでカーソルを使用しないでください。<br /><br /> ネイティブ コンパイル ストアド プロシージャを作成する場合は、カーソルを使用せずに、セットベースのロジックまたは **WHILE** ループを使用します。|  
 |特徴量|定数以外のパラメーターの既定値|ネイティブ コンパイル ストアド プロシージャのパラメーターで既定値を使用する場合、値は定数にする必要があります。 パラメーター宣言からワイルドカードを削除します。|  
 |特徴量|EXTERNAL|CLR ストアド プロシージャをネイティブでコンパイルすることはできません。 CREATE PROCEDURE ステートメントから AS EXTERNAL 句または NATIVE_COMPILATION オプションを削除します。|  
 |特徴量|番号付きストアド プロシージャ|ネイティブ コンパイル ストアド プロシージャには番号を付けられません。 **CREATE PROCEDURE**_ステートメントから_ ; **number** を削除してください。|  
