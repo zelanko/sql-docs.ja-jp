@@ -13,13 +13,13 @@ dev_langs:
 ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c89cfff4f1477503650ab8f20ceb636636fb333f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a3ce83d95f98102c087affc91581082857f21250
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540571"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481753"
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL ステートメント
 
@@ -45,6 +45,7 @@ SQL ステートメントは作業のアトミック単位であり、完全に�
 - ENABLE TRIGGER
 - RENAME
 - UPDATE STATISTICS
+- TRUNCATE TABLE
 
 ## <a name="data-manipulation-language"></a>データ操作言語
 
@@ -56,7 +57,6 @@ SQL ステートメントは作業のアトミック単位であり、完全に�
 - SELECT
 - UPDATE
 - MERGE
-- TRUNCATE TABLE
 
 ## <a name="permissions-statements"></a>権限ステートメント
 

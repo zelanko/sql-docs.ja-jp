@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 50228f2f-6949-4d2e-8e43-fad11bf973ab
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d14ac2a7f8feb6b9d7b7fd7ceafad4d7454b4c21
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 70761565d21d9a9f79634bbd0a70db71c3008e2c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88365678"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482023"
 ---
 # <a name="error_severity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ERROR_SEVERITY ( )
 
 `ERROR_SEVERITY` は、CATCH ブロックの範囲外で呼び出された場合に NULL を返します。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 `ERROR_SEVERITY` は、CATCH ブロックのスコープ内の任意の場所で呼び出すことができます。  
   
 `ERROR_SEVERITY` は、実行回数に関係なく、あるいは `CATCH` ブロックのスコープ内の実行場所に関係なく、エラーのエラー重大度を返します。 エラーが発生したステートメントの直後のステートメントのエラー番号のみを返す、@@ERROR などの関数とは対照的となります。  

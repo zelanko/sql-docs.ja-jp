@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee26ff95b5317d65e71fbdb91e39a2d56e9f5f95
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cc6e5734edbf7203f98d1b7fc7a685e699aaa635
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756343"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481433"
 ---
 # <a name="contained-databases"></a>包含データベース
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "85756343"
  データベース境界を越える要素。  
   
  非包含データベース  
- 包含が **NONE**に設定されているデータベース。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のバージョンのすべてのデータベースは、非包含です。 既定では、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のすべてのデータベースの包含は **NONE**に設定されています。  
+ 包含が **NONE** に設定されているデータベース。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のバージョンのすべてのデータベースは、非包含です。 既定では、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のすべてのデータベースの包含は **NONE** に設定されています。  
   
  部分的包含データベース  
  部分的包含データベースは、データベース境界を越えることが許可される包含データベースです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、包含の境界をいつ超えるかを判断する機能が含まれています。  
@@ -80,12 +80,12 @@ ms.locfileid: "85756343"
  データベース境界  
  部分的包含データベースはデータベースの機能をインスタンスの機能から分離するので、これらの 2 つの要素間には " *データベース境界*" と呼ばれる、明確に定義された区分線があります。  
   
- データベース境界の内側は *データベース モデル*で、ここではデータベースが開発および管理されます。 データベース内にあるエンティティの例としては、 **sys.tables**のようなシステム テーブル、パスワードを持つ包含データベース ユーザー、2 部構成の名前で参照されている現在のデータベース内のユーザー テーブルなどがあります。  
+ データベース境界の内側は *データベース モデル* で、ここではデータベースが開発および管理されます。 データベース内にあるエンティティの例としては、 **sys.tables** のようなシステム テーブル、パスワードを持つ包含データベース ユーザー、2 部構成の名前で参照されている現在のデータベース内のユーザー テーブルなどがあります。  
   
- データベース境界の外側は " *管理モデル*" で、ここではインスタンスレベルの機能と管理が扱われます。 データベース境界の外にあるエンティティの例としては、 **sys.endpoints**のようなシステム テーブル、ログインにマップされているユーザー、3 部構成の名前で参照されている他のデータベース内のユーザー テーブルなどがあります。  
+ データベース境界の外側は " *管理モデル*" で、ここではインスタンスレベルの機能と管理が扱われます。 データベース境界の外にあるエンティティの例としては、 **sys.endpoints** のようなシステム テーブル、ログインにマップされているユーザー、3 部構成の名前で参照されている他のデータベース内のユーザー テーブルなどがあります。  
   
 ##  <a name="containment"></a><a name="containment"></a> 包含  
- 全体がデータベース内に存在しているユーザー エンティティは、 *包含*であると見なされます。 データベースの外部に存在していたり、データベースの外部の機能とのやり取りに依存しているすべてのエンティティは、 *非包含*と見なされます。  
+ 全体がデータベース内に存在しているユーザー エンティティは、 *包含* であると見なされます。 データベースの外部に存在していたり、データベースの外部の機能とのやり取りに依存しているすべてのエンティティは、 *非包含* と見なされます。  
   
  一般に、ユーザー エンティティは、以下の包含のカテゴリのいずれかに分類されます。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "85756343"
  非包含オブジェクトまたは機能に関する情報を取得するには、[sys.dm_db_uncontained_entities](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) ビューおよび [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) ビューを使用します。 データベースの要素の包含状態を確認することにより、包含を昇格させるためにどのオブジェクトまたは機能を置き換えたり変更したりする必要があるかを判断できます。  
   
 > [!IMPORTANT]  
->  一部のオブジェクトでは、既定の包含設定が **NONE**であるため、このビューは偽陽性の結果を返す場合があります。  
+>  一部のオブジェクトでは、既定の包含設定が **NONE** であるため、このビューは偽陽性の結果を返す場合があります。  
   
  部分的包含データベースの動作と非包含データベースの動作の違いが最も明らかなのが、照合順序の場合です。 照合順序の問題の詳細については、「 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)」をご覧ください。  
   

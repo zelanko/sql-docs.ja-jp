@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: 4ba8baac-5f07-432c-87c5-d23e7011da55
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28cca0a52c68716f363003d486f4c2f6a199fd16
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8e80d9da49c844bef15a2bef2e331b4abc51833a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197006"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481903"
 ---
 # <a name="-addition-transact-sql"></a>+ (加算) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ expression + expression
 
 ## <a name="arguments"></a>引数
  *式 (expression)*  
- 数値型に分類される任意のデータ型を持つ有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。ただし、**bit** データ型は除きます。 **date**、**time**、**datetime2**、または **datetimeoffset** データ型と共に使用することはできません。  
+ 数値型に分類される任意のデータ型を持つ有効な [式](../../t-sql/language-elements/expressions-transact-sql.md)です。ただし、**bit** データ型は除きます。 **date**、**time**、**datetime2**、または **datetimeoffset** データ型と共に使用することはできません。  
   
 ## <a name="result-types"></a>戻り値の型  
  優先順位が高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  

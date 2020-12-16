@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55fdb422e4a8dd35a23e8e637cabd165729c97b0
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 40416d9ccd36e8de4ac1e4196a769607af3b5545
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809978"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482358"
 ---
 # <a name="tables"></a>テーブル
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91809978"
 
 ### <a name="temporary-tables"></a>一時テーブル
 
-一時テーブルは **tempdb**に格納されます。 一時テーブルには、ローカル一時テーブルとグローバル一時テーブルの 2 種類があります。 この 2 種類の一時テーブルでは、名前、表示設定、および可用性が異なります。 ローカル一時テーブル名の先頭には、番号記号 (#) が 1 つ付いています。このテーブルは、作成したユーザーの現在の接続でのみ表示され、このユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスから切断すると削除されます。 グローバル一時テーブル名の先頭には、番号記号が 2 つ (##) 付いています。このテーブルは、作成されるとすべてのユーザーに表示され、このテーブルを参照するすべてのユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスから切断すると削除されます。 
+一時テーブルは **tempdb** に格納されます。 一時テーブルには、ローカル一時テーブルとグローバル一時テーブルの 2 種類があります。 この 2 種類の一時テーブルでは、名前、表示設定、および可用性が異なります。 ローカル一時テーブル名の先頭には、番号記号 (#) が 1 つ付いています。このテーブルは、作成したユーザーの現在の接続でのみ表示され、このユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスから切断すると削除されます。 グローバル一時テーブル名の先頭には、番号記号が 2 つ (##) 付いています。このテーブルは、作成されるとすべてのユーザーに表示され、このテーブルを参照するすべてのユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスから切断すると削除されます。 
 
 
 #### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes"></a><a name="ctp23"></a> 複数のスコープにまたがる一時テーブルを使用するワークロードの再コンパイルの削減

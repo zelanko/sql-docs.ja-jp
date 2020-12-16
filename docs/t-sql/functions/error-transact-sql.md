@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93fe08c7dcba1b9c45f9dfabd0c360b3db2c152f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 90970163ac7e688bc77c90fc5f685b5371ba224c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88366258"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482013"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "88366258"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>戻り値の型
- 整数 (integer)  
+ integer  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  直前の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでエラーが発生しなかった場合は、0 が返されます。  
   
  直前のステートメントでエラーが発生した場合は、エラー番号が返されます。 エラーが sys.messages カタログ ビューのエラーであった場合、そのエラーに対応する sys.messages.message_id 列の値が @@ERROR に含まれます。 @@ERROR エラー番号に関連付けられているテキストは、sys.messages で表示できます。  
@@ -171,7 +171,7 @@ GO
 ```  
 
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
