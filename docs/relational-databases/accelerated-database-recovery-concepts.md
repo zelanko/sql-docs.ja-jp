@@ -12,13 +12,13 @@ helpviewer_keywords:
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b6c05db7b6022aec3b7f6123f0a070f238560db8
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: fc56c4baae161570f3167323bf7c6b9d26d6beb1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989889"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483744"
 ---
 # <a name="accelerated-database-recovery"></a>高速データベース復旧
 
@@ -85,7 +85,7 @@ ADR 復旧プロセスには、現行の復旧プロセスと同じく 3 つの�
 
   プロセスは現行のものと同じままで、sLog を再構築し、バージョン管理されない操作のログ レコードがコピーされるという作業が追加されます。
   
-- **再実行**フェーズ
+- **再実行** フェーズ
 
   2 つのサブフェーズに分割されます。
   - サブフェーズ 1
