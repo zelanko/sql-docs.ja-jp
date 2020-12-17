@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 9cc46d90e27f70870e320c7815752351397b9c97
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a4eb9fe66320700e90a5e48a228b5bd23e6c1b53
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472753"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644100"
 ---
 # <a name="syspdw_nodes_dm_exec_query_plan-transact-sql"></a>sys.pdw_nodes_dm_exec_query_plan (Transact-sql)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "97472753"
 |**query_plan**|**xml**|*Plan_handle* で指定されたクエリ実行プランのコンパイル時のプラン表示表現を格納します。 プラン表示は XML 形式です。 アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、ストアド プロシージャ コール、ユーザー定義関数コールなどを含むバッチごとに、1 つのプランが生成されます。<br /><br /> NULL 値は許可されます。|  
   
 ## <a name="remarks"></a>解説  
-[Sys.dm_exec_query_plan](./sys-dm-exec-query-plan-transact-sql.md?view=sql-server-ver15)の同じ解説が適用されます。  
+[Sys.dm_exec_query_plan](./sys-dm-exec-query-plan-transact-sql.md)の同じ解説が適用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する **sysadmin** サーバーロールまたは権限が必要 `VIEW SERVER STATE` です。  

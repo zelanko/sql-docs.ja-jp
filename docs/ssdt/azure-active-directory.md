@@ -9,13 +9,13 @@ ms.author: maghan
 reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4227c2ad60e30994287fd0fc8c2524787c19b534
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 564e6ad8cc4ab7cc14d816b34e5332412f912739
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300365"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489732"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) での Azure Active Directory のサポート
 
@@ -29,7 +29,7 @@ Visual Studio で **[SQL Server オブジェクト エクスプローラー]** (
 
 #### <a name="which-azure-sql-products"></a>対象となる Azure SQL 製品
 
-この記事では、 [Azure クラウド](https://azure.microsoft.com/)の次の *Azure SQL 製品* を対象に Azure AD について説明します。
+この記事では、[Azure クラウド](https://azure.microsoft.com/)の次の *Azure SQL 製品* を対象に Azure AD について説明します。
 
 - Azure SQL データベース
 - Azure Synapse Analytics
@@ -49,7 +49,7 @@ Visual Studio で **[SQL Server オブジェクト エクスプローラー]** (
 
 ## <a name="active-directory-interactive-authentication"></a>Active Directory 対話型認証
 
-*Active Directory 対話型認証* は、SSDT を含む上記 Azure SQL 製品に接続するときに利用できますが、 [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2) 以降のバージョンが必要になります。
+*Active Directory 対話型認証* は、SSDT を含む上記 Azure SQL 製品に接続するときに利用できますが、[.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2&preserve-view=true) 以降のバージョンが必要になります。
 
 - [各種バージョンの .NET Framework をダウンロードし、インストールする](https://www.microsoft.com/net/download/all)。
 - [Visual Studio 2017 バージョン 15.6](/visualstudio/releasenotes/vs2017-relnotes) またはそれ以降のバージョン。
@@ -78,7 +78,7 @@ MFA の実施は、Azure AD によって、この追加の MFA ポップアッ�
 ## <a name="known-issues-and-limitations"></a>既知の問題と制限事項
 
 - *Active Directory 対話型認証* は、この記事の冒頭に記載している Azure SQL 製品に接続するときにのみ利用できます。 SQL Server (オンプレミスまたは VM 上) に対しては、この認証はサポートされていません。
-- *Active Directory 対話型認証* は、 *サーバー エクスプローラー* の接続ダイアログではサポートされません。 *SQL Server オブジェクト エクスプローラー* で SSDT を使用して接続する必要があります。
+- *Active Directory 対話型認証* は、*サーバー エクスプローラー* の接続ダイアログではサポートされません。 *SQL Server オブジェクト エクスプローラー* で SSDT を使用して接続する必要があります。
 - 現在ログインしている Visual Studio アカウントとのシングル サインオン統合は、SSDT ではサポートされません。
 - Visual Studio のインストール中に Extensions ディレクトリにインストールされる SQLPackage.exe は、その場所から使用するためのものではありません。 Azure AD で SQLPackage.exe を使用するには、[データ層アプリケーション フレームワーク](https://www.microsoft.com/download/details.aspx?id=55088)に移動します。 
 - SSDT データ比較は、Azure AD 認証ではサポートされていません。  
