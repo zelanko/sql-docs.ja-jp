@@ -9,13 +9,13 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a23b12f1cd42a1c6f67a09708481134d8d893d4
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: a0edb79e6e23f713767da060fc580ac92c3daaee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870470"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471173"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>miniCRAN を使用してローカル R パッケージ リポジトリを作成する
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -112,7 +112,7 @@ pdb[, c("Package", "Version", "License")]
 
 必要なパッケージを含むローカル リポジトリを作成したら、パッケージ リポジトリを SQL Server コンピューターに移動します。 次の手順では、R ツールを使用してパッケージをインストールする方法について説明します。
 
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 > [!NOTE]
 > パッケージをインストールするには、**sqlmlutils** を使用することをお勧めします。 「[sqlmlutils で新しい R パッケージをインストールする](install-additional-r-packages-on-sql-server.md)」を参照してください。
 ::: moniker-end
@@ -125,21 +125,21 @@ pdb[, c("Package", "Version", "License")]
 
 2. インスタンスに関連付けられている R ツールを開きます (たとえば、Rgui.exe を使用できます)。 右クリックして **[管理者として実行]** を選択し、ツールがシステムを更新できるようにします。
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    - たとえば、RGUI の既定のファイルの場所は `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64` です。
    ::: moniker-end
 
-   ::: moniker range"=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    - たとえば、RGUI のファイルの場所は `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64` です。
    ::: moniker-end
 
-   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">sql-server-2017"
    - たとえば、RGUI のファイルの場所は `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\bin\x64` です。
    ::: moniker-end
 
 3. インスタンス ライブラリのパスを取得し、ライブラリ パスの一覧に追加します。
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    たとえば、次のように入力します。
 
    ```R
@@ -148,7 +148,7 @@ pdb[, c("Package", "Version", "License")]
 
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    たとえば、次のように入力します。
 
    ```R
@@ -157,7 +157,7 @@ pdb[, c("Package", "Version", "License")]
 
    ::: moniker-end
 
-   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">sql-server-2017"
    たとえば、次のように入力します。
 
    ```R

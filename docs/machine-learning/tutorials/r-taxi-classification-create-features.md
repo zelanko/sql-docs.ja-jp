@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e498b76d1b7924a4ee4154c35c4e492612b9c801
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 67c8c2c34ff49df4c9be7bea9dc1015d4bcebedd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412569"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470173"
 ---
 # <a name="r-tutorial-create-data-features"></a>R チュートリアル:データの機能の作成
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "92412569"
 
 このチュートリアルの準備の一環として、関数 _fnCalculateDistance_ をダウンロードし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録する必要があります。 少し時間をかけてコードを確認してください。
   
-1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プログラミング]** 、 **[関数]** 、 **[スカラー値関数]** の順に展開します。   
+1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プログラミング]**、 **[関数]** 、 **[スカラー値関数]** の順に展開します。   
 
 2. _fnCalculateDistance_ を右クリックし、 **[変更]** を選択し、新しいクエリ ウィンドウで [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを開きます。
   

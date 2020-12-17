@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7dbb9e32c1b5f68334ae1ccab17a85c23c069112
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: afd34354290134d0973c1105a902b96c4bbdd706
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192622"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470003"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>チュートリアル:R データ サイエンティスト向けの SQL 開発
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -72,7 +72,7 @@ R コード、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デー�
 SQL Server にパッケージをインストールするには、いくつかのオプションがあります。 たとえば、SQL Server では [R パッケージ管理](../package-management/install-additional-r-packages-on-sql-server.md)機能が用意されています。これにより、データベース管理者はパッケージ リポジトリを作成し、ユーザーが独自のパッケージをインストールするための権限をユーザーに割り当てることができます。 ただし、コンピューターの管理者の場合は、正しいライブラリにインストールする場合に限り、R を使用して新しいパッケージをインストールできます。
 
 > [!NOTE]
-> サーバー上には、求められたとしてもユーザー ライブラリをインストール**しないでください**。 ユーザー ライブラリをインストールすると、SQL Server インスタンスでパッケージを見つけることも、実行することもできなくなります。 詳細については、[SQL Server に新しい R パッケージをインストールする](../package-management/install-additional-r-packages-on-sql-server.md)に関するページを参照してください。
+> サーバー上には、求められたとしてもユーザー ライブラリをインストール **しないでください**。 ユーザー ライブラリをインストールすると、SQL Server インスタンスでパッケージを見つけることも、実行することもできなくなります。 詳細については、[SQL Server に新しい R パッケージをインストールする](../package-management/install-additional-r-packages-on-sql-server.md)に関するページを参照してください。
 
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターで、**管理者権限で** RGui.exe を開きます。  既定値を使用して SQL Server R Services をインストールした場合、Rgui.exe は C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64 にあります。
 

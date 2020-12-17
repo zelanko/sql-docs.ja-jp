@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f92b7e0a414cbe6b9cbdb9dcc04cc8779ff4cff6
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+ms.openlocfilehash: 1df8e6c21f4aba600d36314ea224d1a77d6f2332
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328474"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464443"
 ---
 # <a name="oracle-connection-type-ssrs--power-bi-report-server"></a>Oracle の接続の種類 (SSRS および Power BI Report Server)
 
@@ -64,7 +64,7 @@ Power BI Report Server は、Power BI のレポートに **Unmanaged ODP.NET** �
 
 ## <a name="32-bit-drivers-for-report-builder"></a>レポート ビルダー用の 32 ビット ドライバー
 
-レポート ビルダーは、ページ分割された (RDL) レポートの作成に、 **Managed ODP.NET** を使用します。 Oracle ODAC ドライバー 12.2 以降を使用している場合は、次の手順のみが必要です。 それ以外の場合、新しい Oracle ホームのコンピューター全体ではない構成に既定でインストールされます。 これらの手順では、レポート ビルダーがインストールされている c:\oracle32 フォルダーに ODAC 18.x ファイルがインストールされていることを前提としています。 次の手順に従って、Managed ODP.NET を登録します。
+レポート ビルダーは、ページ分割された (RDL) レポートの作成に、**Managed ODP.NET** を使用します。 Oracle ODAC ドライバー 12.2 以降を使用している場合は、次の手順のみが必要です。 それ以外の場合、新しい Oracle ホームのコンピューター全体ではない構成に既定でインストールされます。 これらの手順では、レポート ビルダーがインストールされている c:\oracle32 フォルダーに ODAC 18.x ファイルがインストールされていることを前提としています。 次の手順に従って、Managed ODP.NET を登録します。
 
 1. Oracle ダウンロード サイトで、[Oracle 32-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html) をインストールします。
 
@@ -156,7 +156,7 @@ Oracle データ ソースに接続するには、システム管理者が、Ora
 
 Oracle データベースからのデータの取得は、OLE DB のデータ ソースの種類を使用して行うこともできます。 詳細については、「[OLE DB の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)」を参照してください。  
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-2017"
 
 ### <a name="report-models"></a>レポート モデル
 

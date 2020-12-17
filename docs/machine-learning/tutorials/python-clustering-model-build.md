@@ -10,24 +10,24 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 571943e82ca844339a03a2e2af92199c3df16601
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: ef96e0ac95014fad9e479ef039df547dee6b8471
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870449"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470443"
 ---
 # <a name="python-tutorial-build-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習を使用して顧客を分類するモデルを構築する
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 この 4 部構成のチュートリアル シリーズのパート 3 では、クラスタリングを実行するために、Python で K-Means モデルをビルドします。 このシリーズの次のパートでは、SQL Server Machine Learning Services またはビッグ データ クラスターを使用して、このモデルをデータベースにデプロイします。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 この 4 部構成のチュートリアル シリーズのパート 3 では、クラスタリングを実行するために、Python で K-Means モデルをビルドします。 このシリーズの次のパートでは、SQL Server Machine Learning Services を使用して、このモデルをデータベースにデプロイします。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 この 4 部構成のチュートリアル シリーズのパート 3 では、クラスタリングを実行するために、Python で K-Means モデルをビルドします。 このシリーズの次の部では、Azure SQL Managed Instance Machine Learning Services を使用し、データベースにこのモデルをデプロイします。
 ::: moniker-end
 
