@@ -10,24 +10,24 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c9d971efb90f51562bfa59c73802e577dd8d511
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 60119db288040111668868692eb5f3c6f1ce458c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870395"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470433"
 ---
 # <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習を使用して顧客を分類するモデルをデプロイする
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 この 4 部構成のチュートリアル シリーズのパート 4 では、SQL Server Machine Learning Services またはビッグ データ クラスターを使用して、Python で開発されたクラスタリング モデルをデータベースにデプロイします。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 この 4 部構成チュートリアルシリーズの第 4 部では、SQL Server Machine Learning Services を使用して、Python で開発されたクラスター モデルをデータベースにデプロイします。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 この 4 部構成のチュートリアル シリーズのパート 4 では、Azure SQL Managed Instance Machine Learning Services を使用して、Python で開発されたクラスタリング モデルをデータベースにデプロイします。
 ::: moniker-end
 

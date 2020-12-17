@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9dd059571a35162cabe462500751331667552e26
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: e070d2afa3b26d7c7d0c63f597571a3f526ae1d3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035585"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482192"
 ---
 # <a name="modify-the-target-servers-for-a-job"></a>Modify the Target Servers for a Job
 

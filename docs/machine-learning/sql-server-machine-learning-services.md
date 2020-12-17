@@ -8,13 +8,13 @@ ms.date: 11/10/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7f25b832feeb54e622b364ccd715886ed90aae88
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: b73b8521593b81e38d5b0b3931da793f943c45a0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94582624"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470693"
 ---
 # <a name="what-is-sql-server-machine-learning-services-with-python-and-r"></a>SQL Server Machine Learning Services (Python と R) とは
 [!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -23,7 +23,7 @@ Machine Learning Services は、リレーショナル データを使用して P
 
 他の SQL プラットフォームの機械学習については、[SQL 機械学習のドキュメント](index.yml)を参照してください。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
 > SQL Server で Java を実行する方法については、[Java 言語拡張のドキュメント](../language-extensions/java-overview.md)を参照してください。
 ::: moniker-end
@@ -44,7 +44,7 @@ Machine Learning Services では、SQL Server での Python および R スク�
 
 ## <a name="get-started-with-machine-learning-services"></a>Machine Learning Services の概要
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 1. [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json)または [Windows に SQL Server Machine Learning Services をインストールする](install/sql-machine-learning-services-windows-install.md)。 また、[ビッグ データ クラスターで Machine Learning Services](../big-data-cluster/machine-learning-services.md) を使用したり、[Azure SQL Managed Instance で Machine Learning Services ](/azure/azure-sql/managed-instance/machine-learning-services-overview)を使用したりすることもできます。
 
 1. 開発ツールを構成します。 「[Azure Data Studio のノートブックで Python スクリプトと R スクリプトを実行する](install/sql-machine-learning-azure-data-studio.md)」を使用できます。 [Azure Data Studio](../azure-data-studio/what-is.md) で T-SQL を実行することもできます。
@@ -55,14 +55,14 @@ Machine Learning Services では、SQL Server での Python および R スク�
    + [SQL 機械学習用の R チュートリアル](tutorials/r-tutorials.md)
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 + 初めての Python または R スクリプトを作成する。
 
    + [SQL 機械学習用の Python チュートリアル](tutorials/python-tutorials.md)
    + [SQL 機械学習用の R チュートリアル](tutorials/r-tutorials.md)
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 1. [Windows に SQL Server Machine Learning Services をインストールする](install/sql-machine-learning-services-windows-install.md)。
 
 1. 開発ツールを構成します。 「[Azure Data Studio のノートブックで Python スクリプトと R スクリプトを実行する](install/sql-machine-learning-azure-data-studio.md)」を使用できます。 [Azure Data Studio](../azure-data-studio/what-is.md) で T-SQL を使用することもできます。
@@ -104,13 +104,13 @@ Microsoft のエンタープライズ パッケージに加えて、オープン
 
 Machine Learning Services と共にインストールされるパッケージと、他のパッケージをインストールする方法の詳細については、以下を参照してください。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 + [Python パッケージ情報の取得](package-management/python-package-information.md)
 + [sqlmlutils を使用した Python パッケージのインストール](package-management/install-additional-python-packages-on-sql-server.md)
 + [R パッケージ情報の取得](package-management/r-package-information.md)
 + [sqlmlutils を使用した新しい R パッケージのインストール](package-management/install-additional-r-packages-on-sql-server.md)
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [Python パッケージ情報の取得](package-management/python-package-information.md)
 + [Python ツールを使用して SQL Server 上にパッケージをインストールする](package-management/install-python-packages-standard-tools.md)
 + [R パッケージ情報の取得](package-management/r-package-information.md)

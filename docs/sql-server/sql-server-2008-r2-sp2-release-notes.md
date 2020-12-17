@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ebebc4ed225e131db50df4c4c0b1ee3eb6da51b7
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: = sql-server-2016
+ms.openlocfilehash: 33d919b5536994da040ce4cca4d4ac32a0e735c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384632"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466683"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -56,9 +56,9 @@ SQL Server 2008 R2 のインストール方法の一般的な情報について�
 |SQL Server 2008 R2 Management Studio の 64 ビット インストールなし|SQL Server 2008 R2 Management Studio のインストール (SP2 含む)|SQLManagementStudio_x64_ENU.exe ( [ここから](https://go.microsoft.com/fwlink/p/?LinkId=251791) ) を使用して無料の SQL Server 2008 R2 SP2 Management Studio Express Edition をインストールしてください。|  
   
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2 別のプロセスによって SQAGTRES.dll がロックされている場合のセットアップ失敗  
-**問題点** : SQL Server のセットアップ操作が次のエラーにより失敗する場合:`Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` 根本的な原因は、C:\Windows\system32\SQAGTRES.DLL が別のプロセスによってロックされていて、セットアップが更新できなかったことです。  
+**問題点**: SQL Server のセットアップ操作が次のエラーにより失敗する場合:`Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` 根本的な原因は、C:\Windows\system32\SQAGTRES.DLL が別のプロセスによってロックされていて、セットアップが更新できなかったことです。  
   
-**回避策** :C:\Windows\system32\SQAGTRES.DLL を一時的な名前 (C:\Windows\system32\SQAGTRES_old.DLL など) に変更して、セットアップ エラー メッセージの再試行オプションを選択します。 これにより、セットアップを続行できます。 再起動後、一時ファイル C:\Windows\system32\SQAGTRES_old.DLL は削除できます。  
+**回避策**:C:\Windows\system32\SQAGTRES.DLL を一時的な名前 (C:\Windows\system32\SQAGTRES_old.DLL など) に変更して、セットアップ エラー メッセージの再試行オプションを選択します。 これにより、セットアップを続行できます。 再起動後、一時ファイル C:\Windows\system32\SQAGTRES_old.DLL は削除できます。  
   
 ## <a name="30-known-issues-fixed-in-this-service-pack"></a>3.0 この Service Pack で修正された既知の問題  
 この Service Pack で修正されたすべてのバグと既知の問題については、この [サポート技術情報記事](https://support.microsoft.com/kb/2630455)を参照してください。  

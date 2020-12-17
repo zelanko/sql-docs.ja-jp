@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4207b3492ac0bf29e66a20002a0baa34d453b9c0
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 8515cb0a2269b5cc9a19d8fa50fada7291436015
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038101"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409220"
 ---
 # <a name="define-the-response-to-an-alert"></a>警告に対する応答の定義
 
@@ -51,7 +51,7 @@ ms.locfileid: "92038101"
   
 #### <a name="to-define-the-response-to-an-alert"></a>警告に対する応答を定義するには  
   
-1.  **オブジェクト エクスプローラー**で、応答を定義する警告を格納するサーバーをプラス記号をクリックして展開します。  
+1.  **オブジェクト エクスプローラー** で、応答を定義する警告を格納するサーバーをプラス記号をクリックして展開します。  
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "92038101"
   
 #### <a name="to-define-the-response-to-an-alert"></a>警告に対する応答を定義するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

@@ -8,13 +8,13 @@ ms.technology: release-landing
 ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c1232571931a8260e545aa21d483a5fbe2d93c70
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: 28b2d4cf892aa21b44d989fb56351a6ab5448bff
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864315"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482283"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
@@ -241,7 +241,7 @@ ms.locfileid: "87864315"
 
 | 新機能または更新 | 詳細 |
 |:---|:---|
-|表形式モデルでの計算グループ| 計算グループを使用すると、一般的なメジャー式を*計算品目*としてグループ化することにより、冗長なメジャーの数を大幅に削減できます。 詳細については、[表形式モデルの計算グループ](/analysis-services/tabular-models/calculation-groups)に関する記事を参照してください。 |
+|表形式モデルでの計算グループ| 計算グループを使用すると、一般的なメジャー式を *計算品目* としてグループ化することにより、冗長なメジャーの数を大幅に削減できます。 詳細については、[表形式モデルの計算グループ](/analysis-services/tabular-models/calculation-groups)に関する記事を参照してください。 |
 |クエリ インターリーブ| クエリ インターリーブは、同時実行性の高いシナリオでユーザー クエリの応答時間を向上させることができる表形式モードのシステム構成です。 詳細については、「[クエリ インターリーブ](/analysis-services/tabular-models/query-interleaving)」を参照してください。 |
 |表形式モデルでの多対多リレーションシップ| 両列が一意でない場合の多対多リレーションシップを使用できます。 詳細については、[表形式モデルでのリレーションシップ](/analysis-services/tabular-models/relationships-ssas-tabular)に関する記事を参照してください。|
 |リソース ガバナンス用のプロパティ設定| このリリースでは、新しいメモリ設定が追加されました: リソース ガバナンス用の Memory\QueryMemoryLimit、DbpropMsmdRequestMemoryLimit、OLAP\Query\RowsetSerializationLimit。 詳細については、[メモリの設定](/analysis-services/server-properties/memory-properties)に関する記事を参照してください。|

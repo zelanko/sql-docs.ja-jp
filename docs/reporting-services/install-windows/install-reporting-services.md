@@ -1,19 +1,19 @@
 ---
 description: SQL Server Reporting Services のインストール
 title: SQL Server Reporting Services のインストール | Microsoft Docs
-ms.date: 05/01/2020
+ms.date: 12/11/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 74713128e0a7e1c749bcde676d02c63ec05e3632
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 35924e9e1f5a72533ef1b30d983b99493858274d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891932"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484234"
 ---
 # <a name="install-sql-server-reporting-services"></a>SQL Server Reporting Services のインストール
 
@@ -21,12 +21,12 @@ ms.locfileid: "91891932"
 
 SQL Server Reporting Services をインストールするには、レポート アイテムの格納、レポートの表示、およびサブスクリプションや他のレポート サービスの処理を行うためのサーバー コンポーネントが必要です。 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 Microsoft ダウンロード センターから [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) をダウンロードします。
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Microsoft ダウンロード センターから [SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252) をダウンロードします。
 
 ::: moniker-end
@@ -101,7 +101,7 @@ URL 予約は、プレフィックス、ホスト名、ポート、および仮�
 |Prefix|既定のプレフィックスは HTTP です。 以前にトランスポート層セキュリティ(TLS) (旧称 Secure Sockets Layer (SSL)) 証明書をインストールした場合は、セットアップによって、HTTPS プレフィックスを使用する URL 予約の作成が試みられます。|
 |ホスト名|既定のホスト名は、強いワイルドカード (+) です。 これにより、コンピューターに対して解決されるあらゆるホスト名 (`https://<computername>/reportserver`、`https://localhost/reportserver`、`https://<IPAddress>/reportserver.`) の指定のポートで、レポート サーバーが HTTP 要求を受け付けるように指定されます。|
 |Port|既定のポートは 80 です。 ポート 80 以外のポートを使用する場合は、Web ポータルをブラウザー ウィンドウで開くときに、そのポートを URL に明示的に追加する必要があります。|
-|仮想ディレクトリ|既定では、仮想ディレクトリは、レポート サーバー Web サービスの場合は ReportServer の形式で作成され、Web ポータルの場合は Reports の形式で作成されます。 レポート サーバー Web サービスの既定の仮想ディレクトリは、 **reportserver**です。 Web ポータルの既定の仮想ディレクトリは、**reports** です。|
+|仮想ディレクトリ|既定では、仮想ディレクトリは、レポート サーバー Web サービスの場合は ReportServer の形式で作成され、Web ポータルの場合は Reports の形式で作成されます。 レポート サーバー Web サービスの既定の仮想ディレクトリは、 **reportserver** です。 Web ポータルの既定の仮想ディレクトリは、**reports** です。|
 
 完全な URL 文字列の例を次に示します。
 
@@ -127,7 +127,7 @@ Web サービス URL および Web ポータル URL 用に構成されている 
 
 SQL Server Reporting Services ネイティブ モードをインストールする方法については、「[Reporting Services ネイティブ モードのレポート サーバーのインストール](install-reporting-services-native-mode-report-server.md)」を参照してください。 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 SharePoint 統合モードで SQL Server 2016 Reporting Services (およびそれ以降) をインストールする方法については、「[SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)」を参照してください。
 

@@ -7,13 +7,13 @@ ms.date: 09/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 3263723e04834e5b0a6bad86455f281fe643e083
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2016||=sql-server-2017
+ms.openlocfilehash: 7abbcf2297083b8e0bd9f05be12650e1efc1c942
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870460"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471103"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services でバインドを使用して Python および R ランタイムをアップグレードする
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "94870460"
 > [!NOTE]
 > バインドは、SQL Server のインスタンスにバインドされている、データベース内インスタンスにのみ適用されます。 この場合、スタンドアロン インストールにはバインドは必要ありません。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 **SQL Server 2016 のバインドに関する考慮事項**
 
 SQL Server 2016 R Services のお客様の場合は、バインドによって次が提供されます。
@@ -58,7 +58,7 @@ SQL Server 2016 R Services のお客様の場合は、バインドによって�
 
 バインドを行っても、最新バージョンの R または Anaconda は保証されません。 Microsoft Machine Learning Server にバインドすると、セットアップを通じてインストールされる R または Python のバージョンを入手できますが、これは Web 上で入手できる最新バージョンではない可能性があります。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
 コンポーネント |最初のリリース | [Microsoft R Server 9.0.1](/machine-learning-server/install/r-server-install-windows) | [Microsoft R Server 9.1](/machine-learning-server/install/r-server-install-windows) | [Machine Learning Server 9.2.1](/machine-learning-server/install/machine-learning-server-windows-install) | [Machine Learning Server 9.3](/machine-learning-server/install/machine-learning-server-windows-install) |  [Machine Learning Server 9.4.7](/machine-learning-server/install/machine-learning-server-windows-install)
@@ -71,7 +71,7 @@ R 上の Microsoft R Open (MRO) | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  
 [olapR](/machine-learning-server/r-reference/olapr/olapr) | 該当なし | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 [**SQL Server 2017 Machine Learning Services**](../install/sql-machine-learning-services-windows-install.md)
 
 コンポーネント |最初のリリース | Machine Learning Server 9.3 | Machine Learning Server 9.4.7 |

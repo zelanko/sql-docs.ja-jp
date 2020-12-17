@@ -9,30 +9,30 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: db8a0c073821df46e6d9d5bda43e74aae19a2501
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: afc692cdd0b7766ff0366f0de5d13e47d6dc27e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94585056"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470183"
 ---
 # <a name="r-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>R チュートリアル:二項分類を使用して NYC タクシーの料金を予測する
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 SQL プログラマー向けのこの 5 部構成のチュートリアル シリーズでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) または[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)での R 統合について説明します。
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 SQL プログラマー向けのこの 5 部構成のチュートリアル シリーズでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) での R 統合について説明します。
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 SQL プログラマー向けのこの 5 部構成のチュートリアル シリーズでは、[SQL Server 2016 R Services](../sql-server-machine-learning-services.md) での R 統合について説明します。
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=azuresqldb-mi-current"
 SQL プログラマー向けのこの 5 部構成のチュートリアル シリーズでは、[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) での R 統合について説明します。
 ::: moniker-end
 
@@ -61,11 +61,11 @@ SQL Server でサンプル データベースを使用して、R ベースの機
 
 ## <a name="prerequisites"></a>前提条件
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) をインストールする
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 + [R を有効にして SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md#verify-installation) をインストールする
 ::: moniker-end
 
@@ -73,7 +73,7 @@ SQL Server でサンプル データベースを使用して、R ベースの機
 
 + [Python スクリプトを実行するアクセス許可を付与する](../security/user-permission.md)
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 + SQL Server 2019 以降、この分離メカニズムを使用して、プロット ファイルが保存されるディレクトリに適切なアクセス許可を与える必要があります。 これらのアクセス許可の設定方法の詳細については、[「Windows 上の SQL Server 2019:Machine Learning Services」の「ファイルのアクセス許可」](../install/sql-server-machine-learning-services-2019.md#file-permissions)セクションを参照してください。
 ::: moniker-end
 

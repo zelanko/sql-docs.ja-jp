@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a4a12d71818ad4b900a7959904c47cb0baad4357
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 55f416890794509f2fd141c2a907222a7d72c47e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870313"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470143"
 ---
 # <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>チュートリアル:SQL 機械学習を使用して R で予測モデルをトレーニングするためのデータを準備する
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 この 4 部構成のチュートリアル シリーズのパート 2 では、R を使用してデータベースからデータを準備します。このシリーズの後半では、このデータを利用し、SQL Server Machine Learning Services またはビッグ データ クラスターを使用して R で予測モデルをトレーニングしてデプロイします。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 この 4 部構成のチュートリアル シリーズのパート 2 では、R を使用してデータベースからデータを準備します。このシリーズの後半では、このデータを利用して、SQL Server Machine Learning Services を使用して R で予測モデルをトレーニングしてデプロイします。
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 この 4 部構成のチュートリアル シリーズのパート 2 では、R を使用してデータベースからデータを準備します。このシリーズの後半では、このデータを利用して、SQL Server R Services を使用して R で予測モデルをトレーニングしてデプロイします。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 この 4 部構成のチュートリアル シリーズのパート 2 では、R を使用してデータベースからデータを準備します。このシリーズの後半では、このデータを利用して、Azure SQL Managed Instance の Machine Learning Services で R の予測モデルのトレーニングおよびデプロイを行います。
 ::: moniker-end
 

@@ -7,13 +7,13 @@ ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: eb16c276b9cc716f52e6ce73da5ec4ba3843dfbd
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 36b68809377492e3643ebc7c60e0b2111d52f638
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92678894"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484244"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint モードでの最初のレポート サーバーのインストール
 
@@ -72,10 +72,10 @@ ms.locfileid: "92678894"
  この手順では、SharePoint モードの Reporting Services レポート サーバーと、SharePoint 製品用の Reporting Services アドインをインストールします。 コンピューターに既にインストールされている内容によっては、次の手順で説明するインストール ページの一部は表示されない場合があります。  
  
  > [!IMPORTANT]
- > SharePoint 2016 の場合、Reporting Services のインストール先の SharePoint サーバーは、 **ユーザー定義** のサーバー ロールを持っている必要があります。 Reporting Services の展開は、 **ユーザー定義** のロールでない SharePoint サーバーでも成功します。しかし、次回の SharePoint メンテナンス期間に、MinRole は、SharePoint 統合モードの Reporting Services が他のどの SharePoint サーバー ロールもサポートしていないことを検出するため、Reporting Services サービスを停止します。 Reporting Services サービス アプリケーションは、 **ユーザー定義** のロールのみをサポートします。
+ > SharePoint 2016 の場合、Reporting Services のインストール先の SharePoint サーバーは、**ユーザー定義** のサーバー ロールを持っている必要があります。 Reporting Services の展開は、**ユーザー定義** のロールでない SharePoint サーバーでも成功します。しかし、次回の SharePoint メンテナンス期間に、MinRole は、SharePoint 統合モードの Reporting Services が他のどの SharePoint サーバー ロールもサポートしていないことを検出するため、Reporting Services サービスを停止します。 Reporting Services サービス アプリケーションは、**ユーザー定義** のロールのみをサポートします。
  
  > [!NOTE]
- > Power Pivot サービスも SharePoint 2016 上にインストールする予定の場合は、Reporting Services をインストールする前にインストールしてください。 Power Pivot サービスは、 **カスタム** ロールの SharePoint サーバーにのみインストールできます。
+ > Power Pivot サービスも SharePoint 2016 上にインストールする予定の場合は、Reporting Services をインストールする前にインストールしてください。 Power Pivot サービスは、**カスタム** ロールの SharePoint サーバーにのみインストールできます。
  
  ### <a name="apply-the-custom-server-role-to-a-sharepoint-2016-server"></a>ユーザー定義のサーバー ロールを SharePoint 2016 サーバーに適用する
  
@@ -137,7 +137,7 @@ ms.locfileid: "92678894"
   
     -   **Reporting Services - SharePoint**  
   
-    -   **SharePoint 製品用 Reporting Services アドイン** 。  
+    -   **SharePoint 製品用 Reporting Services アドイン**。  
   
     -   必要に応じて、完全な環境にするために **[データベース エンジン サービス]** を選ぶこともできます。ただし、SharePoint データベースをホストする SQL Server データベース エンジンのインスタンスが必要です。  
   
@@ -241,7 +241,7 @@ ms.locfileid: "92678894"
 3.  [新規作成] メニューで、 **[SQL Server Reporting Services サービス アプリケーション]** を選びます。  
   
     > [!IMPORTANT]  
-    >  Reporting Services オプションが一覧に表示されない場合は、 **Reporting Services 共有サービスがインストールされていない** ことを示しています。 前のセクションの、PowerShell コマンドレットを使って Reporting Services サービスをインストールする方法を確認してください。  
+    >  Reporting Services オプションが一覧に表示されない場合は、**Reporting Services 共有サービスがインストールされていない** ことを示しています。 前のセクションの、PowerShell コマンドレットを使って Reporting Services サービスをインストールする方法を確認してください。  
   
 4.  **[SQL Server Reporting Services サービス アプリケーションの作成]** ページで、アプリケーションの名前を入力します。 複数の Reporting Services サービス アプリケーションを作成する場合は、わかりやすい名前または名前付け規則を使用すると、管理および運用操作を体系化できます。  
   
@@ -417,7 +417,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  Reporting Services のデータ警告機能は、電子メール メッセージで警告を送信します。 電子メールを送信するには、Reporting Services サービス アプリケーションを構成して、このサービス アプリケーションの電子メール配信拡張機能を変更しなければならない場合があります。 Reporting Services サブスクリプション機能の電子メール配信拡張機能を使う場合は、電子メールの設定が必要です。 詳細については、「[Reporting Services サービス アプリケーションの電子メールの構成 &#40;SharePoint 2013 および SharePoint 2016&#41;](./configure-e-mail-for-a-reporting-services-service-application.md)」を参照してください。 
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>コンテンツ ライブラリに Reporting Services のコンテンツの種類を追加する  
- Reporting Services では、共有データ ソース (.rsds) ファイル、レポート ビルダーのレポート定義 (.rdl) ファイルを管理するときに使われるコンテンツの種類が、あらかじめ定義されています。 コンテンツの種類として、 **[レポート ビルダー レポート]** および **[レポート データ ソース]** をライブラリに追加すると、 **[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」をご覧ください。  
+ Reporting Services では、共有データ ソース (.rsds) ファイル、レポート ビルダーのレポート定義 (.rdl) ファイルを管理するときに使われるコンテンツの種類が、あらかじめ定義されています。 コンテンツの種類として、**[レポート ビルダー レポート]** および **[レポート データ ソース]** をライブラリに追加すると、**[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」をご覧ください。  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>レポート サーバーのファイル同期機能をアクティブにする  
  ユーザーがパブリッシュされたレポート アイテムを SharePoint ドキュメント ライブラリに頻繁に直接アップロードする場合は、サイト レベルの **レポート サーバー ファイル同期** 機能が役立ちます。 ファイル同期機能では、レポート サーバー カタログとドキュメント ライブラリのアイテムの同期が、より頻繁に行われます。 詳しくは、「 [SharePoint サーバーの全体管理でレポート サーバーのファイル同期機能をアクティブにする](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)」をご覧ください。  

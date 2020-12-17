@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 01fab32210e231b371ce31cd70a94bca1cb9455f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: ada99a4058b2b3657a9064e42f2f2ca1f2aedbb3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196236"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470013"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>SQL と R を使用してグラフとプロットを作成する (チュートリアル)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "92196236"
 
 通常、データベース サーバーによってインターネット アクセスがブロックされます。 これは、マップやその他の画像をダウンロードしてプロットを生成する必要がある R パッケージを使用する場合に、不便な場合があります。 しかし、独自のアプリケーションを開発する場合に役立つ回避策があります。 基本的に、クライアントでマップ表現を生成してから、SQL Server テーブルに属性として格納されているポイントをマップ上でオーバーレイします。
 
-1. R プロット オブジェクトを作成する関数を定義します。 カスタム関数 *mapPlot* は、タクシーが客を乗せた場所を利用し、それぞれの場所から開始した乗車の数をプロットする散布図を作成します。 これは **ggplot2** パッケージと **ggmap** パッケージを利用します。この 2 つのパッケージは既に[インストールされ、読み込まれている](walkthrough-data-science-end-to-end-walkthrough.md#add-packages)はずです。
+1. R プロット オブジェクトを作成する関数を定義します。 カスタム関数 *mapPlot* は、タクシーが客を乗せた場所を利用し、それぞれの場所から開始した乗車の数をプロットする散布図を作成します。 これは **ggplot2** パッケージと **ggmap** パッケージを利用します。この 2 つのパッケージは既に [インストールされ、読み込まれている](walkthrough-data-science-end-to-end-walkthrough.md#add-packages)はずです。
 
     ```R
     mapPlot <- function(inDataSource, googMap){

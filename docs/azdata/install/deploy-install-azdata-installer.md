@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9dd953a78a992a9a5fed7135ae0aee02f88e4de9
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: c5b190c50dbbeebef94cdd15314539e5ce501160
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257495"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489642"
 ---
 # <a name="install-azure-data-cli-azdata-with-windows-installer"></a>Windows インストーラーを使用して [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] をインストールする
 
@@ -38,7 +38,7 @@ Windows インストーラーで `azdata` をアンインストールするに�
 | Windows 10| [スタート] > [設定] > [アプリ]                                |
 | Windows 8     | [スタート] > [コントロール パネル] > [プログラム] > [プログラムのアンインストール] |
 
-アンインストールするプログラムは `Azdata CLI` という名前です。 このアプリケーションを選択し、`Uninstall` ボタンをクリックします。
+アンインストールするプログラムは `Azure Data CLI` という名前です。 このアプリケーションを選択し、`Uninstall` ボタンをクリックします。
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 496a5e901ec802cbd7a7ffbb810a14ee31734dcc
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 01294938af5e2d1813a371091e89b03321268637
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037759"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478783"
 ---
 # <a name="synchronize-target-server-clocks"></a>ターゲット サーバーのクロックの同期
 
@@ -45,7 +45,7 @@ ms.locfileid: "92037759"
   
 #### <a name="to-synchronize-target-server-clocks"></a>ターゲット サーバーのクロックを同期するには  
   
-1.  **オブジェクト エクスプローラー**で、ターゲット サーバーのクロックとマスター サーバーのクロックを同期するサーバーをプラス記号をクリックして展開します。  
+1.  **オブジェクト エクスプローラー** で、ターゲット サーバーのクロックとマスター サーバーのクロックを同期するサーバーをプラス記号をクリックして展開します。  
   
 2.  **[SQL Server エージェント]** を右クリックし、**[マルチ サーバーの管理]** をポイントして、**[ターゲット サーバーの管理]** を選択します。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "92037759"
   
 #### <a name="to-synchronize-target-server-clocks"></a>ターゲット サーバーのクロックを同期するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

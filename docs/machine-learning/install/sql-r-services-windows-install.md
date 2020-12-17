@@ -9,13 +9,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
-monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1aa6fee67871e705f915f72a178ee4d0e4c562e6
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: =sql-server-2016
+ms.openlocfilehash: 05802b7d3a0bc9f4922cb1db68162d89a576f18c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956771"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471133"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services のインストール
 
@@ -95,7 +95,7 @@ SQL Server の前提条件としてインストールされる特定のバージ
 
 ## <a name="set-environment-variables"></a>環境変数の設定
 
-R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、Intel Math Kernel Library (MKL) 計算からの[一貫した出力を保証](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)する必要があります。
+R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、Intel Math Kernel Library (MKL) 計算からの [一貫した出力を保証](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)する必要があります。
 
 1. コントロール パネルで、 **[システムとセキュリティ]**  >  **[システム]**  >  **[システムの詳細設定]**  >  **[環境変数]** の順にクリックします。
 
@@ -147,7 +147,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 
     この時点で、**run_value** が 1 に設定されている必要があります。
 
-1. SQL Server 構成マネージャーを開き、**SQL Server Launchpad サービス**が実行されていることを確認します。 R がインストールされているすべてのデータベース エンジンのインスタンスに対して 1 つのサービスがある必要があります。 サービスの詳細については、[機能拡張フレームワーク](../concepts/extensibility-framework.md)に関するページを参照してください。
+1. SQL Server 構成マネージャーを開き、**SQL Server Launchpad サービス** が実行されていることを確認します。 R がインストールされているすべてのデータベース エンジンのインスタンスに対して 1 つのサービスがある必要があります。 サービスの詳細については、[機能拡張フレームワーク](../concepts/extensibility-framework.md)に関するページを参照してください。
 
 1. Launchpad が実行されている場合は、外部スクリプト ランタイムが SQL Server と通信できることを確認するため、単純な R を実行できる必要があります。
 

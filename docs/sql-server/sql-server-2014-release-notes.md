@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f2b94f4458e29090559e2fdf7d5819cddb30842f
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: = sql-server-2016
+ms.openlocfilehash: adfd91c6771626aa0979da622d95766a2e4e5613
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384852"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409628"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -270,7 +270,7 @@ DATEPART(weekday, @d)
 #### <a name="register-through-ssms-adds-dac-meta-data-with-mismatched-instance-ids"></a>SSMS を使用して登録を行うと、不一致のインスタンス ID を持つ DAC メタデータが追加される  
 **問題:** SQL Server Management Studio を使用してデータ層アプリケーション パッケージ (.dacpac) を登録または削除すると、sysdac* テーブルが正しく更新されず、データベースに対して dacpac 履歴のクエリを実行できません。  sysdac_history_internal と sysdac_instances_internal の instance_id が一致せず、結合が許可されません。  
   
-**対処法:** この問題は、 [データ層アプリケーション フレームワーク](https://www.microsoft.com/download/details.aspx?id=100297)の Feature Pack の再配布で修正されています。  更新プログラムを適用した後、すべての新しい履歴エントリは sysdac_instances_internal テーブル内の instance_id の一覧に含まれる値を使用します。  
+**対処法:** この問題は、[データ層アプリケーション フレームワーク](https://www.microsoft.com/download/details.aspx?id=100297)の Feature Pack の再配布で修正されています。  更新プログラムを適用した後、すべての新しい履歴エントリは sysdac_instances_internal テーブル内の instance_id の一覧に含まれる値を使用します。  
   
 instance_id の値の不一致という問題が既に発生している場合は、不一致の値を修正する唯一の方法は、MSDB データベースへ書き込む特権を持つユーザーとしてサーバーに接続し、instance_id の値を更新して一致させることです。  同じデータベースから複数の登録イベントと登録解除イベントが発生する場合は、時刻と日付を参照し、どのレコードが現在の instance_id の値と一致しているかを確認する必要があります。  
   
@@ -411,7 +411,7 @@ Azure サブネットを含め、可用性グループのレプリカをホス�
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 アップグレード アドバイザーが SQL Server Reporting Services に関係のないアップグレードの問題点を報告する  
 **問題:** SQL Server 2014 メディアに収録されている SQL Server アップグレード アドバイザー (SSUA) が SQL Server Reporting Services サーバーを分析するときに、不適切な複数のエラーを報告します。  
   
-**対処法:** この問題は、 [SSUA 用の SQL Server 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=57474) の一部として提供される SQL Server アップグレード アドバイザーで解決できます。  
+**対処法:** この問題は、[SSUA 用の SQL Server 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=57474) の一部として提供される SQL Server アップグレード アドバイザーで解決できます。  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>SQL Server 2014 アップグレード アドバイザーで SQL Server Integration Services サーバーを分析するときにエラーが報告される  
 **問題:** SQL Server 2014 メディアに収録されている SQL Server Upgrade Advisor (SSUA) により、SQL Server Integration Services サーバーを分析するときにエラーが報告されます。  ユーザーに対して表示されるエラーは、次のようなものです。  
@@ -422,6 +422,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**対処法:** この問題は、 [SSUA 用の SQL Server 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=57474) の一部として提供される SQL Server アップグレード アドバイザーで解決できます。  
+**対処法:** この問題は、[SSUA 用の SQL Server 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=57474) の一部として提供される SQL Server アップグレード アドバイザーで解決できます。  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -7,13 +7,13 @@ ms.date: 03/09/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b8f787cdef6baeeaa57e79c9c5c167e12395508b
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
+ms.openlocfilehash: bd7dacd4807e4e779f43d396d9d1e9b19d4134dc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956986"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471203"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services を使用して Azure Data Studio のノートブックで Python スクリプトと R スクリプトを実行する
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91956986"
 
 SQL ノートブックを使って、Azure Data Studio で Machine Learning Services を使用できます。 新しいノートブックを作成するには、次の手順に従います。
 
-1. **[ファイル]** と **[新しいノートブック]** をクリックして、新しいノートブックを作成します。 ノートブックでは、既定で **SQL カーネル**が使用されます。
+1. **[ファイル]** と **[新しいノートブック]** をクリックして、新しいノートブックを作成します。 ノートブックでは、既定で **SQL カーネル** が使用されます。
 
 1. **[アタッチ先]** と **[接続の変更]** をクリックしします。 
 
