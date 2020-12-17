@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 06bfaa994c2b29959f44cfc554122465db9e0394
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: e7a618ef92a9f4a4cc969112886a4246ad25adc6
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772226"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559204"
 ---
 # <a name="retrieve-data-by-a-datareader"></a>DataReader によってデータを取得する
 
@@ -53,7 +53,7 @@ reader = command.ExecuteReader();
 > **DataReader** が開かれている間、**Connection** はその **DataReader** によって排他的に使用されています。 元の **DataReader** が閉じられるまでは、別の **DataReader** の作成など、どのようなコマンドもその **Connection** に対して実行できません。  
 
 > [!NOTE]
-> クラスの **Finalize** メソッド内では、**Connection**、**DataReader**、またはその他のマネージド オブジェクトに対して、**Close** または **Dispose** を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージド リソースを所有していない場合は、クラス定義に **Finalize** メソッドを含めないでください。 詳しくは、「[ガベージ コレクション](/dotnet/standard/garbage-collection/index.md)」をご覧ください。
+> クラスの **Finalize** メソッド内では、**Connection**、**DataReader**、またはその他のマネージド オブジェクトに対して、**Close** または **Dispose** を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージド リソースを所有していない場合は、クラス定義に **Finalize** メソッドを含めないでください。 詳しくは、「[ガベージ コレクション](/dotnet/standard/garbage-collection/index)」をご覧ください。
  
 ## <a name="retrieve-multiple-result-sets-using-nextresult"></a>NextResult による複数の結果セットの取得
 

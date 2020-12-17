@@ -11,13 +11,13 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f142a872688d28befefcffebfcdeb75976072863
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current'
+ms.openlocfilehash: c59e142ec924a573e127d9caa0cd7d6ac9bf9e8f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987858"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440498"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) リリース ノート
 
@@ -755,16 +755,16 @@ _SQL Server 2017 までのサポート。_
     - PowerQuery での例示による列の追加
     - 1400 モデルでのデータ アクセス オプション (M エンジンによって使われるモデル レベルのプロパティ)
         - 高速結合の有効化 (既定値は false です。true に設定すると、マッシュアップ エンジンはデータを結合するときにデータ ソースのプライバシー レベルを無視します)
-        - 従来のリダイレクトの有効化 (既定値は false です。true に設定すると、マッシュアップ エンジンは安全ではない可能性のある HTTP リダイレクトに従います。  たとえば、HTTPS から HTTP URI へのリダイレクト)  
-        - エラー値を null として返します (既定値は false です。true にすると、セル レベルのエラーが null として返されます。 false の場合、セルにエラーが含まれると例外が発生します)  
+        - 従来のリダイレクトの有効化 (既定値は false です。true に設定すると、マッシュアップ エンジンは安全ではない可能性のある HTTP リダイレクトに従います。    たとえば、HTTPS から HTTP URI へのリダイレクト)  
+        - エラー値を null として返します (既定値は false です。true にすると、セル レベルのエラーが null として返されます。 false の場合、セルにエラーが含まれると例外が発生します)  
     - PowerQuery を使う追加データ ソース (ファイル データ ソース)
-        - Excel 
-        - テキスト/CSV 
-        - xml 
-        - Json 
-        - Folder 
-        - Access データベース 
-        - Azure Blob Storage 
+        - Excel 
+        - テキスト/CSV 
+        - xml 
+        - Json 
+        - Folder 
+        - Access データベース 
+        - Azure Blob Storage 
     - ローカライズされた PowerQuery ユーザー インターフェイス
 - DAX エディター ツール ウィンドウ
     - SSDT の [表示] > [その他のウィンドウ] メニューで利用可能な DAX 編集エクスペリエンスがメジャー、計算列、詳細行の式に関して改良されました
@@ -873,24 +873,24 @@ SqlPackage の発行アクションとスクリプト アクションには、2 
 DacFx に 2 つの新しい API、DacServices.Publish() と DacServices.Script() が追加されました。 これらは、発行 + スクリプト + レポートの各アクションを 1 回の操作で実行できるようサポートします。 使用例:
 
 ```
-DacServices service = new DacServices(connectionString);
-using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
-var options = new PublishOptions() {
-    GenerateDeploymentScript = true, // Should a deployment script be created?
-    GenerateDeploymentReport = true, // Should an xml deploy report be created?
-    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
-    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
-    DeployOptions = new DacDeployOptions()
+DacServices service = new DacServices(connectionString);
+using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
+var options = new PublishOptions() {
+    GenerateDeploymentScript = true, // Should a deployment script be created?
+    GenerateDeploymentReport = true, // Should an xml deploy report be created?
+    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
+    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
+    DeployOptions = new DacDeployOptions()
 };
 
-// Call publish and receive deployment script & report in the results
-PublishResult result = service.Publish(package, "TargetDb", options);
+// Call publish and receive deployment script & report in the results
+PublishResult result = service.Publish(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
 
-// Call script and receive deployment script & report in results
-result = service.Script(package, "TargetDb", options);
+// Call script and receive deployment script & report in results
+result = service.Script(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
@@ -925,7 +925,7 @@ SSAS 表形式デザイナーの DAX パーサーにおいて、大きな DAX �
 
 **統合サービス**
 
-* 接続のバグ  [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks) の修正:複数の統合サービス パッケージのタスクの移動
+* 接続のバグ [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks) の修正: 複数の統合サービス パッケージのタスクの移動
 
 ## <a name="164-ssdt-for-vs-2015"></a>16.4、VS 2015 用 SSDT
 
@@ -935,7 +935,7 @@ _SQL Server 2016 の場合。_
 
 **新機能**
 
-SqlPackage.exe および Data-Tier Application Framework (DacFx) API でスキーマ比較がサポートされるようになりました。 詳しくは、「 [Schema Compare in SqlPackage and the Data-Tier Application Framework](/archive/blogs/ssdt/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx)」(SqlPackage および Data-Tier Application Framework におけるスキーマ比較) をご覧ください。
+SqlPackage.exe および Data-Tier Application Framework (DacFx) API でスキーマ比較がサポートされるようになりました。 詳しくは、「[Schema Compare in SqlPackage and the Data-Tier Application Framework](/archive/blogs/ssdt/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx)」(SqlPackage および Data-Tier Application Framework におけるスキーマ比較) をご覧ください。
 
 **Analysis Services - SSDT テーブル (SSAS) 統合のワークスペース モード**
 

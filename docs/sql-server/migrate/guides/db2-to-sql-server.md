@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 08/17/2020
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: release-landing
+ms.technology: migration-guide
 ms.topic: conceptual
 helpviewer_keywords:
 - processors [SQL Server], supported
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - maximum number of processors supported
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a4aa024d94908800c020fdc5d2362d48d03becd
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.openlocfilehash: 81b631c6b5810fc45ce3b14449a458544fdf6200
+ms.sourcegitcommit: 18e2f0706e03d0b2b6324845244fbafaa077a8dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734666"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97100358"
 ---
 # <a name="migration-guide-db2-to-sql-server"></a>移行ガイド:DB2 から SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
@@ -56,18 +56,18 @@ SQL Server Migration Assistant (SSMA) を使用して評価を作成します。
 
 1. **[DB2 への接続]** ダイアログ ボックスで、DB2 接続の詳細の値を入力します。 
 
-   :::image type="content" source="media/db2-to-sql-server/connect-to-db2.png" alt-text="プロジェクトの詳細を入力し、[OK] を選択して保存します。":::
+   :::image type="content" source="media/db2-to-sql-server/connect-to-db2.png" alt-text="DB2 インスタンスに接続する":::
 
 
 1. 移行する DB2 スキーマを右クリックし、 **[レポートの作成]** を選択します。 これにより、HTML レポートが生成されます。 また、スキーマを選択した後、ナビゲーション バーから **[レポートの作成]** を選択することもできます。 
 
-   :::image type="content" source="media/db2-to-sql-server/create-report.png" alt-text="プロジェクトの詳細を入力し、[OK] を選択して保存します。":::
+   :::image type="content" source="media/db2-to-sql-server/create-report.png" alt-text="スキーマを右クリックし、[レポートの作成] を選択する":::
 
 1. HTML レポートを確認し、変換の統計情報とエラーまたは警告を把握します。 また、Excel でレポートを開き、DB2 オブジェクトのインベントリとスキーマ変換の実行に必要な作業量を確認することもできます。 レポートの既定の場所は、SSMAProjects 内のレポート フォルダーです。
 
    (例: `drive:\<username>\Documents\SSMAProjects\MyDB2Migration\report\report_<date>`)。 
 
-   :::image type="content" source="media/db2-to-sql-server/report.png" alt-text="プロジェクトの詳細を入力し、[OK] を選択して保存します。":::
+   :::image type="content" source="media/db2-to-sql-server/report.png" alt-text="レポートを確認して、エラーや警告を特定する":::
 
 
 ### <a name="validate-data-types"></a>データ型を検証する
@@ -78,7 +78,7 @@ SQL Server Migration Assistant (SSMA) を使用して評価を作成します。
 1. **[プロジェクトの設定]** を選択します。 
 1. **[Type mappings]\(型のマッピング\)** タブを選択します。 
 
-   :::image type="content" source="media/db2-to-sql-server/type-mapping.png" alt-text="プロジェクトの詳細を入力し、[OK] を選択して保存します。":::
+   :::image type="content" source="media/db2-to-sql-server/type-mapping.png" alt-text="スキーマ、型マッピングの順に選択する":::
 
 1. **DB2 メタデータ エクスプローラー** でテーブルを選択することにより、各テーブルの型マッピングを変更できます。 
 
@@ -92,16 +92,16 @@ SQL Server Migration Assistant (SSMA) を使用して評価を作成します。
     1. ターゲット サーバー上の既存のデータベースに接続するか、新しい名前を指定してターゲット サーバー上に新しいデータベースを作成するかを選択します。 
     1. **[接続]** を選択します。 
 
-   :::image type="content" source="media/db2-to-sql-server/connect-to-sql-server.png" alt-text="プロジェクトの詳細を入力し、[OK] を選択して保存します。":::
+   :::image type="content" source="media/db2-to-sql-server/connect-to-sql-server.png" alt-text="SQL Server に接続するための詳細を入力する":::
 
 
 1. スキーマを右クリックして、 **[スキーマの変換]** を選択します。 または、スキーマを選択した後、上部のナビゲーション バーから **[スキーマの変換]** を選択することもできます。 
 
-   :::image type="content" source="media/db2-to-sql-server/convert-schema.png" alt-text="プロジェクトの詳細を入力し、[OK] を選択して保存します。":::
+   :::image type="content" source="media/db2-to-sql-server/convert-schema.png" alt-text="スキーマを右クリックして、[スキーマの変換] を選択する":::
 
 1. 変換が完了したら、スキーマの構造を比較し、確認して、潜在的な問題を特定し、推奨事項に基づいて対処します。 
 
-   :::image type="content" source="media/db2-to-sql-server/compare-review-schema-structure.png" alt-text="プロジェクトの詳細を入力し、[OK] を選択して保存します。":::
+   :::image type="content" source="media/db2-to-sql-server/compare-review-schema-structure.png" alt-text="スキーマの構造を比較し、確認して、潜在的な問題を特定し、推奨事項に基づいて対処する。":::
 
 1. オフライン スキーマ修復の演習のために、プロジェクトをローカルに保存します。 **[ファイル]** メニューから **[プロジェクトの保存]** を選択します。 
 
@@ -114,20 +114,20 @@ SQL Server Migration Assistant (SSMA) を使用して評価を作成します。
 
 1. スキーマを発行する: **SQL Server メタデータ エクスプローラー** の **[データベース]** ノードからデータベースを右クリックし、 **[データベースとの同期]** を選択します。
 
-   :::image type="content" source="media/db2-to-sql-server/synchronize-with-database.png" alt-text="プロジェクトの詳細を入力し、[OK] を選択して保存します。":::
+   :::image type="content" source="media/db2-to-sql-server/synchronize-with-database.png" alt-text="データベースを右クリックし、[データベースとの同期] を選択する":::
 
 1. データを移行する: **DB2 メタデータ エクスプローラー** からスキーマを右クリックし、 **[データの移行]** を選択します。 
 
-   :::image type="content" source="media/db2-to-sql-server/migrate-data.png" alt-text="プロジェクトの詳細を入力し、[OK] を選択して保存します。":::
+   :::image type="content" source="media/db2-to-sql-server/migrate-data.png" alt-text="スキーマを右クリックし、データの移行を選択する":::
 
 1. DB2 インスタンスと SQL Server インスタンスの両方の接続の詳細を指定します。 
 1. **データ移行レポート** を確認します。 
 
-   :::image type="content" source="media/db2-to-sql-server/data-migration-report.png" alt-text="プロジェクトの詳細を入力し、[OK] を選択して保存します。":::
+   :::image type="content" source="media/db2-to-sql-server/data-migration-report.png" alt-text="データ移行レポートを確認する":::
 
 1. SQL Server Management Studio を使用して SQL Server インスタンスに接続し、データとスキーマを確認して移行を検証します。 
 
-   :::image type="content" source="media/db2-to-sql-server/compare-schema-in-ssms.png" alt-text="プロジェクトの詳細を入力し、[OK] を選択して保存します。":::
+   :::image type="content" source="media/db2-to-sql-server/compare-schema-in-ssms.png" alt-text="SSMS でスキーマを比較する":::
 
 ## <a name="post-migration"></a>移行後 
 
@@ -141,10 +141,10 @@ SQL Server Migration Assistant (SSMA) を使用して評価を作成します。
 
 データベース移行のテストア プローチは、次のアクティビティで構成されています。
 
-1. **検証テストを作成する** : データベースの移行をテストするには、SQL クエリを使用する必要があります。 ソース データベースとターゲット データベースの両方に対して実行する検証クエリを作成する必要があります。 検証クエリには、定義したスコープが含まれている必要があります。
-1. **テスト環境を設定する** : テスト環境には、ソース データベースとターゲット データベースのコピーが含まれている必要があります。 必ずテスト環境を分離してください。
-1. **検証テストを実行する** : ソースとターゲットに対して検証テストを実行してから、結果を分析します。
-1. **パフォーマンス テストを実行する** : ソースとターゲットに対してパフォーマンス テストを実行し、結果を分析して比較します。
+1. **検証テストを作成する**: データベースの移行をテストするには、SQL クエリを使用する必要があります。 ソース データベースとターゲット データベースの両方に対して実行する検証クエリを作成する必要があります。 検証クエリには、定義したスコープが含まれている必要があります。
+1. **テスト環境を設定する**: テスト環境には、ソース データベースとターゲット データベースのコピーが含まれている必要があります。 必ずテスト環境を分離してください。
+1. **検証テストを実行する**: ソースとターゲットに対して検証テストを実行してから、結果を分析します。
+1. **パフォーマンス テストを実行する**: ソースとターゲットに対してパフォーマンス テストを実行し、結果を分析して比較します。
 
    > [!NOTE]
    > 移行後の検証テストの開発と実行を支援するために、パートナーの [QuerySurge](https://www.querysurge.com/company/partners/microsoft) から入手できる Data Quality Solution を検討してください。 

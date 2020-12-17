@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: alayu, maghan
 ms.custom: seodec18
 ms.date: 10/28/2020
-ms.openlocfilehash: 212115d87f747d1ee35bc4d9445833daee5d25e5
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 33a7470f3b80d74201c127823db938b11df068e6
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035938"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559034"
 ---
 # <a name="azure-data-studio-faq"></a>Azure Data Studio に関する FAQ
 
@@ -93,7 +93,7 @@ SMO API は、Linux または macOS に対してまだ使いやすい方法で�
 
 はい。
 
-[SqlPackage.exe](../tools/sqlpackage-download.md) が、Windows、macOS、および Linux 用の .NET Core で使用できるようになりました。  SQL プロジェクト (SSDT) の機能は、[SQL Database プロジェクトの拡張機能](extensions/sql-database-project-extension.md)の Azure Data Studio で有効になっています。
+[SqlPackage.exe](../tools/sqlpackage/sqlpackage-download.md) が、Windows、macOS、および Linux 用の .NET Core で使用できるようになりました。  SQL プロジェクト (SSDT) の機能は、[SQL Database プロジェクトの拡張機能](extensions/sql-database-project-extension.md)の Azure Data Studio で有効になっています。
 
 ## <a name="will-sql-powershell-cmdlets-be-available-on-linux-and-macos"></a>SQL PowerShell コマンドレットは、Linux および macOS 上で利用できますか?
 

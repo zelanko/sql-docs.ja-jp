@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0879c9399a21300fdbbfd735685d8a049a52b14f
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: = sql-server-2016
+ms.openlocfilehash: 123a1604717fdfb58f7f1e69db353995e6e0a960
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384686"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559294"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack のリリース ノート
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -38,25 +38,25 @@ Service Pack は、インストール メディアではなくオンラインで
 
 
 ### <a name="performance-and-scale-improvements"></a>パフォーマンスとスケーリングの改善
-- **ディストリビューション エージェントのクリーンアップ プロシージャの向上** :サイズ超過のディストリビューション データベースが原因で、ブロックとデッドロックの状況が発生していました。 クリーンアップ プロシージャの向上は、これらのブロックまたはデッドロックのシナリオの一部を排除することを目的としています。 
-- **動的メモリ オブジェクトのスケーリング** : 最新のハードウェア上でスケールするノードとコアの数に基づいて、動的にメモリ オブジェクトをパーティション分割します。 動的な昇格の目的は、潜在的なボトルネックを回避し、スレッド セーフ メモリ オブジェクトを自動的にパーティション分割することです。 パーティション分割されていないメモリ オブジェクトは、ノードによってパーティション分割されるように動的に昇格できます。 パーティションの数は、NUMA ノードの数と同じです。 ノードによってパーティション分割されたメモリ オブジェクトは、CPU によってパーティション分割されるようにさらに昇格することができます。この場合、パーティションの数は CPU の数と等しくなります。
-- **8 TB を超えるバッファー プールの有効化** : バッファー プールの使用量に対し 128 TB の仮想アドレス空間を有効にします。
-- **Change Tracking のクリーンアップ** : Change Tracking のクリーンアップのパフォーマンスと Change Tracking のサイド テーブルの効率性が向上しました。 
+- **ディストリビューション エージェントのクリーンアップ プロシージャの向上**:サイズ超過のディストリビューション データベースが原因で、ブロックとデッドロックの状況が発生していました。 クリーンアップ プロシージャの向上は、これらのブロックまたはデッドロックのシナリオの一部を排除することを目的としています。 
+- **動的メモリ オブジェクトのスケーリング**: 最新のハードウェア上でスケールするノードとコアの数に基づいて、動的にメモリ オブジェクトをパーティション分割します。 動的な昇格の目的は、潜在的なボトルネックを回避し、スレッド セーフ メモリ オブジェクトを自動的にパーティション分割することです。 パーティション分割されていないメモリ オブジェクトは、ノードによってパーティション分割されるように動的に昇格できます。 パーティションの数は、NUMA ノードの数と同じです。 ノードによってパーティション分割されたメモリ オブジェクトは、CPU によってパーティション分割されるようにさらに昇格することができます。この場合、パーティションの数は CPU の数と等しくなります。
+- **8 TB を超えるバッファー プールの有効化**: バッファー プールの使用量に対し 128 TB の仮想アドレス空間を有効にします。
+- **Change Tracking のクリーンアップ**: Change Tracking のクリーンアップのパフォーマンスと Change Tracking のサイド テーブルの効率性が向上しました。 
 
 ### <a name="supportability-and-diagnostics-improvements"></a>サポート性と診断の向上
-- **レプリケーション エージェントの完全ダンプのサポート** : 現在は、レプリケーション エージェントがハンドルされない例外に遭遇すると、既定の動作では例外の現象のミニ ダンプが作成されます。 既定の動作では、ハンドルされない例外に対する複雑なトラブルシューティング手順が必要です。 SP4 では、レプリケーション エージェントの完全ダンプの作成をサポートする新しいレジストリ キーが導入されました。
-- **プラン表示 XML での診断の拡張** : プラン表示 XML は、有効なトレース フラグ、最適化された入れ子になったループ結合のメモリ部分、CPU 時間、および経過時間に関する情報を公開するために拡張されています。 
-- **診断 XE および DMV 間の相関関係の改善** : クエリを一意に識別するために Query_hash と query_plan_hash フィールドが使用されます。 DMV はこれらを varbinary(8) として定義するのに対し、XEvent は UINT64 として定義します。 SQL Server に "符号なし bigint" がないため、キャストが機能しない場合があります。 この機能強化では、新しい XEvent アクション/フィルター列が導入されています。これは XE と DMV 間の関連付けクエリに役立つ INT64 として定義されている点を除き、query_hash と query_plan_hash と同等です。 
-- **メモリ許可/使用状況の診断の向上** : 新しい query_memory_grant_usage XEvent (サーバー 2016 SP1 から移植)。
-- **SSL ネゴシエーション手順へのプロトコル トレースの追加** : ネゴシエーションの成功/失敗のビット トレース情報 (プロトコルなど) を追加します。たとえば TLS 1.2 の展開時に接続性のシナリオをトラブルシューティングするときに役に立ちます。
-- **ディストリビューション データベースの正しい互換性レベルの設定** : サービス パックをインストールすると、ディストリビューション データベースの互換性レベルが 90 に変わります。 レベルが変更されたのは、sp_vupgrade_replication ストアド プロシージャの問題によるものです。 SP はディストリビューション データベースに正しい互換性レベルが設定されるように変更されています。 
-- **データベースの複製を作成する新しい DBCC コマンド** : 複製データベースは、CSS などのパワー ユーザーがスキーマとメタデータをデータなしで複製することによって、既存の運用データベースをトラブルシューティングできるように追加された、新しい DBCC コマンドです。 呼び出しは、DBCC clonedatabase ('source_database_name', 'clone_database_name') で実行されます。 複製されたデータベースは、実稼働環境では使用できません。 データベースが複製データベースの呼び出しから生成されているかどうかを確認するには、次のコマンドを使用して、DATABASEPROPERTYEX('clonedb', 'isClone') を選択します。戻り値 1 が true、0 が false です。 
-- **SQL エラー ログの TempDB ファイルとファイル サイズの情報** : スタートアップ時に、TempDB データ ファイルのサイズと自動拡張が異なる場合、ファイルの数を出力し、警告をトリガーします。
-- **SQL Server エラー ログの IFI サポート メッセージ** : エラー ログにデータベース ファイルの瞬時初期化の有効/無効を示します。
-- **DBCC INPUTBUFFER に置き換わる新しい DMF** : DBCC INPUTBUFFER を置き換えるため、session_id をパラメーターとして受け取る新しい動的管理関数 sys.dm_input_buffer が導入されました。
-- **可用性グループの読み取りルーティングの障害に対する Xevent の機能強化** : 現在、read_only_rout_fail XEvent は、ルーティング リストがあるが、リスト内のどのサーバーも接続に使用できない場合にのみ起動されます。 この機能強化には、トラブルシューティングに役立つ追加情報と、XEvent が起動するコード ポイントの拡張も含まれます。 
-- **可用性グループのフェールオーバーを使用した Service Broker の処理の向上** : 現在、可用性グループのデータベースで Service Broker が有効になっていると、プライマリ レプリカで開始されたすべての Service Broker の接続は、AG フェールオーバー中に開いたままになります。 この機能強化により、AG フェールオーバー中、これらの開いたままの接続がすべて閉じられます。
-- **自動ソフト NUMA のパーティション分割** : サーバー レベルでトレース フラグ 8079 が有効になっている場合、SQL 2014 SP2 で自動 [ソフト NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) パーティション分割が導入されます。 スタートアップ時にトレース フラグ 8079 が有効になっていると、SQL Server 2014 SP2 はハードウェア レイアウトを問い合わせて、NUMA ノードあたり 8 個以上の CPU をレポートするシステムにソフト NUMA を自動的に構成します。 自動ソフト NUMA の動作は、ハイパースレッド (HT/論理プロセッサ) に対応しています。 パーティション分割と追加ノードの作成により、リスナーの数の増加、スケーリング、およびネットワークと暗号化機能の向上により、バックグラウンド処理が拡張されます。 自動ソフト NUMA を実稼働環境でオンにする前に、最初にワークロードのパフォーマンスをテストすることをお勧めします。
+- **レプリケーション エージェントの完全ダンプのサポート**: 現在は、レプリケーション エージェントがハンドルされない例外に遭遇すると、既定の動作では例外の現象のミニ ダンプが作成されます。 既定の動作では、ハンドルされない例外に対する複雑なトラブルシューティング手順が必要です。 SP4 では、レプリケーション エージェントの完全ダンプの作成をサポートする新しいレジストリ キーが導入されました。
+- **プラン表示 XML での診断の拡張**: プラン表示 XML は、有効なトレース フラグ、最適化された入れ子になったループ結合のメモリ部分、CPU 時間、および経過時間に関する情報を公開するために拡張されています。 
+- **診断 XE および DMV 間の相関関係の改善**: クエリを一意に識別するために Query_hash と query_plan_hash フィールドが使用されます。 DMV はこれらを varbinary(8) として定義するのに対し、XEvent は UINT64 として定義します。 SQL Server に "符号なし bigint" がないため、キャストが機能しない場合があります。 この機能強化では、新しい XEvent アクション/フィルター列が導入されています。これは XE と DMV 間の関連付けクエリに役立つ INT64 として定義されている点を除き、query_hash と query_plan_hash と同等です。 
+- **メモリ許可/使用状況の診断の向上**: 新しい query_memory_grant_usage XEvent (サーバー 2016 SP1 から移植)。
+- **SSL ネゴシエーション手順へのプロトコル トレースの追加**: ネゴシエーションの成功/失敗のビット トレース情報 (プロトコルなど) を追加します。たとえば TLS 1.2 の展開時に接続性のシナリオをトラブルシューティングするときに役に立ちます。
+- **ディストリビューション データベースの正しい互換性レベルの設定**: サービス パックをインストールすると、ディストリビューション データベースの互換性レベルが 90 に変わります。 レベルが変更されたのは、sp_vupgrade_replication ストアド プロシージャの問題によるものです。 SP はディストリビューション データベースに正しい互換性レベルが設定されるように変更されています。 
+- **データベースの複製を作成する新しい DBCC コマンド**: 複製データベースは、CSS などのパワー ユーザーがスキーマとメタデータをデータなしで複製することによって、既存の運用データベースをトラブルシューティングできるように追加された、新しい DBCC コマンドです。 呼び出しは、DBCC clonedatabase ('source_database_name', 'clone_database_name') で実行されます。 複製されたデータベースは、実稼働環境では使用できません。 データベースが複製データベースの呼び出しから生成されているかどうかを確認するには、次のコマンドを使用して、DATABASEPROPERTYEX('clonedb', 'isClone') を選択します。戻り値 1 が true、0 が false です。 
+- **SQL エラー ログの TempDB ファイルとファイル サイズの情報**: スタートアップ時に、TempDB データ ファイルのサイズと自動拡張が異なる場合、ファイルの数を出力し、警告をトリガーします。
+- **SQL Server エラー ログの IFI サポート メッセージ**: エラー ログにデータベース ファイルの瞬時初期化の有効/無効を示します。
+- **DBCC INPUTBUFFER に置き換わる新しい DMF**: DBCC INPUTBUFFER を置き換えるため、session_id をパラメーターとして受け取る新しい動的管理関数 sys.dm_input_buffer が導入されました。
+- **可用性グループの読み取りルーティングの障害に対する Xevent の機能強化**: 現在、read_only_rout_fail XEvent は、ルーティング リストがあるが、リスト内のどのサーバーも接続に使用できない場合にのみ起動されます。 この機能強化には、トラブルシューティングに役立つ追加情報と、XEvent が起動するコード ポイントの拡張も含まれます。 
+- **可用性グループのフェールオーバーを使用した Service Broker の処理の向上**: 現在、可用性グループのデータベースで Service Broker が有効になっていると、プライマリ レプリカで開始されたすべての Service Broker の接続は、AG フェールオーバー中に開いたままになります。 この機能強化により、AG フェールオーバー中、これらの開いたままの接続がすべて閉じられます。
+- **自動ソフト NUMA のパーティション分割**: サーバー レベルでトレース フラグ 8079 が有効になっている場合、SQL 2014 SP2 で自動 [ソフト NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) パーティション分割が導入されます。 スタートアップ時にトレース フラグ 8079 が有効になっていると、SQL Server 2014 SP2 はハードウェア レイアウトを問い合わせて、NUMA ノードあたり 8 個以上の CPU をレポートするシステムにソフト NUMA を自動的に構成します。 自動ソフト NUMA の動作は、ハイパースレッド (HT/論理プロセッサ) に対応しています。 パーティション分割と追加ノードの作成により、リスナーの数の増加、スケーリング、およびネットワークと暗号化機能の向上により、バックグラウンド処理が拡張されます。 自動ソフト NUMA を実稼働環境でオンにする前に、最初にワークロードのパフォーマンスをテストすることをお勧めします。
 
 ## <a name="service-pack-3-release-notes"></a>Service Pack 3 リリース ノート
 
@@ -154,7 +154,7 @@ Service Pack は、インストール メディアではなくオンラインで
 ### <a name="reporting-services"></a>Reporting Services  
   
 #### <a name="install-and-configure-sharepoint-server-2013-prior-to-installing-reporting-services"></a>Reporting Services をインストールする前に SharePoint Server 2013 をインストールおよび構成する  
-**問題:** SQL Server Reporting Services (SSRS) をインストールする **前に** 、次の要件を完了します。  
+**問題:** SQL Server Reporting Services (SSRS) をインストールする **前に**、次の要件を完了します。  
   
 1.  SharePoint 2013 製品準備ツールを実行します。  
   
@@ -175,19 +175,19 @@ Service Pack は、インストール メディアではなくオンラインで
   
 -   "値 'SharePoint Principal' は、接続文字列プロパティ 'User Identity' ではサポートされていません。"  
   
-**対処法:** SharePoint Server 2013 に PowerPivot for SharePoint 2013 インストーラー パッケージ ( **spPowerPivot.msi** ) をインストールします。 インストーラー パッケージは、 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 機能パックに付属しています。 この機能パックは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] ダウンロード センターの [SQL Server 2012 SP1 機能パック](https://www.microsoft.com/download/details.aspx?id=35575) からダウンロードできます。  
+**対処法:** SharePoint Server 2013 に PowerPivot for SharePoint 2013 インストーラー パッケージ (**spPowerPivot.msi**) をインストールします。 インストーラー パッケージは、 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 機能パックに付属しています。 この機能パックは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] ダウンロード センターの [SQL Server 2012 SP1 機能パック](https://www.microsoft.com/download/details.aspx?id=35575) からダウンロードできます。  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>定期データ更新の後で、PowerPivot ブックの Power View シートが削除される  
-**問題点** : PowerPivot for SharePoint アドインでは、Power View が含まれたブックで **定期データ更新** を使用すると、すべての Power View シートが削除されます。  
+**問題点**: PowerPivot for SharePoint アドインでは、Power View が含まれたブックで **定期データ更新** を使用すると、すべての Power View シートが削除されます。  
   
-**回避策** :Power View ブックで **Scheduled Data Refresh** を使用するには、データ モデルだけの PowerPivot ブックを作成します。 Excel シートと Power View シートを含む別のブックを作成し、データ モデルを含む PowerPivot ブックにリンクします。 データ モデルを含む PowerPivot ブックに対してのみ、定期データ更新を実行します。  
+**回避策**:Power View ブックで **Scheduled Data Refresh** を使用するには、データ モデルだけの PowerPivot ブックを作成します。 Excel シートと Power View シートを含む別のブックを作成し、データ モデルを含む PowerPivot ブックにリンクします。 データ モデルを含む PowerPivot ブックに対してのみ、定期データ更新を実行します。  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS がサポートされていないエディションの SQL Server 2012 で使用可能になる  
 **問題:** [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM リリースでは、Enterprise、Business Intelligence、Developer 以外のエディションの SQL Server でも Data Quality Services (DQS) 機能を使用できます。 SQL Server 2012 SP1 のインストール後は、Enterprise、Business Intelligence、および Developer 以外のエディションで DQS を使用できなくなります。  
   
-**回避策** :サポートされていないエディションで DQS を使用している場合は、サポートされているエディションにアップグレードするか、アプリケーションをこの機能に依存しないように変更します。  
+**回避策**:サポートされていないエディションで DQS を使用している場合は、サポートされているエディションにアップグレードするか、アプリケーションをこの機能に依存しないように変更します。  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
@@ -232,7 +232,7 @@ DACFx は、すべての DAC シナリオとクライアント ツールで、SX
   
 -   BACPAC のインポート - .bacpac ファイルをインポートして、SQL Server または Azure SQL Database を新規に作成したり、空のデータベースにデータを入力したりできます。  
   
-SqlPackage.exe の完全なドキュメントは、MSDN の [ここ](../tools/sqlpackage.md)にあります。  
+SqlPackage.exe の完全なドキュメントは、MSDN の [ここ](../tools/sqlpackage/sqlpackage.md)にあります。  
   
 **パッケージの互換性**  
   
