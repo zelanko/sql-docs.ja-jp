@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9ac8349306d78075de65e3a14989d2f68261393f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 3c8f19565b3dd368764e1e0d2106b622663f4549
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037790"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474383"
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service"></a>SQL Server エージェント サービスの SQL Server 接続を設定する
 
@@ -58,7 +58,7 @@ ms.locfileid: "92037790"
   
 #### <a name="to-set-the-sql-server-connection"></a>SQL Server の接続を設定するには  
   
-1.  **オブジェクト エクスプローラー**で、SQL Server エージェント サービスへの接続を設定するサーバーをプラス記号をクリックして展開します。  
+1.  **オブジェクト エクスプローラー** で、SQL Server エージェント サービスへの接続を設定するサーバーをプラス記号をクリックして展開します。  
   
 2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** を選択します。  
   

@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9916bd14969b7bf9065e98ecb07fc131d8391f30
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 32006b2ac6581e4f5bc3a303cc5f6475483708c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035748"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472373"
 ---
 # <a name="autostart-sql-server-agent"></a>SQL Server エージェントの自動起動
 
@@ -55,7 +55,7 @@ ms.locfileid: "92035748"
   
 #### <a name="to-configure-sql-server-agent-to-automatically-restart"></a>自動的に再起動するように SQL Server エージェントを構成するには  
   
-1.  **オブジェクト エクスプ ローラー**で、プラス記号をクリックして、自動的に再起動するように構成する SQL Server エージェントを展開します。  
+1.  **オブジェクト エクスプ ローラー** で、プラス記号をクリックして、自動的に再起動するように構成する SQL Server エージェントを展開します。  
   
 2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** をクリックします。  
   

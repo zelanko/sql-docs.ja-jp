@@ -8,13 +8,13 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f64ef01e248052667239f7516b0ccddc592871c7
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 1b13134166c4c17bea73d2990ceaf678fe1b4b2c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935192"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478843"
 ---
 # <a name="azure-sql-connection-type-ssrs"></a>Azure SQL の接続の種類 (SSRS)
 
@@ -130,7 +130,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 入力パラメーターを含むクエリ変数またはストアド プロシージャがクエリ テキストに含まれている場合、対応するデータセットのクエリ パラメーターとレポートのレポート パラメーターが自動的に生成されます。 クエリ テキストには、各クエリ変数の DECLARE ステートメントを含めないでください。  
   
- たとえば、次の SQL クエリでは、 **EmpID**という名前のレポート パラメーターが作成されます。  
+ たとえば、次の SQL クエリでは、 **EmpID** という名前のレポート パラメーターが作成されます。  
 
 ```sql
 SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN  
@@ -152,7 +152,7 @@ WHERE EmployeeID = (@EmpID)
 
 プラットフォームとバージョンのサポートについて詳しくは、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」をご覧ください。  
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 
 ## <a name="azure-sql-database-and-aad"></a>Azure SQL データベースと AAD
 

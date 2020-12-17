@@ -7,13 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 1526f1c9eaaf4924ec248b523bd44148398e031b
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2016||=sql-server-2017
+ms.openlocfilehash: 28dbaf6f3496004ba90731d6bf5eaef693036e19
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870116"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471053"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>RevoScaleR を使用して R パッケージをインストールする
 
@@ -21,7 +21,7 @@ ms.locfileid: "94870116"
 
 この記事では、[RevoScaleR](../r/ref-r-revoscaler.md) (バージョン 9.0.1 以降) 関数を使用して、Machine Learning Services または R Services を使って SQL Server に R パッケージをインストールする方法について説明します。 RevoScaleR 関数を使用すると、リモートの管理者以外のユーザーが、サーバーに直接アクセスせずに SQL Server にパッケージをインストールできます。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 > [!NOTE]
 > SQL Server R Services のお客様が RevoScaleR パッケージ管理機能を利用するには、[コンポーネントをアップグレード](../install/upgrade-r-and-python.md)する必要があります。 パッケージのバージョンと内容を取得する方法については、「[R パッケージ情報の取得](../package-management/r-package-information.md)」を参照してください。
 ::: moniker-end

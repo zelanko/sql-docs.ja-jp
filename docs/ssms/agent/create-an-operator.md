@@ -18,13 +18,13 @@ ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bad9dcc1d3fad1e7f0359d7805f93cbe44cb7652
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1c3aa127a22f45d403de94484b590a3fc5db1616
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035047"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477123"
 ---
 # <a name="create-an-operator"></a>オペレーターの作成
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "92035047"
   
 #### <a name="to-create-an-operator"></a>オペレーターを作成するには  
   
-1.  **オブジェクト エクスプ ローラー**で、SQL Server エージェント オペレーターを作成するサーバーをプラス記号をクリックして展開します。  
+1.  **オブジェクト エクスプ ローラー** で、SQL Server エージェント オペレーターを作成するサーバーをプラス記号をクリックして展開します。  
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "92035047"
     オペレーターの電子メール アドレスを指定します。  
   
     **[Net Send アドレス]**  
-    **net send**に使用するアドレスを指定します。  
+    **net send** に使用するアドレスを指定します。  
   
     **[ポケットベル用電子メール ログイン名]**  
     オペレーターのポケットベルに使用する電子メール アドレスを指定します。  
@@ -109,7 +109,7 @@ ms.locfileid: "92035047"
     電子メールをポケット ベルに送信することによって、このオペレーターに通知します。  
   
     **Net send**  
-    **net send**を使用してこのオペレーターに通知します。  
+    **net send** を使用してこのオペレーターに通知します。  
   
 4.  新しいオペレーターの作成が完了したら、 **[OK]** をクリックします。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "92035047"
   
 #### <a name="to-create-an-operator"></a>オペレーターを作成するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2a37b086804a8fabe3719db0744b49345d69e6b8
-ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 15047969fdf25727d324ae577414273cc86769cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94674140"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471223"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>SQL Server 用の Python カスタム ランタイムをインストールする
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "94674140"
 
 + SQL Server 2019 での Machine Learning Services のインストール。 いくつかの追加構成手順を完了した後、言語拡張機能を [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) で使用できます。
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > この記事では、Windows に Python 用のカスタム ランタイムをインストールする方法について説明します。 Linux にインストールするには、[SQL Server on Linux 用の Python カスタム ランタイムのインストール](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)に関するページを参照してください
@@ -148,7 +148,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 SQL Server は、Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、および Ubuntu にインストールできます。 詳細については、[「SQL Server on Linux のインストール ガイド」の「サポートされているプラットフォーム」](../../linux/sql-server-linux-setup.md)を参照してください。
 

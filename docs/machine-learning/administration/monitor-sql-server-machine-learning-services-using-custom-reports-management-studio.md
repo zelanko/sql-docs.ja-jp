@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ed72d25320caef7e946ffc317541665ca37c5b6d
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 1dd9f995efad5f8e4209baf5827c7be8ccdd8886
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115374"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471353"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>SQL Server Management Studio のカスタムレポートを使用して Python および R のスクリプトの実行を監視する
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -41,14 +41,14 @@ SQL Server Management Studio のレポートの詳細については、「[Manag
 
 1. GitHub から SQL Server Machine Learning Services の [SSMS カスタム レポート](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)をダウンロードします。
 
-   ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+   ::: moniker range="=azuresqldb-mi-current"
    >[!NOTE]
    > カスタム レポート **ML Services - Configure Instance** は、Azure SQL Managed Instance ではサポートされていません。
    ::: moniker-end
 
 2. Management Studio へのレポートのコピー
 
-    1. SQL Server Management Studio で使用されるカスタム レポート フォルダーを見つけます。 既定では、カスタム レポートはこのフォルダーに格納されます ( **user_name** は Windows ユーザー名)。
+    1. SQL Server Management Studio で使用されるカスタム レポート フォルダーを見つけます。 既定では、カスタム レポートはこのフォルダーに格納されます (**user_name** は Windows ユーザー名)。
 
         `C:\Users\user_name\Documents\SQL Server Management Studio\Custom Reports`
 
