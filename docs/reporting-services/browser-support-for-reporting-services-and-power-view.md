@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8bae1b0ae40d9895cedc094cf4a31386199f5e1
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: aa8a9fbbcadfcdd3c266de4b1453ea7e5402e1af
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891232"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466653"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services と Power View のブラウザー サポート
 
@@ -83,7 +83,7 @@ SQL Server Reporting Services、ReportViewer コントロール、Power View. �
 
  **(+)** 最新公開リリース バージョン
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]に統合されている SharePoint 製品を使用している場合は、「  [SharePoint 2016 でブラウザー サポートを計画する](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)」を参照してください。
 
@@ -147,7 +147,7 @@ SQL Server Reporting Services、ReportViewer コントロール、Power View. �
 
  **(+)** 最新公開リリース バージョン
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
  SharePoint 2016 のブラウザー サポートの詳細については、「 [SharePoint 2013 でブラウザー サポートを計画する](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)」を参照してください。
 

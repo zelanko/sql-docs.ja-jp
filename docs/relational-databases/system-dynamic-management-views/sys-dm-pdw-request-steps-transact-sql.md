@@ -13,12 +13,12 @@ ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 8fd0bbad8ede056d1d35a9be62e82704575472bd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 839a1d906fcd7b6a4a980a7381b4f5fcdcf10d5d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482501"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644042"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "97482501"
 |request_id|**nvarchar(32)**|request_id と step_index このビューのキーを構成します。<br /><br /> 要求に関連付けられている一意の数値 ID。|[Transact-sql&#41;&#40;sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)の request_id を参照してください。|  
 |step_index|**int**|request_id と step_index このビューのキーを構成します。<br /><br /> 要求を構成する一連の手順におけるこのステップの位置。|n 個の手順を含む要求の場合は 0 ~ (n-1)。|  
 |plan_node_id|**int**|実行プラン内のそのステップのオペレーター ID に対応するノード ID。|なし|  
-|operation_type|**nvarchar(35)**|このステップで表される操作の種類。|**DMS クエリプランの操作:** ' Returnoperation) '、' PartitionMoveOperation '、' MoveOperation '、' BroadcastMoveOperation '、' ShuffleMoveOperation '、' TrimMoveOperation '、' CopyOperation '、' DistributeReplicatedTableMoveOperation '<br /><br /> **SQL クエリプランの操作:** ' OnOperation '、' RemoteOperation '<br /><br /> **その他のクエリプランの操作:** ' MetaDataCreateOperation '、' RandomIDOperation '<br /><br /> **読み取りの外部操作:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **MapReduce の外部操作:** ' HadoopJobOperation '、' HdfsDeleteOperation '<br /><br /> **書き込みの外部操作:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> 詳細については、「」の「クエリプランについて」を参照してください [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 。 <br /><br />  クエリプランは、データベースの設定によっても影響を受ける可能性があります。  詳細については、 [ALTER DATABASE SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json&view=azure-sqldw-latest) を確認してください。|  
+|operation_type|**nvarchar(35)**|このステップで表される操作の種類。|**DMS クエリプランの操作:** ' Returnoperation) '、' PartitionMoveOperation '、' MoveOperation '、' BroadcastMoveOperation '、' ShuffleMoveOperation '、' TrimMoveOperation '、' CopyOperation '、' DistributeReplicatedTableMoveOperation '<br /><br /> **SQL クエリプランの操作:** ' OnOperation '、' RemoteOperation '<br /><br /> **その他のクエリプランの操作:** ' MetaDataCreateOperation '、' RandomIDOperation '<br /><br /> **読み取りの外部操作:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **MapReduce の外部操作:** ' HadoopJobOperation '、' HdfsDeleteOperation '<br /><br /> **書き込みの外部操作:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> 詳細については、「」の「クエリプランについて」を参照してください [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 。 <br /><br />  クエリプランは、データベースの設定によっても影響を受ける可能性があります。  詳細については、 [ALTER DATABASE SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json&view=azure-sqldw-latest&preserve-view=true) を確認してください。|  
 |distribution_type|**nvarchar(32)**|このステップが実行されるディストリビューションの種類。|' AllNodes '、' Allnodes '、' AllComputeNodes '、' CompuSubsetNodes '、' Distribution '、' '、' SubsetDistributions '、' 未指定 '|  
 |location_type|**nvarchar(32)**|ステップが実行されている場所。|' Compute '、' Control '、' DMS '|  
 |status|**nvarchar(32)**|このステップの状態です。|保留中、実行中、完了、失敗、UndoFailed、PendingCancel、取り消し、取り消し済み、中止|  

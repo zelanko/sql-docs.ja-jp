@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5585f26247ad360fa848a24109416a59c49c94a6
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 412d1501344f5cdcb64ebd08cc9d328f4b7090c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793779"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469983"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>R モデルを配置して SQL Server で使用する (チュートリアル)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "92793779"
 
 ## <a name="batch-scoring"></a>バッチ スコアリング
 
-複数の予測を生成し、SQL クエリまたはテーブルを入力として渡す、 *PredictTipBatchMode* というストアド プロシージャを作成します。 結果のテーブルが返されます。これにテーブルに直接挿入したり、ファイルに書き込んだりすることができます。
+複数の予測を生成し、SQL クエリまたはテーブルを入力として渡す、*PredictTipBatchMode* というストアド プロシージャを作成します。 結果のテーブルが返されます。これにテーブルに直接挿入したり、ファイルに書き込んだりすることができます。
 
 - SQL クエリとして一連の入力データを取得する
 - 前のレッスンで保存したトレーニング済みのロジスティック回帰モデルを呼び出す
@@ -74,11 +74,11 @@ ms.locfileid: "92793779"
 
     + SELECT ステートメントを使用して、SQL テーブルから格納されているモデルを呼び出します。 このモデルは **varbinary (max)** データとしてテーブルから取得され、SQL 変数 _\@lmodel2_ に格納された後、パラメーター *mod* としてシステム ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) に渡されます。
 
-    + スコアリングの入力として使用されるデータは、SQL クエリとして定義され、SQL 変数 _\@input_ に文字列として格納されます。 データベースからデータが取得されると、 *InputDataSet* と呼ばれるデータ フレームに格納されます。これは、 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) プロシージャに対する入力データの既定の名前にすぎません。必要に応じて、 _\@input_data_1_name_ パラメーターを使用して別の変数名を定義できます。
+    + スコアリングの入力として使用されるデータは、SQL クエリとして定義され、SQL 変数 _\@input_ に文字列として格納されます。 データベースからデータが取得されると、*InputDataSet* と呼ばれるデータ フレームに格納されます。これは、[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) プロシージャに対する入力データの既定の名前にすぎません。必要に応じて、 _\@input_data_1_name_ パラメーターを使用して別の変数名を定義できます。
 
     + スコアを生成するために、ストアド プロシージャで **RevoScaleR** ライブラリの rxPredict 関数が呼び出されます。
 
-    + 戻り値 ( *Score* ) は、特定のモデルで、そのドライバーがチップをもらう確率です。 (省略可能) 戻り値に特定の種類のフィルターを適用して、戻り値を "チップあり" グループと "チップなし" グループに容易に分類できます。  たとえば、確率が 0.5 よりも小さい場合、チップをもらえない可能性が高いと考えられます。
+    + 戻り値 (*Score*) は、特定のモデルで、そのドライバーがチップをもらう確率です。 (省略可能) 戻り値に特定の種類のフィルターを適用して、戻り値を "チップあり" グループと "チップなし" グループに容易に分類できます。  たとえば、確率が 0.5 よりも小さい場合、チップをもらえない可能性が高いと考えられます。
   
 2.  バッチ モードでストアド プロシージャを呼び出すには、ストアド プロシージャへの入力として必要なクエリを定義します。 次の SQL クエリは、SSMS で実行して動作することを確認できます。
 
@@ -108,7 +108,7 @@ ms.locfileid: "92793779"
     q <- paste("EXEC PredictTipBatchMode @input = ", input, sep="");
     ```
 
-4. R からストアド プロシージャを実行するには、 **RODBC** パッケージの **sqlQuery** メソッドを呼び出し、先ほど定義した SQL 接続 `conn` を使用します。
+4. R からストアド プロシージャを実行するには、**RODBC** パッケージの **sqlQuery** メソッドを呼び出し、先ほど定義した SQL 接続 `conn` を使用します。
 
     ```R
     sqlQuery (conn, q);
@@ -192,13 +192,13 @@ ms.locfileid: "92793779"
     END
     ```
 
-2. SQL Server Management Studio で、[!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** プロシージャ (または **EXECUTE** ) を使用して、ストアド プロシージャを呼び出し、必要な入力に渡すことができます。 たとえば、Management Studio で次のステートメントを実行してみます。
+2. SQL Server Management Studio で、[!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** プロシージャ (または **EXECUTE**) を使用して、ストアド プロシージャを呼び出し、必要な入力に渡すことができます。 たとえば、Management Studio で次のステートメントを実行してみます。
 
     ```sql
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-    ここで渡される値は、それぞれ、変数 _passenger\_count_ 、 _trip_distance_ 、 _trip\_time\_in\_secs_ 、 _pickup\_latitude_ 、 _pickup\_longitude_ 、 _dropoff\_latitude_ 、 _dropoff\_longitude_ に対応します。
+    ここで渡される値は、それぞれ、変数 _passenger\_count_、_trip_distance_、_trip\_time\_in\_secs_、_pickup\_latitude_、_pickup\_longitude_、_dropoff\_latitude_、_dropoff\_longitude_ に対応します。
 
 3. R コードからこの同じ呼び出しを実行するには、次のようにストアド プロシージャの呼び出しをすべて含む R 変数を定義するだけです。
 
@@ -206,9 +206,9 @@ ms.locfileid: "92793779"
     q2 = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 ";
     ```
 
-    ここで渡される値は、それぞれ、変数 _passenger\_count_ 、 _trip\_distance_ 、 _trip\_time\_in\_secs_ 、 _pickup\_latitude_ 、 _pickup\_longitude_ 、 _dropoff\_latitude_ 、 _dropoff\_longitude_ に対応します。
+    ここで渡される値は、それぞれ、変数 _passenger\_count_、_trip\_distance_、_trip\_time\_in\_secs_、_pickup\_latitude_、_pickup\_longitude_、_dropoff\_latitude_、_dropoff\_longitude_ に対応します。
 
-4. ( **RODBC** パッケージから) `sqlQuery` を呼び出し、接続文字列を、ストアド プロシージャの呼び出しを含む文字列変数と共に渡します。
+4. (**RODBC** パッケージから) `sqlQuery` を呼び出し、接続文字列を、ストアド プロシージャの呼び出しを含む文字列変数と共に渡します。
 
     ```R
     # predict with stored procedure in single mode
