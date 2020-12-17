@@ -8,13 +8,13 @@ ms.date: 08/06/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f19c86fe5b61b46a95db7988657b1e5ed833f9fd
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+monikerRange: =sql-server-2016
+ms.openlocfilehash: d1910099e1f0aa4a8f3e58f1faa01dfbe177c517
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227093"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470763"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>SQL Server 2016 R Services とは
 
@@ -55,7 +55,7 @@ R Services で R スクリプトを実行するには、次の 2 つの方法が
 
 + 最も一般的な方法は、T-SQL ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用することです。
 
-+ また、任意の R クライアントを使用して、実行をリモートの SQL Server にプッシュするスクリプト (*リモート計算コンテキスト*と呼ばれます) を書くこともできます。 詳細については、[データ サイエンス クライアントの R 開発を設定する](../r/set-up-a-data-science-client.md)方法に関する記事を参照してください。
++ また、任意の R クライアントを使用して、実行をリモートの SQL Server にプッシュするスクリプト (*リモート計算コンテキスト* と呼ばれます) を書くこともできます。 詳細については、[データ サイエンス クライアントの R 開発を設定する](../r/set-up-a-data-science-client.md)方法に関する記事を参照してください。
 
 <a name="version"></a>
 

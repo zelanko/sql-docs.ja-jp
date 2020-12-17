@@ -15,13 +15,13 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eca2f9ee0bfadddd91443c01089139c7b08a308c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 24c614f6b7fa00eb566dc7d8d25a6686494cfebc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035636"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409218"
 ---
 # <a name="create-a-job-category"></a>ジョブ カテゴリの作成
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "92035636"
   
 #### <a name="to-create-a-job-category"></a>ジョブ カテゴリを作成するには  
   
-1.  **オブジェクト エクスプ ローラー**で、プラス記号をクリックして、ジョブ カテゴリを作成するサーバーを展開します。  
+1.  **オブジェクト エクスプ ローラー** で、プラス記号をクリックして、ジョブ カテゴリを作成するサーバーを展開します。  
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "92035636"
   
 #### <a name="to-create-a-job-category"></a>ジョブ カテゴリを作成するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

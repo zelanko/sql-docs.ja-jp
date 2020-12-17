@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: cba06a816e57189cb69f9680542452d2788b233e
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 571b49dfa3ce555aad02ffe8d6ba7c68a033bbdc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92412535"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470123"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>R チュートリアル:データの調査と視覚化
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "92412535"
 
 ## <a name="create-plots-using-r-in-t-sql"></a>T-SQL で R を使用してプロットを作成する
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!IMPORTANT]
 > SQL Server 2019 以降、この分離メカニズムを使用して、プロット ファイルが保存されるディレクトリに適切なアクセス許可を与える必要があります。 これらのアクセス許可の設定方法の詳細については、[「Windows 上の SQL Server 2019:Machine Learning Services」の「ファイルのアクセス許可」](../install/sql-server-machine-learning-services-2019.md#file-permissions)セクションを参照してください。
 ::: moniker-end

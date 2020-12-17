@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e38e126274b03a53c693f9cdd904ee8301b0069b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 52a3ee78a73e2ba3e600d7dae99019d481da73a7
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987706"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559114"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>チュートリアル:配置計画を変更するためにデータベース プロジェクトの配置を拡張する
 
@@ -775,7 +775,7 @@ ms.locfileid: "91987706"
         > ターゲット データベースと同一のデータベース プロジェクトを配置した場合、生成されるレポートにはあまり意味がありません。 意味のある結果を得るには、データベースに対する変更を配置するか、新しいデータベースを配置します。  
   
 ## <a name="command-line-deployment-using-generated-dacpac-file"></a>生成された dacpac ファイルを使用したコマンド ライン配置  
-SQL プロジェクトのビルドが完了すると、コマンド ラインからスキーマを配置するために使用できる dacpac ファイルが作成されます。これにより、ビルド コンピューターなどの別のコンピューターから配置することができます。 SqlPackage は、さまざまなオプションを使用して dacpacs を配置できるコマンド ライン ユーティリティです。これらのオプションにより、ユーザーは、特に dacpac の配置や配置スクリプトの生成を実行できます。 詳しくは、「[SqlPackage.exe](../tools/sqlpackage.md)」をご覧ください。  
+SQL プロジェクトのビルドが完了すると、コマンド ラインからスキーマを配置するために使用できる dacpac ファイルが作成されます。これにより、ビルド コンピューターなどの別のコンピューターから配置することができます。 SqlPackage は、さまざまなオプションを使用して dacpacs を配置できるコマンド ライン ユーティリティです。これらのオプションにより、ユーザーは、特に dacpac の配置や配置スクリプトの生成を実行できます。 詳しくは、「[SqlPackage.exe](../tools/sqlpackage/sqlpackage.md)」をご覧ください。  
   
 > [!NOTE]  
 > DeploymentContributors プロパティが定義されているプロジェクトからビルドされた dacpacs を正常に配置するには、配置コントリビューターを含む DLL を、使用中のコンピューターにインストールする必要があります。 これは、配置を正常に完了するためにこれらの DLL が必須とマークされているためです。  

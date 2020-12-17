@@ -9,24 +9,24 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e7657dcfe382ed87b31ca17e6c36d9019d1b84e2
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 0b32d12a694062e56611abaff18dc4f1e2f23061
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412518"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470113"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>R チュートリアル:SQL ストアド プロシージャで予測を実行する
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-全 5 回からなるこのチュートリアル シリーズの第 5 回では、潜在的成果を予測するモデルを利用し、前回のチュートリアルでトレーニングし、保存したモデルを " *運用化* " します。 モデルは、他のアプリケーションから直接呼び出すことができるストアド プロシージャにラップされます。
+全 5 回からなるこのチュートリアル シリーズの第 5 回では、潜在的成果を予測するモデルを利用し、前回のチュートリアルでトレーニングし、保存したモデルを "*運用化*" します。 モデルは、他のアプリケーションから直接呼び出すことができるストアド プロシージャにラップされます。
 
 この記事では、スコアリングを実行する 2 つの方法を実演します。
 
-+ **バッチ スコアリング モード** :ストアド プロシージャへの入力には SELECT クエリを使用します。 このストアド プロシージャは、入力ケースに対応する観察のテーブルを返します。
++ **バッチ スコアリング モード**:ストアド プロシージャへの入力には SELECT クエリを使用します。 このストアド プロシージャは、入力ケースに対応する観察のテーブルを返します。
 
-+ **個別スコア付けモード** : 個々のパラメーター セットを入力として渡します。  このストアド プロシージャは、1 つの行または値を返します。
++ **個別スコア付けモード**: 個々のパラメーター セットを入力として渡します。  このストアド プロシージャは、1 つの行または値を返します。
 
 この記事では、次のことを行います。
 

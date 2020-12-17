@@ -8,13 +8,13 @@ ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c0089390202f6bebfc0ecce8b41b70adee7348c6
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 7772c0307732809cb7d5d6d0767ad7bcd29c7c89
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196346"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470673"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での既知の問題
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -254,13 +254,13 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 ### <a name="15-installation-or-upgrade-error-on-fips-enabled-servers"></a>15. FIPS 対応サーバーでのインストールまたはアップグレード エラー
 
-機能 **Machine Learning Services および言語拡張機能**を備えた SQL Server 2019 をインストールするか、または [(FIPS) Federal Information Processing Standard (FIPS)](/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) 対応サーバー上の SQL Server インスタンスをアップグレードすると、次のエラーが表示されます。
+機能 **Machine Learning Services および言語拡張機能** を備えた SQL Server 2019 をインストールするか、または [(FIPS) Federal Information Processing Standard (FIPS)](/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) 対応サーバー上の SQL Server インスタンスをアップグレードすると、次のエラーが表示されます。
 
 > *An error occurred while installing extensibility feature with error message:AppContainer Creation Failed with error message NONE, state This implementation is not part of the Windows Platform FIPS validated cryptographic algorithms. (拡張機能のインストール中にエラーが発生しました。エラー メッセージ: AppContainer の作成がエラー メッセージ NONE で失敗しました、この実装は Windows プラットフォーム FIPS 検証暗号化アルゴリズムの一部ではありません。)*
 
 **回避策**
 
-機能 **Machine Learning Services および言語拡張機能**を備えた SQL Server 2019 のインストールまたは SQL Server インスタンスのアップグレードの前に、FIPS を無効にします。 インストールまたはアップグレードが完了したら、FIPS を再び有効にすることができます。
+機能 **Machine Learning Services および言語拡張機能** を備えた SQL Server 2019 のインストールまたは SQL Server インスタンスのアップグレードの前に、FIPS を無効にします。 インストールまたはアップグレードが完了したら、FIPS を再び有効にすることができます。
 
 **適用対象:** SQL Server 2019
 
@@ -495,26 +495,26 @@ R での `OutputDataSet` としての `data.table` は、SQL Server 2017 累積�
 
 ```sql
 USE MASTER
-DECLARE @language nvarchar(1) = N'R'
-DECLARE @script nvarchar(max) = N'Sys.sleep(100)'
-DECLARE @input_data_1 nvarchar(max) = N'select 1'
-EXEC sp_execute_external_script @language = @language, @script = @script, @input_data_1 = @input_data_1 with result sets none
+DECLARE @language nvarchar(1) = N'R'
+DECLARE @script nvarchar(max) = N'Sys.sleep(100)'
+DECLARE @input_data_1 nvarchar(max) = N'select 1'
+EXEC sp_execute_external_script @language = @language, @script = @script, @input_data_1 = @input_data_1 with result sets none
 go
 ```
 
 その間に並列に dbo でライブラリを LibraryManagementFunctional にインストールします。
 
 ```sql
-USE [LibraryManagementFunctional]
+USE [LibraryManagementFunctional]
 go
 
-CREATE EXTERNAL LIBRARY [RODBC] FROM (CONTENT = N'/home/ani/var/opt/mssql/data/RODBC_1.3-16.tar.gz') WITH (LANGUAGE = 'R')
+CREATE EXTERNAL LIBRARY [RODBC] FROM (CONTENT = N'/home/ani/var/opt/mssql/data/RODBC_1.3-16.tar.gz') WITH (LANGUAGE = 'R')
 go
 
-DECLARE @language nvarchar(1) = N'R'
-DECLARE @script nvarchar(14) = N'library(RODBC)'
-DECLARE @input_data_1 nvarchar(8) = N'select 1'
-EXEC sp_execute_external_script @language = @language, @script = @script, @input_data_1 = @input_data_1
+DECLARE @language nvarchar(1) = N'R'
+DECLARE @script nvarchar(14) = N'library(RODBC)'
+DECLARE @input_data_1 nvarchar(8) = N'select 1'
+EXEC sp_execute_external_script @language = @language, @script = @script, @input_data_1 = @input_data_1
 go
 ```
 
@@ -597,7 +597,7 @@ go
 
 SQL Server 2017 CU2 以降では、Python コードが正常に実行された場合でも、次のメッセージが表示されることがあります。
 
-> *外部スクリプトからの STDERR メッセージ: *
+> *外部スクリプトからの STDERR メッセージ:*
 >  *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
 > *SyntaxWarning: telemetry_state がグローバル宣言の前で使用されています*
 
@@ -681,13 +681,13 @@ pip install quantfolio
 
 ```text
 EXEC sp_execute_external_script
-    @language = N'Python'
-    , @script = N'
+    @language = N'Python'
+    , @script = N'
 OutputDataSet = InputDataSet'
-    , @input_data_1 = N'select 1'
-    , @input_data_1_name = N'InputDataSet'
-    , @output_data_1_name = N'OutputDataSet'
-    WITH RESULT SETS (([output] int not null));
+    , @input_data_1 = N'select 1'
+    , @input_data_1_name = N'InputDataSet'
+    , @output_data_1_name = N'OutputDataSet'
+    WITH RESULT SETS (([output] int not null));
 Msg 39012, Level 16, State 14, Line 0
 Unable to communicate with the runtime for 'Python' script for request id: 94257840-1704-45E8-83D2-2F74AEB46CF7. Please check the requirements of 'Python' runtime.
 STDERR message(s) from external script:
@@ -698,10 +698,10 @@ SqlSatelliteCall error: Failed to load library /opt/mssql-extensibility/lib/sqls
 STDOUT message(s) from external script:
 SqlSatelliteCall function failed. Please see the console output for more information.
 Traceback (most recent call last):
-  File "/opt/mssql/mlservices/libraries/PythonServer/revoscalepy/computecontext/RxInSqlServer.py", line 605, in rx_sql_satellite_call
-    rx_native_call("SqlSatelliteCall", params)
-  File "/opt/mssql/mlservices/libraries/PythonServer/revoscalepy/RxSerializable.py", line 375, in rx_native_call
-    ret = px_call(functionname, params)
+  File "/opt/mssql/mlservices/libraries/PythonServer/revoscalepy/computecontext/RxInSqlServer.py", line 605, in rx_sql_satellite_call
+    rx_native_call("SqlSatelliteCall", params)
+  File "/opt/mssql/mlservices/libraries/PythonServer/revoscalepy/RxSerializable.py", line 375, in rx_native_call
+    ret = px_call(functionname, params)
 RuntimeError: revoscalepy function failed.
 Total execution time: 00:01:00.387
 ```

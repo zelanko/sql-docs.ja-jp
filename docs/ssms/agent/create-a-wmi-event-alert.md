@@ -13,13 +13,13 @@ ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6511ea5b72a4031ec212d463b6cf8a6f7b977a9e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1ae08f86a984f4a8bdbc73db02fb41e335250e4f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035085"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464473"
 ---
 # <a name="create-a-wmi-event-alert"></a>Create a WMI Event Alert
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ WMI Provider を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 ### <a name="security"></a><a name="Security"></a>セキュリティ  
   
 #### <a name="permissions"></a><a name="Permissions"></a>アクセス許可  
-既定では、 **sp_add_alert** を実行できるのは、 **sysadmin**固定サーバー ロールのメンバーだけです。  
+既定では、 **sp_add_alert** を実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーだけです。  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
   
@@ -71,7 +71,7 @@ WMI Provider を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
 #### <a name="to-create-a-wmi-event-alert"></a>WMI イベント警告を作成するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
