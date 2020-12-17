@@ -9,20 +9,20 @@ ms.author: davidph
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning-services
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d0da76c639048e9479afd575b584275a9bb51c6
-ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: fdf9cb30fead518c36fef8de4e62db4cd56d9560
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94810512"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469993"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の新機能
 [!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
 
 この記事では、[SQL Server Machine Learning Services](sql-server-machine-learning-services.md) の各バージョンに含まれている新しい機能について説明します。 データ プラットフォーム、高度な分析、データ サイエンスの間の統合を継続的に拡大、拡張、強化するために、機械学習機能は、SQL Server の各リリースに追加されています。 
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ## <a name="new-in-sql-server-2019"></a>SQL Server 2019 の新機能
 
 このリリースでは、SQL Server での Python および R の機械学習操作に対して最も要望の多かった機能が追加されています。 このリリースのすべての機能の詳細については、[SQL Server 2019 の新機能](../sql-server/what-s-new-in-sql-server-ver15.md)に関するページ、および「[SQL Server 2019 のリリース ノート](../sql-server/sql-server-version-15-release-notes.md)」を参照してください。
@@ -41,7 +41,7 @@ ms.locfileid: "94810512"
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ## <a name="new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 
 このリリースでは [Python サポートと業界をリードする機械学習アルゴリズム](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)が追加されています。 SQL Server 2017 は、新しいスコープを反映するように名前が変更され、[SQL Server Machine Learning Services (データベース内)](sql-server-machine-learning-services.md) の導入と、Python と R の両方の言語サポートが示されています。 
@@ -90,7 +90,7 @@ T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 関数を使用する�
 このリリースでは、完全に独立したデータ サイエンス サーバーである [SQL Server Machine Learning Server (スタンドアロン)](r/r-server-standalone.md)も追加され、R および Python での統計分析と予測分析がサポートされます。 R Services と同様に、このサーバーは SQL Server 2016 R Server (スタンドアロン) の次のバージョンです。 スタンドアロン サーバーを使用すると、SQL Server と依存関係のない R または Python ソリューションを配布し、スケーリングすることができます。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 ## <a name="new-in-sql-server-2016"></a>SQL Server 2016 の新機能
 
 このリリースでは、**SQL Server 2016 R Services** を通じて SQL Server に機械学習機能が導入されました。SQL Server 2016 R Services は、データベース エンジン インスタンス内の常駐データに対して R スクリプトを処理するためのデータベース内分析エンジンです。
@@ -106,7 +106,7 @@ T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 関数を使用する�
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ## <a name="linux-support"></a>Linux Support
 
 SQL Server 2019 では、データベース エンジンのインスタンスを使用して機械学習パッケージをインストールすると、R と Python に対する Linux Support が追加されます。 詳細については、[Linux に SQL Server Machine Learning Services をインストールする](../linux/sql-server-linux-setup-machine-learning.md)方法に関するページを参照してください。

@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 9bb87af8d580830072dd3a8199958497b8e38a25
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b4e4c686411d40a2c161c670821e6566460db4a4
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440813"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644073"
 ---
 # <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>sys.pdw_nodes_dm_exec_sql_text (Transact-sql)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "97440813"
 |**text**|**nvarchar(max)**|SQL クエリのテキスト。<br /><br /> 暗号化されているオブジェクトの場合は NULL になります。|  
 
 ## <a name="remarks"></a>解説  
-[Sys.dm_exec_sql_text](./sys-dm-exec-sql-text-transact-sql.md?view=sql-server-ver15)の同じ解説が適用されます。  
+[Sys.dm_exec_sql_text](./sys-dm-exec-sql-text-transact-sql.md)の同じ解説が適用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する **sysadmin** サーバーロールまたは権限が必要 `VIEW SERVER STATE` です。  

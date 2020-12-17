@@ -9,24 +9,24 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e4c25f5fedb0671840406bcb2364fa918de1219a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: ef7dd974d77b60d3b03cf8799f7707481f32e91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173393"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470373"
 ---
 # <a name="python-tutorial-train-a-linear-regression-model-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習で線形回帰モデルをトレーニングする
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 この 4 部構成のチュートリアル シリーズの第 3 部では、Python で線形回帰モデルをトレーニングします。 このシリーズの次のパートでは、Machine Learning Services またはビッグ データ クラスターを使用して、このモデルを SQL Server データベースにデプロイします。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 この 4 部構成のチュートリアル シリーズの第 3 部では、Python で線形回帰モデルをトレーニングします。 このシリーズの次の部では、Machine Learning Services を使用して、このモデルを SQL Server データベースにデプロイします。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 この 4 部構成のチュートリアル シリーズの第 3 部では、Python で線形回帰モデルをトレーニングします。 このシリーズの次の部では、Machine Learning Services を使用して、このモデルを Azure SQL Managed Instance データベースにデプロイします。
 ::: moniker-end
 

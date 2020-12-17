@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: a20939e77c29566c890450d828cff441366c6f00
-ms.sourcegitcommit: dc3ea1696b8a4332934568439aed6cce4e9737eb
+monikerRange: '>=sql-server-2017'
+ms.openlocfilehash: 07e8b01d94d1ab9c3b9d19ab28d4ed4b3d595b2b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93244664"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425126"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SQL Server Reporting Services (SSRS) 2017 以降のリリース ノート
 
@@ -189,7 +189,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | リンク レポートのレポート パラメーターの表示が、そのプロパティを編集すると元に戻る。 | &nbsp; |
 | Express エディションで URL パラメーター rc:Toolbar=false が機能しない。 | &nbsp; |
 | CanGrow プロパティが false に設定されたテキスト ボックスに式があると、値が表示されない。 | &nbsp; |
-| セットアップ時のプロダクト キーに " _詳細情報_ " リンクが追加される。 | &nbsp; |
+| セットアップ時のプロダクト キーに "_詳細情報_" リンクが追加される。 | &nbsp; |
 | カスタムのフォーム認証を使用した Web ポータルで、スライド式有効期限の Cookie が無視される。 | &nbsp; |
 | 行のコンテンツが空の場合、Word にエクスポートすると行の高さが等しくならない。 | &nbsp; |
 | &nbsp; | &nbsp; |

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71c53b9a1f57e5c207500d25f1ab3eb0fec16ad8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cbc72515c3ba8bcee52bff213ba11bd0b4bc2140
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985593"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641151"
 ---
 # <a name="adox-properties"></a>ADOX のプロパティ
 
@@ -51,5 +51,5 @@ ms.locfileid: "88985593"
 |[UpdateRule](./updaterule-property-adox.md)|主キーが更新されたときに実行されるアクションを示します。|  
   
 ## <a name="see-also"></a>参照  
- [ADOX API リファレンス](./adox-object-model.md?view=sql-server-ver15)   
+ [ADOX API リファレンス](./adox-object-model.md)   
  [データ定義言語とセキュリティの ADO 拡張機能 (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
