@@ -1,6 +1,6 @@
 ---
 description: sys.function_order_columns (Transact-SQL)
-title: function_order_columns (Transact-sql) |Microsoft Docs
+title: sys.function_order_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c7ac555630f4472e5cf58ad9017cdb03643ae2b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ad217286e8d9f0e3fc6b6a7cc8441cee6787f76c
+ms.sourcegitcommit: a81823f20262227454c0b5ce9c8ac607aaf537e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546797"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684190"
 ---
 # <a name="sysfunction_order_columns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "89546797"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|順序が定義されているオブジェクト (CLR テーブル値関数) の ID です。|  
-|**order_column_id**|**int**|順序列の ID です **order_column_id** は **object_id**内でのみ一意です。<br /><br /> **order_column_id** は、順序付けにおけるこの列の位置を表します。|  
-|**column_id**|**int**|**Object_id**内の列の ID。<br /><br /> **column_id** は **object_id**内でのみ一意です。|  
+|**order_column_id**|**int**|順序列の ID です **order_column_id** は **object_id** 内でのみ一意です。<br /><br /> **order_column_id** は、順序付けにおけるこの列の位置を表します。|  
+|**column_id**|**int**|**Object_id** 内の列の ID。<br /><br /> **column_id** は **object_id** 内でのみ一意です。|  
 |**is_descending**|**bit**|1 = 順序列には、降順の並べ替え方向があります。<br /><br /> 0 = 順序列には昇順の並べ替え方向があります。|  
   
 ## <a name="permissions"></a>アクセス許可  
