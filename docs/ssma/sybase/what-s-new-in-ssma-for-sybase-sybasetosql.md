@@ -4,22 +4,29 @@ description: 各リリースの Sybase (SybaseToSQL) の SQL Server Migration As
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 57b589ef62259904d63106298326dd537d33fc15
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: c9bbea58446a4e42410273e6d20f2649121ee813
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036065"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665866"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE の新機能 (SybaseToSQL)
 
 この記事では、各リリースでの SAP ASE (旧称 SSMA for Sybase) の変更 (SSMA) の SQL Server Migration Assistant を示します。
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+SSMA for SAP ASE の v 8.16 リリースには、次の変更が含まれています。
+
+* レガシパーサーのサポートを削除する
+* データベースから更新されていないオブジェクトの問題を修正します
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 
@@ -81,7 +88,7 @@ SSMA for SAP ASE のバージョン8.7 リリースでは、グラフィカル�
 
 ユーザビリティとパフォーマンスを向上させるために設計された一連の修正に加えて、SSMA for SAP ASE のリリースは、ユーザーが変換されたコードで SSMA の拡張プロパティを省略できるようにする設定を追加することによって強化されています。
 
-Ssma for SAP ASE でこの設定を利用するには、[ **ツール** ] [プロジェクト] [  >  **設定** ]  >  **[全般**  >  **変換** ] に移動し、[その **他** ] の [ **拡張プロパティを省略** ] 設定の値を **[はい]** に更新します。
+Ssma for SAP ASE でこの設定を利用するには、[**ツール**] [プロジェクト] [  >  **設定**]  >  **[全般**  >  **変換**] に移動し、[その **他**] の [**拡張プロパティを省略**] 設定の値を **[はい]** に更新します。
 
 ![拡張プロパティの設定を省略する](../sybase/media/ssma-omit-extended-properties.png)
 
@@ -137,7 +144,7 @@ SSMA for SAP ASE の v2.0 リリースは、品質と変換メトリックの向
 
   ![SQL Database MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
 
-* 変換後の **修正アドバイザー** 。 詳細について [は、こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)を参照してください。
+* 変換後の **修正アドバイザー**。 詳細について [は、こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)を参照してください。
 
 * データベース/スキーマの事前選択。
 
@@ -162,7 +169,7 @@ SSMA for SAP ASE の v1.0 リリースには、次の変更が含まれていま
 
 SSMA for SAP ASE の v1.0 リリースには、次の変更が含まれています。
 
-* [ **プロジェクトの設定** ] で強調表示されている型マッピングを変更します。
+* [ **プロジェクトの設定**] で強調表示されている型マッピングを変更します。
 * ユーザーがテレメトリを無効にする機能。
 
 ## <a name="ssma-v77"></a>SSMA v 7.7

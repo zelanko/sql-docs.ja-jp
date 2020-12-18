@@ -4,22 +4,30 @@ description: 各リリースのアクセス用 (SSMA) の SQL Server Migration A
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: c563769ec4c0b15ac3009b6cbe3207896e7f7c4c
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 1482ec079e0410fd7713ac183f6181c2a8793a11
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036063"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665863"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access の新機能 (アクセス可能な Sql)
 
 この記事では、各リリースでのアクセス変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+SSMA for Access の v 8.16 リリースには、次の変更が含まれています。
+
+* HTML 変換レポートでクエリの SQL テキストを表示する
+* レガシパーサーのサポートを削除する
+* データベースから更新されていないオブジェクトの問題を修正します
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 
@@ -87,7 +95,7 @@ SSMA for Access のリリースでは、クエリでの関数の変換が改善�
 
 ユーザビリティとパフォーマンスを向上させるために設計された一連の修正に加え、SSMA の SSMA リリースは、ユーザーが変換されたコードで SSMA 拡張プロパティを省略できるようにする設定を追加することによって強化されています。
 
-Ssma for Access でこの設定を利用するには、[ **ツール** ] [  >  **プロジェクト設定** ] [  >  **全般**  >  **変換** ] の順に移動し、[その **他** ] の [ **拡張プロパティを省略** ] 設定の値を **[はい]** に更新します。
+Ssma for Access でこの設定を利用するには、[**ツール**] [  >  **プロジェクト設定**] [  >  **全般**  >  **変換**] の順に移動し、[その **他**] の [**拡張プロパティを省略**] 設定の値を **[はい]** に更新します。
 
 ![拡張プロパティの設定を省略する](../access/media/ssma-omit-extended-properties.png)
 
@@ -139,7 +147,7 @@ SSMA for Access の v2.0 リリースは、品質と変換メトリックの向�
 
   ![SQL MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
 
-* 変換後の **修正アドバイザー** 。 詳細について [は、こちら](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733)を参照してください。
+* 変換後の **修正アドバイザー**。 詳細について [は、こちら](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733)を参照してください。
 
 * データベース/スキーマの事前選択。
 

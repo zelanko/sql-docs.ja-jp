@@ -4,22 +4,32 @@ description: リリースごとに SQL Server Migration Assistant (SSMA) for MyS
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: efd716c1e41597e276c4b33bb19122d70b91dd03
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: b97f27f2e6c1fbed9109abbde012d7a8cf97935a
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036038"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665833"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL の新機能 (MySqlToSql)
 
 この記事では、各リリースでの MySQL 変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+SSMA for MySQL の v 8.16 リリースには、次の変更が含まれています。
+
+* 計算列のサポートを追加する
+* `INSERT`Unique 制約と主キーを持つテーブルに対してステートメントを変換するときの問題を修正する
+* `ANSI_QUOTES`およびサーバーモードに合わせたパーサーの更新 `NO_BACKSLASH_ESCAPES`
+* レガシパーサーのサポートを削除する
+* データベースから更新されていないオブジェクトの問題を修正します
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 
@@ -83,7 +93,7 @@ SSMA for MySQL のバージョン8.7 リリースでは、グラフィカルユ�
 
 ユーザビリティとパフォーマンスを向上させるために設計された一連の修正に加えて、SSMA for MySQL のリリースは、ユーザーが変換されたコードで SSMA の拡張プロパティを省略できるようにする設定を追加することによって強化されています。
 
-Ssma for MySQL でこの設定を利用するには、[ **ツール** ] [プロジェクト] [  >  **設定** ]  >  **[全般**  >  **変換** ] に移動し、[その **他** ] の [ **拡張プロパティを省略** する] 設定の値を **[はい]** に更新します。
+Ssma for MySQL でこの設定を利用するには、[**ツール**] [プロジェクト] [  >  **設定**]  >  **[全般**  >  **変換**] に移動し、[その **他**] の [**拡張プロパティを省略** する] 設定の値を **[はい]** に更新します。
 
 ![拡張プロパティの設定を省略する](../mysql/media/ssma-omit-extended-properties.png)
 
@@ -137,7 +147,7 @@ SSMA for MySQL の v2.0 リリースは、品質と変換メトリックの向�
 
   ![SQL MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
 
-* 変換後の **修正アドバイザー** 。 詳細について [は、こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)を参照してください。
+* 変換後の **修正アドバイザー**。 詳細について [は、こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)を参照してください。
 
 * データベース/スキーマの事前選択。
 
