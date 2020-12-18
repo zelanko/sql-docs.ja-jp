@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee984b5e04426cd269b7ed21f43d6b9b9dc91469
-ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bd526468e48eddb24aacaa776af4f35164f51b32
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328122"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478563"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -53,7 +53,7 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* 作成するデータベース スコープの資格情報の名前を指定します。 *credential_name* はシャープ (#) 記号で始めることはできません。 システム資格情報は ## で始まります。
 
-IDENTITY **='** _identity\_name_ **'** サーバーの外部に接続するときに使用するアカウントの名前を指定します。 共有キーを使用して Azure Blob Storage からファイルをインポートするには、ID 名が `SHARED ACCESS SIGNATURE` である必要があります。 データを SQL DW に読み込むには、任意の有効な値を ID に使用できます。 Shared Access Signature の詳細については、「[Shared Access Signatures (SAS) の使用](/azure/storage/storage-dotnet-shared-access-signature-part-1)」をご覧ください。 Kerberos (Windows Active Directory または MIT KDC) の使用時には、IDENTITY 引数でドメイン名を使用しないでください。 アカウント名にしておけば問題ありません。
+IDENTITY **='** _identity\_name_ **'** サーバーの外部に接続するときに使用するアカウントの名前を指定します。 共有キーを使用して Azure Blob Storage からファイルをインポートするには、ID 名が `SHARED ACCESS SIGNATURE` である必要があります。 データを Azure Synapse Analytics に読み込むには、任意の有効な値を ID に使用できます。 Shared Access Signature の詳細については、「[Shared Access Signatures (SAS) の使用](/azure/storage/storage-dotnet-shared-access-signature-part-1)」をご覧ください。 Kerberos (Windows Active Directory または MIT KDC) の使用時、IDENTITY 引数でドメイン名を使用しないでください。 アカウント名にしておけば問題ありません。
 
 > [!IMPORTANT]
 > PolyBase 用の SQL、Oracle、Teradata、および MongoDB ODBC コネクタでサポートされるのは、Kerberos 認証ではなく、基本認証のみです。
@@ -61,7 +61,7 @@ IDENTITY **='** _identity\_name_ **'** サーバーの外部に接続すると�
 > [!NOTE]
 > Azure Blob Storage 内のコンテナーで匿名アクセスが有効になっている場合は、WITH IDENTITY を使用する必要はありません。 Azure Blob Storage に対するクエリの例については、「[Azure Blob Storage に格納されているファイルからテーブルへのインポート](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage)」を参照してください。
 
-SECRET **='** _secret_ **'** 送信の認証に必要なシークレットを指定します。 `SECRET` は、Azure Blob Storage からファイルをインポートするために必要です。 Azure Blob Storage から SQL DW または Parallel Data Warehouse に読み込むには、シークレットが Azure Storage キーである必要があります。
+SECRET **='** _secret_ **'** 送信の認証に必要なシークレットを指定します。 `SECRET` は、Azure Blob Storage からファイルをインポートするために必要です。 Azure Blob Storage から Azure Synapse Analytics または Parallel Data Warehouse に読み込むには、シークレットが Azure Storage キーである必要があります。
 > [!WARNING]
 > SAS キーの値は '?' (疑問符) で始まる可能性があります。 SAS キーを使用する場合は、先頭の '?' を削除する必要があります。 そうしないと、作業がブロックされる可能性があります。
 
@@ -110,7 +110,7 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. Shared Access Signature のデータベース スコープ資格情報の作成
 
-次の例では、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) や [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) など、一括操作できる[外部データ ソース](../../t-sql/statements/create-external-data-source-transact-sql.md)の作成に使用できるデータベース スコープ資格情報を作成します。 Shared Access Signatures は、SQL Server、APS、または SQL DW では PolyBase と共に使用できません。
+次の例では、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) や [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) など、一括操作できる[外部データ ソース](../../t-sql/statements/create-external-data-source-transact-sql.md)の作成に使用できるデータベース スコープ資格情報を作成します。 Shared Access Signatures は、SQL Server、APS、または Azure Synapse Analytics では PolyBase と共に使用できません。
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.

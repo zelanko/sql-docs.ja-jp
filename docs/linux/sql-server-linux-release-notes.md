@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: dd0473eea265df700c1224ba4db8edf2dbff9e9e
-ms.sourcegitcommit: 49706fb7efb46ee467e88dc794a1eab916a9af25
+ms.openlocfilehash: a585314a26e90b76d18117be2eafe6f78e399dc3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90013675"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322217"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -28,8 +28,8 @@ ms.locfileid: "90013675"
 
 | プラットフォーム | ファイル システム | インストール ガイド |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3、7.4、7.5、7.6、または 8 Server | XFS または EXT4 | [インストール ガイド](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | XFS または EXT4 | [インストール ガイド](quickstart-install-connect-suse.md) |
+| Red Hat Enterprise Linux 7.3 から 7.8、または 8.0 から 8.3 のサーバー | XFS または EXT4 | [インストール ガイド](quickstart-install-connect-red-hat.md) | 
+| SUSE Enterprise Linux Server v12 SP2 - SP5 | XFS または EXT4 | [インストール ガイド](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04 LTS、18.04 LTS | XFS または EXT4 | [インストール ガイド](quickstart-install-connect-ubuntu.md) | 
 | Windows、Mac、または Linux 上の Docker エンジン 1.8+ | 該当なし | [インストール ガイド](quickstart-install-connect-docker.md) | 
 
@@ -609,7 +609,7 @@ sudo systemctl start mssql-server
 #### <a name="network-file-system-nfs"></a>Network File System (NFS)
 運用環境で **Network File System (NFS)** のリモート共有を使用する場合は、次のサポート要件に注意してください。
 
-- NFS バージョン **4.2 以上**を使用してください。 前のバージョンの NFS では、最新のファイル システムに共通する、fallocate やスパース ファイルの作成などの必要な機能がサポートされていません。
+- NFS バージョン **4.2 以上** を使用してください。 前のバージョンの NFS では、最新のファイル システムに共通する、fallocate やスパース ファイルの作成などの必要な機能がサポートされていません。
 - NFS マウント上の **/var/opt/mssql** ディレクトリのみが検索されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] システム バイナリなどの他のファイルはサポートされていません。
 - リモート共有をマウントするときに NFS クライアントが 'nolock' オプションを使用していることを確認してください。
 

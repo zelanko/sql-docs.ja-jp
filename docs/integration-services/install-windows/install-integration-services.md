@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 613546be790bac993f1242c6bfba470e95eb8685
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 6721d36159003077cf771fbff6a0e7a50a182ed2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197046"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490012"
 ---
 # <a name="install-integration-services-ssis"></a>Integration Services (SSIS) のインストール
 
@@ -95,7 +95,7 @@ ETL (抽出、変換、読み込み) プロセス専用のサーバーを使う�
 
   - 32 ビットおよび 64 ビットの SSIS コンポーネント。
 
-  - SSIS をインストールしても、SSIS パッケージの設計と開発に必要なツールはインストール**されません**。
+  - SSIS をインストールしても、SSIS パッケージの設計と開発に必要なツールはインストール **されません**。
 
 - **SQL Server データベース エンジン**。 SQL Server セットアップ ウィザードでデータベース エンジンをインストールします。 データベース エンジンを選ぶと、SSIS パッケージを格納、管理、実行、監視するための SSIS カタログ データベース `SSISDB` を作成してホストできます。
 
@@ -115,7 +115,7 @@ ETL (抽出、変換、読み込み) プロセス専用のサーバーを使う�
 
 - **SQL Server Data Tools (SSDT)** 。 Visual Studio 2019 向け SSDT スタンドアロン インストーラーは廃止となりました。 Visual Studio 2019 に関しては、今後、[VS マーケット プレース](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview)から SSIS デザイナー拡張機能を入手できます。
 
-- **Integration Services Feature Pack for Azure**。 Feature Pack のダウンロードとインストールについて詳しくは、「[Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](../azure-feature-pack-for-integration-services-ssis.md?view=sql-server-2017)」をご覧ください。 Feature Pack をインストールすると、パッケージは、次のサービスを含む Azure クラウドのストレージ サービスと分析サービスに接続できます。
+- **Integration Services Feature Pack for Azure**。 Feature Pack のダウンロードとインストールについて詳しくは、[Microsoft SQL Server Integration Services Feature Pack for Azure](../azure-feature-pack-for-integration-services-ssis.md) に関するページをご覧ください。 Feature Pack をインストールすると、パッケージは、次のサービスを含む Azure クラウドのストレージ サービスと分析サービスに接続できます。
 
   - Azure Blob Storage です。
 

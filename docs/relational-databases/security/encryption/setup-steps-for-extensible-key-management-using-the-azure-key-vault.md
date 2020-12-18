@@ -2,7 +2,7 @@
 title: Azure Key Vault を使用した Transparent Data Encryption (TDE) 拡張キー管理を設定する
 description: SQL Server コネクタ for Azure Key Vault をインストールして構成します。
 ms.custom: seo-lt-2019
-ms.date: 10/08/2020
+ms.date: 11/25/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,15 +12,16 @@ helpviewer_keywords:
 - EKM, with key vault setup
 - SQL Server Connector, setup
 - SQL Server Connector
+- TDE, AKV, EKM
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: Rupp29
 ms.author: arupp
-ms.openlocfilehash: 4df1fb243b2e811b216b03ec453164ae1a00b1af
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 03ed7f3bca347bbb65ea0b51c807547d7bdb5656
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130211"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489602"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>Azure Key Vault を使用した SQL Server TDE 拡張キー管理を設定する
 
@@ -258,13 +259,13 @@ Azure portal を使用してキー コンテナーを作成し、そのキー �
 1. キー コンテナーに非対称キーを生成します。 これを行う方法は 2 つあります。既存のキーをインポートする方法と、新しいキーを作成する方法です。  
 
      > [!NOTE]
-     > SQL Server は、2048 ビットの RSA キーのみをサポートします。
+     > SQL Server でサポートされているのは、2048 ビットと 3072 ビットの RSA キー、および 2048 ビットと 3072 ビットの RSA HSM キーのみです。
 
 ### <a name="best-practices"></a>ベスト プラクティス
 
 すばやいキー復旧を確保し、Azure 以外のデータにアクセスできるようにするには、次のベスト プラクティスをお勧めします。
 
-- ローカル ハードウェア セキュリティ モジュール (HSM) デバイス上で暗号化キーをローカルに作成します。 SQL Server によってサポートされるように、必ず非対称の RSA 2048 キーを作成してください。
+- ローカル ハードウェア セキュリティ モジュール (HSM) デバイス上で暗号化キーをローカルに作成します。 SQL Server によってサポートされるように、必ず非対称の RSA 2048 または 3072 キーを作成してください。
 - 暗号化キーを Azure Key Vault にインポートします。 このプロセスについては、以降のセクションで説明します。
 - Azure Key Vault で初めてキーを使用する前に、Azure Key Vault キーのバックアップを実行します。 詳細については、[Backup-AzureKeyVaultKey]() コマンドをご覧ください。
 - キーに何らかの変更を加える場合 (ACL の追加、タグの追加、キー属性の追加など) は、必ずもう一度 Azure Key Vault キーのバックアップを実行してください。
@@ -274,7 +275,7 @@ Azure portal を使用してキー コンテナーを作成し、そのキー �
 
 ### <a name="types-of-keys"></a>キーの種類
 
-Azure Key Vault では、SQL Server で動作する 2 種類のキーのいずれかを生成できます。 どちらの種類も、非対称の 2048 ビット RSA キーです。  
+Azure Key Vault では、SQL Server で動作する 4 種類のキーを生成できます。 非対称の 2048 ビットと 3072 ビットの RSA キーと 2048 ビットと 3072 ビットの RSA HSM キーです。
   
 - **ソフトウェアによる保護**:ソフトウェアで処理され、保存状態で暗号化されます。 ソフトウェアで保護されたキーに対する操作は、Azure 仮想マシン上で行われます。 運用環境のデプロイで使用されないキーには、この種類をお勧めします。  
 
@@ -340,7 +341,8 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
 > - バージョン 1.0.3.0 以降の SQL Server コネクタでは、関連するエラー メッセージがトラブルシューティングのために Windows イベント ログにレポートされます。
 > - バージョン 1.0.4.0 以降では、Azure China、Azure Germany、Azure Government などのプライベート Azure クラウドがサポートされています。
 > - バージョン 1.0.5.0 では、サムプリントのアルゴリズムについて破壊的変更があります。 1\.0.5.0 にアップグレードした後、データベースの復元でエラーが発生する可能性があります。 詳細については、[サポート技術情報の記事 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0) を参照してください。
-> - **バージョン 1.0.5.0 (タイムスタンプ: 2020 年 9 月) 以降の SQL Server コネクタで、メッセージのフィルター処理とネットワーク要求の再試行ロジックがサポートされます。**
+> - バージョン 1.0.5.0 (タイムスタンプ: 2020 年 9 月) 以降の SQL Server コネクタで、メッセージのフィルター処理とネットワーク要求の再試行ロジックがサポートされます。
+> - **更新バージョン 1.0.5.0 (タイムスタンプ: 2020 年 11 月) SQL Server コネクタでサポートされているのは、RSA 2048、RSA 3072、RSA-HSM 2048、RSA-HSM 3072 キーです。**
   
   ![SQL Server コネクタ インストール ウィザードのスクリーンショット](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png)  
   

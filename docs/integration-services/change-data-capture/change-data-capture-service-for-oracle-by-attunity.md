@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 715ff2845d686d5cff37a66fdd26866e47c51a99
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 08bfc658b939520cb7b694d39c3c9bee557172a1
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257967"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934050"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Attunity の Change Data Capture Service for Oracle
 
@@ -29,6 +29,7 @@ ms.locfileid: "92257967"
 
 対応する SQL Server バージョンに対する Microsoft Change Data Capture Designer および Service for Oracle by Attunity を、以下のリンクからダウンロードしてください。
 
+- [Microsoft SQL Server 2012 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=51606)
 - [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=55802)
 - [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=56610)
 - [Microsoft SQL Server 2019 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=100303)
@@ -57,6 +58,8 @@ ms.locfileid: "92257967"
 -   Oracle Database 10 g リリース 2
 -   Oracle Database 11g リリース 1 およびリリース 2
 -   クラシック インストールでの Oracle Database 12c (マルチテナント インストールはサポートされていません)  
+-   クラシック インストールでの Oracle Database 18c (マルチテナント インストールはサポートされていません) 
+-   クラシック インストールでの Oracle Database 19c (マルチテナント インストールはサポートされていません) 
   
 ### <a name="target-sql-server-database"></a>対象の SQL Server データベース  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  

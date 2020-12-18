@@ -10,13 +10,13 @@ ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce4c3624600741d900d51dc832ab4a685c28107a
-ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2afdc0e62fdd725584c464bda516fc6284d20f01
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631748"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489992"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase の機能と制限事項
 
@@ -28,18 +28,21 @@ ms.locfileid: "94631748"
 
 PolyBase の主な機能と、これらの機能を利用できる製品を一覧表示した表を次に示します。  
 
-|**機能** |**SQL Server 2016** |**Azure SQL Database** |**Azure Synapse Analytics** |**Parallel Data Warehouse** |
+|**機能** |**SQL Server** (2016 以降) |**Azure SQL Database** |**Azure Synapse Analytics** |**Parallel Data Warehouse** |
 |---------|---------|---------|---------|---------|
 |で Hadoop データのクエリを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)]|はい|いいえ|いいえ|はい|
 |Hadoop からデータをインポートする|はい|いいえ|いいえ|はい|
 |データを Hadoop にエクスポートする  |はい|いいえ|いいえ| はい|
 |Azure HDInsight のクエリ、インポート、エクスポート |いいえ|いいえ|いいえ|いいえ
 |クエリの計算を Hadoop にプッシュダウンする|はい|いいえ|いいえ|はい|  
-|Azure Blob Storage からデータをインポートする|はい|いいえ|はい|はい|
+|Azure Blob Storage からデータをインポートする|はい|はい<sup>*</sup>|はい|はい|
 |Azure Blob Storage にデータをエクスポートする|はい|いいえ|はい|はい|  
 |Azure Data Lake Store からデータをインポートする|いいえ|いいえ|はい|いいえ|
 |Azure Data Lake Store にデータをエクスポートする|いいえ|いいえ|はい|いいえ|
 |Microsoft BI ツールから PolyBase クエリを実行する|はい|いいえ|はい|はい|
+
+<sup>*</sup> SQL Server 2017 で導入されました。「[Azure BLOB ストレージのデータに一括アクセスする例](../import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)」を参照してください。
+
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>T-SQL 演算子でサポートされるプッシュダウン計算
 
@@ -71,7 +74,7 @@ PolyBase には次の制限事項があります。
 - transactional = true の Hive テーブルを使用している場合、PolyBase は Hive テーブルのディレクトリにあるデータにアクセスできません。
 
 <!--SQL Server 2016-->
-::: moniker range="= sql-server-2016 || =sqlallproducts-allversions"
+::: moniker range="= sql-server-2016 "
 
 - [SQL Server 2016 のフェールオーバー クラスターにノードを追加すると、PolyBase の機能をインストールできません](https://support.microsoft.com/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)。
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d0c6f18fc92c778478066c218707fbc17c45c26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55bb82e19a97a91dbe00b44b195e74a250ddf1dc
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463759"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900970"
 ---
 # <a name="about-change-data-capture-sql-server"></a>変更データ キャプチャについて (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -137,6 +137,10 @@ CREATE TABLE T1(
      C1 INT PRIMARY KEY, 
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
+
+## <a name="columnstore-indexes"></a>列ストア インデックス
+
+クラスター化列ストア インデックスを持つテーブルでは、変更データ キャプチャを有効にできません。 SQL Server 2016 以降では、非クラスター化列ストア インデックスを持つテーブルで有効にすることができます。
 
 ## <a name="see-also"></a>参照  
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

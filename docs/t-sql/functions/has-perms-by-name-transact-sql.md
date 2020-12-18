@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c2240ad1cbc9bb8c9fd252eefd6633e81e4ab2f8
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 8574b99c65972f566817749f34d89e3f6d3ca3e5
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91115234"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900971"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  権限をチェックするセキュリティ保護可能なサブエンティティの名前を表す、**sysname** 型のスカラー式を指定します (省略可能)。 既定値は NULL です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降のバージョンでは、sub-securables に **'[**_sub name_**]'** の形式で角かっこを使用することはできません。 代わりに **'** _sub name_ **'** を使用してください。  
+>  sub-securables に **'[** _sub name_ **]'** の形式で角かっこを使用することはできません。 代わりに **'** _sub name_ **'** を使用してください。  
   
  *sub-securable_class*  
  権限をチェックするセキュリティ保護可能なサブエンティティのクラスを表す、**nvarchar(60)** 型のスカラー式を指定します (省略可能)。 既定値は NULL です。  

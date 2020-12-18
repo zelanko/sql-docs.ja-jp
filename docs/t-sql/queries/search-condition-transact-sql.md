@@ -37,13 +37,13 @@ helpviewer_keywords:
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55a88376c7c12870455b2d575ffcb0da601c0dda
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0f7878341361f74c9e8e4aa65b6619aebde9780a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92187769"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460895"
 ---
 # <a name="search-condition-transact-sql"></a>検索条件 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -173,7 +173,7 @@ ms.locfileid: "92187769"
  [ NOT ] LIKE  
  後続の文字列が、パターン照合で使用されます。 詳細については、「[LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)」を参照してください。  
   
- ESCAPE **'***escape_ character***'**  
+ ESCAPE **'** _escape_ character_ *_'_*  
  ワイルドカードとして機能するのではなく、ワイルドカード文字そのものを文字列内で検索できます。 *escape_character* は、ワイルドカード文字の前に付けてこの特別な使用方法を示す文字です。  
   
  [ NOT ] BETWEEN  

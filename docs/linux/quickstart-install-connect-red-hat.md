@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 81e34f795391ad53728f35c8fed6e6b2363b3f7a
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: d3663fb72891f31cdd710fefebaef906c5b14762
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115675"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471673"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>クイック スタート:Red Hat に SQL Server をインストールし、データベースを作成する
 
@@ -28,7 +28,7 @@ ms.locfileid: "92115675"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 このクイックスタートでは、Red Hat Enterprise Linux (RHEL) 8 に SQL Server 2019 をインストールします。 次に、**sqlcmd** と接続して最初のデータベースを作成し、クエリを実行します。
 
@@ -40,16 +40,16 @@ ms.locfileid: "92115675"
 ## <a name="prerequisites"></a>前提条件
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-RHEL 7.3 から 7.8、または 8.0 から 8.2 のマシンには**少なくとも 2 GB** のメモリが必要です。
+RHEL 7.3 から 7.8、または 8.0 から 8.3 のマシンには **少なくとも 2 GB** のメモリが必要です。
 
 ::: moniker-end
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-RHEL 7.3、7.4、7.5、7.6、または 8.0 のマシンには**少なくとも 2 GB** のメモリが必要です。
+RHEL 7.3 から 7.8、または 8.0 から 8.3 のマシンには **少なくとも 2 GB** のメモリが必要です。
 
 ::: moniker-end
 
@@ -129,7 +129,7 @@ RHEL 上で SQL Server を構成するには、ターミナルで次のコマン
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="install-sql-server"></a><a id="install"></a>SQL Server をインストールする
 

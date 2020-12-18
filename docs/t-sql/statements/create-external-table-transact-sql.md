@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6bfa965b74aada909b7e28e1429941d4a82b65a
-ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d45781583e8ac6147f5f761cebc288cc60f9bd9a
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328032"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489056"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -39,7 +39,7 @@ ms.locfileid: "96328032"
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -101,6 +101,9 @@ column_name <data_type>
 ## <a name="arguments"></a>引数
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 。作成するテーブルの 1 つから 3 つの部分で構成される名前。 外部テーブルの場合、SQL では、Hadoop または Azure Blob Storage 内で参照されているファイルまたはフォルダーに関する基本的な統計情報と共に、テーブルのメタデータのみが格納されます。 実際のデータは移動されず、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されません。
+
+> [!IMPORTANT]
+> 最適なパフォーマンスを得るには、外部データ ソース ドライバーが 3 部構成の名前をサポートしている場合は、3 部構成の名前を指定することを強くお勧めします。  
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
 
@@ -589,11 +592,11 @@ WITH
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_** &nbsp;
@@ -641,6 +644,9 @@ column_name <data_type>
 ## <a name="arguments"></a>引数
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 。作成するテーブルの 1 つから 3 つの部分で構成される名前。 外部テーブルの場合、SQL では、Azure SQL Database 内で参照されているファイルまたはフォルダーに関する基本的な統計情報と共に、テーブルのメタデータのみが格納されます。 実際のデータは移動されず、Azure SQL Database に格納されません。
+
+> [!IMPORTANT]
+> 最適なパフォーマンスを得るには、外部データ ソース ドライバーが 3 部構成の名前をサポートしている場合は、3 部構成の名前を指定することを強くお勧めします。
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
 
@@ -750,11 +756,11 @@ WITH
 - [クロスデータベース クエリの概要 (列方向のパーティション分割)](/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)
@@ -825,6 +831,9 @@ column_name <data_type>
 ## <a name="arguments"></a>引数
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 。作成するテーブルの 1 つから 3 つの部分で構成される名前。 外部テーブルの場合、Azure Data Lake、Hadoop、または Azure Blob Storage 内で参照されているファイルまたはフォルダーに関する基本的な統計情報と共に、テーブルのメタデータのみ。 外部テーブルの作成時に、実際のデータは移動または格納されません。
+
+> [!IMPORTANT]
+> 最適なパフォーマンスを得るには、外部データ ソース ドライバーが 3 部構成の名前をサポートしている場合は、3 部構成の名前を指定することを強くお勧めします。
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
 
@@ -1020,11 +1029,11 @@ AS SELECT * FROM
 - [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)
@@ -1078,6 +1087,9 @@ column_name <data_type>
 ## <a name="arguments"></a>引数
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 。作成するテーブルの 1 つから 3 つの部分で構成される名前。 外部テーブルの場合、Analytics Platform System では、Hadoop または Azure Blob Storage 内で参照されているファイルまたはフォルダーに関する基本的な統計情報と共に、テーブルのメタデータのみが格納されます。 実際のデータが Analytics Platform System に移されたり、格納されたりすることはありません。
+
+> [!IMPORTANT]
+> 最適なパフォーマンスを得るには、外部データ ソース ドライバーが 3 部構成の名前をサポートしている場合は、3 部構成の名前を指定することを強くお勧めします。
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
 

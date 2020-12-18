@@ -30,13 +30,13 @@ helpviewer_keywords:
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba0eb3c9907acfe02939c49ea253869adbfc992b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: eca1dbef6ff7d519200e46cff7879d7cb0a9b128
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867348"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478253"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>インデックスを再構成または再構築することでインデックス断片化を解決する
 
@@ -148,7 +148,7 @@ object_id   TableName    index_id    IndexName                                  
 
 詳細については、[sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) に関する記事をご覧ください。
 
-### <a name="to-check-the-fragmentation-of-a-columnstore-index-using-tsql"></a>[!INCLUDE[tsql](../../includes/tsql-md.md)] を利用して列ストア インデックスの断片化を確認するには
+### <a name="to-check-the-fragmentation-of-a-columnstore-index-using-transact-sql"></a>Transact-SQL を使用して列ストア インデックスの断片化を確認するには
 
 次の例では、`AdventureWorksDW2016` データベースの `dbo.FactResellerSalesXL_CCI` テーブルで、すべてのインデックスの断片化の平均パーセンテージを調べます。
 
@@ -180,7 +180,7 @@ object_id   TableName                   index_id    IndexName                   
 ### <a name="check-index-fragmentation-using-sql-server-management-studio"></a>SQL Server Management Studio を使用してインデックス断片化を確認する
 
 > [!NOTE]
-> SQL Server の列ストア インデックスの断片化を計算するために、また、Azure SQL Database 内のインデックスの断片化を計算するために、[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] を使用することはできません。 これらのシナリオには前の [!INCLUDE[tsql](../../includes/tsql-md.md)] の[例](#to-check-the-fragmentation-of-a-columnstore-index-using-)を使用します。
+> SQL Server の列ストア インデックスの断片化を計算するために、また、Azure SQL Database 内のインデックスの断片化を計算するために、[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] を使用することはできません。 前の [!INCLUDE[tsql](../../includes/tsql-md.md)] の[例](#to-check-the-fragmentation-of-a-columnstore-index-using-transact-sql)を使用します。
 
 1. オブジェクト エクスプローラーで、インデックスの断片化を確認するテーブルが格納されているデータベースを展開します。
 2. **[テーブル]** フォルダーを展開します。

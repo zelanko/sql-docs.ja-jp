@@ -38,23 +38,23 @@ helpviewer_keywords:
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce99d5ffe875283675e62069efed8b855ad6d43a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 268aafa5b95bed4c9e2687fef430aa4a972ea2c7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867426"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463163"
 ---
 # <a name="database-level-roles"></a>データベース レベルのロール
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、データベースでの権限を簡単に管理できるように、いくつかの *ロール* が用意されています。ロールは、セキュリティ プリンシパルとして他のプリンシパルをグループ化します。 ロールは、 ***Windows オペレーティング システムの*** グループ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] に似ています。 データベース レベルのロールは、その権限のスコープがデータベース全体に及びます。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、データベースでの権限を簡単に管理できるように、いくつかの *ロール* が用意されています。ロールは、セキュリティ プリンシパルとして他のプリンシパルをグループ化します。 これらは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows オペレーティング システムの "**グループ**" に似ています。 データベース レベルのロールは、その権限のスコープがデータベース全体に及びます。  
 
 データベース ロールに対するユーザーの追加および削除を行うには、 `ADD MEMBER` ALTER ROLE `DROP MEMBER` ステートメントの [と](../../../t-sql/statements/alter-role-transact-sql.md) のオプションを使用します。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] と Azure Synapse では、`ALTER ROLE` のこのような使用はサポートされません。 代わりに、以前の [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) と [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) プロシージャを使用してください。
   
- データベース レベルのロールは 2 種類あります。1 つはデータベースに事前に定義されている *固定データベース ロール* 、もう 1 つはユーザーが作成できる *ユーザー定義データベース ロール* です。  
+ データベース レベルのロールは 2 種類あります。1 つはデータベースに事前に定義されている "固定データベース ロール"、もう 1 つはユーザーが作成できる "*ユーザー定義データベース ロール*" です。  
   
  固定データベース ロールはデータベース レベルで定義されており、各データベースに存在します。 **db_owner** データベース ロールのメンバーは、固定データベース ロールのメンバーシップを管理できます。 msdb データベースには、特別な用途のデータベース ロールもいくつかあります。  
   

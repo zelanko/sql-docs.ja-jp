@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 00a34797c1253418230f5c40a57c2ce5e2948949
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: d92e83fd3bba6c5ee6ae6af3743de98000e05575
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866670"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408224"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>一括エクスポートまたは一括インポートのデータの準備
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "91866670"
   
 -   固定長フィールドまたは固定幅フィールドを含むデータ ファイルからデータをインポートするには、フォーマット ファイルを使用します。 詳細については、「 [XML フォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)です。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一括インポート操作では、コンマ区切り (CSV) ファイルがサポートされていません。 ただし、場合によっては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対してデータを一括インポートする際、CSV ファイルをデータ ファイルとして使用できます。 CSV ファイルのフィールド ターミネータは必ずしもコンマである必要はありません。 一括インポートのデータ ファイルとして利用できるようにするには、CSV ファイルが次の条件を満たしている必要があります。  
+-  SQL Server 2017 以降では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にデータを一括インポートするためのデータ ファイルとして CSV ファイルを使用できます。 CSV ファイルのフィールド ターミネータは必ずしもコンマである必要はありません。 一括インポートのデータ ファイルとして利用できるようにするには、CSV ファイルが次の条件を満たしている必要があります。  
   
     -   データ フィールドにフィールド ターミネータが含まれていないこと。  
   
